@@ -3,3 +3,18 @@ name = "factible"
 version = "0.1.0"
 description = "E2E project to fact check social media posts"
 requires-python = ">=3.12,<3.13"
+dependencies = [
+    "pydantic>=2.0.0,<3.0.0",
+    "pydantic-ai[examples]>=1.0.0,<2.0.0",
+    "python-dotenv",
+    "youtube-transcript-api>=1.2.2,<2.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
