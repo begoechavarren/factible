@@ -1,9 +1,12 @@
 import re
+import logging
 
 from typing import Optional
 from urllib.parse import parse_qs, urlparse
 
 from youtube_transcript_api import YouTubeTranscriptApi
+
+_logger = logging.getLogger(__name__)
 
 
 def extract_video_id(url: str) -> str:
