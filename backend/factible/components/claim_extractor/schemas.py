@@ -13,6 +13,16 @@ class Claim(BaseModel):
         description="Confidence (0.0-1.0) that this is a factual claim",
     )
     category: str
+    importance: float = Field(
+        default=0.5,
+        ge=0.0,
+        le=1.0,
+        description="Relevance score (0.0-1.0) indicating how impactful the claim is for fact-checking",
+    )
+    context: str | None = Field(
+        default=None,
+        description="Concise context including timeframe or speaker cues that help interpret the claim.",
+    )
 
 
 class ExtractedClaims(BaseModel):

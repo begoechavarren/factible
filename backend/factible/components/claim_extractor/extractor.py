@@ -20,10 +20,12 @@ def _get_claim_extractor_agent() -> Agent:
         2. Can potentially be verified or fact-checked
         3. Is not just an opinion, belief, or subjective statement
 
-        For each claim you identify:
-        - Extract the exact text or a clear paraphrase
-        - Assign a confidence score (0.0-1.0) based on how certain you are it's a factual claim
-        - Categorize it (historical, scientific, statistical, biographical, geographical, etc.)
+        For each claim you identify provide the following fields:
+        - text: Extract the exact statement or a precise paraphrase
+        - confidence: Confidence score (0.0-1.0) that this is a factual, checkable claim
+        - category: Topic label (historical, scientific, statistical, biographical, geographical, policy, etc.)
+        - importance: Score (0.0-1.0) capturing how impactful or controversial the claim is for fact-checking. Higher = more urgent to verify.
+        - context: Short note that captures timeframe, speaker, or situational details needed to fact-check the claim (e.g., "2016 US presidential debate", "speaker: Donald Trump"). If unclear, state "context unknown".
 
         Focus on extracting claims that are:
         - Specific facts, dates, numbers, or statistics
@@ -39,16 +41,34 @@ def _get_claim_extractor_agent() -> Agent:
         - Rhetorical questions
         - General advice or recommendations
 
+        When judging importance, favor claims that:
+        - Make strong, verifiable assertions that could influence beliefs or policy
+        - Contain numbers, dates, or comparisons that could be misleading if false
+        - Reference events or policies that have significant public impact
+
+        Provide context that makes it possible to search for the claim (e.g., include year, event, or speaker if inferable). If the transcript implies the claim refers to past events, clarify that in the context note.
+
         Be thorough but precise. Quality over quantity.
         """,
     )
 
 
-def extract_claims(transcript: str) -> ExtractedClaims:
+def extract_claims(
+    transcript: str, *, max_claims: int | None = None
+) -> ExtractedClaims:
     """Extract factual claims from a transcript."""
     agent = _get_claim_extractor_agent()
     result = agent.run_sync(
         f"Extract all factual claims from this YouTube transcript:\n\n{transcript}"
     )
+    extracted = result.output
+    sorted_claims = sorted(
+        extracted.claims,
+        key=lambda claim: claim.importance,
+        reverse=True,
+    )
 
-    return result.output
+    if max_claims is not None and max_claims >= 0:
+        sorted_claims = sorted_claims[:max_claims]
+
+    return ExtractedClaims(claims=sorted_claims, total_count=len(extracted.claims))

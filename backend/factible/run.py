@@ -15,10 +15,11 @@ from factible.components.transcriptor.transcriptor import get_transcript
 _logger = logging.getLogger(__name__)
 
 
+# TODO: Move logging away from run_factible orchestrator function
 def run_factible(
     video_url: str,
     *,
-    max_claims: Optional[int] = None,
+    max_claims: Optional[int] = 5,
     enable_search: bool = True,
     max_queries_per_claim: int = 2,
     max_results_per_query: int = 3,
@@ -29,7 +30,7 @@ def run_factible(
 
     Args:
         video_url: The URL of the YouTube video to fact check.
-        max_claims: Optional cap on how many claims are processed (useful for development).
+        max_claims: Optional cap on how many top-importance claims are processed.
         enable_search: Toggle the search stage to save time or API calls.
         max_queries_per_claim: Number of high-priority queries to run per claim.
         max_results_per_query: Number of search results to inspect per query.
@@ -46,23 +47,29 @@ def run_factible(
         return generate_run_output(empty_claims, [])
 
     # Step 2: Extract claims from transcript
-    extracted_claims = extract_claims(transcript_text)
+    extracted_claims = extract_claims(transcript_text, max_claims=max_claims)
     total_claims = extracted_claims.total_count
     claims_to_process = list(extracted_claims.claims)
-    if max_claims is not None and max_claims >= 0:
-        claims_to_process = claims_to_process[:max_claims]
-        if len(claims_to_process) < total_claims:
-            _logger.info(
-                "Processing limited to %d of %d claims (development mode)",
-                len(claims_to_process),
-                total_claims,
-            )
+    if 0 <= (max_claims or -1) and len(claims_to_process) < total_claims:
+        _logger.info(
+            "Processing limited to top %d of %d claims by importance",
+            len(claims_to_process),
+            total_claims,
+        )
 
     # Show extracted claims
     _logger.info(f"=== EXTRACTED CLAIMS ({total_claims}) ===")
     for i, claim in enumerate(claims_to_process, 1):
-        _logger.info(f"Claim {i}: [{claim.category}] (confidence: {claim.confidence})")
+        _logger.info(
+            "Claim %d: [%s] (confidence: %.2f | importance: %.2f)",
+            i,
+            claim.category,
+            claim.confidence,
+            claim.importance,
+        )
         _logger.info(f"  {claim.text}")
+        if claim.context:
+            _logger.info(f"  Context: {claim.context}")
 
     processed_claims = ExtractedClaims(
         claims=claims_to_process,
@@ -86,28 +93,28 @@ def run_factible(
         _logger.info(f"--- SEARCH RESULTS FOR CLAIM {i} ---")
         collected_results: List[SearchResult] = []
 
-        try:
-            queries = generate_queries(claim.text)
-        except Exception as exc:
-            _logger.error("Failed to generate queries for claim %d: %s", i, exc)
-            claim_evidence_records.append((claim, collected_results))
-            continue
-
         if max_queries_per_claim <= 0:
             _logger.info("  Query execution skipped (max_queries_per_claim <= 0)")
             claim_evidence_records.append((claim, collected_results))
             continue
 
-        priority_queries = [q for q in queries.queries if q.priority <= 2][
-            :max_queries_per_claim
-        ]
+        try:
+            queries = generate_queries(
+                claim,
+                max_queries=max_queries_per_claim,
+                priority_threshold=2,
+            )
+        except Exception as exc:
+            _logger.error("Failed to generate queries for claim %d: %s", i, exc)
+            claim_evidence_records.append((claim, collected_results))
+            continue
 
-        if not priority_queries:
+        if not queries.queries:
             _logger.info("  No high-priority queries generated for this claim")
             claim_evidence_records.append((claim, collected_results))
             continue
 
-        for j, query in enumerate(priority_queries, 1):
+        for j, query in enumerate(queries.queries, 1):
             _logger.info(f"Query {j}: {query.query}")
             if max_results_per_query <= 0:
                 _logger.info("  Search skipped (max_results_per_query <= 0)")
@@ -200,7 +207,7 @@ if __name__ == "__main__":
     load_dotenv()
     logging.basicConfig(level=logging.INFO, format="%(message)s")
 
-    VIDEO_URL = "https://www.youtube.com/watch?v=S2ap2kbMf7w"
+    VIDEO_URL = "https://www.youtube.com/watch?v=d4Tinv8DMBM"
 
-    result = run_factible(video_url=VIDEO_URL, max_claims=1)
+    result = run_factible(video_url=VIDEO_URL, max_claims=3)
     _logger.info("Completed processing %d claims.", result.extracted_claims.total_count)
