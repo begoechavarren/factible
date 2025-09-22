@@ -1,11 +1,14 @@
 import logging
-from typing import Optional
+from typing import List, Optional, Sequence, Tuple
 
 from dotenv import load_dotenv
 
 from factible.components.claim_extractor.extractor import extract_claims
-from factible.components.claim_extractor.schemas import ExtractedClaims
+from factible.components.claim_extractor.schemas import Claim, ExtractedClaims
+from factible.components.online_search.schemas.search import SearchResult
 from factible.components.online_search.search import search_online
+from factible.components.output_generator.generator import generate_run_output
+from factible.components.output_generator.schemas import FactCheckRunOutput
 from factible.components.query_generator.generator import generate_queries
 from factible.components.transcriptor.transcriptor import get_transcript
 
@@ -20,7 +23,7 @@ def run_factible(
     max_queries_per_claim: int = 2,
     max_results_per_query: int = 3,
     headless_search: bool = True,
-) -> ExtractedClaims:
+) -> FactCheckRunOutput:
     """
     Run the factible agent.
 
@@ -33,13 +36,14 @@ def run_factible(
         headless_search: Whether Selenium should run in headless mode when scraping.
 
     Returns:
-        The extracted claims from the transcript.
+        Structured fact-check reports for the processed claims.
     """
     # Step 1: Extract transcript from YouTube video
     transcript_text = get_transcript(video_url)
     if not transcript_text.strip():
         _logger.warning("No transcript retrieved for %s", video_url)
-        return ExtractedClaims(claims=[], total_count=0)
+        empty_claims = ExtractedClaims(claims=[], total_count=0)
+        return generate_run_output(empty_claims, [])
 
     # Step 2: Extract claims from transcript
     extracted_claims = extract_claims(transcript_text)
@@ -60,26 +64,38 @@ def run_factible(
         _logger.info(f"Claim {i}: [{claim.category}] (confidence: {claim.confidence})")
         _logger.info(f"  {claim.text}")
 
+    processed_claims = ExtractedClaims(
+        claims=claims_to_process,
+        total_count=len(claims_to_process),
+    )
+
+    claim_evidence_records: List[Tuple[Claim, Sequence[SearchResult]]] = []
+
     if not enable_search:
         _logger.info("Search disabled; skipping fact-checking stage.")
-        return extracted_claims
+        for claim in claims_to_process:
+            claim_evidence_records.append((claim, []))
+        return generate_run_output(processed_claims, claim_evidence_records)
 
     if not claims_to_process:
         _logger.info("No claims available for search; pipeline complete.")
-        return extracted_claims
+        return generate_run_output(processed_claims, [])
 
     # Step 3: Generate search queries and search for each claim
     for i, claim in enumerate(claims_to_process, 1):
         _logger.info(f"--- SEARCH RESULTS FOR CLAIM {i} ---")
+        collected_results: List[SearchResult] = []
 
         try:
             queries = generate_queries(claim.text)
         except Exception as exc:
             _logger.error("Failed to generate queries for claim %d: %s", i, exc)
+            claim_evidence_records.append((claim, collected_results))
             continue
 
         if max_queries_per_claim <= 0:
             _logger.info("  Query execution skipped (max_queries_per_claim <= 0)")
+            claim_evidence_records.append((claim, collected_results))
             continue
 
         priority_queries = [q for q in queries.queries if q.priority <= 2][
@@ -88,6 +104,7 @@ def run_factible(
 
         if not priority_queries:
             _logger.info("  No high-priority queries generated for this claim")
+            claim_evidence_records.append((claim, collected_results))
             continue
 
         for j, query in enumerate(priority_queries, 1):
@@ -108,6 +125,8 @@ def run_factible(
             if search_results.total_count == 0:
                 _logger.info("  No search results found")
                 continue
+
+            collected_results.extend(search_results.results)
 
             for k, result in enumerate(search_results.results, 1):
                 reliability = result.reliability
@@ -148,7 +167,33 @@ def run_factible(
                 #         if snippet.rationale:
                 #             _logger.info(f"         Reason: {snippet.rationale}")
 
-    return extracted_claims
+        claim_evidence_records.append((claim, collected_results))
+
+    run_output = generate_run_output(processed_claims, claim_evidence_records)
+
+    for idx, report in enumerate(run_output.claim_reports, 1):
+        _logger.info(f"=== FACT-CHECK REPORT FOR CLAIM {idx} ===")
+        _logger.info(
+            "Overall stance: %s (confidence: %s)",
+            report.overall_stance.upper(),
+            report.verdict_confidence,
+        )
+        _logger.info(f"Summary: {report.verdict_summary}")
+        for stance, sources in report.evidence_by_stance.items():
+            _logger.info(f"  {stance.upper()} ({len(sources)} sources)")
+            for source in sources:
+                reliability = source.reliability
+                _logger.info(
+                    "    - %s [%s | %.2f]",
+                    source.title,
+                    reliability.rating.upper(),
+                    reliability.score,
+                )
+                _logger.info(f"      URL: {source.url}")
+                if source.evidence_summary:
+                    _logger.info(f"      Evidence: {source.evidence_summary}")
+
+    return run_output
 
 
 if __name__ == "__main__":
@@ -158,4 +203,4 @@ if __name__ == "__main__":
     VIDEO_URL = "https://www.youtube.com/watch?v=S2ap2kbMf7w"
 
     result = run_factible(video_url=VIDEO_URL, max_claims=1)
-    _logger.info(f"Completed processing {result.total_count} claims.")
+    _logger.info("Completed processing %d claims.", result.extracted_claims.total_count)
