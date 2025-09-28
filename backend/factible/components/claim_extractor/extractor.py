@@ -3,6 +3,8 @@ import logging
 from pydantic_ai import Agent
 
 from factible.components.claim_extractor.schemas import ExtractedClaims
+from factible.models.config import CLAIM_EXTRACTOR_MODEL
+from factible.models.llm import get_model
 
 _logger = logging.getLogger(__name__)
 
@@ -10,7 +12,7 @@ _logger = logging.getLogger(__name__)
 def _get_claim_extractor_agent() -> Agent:
     """Get the claim extractor agent instance."""
     return Agent(
-        model="openai:gpt-4o-mini",
+        model=get_model(CLAIM_EXTRACTOR_MODEL),
         output_type=ExtractedClaims,  # type: ignore[arg-type]
         system_prompt="""
         You are an expert fact-checker. Your task is to extract factual claims from YouTube video transcripts.

@@ -4,6 +4,8 @@ from pydantic_ai import Agent
 
 from factible.components.claim_extractor.schemas import Claim
 from factible.components.query_generator.schemas import GeneratedQueries
+from factible.models.config import QUERY_GENERATOR_MODEL
+from factible.models.llm import get_model
 
 _logger = logging.getLogger(__name__)
 
@@ -11,7 +13,7 @@ _logger = logging.getLogger(__name__)
 def _get_query_generator_agent() -> Agent:
     """Get the query generator agent instance."""
     return Agent(
-        model="openai:gpt-4o-mini",
+        model=get_model(QUERY_GENERATOR_MODEL),
         output_type=GeneratedQueries,  # type: ignore[arg-type]
         system_prompt="""
         You are an expert fact-checker specializing in generating effective search queries.

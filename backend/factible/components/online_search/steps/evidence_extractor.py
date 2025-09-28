@@ -3,6 +3,8 @@ import logging
 from pydantic_ai import Agent
 
 from factible.components.online_search.schemas.evidence import EvidenceExtraction
+from factible.models.config import EVIDENCE_EXTRACTOR_MODEL
+from factible.models.llm import ModelChoice, ModelSpec, get_model
 
 _logger = logging.getLogger(__name__)
 
@@ -11,11 +13,19 @@ class RelevantContentExtractor:
     """Use an LLM to highlight passages relevant to the query."""
 
     def __init__(
-        self, model: str = "openai:gpt-4o-mini", max_characters: int = 6000
+        self,
+        model: ModelSpec | ModelChoice | None = None,
+        max_characters: int = 6000,
     ) -> None:
         self.max_characters = max_characters
+        if isinstance(model, ModelChoice):
+            selected_model = get_model(model)
+        elif model is None:
+            selected_model = get_model(EVIDENCE_EXTRACTOR_MODEL)
+        else:
+            selected_model = model
         self._agent = Agent(
-            model=model,
+            model=selected_model,
             output_type=EvidenceExtraction,  # type: ignore[arg-type]
             system_prompt="""
             You assist a fact-checking analyst. Analyse the provided webpage content and

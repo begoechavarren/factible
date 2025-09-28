@@ -7,9 +7,9 @@ from factible.components.claim_extractor.extractor import extract_claims
 from factible.components.claim_extractor.schemas import Claim, ExtractedClaims
 from factible.components.online_search.schemas.search import SearchResult
 from factible.components.online_search.search import search_online
-from factible.components.output_generator.generator import generate_run_output
+from factible.components.output_generator.output_generator import generate_run_output
 from factible.components.output_generator.schemas import FactCheckRunOutput
-from factible.components.query_generator.generator import generate_queries
+from factible.components.query_generator.query_generator import generate_queries
 from factible.components.transcriptor.transcriptor import get_transcript
 
 _logger = logging.getLogger(__name__)
@@ -207,7 +207,7 @@ if __name__ == "__main__":
     load_dotenv()
     logging.basicConfig(level=logging.INFO, format="%(message)s")
 
-    VIDEO_URL = "https://www.youtube.com/watch?v=d4Tinv8DMBM"
+    VIDEO_URL = "https://www.youtube.com/watch?v=iGkLcqLWxMA"
 
-    result = run_factible(video_url=VIDEO_URL, max_claims=3)
+    result = run_factible(video_url=VIDEO_URL, max_claims=1)
     _logger.info("Completed processing %d claims.", result.extracted_claims.total_count)

@@ -13,6 +13,8 @@ from factible.components.output_generator.schemas import (
     EvidenceSourceSummary,
     FactCheckRunOutput,
 )
+from factible.models.config import OUTPUT_GENERATOR_MODEL
+from factible.models.llm import get_model
 
 _logger = logging.getLogger(__name__)
 
@@ -22,7 +24,7 @@ _DEFAULT_STANCES: Sequence[EvidenceStance] = ("supports", "refutes", "mixed", "u
 def _build_claim_verdict_agent() -> Agent:
     """Instantiate the LLM agent responsible for producing claim verdicts."""
     return Agent(
-        model="openai:gpt-4o-mini",
+        model=get_model(OUTPUT_GENERATOR_MODEL),
         output_type=ClaimVerdict,  # type: ignore[arg-type]
         system_prompt="""
         You are an expert fact-checking analyst. Your goal is to evaluate how the provided evidence
