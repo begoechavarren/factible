@@ -298,6 +298,7 @@ if __name__ == "__main__":
     result = run_factible(
         video_url=VIDEO_URL,
         max_claims=1,
-        enable_query_parallelism=True,
+        enable_query_parallelism=False,
+        enable_claim_parallelism=False,
     )
     _logger.info("Completed processing %d claims.", result.extracted_claims.total_count)
