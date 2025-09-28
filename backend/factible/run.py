@@ -1,4 +1,5 @@
 import logging
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import List, Optional, Sequence, Tuple
 
 from dotenv import load_dotenv
@@ -24,6 +25,10 @@ def run_factible(
     max_queries_per_claim: int = 2,
     max_results_per_query: int = 3,
     headless_search: bool = True,
+    enable_claim_parallelism: bool = False,
+    max_parallel_claims: Optional[int] = None,
+    enable_query_parallelism: bool = False,
+    max_parallel_queries: Optional[int] = None,
 ) -> FactCheckRunOutput:
     """
     Run the factible agent.
@@ -35,6 +40,10 @@ def run_factible(
         max_queries_per_claim: Number of high-priority queries to run per claim.
         max_results_per_query: Number of search results to inspect per query.
         headless_search: Whether Selenium should run in headless mode when scraping.
+        enable_claim_parallelism: Process separate claims concurrently when True.
+        max_parallel_claims: Optional cap on concurrent claim workers (default: min(4, claims)).
+        enable_query_parallelism: Process individual queries within a claim concurrently when True.
+        max_parallel_queries: Optional cap on concurrent query workers per claim (default: min(4, queries)).
 
     Returns:
         Structured fact-check reports for the processed claims.
@@ -89,14 +98,13 @@ def run_factible(
         return generate_run_output(processed_claims, [])
 
     # Step 3: Generate search queries and search for each claim
-    for i, claim in enumerate(claims_to_process, 1):
-        _logger.info(f"--- SEARCH RESULTS FOR CLAIM {i} ---")
+    def _process_claim(index: int, claim: Claim) -> Tuple[Claim, List[SearchResult]]:
+        _logger.info(f"--- SEARCH RESULTS FOR CLAIM {index} ---")
         collected_results: List[SearchResult] = []
 
         if max_queries_per_claim <= 0:
             _logger.info("  Query execution skipped (max_queries_per_claim <= 0)")
-            claim_evidence_records.append((claim, collected_results))
-            continue
+            return claim, collected_results
 
         try:
             queries = generate_queries(
@@ -104,36 +112,37 @@ def run_factible(
                 max_queries=max_queries_per_claim,
                 priority_threshold=2,
             )
-        except Exception as exc:
-            _logger.error("Failed to generate queries for claim %d: %s", i, exc)
-            claim_evidence_records.append((claim, collected_results))
-            continue
+        except Exception as exc:  # pragma: no cover - defensive path
+            _logger.error("Failed to generate queries for claim %d: %s", index, exc)
+            return claim, collected_results
 
         if not queries.queries:
             _logger.info("  No high-priority queries generated for this claim")
-            claim_evidence_records.append((claim, collected_results))
-            continue
+            return claim, collected_results
 
-        for j, query in enumerate(queries.queries, 1):
-            _logger.info(f"Query {j}: {query.query}")
+        def _execute_query(
+            query_index: int, query_obj
+        ) -> Tuple[int, List[SearchResult]]:
+            _logger.info(f"Query {query_index}: {query_obj.query}")
+            local_results: List[SearchResult] = []
             if max_results_per_query <= 0:
                 _logger.info("  Search skipped (max_results_per_query <= 0)")
-                continue
+                return query_index, local_results
             try:
                 search_results = search_online(
-                    query.query,
+                    query_obj.query,
                     limit=max(1, max_results_per_query),
                     headless=headless_search,
                 )
-            except Exception as exc:
+            except Exception as exc:  # pragma: no cover - defensive path
                 _logger.error("  Search failed: %s", exc)
-                continue
+                return query_index, local_results
 
             if search_results.total_count == 0:
                 _logger.info("  No search results found")
-                continue
+                return query_index, local_results
 
-            collected_results.extend(search_results.results)
+            local_results.extend(search_results.results)
 
             for k, result in enumerate(search_results.results, 1):
                 reliability = result.reliability
@@ -174,7 +183,84 @@ def run_factible(
                 #         if snippet.rationale:
                 #             _logger.info(f"         Reason: {snippet.rationale}")
 
-        claim_evidence_records.append((claim, collected_results))
+            return query_index, local_results
+
+        indexed_queries = list(enumerate(queries.queries, 1))
+        if enable_query_parallelism and len(indexed_queries) > 1:
+            query_workers = min(
+                len(indexed_queries),
+                max_parallel_queries
+                if max_parallel_queries and max_parallel_queries > 0
+                else 4,
+            )
+            _logger.info(
+                "  Parallelizing %d queries with up to %d workers",
+                len(indexed_queries),
+                query_workers,
+            )
+            with ThreadPoolExecutor(max_workers=query_workers) as query_executor:
+                future_to_index = {
+                    query_executor.submit(_execute_query, q_idx, query_obj): q_idx
+                    for q_idx, query_obj in indexed_queries
+                }
+                ordered_query_results: dict[int, List[SearchResult]] = {}
+                for future in as_completed(future_to_index):
+                    q_index = future_to_index[future]
+                    try:
+                        q_idx, q_results = future.result()
+                        ordered_query_results[q_idx] = q_results
+                    except Exception as exc:  # pragma: no cover - defensive path
+                        _logger.error("  Query %d failed: %s", q_index, exc)
+                        ordered_query_results[q_index] = []
+                for q_idx, _ in indexed_queries:
+                    collected_results.extend(ordered_query_results.get(q_idx, []))
+        else:
+            if enable_query_parallelism and len(indexed_queries) <= 1:
+                _logger.info("  Parallel query execution skipped (only one query)")
+            elif not enable_query_parallelism:
+                _logger.info("  Processing queries sequentially")
+            for q_idx, query_obj in indexed_queries:
+                _, q_results = _execute_query(q_idx, query_obj)
+                collected_results.extend(q_results)
+
+        return claim, collected_results
+
+    if claims_to_process:
+        if enable_claim_parallelism and len(claims_to_process) > 1:
+            claim_workers = min(
+                len(claims_to_process),
+                max_parallel_claims
+                if max_parallel_claims and max_parallel_claims > 0
+                else 4,
+            )
+            _logger.info(
+                "Parallelizing %d claims with up to %d workers",
+                len(claims_to_process),
+                claim_workers,
+            )
+            with ThreadPoolExecutor(max_workers=claim_workers) as executor:
+                future_to_index = {
+                    executor.submit(_process_claim, idx, claim): idx - 1
+                    for idx, claim in enumerate(claims_to_process, 1)
+                }
+                ordered_results: list[tuple[Claim, List[SearchResult]]] = [
+                    (claims_to_process[idx], [])
+                    for idx in range(len(claims_to_process))
+                ]
+                for future in as_completed(future_to_index):
+                    slot = future_to_index[future]
+                    try:
+                        ordered_results[slot] = future.result()
+                    except Exception as exc:  # pragma: no cover - defensive path
+                        _logger.error("Claim processing failed: %s", exc)
+                claim_evidence_records.extend(ordered_results)
+        else:
+            if enable_claim_parallelism and len(claims_to_process) <= 1:
+                _logger.info("Parallel claim execution skipped (only one claim)")
+            elif not enable_claim_parallelism:
+                _logger.info("Processing claims sequentially")
+            for idx, claim in enumerate(claims_to_process, 1):
+                claim_evidence_records.append(_process_claim(idx, claim))
 
     run_output = generate_run_output(processed_claims, claim_evidence_records)
 
@@ -209,5 +295,9 @@ if __name__ == "__main__":
 
     VIDEO_URL = "https://www.youtube.com/watch?v=iGkLcqLWxMA"
 
-    result = run_factible(video_url=VIDEO_URL, max_claims=1)
+    result = run_factible(
+        video_url=VIDEO_URL,
+        max_claims=1,
+        enable_query_parallelism=True,
+    )
     _logger.info("Completed processing %d claims.", result.extracted_claims.total_count)
