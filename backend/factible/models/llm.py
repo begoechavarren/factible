@@ -7,9 +7,11 @@ from pydantic_ai.providers.ollama import OllamaProvider
 
 
 class ModelChoice(Enum):
-    OPENAI_GPT4O_MINI = ("openai", "gpt-4o-mini")
-    OLLAMA_QWEN3_0_8B = ("ollama", "qwen3:8b")
-    OLLAMA_QWEN3_0_0_5B = ("ollama", "qwen3:0.6b")
+    OPENAI_GPT4O_MINI = ("openai", "gpt-4o-mini")  # 128K context window
+    # https://ollama.com/library/qwen3
+    OLLAMA_QWEN3_0_8B = ("ollama", "qwen3:8b")  # 40K context window
+    OLLAMA_QWEN3_0_4B = ("ollama", "qwen3:4b")  # # 256K context window
+    OLLAMA_QWEN3_0_1_7B = ("ollama", "qwen3:1.7b")  # 40K context window
 
     def __init__(self, provider: str, model_name: str) -> None:
         self.provider = provider
