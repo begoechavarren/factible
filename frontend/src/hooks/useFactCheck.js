@@ -47,18 +47,29 @@ export function useFactCheck() {
 
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
+      let buffer = '';
 
       while (true) {
         const { done, value } = await reader.read();
 
-        if (done) break;
+        if (done) {
+          buffer += decoder.decode();
+        } else {
+          buffer += decoder.decode(value, { stream: true });
+        }
 
-        const chunk = decoder.decode(value);
-        const lines = chunk.split('\n');
+        let separatorIndex;
+        while ((separatorIndex = buffer.indexOf('\n\n')) !== -1) {
+          const rawEvent = buffer.slice(0, separatorIndex);
+          buffer = buffer.slice(separatorIndex + 2);
 
-        for (const line of lines) {
-          if (line.startsWith('data: ')) {
-            const data = JSON.parse(line.slice(6));
+          const dataLine = rawEvent.split('\n').find((line) => line.startsWith('data: '));
+          if (!dataLine) {
+            continue;
+          }
+
+          try {
+            const data = JSON.parse(dataLine.slice(6));
 
             setCurrentStep(data.step);
             setCurrentMessage(data.message);
@@ -71,7 +82,13 @@ export function useFactCheck() {
               setError(data.data?.error || data.message);
               setIsProcessing(false);
             }
+          } catch (parseErr) {
+            console.warn('Failed to parse SSE payload', parseErr);
           }
+        }
+
+        if (done) {
+          break;
         }
       }
     } catch (err) {
