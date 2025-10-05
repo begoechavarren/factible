@@ -1,0 +1,159 @@
+factible Frontend - Component Tree
+═══════════════════════════════════════════════════════════════════
+
+App (Root)
+│
+└─── LandingPage (Page)
+     │
+     ├─── PageLayout (Layout Container)
+     │    │
+     │    └─── DotPattern (Background Decoration)
+     │
+     ├─── Header (Fixed Top)
+     │    │
+     │    └─── Logo (Image Component)
+     │         └─── src/assets/images/logo.png
+     │
+     ├─── Main Content Area (Centered)
+     │    │
+     │    ├─── SearchBar (Form Container)
+     │    │    │
+     │    │    ├─── SearchInput (Text Input)
+     │    │    │    ├─── useYouTubeUrl hook
+     │    │    │    ├─── Real-time validation
+     │    │    │    ├─── Error display
+     │    │    │    └─── Enter key handler
+     │    │    │
+     │    │    └─── SearchButton (Submit)
+     │    │         ├─── Loading state
+     │    │         ├─── Disabled state
+     │    │         └─── Click handler
+     │    │
+     │    └─── FeatureList (Feature Display)
+     │         │
+     │         └─── FeaturePill × 3
+     │              ├─── "AI-Powered Analysis"
+     │              ├─── "Source Verification"
+     │              └─── "Real-time Results"
+     │
+     └─── Footer (Fixed Bottom)
+          └─── Attribution Links
+               ├─── GitHub: @begoechavarren
+               └─── Repo: factible
+
+
+Custom Hooks
+════════════
+useYouTubeUrl
+ ├─── useState: url
+ ├─── useState: isValid
+ ├─── useState: error
+ ├─── validateUrl (regex patterns)
+ ├─── handleChange
+ └─── reset
+
+useMediaQuery
+ ├─── useState: matches
+ ├─── useEffect: media query listener
+ └─── return: boolean
+
+
+Directory Structure
+═══════════════════
+src/
+├── components/
+│   ├── features/
+│   │   └── FeatureList.jsx
+│   ├── layout/
+│   │   ├── Footer.jsx
+│   │   ├── Header.jsx
+│   │   └── PageLayout.jsx
+│   ├── pages/
+│   │   └── LandingPage.jsx
+│   ├── search/
+│   │   ├── SearchBar.jsx
+│   │   ├── SearchButton.jsx
+│   │   └── SearchInput.jsx
+│   └── ui/
+│       ├── DotPattern.jsx
+│       ├── FeaturePill.jsx
+│       └── Logo.jsx
+├── hooks/
+│   ├── useMediaQuery.js
+│   └── useYouTubeUrl.js
+├── styles/
+│   └── index.css
+├── App.jsx
+└── main.jsx
+
+
+Data Flow
+═════════
+User Input → SearchInput
+          ↓
+     useYouTubeUrl (validation)
+          ↓
+     isValid → Enable SearchButton
+          ↓
+     User clicks OR presses Enter
+          ↓
+     LandingPage.handleSubmit()
+          ↓
+     [Future: API call to backend]
+          ↓
+     [Future: Process results]
+
+
+State Management
+════════════════
+Local State (useState):
+ • LandingPage: loading
+ • SearchBar: uses useYouTubeUrl hook
+ • useYouTubeUrl: url, isValid, error
+ • useMediaQuery: matches
+
+Props Flow:
+ • LandingPage → SearchBar: onSubmit, loading
+ • SearchBar → SearchInput: value, onChange, error, isValid
+ • SearchBar → SearchButton: onClick, disabled, loading
+
+
+Styling Approach
+════════════════
+Tailwind CSS:
+ • Utility classes for rapid development
+ • Custom theme configuration
+ • Responsive modifiers (sm:, md:, lg:)
+ • Custom animations
+
+Custom CSS:
+ • Global styles in index.css
+ • Component-specific utilities
+ • Dot pattern background
+ • Focus states
+
+
+Key Features
+════════════
+✅ URL Validation (multiple YouTube formats)
+✅ Real-time Error Feedback
+✅ Keyboard Navigation (Tab, Enter)
+✅ Loading States
+✅ Responsive Design (mobile → desktop)
+✅ Accessibility (ARIA, semantic HTML)
+✅ Smooth Animations
+✅ Touch-Friendly (mobile)
+✅ Auto-focus Input
+✅ Hover Effects
+✅ Professional Polish
+
+
+File Stats
+══════════
+Total Components:  12
+Custom Hooks:      2
+Pages:             1
+Total Files:       16 (JSX/JS)
+Lines of Code:     ~800
+Documentation:     4 comprehensive guides
+Configuration:     6 config files
