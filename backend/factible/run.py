@@ -285,7 +285,7 @@ if __name__ == "__main__":
     load_dotenv()
     logging.basicConfig(level=logging.INFO, format="%(message)s")
 
-    VIDEO_URL = "https://www.youtube.com/watch?v=iGkLcqLWxMA"
+    VIDEO_URL = " "
 
     result = run_factible(
         video_url=VIDEO_URL,

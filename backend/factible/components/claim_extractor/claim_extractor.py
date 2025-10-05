@@ -1,6 +1,7 @@
 import logging
 
 from pydantic_ai import Agent
+from pydantic_ai.exceptions import AgentRunError
 
 from factible.components.claim_extractor.schemas import ExtractedClaims
 from factible.models.config import CLAIM_EXTRACTOR_MODEL
@@ -14,6 +15,7 @@ def _get_claim_extractor_agent() -> Agent:
     return Agent(
         model=get_model(CLAIM_EXTRACTOR_MODEL),
         output_type=ExtractedClaims,  # type: ignore[arg-type]
+        retries=3,
         system_prompt="""
         You are an expert fact-checker. Your task is to extract factual claims from YouTube video transcripts.
 
@@ -60,9 +62,13 @@ def extract_claims(
 ) -> ExtractedClaims:
     """Extract factual claims from a transcript."""
     agent = _get_claim_extractor_agent()
-    result = agent.run_sync(
-        f"Extract all factual claims from this YouTube transcript:\n\n{transcript}"
-    )
+    try:
+        result = agent.run_sync(
+            f"Extract all factual claims from this YouTube transcript:\n\n{transcript}"
+        )
+    except AgentRunError as exc:
+        _logger.error("Claim extraction failed: %s", exc)
+        return ExtractedClaims(claims=[], total_count=0)
     extracted = result.output
     sorted_claims = sorted(
         extracted.claims,

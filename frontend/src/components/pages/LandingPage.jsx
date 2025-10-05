@@ -5,19 +5,13 @@ import Footer from '@components/layout/Footer';
 import SearchBar from '@components/search/SearchBar';
 import FeatureList from '@components/features/FeatureList';
 
-function LandingPage() {
+function LandingPage({ onFactCheck }) {
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (url) => {
-    console.log('Submitting URL:', url);
     setLoading(true);
-
-    // TODO: Integrate with backend API
-    // This will be replaced with actual API call in the future
-    setTimeout(() => {
-      setLoading(false);
-      alert(`Ready to fact-check: ${url}\n\nBackend integration coming soon!`);
-    }, 1500);
+    // Pass to parent App component which will handle the fact-check flow
+    onFactCheck(url);
   };
 
   return (
