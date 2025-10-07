@@ -1,4 +1,7 @@
-import Logo from '@components/ui/Logo';
+import documentIcon from '@assets/images/document.png';
+import magnifierIcon from '@assets/images/magnifier.png';
+import shieldIcon from '@assets/images/shield.png';
+import printerIcon from '@assets/images/printer.png';
 
 const STEPS = [
   { key: 'transcript', label: 'Extracting transcript' },
@@ -8,11 +11,28 @@ const STEPS = [
 ];
 
 export function ProcessingView({ progress, currentMessage, currentStep }) {
+  const normalizedStep = (currentStep || '').toLowerCase();
+
+  const activeIcon = (() => {
+    if (normalizedStep.includes('generating')) {
+      return { src: printerIcon, alt: 'Generating report' };
+    }
+    if (normalizedStep.includes('processing')) {
+      return { src: shieldIcon, alt: 'Fact-checking claim' };
+    }
+    if (normalizedStep.includes('claim')) {
+      return { src: magnifierIcon, alt: 'Analyzing claims' };
+    }
+    return { src: documentIcon, alt: 'Extracting transcript' };
+  })();
+
   return (
     <section className="flex min-h-[24vh] w-full max-w-2xl flex-col items-center justify-center gap-8 px-4 text-center">
-      <div className="animate-pulse">
-        <Logo size="lg" />
-      </div>
+      <img
+        src={activeIcon.src}
+        alt={activeIcon.alt}
+        className="h-12 w-12 animate-pulse object-contain drop-shadow-[0_0_6px_rgba(75,15,192,0.25)] md:h-14 md:w-14"
+      />
 
       <div className="w-full max-w-md">
         <div className="mb-3 flex items-center justify-between gap-2">
