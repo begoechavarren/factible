@@ -34,7 +34,7 @@ export function ProcessingView({ progress, currentMessage, currentStep }) {
         className="h-12 w-12 animate-pulse object-contain drop-shadow-[0_0_6px_rgba(75,15,192,0.25)] md:h-14 md:w-14"
       />
 
-      <div className="w-full max-w-md">
+      <div className="w-full max-w-md -mt-1 md:-mt-2">
         <div className="mb-3 flex items-center justify-between gap-2">
           <p className="pixel-text text-sm text-primary truncate">
             {currentMessage || 'Working on it...'}
@@ -49,7 +49,7 @@ export function ProcessingView({ progress, currentMessage, currentStep }) {
         </div>
       </div>
 
-      <div className="flex flex-col gap-2">
+      <div className="mt-1 flex flex-col gap-2">
         {STEPS.map((step, index) => (
           <Step
             key={step.key}
