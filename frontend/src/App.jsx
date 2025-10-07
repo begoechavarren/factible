@@ -100,11 +100,14 @@ function App() {
   };
 
   const mainClassName = useMemo(() => {
-    const classes = ['relative z-10 flex min-h-screen w-full flex-col px-4 pb-20'];
+    const classes = [
+      'flex flex-1 w-full flex-col items-center px-4 md:px-10 lg:px-12 pb-16 md:pb-20',
+      'transition-all duration-500 ease-out',
+    ];
     if (hasActiveRun) {
-      classes.push('items-center justify-start pt-24 md:pt-32');
+      classes.push('justify-start pt-3 md:pt-4 lg:pt-5');
     } else {
-      classes.push('items-center justify-center pt-16 md:pt-20');
+      classes.push('justify-start pt-16 md:pt-20');
     }
     return classes.join(' ');
   }, [hasActiveRun]);
@@ -112,25 +115,25 @@ function App() {
   const contentWrapperClass = useMemo(
     () =>
       hasActiveRun
-        ? 'w-full max-w-5xl flex flex-col items-center gap-10'
-        : 'w-full max-w-5xl flex flex-col items-center gap-10',
+        ? 'w-full max-w-5xl flex flex-col items-center gap-6 md:gap-7 lg:gap-8 transition-all duration-500 ease-out'
+        : 'w-full max-w-5xl flex flex-col items-center gap-9 md:gap-12 transition-all duration-500 ease-out',
     [hasActiveRun],
   );
 
   const heroClassName = useMemo(
     () =>
       [
-        'transition-transform duration-500 ease-out',
         'w-full max-w-2xl mx-auto',
-        'flex flex-col items-center gap-6',
-        hasActiveRun ? '-translate-y-16 md:-translate-y-20' : 'translate-y-0',
+        hasActiveRun ? 'flex flex-col items-center gap-4 md:gap-5' : 'flex flex-col items-center gap-6 md:gap-7',
+        'transform transition-all duration-500 ease-out',
+        hasActiveRun ? 'mt-2 md:mt-3 -translate-y-2 md:-translate-y-3' : 'mt-12 md:mt-14 translate-y-0',
       ].join(' '),
     [hasActiveRun],
   );
 
   return (
     <PageLayout>
-      <Header onHome={handleReset} />
+      <Header onHome={handleReset} compact={hasActiveRun} />
       <main className={mainClassName}>
         <div className={contentWrapperClass}>
           <section className={heroClassName}>
@@ -172,7 +175,7 @@ function App() {
           )}
 
           {isProcessing && !result && (
-            <div className="-mt-16 w-full flex justify-center">
+            <div className="w-full flex justify-center -mt-3 md:-mt-6 transition-all duration-500 ease-out">
               <ProcessingView
                 progress={progress}
                 currentMessage={currentMessage}

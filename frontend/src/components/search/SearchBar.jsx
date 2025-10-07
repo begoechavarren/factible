@@ -19,7 +19,7 @@ function SearchBar({ onSubmit, disabled = false, loading = false, compact = fals
   const containerClasses = [
     'transition-all duration-500 ease-out',
     'w-full',
-    compact ? 'max-w-xl md:max-w-2xl scale-95' : 'max-w-2xl',
+    compact ? 'max-w-2xl scale-95' : 'max-w-2xl',
   ].join(' ');
 
   const frameClasses = [
@@ -29,7 +29,7 @@ function SearchBar({ onSubmit, disabled = false, loading = false, compact = fals
     'transition-smooth',
     'hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.7),0_6px_15px_rgba(0,0,0,0.1)]',
     'focus-within:border-[rgba(233,78,58,0.4)]',
-    compact ? 'py-1.5 pl-4 pr-1.5 md:py-2 md:pl-5 md:pr-2' : 'py-2 pl-5 pr-2 md:py-2.5 md:pl-6 md:pr-2.5',
+    compact ? 'py-2 pl-5 pr-2 md:py-2 md:pl-5 md:pr-2' : 'py-2 pl-5 pr-2 md:py-2.5 md:pl-6 md:pr-2.5',
     compact ? 'border-[rgba(233,78,58,0.25)]' : 'border-[rgba(233,78,58,0.2)]',
   ].join(' ');
 

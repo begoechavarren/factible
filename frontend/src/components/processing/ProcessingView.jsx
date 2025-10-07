@@ -15,11 +15,11 @@ export function ProcessingView({ progress, currentMessage, currentStep }) {
       </div>
 
       <div className="w-full max-w-md">
-        <div className="mb-3 flex items-center justify-between">
-          <p className="pixel-text text-sm text-primary">
+        <div className="mb-3 flex items-center justify-between gap-2">
+          <p className="pixel-text text-sm text-primary truncate">
             {currentMessage || 'Working on it...'}
           </p>
-          <p className="pixel-text text-sm text-accent">{progress}%</p>
+          <p className="pixel-text text-sm text-accent flex-shrink-0">{progress}%</p>
         </div>
         <div className="h-3 w-full rounded-full border-2 border-primary bg-background/50">
           <div

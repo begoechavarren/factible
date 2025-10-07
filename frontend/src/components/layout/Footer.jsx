@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="absolute bottom-4 left-0 right-0 flex justify-center px-4 md:bottom-6">
+    <footer className="mt-auto flex justify-center px-4 pb-4 md:pb-6">
       <span className="pixel-text text-center text-xs text-accent opacity-70 md:text-sm">
         👩‍💻 Built by{' '}
         <a

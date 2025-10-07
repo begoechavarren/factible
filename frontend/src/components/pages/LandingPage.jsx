@@ -18,7 +18,7 @@ function LandingPage({ onFactCheck }) {
     <PageLayout>
       <Header />
 
-      <main className="flex min-h-screen items-center justify-center px-4">
+      <main className="flex flex-1 items-center justify-center px-4 md:px-10 lg:px-12 py-16 md:py-20">
         <div className="w-full max-w-2xl">
           {/* Screen reader only description */}
           <p className="sr-only">

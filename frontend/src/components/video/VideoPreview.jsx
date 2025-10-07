@@ -1,6 +1,6 @@
 function SkeletonCard() {
   return (
-    <div className="mt-2 w-full max-w-xl animate-pulse overflow-hidden rounded-2xl border-2 border-primary/15 bg-white/60 p-3 shadow-inner backdrop-blur md:max-w-2xl">
+    <div className="mt-2 w-full max-w-2xl animate-pulse overflow-hidden rounded-2xl border-2 border-primary/15 bg-white/60 p-3 shadow-inner backdrop-blur">
       <div className="h-28 w-full rounded-xl bg-primary/10" />
       <div className="mt-3 h-4 w-3/4 rounded bg-primary/10" />
       <div className="mt-2 h-3 w-1/2 rounded bg-primary/10" />
@@ -18,7 +18,7 @@ export function VideoPreview({ url, metadata, loading }) {
   }
 
   return (
-    <article className="mt-2 w-full max-w-xl overflow-hidden rounded-2xl border-2 border-primary/15 bg-white/85 shadow-lg backdrop-blur md:max-w-2xl">
+    <article className="mt-2 w-full max-w-2xl overflow-hidden rounded-2xl border-2 border-primary/15 bg-white/85 shadow-lg backdrop-blur">
       <div className="flex items-center gap-4 p-4">
         <div className="relative h-16 w-28 flex-shrink-0 overflow-hidden rounded-xl bg-primary/10">
           {metadata?.thumbnail ? (
@@ -34,22 +34,22 @@ export function VideoPreview({ url, metadata, loading }) {
             </div>
           )}
         </div>
-        <div className="flex-1">
+        <div className="flex-1 min-w-0">
           <p className="pixel-text text-[11px] uppercase tracking-[0.35em] text-accent/70">
             Analyzing
           </p>
-          <h3 className="text-sm font-semibold leading-snug text-gray-800">
+          <h3 className="text-sm font-semibold leading-snug text-gray-800 line-clamp-2">
             {metadata?.title}
           </h3>
           {metadata?.author && (
-            <p className="text-xs text-gray-500">by {metadata.author}</p>
+            <p className="text-xs text-gray-500 truncate">by {metadata.author}</p>
           )}
         </div>
         <a
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          className="pixel-text text-xs uppercase text-primary hover:underline"
+          className="pixel-text text-xs uppercase text-primary hover:underline flex-shrink-0"
         >
           Open
         </a>

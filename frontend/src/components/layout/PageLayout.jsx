@@ -4,7 +4,9 @@ function PageLayout({ children }) {
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-background">
       <DotPattern />
-      {children}
+      <div className="relative z-10 flex min-h-screen flex-col">
+        {children}
+      </div>
     </div>
   );
 }
