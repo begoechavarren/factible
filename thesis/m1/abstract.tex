@@ -1,0 +1,21 @@
+\thispagestyle{empty}
+
+\section*{Resumen}
+
+La desinformación en plataformas de video constituye un desafío creciente en la sociedad digital actual. Este trabajo propone el diseño, implementación y evaluación de un sistema end-to-end de verificación automática de hechos (fact-checking) para videos de YouTube, basado en una arquitectura multiagente que integra modelos de lenguaje de gran escala (LLMs), técnicas de procesamiento de lenguaje natural y recuperación de información en línea.
+
+El sistema propuesto opera mediante un pipeline de cinco componentes principales: (1) extracción de transcripciones de video, (2) identificación automática de afirmaciones factuales mediante LLMs, (3) generación de consultas de búsqueda optimizadas, (4) recuperación y evaluación de evidencias desde fuentes web, y (5) síntesis de veredictos razonados con evaluación de confianza. Cada componente actúa como un agente especializado que procesa información estructurada mediante esquemas validados con Pydantic, garantizando robustez y trazabilidad en todo el proceso.
+
+La implementación técnica combina Python 3.12 con frameworks modernos (Pydantic AI, FastAPI), modelos de lenguaje estado del arte (GPT-4o-mini) y alternativas de código abierto ejecutables localmente (Ollama Qwen 3), junto con técnicas de web scraping y evaluación de fiabilidad de fuentes. El proyecto incluye una interfaz web desarrollada en React con streaming en tiempo real mediante Server-Sent Events (SSE), proporcionando una experiencia de usuario interactiva durante el proceso de verificación.
+
+Este trabajo aborda tanto aspectos de investigación en ciencia de datos (extracción de claims, evaluación de evidencias, detección de posturas) como de ingeniería de machine learning (arquitectura escalable, optimización de costes de LLMs, despliegue de sistemas productivos). Se plantea una evaluación del sistema mediante métricas cuantitativas de rendimiento y análisis cualitativo de casos de uso en diferentes temáticas de videos, con especial atención a contenido de economía, geopolítica y temas controversiales.
+
+\vspace{1cm}
+
+\noindent\textbf{Palabras clave:} fact-checking, natural language processing, large language models, information retrieval, multi-agent systems, misinformation detection, web scraping, automated verification, social media
+
+\vspace{0.5cm}
+
+\noindent\textbf{Área:} Procesamiento de Lenguaje Natural y Sistemas de Información
+
+\noindent\textbf{Modalidad:} Trabajo ad hoc (a medida)
