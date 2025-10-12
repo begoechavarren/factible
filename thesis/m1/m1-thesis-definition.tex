@@ -289,54 +289,50 @@ Adicionalmente, considero que el fact-checking automatizado representa una contr
 
 \subsection{Hipótesis u objetivo principal}
 
-\textbf{Objetivo principal:} Diseñar, implementar y evaluar un sistema multiagente basado en modelos de lenguaje capaz de verificar automáticamente afirmaciones factuales en videos de YouTube mediante recuperación y análisis de evidencias web, generando veredictos fundamentados con estimación de confianza que sean útiles para usuarios finales.
+Diseñar, implementar y evaluar un sistema multiagente basado en modelos de lenguaje capaz de verificar automáticamente afirmaciones factuales en videos de YouTube mediante recuperación y análisis de evidencias web, generando veredictos fundamentados con estimación de confianza, que sean útiles para usuarios finales.
 
 \subsection{Objetivos específicos (preguntas de investigación)}
 
-\textbf{OE1. Diseño de arquitectura multiagente}
-\begin{itemize}
-    \item Definir pipeline de procesamiento con componentes especializados
-    \item Establecer esquemas de datos estructurados para comunicación inter-agente
-    \item Diseñar sistema de coordinación y flujo de información
-\end{itemize}
-
-\textbf{OE2. Implementación de componentes del sistema}
-\begin{itemize}
-    \item Desarrollar módulo de extracción de transcripciones desde YouTube
-    \item Implementar agente de identificación de claims con clasificación de relevancia
-    \item Crear generador de consultas de búsqueda optimizadas
-    \item Desarrollar sistema de web scraping con evaluación de fiabilidad de fuentes
-    \item Implementar generador de veredictos con razonamiento explicable
-\end{itemize}
-
-\textbf{OE3. Optimización de uso de LLMs}
-\begin{itemize}
-    \item Comparar rendimiento entre modelos comerciales (GPT-4o-mini) y open-source (Ollama Qwen 3)
-    \item Analizar compromisos entre coste, latencia y calidad de outputs
-    \item Evaluar estrategias de optimización de prompts y structured outputs
-\end{itemize}
-
-\textbf{OE4. Evaluación del sistema}
-\begin{itemize}
-    \item Definir métricas de rendimiento técnico (tiempo, coste, throughput)
-    \item Establecer protocolos de evaluación cualitativa de veredictos
-    \item Realizar estudios de caso en diferentes temáticas
-    \item Analizar limitaciones y casos de fallo del sistema
-\end{itemize}
-
-\textbf{OE5. Implementación de sistema end-to-end}
-\begin{itemize}
-    \item Desarrollar API REST con streaming en tiempo real
-    \item Crear interfaz web intuitiva para usuarios finales
-    \item Garantizar reproducibilidad y documentación exhaustiva
-\end{itemize}
-
-\textbf{OE6. Consideración de implicaciones éticas y de sesgo}
-\begin{itemize}
-    \item Analizar de forma cualitativa los sesgos potenciales en las fuentes consultadas y los modelos utilizados.
-    \item Identificar limitaciones del enfoque automatizado y su posible impacto en la propagación de desinformación.
-    \item Elaborar buenas prácticas que reduzcan el riesgo de conclusiones erróneas durante el proceso de verificación.
-\end{itemize}
+\begin{enumerate}
+    \item \textbf{Diseño de arquitectura multiagente}
+    \begin{itemize}
+        \item Definir el pipeline de procesamiento de forma modular con componentes especializados.
+        \item Establecer esquemas de datos estructurados para la comunicación entre agentes.
+        \item Diseñar el sistema de orquestación de la información.
+    \end{itemize}
+    \item \textbf{Implementación de componentes del sistema}
+    \begin{itemize}
+        \item Desarrollar el módulo de extracción de transcripciones de vídeos desde YouTube.
+        \item Implementar el agente de identificación de claims con clasificación de relevancia.
+        \item Crear el generador de consultas de búsqueda optimizadas.
+        \item Desarrollar el sistema de web scraping con evaluación de fiabilidad de fuentes.
+        \item Implementar el generador de veredictos explicables y trazables.
+    \end{itemize}
+    \item \textbf{Optimización del uso de LLMs}
+    \begin{itemize}
+        \item Comparar el rendimiento entre modelos comerciales (p. ej. GPT-4o-mini) y open-source (p. ej. Qwen 3, DeepSeek).
+        \item Analizar compromisos entre coste, latencia y calidad de outputs.
+        \item Evaluar estrategias de prompt optimization y structured outputs.
+    \end{itemize}
+    \item \textbf{Evaluación del sistema}
+    \begin{itemize}
+        \item Definir métricas de rendimiento técnico: tiempo de respuesta, coste por token, throughput y tasa de finalización por agente.
+        \item Incluir métricas cuantitativas específicas de LLMs como faithfulness, factual consistency, coherence y stance accuracy.
+        \item Incorporar evaluación cuantitativa y cualitativa con LLM-as-a-judge y revisión manual.
+        \item Realizar estudios de caso en distintas temáticas y analizar limitaciones del sistema.
+    \end{itemize}
+    \item \textbf{Implementación de sistema end-to-end}
+    \begin{itemize}
+        \item Desarrollar una API REST con streaming en tiempo real.
+        \item Crear una interfaz web intuitiva para usuarios finales.
+        \item Garantizar reproducibilidad y generar documentación.
+    \end{itemize}
+    \item \textbf{Consideración de implicaciones éticas y de sesgo}
+    \begin{itemize}
+        \item Analizar los sesgos potenciales en las fuentes y en los modelos utilizados.
+        \item Identificar limitaciones del enfoque automatizado, su posible impacto en la propagación de desinformación, y definir buenas prácticas que mitiguen esos riesgos durante la verificación.
+    \end{itemize}
+\end{enumerate}
 
 \subsection{Alcance del proyecto}
 
@@ -344,75 +340,42 @@ Adicionalmente, considero que el fact-checking automatizado representa una contr
 \begin{itemize}
     \item Videos de YouTube con transcripciones disponibles (subtítulos automáticos o manuales)
     \item Afirmaciones factuales verificables mediante fuentes web públicas
-    \item Contenido principalmente en inglés, con soporte experimental para español
+    \item Contenido en inglés
     \item Procesamiento bajo demanda de videos individuales
 \end{itemize}
 
 \textbf{No incluye:}
 \begin{itemize}
     \item Generación propia de transcripciones desde audio (speech-to-text)
-    \item Verificación de contenido visual (detección de deepfakes, manipulación de imágenes)
-    \item Sistema de caché o base de datos persistente de verificaciones
-    \item Verificación en tiempo real o procesamiento batch a gran escala
+    \item Verificación de contenido visual
+    \item Verificación a gran escala (batch)
     \item Contenido de plataformas distintas a YouTube
 \end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 7. CCEG Y ODS                          %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Competencia de Compromiso Ético y Global (CCEG)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 7. CONSIDERACIONES ÉTICAS Y DE IMPACTO SOCIAL %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Consideraciones Éticas y de Impacto Social}
 
-Esta sección evalúa el impacto del proyecto en las tres dimensiones de la Competencia de Compromiso Ético y Global establecida por la UOC.
+\subsection{Competencia de Compromiso Ético y Global (CCEG)}
 
-\subsection{Sostenibilidad y Objetivos de Desarrollo Sostenible (ODS)}
+El proyecto aborda las tres dimensiones de la CCEG establecidas por la UOC:
 
-El uso de modelos de lenguaje de gran escala implica un consumo energético significativo. Este proyecto aborda explícitamente esta preocupación mediante:
+\textbf{(I) Sostenibilidad:} El uso de LLMs implica consumo energético significativo. Se abordará mediante evaluación de modelos open-source locales versus comerciales cloud, optimización de prompts para minimizar tokens procesados, y documentación transparente del consumo de recursos.
 
-\begin{itemize}
-    \item \textbf{Evaluación de alternativas eficientes:} Comparación entre modelos comerciales cloud y modelos open-source ejecutables localmente, priorizando modelos locales durante experimentación.
+\textbf{(II) Comportamiento ético y responsabilidad social:} Los LLMs pueden perpetuar sesgos presentes en sus datos de entrenamiento. Estrategias de mitigación: transparencia total en fuentes consultadas con URLs verificables, presentación de evidencias mostrando diferentes posturas (apoya/refuta/neutral), evaluación explícita de nivel de confianza en cada veredicto, y advertencias claras sobre limitaciones del sistema automatizado. El sistema se posiciona como herramienta de apoyo que automatiza pasos preliminares, permitiendo a profesionales enfocarse en análisis complejos que requieren juicio humano.
 
-    \item \textbf{Análisis de compromisos:} Documentación transparente del consumo de recursos (tokens procesados, tiempo de ejecución, coste económico).
+\textbf{(III) Diversidad y derechos humanos:} El sistema busca evaluar diversidad de perspectivas cuando múltiples fuentes web con diferentes enfoques estén disponibles, documentando esta limitación cuando no sea posible. No censura contenido sino que proporciona contexto adicional mediante verificación, respetando la libertad de expresión. No procesa datos personales ni información identificable de usuarios.
 
-    \item \textbf{Optimización:} Refinamiento de prompts para minimizar tokens procesados sin sacrificar calidad.
-\end{itemize}
+\subsection{Objetivos de Desarrollo Sostenible (ODS)}
 
-\textbf{Relación con ODS:}
-\begin{itemize}
-    \item \textbf{ODS 4 (Educación de Calidad):} Herramienta de alfabetización mediática que promueve pensamiento crítico.
-    \item \textbf{ODS 16 (Paz, Justicia e Instituciones Sólidas):} Combate la desinformación que erosiona instituciones democráticas.
-    \item \textbf{ODS 10 (Reducción de Desigualdades):} Democratiza acceso a verificación de hechos.
-\end{itemize}
+El proyecto contribuye a tres ODS de la Agenda 2030:
 
-En las conclusiones se incluirá análisis crítico sobre si la automatización justifica el consumo energético frente a beneficios sociales.
+\textbf{ODS 4 (Educación de Calidad):} El sistema actúa como herramienta de alfabetización mediática que promueve pensamiento crítico y capacidad de evaluación de fuentes de información. Facilita el aprendizaje sobre verificación de hechos, análisis de evidencias y reconocimiento de afirmaciones verificables, competencias fundamentales en la sociedad digital actual donde el volumen de información supera la capacidad individual de validación.
 
-\subsection{Comportamiento ético y responsabilidad social}
+\textbf{ODS 16 (Paz, Justicia e Instituciones Sólidas):} Combate la desinformación que erosiona la confianza en instituciones democráticas y medios de comunicación. Proporciona mecanismos de verificación transparentes, trazables y accesibles que permiten a ciudadanos contrastar afirmaciones factuales de forma sistemática, contribuyendo a un ecosistema informativo más saludable y resiliente ante campañas de desinformación.
 
-\textbf{Impactos éticos identificados y estrategias de mitigación:}
-
-\textbf{(1) Automatización y empleo:} El sistema podría percibirse como amenaza para verificadores profesionales. \textit{Estrategia:} Posicionamiento como herramienta de apoyo que automatiza pasos preliminares, permitiendo a profesionales enfocarse en análisis complejos que requieren juicio humano.
-
-\textbf{(2) Sesgo algorítmico:} Los LLMs pueden perpetuar sesgos presentes en datos de entrenamiento. \textit{Mitigación:} Transparencia total en fuentes consultadas, presentación de evidencias con diferentes posturas, evaluación explícita de confianza en veredictos, y advertencias claras sobre limitaciones.
-
-\textbf{(3) Riesgo de amplificación:} Al citar afirmaciones incorrectas durante verificación, existe riesgo de amplificar desinformación. \textit{Mitigación:} Presentación siempre contextualizada con veredicto, no indexación pública de claims individuales sin contexto, enfoque en proceso educativo más que en listados de falsedades.
-
-\textbf{(4) Privacidad:} El proyecto respeta políticas de YouTube y no procesa contenido privado ni viola términos de uso de plataformas.
-
-Como profesional de Data Science, este proyecto se adhiere a principios deontológicos de transparencia, no maleficencia, beneficencia social y responsabilidad ante consecuencias imprevistas.
-
-\subsection{Diversidad, género y derechos humanos}
-
-\textbf{Accesibilidad:} La interfaz web se diseñará siguiendo principios WCAG 2.1: contraste de colores adecuado, navegación por teclado, textos alternativos para elementos visuales, diseño responsive adaptable a diferentes dispositivos.
-
-\textbf{Diversidad lingüística:} Se reconoce que los modelos LLM tienen mejor rendimiento en inglés. Mitigación mediante soporte experimental para español y documentación explícita de limitaciones lingüísticas.
-
-\textbf{Diversidad de perspectivas:} Las fuentes web indexadas pueden tener sesgo geográfico/cultural (predominancia de contenido occidental). El sistema evaluará diversidad de perspectivas cuando estén disponibles y documentará esta limitación.
-
-\textbf{Derechos fundamentales:}
-\begin{itemize}
-    \item \textbf{Derecho a la información:} Impacto positivo al facilitar acceso a verificación.
-    \item \textbf{Libertad de expresión:} El sistema no censura contenido, solo proporciona contexto adicional.
-    \item \textbf{Privacidad:} No procesa datos personales ni información identificable de usuarios.
-\end{itemize}
+\textbf{ODS 10 (Reducción de Desigualdades):} Democratiza el acceso a verificación de hechos mediante herramienta gratuita y de código abierto, reduciendo la brecha entre organizaciones profesionales con recursos especializados (fact-checkers, periodistas) y ciudadanos individuales. Empodera a usuarios sin formación especializada para evaluar críticamente contenido en plataformas digitales, facilitando acceso equitativo a mecanismos de verificación.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 8. METODOLOGÍA          %
@@ -421,83 +384,49 @@ Como profesional de Data Science, este proyecto se adhiere a principios deontol�
 
 \subsection{Estrategia de investigación}
 
-Este proyecto adopta una metodología de \textbf{Investigación y Desarrollo (Design Science Research)}, combinando investigación en ciencia de datos con ingeniería de software aplicada.
+Este proyecto adopta una estrategia de \textbf{Design and Creation} \citep{oates2006}, apropiada para investigación en sistemas de información donde se desarrolla un artefacto tecnológico nuevo cuya construcción y evaluación constituyen la contribución principal al conocimiento. Según \citet{hevner2004}, citados por Oates, esta estrategia requiere: (1) crear un artefacto viable, (2) abordar un problema relevante, (3) realizar evaluación rigurosa, (4) realizar contribuciones claras, (5) aplicar rigor en la construcción, (6) diseñar como proceso de búsqueda, y (7) comunicar efectivamente los resultados.
 
-La estrategia seleccionada es el \textbf{desarrollo end-to-end con evaluación comparativa}, que combina implementación completa del pipeline (valor ingenieril), experimentación con diferentes modelos (valor investigativo), evaluación cuantitativa y cualitativa (rigor científico), e interfaz funcional (aplicabilidad real). Esta aproximación es apropiada porque:
+\textbf{Técnicas de recolección de datos para evaluación:}
 
+\textit{Cuantitativas:}
 \begin{itemize}
-    \item El problema es complejo y multidisciplinar, requiriendo integración de NLP, recuperación de información y diseño de sistemas
-    \item El resultado debe ser un sistema operativo funcional que aporte valor práctico, no solo análisis teórico
-    \item Las decisiones técnicas se validan mediante experimentación empírica con diferentes configuraciones
-    \item El desarrollo modular permite mejoras incrementales basadas en evaluación continua
+    \item Medición automatizada de métricas del sistema: tiempo de procesamiento, coste (tokens × precio), número de fuentes recuperadas, distribución de stances
+    \item Evaluación mediante LLM-as-a-judge para valorar calidad de claims extraídos y veredictos generados
+    \item Métricas de coordinación multiagente: task completion rate, latencia por agente
 \end{itemize}
 
-\subsection{Metodología de desarrollo}
+\textit{Cualitativas:}
+\begin{itemize}
+    \item Revisión manual de outputs del sistema (relevancia de claims, coherencia de veredictos)
+    \item Estudios de caso detallados en diferentes temáticas
+\end{itemize}
 
-El sistema sigue una \textbf{arquitectura de pipeline} (Figura \ref{fig:arquitectura}) con cinco agentes especializados:
+\textbf{Herramientas:} Python 3.12, Pydantic AI, FastAPI, React, OpenAI, Ollama, Selenium, etc.
+
+\subsection{Metodología de trabajo y desarrollo}
+
+\textbf{Posibles estrategias para llevar a cabo el trabajo:}
 
 \begin{enumerate}
-    \item \textbf{Transcriptor:} Extrae texto desde videos de YouTube usando APIs oficiales
-    \item \textbf{Claim Extractor:} Identifica afirmaciones factuales verificables mediante LLMs
-    \item \textbf{Query Generator:} Crea consultas de búsqueda optimizadas para motores de búsqueda
-    \item \textbf{Online Search:} Recupera y evalúa evidencias web con análisis de credibilidad de fuentes
-    \item \textbf{Output Generator:} Sintetiza veredictos fundamentados con razonamiento explicable
+    \item \textbf{Adaptar soluciones existentes:} Partir de sistemas académicos de fact-checking y extenderlos para contenido audiovisual
+    \item \textbf{Desarrollo de producto nuevo end-to-end:} Crear un sistema completo desde cero con interfaz web funcional
+    \item \textbf{Prototipo de investigación:} Implementar únicamente el pipeline de verificación sin interfaz de usuario
+    \item \textbf{Integración de servicios externos:} Combinar APIs de terceros existentes (Google Fact Check, transcripción comercial)
 \end{enumerate}
 
-Cada componente opera sobre esquemas de datos estructurados definidos con Pydantic, garantizando validación de tipos y contratos claros entre módulos.
+\textbf{Estrategia escogida:} Desarrollo de un producto nuevo end-to-end con interfaz web funcional (opción 2).
+
+\textbf{Justificación:} Esta estrategia es la más apropiada porque permite evaluar la viabilidad práctica completa del sistema en condiciones reales de uso, no solo como concepto teórico. El desarrollo modular desde cero facilita la experimentación con diferentes configuraciones de LLMs y garantiza control total sobre el pipeline de verificación. La inclusión de interfaz web demuestra aplicabilidad para usuarios finales y permite recoger feedback sobre usabilidad real del sistema.
 
 \textbf{Proceso de desarrollo iterativo:}
 \begin{enumerate}
-    \item Implementación básica de cada componente individualmente
-    \item Integración E2E del pipeline completo (MVP funcional)
-    \item Refinamiento iterativo módulo por módulo
+    \item Implementación de componentes individuales con testing aislado
+    \item Integración end-to-end del pipeline (MVP funcional)
+    \item Refinamiento iterativo módulo por módulo basado en resultados
     \item Evaluación comparativa con diferentes configuraciones de LLMs
 \end{enumerate}
 
-\subsection{Técnicas y herramientas}
-
-\textbf{Técnicas de Procesamiento de Lenguaje Natural:}
-\begin{itemize}
-    \item Prompting avanzado con LLMs (chain-of-thought, few-shot learning)
-    \item Structured outputs mediante Pydantic AI para garantizar formato de respuestas
-    \item Análisis de stance (postura de evidencias: apoya/refuta/neutral/no clara)
-\end{itemize}
-
-\textbf{Técnicas de Recuperación de Información:}
-\begin{itemize}
-    \item Web scraping con Selenium para extracción de contenido
-    \item Evaluación de credibilidad mediante análisis WHOIS y características de sitio
-    \item Estrategias de búsqueda diversificadas (múltiples consultas por claim)
-\end{itemize}
-
-\textbf{Stack Tecnológico:}
-\begin{itemize}
-    \item \textbf{Backend:} Python 3.12, Pydantic AI, FastAPI, Uvicorn
-    \item \textbf{LLMs:} OpenAI GPT-4o-mini (comercial), Ollama con Qwen 3 (open-source local)
-    \item \textbf{Frontend:} React 18.3, Vite, Tailwind CSS
-    \item \textbf{Herramientas de desarrollo:} uv (gestión de dependencias), ruff (linting), mypy (type checking)
-    \item \textbf{Control de versiones:} Git, GitHub
-\end{itemize}
-
-\subsection{Métodos de evaluación}
-
-\textbf{Métricas cuantitativas:}
-\begin{itemize}
-    \item Tiempo de procesamiento por video
-    \item Coste por verificación (tokens consumidos × precio por token)
-    \item Número de fuentes recuperadas por claim
-    \item Distribución de stances (evidencias a favor/contra/neutral)
-\end{itemize}
-
-\textbf{Evaluación cualitativa:}
-\begin{itemize}
-    \item Revisión manual de relevancia de claims extraídos
-    \item Análisis de coherencia y fundamentación de veredictos
-    \item Comparación con fact-checks profesionales cuando disponibles
-    \item Identificación de casos de fallo y limitaciones
-\end{itemize}
-
-\textbf{Conjunto de evaluación:} Dataset de 15-20 videos diversos cubriendo diferentes temáticas (economía, política, ciencia, pseudociencia) y niveles de controversia.
+\textbf{Recursos técnicos:} Prompting avanzado (chain-of-thought, few-shot learning), structured outputs con Pydantic, evaluación mediante LLM-as-a-judge, web scraping con Selenium, streaming en tiempo real (SSE). Conjunto de videos de evaluación en temáticas diversas.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 9. PLANIFICACIÓN        %
