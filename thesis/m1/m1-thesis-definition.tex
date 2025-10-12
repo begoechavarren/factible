@@ -12,6 +12,9 @@
 \usepackage{geometry}
 \usepackage{longtable}
 \usepackage{caption}
+\usepackage{tikz}
+\usepackage{adjustbox}
+\usetikzlibrary{arrows.meta, positioning, shapes.geometric, calc}
 
 % Configuración de márgenes
 \geometry{
@@ -85,6 +88,12 @@
 \newpage
 \pagenumbering{arabic}
 
+\hypersetup{linkcolor=black}
+\tableofcontents
+\hypersetup{linkcolor=blue}
+
+\newpage
+
 %%%%%%%%%%%%%%%%%%%%%
 % 1. TÍTULO         %
 %%%%%%%%%%%%%%%%%%%%%
@@ -122,13 +131,6 @@ Un componente fundamental del trabajo será la evaluación comparativa de difere
 La desinformación en plataformas de video constituye un desafío creciente en la sociedad digital actual. YouTube, con más de 2 mil millones de usuarios activos mensuales, se ha convertido en una fuente primaria de información para millones de personas. Sin embargo, la ausencia de mecanismos efectivos de verificación de información permite la propagación de afirmaciones incorrectas o engañosas a escala masiva.
 
 El problema central que aborda este proyecto es la \textbf{falta de mecanismos automatizados y accesibles para verificar afirmaciones factuales en contenido audiovisual de plataformas digitales}, específicamente videos de YouTube. Los usuarios individuales carecen de herramientas para verificar afirmaciones de forma sistemática, mientras que la verificación manual requiere habilidades avanzadas, tiempo considerable y recursos no siempre disponibles.
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.85\textwidth]{./figs/system_architecture.png}
-\caption{Arquitectura del sistema multiagente propuesto. Pipeline de cinco componentes especializados procesando secuencialmente desde transcripción hasta veredicto final.}
-\label{fig:arquitectura}
-\end{figure}
 
 \subsection{Relevancia e importancia}
 
@@ -171,6 +173,88 @@ Este proyecto desarrollará un \textbf{sistema funcional end-to-end} que procese
     \item Interfaz web accesible para usuarios finales
 \end{itemize}
 
+La Figura~\ref{fig:arquitectura} muestra la arquitectura general propuesta del sistema multiagente, que integra los cinco componentes principales descritos en este apartado.
+
+\begin{figure}[t]
+\centering
+\begingroup
+\shorthandoff{<>.}
+\begin{tikzpicture}[
+    scale=0.55,
+    transform shape,
+    >=Latex,
+    font=\footnotesize,
+    stage/.style={rectangle, rounded corners=6pt, draw=blue!55!black, very thick, fill=blue!12,
+                    text width=2.1cm, minimum height=1.4cm, align=center},
+    source/.style={rectangle, rounded corners=6pt, draw=gray!70!black, very thick, fill=gray!10,
+                    text width=2.1cm, minimum height=1.4cm, align=center},
+    fork/.style={diamond, draw=blue!55!black, very thick, fill=white, aspect=2,
+                    text width=1.25cm, minimum height=1.05cm, align=center},
+    aggregator/.style={rectangle, rounded corners=6pt, draw=blue!55!black, very thick, fill=blue!18,
+                        text width=2.35cm, minimum height=1.6cm, align=center},
+    arrow/.style={-{Latex[length=2.4mm,width=1.6mm]}, very thick},
+    node distance=2.1cm
+]
+
+% row 1: source -> transcriptor -> claim extractor
+\node[source] (url) {URL del vídeo};
+\node[stage, right=2.2cm of url] (transcriptor) {Transcribir\\vídeo a texto\\\scriptsize youtube-transcript-api};
+\node[stage, right=2.2cm of transcriptor] (claims) {Detectar afirmaciones\\\scriptsize LLM claim extractor};
+
+% forks (claims) - more vertical spread
+\node[fork,  right=1.7cm of claims, yshift=2.4cm] (claimone) {\scriptsize Afirmación 1};
+\node[fork,  right=1.7cm of claims]                (claimtwo) {\scriptsize Afirmación 2};
+\node[fork,  right=1.7cm of claims, yshift=-2.4cm] (claimn)   {\scriptsize Afirmación n};
+\node[font=\large, text=gray!65] at ($(claimtwo)!0.5!(claimn)$) {$\vdots$};
+
+% query generators
+\node[stage, right=1.9cm of claimone] (queryone) {Generación de\\consultas\\\scriptsize LLM};
+\node[stage, right=1.9cm of claimtwo] (querytwo) {Generación de\\consultas\\\scriptsize LLM};
+\node[stage, right=1.9cm of claimn]   (queryn)   {Generación de\\consultas\\\scriptsize LLM};
+\node[font=\large, text=gray!65] at ($(querytwo)!0.5!(queryn)$) {$\vdots$};
+
+% online search
+\node[stage, right=1.9cm of queryone] (searchone) {Búsqueda y\\evaluación\\\scriptsize Google, crawling, fiabilidad};
+\node[stage, right=1.9cm of querytwo] (searchtwo) {Búsqueda y\\evaluación\\\scriptsize Google, crawling, fiabilidad};
+\node[stage, right=1.9cm of queryn]   (searchn)   {Búsqueda y\\evaluación\\\scriptsize Google, crawling, fiabilidad};
+\node[font=\large, text=gray!65] at ($(searchtwo)!0.5!(searchn)$) {$\vdots$};
+
+% output aggregator
+\node[aggregator, right=1.9cm of searchtwo] (output) {Veredicto final\\y confianza\\\scriptsize Síntesis LLM + reporte};
+
+% section headers (raised higher)
+\node[font=\normalsize\bfseries, text=blue!70!black] at ($(transcriptor)+(0,2.3)$) {TRANSCRIPTOR};
+\node[font=\normalsize\bfseries, text=blue!70!black] at ($(claims)+(0,2.3)$) {\begin{tabular}{c}EXTRACTOR DE\\AFIRMACIONES\end{tabular}};
+\node[font=\normalsize\bfseries, text=blue!70!black] at ($(queryone)!0.2!(queryn)+(0,3.2)$) {\begin{tabular}{c}GENERACION DE\\QUERIES\end{tabular}};
+\node[font=\normalsize\bfseries, text=blue!70!black] at ($(searchone)!0.17!(searchn)+(0,3.2)$) {\begin{tabular}{c}BÚSQUEDA\\ONLINE\end{tabular}};
+\node[font=\normalsize\bfseries, text=blue!70!black] at ($(output)+(0,2.3)$) {\begin{tabular}{c}GENERACIÓN DE\\RESULTADOS\end{tabular}};
+
+% arrows
+\draw[arrow] (url) -- (transcriptor);
+\draw[arrow] (transcriptor) -- (claims);
+
+\draw[arrow] (claims) -- (claimone);
+\draw[arrow] (claims) -- (claimtwo);
+\draw[arrow] (claims) -- (claimn);
+
+\draw[arrow] (claimone) -- (queryone);
+\draw[arrow] (claimtwo) -- (querytwo);
+\draw[arrow] (claimn) -- (queryn);
+
+\draw[arrow] (queryone) -- (searchone);
+\draw[arrow] (querytwo) -- (searchtwo);
+\draw[arrow] (queryn) -- (searchn);
+
+\draw[arrow] (searchone.east) -- (output.north west);
+\draw[arrow] (searchtwo.east) -- (output.west);
+\draw[arrow] (searchn.east) -- (output.south west);
+
+\end{tikzpicture}
+\endgroup
+\caption{Arquitectura del sistema multiagente propuesto. Pipeline de cinco componentes especializados procesando secuencialmente desde transcripción hasta veredicto final.}
+\label{fig:arquitectura}
+\end{figure}
+
 \textbf{Contribuciones esperadas:}
 
 \begin{enumerate}
@@ -180,27 +264,8 @@ Este proyecto desarrollará un \textbf{sistema funcional end-to-end} que procese
 
     \item \textbf{Metodología de evaluación:} Protocolo de evaluación cualitativa y cuantitativa aplicable a sistemas similares.
 
-    \item \textbf{Análisis de implicaciones éticas:} Estudio de sesgos, limitaciones y riesgos de la automatización del fact-checking.
+    \item \textbf{Consideración ética y de sesgos:} Análisis cualitativo de sesgos en fuentes y modelos, junto con recomendaciones de buenas prácticas que minimicen riesgos de automatización.
 \end{enumerate}
-
-\subsection{Alcance del proyecto}
-
-\textbf{Incluye:}
-\begin{itemize}
-    \item Videos de YouTube con transcripciones disponibles (subtítulos automáticos o manuales)
-    \item Afirmaciones factuales verificables mediante fuentes web públicas
-    \item Contenido principalmente en inglés, con soporte experimental para español
-    \item Procesamiento bajo demanda de videos individuales
-\end{itemize}
-
-\textbf{No incluye:}
-\begin{itemize}
-    \item Generación propia de transcripciones desde audio (speech-to-text)
-    \item Verificación de contenido visual (detección de deepfakes, manipulación de imágenes)
-    \item Sistema de caché o base de datos persistente de verificaciones
-    \item Verificación en tiempo real o procesamiento batch a gran escala
-    \item Contenido de plataformas distintas a YouTube
-\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 5. MOTIVACIÓN PERSONAL  %
@@ -209,11 +274,11 @@ Este proyecto desarrollará un \textbf{sistema funcional end-to-end} que procese
 
 Mi interés en este proyecto surge de la confluencia de tres factores principales:
 
-\textbf{Experiencia profesional:} Como Machine Learning Engineer con más de 5 años de experiencia en Data Science, he trabajado en proyectos que combinan NLP, APIs y sistemas productivos. Este TFM me permite aplicar y profundizar conocimientos en un contexto de alto impacto social, mientras exploro tecnologías emergentes como LLMs y arquitecturas multiagente.
+\textbf{Experiencia profesional:} Como Machine Learning Engineer, trabajo en proyectos de NLP, APIs y sistemas productivos. Este TFM me permite aplicar y profundizar conocimientos en un contexto de alto impacto social, mientras exploro tecnologías emergentes como LLMs y arquitecturas multiagente.
 
-\textbf{Intereses personales:} Soy consumidor habitual de contenido educativo en YouTube sobre economía, geopolítica y ciencia. Con frecuencia encuentro afirmaciones que requieren verificación pero carezco de herramientas eficientes para hacerlo sistemáticamente. Este proyecto nace de una necesidad personal real: crear la herramienta que me gustaría tener como usuario.
+\textbf{Intereses personales:} Soy consumidor habitual de contenido educativo en YouTube sobre economía, geopolítica y ciencia. Con frecuencia encuentro afirmaciones que requieren verificación pero carezco de herramientas eficientes para hacerlo sistemáticamente. Este proyecto nace de una necesidad personal real: crear una herramienta que me gustaría tener como usuario.
 
-\textbf{Objetivos de desarrollo:} El proyecto combina aspectos de investigación (estado del arte en fact-checking, evaluación de LLMs) con ingeniería de software aplicada (arquitectura escalable, despliegue de aplicaciones). Esta dualidad se alinea con mi visión profesional de transitar desde roles puramente técnicos hacia posiciones que combinan investigación aplicada y desarrollo de producto.
+\textbf{Objetivos de desarrollo:} El proyecto combina aspectos de investigación (estado del arte en fact-checking, evaluación de LLMs) con ingeniería de software aplicada (arquitectura escalable, despliegue de aplicaciones). Esta dualidad se alinea con mi visión profesional de combinar investigación aplicada y desarrollo de producto.
 
 Adicionalmente, considero que el fact-checking automatizado representa una contribución al bien social. En una era donde la desinformación tiene consecuencias reales en salud pública, democracia y cohesión social, desarrollar herramientas que fomenten el pensamiento crítico y la alfabetización mediática es una responsabilidad que me motiva profundamente.
 
@@ -266,11 +331,30 @@ Adicionalmente, considero que el fact-checking automatizado representa una contr
     \item Garantizar reproducibilidad y documentación exhaustiva
 \end{itemize}
 
-\textbf{OE6. Análisis de implicaciones éticas}
+\textbf{OE6. Consideración de implicaciones éticas y de sesgo}
 \begin{itemize}
-    \item Identificar sesgos potenciales en selección de fuentes y generación de veredictos
-    \item Analizar riesgos de automatización de fact-checking
-    \item Proponer salvaguardas y mejores prácticas
+    \item Analizar de forma cualitativa los sesgos potenciales en las fuentes consultadas y los modelos utilizados.
+    \item Identificar limitaciones del enfoque automatizado y su posible impacto en la propagación de desinformación.
+    \item Elaborar buenas prácticas que reduzcan el riesgo de conclusiones erróneas durante el proceso de verificación.
+\end{itemize}
+
+\subsection{Alcance del proyecto}
+
+\textbf{Incluye:}
+\begin{itemize}
+    \item Videos de YouTube con transcripciones disponibles (subtítulos automáticos o manuales)
+    \item Afirmaciones factuales verificables mediante fuentes web públicas
+    \item Contenido principalmente en inglés, con soporte experimental para español
+    \item Procesamiento bajo demanda de videos individuales
+\end{itemize}
+
+\textbf{No incluye:}
+\begin{itemize}
+    \item Generación propia de transcripciones desde audio (speech-to-text)
+    \item Verificación de contenido visual (detección de deepfakes, manipulación de imágenes)
+    \item Sistema de caché o base de datos persistente de verificaciones
+    \item Verificación en tiempo real o procesamiento batch a gran escala
+    \item Contenido de plataformas distintas a YouTube
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
