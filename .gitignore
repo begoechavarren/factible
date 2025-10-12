@@ -200,6 +200,7 @@ cython_debug/
 #   and can be added to the global gitignore or merged into this file. However, if you prefer,
 #   you could uncomment the following to ignore the entire vscode folder
 # .vscode/
+.vscode/settings.json
 
 # Ruff stuff:
 .ruff_cache/
@@ -222,3 +223,55 @@ AGENTS.md
 FRD.md
 QUICKSTART.md
 COMPONENT_TREE.txt
+
+# LaTeX auxiliary files
+*.aux
+*.lof
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+
+# LaTeX intermediate files
+*.dvi
+*.xdv
+*-converted-to.*
+
+# LaTeX bibliography auxiliary files
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+
+# LaTeX build tool files
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+# LaTeX/pdflatex output (comment out if you want to version the PDF)
+# *.pdf
+
+# Latexmk
+*.fdb_latexmk
+
+# LaTeX temporary files
+*.log
+*.nav
+*.snm
+*.vrb
+
+# Beamer slides
+*.nav
+*.pre
+*.snm
+*.vrb

@@ -1,0 +1,512 @@
+\documentclass[12pt,a4paper]{article}
+
+% Paquetes esenciales
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{longtable}
+\usepackage{caption}
+\usepackage{tikz}
+\usepackage{adjustbox}
+\usetikzlibrary{arrows.meta, positioning, shapes.geometric, calc}
+
+% Configuración de márgenes
+\geometry{
+    a4paper,
+    left=3cm,
+    right=2.5cm,
+    top=2.5cm,
+    bottom=2.5cm
+}
+
+% Configuración de hyperref
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    pdftitle={Propuesta TFM - Sistema Multiagente para Verificación de Hechos},
+    pdfauthor={Begoña Echavarren Sánchez}
+}
+
+% Espaciado
+\onehalfspacing
+
+%%%%%%%%%%%%%%%%%%%%
+% INICIO DOCUMENTO %
+%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%%%%%%%%%%%%
+% PORTADA   %
+%%%%%%%%%%%%%
+\begin{titlepage}
+    \begin{center}
+    \vspace*{0.5cm}
+
+    \includegraphics[width=0.6\textwidth]{figs/uoc_logo.png}
+
+    \vspace{1.5cm}
+
+    {\Huge \textbf{Propuesta de Trabajo Final de Máster}}
+
+    \vspace{2cm}
+
+    {\LARGE \textbf{Sistema Multiagente para Verificación Automática de Hechos en Videos de YouTube}}
+
+    \vspace{2.5cm}
+
+    \textbf{\large Begoña Echavarren Sánchez}
+
+    \vspace{0.5cm}
+
+    \textit{Tutor: Josep-Anton Mir Tutusaus}
+
+    \vspace{2cm}
+
+    {\large Máster Universitario en Ciencia de Datos}
+
+    {\large Universitat Oberta de Catalunya}
+
+    \vspace{1cm}
+
+    {\large PEC 1 - Definición del TFM}
+
+    \vspace{0.5cm}
+
+    {\large Octubre 2025}
+
+    \end{center}
+\end{titlepage}
+
+\newpage
+\pagenumbering{arabic}
+
+\hypersetup{linkcolor=black}
+\tableofcontents
+\hypersetup{linkcolor=blue}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%
+% 1. TÍTULO         %
+%%%%%%%%%%%%%%%%%%%%%
+\section{Título del proyecto}
+
+\textbf{Sistema Multiagente para Verificación Automática de Hechos en Videos de YouTube}
+
+%%%%%%%%%%%%%%%%%%%%%
+% 2. PALABRAS CLAVE %
+%%%%%%%%%%%%%%%%%%%%%
+\section{Palabras clave}
+
+fact-checking automatizado, verificación de hechos, LLMs, modelos de lenguaje, sistemas multiagente, procesamiento de lenguaje natural, desinformación, recuperación de información, análisis de evidencias
+
+%%%%%%%%%%%%%%%%%%%%%
+% 3. RESUMEN        %
+%%%%%%%%%%%%%%%%%%%%%
+\section{Resumen}
+
+La desinformación en plataformas de video constituye un desafío creciente en la sociedad digital actual. Este trabajo propone el diseño, implementación y evaluación de un sistema end-to-end de verificación automática de hechos (fact-checking) para videos de YouTube, basado en una arquitectura multiagente que integra modelos de lenguaje de gran escala (LLMs), técnicas de procesamiento de lenguaje natural y recuperación de información en línea.
+
+El sistema propuesto opera mediante un pipeline de cinco componentes especializados: (1) extracción de transcripciones de video, (2) identificación automática de afirmaciones factuales mediante LLMs, (3) generación de consultas de búsqueda optimizadas, (4) recuperación y evaluación de evidencias desde fuentes web, y (5) síntesis de veredictos razonados con evaluación de confianza. Cada componente procesa información estructurada garantizando robustez y trazabilidad en todo el proceso.
+
+La implementación técnica se desarrollará en Python utilizando frameworks modernos como Pydantic AI, FastAPI, entre otros, junto con modelos de lenguaje tanto comerciales como de código abierto. El proyecto incluirá una interfaz web desarrollada en React con streaming en tiempo real mediante Server-Sent Events (SSE), proporcionando una experiencia de usuario interactiva durante el proceso de verificación.
+
+Un componente fundamental del trabajo será la evaluación comparativa de diferentes LLMs y enfoques arquitecturales. Se implementarán técnicas de evaluación específicas para modelos de lenguaje, métricas de rendimiento cuantitativas y protocolos de evaluación cualitativa para determinar las configuraciones óptimas del sistema. El análisis incluirá estudios de caso en diferentes temáticas de videos (economía, geopolítica, ciencia) con especial atención a los compromisos entre coste, calidad y latencia en las distintas aproximaciones evaluadas.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 4. DESCRIPCIÓN Y JUSTIFICACIÓN  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Descripción y justificación del proyecto}
+
+\subsection{Contexto del problema}
+
+La desinformación en plataformas de video constituye un desafío creciente en la sociedad digital actual. YouTube, con más de 2 mil millones de usuarios activos mensuales, se ha convertido en una fuente primaria de información para millones de personas. Sin embargo, la ausencia de mecanismos efectivos de verificación de información permite la propagación de afirmaciones incorrectas o engañosas a escala masiva.
+
+El problema central que aborda este proyecto es la \textbf{falta de mecanismos automatizados y accesibles para verificar afirmaciones factuales en contenido audiovisual de plataformas digitales}, específicamente videos de YouTube. Los usuarios individuales carecen de herramientas para verificar afirmaciones de forma sistemática, mientras que la verificación manual requiere habilidades avanzadas, tiempo considerable y recursos no siempre disponibles.
+
+\subsection{Relevancia e importancia}
+
+Este proyecto es relevante por múltiples razones:
+
+\begin{itemize}
+    \item \textbf{Impacto social:} La desinformación erosiona la confianza en instituciones, influye en decisiones políticas y afecta la salud pública \citep{wardle2017information, benkler2018network}. Un sistema automatizado de verificación puede contribuir a mitigar estos efectos.
+
+    \item \textbf{Desafío tecnológico:} El proyecto integra múltiples áreas de investigación en ciencia de datos: procesamiento de lenguaje natural, recuperación de información, evaluación de credibilidad de fuentes y razonamiento automático. Representa un problema técnicamente complejo que requiere soluciones innovadoras.
+
+    \item \textbf{Escalabilidad necesaria:} El volumen de contenido generado diariamente (más de 500 horas de video por minuto en YouTube) hace inviable el fact-checking puramente humano. La automatización es necesaria para abordar el problema a escala.
+
+    \item \textbf{Alfabetización mediática:} Herramientas que empoderan a ciudadanos para evaluar críticamente información promueven el pensamiento crítico y fortalecen la alfabetización mediática en la sociedad.
+\end{itemize}
+
+\subsection{Estado actual de soluciones existentes}
+
+Actualmente existen tres enfoques principales para la verificación de hechos:
+
+\begin{enumerate}
+    \item \textbf{Fact-checking manual:} Organizaciones como Newtral, Maldita.es y FactCheck.org emplean periodistas especializados. Este enfoque garantiza calidad pero está limitado por recursos humanos y es inherentemente lento.
+
+    \item \textbf{Sistemas académicos:} Proyectos como FEVER \citep{thorne2018fever}, FEVEROUS \citep{aly2021feverous} y trabajos recientes sobre verificación científica \citep{wadden2020scifact} operan principalmente sobre bases de conocimiento estructuradas (Wikipedia) o requieren datasets curados específicos. No están disponibles como productos utilizables por usuarios finales y tienen alcance limitado.
+
+    \item \textbf{APIs de verificación:} Google Fact Check Tools API agrega fact-checks ya publicados por organizaciones profesionales, pero solo cubre contenido previamente verificado manualmente. No proporciona verificación nueva de contenido no examinado.
+\end{enumerate}
+
+\textbf{Limitaciones identificadas:} Ninguno de estos enfoques proporciona verificación automatizada end-to-end para contenido audiovisual generado continuamente por usuarios en plataformas como YouTube. Existe una brecha entre la investigación académica (datasets estáticos, dominios limitados) y herramientas prácticas accesibles para usuarios finales.
+
+\subsection{Propuesta y contribución esperada}
+
+Este proyecto desarrollará un \textbf{sistema funcional end-to-end} que procese videos de YouTube mediante:
+
+\begin{itemize}
+    \item Extracción automática de transcripciones
+    \item Identificación de afirmaciones factuales verificables mediante LLMs
+    \item Recuperación de evidencias desde múltiples fuentes web
+    \item Evaluación de credibilidad de fuentes y postura de evidencias
+    \item Generación de veredictos fundamentados con explicaciones transparentes
+    \item Interfaz web accesible para usuarios finales
+\end{itemize}
+
+\begin{figure}[t]
+\centering
+\begingroup
+\shorthandoff{<>.}
+\begin{tikzpicture}[
+    scale=0.55,
+    transform shape,
+    >=Latex,
+    font=\footnotesize,
+    stage/.style={rectangle, rounded corners=6pt, draw=blue!55!black, very thick, fill=blue!12,
+                    text width=2.1cm, minimum height=1.4cm, align=center},
+    source/.style={rectangle, rounded corners=6pt, draw=gray!70!black, very thick, fill=gray!10,
+                    text width=2.1cm, minimum height=1.4cm, align=center},
+    fork/.style={diamond, draw=blue!55!black, very thick, fill=white, aspect=2,
+                    text width=1.25cm, minimum height=1.05cm, align=center},
+    aggregator/.style={rectangle, rounded corners=6pt, draw=blue!55!black, very thick, fill=blue!18,
+                        text width=2.35cm, minimum height=1.6cm, align=center},
+    arrow/.style={-{Latex[length=2.4mm,width=1.6mm]}, very thick},
+    node distance=2.1cm
+]
+
+% row 1: source -> transcriptor -> claim extractor
+\node[source] (url) {URL del vídeo};
+\node[stage, right=2.2cm of url] (transcriptor) {Transcribir\\vídeo a texto\\\scriptsize youtube-transcript-api};
+\node[stage, right=2.2cm of transcriptor] (claims) {Detectar afirmaciones\\\scriptsize LLM claim extractor};
+
+% forks (claims) - more vertical spread
+\node[fork,  right=1.7cm of claims, yshift=2.4cm] (claimone) {\scriptsize Afirmación 1};
+\node[fork,  right=1.7cm of claims]                (claimtwo) {\scriptsize Afirmación 2};
+\node[fork,  right=1.7cm of claims, yshift=-2.4cm] (claimn)   {\scriptsize Afirmación n};
+\node[font=\large, text=gray!65] at ($(claimtwo)!0.5!(claimn)$) {$\vdots$};
+
+% query generators
+\node[stage, right=1.9cm of claimone] (queryone) {Generación de\\consultas\\\scriptsize LLM};
+\node[stage, right=1.9cm of claimtwo] (querytwo) {Generación de\\consultas\\\scriptsize LLM};
+\node[stage, right=1.9cm of claimn]   (queryn)   {Generación de\\consultas\\\scriptsize LLM};
+\node[font=\large, text=gray!65] at ($(querytwo)!0.5!(queryn)$) {$\vdots$};
+
+% online search
+\node[stage, right=1.9cm of queryone] (searchone) {Búsqueda y\\evaluación\\\scriptsize Google, crawling, fiabilidad};
+\node[stage, right=1.9cm of querytwo] (searchtwo) {Búsqueda y\\evaluación\\\scriptsize Google, crawling, fiabilidad};
+\node[stage, right=1.9cm of queryn]   (searchn)   {Búsqueda y\\evaluación\\\scriptsize Google, crawling, fiabilidad};
+\node[font=\large, text=gray!65] at ($(searchtwo)!0.5!(searchn)$) {$\vdots$};
+
+% output aggregator
+\node[aggregator, right=1.9cm of searchtwo] (output) {Veredicto final\\y confianza\\\scriptsize Síntesis LLM + reporte};
+
+% section headers (raised higher)
+\node[font=\normalsize\bfseries, text=blue!70!black] at ($(transcriptor)+(0,2.3)$) {TRANSCRIPTOR};
+\node[font=\normalsize\bfseries, text=blue!70!black] at ($(claims)+(0,2.3)$) {\begin{tabular}{c}EXTRACTOR DE\\AFIRMACIONES\end{tabular}};
+\node[font=\normalsize\bfseries, text=blue!70!black] at ($(queryone)!0.2!(queryn)+(0,3.2)$) {\begin{tabular}{c}GENERACION DE\\QUERIES\end{tabular}};
+\node[font=\normalsize\bfseries, text=blue!70!black] at ($(searchone)!0.17!(searchn)+(0,3.2)$) {\begin{tabular}{c}BÚSQUEDA\\ONLINE\end{tabular}};
+\node[font=\normalsize\bfseries, text=blue!70!black] at ($(output)+(0,2.3)$) {\begin{tabular}{c}GENERACIÓN DE\\RESULTADOS\end{tabular}};
+
+% arrows
+\draw[arrow] (url) -- (transcriptor);
+\draw[arrow] (transcriptor) -- (claims);
+
+\draw[arrow] (claims) -- (claimone);
+\draw[arrow] (claims) -- (claimtwo);
+\draw[arrow] (claims) -- (claimn);
+
+\draw[arrow] (claimone) -- (queryone);
+\draw[arrow] (claimtwo) -- (querytwo);
+\draw[arrow] (claimn) -- (queryn);
+
+\draw[arrow] (queryone) -- (searchone);
+\draw[arrow] (querytwo) -- (searchtwo);
+\draw[arrow] (queryn) -- (searchn);
+
+\draw[arrow] (searchone.east) -- (output.north west);
+\draw[arrow] (searchtwo.east) -- (output.west);
+\draw[arrow] (searchn.east) -- (output.south west);
+
+\end{tikzpicture}
+\endgroup
+\caption{Arquitectura del sistema multiagente propuesto. Pipeline de cinco componentes especializados procesando secuencialmente desde transcripción hasta veredicto final.}
+\label{fig:arquitectura}
+\end{figure}
+
+\textbf{Contribuciones esperadas:}
+
+\begin{enumerate}
+    \item \textbf{Arquitectura multiagente modular y escalable:} Diseño e implementación de un sistema multiagente optimizado compuesto por cinco componentes especializados que operan de forma coordinada mediante esquemas de datos estructurados (Figura~\ref{fig:arquitectura}). Esta arquitectura modular permite procesamiento paralelo de múltiples afirmaciones, facilita la optimización y extensibilidad del sistema y garantiza trazabilidad completa del pipeline de verificación.
+
+    \item \textbf{Sistema completo operativo:} A diferencia de prototipos académicos, se desarrollará una aplicación funcional con interfaz web.
+
+    \item \textbf{Análisis comparativo de LLMs:} Evaluación de modelos comerciales (i.e. GPT, Claude) versus open-source (i.e. Qwen, Deepseek), documentando compromisos entre coste, rendimiento y calidad.
+
+    \item \textbf{Metodología de evaluación:} Framework de evaluación cualitativa y cuantitativa aplicable a sistemas similares.
+
+    \item \textbf{Consideración ética y de sesgos:} Análisis cualitativo de sesgos en el procesamiento y uso de los modelos que minimicen los riesgos de la automatización del proceso de verificación.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 5. MOTIVACIÓN PERSONAL  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Motivación personal}
+
+Mi interés en este proyecto surge de la confluencia de tres factores principales:
+
+\textbf{Experiencia profesional:} Como Machine Learning Engineer, trabajo en proyectos de NLP, APIs y sistemas productivos. Este TFM me permite aplicar y profundizar conocimientos en un contexto de alto impacto social, mientras exploro tecnologías emergentes como LLMs y arquitecturas multiagente.
+
+\textbf{Intereses personales:} Soy consumidor habitual de contenido educativo en YouTube sobre economía, geopolítica y ciencia. Con frecuencia encuentro afirmaciones que requieren verificación pero carezco de herramientas eficientes para hacerlo sistemáticamente. Este proyecto nace de una necesidad personal real: crear una herramienta que me gustaría tener como usuario.
+
+\textbf{Objetivos de desarrollo:} El proyecto combina aspectos de investigación (estado del arte en fact-checking, evaluación de LLMs) con ingeniería de software aplicada (arquitectura escalable, despliegue de aplicaciones). Esta dualidad se alinea con mi visión profesional de combinar investigación aplicada y desarrollo de producto.
+
+Adicionalmente, considero que el fact-checking automatizado representa una contribución al bien social. En una era donde la desinformación tiene consecuencias reales en salud pública, democracia y cohesión social, desarrollar herramientas que fomenten el pensamiento crítico y la alfabetización mediática es una responsabilidad que me motiva profundamente.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 6. OBJETIVOS            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Objetivos del proyecto}
+
+\subsection{Hipótesis u objetivo principal}
+
+Diseñar, implementar y evaluar un sistema multiagente basado en modelos de lenguaje capaz de verificar automáticamente afirmaciones factuales en videos de YouTube mediante recuperación y análisis de evidencias web, generando veredictos fundamentados con estimación de confianza, que sean útiles para usuarios finales.
+
+\subsection{Objetivos específicos (preguntas de investigación)}
+
+\begin{enumerate}
+    \item \textbf{Diseño de arquitectura multiagente}
+    \begin{itemize}
+        \item Definir el pipeline de procesamiento de forma modular con componentes especializados.
+        \item Establecer esquemas de datos estructurados para la comunicación entre agentes.
+        \item Diseñar el sistema de orquestación de la información.
+    \end{itemize}
+    \item \textbf{Implementación de componentes del sistema}
+    \begin{itemize}
+        \item Desarrollar el módulo de extracción de transcripciones de vídeos desde YouTube.
+        \item Implementar el agente de identificación de claims con clasificación de relevancia.
+        \item Crear el generador de consultas de búsqueda optimizadas.
+        \item Desarrollar el sistema de web scraping con evaluación de fiabilidad de fuentes.
+        \item Implementar el generador de veredictos explicables y trazables.
+    \end{itemize}
+    \item \textbf{Optimización del uso de LLMs}
+    \begin{itemize}
+        \item Comparar el rendimiento entre modelos comerciales (p. ej. GPT-4o-mini) y open-source (p. ej. Qwen 3, DeepSeek).
+        \item Analizar compromisos entre coste, latencia y calidad de outputs.
+        \item Evaluar estrategias de prompt optimization y structured outputs.
+    \end{itemize}
+    \item \textbf{Evaluación del sistema}
+    \begin{itemize}
+        \item Definir métricas de rendimiento técnico: tiempo de respuesta, coste por token, throughput y tasa de finalización por agente.
+        \item Incluir métricas cuantitativas específicas de LLMs como faithfulness, factual consistency, coherence y stance accuracy.
+        \item Incorporar evaluación cuantitativa y cualitativa con LLM-as-a-judge y revisión manual.
+        \item Realizar estudios de caso en distintas temáticas y analizar limitaciones del sistema.
+    \end{itemize}
+    \item \textbf{Implementación de sistema end-to-end}
+    \begin{itemize}
+        \item Desarrollar una API REST con streaming en tiempo real.
+        \item Crear una interfaz web intuitiva para usuarios finales.
+        \item Garantizar reproducibilidad y generar documentación.
+    \end{itemize}
+    \item \textbf{Consideración de implicaciones éticas y de sesgo}
+    \begin{itemize}
+        \item Analizar los sesgos potenciales en las fuentes y en los modelos utilizados.
+        \item Identificar limitaciones del enfoque automatizado, su posible impacto en la propagación de desinformación, y definir buenas prácticas que mitiguen esos riesgos durante la verificación.
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Alcance del proyecto}
+
+\textbf{Incluye:}
+\begin{itemize}
+    \item Videos de YouTube con transcripciones disponibles (subtítulos automáticos o manuales)
+    \item Afirmaciones factuales verificables mediante fuentes web públicas
+    \item Contenido en inglés
+    \item Procesamiento bajo demanda de videos individuales
+\end{itemize}
+
+\textbf{No incluye:}
+\begin{itemize}
+    \item Generación propia de transcripciones desde audio (speech-to-text)
+    \item Verificación de contenido visual
+    \item Verificación a gran escala (batch)
+    \item Contenido de plataformas distintas a YouTube
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 7. CONSIDERACIONES ÉTICAS Y DE IMPACTO SOCIAL %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Consideraciones Éticas y de Impacto Social}
+
+\subsection{Competencia de Compromiso Ético y Global (CCEG)}
+
+El proyecto aborda las tres dimensiones de la CCEG establecidas por la UOC:
+
+\textbf{(I) Sostenibilidad:} El uso de LLMs implica consumo energético significativo. Se abordará mediante evaluación de modelos open-source locales versus comerciales cloud, optimización de prompts para minimizar tokens procesados, y documentación transparente del consumo de recursos.
+
+\textbf{(II) Comportamiento ético y responsabilidad social:} Los LLMs pueden perpetuar sesgos presentes en sus datos de entrenamiento. Estrategias de mitigación: transparencia total en fuentes consultadas con URLs verificables, presentación de evidencias mostrando diferentes posturas (apoya/refuta/neutral), evaluación explícita de nivel de confianza en cada veredicto, y advertencias claras sobre limitaciones del sistema automatizado. El sistema se posiciona como herramienta de apoyo que automatiza pasos preliminares, permitiendo a profesionales enfocarse en análisis complejos que requieren juicio humano.
+
+\textbf{(III) Diversidad y derechos humanos:} El sistema busca evaluar diversidad de perspectivas cuando múltiples fuentes web con diferentes enfoques estén disponibles, documentando esta limitación cuando no sea posible. No censura contenido sino que proporciona contexto adicional mediante verificación, respetando la libertad de expresión. No procesa datos personales ni información identificable de usuarios.
+
+\subsection{Objetivos de Desarrollo Sostenible (ODS)}
+
+El proyecto contribuye a tres ODS de la Agenda 2030:
+
+\textbf{ODS 4 (Educación de Calidad):} El sistema actúa como herramienta de alfabetización mediática que promueve pensamiento crítico y capacidad de evaluación de fuentes de información. Facilita el aprendizaje sobre verificación de hechos, análisis de evidencias y reconocimiento de afirmaciones verificables, competencias fundamentales en la sociedad digital actual donde el volumen de información supera la capacidad individual de validación.
+
+\textbf{ODS 16 (Paz, Justicia e Instituciones Sólidas):} Combate la desinformación que erosiona la confianza en instituciones democráticas y medios de comunicación. Proporciona mecanismos de verificación transparentes, trazables y accesibles que permiten a ciudadanos contrastar afirmaciones factuales de forma sistemática, contribuyendo a un ecosistema informativo más saludable y resiliente ante campañas de desinformación.
+
+\textbf{ODS 10 (Reducción de Desigualdades):} Democratiza el acceso a verificación de hechos mediante herramienta gratuita y de código abierto, reduciendo la brecha entre organizaciones profesionales con recursos especializados (fact-checkers, periodistas) y ciudadanos individuales. Empodera a usuarios sin formación especializada para evaluar críticamente contenido en plataformas digitales, facilitando acceso equitativo a mecanismos de verificación.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 8. METODOLOGÍA          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Metodología}
+
+\subsection{Estrategia de investigación}
+
+Este proyecto adopta una estrategia de \textbf{Design and Creation} \citep{oates2006}, apropiada para investigación en sistemas de información donde se desarrolla un artefacto tecnológico nuevo cuya construcción y evaluación constituyen la contribución principal al conocimiento. Según \citet{hevner2004}, citados por Oates, esta estrategia requiere: (1) crear un artefacto viable, (2) abordar un problema relevante, (3) realizar evaluación rigurosa, (4) realizar contribuciones claras, (5) aplicar rigor en la construcción, (6) diseñar como proceso de búsqueda, y (7) comunicar efectivamente los resultados.
+
+\textbf{Técnicas de recolección de datos para evaluación:}
+
+\textit{Cuantitativas:}
+\begin{itemize}
+    \item Medición automatizada de métricas del sistema: tiempo de procesamiento, coste (tokens × precio), número de fuentes recuperadas, distribución de stances
+    \item Evaluación mediante LLM-as-a-judge para valorar calidad de claims extraídos y veredictos generados
+    \item Métricas de coordinación multiagente: task completion rate, latencia por agente
+\end{itemize}
+
+\textit{Cualitativas:}
+\begin{itemize}
+    \item Revisión manual de outputs del sistema (relevancia de claims, coherencia de veredictos)
+    \item Estudios de caso detallados en diferentes temáticas
+\end{itemize}
+
+\textbf{Herramientas:} Python 3.12, Pydantic AI, FastAPI, React, OpenAI, Ollama, Selenium, etc.
+
+\subsection{Metodología de trabajo y desarrollo}
+
+\textbf{Posibles estrategias para llevar a cabo el trabajo:}
+
+\begin{enumerate}
+    \item \textbf{Adaptar soluciones existentes:} Partir de sistemas académicos de fact-checking y extenderlos para contenido audiovisual
+    \item \textbf{Desarrollo de producto nuevo end-to-end:} Crear un sistema completo desde cero con interfaz web funcional
+    \item \textbf{Prototipo de investigación:} Implementar únicamente el pipeline de verificación sin interfaz de usuario
+    \item \textbf{Integración de servicios externos:} Combinar APIs de terceros existentes (Google Fact Check, transcripción comercial)
+\end{enumerate}
+
+\textbf{Estrategia escogida:} Desarrollo de un producto nuevo end-to-end con interfaz web funcional (opción 2).
+
+\textbf{Justificación:} Esta estrategia es la más apropiada porque permite evaluar la viabilidad práctica completa del sistema en condiciones reales de uso, no solo como concepto teórico. El desarrollo modular desde cero facilita la experimentación con diferentes configuraciones de LLMs y garantiza control total sobre el pipeline de verificación. La inclusión de interfaz web demuestra aplicabilidad para usuarios finales y permite recoger feedback sobre usabilidad real del sistema.
+
+\textbf{Proceso de desarrollo iterativo:}
+\begin{enumerate}
+    \item Implementación de componentes individuales con testing aislado
+    \item Integración end-to-end del pipeline (MVP funcional)
+    \item Refinamiento iterativo módulo por módulo basado en resultados
+    \item Evaluación comparativa con diferentes configuraciones de LLMs
+\end{enumerate}
+
+\textbf{Recursos técnicos:} Prompting avanzado (chain-of-thought, few-shot learning), structured outputs con Pydantic, evaluación mediante LLM-as-a-judge, web scraping con Selenium, streaming en tiempo real (SSE). Conjunto de videos de evaluación en temáticas diversas.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 9. PLANIFICACIÓN        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Planificación del proyecto}
+
+\subsection{Cronograma general}
+
+El proyecto se desarrolla durante el semestre académico 2025-2026, alineado con las entregas establecidas (Cuadro \ref{tab:cronograma}).
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Hito} & \textbf{Entregable} & \textbf{Fecha límite} \\
+\hline
+M1 & Definición del TFM & 12 oct 2025 \\
+M2 & Estado del arte & 2 nov 2025\\
+M3 & Implementación & 14 dic 2025\\
+M4 & Redacción memoria preliminar & 21 dic 2025\\
+M4 & Redacción memoria final & 28 dic 2025\\
+M4 & Presentación audiovisual & 6 ene 2026\\
+M5 & Documentación al tribunal & 9 ene 2026\\
+M5 & Defensa pública & 30 ene 2026\\
+\hline
+\end{tabular}
+\caption{Cronograma general del proyecto}
+\label{tab:cronograma}
+\end{table}
+
+\subsection{Descripción de fases}
+
+\textbf{M1: Definición del TFM (hasta 12 oct 2025)}
+\begin{itemize}
+    \item Revisión bibliográfica sobre fact-checking automatizado y sistemas multiagente con LLMs
+    \item Diseño de arquitectura del sistema y definición de componentes
+    \item Selección de stack tecnológico
+    \item Elaboración de propuesta de TFM
+\end{itemize}
+
+\textbf{M2: Estado del arte (hasta 2 nov 2025)}
+\begin{itemize}
+    \item Análisis en profundidad de soluciones existentes
+    \item Revisión de técnicas de evaluación de LLMs
+    \item Setup inicial del proyecto y estructura de repositorio
+    \item Documentación del estado del arte
+\end{itemize}
+
+\textbf{M3: Implementación (hasta 14 dic 2025)}
+\begin{itemize}
+    \item Implementación de los cinco componentes del pipeline multiagente
+    \item Integración end-to-end del sistema completo
+    \item Desarrollo de API REST con streaming SSE e interfaz web
+    \item Framework de evaluación de agentes
+    \item MVP funcional operativo
+\end{itemize}
+
+\textbf{M4: Evaluación y redacción (hasta 28 dic 2025)}
+\begin{itemize}
+    \item Experimentación iterativa para optimización de componentes
+    \item Testing en conjunto de videos diversos
+    \item Análisis de métricas y resultados
+    \item Redacción de memoria del TFM
+    \item Preparación de presentación audiovisual
+\end{itemize}
+
+\textbf{M5: Defensa (hasta 30 ene 2026)}
+\begin{itemize}
+    \item Entrega de documentación final al tribunal
+    \item Preparación de defensa pública
+    \item Defensa del TFM
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 10. BIBLIOGRAFÍA        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Bibliografía preliminar}
+
+\nocite{*}
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}
