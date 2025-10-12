@@ -173,8 +173,6 @@ Este proyecto desarrollará un \textbf{sistema funcional end-to-end} que procese
     \item Interfaz web accesible para usuarios finales
 \end{itemize}
 
-La Figura~\ref{fig:arquitectura} muestra la arquitectura general propuesta del sistema multiagente, que integra los cinco componentes principales descritos en este apartado.
-
 \begin{figure}[t]
 \centering
 \begingroup
@@ -258,13 +256,15 @@ La Figura~\ref{fig:arquitectura} muestra la arquitectura general propuesta del s
 \textbf{Contribuciones esperadas:}
 
 \begin{enumerate}
+    \item \textbf{Arquitectura multiagente modular y escalable:} Diseño e implementación de un sistema multiagente optimizado compuesto por cinco componentes especializados que operan de forma coordinada mediante esquemas de datos estructurados (Figura~\ref{fig:arquitectura}). Esta arquitectura modular permite procesamiento paralelo de múltiples afirmaciones, facilita la optimización y extensibilidad del sistema y garantiza trazabilidad completa del pipeline de verificación.
+
     \item \textbf{Sistema completo operativo:} A diferencia de prototipos académicos, se desarrollará una aplicación funcional con interfaz web.
 
-    \item \textbf{Análisis comparativo de LLMs:} Evaluación empírica de modelos comerciales (GPT-4o-mini) versus open-source (Ollama Qwen 3), documentando compromisos entre coste, rendimiento y calidad.
+    \item \textbf{Análisis comparativo de LLMs:} Evaluación de modelos comerciales (i.e. GPT, Claude) versus open-source (i.e. Qwen, Deepseek), documentando compromisos entre coste, rendimiento y calidad.
 
-    \item \textbf{Metodología de evaluación:} Protocolo de evaluación cualitativa y cuantitativa aplicable a sistemas similares.
+    \item \textbf{Metodología de evaluación:} Framework de evaluación cualitativa y cuantitativa aplicable a sistemas similares.
 
-    \item \textbf{Consideración ética y de sesgos:} Análisis cualitativo de sesgos en fuentes y modelos, junto con recomendaciones de buenas prácticas que minimicen riesgos de automatización.
+    \item \textbf{Consideración ética y de sesgos:} Análisis cualitativo de sesgos en el procesamiento y uso de los modelos que minimicen los riesgos de la automatización del proceso de verificación.
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -506,7 +506,7 @@ Cada componente opera sobre esquemas de datos estructurados definidos con Pydant
 
 \subsection{Cronograma general}
 
-El proyecto se desarrolla durante el semestre académico 2025-2026, alineado con las entregas establecidas por el programa (Tabla \ref{tab:cronograma}).
+El proyecto se desarrolla durante el semestre académico 2025-2026, alineado con las entregas establecidas (Cuadro \ref{tab:cronograma}).
 
 \begin{table}[h]
 \centering
@@ -515,7 +515,6 @@ El proyecto se desarrolla durante el semestre académico 2025-2026, alineado con
 \textbf{Hito} & \textbf{Entregable} & \textbf{Fecha límite} \\
 \hline
 M1 & Definición del TFM & 12 oct 2025 \\
-M1 & Comité ética y confidencialidad & 12 oct 2025\\
 M2 & Estado del arte & 2 nov 2025\\
 M3 & Implementación & 14 dic 2025\\
 M4 & Redacción memoria preliminar & 21 dic 2025\\
@@ -536,12 +535,12 @@ M5 & Defensa pública & 30 ene 2026\\
     \item Revisión bibliográfica sobre fact-checking automatizado y sistemas multiagente con LLMs
     \item Diseño de arquitectura del sistema y definición de componentes
     \item Selección de stack tecnológico
-    \item Elaboración de propuesta de TFM (presente documento)
+    \item Elaboración de propuesta de TFM
 \end{itemize}
 
 \textbf{M2: Estado del arte (hasta 2 nov 2025)}
 \begin{itemize}
-    \item Análisis en profundidad de soluciones existentes (FEVER, FEVEROUS, FactAgent)
+    \item Análisis en profundidad de soluciones existentes
     \item Revisión de técnicas de evaluación de LLMs
     \item Setup inicial del proyecto y estructura de repositorio
     \item Documentación del estado del arte
@@ -551,14 +550,14 @@ M5 & Defensa pública & 30 ene 2026\\
 \begin{itemize}
     \item Implementación de los cinco componentes del pipeline multiagente
     \item Integración end-to-end del sistema completo
-    \item Desarrollo de API REST con streaming SSE
-    \item Creación de interfaz web en React
+    \item Desarrollo de API REST con streaming SSE e interfaz web
+    \item Framework de evaluación de agentes
     \item MVP funcional operativo
 \end{itemize}
 
 \textbf{M4: Evaluación y redacción (hasta 28 dic 2025)}
 \begin{itemize}
-    \item Evaluación comparativa de LLMs (GPT-4o-mini vs Ollama Qwen 3)
+    \item Experimentación iterativa para optimización de componentes
     \item Testing en conjunto de videos diversos
     \item Análisis de métricas y resultados
     \item Redacción de memoria del TFM
