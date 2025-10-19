@@ -138,15 +138,17 @@ function App() {
         <div className={contentWrapperClass}>
           {!result && (
             <section className={heroClassName}>
-              <div className="w-full">
-                <SearchBar
-                  onSubmit={handleFactCheck}
-                  loading={isProcessing}
-                  compact={hasActiveRun}
-                  disabled={isProcessing}
-                  resetSignal={resetToken}
-                />
-              </div>
+              {!isProcessing && (
+                <div className="w-full">
+                  <SearchBar
+                    onSubmit={handleFactCheck}
+                    loading={isProcessing}
+                    compact={hasActiveRun}
+                    disabled={isProcessing}
+                    resetSignal={resetToken}
+                  />
+                </div>
+              )}
 
               {(isMetaLoading || (videoMeta && videoUrl)) && (
                 <div className="w-full">
@@ -177,7 +179,7 @@ function App() {
           )}
 
           {isProcessing && !result && (
-            <div className="w-full flex justify-center -mt-3 md:-mt-6 transition-all duration-500 ease-out">
+            <div className="w-full flex justify-center transition-all duration-500 ease-out">
               <ProcessingView
                 progress={progress}
                 currentMessage={currentMessage}

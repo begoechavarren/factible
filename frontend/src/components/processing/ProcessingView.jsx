@@ -10,17 +10,26 @@ const STEPS = [
   { key: 'generating', label: 'Generating report' },
 ];
 
+function getPhaseIndex(currentStep) {
+  const normalized = (currentStep || '').toLowerCase();
+  if (normalized.includes('generating')) return 3;
+  if (normalized.includes('processing')) return 2;
+  if (normalized.includes('claim')) return 1;
+  if (normalized.includes('transcript')) return 0;
+  return -1;
+}
+
 export function ProcessingView({ progress, currentMessage, currentStep }) {
-  const normalizedStep = (currentStep || '').toLowerCase();
+  const phaseIndex = getPhaseIndex(currentStep);
 
   const activeIcon = (() => {
-    if (normalizedStep.includes('generating')) {
+    if (phaseIndex === 3) {
       return { src: printerIcon, alt: 'Generating report' };
     }
-    if (normalizedStep.includes('processing')) {
+    if (phaseIndex === 2) {
       return { src: shieldIcon, alt: 'Fact-checking claim' };
     }
-    if (normalizedStep.includes('claim')) {
+    if (phaseIndex === 1) {
       return { src: magnifierIcon, alt: 'Analyzing claims' };
     }
     return { src: documentIcon, alt: 'Extracting transcript' };
@@ -54,8 +63,8 @@ export function ProcessingView({ progress, currentMessage, currentStep }) {
           <Step
             key={step.key}
             label={step.label}
-            active={currentStep.includes(step.key)}
-            completed={progress >= (index + 1) * 25}
+            active={phaseIndex === index}
+            completed={index < phaseIndex}
           />
         ))}
       </div>
@@ -68,12 +77,20 @@ function Step({ label, active, completed }) {
     <div className="flex items-center gap-3">
       <div
         className={`h-2 w-2 rounded-full transition-colors ${
-          completed ? 'bg-accent' : active ? 'bg-primary animate-pulse' : 'bg-gray-300'
+          completed
+            ? 'bg-accent'
+            : active
+              ? 'bg-accent animate-pulse'
+              : 'bg-gray-300'
         }`}
       />
       <p
         className={`pixel-text text-sm transition-colors ${
-          completed || active ? 'text-primary' : 'text-gray-400'
+          completed
+            ? 'text-primary'
+            : active
+              ? 'text-accent'
+              : 'text-gray-400'
         }`}
       >
         {label}

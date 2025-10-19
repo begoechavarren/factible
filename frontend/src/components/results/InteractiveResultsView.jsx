@@ -210,7 +210,11 @@ const stanceStyles = {
 function EvidenceSection({ evidenceByStance }) {
   const entries = Object.entries(evidenceByStance || {});
 
-  if (!entries.length) {
+  const allSources = entries.flatMap(([stance, sources]) =>
+    sources.map((source) => ({ ...source, stance })),
+  );
+
+  if (!allSources.length) {
     return (
       <div className="mt-4 rounded-2xl border border-primary/10 bg-white/80 p-4">
         <p className="pixel-text text-xs uppercase tracking-widest text-gray-500">
@@ -221,42 +225,38 @@ function EvidenceSection({ evidenceByStance }) {
   }
 
   return (
-    <div className="mt-4 space-y-3">
-      {entries.map(([stance, sources]) => (
-        <div
-          key={stance}
-          className="rounded-2xl border border-primary/10 bg-white/80 p-4"
-        >
-          <p className="pixel-text mb-2 text-xs uppercase tracking-widest text-gray-500">
-            Sources ({sources.length})
-          </p>
-          <div className="space-y-2">
-            {sources.map((source, idx) => (
-              <div
-                key={`${stance}-${idx}`}
-                className="rounded-xl border border-primary/10 bg-white/90 p-3"
-              >
-                <a
-                  href={source.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-medium text-primary hover:text-primary/80"
-                >
-                  {source.title}
-                </a>
-                {source.evidence_summary && (
-                  <p className="mt-1 text-xs text-gray-600">{source.evidence_summary}</p>
-                )}
-                <div className="mt-1 flex flex-wrap items-center gap-2">
-                  <span className="pixel-text text-[11px] uppercase text-gray-400">
-                    {source.reliability?.rating ?? 'unknown'} reliability
-                  </span>
-                </div>
-              </div>
-            ))}
+    <div className="mt-4 rounded-2xl border border-primary/10 bg-white/80 p-4">
+      <p className="pixel-text mb-2 text-xs uppercase tracking-widest text-gray-500">
+        Sources: {allSources.length}
+      </p>
+      <div className="space-y-2">
+        {allSources.map((source, idx) => (
+          <div
+            key={`${source.stance}-${idx}`}
+            className="rounded-xl border border-primary/10 bg-white/90 p-3"
+          >
+            <div className="mb-1 flex flex-wrap items-center gap-2">
+              <span className="pixel-text text-[11px] uppercase text-gray-400">
+                {source.stance?.toUpperCase()}
+              </span>
+              <span className="pixel-text text-[11px] uppercase text-gray-400">
+                {source.reliability?.rating ?? 'unknown'} reliability
+              </span>
+            </div>
+            <a
+              href={source.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-primary hover:text-primary/80"
+            >
+              {source.title}
+            </a>
+            {source.evidence_summary && (
+              <p className="mt-1 text-xs text-gray-600">{source.evidence_summary}</p>
+            )}
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
