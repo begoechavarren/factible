@@ -49,60 +49,41 @@ function calculateSimilarity(str1, str2) {
   return matchingTokens / totalTokens;
 }
 
+const MAX_WINDOW_SEGMENTS = 4;
+
 /**
- * Find exact position of claim text within a segment using normalized matching
- * @param {string} claimText - The claim to find
- * @param {string} segmentText - The segment text to search in
- * @returns {Object|null} {start, end, matchedText} or null
+ * Assemble a text window from consecutive raw transcript segments.
+ * @param {Array} segments - Raw transcript segments [{text,start,duration}]
+ * @param {number} startIndex - Index of the first segment in the window
+ * @param {number} maxSegments - Maximum number of segments to include
+ * @returns {Object} { text, start, duration, indices }
  */
-function findExactPosition(claimText, segmentText) {
-  const normalizedClaim = normalizeText(claimText);
-  const normalizedSegment = normalizeText(segmentText);
-
-  const index = normalizedSegment.indexOf(normalizedClaim);
-  if (index !== -1) {
-    // Find approximate position in original text
-    // This is approximate because normalization changes character positions
-    const claimLength = claimText.length;
-    const start = Math.max(0, index - 10);
-    const end = Math.min(segmentText.length, index + claimLength + 10);
-    return {
-      start,
-      end,
-      matchedText: segmentText.substring(start, end),
-    };
+function buildSegmentWindow(segments, startIndex, maxSegments = MAX_WINDOW_SEGMENTS) {
+  const windowSegments = segments.slice(startIndex, startIndex + maxSegments);
+  if (windowSegments.length === 0) {
+    return { text: '', start: 0, duration: 0, indices: [] };
   }
 
-  // Fallback: try to find the longest common substring
-  const claimTokens = claimText.toLowerCase().split(/\s+/);
-  const segmentLower = segmentText.toLowerCase();
+  const text = windowSegments.map((segment) => segment.text).join(' ');
+  const duration = windowSegments.reduce((total, segment) => total + (segment.duration ?? 0), 0);
 
-  for (let i = claimTokens.length; i >= Math.min(3, claimTokens.length); i--) {
-    for (let j = 0; j <= claimTokens.length - i; j++) {
-      const phrase = claimTokens.slice(j, j + i).join(' ');
-      const phraseIndex = segmentLower.indexOf(phrase);
-      if (phraseIndex !== -1) {
-        return {
-          start: phraseIndex,
-          end: phraseIndex + phrase.length,
-          matchedText: segmentText.substring(phraseIndex, phraseIndex + phrase.length),
-        };
-      }
-    }
-  }
-
-  return null;
+  return {
+    text,
+    start: windowSegments[0].start ?? 0,
+    duration,
+    indices: windowSegments.map((segment, offset) => startIndex + offset),
+  };
 }
 
 /**
- * Find the best matching segment for a claim text.
+ * Find the best matching raw transcript window for a claim text.
  * @param {string} claimText - The claim text to find
- * @param {Array} groupedSegments - Grouped transcript segments
- * @param {number} threshold - Minimum similarity score (0.0-1.0), default 0.6
- * @returns {Object|null} {segmentIndex, score, matchedText, highlightStart, highlightEnd} or null if no match
+ * @param {Array} rawSegments - Raw transcript segments as returned by the backend
+ * @param {number} threshold - Minimum similarity score (0.0-1.0), default 0.55
+ * @returns {Object|null} {segmentIndex, score, matchType, start, duration, excerpt, indices}
  */
-export function findClaimInTranscript(claimText, groupedSegments, threshold = 0.6) {
-  if (!claimText || !groupedSegments || groupedSegments.length === 0) {
+export function findClaimInTranscript(claimText, rawSegments, threshold = 0.55) {
+  if (!claimText || !rawSegments || rawSegments.length === 0) {
     return null;
   }
 
@@ -113,27 +94,31 @@ export function findClaimInTranscript(claimText, groupedSegments, threshold = 0.
   let bestScore = 0;
 
   // Try exact substring match first (fastest)
-  for (let i = 0; i < groupedSegments.length; i++) {
-    const segment = groupedSegments[i];
-    const normalizedSegment = normalizeText(segment.text);
+  for (let i = 0; i < rawSegments.length; i++) {
+    const window = buildSegmentWindow(rawSegments, i);
+    const normalizedSegment = normalizeText(window.text);
 
     if (normalizedSegment.includes(normalizedClaim)) {
-      const position = findExactPosition(claimText, segment.text);
       return {
         segmentIndex: i,
         score: 1.0,
-        matchedText: segment.text,
         matchType: 'exact',
-        highlightStart: position?.start || 0,
-        highlightEnd: position?.end || segment.text.length,
+        start: window.start,
+        duration: window.duration,
+        excerpt: window.text.trim(),
+        indices: window.indices,
       };
     }
   }
 
-  // Try fuzzy matching
-  for (let i = 0; i < groupedSegments.length; i++) {
-    const segment = groupedSegments[i];
-    const normalizedSegment = normalizeText(segment.text);
+  // Try fuzzy matching over rolling windows of segments
+  for (let i = 0; i < rawSegments.length; i++) {
+    const window = buildSegmentWindow(rawSegments, i);
+    const normalizedSegment = normalizeText(window.text);
+
+    if (!normalizedSegment) {
+      continue;
+    }
 
     // Quick filter: segment must contain at least some claim words
     const segmentWords = normalizedSegment.split(' ');
@@ -141,30 +126,37 @@ export function findClaimInTranscript(claimText, groupedSegments, threshold = 0.
       segmentWords.some((sw) => sw.includes(word) || word.includes(sw)),
     );
 
-    if (commonWords.length < Math.min(3, claimWords.length * 0.4)) {
+    if (commonWords.length < Math.min(3, Math.ceil(claimWords.length * 0.4))) {
       continue; // Skip if too few words in common
     }
 
-    // Calculate similarity for this segment
     const score = calculateSimilarity(normalizedClaim, normalizedSegment);
 
     if (score > bestScore) {
       bestScore = score;
-      const position = findExactPosition(claimText, segment.text);
       bestMatch = {
         segmentIndex: i,
-        score: score,
-        matchedText: segment.text,
+        score,
         matchType: 'fuzzy',
-        highlightStart: position?.start || 0,
-        highlightEnd: position?.end || segment.text.length,
+        start: window.start,
+        duration: window.duration,
+        excerpt: window.text.trim(),
+        indices: window.indices,
       };
     }
   }
 
-  // Return best match if it exceeds threshold
-  if (bestMatch && bestScore >= threshold) {
-    return bestMatch;
+  if (bestMatch) {
+    if (bestScore >= threshold) {
+      return bestMatch;
+    }
+
+    if (bestScore >= 0.35) {
+      return {
+        ...bestMatch,
+        matchType: 'approx',
+      };
+    }
   }
 
   return null;
@@ -172,11 +164,11 @@ export function findClaimInTranscript(claimText, groupedSegments, threshold = 0.
 
 /**
  * Match multiple claims to transcript segments.
- * @param {Array} claims - Array of claim objects with {text, ...} or {claim_text, ...}
- * @param {Array} groupedSegments - Grouped transcript segments
+ * @param {Array} claims - Array of claim report objects
+ * @param {Array} rawSegments - Raw transcript segments with timestamps
  * @returns {Map} Map of claimIndex -> matchResult
  */
-export function matchClaimsToSegments(claims, groupedSegments) {
+export function matchClaimsToSegments(claims, rawSegments) {
   const matches = new Map();
 
   claims.forEach((claim, index) => {
@@ -188,7 +180,7 @@ export function matchClaimsToSegments(claims, groupedSegments) {
       return;
     }
 
-    const match = findClaimInTranscript(claimText, groupedSegments);
+    const match = findClaimInTranscript(claimText, rawSegments);
     if (match) {
       matches.set(index, match);
     } else {
