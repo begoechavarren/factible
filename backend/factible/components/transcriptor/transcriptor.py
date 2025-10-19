@@ -6,6 +6,8 @@ from urllib.parse import parse_qs, urlparse
 
 from youtube_transcript_api import YouTubeTranscriptApi
 
+from factible.components.transcriptor.schemas import TranscriptData, TranscriptSegment
+
 _logger = logging.getLogger(__name__)
 
 
@@ -27,6 +29,41 @@ def extract_video_id(url: str) -> str:
     raise ValueError(f"Invalid YouTube URL: {url}")
 
 
+def get_transcript_with_segments(
+    url: str, languages: Optional[list[str]] = None
+) -> TranscriptData:
+    """Get transcript with both plain text and timestamped segments.
+
+    Args:
+        url: YouTube video URL
+        languages: List of preferred languages (default: ["en", "en-US"])
+
+    Returns:
+        TranscriptData containing plain text, segments, and video_id
+    """
+    if languages is None:
+        languages = ["en", "en-US"]
+
+    video_id = extract_video_id(url)
+
+    ytt_api = YouTubeTranscriptApi()
+    transcript = ytt_api.fetch(video_id, languages=languages)
+
+    # Extract segments with timestamps
+    segments = [
+        TranscriptSegment(
+            text=snippet.text, start=snippet.start, duration=snippet.duration
+        )
+        for snippet in transcript
+    ]
+
+    # Join snippets and clean up newlines for plain text
+    text = " ".join(snippet.text for snippet in transcript)
+    text = re.sub(r"\s+", " ", text).strip()
+
+    return TranscriptData(text=text, segments=segments, video_id=video_id)
+
+
 def get_transcript(url: str, languages: Optional[list[str]] = None) -> str:
     """Get transcript for a YouTube video.
 
@@ -37,16 +74,5 @@ def get_transcript(url: str, languages: Optional[list[str]] = None) -> str:
     Returns:
         Transcript text as a single string
     """
-    if languages is None:
-        languages = ["en", "en-US"]
-
-    video_id = extract_video_id(url)
-
-    ytt_api = YouTubeTranscriptApi()
-    transcript = ytt_api.fetch(video_id, languages=languages)
-
-    # Join snippets and clean up newlines
-    text = " ".join(snippet.text for snippet in transcript)
-    text = re.sub(r"\s+", " ", text).strip()
-
-    return text
+    transcript_data = get_transcript_with_segments(url, languages)
+    return transcript_data.text

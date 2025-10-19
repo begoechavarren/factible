@@ -5,7 +5,7 @@ import PageLayout from '@components/layout/PageLayout';
 import SearchBar from '@components/search/SearchBar';
 import FeatureList from '@components/features/FeatureList';
 import { ProcessingView } from '@components/processing/ProcessingView';
-import { ResultsView } from '@components/results/ResultsView';
+import { InteractiveResultsView } from '@components/results/InteractiveResultsView';
 import { useFactCheck } from '@hooks/useFactCheck';
 import { VideoPreview } from '@components/video/VideoPreview';
 
@@ -115,8 +115,8 @@ function App() {
   const contentWrapperClass = useMemo(
     () =>
       hasActiveRun
-        ? 'w-full max-w-5xl flex flex-col items-center gap-6 md:gap-7 lg:gap-8 transition-all duration-500 ease-out'
-        : 'w-full max-w-5xl flex flex-col items-center gap-9 md:gap-12 transition-all duration-500 ease-out',
+        ? 'mx-auto w-full max-w-5xl flex flex-col items-center gap-6 md:gap-7 lg:gap-8 transition-all duration-500 ease-out'
+        : 'mx-auto w-full max-w-5xl flex flex-col items-center gap-9 md:gap-12 transition-all duration-500 ease-out',
     [hasActiveRun],
   );
 
@@ -136,29 +136,31 @@ function App() {
       <Header onHome={handleReset} compact={hasActiveRun} />
       <main className={mainClassName}>
         <div className={contentWrapperClass}>
-          <section className={heroClassName}>
-            <div className="w-full">
-              <SearchBar
-                onSubmit={handleFactCheck}
-                loading={isProcessing}
-                compact={hasActiveRun}
-                disabled={isProcessing}
-                resetSignal={resetToken}
-              />
-            </div>
-
-            {(isMetaLoading || (videoMeta && videoUrl)) && (
+          {!result && (
+            <section className={heroClassName}>
               <div className="w-full">
-                <VideoPreview
-                  url={videoUrl}
-                  metadata={videoMeta}
-                  loading={isMetaLoading}
+                <SearchBar
+                  onSubmit={handleFactCheck}
+                  loading={isProcessing}
+                  compact={hasActiveRun}
+                  disabled={isProcessing}
+                  resetSignal={resetToken}
                 />
               </div>
-            )}
 
-            {!hasActiveRun && <FeatureList />}
-          </section>
+              {(isMetaLoading || (videoMeta && videoUrl)) && (
+                <div className="w-full">
+                  <VideoPreview
+                    url={videoUrl}
+                    metadata={videoMeta}
+                    loading={isMetaLoading}
+                  />
+                </div>
+              )}
+
+              {!hasActiveRun && <FeatureList />}
+            </section>
+          )}
 
           {error && (
             <div className="mx-auto w-full max-w-3xl rounded-3xl border-2 border-accent/40 bg-white/90 p-8 shadow-lg backdrop-blur">
@@ -185,7 +187,7 @@ function App() {
           )}
 
           {result && (
-            <ResultsView result={result} onReset={handleReset} />
+            <InteractiveResultsView result={result} onReset={handleReset} />
           )}
         </div>
       </main>

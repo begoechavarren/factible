@@ -5,6 +5,7 @@ from pydantic import BaseModel, Field
 from factible.components.claim_extractor.schemas import Claim, ExtractedClaims
 from factible.components.online_search.schemas.evidence import EvidenceStance
 from factible.components.online_search.schemas.reliability import SiteReliability
+from factible.components.transcriptor.schemas import TranscriptData
 
 
 VerdictConfidence = Literal["low", "medium", "high"]
@@ -65,6 +66,9 @@ class FactCheckRunOutput(BaseModel):
 
     extracted_claims: ExtractedClaims
     claim_reports: List[ClaimFactCheckReport]
+    transcript_data: TranscriptData = Field(
+        description="Original transcript with timestamped segments for UI"
+    )
 
 
 class ClaimEvidenceBundle(BaseModel):

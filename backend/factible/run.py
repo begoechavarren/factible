@@ -10,7 +10,7 @@ from factible.components.online_search.search import search_online
 from factible.components.output_generator.output_generator import generate_run_output
 from factible.components.output_generator.schemas import FactCheckRunOutput
 from factible.components.query_generator.query_generator import generate_queries
-from factible.components.transcriptor.transcriptor import get_transcript
+from factible.components.transcriptor.transcriptor import get_transcript_with_segments
 from factible.utils.profile import timer
 
 _logger = logging.getLogger(__name__)
@@ -54,7 +54,8 @@ def run_factible(
             )
 
         with timer("Step 1: Transcript extraction"):
-            transcript_text = get_transcript(video_url)
+            transcript_data = get_transcript_with_segments(video_url)
+            transcript_text = transcript_data.text
 
         if not transcript_text.strip():
             _logger.warning("No transcript retrieved for %s", video_url)
@@ -66,7 +67,7 @@ def run_factible(
                     {"error": "No transcript available"},
                 )
             empty_claims = ExtractedClaims(claims=[], total_count=0)
-            return generate_run_output(empty_claims, [])
+            return generate_run_output(empty_claims, [], transcript_data)
 
         if progress_callback:
             progress_callback(
@@ -139,13 +140,15 @@ def run_factible(
                     100,
                     {"result": processed_claims.model_dump()},
                 )
-            return generate_run_output(processed_claims, [])
+            return generate_run_output(processed_claims, [], transcript_data)
 
         if not enable_search:
             _logger.info("Search disabled; skipping fact-checking stage.")
             for claim in claims_to_process:
                 claim_evidence_records.append((claim, []))
-            return generate_run_output(processed_claims, claim_evidence_records)
+            return generate_run_output(
+                processed_claims, claim_evidence_records, transcript_data
+            )
 
         # Step 3: Generate search queries and search for each claim
         base_progress = 35
@@ -246,7 +249,9 @@ def run_factible(
             )
 
         with timer("Step 4: Output generation"):
-            run_output = generate_run_output(processed_claims, claim_evidence_records)
+            run_output = generate_run_output(
+                processed_claims, claim_evidence_records, transcript_data
+            )
 
         for idx, report in enumerate(run_output.claim_reports, 1):
             _logger.info(f"=== FACT-CHECK REPORT FOR CLAIM {idx} ===")

@@ -13,6 +13,7 @@ from factible.components.output_generator.schemas import (
     EvidenceSourceSummary,
     FactCheckRunOutput,
 )
+from factible.components.transcriptor.schemas import TranscriptData
 from factible.models.config import OUTPUT_GENERATOR_MODEL
 from factible.models.llm import get_model
 
@@ -155,10 +156,15 @@ def generate_claim_report(
 def generate_run_output(
     extracted_claims: ExtractedClaims,
     claim_results: Sequence[Tuple[Claim, Sequence[SearchResult]]],
+    transcript_data: TranscriptData,
 ) -> FactCheckRunOutput:
     """Aggregate claim reports for an entire pipeline run."""
     reports: List[ClaimFactCheckReport] = []
     for claim, results in claim_results:
         reports.append(generate_claim_report(claim, results))
 
-    return FactCheckRunOutput(extracted_claims=extracted_claims, claim_reports=reports)
+    return FactCheckRunOutput(
+        extracted_claims=extracted_claims,
+        claim_reports=reports,
+        transcript_data=transcript_data,
+    )
