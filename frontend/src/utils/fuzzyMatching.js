@@ -49,7 +49,8 @@ function calculateSimilarity(str1, str2) {
   return matchingTokens / totalTokens;
 }
 
-const MAX_WINDOW_SEGMENTS = 4;
+// Handle long claims that span multiple segments
+const MAX_WINDOW_SEGMENTS = 8;
 
 /**
  * Assemble a text window from consecutive raw transcript segments.
@@ -79,10 +80,10 @@ function buildSegmentWindow(segments, startIndex, maxSegments = MAX_WINDOW_SEGME
  * Find the best matching raw transcript window for a claim text.
  * @param {string} claimText - The claim text to find
  * @param {Array} rawSegments - Raw transcript segments as returned by the backend
- * @param {number} threshold - Minimum similarity score (0.0-1.0), default 0.55
+ * @param {number} threshold - Minimum similarity score (0.0-1.0)
  * @returns {Object|null} {segmentIndex, score, matchType, start, duration, excerpt, indices}
  */
-export function findClaimInTranscript(claimText, rawSegments, threshold = 0.55) {
+export function findClaimInTranscript(claimText, rawSegments, threshold = 0.45) {
   if (!claimText || !rawSegments || rawSegments.length === 0) {
     return null;
   }
@@ -92,6 +93,7 @@ export function findClaimInTranscript(claimText, rawSegments, threshold = 0.55) 
 
   let bestMatch = null;
   let bestScore = 0;
+  const debugCandidates = [];
 
   // Try exact substring match first (fastest)
   for (let i = 0; i < rawSegments.length; i++) {
@@ -99,6 +101,7 @@ export function findClaimInTranscript(claimText, rawSegments, threshold = 0.55) 
     const normalizedSegment = normalizeText(window.text);
 
     if (normalizedSegment.includes(normalizedClaim)) {
+      console.log(`✓ Exact match found for claim at ${window.start}s:`, claimText.substring(0, 50));
       return {
         segmentIndex: i,
         score: 1.0,
@@ -144,20 +147,45 @@ export function findClaimInTranscript(claimText, rawSegments, threshold = 0.55) 
         indices: window.indices,
       };
     }
+
+    // Track top candidates for debugging
+    if (score > 0.3) {
+      debugCandidates.push({
+        score,
+        start: window.start,
+        excerpt: window.text.substring(0, 80),
+      });
+    }
   }
+
+  // Sort debug candidates by score
+  debugCandidates.sort((a, b) => b.score - a.score);
 
   if (bestMatch) {
     if (bestScore >= threshold) {
+      console.log(
+        `✓ Fuzzy match found (score: ${bestScore.toFixed(2)}) at ${bestMatch.start}s:`,
+        claimText.substring(0, 50)
+      );
       return bestMatch;
     }
 
     if (bestScore >= 0.35) {
+      console.log(
+        `~ Approximate match found (score: ${bestScore.toFixed(2)}) at ${bestMatch.start}s:`,
+        claimText.substring(0, 50)
+      );
       return {
         ...bestMatch,
         matchType: 'approx',
       };
     }
   }
+
+  // Log failure details
+  console.warn('✗ No match found for claim:', claimText.substring(0, 80));
+  console.warn(`  Best score: ${bestScore.toFixed(2)} (threshold: ${threshold})`);
+  console.warn('  Top 3 candidates:', debugCandidates.slice(0, 3));
 
   return null;
 }

@@ -1,7 +1,7 @@
 import { useState, useRef, useMemo, useCallback } from 'react';
 import YouTubePlayer from '@components/video/YouTubePlayer';
 import { formatTime } from '@/utils/segmentGrouping';
-import { matchClaimsToSegments } from '@/utils/fuzzyMatching';
+import { findClaimInTranscript } from '@/utils/fuzzyMatching';
 
 /**
  * Interactive Results View - Redesigned with centered video and full-width transcript
@@ -17,9 +17,47 @@ export function InteractiveResultsView({ result, onReset }) {
   const rawSegments = transcriptData?.segments || [];
 
   // Match claims to precise transcript timestamps
+  // Use backend timestamp hints when available, fallback to fuzzy matching
   const claimMatches = useMemo(() => {
     if (!claims || !rawSegments) return new Map();
-    return matchClaimsToSegments(claims, rawSegments);
+
+    const matches = new Map();
+    let backendHints = 0;
+    let frontendMatches = 0;
+    let noMatches = 0;
+
+    claims.forEach((claim, index) => {
+      // PRIORITY 1: Use backend timestamp hint if available
+      if (claim.timestamp_hint !== null && claim.timestamp_hint !== undefined) {
+        matches.set(index, {
+          start: claim.timestamp_hint,
+          score: claim.timestamp_confidence || 1.0,
+          matchType: 'backend-hint',
+          segmentIndex: 0,
+          duration: 0,
+          excerpt: '',
+          indices: [],
+        });
+        backendHints++;
+      } else {
+        // PRIORITY 2: Fallback to frontend fuzzy matching ONLY for claims without backend hints
+        const claimText = claim.claim_text || claim.text;
+        const match = findClaimInTranscript(claimText, rawSegments);
+        if (match) {
+          matches.set(index, match);
+          frontendMatches++;
+        } else {
+          noMatches++;
+        }
+      }
+    });
+
+    // Summary log
+    console.log(
+      `📍 Timestamp matching: ${backendHints} backend hints, ${frontendMatches} frontend matches, ${noMatches} not found (${claims.length} total claims)`
+    );
+
+    return matches;
   }, [claims, rawSegments]);
 
   // Prepare timeline entries sorted by chronological order when matches exist

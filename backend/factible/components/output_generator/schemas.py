@@ -59,6 +59,14 @@ class ClaimFactCheckReport(BaseModel):
         ge=0,
         description="Total evidence sources considered across all stances.",
     )
+    timestamp_hint: float | None = Field(
+        default=None,
+        description="Suggested video timestamp in seconds where this claim appears",
+    )
+    timestamp_confidence: float | None = Field(
+        default=None,
+        description="Confidence score (0.0-1.0) for the timestamp hint",
+    )
 
 
 class FactCheckRunOutput(BaseModel):

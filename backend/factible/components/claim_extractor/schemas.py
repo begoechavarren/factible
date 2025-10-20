@@ -23,6 +23,18 @@ class Claim(BaseModel):
         default=None,
         description="Concise context including timeframe or speaker cues that help interpret the claim.",
     )
+    transcript_char_start: int | None = Field(
+        default=None,
+        description="Character position in transcript where this claim likely appears (post-processing)",
+    )
+    transcript_char_end: int | None = Field(
+        default=None,
+        description="End character position in transcript for this claim (post-processing)",
+    )
+    transcript_match_score: float | None = Field(
+        default=None,
+        description="Fuzzy match confidence score (0.0-1.0) for transcript position",
+    )
 
 
 class ExtractedClaims(BaseModel):

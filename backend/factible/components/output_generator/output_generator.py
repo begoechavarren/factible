@@ -14,6 +14,7 @@ from factible.components.output_generator.schemas import (
     FactCheckRunOutput,
 )
 from factible.components.transcriptor.schemas import TranscriptData
+from factible.components.transcriptor.transcriptor import map_char_position_to_timestamp
 from factible.models.config import OUTPUT_GENERATOR_MODEL
 from factible.models.llm import get_model
 
@@ -135,11 +136,24 @@ Provide the structured verdict.
 
 
 def generate_claim_report(
-    claim: Claim, search_results: Sequence[SearchResult]
+    claim: Claim,
+    search_results: Sequence[SearchResult],
+    transcript_data: TranscriptData,
 ) -> ClaimFactCheckReport:
     """Create a fact-check report for a single claim from search evidence."""
     bundle = _build_evidence_bundle(claim, search_results)
     verdict = _generate_verdict(bundle)
+
+    # Map claim's character position to timestamp if available
+    timestamp_hint = None
+    timestamp_confidence = None
+    if claim.transcript_char_start is not None:
+        timestamp_info = map_char_position_to_timestamp(
+            claim.transcript_char_start, transcript_data
+        )
+        if timestamp_info:
+            timestamp_hint = timestamp_info["start"]
+            timestamp_confidence = claim.transcript_match_score
 
     return ClaimFactCheckReport(
         claim_text=claim.text,
@@ -150,6 +164,8 @@ def generate_claim_report(
         verdict_summary=verdict.summary,
         evidence_by_stance=bundle.stance_groups,
         total_sources=bundle.total_sources,
+        timestamp_hint=timestamp_hint,
+        timestamp_confidence=timestamp_confidence,
     )
 
 
@@ -161,7 +177,7 @@ def generate_run_output(
     """Aggregate claim reports for an entire pipeline run."""
     reports: List[ClaimFactCheckReport] = []
     for claim, results in claim_results:
-        reports.append(generate_claim_report(claim, results))
+        reports.append(generate_claim_report(claim, results, transcript_data))
 
     return FactCheckRunOutput(
         extracted_claims=extracted_claims,

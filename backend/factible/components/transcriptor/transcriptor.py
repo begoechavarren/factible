@@ -64,15 +64,44 @@ def get_transcript_with_segments(
     return TranscriptData(text=text, segments=segments, video_id=video_id)
 
 
-def get_transcript(url: str, languages: Optional[list[str]] = None) -> str:
-    """Get transcript for a YouTube video.
+def map_char_position_to_timestamp(
+    char_position: int, transcript_data: TranscriptData
+) -> dict | None:
+    """
+    Map a character position in the full transcript to a segment timestamp.
 
     Args:
-        url: YouTube video URL
-        languages: List of preferred languages (default: ["en", "en-US"])
+        char_position: Character index in the full transcript text
+        transcript_data: TranscriptData with segments
 
     Returns:
-        Transcript text as a single string
+        dict with segment_index, start, duration if found, else None
     """
-    transcript_data = get_transcript_with_segments(url, languages)
-    return transcript_data.text
+    if not transcript_data.segments:
+        return None
+
+    # Build character position map by iterating through segments
+    current_char = 0
+    for idx, segment in enumerate(transcript_data.segments):
+        segment_text = segment.text + " "  # Account for space after each segment
+        segment_length = len(segment_text)
+
+        if current_char <= char_position < current_char + segment_length:
+            return {
+                "segment_index": idx,
+                "start": segment.start,
+                "duration": segment.duration,
+            }
+
+        current_char += segment_length
+
+    # If position is beyond all segments, return last segment
+    if transcript_data.segments:
+        last_segment = transcript_data.segments[-1]
+        return {
+            "segment_index": len(transcript_data.segments) - 1,
+            "start": last_segment.start,
+            "duration": last_segment.duration,
+        }
+
+    return None
