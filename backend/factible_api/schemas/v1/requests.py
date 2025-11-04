@@ -9,6 +9,10 @@ class FactCheckRequest(BaseModel):
         description="YouTube video URL to fact-check",
         examples=["https://www.youtube.com/watch?v=iGkLcqLWxMA"],
     )
+    experiment_name: str = Field(
+        default="default",
+        description="Name for this experiment run (for tracking)",
+    )
     max_claims: int | None = Field(
         default=5,
         ge=1,

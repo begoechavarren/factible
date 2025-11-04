@@ -11,7 +11,7 @@ from factible.components.output_generator.output_generator import generate_run_o
 from factible.components.output_generator.schemas import FactCheckRunOutput
 from factible.components.query_generator.query_generator import generate_queries
 from factible.components.transcriptor.transcriptor import get_transcript_with_segments
-from factible.utils.profile import timer
+from factible.evaluation.tracker import ExperimentTracker, timer
 
 _logger = logging.getLogger(__name__)
 
@@ -20,6 +20,7 @@ _logger = logging.getLogger(__name__)
 def run_factible(
     video_url: str,
     *,
+    experiment_name: str = "default",
     max_claims: Optional[int] = 5,
     enable_search: bool = True,
     max_queries_per_claim: int = 2,
@@ -32,6 +33,7 @@ def run_factible(
 
     Args:
         video_url: The URL of the YouTube video to fact check.
+        experiment_name: Name for this experiment run (for tracking).
         max_claims: Optional cap on how many top-importance claims are processed.
         enable_search: Toggle the search stage to save time or API calls.
         max_queries_per_claim: Number of high-priority queries to run per claim.
@@ -43,7 +45,18 @@ def run_factible(
     Returns:
         Structured fact-check reports for the processed claims.
     """
-    with timer("TOTAL PIPELINE"):
+    config = {
+        "video_url": video_url,
+        "max_claims": max_claims,
+        "enable_search": enable_search,
+        "max_queries_per_claim": max_queries_per_claim,
+        "max_results_per_query": max_results_per_query,
+        "headless_search": headless_search,
+    }
+
+    with ExperimentTracker("end_to_end", experiment_name, config) as tracker:
+        tracker.log_input("video_url", video_url)
+
         # Step 1: Extract transcript from YouTube video
         if progress_callback:
             progress_callback(
@@ -56,6 +69,8 @@ def run_factible(
         with timer("Step 1: Transcript extraction"):
             transcript_data = get_transcript_with_segments(video_url)
             transcript_text = transcript_data.text
+
+        tracker.log_input("transcript_length", len(transcript_text))
 
         if not transcript_text.strip():
             _logger.warning("No transcript retrieved for %s", video_url)
@@ -88,6 +103,8 @@ def run_factible(
 
         with timer("Step 2: Claim extraction"):
             extracted_claims = extract_claims(transcript_text, max_claims=max_claims)
+
+        tracker.log_output("extracted_claims", extracted_claims.model_dump())
 
         total_claims = extracted_claims.total_count
         claims_to_process = list(extracted_claims.claims)
@@ -252,6 +269,8 @@ def run_factible(
             run_output = generate_run_output(
                 processed_claims, claim_evidence_records, transcript_data
             )
+
+        tracker.log_output("final_output", run_output.model_dump())
 
         for idx, report in enumerate(run_output.claim_reports, 1):
             _logger.info(f"=== FACT-CHECK REPORT FOR CLAIM {idx} ===")

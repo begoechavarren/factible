@@ -4,6 +4,7 @@ from pydantic_ai import Agent
 
 from factible.components.claim_extractor.schemas import Claim
 from factible.components.query_generator.schemas import GeneratedQueries
+from factible.evaluation.pydantic_monitor import track_pydantic
 from factible.models.config import QUERY_GENERATOR_MODEL
 from factible.models.llm import get_model
 
@@ -48,6 +49,7 @@ def _get_query_generator_agent() -> Agent:
     )
 
 
+@track_pydantic("query_generation")
 def generate_queries(
     claim: Claim,
     *,

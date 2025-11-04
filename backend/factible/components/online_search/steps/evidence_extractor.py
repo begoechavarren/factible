@@ -3,6 +3,7 @@ import logging
 from pydantic_ai import Agent
 
 from factible.components.online_search.schemas.evidence import EvidenceExtraction
+from factible.evaluation.pydantic_monitor import track_pydantic
 from factible.models.config import EVIDENCE_EXTRACTOR_MODEL
 from factible.models.llm import ModelChoice, ModelSpec, get_model
 
@@ -43,6 +44,7 @@ class RelevantContentExtractor:
             """,
         )
 
+    @track_pydantic("evidence_extraction")
     def extract(self, query: str, content: str) -> EvidenceExtraction:
         if not content.strip():
             return EvidenceExtraction(

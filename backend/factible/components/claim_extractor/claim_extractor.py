@@ -6,6 +6,7 @@ from pydantic_ai import Agent
 from pydantic_ai.exceptions import AgentRunError
 
 from factible.components.claim_extractor.schemas import ExtractedClaims
+from factible.evaluation.pydantic_monitor import track_pydantic
 from factible.models.config import CLAIM_EXTRACTOR_MODEL
 from factible.models.llm import get_model
 
@@ -140,6 +141,7 @@ def _get_claim_extractor_agent() -> Agent:
     )
 
 
+@track_pydantic("claim_extraction")
 def extract_claims(
     transcript: str, *, max_claims: int | None = None
 ) -> ExtractedClaims:

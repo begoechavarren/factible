@@ -9,5 +9,6 @@ $ uv run python -m factible_api.main
 
 $ ollama serve
 
+$ cd frontend
 $ npm run dev
 ```

@@ -15,6 +15,7 @@ from factible.components.output_generator.schemas import (
 )
 from factible.components.transcriptor.schemas import TranscriptData
 from factible.components.transcriptor.transcriptor import map_char_position_to_timestamp
+from factible.evaluation.pydantic_monitor import track_pydantic
 from factible.models.config import OUTPUT_GENERATOR_MODEL
 from factible.models.llm import get_model
 
@@ -99,6 +100,7 @@ def _format_evidence_for_prompt(bundle: ClaimEvidenceBundle) -> str:
     return "\n".join(lines)
 
 
+@track_pydantic("verdict_generation")
 def _generate_verdict(bundle: ClaimEvidenceBundle) -> ClaimVerdict:
     """Ask the LLM to produce an overall verdict for the claim."""
     if not bundle.stance_groups:

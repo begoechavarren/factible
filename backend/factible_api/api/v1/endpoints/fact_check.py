@@ -42,6 +42,7 @@ async def fact_check_stream(
             await asyncio.to_thread(
                 run_factible,
                 str(request.video_url),
+                experiment_name=request.experiment_name,
                 max_claims=request.max_claims,
                 max_queries_per_claim=request.max_queries_per_claim,
                 max_results_per_query=request.max_results_per_query,
