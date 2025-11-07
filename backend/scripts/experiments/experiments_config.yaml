@@ -1,0 +1,58 @@
+# Experiment Configuration for Factible Evaluation
+# This file defines test videos and experiment configurations for systematic evaluation
+
+# Test videos for evaluation
+videos:
+  - id: "example_video_1"
+    url: "https://youtube.com/watch?v=dQw4w9WgXcQ"  # Replace with actual test video
+    description: "Example video 1 - Political speech"
+    tags: ["politics", "baseline"]
+    notes: "Contains 3-5 verifiable claims about policy"
+
+  - id: "example_video_2"
+    url: "https://youtube.com/watch?v=dQw4w9WgXcQ"  # Replace with actual test video
+    description: "Example video 2 - Science explainer"
+    tags: ["science", "complex"]
+    notes: "Technical content with statistical claims"
+
+  # Add more test videos here
+  # - id: "video_3"
+  #   url: "https://youtube.com/watch?v=..."
+  #   description: "..."
+  #   tags: ["category"]
+
+# Experiment configurations
+# Each experiment will be run on all videos (or filtered by tags)
+experiments:
+  - name: "baseline_gpt4o_mini"
+    description: "Baseline configuration with GPT-4o-mini"
+    model_config: "OPENAI_GPT4O_MINI"  # References ModelChoice enum
+    max_claims: 5
+    max_queries_per_claim: 2
+    max_results_per_query: 3
+    enable_search: true
+    video_filter: []  # Empty = run on all videos, or specify tags: ["baseline"]
+
+  - name: "fast_qwen3_4b"
+    description: "Fast local model for cost comparison"
+    model_config: "OLLAMA_QWEN3_0_4B"
+    max_claims: 3
+    max_queries_per_claim: 1
+    max_results_per_query: 2
+    enable_search: true
+    video_filter: []
+
+  - name: "high_quality_gpt4o"
+    description: "High quality with GPT-4o (expensive)"
+    model_config: "OPENAI_GPT4O"
+    max_claims: 10
+    max_queries_per_claim: 3
+    max_results_per_query: 5
+    enable_search: true
+    video_filter: ["baseline"]  # Only run on baseline tagged videos
+
+# Global settings
+settings:
+  headless_search: true
+  parallel_execution: false  # Set to true to run experiments in parallel (not implemented yet)
+  skip_existing: false  # Set to true to skip videos that already have results
