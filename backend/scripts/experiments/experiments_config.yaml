@@ -3,23 +3,11 @@
 
 # Test videos for evaluation
 videos:
-  - id: "example_video_1"
-    url: "https://youtube.com/watch?v=dQw4w9WgXcQ"  # Replace with actual test video
-    description: "Example video 1 - Political speech"
-    tags: ["politics", "baseline"]
-    notes: "Contains 3-5 verifiable claims about policy"
-
-  - id: "example_video_2"
-    url: "https://youtube.com/watch?v=dQw4w9WgXcQ"  # Replace with actual test video
-    description: "Example video 2 - Science explainer"
-    tags: ["science", "complex"]
-    notes: "Technical content with statistical claims"
-
-  # Add more test videos here
-  # - id: "video_3"
-  #   url: "https://youtube.com/watch?v=..."
-  #   description: "..."
-  #   tags: ["category"]
+  - id: "climate_change_2_min"
+    url: "https://www.youtube.com/watch?v=QlQ-MEZgRGY"
+    description: "Climate Change - 2 min kids video"
+    tags: ["climate change", "baseline"]
+    notes: "Climate change verifiable claims"
 
 # Experiment configurations
 # Each experiment will be run on all videos (or filtered by tags)
