@@ -112,11 +112,52 @@ def track_pydantic(component: str) -> Callable[[Callable[..., T]], Callable[...,
     def decorator(func: Callable[..., T]) -> Callable[..., T]:
         @wraps(func)
         def wrapper(*args, **kwargs) -> T:
-            # Monkey-patch agent.run_sync to track calls
+            # Save original method BEFORE patching
             original_run_sync = Agent.run_sync
 
             def tracked_run_sync(self, prompt, *run_args, **run_kwargs):
-                return track_pydantic_call(self, prompt, component, "run_sync").output
+                # Track the call using the ORIGINAL method
+                tracker = ExperimentTracker.get_current()
+                model_name = str(self.model) if hasattr(self, "model") else "unknown"
+
+                start_time = time.time()
+
+                # Call the ORIGINAL method, not the patched one
+                result = original_run_sync(self, prompt, *run_args, **run_kwargs)
+
+                latency = time.time() - start_time
+                output = result.output if hasattr(result, "output") else result
+
+                # Estimate tokens and cost
+                input_tokens = estimate_tokens(prompt)
+                output_str = (
+                    str(output)
+                    if not hasattr(output, "model_dump_json")
+                    else output.model_dump_json()
+                )
+                output_tokens = estimate_tokens(output_str)
+                cost = calculate_cost(model_name, input_tokens, output_tokens)
+
+                # Log to tracker
+                if tracker:
+                    call_data = {
+                        "component": component,
+                        "model": model_name,
+                        "timestamp": datetime.now().isoformat(),
+                        "latency_seconds": round(latency, 2),
+                        "input_prompt": prompt,
+                        "input_length_chars": len(prompt),
+                        "input_tokens_estimated": input_tokens,
+                        "output": output.model_dump()
+                        if hasattr(output, "model_dump")
+                        else str(output),
+                        "output_length_chars": len(output_str),
+                        "output_tokens_estimated": output_tokens,
+                        "cost_usd": round(cost, 6),
+                    }
+                    tracker.log_pydantic_call(call_data)
+
+                return result
 
             try:
                 Agent.run_sync = tracked_run_sync

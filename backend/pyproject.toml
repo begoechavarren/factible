@@ -19,7 +19,7 @@ dependencies = [
 ]
 
 [project.scripts]
-factible-experiments = "scripts.experiments.run_experiments:app"
+factible-experiments = "factible.experiments.run_experiments:app"
 
 [dependency-groups]
 dev = [

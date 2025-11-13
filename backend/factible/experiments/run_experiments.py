@@ -21,7 +21,7 @@ app = typer.Typer(help="Run systematic experiments for Factible evaluation")
 _logger = logging.getLogger(__name__)
 
 # Default config file location
-DEFAULT_CONFIG = Path("scripts/experiments/experiments_config.yaml")
+DEFAULT_CONFIG = Path("factible/experiments/experiments_config.yaml")
 
 
 def load_config(config_path: Path) -> dict[str, Any]:

@@ -19,7 +19,7 @@ class ExperimentTracker:
         component: str,
         experiment_name: str,
         config: dict[str, Any],
-        base_dir: Path = Path("experiments/runs"),
+        base_dir: Path = Path("factible/experiments/runs"),
     ):
         self.component = component
         self.experiment_name = experiment_name
