@@ -96,7 +96,6 @@ def run_single(
             video_url=video["url"],
             experiment_name=full_name,
             max_claims=experiment.get("max_claims", 5),
-            enable_search=experiment.get("enable_search", True),
             max_queries_per_claim=experiment.get("max_queries_per_claim", 2),
             max_results_per_query=experiment.get("max_results_per_query", 3),
             headless_search=settings.get("headless_search", True),

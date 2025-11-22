@@ -22,7 +22,6 @@ def run_factible(
     *,
     experiment_name: str = "default",
     max_claims: Optional[int] = 5,
-    enable_search: bool = True,
     max_queries_per_claim: int = 2,
     max_results_per_query: int = 3,
     headless_search: bool = True,
@@ -35,7 +34,6 @@ def run_factible(
         video_url: The URL of the YouTube video to fact check.
         experiment_name: Name for this experiment run (for tracking).
         max_claims: Optional cap on how many top-importance claims are processed.
-        enable_search: Toggle the search stage to save time or API calls.
         max_queries_per_claim: Number of high-priority queries to run per claim.
         max_results_per_query: Number of search results to inspect per query.
         headless_search: Whether Selenium should run in headless mode when scraping.
@@ -48,7 +46,6 @@ def run_factible(
     config = {
         "video_url": video_url,
         "max_claims": max_claims,
-        "enable_search": enable_search,
         "max_queries_per_claim": max_queries_per_claim,
         "max_results_per_query": max_results_per_query,
         "headless_search": headless_search,
@@ -158,14 +155,6 @@ def run_factible(
                     {"result": processed_claims.model_dump()},
                 )
             return generate_run_output(processed_claims, [], transcript_data)
-
-        if not enable_search:
-            _logger.info("Search disabled; skipping fact-checking stage.")
-            for claim in claims_to_process:
-                claim_evidence_records.append((claim, []))
-            return generate_run_output(
-                processed_claims, claim_evidence_records, transcript_data
-            )
 
         # Step 3: Generate search queries and search for each claim
         base_progress = 35

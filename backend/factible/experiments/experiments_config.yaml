@@ -21,10 +21,17 @@ experiments:
   - name: "baseline_gpt4o_mini"
     description: "Baseline configuration with GPT-4o-mini"
     model_config: "OPENAI_GPT4O_MINI"  # References ModelChoice enum
+    max_claims: 1
+    max_queries_per_claim: 1
+    max_results_per_query: 1
+    video_filter: []  # Empty = run on all videos, or specify tags: ["baseline"]
+
+  - name: "default_gpt4o_mini"
+    description: "Baseline configuration with GPT-4o-mini"
+    model_config: "OPENAI_GPT4O_MINI"  # References ModelChoice enum
     max_claims: 5
     max_queries_per_claim: 2
     max_results_per_query: 3
-    enable_search: true
     video_filter: []  # Empty = run on all videos, or specify tags: ["baseline"]
 
   - name: "fast_qwen3_4b"
@@ -33,7 +40,6 @@ experiments:
     max_claims: 3
     max_queries_per_claim: 1
     max_results_per_query: 2
-    enable_search: true
     video_filter: []
 
   - name: "high_quality_gpt4o"
@@ -42,7 +48,6 @@ experiments:
     max_claims: 10
     max_queries_per_claim: 3
     max_results_per_query: 5
-    enable_search: true
     video_filter: ["baseline"]  # Only run on baseline tagged videos
 
 # Global settings
