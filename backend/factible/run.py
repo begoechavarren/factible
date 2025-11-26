@@ -171,7 +171,7 @@ def run_factible(
                 return claim, collected_results
 
             try:
-                with timer(f"  Query generation for claim {index}"):
+                with timer(f"Step 3.{index}: Query generation for claim {index}"):
                     queries = generate_queries(
                         claim,
                         max_queries=max_queries_per_claim,
@@ -192,7 +192,9 @@ def run_factible(
                     continue
 
                 try:
-                    with timer(f"    Search execution for query {query_index}"):
+                    with timer(
+                        f"Step 3.{index}.{query_index}: Search execution for claim {index} query {query_index}"
+                    ):
                         search_results = search_online(
                             query_obj.query,
                             limit=max(1, max_results_per_query),
