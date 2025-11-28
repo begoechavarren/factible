@@ -14,13 +14,18 @@ from factible.components.online_search.steps.google_search import GoogleSearchCl
 from factible.components.online_search.steps.reliability import (
     WebsiteReliabilityChecker,
 )
-from factible.utils.profile import timer
+from factible.evaluation.tracker import timer
 
 _logger = logging.getLogger(__name__)
 
 
 def search_online(
-    query: str, limit: int = 5, *, headless: bool = True
+    query: str,
+    limit: int = 5,
+    *,
+    headless: bool = True,
+    claim_index: int | None = None,
+    query_index: int | None = None,
 ) -> SearchResults:
     """Perform an online search and enrich results with evidence and reliability."""
 
@@ -28,7 +33,13 @@ def search_online(
     reliability_checker = WebsiteReliabilityChecker()
     evidence_extractor = RelevantContentExtractor()
 
-    with timer("        [Online Search] Google search"):
+    # Build timer prefix for hierarchical tracking
+    if claim_index is not None and query_index is not None:
+        prefix = f"Step 3.{claim_index}.2.{query_index}"
+    else:
+        prefix = "Search"
+
+    with timer(f"{prefix}.1: Google Search API"):
         raw_results = search_client.search(query, limit)
     if not raw_results:
         return SearchResults(query=query, results=[], total_count=0)
@@ -44,39 +55,40 @@ def search_online(
     results: List[SearchResult] = []
 
     with context_manager as active_fetcher:  # type: ignore[assignment]
-        for item in raw_results:
-            with timer(f"          [Result] {item.title[:50]}..."):
-                with timer("            [Reliability] Assessment"):
-                    reliability = reliability_checker.assess(item.url)
+        for result_idx, item in enumerate(raw_results, 1):
+            # Per-result timing
+            # Track the substeps instead
+            with timer(f"{prefix}.2: Reliability assessment (result {result_idx})"):
+                reliability = reliability_checker.assess(item.url)
 
-                page_text = ""
-                if isinstance(active_fetcher, SeleniumContentFetcher):
-                    with timer("            [Content] Fetching"):
-                        page_text = active_fetcher.fetch_text(item.url)
+            page_text = ""
+            if isinstance(active_fetcher, SeleniumContentFetcher):
+                with timer(f"{prefix}.3: Content fetching (result {result_idx})"):
+                    page_text = active_fetcher.fetch_text(item.url)
 
-                evidence_summary = None
-                overall_stance = None
-                snippets: List[EvidenceSnippet] = []
-                if page_text:
-                    with timer("            [Evidence] Extraction"):
-                        evidence_output = evidence_extractor.extract(query, page_text)
-                        overall_stance = evidence_output.overall_stance
-                        if evidence_output.has_relevant_evidence:
-                            evidence_summary = evidence_output.summary
-                            snippets = evidence_output.snippets
+            evidence_summary = None
+            overall_stance = None
+            snippets: List[EvidenceSnippet] = []
+            if page_text:
+                with timer(f"{prefix}.4: Evidence extraction (result {result_idx})"):
+                    evidence_output = evidence_extractor.extract(query, page_text)
+                    overall_stance = evidence_output.overall_stance
+                    if evidence_output.has_relevant_evidence:
+                        evidence_summary = evidence_output.summary
+                        snippets = evidence_output.snippets
 
-                results.append(
-                    SearchResult(
-                        title=item.title,
-                        url=item.url,
-                        snippet=item.snippet,
-                        engine=item.engine,
-                        reliability=reliability,
-                        relevant_evidence=snippets,
-                        evidence_summary=evidence_summary,
-                        evidence_overall_stance=overall_stance,
-                        content_characters=len(page_text),
-                    )
+            results.append(
+                SearchResult(
+                    title=item.title,
+                    url=item.url,
+                    snippet=item.snippet,
+                    engine=item.engine,
+                    reliability=reliability,
+                    relevant_evidence=snippets,
+                    evidence_summary=evidence_summary,
+                    evidence_overall_stance=overall_stance,
+                    content_characters=len(page_text),
                 )
+            )
 
     return SearchResults(query=query, results=results, total_count=len(results))
