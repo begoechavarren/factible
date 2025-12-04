@@ -82,7 +82,7 @@ def track_pydantic_call(
             "input_prompt": prompt,
             "input_length_chars": len(prompt),
             "input_tokens_estimated": input_tokens,
-            "output": output.model_dump()
+            "output": output.model_dump(exclude_none=True)
             if hasattr(output, "model_dump")
             else str(output),
             "output_length_chars": len(output_str),
@@ -148,7 +148,7 @@ def track_pydantic(component: str) -> Callable[[Callable[..., T]], Callable[...,
                         "input_prompt": prompt,
                         "input_length_chars": len(prompt),
                         "input_tokens_estimated": input_tokens,
-                        "output": output.model_dump()
+                        "output": output.model_dump(exclude_none=True)
                         if hasattr(output, "model_dump")
                         else str(output),
                         "output_length_chars": len(output_str),

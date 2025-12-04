@@ -77,25 +77,19 @@ class ExperimentTracker:
         """Save all tracked data to disk."""
         total_time = time.time() - self.start_time
 
-        # Save config
+        # Save config (includes inputs)
         config_data = {
             "run_id": self.run_id,
             "experiment_name": self.experiment_name,
             "component": self.component,
             "timestamp": datetime.now().isoformat(),
             **self.config,
+            **self.inputs,  # Merge inputs into config
         }
         self._write_json("config.json", config_data)
 
-        # Save timing
-        timing_data = {**self.timing_data, "total_seconds": total_time}
-        self._write_json("timing.json", timing_data)
-
-        # Save pydantic calls
-        self._write_json("pydantic_calls.json", self.pydantic_calls)
-
-        # Save inputs
-        self._write_json("inputs.json", self.inputs)
+        # Save LLM calls
+        self._write_json("llm_calls.json", self.pydantic_calls)
 
         # Save outputs
         self._write_json("outputs.json", self.outputs)
@@ -114,13 +108,13 @@ class ExperimentTracker:
             **self.timing_data,
         }
 
-        # Pydantic AI metrics
+        # LLM call metrics
         if self.pydantic_calls:
             total_cost = sum(call.get("cost_usd", 0) for call in self.pydantic_calls)
             total_latency = sum(
                 call.get("latency_seconds", 0) for call in self.pydantic_calls
             )
-            self.metrics["pydantic_ai"] = {
+            self.metrics["llm"] = {
                 "total_calls": len(self.pydantic_calls),
                 "total_cost_usd": total_cost,
                 "total_latency_seconds": total_latency,
