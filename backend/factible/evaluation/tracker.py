@@ -38,6 +38,9 @@ class ExperimentTracker:
         self.outputs: dict[str, Any] = {}
         self.pydantic_calls: list[dict[str, Any]] = []
 
+        # Context for tracing (claim/query being processed)
+        self.context: dict[str, Any] = {}
+
         # Timing
         self.start_time = time.time()
 
@@ -71,7 +74,18 @@ class ExperimentTracker:
 
     def log_pydantic_call(self, call_data: dict[str, Any]):
         """Log a Pydantic AI call."""
+        # Include current context for traceability
+        if self.context:
+            call_data["context"] = self.context.copy()
         self.pydantic_calls.append(call_data)
+
+    def set_context(self, **kwargs):
+        """Set context for tracing (e.g., claim_index, claim_text, query_index)."""
+        self.context.update(kwargs)
+
+    def clear_context(self):
+        """Clear the current context."""
+        self.context.clear()
 
     def save(self):
         """Save all tracked data to disk."""
@@ -93,6 +107,16 @@ class ExperimentTracker:
 
         # Save outputs
         self._write_json("outputs.json", self.outputs)
+
+        # Save transcript as separate text file (if available)
+        if "final_output" in self.outputs:
+            final_output = self.outputs["final_output"]
+            if isinstance(final_output, dict) and "transcript_data" in final_output:
+                transcript_data = final_output["transcript_data"]
+                if isinstance(transcript_data, dict) and "text" in transcript_data:
+                    transcript_text = transcript_data["text"]
+                    transcript_path = self.run_dir / "transcript.txt"
+                    transcript_path.write_text(transcript_text, encoding="utf-8")
 
         # Calculate and save metrics
         self._calculate_metrics(total_time)

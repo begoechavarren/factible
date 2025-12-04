@@ -16,6 +16,7 @@ from factible.components.output_generator.schemas import (
 from factible.components.transcriptor.schemas import TranscriptData
 from factible.components.transcriptor.transcriptor import map_char_position_to_timestamp
 from factible.evaluation.pydantic_monitor import track_pydantic
+from factible.evaluation.tracker import ExperimentTracker
 from factible.models.config import OUTPUT_GENERATOR_MODEL
 from factible.models.llm import get_model
 
@@ -177,9 +178,19 @@ def generate_run_output(
     transcript_data: TranscriptData,
 ) -> FactCheckRunOutput:
     """Aggregate claim reports for an entire pipeline run."""
+    tracker = ExperimentTracker.get_current()
     reports: List[ClaimFactCheckReport] = []
-    for claim, results in claim_results:
+
+    for idx, (claim, results) in enumerate(claim_results, 1):
+        # Set context for verdict generation traceability
+        if tracker:
+            tracker.set_context(claim_index=idx, claim_text=claim.text)
+
         reports.append(generate_claim_report(claim, results, transcript_data))
+
+        # Clear context after generating report
+        if tracker:
+            tracker.clear_context()
 
     return FactCheckRunOutput(
         extracted_claims=extracted_claims,

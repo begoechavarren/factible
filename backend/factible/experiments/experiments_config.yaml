@@ -26,6 +26,14 @@ experiments:
     max_results_per_query: 1
     video_filter: []  # Empty = run on all videos, or specify tags: ["baseline"]
 
+  - name: "baseline_2_gpt4o_mini"
+    description: "Baseline configuration with GPT-4o-mini"
+    model_config: "OPENAI_GPT4O_MINI"  # References ModelChoice enum
+    max_claims: 2
+    max_queries_per_claim: 1
+    max_results_per_query: 1
+    video_filter: []  # Empty = run on all videos, or specify tags: ["baseline"]
+
   - name: "default_gpt4o_mini"
     description: "Baseline configuration with GPT-4o-mini"
     model_config: "OPENAI_GPT4O_MINI"  # References ModelChoice enum

@@ -1,5 +1,6 @@
 import re
 import logging
+import requests
 
 from typing import Optional
 from urllib.parse import parse_qs, urlparse
@@ -27,6 +28,26 @@ def extract_video_id(url: str) -> str:
             return parsed.path.split("/")[2]
 
     raise ValueError(f"Invalid YouTube URL: {url}")
+
+
+def get_video_title(url: str) -> str:
+    """Get video title using YouTube oEmbed API.
+
+    Args:
+        url: YouTube video URL
+
+    Returns:
+        Video title string, or "Unknown" if fetch fails
+    """
+    try:
+        oembed_url = f"https://www.youtube.com/oembed?url={url}&format=json"
+        response = requests.get(oembed_url, timeout=5)
+        response.raise_for_status()
+        data = response.json()
+        return data.get("title", "Unknown")
+    except Exception as exc:
+        _logger.warning(f"Failed to fetch video title: {exc}")
+        return "Unknown"
 
 
 def get_transcript_with_segments(

@@ -10,7 +10,10 @@ from factible.components.online_search.search import search_online
 from factible.components.output_generator.output_generator import generate_run_output
 from factible.components.output_generator.schemas import FactCheckRunOutput
 from factible.components.query_generator.query_generator import generate_queries
-from factible.components.transcriptor.transcriptor import get_transcript_with_segments
+from factible.components.transcriptor.transcriptor import (
+    get_transcript_with_segments,
+    get_video_title,
+)
 from factible.evaluation.tracker import ExperimentTracker, timer
 
 _logger = logging.getLogger(__name__)
@@ -53,6 +56,10 @@ def run_factible(
 
     with ExperimentTracker("end_to_end", experiment_name, config) as tracker:
         tracker.log_input("video_url", video_url)
+
+        # Fetch video title
+        video_title = get_video_title(video_url)
+        tracker.log_input("video_title", video_title)
 
         # Step 1: Extract transcript from YouTube video
         if progress_callback:
@@ -163,11 +170,15 @@ def run_factible(
         def _process_claim(
             index: int, claim: Claim
         ) -> Tuple[Claim, List[SearchResult]]:
+            # Set context for traceability
+            tracker.set_context(claim_index=index, claim_text=claim.text)
+
             _logger.info(f"--- SEARCH RESULTS FOR CLAIM {index} ---")
             collected_results: List[SearchResult] = []
 
             if max_queries_per_claim <= 0:
                 _logger.info("  Query execution skipped (max_queries_per_claim <= 0)")
+                tracker.clear_context()
                 return claim, collected_results
 
             try:
@@ -179,13 +190,23 @@ def run_factible(
                     )
             except Exception as exc:  # pragma: no cover - defensive path
                 _logger.error("Failed to generate queries for claim %d: %s", index, exc)
+                tracker.clear_context()
                 return claim, collected_results
 
             if not queries.queries:
                 _logger.info("  No high-priority queries generated for this claim")
+                tracker.clear_context()
                 return claim, collected_results
 
             for query_index, query_obj in enumerate(queries.queries, 1):
+                # Update context with query information
+                tracker.set_context(
+                    claim_index=index,
+                    claim_text=claim.text,
+                    query_index=query_index,
+                    query_text=query_obj.query,
+                )
+
                 _logger.info(f"Query {query_index}: {query_obj.query}")
                 if max_results_per_query <= 0:
                     _logger.info("  Search skipped (max_results_per_query <= 0)")
@@ -235,6 +256,7 @@ def run_factible(
                             result.evidence_overall_stance.upper(),
                         )
 
+            tracker.clear_context()
             return claim, collected_results
 
         if claims_to_process:
