@@ -73,7 +73,6 @@ def run_single(
         _logger.info(f"⊘ Skipping [{exp_name}] on [{video_id}]: {reason}")
         return True
 
-    # Show what we're doing
     _logger.info("=" * 80)
     _logger.info(f"🚀 {full_name}")
     _logger.info(f"   Video: {video.get('description', video_id)}")

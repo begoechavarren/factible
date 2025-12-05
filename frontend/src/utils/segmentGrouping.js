@@ -50,7 +50,7 @@ export function groupTranscriptSegments(rawSegments, options = {}) {
     const isLastSegment = i === rawSegments.length - 1;
 
     // Break conditions:
-    // 1. Hit sentence boundary AND we're long enough
+    // 1. Hit sentence boundary AND long enough
     // 2. Hit max duration (force break)
     // 3. Last segment (flush remaining)
     if ((endsWithPunctuation && isLongEnough) || tooLong || isLastSegment) {
