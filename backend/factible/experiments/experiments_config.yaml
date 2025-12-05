@@ -9,125 +9,68 @@ videos:
     tags: ["climate change", "baseline"]
     notes: "Climate change verifiable claims"
 
-  - id: "economy_inflation_8_min"
-    url: "https://www.youtube.com/watch?v=UMAELCrJxt0"
-    description: "What is inflation - 8 min info video"
-    tags: ["economy", "baseline"]
-    notes: "Economic verifiable claims"
-
-  - id: "climate_change_skepticism_3_min"
-    url: "https://www.youtube.com/watch?v=r9MM6pJLEMY"
-    description: "Climate Change Skepticism | Explained"
-    tags: ["climate change", "baseline"]
-    notes: "Climate change verifiable claims - reference trump"
-
-  - id: "real_time_climate_fakery"
-    url: "https://www.youtube.com/watch?v=yIQSZ_Tlqmo"
-    description: "Real Time Climate Fakery (1m 45s)"
-    tags: ["climate skepticism", "short"]
-    notes: "Climate misinformation - Tony Heller"
-
-  - id: "false_alarm_lomborg"
-    url: "https://www.youtube.com/watch?v=SyYqfrrAezs"
-    description: "False Alarm by Bjorn Lomborg (1m 46s)"
-    tags: ["climate skepticism", "short"]
-    notes: "Bjorn Lomborg book promo"
-
-  - id: "debunking_climate_lies"
-    url: "https://www.youtube.com/watch?v=LJVxAJ_jegA"
-    description: "Debunking 3 Major Climate Change Lies (3m 16s)"
-    tags: ["climate skepticism", "short"]
-    notes: "Climate misinformation claims"
-
-  - id: "no_climate_crisis_harris"
-    url: "https://www.youtube.com/watch?v=Qdg4uQW8Dlg"
-    description: "There is no climate crisis: Tom Harris (4m 12s)"
-    tags: ["climate skepticism", "short"]
-    notes: "Climate denial - Fox News"
-
-  - id: "truth_about_co2"
-    url: "https://www.youtube.com/watch?v=WDWEjSDYfxc"
-    description: "The Truth about CO2 | 5 Minute Video (4m 31s)"
-    tags: ["climate skepticism", "prager_u"]
-    notes: "PragerU video on CO2"
-
-  - id: "what_they_havent_told_climate"
-    url: "https://www.youtube.com/watch?v=p6CMEYygxHw"
-    description: "What They Haven't Told You about Climate Change (4m 54s)"
-    tags: ["climate skepticism", "prager_u"]
-    notes: "Patrick Moore - PragerU (2.5M+ views)"
-
-  - id: "climate_what_scientists_say"
-    url: "https://www.youtube.com/watch?v=OwqIy8Ikv-c"
-    description: "Climate Change: What Do Scientists Say? | 5 Minute Video (5m 4s)"
-    tags: ["climate skepticism", "prager_u"]
-    notes: "Richard Lindzen - PragerU"
-
+  # option_1 videos (PragerU climate skepticism)
   - id: "fossil_fuels_greenest_energy"
     url: "https://www.youtube.com/watch?v=BJWq1FeGpCw"
-    description: "Fossil Fuels: The Greenest Energy | 5 Minute Video (5m 8s)"
-    tags: ["climate skepticism", "prager_u"]
-    notes: "Alex Epstein - PragerU"
+    description: "Fossil Fuels: The Greenest Energy | 5 Minute Video"
+    tags: ["option_1", "climate_skepticism", "prager_u", "energy"]
+    notes: "PragerU - Alex Epstein arguing fossil fuels are beneficial"
 
   - id: "great_texas_freeze"
     url: "https://www.youtube.com/watch?v=KdMqCUa7XJk"
-    description: "The Great Texas Freeze of 2021 | 5 Minute Video (5m 8s)"
-    tags: ["climate skepticism", "prager_u"]
-    notes: "Blames renewable energy falsely - PragerU"
+    description: "The Great Texas Freeze of 2021 | 5 Minute Video"
+    tags: ["option_1", "climate_skepticism", "prager_u", "energy"]
+    notes: "PragerU - Falsely blames renewable energy for Texas blackouts"
+
+  - id: "climate_what_scientists_say"
+    url: "https://www.youtube.com/watch?v=OwqIy8Ikv-c"
+    description: "Climate Change: What Do Scientists Say? | 5 Minute Video"
+    tags: ["option_1", "climate_skepticism", "prager_u", "science"]
+    notes: "PragerU - Richard Lindzen on climate science"
 
   - id: "climate_emergency_koonin"
     url: "https://www.youtube.com/watch?v=P19ywkobLX8"
-    description: "Is There Really a Climate Emergency? | 5 Minute Video (5m 32s)"
-    tags: ["climate skepticism", "prager_u"]
-    notes: "Steve Koonin - PragerU"
+    description: "Is There Really a Climate Emergency? | 5 Minute Video"
+    tags: ["option_1", "climate_skepticism", "prager_u", "policy"]
+    notes: "PragerU - Steve Koonin questioning climate emergency"
+
+  - id: "truth_about_co2"
+    url: "https://www.youtube.com/watch?v=WDWEjSDYfxc"
+    description: "The Truth about CO2 | 5 Minute Video"
+    tags: ["option_1", "climate_skepticism", "prager_u", "science"]
+    notes: "PragerU - Downplaying CO2 impact on climate"
+
+  # option_2 videos (mixed skepticism content)
+  - id: "debunking_climate_lies"
+    url: "https://www.youtube.com/watch?v=LJVxAJ_jegA"
+    description: "Debunking 3 Major Climate Change Lies"
+    tags: ["option_2", "climate_skepticism", "short"]
+    notes: "Claims to debunk climate 'lies'"
 
   - id: "climate_biggest_problem_lomborg"
     url: "https://www.youtube.com/watch?v=Sgm3QOWt6Tc"
-    description: "Is Climate Change Our Biggest Problem? | 5 Minute Video (5m 34s)"
-    tags: ["climate skepticism", "prager_u"]
-    notes: "Bjorn Lomborg - PragerU"
+    description: "Is Climate Change Our Biggest Problem? | 5 Minute Video"
+    tags: ["option_2", "climate_skepticism", "prager_u", "policy"]
+    notes: "PragerU - Bjorn Lomborg downplaying climate priority"
 
-  - id: "precisely_as_scientists_predicted"
-    url: "https://www.youtube.com/watch?v=M4iNwUkT1bY"
-    description: "Precisely As Scientists Predicted (5m 49s)"
-    tags: ["climate skepticism", "short"]
-    notes: "Tony Heller climate denial"
-
-  - id: "misconceptions_global_warming_veritasium"
-    url: "https://www.youtube.com/watch?v=OWXoRSIxyIU"
-    description: "13 Misconceptions About Global Warming (6m 49s)"
-    tags: ["climate science", "educational"]
-    notes: "Veritasium - DEBUNKS myths, educational content"
-
-  - id: "agenda_21_dummies"
-    url: "https://www.youtube.com/watch?v=TzEEgtOFFlM"
-    description: "Agenda 21 For Dummies (9m 31s)"
-    tags: ["conspiracy", "political"]
-    notes: "UN Agenda 21 conspiracy theories"
+  # pro_science videos (educational, debunking misinformation)
+  - id: "climate_misinformation_stream"
+    url: "https://www.youtube.com/watch?v=IypwREu6vs0"
+    description: "How dangerous is climate misinformation? | The Stream"
+    tags: ["pro_science", "climate_science", "journalism", "medium"]
+    notes: "Al Jazeera - Discussion on dangers of climate misinformation"
 
   - id: "dumbest_climate_denial"
     url: "https://www.youtube.com/watch?v=JYv1S4ymjM0"
-    description: "The Dumbest Climate Denial Ever? (9m 50s)"
-    tags: ["climate science", "short"]
-    notes: "Climate denial criticism"
+    description: "The Dumbest Climate Denial Ever?"
+    tags: ["pro_science", "climate_science", "debunking", "short"]
+    notes: "Critical analysis of climate denial arguments"
 
-  - id: "monckton_warming_hoax"
-    url: "https://www.youtube.com/watch?v=wiS2eJ7PjKQ"
-    description: "Lord Christopher Monckton - Global Warming Is a Hoax (21m 55s)"
-    tags: ["climate skepticism", "medium"]
-    notes: "Monckton climate denial lecture 2014"
-
-  - id: "climate_misinformation_stream"
-    url: "https://www.youtube.com/watch?v=IypwREu6vs0"
-    description: "How dangerous is climate misinformation? | The Stream (25m 20s)"
-    tags: ["climate science", "medium"]
-    notes: "Al Jazeera discussion on misinformation"
-
-  - id: "cia_whistleblower_climate"
-    url: "https://www.youtube.com/watch?v=Nl5NW9KcMt0"
-    description: "CIA Whistleblower Speaks Out About Climate Engineering (36m 29s)"
-    tags: ["conspiracy", "medium"]
-    notes: "Climate engineering conspiracy theories"
+  - id: "misconceptions_global_warming_veritasium"
+    url: "https://www.youtube.com/watch?v=OWXoRSIxyIU"
+    description: "13 Misconceptions About Global Warming"
+    tags: ["pro_science", "climate_science", "educational", "veritasium"]
+    notes: "Veritasium - Educational video debunking climate myths"
 
 # Experiment configurations
 # Each experiment will be run on all videos (or filtered by tags)
