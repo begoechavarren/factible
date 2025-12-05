@@ -1,4 +1,5 @@
 import re
+import os
 import logging
 import requests
 
@@ -8,6 +9,8 @@ from urllib.parse import parse_qs, urlparse
 from youtube_transcript_api import YouTubeTranscriptApi
 
 from factible.components.transcriptor.schemas import TranscriptData, TranscriptSegment
+
+from youtube_transcript_api.proxies import WebshareProxyConfig
 
 _logger = logging.getLogger(__name__)
 
@@ -55,6 +58,8 @@ def get_transcript_with_segments(
 ) -> TranscriptData:
     """Get transcript with both plain text and timestamped segments.
 
+    Tries direct API first, falls back to Webshare proxy if rate limited.
+
     Args:
         url: YouTube video URL
         languages: List of preferred languages (default: ["en", "en-US"])
@@ -67,8 +72,44 @@ def get_transcript_with_segments(
 
     video_id = extract_video_id(url)
 
-    ytt_api = YouTubeTranscriptApi()
-    transcript = ytt_api.fetch(video_id, languages=languages)
+    # Try direct API first
+    try:
+        ytt_api = YouTubeTranscriptApi()
+        transcript = ytt_api.fetch(video_id, languages=languages)
+        _logger.debug(f"Fetched transcript for {video_id} (direct)")
+
+    except Exception as e:
+        error_msg = str(e).lower()
+
+        # Check if it's a rate limiting error
+        if (
+            "blocking" in error_msg
+            or "ipblocked" in error_msg
+            or "requestblocked" in error_msg
+        ):
+            _logger.warning(f"Rate limited for {video_id}, trying proxy fallback...")
+
+            # Try with Webshare proxy
+            if all(
+                [
+                    os.getenv("WEBSHARE_PROXY_USERNAME"),
+                    os.getenv("WEBSHARE_PROXY_PASSWORD"),
+                ]
+            ):
+                proxy_config = WebshareProxyConfig(
+                    proxy_username=os.getenv("WEBSHARE_PROXY_USERNAME"),
+                    proxy_password=os.getenv("WEBSHARE_PROXY_PASSWORD"),
+                    filter_ip_locations=[os.getenv("WEBSHARE_PROXY_LOCATION", "es")],
+                )
+                ytt_api = YouTubeTranscriptApi(proxy_config=proxy_config)
+                transcript = ytt_api.fetch(video_id, languages=languages)
+                _logger.info(f"Fetched transcript for {video_id} (via proxy)")
+            else:
+                _logger.error("Proxy credentials not configured, cannot fallback")
+                raise
+        else:
+            # Not a rate limiting error, re-raise
+            raise
 
     # Extract segments with timestamps
     segments = [
