@@ -21,11 +21,22 @@ export function useFactCheck() {
     setResult(null);
     setError(null);
 
-    const {
-      maxClaims = 1,
-      maxQueriesPerClaim = 1,
-      maxResultsPerQuery = 1,
-    } = options;
+    // Use backend API defaults from factible_api/schemas/v1/requests.py
+    // Only include options if explicitly provided
+    const requestBody = {
+      video_url: videoUrl,
+    };
+
+    // Only add optional parameters if provided (let backend use its defaults otherwise)
+    if (options.maxClaims !== undefined) {
+      requestBody.max_claims = options.maxClaims;
+    }
+    if (options.maxQueriesPerClaim !== undefined) {
+      requestBody.max_queries_per_claim = options.maxQueriesPerClaim;
+    }
+    if (options.maxResultsPerQuery !== undefined) {
+      requestBody.max_results_per_query = options.maxResultsPerQuery;
+    }
 
     try {
       const response = await fetch('http://localhost:8000/api/v1/fact-check/stream', {
@@ -33,12 +44,7 @@ export function useFactCheck() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          video_url: videoUrl,
-          max_claims: maxClaims,
-          max_queries_per_claim: maxQueriesPerClaim,
-          max_results_per_query: maxResultsPerQuery,
-        }),
+        body: JSON.stringify(requestBody),
       });
 
       if (!response.ok) {

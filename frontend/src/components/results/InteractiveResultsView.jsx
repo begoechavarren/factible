@@ -179,7 +179,7 @@ export function InteractiveResultsView({ result, onReset }) {
 
       {/* Claim timeline */}
       <section className="w-full space-y-5">
-        {timelineEntries.map(({ claim, index, match }) => {
+        {timelineEntries.map(({ claim, index, match }, displayIndex) => {
           const isActive = activeClaimIndex === index;
           const hasMatch = Boolean(match);
           const stance = claim.overall_stance || 'unclear';
@@ -194,7 +194,7 @@ export function InteractiveResultsView({ result, onReset }) {
               <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                 <div className="flex-1 min-w-0">
                   <p className="pixel-text mb-2 text-xs uppercase tracking-widest text-accent">
-                    Claim {index + 1}
+                    Claim {displayIndex + 1}
                   </p>
                   <p className="text-lg font-semibold leading-relaxed text-gray-900 break-words">“{claim.claim_text}”</p>
                 </div>
