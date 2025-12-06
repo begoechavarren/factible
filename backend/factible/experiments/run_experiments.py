@@ -17,7 +17,10 @@ from factible.models.config import (
 )
 from factible.run import run_factible
 
-app = typer.Typer(help="Run systematic experiments for Factible evaluation")
+app = typer.Typer(
+    help="Run systematic experiments for Factible evaluation",
+    no_args_is_help=True,
+)
 _logger = logging.getLogger(__name__)
 
 # Default config file location
@@ -137,7 +140,12 @@ def should_run(video: dict, experiment: dict) -> tuple[bool, str]:
 
 
 def run_single(
-    video: dict, experiment: dict, settings: dict, dry_run: bool = False
+    video: dict,
+    experiment: dict,
+    settings: dict,
+    dry_run: bool = False,
+    current: int = 1,
+    total: int = 1,
 ) -> bool:
     """Run a single experiment on a video."""
     video_id = video["id"]
@@ -151,7 +159,7 @@ def run_single(
         return True
 
     _logger.info("=" * 80)
-    _logger.info(f"🚀 {full_name}")
+    _logger.info(f"🚀 Experiment {current}/{total}: {full_name}")
     _logger.info(f"   Video: {video.get('description', video_id)}")
     _logger.info(f"   URL: {video['url']}")
     _logger.info("=" * 80)
@@ -266,9 +274,11 @@ def run(
 
     # Execute
     results = []
+    current = 0
     for vid in videos:
         for exp in experiments:
-            success = run_single(vid, exp, settings, dry_run)
+            current += 1
+            success = run_single(vid, exp, settings, dry_run, current, total)
             results.append(
                 {"video": vid["id"], "experiment": exp["name"], "success": success}
             )

@@ -19,7 +19,7 @@ dependencies = [
 ]
 
 [project.scripts]
-factible-experiments = "factible.experiments.run_experiments:app"
+factible-experiments = "factible.experiments.cli:app"
 
 [dependency-groups]
 dev = [
@@ -27,6 +27,9 @@ dev = [
     "types-requests>=2.32.4",
     "types-pyyaml>=6.0.0",
     "py-spy>=0.4.1,<0.5.0",
+    "matplotlib>=3.10.7",
+    "seaborn>=0.13.2",
+    "pandas>=2.3.2",
 ]
 
 [build-system]
