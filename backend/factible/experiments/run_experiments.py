@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 """Run systematic experiments for Factible evaluation."""
 
+import asyncio
 import logging
 from pathlib import Path
 from typing import Annotated, Any, Optional
@@ -139,7 +140,7 @@ def should_run(video: dict, experiment: dict) -> tuple[bool, str]:
     return False, "no match"
 
 
-def run_single(
+async def run_single(
     video: dict,
     experiment: dict,
     settings: dict,
@@ -148,7 +149,7 @@ def run_single(
     total: int = 1,
     runs_subdir: Optional[str] = None,
 ) -> bool:
-    """Run a single experiment on a video."""
+    """Run a single experiment on a video (async)."""
     video_id = video["id"]
     exp_name = experiment["name"]
     full_name = f"{exp_name}_{video_id}"
@@ -190,7 +191,7 @@ def run_single(
         return True
 
     try:
-        result = run_factible(
+        result = await run_factible(
             video_url=video["url"],
             experiment_name=full_name,
             max_claims=experiment.get("max_claims", 5),
@@ -341,17 +342,22 @@ def run(
         _logger.info("🔍 DRY RUN MODE\n")
 
     # Execute
-    results = []
-    current = 0
-    for vid in videos:
-        for exp in experiments:
-            current += 1
-            success = run_single(
-                vid, exp, settings, dry_run, current, total, runs_subdir
-            )
-            results.append(
-                {"video": vid["id"], "experiment": exp["name"], "success": success}
-            )
+    async def run_all_experiments():
+        """Run all experiments asynchronously."""
+        results = []
+        current = 0
+        for vid in videos:
+            for exp in experiments:
+                current += 1
+                success = await run_single(
+                    vid, exp, settings, dry_run, current, total, runs_subdir
+                )
+                results.append(
+                    {"video": vid["id"], "experiment": exp["name"], "success": success}
+                )
+        return results
+
+    results = asyncio.run(run_all_experiments())
 
     # Summary
     successful = sum(1 for r in results if r["success"])

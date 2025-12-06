@@ -25,22 +25,18 @@ async def fact_check_stream(
     """
     # Queue to collect progress updates from callback
     updates_queue: asyncio.Queue[ProgressUpdate | None] = asyncio.Queue()
-    loop = asyncio.get_running_loop()
 
     def progress_handler(step: str, message: str, progress: int, data: dict | None):
         """Callback that collects updates for SSE streaming."""
-        asyncio.run_coroutine_threadsafe(
-            updates_queue.put(
-                ProgressUpdate(step=step, message=message, progress=progress, data=data)
-            ),
-            loop,
+        # Put to queue because of async context
+        updates_queue.put_nowait(
+            ProgressUpdate(step=step, message=message, progress=progress, data=data)
         )
 
-    # Run pipeline in thread with callback
+    # Run pipeline asynchronously with callback
     async def run_pipeline():
         try:
-            await asyncio.to_thread(
-                run_factible,
+            await run_factible(
                 str(request.video_url),
                 experiment_name=request.experiment_name,
                 max_claims=request.max_claims,
@@ -51,19 +47,16 @@ async def fact_check_stream(
             )
         except Exception as exc:
             _logger.exception("Fact-checking pipeline failed: %s", exc)
-            asyncio.run_coroutine_threadsafe(
-                updates_queue.put(
-                    ProgressUpdate(
-                        step="error",
-                        message=f"Fact-checking failed: {str(exc)}",
-                        progress=100,
-                        data={"error": str(exc)},
-                    )
-                ),
-                loop,
+            updates_queue.put_nowait(
+                ProgressUpdate(
+                    step="error",
+                    message=f"Fact-checking failed: {str(exc)}",
+                    progress=100,
+                    data={"error": str(exc)},
+                )
             )
         finally:
-            asyncio.run_coroutine_threadsafe(updates_queue.put(None), loop)
+            updates_queue.put_nowait(None)
 
     # Start pipeline in background
     asyncio.create_task(run_pipeline())
