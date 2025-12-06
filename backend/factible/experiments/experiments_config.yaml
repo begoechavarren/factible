@@ -8,35 +8,35 @@ videos:
     url: "https://www.youtube.com/watch?v=BJWq1FeGpCw"
     description: "Fossil Fuels: The Greenest Energy | 5 Minute Video"
     duration: "5m 8s"
-    tags: ["climate", "climate_skepticism", "prager_u", "energy"]
+    tags: ["climate", "climate_skepticism", "prager_u", "energy", "short", "selected"]
     notes: "PragerU - Alex Epstein arguing fossil fuels are beneficial"
 
   - id: "great_texas_freeze"
     url: "https://www.youtube.com/watch?v=KdMqCUa7XJk"
     description: "The Great Texas Freeze of 2021 | 5 Minute Video"
     duration: "5m 8s"
-    tags: ["climate", "climate_skepticism", "prager_u", "energy"]
+    tags: ["climate", "climate_skepticism", "prager_u", "energy", "short"]
     notes: "PragerU - Falsely blames renewable energy for Texas blackouts"
 
   - id: "climate_what_scientists_say"
     url: "https://www.youtube.com/watch?v=OwqIy8Ikv-c"
     description: "Climate Change: What Do Scientists Say? | 5 Minute Video"
     duration: "5m 4s"
-    tags: ["climate", "climate_skepticism", "prager_u", "science"]
+    tags: ["climate", "climate_skepticism", "prager_u", "science", "short"]
     notes: "PragerU - Richard Lindzen on climate science"
 
   - id: "climate_emergency_koonin"
     url: "https://www.youtube.com/watch?v=P19ywkobLX8"
     description: "Is There Really a Climate Emergency? | 5 Minute Video"
     duration: "5m 32s"
-    tags: ["climate", "climate_skepticism", "prager_u", "policy"]
+    tags: ["climate", "climate_skepticism", "prager_u", "policy", "short"]
     notes: "PragerU - Steve Koonin questioning climate emergency"
 
   - id: "truth_about_co2"
     url: "https://www.youtube.com/watch?v=WDWEjSDYfxc"
     description: "The Truth about CO2 | 5 Minute Video"
     duration: "4m 31s"
-    tags: ["climate", "climate_skepticism", "prager_u", "science"]
+    tags: ["climate", "climate_skepticism", "prager_u", "science", "short"]
     notes: "PragerU - Downplaying CO2 impact on climate"
 
   - id: "debunking_climate_lies"
@@ -50,7 +50,7 @@ videos:
     url: "https://www.youtube.com/watch?v=Sgm3QOWt6Tc"
     description: "Is Climate Change Our Biggest Problem? | 5 Minute Video"
     duration: "5m 34s"
-    tags: ["climate", "climate_skepticism", "prager_u", "policy"]
+    tags: ["climate", "climate_skepticism", "prager_u", "policy", "short"]
     notes: "PragerU - Bjorn Lomborg downplaying climate priority"
 
   - id: "climate_misinformation_stream"
@@ -71,7 +71,7 @@ videos:
     url: "https://www.youtube.com/watch?v=OWXoRSIxyIU"
     description: "13 Misconceptions About Global Warming"
     duration: "6m 49s"
-    tags: ["climate", "climate_science", "educational", "veritasium"]
+    tags: ["climate", "climate_science", "educational", "veritasium", "short"]
     notes: "Veritasium - Educational video debunking climate myths"
 
   # TECH
@@ -93,7 +93,7 @@ videos:
     url: "https://www.youtube.com/watch?v=7c1xhcV9QqU"
     description: "Godfather of AI: These jobs won't exist in 24 months"
     duration: "4m 44s"
-    tags: ["technology", "ai_jobs", "short"]
+    tags: ["technology", "ai_jobs", "short", "selected"]
     notes: "Claims about AI causing rapid job displacement"
 
   - id: "ai_mass_unemployment"
@@ -129,7 +129,7 @@ videos:
     url: "https://www.youtube.com/watch?v=HfYbcxvYDYM"
     description: "EMFs (Electromagnetic Fields): Cell Phone Radiation Effects on Human Body – Dr. Berg"
     duration: "3m 38s"
-    tags: ["health", "emf", "short"]
+    tags: ["health", "emf", "short", "selected"]
     notes: "Dr. Berg on EMF dangers from cell phones, WiFi, health effects and protection"
 
   - id: "alkaline_water"
@@ -159,7 +159,7 @@ experiments:
     max_claims: [1, 3, 5, 7, 10]  # generates 5 experiments
     max_queries_per_claim: 2
     max_results_per_query: 3
-    video_filter: ["short"]
+    video_filter: ["selected"]
 
   # Study impact of varying QUERIES PER CLAIM (generates vary_queries_queries1, vary_queries_queries2...)
   - name: "vary_queries"

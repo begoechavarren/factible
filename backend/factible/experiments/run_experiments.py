@@ -146,6 +146,7 @@ def run_single(
     dry_run: bool = False,
     current: int = 1,
     total: int = 1,
+    runs_subdir: Optional[str] = None,
 ) -> bool:
     """Run a single experiment on a video."""
     video_id = video["id"]
@@ -157,6 +158,19 @@ def run_single(
     if not should:
         _logger.info(f"⊘ Skipping [{exp_name}] on [{video_id}]: {reason}")
         return True
+
+    # Check if this experiment already exists in the runs directory
+    if runs_subdir:
+        runs_dir = Path("factible/experiments/runs") / runs_subdir
+        if runs_dir.exists():
+            # Look for existing runs matching this experiment+video combination
+            # Run directories are named: YYYYMMDD_HHMMSS_end_to_end_EXPERIMENTNAME
+            existing_runs = list(runs_dir.glob(f"*_end_to_end_{full_name}"))
+            if existing_runs:
+                _logger.info(f"⏭️  Skipping [{full_name}] - already exists:")
+                for existing_run in existing_runs:
+                    _logger.info(f"     {existing_run.name}")
+                return True
 
     _logger.info("=" * 80)
     _logger.info(f"🚀 Experiment {current}/{total}: {full_name}")
@@ -183,6 +197,7 @@ def run_single(
             max_queries_per_claim=experiment.get("max_queries_per_claim", 2),
             max_results_per_query=experiment.get("max_results_per_query", 3),
             headless_search=settings.get("headless_search", True),
+            runs_subdir=runs_subdir,
         )
 
         _logger.info(
@@ -216,6 +231,12 @@ def run(
     dry_run: Annotated[
         bool, typer.Option("--dry-run", help="Preview without executing")
     ] = False,
+    runs_subdir: Annotated[
+        Optional[str],
+        typer.Option(
+            help="Subdirectory within runs/ to organize this experiment session"
+        ),
+    ] = None,
     log_level: Annotated[str, typer.Option(help="Logging level")] = "INFO",
 ):
     """
@@ -259,10 +280,40 @@ def run(
             raise typer.Exit(1)
 
     if experiment:
-        experiments = [e for e in experiments if e["name"] == experiment]
+        # Filter by exact match OR prefix match (for auto-expanded experiments)
+        experiments = [
+            e
+            for e in experiments
+            if e["name"] == experiment or e["name"].startswith(f"{experiment}_")
+        ]
         if not experiments:
             _logger.error(f"Experiment '{experiment}' not found in config")
             raise typer.Exit(1)
+
+    # Auto-generate runs_subdir if not provided
+    if runs_subdir is None:
+        from datetime import datetime
+
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+        if len(experiments) == 1:
+            # Single experiment: use experiment name
+            runs_subdir = f"{experiments[0]['name']}_{timestamp}"
+        else:
+            # Multiple experiments: check if they share a common base name
+            # (e.g., vary_claims_claims1, vary_claims_claims3 -> vary_claims)
+            first_name = experiments[0]["name"]
+            if "_" in first_name and all(
+                e["name"].startswith(first_name.rsplit("_", 1)[0]) for e in experiments
+            ):
+                # Use common prefix
+                base_name = first_name.rsplit("_", 1)[0]
+                runs_subdir = f"{base_name}_{timestamp}"
+            else:
+                # Unrelated experiments: use batch name
+                runs_subdir = f"batch_{timestamp}"
+
+        _logger.info(f"📁 Auto-generated runs directory: runs/{runs_subdir}/\n")
 
     # Plan
     total = len(videos) * len(experiments)
@@ -278,7 +329,9 @@ def run(
     for vid in videos:
         for exp in experiments:
             current += 1
-            success = run_single(vid, exp, settings, dry_run, current, total)
+            success = run_single(
+                vid, exp, settings, dry_run, current, total, runs_subdir
+            )
             results.append(
                 {"video": vid["id"], "experiment": exp["name"], "success": success}
             )

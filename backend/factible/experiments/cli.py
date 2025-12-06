@@ -11,8 +11,8 @@ from typing import Annotated
 import typer
 from dotenv import load_dotenv
 
-# Import subcommand modules
-from factible.experiments import run_experiments
+# Import command functions directly
+from factible.experiments.run_experiments import run as run_experiments_command
 from factible.experiments.analyze import analyze_results
 
 app = typer.Typer(
@@ -20,8 +20,8 @@ app = typer.Typer(
     no_args_is_help=True,
 )
 
-# Add subcommands
-app.add_typer(run_experiments.app, name="run", help="Run fact-checking experiments")
+# Add commands directly (not as sub-apps)
+app.command(name="run", help="Run fact-checking experiments")(run_experiments_command)
 app.command(
     name="analyze", help="Analyze experiment results and generate visualizations"
 )(analyze_results)

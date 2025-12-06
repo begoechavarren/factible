@@ -14,6 +14,12 @@ from factible.components.transcriptor.transcriptor import (
     get_transcript_with_segments,
     get_video_title,
 )
+from factible.models.config import (
+    CLAIM_EXTRACTOR_MODEL,
+    EVIDENCE_EXTRACTOR_MODEL,
+    OUTPUT_GENERATOR_MODEL,
+    QUERY_GENERATOR_MODEL,
+)
 from factible.evaluation.tracker import ExperimentTracker, timer
 
 _logger = logging.getLogger(__name__)
@@ -29,6 +35,7 @@ def run_factible(
     max_results_per_query: int = 3,
     headless_search: bool = True,
     progress_callback: Optional[Callable[[str, str, int, dict], None]] = None,
+    runs_subdir: Optional[str] = None,
 ) -> FactCheckRunOutput:
     """
     Run the factible agent.
@@ -42,19 +49,47 @@ def run_factible(
         headless_search: Whether Selenium should run in headless mode when scraping.
         progress_callback: Optional callback for progress updates.
             Called with (step, message, progress, data).
+        runs_subdir: Optional subdirectory name within runs/ to organize experiments.
+            If None, runs go directly in factible/experiments/runs/.
 
     Returns:
         Structured fact-check reports for the processed claims.
     """
+    model_config = {
+        "claim_extractor": CLAIM_EXTRACTOR_MODEL.name,
+        "query_generator": QUERY_GENERATOR_MODEL.name,
+        "evidence_extractor": EVIDENCE_EXTRACTOR_MODEL.name,
+        "output_generator": OUTPUT_GENERATOR_MODEL.name,
+    }
+    model_summary = " | ".join(
+        [
+            f"CE:{CLAIM_EXTRACTOR_MODEL.value.model_name}",
+            f"QG:{QUERY_GENERATOR_MODEL.value.model_name}",
+            f"EE:{EVIDENCE_EXTRACTOR_MODEL.value.model_name}",
+            f"OG:{OUTPUT_GENERATOR_MODEL.value.model_name}",
+        ]
+    )
+
     config = {
         "video_url": video_url,
         "max_claims": max_claims,
         "max_queries_per_claim": max_queries_per_claim,
         "max_results_per_query": max_results_per_query,
         "headless_search": headless_search,
+        "model_config": model_config,
+        "model_summary": model_summary,
     }
 
-    with ExperimentTracker("end_to_end", experiment_name, config) as tracker:
+    # Determine base directory for runs
+    from pathlib import Path
+
+    base_dir = Path("factible/experiments/runs")
+    if runs_subdir:
+        base_dir = base_dir / runs_subdir
+
+    with ExperimentTracker(
+        "end_to_end", experiment_name, config, base_dir=base_dir
+    ) as tracker:
         tracker.log_input("video_url", video_url)
 
         # Fetch video title
@@ -75,6 +110,12 @@ def run_factible(
             transcript_text = transcript_data.text
 
         tracker.log_input("transcript_length", len(transcript_text))
+        tracker.log_input("transcript_tokens", len(transcript_text.split()))
+
+        if transcript_data.segments:
+            last_segment = transcript_data.segments[-1]
+            video_duration_seconds = last_segment.start + last_segment.duration
+            tracker.log_input("video_duration_seconds", video_duration_seconds)
 
         if not transcript_text.strip():
             _logger.warning("No transcript retrieved for %s", video_url)
