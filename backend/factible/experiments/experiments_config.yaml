@@ -140,47 +140,84 @@ videos:
     notes: "Health claims about alkaline water benefits"
 
 # Experiment configurations
-# Each experiment will be run on all videos (or filtered by tags)
 experiments:
-  - name: "baseline_gpt4o_mini"
-    description: "Baseline configuration with GPT-4o-mini"
-    model_config: "OPENAI_GPT4O_MINI"  # References ModelChoice enum
-    max_claims: 1
-    max_queries_per_claim: 1
-    max_results_per_query: 1
-    video_filter: []  # Empty = run on all videos, or specify tags: ["baseline"]
-
-  - name: "baseline_2_gpt4o_mini"
-    description: "Baseline configuration with GPT-4o-mini"
-    model_config: "OPENAI_GPT4O_MINI"  # References ModelChoice enum
-    max_claims: 2
-    max_queries_per_claim: 1
-    max_results_per_query: 1
-    video_filter: []  # Empty = run on all videos, or specify tags: ["baseline"]
-
-  - name: "default_gpt4o_mini"
-    description: "Baseline configuration with GPT-4o-mini"
-    model_config: "OPENAI_GPT4O_MINI"  # References ModelChoice enum
+  # BASELINE - Standard configuration
+  - name: "baseline"
+    description: "Baseline configuration for reference"
+    model_config: "OPENAI_GPT4O_MINI"
     max_claims: 5
     max_queries_per_claim: 2
     max_results_per_query: 3
-    video_filter: []  # Empty = run on all videos, or specify tags: ["baseline"]
+    video_filter: ["short"]  # Start with short videos to save costs
 
-  - name: "fast_qwen3_4b"
-    description: "Fast local model for cost comparison"
-    model_config: "OLLAMA_QWEN3_0_4B"
+  # OFAT ANALYSIS - Vary one parameter at a time
+
+  # Study impact of varying NUMBER OF CLAIMS (generates vary_claims_claims1, vary_claims_claims3...)
+  - name: "vary_claims"
+    description: "OFAT: Impact of max_claims on quality/cost/time"
+    model_config: "OPENAI_GPT4O_MINI"
+    max_claims: [1, 3, 5, 7, 10]  # generates 5 experiments
+    max_queries_per_claim: 2
+    max_results_per_query: 3
+    video_filter: ["short"]
+
+  # Study impact of varying QUERIES PER CLAIM (generates vary_queries_queries1, vary_queries_queries2...)
+  - name: "vary_queries"
+    description: "OFAT: Impact of max_queries_per_claim on evidence quality"
+    model_config: "OPENAI_GPT4O_MINI"
+    max_claims: 5
+    max_queries_per_claim: [1, 2, 3, 4, 5]  # generates 5 experiments
+    max_results_per_query: 3
+    video_filter: ["short"]
+
+  # Study impact of varying RESULTS PER QUERY (generates vary_results_results1, vary_results_results2...)
+  - name: "vary_results"
+    description: "OFAT: Impact of max_results_per_query on evidence coverage"
+    model_config: "OPENAI_GPT4O_MINI"
+    max_claims: 5
+    max_queries_per_claim: 2
+    max_results_per_query: [1, 2, 3, 5, 7]  # generates 5 experiments
+    video_filter: ["short"]
+
+  # STRATEGIC COMBINATIONS - Specific hypotheses
+
+  # Minimal (fast & cheap)
+  - name: "minimal"
+    description: "Minimal configuration for fast/cheap fact-checking"
+    model_config: "OPENAI_GPT4O_MINI"
+    max_claims: 1
+    max_queries_per_claim: 1
+    max_results_per_query: 1
+    video_filter: ["short"]
+
+  # Deep (few claims, comprehensive evidence)
+  - name: "deep"
+    description: "Deep dive: Few claims with comprehensive evidence"
+    model_config: "OPENAI_GPT4O_MINI"
     max_claims: 3
+    max_queries_per_claim: 4
+    max_results_per_query: 5
+    video_filter: ["short"]
+
+  # Broad (many claims, light evidence)
+  - name: "broad"
+    description: "Broad coverage: Many claims with light evidence"
+    model_config: "OPENAI_GPT4O_MINI"
+    max_claims: 10
     max_queries_per_claim: 1
     max_results_per_query: 2
-    video_filter: []
+    video_filter: ["short"]
 
-  - name: "high_quality_gpt4o"
-    description: "High quality with GPT-4o (expensive)"
-    model_config: "OPENAI_GPT4O"
-    max_claims: 10
-    max_queries_per_claim: 3
-    max_results_per_query: 5
-    video_filter: ["baseline"]  # Only run on baseline tagged videos
+  # MODEL COMPARISON (for future use)
+
+  #  # Auto-generates 3 experiments, one per model
+  # - name: "model_comparison"
+  #   description: "Compare different LLM models"
+  #   model_config: ["OPENAI_GPT4O_MINI", "OPENAI_GPT4O", "OLLAMA_QWEN3_0_4B"]
+  #   max_claims: 5
+  #   max_queries_per_claim: 2
+  #   max_results_per_query: 3
+  #   video_filter: ["short"]
 
 # Global settings
 settings:

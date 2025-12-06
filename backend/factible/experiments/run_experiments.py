@@ -24,6 +24,73 @@ _logger = logging.getLogger(__name__)
 DEFAULT_CONFIG = Path("factible/experiments/experiments_config.yaml")
 
 
+def expand_experiments(experiments: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """
+    Expand experiments with list-valued parameters into individual configs.
+
+    Example:
+        Input:  {"name": "vary_claims", "max_claims": [1, 3, 5], "max_queries_per_claim": 2}
+        Output: [
+            {"name": "vary_claims_claims1", "max_claims": 1, "max_queries_per_claim": 2},
+            {"name": "vary_claims_claims3", "max_claims": 3, "max_queries_per_claim": 2},
+            {"name": "vary_claims_claims5", "max_claims": 5, "max_queries_per_claim": 2},
+        ]
+    """
+    expanded = []
+
+    # Parameters that can be varied
+    SWEEP_PARAMS = {
+        "max_claims": "claims",
+        "max_queries_per_claim": "queries",
+        "max_results_per_query": "results",
+        "model_config": "model",
+    }
+
+    for exp in experiments:
+        # Check if any parameter is a list
+        list_params = {}
+        for param, short_name in SWEEP_PARAMS.items():
+            if param in exp and isinstance(exp[param], list):
+                list_params[param] = (short_name, exp[param])
+
+        # If no list params, keep as-is
+        if not list_params:
+            expanded.append(exp)
+            continue
+
+        # If multiple list params, raise error (not supported for clarity)
+        if len(list_params) > 1:
+            param_names = ", ".join(list_params.keys())
+            _logger.error(
+                f"Experiment '{exp['name']}' has multiple list parameters: {param_names}. "
+                "Only one parameter can be varied per experiment group for clarity."
+            )
+            raise typer.Exit(1)
+
+        # Expand the single list parameter
+        param_name, (short_name, values) = list(list_params.items())[0]
+        base_name = exp["name"]
+
+        for value in values:
+            # Create new config with this value
+            new_exp = exp.copy()
+            new_exp[param_name] = value
+            new_exp["name"] = f"{base_name}_{short_name}{value}"
+
+            # Add metadata about the sweep
+            if "description" not in new_exp:
+                new_exp["description"] = f"Sweep {param_name}={value}"
+            else:
+                new_exp["description"] = (
+                    f"{new_exp['description']} (sweep {param_name}={value})"
+                )
+
+            expanded.append(new_exp)
+            _logger.debug(f"  Expanded: {base_name} → {new_exp['name']}")
+
+    return expanded
+
+
 def load_config(config_path: Path) -> dict[str, Any]:
     """Load and validate experiment configuration."""
     if not config_path.exists():
@@ -40,6 +107,16 @@ def load_config(config_path: Path) -> dict[str, Any]:
     if "experiments" not in config or not config["experiments"]:
         _logger.error("Config must contain at least one experiment")
         raise typer.Exit(1)
+
+    # Expand experiments with list-valued parameters
+    original_count = len(config["experiments"])
+    config["experiments"] = expand_experiments(config["experiments"])
+    expanded_count = len(config["experiments"])
+
+    if expanded_count > original_count:
+        _logger.info(
+            f"🔄 Expanded {original_count} experiment groups → {expanded_count} individual experiments"
+        )
 
     return config
 
