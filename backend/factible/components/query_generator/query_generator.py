@@ -50,13 +50,13 @@ def _get_query_generator_agent() -> Agent:
 
 
 @track_pydantic("query_generation")
-def generate_queries(
+async def generate_queries(
     claim: Claim,
     *,
     max_queries: int | None = None,
     priority_threshold: int = 2,
 ) -> GeneratedQueries:
-    """Generate search queries for fact-checking a claim."""
+    """Generate search queries for fact-checking a claim (async)."""
     agent = _get_query_generator_agent()
     context_note = (
         f"Context: {claim.context}" if claim.context else "Context: unspecified"
@@ -66,7 +66,7 @@ def generate_queries(
         f"\nClaim: {claim.text}\n{context_note}"
         "\nFocus on the timeframe implied by the context, if any."
     )
-    result = agent.run_sync(prompt)
+    result = await agent.run(prompt)
     generated = result.output
 
     filtered_queries = [

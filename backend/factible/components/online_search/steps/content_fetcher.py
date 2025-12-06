@@ -1,3 +1,4 @@
+import asyncio
 import logging
 import re
 from typing import Optional
@@ -62,6 +63,7 @@ class SeleniumContentFetcher:
         )
 
     def fetch_text(self, url: str, min_characters: int = 200) -> str:
+        """Synchronous fetch (blocking I/O)."""
         if not self._driver:
             raise RuntimeError(
                 "Selenium driver not initialised. Use SeleniumContentFetcher as a context manager."
@@ -102,6 +104,10 @@ class SeleniumContentFetcher:
         except Exception as exc:
             _logger.error("Unexpected Selenium error for %s: %s", url, exc)
             return ""
+
+    async def fetch_text_async(self, url: str, min_characters: int = 200) -> str:
+        """Async wrapper for blocking Selenium fetch."""
+        return await asyncio.to_thread(self.fetch_text, url, min_characters)
 
     @staticmethod
     def _clean_text(text: str) -> str:

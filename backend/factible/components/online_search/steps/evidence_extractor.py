@@ -45,7 +45,7 @@ class RelevantContentExtractor:
         )
 
     @track_pydantic("evidence_extraction")
-    def extract(self, query: str, content: str) -> EvidenceExtraction:
+    async def extract(self, query: str, content: str) -> EvidenceExtraction:
         if not content.strip():
             return EvidenceExtraction(
                 has_relevant_evidence=False,
@@ -64,7 +64,7 @@ class RelevantContentExtractor:
         )
 
         try:
-            result = self._agent.run_sync(prompt)
+            result = await self._agent.run(prompt)
             return result.output
         except Exception as exc:
             _logger.error("Evidence extraction failed: %s", exc)

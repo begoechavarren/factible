@@ -142,13 +142,13 @@ def _get_claim_extractor_agent() -> Agent:
 
 
 @track_pydantic("claim_extraction")
-def extract_claims(
+async def extract_claims(
     transcript: str, *, max_claims: int | None = None
 ) -> ExtractedClaims:
-    """Extract factual claims from a transcript."""
+    """Extract factual claims from a transcript (async)."""
     agent = _get_claim_extractor_agent()
     try:
-        result = agent.run_sync(
+        result = await agent.run(
             f"Extract all factual claims from this YouTube transcript:\n\n{transcript}"
         )
     except AgentRunError as exc:

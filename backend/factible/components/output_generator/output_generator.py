@@ -1,3 +1,4 @@
+import asyncio
 import logging
 from typing import List, Sequence, Tuple
 
@@ -102,8 +103,8 @@ def _format_evidence_for_prompt(bundle: ClaimEvidenceBundle) -> str:
 
 
 @track_pydantic("verdict_generation")
-def _generate_verdict(bundle: ClaimEvidenceBundle) -> ClaimVerdict:
-    """Ask the LLM to produce an overall verdict for the claim."""
+async def _generate_verdict(bundle: ClaimEvidenceBundle) -> ClaimVerdict:
+    """Ask the LLM to produce an overall verdict for the claim (async)."""
     if not bundle.stance_groups:
         return ClaimVerdict(
             overall_stance="unclear",
@@ -124,7 +125,7 @@ Provide the structured verdict.
 """
 
     try:
-        result = agent.run_sync(prompt)
+        result = await agent.run(prompt)
     except Exception as exc:  # pragma: no cover - defensive fallback
         _logger.error(
             "Failed to generate verdict for claim '%s': %s", bundle.claim.text, exc
@@ -138,14 +139,14 @@ Provide the structured verdict.
     return result.output
 
 
-def generate_claim_report(
+async def generate_claim_report(
     claim: Claim,
     search_results: Sequence[SearchResult],
     transcript_data: TranscriptData,
 ) -> ClaimFactCheckReport:
-    """Create a fact-check report for a single claim from search evidence."""
+    """Create a fact-check report for a single claim from search evidence (async)."""
     bundle = _build_evidence_bundle(claim, search_results)
-    verdict = _generate_verdict(bundle)
+    verdict = await _generate_verdict(bundle)
 
     # Map claim's character position to timestamp if available
     timestamp_hint = None
@@ -172,28 +173,39 @@ def generate_claim_report(
     )
 
 
-def generate_run_output(
+async def generate_run_output(
     extracted_claims: ExtractedClaims,
     claim_results: Sequence[Tuple[Claim, Sequence[SearchResult]]],
     transcript_data: TranscriptData,
 ) -> FactCheckRunOutput:
-    """Aggregate claim reports for an entire pipeline run."""
+    """Aggregate claim reports for an entire pipeline run (async with parallel verdicts)."""
     tracker = ExperimentTracker.get_current()
-    reports: List[ClaimFactCheckReport] = []
 
-    for idx, (claim, results) in enumerate(claim_results, 1):
+    async def _generate_report_with_context(
+        idx: int, claim: Claim, results: Sequence[SearchResult]
+    ) -> ClaimFactCheckReport:
         # Set context for verdict generation traceability
         if tracker:
             tracker.set_context(claim_index=idx, claim_text=claim.text)
 
-        reports.append(generate_claim_report(claim, results, transcript_data))
+        report = await generate_claim_report(claim, results, transcript_data)
 
         # Clear context after generating report
         if tracker:
             tracker.clear_context()
 
+        return report
+
+    # Generate all reports in parallel
+    _logger.info(f"⚡ Generating {len(claim_results)} verdicts in PARALLEL")
+    report_tasks = [
+        _generate_report_with_context(idx, claim, results)
+        for idx, (claim, results) in enumerate(claim_results, 1)
+    ]
+    reports = await asyncio.gather(*report_tasks)
+
     return FactCheckRunOutput(
         extracted_claims=extracted_claims,
-        claim_reports=reports,
+        claim_reports=list(reports),
         transcript_data=transcript_data,
     )

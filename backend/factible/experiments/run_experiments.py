@@ -244,16 +244,22 @@ def run(
 
     Examples:
         # Run all experiments
-        python run_experiments.py
+        factible-experiments run
 
         # Run specific experiment
-        python run_experiments.py --experiment baseline_gpt4o_mini
+        factible-experiments run --experiment baseline
 
         # Run on specific video
-        python run_experiments.py --video example_video_1
+        factible-experiments run --video fossil_fuels_greenest_energy
 
         # Dry run (preview)
-        python run_experiments.py --dry-run
+        factible-experiments run --dry-run
+
+        # Organize runs in custom subdirectory
+        factible-experiments run --experiment vary_claims --runs-subdir vary_claims_20251206_191228
+
+        # Resume interrupted experiment run
+        factible-experiments run --experiment vary_claims --runs-subdir vary_claims_20251206_191228
     """
     # Setup logging
     logging.basicConfig(level=log_level, format="%(message)s")
@@ -315,10 +321,21 @@ def run(
 
         _logger.info(f"📁 Auto-generated runs directory: runs/{runs_subdir}/\n")
 
-    # Plan
-    total = len(videos) * len(experiments)
+    # Plan - calculate actual runs considering video_filter
+    actual_runs = 0
+    filtered_videos = set()
+    for vid in videos:
+        for exp in experiments:
+            should, _ = should_run(vid, exp)
+            if should:
+                actual_runs += 1
+                filtered_videos.add(vid["id"])
+
+    total = actual_runs
     _logger.info(f"\n📊 Planning {total} runs:")
-    _logger.info(f"   {len(videos)} videos × {len(experiments)} experiments\n")
+    _logger.info(
+        f"   {len(filtered_videos)} videos × {len(experiments)} experiments (after applying video_filter)\n"
+    )
 
     if dry_run:
         _logger.info("🔍 DRY RUN MODE\n")
