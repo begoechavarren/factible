@@ -31,13 +31,23 @@ class RelevantContentExtractor:
             system_prompt="""
             You assist a fact-checking analyst. Analyse the provided webpage content and
             identify at most three short verbatim snippets that directly relate to the
-            query. For each snippet, record whether it SUPPORTS, REFUTES, or is MIXED
-            regarding the claim. Use UNCLEAR only when relevance exists but stance cannot
-            be determined. Provide a brief summary of what the evidence collectively
-            indicates and set overall_stance accordingly.
+            query. For each snippet, determine its stance:
 
-            When filling the schema, use lowercase stance values: "supports", "refutes",
-            "mixed", or "unclear".
+            - SUPPORTS: The snippet confirms, validates, or provides evidence for the claim
+            - REFUTES: The snippet contradicts, disproves, or provides counter-evidence
+            - MIXED: The snippet contains both supporting and refuting elements
+            - UNCLEAR: Use ONLY when the snippet is topically relevant but genuinely ambiguous
+              (e.g., discusses the topic without taking a position, uses vague language that
+              could support either side, or contains contradictory statements)
+
+            Important: If a snippet provides numerical data, facts, or statements that align
+            with the claim, mark it as SUPPORTS even if the wording differs slightly from
+            the original claim. Do NOT mark clear evidence as UNCLEAR.
+
+            Provide a brief summary of what the evidence collectively indicates and set
+            overall_stance accordingly.
+
+            Use lowercase stance values: "supports", "refutes", "mixed", or "unclear".
 
             If no relevant evidence is found, set has_relevant_evidence to false, return
             an UNCLEAR overall_stance, and do not include snippets.

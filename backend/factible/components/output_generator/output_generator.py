@@ -23,7 +23,11 @@ from factible.models.llm import get_model
 
 _logger = logging.getLogger(__name__)
 
-_DEFAULT_STANCES: Sequence[EvidenceStance] = ("supports", "refutes", "mixed", "unclear")
+# All possible stances in the evidence schema
+_ALL_STANCES: Sequence[EvidenceStance] = ("supports", "refutes", "mixed", "unclear")
+
+# Actionable stances for verdict generation (exclude "unclear" as it provides no verification value)
+_ACTIONABLE_STANCES: Sequence[EvidenceStance] = ("supports", "refutes", "mixed")
 
 
 def _build_claim_verdict_agent() -> Agent:
@@ -59,12 +63,26 @@ def _select_evidence_description(result: SearchResult) -> str | None:
 def _build_evidence_bundle(
     claim: Claim, search_results: Sequence[SearchResult]
 ) -> ClaimEvidenceBundle:
+    # Only include actionable stances for verdict generation
+    # "unclear" sources are topically relevant but don't help verification
     grouped: dict[EvidenceStance, List[EvidenceSourceSummary]] = {
-        stance: [] for stance in _DEFAULT_STANCES
+        stance: [] for stance in _ACTIONABLE_STANCES
     }
 
+    unclear_count = 0
     for result in search_results:
         stance: EvidenceStance = result.evidence_overall_stance or "unclear"
+
+        # Filter out unclear sources as they don't contribute to verification
+        if stance == "unclear":
+            unclear_count += 1
+            _logger.debug(
+                "Filtering unclear source from verdict: %s (%s)",
+                result.title,
+                result.url,
+            )
+            continue
+
         summary = _select_evidence_description(result)
         grouped[stance].append(
             EvidenceSourceSummary(
@@ -75,6 +93,13 @@ def _build_evidence_bundle(
                 evidence_summary=summary,
                 snippet=result.snippet or None,
             )
+        )
+
+    if unclear_count > 0:
+        _logger.info(
+            "Filtered %d unclear source(s) for claim: %s",
+            unclear_count,
+            claim.text[:50],
         )
 
     # Drop empty stances to keep payload compact for the UI.
