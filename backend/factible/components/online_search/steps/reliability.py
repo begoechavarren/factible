@@ -13,109 +13,93 @@ _logger = logging.getLogger(__name__)
 
 
 class WebsiteReliabilityChecker:
-    """Estimate the reliability of a domain using lightweight heuristics."""
+    """Estimate the reliability of a domain using MBFC data and basic heuristics."""
 
     HIGH_TRUST_TLDS = (".gov", ".edu", ".int")
-    SUPPORTIVE_TLDS = (".org", ".mil")
-    LOWER_TRUST_TLDS = (".info", ".biz", ".click")
-
-    TRUSTED_DOMAINS = (
-        "who.int",
-        "nih.gov",
-        "cdc.gov",
-        "un.org",
-        "worldbank.org",
-        "nature.com",
-        "science.org",
-        "reuters.com",
-        "apnews.com",
-    )
-
-    SUSPECT_DOMAINS = (
-        "wikipedia.org",
-        "blogspot.com",
-        "medium.com",
-    )
 
     def __init__(self, dataset_path: Optional[str] = None) -> None:
         self._dataset = self._load_dataset(dataset_path)
 
     def assess(self, url: str) -> SiteReliability:
+        """
+        Assess source reliability using MBFC credibility ratings and basic heuristics.
+
+        Priority order:
+        1. MBFC Credibility rating (if available) - authoritative
+        2. Government/education TLD (.gov, .edu, .int) - high trust
+        3. Domain age - older domains more established
+        """
         domain = self._extract_domain(url)
         if not domain:
             return SiteReliability(
                 rating="unknown", score=0.5, reasons=["Unable to parse domain"]
             )
 
-        score = 0.5
         reasons: List[str] = []
 
+        # Check MBFC dataset first (most authoritative)
         dataset_entry = self._dataset.get(domain)
         if dataset_entry:
-            factual = (dataset_entry.get("factual") or "").lower()
-            bias = (dataset_entry.get("bias") or "").lower()
-            if factual in {"very high", "high", "mostly factual"}:
-                score += 0.25
-                reasons.append(f"Dataset factuality: {factual}")
-            elif factual in {"mixed", "low", "very low"}:
-                score -= 0.25
-                reasons.append(f"Dataset factuality: {factual}")
+            credibility = (dataset_entry.get("credibility") or "").lower()
+            factual = dataset_entry.get("factual", "")
+            bias = dataset_entry.get("bias", "")
 
-            if bias in {"least biased", "left-center", "right-center", "pro-science"}:
-                score += 0.1
-                reasons.append(f"Dataset bias: {bias}")
-            elif bias in {"extreme", "conspiracy", "questionable"}:
-                score -= 0.15
-                reasons.append(f"Dataset bias: {bias}")
+            # Map MBFC credibility directly to our rating system
+            credibility_map = {
+                "high": ("high", 0.85),
+                "medium": ("medium", 0.60),
+                "low": ("low", 0.30),
+                "very low": ("low", 0.15),
+            }
 
+            if credibility in credibility_map:
+                rating, score = credibility_map[credibility]
+                reasons.append(f"MBFC credibility: {credibility}")
+                if factual:
+                    reasons.append(f"Factual reporting: {factual}")
+                if bias:
+                    reasons.append(f"Bias: {bias}")
+                return SiteReliability(rating=rating, score=score, reasons=reasons)
+
+        # Fallback heuristics if not in MBFC dataset
+        score = 0.5
+
+        # Government/education domains are highly trustworthy
         if any(domain.endswith(tld) for tld in self.HIGH_TRUST_TLDS):
-            score += 0.2
-            reasons.append("High-trust top-level domain")
-        elif any(domain.endswith(tld) for tld in self.SUPPORTIVE_TLDS):
-            score += 0.1
-            reasons.append("Non-profit or military TLD")
-        elif any(domain.endswith(tld) for tld in self.LOWER_TRUST_TLDS):
-            score -= 0.1
-            reasons.append("Lower-trust top-level domain")
+            score = 0.90
+            reasons.append("Government or educational institution")
 
-        if any(domain.endswith(trusted) for trusted in self.TRUSTED_DOMAINS):
-            score += 0.2
-            reasons.append("Domain recognised as high-trust")
-
-        if any(domain.endswith(suspect) for suspect in self.SUSPECT_DOMAINS):
-            score -= 0.1
-            reasons.append("Domain known for mixed reliability")
-
+        # Domain age as additional signal
         age_years = self._domain_age(domain)
         if age_years is not None:
             if age_years >= 10:
-                score += 0.15
+                score += 0.10
                 reasons.append(f"Established domain ({age_years:.1f} years)")
-            elif age_years >= 5:
-                score += 0.1
-                reasons.append(f"Mature domain ({age_years:.1f} years)")
             elif age_years < 1:
-                score -= 0.2
-                reasons.append("Domain is less than a year old")
+                score -= 0.15
+                reasons.append("New domain (less than 1 year)")
 
+        # Clamp score
         score = min(1.0, max(0.0, score))
 
-        if not reasons:
-            return SiteReliability(rating="unknown", score=score, reasons=[])
-
+        # Determine rating from score
         if score >= 0.75:
             rating = "high"
-        elif score >= 0.55:
+        elif score >= 0.50:
             rating = "medium"
-        elif score >= 0.35:
-            rating = "low"
         else:
+            rating = "low"
+
+        if not reasons:
+            reasons.append("No credibility data available")
             rating = "unknown"
 
         return SiteReliability(rating=rating, score=score, reasons=reasons)
 
     @staticmethod
     def _extract_domain(url: str) -> str:
+        if not url.startswith(("http://", "https://")):
+            url = "https://" + url
         parsed = urlparse(url)
         domain = parsed.netloc.lower()
         if domain.startswith("www."):
@@ -127,7 +111,7 @@ class WebsiteReliabilityChecker:
         if dataset_path:
             candidate_paths.append(Path(dataset_path))
         default_path = (
-            Path(__file__).resolve().parent.parent / "data" / "media_bias_data.json"
+            Path(__file__).resolve().parent / "media_bias" / "media_bias_data.json"
         )
         candidate_paths.append(default_path)
 
@@ -138,11 +122,23 @@ class WebsiteReliabilityChecker:
                         dataset = json.load(handle)
                     mapped: dict[str, dict] = {}
                     for entry in dataset:
-                        url_or_domain = entry.get("url") or entry.get("domain")
+                        url_or_domain = (
+                            entry.get("url")
+                            or entry.get("domain")
+                            or entry.get("Source URL")
+                        )
                         if not url_or_domain:
                             continue
                         domain = self._extract_domain(url_or_domain)
-                        mapped[domain] = entry
+                        if domain and domain.lower() != "dead":
+                            normalized_entry = {
+                                "credibility": entry.get("credibility")
+                                or entry.get("Credibility"),
+                                "factual": entry.get("factual")
+                                or entry.get("Factual Reporting"),
+                                "bias": entry.get("bias") or entry.get("Bias"),
+                            }
+                            mapped[domain] = normalized_entry
                     if mapped:
                         _logger.info("Loaded media bias dataset from %s", path)
                     return mapped
