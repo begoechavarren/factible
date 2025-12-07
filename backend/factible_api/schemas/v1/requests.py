@@ -20,7 +20,7 @@ class FactCheckRequest(BaseModel):
         description="Maximum number of claims to extract and verify",
     )
     max_queries_per_claim: int = Field(
-        default=2,
+        default=3,
         ge=1,
         le=5,
         description="Number of search queries to generate per claim",

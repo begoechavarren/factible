@@ -180,12 +180,18 @@ Provide the structured verdict.
         result = await agent.run(prompt)
     except Exception as exc:  # pragma: no cover - defensive fallback
         _logger.error(
-            "Failed to generate verdict for claim '%s': %s", bundle.claim.text, exc
+            "Failed to generate verdict for claim '%s': %s",
+            bundle.claim.text,
+            exc,
+            exc_info=True,
         )
+        # Include error type in summary for debugging
+        error_type = type(exc).__name__
+        error_msg = str(exc)[:100]  # Truncate long errors
         return ClaimVerdict(
             overall_stance="unclear",
             confidence="low",
-            summary="Automatic verdict generation failed; manual review required.",
+            summary=f"Automatic verdict generation failed ({error_type}: {error_msg}); manual review required.",
         )
 
     return result.output
