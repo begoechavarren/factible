@@ -50,7 +50,9 @@ async def _process_search_result_async(
     snippets: List[EvidenceSnippet] = []
     if page_text:
         with timer(f"{prefix}.4: Evidence extraction (result {result_idx})"):
-            evidence_output = await evidence_extractor.extract(query, page_text)
+            evidence_output = await evidence_extractor.extract(
+                query, page_text, title=item.title
+            )
             overall_stance = evidence_output.overall_stance
             if evidence_output.has_relevant_evidence:
                 evidence_summary = evidence_output.summary
@@ -181,7 +183,7 @@ def search_online(
             if page_text:
                 with timer(f"{prefix}.4: Evidence extraction (result {result_idx})"):
                     evidence_output = asyncio.run(
-                        evidence_extractor.extract(query, page_text)
+                        evidence_extractor.extract(query, page_text, title=item.title)
                     )
                     overall_stance = evidence_output.overall_stance
                     if evidence_output.has_relevant_evidence:

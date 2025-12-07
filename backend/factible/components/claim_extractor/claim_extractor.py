@@ -113,7 +113,22 @@ def _get_claim_extractor_agent() -> Agent:
         - confidence: Confidence score (0.0-1.0) that this is a factual, checkable claim
         - category: Topic label (historical, scientific, statistical, biographical, geographical, policy, etc.)
         - importance: Score (0.0-1.0) capturing how impactful or controversial the claim is for fact-checking. Higher = more urgent to verify.
-        - context: Short note that captures timeframe, speaker, or situational details needed to fact-check the claim (e.g., "2016 US presidential debate", "speaker: Donald Trump"). If unclear, state "context unknown".
+        - context: Short note that captures timeframe, speaker, or situational details needed to fact-check the claim (e.g., "2016 US presidential debate", "speaker: Donald Trump"). When possible, also mention how it connects to the inferred thesis. If unclear, state "context unknown".
+
+        Before listing claims, infer the video's central thesis in no more than 25 words
+        (e.g., "Climate change alarmism is driven more by politics and media than by settled science").
+        Use this thesis to judge how critical each claim is.
+
+        When assigning IMPORTANCE scores:
+        - 0.85-1.0 → Prescriptive or causal claims that, if false, would undermine the thesis (e.g., who/what is to blame, proposed solutions).
+        - 0.60-0.80 → Quantitative or historical evidence directly tied to the thesis.
+        - 0.30-0.55 → Context or supporting background needed to understand the story but not decisive.
+        - 0.0-0.25 → Peripheral or anecdotal details that do not meaningfully change the argument.
+
+        Workflow:
+        1. Brainstorm candidate claims from the transcript.
+        2. Rank them by thesis impact first, then uniqueness (remove paraphrases or repeated numbers).
+        3. Only output the highest-ranked set (aim for the 8-10 most check-worthy items unless the transcript has fewer). Adjust importance scores slightly to reflect the ranking—avoid identical scores unless truly equivalent.
 
         Focus on extracting claims that are:
         - Specific facts, dates, numbers, or statistics

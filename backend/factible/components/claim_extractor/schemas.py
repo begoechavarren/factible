@@ -17,7 +17,10 @@ class Claim(BaseModel):
         default=0.5,
         ge=0.0,
         le=1.0,
-        description="Relevance score (0.0-1.0) indicating how impactful the claim is for fact-checking",
+        description=(
+            "Relevance score (0.0-1.0) indicating how strongly the claim underpins or challenges "
+            "the video's thesis—higher scores mean fact-checking it could change the core argument."
+        ),
     )
     context: str | None = Field(
         default=None,
