@@ -248,9 +248,49 @@ const stanceStyles = {
 function EvidenceSection({ evidenceByStance }) {
   const entries = Object.entries(evidenceByStance || {});
 
-  const allSources = entries.flatMap(([stance, sources]) =>
-    sources.map((source) => ({ ...source, stance })),
-  );
+  const reliabilityPriority = {
+    high: 0,
+    medium: 1,
+    low: 2,
+    unknown: 3,
+  };
+
+  const stancePriority = {
+    refutes: 0,
+    supports: 1,
+    mixed: 2,
+    unclear: 3,
+  };
+
+  const allSources = entries
+    .flatMap(([stance, sources]) => sources.map((source) => ({ ...source, stance })))
+    .sort((a, b) => {
+      const ratingA = a.reliability?.rating ?? 'unknown';
+      const ratingB = b.reliability?.rating ?? 'unknown';
+      const ratingDiff =
+        (reliabilityPriority[ratingA] ?? reliabilityPriority.unknown) -
+        (reliabilityPriority[ratingB] ?? reliabilityPriority.unknown);
+      if (ratingDiff !== 0) {
+        return ratingDiff;
+      }
+
+      const stanceA = a.stance ?? 'unclear';
+      const stanceB = b.stance ?? 'unclear';
+      const stanceDiff =
+        (stancePriority[stanceA] ?? stancePriority.unclear) -
+        (stancePriority[stanceB] ?? stancePriority.unclear);
+      if (stanceDiff !== 0) {
+        return stanceDiff;
+      }
+
+      const scoreA = typeof a.reliability?.score === 'number' ? a.reliability.score : 0;
+      const scoreB = typeof b.reliability?.score === 'number' ? b.reliability.score : 0;
+      if (scoreA !== scoreB) {
+        return scoreB - scoreA;
+      }
+
+      return 0;
+    });
 
   if (!allSources.length) {
     return (

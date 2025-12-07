@@ -26,9 +26,6 @@ _logger = logging.getLogger(__name__)
 # All possible stances in the evidence schema
 _ALL_STANCES: Sequence[EvidenceStance] = ("supports", "refutes", "mixed", "unclear")
 
-# Actionable stances for verdict generation (exclude "unclear" as it provides no verification value)
-_ACTIONABLE_STANCES: Sequence[EvidenceStance] = ("supports", "refutes", "mixed")
-
 
 def _build_claim_verdict_agent() -> Agent:
     """Instantiate the LLM agent responsible for producing claim verdicts."""
@@ -63,41 +60,37 @@ def _select_evidence_description(result: SearchResult) -> str | None:
 def _build_evidence_bundle(
     claim: Claim, search_results: Sequence[SearchResult]
 ) -> ClaimEvidenceBundle:
-    # Only include actionable stances for verdict generation
-    # "unclear" sources are topically relevant but don't help verification
-    grouped: dict[EvidenceStance, List[EvidenceSourceSummary]] = {
-        stance: [] for stance in _ACTIONABLE_STANCES
-    }
+    # Group evidence by stance (including unclear for transparency)
+    grouped: dict[EvidenceStance, List[EvidenceSourceSummary]] = {}
+    reliability_priority = {"high": 0, "medium": 1, "low": 2, "unknown": 3}
+    stance_priority: Sequence[EvidenceStance] = (
+        "refutes",
+        "supports",
+        "mixed",
+        "unclear",
+    )
 
-    unclear_count = 0
     duplicate_count = 0
     seen_urls: set[str] = set()
 
     for result in search_results:
         stance: EvidenceStance = result.evidence_overall_stance or "unclear"
 
-        # Filter out unclear sources as they don't contribute to verification
-        if stance == "unclear":
-            unclear_count += 1
-            _logger.debug(
-                "Filtering unclear source from verdict: %s (%s)",
-                result.title,
-                result.url,
-            )
-            continue
-
         # Deduplicate by URL (same source may appear from different queries)
         if result.url in seen_urls:
             duplicate_count += 1
             _logger.debug(
-                "Filtering duplicate URL from verdict: %s (%s)",
-                result.title,
-                result.url,
+                f"Filtering duplicate URL from verdict: {result.title} ({result.url})"
             )
             continue
         seen_urls.add(result.url)
 
         summary = _select_evidence_description(result)
+
+        # Add to appropriate stance group (including unclear for transparency)
+        if stance not in grouped:
+            grouped[stance] = []
+
         grouped[stance].append(
             EvidenceSourceSummary(
                 title=result.title,
@@ -109,22 +102,35 @@ def _build_evidence_bundle(
             )
         )
 
-    if unclear_count > 0:
-        _logger.info(
-            "Filtered %d unclear source(s) for claim: %s",
-            unclear_count,
-            claim.text[:50],
-        )
-
     if duplicate_count > 0:
         _logger.info(
-            "Filtered %d duplicate URL(s) for claim: %s",
-            duplicate_count,
-            claim.text[:50],
+            f"Filtered {duplicate_count} duplicate URL(s) for claim: {claim.text[:50]}"
         )
 
-    # Drop empty stances to keep payload compact for the UI.
-    compact_grouped = {stance: items for stance, items in grouped.items() if items}
+    # Sort each stance group so higher reliability sources appear first.
+    for sources in grouped.values():
+        sources.sort(
+            key=lambda source: (
+                reliability_priority.get(
+                    source.reliability.rating, reliability_priority["unknown"]
+                ),
+                -source.reliability.score,
+                (source.title or "").lower(),
+            )
+        )
+
+    # Drop empty stances but preserve a canonical stance ordering so refutes/supports
+    # appear before mixed/unclear across all clients.
+    compact_grouped: dict[EvidenceStance, List[EvidenceSourceSummary]] = {}
+    for stance in stance_priority:
+        items = grouped.get(stance)
+        if items:
+            compact_grouped[stance] = items
+
+    # Include any other stance keys that might exist in fallback order.
+    for stance, items in grouped.items():
+        if stance not in compact_grouped and items:
+            compact_grouped[stance] = items
 
     return ClaimEvidenceBundle(claim=claim, stance_groups=compact_grouped)
 
@@ -155,7 +161,7 @@ async def _generate_verdict(bundle: ClaimEvidenceBundle) -> ClaimVerdict:
         return ClaimVerdict(
             overall_stance="unclear",
             confidence="low",
-            summary="No evidence was found, so the claim remains unverified.",
+            summary="No reliable evidence sources were found for this claim. This may indicate the claim is difficult to verify, too specific, or references information not available in public sources.",
         )
 
     agent = _build_claim_verdict_agent()
@@ -185,6 +191,36 @@ Provide the structured verdict.
     return result.output
 
 
+def _calculate_evidence_quality_score(bundle: ClaimEvidenceBundle) -> float:
+    """Calculate quality score based on evidence quantity, reliability, and stance clarity."""
+    if bundle.total_sources == 0:
+        return 0.0
+
+    # Base score from having evidence
+    score = 0.3
+
+    # Bonus for actionable stances (supports/refutes/mixed vs unclear)
+    actionable_count = sum(
+        len(sources)
+        for stance, sources in bundle.stance_groups.items()
+        if stance in ("supports", "refutes", "mixed")
+    )
+    if actionable_count > 0:
+        score += 0.3 * min(1.0, actionable_count / 3.0)  # Up to 3 sources
+
+    # Bonus for high reliability sources
+    high_reliability_count = sum(
+        1
+        for sources in bundle.stance_groups.values()
+        for source in sources
+        if source.reliability.rating in ("high", "medium")
+    )
+    if high_reliability_count > 0:
+        score += 0.4 * min(1.0, high_reliability_count / 3.0)  # Up to 3 high-quality
+
+    return min(1.0, score)
+
+
 async def generate_claim_report(
     claim: Claim,
     search_results: Sequence[SearchResult],
@@ -193,6 +229,9 @@ async def generate_claim_report(
     """Create a fact-check report for a single claim from search evidence (async)."""
     bundle = _build_evidence_bundle(claim, search_results)
     verdict = await _generate_verdict(bundle)
+
+    # Calculate evidence quality for sorting
+    quality_score = _calculate_evidence_quality_score(bundle)
 
     # Map claim's character position to timestamp if available
     timestamp_hint = None
@@ -214,6 +253,7 @@ async def generate_claim_report(
         verdict_summary=verdict.summary,
         evidence_by_stance=bundle.stance_groups,
         total_sources=bundle.total_sources,
+        evidence_quality_score=quality_score,
         timestamp_hint=timestamp_hint,
         timestamp_confidence=timestamp_confidence,
     )
@@ -250,8 +290,14 @@ async def generate_run_output(
     ]
     reports = await asyncio.gather(*report_tasks)
 
+    # Sort reports by evidence quality (high quality first, no evidence last)
+    sorted_reports = sorted(
+        reports, key=lambda r: r.evidence_quality_score, reverse=True
+    )
+    _logger.info("✓ Sorted %d reports by evidence quality", len(sorted_reports))
+
     return FactCheckRunOutput(
         extracted_claims=extracted_claims,
-        claim_reports=list(reports),
+        claim_reports=sorted_reports,
         transcript_data=transcript_data,
     )

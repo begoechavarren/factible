@@ -59,6 +59,12 @@ class ClaimFactCheckReport(BaseModel):
         ge=0,
         description="Total evidence sources considered across all stances.",
     )
+    evidence_quality_score: float = Field(
+        default=0.0,
+        ge=0.0,
+        le=1.0,
+        description="Quality score for sorting: 0.0 (no evidence) to 1.0 (high-quality evidence)",
+    )
     timestamp_hint: float | None = Field(
         default=None,
         description="Suggested video timestamp in seconds where this claim appears",
