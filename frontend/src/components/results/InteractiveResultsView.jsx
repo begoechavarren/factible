@@ -331,6 +331,14 @@ function EvidenceSection({ evidenceByStance }) {
                 <span className="pixel-text text-[11px] uppercase text-gray-600">
                   {source.reliability?.rating ?? 'unknown'} reliability
                 </span>
+                {source.reliability?.bias && (
+                  <>
+                    <span className="pixel-text text-[11px] text-gray-600">•</span>
+                    <span className="pixel-text text-[11px] uppercase text-gray-600">
+                      {source.reliability.bias}
+                    </span>
+                  </>
+                )}
                 <span className="pixel-text text-[11px] text-gray-600">•</span>
                 <span className="pixel-text text-[11px] text-gray-600">
                   {domain}

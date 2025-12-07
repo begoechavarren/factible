@@ -77,7 +77,6 @@ async def search_online_async(
     headless: bool = True,
     claim_index: int | None = None,
     query_index: int | None = None,
-    max_fetch_attempts: int = 10,
     min_credibility: str = "medium",
 ) -> SearchResults:
     """
@@ -92,7 +91,6 @@ async def search_online_async(
         headless: Run Selenium in headless mode
         claim_index: Optional claim index for logging
         query_index: Optional query index for logging
-        max_fetch_attempts: Maximum results to fetch from Google (prevents infinite loops)
         min_credibility: Minimum credibility rating ("high", "medium", "low")
     """
 
@@ -237,6 +235,35 @@ async def search_online_async(
             for idx, item in enumerate(raw_results, 1)
         ]
         all_results = await asyncio.gather(*tasks)
+
+        # Step 3: Filter unclear stances if more than half have definitive stances
+        definitive_results = [
+            r
+            for r in all_results
+            if r.evidence_overall_stance
+            and r.evidence_overall_stance.lower() in ["supports", "refutes", "mixed"]
+        ]
+        unclear_results = [
+            r
+            for r in all_results
+            if not r.evidence_overall_stance
+            or r.evidence_overall_stance.lower() not in ["supports", "refutes", "mixed"]
+        ]
+
+        # If more than half have definitive stances, filter out unclear
+        if len(definitive_results) > len(all_results) / 2:
+            filtered_count = len(unclear_results)
+            all_results = definitive_results
+            if filtered_count > 0:
+                _logger.info(
+                    f"    ✓ Filtered {filtered_count} unclear stance source(s) "
+                    f"({len(definitive_results)} definitive / {len(definitive_results) + filtered_count} total)"
+                )
+        else:
+            _logger.info(
+                f"    ✓ Keeping all stances: {len(definitive_results)} definitive, "
+                f"{len(unclear_results)} unclear (≤50% definitive)"
+            )
 
         # Return up to limit results
         final_results = all_results[:limit]

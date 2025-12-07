@@ -32,7 +32,10 @@ class WebsiteReliabilityChecker:
         domain = self._extract_domain(url)
         if not domain:
             return SiteReliability(
-                rating="unknown", score=0.5, reasons=["Unable to parse domain"]
+                rating="unknown",
+                score=0.5,
+                reasons=["Unable to parse domain"],
+                bias=None,
             )
 
         reasons: List[str] = []
@@ -57,9 +60,9 @@ class WebsiteReliabilityChecker:
                 reasons.append(f"MBFC credibility: {credibility}")
                 if factual:
                     reasons.append(f"Factual reporting: {factual}")
-                if bias:
-                    reasons.append(f"Bias: {bias}")
-                return SiteReliability(rating=rating, score=score, reasons=reasons)
+                return SiteReliability(
+                    rating=rating, score=score, reasons=reasons, bias=bias or None
+                )
 
         # Fallback heuristics if not in MBFC dataset
         score = 0.5
@@ -94,7 +97,7 @@ class WebsiteReliabilityChecker:
             reasons.append("No credibility data available")
             rating = "unknown"
 
-        return SiteReliability(rating=rating, score=score, reasons=reasons)
+        return SiteReliability(rating=rating, score=score, reasons=reasons, bias=None)
 
     @staticmethod
     def _extract_domain(url: str) -> str:
