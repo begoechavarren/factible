@@ -246,6 +246,7 @@ async def run_factible(
                         f"Step 3.{index}.2: Search execution for claim {index} query {query_index}"
                     ):
                         search_results = await search_online_async(
+                            claim.text,
                             query_obj.query,
                             limit=max(1, max_results_per_query),
                             headless=headless_search,

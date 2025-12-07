@@ -2,7 +2,6 @@ import asyncio
 import logging
 from typing import List, Optional
 
-from factible.components.online_search.schemas.evidence import EvidenceSnippet
 from factible.components.online_search.schemas.search import SearchResult, SearchResults
 from factible.components.online_search.steps.content_fetcher import (
     SeleniumContentFetcher,
@@ -24,6 +23,7 @@ _logger = logging.getLogger(__name__)
 
 async def _process_search_result_async(
     item: GoogleSearchHit,
+    claim: str,
     query: str,
     fetcher: Optional[SeleniumContentFetcher],
     reliability_checker: WebsiteReliabilityChecker,
@@ -44,18 +44,26 @@ async def _process_search_result_async(
             page_text = await fetcher.fetch_text_async(item.url)
 
     # Evidence extraction (LLM call, async)
+    # Always pass both scraped content AND Google snippet
+    # If scraping failed, use snippet as minimal content
     evidence_summary = None
     overall_stance = None
-    snippets: List[EvidenceSnippet] = []
-    if page_text:
+    content_for_extraction = page_text if page_text else item.snippet
+
+    if content_for_extraction:
         with timer(f"{prefix}.4: Evidence extraction (result {result_idx})"):
             evidence_output = await evidence_extractor.extract(
-                query, page_text, title=item.title
+                claim,
+                query,
+                content_for_extraction,
+                title=item.title,
+                snippet=item.snippet
+                if page_text
+                else None,  # Don't duplicate if using snippet as content
             )
             overall_stance = evidence_output.overall_stance
             if evidence_output.has_relevant_evidence:
                 evidence_summary = evidence_output.summary
-                snippets = evidence_output.snippets
 
     return SearchResult(
         title=item.title,
@@ -63,14 +71,15 @@ async def _process_search_result_async(
         snippet=item.snippet,
         engine=item.engine,
         reliability=reliability,
-        relevant_evidence=snippets,
         evidence_summary=evidence_summary,
         evidence_overall_stance=overall_stance,
         content_characters=len(page_text),
+        content_source="snippet_fallback" if not page_text else "scraped",
     )
 
 
 async def search_online_async(
+    claim: str,
     query: str,
     limit: int = 5,
     *,
@@ -86,6 +95,7 @@ async def search_online_async(
     from Google until we have enough high-quality sources.
 
     Args:
+        claim: The original claim being fact-checked
         query: Search query
         limit: Desired number of high-quality results
         headless: Run Selenium in headless mode
@@ -225,6 +235,7 @@ async def search_online_async(
         tasks = [
             _process_search_result_async(
                 item,
+                claim,
                 query,
                 fetcher,
                 reliability_checker,

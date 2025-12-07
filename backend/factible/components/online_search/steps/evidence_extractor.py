@@ -29,74 +29,63 @@ class RelevantContentExtractor:
             model=selected_model,
             output_type=EvidenceExtraction,  # type: ignore[arg-type]
             system_prompt="""
-            You assist a fact-checking analyst. Analyse the provided webpage content and
-            identify at most three verbatim snippets that directly relate to the query.
-            For each snippet, determine its stance:
+            You assist a fact-checking analyst. You will receive:
+            - The CLAIM to fact-check
+            - Article title (if available)
+            - Google Search snippet (short preview from search results)
+            - Full page content (scraped from the webpage)
 
-            - SUPPORTS: The snippet confirms, validates, or provides evidence for the claim.
+            Your task: Analyze ALL provided information and determine:
+            1. Does this source contain relevant evidence about the claim?
+            2. What is the overall stance of the evidence towards the claim?
+            3. A brief synthesis explaining the relationship
+
+            STANCE DEFINITIONS (relative to the CLAIM, not any query):
+
+            - SUPPORTS: The evidence confirms, validates, or provides support for the claim.
               This includes:
               * Direct statements that validate the claim
-              * Descriptions of the same mechanism even without using exact terminology
-                (e.g., "gases trap heat" = greenhouse effect, even if phrase not used)
+              * Descriptions of the same mechanism even without exact terminology
+                (e.g., "gases trap heat" = greenhouse effect)
               * Evidence of causal chains mentioned in the claim
-              * Related facts that support the underlying assertion
-              * Semantic equivalents (e.g., "fossil fuels cause emissions" supports
-                "greenhouse effect causes warming" because fossil fuels → greenhouse gases
-                → greenhouse effect)
+              * Semantic equivalents that support the underlying assertion
 
-            - REFUTES: The snippet contradicts, disproves, or provides counter-evidence that
-              directly challenges the claim or its core mechanism.
+            - REFUTES: The evidence contradicts, disproves, or challenges the claim.
+              Pay special attention to qualifiers like "only", "never", "always" in claims.
 
-            - MIXED: The snippet contains BOTH supporting AND refuting elements about the
-              same claim (e.g., "X is true BUT Y contradicts it").
+            - MIXED: The evidence contains BOTH supporting AND refuting elements.
 
-            - UNCLEAR: Use ONLY when the snippet is topically relevant but GENUINELY ambiguous:
+            - UNCLEAR: Use ONLY when genuinely ambiguous:
               * Discusses related topics without addressing the specific claim
-              * Uses vague language that could support either position
               * Lacks sufficient context to determine stance
+              * Content is too low-quality (navigation menus, forms, etc.)
 
             CRITICAL INSTRUCTIONS:
             1. Be decisive - prefer SUPPORTS or REFUTES over UNCLEAR
-            2. Recognize mechanisms even without exact terminology:
-               - "gases trap heat" = greenhouse effect (even if term not mentioned)
-               - "CO2 absorbs radiation" = greenhouse effect
-               - "emissions warm the planet" = greenhouse effect
-            3. Consider causal chains: if the claim says "A causes B" and evidence says
-               "C causes D" where C→A and D→B, that SUPPORTS the claim
-            4. Look for semantic agreement and mechanism description, not just exact phrase matches
-            5. Use the article title for context - it often clarifies ambiguous content
+            2. Recognize mechanisms even without exact terminology
+            3. Consider causal chains and semantic equivalents
+            4. Pay attention to claim qualifiers ("only", "since X date", etc.)
+            5. Use both the Google snippet AND page content - prioritize whichever has better evidence
+            6. If page content is just navigation/forms/menus, rely on the Google snippet
 
-            Examples:
-            - Claim: "Human activities cause global warming"
-              Snippet: "Emissions from human activities have unequivocally caused warming"
-              → SUPPORTS (direct validation)
+            OUTPUT:
+            - has_relevant_evidence: true if you found usable evidence, false otherwise
+            - summary: 1-2 sentences explaining what the evidence says about the claim
+            - overall_stance: "supports", "refutes", "mixed", or "unclear"
+            - key_quote: (optional) One compelling verbatim quote if available
 
-            - Claim: "Greenhouse effect is the main cause of climate change"
-              Snippet: "Fossil fuels are the largest contributor to climate change"
-              → SUPPORTS (fossil fuels → greenhouse gases → greenhouse effect)
-
-            - Claim: "Greenhouse effect causes climate change"
-              Snippet: "Greenhouse gas emissions trap the sun's heat, warming the planet"
-              → SUPPORTS (describes greenhouse effect mechanism even without using term)
-
-            - Claim: "CO2 has increased 50% since pre-industrial times"
-              Article Title: "CO2 now 50% higher than pre-industrial levels"
-              Snippet: "The increase reached 40% by 2011, now reaching 50%"
-              → SUPPORTS (title + content confirm the claim)
-
-            Provide a brief summary of what the evidence collectively indicates and set
-            overall_stance accordingly. Prefer SUPPORTS or REFUTES when evidence is clear.
-
-            Use lowercase stance values: "supports", "refutes", "mixed", or "unclear".
-
-            If no relevant evidence is found, set has_relevant_evidence to false, return
-            an UNCLEAR overall_stance, and do not include snippets.
+            If no relevant evidence is found, set has_relevant_evidence to false and overall_stance to "unclear".
             """,
         )
 
     @track_pydantic("evidence_extraction")
     async def extract(
-        self, query: str, content: str, title: str | None = None
+        self,
+        claim: str,
+        query: str,
+        content: str,
+        title: str | None = None,
+        snippet: str | None = None,
     ) -> EvidenceExtraction:
         if not content.strip():
             return EvidenceExtraction(
@@ -108,12 +97,18 @@ class RelevantContentExtractor:
 
         trimmed_content = content[: self.max_characters]
 
-        # Include title if available as it often contains key context
-        prompt_parts = ["Query:\n", f"{query}\n\n"]
+        # Include claim, title, and snippet for proper context
+        prompt_parts = ["Claim:\n", f"{claim}\n\n"]
         if title:
             prompt_parts.extend(["Article Title:\n", f"{title}\n\n"])
+        if snippet:
+            prompt_parts.extend(["Google Search Snippet:\n", f"{snippet}\n\n"])
         prompt_parts.extend(
-            ["Content:\n", f"{trimmed_content}\n\n", "Provide relevant evidence."]
+            [
+                "Full Page Content:\n",
+                f"{trimmed_content}\n\n",
+                "Provide relevant evidence.",
+            ]
         )
 
         prompt = "".join(prompt_parts)
