@@ -33,6 +33,7 @@ async def run_factible(
     max_claims: Optional[int] = 5,
     max_queries_per_claim: int = 2,
     max_results_per_query: int = 3,
+    min_source_credibility: str = "medium",
     headless_search: bool = True,
     progress_callback: Optional[Callable[[str, str, int, dict], None]] = None,
     runs_subdir: Optional[str] = None,
@@ -248,6 +249,7 @@ async def run_factible(
                             query_obj.query,
                             limit=max(1, max_results_per_query),
                             headless=headless_search,
+                            min_credibility=min_source_credibility,
                             claim_index=index,
                             query_index=query_index,
                         )

@@ -189,4 +189,4 @@ async def extract_claims(
     if max_claims is not None and max_claims >= 0:
         sorted_claims = sorted_claims[:max_claims]
 
-    return ExtractedClaims(claims=sorted_claims, total_count=len(extracted.claims))
+    return ExtractedClaims(claims=sorted_claims, total_count=len(sorted_claims))

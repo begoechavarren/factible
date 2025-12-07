@@ -1,6 +1,5 @@
 import asyncio
 import logging
-from contextlib import nullcontext
 from typing import List, Optional
 
 from factible.components.online_search.schemas.evidence import EvidenceSnippet
@@ -99,20 +98,22 @@ async def search_online_async(
     claim_index: int | None = None,
     query_index: int | None = None,
     max_fetch_attempts: int = 10,
+    min_credibility: str = "medium",
 ) -> SearchResults:
     """
-    Async version: Perform online search with parallel result processing.
+    Async version: Perform online search with credibility-based filtering.
 
-    Automatically handles paywalled/restricted sources by fetching additional
-    results from Google until we have enough accessible sources.
+    Automatically handles paywalled/restricted sources and low-credibility sources
+    by fetching additional results from Google until we have enough high-quality sources.
 
     Args:
         query: Search query
-        limit: Desired number of accessible results
+        limit: Desired number of high-quality results
         headless: Run Selenium in headless mode
         claim_index: Optional claim index for logging
         query_index: Optional query index for logging
         max_fetch_attempts: Maximum results to fetch from Google (prevents infinite loops)
+        min_credibility: Minimum credibility rating ("high", "medium", "low")
     """
 
     search_client = GoogleSearchClient()
@@ -126,15 +127,110 @@ async def search_online_async(
     else:
         prefix = "Search"
 
-    # Step 1: Google Search API - fetch more than needed to account for paywalls
-    # Start with 2x the limit to have buffer for paywalled sources
-    initial_fetch = min(limit * 2, max_fetch_attempts)
+    # Step 1: Google Search with simple adaptive fetching
+    # Strategy: Fetch 1 batch, if >50% unreliable fetch 1 more, then filter
+    credibility_hierarchy = {"high": 3, "medium": 2, "low": 1, "unknown": 0}
+    min_credibility_score = credibility_hierarchy.get(min_credibility, 2)
+    min_guaranteed_sources = max(1, limit // 2)
 
-    with timer(f"{prefix}.1: Google Search API"):
-        raw_results = await search_client.search(query, initial_fetch)
+    batch_size = limit * 2
+    all_assessed_results: List[tuple[GoogleSearchHit, int, str]] = []
 
-    if not raw_results:
+    # Batch 1: Initial fetch
+    with timer(f"{prefix}.1.1: Google Search API (batch 1)"):
+        batch_1 = await search_client.search(query, limit=batch_size)
+
+    if not batch_1:
         return SearchResults(query=query, results=[], total_count=0)
+
+    # Assess credibility for batch 1
+    for item in batch_1:
+        reliability = await asyncio.to_thread(reliability_checker.assess, item.url)
+        credibility_score = credibility_hierarchy.get(reliability.rating, 0)
+        all_assessed_results.append((item, credibility_score, reliability.rating))
+
+    # Check quality: if >50% unreliable, fetch one more batch
+    reliable_count = sum(
+        1 for _, score, _ in all_assessed_results if score >= min_credibility_score
+    )
+    unreliable_count = len(all_assessed_results) - reliable_count
+
+    if unreliable_count > len(all_assessed_results) / 2:
+        _logger.info(
+            f"    ⚠ {unreliable_count}/{len(all_assessed_results)} sources are low-quality "
+            f"(>{len(all_assessed_results) / 2:.0f}) → Fetching 1 additional batch"
+        )
+
+        # Batch 2: Additional fetch
+        with timer(f"{prefix}.1.2: Google Search API (batch 2)"):
+            batch_2 = await search_client.search(query, limit=batch_size)
+
+        if batch_2:
+            for item in batch_2:
+                reliability = await asyncio.to_thread(
+                    reliability_checker.assess, item.url
+                )
+                credibility_score = credibility_hierarchy.get(reliability.rating, 0)
+                all_assessed_results.append(
+                    (item, credibility_score, reliability.rating)
+                )
+
+            reliable_count = sum(
+                1
+                for _, score, _ in all_assessed_results
+                if score >= min_credibility_score
+            )
+            _logger.info(
+                f"    ✓ After batch 2: {reliable_count}/{len(all_assessed_results)} reliable sources"
+            )
+    else:
+        _logger.info(
+            f"    ✓ Quality acceptable: {reliable_count}/{len(all_assessed_results)} reliable "
+            f"(≤50% unreliable) → Proceeding with filtering"
+        )
+
+    if not all_assessed_results:
+        return SearchResults(query=query, results=[], total_count=0)
+
+    # Step 1.5: Smart filtering with minimum guarantee
+    _logger.info(
+        f"    🔍 Filtering {len(all_assessed_results)} results "
+        f"(min quality: {min_credibility}, min guarantee: {min_guaranteed_sources})"
+    )
+
+    # Sort by credibility score (best first)
+    all_assessed_results.sort(key=lambda x: x[1], reverse=True)
+
+    # Split into reliable and unreliable
+    reliable = [r[0] for r in all_assessed_results if r[1] >= min_credibility_score]
+    unreliable = [r[0] for r in all_assessed_results if r[1] < min_credibility_score]
+
+    # Decision logic:
+    if len(reliable) >= min_guaranteed_sources:
+        # We have enough reliable sources - use only those
+        filtered_results = reliable[: limit * 2]  # Keep buffer for paywalls
+        skipped = len(unreliable)
+        _logger.info(
+            f"    ✓ Using {len(filtered_results)} reliable sources "
+            f"(filtered {skipped} low-credibility)"
+        )
+    else:
+        # Not enough reliable sources - keep best available
+        # Use ALL reliable + fill gap with best unreliable
+        needed_unreliable = min_guaranteed_sources - len(reliable)
+        filtered_results = reliable + unreliable[:needed_unreliable]
+
+        _logger.warning(
+            f"    ⚠ Only {len(reliable)} reliable sources found "
+            f"(target: {limit}, min guarantee: {min_guaranteed_sources})"
+        )
+        _logger.info(
+            f"    ➜ Keeping {len(filtered_results)} total sources "
+            f"({len(reliable)} reliable + {len(filtered_results) - len(reliable)} best available)"
+        )
+
+    # Only process filtered sources from here
+    raw_results = filtered_results
 
     # Initialize Selenium fetcher
     fetcher: Optional[SeleniumContentFetcher] = None
@@ -189,118 +285,3 @@ async def search_online_async(
         if fetcher:
             fetcher.__exit__(None, None, None)  # Cleanup driver
         await search_client.close()
-
-
-def search_online(
-    query: str,
-    limit: int = 5,
-    *,
-    headless: bool = True,
-    claim_index: int | None = None,
-    query_index: int | None = None,
-    max_fetch_attempts: int = 10,
-) -> SearchResults:
-    """
-    Sync version (kept for backward compatibility).
-
-    Automatically handles paywalled/restricted sources.
-    """
-
-    search_client = GoogleSearchClient()
-    reliability_checker = WebsiteReliabilityChecker()
-    evidence_extractor = RelevantContentExtractor()
-    paywall_detector = PaywallDetector()
-
-    # Build timer prefix for hierarchical tracking
-    if claim_index is not None and query_index is not None:
-        prefix = f"Step 3.{claim_index}.2.{query_index}"
-    else:
-        prefix = "Search"
-
-    # Fetch more than needed to account for paywalls
-    initial_fetch = min(limit * 2, max_fetch_attempts)
-
-    with timer(f"{prefix}.1: Google Search API"):
-        raw_results = asyncio.run(search_client.search(query, initial_fetch))
-    if not raw_results:
-        return SearchResults(query=query, results=[], total_count=0)
-
-    fetcher_cm: Optional[SeleniumContentFetcher]
-    try:
-        fetcher_cm = SeleniumContentFetcher(headless=headless)
-    except RuntimeError as exc:
-        _logger.warning("Selenium unavailable: %s", exc)
-        fetcher_cm = None
-
-    context_manager = fetcher_cm if fetcher_cm is not None else nullcontext()
-    results: List[SearchResult] = []
-    skipped_paywalled = 0
-
-    with context_manager as active_fetcher:  # type: ignore[assignment]
-        for result_idx, item in enumerate(raw_results, 1):
-            # Stop if we have enough accessible results
-            if len(results) >= limit:
-                break
-
-            with timer(f"{prefix}.2: Reliability assessment (result {result_idx})"):
-                reliability = reliability_checker.assess(item.url)
-
-            page_text = ""
-            if isinstance(active_fetcher, SeleniumContentFetcher):
-                with timer(f"{prefix}.3: Content fetching (result {result_idx})"):
-                    page_text = active_fetcher.fetch_text(item.url)
-
-            # Paywall detection - skip if paywalled
-            if page_text:
-                is_paywalled, reason = paywall_detector.is_paywalled(
-                    page_text, item.url, item.title
-                )
-                if is_paywalled:
-                    _logger.info(
-                        "⊘ Skipping paywalled/restricted source [%d]: %s - %s",
-                        result_idx,
-                        item.url,
-                        reason,
-                    )
-                    skipped_paywalled += 1
-                    continue  # Skip to next result
-
-            evidence_summary = None
-            overall_stance = None
-            snippets: List[EvidenceSnippet] = []
-            if page_text:
-                with timer(f"{prefix}.4: Evidence extraction (result {result_idx})"):
-                    evidence_output = asyncio.run(
-                        evidence_extractor.extract(query, page_text, title=item.title)
-                    )
-                    overall_stance = evidence_output.overall_stance
-                    if evidence_output.has_relevant_evidence:
-                        evidence_summary = evidence_output.summary
-                        snippets = evidence_output.snippets
-
-            results.append(
-                SearchResult(
-                    title=item.title,
-                    url=item.url,
-                    snippet=item.snippet,
-                    engine=item.engine,
-                    reliability=reliability,
-                    relevant_evidence=snippets,
-                    evidence_summary=evidence_summary,
-                    evidence_overall_stance=overall_stance,
-                    content_characters=len(page_text),
-                )
-            )
-
-    if skipped_paywalled > 0:
-        _logger.info(
-            f"✓ Filtered {skipped_paywalled} paywalled/restricted sources, "
-            f"kept {len(results)} accessible"
-        )
-
-    if len(results) < limit:
-        _logger.warning(
-            f"⚠ Only {len(results)} accessible sources found (target: {limit})"
-        )
-
-    return SearchResults(query=query, results=results, total_count=len(results))
