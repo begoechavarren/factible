@@ -271,6 +271,8 @@ async def run_factible(
             duplicate_count = 0
             for search_results in search_results_list:
                 if search_results.total_count > 0:
+                    # First pass: deduplicate and collect
+                    unique_results = []
                     for result in search_results.results:
                         # Deduplicate by URL to avoid duplicate sources across queries
                         if result.url in seen_urls:
@@ -283,8 +285,10 @@ async def run_factible(
                             continue
                         seen_urls.add(result.url)
                         collected_results.append(result)
+                        unique_results.append(result)
 
-                    for k, result in enumerate(search_results.results, 1):
+                    # Second pass: log only unique results
+                    for k, result in enumerate(unique_results, 1):
                         reliability = result.reliability
                         reliability_label = reliability.rating.upper()
                         _logger.info(

@@ -70,6 +70,9 @@ def _build_evidence_bundle(
     }
 
     unclear_count = 0
+    duplicate_count = 0
+    seen_urls: set[str] = set()
+
     for result in search_results:
         stance: EvidenceStance = result.evidence_overall_stance or "unclear"
 
@@ -82,6 +85,17 @@ def _build_evidence_bundle(
                 result.url,
             )
             continue
+
+        # Deduplicate by URL (same source may appear from different queries)
+        if result.url in seen_urls:
+            duplicate_count += 1
+            _logger.debug(
+                "Filtering duplicate URL from verdict: %s (%s)",
+                result.title,
+                result.url,
+            )
+            continue
+        seen_urls.add(result.url)
 
         summary = _select_evidence_description(result)
         grouped[stance].append(
@@ -99,6 +113,13 @@ def _build_evidence_bundle(
         _logger.info(
             "Filtered %d unclear source(s) for claim: %s",
             unclear_count,
+            claim.text[:50],
+        )
+
+    if duplicate_count > 0:
+        _logger.info(
+            "Filtered %d duplicate URL(s) for claim: %s",
+            duplicate_count,
             claim.text[:50],
         )
 
