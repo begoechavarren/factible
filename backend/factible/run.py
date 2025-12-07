@@ -266,10 +266,24 @@ async def run_factible(
             ]
             search_results_list = await asyncio.gather(*query_tasks)
 
-            # Flatten and collect results
+            # Flatten and collect results with deduplication by URL
+            seen_urls: set[str] = set()
+            duplicate_count = 0
             for search_results in search_results_list:
                 if search_results.total_count > 0:
-                    collected_results.extend(search_results.results)
+                    for result in search_results.results:
+                        # Deduplicate by URL to avoid duplicate sources across queries
+                        if result.url in seen_urls:
+                            duplicate_count += 1
+                            _logger.debug(
+                                "Skipping duplicate URL: %s (%s)",
+                                result.url,
+                                result.title,
+                            )
+                            continue
+                        seen_urls.add(result.url)
+                        collected_results.append(result)
+
                     for k, result in enumerate(search_results.results, 1):
                         reliability = result.reliability
                         reliability_label = reliability.rating.upper()
@@ -290,6 +304,11 @@ async def run_factible(
                                 "     Evidence stance: %s",
                                 result.evidence_overall_stance.upper(),
                             )
+
+            if duplicate_count > 0:
+                _logger.info(
+                    f"Filtered {duplicate_count} duplicate URL(s) for claim {index}"
+                )
 
             tracker.clear_context()
             return claim, collected_results
