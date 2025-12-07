@@ -14,7 +14,6 @@ from factible.components.online_search.steps.google_search import (
     GoogleSearchClient,
     GoogleSearchHit,
 )
-from factible.components.online_search.steps.paywall_detector import PaywallDetector
 from factible.components.online_search.steps.reliability import (
     WebsiteReliabilityChecker,
 )
@@ -29,15 +28,10 @@ async def _process_search_result_async(
     fetcher: Optional[SeleniumContentFetcher],
     reliability_checker: WebsiteReliabilityChecker,
     evidence_extractor: RelevantContentExtractor,
-    paywall_detector: PaywallDetector,
     prefix: str,
     result_idx: int,
-) -> Optional[SearchResult]:
-    """
-    Process a single search result asynchronously.
-
-    Returns None if source is paywalled/inaccessible and should be skipped.
-    """
+) -> SearchResult:
+    """Process a single search result asynchronously."""
 
     # Reliability assessment (fast, can run in thread pool)
     with timer(f"{prefix}.2: Reliability assessment (result {result_idx})"):
@@ -48,20 +42,6 @@ async def _process_search_result_async(
     if fetcher is not None:
         with timer(f"{prefix}.3: Content fetching (result {result_idx})"):
             page_text = await fetcher.fetch_text_async(item.url)
-
-    # Paywall detection - skip if content is paywalled/restricted
-    if page_text:
-        is_paywalled, reason = paywall_detector.is_paywalled(
-            page_text, item.url, item.title
-        )
-        if is_paywalled:
-            _logger.info(
-                "⊘ Skipping paywalled/restricted source [%d]: %s - %s",
-                result_idx,
-                item.url,
-                reason,
-            )
-            return None  # Signal to skip this source
 
     # Evidence extraction (LLM call, async)
     evidence_summary = None
@@ -103,8 +83,8 @@ async def search_online_async(
     """
     Async version: Perform online search with credibility-based filtering.
 
-    Automatically handles paywalled/restricted sources and low-credibility sources
-    by fetching additional results from Google until we have enough high-quality sources.
+    Automatically handles low-credibility sources by fetching additional results
+    from Google until we have enough high-quality sources.
 
     Args:
         query: Search query
@@ -119,7 +99,6 @@ async def search_online_async(
     search_client = GoogleSearchClient()
     reliability_checker = WebsiteReliabilityChecker()
     evidence_extractor = RelevantContentExtractor()
-    paywall_detector = PaywallDetector()
 
     # Build timer prefix for hierarchical tracking
     if claim_index is not None and query_index is not None:
@@ -208,7 +187,7 @@ async def search_online_async(
     # Decision logic:
     if len(reliable) >= min_guaranteed_sources:
         # We have enough reliable sources - use only those
-        filtered_results = reliable[: limit * 2]  # Keep buffer for paywalls
+        filtered_results = reliable[: limit * 2]
         skipped = len(unreliable)
         _logger.info(
             f"    ✓ Using {len(filtered_results)} reliable sources "
@@ -252,7 +231,6 @@ async def search_online_async(
                 fetcher,
                 reliability_checker,
                 evidence_extractor,
-                paywall_detector,
                 prefix,
                 idx,
             )
@@ -260,23 +238,8 @@ async def search_online_async(
         ]
         all_results = await asyncio.gather(*tasks)
 
-        # Filter out None values (paywalled/skipped sources)
-        accessible_results = [r for r in all_results if r is not None]
-
-        paywalled_count = len(all_results) - len(accessible_results)
-        if paywalled_count > 0:
-            _logger.info(
-                f"    ✓ Filtered {paywalled_count} paywalled/restricted sources, "
-                f"kept {len(accessible_results)} accessible"
-            )
-
-        # Return up to limit accessible results
-        final_results = accessible_results[:limit]
-
-        if len(final_results) < limit:
-            _logger.warning(
-                f"    ⚠ Only {len(final_results)} accessible sources found (target: {limit})"
-            )
+        # Return up to limit results
+        final_results = all_results[:limit]
 
         return SearchResults(
             query=query, results=final_results, total_count=len(final_results)
