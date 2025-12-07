@@ -268,32 +268,48 @@ function EvidenceSection({ evidenceByStance }) {
         Sources: {allSources.length}
       </p>
       <div className="space-y-2">
-        {allSources.map((source, idx) => (
-          <div
-            key={`${source.stance}-${idx}`}
-            className="rounded-xl border border-primary/10 bg-white/90 p-3"
-          >
-            <div className="mb-1 flex flex-wrap items-center gap-2">
-              <span className="pixel-text text-[11px] uppercase text-gray-400">
-                {source.stance?.toUpperCase()}
-              </span>
-              <span className="pixel-text text-[11px] uppercase text-gray-400">
-                {source.reliability?.rating ?? 'unknown'} reliability
-              </span>
-            </div>
-            <a
-              href={source.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium text-primary hover:text-primary/80"
+        {allSources.map((source, idx) => {
+          // Extract domain from URL
+          let domain = '';
+          try {
+            const url = new URL(source.url);
+            domain = url.hostname.replace(/^www\./, '');
+          } catch {
+            domain = 'unknown source';
+          }
+
+          return (
+            <div
+              key={`${source.stance}-${idx}`}
+              className="rounded-xl border border-primary/10 bg-white/90 p-3"
             >
-              {source.title}
-            </a>
-            {source.evidence_summary && (
-              <p className="mt-1 text-xs text-gray-600">{source.evidence_summary}</p>
-            )}
-          </div>
-        ))}
+              <div className="mb-1 flex flex-wrap items-center gap-1.5">
+                <span className="pixel-text text-[11px] uppercase text-gray-600">
+                  {source.stance?.toUpperCase()}
+                </span>
+                <span className="pixel-text text-[11px] text-gray-600">•</span>
+                <span className="pixel-text text-[11px] uppercase text-gray-600">
+                  {source.reliability?.rating ?? 'unknown'} reliability
+                </span>
+                <span className="pixel-text text-[11px] text-gray-600">•</span>
+                <span className="pixel-text text-[11px] text-gray-600">
+                  {domain}
+                </span>
+              </div>
+              <a
+                href={source.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-primary hover:text-primary/80"
+              >
+                {source.title}
+              </a>
+              {source.evidence_summary && (
+                <p className="mt-1 text-xs text-gray-600">{source.evidence_summary}</p>
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
