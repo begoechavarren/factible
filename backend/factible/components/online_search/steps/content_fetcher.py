@@ -2,6 +2,7 @@ import asyncio
 import logging
 import re
 from typing import Optional
+import time
 
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException, WebDriverException
@@ -36,6 +37,12 @@ class SeleniumContentFetcher:
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--window-size=1920,1080")
         chrome_options.add_argument("--blink-settings=imagesEnabled=false")
+        # Set realistic User-Agent to avoid blocks from academic sites
+        chrome_options.add_argument(
+            "user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/131.0.0.0 Safari/537.36"
+        )
 
         self._options = chrome_options
         self.wait_timeout = wait_timeout
@@ -64,6 +71,7 @@ class SeleniumContentFetcher:
 
     def fetch_text(self, url: str, min_characters: int = 200) -> str:
         """Synchronous fetch (blocking I/O)."""
+
         if not self._driver:
             raise RuntimeError(
                 "Selenium driver not initialised. Use SeleniumContentFetcher as a context manager."
@@ -74,12 +82,30 @@ class SeleniumContentFetcher:
             if self._wait and EC is not None:
                 self._wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))  # type: ignore[arg-type]
 
+            # Smart wait: Only delay for JS-heavy sites that need it
+            # Check if we need to wait for content to load
             paragraphs = []
             if By is not None and self._driver:
+                # First quick attempt - most sites load instantly
                 for element in self._driver.find_elements(By.TAG_NAME, "p"):
                     text = self._clean_text(element.text)
                     if text:
                         paragraphs.append(text)
+
+                # If we got very little content, it might be JS-heavy - wait and retry
+                initial_content = "\n".join(paragraphs)
+                if len(initial_content) < 100:
+                    _logger.debug(
+                        "Low initial content (%d chars), waiting for JS render...",
+                        len(initial_content),
+                    )
+                    time.sleep(1.0)  # Reduced from 1.5s
+                    # Re-extract after wait
+                    paragraphs = []
+                    for element in self._driver.find_elements(By.TAG_NAME, "p"):
+                        text = self._clean_text(element.text)
+                        if text:
+                            paragraphs.append(text)
 
             content = "\n".join(paragraphs)
             if len(content) < min_characters and self._driver and By is not None:
