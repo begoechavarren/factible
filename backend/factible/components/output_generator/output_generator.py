@@ -41,9 +41,12 @@ def _build_claim_verdict_agent() -> Agent:
         - Choose overall_stance as one of: supports, refutes, mixed, unclear.
         - Set confidence to low/medium/high depending on the strength, consistency, and reliability
           of the evidence.
-        - Provide a concise summary referencing the most persuasive evidence. Mention each cited
-          source by its title or publication (e.g., "Frontiers study" or "Nature article") instead of
-          generic phrases like "one source". Cite stance and reliability when relevant.
+        - Provide a concise summary referencing the most persuasive evidence. When citing a specific
+          piece of evidence, name the source once (e.g., "Frontiers study", "Nature article",
+          "Reuters report", or "WHO guidance"). For
+          consensus statements, keep the summary concise without enumerating every source. Cite stance
+          and reliability when relevant, and only mention additional source names when they clarify
+          contrasting perspectives.
         - Only when evidence conflicts, explicitly name the key supporting and refuting sources so the
           reader understands where disagreement originates. If there is consensus, simply synthesize it.
 
