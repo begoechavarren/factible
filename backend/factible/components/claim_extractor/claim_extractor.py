@@ -2,7 +2,8 @@ import logging
 import re
 from difflib import SequenceMatcher
 
-from pydantic_ai import Agent
+from pydantic import BaseModel
+from pydantic_ai import Agent, RunContext
 from pydantic_ai.exceptions import AgentRunError
 
 from factible.components.claim_extractor.schemas import ExtractedClaims
@@ -11,6 +12,10 @@ from factible.models.config import CLAIM_EXTRACTOR_MODEL
 from factible.models.llm import get_model
 
 _logger = logging.getLogger(__name__)
+
+
+class ClaimExtractorDeps(BaseModel):
+    max_claims: int | None = None
 
 
 def _normalize_for_matching(text: str) -> str:
@@ -94,12 +99,13 @@ def _find_claim_in_transcript(
     return None
 
 
-def _get_claim_extractor_agent() -> Agent:
+def _get_claim_extractor_agent() -> Agent[ClaimExtractorDeps]:
     """Get the claim extractor agent instance."""
-    return Agent(
+    agent = Agent(
         model=get_model(CLAIM_EXTRACTOR_MODEL),
         output_type=ExtractedClaims,  # type: ignore[arg-type]
         retries=3,
+        deps_type=ClaimExtractorDeps,
         system_prompt="""
         You are an expert fact-checker. Your task is to extract factual claims from YouTube video transcripts.
 
@@ -108,7 +114,6 @@ def _get_claim_extractor_agent() -> Agent:
         2. Can potentially be verified or fact-checked
         3. Is not just an opinion, belief, or subjective statement
 
-        {LIMIT_INSTRUCTION}
         For each claim you identify provide the following fields:
         - text: Extract the exact statement or a precise paraphrase (≤40 words)
         - confidence: Confidence score (0.0-1.0) that this is a factual, checkable claim
@@ -164,6 +169,15 @@ def _get_claim_extractor_agent() -> Agent:
         """,
     )
 
+    @agent.instructions
+    def _limit_instruction(ctx: RunContext[ClaimExtractorDeps]) -> str:
+        max_claims = ctx.deps.max_claims
+        if max_claims is not None and max_claims >= 0:
+            return f"Never output more than {max_claims} claims; drop lower-importance ones beyond that."
+        return "Output only the highest-impact claims; omit trivial or redundant statements."
+
+    return agent
+
 
 @track_pydantic("claim_extraction")
 async def extract_claims(
@@ -171,16 +185,10 @@ async def extract_claims(
 ) -> ExtractedClaims:
     """Extract factual claims from a transcript (async)."""
     agent = _get_claim_extractor_agent()
-    if max_claims is not None and max_claims >= 0:
-        limit_instruction = f"Never output more than {max_claims} claims; drop lower-importance ones beyond that."
-    else:
-        limit_instruction = "Output only the highest-impact claims; omit trivial or redundant statements."
-    agent.system_prompt = agent.system_prompt.format(
-        LIMIT_INSTRUCTION=limit_instruction
-    )
     try:
         result = await agent.run(
-            f"Extract all factual claims from this YouTube transcript:\n\n{transcript}"
+            f"Extract all factual claims from this YouTube transcript:\n\n{transcript}",
+            deps=ClaimExtractorDeps(max_claims=max_claims),
         )
     except AgentRunError as exc:
         _logger.error("Claim extraction failed: %s", exc)

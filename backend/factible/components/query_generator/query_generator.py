@@ -1,6 +1,7 @@
 import logging
 
-from pydantic_ai import Agent
+from pydantic import BaseModel
+from pydantic_ai import Agent, RunContext
 
 from factible.components.claim_extractor.schemas import Claim
 from factible.components.query_generator.schemas import GeneratedQueries
@@ -11,11 +12,16 @@ from factible.models.llm import get_model
 _logger = logging.getLogger(__name__)
 
 
-def _get_query_generator_agent() -> Agent:
+class QueryGeneratorDeps(BaseModel):
+    max_queries: int | None = None
+
+
+def _get_query_generator_agent() -> Agent[QueryGeneratorDeps]:
     """Get the query generator agent instance."""
-    return Agent(
+    agent = Agent(
         model=get_model(QUERY_GENERATOR_MODEL),
         output_type=GeneratedQueries,  # type: ignore[arg-type]
+        deps_type=QueryGeneratorDeps,
         system_prompt="""
         You are an expert fact-checker specializing in generating effective search queries.
         Your task is to create multiple search queries that will help verify or refute factual claims.
@@ -50,6 +56,15 @@ def _get_query_generator_agent() -> Agent:
         """,
     )
 
+    @agent.instructions
+    def _limit_instruction(ctx: RunContext[QueryGeneratorDeps]) -> str:
+        max_queries = ctx.deps.max_queries
+        if max_queries is not None and max_queries >= 0:
+            return f"Return no more than {max_queries} total queries for this claim."
+        return "Return only the highest-priority queries needed for verification."
+
+    return agent
+
 
 @track_pydantic("query_generation")
 async def generate_queries(
@@ -63,17 +78,16 @@ async def generate_queries(
     context_note = (
         f"Context: {claim.context}" if claim.context else "Context: unspecified"
     )
-    max_queries_value = (
-        max_queries if max_queries is not None and max_queries >= 0 else 5
-    )
     prompt = (
-        "Generate effective search queries to fact-check this claim. "
-        f"Return no more than {max_queries_value} total queries and keep them sorted by ascending priority (1 is highest)."
+        "Generate effective search queries to fact-check this claim."
         f"\nClaim: {claim.text}\n{context_note}"
         "\nFocus on the timeframe implied by the context, if any."
         "\nReturn only the structured fields—no explanations."
     )
-    result = await agent.run(prompt)
+    result = await agent.run(
+        prompt,
+        deps=QueryGeneratorDeps(max_queries=max_queries),
+    )
     generated = result.output
 
     filtered_queries = [
