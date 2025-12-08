@@ -119,6 +119,11 @@ def _get_claim_extractor_agent() -> Agent:
         (e.g., "Climate change alarmism is driven more by politics and media than by settled science").
         Use this thesis to judge how critical each claim is.
 
+        Relevance guardrails:
+        - If removing the statement would not weaken or contradict the thesis, either drop it or cap its importance at 0.25.
+        - Pure background or credential facts (e.g., "<person> is a <profession>", publication counts, awards, generic definitions) MUST stay ≤0.30 unless the thesis itself questions that person's expertise.
+        - Silently verify you can describe in ≤12 words how the claim advances or undermines the thesis; if you cannot, treat it as peripheral (importance ≤0.25).
+
         When assigning IMPORTANCE scores:
         - 0.85-1.0 → Prescriptive or causal claims that, if false, would undermine the thesis (e.g., who/what is to blame, proposed solutions).
         - 0.60-0.80 → Quantitative or historical evidence directly tied to the thesis.
