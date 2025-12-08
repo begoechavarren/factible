@@ -113,10 +113,9 @@ class WebsiteReliabilityChecker:
         candidate_paths: List[Path] = []
         if dataset_path:
             candidate_paths.append(Path(dataset_path))
-        default_path = (
-            Path(__file__).resolve().parent / "media_bias" / "media_bias_data.json"
-        )
-        candidate_paths.append(default_path)
+
+        media_bias_dir = Path(__file__).resolve().parent / "media_bias"
+        candidate_paths.extend(self._find_dataset_snapshots(media_bias_dir))
 
         for path in candidate_paths:
             if path.exists():
@@ -150,6 +149,26 @@ class WebsiteReliabilityChecker:
                         "Failed to load media bias dataset %s: %s", path, exc
                     )
         return {}
+
+    @staticmethod
+    def _find_dataset_snapshots(directory: Path) -> List[Path]:
+        snapshots = sorted(
+            (
+                path
+                for path in directory.glob("*_media_bias_data.json")
+                if path.is_file()
+            ),
+            reverse=True,
+        )
+
+        legacy_file = directory / "media_bias_data.json"
+        if legacy_file.exists():
+            snapshots.append(legacy_file)
+
+        if not snapshots:
+            snapshots.append(legacy_file)
+
+        return snapshots
 
     @staticmethod
     def _domain_age(domain: str) -> Optional[float]:
