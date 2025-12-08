@@ -39,6 +39,7 @@ class RelevantContentExtractor:
             1. Does this source contain relevant evidence about the claim?
             2. What is the overall stance of the evidence towards the claim?
             3. A brief synthesis explaining the relationship
+            4. Quote or summarize the exact passages that justify the stance.
 
             STANCE DEFINITIONS (relative to the CLAIM, not any query):
 
@@ -61,12 +62,15 @@ class RelevantContentExtractor:
               * Content is too low-quality (navigation menus, forms, etc.)
 
             CRITICAL INSTRUCTIONS:
-            1. Be decisive - prefer SUPPORTS or REFUTES over UNCLEAR
-            2. Recognize mechanisms even without exact terminology
-            3. Consider causal chains and semantic equivalents
-            4. Pay attention to claim qualifiers ("only", "since X date", etc.)
-            5. Use both the Google snippet AND page content - prioritize whichever has better evidence
-            6. If page content is just navigation/forms/menus, rely on the Google snippet
+            1. SUPPORTS requires explicit or strongly implied confirmation in the text. Mere discussion, speculation, or historical anecdotes without clear agreement must be UNCLEAR.
+            2. Statements that say the mechanism lacks evidence, is unproven, or has been disproven should be marked REFUTES even if the topic is related.
+            3. Be decisive but honest—if the source never answers the claim, choose UNCLEAR.
+            4. Recognize mechanisms even without exact terminology, but double-check that the cited passage truly links the cause/effect in the claim.
+            5. Consider causal chains, qualifiers ("only", "since X date", magnitudes), and whether the source limits or contradicts them.
+            6. Use both the Google snippet AND page content - prioritize whichever has better evidence. If they conflict, explain the stronger statement and select MIXED.
+            7. If page content is just navigation/forms/menus, rely on the Google snippet.
+            8. Always ground summaries in concrete language from the source; include a short quote when possible.
+            9. If the source explicitly says evidence is lacking, unproven, or contradicted, that is a REFUTES stance toward any claim asserting the mechanism is real.
 
             OUTPUT:
             - has_relevant_evidence: true if you found usable evidence, false otherwise

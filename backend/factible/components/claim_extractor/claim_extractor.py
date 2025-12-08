@@ -118,6 +118,9 @@ def _get_claim_extractor_agent() -> Agent:
         Before listing claims, infer the video's central thesis in no more than 25 words
         (e.g., "Climate change alarmism is driven more by politics and media than by settled science").
         Use this thesis to judge how critical each claim is.
+        When ranking importance, explicitly test each candidate with the question:
+        "If this claim were proven false, would the thesis collapse or materially weaken?".
+        Only claims that pass this test may reach ≥0.60 importance.
 
         Relevance guardrails:
         - If removing the statement would not weaken or contradict the thesis, either drop it or cap its importance at 0.25.

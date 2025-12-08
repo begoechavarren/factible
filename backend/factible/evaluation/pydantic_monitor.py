@@ -1,9 +1,10 @@
 import inspect
 import logging
 import time
+from contextvars import ContextVar
 from datetime import datetime
 from functools import wraps
-from typing import Any, Callable, TypeVar
+from typing import Any, Awaitable, Callable, TypeVar, cast
 
 from pydantic_ai import Agent
 
@@ -13,6 +14,98 @@ from factible.models.llm import get_model_pricing
 _logger = logging.getLogger(__name__)
 
 T = TypeVar("T")
+
+_current_component: ContextVar[str | None] = ContextVar(
+    "current_pydantic_component", default=None
+)
+
+_original_agent_run = Agent.run
+_original_agent_run_sync = Agent.run_sync
+_agent_patch_initialized = False
+
+
+def _ensure_agent_patched() -> None:
+    global _agent_patch_initialized
+    if _agent_patch_initialized:
+        return
+    _agent_patch_initialized = True
+
+    async def _tracked_agent_run(self, prompt, *run_args, **run_kwargs):  # type: ignore[override]
+        tracker = ExperimentTracker.get_current()
+        component = _current_component.get()
+        start_time = time.time()
+        result = await _original_agent_run(self, prompt, *run_args, **run_kwargs)
+        if not tracker or not component:
+            return result
+
+        latency = time.time() - start_time
+        output = result.output if hasattr(result, "output") else result
+        input_tokens = estimate_tokens(prompt)
+        output_str = (
+            str(output)
+            if not hasattr(output, "model_dump_json")
+            else output.model_dump_json()
+        )
+        output_tokens = estimate_tokens(output_str)
+        cost = calculate_cost(str(self.model), input_tokens, output_tokens)
+
+        call_data = {
+            "component": component,
+            "model": str(self.model),
+            "timestamp": datetime.now().isoformat(),
+            "latency_seconds": round(latency, 2),
+            "input_prompt": prompt,
+            "input_length_chars": len(prompt),
+            "input_tokens_estimated": input_tokens,
+            "output": output.model_dump(exclude_none=True)
+            if hasattr(output, "model_dump")
+            else str(output),
+            "output_length_chars": len(output_str),
+            "output_tokens_estimated": output_tokens,
+            "cost_usd": round(cost, 6),
+        }
+        tracker.log_pydantic_call(call_data)
+        return result
+
+    def _tracked_agent_run_sync(self, prompt, *run_args, **run_kwargs):  # type: ignore[override]
+        tracker = ExperimentTracker.get_current()
+        component = _current_component.get()
+        start_time = time.time()
+        result = _original_agent_run_sync(self, prompt, *run_args, **run_kwargs)
+        if not tracker or not component:
+            return result
+
+        latency = time.time() - start_time
+        output = result.output if hasattr(result, "output") else result
+        input_tokens = estimate_tokens(prompt)
+        output_str = (
+            str(output)
+            if not hasattr(output, "model_dump_json")
+            else output.model_dump_json()
+        )
+        output_tokens = estimate_tokens(output_str)
+        cost = calculate_cost(str(self.model), input_tokens, output_tokens)
+
+        call_data = {
+            "component": component,
+            "model": str(self.model),
+            "timestamp": datetime.now().isoformat(),
+            "latency_seconds": round(latency, 2),
+            "input_prompt": prompt,
+            "input_length_chars": len(prompt),
+            "input_tokens_estimated": input_tokens,
+            "output": output.model_dump(exclude_none=True)
+            if hasattr(output, "model_dump")
+            else str(output),
+            "output_length_chars": len(output_str),
+            "output_tokens_estimated": output_tokens,
+            "cost_usd": round(cost, 6),
+        }
+        tracker.log_pydantic_call(call_data)
+        return result
+
+    Agent.run = _tracked_agent_run
+    Agent.run_sync = _tracked_agent_run_sync
 
 
 def estimate_tokens(text: str) -> int:
@@ -46,53 +139,13 @@ def track_pydantic_call(
     Returns:
         The agent result
     """
-    tracker = ExperimentTracker.get_current()
-
-    # Get model name
-    model_name = str(agent.model) if hasattr(agent, "model") else "unknown"
-
-    # Timing
-    start_time = time.time()
-
-    # Execute agent call
-    agent_method = getattr(agent, method)
-    result = agent_method(prompt)
-
-    latency = time.time() - start_time
-
-    # Extract output
-    output = result.output if hasattr(result, "output") else result
-
-    # Estimate tokens and cost
-    input_tokens = estimate_tokens(prompt)
-    output_str = (
-        str(output)
-        if not hasattr(output, "model_dump_json")
-        else output.model_dump_json()
-    )
-    output_tokens = estimate_tokens(output_str)
-    cost = calculate_cost(model_name, input_tokens, output_tokens)
-
-    # Log to tracker
-    if tracker:
-        call_data = {
-            "component": component,
-            "model": model_name,
-            "timestamp": datetime.now().isoformat(),
-            "latency_seconds": round(latency, 2),
-            "input_prompt": prompt,
-            "input_length_chars": len(prompt),
-            "input_tokens_estimated": input_tokens,
-            "output": output.model_dump(exclude_none=True)
-            if hasattr(output, "model_dump")
-            else str(output),
-            "output_length_chars": len(output_str),
-            "output_tokens_estimated": output_tokens,
-            "cost_usd": round(cost, 6),
-        }
-        tracker.log_pydantic_call(call_data)
-
-    return result
+    _ensure_agent_patched()
+    token = _current_component.set(component)
+    try:
+        agent_method = getattr(agent, method)
+        return agent_method(prompt)
+    finally:
+        _current_component.reset(token)
 
 
 def track_pydantic(component: str) -> Callable[[Callable[..., T]], Callable[..., T]]:
@@ -118,126 +171,31 @@ def track_pydantic(component: str) -> Callable[[Callable[..., T]], Callable[...,
     """
 
     def decorator(func: Callable[..., T]) -> Callable[..., T]:
-        # Check if function is async
         is_async = inspect.iscoroutinefunction(func)
+        _ensure_agent_patched()
 
         if is_async:
+            async_func = cast(Callable[..., Awaitable[T]], func)
 
             @wraps(func)
             async def async_wrapper(*args, **kwargs) -> T:
-                # Save original async method before patching
-                original_run = Agent.run
-
-                async def tracked_run(self, prompt, *run_args, **run_kwargs):
-                    tracker = ExperimentTracker.get_current()
-                    model_name = (
-                        str(self.model) if hasattr(self, "model") else "unknown"
-                    )
-
-                    start_time = time.time()
-
-                    # Call the original async method
-                    result = await original_run(self, prompt, *run_args, **run_kwargs)
-
-                    latency = time.time() - start_time
-                    output = result.output if hasattr(result, "output") else result
-
-                    # Estimate tokens and cost
-                    input_tokens = estimate_tokens(prompt)
-                    output_str = (
-                        str(output)
-                        if not hasattr(output, "model_dump_json")
-                        else output.model_dump_json()
-                    )
-                    output_tokens = estimate_tokens(output_str)
-                    cost = calculate_cost(model_name, input_tokens, output_tokens)
-
-                    # Log to tracker
-                    if tracker:
-                        call_data = {
-                            "component": component,
-                            "model": model_name,
-                            "timestamp": datetime.now().isoformat(),
-                            "latency_seconds": round(latency, 2),
-                            "input_prompt": prompt,
-                            "input_length_chars": len(prompt),
-                            "input_tokens_estimated": input_tokens,
-                            "output": output.model_dump(exclude_none=True)
-                            if hasattr(output, "model_dump")
-                            else str(output),
-                            "output_length_chars": len(output_str),
-                            "output_tokens_estimated": output_tokens,
-                            "cost_usd": round(cost, 6),
-                        }
-                        tracker.log_pydantic_call(call_data)
-
-                    return result
-
+                token = _current_component.set(component)
                 try:
-                    Agent.run = tracked_run
-                    return await func(*args, **kwargs)  # type: ignore[misc]
+                    return await async_func(*args, **kwargs)
                 finally:
-                    Agent.run = original_run
+                    _current_component.reset(token)
 
             return async_wrapper  # type: ignore[return-value]
         else:
 
             @wraps(func)
             def sync_wrapper(*args, **kwargs) -> T:
-                # Save original sync method before patching
-                original_run_sync = Agent.run_sync
-
-                def tracked_run_sync(self, prompt, *run_args, **run_kwargs):
-                    tracker = ExperimentTracker.get_current()
-                    model_name = (
-                        str(self.model) if hasattr(self, "model") else "unknown"
-                    )
-
-                    start_time = time.time()
-
-                    # Call the original method, not the patched one
-                    result = original_run_sync(self, prompt, *run_args, **run_kwargs)
-
-                    latency = time.time() - start_time
-                    output = result.output if hasattr(result, "output") else result
-
-                    # Estimate tokens and cost
-                    input_tokens = estimate_tokens(prompt)
-                    output_str = (
-                        str(output)
-                        if not hasattr(output, "model_dump_json")
-                        else output.model_dump_json()
-                    )
-                    output_tokens = estimate_tokens(output_str)
-                    cost = calculate_cost(model_name, input_tokens, output_tokens)
-
-                    # Log to tracker
-                    if tracker:
-                        call_data = {
-                            "component": component,
-                            "model": model_name,
-                            "timestamp": datetime.now().isoformat(),
-                            "latency_seconds": round(latency, 2),
-                            "input_prompt": prompt,
-                            "input_length_chars": len(prompt),
-                            "input_tokens_estimated": input_tokens,
-                            "output": output.model_dump(exclude_none=True)
-                            if hasattr(output, "model_dump")
-                            else str(output),
-                            "output_length_chars": len(output_str),
-                            "output_tokens_estimated": output_tokens,
-                            "cost_usd": round(cost, 6),
-                        }
-                        tracker.log_pydantic_call(call_data)
-
-                    return result
-
+                token = _current_component.set(component)
                 try:
-                    Agent.run_sync = tracked_run_sync
                     return func(*args, **kwargs)
                 finally:
-                    Agent.run_sync = original_run_sync
+                    _current_component.reset(token)
 
-            return sync_wrapper  # type: ignore[return-value]
+            return sync_wrapper
 
     return decorator
