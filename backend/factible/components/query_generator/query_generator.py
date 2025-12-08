@@ -23,7 +23,7 @@ def _get_query_generator_agent() -> Agent:
         Your queries must respect the context when choosing keywords (e.g., include relevant years or
         qualifiers if provided, avoid mixing eras when context specifies a timeframe).
 
-        For each claim, generate 3-5 different search queries with these types:
+        For each claim, generate up to the requested number of search queries with these types:
 
         1. DIRECT: Search for the exact claim or very similar phrasing
         2. ALTERNATIVE: Rephrase the claim using different keywords/terms
@@ -44,7 +44,9 @@ def _get_query_generator_agent() -> Agent:
         - Priority 4: Lower chance but might provide context
         - Priority 5: Least likely but could be useful for completeness
 
-        Keep queries concise but specific enough to be effective.
+        Keep queries concise but specific enough to be effective. Return only the query, query_type, and
+        priority fields—do not include explanations or rationale. Order your output from the highest
+        priority (1) to the lowest value provided.
         """,
     )
 
@@ -61,10 +63,15 @@ async def generate_queries(
     context_note = (
         f"Context: {claim.context}" if claim.context else "Context: unspecified"
     )
+    max_queries_value = (
+        max_queries if max_queries is not None and max_queries >= 0 else 5
+    )
     prompt = (
-        "Generate effective search queries to fact-check this claim:"
+        "Generate effective search queries to fact-check this claim. "
+        f"Return no more than {max_queries_value} total queries and keep them sorted by ascending priority (1 is highest)."
         f"\nClaim: {claim.text}\n{context_note}"
         "\nFocus on the timeframe implied by the context, if any."
+        "\nReturn only the structured fields—no explanations."
     )
     result = await agent.run(prompt)
     generated = result.output
@@ -72,6 +79,7 @@ async def generate_queries(
     filtered_queries = [
         query for query in generated.queries if query.priority <= priority_threshold
     ]
+    filtered_queries.sort(key=lambda query: query.priority)
 
     if max_queries is not None and max_queries >= 0:
         filtered_queries = filtered_queries[:max_queries]

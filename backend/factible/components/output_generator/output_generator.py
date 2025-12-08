@@ -92,6 +92,7 @@ def _build_evidence_bundle(
         seen_urls.add(result.url)
 
         summary = _select_evidence_description(result)
+        snippet = result.snippet or None
 
         # Add to appropriate stance group (including unclear for transparency)
         if stance not in grouped:
@@ -104,7 +105,7 @@ def _build_evidence_bundle(
                 reliability=result.reliability,
                 stance=stance,
                 evidence_summary=summary,
-                snippet=result.snippet or None,
+                snippet=snippet,
             )
         )
 

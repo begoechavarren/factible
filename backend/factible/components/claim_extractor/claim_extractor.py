@@ -108,12 +108,13 @@ def _get_claim_extractor_agent() -> Agent:
         2. Can potentially be verified or fact-checked
         3. Is not just an opinion, belief, or subjective statement
 
+        {LIMIT_INSTRUCTION}
         For each claim you identify provide the following fields:
-        - text: Extract the exact statement or a precise paraphrase
+        - text: Extract the exact statement or a precise paraphrase (≤40 words)
         - confidence: Confidence score (0.0-1.0) that this is a factual, checkable claim
         - category: Topic label (historical, scientific, statistical, biographical, geographical, policy, etc.)
         - importance: Score (0.0-1.0) capturing how impactful or controversial the claim is for fact-checking. Higher = more urgent to verify.
-        - context: Short note that captures timeframe, speaker, or situational details needed to fact-check the claim (e.g., "2016 US presidential debate", "speaker: Donald Trump"). When possible, also mention how it connects to the inferred thesis. If unclear, state "context unknown".
+        - context: Short note (≤20 words) that captures timeframe, speaker, or situational details needed to fact-check the claim (e.g., "2016 US presidential debate", "speaker: Donald Trump"). When possible, also mention how it connects to the inferred thesis. If unclear, state "context unknown".
 
         Before listing claims, infer the video's central thesis in no more than 25 words
         (e.g., "Climate change alarmism is driven more by politics and media than by settled science").
@@ -170,6 +171,13 @@ async def extract_claims(
 ) -> ExtractedClaims:
     """Extract factual claims from a transcript (async)."""
     agent = _get_claim_extractor_agent()
+    if max_claims is not None and max_claims >= 0:
+        limit_instruction = f"Never output more than {max_claims} claims; drop lower-importance ones beyond that."
+    else:
+        limit_instruction = "Output only the highest-impact claims; omit trivial or redundant statements."
+    agent.system_prompt = agent.system_prompt.format(
+        LIMIT_INSTRUCTION=limit_instruction
+    )
     try:
         result = await agent.run(
             f"Extract all factual claims from this YouTube transcript:\n\n{transcript}"
