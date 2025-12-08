@@ -1,6 +1,7 @@
 import logging
 
 from pydantic_ai import Agent
+from pydantic_ai.models import ModelSettings
 
 from factible.components.online_search.schemas.evidence import EvidenceExtraction
 from factible.evaluation.pydantic_monitor import track_pydantic
@@ -8,6 +9,12 @@ from factible.models.config import EVIDENCE_EXTRACTOR_MODEL
 from factible.models.llm import ModelChoice, ModelSpec, get_model
 
 _logger = logging.getLogger(__name__)
+
+
+EVIDENCE_EXTRACTOR_MODEL_SETTINGS: ModelSettings = {
+    "temperature": 0.0,
+    "max_tokens": 1100,
+}
 
 
 class RelevantContentExtractor:
@@ -28,6 +35,7 @@ class RelevantContentExtractor:
         self._agent = Agent(
             model=selected_model,
             output_type=EvidenceExtraction,  # type: ignore[arg-type]
+            model_settings=EVIDENCE_EXTRACTOR_MODEL_SETTINGS,
             system_prompt="""
             You assist a fact-checking analyst. You will receive:
             - The CLAIM to fact-check

@@ -3,6 +3,7 @@ import logging
 from typing import List, Sequence, Tuple
 
 from pydantic_ai import Agent
+from pydantic_ai.models import ModelSettings
 
 from factible.components.claim_extractor.schemas import Claim, ExtractedClaims
 from factible.components.online_search.schemas.evidence import EvidenceStance
@@ -23,6 +24,11 @@ from factible.models.llm import get_model
 
 _logger = logging.getLogger(__name__)
 
+OUTPUT_GENERATOR_MODEL_SETTINGS: ModelSettings = {
+    "temperature": 0.0,
+    "max_tokens": 900,
+}
+
 # All possible stances in the evidence schema
 _ALL_STANCES: Sequence[EvidenceStance] = ("supports", "refutes", "mixed", "unclear")
 
@@ -32,6 +38,7 @@ def _build_claim_verdict_agent() -> Agent:
     return Agent(
         model=get_model(OUTPUT_GENERATOR_MODEL),
         output_type=ClaimVerdict,  # type: ignore[arg-type]
+        model_settings=OUTPUT_GENERATOR_MODEL_SETTINGS,
         system_prompt="""
         You are an expert fact-checking analyst. Your goal is to evaluate how the provided evidence
         supports, refutes, or provides mixed/unclear signals for a specific claim. Base every

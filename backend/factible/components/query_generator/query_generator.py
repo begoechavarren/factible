@@ -2,6 +2,7 @@ import logging
 
 from pydantic import BaseModel
 from pydantic_ai import Agent, RunContext
+from pydantic_ai.models import ModelSettings
 
 from factible.components.claim_extractor.schemas import Claim
 from factible.components.query_generator.schemas import GeneratedQueries
@@ -16,12 +17,19 @@ class QueryGeneratorDeps(BaseModel):
     max_queries: int | None = None
 
 
+QUERY_GENERATOR_MODEL_SETTINGS: ModelSettings = {
+    "temperature": 0.0,
+    "max_tokens": 600,
+}
+
+
 def _get_query_generator_agent() -> Agent[QueryGeneratorDeps]:
     """Get the query generator agent instance."""
     agent = Agent(
         model=get_model(QUERY_GENERATOR_MODEL),
         output_type=GeneratedQueries,  # type: ignore[arg-type]
         deps_type=QueryGeneratorDeps,
+        model_settings=QUERY_GENERATOR_MODEL_SETTINGS,
         system_prompt="""
         You are an expert fact-checker specializing in generating effective search queries.
         Your task is to create multiple search queries that will help verify or refute factual claims.

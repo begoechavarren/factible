@@ -4,6 +4,7 @@ from difflib import SequenceMatcher
 
 from pydantic import BaseModel
 from pydantic_ai import Agent, RunContext
+from pydantic_ai.models import ModelSettings
 from pydantic_ai.exceptions import AgentRunError
 
 from factible.components.claim_extractor.schemas import ExtractedClaims
@@ -12,6 +13,11 @@ from factible.models.config import CLAIM_EXTRACTOR_MODEL
 from factible.models.llm import get_model
 
 _logger = logging.getLogger(__name__)
+
+CLAIM_EXTRACTOR_MODEL_SETTINGS: ModelSettings = {
+    "temperature": 0.0,
+    "max_tokens": 1200,
+}
 
 
 class ClaimExtractorDeps(BaseModel):
@@ -106,6 +112,7 @@ def _get_claim_extractor_agent() -> Agent[ClaimExtractorDeps]:
         output_type=ExtractedClaims,  # type: ignore[arg-type]
         retries=3,
         deps_type=ClaimExtractorDeps,
+        model_settings=CLAIM_EXTRACTOR_MODEL_SETTINGS,
         system_prompt="""
         You are an expert fact-checker. Your task is to extract factual claims from YouTube video transcripts.
 
