@@ -1,6 +1,6 @@
 import asyncio
 import logging
-from typing import Callable, List, Optional, Tuple
+from typing import Callable, List, Optional
 
 from dotenv import load_dotenv
 
@@ -8,8 +8,14 @@ from factible.components.claim_extractor.claim_extractor import extract_claims
 from factible.components.claim_extractor.schemas import Claim, ExtractedClaims
 from factible.components.online_search.schemas.search import SearchResult, SearchResults
 from factible.components.online_search.search import search_online_async
-from factible.components.output_generator.output_generator import generate_run_output
-from factible.components.output_generator.schemas import FactCheckRunOutput
+from factible.components.output_generator.output_generator import (
+    generate_claim_report,
+    generate_run_output,
+)
+from factible.components.output_generator.schemas import (
+    ClaimFactCheckReport,
+    FactCheckRunOutput,
+)
 from factible.components.query_generator.query_generator import generate_queries
 from factible.components.transcriptor.transcriptor import (
     get_transcript_with_segments,
@@ -193,11 +199,11 @@ async def run_factible(
                 )
             return await generate_run_output(processed_claims, [], transcript_data)
 
-        # Step 3: Process all claims in PARALLEL
+        # Step 3: Process all claims in PARALLEL (evidence + verdict generation)
         async def _process_claim_async(
             index: int, claim: Claim
-        ) -> Tuple[Claim, List[SearchResult]]:
-            """Process a single claim asynchronously (Level 1 parallelization)."""
+        ) -> ClaimFactCheckReport:
+            """Process a single claim asynchronously: collect evidence and generate verdict (Level 1 parallelization)."""
             tracker.set_context(claim_index=index, claim_text=claim.text)
 
             _logger.info(f"--- SEARCH RESULTS FOR CLAIM {index} ---")
@@ -205,8 +211,12 @@ async def run_factible(
 
             if max_queries_per_claim <= 0:
                 _logger.info("  Query execution skipped (max_queries_per_claim <= 0)")
+                # Generate verdict with no evidence
+                report = await generate_claim_report(
+                    claim, collected_results, transcript_data
+                )
                 tracker.clear_context()
-                return claim, collected_results
+                return report
 
             try:
                 with timer(f"Step 3.{index}.1: Query generation for claim {index}"):
@@ -217,13 +227,21 @@ async def run_factible(
                     )
             except Exception as exc:
                 _logger.error("Failed to generate queries for claim %d: %s", index, exc)
+                # Generate verdict with no evidence
+                report = await generate_claim_report(
+                    claim, collected_results, transcript_data
+                )
                 tracker.clear_context()
-                return claim, collected_results
+                return report
 
             if not queries.queries:
                 _logger.info("  No high-priority queries generated for this claim")
+                # Generate verdict with no evidence
+                report = await generate_claim_report(
+                    claim, collected_results, transcript_data
+                )
                 tracker.clear_context()
-                return claim, collected_results
+                return report
 
             # Level 2: Execute all queries in PARALLEL
             async def _execute_query(query_index: int, query_obj):
@@ -317,31 +335,47 @@ async def run_factible(
                     f"Filtered {duplicate_count} duplicate URL(s) for claim {index}"
                 )
 
-            tracker.clear_context()
-            return claim, collected_results
+            # Generate verdict immediately after evidence collection
+            _logger.info(f"Generating verdict for claim {index}...")
+            with timer(f"Step 3.{index}.3: Verdict generation for claim {index}"):
+                report = await generate_claim_report(
+                    claim, collected_results, transcript_data
+                )
 
-        # Level 1: Process all claims in PARALLEL
+            tracker.clear_context()
+            return report
+
+        # Level 1: Process all claims in parallel (including verdict generation)
         _logger.info(f"⚡ Processing {len(claims_to_process)} claims in PARALLEL")
-        with timer("Step 3: Query generation + search for all claims (PARALLEL)"):
+        with timer(
+            "Step 3: Query generation + search + verdicts for all claims (PARALLEL)"
+        ):
             claim_tasks = [
                 _process_claim_async(idx, claim)
                 for idx, claim in enumerate(claims_to_process, 1)
             ]
-            claim_evidence_records = await asyncio.gather(*claim_tasks)
+            claim_reports = await asyncio.gather(*claim_tasks)
         _logger.info(f"✓ Completed {len(claims_to_process)} claims in parallel")
 
         if progress_callback:
             progress_callback(
                 "generating_report",
-                "Generating final fact-check report...",
+                "Sorting and finalizing fact-check report...",
                 90,
                 {},
             )
 
-        # Step 4: Generate output (verdicts generated in parallel internally)
-        with timer("Step 4: Output generation (PARALLEL verdicts)"):
-            run_output = await generate_run_output(
-                processed_claims, claim_evidence_records, transcript_data
+        # Step 4: Sort reports by evidence quality and assemble final output
+        with timer("Step 4: Sort and assemble final output"):
+            sorted_reports = sorted(
+                claim_reports, key=lambda r: r.evidence_quality_score, reverse=True
+            )
+            _logger.info("✓ Sorted %d reports by evidence quality", len(sorted_reports))
+
+            run_output = FactCheckRunOutput(
+                extracted_claims=processed_claims,
+                claim_reports=sorted_reports,
+                transcript_data=transcript_data,
             )
 
         tracker.log_output("final_output", run_output.model_dump())

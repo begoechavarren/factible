@@ -134,7 +134,7 @@ This section presents the comprehensive technical implementation of Factible, a 
 
 \subsubsection{High-Level Architecture}
 
-Factible implements an end-to-end automated fact-checking pipeline for YouTube videos using a multi-agent architecture. Recent research on LLM agents demonstrates that multi-agent collaboration can enhance factuality and reasoning by allowing specialized agents to converse and coordinate on tasks \citep{wu2023autogen}. FactAgent further shows that decomposing fact-checking into dedicated agents for input ingestion, query generation, evidence retrieval, and verdict prediction yields higher accuracy and transparency \citep{zhang2025factagent}. The Factible architecture follows this line of work by processing video content through five specialized, modular components that operate sequentially with four levels of internal parallelization.
+Factible implements an end-to-end automated fact-checking pipeline for YouTube videos using a multi-agent architecture. Recent research on LLM agents demonstrates that multi-agent collaboration can enhance factuality and reasoning by allowing specialized agents to converse and coordinate on tasks \citep{wu2023autogen}. FactAgent further shows that decomposing fact-checking into dedicated agents for input ingestion, query generation, evidence retrieval, and verdict prediction yields higher accuracy and transparency \citep{zhang2025factagent}. The Factible architecture follows this line of work by processing video content through five specialized, modular components that operate sequentially with three levels of internal parallelization.
 
 The system processes a YouTube video URL through five sequential stages, each with specialized responsibilities. The pipeline begins with transcript extraction, proceeds through claim and query generation, conducts online evidence retrieval, and culminates in structured verdict synthesis. This modular design enables independent optimization of each component while maintaining clear data contracts between stages.
 
@@ -196,12 +196,11 @@ Figure \ref{fig:pipeline-architecture} illustrates the complete pipeline archite
 % Arrows
 \draw[arrow] (s1) -- (s2);
 \draw[arrow] (s2) -- node[right, font=\scriptsize, orange] {Level 1: N claims $\parallel$} (s3);
-\draw[arrow] (s3) -- node[right, font=\scriptsize, orange] {Level 2: M queries $\parallel$} (s4);
-\draw[arrow] (s4) -- node[right, font=\scriptsize, orange] {Level 3: K results $\parallel$} (s5);
-\node[right=0.2cm of s5, font=\scriptsize, orange] {Level 4: N verdicts $\parallel$};
+\draw[arrow] (s3) -- node[right, font=\scriptsize, orange] {Level 2: M queries/claim $\parallel$} (s4);
+\draw[arrow] (s4) -- node[right, font=\scriptsize, orange] {Level 3: K results/query $\parallel$} (s5);
 
 \end{tikzpicture}
-\caption{High-level pipeline architecture showing the five main stages and four parallelization levels. Parallelization occurs at claims (Level 1), queries per claim (Level 2), search results per query (Level 3), and final verdicts (Level 4).}
+\caption{High-level pipeline architecture showing the five main stages and three parallelization levels. Parallelization occurs at claims (Level 1), queries per claim (Level 2), and search results per query (Level 3). Verdict generation happens within Level 1 after each claim's evidence is collected.}
 \label{fig:pipeline-architecture}
 \end{figure}
 
@@ -585,9 +584,9 @@ Reliability & 0.4 & Up to 3 high/medium reliability sources \\
 \end{tabular}
 \end{table}
 
-\paragraph{Parallel Verdict Generation (Level 4)}
+\paragraph{Integrated Verdict Generation (within Level 1)}
 
-All verdicts are generated concurrently using asynchronous programming primitives. The implementation creates verdict generation tasks for each claim-evidence pair, executes them in parallel using \texttt{asyncio.gather()}, and sorts the resulting reports by evidence quality score (descending) to prioritize high-confidence verdicts in the user interface. This parallel generation represents the fourth and final level of parallelization in the pipeline, significantly reducing total latency when processing multiple claims.
+Verdicts are generated immediately after each claim's evidence collection completes, within the same parallel execution context as the claim processing. This design choice eliminates the latency overhead of waiting for all claims to finish evidence collection before beginning verdict synthesis. Each claim's verdict generation executes as soon as its evidence is ready, allowing early-finishing claims to produce results while slower claims continue processing. After all parallel claim tasks complete, the reports are sorted by evidence quality score (descending) to prioritize high-confidence verdicts in the user interface.
 
 \paragraph{Output Schema}
 
@@ -667,23 +666,21 @@ Input token counts are minimized through aggressive content trimming strategies.
 
 The pipeline minimizes LLM API calls by combining operations into single requests wherever possible. Each component makes exactly one LLM call per input unit (one call for claim extraction, one per claim for query generation, one per search result for evidence extraction, and one per claim for verdict synthesis), with no multi-turn conversations that would multiply request counts. The Query Generator produces all queries for a claim in a single batch call rather than generating queries iteratively. Similarly, the Output Generator synthesizes verdicts with all available evidence in a single call. This design reduces API overhead, improves latency, and simplifies cost tracking.
 
-\subsubsection{Parallelize: 4-Level Async Architecture}
+\subsubsection{Parallelize: 3-Level Async Architecture}
 
-The system implements four levels of nested parallelization to maximize throughput while maintaining dependency ordering. This architecture enables the pipeline to process multiple claims, queries, and search results simultaneously, dramatically reducing total execution time compared to sequential processing.
+The system implements three levels of nested parallelization to maximize throughput while maintaining dependency ordering. This architecture enables the pipeline to process multiple claims, queries, and search results simultaneously, dramatically reducing total execution time compared to sequential processing.
 
 The parallelization hierarchy operates as follows:
 
 \begin{itemize}
-    \item \textbf{Level 1 (Claims)}: After extracting N claims from the transcript, all claims are processed in parallel. Each claim independently proceeds through query generation and search.
+    \item \textbf{Level 1 (Claims)}: After extracting N claims from the transcript, all claims are processed in parallel. Each claim independently proceeds through query generation, evidence search, and verdict generation. Critically, each claim's verdict is generated immediately after its evidence collection completes, rather than waiting for all claims to finish---this optimization reduces perceived latency by producing results progressively.
 
-    \item \textbf{Level 2 (Queries per Claim)}: For each claim, the Query Generator produces M queries. These queries are executed in parallel, enabling simultaneous search across different query formulations (direct, alternative, source-seeking, contextual).
+    \item \textbf{Level 2 (Queries per Claim)}: Within each claim's processing, the Query Generator produces M queries. These queries are executed in parallel, enabling simultaneous search across different query formulations (direct, alternative, source-seeking, contextual).
 
-    \item \textbf{Level 3 (Search Results per Query)}: For each query, the Online Search component retrieves K results from Google. The four-step pipeline (reliability assessment, content fetching, and evidence extraction) runs in parallel for all K results, with each result processed independently.
-
-    \item \textbf{Level 4 (Verdicts)}: After all evidence collection completes, the Output Generator synthesizes verdicts for all N claims in parallel, producing the final fact-check reports simultaneously.
+    \item \textbf{Level 3 (Search Results per Query)}: Within each query's execution, the Online Search component retrieves K results from Google. The four-step pipeline (reliability assessment, content fetching, and evidence extraction) runs in parallel for all K results, with each result processed independently.
 \end{itemize}
 
-This design achieves maximum theoretical parallelization of $N \times M \times K$ operations during the search phase, bounded only by system resources and API rate limits. Blocking I/O operations (Selenium WebDriver for content fetching, WHOIS for domain age lookup) are wrapped in \texttt{asyncio.to\_thread()} to avoid blocking the event loop, ensuring that CPU-bound and I/O-bound operations can execute concurrently.
+This design achieves maximum theoretical parallelization of $N \times M \times K$ operations during the search phase, bounded only by system resources and API rate limits. The nesting structure means that at peak execution, the system may be processing dozens of parallel operations across all three levels simultaneously. Blocking I/O operations (Selenium WebDriver for content fetching, WHOIS for domain age lookup) are wrapped in \texttt{asyncio.to\_thread()} to avoid blocking the event loop, ensuring that CPU-bound and I/O-bound operations can execute concurrently.
 
 \subsubsection{Real-Time Streaming}
 
