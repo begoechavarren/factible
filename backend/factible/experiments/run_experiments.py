@@ -305,7 +305,7 @@ def run(
 
         if len(experiments) == 1:
             # Single experiment: use experiment name
-            runs_subdir = f"{experiments[0]['name']}_{timestamp}"
+            runs_subdir = f"{timestamp}_{experiments[0]['name']}"
         else:
             # Multiple experiments: check if they share a common base name
             # (e.g., vary_claims_claims1, vary_claims_claims3 -> vary_claims)
@@ -315,10 +315,10 @@ def run(
             ):
                 # Use common prefix
                 base_name = first_name.rsplit("_", 1)[0]
-                runs_subdir = f"{base_name}_{timestamp}"
+                runs_subdir = f"{timestamp}_{base_name}"
             else:
                 # Unrelated experiments: use batch name
-                runs_subdir = f"batch_{timestamp}"
+                runs_subdir = f"{timestamp}_batch"
 
         _logger.info(f"📁 Auto-generated runs directory: runs/{runs_subdir}/\n")
 
