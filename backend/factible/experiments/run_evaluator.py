@@ -73,6 +73,7 @@ class VideoGroundTruth(BaseModel):
 class ClaimExtractionMetrics(BaseModel):
     """Metrics for claim extraction component"""
 
+    # Basic ClaimBuster-style metrics
     precision: float = Field(ge=0.0, le=1.0)
     recall: float = Field(ge=0.0, le=1.0)
     f1_score: float = Field(ge=0.0, le=1.0)
@@ -80,6 +81,25 @@ class ClaimExtractionMetrics(BaseModel):
     true_positives: int = Field(ge=0)
     false_positives: int = Field(ge=0)
     false_negatives: int = Field(ge=0)
+
+    # ClaimBuster ranking metrics
+    mean_average_precision: float = Field(
+        default=0.0, ge=0.0, le=1.0, description="MAP score for ranking quality"
+    )
+
+    # Custom importance-based metrics
+    recall_at_important: float = Field(
+        default=0.0,
+        ge=0.0,
+        le=1.0,
+        description="Recall for high-importance claims (>= 0.80)",
+    )
+    importance_weighted_coverage: float = Field(
+        default=0.0,
+        ge=0.0,
+        le=1.0,
+        description="% of total importance covered by matched claims",
+    )
 
     # Detailed matching info
     matched_claims: List[Dict] = Field(default_factory=list)
@@ -167,10 +187,13 @@ class GroundTruthManager:
 
         path = self.gt_dir / f"{video_id}.yaml"
         if not path.exists():
-            raise FileNotFoundError(
-                f"Ground truth file not found: {path}\n"
-                f"Create it using the ground truth template as reference."
-            )
+            alternative_path = self._find_file_by_video_id(video_id)
+            if alternative_path is None:
+                raise FileNotFoundError(
+                    f"Ground truth file not found: {path}\n"
+                    f"Create it using the ground truth template as reference."
+                )
+            path = alternative_path
 
         with open(path) as f:
             data = yaml.safe_load(f)
@@ -179,10 +202,47 @@ class GroundTruthManager:
         self.cache[video_id] = gt
         return gt
 
+    def _find_file_by_video_id(self, video_id: str) -> Optional[Path]:
+        """Search YAML files for a matching video_id field."""
+        for path in self.gt_dir.glob("*.yaml"):
+            if path.stem == "TEMPLATE_video":
+                continue
+
+            try:
+                with open(path) as f:
+                    data = yaml.safe_load(f) or {}
+            except Exception:
+                continue
+
+            if data.get("video_id") == video_id:
+                return path
+
+        return None
+
     def list_available(self) -> List[str]:
         """List all available ground truth video IDs"""
-        yaml_files = self.gt_dir.glob("*.yaml")
-        return [f.stem for f in yaml_files if f.stem != "TEMPLATE_video"]
+        video_ids: List[str] = []
+
+        for path in sorted(self.gt_dir.glob("*.yaml")):
+            if path.stem == "TEMPLATE_video":
+                continue
+
+            video_id: Optional[str] = None
+            try:
+                with open(path) as f:
+                    data = yaml.safe_load(f) or {}
+                raw_video_id = data.get("video_id")
+                if isinstance(raw_video_id, str) and raw_video_id.strip():
+                    video_id = raw_video_id.strip()
+            except Exception as exc:  # pragma: no cover - defensive log only
+                print(
+                    f"⚠️  Failed to parse video_id from {path.name}: {exc}. "
+                    "Falling back to filename."
+                )
+
+            video_ids.append(video_id or path.stem)
+
+        return video_ids
 
 
 # ============================================================================
@@ -190,10 +250,92 @@ class GroundTruthManager:
 # ============================================================================
 
 
-def fuzzy_match_claims(
+def semantic_similarity_match_claims(
     gt_claims: List[GroundTruthClaim],
     system_claims: List,
     threshold: float = 0.7,
+    model=None,
+) -> Dict[str, List]:
+    """
+    Match claims using semantic similarity (sentence-transformers).
+    Falls back to fuzzy matching if sentence-transformers not available.
+
+    Args:
+        gt_claims: Ground truth claims
+        system_claims: System extracted claims
+        threshold: Similarity threshold for matching
+        model: Pre-loaded SentenceTransformer model (optional, will load if not provided)
+
+    Returns:
+        {
+            "true_positives": [(gt_claim, system_claim, similarity_score), ...],
+            "false_positives": [system_claim, ...],
+            "false_negatives": [gt_claim, ...],
+        }
+    """
+    try:
+        from sentence_transformers import SentenceTransformer, util
+
+        # Use provided model or load new one
+        if model is None:
+            model = SentenceTransformer("all-MiniLM-L6-v2")
+
+        # Encode all claims
+        gt_texts = [c.claim_text for c in gt_claims]
+        sys_texts = [c.text for c in system_claims]
+
+        gt_embeddings = model.encode(gt_texts, convert_to_tensor=True)
+        sys_embeddings = model.encode(sys_texts, convert_to_tensor=True)
+
+        # Compute cosine similarities
+        similarities = util.cos_sim(sys_embeddings, gt_embeddings)
+
+        matched_pairs = []
+        matched_gt_indices = set()
+        matched_sys_indices = set()
+
+        # Greedy matching: find best matches above threshold
+        for sys_idx, sys_claim in enumerate(system_claims):
+            best_gt_idx = None
+            best_score = threshold
+
+            for gt_idx in range(len(gt_claims)):
+                if gt_idx in matched_gt_indices:
+                    continue
+
+                score = similarities[sys_idx][gt_idx].item()
+                if score > best_score:
+                    best_score = score
+                    best_gt_idx = gt_idx
+
+            if best_gt_idx is not None:
+                matched_pairs.append((gt_claims[best_gt_idx], sys_claim, best_score))
+                matched_gt_indices.add(best_gt_idx)
+                matched_sys_indices.add(sys_idx)
+
+        unmatched_gt = [
+            c for i, c in enumerate(gt_claims) if i not in matched_gt_indices
+        ]
+        unmatched_sys = [
+            c for i, c in enumerate(system_claims) if i not in matched_sys_indices
+        ]
+
+        return {
+            "true_positives": matched_pairs,
+            "false_positives": unmatched_sys,
+            "false_negatives": unmatched_gt,
+        }
+
+    except ImportError:
+        print("⚠️  sentence-transformers not installed. Falling back to fuzzy matching.")
+        print("   Install with: uv pip install sentence-transformers")
+        return fuzzy_match_claims(gt_claims, system_claims, threshold)
+
+
+def fuzzy_match_claims(
+    gt_claims: List[GroundTruthClaim],
+    system_claims: List,
+    threshold: float = 0.5,  # Lowered from 0.7 to 0.5
 ) -> Dict[str, List]:
     """
     Match system-extracted claims to ground truth claims using fuzzy string matching.
@@ -235,6 +377,49 @@ def fuzzy_match_claims(
     }
 
 
+def calculate_mean_average_precision(
+    system_claims: List,
+    gt_claims: List[GroundTruthClaim],
+    matches: Dict[str, List],
+) -> float:
+    """
+    Calculate Mean Average Precision (MAP) for claim ranking quality.
+
+    MAP rewards systems that rank matched claims higher in their output.
+
+    Args:
+        system_claims: List of system extracted claims (assumed ordered by importance)
+        gt_claims: List of ground truth claims
+        matches: Output from fuzzy_match_claims or semantic_similarity_match_claims
+
+    Returns:
+        MAP score between 0.0 and 1.0
+    """
+    if not system_claims or not matches["true_positives"]:
+        return 0.0
+
+    # Create a set of matched system claims for quick lookup
+    matched_system_claims = {
+        sys_claim for _, sys_claim, *_ in matches["true_positives"]
+    }
+
+    precisions_at_k = []
+    num_matches_so_far = 0
+
+    # Iterate through system claims in order (ranked by importance)
+    for k, sys_claim in enumerate(system_claims, start=1):
+        if sys_claim in matched_system_claims:
+            num_matches_so_far += 1
+            precision_at_k = num_matches_so_far / k
+            precisions_at_k.append(precision_at_k)
+
+    # MAP is the average of all precisions at positions where matches occurred
+    if not precisions_at_k:
+        return 0.0
+
+    return np.mean(precisions_at_k)
+
+
 # ============================================================================
 # Main Evaluator
 # ============================================================================
@@ -254,6 +439,14 @@ class GroundTruthEvaluator:
         self.ground_truth_dir = Path(ground_truth_dir)
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
+
+        # Load sentence-transformer model once for all evaluations
+        try:
+            from sentence_transformers import SentenceTransformer
+
+            self.similarity_model = SentenceTransformer("all-MiniLM-L6-v2")
+        except ImportError:
+            self.similarity_model = None
 
     def find_matching_videos(self) -> List[str]:
         """Find video IDs that exist in both runs and ground truth"""
@@ -300,14 +493,19 @@ class GroundTruthEvaluator:
         if run_dir is None:
             run_dir = self._find_run_dir(video_id)
 
-        outputs_data, metrics_data = self._load_run_outputs(run_dir)
+        outputs_data, metrics_data, config_data = self._load_run_outputs(run_dir)
+
+        # Get max_claims from config for reporting
+        max_claims = config_data.get("max_claims", None)
 
         print(f"Loaded run from: {run_dir}")
+        print(f"System config: max_claims={max_claims}")
         print(
             f"System extracted: {len(outputs_data['extracted_claims']['claims'])} claims"
         )
+        print(f"Evaluating against: {len(gt.claims)} ground truth claims (ALL)")
 
-        # Evaluate claim extraction
+        # Evaluate claim extraction - match against ALL ground truth claims
         claim_metrics = self._evaluate_claim_extraction(
             gt.claims, outputs_data["extracted_claims"]["claims"]
         )
@@ -315,6 +513,9 @@ class GroundTruthEvaluator:
             f"Claim Extraction: P={claim_metrics.precision:.2f} "
             f"R={claim_metrics.recall:.2f} F1={claim_metrics.f1_score:.2f}"
         )
+        print(f"MAP: {claim_metrics.mean_average_precision:.3f}")
+        print(f"Recall@Important: {claim_metrics.recall_at_important:.2%}")
+        print(f"Importance Coverage: {claim_metrics.importance_weighted_coverage:.2%}")
         print(f"Importance MAE: {claim_metrics.importance_mae:.3f}")
 
         # Evaluate verdict accuracy
@@ -351,7 +552,14 @@ class GroundTruthEvaluator:
     def _evaluate_claim_extraction(
         self, gt_claims: List[GroundTruthClaim], extracted_claims_data: List[Dict]
     ) -> ClaimExtractionMetrics:
-        """Evaluate claim extraction precision/recall"""
+        """
+        Evaluate claim extraction with comprehensive metrics.
+
+        Metrics calculated:
+        - Basic: Precision, Recall, F1
+        - ClaimBuster: MAP (Mean Average Precision)
+        - Custom: Recall@Important, Importance-Weighted Coverage
+        """
 
         # Convert dict to simple objects for matching
         class SimpleClaim:
@@ -361,8 +569,17 @@ class GroundTruthEvaluator:
 
         system_claims = [SimpleClaim(c) for c in extracted_claims_data]
 
-        matches = fuzzy_match_claims(gt_claims, system_claims)
+        # Try semantic similarity first (with pre-loaded model), fall back to fuzzy matching
+        try:
+            matches = semantic_similarity_match_claims(
+                gt_claims, system_claims, model=self.similarity_model
+            )
+        except Exception:
+            matches = fuzzy_match_claims(gt_claims, system_claims)
 
+        # ============================================================
+        # Basic Metrics: Precision, Recall, F1
+        # ============================================================
         tp = len(matches["true_positives"])
         fp = len(matches["false_positives"])
         fn = len(matches["false_negatives"])
@@ -375,11 +592,46 @@ class GroundTruthEvaluator:
             else 0.0
         )
 
-        # Calculate importance scoring accuracy (MAE)
+        # ============================================================
+        # ClaimBuster Metric: MAP (Mean Average Precision)
+        # ============================================================
+        map_score = calculate_mean_average_precision(system_claims, gt_claims, matches)
+
+        # ============================================================
+        # Custom Metric 1: Recall@Important
+        # ============================================================
+        # Focus on high-importance claims (>= 0.80)
+        important_gt_claims = [c for c in gt_claims if c.importance >= 0.80]
+        matched_important = 0
+
+        for gt_claim, sys_claim, *_ in matches["true_positives"]:
+            if gt_claim.importance >= 0.80:
+                matched_important += 1
+
+        recall_at_important = (
+            matched_important / len(important_gt_claims) if important_gt_claims else 0.0
+        )
+
+        # ============================================================
+        # Custom Metric 2: Importance-Weighted Coverage
+        # ============================================================
+        # Calculate total importance covered by matched claims
+        matched_importance = sum(
+            gt_claim.importance for gt_claim, _, *_ in matches["true_positives"]
+        )
+        total_importance = sum(c.importance for c in gt_claims)
+
+        importance_weighted_coverage = (
+            matched_importance / total_importance if total_importance > 0 else 0.0
+        )
+
+        # ============================================================
+        # Importance Scoring Accuracy (MAE)
+        # ============================================================
         importance_errors = []
-        for gt_claim, sys_claim in matches["true_positives"]:
-            gt_imp = gt_claim.importance  # 0.0-1.0
-            sys_imp = sys_claim.importance  # 0.0-1.0
+        for gt_claim, sys_claim, *_ in matches["true_positives"]:
+            gt_imp = gt_claim.importance
+            sys_imp = sys_claim.importance
             importance_errors.append(abs(gt_imp - sys_imp))
 
         importance_mae = np.mean(importance_errors) if importance_errors else 0.0
@@ -391,6 +643,9 @@ class GroundTruthEvaluator:
             true_positives=tp,
             false_positives=fp,
             false_negatives=fn,
+            mean_average_precision=map_score,
+            recall_at_important=recall_at_important,
+            importance_weighted_coverage=importance_weighted_coverage,
             importance_mae=importance_mae,
             matched_claims=[
                 {
@@ -400,7 +655,7 @@ class GroundTruthEvaluator:
                     "sys_importance": sys.importance,
                     "importance_error": abs(gt.importance - sys.importance),
                 }
-                for gt, sys in matches["true_positives"]
+                for gt, sys, *_ in matches["true_positives"]
             ],
             missed_claims=[gt.claim_text for gt in matches["false_negatives"]],
             extra_claims=[sys.text for sys in matches["false_positives"]],
@@ -541,10 +796,11 @@ class GroundTruthEvaluator:
             f"Available runs: {[d.name for d in self.runs_dir.iterdir() if d.is_dir()]}"
         )
 
-    def _load_run_outputs(self, run_dir: Path) -> Tuple[Dict, Dict]:
-        """Load outputs.json and metrics.json from a run directory"""
+    def _load_run_outputs(self, run_dir: Path) -> Tuple[Dict, Dict, Dict]:
+        """Load outputs.json, metrics.json, and config.json from a run directory"""
         outputs_path = run_dir / "outputs.json"
         metrics_path = run_dir / "metrics.json"
+        config_path = run_dir / "config.json"
 
         if not outputs_path.exists():
             raise FileNotFoundError(f"outputs.json not found in {run_dir}")
@@ -552,13 +808,19 @@ class GroundTruthEvaluator:
         if not metrics_path.exists():
             raise FileNotFoundError(f"metrics.json not found in {run_dir}")
 
+        if not config_path.exists():
+            raise FileNotFoundError(f"config.json not found in {run_dir}")
+
         with open(outputs_path) as f:
             outputs_data = json.load(f)
 
         with open(metrics_path) as f:
             metrics_data = json.load(f)
 
-        return outputs_data, metrics_data
+        with open(config_path) as f:
+            config_data = json.load(f)
+
+        return outputs_data, metrics_data, config_data
 
     def _save_result(self, video_id: str, result: VideoEvaluationResult):
         """Save evaluation result to JSON with datetime_videoid format"""
@@ -612,10 +874,32 @@ class GroundTruthEvaluator:
         print("AGGREGATE RESULTS")
         print(f"{'=' * 60}\n")
 
-        # Claim extraction metrics
+        # Extract max_claims from first run's config
+        max_claims = None
+        try:
+            # Find first video's run directory
+            first_video_id = results[0].video_id
+            run_dir = self._find_run_dir(first_video_id)
+            config_path = run_dir / "config.json"
+            with open(config_path) as f:
+                config_data = json.load(f)
+                max_claims = config_data.get("max_claims")
+        except Exception:
+            pass  # If we can't get max_claims, just skip it
+
+        # Claim extraction metrics - Basic
         avg_precision = np.mean([r.claim_extraction.precision for r in results])
         avg_recall = np.mean([r.claim_extraction.recall for r in results])
         avg_f1 = np.mean([r.claim_extraction.f1_score for r in results])
+
+        # Claim extraction metrics - ClaimBuster & Custom
+        avg_map = np.mean([r.claim_extraction.mean_average_precision for r in results])
+        avg_recall_important = np.mean(
+            [r.claim_extraction.recall_at_important for r in results]
+        )
+        avg_importance_coverage = np.mean(
+            [r.claim_extraction.importance_weighted_coverage for r in results]
+        )
 
         print("Claim Extraction:")
         print(
@@ -627,44 +911,113 @@ class GroundTruthEvaluator:
         print(
             f"  F1 Score:  {avg_f1:.2%} (σ={np.std([r.claim_extraction.f1_score for r in results]):.2%})"
         )
+        print(f"\n  MAP (ClaimBuster): {avg_map:.3f}")
+        print(f"  Recall@Important:  {avg_recall_important:.2%}")
+        print(f"  Importance Coverage: {avg_importance_coverage:.2%}")
 
         # Verdict accuracy
         avg_verdict_acc = np.mean(
             [r.verdict_accuracy.overall_accuracy for r in results]
         )
+        avg_stance_acc = np.mean([r.verdict_accuracy.stance_accuracy for r in results])
         print(
             f"\nVerdict Accuracy: {avg_verdict_acc:.2%} (σ={np.std([r.verdict_accuracy.overall_accuracy for r in results]):.2%})"
+        )
+        print(
+            f"  Stance Accuracy: {avg_stance_acc:.2%} (σ={np.std([r.verdict_accuracy.stance_accuracy for r in results]):.2%})"
         )
 
         # End-to-end
         avg_coverage = np.mean([r.end_to_end.claim_coverage for r in results])
         avg_e2e_acc = np.mean([r.end_to_end.verdict_accuracy for r in results])
 
+        # Latency metrics
+        avg_latency = np.mean([r.end_to_end.total_time_seconds for r in results])
+        std_latency = np.std([r.end_to_end.total_time_seconds for r in results])
+        total_latency = np.sum([r.end_to_end.total_time_seconds for r in results])
+
+        # Cost metrics
+        avg_cost = np.mean([r.end_to_end.total_cost_usd for r in results])
+        total_cost = np.sum([r.end_to_end.total_cost_usd for r in results])
+
         print("\nEnd-to-End:")
         print(f"  Claim Coverage:   {avg_coverage:.2%}")
         print(f"  Verdict Accuracy: {avg_e2e_acc:.2%}")
+        print(f"  Avg Latency:      {avg_latency:.2f}s (σ={std_latency:.2f}s)")
+        print(f"  Total Latency:    {total_latency:.2f}s")
+        print(f"  Avg Cost:         ${avg_cost:.4f}")
+        print(f"  Total Cost:       ${total_cost:.4f}")
 
         # Save aggregate report
         report_path = self.output_dir / "aggregate_report.json"
+        report_data = {
+            "timestamp": datetime.now().isoformat(),
+            "n_videos": len(results),
+            "description": {
+                "precision_at_k": "Of k claims extracted, % that match ground truth (any GT claim)",
+                "recall": "Of all GT claims, % that were matched by extracted claims",
+                "f1": "Harmonic mean of precision and recall",
+                "map": "Mean Average Precision - ranking quality (ClaimBuster metric)",
+                "recall_at_important": "Recall for GT claims with importance >= 0.80",
+                "importance_weighted_coverage": "% of total GT importance covered by matches",
+                "verdict_overall_accuracy": "% of verdicts that match ground truth (both stance and factual assessment)",
+                "verdict_stance_accuracy": "% of verdicts where stance classification matches ground truth",
+                "latency": "Processing time in seconds per video",
+                "cost": "LLM API cost in USD per video",
+            },
+            "claim_extraction": {
+                "precision_at_k_mean": avg_precision,
+                "precision_at_k_std": np.std(
+                    [r.claim_extraction.precision for r in results]
+                ),
+                "recall_mean": avg_recall,
+                "recall_std": np.std([r.claim_extraction.recall for r in results]),
+                "f1_mean": avg_f1,
+                "f1_std": np.std([r.claim_extraction.f1_score for r in results]),
+                "map_mean": avg_map,
+                "map_std": np.std(
+                    [r.claim_extraction.mean_average_precision for r in results]
+                ),
+                "recall_at_important_mean": avg_recall_important,
+                "recall_at_important_std": np.std(
+                    [r.claim_extraction.recall_at_important for r in results]
+                ),
+                "importance_weighted_coverage_mean": avg_importance_coverage,
+                "importance_weighted_coverage_std": np.std(
+                    [r.claim_extraction.importance_weighted_coverage for r in results]
+                ),
+            },
+            "verdict": {
+                "overall_accuracy_mean": avg_verdict_acc,
+                "overall_accuracy_std": np.std(
+                    [r.verdict_accuracy.overall_accuracy for r in results]
+                ),
+                "stance_accuracy_mean": avg_stance_acc,
+                "stance_accuracy_std": np.std(
+                    [r.verdict_accuracy.stance_accuracy for r in results]
+                ),
+            },
+            "end_to_end": {
+                "coverage_mean": avg_coverage,
+                "coverage_std": np.std([r.end_to_end.claim_coverage for r in results]),
+                "accuracy_mean": avg_e2e_acc,
+                "accuracy_std": np.std(
+                    [r.end_to_end.verdict_accuracy for r in results]
+                ),
+                "latency_mean_seconds": avg_latency,
+                "latency_std_seconds": std_latency,
+                "latency_total_seconds": total_latency,
+                "cost_mean_usd": avg_cost,
+                "cost_total_usd": total_cost,
+            },
+        }
+
+        # Add max_claims if available
+        if max_claims is not None:
+            report_data["max_claims"] = max_claims
+
         with open(report_path, "w") as f:
-            json.dump(
-                {
-                    "timestamp": datetime.now().isoformat(),
-                    "n_videos": len(results),
-                    "claim_extraction": {
-                        "precision_mean": avg_precision,
-                        "recall_mean": avg_recall,
-                        "f1_mean": avg_f1,
-                    },
-                    "verdict_accuracy_mean": avg_verdict_acc,
-                    "end_to_end": {
-                        "coverage_mean": avg_coverage,
-                        "accuracy_mean": avg_e2e_acc,
-                    },
-                },
-                f,
-                indent=2,
-            )
+            json.dump(report_data, f, indent=2)
 
         print(f"\nAggregate report saved to: {report_path}")
 

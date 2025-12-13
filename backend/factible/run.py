@@ -79,7 +79,7 @@ async def run_factible(
 
     from pathlib import Path
 
-    base_dir = Path("factible/experiments/runs")
+    base_dir = Path("factible/experiments/data/runs")
     if runs_subdir:
         base_dir = base_dir / runs_subdir
 
