@@ -47,11 +47,12 @@ def _ensure_agent_patched() -> None:
             else output.model_dump_json()
         )
         output_tokens = estimate_tokens(output_str)
-        cost = calculate_cost(str(self.model), input_tokens, output_tokens)
+        model_name = _get_model_name(self.model)
+        cost = calculate_cost(model_name, input_tokens, output_tokens)
 
         call_data = {
             "component": component,
-            "model": str(self.model),
+            "model": model_name,
             "timestamp": datetime.now().isoformat(),
             "latency_seconds": round(latency, 2),
             "input_prompt": prompt,
@@ -84,11 +85,12 @@ def _ensure_agent_patched() -> None:
             else output.model_dump_json()
         )
         output_tokens = estimate_tokens(output_str)
-        cost = calculate_cost(str(self.model), input_tokens, output_tokens)
+        model_name = _get_model_name(self.model)
+        cost = calculate_cost(model_name, input_tokens, output_tokens)
 
         call_data = {
             "component": component,
-            "model": str(self.model),
+            "model": model_name,
             "timestamp": datetime.now().isoformat(),
             "latency_seconds": round(latency, 2),
             "input_prompt": prompt,
@@ -106,6 +108,33 @@ def _ensure_agent_patched() -> None:
 
     Agent.run = _tracked_agent_run
     Agent.run_sync = _tracked_agent_run_sync
+
+
+def _get_model_name(model: Any) -> str:
+    """
+    Extract model name from various model types.
+
+    Handles:
+    - String models like "openai:gpt-4o-mini"
+    - OpenAIChatModel instances
+    """
+    if isinstance(model, str):
+        return model
+
+    # For OpenAIChatModel, extract model name from internal attributes
+    if hasattr(model, "model_name"):
+        return f"openai:{model.model_name}"
+
+    # Check __dict__ or _model attribute
+    if hasattr(model, "__dict__"):
+        model_dict = model.__dict__
+        if "model_name" in model_dict:
+            return f"openai:{model_dict['model_name']}"
+        if "_model_name" in model_dict:
+            return f"openai:{model_dict['_model_name']}"
+
+    # Last resort: return string representation
+    return str(model)
 
 
 def estimate_tokens(text: str) -> int:
