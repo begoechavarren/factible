@@ -4,7 +4,7 @@ from pydantic_ai import Agent
 from pydantic_ai.models import ModelSettings
 
 from factible.components.online_search.schemas.evidence import EvidenceExtraction
-from factible.evaluation.pydantic_monitor import track_pydantic
+from factible.tracking.pydantic_monitor import track_pydantic
 from factible.models.config import EVIDENCE_EXTRACTOR_MODEL
 from factible.models.llm import ModelChoice, ModelSpec, get_model
 

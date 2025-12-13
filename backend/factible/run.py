@@ -27,7 +27,7 @@ from factible.models.config import (
     OUTPUT_GENERATOR_MODEL,
     QUERY_GENERATOR_MODEL,
 )
-from factible.evaluation.tracker import ExperimentTracker, timer
+from factible.tracking.tracker import ExperimentTracker, timer
 
 _logger = logging.getLogger(__name__)
 

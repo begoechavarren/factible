@@ -16,7 +16,7 @@ from factible.components.online_search.steps.google_search import (
 from factible.components.online_search.steps.reliability import (
     WebsiteReliabilityChecker,
 )
-from factible.evaluation.tracker import timer
+from factible.tracking.tracker import timer
 
 _logger = logging.getLogger(__name__)
 

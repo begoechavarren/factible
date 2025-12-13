@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-"""Run systematic experiments for Factible evaluation."""
-
 import asyncio
 import json
 import logging
@@ -178,7 +175,7 @@ async def run_single(
 
     # Check if this experiment already exists in the runs directory
     if runs_subdir:
-        runs_dir = Path("factible/experiments/runs") / runs_subdir
+        runs_dir = Path("factible/experiments/data/runs") / runs_subdir
         if runs_dir.exists():
             for run_dir in runs_dir.iterdir():
                 config_path = run_dir / "config.json"
@@ -399,7 +396,7 @@ def run(
             if not r["success"]:
                 _logger.info(f"  - {r['experiment']} on {r['video']}")
 
-    _logger.info("\nResults saved to: experiments/runs/")
+    _logger.info("\nResults saved to: experiments/data/runs/")
 
     if failed > 0:
         raise typer.Exit(1)

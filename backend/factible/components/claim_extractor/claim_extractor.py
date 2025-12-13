@@ -8,7 +8,7 @@ from pydantic_ai.models import ModelSettings
 from pydantic_ai.exceptions import AgentRunError
 
 from factible.components.claim_extractor.schemas import ExtractedClaims
-from factible.evaluation.pydantic_monitor import track_pydantic
+from factible.tracking.pydantic_monitor import track_pydantic
 from factible.models.config import CLAIM_EXTRACTOR_MODEL
 from factible.models.llm import get_model
 

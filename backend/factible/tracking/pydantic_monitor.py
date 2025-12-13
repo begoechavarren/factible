@@ -8,7 +8,7 @@ from typing import Any, Awaitable, Callable, TypeVar, cast
 
 from pydantic_ai import Agent
 
-from factible.evaluation.tracker import ExperimentTracker
+from factible.tracking.tracker import ExperimentTracker
 from factible.models.llm import get_model_pricing
 
 _logger = logging.getLogger(__name__)

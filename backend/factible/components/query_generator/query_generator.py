@@ -6,7 +6,7 @@ from pydantic_ai.models import ModelSettings
 
 from factible.components.claim_extractor.schemas import Claim
 from factible.components.query_generator.schemas import GeneratedQueries
-from factible.evaluation.pydantic_monitor import track_pydantic
+from factible.tracking.pydantic_monitor import track_pydantic
 from factible.models.config import QUERY_GENERATOR_MODEL
 from factible.models.llm import get_model
 
