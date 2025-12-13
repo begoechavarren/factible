@@ -1,32 +1,28 @@
-# Experiment Configuration for Factible Evaluation
-# This file defines test videos and experiment configurations for systematic evaluation
-
 videos:
-  # CLIMATE
 - id: fossil_fuels_greenest_energy
   url: https://www.youtube.com/watch?v=BJWq1FeGpCw
-  description: 'Fossil Fuels: The Greenest Energy | 5 Minute Video'
+  description: 'Fossil Fuels: The Greenest Energy'
   duration: 5m 8s
   tags: [climate, missinformation]
   notes: Alex Epstein arguing fossil fuels are beneficial
 
 - id: great_texas_freeze
   url: https://www.youtube.com/watch?v=KdMqCUa7XJk
-  description: The Great Texas Freeze of 2021 | 5 Minute Video
+  description: The Great Texas Freeze of 2021
   duration: 5m 8s
   tags: [climate, missinformation]
   notes: Falsely blames renewable energy for Texas blackouts
 
 - id: climate_what_scientists_say
   url: https://www.youtube.com/watch?v=OwqIy8Ikv-c
-  description: 'Climate Change: What Do Scientists Say? | 5 Minute Video'
+  description: 'Climate Change: What Do Scientists Say?'
   duration: 5m 4s
   tags: [climate, missinformation]
   notes: Richard Lindzen on climate science
 
 - id: climate_emergency_koonin
   url: https://www.youtube.com/watch?v=P19ywkobLX8
-  description: Is There Really a Climate Emergency? | 5 Minute Video
+  description: Is There Really a Climate Emergency?
   duration: 5m 32s
   tags: [climate, missinformation]
   notes: Steve Koonin questioning climate emergency
@@ -35,11 +31,50 @@ videos:
   url: https://www.youtube.com/watch?v=RegC520C6ec
   description: 'Proof: Worldwide Massive Flooding is All Manmade'
   duration: 22m 14s
-  tags: [climate, climate_skepticism]
+  tags: [climate, missinformation]
   notes: The video claims that worldwide flooding is caused by deliberate geoengineering,
     not natural weather patterns.
 
-  # HEALTH
+- id: causes_effects_climate_change_natgeo
+  url: https://www.youtube.com/watch?v=G4H1N_yXBiA
+  description: Causes and Effects of Climate Change | National Geographic
+  duration: 3m 5s
+  tags: [climate, factual]
+  notes: Human activities are driving climate change, but transitioning to renewable
+    energy can mitigate its effects.
+
+- id: why_climate_change_matter
+  url: https://www.youtube.com/watch?v=YfWCUYX2_U0
+  description: Why does climate change matter
+  duration: 1m 34s
+  tags: [climate, factual]
+  notes: Climate change is real, serious, and impacts daily decisions, but solutions
+    and hope exist.
+
+- id: extreme_weather
+  url: https://www.youtube.com/watch?v=eeISzbk9SeE
+  description: Extreme wheather
+  duration: 5m 8s
+  tags: [climate, factual]
+  notes: Extreme weather events are increasingly linked to climate change, necessitating
+    urgent action to mitigate impacts.
+
+- id: life_cycle_plastic_bottle
+  url: https://www.youtube.com/watch?v=_6xlNyWPpB8
+  description: The life cycle of a plastic bottle
+  duration: 3m 50s
+  tags: [climate, factual]
+  notes: The video illustrates the divergent fates of discarded plastic bottles and
+    their environmental impact.
+
+- id: greenhouse_gases_measured
+  url: https://www.youtube.com/watch?v=rIcXeueo0O8
+  description: What are Greenhouse Gases and How are they Measured?
+  duration: 4m 40s
+  tags: [climate, factual]
+  notes: Greenhouse gases trap heat, and measuring them helps understand their impact
+    on climate change.
+
 - id: fluoridated_water_iq
   url: https://youtu.be/oFmGG3k8naQ
   description: Harvard Study Proves Fluoridated water Lowers your IQ
@@ -80,6 +115,47 @@ videos:
   notes: A three-day juice cleanse boosts immunity, aids weight loss, and promotes
     detoxification and energy.
 
+- id: exercising_regularly_human_body
+  url: https://www.youtube.com/watch?v=rBUjOY12gJA
+  description: What Happens To Your Body When You Start Exercising Regularly | The
+    Human Body
+  duration: 4m 19s
+  tags: [health, factual]
+  notes: Regular exercise leads to significant physical and mental health improvements
+    over time.
+
+- id: brain_changing_benefits_exercise
+  url: https://www.youtube.com/watch?v=BHY0FxzoKZE
+  description: The Brain-Changing Benefits of Exercise | Wendy Suzuki | TED
+  duration: 13m 1s
+  tags: [health, factual]
+  notes: Exercise significantly enhances brain function, mood, and protects against
+    cognitive decline and diseases.
+
+- id: immunology_battle_hiv
+  url: https://www.youtube.com/watch?v=BADDj82oces
+  description: 'Immunology wars: The battle with HIV'
+  duration: 2m 58s
+  tags: [health, factual]
+  notes: HIV evades the immune system, leading to AIDS, but antiretroviral treatment
+    can help manage it.
+
+- id: juice_vs_whole_fruit
+  url: https://www.youtube.com/watch?v=-LDjqcvSbP4
+  description: 'Juice vs. Whole Fruit: Which is Healthier?'
+  duration: 3m 55s
+  tags: [health, factual]
+  notes: Whole fruits are healthier than 100% fruit juice due to higher fiber and
+    lower sugar content.
+
+- id: sleep_teenage_brain
+  url: https://www.youtube.com/watch?v=WJhCa12UTsg
+  description: What lack of sleep does to the teenage brain - Wendy Troxel
+  duration: 6m 19s
+  tags: [health, factual]
+  notes: Delaying school start times improves teenagers' sleep, health, and academic
+    performance significantly.
+
   # POLITICS / SOCIAL
 - id: egg_price_trump
   url: https://www.youtube.com/watch?v=oTFt4byuIuo
@@ -119,8 +195,48 @@ videos:
   description: A nation of inmigrants
   duration: 5m 15s
   tags: [politics, missinformation]
-  notes: The U.S. is a nation of immigrants but current policies threaten the
-      American Dream.
+  notes: The U.S. is a nation of immigrants but current policies threaten the American
+    Dream.
+
+- id: national_trust_sues_trump
+  url: https://www.youtube.com/watch?v=OMBxolu127k
+  description: National Trust sues Trump admin over ballroom plans
+  duration: 7m 34s
+  tags: [politics, factual]
+  notes: The National Trust is suing the Trump administration to halt the controversial
+    White House ballroom project.
+
+- id: what_is_democracy_bbc
+  url: https://www.youtube.com/watch?v=EbkLW_-m938
+  description: What Is Democracy BBC Bitesize? - The Documentary Reel
+  duration: 2m 11s
+  tags: [politics, factual]
+  notes: Democracy empowers citizens to choose leaders and influence government decisions,
+    ensuring equality and justice.
+
+- id: what_is_inflation
+  url: https://www.youtube.com/watch?v=HQ-Kg_xgdhE
+  description: What is inflation? Economics explained
+  duration: 1m 52s
+  tags: [politics, factual]
+  notes: Inflation is the average rate at which prices rise, impacting savings and
+    economic stability.
+
+- id: uk_election_results
+  url: https://www.youtube.com/watch?v=W97evNJrMn8
+  description: The UK Election Results Explained
+  duration: 8m 18s
+  tags: [politics, factual]
+  notes: The Labour Party's victory marks the end of 14 years of Conservative rule
+    in the UK.
+
+- id: trump_national_emergency
+  url: https://www.youtube.com/watch?v=BiulFh5uAyM
+  description: Trump’s Historic 'National Emergency’ Explained
+  duration: 7m 46s
+  tags: [politics, factual]
+  notes: Donald Trump declaration of a national emergency over border wall funding
+    in 2019.
 
 experiments:
   # BASELINE - Standard configuration
