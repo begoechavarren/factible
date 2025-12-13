@@ -20,6 +20,7 @@ class ExperimentTracker:
         experiment_name: str,
         config: dict[str, Any],
         base_dir: Path = Path("factible/experiments/runs"),
+        run_label: Optional[str] = None,
     ):
         self.component = component
         self.experiment_name = experiment_name
@@ -27,7 +28,9 @@ class ExperimentTracker:
 
         # Create unique run directory
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        self.run_id = f"{timestamp}_{component}_{experiment_name}"
+        base_label = run_label if run_label else f"{component}_{experiment_name}"
+        safe_label = self._sanitize_label(base_label)
+        self.run_id = f"{timestamp}_{safe_label}"
         self.run_dir = base_dir / self.run_id
         self.run_dir.mkdir(parents=True, exist_ok=True)
 
@@ -45,6 +48,11 @@ class ExperimentTracker:
         self.start_time = time.time()
 
         _logger.info(f"📊 Experiment started: {self.run_id}")
+
+    @staticmethod
+    def _sanitize_label(value: str) -> str:
+        """Return a filesystem-friendly label."""
+        return value.replace(" ", "_")
 
     @classmethod
     def get_current(cls) -> Optional["ExperimentTracker"]:

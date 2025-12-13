@@ -47,7 +47,7 @@ videos:
   url: https://www.youtube.com/watch?v=YfWCUYX2_U0
   description: Why does climate change matter
   duration: 1m 34s
-  tags: [climate, factual]
+  tags: [climate, factual, test]
   notes: Climate change is real, serious, and impacts daily decisions, but solutions
     and hope exist.
 
@@ -95,7 +95,7 @@ videos:
   url: https://youtu.be/sO6Po_RItl8
   description: Garlic cancer
   duration: 4m 25s
-  tags: [health, missinformation]
+  tags: [health, missinformation, test]
   notes: Crushed garlic contains a compound that can kill cancer cells, particularly
     in gastrointestinal cancers.
 
@@ -152,7 +152,7 @@ videos:
   url: https://www.youtube.com/watch?v=WJhCa12UTsg
   description: What lack of sleep does to the teenage brain - Wendy Troxel
   duration: 6m 19s
-  tags: [health, factual]
+  tags: [health, factual, test]
   notes: Delaying school start times improves teenagers' sleep, health, and academic
     performance significantly.
 
@@ -177,7 +177,7 @@ videos:
   url: https://www.youtube.com/watch?v=SYS2_ECsaxY
   description: FBI orchestrated Jan 6th
   duration: 2m 55s
-  tags: [politics, missinformation]
+  tags: [politics, missinformation, test]
   notes: The video claims the FBI orchestrated the January 6th riots and manipulated
     involved groups.
 
@@ -226,7 +226,7 @@ videos:
   url: https://www.youtube.com/watch?v=W97evNJrMn8
   description: The UK Election Results Explained
   duration: 8m 18s
-  tags: [politics, factual]
+  tags: [politics, factual, test]
   notes: The Labour Party's victory marks the end of 14 years of Conservative rule
     in the UK.
 
@@ -246,7 +246,7 @@ experiments:
     max_claims: 5
     max_queries_per_claim: 2
     max_results_per_query: 3
-    video_filter: []  # run on all videos
+    video_filter: [test]
 
   # OFAT ANALYSIS - Vary one parameter at a time
 

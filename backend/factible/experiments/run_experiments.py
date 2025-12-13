@@ -2,9 +2,11 @@
 """Run systematic experiments for Factible evaluation."""
 
 import asyncio
+import json
 import logging
 from pathlib import Path
 from typing import Annotated, Any, Optional
+from urllib.parse import parse_qs, urlparse
 
 import typer
 import yaml
@@ -26,6 +28,19 @@ _logger = logging.getLogger(__name__)
 
 # Default config file location
 DEFAULT_CONFIG = Path("factible/experiments/experiments_config.yaml")
+
+
+def _youtube_video_id(url: str | None) -> str | None:
+    """Extract the YouTube video ID from a URL."""
+    if not url:
+        return None
+    parsed = urlparse(url)
+    host = parsed.netloc.lower()
+    if host in {"youtube.com", "www.youtube.com", "m.youtube.com"}:
+        return parse_qs(parsed.query).get("v", [None])[0]
+    if host.endswith("youtu.be"):
+        return parsed.path.strip("/") or None
+    return None
 
 
 def expand_experiments(experiments: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -153,6 +168,7 @@ async def run_single(
     video_id = video["id"]
     exp_name = experiment["name"]
     full_name = f"{exp_name}_{video_id}"
+    youtube_id = _youtube_video_id(video.get("url"))
 
     # Check filters
     should, reason = should_run(video, experiment)
@@ -164,14 +180,19 @@ async def run_single(
     if runs_subdir:
         runs_dir = Path("factible/experiments/runs") / runs_subdir
         if runs_dir.exists():
-            # Look for existing runs matching this experiment+video combination
-            # Run directories are named: YYYYMMDD_HHMMSS_end_to_end_EXPERIMENTNAME
-            existing_runs = list(runs_dir.glob(f"*_end_to_end_{full_name}"))
-            if existing_runs:
-                _logger.info(f"⏭️  Skipping [{full_name}] - already exists:")
-                for existing_run in existing_runs:
-                    _logger.info(f"     {existing_run.name}")
-                return True
+            for run_dir in runs_dir.iterdir():
+                config_path = run_dir / "config.json"
+                if not config_path.exists():
+                    continue
+                try:
+                    with config_path.open() as cfg_file:
+                        cfg = json.load(cfg_file)
+                except Exception:  # noqa: BLE001
+                    continue
+                if cfg.get("experiment_name") == full_name:
+                    _logger.info(f"⏭️  Skipping [{full_name}] - already exists:")
+                    _logger.info(f"     {run_dir.name}")
+                    return True
 
     _logger.info("=" * 80)
     _logger.info(f"🚀 Experiment {current}/{total}: {full_name}")
@@ -199,6 +220,7 @@ async def run_single(
             max_results_per_query=experiment.get("max_results_per_query", 3),
             headless_search=settings.get("headless_search", True),
             runs_subdir=runs_subdir,
+            run_label=youtube_id if youtube_id else None,
         )
 
         _logger.info(
@@ -323,14 +345,18 @@ def run(
         _logger.info(f"📁 Auto-generated runs directory: runs/{runs_subdir}/\n")
 
     # Plan - calculate actual runs considering video_filter
-    actual_runs = 0
+    run_plan: list[tuple[dict[str, Any], dict[str, Any]]] = []
     filtered_videos = set()
     for vid in videos:
         for exp in experiments:
-            should, _ = should_run(vid, exp)
+            should, reason = should_run(vid, exp)
             if should:
-                actual_runs += 1
+                run_plan.append((vid, exp))
                 filtered_videos.add(vid["id"])
+            else:
+                _logger.info(f"⊘ Skipping [{exp['name']}] on [{vid['id']}]: {reason}")
+
+    actual_runs = len(run_plan)
 
     total = actual_runs
     _logger.info(f"\n📊 Planning {total} runs:")
@@ -345,16 +371,13 @@ def run(
     async def run_all_experiments():
         """Run all experiments asynchronously."""
         results = []
-        current = 0
-        for vid in videos:
-            for exp in experiments:
-                current += 1
-                success = await run_single(
-                    vid, exp, settings, dry_run, current, total, runs_subdir
-                )
-                results.append(
-                    {"video": vid["id"], "experiment": exp["name"], "success": success}
-                )
+        for idx, (vid, exp) in enumerate(run_plan, start=1):
+            success = await run_single(
+                vid, exp, settings, dry_run, idx, total, runs_subdir
+            )
+            results.append(
+                {"video": vid["id"], "experiment": exp["name"], "success": success}
+            )
         return results
 
     results = asyncio.run(run_all_experiments())

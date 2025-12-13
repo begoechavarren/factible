@@ -43,6 +43,7 @@ async def run_factible(
     headless_search: bool = True,
     progress_callback: Optional[Callable[[str, str, int, dict], None]] = None,
     runs_subdir: Optional[str] = None,
+    run_label: Optional[str] = None,
 ) -> FactCheckRunOutput:
     """
     Async parallelization at 3 levels:
@@ -83,7 +84,11 @@ async def run_factible(
         base_dir = base_dir / runs_subdir
 
     with ExperimentTracker(
-        "end_to_end", experiment_name, config, base_dir=base_dir
+        "end_to_end",
+        experiment_name,
+        config,
+        base_dir=base_dir,
+        run_label=run_label,
     ) as tracker:
         tracker.log_input("video_url", video_url)
 
