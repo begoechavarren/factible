@@ -148,7 +148,7 @@ class ExperimentTracker:
             )
             self.metrics["llm"] = {
                 "total_calls": len(self.pydantic_calls),
-                "total_cost_usd": total_cost,
+                "total_cost_usd": round(total_cost, 10),
                 "total_latency_seconds": total_latency,
             }
 

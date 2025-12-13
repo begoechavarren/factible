@@ -62,7 +62,7 @@ def _ensure_agent_patched() -> None:
             else str(output),
             "output_length_chars": len(output_str),
             "output_tokens_estimated": output_tokens,
-            "cost_usd": round(cost, 6),
+            "cost_usd": round(cost, 10),
         }
         tracker.log_pydantic_call(call_data)
         return result
@@ -99,7 +99,7 @@ def _ensure_agent_patched() -> None:
             else str(output),
             "output_length_chars": len(output_str),
             "output_tokens_estimated": output_tokens,
-            "cost_usd": round(cost, 6),
+            "cost_usd": round(cost, 10),
         }
         tracker.log_pydantic_call(call_data)
         return result
