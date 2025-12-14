@@ -280,7 +280,7 @@ Ollama & qwen3:4b & 256K & Free (local) & Small footprint \\
 \end{tabular}
 \end{table}
 
-Large language models such as GPT-4 offer multimodal capabilities and demonstrate human-level performance across diverse benchmarks \citep{openai2024gpt4}. Despite these advances, models still suffer from hallucinations and are constrained by limited context windows, underscoring the need for careful configuration and reliability safeguards \citep{openai2024gpt4}. Our model management layer therefore emphasizes deterministic outputs, context-aware trimming, and tool-assisted generation.
+Large language models such as GPT-4 offer multimodal capabilities and demonstrate human-level performance across diverse benchmarks \citep{openai2024gpt4}. Despite these advances, models still suffer from hallucinations and are constrained by limited context windows, underscoring the need for careful configuration and reliability safeguards \citep{openai2024gpt4}. The model management layer therefore emphasizes deterministic outputs, context-aware trimming, and tool-assisted generation.
 
 \subsubsection{External Services}
 
@@ -335,7 +335,7 @@ The timestamp mapping function enables the system to locate where in the video e
 
 \subsubsection{Claim Extractor}
 
-The Claim Extractor identifies factual, verifiable claims from video transcripts using LLM-based extraction with thesis-relative importance ranking. Our approach builds on prior work in automated claim detection: supervised models trained on annotated political debates have been used to detect check-worthy claims \citep{hassan2015claimbuster}, and end-to-end systems like ClaimBuster monitor public discourse and prioritize factual statements for manual fact-checking \citep{li2017claimbuster}. These systems show that focusing on salient, verifiable claims improves the efficiency of fact-checking pipelines.
+The Claim Extractor identifies factual, verifiable claims from video transcripts using LLM-based extraction with thesis-relative importance ranking. This approach builds on prior work in automated claim detection: supervised models trained on annotated political debates have been used to detect check-worthy claims \citep{hassan2015claimbuster}, and end-to-end systems like ClaimBuster monitor public discourse and prioritize factual statements for manual fact-checking \citep{li2017claimbuster}. These systems show that focusing on salient, verifiable claims improves the efficiency of fact-checking pipelines.
 
 \paragraph{LLM Configuration}
 
@@ -448,7 +448,7 @@ class GeneratedQueries(BaseModel):
 
 The Online Search component implements a multi-step pipeline to retrieve, assess, and extract evidence from web sources with adaptive quality filtering. Unlike the other LLM-based components, Online Search orchestrates multiple classical algorithms alongside a single LLM call for evidence extraction. This hybrid approach balances speed, reliability, and reasoning capabilities.
 
-The reliability assessment combines domain-level heuristics with the Media Bias/Fact Check (MBFC) methodology, which employs a comprehensive weighted scoring system to evaluate media outlets' ideological bias and factual reliability \citep{mbfc2024methodology}. To mitigate hallucinations and ensure evidence quality, we draw on research like SelfCheckGPT, which detects hallucinations by comparing multiple sampled responses and ranks passages by factuality \citep{manakul2023selfcheckgpt}. Our multi-agent retrieval strategy is further informed by systems such as FactAgent \citep{zhang2025factagent} and LoCal \citep{chen2024local}, where decomposing, reasoning, and evaluating agents iteratively refine answers and outperform baselines.
+The reliability assessment combines domain-level heuristics with the Media Bias/Fact Check (MBFC) methodology, which employs a comprehensive weighted scoring system to evaluate media outlets' ideological bias and factual reliability \citep{mbfc2024methodology}. To mitigate hallucinations and ensure evidence quality, the system draws on research like SelfCheckGPT, which detects hallucinations by comparing multiple sampled responses and ranks passages by factuality \citep{manakul2023selfcheckgpt}. The multi-agent retrieval strategy is further informed by systems such as FactAgent \citep{zhang2025factagent} and LoCal \citep{chen2024local}, where decomposing, reasoning, and evaluating agents iteratively refine answers and outperform baselines.
 
 Figure \ref{fig:online-search-pipeline} illustrates the four-step Online Search pipeline executed for each query.
 
@@ -508,7 +508,7 @@ The Google search client wraps the Serper API for asynchronous search execution.
 The reliability checker uses a multi-factor scoring system with first-match priority, combining external datasets with algorithmic heuristics:
 
 \begin{itemize}
-    \item \textbf{Media Bias/Fact Check (MBFC) Dataset}: The system loads timestamped JSON snapshots containing over 10,000 news sources with credibility ratings. Credibility mappings are: high $\rightarrow$ 0.85, medium $\rightarrow$ 0.60, low $\rightarrow$ 0.30, very low $\rightarrow$ 0.15.
+    \item \textbf{Media Bias/Fact Check (MBFC) Dataset}: The system loads timestamped JSON snapshots containing nearly 10,000 news sources with credibility ratings (dataset extracted December 2025). Credibility mappings are: high $\rightarrow$ 0.85, medium $\rightarrow$ 0.60, low $\rightarrow$ 0.30, very low $\rightarrow$ 0.15.
 
     \item \textbf{TLD Reputation}: High-trust top-level domains (\texttt{.gov}, \texttt{.edu}, \texttt{.int}) receive a base score of 0.90, reflecting their institutional authority.
 
@@ -720,90 +720,51 @@ All LLM agents use Pydantic models as their \texttt{output\_type}, providing com
 The schema design follows five guiding principles to balance flexibility, safety, and maintainability. First, schemas prefer flat structures over deeply nested objects to simplify validation and reduce complexity. Second, optional fields use Python's union type syntax (\texttt{str | None}) for clarity. Third, \texttt{Literal} types constrain string fields to predefined values (e.g., stance must be ``supports'', ``refutes'', ``mixed'', or ``unclear''). Fourth, all fields include descriptive names and \texttt{Field} descriptions for documentation and IDE hints. Fifth, numeric fields include validation constraints (e.g., \texttt{Field(ge=0.0, le=1.0)} for scores) to catch invalid data at runtime. These principles ensure robust data contracts across component boundaries.
 
 %-------------------------------------------------------
-\subsection{Evaluation Framework}
+\subsection{Experimentation and Evaluation Framework}
 %-------------------------------------------------------
 
-Evaluating fact-checking systems remains an open challenge because existing benchmarks are narrow and risk overfitting. Commentators have noted a ``benchmark crisis'' where canonical datasets no longer represent broad language understanding \citep{ruder2025evolving}. Practical evaluation strategies include multiple-choice benchmarks, verifiers, public leaderboards, and LLM judges, each with distinct trade-offs \citep{raschka2025evaluation}. Our evaluation framework therefore combines quantitative metrics with qualitative assessments using external datasets such as FEVER \citep{thorne2018fever} and FEVEROUS \citep{aly2021feverous}.
+Evaluating LLM-based fact-checking systems presents unique challenges: outputs are non-deterministic, external dependencies (web search) introduce variability, and traditional benchmarks risk overfitting \citep{ruder2025evolving}. To address these challenges, a three-component experimentation framework was developed to capture complete execution traces, support batch experimentation, and compute performance metrics.
 
-\subsubsection{Experiment Tracker (Singleton Pattern)}
+\subsubsection{Framework Architecture}
 
-The \texttt{ExperimentTracker} implements a singleton pattern with context manager support for global access during pipeline execution. This design enables any component to log metrics, timing, and LLM calls without explicit parameter passing. When initialized, the tracker creates a timestamped run directory, initializes data structures for timing, metrics, and LLM call logs, and registers itself as the current global tracker. The context manager protocol ensures automatic saving on exit and cleanup of the global reference.
+The framework follows a linear data flow through three stages:
 
-A complementary \texttt{timer} context manager provides automatic timing instrumentation. When a code block executes within a timer context, the elapsed duration is automatically logged to the current tracker with a descriptive label. This declarative timing approach eliminates manual timing boilerplate and ensures consistent timing collection across all pipeline stages.
+\begin{enumerate}
+    \item \textbf{Experiment Runner}: Executes the fact-checking pipeline on configured videos, invoking the tracking module for each run.
+    \item \textbf{Tracking Module}: Captures all execution data---inputs, outputs, LLM calls, timing, and costs---saving structured artifacts for later analysis.
+    \item \textbf{Evaluator}: Computes performance metrics including comparisons against ground truth annotations, system efficiency measurements, and source quality assessments.
+\end{enumerate}
 
-\subsubsection{Pydantic AI Monitoring (Monkey-Patching)}
+This separation of concerns enables independent iteration on each component while maintaining a consistent data contract between stages.
 
-The \texttt{@track\_pydantic(component\_name)} decorator enables automatic tracking of all LLM calls via runtime monkey-patching of \texttt{Agent.run()} and \texttt{Agent.run\_sync()}. Each call records component name, model, timestamp, latency, input prompt, estimated tokens, output, and calculated cost in USD.
+\subsubsection{Tracking Module}
 
-\subsubsection{Metrics Aggregation}
+The tracking module implements a singleton pattern with context manager support, enabling any pipeline component to log data without explicit parameter passing. When initialized, the tracker creates a timestamped run directory and registers itself as the global tracker. The context manager protocol ensures automatic saving on exit.
 
-The \texttt{metrics.json} file provides aggregated experiment metrics for quantitative analysis and comparison across runs. Metrics include total pipeline execution time, per-step timing breakdowns (transcript, claims, queries, search, output), total LLM call count, estimated total cost in USD, and success/failure status. This structured format enables automated analysis scripts to compare different parameter configurations, identify performance bottlenecks, and track cost-quality trade-offs across the experiment corpus.
+Each run generates structured artifacts containing: run configuration and parameters, complete records of all LLM calls with prompts, responses, latency and cost, final extracted claims and fact-check verdicts, aggregated timing and cost metrics, and the original video transcript for reference.
 
-\subsubsection{Output Directory Structure}
+LLM call tracking is achieved via a decorator that instruments the Pydantic AI agent methods, automatically recording component name, model, timestamp, latency, token counts, and calculated cost for every inference call.
 
-Each experiment run creates a timestamped directory containing structured artifacts for analysis. The directory includes \texttt{config.json} (run ID, parameters, model configuration), \texttt{llm\_calls.json} (all Pydantic AI calls with full input/output), \texttt{outputs.json} (final claims and fact-check reports), \texttt{metrics.json} (aggregated timing, cost, success status), and \texttt{transcript.txt} (original video transcript for reference). This organization enables reproducible analysis, post-hoc debugging of individual LLM calls, and batch processing of experiment results across parameter sweeps.
+\subsubsection{Experiment Runner}
 
-%-------------------------------------------------------
-\subsection{Experiment Configuration and Runner}
-%-------------------------------------------------------
+The experiment runner enables batch execution through YAML configuration files that define video corpora and parameter sweeps. Videos are specified with metadata and tags for filtering, while experiments define parameter variations that automatically expand into multiple runs (e.g., testing \texttt{max\_claims} values of 1, 3, 5, 7, and 10 generates five separate experiment runs).
 
-\subsubsection{YAML Configuration}
+A command-line interface provides commands for running experiments, filtering by experiment name or video ID, and previewing configurations before execution.
 
-The YAML configuration defines test videos and experiment parameters with automatic expansion:
+\subsubsection{Evaluator}
 
-\begin{lstlisting}[language=Python, caption={Example YAML configuration}]
-videos:
-  - id: "climate_what_scientists_say"
-    url: "https://www.youtube.com/watch?v=OwqIy8Ikv-c"
-    description: "Climate Change: What Do Scientists Say?"
-    tags: ["climate", "climate_skepticism", "short", "selected"]
+The evaluator computes performance metrics using modular components for each evaluation dimension:
 
-experiments:
-  - name: "vary_claims"
-    description: "OFAT: Impact of max_claims on quality/cost/time"
-    max_claims: [1, 3, 5, 7, 10]  # Auto-expands to 5 experiments
-    max_queries_per_claim: 2
-    max_results_per_query: 3
-    video_filter: ["selected"]
-\end{lstlisting}
+\begin{itemize}
+    \item \textbf{Claim extraction metrics}: Precision@k, Recall, F1, and MAP computed using semantic similarity matching between extracted and ground truth claims.
+    \item \textbf{Verdict accuracy}: Comparison of system stances against ground truth labels.
+    \item \textbf{Evidence retrieval metrics}: Success rate and source reliability distribution based on MBFC credibility ratings.
+    \item \textbf{System efficiency}: Latency and cost aggregation across all pipeline components.
+\end{itemize}
 
-\subsubsection{Test Video Corpus}
+Evaluations execute in parallel across multiple videos for efficiency. Results include per-video reports and aggregate statistics (means, standard deviations, distributions) across all evaluated videos.
 
-The evaluation dataset includes 19 videos across domains: Climate (10 videos covering climate skepticism, renewable energy, CO2, Texas freeze), Technology (7 videos on 5G health concerns, AI job displacement), and Health (2 videos on EMF radiation, alkaline water). Selection criteria include verifiable factual claims, range of difficulty levels, mix of viewpoints, available English transcripts, and durations from 2--25 minutes.
-
-\subsubsection{Experiment Types}
-
-Three experiment types are supported:
-
-\textbf{Baseline}: Standard configuration (\texttt{max\_claims=5}, \texttt{max\_queries=2}, \texttt{max\_results=3}).
-
-\textbf{OFAT (One-Factor-At-A-Time) Analysis}: Sensitivity analysis varying one parameter while holding others constant---\texttt{vary\_claims} [1, 3, 5, 7, 10], \texttt{vary\_queries} [1, 2, 3, 4, 5], \texttt{vary\_results} [1, 2, 3, 5, 7].
-
-\textbf{Strategic Combinations}: \texttt{minimal} (1/1/1 for fast prototyping), \texttt{deep} (3/4/5 for comprehensive evidence), \texttt{broad} (10/1/2 for coverage-focused).
-
-\subsubsection{Experiment Runner CLI}
-
-The experiment runner provides command-line options:
-
-\begin{lstlisting}[language=bash, caption={Experiment runner CLI usage}]
-factible-experiments run                    # Run all experiments
-factible-experiments run --experiment vary_claims  # Specific group
-factible-experiments run --video fossil_fuels      # Specific video
-factible-experiments run --dry-run          # Preview without executing
-factible-experiments analyze                # Analyze completed runs
-\end{lstlisting}
-
-%-------------------------------------------------------
-\subsection{Analysis and Visualization Pipeline}
-%-------------------------------------------------------
-
-\subsubsection{Data Loading and Enrichment}
-
-The analysis script loads all experiment runs into a pandas DataFrame, extracting configuration, metrics, and outputs from JSON files. Enrichment adds categorization including experiment type, OFAT parameter, and strategy type.
-
-\subsubsection{Generated Visualizations}
-
-The analysis pipeline generates visualizations including run summary overviews, component breakdowns showing latency and tokens by component, claims analysis with stance distribution, pipeline timing tables, scalability plots (tokens vs. time), OFAT sensitivity analysis, and strategy comparisons.
+This infrastructure enabled an iterative development cycle: run experiments, evaluate metrics, identify issues, adjust parameters, and repeat---producing the results reported in Section~\ref{sec:results}.
 
 %-------------------------------------------------------
 \subsection{API Layer and Real-Time Streaming}
@@ -966,7 +927,7 @@ This section presents the experimental evaluation of Factible across 30 YouTube 
 
 \subsubsection{Evaluation Dataset}
 
-The evaluation corpus consists of 30 YouTube videos manually annotated with ground truth claims. Videos were selected across three thematic categories---climate, health, and political/social issues---with 10 videos per category to ensure balanced representation. Within each category, videos were equally split between factual content (5 videos) and misinformation (5 videos), allowing evaluation of the system's performance across different truth orientations. Videos range from educational science content to political commentary, representing diverse domains and claim densities. Table~\ref{tab:dataset-stats} summarizes the dataset characteristics.
+The evaluation corpus consists of 30 YouTube videos manually annotated with ground truth claims. This sample size is comparable to evaluation scales used in end-to-end fact-checking systems; for example, ClaimBuster evaluated their system on 25 presidential debates \citep{hassan2017vldb}. Videos were selected across three thematic categories---climate, health, and political/social issues---with 10 videos per category to ensure balanced representation. Within each category, videos were equally split between factual content (5 videos) and misinformation (5 videos), allowing evaluation of the system's performance across different truth orientations. Videos range from educational science content to political commentary, representing diverse domains and claim densities. Table~\ref{tab:dataset-stats} summarizes the dataset characteristics.
 
 \begin{table}[H]
 \centering
@@ -979,7 +940,7 @@ The evaluation corpus consists of 30 YouTube videos manually annotated with grou
 Total videos & 30 \\
 Ground truth claims per video (mean) & 16.8 \\
 Ground truth claims per video (range) & 9--35 \\
-Total ground truth claims & 504 \\
+Total ground truth claims & 503 \\
 System claims extracted per video & 5 \\
 \bottomrule
 \end{tabular}
@@ -1017,9 +978,9 @@ The evaluation employs metrics at two levels: claim extraction quality and verdi
 
 \subsubsection{Component Evaluation Scope}
 
-The evaluation focuses on components where the system makes reasoning decisions that can be compared against ground truth. Specifically, we evaluate \textbf{Claim Extraction} (precision, recall, importance ranking) and \textbf{Verdict Generation} (stance accuracy, explanation quality) as these components employ LLM-based reasoning that can produce varying results.
+The evaluation focuses on components where the system makes reasoning decisions that can be compared against ground truth. Specifically, the evaluation covers \textbf{Claim Extraction} (precision, recall, importance ranking) and \textbf{Verdict Generation} (stance accuracy, explanation quality) as these components employ LLM-based reasoning that can produce varying results.
 
-Components relying on external APIs---\textbf{Transcript Extraction} (YouTube Transcript API) and \textbf{Online Search} (Serper/Google)---are not evaluated directly, as their performance depends on third-party services rather than our system's design. However, their effectiveness is implicitly covered by the end-to-end evaluation: if transcript extraction fails, no claims can be extracted; if search fails, verdict accuracy degrades. The \textbf{Query Generator} component is assessed indirectly through evidence retrieval success rates, as effective queries should yield relevant evidence.
+Components relying on external APIs---\textbf{Transcript Extraction} (YouTube Transcript API) and \textbf{Online Search} (Serper/Google)---are not evaluated directly, as their performance depends on third-party services rather than the system's design. However, their effectiveness is implicitly covered by the end-to-end evaluation: if transcript extraction fails, no claims can be extracted; if search fails, verdict accuracy degrades. The \textbf{Query Generator} component is assessed indirectly through evidence retrieval success rates, as effective queries should yield relevant evidence.
 
 This evaluation strategy enables focused assessment of the system's core reasoning capabilities while acknowledging that external dependencies affect overall performance through the end-to-end metrics.
 
@@ -1027,7 +988,7 @@ This evaluation strategy enables focused assessment of the system's core reasoni
 \subsection{Precision-Recall Tradeoff Analysis}
 %-------------------------------------------------------
 
-Before presenting detailed results, we analyze the precision-recall tradeoff to justify the choice of \texttt{max\_claims=5} as the primary configuration. The system was evaluated across six configurations with \texttt{max\_claims} $\in \{1, 3, 5, 7, 10, 15\}$.
+Before presenting detailed results, this section analyzes the precision-recall tradeoff to justify the choice of \texttt{max\_claims=5} as the primary configuration. The system was evaluated across six configurations with \texttt{max\_claims} $\in \{1, 3, 5, 7, 10, 15\}$.
 
 \begin{table}[H]
 \centering
@@ -1120,55 +1081,55 @@ Stance Accuracy & 0.733 & 0.334 \\
 
 \subsubsection{Accuracy Distribution Analysis}
 
-The high standard deviation (0.334) in verdict accuracy warrants investigation. Analysis of per-video results reveals a bimodal distribution:
+The standard deviation (0.334) in verdict accuracy warrants investigation. Analysis of per-video results reveals a distribution skewed toward high accuracy:
 
 \begin{itemize}
-    \item \textbf{14 videos (46.7\%)} achieved 100\% verdict accuracy---all extracted claims were correctly classified.
-    \item \textbf{9 videos (30.0\%)} achieved 0\% verdict accuracy---no claims were correctly classified.
-    \item \textbf{7 videos (23.3\%)} achieved partial accuracy between 20\% and 80\%.
+    \item \textbf{21 videos (70.0\%)} achieved high accuracy ($\geq$75\%)---the majority of extracted claims were correctly classified.
+    \item \textbf{5 videos (16.7\%)} achieved medium accuracy (25--74\%)---partial verdict correctness.
+    \item \textbf{4 videos (13.3\%)} achieved low accuracy ($<$25\%)---most claims were incorrectly classified.
 \end{itemize}
 
-\paragraph{Root Cause: Evidence Retrieval Correlation}
+\paragraph{Evidence Retrieval and Verdict Quality}
 
-Detailed analysis reveals a near-perfect correlation between evidence retrieval success and verdict accuracy. Table~\ref{tab:accuracy-retrieval-correlation} presents representative examples demonstrating this relationship.
+With an evidence retrieval success rate of 94.7\%, the system consistently finds relevant sources for most claims. Table~\ref{tab:accuracy-retrieval-correlation} illustrates how verdict accuracy varies across the dataset.
 
 \begin{table}[H]
 \centering
-\caption{Correlation between evidence retrieval and verdict accuracy}
+\caption{Verdict accuracy distribution with evidence retrieval rates}
 \label{tab:accuracy-retrieval-correlation}
 \small
 \begin{tabular}{p{4.5cm}ccc}
 \toprule
 \textbf{Video Topic} & \textbf{Retrieval Rate} & \textbf{Verdict Acc.} & \textbf{Avg Sources} \\
 \midrule
-\multicolumn{4}{l}{\textit{High accuracy (100\%)}} \\
+\multicolumn{4}{l}{\textit{High accuracy ($\geq$75\%) --- 21 videos}} \\
 \quad Brain Benefits of Exercise (TED) & 100\% & 100\% & 2.5 \\
 \quad Climate Change (NatGeo) & 100\% & 100\% & 2.3 \\
 \quad Fossil Fuels & 100\% & 100\% & 2.7 \\
-\quad Fluoride \& IQ Claims & 100\% & 100\% & 2.1 \\
+\quad UK Election Results & 100\% & 75\% & 2.8 \\
 \midrule
-\multicolumn{4}{l}{\textit{Zero accuracy (0\%)}} \\
-\quad FBI \& January 6th & 0\% & 0\% & 0.0 \\
-\quad Gender Wage Gap & 0\% & 0\% & 0.0 \\
-\quad Egg Prices (Political) & 0\% & 0\% & 0.0 \\
-\quad Immigration Statistics & 0\% & 0\% & 0.0 \\
+\multicolumn{4}{l}{\textit{Medium/Low accuracy ($<$75\%) --- 9 videos}} \\
+\quad Gender Wage Gap & 100\% & 50\% & 2.7 \\
+\quad FBI \& January 6th & 100\% & 50\% & 2.3 \\
+\quad Inflation Explainer & 60\% & 25\% & 1.8 \\
+\quad Immigration Statistics & 100\% & 0\% & 2.9 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-When evidence retrieval fails completely (0\% success rate), the system defaults all verdicts to UNCLEAR due to insufficient evidence, which systematically mismatches ground truth labels. Conversely, videos with successful evidence retrieval consistently achieve 100\% verdict accuracy, indicating that the LLM's reasoning capabilities are effective when provided with relevant evidence.
+Notably, successful evidence retrieval does not guarantee high verdict accuracy. Some politically contentious topics achieve 100\% retrieval but lower verdict accuracy, suggesting that the challenge lies not in finding evidence but in correctly synthesizing conflicting sources or matching the ground truth annotator's interpretation.
 
-\paragraph{Video Characteristics Affecting Retrieval}
+\paragraph{Factors Affecting Verdict Accuracy}
 
-Analysis suggests that politically current or contentious topics exhibit higher retrieval failure rates. Videos about contested political claims (election procedures, wage gap debates, recent policy events) showed 0\% retrieval success, while scientific and health topics generally achieved successful retrieval. Potential contributing factors include:
+Analysis of low-accuracy videos reveals several contributing factors:
 
 \begin{itemize}
-    \item \textbf{Temporal sensitivity}: Claims about recent events may lack stable, indexed web sources at the time of search.
-    \item \textbf{Web scraping limitations}: Certain news sites or platforms may block automated content extraction.
-    \item \textbf{Query formulation challenges}: Politically charged claims may generate queries that return opinion pieces rather than factual sources.
+    \item \textbf{Contested claims}: Topics with legitimate disagreement (e.g., wage gap interpretations, immigration statistics) may have evidence supporting multiple stances, making definitive verdicts challenging.
+    \item \textbf{Ground truth subjectivity}: Some claims involve nuanced interpretations where reasonable annotators might disagree on the correct stance.
+    \item \textbf{Evidence-claim mismatch}: Retrieved evidence may address related but not identical claims, leading to verdict errors.
 \end{itemize}
 
-This finding identifies evidence retrieval robustness as the primary bottleneck for system improvement, rather than LLM reasoning quality.
+These findings suggest that further improvements require enhanced evidence synthesis and more sophisticated handling of contested claims, rather than simply improving retrieval success.
 
 \subsubsection{Comparison to Random Baseline}
 
@@ -1190,14 +1151,14 @@ Table~\ref{tab:evidence-results} summarizes evidence retrieval performance.
 \toprule
 \textbf{Metric} & \textbf{Value} \\
 \midrule
-Evidence retrieval success rate & 60.7\% \\
+Evidence retrieval success rate & 94.7\% \\
 Average sources per query & 1.52 \\
-Average evidence items per claim & 3.04 \\
+Average evidence items per claim & 2.41 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-The evidence retrieval success rate of 60.7\% indicates that approximately 6 out of 10 search queries return usable evidence. When evidence is retrieved, claims receive an average of 3.04 evidence items, providing multiple perspectives for verdict synthesis.
+The evidence retrieval success rate of 94.7\% indicates that the vast majority of search queries return usable evidence. When evidence is retrieved, claims receive an average of 2.41 evidence items, providing multiple perspectives for verdict synthesis.
 
 \subsubsection{Source Reliability Distribution}
 
@@ -1205,21 +1166,21 @@ A critical aspect of fact-checking is source quality. Table~\ref{tab:source-reli
 
 \begin{table}[H]
 \centering
-\caption{Source reliability distribution (n=456 total sources)}
+\caption{Source reliability distribution (n=724 total sources)}
 \label{tab:source-reliability}
 \begin{tabular}{lrr}
 \toprule
 \textbf{Reliability Rating} & \textbf{Count} & \textbf{Percentage} \\
 \midrule
-High & 383 & 84.0\% \\
-Medium & 67 & 14.7\% \\
+High & 605 & 83.6\% \\
+Medium & 110 & 15.2\% \\
 Low & 0 & 0.0\% \\
-Unknown & 6 & 1.3\% \\
+Unknown & 9 & 1.2\% \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-The overwhelming majority of retrieved sources (84.0\%) receive high reliability ratings from the Media Bias/Fact Check-based assessment system \citep{mbfc2024methodology}. No sources received low reliability ratings, and only 1.3\% were classified as unknown (typically due to missing MBFC data for niche domains). This distribution validates the effectiveness of the source credibility filtering, which prioritizes established, factual reporting sources.
+The overwhelming majority of retrieved sources (83.6\%) receive high reliability ratings from the Media Bias/Fact Check-based assessment system \citep{mbfc2024methodology}. No sources received low reliability ratings, and only 1.2\% were classified as unknown (typically due to missing MBFC data for niche domains). This distribution validates the effectiveness of the source credibility filtering, which prioritizes established, factual reporting sources.
 
 %-------------------------------------------------------
 \subsection{System Efficiency}
@@ -1250,7 +1211,7 @@ The mean processing time of 129.6 seconds per video enables near-interactive use
 
 \subsubsection{Cost Analysis}
 
-All experiments used GPT-4o-mini for LLM inference at current pricing (\$0.15 per million input tokens, \$0.60 per million output tokens). Across the 30-video evaluation corpus, the average cost per video was \$0.0063, with individual videos ranging from \$0.0008 to \$0.0164 depending on transcript length, claim complexity, and evidence retrieval needs. The total cost for processing all 30 videos was \$0.18, demonstrating the practical affordability of the system for individual users. This cost-effectiveness contrasts with concerns about LLM deployment costs noted in prior work \citep{zhang2025factagent}, showing that fact-checking systems can achieve meaningful accuracy at minimal expense when using appropriately-sized models.
+All experiments used GPT-4o-mini for LLM inference at current pricing (\$0.15 per million input tokens, \$0.60 per million output tokens). Across the 30-video evaluation corpus, the average cost per video was \$0.003, with individual videos ranging from \$0.0008 to \$0.0164 depending on transcript length, claim complexity, and evidence retrieval needs. The total cost for processing all 30 videos was \$0.09, demonstrating the practical affordability of the system for individual users. This cost-effectiveness contrasts with concerns about LLM deployment costs noted in prior work \citep{zhang2025factagent}, showing that fact-checking systems can achieve meaningful accuracy at minimal expense when using appropriately-sized models.
 
 %-------------------------------------------------------
 \subsection{Qualitative Analysis}
@@ -1282,7 +1243,7 @@ These examples demonstrate that the system successfully extracts claims while al
 
 \subsubsection{Error Analysis: Verdict Failures}
 
-Analysis of verdict errors reveals systematic patterns. The most common failure mode occurs when evidence retrieval fails entirely, causing the system to default to UNCLEAR verdicts regardless of ground truth. Table~\ref{tab:verdict-errors} categorizes the primary error types.
+Analysis of verdict errors reveals systematic patterns. With high evidence retrieval success (94.7\%), the primary failure modes involve stance misclassification and handling nuanced claims where conflicting evidence requires domain expertise to synthesize correctly. Table~\ref{tab:verdict-errors} categorizes the primary error types.
 
 \begin{table}[H]
 \centering
@@ -1299,17 +1260,37 @@ Nuanced claims & Claims requiring domain expertise to evaluate mixed evidence \\
 \end{tabular}
 \end{table}
 
-The predominant error pattern (evidence retrieval failure $\rightarrow$ UNCLEAR verdict) suggests that improving search query generation and web scraping robustness would yield substantial accuracy gains. Videos achieving 0\% verdict accuracy consistently exhibited evidence retrieval success rates near 0\%, while videos achieving 100\% accuracy consistently had success rates near 100\%.
+Error analysis reveals that evidence retrieval success does not guarantee verdict accuracy. Two of the four lowest-accuracy videos achieved 100\% evidence retrieval but 0\% verdict accuracy, indicating that the challenge lies in evidence synthesis rather than retrieval. These cases involve politically contested claims where ground truth stances require nuanced interpretation of conflicting sources.
 
-\subsubsection{Challenging Video Categories}
+\subsubsection{Analysis of Low-Accuracy Cases}
 
-Certain video categories proved more challenging for the system:
+Only 4 videos (13.3\%) achieved less than 25\% verdict accuracy. Detailed analysis reveals their characteristics:
 
-\textbf{Controversial topics with contested evidence:} Videos on politically charged topics (e.g., wage gap, climate policy) often retrieved conflicting evidence from sources with different editorial perspectives, leading to MIXED or UNCLEAR verdicts even when ground truth indicated clearer stances.
+\begin{table}[H]
+\centering
+\caption{Low-accuracy video analysis ($<$25\% verdict accuracy)}
+\label{tab:low-accuracy-videos}
+\small
+\begin{tabular}{p{4cm}ccp{4cm}}
+\toprule
+\textbf{Video Topic} & \textbf{Retrieval} & \textbf{Accuracy} & \textbf{Likely Cause} \\
+\midrule
+Trump's National Emergency & 60\% & 0\% & Political claims with contested interpretations \\
+Immigration Statistics & 100\% & 0\% & Conflicting sources on contested statistics \\
+Juice vs. Whole Fruit & 20\% & 20\% & Limited evidence retrieval \\
+Sleep \& Teenage Brain & 100\% & 20\% & Nuanced scientific claims \\
+\bottomrule
+\end{tabular}
+\end{table}
 
-\textbf{Niche or specialized domains:} Videos on highly specialized topics sometimes failed evidence retrieval entirely due to limited web coverage of specific claims.
+Key observations:
+\begin{itemize}
+    \item \textbf{High retrieval does not guarantee accuracy:} Two videos achieved 100\% retrieval but 0--20\% accuracy, confirming that evidence synthesis is the bottleneck for contested claims.
+    \item \textbf{No single category dominates:} Low-accuracy videos span both political (2) and health (2) topics, and include both factual content (3) and misinformation (1).
+    \item \textbf{Contested claims are hardest:} The common thread is claims where reasonable sources disagree or where ground truth requires nuanced interpretation.
+\end{itemize}
 
-\textbf{Conspiracy content:} Videos promoting misinformation (e.g., chemtrails, geoengineering conspiracies) were correctly identified as containing false claims when evidence was retrieved, demonstrating the system's capability to fact-check problematic content.
+\textbf{Successful categories:} Videos on scientific explanations (e.g., climate science, exercise benefits), health misinformation debunking (e.g., fluoride claims, detox myths), and conspiracy content (e.g., chemtrails, geoengineering) achieved high accuracy, demonstrating the system's effectiveness when evidence clearly supports or refutes claims.
 
 %-------------------------------------------------------
 \subsection{Considerations for Generative AI Systems}
@@ -1339,7 +1320,7 @@ Beyond LLM variability, the system's reliance on external web search introduces 
     \item \textbf{Rate limiting}: Search APIs may throttle requests, causing some queries to fail during high-load evaluation runs.
 \end{itemize}
 
-These factors explain part of the bimodal verdict accuracy distribution: search failures are not necessarily reproducible, and a claim that failed evidence retrieval in one run might succeed in another.
+These factors contribute to verdict accuracy variance: search results may differ between runs, and a claim that retrieved limited evidence in one execution might find more sources in another.
 
 \subsubsection{Implications for Metric Interpretation}
 
@@ -1357,23 +1338,21 @@ The strategies employed in this work to maximize reproducibility---temperature=0
 \subsection{Summary of Key Findings}
 %-------------------------------------------------------
 
-The experimental evaluation demonstrates that Factible achieves its design goals of high-precision claim extraction with evidence-backed verification:
+The experimental evaluation demonstrates that Factible achieves reliable fact-checking performance across diverse video content:
 
 \begin{enumerate}
-    \item \textbf{High-precision claim extraction:} The system extracts claims with 81.3\% precision, meaning users can trust that presented claims are legitimate factual statements from the video.
+    \item \textbf{High-precision claim extraction:} 81.3\% precision with strong importance ranking (MAP 0.870), meaning users can trust that presented claims are legitimate, high-priority factual statements.
 
-    \item \textbf{Effective importance prioritization:} The MAP score of 0.870 and Recall@Important of 39.5\% confirm that the system successfully identifies and prioritizes the most important claims, capturing nearly 40\% of high-importance claims while extracting only 30\% of total claims.
+    \item \textbf{Robust evidence retrieval:} 94.7\% success rate with 83.6\% of sources from high-reliability origins, demonstrating effective query generation and source filtering.
 
-    \item \textbf{Reliable evidence sourcing:} 84.0\% of retrieved evidence comes from high-reliability sources, ensuring that verdicts are grounded in credible information.
+    \item \textbf{Consistent verdict accuracy:} 73.3\% overall accuracy, with 70\% of videos (21/30) achieving $\geq$75\% accuracy. This represents a 2.93$\times$ improvement over random baselines.
 
-    \item \textbf{Meaningful verdict accuracy:} The 73.3\% verdict accuracy substantially exceeds random baselines and provides evidence-backed explanations enabling user evaluation.
+    \item \textbf{Identified challenges:} The 4 low-accuracy videos (13.3\%) involve politically contested claims with legitimate disagreement, where evidence synthesis rather than retrieval poses the challenge.
 
-    \item \textbf{Practical efficiency:} Mean processing time of 129.6 seconds per video enables near-interactive use at negligible API cost.
-
-    \item \textbf{Identified improvement opportunities:} The bimodal verdict accuracy distribution suggests that enhancing evidence retrieval robustness would yield significant overall accuracy gains.
+    \item \textbf{Practical efficiency:} 129.6 seconds mean latency at \$0.003 per video enables cost-effective, near-interactive use.
 \end{enumerate}
 
-These results position Factible as a viable tool for preliminary fact-checking of YouTube content, providing high-precision claim identification and evidence-backed verification suitable for users seeking to evaluate video claims.
+These results position Factible as a reliable tool for preliminary fact-checking of YouTube content. The system performs well on scientific, health, and clearly verifiable claims, while contested political topics with conflicting evidence sources represent the primary remaining challenge for future work.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION 3: FUTURE WORK
@@ -1453,7 +1432,7 @@ Making the system publicly accessible would enable real-world validation and fee
 \section{Ground Truth Annotation Dataset}
 \label{appendix:ground-truth}
 
-This appendix provides details on the ground truth annotation dataset used for system evaluation. The complete dataset comprises 30 YouTube videos with 504 annotated claims across three thematic categories.
+This appendix provides details on the ground truth annotation dataset used for system evaluation. The complete dataset comprises 30 YouTube videos with 503 annotated claims across three thematic categories.
 
 \subsection{Video Corpus Summary}
 
