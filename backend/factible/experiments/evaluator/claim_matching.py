@@ -45,6 +45,21 @@ def semantic_similarity_match_claims(
         gt_texts = [c.claim_text for c in gt_claims]
         sys_texts = [c.text for c in system_claims]
 
+        # Handle edge cases: no claims
+        if not system_claims:
+            return {
+                "true_positives": [],
+                "false_positives": [],
+                "false_negatives": gt_claims,
+            }
+
+        if not gt_claims:
+            return {
+                "true_positives": [],
+                "false_positives": system_claims,
+                "false_negatives": [],
+            }
+
         gt_embeddings = model.encode(gt_texts, convert_to_tensor=True)
         sys_embeddings = model.encode(sys_texts, convert_to_tensor=True)
 

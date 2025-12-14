@@ -179,7 +179,15 @@ class GroundTruthEvaluator:
         print(f"Importance MAE: {claim_metrics.importance_mae:.3f}")
 
         # 2. Evaluate verdicts
-        claim_reports = outputs_data["final_output"]["claim_reports"]
+        # Handle case where no claims were extracted (no final_output)
+        if (
+            "final_output" in outputs_data
+            and "claim_reports" in outputs_data["final_output"]
+        ):
+            claim_reports = outputs_data["final_output"]["claim_reports"]
+        else:
+            claim_reports = []
+
         verdict_metrics = self.verdict_eval.evaluate(
             gt.claims, claim_reports, claim_metrics.matched_claims
         )
