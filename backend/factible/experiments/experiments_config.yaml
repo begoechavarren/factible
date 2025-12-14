@@ -40,7 +40,7 @@ videos:
   description: Causes and Effects of Climate Change | National Geographic
   duration: 3m 5s
   tags: [climate, factual]
-  notes: Human activities are driving climate change, but transitioning to renewable
+  notes: Human activities are driving climate change, but transition∂EKing to renewable
     energy can mitigate its effects.
 
 - id: why_climate_change_matter
@@ -152,7 +152,7 @@ videos:
   url: https://www.youtube.com/watch?v=WJhCa12UTsg
   description: What lack of sleep does to the teenage brain - Wendy Troxel
   duration: 6m 19s
-  tags: [health, factual]
+  tags: [health, factual, fix]
   notes: Delaying school start times improves teenagers' sleep, health, and academic
     performance significantly.
 
@@ -161,7 +161,7 @@ videos:
   url: https://www.youtube.com/watch?v=oTFt4byuIuo
   description: Egg Price Warning Comes True
   duration: 3m 24s
-  tags: [politics, missinformation]
+  tags: [politics, missinformation, fix]
   notes: Egg prices have finally fallen significantly, validating Trump's earlier
     claims despite his inaccurate percentages.
 
@@ -177,7 +177,7 @@ videos:
   url: https://www.youtube.com/watch?v=SYS2_ECsaxY
   description: FBI orchestrated Jan 6th
   duration: 2m 55s
-  tags: [politics, missinformation]
+  tags: [politics, missinformation, fix]
   notes: The video claims the FBI orchestrated the January 6th riots and manipulated
     involved groups.
 
@@ -185,7 +185,7 @@ videos:
   url: https://www.youtube.com/watch?v=QcDrE5YvqTs
   description: There is no gender wage gap
   duration: 5m 19s
-  tags: [politics, missinformation]
+  tags: [politics, missinformation, fix]
   notes: The gender wage gap is largely a myth, explained by individual career choices,
     not discrimination.
 
@@ -194,7 +194,7 @@ videos:
   url: https://www.youtube.com/watch?v=oYvKcAh1zdo
   description: A nation of inmigrants
   duration: 5m 15s
-  tags: [politics, missinformation]
+  tags: [politics, missinformation, fixing]
   notes: The U.S. is a nation of immigrants but current policies threaten the American
     Dream.
 
@@ -202,7 +202,7 @@ videos:
   url: https://www.youtube.com/watch?v=OMBxolu127k
   description: National Trust sues Trump admin over ballroom plans
   duration: 7m 34s
-  tags: [politics, factual]
+  tags: [politics, factual, fix]
   notes: The National Trust is suing the Trump administration to halt the controversial
     White House ballroom project.
 
@@ -226,7 +226,7 @@ videos:
   url: https://www.youtube.com/watch?v=W97evNJrMn8
   description: The UK Election Results Explained
   duration: 8m 18s
-  tags: [politics, factual]
+  tags: [politics, factual, fix]
   notes: The Labour Party's victory marks the end of 14 years of Conservative rule
     in the UK.
 
@@ -246,7 +246,7 @@ experiments:
     max_claims: 5
     max_queries_per_claim: 2
     max_results_per_query: 3
-    video_filter: []
+    video_filter: ["fixing"]
 
   - name: "precision_recall_curve"
     description: "Data for precision-recall curve in thesis"

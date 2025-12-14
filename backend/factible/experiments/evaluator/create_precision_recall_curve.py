@@ -138,16 +138,17 @@ def main(
     # Add legend
     ax.legend(loc="lower left", fontsize=12)
 
-    # Add text box with interpretation
+    # Add text box with interpretation (top right corner)
     textstr = f"Operating Point: k=5\nPrecision: {data['precision'][data['max_claims'].index(5)]:.1%}\nRecall: {data['recall'][data['max_claims'].index(5)]:.1%}\nF1 Score: {data['f1'][data['max_claims'].index(5)]:.1%}"
     props = dict(boxstyle="round", facecolor="wheat", alpha=0.5)
     ax.text(
-        0.02,
-        0.82,
+        0.98,
+        0.98,
         textstr,
         transform=ax.transAxes,
         fontsize=11,
         verticalalignment="top",
+        horizontalalignment="right",
         bbox=props,
     )
 
