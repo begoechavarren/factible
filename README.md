@@ -3,18 +3,42 @@
   <p><em>E2E project to fact check YouTube videos</em></p>
 </div>
 
+<p align="center">
+  <img src="assets/main.png" alt="Landing page" /><br/>
+  <em>Landing page</em>
+</p>
+
+<p align="center">
+  <img src="assets/process.png" alt="Processing" /><br/>
+  <em>Real-time updates</em>
+</p>
+
+<p align="center">
+  <img src="assets/results.png" alt="Results overview" /><br/>
+  <em>Results page</em>
+</p>
+
+<p align="center">
+  <img src="assets/claim.png" alt="Claim details" /><br/>
+  <em>Results per claim</em>
+</p>
+
+## Quick Start
+
+```bash
+# Backend
+cd backend
+uv run python -m factible_api.main
+
+# Frontend
+cd frontend
+npm run dev
 ```
-$ cd backend
-$ uv run python -m factible_api.main
 
-$ ollama serve
+```bash
+# Run experiments
+uv run factible-experiments run --experiment vary_claims
 
-$ cd frontend
-$ npm run dev
-
-$ ./factible/experiments/run_phase1_experiments.sh --ofat-only
-$ ./factible/experiments/run_phase1_experiments.sh --resume vary_claims_20251206_191228 --ofat-only
-$ uv run factible-experiments analyze --runs-dir factible/experiments/runs/vary_claims_20251206_191228 --name vary_claims_partial
-
-$ uv run factible-experiments run --experiment vary_claims --runs-subdir vary_claims_20251206_191228
+# Analyze results
+uv run factible-experiments analyze --runs-dir factible/experiments/runs/<run_dir>
 ```

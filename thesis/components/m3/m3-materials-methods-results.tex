@@ -126,7 +126,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Materials and Methods}
 
-This section presents the comprehensive technical implementation of Factible, a multi-agent system for automated fact-checking of YouTube videos. The system implements an end-to-end pipeline that processes video content through five specialized components, leveraging large language models (LLMs) for reasoning tasks while employing classical algorithms for deterministic operations. The implementation follows design-science principles \citep{hevner2004design, oates2006researching}, emphasizing the creation of artifacts that extend human capabilities through systematic evaluation and iterative refinement.
+This section presents the comprehensive technical implementation of Factible, a multi-agent system for automated fact-checking of YouTube videos. The complete source code is publicly available at \url{https://github.com/begoechavarren/factible}. The system implements an end-to-end pipeline that processes video content through five specialized components, leveraging large language models (LLMs) for reasoning tasks while employing classical algorithms for deterministic operations. The implementation follows design-science principles \citep{hevner2004design, oates2006researching}, emphasizing the creation of artifacts that extend human capabilities through systematic evaluation and iterative refinement.
 
 %-------------------------------------------------------
 \subsection{System Architecture Overview}
@@ -313,19 +313,7 @@ The transcriptor uses the \texttt{youtube-transcript-api} library to fetch avail
 
 \paragraph{Output Schema}
 
-\begin{lstlisting}[language=Python, caption={Transcriptor output schemas}]
-class TranscriptSegment(BaseModel):
-    """A single timestamped segment from a YouTube transcript."""
-    text: str = Field(description="The text content of this segment")
-    start: float = Field(ge=0.0, description="Start time in seconds")
-    duration: float = Field(ge=0.0, description="Duration in seconds")
-
-class TranscriptData(BaseModel):
-    """Complete transcript data with timestamped segments."""
-    text: str = Field(description="Full transcript as plain text")
-    segments: list[TranscriptSegment]
-    video_id: str = Field(description="YouTube video ID")
-\end{lstlisting}
+The transcriptor outputs structured data using Pydantic models for type safety and validation. Each transcript segment contains text content, start time, and duration with non-negative constraints. The complete transcript includes the full text, a list of timestamped segments, and the video identifier.
 
 \paragraph{Timestamp Mapping Algorithm}
 
@@ -353,7 +341,8 @@ The claim extractor employs a novel \textit{thesis-first approach} with multi-st
 \centering
 \caption{Claim importance scoring guidelines}
 \label{tab:importance-scoring}
-\begin{tabular}{lll}
+\small
+\begin{tabular}{p{2.5cm}p{5.5cm}p{5cm}}
 \toprule
 \textbf{Score Range} & \textbf{Description} & \textbf{Examples} \\
 \midrule
@@ -377,24 +366,7 @@ After LLM extraction, each claim is located in the original transcript using fuz
 
 \paragraph{Output Schema}
 
-\begin{lstlisting}[language=Python, caption={Claim extractor output schemas}]
-class Claim(BaseModel):
-    """A single claim or fact extracted from text."""
-    text: str  # Claim text (<=40 words recommended)
-    confidence: float = Field(ge=0.0, le=1.0)
-    category: str  # historical, scientific, statistical, etc.
-    importance: float = Field(default=0.5, ge=0.0, le=1.0)
-    context: str | None = Field(default=None)
-    # Post-processing fields
-    transcript_char_start: int | None = None
-    transcript_char_end: int | None = None
-    transcript_match_score: float | None = None
-
-class ExtractedClaims(BaseModel):
-    """Collection of claims extracted from a transcript."""
-    claims: list[Claim]  # Sorted by importance (descending)
-    total_count: int
-\end{lstlisting}
+Extracted claims are represented as structured objects with validated fields: claim text (recommended maximum 40 words), confidence score (0.0--1.0), category (historical, scientific, statistical), importance score (0.0--1.0), and optional context. Post-processing adds transcript location metadata including character positions and fuzzy match scores. The collection of claims is sorted by importance in descending order.
 
 Standard fact-checking datasets such as FEVER \citep{thorne2018fever} and FEVEROUS \citep{aly2021feverous} are used as external references to evaluate claim extraction performance. FEVER contains 185,445 claims derived from Wikipedia sentences labeled as Supported, Refuted, or NotEnoughInfo, while FEVEROUS extends this to 87,026 claims with both unstructured text and structured table evidence.
 
@@ -412,7 +384,8 @@ The system generates four types of queries with different search strategies, as 
 \centering
 \caption{Query type taxonomy}
 \label{tab:query-types}
-\begin{tabular}{llll}
+\small
+\begin{tabular}{p{2.3cm}p{4cm}p{3cm}p{4cm}}
 \toprule
 \textbf{Type} & \textbf{Description} & \textbf{Strategy} & \textbf{Example} \\
 \midrule
@@ -428,19 +401,13 @@ CONTEXT & Broader context & Background search & ``economic indicators fall 2024'
 
 Queries are prioritized 1--5 based on likelihood of finding reliable, definitive information: priority 1 queries are always included, priority 2 by default, priority 3 if budget allows, and priorities 4--5 rarely or only for completeness.
 
+\paragraph{Context-Aware Query Generation}
+
+Beyond factual accuracy, the query generator is designed to detect misleadingly framed claims---statements that may be technically accurate but presented without essential context. The system prompt instructs the LLM to respect temporal context when choosing keywords (e.g., including relevant years or qualifiers to avoid mixing eras), and to explicitly generate queries seeking counter-arguments or opposing views. This approach helps surface evidence that may qualify, limit, or contextualize the original claim, enabling more nuanced verdict generation. For example, a claim stating ``unemployment dropped 20\%'' might be technically accurate for a specific quarter but misleading without the broader trend; context-aware queries would seek both confirming statistics and broader economic context.
+
 \paragraph{Output Schema}
 
-\begin{lstlisting}[language=Python, caption={Query generator output schemas}]
-class SearchQuery(BaseModel):
-    query: str           # Search query text
-    query_type: str      # "direct", "alternative", "source", "context"
-    priority: int        # 1-5 (1 = highest priority)
-
-class GeneratedQueries(BaseModel):
-    original_claim: str           # Reference to source claim
-    queries: list[SearchQuery]    # Filtered and sorted queries
-    total_count: int              # Original count before filtering
-\end{lstlisting}
+Generated queries are structured objects containing the query text, query type (direct, alternative, source, or context), and priority (1--5, with 1 being highest). The complete output includes the original claim reference, a filtered and sorted list of queries, and a count of total queries generated before filtering.
 
 %---
 
@@ -534,7 +501,7 @@ The evidence extractor analyzes retrieved content against claims using structure
     \item \textbf{UNCLEAR}: Genuinely ambiguous content that discusses related topics without addressing the specific claim.
 \end{itemize}
 
-Critical prompt instructions ensure that mere discussion equals UNCLEAR, that mechanisms are recognized even without exact terminology, and that both Google snippets and page content are considered with better evidence prioritized.
+Critical prompt instructions ensure that mere discussion equals UNCLEAR, that mechanisms are recognized even without exact terminology, and that both Google snippets and page content are considered with better evidence prioritized. Importantly, the evidence extractor pays special attention to qualifiers such as ``only'', ``never'', ``always'', and temporal scope limitations (e.g., ``since X date'')---this enables detection of claims that may be technically accurate but misleadingly framed due to omitted context or overgeneralization.
 
 \paragraph{Adaptive Credibility Filtering}
 
@@ -590,23 +557,7 @@ Verdicts are generated immediately after each claim's evidence collection comple
 
 \paragraph{Output Schema}
 
-\begin{lstlisting}[language=Python, caption={Output generator schemas}]
-VerdictConfidence = Literal["low", "medium", "high"]
-
-class ClaimFactCheckReport(BaseModel):
-    """Structured report ready to present to end users."""
-    claim_text: str
-    claim_confidence: float
-    claim_category: str
-    overall_stance: EvidenceStance
-    verdict_confidence: VerdictConfidence
-    verdict_summary: str
-    evidence_by_stance: dict[EvidenceStance, list[EvidenceSourceSummary]]
-    total_sources: int = Field(ge=0)
-    evidence_quality_score: float = Field(ge=0.0, le=1.0)
-    timestamp_hint: float | None = None
-    timestamp_confidence: float | None = None
-\end{lstlisting}
+The fact-check report is a structured object containing all information for user presentation: claim metadata (text, confidence, category), verdict assessment (overall stance, confidence level, summary), evidence organization (grouped by stance with source summaries), quality metrics (total source count, evidence quality score), and optional timestamp references for video navigation. Verdict confidence is constrained to low, medium, or high levels.
 
 %-------------------------------------------------------
 \subsection{LLM Configuration and Model Management}
@@ -760,6 +711,7 @@ The evaluator computes performance metrics using modular components for each eva
     \item \textbf{Verdict accuracy}: Comparison of system stances against ground truth labels.
     \item \textbf{Evidence retrieval metrics}: Success rate and source reliability distribution based on MBFC credibility ratings.
     \item \textbf{System efficiency}: Latency and cost aggregation across all pipeline components.
+    \item \textbf{LLM-as-judge evaluation} (optional): Qualitative assessment of claim relevance, evidence quality, and verdict coherence using LLM-based evaluation \citep{raschka2025evaluation}.
 \end{itemize}
 
 Evaluations execute in parallel across multiple videos for efficiency. Results include per-video reports and aggregate statistics (means, standard deviations, distributions) across all evaluated videos.
@@ -772,23 +724,7 @@ This infrastructure enabled an iterative development cycle: run experiments, eva
 
 \subsubsection{FastAPI Setup}
 
-The API uses FastAPI with CORS middleware for frontend development and API versioning:
-
-\begin{lstlisting}[language=Python, caption={FastAPI setup}]
-app = FastAPI(
-    title="Factible API",
-    version="0.1.0",
-    description="Automated fact-checking for YouTube videos"
-)
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:5173"],
-    allow_methods=["*"], allow_headers=["*"],
-)
-
-app.include_router(fact_check_router, prefix="/api/v1")
-\end{lstlisting}
+The API uses FastAPI with CORS middleware configured for local frontend development, supporting common development server ports. API routes are organized under a versioned prefix to enable future API evolution without breaking existing clients.
 
 \subsubsection{Streaming Endpoint with SSE}
 
@@ -819,22 +755,50 @@ Error & 100\% & error & error message \\
 
 \subsubsection{Request/Response Schemas}
 
-\begin{lstlisting}[language=Python, caption={API request/response schemas}]
-class FactCheckRequest(BaseModel):
-    """Request schema for fact-checking a YouTube video."""
-    video_url: HttpUrl = Field(..., description="YouTube video URL")
-    experiment_name: str = Field(default="default")
-    max_claims: int | None = Field(default=5, ge=1, le=20)
-    max_queries_per_claim: int = Field(default=2, ge=1, le=5)
-    max_results_per_query: int = Field(default=3, ge=1, le=10)
+Request schemas validate YouTube video URLs and pipeline parameters (claim limits, query limits, results per query) with appropriate range constraints. Progress update schemas structure the SSE events with step identification, descriptive messages, progress percentages (0--100), and optional data payloads for intermediate results.
 
-class ProgressUpdate(BaseModel):
-    """SSE response schema for progress updates."""
-    step: str
-    message: str
-    progress: int  # 0-100
-    data: dict | None
-\end{lstlisting}
+%-------------------------------------------------------
+\subsection{User Interface}
+%-------------------------------------------------------
+
+A web-based frontend provides an accessible interface for end users to interact with the fact-checking pipeline. The interface is built with React and communicates with the backend via the streaming API endpoint. Figure~\ref{fig:ui-screenshots} presents the four main interface states.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{../../../assets/main.png}
+    \caption{Landing page with YouTube URL input}
+    \label{fig:ui-main}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{../../../assets/process.png}
+    \caption{Real-time processing with progress updates}
+    \label{fig:ui-process}
+\end{subfigure}
+
+\vspace{0.5cm}
+
+\begin{subfigure}[b]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{../../../assets/results.png}
+    \caption{Results overview with embedded video player}
+    \label{fig:ui-results}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{../../../assets/claim.png}
+    \caption{Detailed claim view with verdict and sources}
+    \label{fig:ui-claim}
+\end{subfigure}
+\caption{User interface screenshots showing the fact-checking workflow: (a) users paste a YouTube URL, (b) real-time progress is displayed during analysis, (c) results are presented alongside the embedded video, and (d) each claim shows its verdict, confidence level, and supporting evidence with source reliability ratings.}
+\label{fig:ui-screenshots}
+\end{figure}
+
+The interface emphasizes transparency by displaying source reliability ratings, confidence levels, and direct links to evidence sources. Users can click ``Jump'' buttons to navigate directly to the video timestamp where each claim was made, enabling quick verification of the original context.
 
 %-------------------------------------------------------
 \subsection{Code Quality and Engineering Practices}
@@ -918,6 +882,7 @@ Several architectural decisions significantly shaped the implementation. Pydanti
 % SECTION 2: RESULTS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
+\label{sec:results}
 
 This section presents the experimental evaluation of Factible across 30 YouTube videos spanning diverse topics including health, science, politics, and climate. The evaluation framework follows established practices from claim detection and fact-checking research \citep{hassan2015claimbuster, thorne2018fever}, combining ground truth comparison with LLM-as-judge quality assessments. All experiments used \texttt{max\_claims=5} as the primary operating point, selected after exploring the precision-recall tradeoff across multiple configurations while balancing cost and latency constraints.
 
@@ -1207,7 +1172,14 @@ Total processing time (30 videos) & 64.8 minutes \\
 \end{tabular}
 \end{table}
 
-The mean processing time of 129.6 seconds per video enables near-interactive use for individual videos. The high variance (standard deviation 101.8s) reflects differences in video complexity, evidence retrieval success, and web scraping latency. Videos with failed evidence retrieval complete faster (fewer web requests), while videos requiring multiple successful searches experience longer latencies.
+The mean processing time of 129.6 seconds per video enables near-interactive use for individual videos. The high variance (standard deviation 101.8s) reflects multiple contributing factors:
+
+\begin{itemize}
+    \item \textbf{Video length}: Longer transcripts require more LLM tokens for claim extraction, increasing inference time.
+    \item \textbf{Pipeline parameters}: The configuration parameters \texttt{max\_claims}, \texttt{max\_queries}, and \texttt{max\_results\_per\_query} directly multiply the number of downstream operations. With the evaluation configuration ($\text{max\_claims}=5$, $\text{max\_queries}=3$, $\text{max\_results}=3$), each video triggers up to $5 \times 3 \times 3 = 45$ evidence extraction operations.
+    \item \textbf{Evidence retrieval success}: Videos with failed evidence retrieval complete faster (fewer web requests), while videos requiring multiple successful searches experience longer latencies.
+    \item \textbf{Web scraping variability}: JavaScript-heavy sites require longer Selenium wait times, and some domains respond slower than others.
+\end{itemize}
 
 \subsubsection{Cost Analysis}
 
@@ -1424,6 +1396,20 @@ Transitioning from research prototype to production system requires addressing s
 
 Making the system publicly accessible would enable real-world validation and feedback collection, informing further improvements based on actual usage patterns.
 
+%-------------------------------------------------------
+\subsection{Extended Evaluation}
+%-------------------------------------------------------
+
+The current evaluation, while comparable in scale to prior fact-checking systems \citep{hassan2017vldb}, would benefit from expansion along two dimensions:
+
+\begin{itemize}
+    \item \textbf{Larger evaluation corpus}: Scaling from 30 to 100+ videos would enable more robust statistical analysis, identification of edge cases, and evaluation across a broader range of topics and content styles. A larger corpus would also allow stratified analysis by video characteristics (length, topic, claim density) and more reliable confidence intervals for reported metrics.
+
+    \item \textbf{Parameter grid exploration}: The current evaluation used a single configuration (\texttt{max\_claims}=5, \texttt{max\_queries}=3, \texttt{max\_results}=3). Systematic evaluation across the full parameter space would characterize the cost-accuracy-latency tradeoffs more comprehensively. Key configurations to explore include higher claim limits (10, 15, 20) for recall-focused applications, varied query counts to understand evidence saturation, and different result limits to assess diminishing returns in evidence collection.
+\end{itemize}
+
+Such extended evaluation would provide deployment guidelines for different use cases (e.g., high-precision quick checks vs. thorough investigations) and quantify the marginal value of additional computational resources.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % APPENDIX
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1438,7 +1424,7 @@ This appendix provides details on the ground truth annotation dataset used for s
 
 Table~\ref{tab:video-corpus} presents the evaluation video corpus organized by category and content type.
 
-\begin{longtable}{p{5cm}p{3cm}p{2cm}p{2cm}}
+\begin{longtable}{p{6.5cm}p{2cm}p{3cm}r}
 \caption{Evaluation video corpus by category and content type} \label{tab:video-corpus} \\
 \toprule
 \textbf{Video Title} & \textbf{Category} & \textbf{Content Type} & \textbf{Claims} \\
@@ -1514,40 +1500,7 @@ Each ground truth claim was annotated with the following attributes:
 
 \subsection{Sample Annotation}
 
-The following excerpt demonstrates the annotation format for ``The Brain-Changing Benefits of Exercise'' (TED talk by Wendy Suzuki):
-
-\begin{lstlisting}[language=Python, caption={Sample ground truth annotation (YAML format)}]
-video_id: BHY0FxzoKZE
-video_title: The Brain-Changing Benefits of Exercise | Wendy Suzuki | TED
-claims:
-  - claim_text: A single workout immediately increases levels of
-      neurotransmitters like dopamine, serotonin, and noradrenaline
-    is_checkable: true
-    importance: 0.9
-    verdict:
-      overall_stance: SUPPORTS
-      reasoning: True. Studies show acute exercise increases dopamine,
-        serotonin, noradrenaline. Basso & Suzuki 2017 review confirms.
-
-  - claim_text: Exercise produces brand new brain cells, new brain
-      cells in the hippocampus, that increase its volume
-    is_checkable: true
-    importance: 0.95
-    verdict:
-      overall_stance: MIXED
-      reasoning: Mixed. In animals (mice) - yes, clear neurogenesis.
-        In humans - controversial. Hippocampus volume increases but
-        might not be new neurons (could be blood flow, other factors).
-
-  - claim_text: You want to get three to four times a week exercise,
-      minimum 30 minutes an exercise session, and aerobic exercise
-    is_checkable: true
-    importance: 0.8
-    verdict:
-      overall_stance: SUPPORTS
-      reasoning: Good recommendation. CDC/WHO say 150 min/week.
-        Suzuki's 3-4 x 30min = 90-120min/week is within range.
-\end{lstlisting}
+A typical annotated video (e.g., ``The Brain-Changing Benefits of Exercise'' TED talk) contains the video identifier, title, and a list of claims with their attributes. Example claims include statements about neurotransmitter increases from exercise (importance: 0.9, verdict: SUPPORTS), neurogenesis in the hippocampus (importance: 0.95, verdict: MIXED due to human-animal research differences), and exercise recommendations (importance: 0.8, verdict: SUPPORTS based on CDC/WHO guidelines). The complete ground truth dataset in machine-readable YAML format is available in the project repository.
 
 \subsection{Annotation Guidelines}
 
