@@ -5,15 +5,21 @@ Calculates precision, recall, F1, MAP, importance-based metrics for claim extrac
 """
 
 from typing import List, Dict
+import logging
 import numpy as np
 import asyncio
 
-from ..models import ClaimExtractionMetrics, GroundTruthClaim
-from ..claim_matching import (
+from factible.experiments.evaluator.models import (
+    ClaimExtractionMetrics,
+    GroundTruthClaim,
+)
+from factible.experiments.evaluator.claim_matching import (
     semantic_similarity_match_claims,
     calculate_mean_average_precision,
 )
-from ..llm_judge import ClaimQualityJudge
+from factible.experiments.evaluator.llm_judge import ClaimQualityJudge
+
+_logger = logging.getLogger(__name__)
 
 
 class ClaimExtractionEvaluator:
@@ -121,7 +127,7 @@ class ClaimExtractionEvaluator:
         # LLM-as-judge for claim quality (optional)
         claim_quality_avg = 0.0
         if self.enable_llm_judge and self.judge:
-            print("  Running LLM-as-judge for claim quality...")
+            _logger.info("  Running LLM-as-judge for claim quality...")
 
             # Evaluate extracted claims in parallel (limit to avoid excessive API calls)
             max_claims_to_evaluate = min(len(system_claims), 5)
@@ -131,8 +137,10 @@ class ClaimExtractionEvaluator:
 
             if quality_scores:
                 claim_quality_avg = np.mean(quality_scores)
-                print(
-                    f"  Evaluated {len(quality_scores)} claims in parallel, avg quality: {claim_quality_avg:.2f}"
+                _logger.info(
+                    "  Evaluated %d claims in parallel, avg quality: %.2f",
+                    len(quality_scores),
+                    claim_quality_avg,
                 )
 
         return ClaimExtractionMetrics(
@@ -162,7 +170,7 @@ class ClaimExtractionEvaluator:
                 )
                 return score.overall_quality
             except Exception as e:
-                print(f"    Warning: Failed to evaluate claim quality: {e}")
+                _logger.warning("    Failed to evaluate claim quality: %s", e)
                 return None
 
         # Run all evaluations in parallel

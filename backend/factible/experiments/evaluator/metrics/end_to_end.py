@@ -4,7 +4,7 @@ End-to-end metrics calculator.
 
 from typing import Dict
 
-from ..models import EndToEndMetrics
+from factible.experiments.evaluator.models import EndToEndMetrics
 
 
 class EndToEndEvaluator:

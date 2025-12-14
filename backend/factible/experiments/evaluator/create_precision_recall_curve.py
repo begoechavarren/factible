@@ -14,6 +14,26 @@ matplotlib.use("Agg")  # Use non-interactive backend
 import matplotlib.pyplot as plt
 from pathlib import Path
 
+# LaTeX-style settings for academic figures
+plt.rcParams.update(
+    {
+        "font.family": "serif",
+        "font.serif": ["Computer Modern Roman", "Times New Roman", "DejaVu Serif"],
+        "font.size": 11,
+        "axes.labelsize": 12,
+        "axes.titlesize": 13,
+        "xtick.labelsize": 10,
+        "ytick.labelsize": 10,
+        "legend.fontsize": 10,
+        "figure.titlesize": 14,
+        "text.usetex": False,  # Set True if LaTeX is installed
+        "axes.linewidth": 0.8,
+        "grid.linewidth": 0.5,
+        "lines.linewidth": 1.5,
+        "lines.markersize": 6,
+    }
+)
+
 app = typer.Typer()
 
 
@@ -85,68 +105,76 @@ def main(
 
     typer.echo(f"\nLoaded data for {len(data['max_claims'])} configurations")
 
-    # Create the precision-recall curve
-    fig, ax = plt.subplots(figsize=(10, 7))
+    # Create the precision-recall curve with academic styling
+    fig, ax = plt.subplots(figsize=(6, 4.5))
 
-    # Plot the curve
+    # Plot the curve - darker color, cleaner style
     ax.plot(
         data["recall"],
         data["precision"],
-        "b-o",
-        linewidth=2.5,
-        markersize=10,
+        color="#2c3e50",
+        marker="o",
+        linestyle="-",
+        linewidth=1.5,
+        markersize=7,
+        markerfacecolor="white",
+        markeredgewidth=1.5,
         label="Precision-Recall Curve",
     )
 
     # Annotate each point with max_claims value
     for i, k in enumerate(data["max_claims"]):
-        # Highlight max_claims=5 (your primary configuration)
+        # Highlight max_claims=5 (primary configuration)
         if k == 5:
             ax.annotate(
-                f"k={k}\n(Primary)",
+                f"k={k}",
                 (data["recall"][i], data["precision"][i]),
                 textcoords="offset points",
-                xytext=(10, 10),
+                xytext=(8, 8),
                 ha="left",
-                fontsize=11,
+                fontsize=10,
                 fontweight="bold",
-                bbox=dict(boxstyle="round,pad=0.5", facecolor="yellow", alpha=0.7),
+                bbox=dict(
+                    boxstyle="round,pad=0.3",
+                    facecolor="#f0f0f0",
+                    edgecolor="#666666",
+                    linewidth=0.5,
+                ),
             )
         else:
             ax.annotate(
                 f"k={k}",
                 (data["recall"][i], data["precision"][i]),
                 textcoords="offset points",
-                xytext=(0, 12),
+                xytext=(0, 10),
                 ha="center",
-                fontsize=10,
+                fontsize=9,
             )
 
-    # Styling
-    ax.set_xlabel("Recall", fontsize=14, fontweight="bold")
-    ax.set_ylabel("Precision", fontsize=14, fontweight="bold")
-    ax.set_title(
-        "Precision-Recall Tradeoff for Different max_claims Values",
-        fontsize=16,
-        fontweight="bold",
-        pad=20,
-    )
-    ax.grid(True, alpha=0.3, linestyle="--")
+    # Clean academic styling
+    ax.set_xlabel("Recall")
+    ax.set_ylabel("Precision")
+    ax.set_title("Precision-Recall Tradeoff by max_claims (k)", pad=10)
+    ax.grid(True, alpha=0.3, linestyle="-", linewidth=0.5)
     ax.set_xlim(0, 0.65)
     ax.set_ylim(0.65, 0.85)
 
-    # Add legend
-    ax.legend(loc="lower left", fontsize=12)
+    # Clean up spines
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
 
-    # Add text box with interpretation (top right corner)
-    textstr = f"Operating Point: k=5\nPrecision: {data['precision'][data['max_claims'].index(5)]:.1%}\nRecall: {data['recall'][data['max_claims'].index(5)]:.1%}\nF1 Score: {data['f1'][data['max_claims'].index(5)]:.1%}"
-    props = dict(boxstyle="round", facecolor="wheat", alpha=0.5)
+    # Add text box with operating point (top right corner)
+    idx_5 = data["max_claims"].index(5)
+    textstr = f"Operating point (k=5):\nPrecision: {data['precision'][idx_5]:.1%}\nRecall: {data['recall'][idx_5]:.1%}\nF1: {data['f1'][idx_5]:.1%}"
+    props = dict(
+        boxstyle="round,pad=0.4", facecolor="white", edgecolor="#cccccc", linewidth=0.5
+    )
     ax.text(
-        0.98,
-        0.98,
+        0.97,
+        0.97,
         textstr,
         transform=ax.transAxes,
-        fontsize=11,
+        fontsize=9,
         verticalalignment="top",
         horizontalalignment="right",
         bbox=props,

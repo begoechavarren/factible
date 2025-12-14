@@ -27,18 +27,21 @@ from pathlib import Path
 from typing import List
 import json
 from datetime import datetime
+import logging
 import numpy as np
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-from .models import VideoEvaluationResult
-from .ground_truth import GroundTruthManager
-from .metrics import (
+from factible.experiments.evaluator.models import VideoEvaluationResult
+from factible.experiments.evaluator.ground_truth import GroundTruthManager
+from factible.experiments.evaluator.metrics import (
     ClaimExtractionEvaluator,
     VerdictEvaluator,
     QueryGenerationEvaluator,
     EvidenceSearchEvaluator,
     EndToEndEvaluator,
 )
+
+_logger = logging.getLogger(__name__)
 
 
 class GroundTruthEvaluator:
@@ -129,17 +132,17 @@ class GroundTruthEvaluator:
         Returns:
             VideoEvaluationResult with all metrics
         """
-        print(f"\n{'=' * 60}")
-        print(f"Evaluating: {video_id}")
-        print(f"{'=' * 60}")
+        _logger.info("\n%s", "=" * 60)
+        _logger.info("Evaluating: %s", video_id)
+        _logger.info("%s", "=" * 60)
 
         # Load ground truth
         gt = self.gt_mgr.load(video_id)
-        print(f"Loaded ground truth: {len(gt.claims)} claims")
+        _logger.info("Loaded ground truth: %d claims", len(gt.claims))
 
         # Find and load run data
         run_dir = self._find_run_dir(video_id)
-        print(f"Loaded run from: {run_dir}")
+        _logger.info("Loaded run from: %s", run_dir)
 
         # Load run outputs
         with open(run_dir / "outputs.json") as f:
@@ -158,25 +161,32 @@ class GroundTruthEvaluator:
             with open(llm_calls_path) as f:
                 llm_calls_data = json.load(f)
 
-        print(f"System config: max_claims={config_data.get('max_claims')}")
+        _logger.info("System config: max_claims=%s", config_data.get("max_claims"))
 
         # Extract system claims
         extracted_claims_data = outputs_data["extracted_claims"]["claims"]
-        print(f"System extracted: {len(extracted_claims_data)} claims")
-        print(f"Evaluating against: {len(gt.claims)} ground truth claims (ALL)")
+        _logger.info("System extracted: %d claims", len(extracted_claims_data))
+        _logger.info("Evaluating against: %d ground truth claims (ALL)", len(gt.claims))
 
         # 1. Evaluate claim extraction
         claim_metrics = self.claim_extractor_eval.evaluate(
             gt.claims, extracted_claims_data
         )
-        print(
-            f"Claim Extraction: P={claim_metrics.precision:.2f} "
-            f"R={claim_metrics.recall:.2f} F1={claim_metrics.f1_score:.2f}"
+        _logger.info(
+            "Claim Extraction: P=%.2f R=%.2f F1=%.2f",
+            claim_metrics.precision,
+            claim_metrics.recall,
+            claim_metrics.f1_score,
         )
-        print(f"MAP: {claim_metrics.mean_average_precision:.3f}")
-        print(f"Recall@Important: {claim_metrics.recall_at_important:.2%}")
-        print(f"Importance Coverage: {claim_metrics.importance_weighted_coverage:.2%}")
-        print(f"Importance MAE: {claim_metrics.importance_mae:.3f}")
+        _logger.info("MAP: %.3f", claim_metrics.mean_average_precision)
+        _logger.info(
+            "Recall@Important: %.2f%%", claim_metrics.recall_at_important * 100
+        )
+        _logger.info(
+            "Importance Coverage: %.2f%%",
+            claim_metrics.importance_weighted_coverage * 100,
+        )
+        _logger.info("Importance MAE: %.3f", claim_metrics.importance_mae)
 
         # 2. Evaluate verdicts
         # Handle case where no claims were extracted (no final_output)
@@ -191,7 +201,7 @@ class GroundTruthEvaluator:
         verdict_metrics = self.verdict_eval.evaluate(
             gt.claims, claim_reports, claim_metrics.matched_claims
         )
-        print(f"Stance Accuracy: {verdict_metrics.stance_accuracy:.2%}")
+        _logger.info("Stance Accuracy: %.2f%%", verdict_metrics.stance_accuracy * 100)
 
         # 3. Evaluate query generation (optional with LLM judge)
         query_metrics = self.query_eval.evaluate(outputs_data, llm_calls_data)
@@ -206,13 +216,16 @@ class GroundTruthEvaluator:
             metrics_data=metrics_data,
             outputs_data=outputs_data,
         )
-        print(
-            f"End-to-End: Coverage={end_to_end_metrics.claim_coverage:.2%} "
-            f"Accuracy={end_to_end_metrics.verdict_accuracy:.2%}"
+        _logger.info(
+            "End-to-End: Coverage=%.2f%% Accuracy=%.2f%%",
+            end_to_end_metrics.claim_coverage * 100,
+            end_to_end_metrics.verdict_accuracy * 100,
         )
-        print(f"Avg Evidence Quality: {end_to_end_metrics.evidence_quality_avg:.2f}")
-        print(f"Total Cost: ${end_to_end_metrics.total_cost_usd:.4f}")
-        print(f"Total Time: {end_to_end_metrics.total_time_seconds:.1f}s")
+        _logger.info(
+            "Avg Evidence Quality: %.2f", end_to_end_metrics.evidence_quality_avg
+        )
+        _logger.info("Total Cost: $%.4f", end_to_end_metrics.total_cost_usd)
+        _logger.info("Total Time: %.1fs", end_to_end_metrics.total_time_seconds)
 
         # Create result
         result = VideoEvaluationResult(
@@ -237,7 +250,7 @@ class GroundTruthEvaluator:
         with open(result_path, "w") as f:
             json.dump(result.model_dump(), f, indent=2)
 
-        print(f"\nSaved results to: {result_path}")
+        _logger.info("\nSaved results to: %s", result_path)
 
         return result
 
@@ -250,28 +263,32 @@ class GroundTruthEvaluator:
         """
         matching_videos = self.find_matching_videos()
 
-        print(f"\n{'=' * 60}")
-        print(
-            f"Evaluation: {self.runs_dir.name}/{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+        _logger.info("\n%s", "=" * 60)
+        _logger.info(
+            "Evaluation: %s/%s",
+            self.runs_dir.name,
+            datetime.now().strftime("%Y%m%d_%H%M%S"),
         )
-        print(f"{'=' * 60}")
-        print(f"Runs dir: {self.runs_dir}")
-        print(f"Ground truth dir: {self.ground_truth_dir}")
-        print(f"Output dir: {self.output_dir}")
-        print(f"Parallelization: {self.max_workers} workers")
-        print(f"\nFound {len(matching_videos)} matching videos:")
+        _logger.info("%s", "=" * 60)
+        _logger.info("Runs dir: %s", self.runs_dir)
+        _logger.info("Ground truth dir: %s", self.ground_truth_dir)
+        _logger.info("Output dir: %s", self.output_dir)
+        _logger.info("Parallelization: %d workers", self.max_workers)
+        _logger.info("\nFound %d matching videos:", len(matching_videos))
         for vid in matching_videos:
-            print(f"  - {vid}")
+            _logger.info("  - %s", vid)
 
         # Parallel evaluation using ThreadPoolExecutor
         results = []
         completed = 0
         total = len(matching_videos)
 
-        print(
-            f"\n⚡ Evaluating {total} videos in PARALLEL with {self.max_workers} workers"
+        _logger.info(
+            "\nEvaluating %d videos in PARALLEL with %d workers",
+            total,
+            self.max_workers,
         )
-        print("-" * 60)
+        _logger.info("%s", "-" * 60)
 
         with ThreadPoolExecutor(max_workers=self.max_workers) as executor:
             # Submit all video evaluation tasks
@@ -287,12 +304,14 @@ class GroundTruthEvaluator:
                 try:
                     result = future.result()
                     results.append(result)
-                    print(f"✓ [{completed}/{total}] Completed: {video_id}")
+                    _logger.info("[%d/%d] Completed: %s", completed, total, video_id)
                 except Exception as exc:
-                    print(f"✗ [{completed}/{total}] Failed: {video_id} - {exc}")
+                    _logger.error(
+                        "[%d/%d] Failed: %s - %s", completed, total, video_id, exc
+                    )
 
-        print(f"\n✓ Completed all {total} evaluations")
-        print("-" * 60)
+        _logger.info("\nCompleted all %d evaluations", total)
+        _logger.info("%s", "-" * 60)
 
         # Sort results by video_id for consistent ordering
         results.sort(key=lambda r: r.video_id)
@@ -304,9 +323,9 @@ class GroundTruthEvaluator:
 
     def generate_aggregate_report(self, results: List[VideoEvaluationResult]):
         """Generate aggregate statistics across all videos."""
-        print(f"\n\n{'=' * 60}")
-        print("AGGREGATE RESULTS")
-        print(f"{'=' * 60}\n")
+        _logger.info("\n\n%s", "=" * 60)
+        _logger.info("AGGREGATE RESULTS")
+        _logger.info("%s\n", "=" * 60)
 
         # Extract max_claims from first run's config
         max_claims = None
@@ -331,30 +350,40 @@ class GroundTruthEvaluator:
             [r.claim_extraction.importance_weighted_coverage for r in results]
         )
 
-        print("Claim Extraction:")
-        print(
-            f"  Precision: {avg_precision:.2%} (σ={np.std([r.claim_extraction.precision for r in results]):.2%})"
+        _logger.info("Claim Extraction:")
+        _logger.info(
+            "  Precision: %.2f%% (σ=%.2f%%)",
+            avg_precision * 100,
+            np.std([r.claim_extraction.precision for r in results]) * 100,
         )
-        print(
-            f"  Recall:    {avg_recall:.2%} (σ={np.std([r.claim_extraction.recall for r in results]):.2%})"
+        _logger.info(
+            "  Recall:    %.2f%% (σ=%.2f%%)",
+            avg_recall * 100,
+            np.std([r.claim_extraction.recall for r in results]) * 100,
         )
-        print(
-            f"  F1 Score:  {avg_f1:.2%} (σ={np.std([r.claim_extraction.f1_score for r in results]):.2%})"
+        _logger.info(
+            "  F1 Score:  %.2f%% (σ=%.2f%%)",
+            avg_f1 * 100,
+            np.std([r.claim_extraction.f1_score for r in results]) * 100,
         )
-        print(f"\n  MAP (ClaimBuster): {avg_map:.3f}")
-        print(f"  Recall@Important:  {avg_recall_important:.2%}")
-        print(f"  Importance Coverage: {avg_importance_coverage:.2%}")
+        _logger.info("\n  MAP (ClaimBuster): %.3f", avg_map)
+        _logger.info("  Recall@Important:  %.2f%%", avg_recall_important * 100)
+        _logger.info("  Importance Coverage: %.2f%%", avg_importance_coverage * 100)
 
         # Verdict accuracy
         avg_verdict_acc = np.mean(
             [r.verdict_accuracy.overall_accuracy for r in results]
         )
         avg_stance_acc = np.mean([r.verdict_accuracy.stance_accuracy for r in results])
-        print(
-            f"\nVerdict Accuracy: {avg_verdict_acc:.2%} (σ={np.std([r.verdict_accuracy.overall_accuracy for r in results]):.2%})"
+        _logger.info(
+            "\nVerdict Accuracy: %.2f%% (σ=%.2f%%)",
+            avg_verdict_acc * 100,
+            np.std([r.verdict_accuracy.overall_accuracy for r in results]) * 100,
         )
-        print(
-            f"  Stance Accuracy: {avg_stance_acc:.2%} (σ={np.std([r.verdict_accuracy.stance_accuracy for r in results]):.2%})"
+        _logger.info(
+            "  Stance Accuracy: %.2f%% (σ=%.2f%%)",
+            avg_stance_acc * 100,
+            np.std([r.verdict_accuracy.stance_accuracy for r in results]) * 100,
         )
 
         # End-to-end
@@ -366,13 +395,13 @@ class GroundTruthEvaluator:
         avg_cost = np.mean([r.end_to_end.total_cost_usd for r in results])
         total_cost = np.sum([r.end_to_end.total_cost_usd for r in results])
 
-        print("\nEnd-to-End:")
-        print(f"  Claim Coverage:   {avg_coverage:.2%}")
-        print(f"  Verdict Accuracy: {avg_e2e_acc:.2%}")
-        print(f"  Avg Latency:      {avg_latency:.2f}s (σ={std_latency:.2f}s)")
-        print(f"  Total Latency:    {total_latency:.2f}s")
-        print(f"  Avg Cost:         ${avg_cost:.4f}")
-        print(f"  Total Cost:       ${total_cost:.4f}")
+        _logger.info("\nEnd-to-End:")
+        _logger.info("  Claim Coverage:   %.2f%%", avg_coverage * 100)
+        _logger.info("  Verdict Accuracy: %.2f%%", avg_e2e_acc * 100)
+        _logger.info("  Avg Latency:      %.2fs (σ=%.2fs)", avg_latency, std_latency)
+        _logger.info("  Total Latency:    %.2fs", total_latency)
+        _logger.info("  Avg Cost:         $%.4f", avg_cost)
+        _logger.info("  Total Cost:       $%.4f", total_cost)
 
         # Build aggregate report
         report_data = {
@@ -445,7 +474,7 @@ class GroundTruthEvaluator:
         with open(report_path, "w") as f:
             json.dump(report_data, f, indent=2)
 
-        print(f"\nAggregate report saved to: {report_path}")
+        _logger.info("\nAggregate report saved to: %s", report_path)
 
 
 # Public API for backward compatibility

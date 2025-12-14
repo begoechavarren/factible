@@ -3,11 +3,14 @@ Query generation metrics calculator (with LLM-as-judge).
 """
 
 from typing import Dict, List
+import logging
 import numpy as np
 import asyncio
 
-from ..models import QueryGenerationMetrics
-from ..llm_judge import QueryRelevanceJudge
+from factible.experiments.evaluator.models import QueryGenerationMetrics
+from factible.experiments.evaluator.llm_judge import QueryRelevanceJudge
+
+_logger = logging.getLogger(__name__)
 
 
 class QueryGenerationEvaluator:
@@ -61,7 +64,7 @@ class QueryGenerationEvaluator:
         # LLM-as-judge for query relevance (optional)
         query_relevance_avg = 0.0
         if self.enable_llm_judge and self.judge and llm_calls_data:
-            print("  Running LLM-as-judge for query relevance...")
+            _logger.info("  Running LLM-as-judge for query relevance...")
 
             # Extract query generation calls from llm_calls_data
             query_gen_calls = [
@@ -80,8 +83,10 @@ class QueryGenerationEvaluator:
 
             if relevance_scores:
                 query_relevance_avg = np.mean(relevance_scores)
-                print(
-                    f"  Evaluated {len(relevance_scores)} queries in parallel, avg relevance: {query_relevance_avg:.2f}"
+                _logger.info(
+                    "  Evaluated %d queries in parallel, avg relevance: %.2f",
+                    len(relevance_scores),
+                    query_relevance_avg,
                 )
 
         return QueryGenerationMetrics(
@@ -106,7 +111,7 @@ class QueryGenerationEvaluator:
                 )
                 return score.relevance_score
             except Exception as e:
-                print(f"    Warning: Failed to evaluate query relevance: {e}")
+                _logger.warning("    Failed to evaluate query relevance: %s", e)
                 return None
 
         # Collect all query evaluation tasks

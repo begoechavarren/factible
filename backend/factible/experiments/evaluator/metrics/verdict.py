@@ -3,11 +3,17 @@ Verdict accuracy metrics calculator.
 """
 
 from typing import List, Dict
+import logging
 import numpy as np
 import asyncio
 
-from ..models import VerdictAccuracyMetrics, GroundTruthClaim
-from ..llm_judge import ExplanationQualityJudge
+from factible.experiments.evaluator.models import (
+    VerdictAccuracyMetrics,
+    GroundTruthClaim,
+)
+from factible.experiments.evaluator.llm_judge import ExplanationQualityJudge
+
+_logger = logging.getLogger(__name__)
 
 
 class VerdictEvaluator:
@@ -83,7 +89,7 @@ class VerdictEvaluator:
         # LLM-as-judge for explanation quality (optional)
         explanation_quality_avg = 0.0
         if self.enable_llm_judge and self.judge:
-            print("  Running LLM-as-judge for explanation quality...")
+            _logger.info("  Running LLM-as-judge for explanation quality...")
 
             # Evaluate explanations in parallel (limit to avoid excessive API calls)
             max_reports = min(len(claim_reports), 5)
@@ -93,8 +99,10 @@ class VerdictEvaluator:
 
             if quality_scores:
                 explanation_quality_avg = np.mean(quality_scores)
-                print(
-                    f"  Evaluated {len(quality_scores)} explanations in parallel, avg quality: {explanation_quality_avg:.2f}"
+                _logger.info(
+                    "  Evaluated %d explanations in parallel, avg quality: %.2f",
+                    len(quality_scores),
+                    explanation_quality_avg,
                 )
 
         return VerdictAccuracyMetrics(
@@ -122,7 +130,7 @@ class VerdictEvaluator:
                 )
                 return score.overall_quality
             except Exception as e:
-                print(f"    Warning: Failed to evaluate explanation quality: {e}")
+                _logger.warning("    Failed to evaluate explanation quality: %s", e)
                 return None
 
         # Collect all explanation evaluation tasks

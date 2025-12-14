@@ -3,11 +3,14 @@ Evidence search metrics calculator (with LLM-as-judge).
 """
 
 from typing import Dict, List
+import logging
 import numpy as np
 import asyncio
 
-from ..models import EvidenceSearchMetrics
-from ..llm_judge import EvidenceRelevanceJudge
+from factible.experiments.evaluator.models import EvidenceSearchMetrics
+from factible.experiments.evaluator.llm_judge import EvidenceRelevanceJudge
+
+_logger = logging.getLogger(__name__)
 
 
 class EvidenceSearchEvaluator:
@@ -59,7 +62,7 @@ class EvidenceSearchEvaluator:
         # LLM-as-judge for evidence relevance (optional)
         evidence_relevance_avg = 0.0
         if self.enable_llm_judge and self.judge:
-            print("  Running LLM-as-judge for evidence relevance...")
+            _logger.info("  Running LLM-as-judge for evidence relevance...")
 
             # Evaluate evidence in parallel (limit to avoid excessive API calls)
             max_claims = min(len(claim_reports), 5)
@@ -71,8 +74,10 @@ class EvidenceSearchEvaluator:
 
             if relevance_scores:
                 evidence_relevance_avg = np.mean(relevance_scores)
-                print(
-                    f"  Evaluated {len(relevance_scores)} evidence pieces in parallel, avg relevance: {evidence_relevance_avg:.2f}"
+                _logger.info(
+                    "  Evaluated %d evidence pieces in parallel, avg relevance: %.2f",
+                    len(relevance_scores),
+                    evidence_relevance_avg,
                 )
 
         return EvidenceSearchMetrics(
@@ -99,7 +104,7 @@ class EvidenceSearchEvaluator:
                 )
                 return score.relevance_score
             except Exception as e:
-                print(f"    Warning: Failed to evaluate evidence: {e}")
+                _logger.warning("    Failed to evaluate evidence: %s", e)
                 return None
 
         # Collect all evidence evaluation tasks

@@ -4,9 +4,12 @@ Ground truth data management for evaluation.
 
 from pathlib import Path
 from typing import Dict, List, Optional
+import logging
 import yaml
 
-from .models import VideoGroundTruth
+from factible.experiments.evaluator.models import VideoGroundTruth
+
+_logger = logging.getLogger(__name__)
 
 
 class GroundTruthManager:
@@ -77,9 +80,10 @@ class GroundTruthManager:
                 if isinstance(raw_video_id, str) and raw_video_id.strip():
                     video_id = raw_video_id.strip()
             except Exception as exc:  # pragma: no cover - defensive log only
-                print(
-                    f"⚠️  Failed to parse video_id from {path.name}: {exc}. "
-                    "Falling back to filename."
+                _logger.warning(
+                    "Failed to parse video_id from %s: %s. Falling back to filename.",
+                    path.name,
+                    exc,
                 )
 
             video_ids.append(video_id or path.stem)

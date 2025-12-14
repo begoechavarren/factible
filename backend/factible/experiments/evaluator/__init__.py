@@ -24,20 +24,23 @@ Usage:
 """
 
 # Main evaluator
-from .run_evaluator import GroundTruthEvaluator, evaluate_runs
+from factible.experiments.evaluator.run_evaluator import (
+    GroundTruthEvaluator,
+    evaluate_runs,
+)
 
 # Ground truth management
-from .ground_truth import GroundTruthManager
+from factible.experiments.evaluator.ground_truth import GroundTruthManager
 
 # Claim matching utilities
-from .claim_matching import (
+from factible.experiments.evaluator.claim_matching import (
     semantic_similarity_match_claims,
     fuzzy_match_claims,
     calculate_mean_average_precision,
 )
 
 # Data models
-from .models import (
+from factible.experiments.evaluator.models import (
     # Ground truth models
     GroundTruthClaim,
     VideoGroundTruth,
@@ -52,7 +55,7 @@ from .models import (
 )
 
 # Metrics evaluators (also available via metrics subpackage)
-from .metrics import (
+from factible.experiments.evaluator.metrics import (
     ClaimExtractionEvaluator,
     VerdictEvaluator,
     QueryGenerationEvaluator,
@@ -61,7 +64,7 @@ from .metrics import (
 )
 
 # LLM judges (also available via llm_judge subpackage)
-from .llm_judge import (
+from factible.experiments.evaluator.llm_judge import (
     LLMJudgeBase,
     create_simple_judge,
     ClaimQualityJudge,

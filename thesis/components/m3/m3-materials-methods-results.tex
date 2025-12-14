@@ -126,7 +126,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Materials and Methods}
 
-This section presents the comprehensive technical implementation of Factible, a multi-agent system for automated fact-checking of YouTube videos. The complete source code is publicly available at \url{https://github.com/begoechavarren/factible}. The system implements an end-to-end pipeline that processes video content through five specialized components, leveraging large language models (LLMs) for reasoning tasks while employing classical algorithms for deterministic operations. The implementation follows design-science principles \citep{hevner2004design, oates2006researching}, emphasizing the creation of artifacts that extend human capabilities through systematic evaluation and iterative refinement.
+This section presents the comprehensive technical implementation of Factible, a multi-agent system for automated fact-checking of YouTube videos. The complete source code is publicly available at \url{https://github.com/begoechavarren/factible}. The system implements an end-to-end pipeline that processes video content through five specialized components, leveraging large language models (LLMs) for reasoning tasks while employing classical algorithms for deterministic operations. The implementation follows design-science principles \citep{hevner2004design, oates2006researching} and focuses on building practical artifacts that are iteratively evaluated and refined.
 
 %-------------------------------------------------------
 \subsection{System Architecture Overview}
@@ -134,7 +134,7 @@ This section presents the comprehensive technical implementation of Factible, a 
 
 \subsubsection{High-Level Architecture}
 
-Factible implements an end-to-end automated fact-checking pipeline for YouTube videos using a multi-agent architecture. Recent research on LLM agents demonstrates that multi-agent collaboration can enhance factuality and reasoning by allowing specialized agents to converse and coordinate on tasks \citep{wu2023autogen}. FactAgent further shows that decomposing fact-checking into dedicated agents for input ingestion, query generation, evidence retrieval, and verdict prediction yields higher accuracy and transparency \citep{zhang2025factagent}. The Factible architecture follows this line of work by processing video content through five specialized, modular components that operate sequentially with three levels of internal parallelization.
+Factible implements an end-to-end automated fact-checking pipeline for YouTube videos using a multi-agent architecture. Recent research on LLM agents demonstrates that multi-agent collaboration can enhance factuality and reasoning by allowing specialized agents to coordinate on tasks \citep{wu2023autogen}. FactAgent further shows that decomposing fact-checking into dedicated agents for input ingestion, query generation, evidence retrieval, and verdict prediction yields higher accuracy and transparency \citep{zhang2025factagent}. The Factible architecture follows this line of work by processing video content through five specialized, modular components that operate sequentially with three levels of internal parallelization.
 
 The system processes a YouTube video URL through five sequential stages, each with specialized responsibilities. The pipeline begins with transcript extraction, proceeds through claim and query generation, conducts online evidence retrieval, and culminates in structured verdict synthesis. This modular design enables independent optimization of each component while maintaining clear data contracts between stages.
 
@@ -145,7 +145,7 @@ The five stages are:
 
     \item \textbf{Claim Extractor} (LLM Agent): Employs thesis-first reasoning to infer the video's central argument before extracting factual and verifiable claims. Each claim receives an importance score based on its impact on the video's thesis. Post-processing uses fuzzy string matching to locate claims within the transcript for timestamp mapping.
 
-    \item \textbf{Query Generator} (LLM Agent): Generates diverse search queries across four strategic types---direct, alternative, source-seeking, and contextual. Each query receives a priority score (1--5) based on evidence likelihood, enabling budget-conscious filtering of low-priority queries.
+    \item \textbf{Query Generator} (LLM Agent): Generates diverse search queries across four strategic types---direct, alternative, source-seeking, and contextual. Each query receives a priority score (1--5) based on evidence likelihood, enabling filtering of low-priority queries.
 
     \item \textbf{Online Search}: Executes a four-step evidence retrieval pipeline for each query: (i) Google Search via Serper API, (ii) website reliability assessment using Media Bias/Fact Check (MBFC) data combined with domain heuristics \citep{mbfc2024methodology}, (iii) content fetching via Selenium WebDriver with JavaScript rendering support, and (iv) LLM-based evidence extraction with stance classification (supports, refutes, mixed, unclear).
 
@@ -206,7 +206,7 @@ Figure \ref{fig:pipeline-architecture} illustrates the complete pipeline archite
 
 \subsubsection{Design Principles}
 
-The system adheres to several key design principles derived from software engineering best practices and GenAI application development, aligned with the design-science paradigm in information systems research \citep{hevner2004design}:
+The system adheres to several key design principles derived from software engineering best practices and GenAI application development \citep{hevner2004design}:
 
 \begin{enumerate}
     \item \textbf{Modularity}: Each component is isolated with well-defined inputs and outputs using Pydantic schemas, enabling independent optimization, testing, and replacement.
@@ -217,7 +217,7 @@ The system adheres to several key design principles derived from software engine
 
     \item \textbf{Progressive Enhancement}: The pipeline operates with graceful degradation (e.g., fallback to snippet if scraping fails, fallback to proxy if rate-limited) rather than failing entirely.
 
-    \item \textbf{Cost-Conscious Design}: Configurable limits (\texttt{max\_claims}, \texttt{max\_queries}, \texttt{max\_results}) prevent runaway API costs during development and production.
+    \item \textbf{Cost-Conscious Design}: Configurable limits (\texttt{max\_claims}, \texttt{max\_queries}, \texttt{max\_results}) prevent runaway API costs and controled latency during development and production.
 
     \item \textbf{Reproducibility}: Deterministic LLM outputs (\texttt{temperature=0.0}), structured YAML configurations, and comprehensive experiment tracking enable reproducible research.
 
@@ -226,7 +226,7 @@ The system adheres to several key design principles derived from software engine
 
 \subsubsection{Component Isolation Pattern}
 
-Each component follows a consistent directory structure that promotes modularity and maintainability. This standardized organization enables independent testing of each component in isolation, seamless swapping of LLM models for experimentation, automated metrics collection via decorators, and clear interface contracts through Pydantic schemas. The typical structure includes a public exports file (\texttt{\_\_init\_\_.py}), main logic file with tracking decorators (\texttt{component\_name.py}), and schema definitions file (\texttt{schemas.py}) containing all input and output Pydantic models. This separation of concerns facilitates parallel development and reduces coupling between pipeline stages.
+Each component follows a consistent structure that promotes modularity and maintainability. This standardized organization enables independent testing of each component in isolation, swapping LLM models for experimentation, automated metrics collection via decorators, and clear interface contracts through Pydantic schemas. The separation of concerns facilitates parallel development and reduces coupling between pipeline stages.
 
 %-------------------------------------------------------
 \subsection{Technology Stack}
@@ -275,12 +275,14 @@ OpenAI & gpt-4o-mini & 128K & \$0.15 / \$0.60 & Default \\
 OpenAI & gpt-4o & 128K & \$5.00 / \$15.00 & High-quality \\
 OpenAI & gpt-4-turbo & 128K & \$10.00 / \$30.00 & Premium \\
 Ollama & qwen3:8b & 40K & Free (local) & Budget/offline \\
-Ollama & qwen3:4b & 256K & Free (local) & Small footprint \\
+Ollama & qwen3:4b & 256K & Free (local) & Budget/offline \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Large language models such as GPT-4 offer multimodal capabilities and demonstrate human-level performance across diverse benchmarks \citep{openai2024gpt4}. Despite these advances, models still suffer from hallucinations and are constrained by limited context windows, underscoring the need for careful configuration and reliability safeguards \citep{openai2024gpt4}. The model management layer therefore emphasizes deterministic outputs, context-aware trimming, and tool-assisted generation.
+Large language models such as GPT-4 offer multimodal capabilities and demonstrate human-level performance across diverse benchmarks \citep{openai2024gpt4}. Despite these advances, models still suffer from hallucinations and are constrained by limited context windows, underscoring the need for careful configuration and reliability safeguards \citep{openai2024gpt4}. The model management layer therefore makes it straightforward to switch providers, tune limits, and keep outputs deterministic through shared configuration.
+
+The same layer also exposes a zero-cost, offline alternative through Ollama with three Qwen 3 variants (qwen3:8b, qwen3:4b, qwen3:1.7b). Switching between OpenAI and local providers requires only a configuration change, enabling experiments that balance latency, quality, and hardware constraints. GPT-4o-mini remains the default selection for this thesis because cloud inference provides lower latency than consumer hardware while maintaining strong reasoning quality.
 
 \subsubsection{External Services}
 
@@ -302,7 +304,7 @@ The Transcriptor component extracts YouTube video transcripts with precise times
 
 \paragraph{Implementation Details}
 
-The transcriptor uses the \texttt{youtube-transcript-api} library to fetch available transcripts, with preference for English (\texttt{["en", "en-US"]}). When rate-limited by YouTube, it automatically falls back to a proxy service (Webshare). Key features include:
+The transcriptor uses the \texttt{youtube-transcript-api} library to fetch available transcripts, with preference for English. When rate-limited by YouTube, it automatically falls back to a proxy service (Webshare). Key features include:
 
 \begin{itemize}
     \item \textbf{Timestamped Segments}: Each segment preserves \texttt{start} time and \texttt{duration} in seconds.
@@ -311,13 +313,9 @@ The transcriptor uses the \texttt{youtube-transcript-api} library to fetch avail
     \item \textbf{Proxy Fallback}: Automatic retry through Webshare proxy when rate-limited.
 \end{itemize}
 
-\paragraph{Output Schema}
+\paragraph{Output and Timestamp Mapping}
 
-The transcriptor outputs structured data using Pydantic models for type safety and validation. Each transcript segment contains text content, start time, and duration with non-negative constraints. The complete transcript includes the full text, a list of timestamped segments, and the video identifier.
-
-\paragraph{Timestamp Mapping Algorithm}
-
-The timestamp mapping function enables the system to locate where in the video each claim originates. The algorithm iterates through transcript segments sequentially, maintaining a cumulative character counter. When a character position falls within a segment's range, the function returns the corresponding video timestamp (start time and duration). This mapping is crucial for the user interface, allowing users to jump directly to the video moment where a specific claim was made.
+Each run returns the video identifier, the full transcript text, and a list of timestamped segments containing text, start time, and duration. A lightweight mapping pass scans the segments sequentially while maintaining a cumulative character counter so that claim positions can be translated into timestamps. This enables the interface to jump straight to the moment where a claim appeared without duplicating transcript parsing logic elsewhere.
 
 %---
 
@@ -356,25 +354,32 @@ The claim extractor employs a novel \textit{thesis-first approach} with multi-st
 
 \textbf{Step 3: Relevance Guardrails} --- Pure credential facts are capped at 0.30 unless the thesis questions expertise; statements not affecting the thesis are capped at 0.25; pure opinions are excluded; and paraphrases and duplicate numbers are removed.
 
-\paragraph{Dynamic Instructions via Pydantic AI Dependencies}
+\paragraph{Prompt Engineering Techniques}
 
-The agent uses Pydantic AI's dependency injection mechanism to inject runtime constraints into the system prompt. This design pattern enables dynamic instruction generation based on runtime parameters: when a \texttt{max\_claims} limit is specified, the instruction explicitly constrains the output size; otherwise, it defaults to requesting only the highest-impact claims. This approach provides flexibility for experimentation while maintaining type safety through Pydantic validation.
+The system employs several established prompting techniques across its components:
+
+\begin{itemize}
+    \item \textbf{Role/system prompting}: Each component receives a focused system prompt that spells out its role, constraints, and expected outputs for consistent behavior.
+    \item \textbf{Structured outputs}: Responses are constrained to typed schemas so downstream stages always receive validated fields.
+    \item \textbf{Chain-of-thought reasoning}: The thesis-first steps require the model to state the thesis and then rate claims against it, which improves prioritization.
+    \item \textbf{Dynamic instruction injection}: Runtime parameters such as \texttt{max\_claims} are inserted directly into prompts so component behavior adapts without duplicating templates.
+    \item \textbf{Deterministic generation}: Temperature stays at 0.0 across the pipeline for reproducible, debuggable outputs.
+    \item \textbf{Zero-shot prompting}: Components receive task instructions without example I/O pairs, minimizing prompt length and avoiding format bias.
+\end{itemize}
 
 \paragraph{Post-Processing: Fuzzy Claim Localization}
 
-After LLM extraction, each claim is located in the original transcript using fuzzy string matching. The algorithm normalizes text, applies a sliding window with $\pm 2$ words around the claim length, computes similarity using \texttt{difflib.SequenceMatcher}, and requires a minimum score of 0.5 for a match. This produces \texttt{transcript\_char\_start}, \texttt{transcript\_char\_end}, and \texttt{transcript\_match\_score} fields for timestamp mapping.
+After LLM extraction, each claim is located in the original transcript using fuzzy string matching. The algorithm normalizes both the claim text and transcript, then applies a sliding window approach (with $\pm 2$ words tolerance around the expected claim length) to find the best matching region. Similarity is computed using Python's sequence matching algorithm, which calculates the ratio of matching characters between two strings. A minimum similarity score of 0.5 is required for a valid match. This process yields the character-level start and end positions within the transcript, along with the match confidence score, enabling precise timestamp mapping from transcript positions back to video timestamps.
 
 \paragraph{Output Schema}
 
 Extracted claims are represented as structured objects with validated fields: claim text (recommended maximum 40 words), confidence score (0.0--1.0), category (historical, scientific, statistical), importance score (0.0--1.0), and optional context. Post-processing adds transcript location metadata including character positions and fuzzy match scores. The collection of claims is sorted by importance in descending order.
 
-Standard fact-checking datasets such as FEVER \citep{thorne2018fever} and FEVEROUS \citep{aly2021feverous} are used as external references to evaluate claim extraction performance. FEVER contains 185,445 claims derived from Wikipedia sentences labeled as Supported, Refuted, or NotEnoughInfo, while FEVEROUS extends this to 87,026 claims with both unstructured text and structured table evidence.
-
 %---
 
 \subsubsection{Query Generator}
 
-The Query Generator produces diverse, prioritized search queries optimized for evidence retrieval. Research on LLMs shows that interleaving reasoning and acting enables models to plan and perform external searches more effectively; the ReAct prompting technique encourages models to produce intermediate reasoning steps and task-specific actions, leading to improved factuality and reduced hallucination \citep{yao2023react}. Retrieval-augmented generation methods combine parametric language models with non-parametric memory to retrieve relevant documents \citep{lewis2020retrieval}, while frameworks like RARR perform post-generation research and revision to align outputs with supporting evidence \citep{gao2022rarr}.
+The Query Generator produces diverse, prioritized search queries tailored to each claim. A single LLM call emits direct restatements, synonym-heavy variations, source-focused prompts, and broader context queries together with priority tags so downstream steps can respect latency budgets. Guardrails ensure the suggestions include relevant entities, time periods, and qualifiers while capping each claim at a manageable number of high-yield searches.
 
 \paragraph{Query Type Taxonomy}
 
@@ -415,7 +420,7 @@ Generated queries are structured objects containing the query text, query type (
 
 The Online Search component implements a multi-step pipeline to retrieve, assess, and extract evidence from web sources with adaptive quality filtering. Unlike the other LLM-based components, Online Search orchestrates multiple classical algorithms alongside a single LLM call for evidence extraction. This hybrid approach balances speed, reliability, and reasoning capabilities.
 
-The reliability assessment combines domain-level heuristics with the Media Bias/Fact Check (MBFC) methodology, which employs a comprehensive weighted scoring system to evaluate media outlets' ideological bias and factual reliability \citep{mbfc2024methodology}. To mitigate hallucinations and ensure evidence quality, the system draws on research like SelfCheckGPT, which detects hallucinations by comparing multiple sampled responses and ranks passages by factuality \citep{manakul2023selfcheckgpt}. The multi-agent retrieval strategy is further informed by systems such as FactAgent \citep{zhang2025factagent} and LoCal \citep{chen2024local}, where decomposing, reasoning, and evaluating agents iteratively refine answers and outperform baselines.
+The reliability assessment combines domain-level heuristics with the Media Bias/Fact Check (MBFC) methodology, which employs a comprehensive weighted scoring system to evaluate media outlets' ideological bias and factual reliability \citep{mbfc2024methodology}. These scores, combined with stance-aware evidence extraction instructions, keep unreliable or speculative passages from flowing downstream.
 
 Figure \ref{fig:online-search-pipeline} illustrates the four-step Online Search pipeline executed for each query.
 
@@ -486,9 +491,7 @@ The output includes a categorical rating (high, medium, low, unknown), numerical
 
 \paragraph{Step 3: Content Fetching (Selenium)}
 
-Content fetching uses Selenium WebDriver in headless Chrome mode with smart wait strategies to handle JavaScript-heavy sites. The implementation employs a two-phase extraction strategy: first attempting quick extraction of paragraph elements, then waiting for JavaScript rendering if initial content is insufficient ($<$100 characters). This adaptive approach balances speed for static sites with completeness for dynamic content.
-
-Configuration optimizations include disabling images to reduce load time, setting page load timeouts (20 seconds), and limiting wait times for dynamic content (12 seconds). Content is trimmed to a maximum of 8,000 characters to control LLM input costs while preserving sufficient context for evidence extraction. Async integration wraps blocking Selenium calls in \texttt{asyncio.to\_thread()} for non-blocking operation, enabling parallel processing of multiple search results.
+Content fetching uses headless Chrome with smart waits: the scraper first grabs paragraph elements immediately, then allows extra rendering time only when less than 100 characters were captured. Images are disabled, page-load and wait timeouts cap the work (20 seconds and 12 seconds, respectively), and the cleaned text is trimmed to 8,000 characters before being passed to the LLM. Blocking Selenium calls are delegated to background threads so multiple results can be processed in parallel without freezing the async loop.
 
 \paragraph{Step 4: Evidence Extraction (LLM)}
 
@@ -508,12 +511,12 @@ Critical prompt instructions ensure that mere discussion equals UNCLEAR, that me
 The search orchestrator implements adaptive credibility filtering as a key innovation for ensuring evidence quality. The algorithm operates in three phases:
 
 \begin{enumerate}
-    \item \textbf{Initial Batch}: Fetch 2× the desired limit to provide filtering headroom
+    \item \textbf{Initial Batch}: Fetch 2× the desired limit to provide filtering margin
     \item \textbf{Quality Check}: If $>$50\% of results are unreliable, fetch an additional batch to increase the pool of high-quality sources
     \item \textbf{Intelligent Filtering}: Sort all results by reliability score and select the top reliable sources, with a minimum guarantee ensuring at least some results are returned even if reliability is universally low
 \end{enumerate}
 
-Additional filtering mechanisms include stance filtering (removing unclear results if $>$50\% have definitive stances) and URL deduplication using hash sets to prevent duplicate sources across different queries for the same claim.
+Additional filtering mechanisms include stance filtering (removing unclear results if $>$50\% have definitive stances) and URL deduplication using sets to prevent duplicate sources across different queries for the same claim.
 
 %---
 
@@ -525,7 +528,7 @@ The Output Generator synthesizes evidence into coherent verdicts with confidence
 
 The Output Generator employs a hybrid approach combining algorithmic evidence organization with LLM-based synthesis:
 
-\textbf{Step 1: Build Evidence Bundle (Algorithmic)} --- The system groups evidence by stance (supports, refutes, mixed, unclear), deduplicates sources by URL, and sorts within each group by reliability rating (high first), then numerical score, with alphabetic tie-breaking for consistency. This deterministic organization ensures reproducible output ordering.
+\textbf{Step 1: Build Evidence Bundle (Algorithmic)} --- The system groups evidence by stance (supports, refutes, mixed, unclear), deduplicates sources by URL, and sorts within each group by reliability rating (high first), then numerical score, with alphabetic tie-breaking for consistency.
 
 \textbf{Step 2: Generate Verdict (LLM)} --- Organized evidence is formatted into a structured prompt containing stance labels, source counts, reliability ratings, and evidence summaries. The system prompt instructs the LLM to synthesize concise verdicts, naming sources explicitly only when clarifying contrasting perspectives or when evidence directly conflicts. This reduces verbosity while maintaining attribution transparency.
 
@@ -565,19 +568,15 @@ The fact-check report is a structured object containing all information for user
 
 \subsubsection{Model Abstraction Layer}
 
-The system uses an enum-based model configuration with Pydantic validation for type-safe model management. Each model is defined through a \texttt{ModelConfig} schema containing provider name (OpenAI or Ollama), model identifier, input and output pricing per million tokens, and context window size. The \texttt{ModelChoice} enumeration defines available models as named constants (e.g., \texttt{OPENAI\_GPT4O\_MINI}, \texttt{OLLAMA\_QWEN3\_8B}), each associated with its configuration. This abstraction enables centralized model definitions, compile-time checking of model names, automatic price tracking for cost estimation, and easy addition of new models through enum extension.
-
-\subsubsection{Model Instantiation with Caching}
-
-Ollama model instances are cached using Python's \texttt{@lru\_cache} decorator to enable connection reuse across multiple agent invocations. Without caching, each agent run would create a new provider connection, incurring initialization overhead. The cache is unbounded (\texttt{maxsize=None}), ensuring that once a model is instantiated, subsequent requests reuse the existing connection. This optimization is particularly important for Ollama models where the provider connection establishes communication with the local inference server at \texttt{http://127.0.0.1:11434/v1}.
+All LLM settings live in a single configuration document that lists each provider, the model identifier, pricing information, and context window. Component modules refer only to that catalog, so swapping a model or updating prices requires editing one place rather than chasing hard-coded strings. The abstraction is deliberately simple—just structured data that the pipeline reads on startup—yet it keeps experiments reproducible because every run records the same model metadata.
 
 \subsubsection{Per-Component Model Configuration}
 
-A centralized configuration file defines which model each component uses, enabling easy model swapping for experiments. By default, all components use \texttt{OPENAI\_GPT4O\_MINI} for consistency, but this can be overridden on a per-component basis. For example, the Evidence Extractor could be downgraded to a local Ollama model to reduce costs while keeping the Claim Extractor on GPT-4o-mini for quality. This granular control enables component-specific optimization, A/B testing of model choices, and precise cost-quality trade-off analysis.
+Each pipeline stage points to a default cloud model for consistency, but any component can be redirected to a different provider through configuration alone. This granular setup enables per-component tests without touching code.
 
 \subsubsection{Common Model Settings}
 
-All components use \texttt{temperature=0.0} for deterministic outputs, enabling reproducibility, consistency in structured outputs, and meaningful A/B comparisons. Table \ref{tab:model-settings} shows the token limits per component.
+All components use \texttt{temperature=0.0} for deterministic outputs, enabling reproducibility, consistency in structured outputs, and meaningful comparisons. Table \ref{tab:model-settings} shows the token limits per component.
 
 \begin{table}[H]
 \centering
@@ -594,12 +593,11 @@ Output Generator & 0.0 & 900 & Concise verdict synthesis \\
 \bottomrule
 \end{tabular}
 \end{table}
-
 %-------------------------------------------------------
 \subsection{Latency Optimization Strategies}
 %-------------------------------------------------------
 
-The system implements multiple latency optimization strategies following established principles for LLM applications \citep{openai2024latency}. Research into LLM latency shows that prompt size, completion length, and model size are the dominant factors in inference time; reducing input and output token counts directly lowers compute and memory overhead \citep{graphsignal2024latency, openai2024latency}. Additional techniques such as defining clear output boundaries, setting token limits, and adjusting sampling temperature can reduce generated tokens, and caching prompts allows reuse of computations for identical prefixes \citep{openai2024latency}. Choosing smaller model weights yields faster inference speeds. These optimizations can be grouped into seven core principles: processing tokens faster, generating fewer tokens, using fewer input tokens, making fewer requests, parallelizing operations, reducing perceived wait time, and using classical methods where LLMs are not required \citep{openai2024latency}.
+The pipeline ships with a concrete set of latency optimizations inspired by LLM engineering guidelines but implemented specifically for Factible. The following subsections describe what was actually built: tuned model choices, strict token budgets, trimmed inputs, single-call components, parallel execution, real-time streaming updates, and classical fallbacks for non-reasoning tasks. Together these measures reduced mean end-to-end latency to 129.6 seconds for the current evaluation set.
 
 \subsubsection{Process Tokens Faster: Model Selection}
 
@@ -631,11 +629,11 @@ The parallelization hierarchy operates as follows:
     \item \textbf{Level 3 (Search Results per Query)}: Within each query's execution, the Online Search component retrieves K results from Google. The four-step pipeline (reliability assessment, content fetching, and evidence extraction) runs in parallel for all K results, with each result processed independently.
 \end{itemize}
 
-This design achieves maximum theoretical parallelization of $N \times M \times K$ operations during the search phase, bounded only by system resources and API rate limits. The nesting structure means that at peak execution, the system may be processing dozens of parallel operations across all three levels simultaneously. Blocking I/O operations (Selenium WebDriver for content fetching, WHOIS for domain age lookup) are wrapped in \texttt{asyncio.to\_thread()} to avoid blocking the event loop, ensuring that CPU-bound and I/O-bound operations can execute concurrently.
+This design achieves maximum theoretical parallelization of $N \times M \times K$ operations during the search phase, bounded only by system resources and API rate limits. The nesting structure means that at peak execution, the system may be processing dozens of parallel operations across all three levels simultaneously. Blocking I/O operations (Selenium WebDriver for content fetching, WHOIS for domain age lookup) are delegated to worker threads to keep the async event loop responsive, ensuring that CPU-bound and I/O-bound operations can execute concurrently.
 
 \subsubsection{Real-Time Streaming}
 
-Server-Sent Events (SSE) provide progressive updates as the pipeline executes, improving perceived responsiveness for users. The streaming endpoint emits progress updates at key milestones, ranging from 5\% (transcript extraction initiated) through 100\% (fact-checking complete). Importantly, extracted claims are streamed to the user interface immediately after the Claim Extractor completes, allowing users to preview claims and begin reviewing the video's assertions before the time-intensive search phase completes. This progressive disclosure pattern reduces perceived latency and enables users to provide early feedback or cancellation if the extracted claims are not aligned with their expectations.
+Server-Sent Events (SSE) provide progressive updates as the pipeline executes, improving perceived responsiveness for users. Each update labels the active stage (e.g., ``claim extraction'', ``processing\_claim\_2'', ``generating\_report'') alongside a percentage so the UI can display the exact component currently running. Extracted claims are streamed immediately after the Claim Extractor finishes, enabling preview and early user feedback while later stages gather evidence. This progressive disclosure pattern reduces perceived latency and gives users clear visibility into pipeline progress.
 
 \subsubsection{Classical Methods for Non-Reasoning Tasks}
 
@@ -659,16 +657,19 @@ Stance filtering & Threshold-based & Simple percentage check \\
 \end{table}
 
 %-------------------------------------------------------
-\subsection{Data Schemas and Structured Outputs}
+\subsection{Structured Outputs with Pydantic}
 %-------------------------------------------------------
 
-\subsubsection{Pydantic AI Integration}
+All LLM agents use Pydantic models to constrain their outputs, providing comprehensive type safety throughout the pipeline. This approach offers several benefits for LLM-based systems:
 
-All LLM agents use Pydantic models as their \texttt{output\_type}, providing comprehensive type safety throughout the pipeline. This integration ensures automatic JSON parsing and validation of LLM outputs, graceful error handling with automatic retries on validation failures, full IDE support with autocomplete for all schema fields, and consistent serialization via \texttt{model\_dump()} for logging and persistence. The agent configuration includes the model selection, output schema type, runtime dependencies type, model settings (temperature, token limits), system prompt, and retry count. This declarative configuration style reduces boilerplate while maintaining explicit control over agent behavior.
+\begin{itemize}
+    \item \textbf{Reliable parsing}: LLM outputs are automatically parsed and validated against the schema, eliminating manual JSON handling and catching malformed responses immediately.
+    \item \textbf{Automatic retries}: When the LLM produces invalid output (e.g., missing required fields, out-of-range values), Pydantic AI automatically retries with feedback about the validation error.
+    \item \textbf{Clear contracts}: Schemas define explicit interfaces between pipeline stages, enabling independent development and testing of each component.
+    \item \textbf{Reduced hallucination}: Constraining outputs to predefined structures (e.g., stance must be one of four values) prevents the LLM from inventing invalid categories or formats.
+\end{itemize}
 
-\subsubsection{Schema Design Principles}
-
-The schema design follows five guiding principles to balance flexibility, safety, and maintainability. First, schemas prefer flat structures over deeply nested objects to simplify validation and reduce complexity. Second, optional fields use Python's union type syntax (\texttt{str | None}) for clarity. Third, \texttt{Literal} types constrain string fields to predefined values (e.g., stance must be ``supports'', ``refutes'', ``mixed'', or ``unclear''). Fourth, all fields include descriptive names and \texttt{Field} descriptions for documentation and IDE hints. Fifth, numeric fields include validation constraints (e.g., \texttt{Field(ge=0.0, le=1.0)} for scores) to catch invalid data at runtime. These principles ensure robust data contracts across component boundaries.
+This declarative configuration style reduces boilerplate while maintaining explicit control over agent behavior, and ensures robust data flow across the entire pipeline.
 
 %-------------------------------------------------------
 \subsection{Experimentation and Evaluation Framework}
@@ -698,7 +699,7 @@ LLM call tracking is achieved via a decorator that instruments the Pydantic AI a
 
 \subsubsection{Experiment Runner}
 
-The experiment runner enables batch execution through YAML configuration files that define video corpora and parameter sweeps. Videos are specified with metadata and tags for filtering, while experiments define parameter variations that automatically expand into multiple runs (e.g., testing \texttt{max\_claims} values of 1, 3, 5, 7, and 10 generates five separate experiment runs).
+The experiment runner enables batch execution through YAML configuration files that define sets of videos and planned parameter variations. Videos are specified with metadata and tags for filtering, while experiments define parameter variations that automatically expand into multiple runs (e.g., testing \texttt{max\_claims} values of 1, 3, 5, 7, and 10 generates five separate experiment runs).
 
 A command-line interface provides commands for running experiments, filtering by experiment name or video ID, and previewing configurations before execution.
 
@@ -711,7 +712,7 @@ The evaluator computes performance metrics using modular components for each eva
     \item \textbf{Verdict accuracy}: Comparison of system stances against ground truth labels.
     \item \textbf{Evidence retrieval metrics}: Success rate and source reliability distribution based on MBFC credibility ratings.
     \item \textbf{System efficiency}: Latency and cost aggregation across all pipeline components.
-    \item \textbf{LLM-as-judge evaluation} (optional): Qualitative assessment of claim relevance, evidence quality, and verdict coherence using LLM-based evaluation \citep{raschka2025evaluation}.
+    \item \textbf{LLM-as-judge evaluation} (optional): LLM-as-judge is an evaluation paradigm where a language model assesses the quality of outputs from another model (or the same model), providing scores or judgments on dimensions difficult to capture with traditional metrics \citep{raschka2025evaluation}. In this system, LLM-as-judge can evaluate claim relevance (is this claim worth checking?), evidence quality (does the retrieved evidence actually address the claim?), and verdict coherence (is the reasoning logically sound?). This approach complements quantitative metrics by capturing semantic nuances that string-matching or classification accuracy cannot measure. However, it incurs additional API costs and introduces potential biases from the judge model, so it remains optional and was not used for the primary evaluation reported here.
 \end{itemize}
 
 Evaluations execute in parallel across multiple videos for efficiency. Results include per-video reports and aggregate statistics (means, standard deviations, distributions) across all evaluated videos.
@@ -728,34 +729,7 @@ The API uses FastAPI with CORS middleware configured for local frontend developm
 
 \subsubsection{Streaming Endpoint with SSE}
 
-The streaming endpoint (\texttt{POST /api/v1/fact-check/stream}) returns a \texttt{StreamingResponse} with \texttt{text/event-stream} media type. A callback-based progress handler collects updates into an asyncio queue, which are then yielded as SSE events.
-
-\subsubsection{Progress Events}
-
-Table \ref{tab:progress-events} shows the progress events emitted during pipeline execution.
-
-\begin{table}[H]
-\centering
-\caption{SSE progress events}
-\label{tab:progress-events}
-\begin{tabular}{llll}
-\toprule
-\textbf{Stage} & \textbf{Progress} & \textbf{Event Name} & \textbf{Data Payload} \\
-\midrule
-1 & 5\% & transcript\_extraction & -- \\
-2 & 15\% & transcript\_complete & transcript\_length \\
-3 & 20\% & claim\_extraction & -- \\
-4 & 35\% & claims\_extracted & claims[], total\_claims \\
-5 & 90\% & generating\_report & -- \\
-6 & 100\% & complete & result (full output) \\
-Error & 100\% & error & error message \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\subsubsection{Request/Response Schemas}
-
-Request schemas validate YouTube video URLs and pipeline parameters (claim limits, query limits, results per query) with appropriate range constraints. Progress update schemas structure the SSE events with step identification, descriptive messages, progress percentages (0--100), and optional data payloads for intermediate results.
+The streaming endpoint exposes the fact-checking run as a server-sent event stream. Progress callbacks enqueue updates that the API emits in real time, allowing clients to maintain a single open connection while receiving incremental status messages. Events follow a fixed sequence (transcript extraction, claim extraction, per-claim processing, verdict generation, completion) so the frontend can map each update to user-facing milestones without polling.
 
 %-------------------------------------------------------
 \subsection{User Interface}
@@ -798,85 +772,21 @@ A web-based frontend provides an accessible interface for end users to interact 
 \label{fig:ui-screenshots}
 \end{figure}
 
-The interface emphasizes transparency by displaying source reliability ratings, confidence levels, and direct links to evidence sources. Users can click ``Jump'' buttons to navigate directly to the video timestamp where each claim was made, enabling quick verification of the original context.
+The interface shows transparency by displaying source reliability ratings, confidence levels, and direct links to evidence sources. Users can click ``Jump'' buttons to navigate directly to the video timestamp where each claim was made, enabling quick verification of the original context.
 
 %-------------------------------------------------------
-\subsection{Code Quality and Engineering Practices}
+\subsection{Engineering Practices}
 %-------------------------------------------------------
 
-\subsubsection{Type Safety}
+The thesis emphasizes data science outcomes, yet maintaining consistent engineering habits keeps experiments reproducible and easier to debug. Practices are kept lightweight and focused on what directly supports the fact-checking pipeline:
 
-The codebase enforces strong type safety through multiple mechanisms. All functions use Python 3.12 type annotations with modern union syntax (\texttt{str | None}) and generic types (\texttt{list[T]}), enabling static analysis and IDE assistance. Pydantic models provide runtime validation for all data structures crossing component boundaries, catching type mismatches and constraint violations at execution time. Additionally, static type checking via mypy with strict mode configuration runs in continuous integration, preventing type errors from reaching production. This layered approach combines the benefits of gradual typing with runtime safety nets.
-
-\subsubsection{Logging}
-
-Module-level loggers provide structured logging throughout the pipeline execution. Each component initializes a logger using Python's standard logging module, configured with consistent formatting for timestamp, level, and message. Log messages use semantic levels (INFO for normal progress, WARNING for recoverable issues, ERROR for failures) and include contextual information such as claim indices, query counts, and reliability scores. The logging output supports both real-time monitoring during development and post-hoc analysis from experiment run files.
-
-\subsubsection{Error Handling Patterns}
-
-Table \ref{tab:error-handling} summarizes error handling strategies.
-
-\begin{table}[H]
-\centering
-\caption{Error handling patterns}
-\label{tab:error-handling}
-\begin{tabular}{lll}
-\toprule
-\textbf{Error Type} & \textbf{Handling} & \textbf{Fallback} \\
-\midrule
-No transcript & Return empty claims & Continue with empty pipeline \\
-LLM failure & Retry 3x & Return empty/unclear \\
-Search API failure & Log and continue & Empty results for query \\
-Scraping failure & Fall back to snippet & Use Google snippet \\
-Reliability failure & Default to ``unknown'' & Conservative rating \\
-Verdict failure & Error message in summary & Unclear stance \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\subsubsection{Configuration Management}
-
-Configuration is managed through multiple layers optimized for different use cases. Sensitive credentials (API keys for Serper, OpenAI, Webshare) are stored in environment variables loaded from a \texttt{.env} file, following security best practices by keeping secrets out of version control. Experiment parameters (max claims, queries per claim, results per query, video corpus) are defined in YAML files for human readability and version control tracking. Model settings (temperature, token limits, retry counts) are specified as Python constants for type safety and inline documentation. Finally, API server configuration (CORS origins, port, host) uses Pydantic Settings with automatic environment variable override support. This layered approach balances security, flexibility, and maintainability.
-
-\subsubsection{Pre-commit Hooks}
-
-Code quality is enforced automatically through pre-commit hooks that run before each git commit. The ruff linter performs fast Python linting with automatic fixes for common issues (unused imports, trailing whitespace, line length violations) and consistent code formatting following PEP 8 style guidelines. The mypy static type checker validates type annotations across the entire codebase in strict mode, catching potential type errors before runtime. Additional standard hooks validate YAML and TOML file syntax, preventing configuration errors. These automated checks ensure code quality standards are maintained consistently across all contributions without requiring manual review for style issues.
-
-%-------------------------------------------------------
-\subsection{Design Patterns and Software Engineering}
-%-------------------------------------------------------
-
-\subsubsection{Patterns Summary}
-
-Table \ref{tab:design-patterns} summarizes the design patterns employed.
-
-\begin{table}[H]
-\centering
-\caption{Design patterns used in the implementation}
-\label{tab:design-patterns}
-\begin{tabular}{lll}
-\toprule
-\textbf{Pattern} & \textbf{Usage} & \textbf{Benefit} \\
-\midrule
-Singleton & ExperimentTracker & Global access during pipeline \\
-Context Manager & Tracker, Timer, Fetcher & Resource cleanup, timing \\
-Decorator & @track\_pydantic & Cross-cutting concerns \\
-Monkey-Patching & Agent monitoring & Non-invasive instrumentation \\
-Factory & get\_model() & Model instantiation \\
-Strategy & Adaptive filtering & Runtime algorithm selection \\
-Observer & Progress callbacks & Decoupled progress reporting \\
-Builder & Evidence bundle & Complex object construction \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\subsubsection{Async Patterns}
-
-The implementation employs four asynchronous programming patterns to maximize concurrency. First, parallel independent tasks use \texttt{asyncio.gather()} to execute multiple coroutines concurrently and collect their results. Second, thread pools handle blocking I/O operations (Selenium, WHOIS) via \texttt{asyncio.to\_thread()}, preventing them from blocking the event loop. Third, queue-based producer/consumer patterns enable streaming results from background workers to the API endpoint. Fourth, background task spawning via \texttt{asyncio.create\_task()} allows fire-and-forget operations that don't block the main execution flow. These patterns combine to create a highly concurrent pipeline that efficiently utilizes system resources.
-
-\subsubsection{Key Engineering Decisions}
-
-Several architectural decisions significantly shaped the implementation. Pydantic AI was chosen over LangChain for its simpler API surface and native support for type-safe structured outputs through Pydantic models. Selenium was selected over lightweight HTTP libraries like requests specifically to handle JavaScript-rendered content that requires browser execution. The MBFC dataset provides authoritative reliability ratings based on established fact-checking methodology, offering more credible assessments than simple domain heuristics alone. The \texttt{asyncio.to\_thread} pattern enables non-blocking integration of synchronous libraries (Selenium, WHOIS) within the async pipeline. Temperature 0.0 ensures reproducible experiments by eliminating sampling randomness. Finally, token estimation using character count divided by 4 provides a computationally cheap approximation for cost tracking without requiring exact tokenization.
+\begin{itemize}
+    \item \textbf{Typed schemas}: Pydantic models plus strict mypy checks prevent interface drift between components while supplying clear validation errors during runs.
+    \item \textbf{Logging \& fallbacks}: Module-level logging records claim/query context, and simple retry rules (e.g., fall back to Google snippets when scraping fails) keep long runs from collapsing on transient issues.
+    \item \textbf{Centralized configuration}: Environment variables store secrets, YAML files define experiment batches, and a small Python settings module captures model limits, making it easy to reproduce or tweak runs.
+    \item \textbf{Async + background threads}: Claims, queries, and search results fan out via asyncio gather calls, while Selenium/WHOIS work shifts to threads so blocking I/O never stalls the event loop; the same progress callbacks drive the SSE stream for user feedback.
+    \item \textbf{Pre-commit hooks}: Lightweight automated checks run before every commit to keep formatting, linting, and type rules consistent.
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION 2: RESULTS
@@ -884,7 +794,7 @@ Several architectural decisions significantly shaped the implementation. Pydanti
 \section{Results}
 \label{sec:results}
 
-This section presents the experimental evaluation of Factible across 30 YouTube videos spanning diverse topics including health, science, politics, and climate. The evaluation framework follows established practices from claim detection and fact-checking research \citep{hassan2015claimbuster, thorne2018fever}, combining ground truth comparison with LLM-as-judge quality assessments. All experiments used \texttt{max\_claims=5} as the primary operating point, selected after exploring the precision-recall tradeoff across multiple configurations while balancing cost and latency constraints.
+This section presents the experimental evaluation of Factible across 30 YouTube videos spanning diverse topics including health, science, politics, and climate. The evaluation framework follows established practices from claim detection and fact-checking research \citep{hassan2015claimbuster, thorne2018fever}, combining ground truth comparison with LLM-as-judge quality assessments. Every run limited the pipeline to five claims per video, a setting chosen after analyzing the precision-recall tradeoff across multiple configurations while balancing cost and latency constraints.
 
 %-------------------------------------------------------
 \subsection{Experimental Setup}
@@ -918,6 +828,10 @@ Ground truth annotations were created following a structured protocol. For each 
 \subsubsection{Evaluation Metrics}
 
 The evaluation employs metrics at two levels: claim extraction quality and verdict accuracy.
+
+\paragraph{Claim Alignment via Semantic Similarity}
+
+System claims are matched to ground truth using sentence-transformer embeddings (all-MiniLM-L6-v2). Claims whose cosine similarity exceeds 0.7 count as matches; others become false positives or false negatives. A greedy pass ensures each ground truth claim pairs with at most one system claim. This simple semantic alignment yields the true positives needed for precision, recall, F1, and MAP calculations.
 
 \textbf{Claim Extraction Metrics:}
 \begin{itemize}
@@ -953,7 +867,7 @@ This evaluation strategy enables focused assessment of the system's core reasoni
 \subsection{Precision-Recall Tradeoff Analysis}
 %-------------------------------------------------------
 
-Before presenting detailed results, this section analyzes the precision-recall tradeoff to justify the choice of \texttt{max\_claims=5} as the primary configuration. The system was evaluated across six configurations with \texttt{max\_claims} $\in \{1, 3, 5, 7, 10, 15\}$.
+Before presenting detailed results, this section analyzes the precision-recall tradeoff to justify the choice of the configuration of maximum claims to fetch to be 5 (\texttt{max\_claims=5}) as the primary configuration. The system was evaluated across six configurations with \texttt{max\_claims} $\in \{1, 3, 5, 7, 10, 15\}$.
 
 \begin{table}[H]
 \centering
@@ -1145,7 +1059,7 @@ Unknown & 9 & 1.2\% \\
 \end{tabular}
 \end{table}
 
-The overwhelming majority of retrieved sources (83.6\%) receive high reliability ratings from the Media Bias/Fact Check-based assessment system \citep{mbfc2024methodology}. No sources received low reliability ratings, and only 1.2\% were classified as unknown (typically due to missing MBFC data for niche domains). This distribution validates the effectiveness of the source credibility filtering, which prioritizes established, factual reporting sources.
+The overwhelming majority of retrieved sources (83.6\%) receive high reliability ratings from the Media Bias/Fact Check-based assessment system \citep{mbfc2024methodology}. No sources received low reliability ratings, and only 1.2\% were classified as unknown (typically due to missing MBFC data for niche domains). This distribution reflects both the reliability scoring heuristics and the retry behavior that fetches additional results whenever the initial batch skews toward low-reliability domains.
 
 %-------------------------------------------------------
 \subsection{System Efficiency}
@@ -1337,100 +1251,60 @@ While the current implementation demonstrates the viability of automated fact-ch
 \subsection{Multilingual Support}
 %-------------------------------------------------------
 
-The current system operates exclusively with English-language content, limiting its applicability in a globally connected information ecosystem. Extending support to additional languages would require: (1) multilingual transcript extraction, as YouTube provides auto-generated transcripts in multiple languages; (2) multilingual claim extraction, leveraging multilingual LLMs such as GPT-4 or open-source alternatives like mBART and XLM-RoBERTa; (3) cross-lingual evidence retrieval, enabling the system to find evidence in languages different from the claim's source language; and (4) multilingual verdict synthesis, generating explanations in the user's preferred language. Languages with high misinformation prevalence (Spanish, Portuguese, Hindi, Arabic) should be prioritized for maximum impact.
+Future iterations should extend transcript extraction, claim detection, and verdict synthesis to major languages beyond English (e.g., Spanish, Portuguese, Hindi, Arabic) so the system remains useful in the regions where misinformation volumes are highest.
 
 %-------------------------------------------------------
 \subsection{Large Language Model Comparison}
 %-------------------------------------------------------
 
-This work used GPT-4o-mini as the primary LLM across all components. A systematic comparison of different LLMs would provide valuable insights for deployment decisions:
-
-\begin{itemize}
-    \item \textbf{Commercial models}: GPT-4, GPT-4-turbo, Claude 3 (Opus, Sonnet, Haiku), Gemini Pro
-    \item \textbf{Open-source models}: LLaMA 3, Mistral, Qwen, DeepSeek
-    \item \textbf{Trade-off analysis}: Cost vs. accuracy vs. latency across different model sizes and providers
-    \item \textbf{Component-specific optimization}: Different models may be optimal for different pipeline stages (e.g., smaller models for query generation, larger models for verdict synthesis)
-\end{itemize}
-
-Such comparisons would inform cost-effective deployment strategies and identify which components benefit most from more capable models.
+Future studies should benchmark multiple commercial and local models (e.g., GPT-4 variants, Claude, Gemini, LLaMA, Qwen, Mistral) across pipeline components to map the cost, latency, and accuracy trade-offs for mixed deployments.
 
 %-------------------------------------------------------
 \subsection{Prompt Engineering and Management}
 %-------------------------------------------------------
 
-The current system uses fixed prompts for each component. A more sophisticated prompt management approach could improve both performance and maintainability:
-
-\begin{itemize}
-    \item \textbf{Prompt library}: Develop a versioned repository of prompts with documented performance characteristics, enabling systematic comparison and A/B testing
-    \item \textbf{Prompt optimization}: Apply techniques such as automatic prompt optimization (APO) or DSPy to systematically improve prompts based on evaluation metrics
-    \item \textbf{Few-shot example curation}: Identify optimal examples for few-shot prompting based on claim type, topic domain, and difficulty
-    \item \textbf{Dynamic prompt selection}: Select prompts based on claim characteristics (scientific vs. political claims may benefit from different verification strategies)
-\end{itemize}
+Maintaining a small prompt library with documented variants, automated prompt tuning, and a few curated examples per claim type would make it easier to evolve instructions without rewriting code.
 
 %-------------------------------------------------------
 \subsection{Enhanced Source Reliability Assessment}
 %-------------------------------------------------------
 
-The current reliability assessment relies primarily on the Media Bias/Fact Check (MBFC) dataset and domain heuristics. However, this approach has limitations when handling sources from well-established publishers that may still exhibit bias or inaccuracies on specific topics:
-
-\begin{itemize}
-    \item \textbf{Publisher reputation nuances}: Established publishers (e.g., Frontiers, Nature subsidiary journals) may have varying quality standards across different publications or sections. A more granular assessment could consider journal impact factors, retraction rates, and topic-specific reliability
-    \item \textbf{Claim-specific source evaluation}: A source reliable for general news may be less authoritative for specialized scientific claims; incorporating domain expertise signals would improve evidence quality
-    \item \textbf{Temporal reliability}: Source reliability may change over time; incorporating historical accuracy tracking could improve assessments
-    \item \textbf{Cross-referencing validation}: When multiple sources provide conflicting information, systematic cross-referencing protocols could help identify the most reliable interpretation
-\end{itemize}
+Source reliability could be refined by incorporating publisher-level signals (impact factors, retraction history), topic-aware weighting, time-varying trust scores, and lightweight cross-referencing when conflicting evidence appears.
 
 %-------------------------------------------------------
 \subsection{Production Deployment}
 %-------------------------------------------------------
 
-Transitioning from research prototype to production system requires addressing several engineering challenges:
-
-\begin{itemize}
-    \item \textbf{Cloud deployment}: Deploy the system on AWS, Google Cloud, or Azure with auto-scaling capabilities to handle variable load
-    \item \textbf{User authentication and rate limiting}: Implement user accounts with usage quotas to manage API costs and prevent abuse
-    \item \textbf{Caching and optimization}: Cache transcript extractions, reliability assessments, and common search results to reduce latency and costs
-    \item \textbf{Monitoring and observability}: Implement comprehensive logging, error tracking, and performance monitoring for production operations
-    \item \textbf{Public API}: Expose the fact-checking capabilities via a documented REST API for integration with third-party applications, browser extensions, or other platforms
-\end{itemize}
-
-Making the system publicly accessible would enable real-world validation and feedback collection, informing further improvements based on actual usage patterns.
+Transitioning from research prototype to production would involve cloud deployment (e.g., AWS with auto-scaling), lightweight user auth and rate limiting, basic caching for transcripts and reliability checks, runtime monitoring, etc.
 
 %-------------------------------------------------------
 \subsection{Extended Evaluation}
 %-------------------------------------------------------
 
-The current evaluation, while comparable in scale to prior fact-checking systems \citep{hassan2017vldb}, would benefit from expansion along two dimensions:
-
-\begin{itemize}
-    \item \textbf{Larger evaluation corpus}: Scaling from 30 to 100+ videos would enable more robust statistical analysis, identification of edge cases, and evaluation across a broader range of topics and content styles. A larger corpus would also allow stratified analysis by video characteristics (length, topic, claim density) and more reliable confidence intervals for reported metrics.
-
-    \item \textbf{Parameter grid exploration}: The current evaluation used a single configuration (\texttt{max\_claims}=5, \texttt{max\_queries}=3, \texttt{max\_results}=3). Systematic evaluation across the full parameter space would characterize the cost-accuracy-latency tradeoffs more comprehensively. Key configurations to explore include higher claim limits (10, 15, 20) for recall-focused applications, varied query counts to understand evidence saturation, and different result limits to assess diminishing returns in evidence collection.
-\end{itemize}
-
-Such extended evaluation would provide deployment guidelines for different use cases (e.g., high-precision quick checks vs. thorough investigations) and quantify the marginal value of additional computational resources.
+The current evaluation (30 videos across three domains) should be expanded to a 100+ video corpus with broader topics and formats, and to a richer parameter sweep (higher claim/query limits, more search results) so cost, accuracy, and latency trade-offs can be quantified across deployment scenarios.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % APPENDIX
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
 
+\section*{Appendix}
+
 \section{Ground Truth Annotation Dataset}
 \label{appendix:ground-truth}
 
 This appendix provides details on the ground truth annotation dataset used for system evaluation. The complete dataset comprises 30 YouTube videos with 503 annotated claims across three thematic categories.
-
 \subsection{Video Corpus Summary}
 
 Table~\ref{tab:video-corpus} presents the evaluation video corpus organized by category and content type.
 
+\small
 \begin{longtable}{p{6.5cm}p{2cm}p{3cm}r}
 \caption{Evaluation video corpus by category and content type} \label{tab:video-corpus} \\
 \toprule
 \textbf{Video Title} & \textbf{Category} & \textbf{Content Type} & \textbf{Claims} \\
 \midrule
 \endfirsthead
-\multicolumn{4}{c}{\tablename\ \thetable{} -- continued from previous page} \\
 \toprule
 \textbf{Video Title} & \textbf{Category} & \textbf{Content Type} & \textbf{Claims} \\
 \midrule
@@ -1480,41 +1354,17 @@ UK Election Results Explained & Politics & Factual & 18 \\
 Trump's Historic National Emergency & Politics & Factual & 21 \\
 \end{longtable}
 
-\subsection{Annotation Schema}
+\subsection{Annotation Schema and Guidelines}
 
-Each ground truth claim was annotated with the following attributes:
+Annotations follow ClaimBuster's check-worthiness principles \citep{hassan2017kdd} and store a compact set of structured fields:
 
 \begin{itemize}
-    \item \textbf{claim\_text}: The verbatim or paraphrased factual assertion from the video transcript
-    \item \textbf{is\_checkable}: Boolean indicating whether the claim is verifiable (all included claims are checkable)
-    \item \textbf{importance}: Numeric score (0.0--1.0) reflecting the claim's centrality to the video's main argument:
-    \begin{itemize}
-        \item 0.85--1.0: Thesis-critical claims that would undermine the video's argument if proven false
-        \item 0.60--0.80: Important supporting evidence tied to the main thesis
-        \item 0.30--0.55: Contextual or background information
-        \item 0.0--0.25: Peripheral or anecdotal details
-    \end{itemize}
-    \item \textbf{verdict.overall\_stance}: Expected verification outcome (SUPPORTS, REFUTES, MIXED, UNCLEAR)
-    \item \textbf{verdict.reasoning}: Brief justification for the assigned stance
+    \item \textbf{Claim text}: Verbatim or lightly paraphrased factual statement taken from the transcript; purely opinionated or rhetorical content is excluded.
+    \item \textbf{Importance score}: Thesis-impact hierarchy on a 0.0--1.0 scale (0.85--1.0 thesis-critical, 0.60--0.80 key evidence, 0.30--0.55 contextual, $<$0.30 peripheral).
+    \item \textbf{Expected verdict}: Anticipated stance label (SUPPORTS, REFUTES, MIXED, UNCLEAR) with a short rationale grounded in established sources; MIXED applies only when credible evidence exists on both sides, while UNCLEAR denotes insufficient or conflicting evidence under the same criteria across all videos.
 \end{itemize}
 
-\subsection{Sample Annotation}
-
-A typical annotated video (e.g., ``The Brain-Changing Benefits of Exercise'' TED talk) contains the video identifier, title, and a list of claims with their attributes. Example claims include statements about neurotransmitter increases from exercise (importance: 0.9, verdict: SUPPORTS), neurogenesis in the hippocampus (importance: 0.95, verdict: MIXED due to human-animal research differences), and exercise recommendations (importance: 0.8, verdict: SUPPORTS based on CDC/WHO guidelines). The complete ground truth dataset in machine-readable YAML format is available in the project repository.
-
-\subsection{Annotation Guidelines}
-
-The annotation process followed these guidelines adapted from ClaimBuster's check-worthiness criteria \citep{hassan2017kdd}:
-
-\begin{enumerate}
-    \item \textbf{Claim identification}: Include only factual, verifiable statements. Exclude opinions, predictions, and rhetorical questions.
-    \item \textbf{Importance scoring}: Apply the ``thesis impact test''---if this claim were proven false, would the video's main argument collapse or weaken significantly?
-    \item \textbf{Verdict assignment}: Base verdicts on current scientific consensus and authoritative sources (peer-reviewed literature, government agencies, established fact-checkers).
-    \item \textbf{MIXED vs. UNCLEAR}: Use MIXED when evidence exists for both sides; use UNCLEAR when insufficient evidence exists to make a determination.
-    \item \textbf{Consistency}: Apply the same standards across all videos regardless of the video's overall stance or topic.
-\end{enumerate}
-
-The complete ground truth dataset in machine-readable YAML format is available in the project repository at \texttt{experiments/data/ground\_truth/}.
+This schema keeps annotations consistent while capturing the key metadata needed for quantitative evaluation.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % BIBLIOGRAPHY

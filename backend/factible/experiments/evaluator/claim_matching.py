@@ -6,9 +6,12 @@ Provides fuzzy and semantic similarity matching between ground truth and system-
 
 from typing import Dict, List
 from difflib import SequenceMatcher
+import logging
 import numpy as np
 
-from .models import GroundTruthClaim
+from factible.experiments.evaluator.models import GroundTruthClaim
+
+_logger = logging.getLogger(__name__)
 
 
 def semantic_similarity_match_claims(
@@ -103,8 +106,10 @@ def semantic_similarity_match_claims(
         }
 
     except ImportError:
-        print("⚠️  sentence-transformers not installed. Falling back to fuzzy matching.")
-        print("   Install with: uv pip install sentence-transformers")
+        _logger.warning(
+            "sentence-transformers not installed. Falling back to fuzzy matching."
+        )
+        _logger.info("   Install with: uv pip install sentence-transformers")
         return fuzzy_match_claims(gt_claims, system_claims, threshold)
 
 
