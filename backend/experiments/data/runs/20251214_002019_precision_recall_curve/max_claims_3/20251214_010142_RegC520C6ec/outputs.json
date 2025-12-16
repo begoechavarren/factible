@@ -1,0 +1,1701 @@
+{
+  "extracted_claims": {
+    "claims": [
+      {
+        "text": "Decades of global geoengineering development is responsible for extreme weather events.",
+        "confidence": 0.8,
+        "category": "scientific",
+        "importance": 0.85,
+        "context": "Thesis claim about geoengineering and weather.",
+        "transcript_char_start": 293,
+        "transcript_char_end": 366,
+        "transcript_match_score": 0.7295597484276729
+      },
+      {
+        "text": "Artificial precipitation generation is easy to see on infrared satellite.",
+        "confidence": 0.7,
+        "category": "scientific",
+        "importance": 0.6,
+        "context": "Claim about visibility of geoengineering on satellite images.",
+        "transcript_char_start": 5034,
+        "transcript_char_end": 5106,
+        "transcript_match_score": 1.0
+      },
+      {
+        "text": "At least nine states have flash flood watches due to extreme weather.",
+        "confidence": 0.9,
+        "category": "geographical",
+        "importance": 0.6,
+        "context": "Recent weather events causing flooding in the U.S.",
+        "transcript_char_start": 6193,
+        "transcript_char_end": 6247,
+        "transcript_match_score": 0.7540983606557377
+      }
+    ],
+    "total_count": 3
+  },
+  "final_output": {
+    "extracted_claims": {
+      "claims": [
+        {
+          "text": "Decades of global geoengineering development is responsible for extreme weather events.",
+          "confidence": 0.8,
+          "category": "scientific",
+          "importance": 0.85,
+          "context": "Thesis claim about geoengineering and weather.",
+          "transcript_char_start": 293,
+          "transcript_char_end": 366,
+          "transcript_match_score": 0.7295597484276729
+        },
+        {
+          "text": "Artificial precipitation generation is easy to see on infrared satellite.",
+          "confidence": 0.7,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Claim about visibility of geoengineering on satellite images.",
+          "transcript_char_start": 5034,
+          "transcript_char_end": 5106,
+          "transcript_match_score": 1.0
+        },
+        {
+          "text": "At least nine states have flash flood watches due to extreme weather.",
+          "confidence": 0.9,
+          "category": "geographical",
+          "importance": 0.6,
+          "context": "Recent weather events causing flooding in the U.S.",
+          "transcript_char_start": 6193,
+          "transcript_char_end": 6247,
+          "transcript_match_score": 0.7540983606557377
+        }
+      ],
+      "total_count": 3
+    },
+    "claim_reports": [
+      {
+        "claim_text": "Decades of global geoengineering development is responsible for extreme weather events.",
+        "claim_confidence": 0.8,
+        "claim_category": "scientific",
+        "overall_stance": "refutes",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence strongly refutes the claim that decades of geoengineering development is responsible for extreme weather events. High-reliability sources, such as the NOAA fact check, indicate that while geoengineering aims to mitigate climate change, it has not been shown to directly cause extreme weather, which is primarily driven by greenhouse gas emissions. Additionally, other sources highlight the uncertainty surrounding geoengineering's impact on weather without establishing a direct link to extreme events.",
+        "evidence_by_stance": {
+          "refutes": [
+            {
+              "title": "Fact check: Debunking weather modification claims - NOAA",
+              "url": "https://www.noaa.gov/news/fact-check-debunking-weather-modification-claims",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that while geoengineering methods are intended to mitigate climate change, they have not been shown to directly cause extreme weather events, such as hurricanes. Instead, the article emphasizes that the warming atmosphere due to greenhouse gas emissions is the primary driver of such weather phenomena.",
+              "snippet": "Geoengineering did not impact hurricanes Helene and Milton, let alone make them worse. The Earth's warming atmosphere can cause hurricanes ..."
+            },
+            {
+              "title": "Making climate geoengineering more inclusive and ethical",
+              "url": "https://www.weforum.org/stories/2024/10/geoengineering-building-ethics-transparency-inclusion-climate-research/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The article discusses the potential for cloud seeding and other geoengineering techniques to modify weather, but it emphasizes the uncertainty and lack of clear evidence linking these methods to extreme weather events. It suggests that while geoengineering has been developed, its impact on extreme weather is not well understood and may not be directly responsible for such events.",
+              "snippet": "This year's extreme weather events are a troubling preamble for the upcoming COP29. At this meeting in Azerbaijan in November, world leaders ..."
+            }
+          ],
+          "mixed": [
+            {
+              "title": "A hard look at geoengineering reveals global risks | The Current",
+              "url": "https://news.ucsb.edu/2025/022027/hard-look-geoengineering-reveals-global-risks",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (38.6 years)"
+                ],
+                "bias": null
+              },
+              "stance": "mixed",
+              "evidence_summary": "The article discusses the potential risks and uncertainties associated with geoengineering methods, particularly how they might impact ecosystems and climate systems, but it does not directly link these methods to extreme weather events as a consequence of their development.",
+              "snippet": "The El Ni\u00f1o Southern Oscillation drives major weather patterns across the globe. Disrupting it could have intense and far-reaching ramifications ..."
+            },
+            {
+              "title": "Geoengineering | Atmospheric Chemistry Observations & Modeling",
+              "url": "https://www2.acom.ucar.edu/modeling/geoengineering",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (39.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "mixed",
+              "evidence_summary": "The evidence discusses geoengineering methods aimed at mitigating climate change, but it does not directly link these methods to causing extreme weather events. Instead, it highlights the risks and uncertainties associated with geoengineering, suggesting that while it may help reduce some climate impacts, it could also exacerbate others if not managed properly.",
+              "snippet": "Geoengineering could be an opportunity to mitigate the worst impacts until emission and greenhouse gas concentration reductions have been effective."
+            },
+            {
+              "title": "How extreme weather fuels interest in geoengineering",
+              "url": "https://climate.uchicago.edu/news/how-extreme-weather-fuels-interest-in-geoengineering/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (34.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "mixed",
+              "evidence_summary": "The article discusses the development of weather modification techniques, including cloud seeding, and acknowledges the uncertainty and potential unintended consequences of these methods. However, it does not directly link decades of geoengineering development to extreme weather events, suggesting that while geoengineering exists, its impact on extreme weather is not clearly established.",
+              "snippet": "How it works: Solar geoengineering would involve intentionally injecting particles of sulfur dioxide into the upper atmosphere to reflect more ..."
+            },
+            {
+              "title": "The Harvard Solar Geoengineering Research Program",
+              "url": "https://salatainstitute.harvard.edu/research-initiatives/the-harvard-solar-geoengineering-research-program/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (40.5 years)"
+                ],
+                "bias": null
+              },
+              "stance": "mixed",
+              "evidence_summary": "The article discusses the potential for cloud seeding and other geoengineering techniques to modify weather, but it emphasizes the uncertainty and lack of clear evidence linking these methods to extreme weather events. It suggests that while geoengineering has been developed, its impact on extreme weather is not well understood and could have unintended consequences.",
+              "snippet": "Carbon geoengineering seeks to remove carbon dioxide from the atmosphere, which would address the root cause of climate change \u2014 the accumulation of carbon ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 38.879,
+        "timestamp_confidence": 0.7295597484276729
+      },
+      {
+        "claim_text": "Artificial precipitation generation is easy to see on infrared satellite.",
+        "claim_confidence": 0.7,
+        "claim_category": "scientific",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "Multiple high-reliability sources indicate that artificial precipitation generation can be detected using infrared satellite imagery. For instance, a NASA report discusses the monitoring of stratospheric aerosols from geoengineering, and the NESDIS confirms the use of infrared imagery for observing weather development. Additionally, articles highlight the capabilities of satellite instruments to detect such phenomena, reinforcing the claim.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "[PDF] Severe Thunderstorm Signatures Within Geostationary Satellite ...",
+              "url": "https://ntrs.nasa.gov/api/citations/20210025214/downloads/GOES_deep_learning_AGU_live_JCedits.pptx.pdf",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The article discusses the detection of stratospheric aerosols formed from sulfur injections using satellite instruments, indicating that such geoengineering activities can be monitored from space, which supports the claim about artificial precipitation generation being observable on infrared satellites.",
+              "snippet": "This presentation demonstrates that OT and AACP patterns can be accurately detected at the satellite pixel scale using U-Net semantic segmentation deep ..."
+            },
+            {
+              "title": "Interactive Maps | NESDIS",
+              "url": "https://www.nesdis.noaa.gov/real-time-imagery/interactive-maps",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The NESDIS website indicates that infrared imagery is used to observe weather development, which implies that artificial precipitation generation can be detected through such satellite data.",
+              "snippet": "NESDIS collects vast amounts of data from satellites to support NOAA's mission to understand and predict changes in climate, weather, oceans, and coasts."
+            },
+            {
+              "title": "The U.S. is building an early warning system to detect geoengineering",
+              "url": "https://csl.noaa.gov/news/2024/420_1202.html",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The article discusses the ability of satellite instruments, specifically SAGE III/ISS, to detect stratospheric aerosols generated from geoengineering experiments, indicating that while smaller amounts may be challenging to detect initially, they can be observed with the right instruments, thus supporting the claim that artificial precipitation generation can be seen on infrared satellites.",
+              "snippet": "Both NOAA and NASA have satellites that can detect large quantities of aerosols in the atmosphere but they can't pick up smaller amounts."
+            },
+            {
+              "title": "How much information on precipitation is contained in satellite ...",
+              "url": "https://www.sciencedirect.com/science/article/abs/pii/S0169809521001307",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The article discusses the analysis of infrared (IR) and precipitation observations, indicating that patterns can be observed, which suggests that artificial precipitation generation may be detectable using infrared satellite data.",
+              "snippet": "We analyze a total of more than 1.3 billion pairs of IR and precipitation observations over CONUS, and we observe interesting patterns."
+            },
+            {
+              "title": "Investigating the ability of satellite occultation instruments to monitor ...",
+              "url": "https://acp.copernicus.org/articles/25/11673/2025/",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (28.6 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The article discusses the ability of satellite instruments, specifically SAGE III/ISS, to detect stratospheric aerosols generated from geoengineering methods, indicating that such emissions can be observed, which supports the claim about artificial precipitation generation being detectable via infrared satellite.",
+              "snippet": "Accordingly, it can be assumed that smaller emission rates cannot be detected as geoengineering signals during the first month of the ..."
+            }
+          ],
+          "mixed": [
+            {
+              "title": "Artificial intelligence systems for rainy areas detection and ...",
+              "url": "https://www.sciencedirect.com/science/article/abs/pii/S0169809516301028",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "mixed",
+              "evidence_summary": "The article discusses the capabilities of satellite imaging, including infrared imagery, which can be used to observe weather phenomena, but it does not specifically confirm that artificial precipitation generation is easily detectable on infrared satellite imagery.",
+              "snippet": "The Spinning Enhanced Visible and Infrared Imager (SEVIRI) imaging radiometer permanently scans the earth, and provides updated weather images every 15 min, ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 710.6,
+        "timestamp_confidence": 1.0
+      },
+      {
+        "claim_text": "At least nine states have flash flood watches due to extreme weather.",
+        "claim_confidence": 0.9,
+        "claim_category": "geographical",
+        "overall_stance": "mixed",
+        "verdict_confidence": "medium",
+        "verdict_summary": "The evidence presents mixed signals regarding the claim. While a coast-to-coast storm is affecting multiple states, and there are reports of flooding in northeastern New York, none of the sources confirm that at least nine states are under flash flood watches. The National Climate Report indicates some flooding but does not verify the specific number of states, leading to uncertainty.",
+        "evidence_by_stance": {
+          "mixed": [
+            {
+              "title": "Monthly Climate Reports | National Climate Report | October 2023",
+              "url": "https://www.ncei.noaa.gov/access/monitoring/monthly-report/national/202310",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "mixed",
+              "evidence_summary": "The article discusses the occurrence of moderate to heavy rainfall in northeastern New York due to a slow-moving frontal boundary, which resulted in some street flooding and minor flooding along the East Branch of the Ausable River. However, it does not confirm that at least nine states are under flash flood watches due to extreme weather, making the overall stance mixed.",
+              "snippet": "This led to reports of street flooding and severe weather across this swath of the region. Overall, October was a quiet month for severe weather for much of the ..."
+            },
+            {
+              "title": "Coast-to-coast storm to bring snow, flooding rain - FOX Weather",
+              "url": "https://www.foxweather.com/weather-news/daily-weather-update-october-9-2023",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (30.5 years)"
+                ],
+                "bias": null
+              },
+              "stance": "mixed",
+              "evidence_summary": "The article discusses a coast-to-coast storm affecting over 30 states, which implies that multiple states are experiencing severe weather conditions, including potential flooding. However, it does not specify that at least nine states have flash flood watches, leaving the claim partially unverified.",
+              "snippet": "A coast-to-coast storm will bring the potential for snow and flooding rain throughout the week for more than 30 states across the US."
+            },
+            {
+              "title": "First October storm to break the heat after severe weather in western ...",
+              "url": "https://nypost.com/2023/10/02/first-october-storm-to-break-the-heat-after-severe-weather-in-western-central-us/",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "MBFC credibility: medium",
+                  "Factual reporting: Mixed"
+                ],
+                "bias": "Right-Center"
+              },
+              "stance": "mixed",
+              "evidence_summary": "The article discusses the occurrence of heavy rainfall and mentions that portions of northern New York experienced street flooding and minor flooding, indicating that extreme weather is affecting the area. However, it does not specify the number of states under flash flood watches, making the claim partially supported but not fully confirmed.",
+              "snippet": "A storm brewing that threatens to bring snow to higher elevations in the West and severe weather and heavy rain to the Plains that will break the heat."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "Flood Event Summary 2023 - National Weather Service",
+              "url": "https://www.weather.gov/marfc/FloodEventSummary2023",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (26.6 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Flood Event Summary 2023 \u00b7 River Observations & Forecasts \u00b7 Watches & Warnings \u00b7 MARFC River Forecast Products \u00b7 River & Lakes Summaries \u00b7 5 Day Significant Flood ...",
+              "snippet": "Flood Event Summary 2023 \u00b7 River Observations & Forecasts \u00b7 Watches & Warnings \u00b7 MARFC River Forecast Products \u00b7 River & Lakes Summaries \u00b7 5 Day Significant Flood ..."
+            },
+            {
+              "title": "NWS Watches-Warnings- Advisories - Storm Prediction Center - NOAA",
+              "url": "https://www.spc.noaa.gov/products/wwa/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "No information is available for this page. \u00b7 Learn why",
+              "snippet": "No information is available for this page. \u00b7 Learn why"
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 1216.96,
+        "timestamp_confidence": 0.7540983606557377
+      }
+    ],
+    "transcript_data": {
+      "text": "7.1 billion people on this planet are completely in the dark The Continuous and escalating extreme weather events occurring every day around the planet are blamed on mother nature but nothing could be further from the [Music] truth all that is required to understand explain and demonstrate how Decades of global geoengineering development is directly and deliberately responsible for all of the Super Storms hurricanes tornadoes and floods is the understanding of a few simple [Music] Concepts however to find un altered explanations of these Concepts we must first travel back 60 years [Music] rain rain go away come again some other day two young fellas want to play one is Fred he lives in this Farm the other is Pete he lives in the city he's visiting [Music] friend boy where does all this rain come from from the sky everybody knows that [Music] but what Pete really wants to know is how does the water get into the sky well let's see Fred sees one way as the water dries off the horses it goes into the air but there are lots of other ways when the sun comes out strongly after a shower we can almost see the water disappearing into the air [Music] here heat from the Sun is drying the roof water at the top edge of the puddle slowly disappears into the air right before our eyes billions of gallons of water go into the air every hour from the ponds lakes rivers and oceans all over the world in fact everything that dries as giving water to the air even wet Fields do [Music] this and wet clothes on a line slowly lose water to the air and become [Music] dry whether you can see it or whether you can't water is always going into the air from many things even dogs give water to the air as they pant [Music] people as well as animals have to replace the water their bodies give off to the [Music] air yep there's another way water can get into the air the water on the doghouse roof dried pretty fast in the warm sun this this water disappears faster because the stove is hotter this change from water we can see to water vapor we can't see is called [Music] evaporation no that's not evaporation that water isn't changing to water vapor it's just sinking into the soil evaporation comes later the leaves give off water to the air water taken up of the plant's Roots it's hard to believe so let's find out if it's true first a cardboard disc to cover the wet soil then a jar to keep any water vapor from the leaves from being lost to the air and the jar without a [Music] plan and last time until tomorrow [Music] morning during the night the plant gave off water because the jar without the plant is dry inside the jar are droplets just like the droplets that form in the moisture from Fred's warm breath hits the window glass the water vapor changes into very small drops of water because the window is cold in the same way the water vapor from the plant changed to water when it touched the cooler surface of the jar but what happens if the glass is warm the best way to answer such a question is to try [Music] it first a glass is [Music] warm then another glass is chilled [Music] what happens with the warm glass nothing but soon on the cold glass glass water collects water from the air when this happens it's called condensation condensation causes dew on the grass during the night when the earth and grass is cooler than the air condensation takes place and the water vapor forms little drops of water the cloud from the spot of the teac kettle is condensation of the water vapor from the teac kettle hitting the colder air the water vapor in the warm air of the room forms a cloud as it hits the very cold air from the refrigerator [Music] uh-oh now what's going to happen [Music] condensation rain [Music] the hot water in the kettle gives off water vapor to the air by rapid evaporation just as rivers lakes and ponds give off water vapor to the air by slow evaporation as the hot water-filled air hits the colder air near the ice tray the water vapor turns into clouds of tiny water droplets floating in the air condensation when the air is quite cold and cannot hold any more water droplets they collect together to form larger drops as on the ice tray and being too heavy to float in the air they fall back to the Earth as [Music] rain without water in the air we couldn't live our Fields would be dry and nothing would grow because water evaporates in the air and returns again as rain we have water running through the valleys in our Brooks and streams filling reservoirs with water to drink turning our water wheels and turning the turbines and the powerhouses to give us electricity all from water in the air the fundamentals of global geoengineering are no different than this child's experiment water vapor is artificially introduced into the air in place of the natural evaporation stage and is artificially cooled and condensed to produce [Music] rain you need a great many tea kettal to produce the massive amounts of water vapor required to fuel these Global storm systems and this planet is deliberately covered with them [Music] [Music] this artificial precipitation generation is easy to see on infrared satellite and is identified by sudden coordinated bursts of superheated water vapor from no natural source [Music] [Music] ironically the same primary source of CO2 Emissions on this planet is the same source of artificial [Music] precipitation this Nationwide artificial precipitation generation site clickers like clockwork every single day [Music] hexagonal Center of Vortex with flat size proves geoengineering manufacturer nightly Nationwide coordinated artificial precipitation generation Noti is the total absence of natural precipitation before the nightly generation cycle [Music] manufactured vortex in exactly the same area rotating in the opposite direction twin vortices rotating in opposite directions Drive artificial precipitation to the southeast [Music] [Music] [Music] the same identifying cycle of circular and sudden coordinated bursts of artificial precipitation can be seen all around the world in every industrialized and colonized country [Music] in [Music] [Music] [Music] this man-made Global artificial precipitation cycle is the singular reason for massive and continuous flooding worldwide at least nine states with flash flood watches Coast to Coast tonight in Newton North Carolina look at this the water suddenly Rising above the windows of this family's home you can barely see the tops of their cars there and this roadway washed away a giant collapse under the rains today this as we get new information tonight on those two tropical systems big changes there as well we get to it all beginning with the flooding and the pictures just now coming in here's ABC meteorologist Ginger Z tonight chest deep Rescuers pulling people to Safety in Western North Carolina at least 10 Swiftwater rescues already today thanks I just it was raining so hard I did not see like any of that a state of emergency declared in cataba County more than a foot of rain in less than 24 hours busting storm drains and swallowing street signs and mailboxes it's bad it come up fast since 9:00 it probably come up 3T from the drowning Southeast to the wild Southwest that is Albuquerque New Mexico just yesterday near 90 m per hour wind gust sliced through the typically tranquil Town pour down like like a hurricane people plucked from their flooded cars the desert rains swamping the streets near Tucson Arizona the millions of tons of heavy metal nanen trails and frequency activated ice nucleation used to control these storm systems is a topic for another [Music] video however don't believe that mother nature monsoons in the United States or any other fairy tale is responsible for worldwide man-made flooding that you can't see with your own eyes look up",
+      "segments": [
+        {
+          "text": "7.1 billion people on this planet are",
+          "start": 17.16,
+          "duration": 5.24
+        },
+        {
+          "text": "completely in the",
+          "start": 19.6,
+          "duration": 2.8
+        },
+        {
+          "text": "dark The Continuous and escalating",
+          "start": 23.24,
+          "duration": 5.4
+        },
+        {
+          "text": "extreme weather events occurring every",
+          "start": 26.64,
+          "duration": 4.28
+        },
+        {
+          "text": "day around the planet are blamed on",
+          "start": 28.64,
+          "duration": 4.24
+        },
+        {
+          "text": "mother nature but nothing could be",
+          "start": 30.92,
+          "duration": 3.34
+        },
+        {
+          "text": "further from the",
+          "start": 32.88,
+          "duration": 2.8
+        },
+        {
+          "text": "[Music]",
+          "start": 34.26,
+          "duration": 4.619
+        },
+        {
+          "text": "truth all that is required to understand",
+          "start": 35.68,
+          "duration": 6.199
+        },
+        {
+          "text": "explain and demonstrate how Decades of",
+          "start": 38.879,
+          "duration": 5.321
+        },
+        {
+          "text": "global geoengineering development is",
+          "start": 41.879,
+          "duration": 5.16
+        },
+        {
+          "text": "directly and deliberately responsible",
+          "start": 44.2,
+          "duration": 5.96
+        },
+        {
+          "text": "for all of the Super Storms hurricanes",
+          "start": 47.039,
+          "duration": 5.641
+        },
+        {
+          "text": "tornadoes and floods is the",
+          "start": 50.16,
+          "duration": 4.76
+        },
+        {
+          "text": "understanding of a few simple",
+          "start": 52.68,
+          "duration": 5.12
+        },
+        {
+          "text": "[Music]",
+          "start": 54.92,
+          "duration": 5.639
+        },
+        {
+          "text": "Concepts however to find un altered",
+          "start": 57.8,
+          "duration": 5.36
+        },
+        {
+          "text": "explanations of these Concepts we must",
+          "start": 60.559,
+          "duration": 5.881
+        },
+        {
+          "text": "first travel back 60 years",
+          "start": 63.16,
+          "duration": 30.4
+        },
+        {
+          "text": "[Music]",
+          "start": 66.44,
+          "duration": 30.959
+        },
+        {
+          "text": "rain rain go away come again some other",
+          "start": 93.56,
+          "duration": 7.28
+        },
+        {
+          "text": "day two young fellas want to play one is",
+          "start": 97.399,
+          "duration": 6.441
+        },
+        {
+          "text": "Fred he lives in this Farm the other is",
+          "start": 100.84,
+          "duration": 7.2
+        },
+        {
+          "text": "Pete he lives in the city he's visiting",
+          "start": 103.84,
+          "duration": 4.2
+        },
+        {
+          "text": "[Music]",
+          "start": 108.12,
+          "duration": 6.919
+        },
+        {
+          "text": "friend boy where does all this rain come",
+          "start": 111.0,
+          "duration": 8.91
+        },
+        {
+          "text": "from from the sky everybody knows that",
+          "start": 115.039,
+          "duration": 7.801
+        },
+        {
+          "text": "[Music]",
+          "start": 119.91,
+          "duration": 5.249
+        },
+        {
+          "text": "but what Pete really wants to know is",
+          "start": 122.84,
+          "duration": 5.839
+        },
+        {
+          "text": "how does the water get into the sky well",
+          "start": 125.159,
+          "duration": 4.921
+        },
+        {
+          "text": "let's",
+          "start": 128.679,
+          "duration": 5.84
+        },
+        {
+          "text": "see Fred sees one way as the water dries",
+          "start": 130.08,
+          "duration": 7.879
+        },
+        {
+          "text": "off the horses it goes into the air but",
+          "start": 134.519,
+          "duration": 6.321
+        },
+        {
+          "text": "there are lots of other",
+          "start": 137.959,
+          "duration": 5.36
+        },
+        {
+          "text": "ways when the sun comes out strongly",
+          "start": 140.84,
+          "duration": 4.84
+        },
+        {
+          "text": "after a shower we can almost see the",
+          "start": 143.319,
+          "duration": 6.681
+        },
+        {
+          "text": "water disappearing into the air",
+          "start": 145.68,
+          "duration": 4.32
+        },
+        {
+          "text": "[Music]",
+          "start": 152.14,
+          "duration": 6.41
+        },
+        {
+          "text": "here heat from the Sun is drying the",
+          "start": 159.159,
+          "duration": 5.881
+        },
+        {
+          "text": "roof water at the top edge of the puddle",
+          "start": 162.319,
+          "duration": 4.56
+        },
+        {
+          "text": "slowly disappears into the air right",
+          "start": 165.04,
+          "duration": 4.44
+        },
+        {
+          "text": "before our",
+          "start": 166.879,
+          "duration": 2.601
+        },
+        {
+          "text": "eyes billions of gallons of water go",
+          "start": 170.4,
+          "duration": 4.919
+        },
+        {
+          "text": "into the air every hour from the ponds",
+          "start": 173.08,
+          "duration": 4.68
+        },
+        {
+          "text": "lakes rivers and oceans all over the",
+          "start": 175.319,
+          "duration": 5.28
+        },
+        {
+          "text": "world in fact everything that dries as",
+          "start": 177.76,
+          "duration": 5.559
+        },
+        {
+          "text": "giving water to the air even wet Fields",
+          "start": 180.599,
+          "duration": 4.361
+        },
+        {
+          "text": "do",
+          "start": 183.319,
+          "duration": 7.12
+        },
+        {
+          "text": "[Music]",
+          "start": 184.96,
+          "duration": 5.479
+        },
+        {
+          "text": "this and wet clothes on a line slowly",
+          "start": 191.36,
+          "duration": 7.29
+        },
+        {
+          "text": "lose water to the air and become",
+          "start": 195.159,
+          "duration": 6.611
+        },
+        {
+          "text": "[Music]",
+          "start": 198.65,
+          "duration": 3.12
+        },
+        {
+          "text": "dry whether you can see it or whether",
+          "start": 202.12,
+          "duration": 4.92
+        },
+        {
+          "text": "you can't water is always going into the",
+          "start": 204.56,
+          "duration": 5.399
+        },
+        {
+          "text": "air from many things",
+          "start": 207.04,
+          "duration": 5.08
+        },
+        {
+          "text": "even dogs give water to the air as they",
+          "start": 209.959,
+          "duration": 3.561
+        },
+        {
+          "text": "pant",
+          "start": 212.12,
+          "duration": 37.56
+        },
+        {
+          "text": "[Music]",
+          "start": 213.52,
+          "duration": 38.559
+        },
+        {
+          "text": "people as well as animals have to",
+          "start": 249.68,
+          "duration": 4.399
+        },
+        {
+          "text": "replace the water their bodies give off",
+          "start": 252.079,
+          "duration": 2.951
+        },
+        {
+          "text": "to the",
+          "start": 254.079,
+          "duration": 6.56
+        },
+        {
+          "text": "[Music]",
+          "start": 255.03,
+          "duration": 8.93
+        },
+        {
+          "text": "air yep there's another way water can",
+          "start": 260.639,
+          "duration": 5.441
+        },
+        {
+          "text": "get into the air the water on the",
+          "start": 263.96,
+          "duration": 4.239
+        },
+        {
+          "text": "doghouse roof dried pretty fast in the",
+          "start": 266.08,
+          "duration": 4.76
+        },
+        {
+          "text": "warm sun this this water disappears",
+          "start": 268.199,
+          "duration": 5.961
+        },
+        {
+          "text": "faster because the stove is",
+          "start": 270.84,
+          "duration": 6.639
+        },
+        {
+          "text": "hotter this change from water we can see",
+          "start": 274.16,
+          "duration": 7.84
+        },
+        {
+          "text": "to water vapor we can't see is called",
+          "start": 277.479,
+          "duration": 15.28
+        },
+        {
+          "text": "[Music]",
+          "start": 282.0,
+          "duration": 13.96
+        },
+        {
+          "text": "evaporation no that's not evaporation",
+          "start": 292.759,
+          "duration": 5.841
+        },
+        {
+          "text": "that water isn't changing to water vapor",
+          "start": 295.96,
+          "duration": 4.6
+        },
+        {
+          "text": "it's just sinking into the",
+          "start": 298.6,
+          "duration": 5.52
+        },
+        {
+          "text": "soil evaporation comes later the leaves",
+          "start": 300.56,
+          "duration": 6.12
+        },
+        {
+          "text": "give off water to the air water taken up",
+          "start": 304.12,
+          "duration": 4.72
+        },
+        {
+          "text": "of the plant's Roots it's hard to",
+          "start": 306.68,
+          "duration": 7.44
+        },
+        {
+          "text": "believe so let's find out if it's true",
+          "start": 308.84,
+          "duration": 5.28
+        },
+        {
+          "text": "first a cardboard disc to cover the wet",
+          "start": 341.84,
+          "duration": 5.28
+        },
+        {
+          "text": "soil then a jar to keep any water vapor",
+          "start": 350.4,
+          "duration": 7.239
+        },
+        {
+          "text": "from the leaves from being lost to the",
+          "start": 353.8,
+          "duration": 3.839
+        },
+        {
+          "text": "air and the jar without a",
+          "start": 357.759,
+          "duration": 6.031
+        },
+        {
+          "text": "[Music]",
+          "start": 360.57,
+          "duration": 3.22
+        },
+        {
+          "text": "plan and last time until tomorrow",
+          "start": 364.319,
+          "duration": 16.091
+        },
+        {
+          "text": "[Music]",
+          "start": 369.24,
+          "duration": 11.17
+        },
+        {
+          "text": "morning during the night the plant gave",
+          "start": 380.8,
+          "duration": 5.2
+        },
+        {
+          "text": "off water because the jar without the",
+          "start": 383.72,
+          "duration": 4.24
+        },
+        {
+          "text": "plant is",
+          "start": 386.0,
+          "duration": 5.56
+        },
+        {
+          "text": "dry inside the jar",
+          "start": 387.96,
+          "duration": 3.6
+        },
+        {
+          "text": "are droplets just like the droplets that",
+          "start": 394.56,
+          "duration": 5.68
+        },
+        {
+          "text": "form in the moisture from Fred's warm",
+          "start": 398.039,
+          "duration": 5.321
+        },
+        {
+          "text": "breath hits the window",
+          "start": 400.24,
+          "duration": 3.12
+        },
+        {
+          "text": "glass the water vapor changes into very",
+          "start": 403.84,
+          "duration": 5.72
+        },
+        {
+          "text": "small drops of water because the window",
+          "start": 406.88,
+          "duration": 4.599
+        },
+        {
+          "text": "is",
+          "start": 409.56,
+          "duration": 4.44
+        },
+        {
+          "text": "cold in the same way the water vapor",
+          "start": 411.479,
+          "duration": 4.601
+        },
+        {
+          "text": "from the plant changed to water when it",
+          "start": 414.0,
+          "duration": 4.36
+        },
+        {
+          "text": "touched the cooler surface of the",
+          "start": 416.08,
+          "duration": 5.16
+        },
+        {
+          "text": "jar but what happens if the glass is",
+          "start": 418.36,
+          "duration": 5.16
+        },
+        {
+          "text": "warm the best way to answer such a",
+          "start": 421.24,
+          "duration": 3.27
+        },
+        {
+          "text": "question is to try",
+          "start": 423.52,
+          "duration": 3.64
+        },
+        {
+          "text": "[Music]",
+          "start": 424.51,
+          "duration": 6.73
+        },
+        {
+          "text": "it first a glass is",
+          "start": 427.16,
+          "duration": 4.08
+        },
+        {
+          "text": "[Music]",
+          "start": 432.95,
+          "duration": 3.24
+        },
+        {
+          "text": "warm then another glass is chilled",
+          "start": 439.879,
+          "duration": 5.481
+        },
+        {
+          "text": "[Music]",
+          "start": 445.74,
+          "duration": 32.299
+        },
+        {
+          "text": "what happens with the warm glass nothing",
+          "start": 474.199,
+          "duration": 6.321
+        },
+        {
+          "text": "but soon on the cold glass glass water",
+          "start": 478.039,
+          "duration": 5.801
+        },
+        {
+          "text": "collects water from the air when this",
+          "start": 480.52,
+          "duration": 7.16
+        },
+        {
+          "text": "happens it's called",
+          "start": 483.84,
+          "duration": 3.84
+        },
+        {
+          "text": "condensation condensation causes dew on",
+          "start": 494.199,
+          "duration": 4.84
+        },
+        {
+          "text": "the grass during the night when the",
+          "start": 497.039,
+          "duration": 4.361
+        },
+        {
+          "text": "earth and grass is cooler than the air",
+          "start": 499.039,
+          "duration": 4.921
+        },
+        {
+          "text": "condensation takes place and the water",
+          "start": 501.4,
+          "duration": 6.44
+        },
+        {
+          "text": "vapor forms little drops of",
+          "start": 503.96,
+          "duration": 6.12
+        },
+        {
+          "text": "water the cloud from the spot of the",
+          "start": 507.84,
+          "duration": 4.4
+        },
+        {
+          "text": "teac kettle is condensation of the water",
+          "start": 510.08,
+          "duration": 4.079
+        },
+        {
+          "text": "vapor from the teac kettle hitting the",
+          "start": 512.24,
+          "duration": 4.4
+        },
+        {
+          "text": "colder",
+          "start": 514.159,
+          "duration": 2.481
+        },
+        {
+          "text": "air the water vapor in the warm air of",
+          "start": 518.64,
+          "duration": 5.04
+        },
+        {
+          "text": "the room forms a cloud as it hits the",
+          "start": 521.2,
+          "duration": 5.85
+        },
+        {
+          "text": "very cold air from the refrigerator",
+          "start": 523.68,
+          "duration": 8.98
+        },
+        {
+          "text": "[Music]",
+          "start": 527.05,
+          "duration": 5.61
+        },
+        {
+          "text": "uh-oh now what's going to",
+          "start": 544.24,
+          "duration": 3.96
+        },
+        {
+          "text": "happen",
+          "start": 568.36,
+          "duration": 11.0
+        },
+        {
+          "text": "[Music]",
+          "start": 570.26,
+          "duration": 13.1
+        },
+        {
+          "text": "condensation rain",
+          "start": 579.36,
+          "duration": 4.0
+        },
+        {
+          "text": "[Music]",
+          "start": 583.59,
+          "duration": 19.41
+        },
+        {
+          "text": "the hot water in the kettle gives off",
+          "start": 601.12,
+          "duration": 4.08
+        },
+        {
+          "text": "water vapor to the air by rapid",
+          "start": 603.0,
+          "duration": 4.72
+        },
+        {
+          "text": "evaporation just as rivers lakes and",
+          "start": 605.2,
+          "duration": 5.24
+        },
+        {
+          "text": "ponds give off water vapor to the air by",
+          "start": 607.72,
+          "duration": 4.64
+        },
+        {
+          "text": "slow",
+          "start": 610.44,
+          "duration": 4.32
+        },
+        {
+          "text": "evaporation as the hot water-filled air",
+          "start": 612.36,
+          "duration": 4.76
+        },
+        {
+          "text": "hits the colder air near the ice tray",
+          "start": 614.76,
+          "duration": 4.48
+        },
+        {
+          "text": "the water vapor turns into clouds of",
+          "start": 617.12,
+          "duration": 5.52
+        },
+        {
+          "text": "tiny water droplets floating in the air",
+          "start": 619.24,
+          "duration": 5.68
+        },
+        {
+          "text": "condensation when the air is quite cold",
+          "start": 622.64,
+          "duration": 4.72
+        },
+        {
+          "text": "and cannot hold any more water droplets",
+          "start": 624.92,
+          "duration": 4.44
+        },
+        {
+          "text": "they collect together to form larger",
+          "start": 627.36,
+          "duration": 5.2
+        },
+        {
+          "text": "drops as on the ice tray and being too",
+          "start": 629.36,
+          "duration": 5.56
+        },
+        {
+          "text": "heavy to float in the air they fall back",
+          "start": 632.56,
+          "duration": 5.64
+        },
+        {
+          "text": "to the Earth as",
+          "start": 634.92,
+          "duration": 3.28
+        },
+        {
+          "text": "[Music]",
+          "start": 638.4,
+          "duration": 6.08
+        },
+        {
+          "text": "rain without water in the air we",
+          "start": 641.959,
+          "duration": 6.0
+        },
+        {
+          "text": "couldn't live our Fields would be dry",
+          "start": 644.48,
+          "duration": 5.88
+        },
+        {
+          "text": "and nothing would grow because water",
+          "start": 647.959,
+          "duration": 5.161
+        },
+        {
+          "text": "evaporates in the air and returns again",
+          "start": 650.36,
+          "duration": 5.2
+        },
+        {
+          "text": "as rain we have water running through",
+          "start": 653.12,
+          "duration": 4.68
+        },
+        {
+          "text": "the valleys in our Brooks and",
+          "start": 655.56,
+          "duration": 5.519
+        },
+        {
+          "text": "streams filling reservoirs with water to",
+          "start": 657.8,
+          "duration": 6.92
+        },
+        {
+          "text": "drink turning our water wheels and",
+          "start": 661.079,
+          "duration": 6.241
+        },
+        {
+          "text": "turning the turbines and the powerhouses",
+          "start": 664.72,
+          "duration": 4.64
+        },
+        {
+          "text": "to give us",
+          "start": 667.32,
+          "duration": 7.56
+        },
+        {
+          "text": "electricity all from water in the",
+          "start": 669.36,
+          "duration": 5.52
+        },
+        {
+          "text": "air the fundamentals of global",
+          "start": 681.12,
+          "duration": 5.04
+        },
+        {
+          "text": "geoengineering are no different than",
+          "start": 683.92,
+          "duration": 6.08
+        },
+        {
+          "text": "this child's experiment",
+          "start": 686.16,
+          "duration": 3.84
+        },
+        {
+          "text": "water vapor is artificially introduced",
+          "start": 690.2,
+          "duration": 4.16
+        },
+        {
+          "text": "into the air in place of the natural",
+          "start": 692.32,
+          "duration": 4.48
+        },
+        {
+          "text": "evaporation stage and is artificially",
+          "start": 694.36,
+          "duration": 4.59
+        },
+        {
+          "text": "cooled and condensed to produce",
+          "start": 696.8,
+          "duration": 5.24
+        },
+        {
+          "text": "[Music]",
+          "start": 698.95,
+          "duration": 5.93
+        },
+        {
+          "text": "rain you need a great many tea kettal to",
+          "start": 702.04,
+          "duration": 4.599
+        },
+        {
+          "text": "produce the massive amounts of water",
+          "start": 704.88,
+          "duration": 3.68
+        },
+        {
+          "text": "vapor required to fuel these Global",
+          "start": 706.639,
+          "duration": 3.961
+        },
+        {
+          "text": "storm systems and this planet is",
+          "start": 708.56,
+          "duration": 5.87
+        },
+        {
+          "text": "deliberately covered with them",
+          "start": 710.6,
+          "duration": 6.9
+        },
+        {
+          "text": "[Music]",
+          "start": 714.43,
+          "duration": 3.07
+        },
+        {
+          "text": "[Music]",
+          "start": 719.59,
+          "duration": 72.369
+        },
+        {
+          "text": "this artificial precipitation generation",
+          "start": 789.32,
+          "duration": 5.4
+        },
+        {
+          "text": "is easy to see on infrared satellite and",
+          "start": 791.959,
+          "duration": 5.281
+        },
+        {
+          "text": "is identified by sudden coordinated",
+          "start": 794.72,
+          "duration": 5.2
+        },
+        {
+          "text": "bursts of superheated water vapor from",
+          "start": 797.24,
+          "duration": 6.399
+        },
+        {
+          "text": "no natural source",
+          "start": 799.92,
+          "duration": 3.719
+        },
+        {
+          "text": "[Music]",
+          "start": 807.77,
+          "duration": 5.47
+        },
+        {
+          "text": "[Music]",
+          "start": 818.86,
+          "duration": 23.38
+        },
+        {
+          "text": "ironically the same primary source of",
+          "start": 842.72,
+          "duration": 5.359
+        },
+        {
+          "text": "CO2 Emissions on this planet is the same",
+          "start": 845.0,
+          "duration": 6.48
+        },
+        {
+          "text": "source of artificial",
+          "start": 848.079,
+          "duration": 3.401
+        },
+        {
+          "text": "[Music]",
+          "start": 853.46,
+          "duration": 3.089
+        },
+        {
+          "text": "precipitation this Nationwide artificial",
+          "start": 856.8,
+          "duration": 5.24
+        },
+        {
+          "text": "precipitation generation site clickers",
+          "start": 859.6,
+          "duration": 7.28
+        },
+        {
+          "text": "like clockwork every single day",
+          "start": 862.04,
+          "duration": 4.84
+        },
+        {
+          "text": "[Music]",
+          "start": 872.72,
+          "duration": 74.379
+        },
+        {
+          "text": "hexagonal Center of Vortex with flat",
+          "start": 961.279,
+          "duration": 6.48
+        },
+        {
+          "text": "size proves geoengineering",
+          "start": 963.88,
+          "duration": 3.879
+        },
+        {
+          "text": "manufacturer nightly Nationwide",
+          "start": 968.8,
+          "duration": 6.76
+        },
+        {
+          "text": "coordinated artificial precipitation",
+          "start": 971.0,
+          "duration": 4.56
+        },
+        {
+          "text": "generation Noti is the total absence of",
+          "start": 981.68,
+          "duration": 5.279
+        },
+        {
+          "text": "natural precipitation before the nightly",
+          "start": 984.279,
+          "duration": 6.521
+        },
+        {
+          "text": "generation cycle",
+          "start": 986.959,
+          "duration": 3.841
+        },
+        {
+          "text": "[Music]",
+          "start": 993.1,
+          "duration": 15.6
+        },
+        {
+          "text": "manufactured vortex in exactly the same",
+          "start": 1009.68,
+          "duration": 7.639
+        },
+        {
+          "text": "area rotating in the opposite direction",
+          "start": 1012.319,
+          "duration": 5.0
+        },
+        {
+          "text": "twin vortices rotating in opposite",
+          "start": 1036.559,
+          "duration": 4.721
+        },
+        {
+          "text": "directions Drive artificial",
+          "start": 1039.199,
+          "duration": 6.24
+        },
+        {
+          "text": "precipitation to the southeast",
+          "start": 1041.28,
+          "duration": 4.159
+        },
+        {
+          "text": "[Music]",
+          "start": 1051.7,
+          "duration": 31.659
+        },
+        {
+          "text": "[Music]",
+          "start": 1087.8,
+          "duration": 23.069
+        },
+        {
+          "text": "[Music]",
+          "start": 1115.03,
+          "duration": 7.649
+        },
+        {
+          "text": "the same identifying cycle of circular",
+          "start": 1119.88,
+          "duration": 5.0
+        },
+        {
+          "text": "and sudden coordinated bursts of",
+          "start": 1122.679,
+          "duration": 5.161
+        },
+        {
+          "text": "artificial precipitation can be seen all",
+          "start": 1124.88,
+          "duration": 5.279
+        },
+        {
+          "text": "around the world in every industrialized",
+          "start": 1127.84,
+          "duration": 6.12
+        },
+        {
+          "text": "and colonized country",
+          "start": 1130.159,
+          "duration": 16.601
+        },
+        {
+          "text": "[Music]",
+          "start": 1133.96,
+          "duration": 15.42
+        },
+        {
+          "text": "in",
+          "start": 1146.76,
+          "duration": 22.41
+        },
+        {
+          "text": "[Music]",
+          "start": 1149.38,
+          "duration": 19.79
+        },
+        {
+          "text": "[Music]",
+          "start": 1174.09,
+          "duration": 18.769
+        },
+        {
+          "text": "[Music]",
+          "start": 1196.41,
+          "duration": 3.109
+        },
+        {
+          "text": "this man-made Global artificial",
+          "start": 1214.919,
+          "duration": 4.361
+        },
+        {
+          "text": "precipitation cycle is the singular",
+          "start": 1216.96,
+          "duration": 4.36
+        },
+        {
+          "text": "reason for massive and continuous",
+          "start": 1219.28,
+          "duration": 4.16
+        },
+        {
+          "text": "flooding",
+          "start": 1221.32,
+          "duration": 4.28
+        },
+        {
+          "text": "worldwide at least nine states with",
+          "start": 1223.44,
+          "duration": 3.84
+        },
+        {
+          "text": "flash flood watches Coast to Coast",
+          "start": 1225.6,
+          "duration": 3.72
+        },
+        {
+          "text": "tonight in Newton North Carolina look at",
+          "start": 1227.28,
+          "duration": 3.8
+        },
+        {
+          "text": "this the water suddenly Rising above the",
+          "start": 1229.32,
+          "duration": 3.599
+        },
+        {
+          "text": "windows of this family's home you can",
+          "start": 1231.08,
+          "duration": 3.88
+        },
+        {
+          "text": "barely see the tops of their cars there",
+          "start": 1232.919,
+          "duration": 4.361
+        },
+        {
+          "text": "and this roadway washed away a giant",
+          "start": 1234.96,
+          "duration": 4.28
+        },
+        {
+          "text": "collapse under the rains today this as",
+          "start": 1237.28,
+          "duration": 3.759
+        },
+        {
+          "text": "we get new information tonight on those",
+          "start": 1239.24,
+          "duration": 4.04
+        },
+        {
+          "text": "two tropical systems big changes there",
+          "start": 1241.039,
+          "duration": 4.401
+        },
+        {
+          "text": "as well we get to it all beginning with",
+          "start": 1243.28,
+          "duration": 3.759
+        },
+        {
+          "text": "the flooding and the pictures just now",
+          "start": 1245.44,
+          "duration": 3.64
+        },
+        {
+          "text": "coming in here's ABC meteorologist",
+          "start": 1247.039,
+          "duration": 4.601
+        },
+        {
+          "text": "Ginger Z",
+          "start": 1249.08,
+          "duration": 5.56
+        },
+        {
+          "text": "tonight chest deep Rescuers pulling",
+          "start": 1251.64,
+          "duration": 4.84
+        },
+        {
+          "text": "people to Safety in Western North",
+          "start": 1254.64,
+          "duration": 4.48
+        },
+        {
+          "text": "Carolina at least 10 Swiftwater rescues",
+          "start": 1256.48,
+          "duration": 5.199
+        },
+        {
+          "text": "already today thanks I just it was",
+          "start": 1259.12,
+          "duration": 4.76
+        },
+        {
+          "text": "raining so hard I did not see like any",
+          "start": 1261.679,
+          "duration": 4.801
+        },
+        {
+          "text": "of that a state of emergency declared in",
+          "start": 1263.88,
+          "duration": 5.0
+        },
+        {
+          "text": "cataba County more than a foot of rain",
+          "start": 1266.48,
+          "duration": 5.36
+        },
+        {
+          "text": "in less than 24 hours busting storm",
+          "start": 1268.88,
+          "duration": 5.279
+        },
+        {
+          "text": "drains and swallowing street signs and",
+          "start": 1271.84,
+          "duration": 5.92
+        },
+        {
+          "text": "mailboxes it's bad it come up fast since",
+          "start": 1274.159,
+          "duration": 6.921
+        },
+        {
+          "text": "9:00 it probably come up 3T from the",
+          "start": 1277.76,
+          "duration": 6.6
+        },
+        {
+          "text": "drowning Southeast to the wild Southwest",
+          "start": 1281.08,
+          "duration": 5.719
+        },
+        {
+          "text": "that is Albuquerque New Mexico just",
+          "start": 1284.36,
+          "duration": 5.4
+        },
+        {
+          "text": "yesterday near 90 m per hour wind gust",
+          "start": 1286.799,
+          "duration": 4.801
+        },
+        {
+          "text": "sliced through the typically tranquil",
+          "start": 1289.76,
+          "duration": 5.36
+        },
+        {
+          "text": "Town pour down like like a hurricane",
+          "start": 1291.6,
+          "duration": 6.52
+        },
+        {
+          "text": "people plucked from their flooded cars",
+          "start": 1295.12,
+          "duration": 4.919
+        },
+        {
+          "text": "the desert rains swamping the streets",
+          "start": 1298.12,
+          "duration": 4.6
+        },
+        {
+          "text": "near Tucson",
+          "start": 1300.039,
+          "duration": 5.12
+        },
+        {
+          "text": "Arizona the millions of tons of heavy",
+          "start": 1302.72,
+          "duration": 5.04
+        },
+        {
+          "text": "metal nanen trails and frequency",
+          "start": 1305.159,
+          "duration": 5.281
+        },
+        {
+          "text": "activated ice nucleation used to control",
+          "start": 1307.76,
+          "duration": 4.84
+        },
+        {
+          "text": "these storm systems is a topic for",
+          "start": 1310.44,
+          "duration": 3.36
+        },
+        {
+          "text": "another",
+          "start": 1312.6,
+          "duration": 3.079
+        },
+        {
+          "text": "[Music]",
+          "start": 1313.8,
+          "duration": 4.84
+        },
+        {
+          "text": "video however don't believe that mother",
+          "start": 1315.679,
+          "duration": 6.081
+        },
+        {
+          "text": "nature monsoons in the United States or",
+          "start": 1318.64,
+          "duration": 5.56
+        },
+        {
+          "text": "any other fairy tale is responsible for",
+          "start": 1321.76,
+          "duration": 4.519
+        },
+        {
+          "text": "worldwide man-made flooding that you",
+          "start": 1324.2,
+          "duration": 5.359
+        },
+        {
+          "text": "can't see with your own",
+          "start": 1326.279,
+          "duration": 3.28
+        },
+        {
+          "text": "eyes look up",
+          "start": 1330.48,
+          "duration": 4.28
+        }
+      ],
+      "video_id": "RegC520C6ec"
+    }
+  }
+}

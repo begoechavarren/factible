@@ -1,0 +1,529 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:04:52.777806",
+    "latency_seconds": 27.13,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\naccording to this i have to say remarkable piece that you just put up late last night read it in bed at midnight that the fbi was organizing the riots of january 6th well yes it certainly suggests that possibility and i'm hearing from people that this is the most important and the darkest investigative piece they've seen in years but the american people deserve the truth about 1-6 not just for the sake of ashley babbitt not just for the sake of the hundreds of people held in prison unjustly as a violation of human rights but for the sake of the 70 plus million people who are trump supporters or just against the corrupt ruling class who have effectively been labeled de facto domestic extremists by our own government and i believe the key that unlocks the truth to 1-6 is the following question to what extent were the main militia groups imputed to the 1-6 so-called capital siege to what extent was their infiltration of those groups by undercover agents or informants and to what extent when we see the unindicted co-conspirators who occupy senior positions in those groups to what extent are those people being spared prosecution on account of a prior relationship with the federal government those two questions create a thread and when we pull that thread the ugly truth of that event and perhaps even the country we live in will be exposed i gotta ask because it it may answer one of the great mysteries is this i think there are 14 000 hours of unreleased video footage from that day the administration is hiding from us do you think this is why i think that's certainly a possibility um it's it's extremely suspicious even going back to this so-called pipe bomber video remember the pipe bomber the capital pipeliner the fbi has been extremely suspicious in withholding evidence video evidence that could help and identify this bomber which presumably they want to do but if you may i'd like to make a general point and it really after seeing all this you have to ask yourself does the national security apparatus do anything but conspire against the american people i'm led to conclude that we cannot have a democracy everything in our politics will be fake and performative until we bring the national security state including the fbi to heal it's not a left issue it's not a right issue every politician who cares about our country should demand a church committee 2.0 immediately and people of good faith on the left should join it uh immediately darren b i appreciate your coming on signing the work you do at revolver.news thank you",
+    "input_length_chars": 2613,
+    "input_tokens_estimated": 653,
+    "output": {
+      "claims": [
+        {
+          "text": "The FBI was organizing the riots of January 6th.",
+          "confidence": 0.7,
+          "category": "historical",
+          "importance": 0.85,
+          "context": "Claims about FBI involvement in January 6th riots."
+        },
+        {
+          "text": "The American people deserve the truth about January 6th.",
+          "confidence": 0.6,
+          "category": "policy",
+          "importance": 0.3,
+          "context": "General statement about transparency regarding January 6th."
+        },
+        {
+          "text": "Hundreds of people are held in prison unjustly as a violation of human rights.",
+          "confidence": 0.8,
+          "category": "policy",
+          "importance": 0.7,
+          "context": "Refers to the treatment of January 6th participants."
+        },
+        {
+          "text": "70 plus million people are Trump supporters or against the corrupt ruling class.",
+          "confidence": 0.75,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Claims about the number of Trump supporters."
+        },
+        {
+          "text": "There are 14,000 hours of unreleased video footage from January 6th.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.8,
+          "context": "Refers to the amount of video footage related to January 6th."
+        },
+        {
+          "text": "The FBI has been withholding evidence related to the pipe bomber.",
+          "confidence": 0.7,
+          "category": "policy",
+          "importance": 0.6,
+          "context": "Claims about FBI's actions regarding the pipe bomber investigation."
+        },
+        {
+          "text": "The national security apparatus conspires against the American people.",
+          "confidence": 0.65,
+          "category": "policy",
+          "importance": 0.55,
+          "context": "General claim about the national security state."
+        },
+        {
+          "text": "A Church Committee 2.0 should be demanded by politicians.",
+          "confidence": 0.6,
+          "category": "policy",
+          "importance": 0.3,
+          "context": "Call for a new investigation into national security practices."
+        }
+      ],
+      "total_count": 8
+    },
+    "output_length_chars": 2331,
+    "output_tokens_estimated": 582,
+    "cost_usd": 0.00044715
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:04:56.769470",
+    "latency_seconds": 2.96,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The American people deserve the truth about January 6th.\nContext: General statement about transparency regarding January 6th.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 298,
+    "input_tokens_estimated": 74,
+    "output": {
+      "original_claim": "The American people deserve the truth about January 6th.",
+      "queries": [
+        {
+          "query": "truth about January 6th Capitol riot",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "American people's right to know about January 6th events",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 298,
+    "output_tokens_estimated": 74,
+    "cost_usd": 5.55e-05,
+    "context": {
+      "claim_index": 8,
+      "claim_text": "A Church Committee 2.0 should be demanded by politicians."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:04:56.771712",
+    "latency_seconds": 2.97,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: 70 plus million people are Trump supporters or against the corrupt ruling class.\nContext: Claims about the number of Trump supporters.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 307,
+    "input_tokens_estimated": 76,
+    "output": {
+      "original_claim": "70 plus million people are Trump supporters or against the corrupt ruling class.",
+      "queries": [
+        {
+          "query": "70 million Trump supporters 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "number of Trump supporters 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 293,
+    "output_tokens_estimated": 73,
+    "cost_usd": 5.52e-05,
+    "context": {
+      "claim_index": 8,
+      "claim_text": "A Church Committee 2.0 should be demanded by politicians."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:04:56.773142",
+    "latency_seconds": 2.97,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The FBI has been withholding evidence related to the pipe bomber.\nContext: Claims about FBI's actions regarding the pipe bomber investigation.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 315,
+    "input_tokens_estimated": 78,
+    "output": {
+      "original_claim": "The FBI has been withholding evidence related to the pipe bomber.",
+      "queries": [
+        {
+          "query": "FBI withholding evidence pipe bomber investigation",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "FBI evidence pipe bomber withheld",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 298,
+    "output_tokens_estimated": 74,
+    "cost_usd": 5.61e-05,
+    "context": {
+      "claim_index": 8,
+      "claim_text": "A Church Committee 2.0 should be demanded by politicians."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:04:56.774442",
+    "latency_seconds": 2.97,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Hundreds of people are held in prison unjustly as a violation of human rights.\nContext: Refers to the treatment of January 6th participants.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 313,
+    "input_tokens_estimated": 78,
+    "output": {
+      "original_claim": "Hundreds of people are held in prison unjustly as a violation of human rights.",
+      "queries": [
+        {
+          "query": "January 6th participants unjustly imprisoned human rights violation",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "human rights violations January 6th prisoners",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 340,
+    "output_tokens_estimated": 85,
+    "cost_usd": 6.27e-05,
+    "context": {
+      "claim_index": 8,
+      "claim_text": "A Church Committee 2.0 should be demanded by politicians."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:04:56.775983",
+    "latency_seconds": 2.97,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The FBI was organizing the riots of January 6th.\nContext: Claims about FBI involvement in January 6th riots.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 281,
+    "input_tokens_estimated": 70,
+    "output": {
+      "original_claim": "The FBI was organizing the riots of January 6th.",
+      "queries": [
+        {
+          "query": "FBI organizing January 6th riots",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "FBI involvement in January 6th Capitol riots",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 274,
+    "output_tokens_estimated": 68,
+    "cost_usd": 5.13e-05,
+    "context": {
+      "claim_index": 8,
+      "claim_text": "A Church Committee 2.0 should be demanded by politicians."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:04:57.220053",
+    "latency_seconds": 3.41,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: A Church Committee 2.0 should be demanded by politicians.\nContext: Call for a new investigation into national security practices.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 302,
+    "input_tokens_estimated": 75,
+    "output": {
+      "original_claim": "A Church Committee 2.0 should be demanded by politicians.",
+      "queries": [
+        {
+          "query": "Church Committee 2.0 demand by politicians",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "new investigation into national security practices Church Committee",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 316,
+    "output_tokens_estimated": 79,
+    "cost_usd": 5.865e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The FBI was organizing the riots of January 6th.",
+      "query_index": 2,
+      "query_text": "FBI involvement in January 6th Capitol riots"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:04:57.304515",
+    "latency_seconds": 3.5,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: There are 14,000 hours of unreleased video footage from January 6th.\nContext: Refers to the amount of video footage related to January 6th.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 312,
+    "input_tokens_estimated": 78,
+    "output": {
+      "original_claim": "There are 14,000 hours of unreleased video footage from January 6th.",
+      "queries": [
+        {
+          "query": "14,000 hours of unreleased video footage January 6th",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "how much unreleased video footage from January 6th",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 320,
+    "output_tokens_estimated": 80,
+    "cost_usd": 5.97e-05,
+    "context": {
+      "claim_index": 8,
+      "claim_text": "A Church Committee 2.0 should be demanded by politicians.",
+      "query_index": 2,
+      "query_text": "new investigation into national security practices Church Committee"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:04:57.305041",
+    "latency_seconds": 3.5,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The national security apparatus conspires against the American people.\nContext: General claim about the national security state.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 301,
+    "input_tokens_estimated": 75,
+    "output": {
+      "original_claim": "The national security apparatus conspires against the American people.",
+      "queries": [
+        {
+          "query": "national security apparatus conspiracy against American people",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "does the national security state conspire against citizens",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 340,
+    "output_tokens_estimated": 85,
+    "cost_usd": 6.225e-05,
+    "context": {
+      "claim_index": 8,
+      "claim_text": "A Church Committee 2.0 should be demanded by politicians.",
+      "query_index": 2,
+      "query_text": "new investigation into national security practices Church Committee"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:05:48.702934",
+    "latency_seconds": 32.33,
+    "input_prompt": "Claim:\n70 plus million people are Trump supporters or against the corrupt ruling class.\n\nArticle Title:\nVoter turnout in the 2020 and 2024 elections - Pew Research Center\n\nGoogle Search Snippet:\nIn the 2024 presidential election, a higher share of Donald Trump's 2020 voters than Joe Biden's 2020 voters turned out to vote. Trump also won ...\n\nFull Page Content:\nFeb 24, 2025, 8:59 AM\nThe Vanderbilt Project on Unity and American Democracy has asked Republicans in a quarterly national poll since June 16, 2023, if they consider themselves supporters of the Make America Great Again or MAGA movement. In that first poll, 37 percent of respondents identified more with the MAGA movement than with the traditional GOP. Now, the share of MAGA identifiers within the GOP has swelled to 52 percent\u2014a majority\u2014for the first time in the poll. This jump underscores Trump\u2019s increasing hold on the Republican Party. These results mirror findings from the Vanderbilt Poll that surveys Tennesseans; in the Volunteer State, that number now stands at 60 percent.\nThe Unity Poll asked respondents about their approval of five high-profile political figures in the United States, including President Donald Trump and Elon Musk. It discovered that Trump had the highest rating, with 41 percent approval and 48 percent disapproval (another 10 percent on the fence). Musk had 28 percent approval and 50 percent disapproval. None of the five had strong support from the public, but Trump enjoys more approval than the other four:\nThe Unity Poll also asked how much confidence respondents had in various institutions, including the government, the military, the news media, and universities and scientists.\nConsidering the pressure higher education and scientific research funding are under from the federal government, it is of interest that the poll shows improvement in public confidence in them since the December 2023 poll. Universities saw public confidence increase from 31 percent in 2023 to 38 percent in 2025. Scientists fared better, with 54 percent of Americans expressing confidence\u2014up from 48 percent in 2023.\nThe military rates the highest among the institutions, with 58 percent of respondents expressing confidence. The three institutions that polled with the least confidence were the national news media at 13 percent, large tech companies at 19 percent and the federal U.S. government also at 19 percent.\nThe poll logged respondents\u2019 opinions on some of Trump\u2019s initial policy moves. Trump\u2019s call for deportations resonates with the public: Even when asked about individuals who have not been convicted of any crimes, people still express an appetite for sending them back to their countries of origin. Seventy-five percent supported deportation for individuals with a criminal record, and 50 percent supported deportation for individuals without a criminal record.\nTariffs present a more mixed picture. Nearly 60 percent of the public disapproves of new tariffs or taxes on goods imported from other countries. Digging into those numbers, Republicans are more supportive of tariffs (70 percent), which is a testament to Trump\u2019s influence on the party that used to pride itself on being the party of free trade. The Democrats now reflect that label, with over 80 percent opposing Trump\u2019s tariffs.\nThe poll asked about pardons by Trump of those convicted of violent crimes during the Jan. 6, 2021, attack on the U.S. Capitol, and it found little public support. Three out of four Americans oppose the president\u2019s pardons, including a majority of Republicans. Only MAGA supporters show a majority support\u201455 percent\u2014for the pardons. Traditional Republicans remain opposed.\nAfter President Trump\u2019s first month in office, more than a third of people polled supported reducing presidential powers\u201437 percent in February 2025. This is a 12 point jump from when we asked the question in December 2023. This change suggests growing concern about presidential power. In fact, just 7 percent of Americans want to see the president grow in power\u2014a number that stands in contrast to the flurry of recent presidential actions.\nThe Vanderbilt Project on Unity and American Democracy also sponsors the Vanderbilt Unity Index, a value generated through analysis of the polling results. \u201cThe Vanderbilt Unity Poll should provide regular snapshots of Americans\u2019 sense of national political unity and their faith in the country\u2019s democratic institutions,\u201d said John Geer, head of the Unity Project.\nSSRS conducted the Vanderbilt Unity Poll on its Opinion Panel Omnibus Platform. Between Feb. 7 and Feb. 9, 2025, 1,037 people across the nation, age 18 and older, responded across several platforms in Spanish and English. The poll has a margin of error of +/-3.9 at the 95 percent confidence level.\nNashville, Tennessee 37240\n615-322-7311 \u2022 Contact Us\nVanderbilt University\u2019s Online Privacy Notice\nVanderbilt University is committed to the principle of equal opportunity. Vanderbilt University does not discriminate against individuals on the basis of their race, sex, sexual orientation, gender identity, religion, color, national or ethnic origin, age, disability, military service, or genetic information in its administration of educational policies, programs, or activities; admissions policies; scholarship and loan programs; athletic or other University-administered programs; or employment. Accessibility information. Vanderbilt\u00ae, Vanderbilt University\u00ae and the Vanderbilt logos are trademarks of The Vanderbilt University. Site Development: Digital Strategies (Communications and Marketing.) \u00a9 2025\n\nProvide relevant evidence.",
+    "input_length_chars": 5615,
+    "input_tokens_estimated": 1403,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that a significant portion of Republicans identify as supporters of the MAGA movement, with 52% of GOP respondents aligning with it, suggesting a strong base of support for Trump. However, it does not provide a clear figure of 70 million supporters or explicitly link this to opposition against the ruling class.",
+      "overall_stance": "mixed",
+      "key_quote": "37 percent of respondents identified more with the MAGA movement than with the traditional GOP. Now, the share of MAGA identifiers within the GOP has swelled to 52 percent\u2014a majority\u2014for the first time in the poll."
+    },
+    "output_length_chars": 632,
+    "output_tokens_estimated": 158,
+    "cost_usd": 0.00030525,
+    "context": {
+      "claim_index": 6,
+      "claim_text": "The national security apparatus conspires against the American people.",
+      "query_index": 2,
+      "query_text": "does the national security state conspire against citizens"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:05:48.968560",
+    "latency_seconds": 28.31,
+    "input_prompt": "Claim:\nThere are 14,000 hours of unreleased video footage from January 6th.\n\nArticle Title:\nCapitol Police provided more than 14,000 hours of Jan. 6 footage to ...\n\nGoogle Search Snippet:\n6 surveillance camera footage with two key congressional committees investigating the mob attack on the building \u2014 and provided \u201cnumerous\u201d clips ...\n\nFull Page Content:\nWASHINGTON - Today, Committee on House Administration's Subcommittee on Oversight Chairman Barry Loudermilk (GA-11) released additional United States Capitol Police CCTV footage from January 6, 2021, continuing to fulfill his and Speaker Mike Johnson\u2019s commitment to the American people to make footage public. View all public USCP CCTV footage on our Rumble page by clicking here.\nBackground:\nWashington D.C.\n1309 Longworth House Office Building\nWashington D.C. 20515\nPhone: 202-225-8281\n\nProvide relevant evidence.",
+    "input_length_chars": 873,
+    "input_tokens_estimated": 218,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article confirms that the Capitol Police provided over 14,000 hours of CCTV footage from January 6, 2021, to congressional committees, supporting the claim about the amount of unreleased video footage.",
+      "overall_stance": "supports",
+      "key_quote": "Committee on House Administration's Subcommittee on Oversight Chairman Barry Loudermilk... released additional United States Capitol Police CCTV footage from January 6, 2021."
+    },
+    "output_length_chars": 465,
+    "output_tokens_estimated": 116,
+    "cost_usd": 0.0001023,
+    "context": {
+      "claim_index": 6,
+      "claim_text": "The national security apparatus conspires against the American people.",
+      "query_index": 2,
+      "query_text": "does the national security state conspire against citizens"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:05:48.971757",
+    "latency_seconds": 28.31,
+    "input_prompt": "Claim:\nThere are 14,000 hours of unreleased video footage from January 6th.\n\nArticle Title:\nJohnson makes Jan. 6 footage available to public - Spectrum News\n\nGoogle Search Snippet:\nHouse Speaker Mike Johnson said Friday that thousands of hours of footage from the Jan. 6, 2021, riot at the U.S. Capitol would be publicly ...\n\nFull Page Content:\nWASHINGTON - Today, Committee on House Administration's Subcommittee on Oversight Chairman Barry Loudermilk (GA-11) released additional United States Capitol Police CCTV footage from January 6, 2021, continuing to fulfill his and Speaker Mike Johnson\u2019s commitment to the American people to make footage public. View all public USCP CCTV footage on our Rumble page by clicking here.\nBackground:\nWashington D.C.\n1309 Longworth House Office Building\nWashington D.C. 20515\nPhone: 202-225-8281\n\nProvide relevant evidence.",
+    "input_length_chars": 861,
+    "input_tokens_estimated": 215,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article mentions that thousands of hours of footage from the January 6th riot are being made public, but it does not specify the exact number of hours, such as 14,000.",
+      "overall_stance": "unclear",
+      "key_quote": "thousands of hours of footage from the Jan. 6, 2021, riot at the U.S. Capitol would be publicly ..."
+    },
+    "output_length_chars": 355,
+    "output_tokens_estimated": 88,
+    "cost_usd": 8.505e-05,
+    "context": {
+      "claim_index": 6,
+      "claim_text": "The national security apparatus conspires against the American people.",
+      "query_index": 2,
+      "query_text": "does the national security state conspire against citizens"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:05:49.000452",
+    "latency_seconds": 29.18,
+    "input_prompt": "Claim:\nThe FBI was organizing the riots of January 6th.\n\nArticle Title:\n[PDF] FBI did not send undercover operatives to join Jan. 6 attack ...\n\nFull Page Content:\nThe FBI has long denied having any involvement by its own staff or its informants in the riots at the Capitol, though conspiracy theories about ...\n\nProvide relevant evidence.",
+    "input_length_chars": 338,
+    "input_tokens_estimated": 84,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that the FBI has denied any involvement of its staff or informants in the January 6th riots, which contradicts the claim that the FBI was organizing the riots.",
+      "overall_stance": "refutes",
+      "key_quote": "The FBI has long denied having any involvement by its own staff or its informants in the riots at the Capitol."
+    },
+    "output_length_chars": 377,
+    "output_tokens_estimated": 94,
+    "cost_usd": 6.9e-05,
+    "context": {
+      "claim_index": 6,
+      "claim_text": "The national security apparatus conspires against the American people.",
+      "query_index": 2,
+      "query_text": "does the national security state conspire against citizens"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:05:49.110058",
+    "latency_seconds": 26.06,
+    "input_prompt": "Claim:\n70 plus million people are Trump supporters or against the corrupt ruling class.\n\nArticle Title:\nOver 74 Million Votes for Trump and Party Polarization is Stronger ...\n\nGoogle Search Snippet:\nA conversation with Dr. Robert J. Blendon on the current state of American politics and public opinion. Dr. Blendon's analysis of national polls reveals how ...\n\nFull Page Content:\nDr. Robert J. Blendon is currently the Richard L. Menschel Professor of Public Health and Professor of Health Policy and Political Analysis, Emeritus, at the Harvard T.H. Chan School of Public Health. He holds appointments as a Professor of Health Policy and Political Analysis at both the Harvard T.H. Chan School of Public Health and the Harvard Kennedy School of Government. In addition, he directs the Harvard Opinion Research Program, which focuses on better understanding of public knowledge, attitudes, and beliefs about major social policy issues in the U.S. and other nations. He currently co-directs the Robert Wood Johnson Foundation/Harvard T.H. Chan School of Public Health project on understanding Americans\u2019 Health Agenda, including a joint series with National Public Radio and POLITICO.\nSally Bagshaw: As head of the Harvard Opinion Research Program, you recently analyzed 19 national public opinion polls. What can you share about values and preferences across our nation?\nRobert Blendon: We published our findings in the New England Journal of Medicine article titled Implications of the 2020 Election for U.S. Health Policy. This data confirms that Republicans and Democrats have grown further apart in their policy preferences. Our study showed that average Republicans differ from average Democrats in their views across 30 policy-related issues, and these differences more than doubled the gap identified in 1994.\nTwenty-five years ago, we had our political differences, but vast differences apply now to many more issues including the handling of the Coronavirus, gun control and abortion rights as examples. More than half of Republicans polled (56%) thought the real problem with the COVID-19 response was that the country wasn\u2019t lifting restrictions quickly enough, whereas 82% of Democrats thought the country was lifting restrictions too quickly. Significantly less than half of Republicans (39%) favored stricter gun control laws compared to 85% of Democrats who want tighter controls. When the question of abortion is posed, 27% of Republicans believe abortion should be illegal in all circumstances as opposed to 49% of Democrats who believe abortion should be legal under any circumstance. Those are large gaps to fill.\nBagshaw: Is it true that the majority of Republican voters truly dislike Democrats?\nBlendon: I have seen incredible hostility in Middle America and the South. There\u2019s a big difference between cultures and in perception of what people believe on the East Coast and West Coast. In the red states, over half the voters didn\u2019t graduate from college and resent the \u201ccoastal cultures.\u201d There\u2019s a feeling among some of the non-college graduates that there\u2019s a Democratic elite, that you have to have a college degree or you\u2019re on your own. And as a Harvard professor looking at the data, I\u2019ve felt resentment that we college graduates give advice about how the country should be run.\nBiden escaped some of this. He was accepted in some communities more than other Democrats running for election, because people in battleground states relate more to him. He may not generate a lot of enthusiasm, but he emphasized his working class family background and his summer work in Scranton, Pennsylvania.\nSome polls show that Democrats are perceived as not appreciating rural issues, they don\u2019t appear to respect rural cultures or needs. That\u2019s one of the reasons why the deep division remains, and where Democrats must seek to understand and be understood if they want to gain votes for 2022 and 2024.\nBagshaw: Can Republicans and Democrats reach common ground on anything major?\nBlendon: This election did not settle the question of the direction our country is going to go. For example, health care ranked among the top issues for a large percentage of both Republicans and Democrats, but there are significant differences in views on the role of government in this sphere. Among Democratic party voters, 82% believe the federal government has responsibility to provide all Americans with some form of health care, but only 39% of Republicans share that view. We are pulling in decidedly different directions.\nThat said, everyone wants to see the end of COVID-19 and quarantines. Everyone wants to get back to work and see their kids in school. We don\u2019t have agreement on how to achieve this yet, but the goals are similar.\nBagshaw: Can President-elect Biden change the course of COVID-19?\nBlendon: He is right to assemble his first advisory committee to target COVID, and there\u2019s much riding on this. The public is impatient. With cases skyrocketing, over 160,000 per day as of this writing, he has six months to show his administration can do better than Trump\u2019s. He\u2019s assembled some of the brightest scientific and experienced minds to solve the problem. If the vaccine works, if it can be distributed rapidly, if people are back to work and their children back in school early in 2021, there will be a major sigh of relief. His administration will be credited. On the other hand, if the vaccine efforts fail and more businesses close, voters are likely to show their impatience quickly.\nBagshaw: Will President-elect Biden solve problems relating to COVID and the economy in the first year or two of his term?\nBlendon: These two issues will top the charts. President-elect Biden and his scientific team will have to get an effective vaccine distributed fast and fairly. If he can get people back to work and back to school, he\u2019ll get credit for it. If his efforts fail and people continue to get sick and the economy worsens, he will be blamed and the pendulum will swing back toward the Republicans. Since he\u2019s not likely to get help from Senate Majority Leader Mitch McConnell, President-elect Biden must rely on his team to develop the public health and economic recovery plans.\nBagshaw: What happens if people refuse to take the vaccine?\nBlendon: This can be a real problem for the incoming President and for the country\u2019s health and welfare as a whole\n\nProvide relevant evidence.",
+    "input_length_chars": 6408,
+    "input_tokens_estimated": 1602,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses the polarization between Republicans and Democrats, indicating that a significant portion of the population, particularly Republicans, feel resentment towards the Democratic elite, which may suggest a strong base of support for Trump and anti-establishment sentiments.",
+      "overall_stance": "mixed",
+      "key_quote": "\"There\u2019s a feeling among some of the non-college graduates that there\u2019s a Democratic elite, that you have to have a college degree or you\u2019re on your own.\""
+    },
+    "output_length_chars": 529,
+    "output_tokens_estimated": 132,
+    "cost_usd": 0.0003195,
+    "context": {
+      "claim_index": 6,
+      "claim_text": "The national security apparatus conspires against the American people.",
+      "query_index": 2,
+      "query_text": "does the national security state conspire against citizens"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:05:49.713524",
+    "latency_seconds": 26.66,
+    "input_prompt": "Claim:\n70 plus million people are Trump supporters or against the corrupt ruling class.\n\nArticle Title:\nKoch network raises more than $70 million, launches new anti ...\n\nGoogle Search Snippet:\nThe influential network associated with conservative billionaire Charles Koch has collected more than $70 million for political races, ...\n\nFull Page Content:\nDr. Robert J. Blendon is currently the Richard L. Menschel Professor of Public Health and Professor of Health Policy and Political Analysis, Emeritus, at the Harvard T.H. Chan School of Public Health. He holds appointments as a Professor of Health Policy and Political Analysis at both the Harvard T.H. Chan School of Public Health and the Harvard Kennedy School of Government. In addition, he directs the Harvard Opinion Research Program, which focuses on better understanding of public knowledge, attitudes, and beliefs about major social policy issues in the U.S. and other nations. He currently co-directs the Robert Wood Johnson Foundation/Harvard T.H. Chan School of Public Health project on understanding Americans\u2019 Health Agenda, including a joint series with National Public Radio and POLITICO.\nSally Bagshaw: As head of the Harvard Opinion Research Program, you recently analyzed 19 national public opinion polls. What can you share about values and preferences across our nation?\nRobert Blendon: We published our findings in the New England Journal of Medicine article titled Implications of the 2020 Election for U.S. Health Policy. This data confirms that Republicans and Democrats have grown further apart in their policy preferences. Our study showed that average Republicans differ from average Democrats in their views across 30 policy-related issues, and these differences more than doubled the gap identified in 1994.\nTwenty-five years ago, we had our political differences, but vast differences apply now to many more issues including the handling of the Coronavirus, gun control and abortion rights as examples. More than half of Republicans polled (56%) thought the real problem with the COVID-19 response was that the country wasn\u2019t lifting restrictions quickly enough, whereas 82% of Democrats thought the country was lifting restrictions too quickly. Significantly less than half of Republicans (39%) favored stricter gun control laws compared to 85% of Democrats who want tighter controls. When the question of abortion is posed, 27% of Republicans believe abortion should be illegal in all circumstances as opposed to 49% of Democrats who believe abortion should be legal under any circumstance. Those are large gaps to fill.\nBagshaw: Is it true that the majority of Republican voters truly dislike Democrats?\nBlendon: I have seen incredible hostility in Middle America and the South. There\u2019s a big difference between cultures and in perception of what people believe on the East Coast and West Coast. In the red states, over half the voters didn\u2019t graduate from college and resent the \u201ccoastal cultures.\u201d There\u2019s a feeling among some of the non-college graduates that there\u2019s a Democratic elite, that you have to have a college degree or you\u2019re on your own. And as a Harvard professor looking at the data, I\u2019ve felt resentment that we college graduates give advice about how the country should be run.\nBiden escaped some of this. He was accepted in some communities more than other Democrats running for election, because people in battleground states relate more to him. He may not generate a lot of enthusiasm, but he emphasized his working class family background and his summer work in Scranton, Pennsylvania.\nSome polls show that Democrats are perceived as not appreciating rural issues, they don\u2019t appear to respect rural cultures or needs. That\u2019s one of the reasons why the deep division remains, and where Democrats must seek to understand and be understood if they want to gain votes for 2022 and 2024.\nBagshaw: Can Republicans and Democrats reach common ground on anything major?\nBlendon: This election did not settle the question of the direction our country is going to go. For example, health care ranked among the top issues for a large percentage of both Republicans and Democrats, but there are significant differences in views on the role of government in this sphere. Among Democratic party voters, 82% believe the federal government has responsibility to provide all Americans with some form of health care, but only 39% of Republicans share that view. We are pulling in decidedly different directions.\nThat said, everyone wants to see the end of COVID-19 and quarantines. Everyone wants to get back to work and see their kids in school. We don\u2019t have agreement on how to achieve this yet, but the goals are similar.\nBagshaw: Can President-elect Biden change the course of COVID-19?\nBlendon: He is right to assemble his first advisory committee to target COVID, and there\u2019s much riding on this. The public is impatient. With cases skyrocketing, over 160,000 per day as of this writing, he has six months to show his administration can do better than Trump\u2019s. He\u2019s assembled some of the brightest scientific and experienced minds to solve the problem. If the vaccine works, if it can be distributed rapidly, if people are back to work and their children back in school early in 2021, there will be a major sigh of relief. His administration will be credited. On the other hand, if the vaccine efforts fail and more businesses close, voters are likely to show their impatience quickly.\nBagshaw: Will President-elect Biden solve problems relating to COVID and the economy in the first year or two of his term?\nBlendon: These two issues will top the charts. President-elect Biden and his scientific team will have to get an effective vaccine distributed fast and fairly. If he can get people back to work and back to school, he\u2019ll get credit for it. If his efforts fail and people continue to get sick and the economy worsens, he will be blamed and the pendulum will swing back toward the Republicans. Since he\u2019s not likely to get help from Senate Majority Leader Mitch McConnell, President-elect Biden must rely on his team to develop the public health and economic recovery plans.\nBagshaw: What happens if people refuse to take the vaccine?\nBlendon: This can be a real problem for the incoming President and for the country\u2019s health and welfare as a whole\n\nProvide relevant evidence.",
+    "input_length_chars": 6380,
+    "input_tokens_estimated": 1595,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses the political divide between Republicans and Democrats, highlighting a significant resentment among some Republican voters towards perceived Democratic elitism, but it does not provide specific evidence or statistics to support the claim that 70 million people are Trump supporters or against the corrupt ruling class.",
+      "overall_stance": "unclear",
+      "key_quote": "There\u2019s a feeling among some of the non-college graduates that there\u2019s a Democratic elite, that you have to have a college degree or you\u2019re on your own."
+    },
+    "output_length_chars": 577,
+    "output_tokens_estimated": 144,
+    "cost_usd": 0.00032565,
+    "context": {
+      "claim_index": 6,
+      "claim_text": "The national security apparatus conspires against the American people.",
+      "query_index": 2,
+      "query_text": "does the national security state conspire against citizens"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:05:50.270295",
+    "latency_seconds": 21.44,
+    "input_prompt": "Claim:\nHundreds of people are held in prison unjustly as a violation of human rights.\n\nArticle Title:\nPardon of January 6 United States Capitol attack defendants\n\nGoogle Search Snippet:\nMore than 600 rioters had been convicted of or pleaded guilty to assault of or obstructing law enforcement officers and 170 of using a deadly weapon.\n\nFull Page Content:\nOn January 20, 2025, during the first day of his second term, United States president Donald Trump granted blanket clemency to all people, nearly 1,600, convicted of or awaiting trial or sentencing for offenses related to the January 6 United States Capitol attack that occurred near the end of his first presidential term. Most of them received full pardons, while the sentences of 14 members of the Oath Keepers and the Proud Boys were commuted. More than 600 rioters had been convicted of or pleaded guilty to assault of or obstructing law enforcement officers and 170 of using a deadly weapon.[1]\nIn the aftermath of his 2020 presidential election loss to Joe Biden, Trump repeatedly made false claims that widespread electoral fraud had occurred and that only he himself had legitimately won the election. Although most resulting lawsuits were either dismissed or ruled against by numerous courts,[2][3][4] Trump nonetheless conspired with his campaign team to submit documents in several states (all of which had been won by Biden) which falsely claimed to be legitimate electoral certificates for President Trump and Vice President Mike Pence.[5] After the submission of these documents, the Trump campaign intended that the presiding officer of the United States Senate, either President of the Senate Pence or President pro tempore Chuck Grassley, would claim to have the unilateral power to reject electors during the January 6, 2021 vote counting session; the presiding officer would reject all electors from the several states in which the Trump campaign had submitted false documents, leaving 232 votes for Trump and 222 votes for Biden, thereby overturning the election results in favor of Trump.[6][7][8] The plans for January 6 failed to come to fruition after Pence refused to follow the campaign's proposals.[9][10]\nTrump nevertheless urged his supporters on January 6, 2021, to march to the Capitol while the joint session of Congress was assembled there to count electoral votes and formalize Biden's victory, culminating with hundreds storming the building and interrupting the electoral vote count.[11]\nBy the end of 2021, 725 people had been charged with federal crimes.[12][13] That number rose to 1,000 by the second anniversary of the attack,[12] to 1,200 by the third anniversary (three-quarters of whom had by then been found guilty)[14][15] and to 1,500 before the fourth anniversary.[16] The Justice Department documented assaults on over 140 police officers and property damage exceeding $2.8 million to the Capitol building and grounds. Approximately 170 defendants had been accused of using deadly or dangerous weapons against law enforcement officers, including fire extinguishers and bear spray.[17]\nThroughout the Biden administration, Trump characterized the January 6 defendants as \"political prisoners\" and \"hostages.\"[17] He promoted a revisionist history of the event by downplaying the severity of the violence and spreading conspiracy theories.[18][19] House Republicans also spread a fringe conspiracy that the FBI orchestrated the attack.[20] On January 29, 2022, when over 760 people had been charged,[12] Trump said at a Texas rally that he would be inclined to pardon the rioters if he were reelected in 2024,[21] which he repeated at a Tennessee rally in June 2022.[22] In November, four days before the midterm elections, he said: \"Let them all go now!\"[23] On May 10, 2023, he said he would be \"inclined to pardon many of them\" while hedging by saying \"a couple of them, probably, they got out of control\".[24] On September 15, 2023, he said in an interview that aired two days later: \"I'm going to look at them, and I certainly might [pardon them] if I think it's appropriate.\"[25]\nThen-representative Adam Schiff, who served on the House committee that investigated the attack and was the lead manager during Trump's first impeachment trial, told MSNBC in February 2022 that Trump's offer of pardons suggested that he \"condoned\" the violence.[26] Representative Pete Aguilar, who was also on the committee, told CNN the same day that he considered Trump's offer to be witness tampering.[27]\nOn December 8, 2024, as president-elect, Trump said in an interview with Kristen Welker on Meet the Press, that he would pardon the rioters on his \"first day\" in office except for any he might deem to be \"radical, crazy.\"[28] Then-vice president elect JD Vance stated that pardons should be given to those who \"protested peacefully\", and not those who did so violently.[29] Vance initially advocated for a blanket pardon in private but thought Trump wouldn't want to do so for political reasons, and was reportedly \"100% behind\" Trump's decision to grant clemency to all rioters.[30] A week following the pardon, Vance told Face the Nation that he and Trump perceived a \"massive denial of due process of liberty\" and that the pardon was the \"right decision\".[31]\nOn January 20, 2025, Trump issued a proclamation titled \"Granting Pardons and Commutation of Sentences for Certain Offenses Relating to the Events at or Near the United States Capitol on January 6, 2021\". The proclamation categorized prior criminal proceedings as a \"grave national injustice\" against the American people, and positioned the pardons as beginning a \"process of national reconciliation\".[32] Two inside sources stated that Trump made the decision to give blanket pardons at the \"last minute\" just days before the inauguration,[33] with one advisor saying Trump said \"Fuck it: Release 'em all\".[30]\nCiting Article II, Section 2 of the Constitution of the United States, the proclamation established two distinct categories of clemency for individuals involved in the events at the United States Capitol on January 6, 2021. The first category of clemency consisted of sentence commutations to time served for fourteen named individuals. These commutations applied to prominent figures in the January 6 events, including Oath Keepers leader Stewart Rhodes with members Kelly Meggs a\n\nProvide relevant evidence.",
+    "input_length_chars": 6384,
+    "input_tokens_estimated": 1596,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses the pardoning of individuals convicted for their roles in the January 6 Capitol attack, with Trump labeling them as 'political prisoners' and suggesting that their convictions were a violation of due process, which aligns with the claim of unjust imprisonment as a human rights violation.",
+      "overall_stance": "supports",
+      "key_quote": "Trump characterized the January 6 defendants as 'political prisoners' and 'hostages.'"
+    },
+    "output_length_chars": 481,
+    "output_tokens_estimated": 120,
+    "cost_usd": 0.0003114,
+    "context": {
+      "claim_index": 6,
+      "claim_text": "The national security apparatus conspires against the American people.",
+      "query_index": 2,
+      "query_text": "does the national security state conspire against citizens"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:05:51.044324",
+    "latency_seconds": 34.68,
+    "input_prompt": "Claim:\n70 plus million people are Trump supporters or against the corrupt ruling class.\n\nArticle Title:\nDonald Trump favorability by party U.S. 2025 - Statista\n\nGoogle Search Snippet:\nAccording to a July 2025 survey, Donald Trump's favorability among Republicans was strong, with 60 percent viewing him very favorably and 29 percent ...\n\nFull Page Content:\nFeb 24, 2025, 8:59 AM\nThe Vanderbilt Project on Unity and American Democracy has asked Republicans in a quarterly national poll since June 16, 2023, if they consider themselves supporters of the Make America Great Again or MAGA movement. In that first poll, 37 percent of respondents identified more with the MAGA movement than with the traditional GOP. Now, the share of MAGA identifiers within the GOP has swelled to 52 percent\u2014a majority\u2014for the first time in the poll. This jump underscores Trump\u2019s increasing hold on the Republican Party. These results mirror findings from the Vanderbilt Poll that surveys Tennesseans; in the Volunteer State, that number now stands at 60 percent.\nThe Unity Poll asked respondents about their approval of five high-profile political figures in the United States, including President Donald Trump and Elon Musk. It discovered that Trump had the highest rating, with 41 percent approval and 48 percent disapproval (another 10 percent on the fence). Musk had 28 percent approval and 50 percent disapproval. None of the five had strong support from the public, but Trump enjoys more approval than the other four:\nThe Unity Poll also asked how much confidence respondents had in various institutions, including the government, the military, the news media, and universities and scientists.\nConsidering the pressure higher education and scientific research funding are under from the federal government, it is of interest that the poll shows improvement in public confidence in them since the December 2023 poll. Universities saw public confidence increase from 31 percent in 2023 to 38 percent in 2025. Scientists fared better, with 54 percent of Americans expressing confidence\u2014up from 48 percent in 2023.\nThe military rates the highest among the institutions, with 58 percent of respondents expressing confidence. The three institutions that polled with the least confidence were the national news media at 13 percent, large tech companies at 19 percent and the federal U.S. government also at 19 percent.\nThe poll logged respondents\u2019 opinions on some of Trump\u2019s initial policy moves. Trump\u2019s call for deportations resonates with the public: Even when asked about individuals who have not been convicted of any crimes, people still express an appetite for sending them back to their countries of origin. Seventy-five percent supported deportation for individuals with a criminal record, and 50 percent supported deportation for individuals without a criminal record.\nTariffs present a more mixed picture. Nearly 60 percent of the public disapproves of new tariffs or taxes on goods imported from other countries. Digging into those numbers, Republicans are more supportive of tariffs (70 percent), which is a testament to Trump\u2019s influence on the party that used to pride itself on being the party of free trade. The Democrats now reflect that label, with over 80 percent opposing Trump\u2019s tariffs.\nThe poll asked about pardons by Trump of those convicted of violent crimes during the Jan. 6, 2021, attack on the U.S. Capitol, and it found little public support. Three out of four Americans oppose the president\u2019s pardons, including a majority of Republicans. Only MAGA supporters show a majority support\u201455 percent\u2014for the pardons. Traditional Republicans remain opposed.\nAfter President Trump\u2019s first month in office, more than a third of people polled supported reducing presidential powers\u201437 percent in February 2025. This is a 12 point jump from when we asked the question in December 2023. This change suggests growing concern about presidential power. In fact, just 7 percent of Americans want to see the president grow in power\u2014a number that stands in contrast to the flurry of recent presidential actions.\nThe Vanderbilt Project on Unity and American Democracy also sponsors the Vanderbilt Unity Index, a value generated through analysis of the polling results. \u201cThe Vanderbilt Unity Poll should provide regular snapshots of Americans\u2019 sense of national political unity and their faith in the country\u2019s democratic institutions,\u201d said John Geer, head of the Unity Project.\nSSRS conducted the Vanderbilt Unity Poll on its Opinion Panel Omnibus Platform. Between Feb. 7 and Feb. 9, 2025, 1,037 people across the nation, age 18 and older, responded across several platforms in Spanish and English. The poll has a margin of error of +/-3.9 at the 95 percent confidence level.\nNashville, Tennessee 37240\n615-322-7311 \u2022 Contact Us\nVanderbilt University\u2019s Online Privacy Notice\nVanderbilt University is committed to the principle of equal opportunity. Vanderbilt University does not discriminate against individuals on the basis of their race, sex, sexual orientation, gender identity, religion, color, national or ethnic origin, age, disability, military service, or genetic information in its administration of educational policies, programs, or activities; admissions policies; scholarship and loan programs; athletic or other University-administered programs; or employment. Accessibility information. Vanderbilt\u00ae, Vanderbilt University\u00ae and the Vanderbilt logos are trademarks of The Vanderbilt University. Site Development: Digital Strategies (Communications and Marketing.) \u00a9 2025\n\nProvide relevant evidence.",
+    "input_length_chars": 5609,
+    "input_tokens_estimated": 1402,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that a significant portion of Republicans identify with the MAGA movement, which suggests a strong base of support for Trump, but it does not quantify the total number of supporters or explicitly state that 70 million people are Trump supporters or against the ruling class.",
+      "overall_stance": "mixed",
+      "key_quote": "Now, the share of MAGA identifiers within the GOP has swelled to 52 percent\u2014a majority\u2014for the first time in the poll."
+    },
+    "output_length_chars": 498,
+    "output_tokens_estimated": 124,
+    "cost_usd": 0.0002847,
+    "context": {
+      "claim_index": 6,
+      "claim_text": "The national security apparatus conspires against the American people.",
+      "query_index": 2,
+      "query_text": "does the national security state conspire against citizens"
+    }
+  }
+]

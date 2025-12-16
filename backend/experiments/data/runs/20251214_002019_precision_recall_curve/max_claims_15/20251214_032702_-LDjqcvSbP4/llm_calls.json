@@ -1,0 +1,493 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:27:24.769048",
+    "latency_seconds": 20.52,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\ntoday's medical Centric topic is is 100% fruit juice good for you 100% fruit juice is often viewed as a healthy alternative to sugary drinks but its benefits and potential drawbacks need to be considered while it contains vitamins and nutrients drinking too much juice may have negative effects on your health one nutritional benefits of 100% fruit juice rich in vitamins vitamins and antioxidants 100% fruit juice is a good source of essential vitamins especially vitamin C which supports the immune system and potassium which helps regulate blood pressure juice also contains antioxidants which protect cells from damage nutrient absorption the vitamins and minerals and Juice can be absorbed quickly by the body making it a convenient way to get a nutritional boost hydration fluid intake since fruit juice is mostly water it helps with hydration for people who struggle to drink plain water juice can be a more palatable option two potential drawbacks of 100% fruit juice high in natural sugars fructose content even though 100% fruit juice doesn't have added sugars it still contains high amounts of naturally occurring sugar sugars like fructose these sugars can Spike blood sugar levels which may lead to insulin resistance over time calories juice is calorie dense compared to whole fruits and consuming large amounts can contribute to weight gain if not balanced with physical activity LAX fiber removed during processing one of the biggest differences between fruit juice and whole fruit is the fiber content when fruit is Juiced the fiber is removed which helps regulate blood sugar and AIDS digestion without fiber juice may cause rapid sugar absorption and hunger soon after consumption three how much is too much portion control recommended intake nutrition experts often suggest limiting fruit juice intake to one small glass per day around 4 to 6 ounces drinking juice in moderation can provide health benefits balancing diet it's essential to balance juice intake with other sources of hydration and nutrition such as water and whole fruits four alternatives to fruit juice whole fruits better nutritional value eating whole fruits provides all the vitamins and minerals found in juice along with fiber which is essential for digestion and blood sugar control whole fruits also keep you Fuller for longer diluting juice reducing sugar for those who enjoy juice dilating it with water can reduce sugar intake while still offering a refreshing taste and some nutritional benefits five long-term health effects weight gain and dental health caloric impact regularly drinking large amounts of juice can lead to excess calorie consumption contributing to weight gain over time tooth decay the sugar and Juice can contribute to cavities especially when consumed frequently throughout the day drinking juice with meals and using a straw may help reduce this risk thank you for watching our video please do not forget to like and share the video also please subscribe to the channel to stay updated on our latest videos",
+    "input_length_chars": 3086,
+    "input_tokens_estimated": 771,
+    "output": {
+      "claims": [
+        {
+          "text": "100% fruit juice is often viewed as a healthy alternative to sugary drinks.",
+          "confidence": 0.8,
+          "category": "health",
+          "importance": 0.3,
+          "context": "general statement about perception of fruit juice"
+        },
+        {
+          "text": "100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.",
+          "confidence": 0.9,
+          "category": "nutritional",
+          "importance": 0.6,
+          "context": "discussing nutritional benefits of 100% fruit juice"
+        },
+        {
+          "text": "Juice contains antioxidants which protect cells from damage.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "benefits of antioxidants in juice"
+        },
+        {
+          "text": "The vitamins and minerals in juice can be absorbed quickly by the body.",
+          "confidence": 0.8,
+          "category": "scientific",
+          "importance": 0.5,
+          "context": "discussing nutrient absorption from juice"
+        },
+        {
+          "text": "Fruit juice is mostly water and helps with hydration.",
+          "confidence": 0.9,
+          "category": "health",
+          "importance": 0.4,
+          "context": "benefits of juice for hydration"
+        },
+        {
+          "text": "100% fruit juice contains high amounts of naturally occurring sugars like fructose.",
+          "confidence": 0.9,
+          "category": "nutritional",
+          "importance": 0.7,
+          "context": "discussing sugar content in fruit juice"
+        },
+        {
+          "text": "These sugars can spike blood sugar levels, potentially leading to insulin resistance over time.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "health risks associated with sugar in juice"
+        },
+        {
+          "text": "Juice is calorie dense compared to whole fruits, contributing to weight gain if not balanced with physical activity.",
+          "confidence": 0.9,
+          "category": "nutritional",
+          "importance": 0.6,
+          "context": "caloric impact of juice consumption"
+        },
+        {
+          "text": "The fiber is removed during processing, which helps regulate blood sugar and aids digestion.",
+          "confidence": 0.9,
+          "category": "nutritional",
+          "importance": 0.6,
+          "context": "difference between juice and whole fruit regarding fiber"
+        },
+        {
+          "text": "Nutrition experts often suggest limiting fruit juice intake to one small glass per day, around 4 to 6 ounces.",
+          "confidence": 0.85,
+          "category": "policy",
+          "importance": 0.6,
+          "context": "recommendations for juice consumption"
+        },
+        {
+          "text": "Eating whole fruits provides all the vitamins and minerals found in juice along with fiber.",
+          "confidence": 0.9,
+          "category": "nutritional",
+          "importance": 0.6,
+          "context": "benefits of whole fruits over juice"
+        },
+        {
+          "text": "Regularly drinking large amounts of juice can lead to excess calorie consumption contributing to weight gain.",
+          "confidence": 0.85,
+          "category": "health",
+          "importance": 0.7,
+          "context": "long-term health effects of juice consumption"
+        },
+        {
+          "text": "The sugar in juice can contribute to cavities, especially when consumed frequently throughout the day.",
+          "confidence": 0.9,
+          "category": "health",
+          "importance": 0.6,
+          "context": "dental health risks associated with juice"
+        },
+        {
+          "text": "Drinking juice with meals and using a straw may help reduce the risk of cavities.",
+          "confidence": 0.8,
+          "category": "health",
+          "importance": 0.4,
+          "context": "suggestions to mitigate dental health risks from juice"
+        }
+      ],
+      "total_count": 15
+    },
+    "output_length_chars": 4199,
+    "output_tokens_estimated": 1049,
+    "cost_usd": 0.00074505
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:27:29.889761",
+    "latency_seconds": 2.15,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Juice contains antioxidants which protect cells from damage.\nContext: benefits of antioxidants in juice\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 276,
+    "input_tokens_estimated": 69,
+    "output": {
+      "original_claim": "Juice contains antioxidants which protect cells from damage.",
+      "queries": [
+        {
+          "query": "Juice antioxidants protect cells from damage",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Benefits of antioxidants in juice",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 287,
+    "output_tokens_estimated": 71,
+    "cost_usd": 5.295e-05,
+    "context": {
+      "claim_index": 14,
+      "claim_text": "100% fruit juice is often viewed as a healthy alternative to sugary drinks."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:27:30.080233",
+    "latency_seconds": 2.34,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Fruit juice is mostly water and helps with hydration.\nContext: benefits of juice for hydration\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 267,
+    "input_tokens_estimated": 66,
+    "output": {
+      "original_claim": "Fruit juice is mostly water and helps with hydration.",
+      "queries": [
+        {
+          "query": "Is fruit juice mostly water and does it help with hydration?",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Benefits of fruit juice for hydration and its water content",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 322,
+    "output_tokens_estimated": 80,
+    "cost_usd": 5.79e-05,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "Juice contains antioxidants which protect cells from damage.",
+      "query_index": 2,
+      "query_text": "Benefits of antioxidants in juice"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:27:30.607723",
+    "latency_seconds": 2.87,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The sugar in juice can contribute to cavities, especially when consumed frequently throughout the day.\nContext: dental health risks associated with juice\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 326,
+    "input_tokens_estimated": 81,
+    "output": {
+      "original_claim": "The sugar in juice can contribute to cavities, especially when consumed frequently throughout the day.",
+      "queries": [
+        {
+          "query": "sugar in juice cavities dental health",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "juice consumption sugar cavities risk",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 326,
+    "output_tokens_estimated": 81,
+    "cost_usd": 6.075e-05,
+    "context": {
+      "claim_index": 12,
+      "claim_text": "Fruit juice is mostly water and helps with hydration.",
+      "query_index": 2,
+      "query_text": "Benefits of fruit juice for hydration and its water content"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:27:30.610496",
+    "latency_seconds": 2.88,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: 100% fruit juice contains high amounts of naturally occurring sugars like fructose.\nContext: discussing sugar content in fruit juice\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 305,
+    "input_tokens_estimated": 76,
+    "output": {
+      "original_claim": "100% fruit juice contains high amounts of naturally occurring sugars like fructose.",
+      "queries": [
+        {
+          "query": "100% fruit juice sugar content fructose",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "naturally occurring sugars in 100% fruit juice",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 318,
+    "output_tokens_estimated": 79,
+    "cost_usd": 5.88e-05,
+    "context": {
+      "claim_index": 12,
+      "claim_text": "Fruit juice is mostly water and helps with hydration.",
+      "query_index": 2,
+      "query_text": "Benefits of fruit juice for hydration and its water content"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:27:30.815957",
+    "latency_seconds": 3.08,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: 100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.\nContext: discussing nutritional benefits of 100% fruit juice\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 326,
+    "input_tokens_estimated": 81,
+    "output": {
+      "original_claim": "100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.",
+      "queries": [
+        {
+          "query": "nutritional benefits of 100% fruit juice vitamin C potassium",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "is 100% fruit juice a good source of vitamins and potassium",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 361,
+    "output_tokens_estimated": 90,
+    "cost_usd": 6.615e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "100% fruit juice contains high amounts of naturally occurring sugars like fructose.",
+      "query_index": 2,
+      "query_text": "naturally occurring sugars in 100% fruit juice"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:27:30.901525",
+    "latency_seconds": 3.16,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Drinking juice with meals and using a straw may help reduce the risk of cavities.\nContext: suggestions to mitigate dental health risks from juice\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 318,
+    "input_tokens_estimated": 79,
+    "output": {
+      "original_claim": "Drinking juice with meals and using a straw may help reduce the risk of cavities.",
+      "queries": [
+        {
+          "query": "Drinking juice with meals and using a straw reduce risk of cavities",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Does using a straw and drinking juice with meals prevent cavities?",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 364,
+    "output_tokens_estimated": 91,
+    "cost_usd": 6.645e-05,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.",
+      "query_index": 2,
+      "query_text": "is 100% fruit juice a good source of vitamins and potassium"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:27:30.902274",
+    "latency_seconds": 3.17,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Regularly drinking large amounts of juice can lead to excess calorie consumption contributing to weight gain.\nContext: long-term health effects of juice consumption\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 337,
+    "input_tokens_estimated": 84,
+    "output": {
+      "original_claim": "Regularly drinking large amounts of juice can lead to excess calorie consumption contributing to weight gain.",
+      "queries": [
+        {
+          "query": "effects of drinking large amounts of juice on calorie consumption and weight gain",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "juice consumption and weight gain due to excess calories",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 396,
+    "output_tokens_estimated": 99,
+    "cost_usd": 7.2e-05,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.",
+      "query_index": 2,
+      "query_text": "is 100% fruit juice a good source of vitamins and potassium"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:27:31.401637",
+    "latency_seconds": 3.66,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: 100% fruit juice is often viewed as a healthy alternative to sugary drinks.\nContext: general statement about perception of fruit juice\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 307,
+    "input_tokens_estimated": 76,
+    "output": {
+      "original_claim": "100% fruit juice is often viewed as a healthy alternative to sugary drinks.",
+      "queries": [
+        {
+          "query": "Is 100% fruit juice considered a healthy alternative to sugary drinks?",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Perception of 100% fruit juice as a healthy option compared to sugary beverages",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 374,
+    "output_tokens_estimated": 93,
+    "cost_usd": 6.72e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "Regularly drinking large amounts of juice can lead to excess calorie consumption contributing to weight gain.",
+      "query_index": 2,
+      "query_text": "juice consumption and weight gain due to excess calories"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:27:31.553036",
+    "latency_seconds": 3.82,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The fiber is removed during processing, which helps regulate blood sugar and aids digestion.\nContext: difference between juice and whole fruit regarding fiber\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 331,
+    "input_tokens_estimated": 82,
+    "output": {
+      "original_claim": "The fiber is removed during processing, which helps regulate blood sugar and aids digestion.",
+      "queries": [
+        {
+          "query": "Does juice processing remove fiber and affect blood sugar regulation?",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "How does fiber in whole fruit compare to juice in terms of digestion and blood sugar?",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 396,
+    "output_tokens_estimated": 99,
+    "cost_usd": 7.17e-05,
+    "context": {
+      "claim_index": 14,
+      "claim_text": "100% fruit juice is often viewed as a healthy alternative to sugary drinks.",
+      "query_index": 2,
+      "query_text": "Perception of 100% fruit juice as a healthy option compared to sugary beverages"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:28:41.502630",
+    "latency_seconds": 12.32,
+    "input_prompt": "Claim:\nDrinking juice with meals and using a straw may help reduce the risk of cavities.\n\nArticle Title:\nDoes Using Straws Really Help Protect Teeth? - Frank Dunlap, DDS\n\nGoogle Search Snippet:\nEven though using a straw can help protect your teeth from stains, it doesn't keep them free of cavities or other dental problems.\n\nFull Page Content:\nAccessibility AA A 11451 Katy Freeway, Suite 103, Houston, TX 77079 (346) 576-4411 Frank Dunlap, DDS REQUEST YOUR APPOINTMENT HOME ABOUT DENTAL SERVICES FOR PATIENTS REVIEWS CONTACT Does Using Straws Really Help Protect Teeth? Posted on 2/20/2023 by Team at Frank Dunlap It has been estimated that more than 60% of adults in the United States drink with a straw. That's right, two-thirds of us sip iced tea, iced coffee, and even water through one long tube! The reason for this is simple: it helps to prevent tooth decay. But does it work? Well, read on to find out! Why Drinking With A Straw Does Not Protect Your Teeth Drinking through a straw is not the magical solution that many people think it is. Even though using a straw can help protect your teeth from stains, it doesn't keep them free of cavities or other dental problems. Most drinks we use straws with are not healthy for us anyway. Many people drink sodas, fruit juices, and sports drinks with straws because they think it will save their teeth from getting stained or damaged. This is just an illusion of safety that could be harmful to your health in the long run. Sugar Is More Harmful To Your Teeth Than The Acid In Soda And Fruit Juice Although most people are fearful of the acidity in soda and fruit juice, sugar is more harmful to your teeth. According to the National Institute of Dental & Craniofacial Research (NIDCR), sugars break down into acids that attack tooth enamel when exposed to heat or moisture for a long time. How To Protect Your Teeth From Harmful Drinks To protect your teeth from harmful drinks, you should decrease or limit the number of acidic beverages in your diet. Acidic beverages include soda, fruit juice, sports drinks, among many others. Be sure to drink plenty of water throughout the day instead of sugary sodas or sports drinks. Water keeps saliva flowing, which helps neutralize acidity levels in the mouth while washing away food particles before they have a chance to stick onto tooth enamel. Drinking water with meals can also help reduce plaque buildup on dental surfaces due to certain types of starchy foods like bread and cereals that are found at many dinners. There are a lot of misconceptions about what is good for your teeth. If you have any questions or want more information on our dental services, please don't hesitate to call us at (346) 576-4411 or explore the links below. We look forward to hearing from you soon! Teeth Cleaning Dental Exam Tooth Filling Tooth Extraction Periodontal Care Periodontal Maintenance Areas We Love To Serve! Pasadena Pearland Sugar Land Missouri City Friendswood League City Baytown La Porte Deer Park Channelview Cypress Katy Spring Humble The Woodlands Tomball Aldine Alief Kingwood Clear Lake FRANK DUNLAP, DDS Dr. Frank Dunlap (346) 576-4411 11451 Katy Freeway, Suite 103 Houston, TX 77079 Copyright \u00a9 2021-2025 Frank Dunlap, DDS and WEO Media - Dental Marketing (Touchpoint Communications LLC). All rights reserved. Sitemap About Our Houston Dental Practice | Expert Dentistry for Your Oral Health | Frank Dunlap, DDS Learn about our expert dental practice in Houston. Discover our commitment to providing exceptional dentistry and achieving optimal oral health. Frank Dunlap, DDS, 11451 Katy Freeway, Suite 103, Houston, TX 77079, (346) 576-4411, drfrankdunlap.com, 12/9/2025, Page Terms:dentist Houston TX,\n\nProvide relevant evidence.",
+    "input_length_chars": 3742,
+    "input_tokens_estimated": 935,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that while using a straw may help protect teeth from stains, it does not prevent cavities or other dental issues, which contradicts the claim that drinking juice with meals and using a straw may reduce the risk of cavities.",
+      "overall_stance": "refutes",
+      "key_quote": "Even though using a straw can help protect your teeth from stains, it doesn't keep them free of cavities or other dental problems."
+    },
+    "output_length_chars": 461,
+    "output_tokens_estimated": 115,
+    "cost_usd": 0.00020925
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:28:41.595507",
+    "latency_seconds": 21.28,
+    "input_prompt": "Claim:\n100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.\n\nArticle Title:\nIs your fruit juice really 100 percent fruit juice? - MSU Extension\n\nGoogle Search Snippet:\nOne serving of 100 percent orange juice supplies 100 percent of the vitamin C that your body needs. ... nutrients like calcium and potassium ...\n\nFull Page Content:\nAn official website of the United States government\nBack to What Is MyPlate\nThe Fruit Group includes all fruits and 100% fruit juice. Fruits may be fresh, frozen, canned, or dried/dehydrated. Fruits can be eaten whole, cut up, pur\u00e9ed (mashed), or cooked. At least half of the recommended amount of fruit eaten should come from whole fruit, rather than 100% fruit juice.\nYour fruit needs depend on your age, sex, height, weight, and physical activity. This amount can also depend on whether you are pregnant or breastfeeding.\nFind the right amount for you by getting your MyPlate Plan. For general guidance by age, see the table below.\nIn general, the following counts as 1 cup from the Fruit Group:\nThe table below shows amounts that count as 1 cup from the Fruit Group.\nThe table below shows amounts that count as 1 cup from the Fruit Group.\nNote: Click on the top row to expand the table. If you are on a mobile device, you may need to turn it to see the full table.\nEating fruit has many health benefits. People who eat fruits and vegetables as part of an overall diet may lower their risk for certain diseases. Fruits provide nutrients needed to maintain your health and body.\nMost fruits are low in fat, sodium, and calories. Fruits do not have cholesterol.\nAll food and beverage choices matter. Focus on variety, amount, and nutrition.\nDo you want to know more about the foods in the Fruit Group? What does a cup or half a cup of fruit look like? Check out the Food Group Gallery! This is a great resource if you want to eat more fruits. It will also help if you want to try something new.\nBlackberries, star fruits, kumquats... they\u2019re all waiting for you in the Food Group Gallery.\nFind savings in your area and discover new ways to prepare budget-friendly foods.\nLearn more\nGet MyPlate nutrition tips on Amazon Alexa devices or the free Alexa app.\nLearn more\nBuild healthy eating habits one goal at a time! Download the Start Simple with MyPlate app today.\nLearn more\nMyPlate.gov is based on the Dietary Guidelines for Americans, 2020-2025\nLearn more\nSign up\n\nProvide relevant evidence.",
+    "input_length_chars": 2468,
+    "input_tokens_estimated": 617,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The source confirms that 100% orange juice provides 100% of the daily recommended vitamin C intake and also mentions nutrients like potassium, supporting the claim that 100% fruit juice is a good source of essential vitamins.",
+      "overall_stance": "supports",
+      "key_quote": "One serving of 100 percent orange juice supplies 100 percent of the vitamin C that your body needs."
+    },
+    "output_length_chars": 410,
+    "output_tokens_estimated": 102,
+    "cost_usd": 0.00015375
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:28:41.928539",
+    "latency_seconds": 12.76,
+    "input_prompt": "Claim:\nDrinking juice with meals and using a straw may help reduce the risk of cavities.\n\nArticle Title:\nIs Juice Healthy for Teeth? - North Scottsdale Children's Dentistry\n\nGoogle Search Snippet:\nChoosing water more often and limiting juice to small servings with meals can help prevent cavities and support little teeth.\n\nFull Page Content:\nAccessibility AA A 11451 Katy Freeway, Suite 103, Houston, TX 77079 (346) 576-4411 Frank Dunlap, DDS REQUEST YOUR APPOINTMENT HOME ABOUT DENTAL SERVICES FOR PATIENTS REVIEWS CONTACT Does Using Straws Really Help Protect Teeth? Posted on 2/20/2023 by Team at Frank Dunlap It has been estimated that more than 60% of adults in the United States drink with a straw. That's right, two-thirds of us sip iced tea, iced coffee, and even water through one long tube! The reason for this is simple: it helps to prevent tooth decay. But does it work? Well, read on to find out! Why Drinking With A Straw Does Not Protect Your Teeth Drinking through a straw is not the magical solution that many people think it is. Even though using a straw can help protect your teeth from stains, it doesn't keep them free of cavities or other dental problems. Most drinks we use straws with are not healthy for us anyway. Many people drink sodas, fruit juices, and sports drinks with straws because they think it will save their teeth from getting stained or damaged. This is just an illusion of safety that could be harmful to your health in the long run. Sugar Is More Harmful To Your Teeth Than The Acid In Soda And Fruit Juice Although most people are fearful of the acidity in soda and fruit juice, sugar is more harmful to your teeth. According to the National Institute of Dental & Craniofacial Research (NIDCR), sugars break down into acids that attack tooth enamel when exposed to heat or moisture for a long time. How To Protect Your Teeth From Harmful Drinks To protect your teeth from harmful drinks, you should decrease or limit the number of acidic beverages in your diet. Acidic beverages include soda, fruit juice, sports drinks, among many others. Be sure to drink plenty of water throughout the day instead of sugary sodas or sports drinks. Water keeps saliva flowing, which helps neutralize acidity levels in the mouth while washing away food particles before they have a chance to stick onto tooth enamel. Drinking water with meals can also help reduce plaque buildup on dental surfaces due to certain types of starchy foods like bread and cereals that are found at many dinners. There are a lot of misconceptions about what is good for your teeth. If you have any questions or want more information on our dental services, please don't hesitate to call us at (346) 576-4411 or explore the links below. We look forward to hearing from you soon! Teeth Cleaning Dental Exam Tooth Filling Tooth Extraction Periodontal Care Periodontal Maintenance Areas We Love To Serve! Pasadena Pearland Sugar Land Missouri City Friendswood League City Baytown La Porte Deer Park Channelview Cypress Katy Spring Humble The Woodlands Tomball Aldine Alief Kingwood Clear Lake FRANK DUNLAP, DDS Dr. Frank Dunlap (346) 576-4411 11451 Katy Freeway, Suite 103 Houston, TX 77079 Copyright \u00a9 2021-2025 Frank Dunlap, DDS and WEO Media - Dental Marketing (Touchpoint Communications LLC). All rights reserved. Sitemap About Our Houston Dental Practice | Expert Dentistry for Your Oral Health | Frank Dunlap, DDS Learn about our expert dental practice in Houston. Discover our commitment to providing exceptional dentistry and achieving optimal oral health. Frank Dunlap, DDS, 11451 Katy Freeway, Suite 103, Houston, TX 77079, (346) 576-4411, drfrankdunlap.com, 12/9/2025, Page Terms:dentist Houston TX,\n\nProvide relevant evidence.",
+    "input_length_chars": 3740,
+    "input_tokens_estimated": 935,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence suggests that while drinking juice with meals may be common, it does not effectively protect against cavities, and using a straw is not a reliable method for preventing tooth decay. Instead, limiting acidic beverages and drinking water is recommended for better dental health.",
+      "overall_stance": "refutes",
+      "key_quote": "Drinking through a straw is not the magical solution that many people think it is... it doesn't keep them free of cavities or other dental problems."
+    },
+    "output_length_chars": 522,
+    "output_tokens_estimated": 130,
+    "cost_usd": 0.00021825
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:28:43.394528",
+    "latency_seconds": 26.06,
+    "input_prompt": "Claim:\n100% fruit juice contains high amounts of naturally occurring sugars like fructose.\n\nArticle Title:\nWhole Fruits Versus 100% Fruit Juice: Revisiting the Evidence and ...\n\nGoogle Search Snippet:\nProcessing and/or storing 100% fruit juice reduces its fibre, vitamins and other antioxidant contents and transforms intrinsic sugars in the ...\n\nFull Page Content:\nAn official website of the United States government\nA number of clinical and epidemiological studies have reported positive associations between high sugar or fructose intake and the risk for several chronic diseases or other conditions, including overweight and obesity, diabetes, insulin resistance, metabolic syndrome and hyperlipidaemia( 1 , 2 ). However, there are also studies that fail to support this relationship, especially when intakes are at levels that mirror typical consumption( 3 ). The research on fructose also has implicated this sugar as having possible health risks, although the interpretation of this hypothesis has noteworthy limitations. The results of animal studies are frequently extrapolated to man even though there are metabolic differences related to fructose metabolism, while human clinical studies often suffer from methodological issues that can affect their interpretation and application to the general human population( 4 , 5 ). For example, in most clinical studies fructose levels far exceed those consumed by the general population. Nevertheless, the potential health effects related to the consumption or overconsumption of sugars and fructose have captured the spotlight in scientific journal editorials and commentary( 6 , 7 ) and the lay press( 8 \u2013 10 ), as well as in business/finance institution reports related to global sugar consumption and health impacts( 11 ). While most of the attention has focused on beverages containing added sugars, particularly high-fructose corn syrup, 100 % fruit juices (FJ) have been swept into the discourse because of their sugar and fructose contents( 12 , 13 ), which come not from added sugars but as naturally occurring sugars in the whole fruit. As a result, 100 % FJ is often discussed in a context that focuses solely on its sugar content and neglects the nutritional value and potential health benefits associated with including 100 % FJ in the diet. Moreover, the evidence to date suggests that the adverse effects associated with excess added sugar or fructose intake are not observed with respect to the consumption of 100 % FJ at typical amounts.\nA number of observational studies have investigated the relationship between 100 % FJ intake and anthropometric measures in children and/or adolescents. A comprehensive review article published in 2008 evaluated the results of twenty-one studies (nine cross-sectional and twelve longitudinal)( 14 ). Only three out of nine cross-sectional studies and three out of twelve longitudinal studies reported a positive association between 100 % FJ intake and weight status. After critically reviewing the quality of the studies, the authors concluded that there was no systematic association between 100 % FJ intake and body weight in children or adolescents. As analysed in the review, three longitudinal studies reported significant associations between 100 % FJ intake and weight or BMI in adolescent girls in Germany( 15 ) or low-income children who were overweight or at risk for overweight at baseline in the USA( 16 , 17 ). The two latter studies included relatively large sample sizes, yet none of the three studies used a nationally representative sample. Observational studies concerning FJ intake and anthropometric measures in children and adolescents published since the 2008 review are summarized in Table 1. Several cross-sectional and longitudinal studies published since the 2008 review report no association between 100 % FJ consumption and obesity or BMI in children and adolescents, including Mexican-American children in California( 18 ), Swedish adolescents( 19 ), Greek schoolchildren( 20 ), Canadian children( 21 ), children in a California WIC (Special Supplemental Nutrition Program for Women, Infants, and Children)( 22 ), and adolescents in Project EAT (Eating Among Teens)( 23 ) and the National Health and Nutrition Examination Survey (NHANES)( 24 ). A multi-year and multi-state analysis of over 272 000 adolescents from the Youth Risk Behavior Survey reported an inverse association between 100 % FJ intake and BMI in girls and a null association in boys( 25 ). These results should be interpreted with caution since height and weight were self-reported and adolescent females tend to under-report their weight( 26 , 27 ). One longitudinal study reported a significant association between the amount of FJ consumed by children at age 1 year and BMI Z-score during early and mid-childhood( 28 ), while an inverse association was reported between fruit and vegetable juice intake during childhood and waist circumference and skinfold measurements in adolescence( 29 ). Two recent reviews of the literature, including an analysis by a workgroup on behalf of the Academy of Nutrition and Dietetics\u2019 Evidence Analysis Library, concluded that the majority of evidence does not support an association between 100 % FJ consumption and weight status or adiposity in children 2\u201318 years of age( 30 , 31 ). Readers desiring more detailed information about individual studies should consult these reviews.\nObservational studies published since 2008 evaluating fruit juice intake and anthropometric measures in children and adolescents\nNHANES, National Health and Nutrition Examination Survey; WIC, Special Supplemental Nutrition Program for Women, Infants, and Children; EAT, Eating Among Teens; fl oz, fluid ounces (1 fl oz=29\u00b757 ml); Ht, height; Wt, weight; WC, waist circumference; FJ, fruit juice; CDC, Centers for Disease Control and Prevention; IOTF, International Obesity Task Force; %BF, percentage body fat; PA, physical activity; SES, socio-economic status; T2, time 2; TV, television; %E, percentage of energy intake.\nFor adults, no association between 100 % FJ consumption and waist circumference was observed in the Coronary Artery Risk Development in Young Adults (CARDIA) longitudinal cohort( 32 ), while inverse associations between 100 % FJ and BMI have been reported in other studies( 33 , 34 ). However, a large study using th\n\nProvide relevant evidence.",
+    "input_length_chars": 6394,
+    "input_tokens_estimated": 1598,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that 100% fruit juice contains naturally occurring sugars, including fructose, which are derived from whole fruits. However, it also discusses the health implications of sugar intake, particularly in relation to chronic diseases, while emphasizing the nutritional value of 100% fruit juice.",
+      "overall_stance": "supports",
+      "key_quote": "\"100 % FJ is often discussed in a context that focuses solely on its sugar content and neglects the nutritional value and potential health benefits associated with including 100 % FJ in the diet.\""
+    },
+    "output_length_chars": 597,
+    "output_tokens_estimated": 149,
+    "cost_usd": 0.0003291
+  }
+]

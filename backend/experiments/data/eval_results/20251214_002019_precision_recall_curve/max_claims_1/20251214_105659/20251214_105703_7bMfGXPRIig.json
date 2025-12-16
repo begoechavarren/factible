@@ -1,0 +1,86 @@
+{
+  "video_id": "7bMfGXPRIig",
+  "timestamp": "2025-12-14T10:57:03.646803",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_1",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 1.0,
+    "recall": 0.06666666666666667,
+    "f1_score": 0.125,
+    "true_positives": 1,
+    "false_positives": 0,
+    "false_negatives": 14,
+    "mean_average_precision": 1.0,
+    "recall_at_important": 0.25,
+    "importance_weighted_coverage": 0.10052910052910054,
+    "matched_claims": [
+      {
+        "gt_text": "A three-day juice cleanse can jump start health, help get off medications, bolster the immune system, and burn fat quickly",
+        "sys_text": "A three-day juice cleanse can bolster the immune system and aid fat loss.",
+        "gt_importance": 0.95,
+        "sys_importance": 0.85,
+        "importance_error": 0.09999999999999998
+      }
+    ],
+    "missed_claims": [
+      "A juice cleanse will lower your insulin if you make it right",
+      "A juice cleanse is going to help increase your human growth hormone",
+      "Doing a juice cleanse right will trigger autophagy",
+      "When you start burning fat, the fat contains toxins which are released into the system and if not eliminated quickly, they take back up into tissue and are restored as fat (the rebounding effect)",
+      "Green apples (Granny Smith) have lower sugar content than red apples, which helps keep insulin down",
+      "Kale is always at the top of the scoring system for most nutritious food",
+      "Celery is amazing for your digestive tract especially your stomach and for supporting your liver and detoxing",
+      "Parsley has more iron than spinach and is really good for anemia",
+      "Broccoli is very anti-cancer",
+      "Dandelion has a very good detox of iron effect",
+      "Your digestive system uses more energy than anything else you could possibly do on this planet, not a marathon, not anything",
+      "The gut microbiome makes up 70 plus percent of your immune system",
+      "Broth or collagen are very insulin friendly and won't spike insulin levels",
+      "You should aim for 64 to 128 ounces of juice during the cleanse"
+    ],
+    "extra_claims": [],
+    "importance_mae": 0.09999999999999998,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.0,
+    "stance_accuracy": 0.0,
+    "correct_verdicts": 0,
+    "total_verdicts": 1,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "A three-day juice cleanse can jump start health, help get off medications, bolster the immune system, and burn fat quickly",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.06666666666666667,
+    "verdict_accuracy": 0.0,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.0027972,
+    "total_time_seconds": 67.53167605400085,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.5
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "medium": 3,
+      "high": 2
+    },
+    "avg_evidence_per_claim": 5.0
+  },
+  "ground_truth_claims_count": 15,
+  "system_claims_count": 1
+}

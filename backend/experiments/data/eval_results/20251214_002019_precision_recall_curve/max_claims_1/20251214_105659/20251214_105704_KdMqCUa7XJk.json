@@ -1,0 +1,78 @@
+{
+  "video_id": "KdMqCUa7XJk",
+  "timestamp": "2025-12-14T10:57:04.139610",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_1",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 1.0,
+    "recall": 0.07142857142857142,
+    "f1_score": 0.13333333333333333,
+    "true_positives": 1,
+    "false_positives": 0,
+    "false_negatives": 13,
+    "mean_average_precision": 1.0,
+    "recall_at_important": 0.0,
+    "importance_weighted_coverage": 0.06849315068493152,
+    "matched_claims": [
+      {
+        "gt_text": "Over five days, four million Texans lost power during what turned out to be the coldest winter storm in a half a century",
+        "sys_text": "Over five days, four million Texans lost power during the coldest winter storm in fifty years.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.85,
+        "importance_error": 0.09999999999999998
+      }
+    ],
+    "missed_claims": [
+      "Hundreds died, including an 11-year-old boy who froze to death in his sleep",
+      "ERCOT later reported the state was just four minutes away from total grid collapse",
+      "From 2010 to 2020, the population of Texas increased by 4 million people",
+      "The state's economy grew by 35%",
+      "While all this growth was happening, the state's reliable energy capacity was actually shrinking. Meanwhile, its unreliable energy capacity was surging. In fact, it almost tripled.",
+      "In 2020, Texans got 25% of their energy from renewables",
+      "During the February storm, that fell to 8%, at one point reaching a deadly low of just 1.5%",
+      "That story begins in 1999, when Texas politicians on the left and the right fell in love with the idea that they could turn the state into a green energy powerhouse",
+      "Since 2006, the state has subsidized renewable energy to the tune of $19 billion",
+      "Over the past decade, the federal government has spent over $230 billion on energy subsidies, and that doesn't even include subsidies the states give away",
+      "Compared to fossil fuel companies, for every unit of electricity generated, Washington subsidizes wind 17 times and solar 75 times more",
+      "Despite all this aid, renewables provide just 4 percent of the country's total energy supply",
+      "The verdict is in: renewable energy is expensive and unreliable"
+    ],
+    "extra_claims": [],
+    "importance_mae": 0.09999999999999998,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 1.0,
+    "stance_accuracy": 1.0,
+    "correct_verdicts": 1,
+    "total_verdicts": 1,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.07142857142857142,
+    "verdict_accuracy": 1.0,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.0030432,
+    "total_time_seconds": 45.02805709838867,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.5
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 5
+    },
+    "avg_evidence_per_claim": 5.0
+  },
+  "ground_truth_claims_count": 14,
+  "system_claims_count": 1
+}

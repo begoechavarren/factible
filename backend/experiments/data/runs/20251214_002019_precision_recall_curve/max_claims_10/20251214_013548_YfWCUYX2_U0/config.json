@@ -1,0 +1,23 @@
+{
+  "run_id": "20251214_013548_YfWCUYX2_U0",
+  "experiment_name": "precision_recall_curve_claims10_why_climate_change_matter",
+  "component": "end_to_end",
+  "timestamp": "2025-12-14T01:37:25.215083",
+  "video_url": "https://www.youtube.com/watch?v=YfWCUYX2_U0",
+  "max_claims": 10,
+  "max_queries_per_claim": 2,
+  "max_results_per_query": 3,
+  "headless_search": true,
+  "model_config": {
+    "claim_extractor": "OPENAI_GPT4O_MINI",
+    "query_generator": "OPENAI_GPT4O_MINI",
+    "evidence_extractor": "OPENAI_GPT4O_MINI",
+    "output_generator": "OPENAI_GPT4O_MINI"
+  },
+  "model_summary": "CE:gpt-4o-mini | QG:gpt-4o-mini | EE:gpt-4o-mini | OG:gpt-4o-mini",
+  "parallelization": "async",
+  "video_title": "Why Does Climate Change Matter? We Asked a NASA Scientist",
+  "transcript_length": 1519,
+  "transcript_tokens": 265,
+  "video_duration_seconds": 94.227
+}

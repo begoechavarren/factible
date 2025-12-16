@@ -1,0 +1,418 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:57:41.640616",
+    "latency_seconds": 6.41,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\n[Music] [Music] we can think of the atmosphere as a mix of all sorts of gases that surrounds our planet some gases that humans produce can have bad effects on the planet including changing the climate and weather many of the human produced gases are called greenhouse gases these are gases that trap heat and energy from the Sun hi my name is Eric I'm an atmospheric scientist I study climate and greenhouse gases my group's research we really try to understand what's impact in the atmosphere and how that impacts climate Eric and his team study the atmosphere and measure the levels of gases that make it up including greenhouse gases the goals are to better understand where harmful gases are coming from but first they have to collect gases in the atmosphere and to do this they collect samples of air using special tools our instruments are designed to measure the contents of the atmosphere much like weather station would measure wind or rainfall or snowfall our instruments are designed to measure the molecules the components of the air that were actually in these instruments are able to take snapshots of the amount of different gases in the atmosphere at a given time which helps scientists investigate sources of greenhouse gases but since Eric and his team are thinking about the atmosphere they have an interesting approach to collecting their samples we have instrumentation that will put in different places sometimes we'll put it on an airplane and we'll actually fly the airplane around to different regions that were interested in studying the sources will collect air into inlets on the side of the airplane and actually measure it on instruments in the airplane by collecting samples in flight they are able to identify different emission sources that may not be measurable on the ground pretty cool but how does collecting air above the ground tell us about what is happening on the ground we can think about it this bees fly around from flower to flower as they fly pollen gets attached to them if we looked at a bee after a day of flying around we would be able to tell where it had been by looking at the types of pollen it collected Eric and his team are kind of like bees they fly around collecting samples of air and the samples are able to tell us about what is in the air they spend a lot of time flying and collecting samples over farms for this project we very much want to understand the impacts of how we grow our crops on the atmosphere so in order to grow crops you need to plant seeds you might put quite a lot of fertilizer down a lot of the nutrients from fertilizer going to the growing of the crops but not all of the nutrients make their way into the crops and the number of them are lost to the atmosphere by focusing on flying over farms they are able to tell if the fertilizers that farmers are using are good or bad for the atmosphere as we get towards answers we can help inform farmers on what our optimal practices to have them both get their best crop yields but minimize the losses to the atmosphere but their research doesn't just stop at farms they also fly over cities and other areas or fly downwind of cities to try to understand how much is being emitted from all the cars and vehicles in the city how much is coming out of landfills and power plants this research is important because in order to understand how the atmosphere is changing we have to understand what is making it change this research helps us determine where the problem is so we can fix it but don't let just the scientist do it all themselves you can help reduce your impact on the earth too so if one is concerned about what impacts you have on the atmosphere there are different actions that can be taken the most important thing is to simply be cognizant and aware of what you're doing being aware of subtle things even light bulbs on leaving the TV on when you're not watching it all of those small things do add up but there's also simply power being aware of the problem and then collective action that can come out of that do you want to be a scientist like Eric and his team try making your own sampling device [Music]",
+    "input_length_chars": 4211,
+    "input_tokens_estimated": 1052,
+    "output": {
+      "claims": [
+        {
+          "text": "Greenhouse gases trap heat and energy from the Sun.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "General explanation of greenhouse gases' role in climate change."
+        },
+        {
+          "text": "Eric's team studies the atmosphere and measures levels of gases, including greenhouse gases.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Speaker: Eric, an atmospheric scientist."
+        },
+        {
+          "text": "They collect air samples using special tools to measure atmospheric contents.",
+          "confidence": 0.8,
+          "category": "scientific",
+          "importance": 0.5,
+          "context": "Describing the methodology of air sample collection."
+        },
+        {
+          "text": "Instruments can take snapshots of different gases in the atmosphere at a given time.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Explaining the functionality of their measurement instruments."
+        },
+        {
+          "text": "Collecting air above the ground helps identify emission sources not measurable on the ground.",
+          "confidence": 0.8,
+          "category": "scientific",
+          "importance": 0.55,
+          "context": "Describing the benefits of aerial sampling."
+        },
+        {
+          "text": "Fertilizers can lose nutrients to the atmosphere during crop growth.",
+          "confidence": 0.75,
+          "category": "scientific",
+          "importance": 0.5,
+          "context": "Discussing the impact of fertilizers on atmospheric gases."
+        },
+        {
+          "text": "Research helps inform farmers on optimal practices for crop yields and minimizing atmospheric losses.",
+          "confidence": 0.8,
+          "category": "policy",
+          "importance": 0.6,
+          "context": "Implications of research for agricultural practices."
+        },
+        {
+          "text": "Research includes measuring emissions from cars, landfills, and power plants in cities.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.65,
+          "context": "Understanding urban contributions to atmospheric change."
+        }
+      ],
+      "total_count": 8
+    },
+    "output_length_chars": 2462,
+    "output_tokens_estimated": 615,
+    "cost_usd": 0.0005268
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:57:45.633123",
+    "latency_seconds": 1.79,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Greenhouse gases trap heat and energy from the Sun.\nContext: General explanation of greenhouse gases' role in climate change.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 298,
+    "input_tokens_estimated": 74,
+    "output": {
+      "original_claim": "Greenhouse gases trap heat and energy from the Sun.",
+      "queries": [
+        {
+          "query": "Greenhouse gases trap heat and energy from the Sun",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "How do greenhouse gases contribute to climate change by trapping heat",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 320,
+    "output_tokens_estimated": 80,
+    "cost_usd": 5.91e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Greenhouse gases trap heat and energy from the Sun."
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:58:07.473228",
+    "latency_seconds": 2.13,
+    "input_prompt": "Claim:\nGreenhouse gases trap heat and energy from the Sun.\n\nArticle Title:\nOverview of Greenhouse Gases | US EPA\n\nGoogle Search Snippet:\nGases that trap heat in the atmosphere are called greenhouse gases. This section provides information on emissions and removals of the main greenhouse gases.\n\nFull Page Content:\nThe greenhouse effect is the process through which heat is trapped near Earth's surface by substances known as 'greenhouse gases.' Imagine these gases as a cozy blanket enveloping our planet, helping to maintain a warmer temperature than it would have otherwise. Greenhouse gases consist of carbon dioxide, methane, ozone, nitrous oxide, chlorofluorocarbons, and water vapor. Water vapor, which reacts to temperature changes, is referred to as a 'feedback', because it amplifies the effect of forces that initially caused the warming.\nScientists have determined that carbon dioxide plays a crucial role in maintaining the stability of Earth's atmosphere. If carbon dioxide were removed, the terrestrial greenhouse effect would collapse, and Earth's surface temperature would drop significantly, by approximately 33\u00b0C (59\u00b0F).\nGreenhouse gases are part of Earth's atmosphere. This is why Earth is often called the 'Goldilocks' planet \u2013 its conditions are just right, not too hot or too cold, allowing life to thrive. Part of what makes Earth so amenable is its natural greenhouse effect, which maintains an average temperature of 15 \u00b0C (59 \u00b0F) . However, in the last century, human activities, primarily from burning fossil fuels that have led to the release of carbon dioxide and other greenhouse gases into the atmosphere, have disrupted Earth's energy balance. This has led to an increase in carbon dioxide in the atmosphere and ocean. The level of carbon dioxide in Earth\u2019s atmosphere has been rising consistently for decades and traps extra heat near Earth's surface, causing temperatures to rise.\nREAD MORE\nExplore Earth Science\nNASA's unique vantage point helps us inform solutions to enhance decision-making, improve livelihoods, and protect our planet.\nEarth Science Data\nFacts About Earth\nNASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.\n\nProvide relevant evidence.",
+    "input_length_chars": 2264,
+    "input_tokens_estimated": 566,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that greenhouse gases trap heat in the atmosphere, maintaining Earth's temperature and contributing to the greenhouse effect, which is essential for life on the planet.",
+      "overall_stance": "supports",
+      "key_quote": "The greenhouse effect is the process through which heat is trapped near Earth's surface by substances known as 'greenhouse gases.'"
+    },
+    "output_length_chars": 406,
+    "output_tokens_estimated": 101,
+    "cost_usd": 0.0001455,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Greenhouse gases trap heat and energy from the Sun.",
+      "query_index": 2,
+      "query_text": "How do greenhouse gases contribute to climate change by trapping heat"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:58:07.921234",
+    "latency_seconds": 2.57,
+    "input_prompt": "Claim:\nGreenhouse gases trap heat and energy from the Sun.\n\nArticle Title:\nClimate change: atmospheric carbon dioxide\n\nGoogle Search Snippet:\nBy adding more carbon dioxide to the atmosphere, people are amplifying the natural greenhouse effect, causing global temperature to rise. According to ...\n\nFull Page Content:\nThe greenhouse effect is the process through which heat is trapped near Earth's surface by substances known as 'greenhouse gases.' Imagine these gases as a cozy blanket enveloping our planet, helping to maintain a warmer temperature than it would have otherwise. Greenhouse gases consist of carbon dioxide, methane, ozone, nitrous oxide, chlorofluorocarbons, and water vapor. Water vapor, which reacts to temperature changes, is referred to as a 'feedback', because it amplifies the effect of forces that initially caused the warming.\nScientists have determined that carbon dioxide plays a crucial role in maintaining the stability of Earth's atmosphere. If carbon dioxide were removed, the terrestrial greenhouse effect would collapse, and Earth's surface temperature would drop significantly, by approximately 33\u00b0C (59\u00b0F).\nGreenhouse gases are part of Earth's atmosphere. This is why Earth is often called the 'Goldilocks' planet \u2013 its conditions are just right, not too hot or too cold, allowing life to thrive. Part of what makes Earth so amenable is its natural greenhouse effect, which maintains an average temperature of 15 \u00b0C (59 \u00b0F) . However, in the last century, human activities, primarily from burning fossil fuels that have led to the release of carbon dioxide and other greenhouse gases into the atmosphere, have disrupted Earth's energy balance. This has led to an increase in carbon dioxide in the atmosphere and ocean. The level of carbon dioxide in Earth\u2019s atmosphere has been rising consistently for decades and traps extra heat near Earth's surface, causing temperatures to rise.\nREAD MORE\nExplore Earth Science\nNASA's unique vantage point helps us inform solutions to enhance decision-making, improve livelihoods, and protect our planet.\nEarth Science Data\nFacts About Earth\nNASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.\n\nProvide relevant evidence.",
+    "input_length_chars": 2266,
+    "input_tokens_estimated": 566,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence clearly explains that greenhouse gases, including carbon dioxide, trap heat near Earth's surface, which is essential for maintaining a stable temperature. It also highlights that human activities have increased the concentration of these gases, amplifying the greenhouse effect and causing global temperatures to rise.",
+      "overall_stance": "supports",
+      "key_quote": "The greenhouse effect is the process through which heat is trapped near Earth's surface by substances known as 'greenhouse gases.'"
+    },
+    "output_length_chars": 547,
+    "output_tokens_estimated": 136,
+    "cost_usd": 0.0001665,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Greenhouse gases trap heat and energy from the Sun.",
+      "query_index": 2,
+      "query_text": "How do greenhouse gases contribute to climate change by trapping heat"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:58:07.969568",
+    "latency_seconds": 2.62,
+    "input_prompt": "Claim:\nGreenhouse gases trap heat and energy from the Sun.\n\nArticle Title:\nWhat is the greenhouse effect? - NASA Science\n\nGoogle Search Snippet:\nThe greenhouse effect is the process through which heat is trapped near Earth's surface by substances known as 'greenhouse gases.'\n\nFull Page Content:\nThe greenhouse effect is the process through which heat is trapped near Earth's surface by substances known as 'greenhouse gases.' Imagine these gases as a cozy blanket enveloping our planet, helping to maintain a warmer temperature than it would have otherwise. Greenhouse gases consist of carbon dioxide, methane, ozone, nitrous oxide, chlorofluorocarbons, and water vapor. Water vapor, which reacts to temperature changes, is referred to as a 'feedback', because it amplifies the effect of forces that initially caused the warming.\nScientists have determined that carbon dioxide plays a crucial role in maintaining the stability of Earth's atmosphere. If carbon dioxide were removed, the terrestrial greenhouse effect would collapse, and Earth's surface temperature would drop significantly, by approximately 33\u00b0C (59\u00b0F).\nGreenhouse gases are part of Earth's atmosphere. This is why Earth is often called the 'Goldilocks' planet \u2013 its conditions are just right, not too hot or too cold, allowing life to thrive. Part of what makes Earth so amenable is its natural greenhouse effect, which maintains an average temperature of 15 \u00b0C (59 \u00b0F) . However, in the last century, human activities, primarily from burning fossil fuels that have led to the release of carbon dioxide and other greenhouse gases into the atmosphere, have disrupted Earth's energy balance. This has led to an increase in carbon dioxide in the atmosphere and ocean. The level of carbon dioxide in Earth\u2019s atmosphere has been rising consistently for decades and traps extra heat near Earth's surface, causing temperatures to rise.\nREAD MORE\nExplore Earth Science\nNASA's unique vantage point helps us inform solutions to enhance decision-making, improve livelihoods, and protect our planet.\nEarth Science Data\nFacts About Earth\nNASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.\n\nProvide relevant evidence.",
+    "input_length_chars": 2245,
+    "input_tokens_estimated": 561,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that greenhouse gases trap heat near Earth's surface, which is essential for maintaining a stable temperature on the planet. It explains how these gases function like a blanket, preventing heat from escaping and thus contributing to the greenhouse effect.",
+      "overall_stance": "supports",
+      "key_quote": "The greenhouse effect is the process through which heat is trapped near Earth's surface by substances known as 'greenhouse gases.'"
+    },
+    "output_length_chars": 493,
+    "output_tokens_estimated": 123,
+    "cost_usd": 0.00015795,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Greenhouse gases trap heat and energy from the Sun.",
+      "query_index": 2,
+      "query_text": "How do greenhouse gases contribute to climate change by trapping heat"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:58:07.971728",
+    "latency_seconds": 2.63,
+    "input_prompt": "Claim:\nGreenhouse gases trap heat and energy from the Sun.\n\nArticle Title:\nHeat-Trapping Pollution - Climate Central\n\nGoogle Search Snippet:\nGreenhouse gases warm the Earth by trapping heat near the surface. Heat-trapping greenhouse gases emitted by humans, mainly from burning ...\n\nFull Page Content:\nThe greenhouse effect is the process through which heat is trapped near Earth's surface by substances known as 'greenhouse gases.' Imagine these gases as a cozy blanket enveloping our planet, helping to maintain a warmer temperature than it would have otherwise. Greenhouse gases consist of carbon dioxide, methane, ozone, nitrous oxide, chlorofluorocarbons, and water vapor. Water vapor, which reacts to temperature changes, is referred to as a 'feedback', because it amplifies the effect of forces that initially caused the warming.\nScientists have determined that carbon dioxide plays a crucial role in maintaining the stability of Earth's atmosphere. If carbon dioxide were removed, the terrestrial greenhouse effect would collapse, and Earth's surface temperature would drop significantly, by approximately 33\u00b0C (59\u00b0F).\nGreenhouse gases are part of Earth's atmosphere. This is why Earth is often called the 'Goldilocks' planet \u2013 its conditions are just right, not too hot or too cold, allowing life to thrive. Part of what makes Earth so amenable is its natural greenhouse effect, which maintains an average temperature of 15 \u00b0C (59 \u00b0F) . However, in the last century, human activities, primarily from burning fossil fuels that have led to the release of carbon dioxide and other greenhouse gases into the atmosphere, have disrupted Earth's energy balance. This has led to an increase in carbon dioxide in the atmosphere and ocean. The level of carbon dioxide in Earth\u2019s atmosphere has been rising consistently for decades and traps extra heat near Earth's surface, causing temperatures to rise.\nREAD MORE\nExplore Earth Science\nNASA's unique vantage point helps us inform solutions to enhance decision-making, improve livelihoods, and protect our planet.\nEarth Science Data\nFacts About Earth\nNASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.\n\nProvide relevant evidence.",
+    "input_length_chars": 2251,
+    "input_tokens_estimated": 562,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that greenhouse gases trap heat near the Earth's surface, which is a fundamental aspect of the greenhouse effect. It explains how these gases maintain a warmer temperature and highlights the role of human activities in increasing greenhouse gas concentrations, leading to additional heat retention.",
+      "overall_stance": "supports",
+      "key_quote": "The greenhouse effect is the process through which heat is trapped near Earth's surface by substances known as 'greenhouse gases.'"
+    },
+    "output_length_chars": 536,
+    "output_tokens_estimated": 134,
+    "cost_usd": 0.0001647,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Greenhouse gases trap heat and energy from the Sun.",
+      "query_index": 2,
+      "query_text": "How do greenhouse gases contribute to climate change by trapping heat"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:58:08.828477",
+    "latency_seconds": 3.48,
+    "input_prompt": "Claim:\nGreenhouse gases trap heat and energy from the Sun.\n\nArticle Title:\nThe Greenhouse Effect - UCAR Center for Science Education\n\nGoogle Search Snippet:\nWhy do greenhouse gases absorb heat? Greenhouse gases are more complex than other gas molecules in the atmosphere, with a structure that can absorb heat.\n\nFull Page Content:\nThe greenhouse effect is the process through which heat is trapped near Earth's surface by substances known as 'greenhouse gases.' Imagine these gases as a cozy blanket enveloping our planet, helping to maintain a warmer temperature than it would have otherwise. Greenhouse gases consist of carbon dioxide, methane, ozone, nitrous oxide, chlorofluorocarbons, and water vapor. Water vapor, which reacts to temperature changes, is referred to as a 'feedback', because it amplifies the effect of forces that initially caused the warming.\nScientists have determined that carbon dioxide plays a crucial role in maintaining the stability of Earth's atmosphere. If carbon dioxide were removed, the terrestrial greenhouse effect would collapse, and Earth's surface temperature would drop significantly, by approximately 33\u00b0C (59\u00b0F).\nGreenhouse gases are part of Earth's atmosphere. This is why Earth is often called the 'Goldilocks' planet \u2013 its conditions are just right, not too hot or too cold, allowing life to thrive. Part of what makes Earth so amenable is its natural greenhouse effect, which maintains an average temperature of 15 \u00b0C (59 \u00b0F) . However, in the last century, human activities, primarily from burning fossil fuels that have led to the release of carbon dioxide and other greenhouse gases into the atmosphere, have disrupted Earth's energy balance. This has led to an increase in carbon dioxide in the atmosphere and ocean. The level of carbon dioxide in Earth\u2019s atmosphere has been rising consistently for decades and traps extra heat near Earth's surface, causing temperatures to rise.\nREAD MORE\nExplore Earth Science\nNASA's unique vantage point helps us inform solutions to enhance decision-making, improve livelihoods, and protect our planet.\nEarth Science Data\nFacts About Earth\nNASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.\n\nProvide relevant evidence.",
+    "input_length_chars": 2280,
+    "input_tokens_estimated": 570,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence clearly explains that greenhouse gases trap heat near Earth's surface, maintaining a warmer temperature and playing a crucial role in the greenhouse effect. It describes how these gases absorb heat and emphasizes their importance in stabilizing Earth's atmosphere.",
+      "overall_stance": "supports",
+      "key_quote": "The greenhouse effect is the process through which heat is trapped near Earth's surface by substances known as 'greenhouse gases.'"
+    },
+    "output_length_chars": 493,
+    "output_tokens_estimated": 123,
+    "cost_usd": 0.0001593,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Greenhouse gases trap heat and energy from the Sun.",
+      "query_index": 2,
+      "query_text": "How do greenhouse gases contribute to climate change by trapping heat"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:58:09.149778",
+    "latency_seconds": 3.8,
+    "input_prompt": "Claim:\nGreenhouse gases trap heat and energy from the Sun.\n\nArticle Title:\nGreenhouse Gases and How They Contribute to Climate Change\n\nGoogle Search Snippet:\nAs that heat travels through the atmosphere toward space, greenhouse gases absorb the heat radiation, trapping some of it before it can escape ...\n\nFull Page Content:\nThe greenhouse effect is the process through which heat is trapped near Earth's surface by substances known as 'greenhouse gases.' Imagine these gases as a cozy blanket enveloping our planet, helping to maintain a warmer temperature than it would have otherwise. Greenhouse gases consist of carbon dioxide, methane, ozone, nitrous oxide, chlorofluorocarbons, and water vapor. Water vapor, which reacts to temperature changes, is referred to as a 'feedback', because it amplifies the effect of forces that initially caused the warming.\nScientists have determined that carbon dioxide plays a crucial role in maintaining the stability of Earth's atmosphere. If carbon dioxide were removed, the terrestrial greenhouse effect would collapse, and Earth's surface temperature would drop significantly, by approximately 33\u00b0C (59\u00b0F).\nGreenhouse gases are part of Earth's atmosphere. This is why Earth is often called the 'Goldilocks' planet \u2013 its conditions are just right, not too hot or too cold, allowing life to thrive. Part of what makes Earth so amenable is its natural greenhouse effect, which maintains an average temperature of 15 \u00b0C (59 \u00b0F) . However, in the last century, human activities, primarily from burning fossil fuels that have led to the release of carbon dioxide and other greenhouse gases into the atmosphere, have disrupted Earth's energy balance. This has led to an increase in carbon dioxide in the atmosphere and ocean. The level of carbon dioxide in Earth\u2019s atmosphere has been rising consistently for decades and traps extra heat near Earth's surface, causing temperatures to rise.\nREAD MORE\nExplore Earth Science\nNASA's unique vantage point helps us inform solutions to enhance decision-making, improve livelihoods, and protect our planet.\nEarth Science Data\nFacts About Earth\nNASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.\n\nProvide relevant evidence.",
+    "input_length_chars": 2274,
+    "input_tokens_estimated": 568,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence clearly explains that greenhouse gases trap heat and energy from the Sun, contributing to the greenhouse effect which maintains Earth's temperature.",
+      "overall_stance": "supports",
+      "key_quote": "Greenhouse gases are part of Earth's atmosphere...traps extra heat near Earth's surface, causing temperatures to rise."
+    },
+    "output_length_chars": 365,
+    "output_tokens_estimated": 91,
+    "cost_usd": 0.0001398,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Greenhouse gases trap heat and energy from the Sun.",
+      "query_index": 2,
+      "query_text": "How do greenhouse gases contribute to climate change by trapping heat"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:58:12.340369",
+    "latency_seconds": 2.25,
+    "input_prompt": "Claim:\nGreenhouse gases trap heat and energy from the Sun.\n\nArticle Title:\nGreenhouse effect - Understanding Global Change\n\nGoogle Search Snippet:\nIncreases in the amount of greenhouses gases will mean that more heat is trapped, increasing the amount of energy in the Earth system (Earth's energy budget), ...\n\nFull Page Content:\nThe greenhouse effect is a process that occurs when certain gases in Earth's atmosphere trap the heat from the sun near the surface. This process keeps Earth\u2019s surface warmer than it would be without it. It is similar to how a glass greenhouse keeps plants warm.\nWatch this video to learn about the greenhouse effect!\nAs you might expect from the name, the greenhouse effect works \u2026 like a greenhouse! A greenhouse is a building with glass walls and a glass roof. Greenhouses are used to grow plants, such as tomatoes and tropical flowers. They are often used in places that are colder than a plant's natural environment.\nA greenhouse stays warm inside, even during the winter. In the daytime, sunlight passes through the glass into the greenhouse. It warms the soil, plants, and air inside. At night, the soil and plants slowly release this heat. But the glass traps it in, making the greenhouse warmer than it is outside.\nThe greenhouse effect on Earth works much the same way. Certain gases in the atmosphere trap heat like the glass of a greenhouse. These heat-trapping gases are called greenhouse gases.\nDuring the day, sunlight travels through the atmosphere and warms Earth\u2019s surface. Some of that sunlight bounces, or reflects, off the surface back into space. The rest of it gets absorbed and heats up the surface. At night, Earth's surface cools, releasing this heat back into the air. But some of the heat is trapped by the greenhouse gases in the atmosphere. That's what keeps our Earth warm enough to support life as we know it.\nThe greenhouse effect increases on Earth when greenhouse gases are added to the atmosphere. They can be added to the air by a variety of sources.\nScientists have found that over the last 100 years extra greenhouse gases have mainly come from a few sources. These are things like burning coal and oil for energy or burning gasoline to run cars and planes. Other sources, such as erupting volcanoes, have also added some greenhouse gases to the air. But those natural additions have been too small to account for the amount of greenhouse gases we measure in the air today.\nTo reduce the greenhouse effect, greenhouse gases need to be taken out of the atmosphere. Earth has a few ways it does this with plants, soil, and oceans.\nAll plants \u2014 from tall trees to blades of grass, and even the tiny plant-like phytoplankton in the ocean \u2014 take in carbon dioxide and give off oxygen. They do this in a process known as photosynthesis. This is when plants take carbon dioxide, water, and sunlight and change it into food (sugar) and oxygen.\nThe soil and ocean also absorb carbon dioxide from the air. It changes into other things over time through chemical reactions. It can also make the soil and ocean more acidic, which can impact plants and animals. For example, ocean acidification can be harmful to many ocean creatures, such as shellfish and coral, as it weakens their shells and skeletons.\nThe Clouds and the Earth\u2019s Radiant Energy System (CERES) instruments measure changes in the greenhouse effect. They collect data to show how much heat is getting trapped on Earth compared to how much is escaping to space. This data has shown that more heat is getting trapped than what is leaving, which is warming the planet.\nNASA also tracks changes in greenhouse gases over time with satellites. The Orbiting Carbon Observatory-2, or OCO-2, and OCO-3 keep track of carbon dioxide in the air. The Earth Source Mineral Dust Source Investigation, or EMIT, satellite can track methane. Other satellites, like the Plankton, Aerosol, Cloud, ocean Ecosystem, or PACE, measure changes in the ocean.\nAqua\u2019s main goal is to improve our understanding of Earth's water cycle.\nOCO-2 is the first spacecraft dedicated to studying carbon dioxide in Earth\u2019s atmosphere.\nOCO-3 is a near replica of OCO-2 and measures carbon dioxide in our atmosphere to help us understand the relationship between plants and carbon dioxide.\nThis mission studies phytoplankton (a type of tiny algae), ocean color and measures atmospheric particles and clouds.\nNASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.\n\nProvide relevant evidence.",
+    "input_length_chars": 4542,
+    "input_tokens_estimated": 1135,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence clearly explains that greenhouse gases in Earth's atmosphere trap heat from the sun, which keeps the Earth's surface warmer than it would be without them. This process is directly compared to how a glass greenhouse retains heat, confirming the claim that greenhouse gases trap heat and energy from the Sun.",
+      "overall_stance": "supports",
+      "key_quote": "The greenhouse effect is a process that occurs when certain gases in Earth's atmosphere trap the heat from the sun near the surface."
+    },
+    "output_length_chars": 537,
+    "output_tokens_estimated": 134,
+    "cost_usd": 0.00025065,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Greenhouse gases trap heat and energy from the Sun.",
+      "query_index": 2,
+      "query_text": "How do greenhouse gases contribute to climate change by trapping heat"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:58:12.389893",
+    "latency_seconds": 2.29,
+    "input_prompt": "Claim:\nGreenhouse gases trap heat and energy from the Sun.\n\nArticle Title:\nWhat Is the Greenhouse Effect? - NASA Science\n\nGoogle Search Snippet:\nGreenhouse gases in Earth's atmosphere trap some of the heat from the sun. It prevents the heat from escaping back into space at night. This ...\n\nFull Page Content:\nThe greenhouse effect is a process that occurs when certain gases in Earth's atmosphere trap the heat from the sun near the surface. This process keeps Earth\u2019s surface warmer than it would be without it. It is similar to how a glass greenhouse keeps plants warm.\nWatch this video to learn about the greenhouse effect!\nAs you might expect from the name, the greenhouse effect works \u2026 like a greenhouse! A greenhouse is a building with glass walls and a glass roof. Greenhouses are used to grow plants, such as tomatoes and tropical flowers. They are often used in places that are colder than a plant's natural environment.\nA greenhouse stays warm inside, even during the winter. In the daytime, sunlight passes through the glass into the greenhouse. It warms the soil, plants, and air inside. At night, the soil and plants slowly release this heat. But the glass traps it in, making the greenhouse warmer than it is outside.\nThe greenhouse effect on Earth works much the same way. Certain gases in the atmosphere trap heat like the glass of a greenhouse. These heat-trapping gases are called greenhouse gases.\nDuring the day, sunlight travels through the atmosphere and warms Earth\u2019s surface. Some of that sunlight bounces, or reflects, off the surface back into space. The rest of it gets absorbed and heats up the surface. At night, Earth's surface cools, releasing this heat back into the air. But some of the heat is trapped by the greenhouse gases in the atmosphere. That's what keeps our Earth warm enough to support life as we know it.\nThe greenhouse effect increases on Earth when greenhouse gases are added to the atmosphere. They can be added to the air by a variety of sources.\nScientists have found that over the last 100 years extra greenhouse gases have mainly come from a few sources. These are things like burning coal and oil for energy or burning gasoline to run cars and planes. Other sources, such as erupting volcanoes, have also added some greenhouse gases to the air. But those natural additions have been too small to account for the amount of greenhouse gases we measure in the air today.\nTo reduce the greenhouse effect, greenhouse gases need to be taken out of the atmosphere. Earth has a few ways it does this with plants, soil, and oceans.\nAll plants \u2014 from tall trees to blades of grass, and even the tiny plant-like phytoplankton in the ocean \u2014 take in carbon dioxide and give off oxygen. They do this in a process known as photosynthesis. This is when plants take carbon dioxide, water, and sunlight and change it into food (sugar) and oxygen.\nThe soil and ocean also absorb carbon dioxide from the air. It changes into other things over time through chemical reactions. It can also make the soil and ocean more acidic, which can impact plants and animals. For example, ocean acidification can be harmful to many ocean creatures, such as shellfish and coral, as it weakens their shells and skeletons.\nThe Clouds and the Earth\u2019s Radiant Energy System (CERES) instruments measure changes in the greenhouse effect. They collect data to show how much heat is getting trapped on Earth compared to how much is escaping to space. This data has shown that more heat is getting trapped than what is leaving, which is warming the planet.\nNASA also tracks changes in greenhouse gases over time with satellites. The Orbiting Carbon Observatory-2, or OCO-2, and OCO-3 keep track of carbon dioxide in the air. The Earth Source Mineral Dust Source Investigation, or EMIT, satellite can track methane. Other satellites, like the Plankton, Aerosol, Cloud, ocean Ecosystem, or PACE, measure changes in the ocean.\nAqua\u2019s main goal is to improve our understanding of Earth's water cycle.\nOCO-2 is the first spacecraft dedicated to studying carbon dioxide in Earth\u2019s atmosphere.\nOCO-3 is a near replica of OCO-2 and measures carbon dioxide in our atmosphere to help us understand the relationship between plants and carbon dioxide.\nThis mission studies phytoplankton (a type of tiny algae), ocean color and measures atmospheric particles and clouds.\nNASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.\n\nProvide relevant evidence.",
+    "input_length_chars": 4522,
+    "input_tokens_estimated": 1130,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence clearly explains that greenhouse gases in Earth's atmosphere trap heat from the sun, preventing it from escaping back into space, which supports the claim about the greenhouse effect.",
+      "overall_stance": "supports",
+      "key_quote": "The greenhouse effect is a process that occurs when certain gases in Earth's atmosphere trap the heat from the sun near the surface."
+    },
+    "output_length_chars": 414,
+    "output_tokens_estimated": 103,
+    "cost_usd": 0.0002313,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Greenhouse gases trap heat and energy from the Sun.",
+      "query_index": 2,
+      "query_text": "How do greenhouse gases contribute to climate change by trapping heat"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:58:12.413303",
+    "latency_seconds": 2.32,
+    "input_prompt": "Claim:\nGreenhouse gases trap heat and energy from the Sun.\n\nArticle Title:\nThe Greenhouse Effect - UCAR Center for Science Education\n\nGoogle Search Snippet:\nThe greenhouse effect causes some of this energy to be waylaid in the atmosphere, absorbed and released by greenhouse gases.\n\nFull Page Content:\nThe greenhouse effect is a process that occurs when certain gases in Earth's atmosphere trap the heat from the sun near the surface. This process keeps Earth\u2019s surface warmer than it would be without it. It is similar to how a glass greenhouse keeps plants warm.\nWatch this video to learn about the greenhouse effect!\nAs you might expect from the name, the greenhouse effect works \u2026 like a greenhouse! A greenhouse is a building with glass walls and a glass roof. Greenhouses are used to grow plants, such as tomatoes and tropical flowers. They are often used in places that are colder than a plant's natural environment.\nA greenhouse stays warm inside, even during the winter. In the daytime, sunlight passes through the glass into the greenhouse. It warms the soil, plants, and air inside. At night, the soil and plants slowly release this heat. But the glass traps it in, making the greenhouse warmer than it is outside.\nThe greenhouse effect on Earth works much the same way. Certain gases in the atmosphere trap heat like the glass of a greenhouse. These heat-trapping gases are called greenhouse gases.\nDuring the day, sunlight travels through the atmosphere and warms Earth\u2019s surface. Some of that sunlight bounces, or reflects, off the surface back into space. The rest of it gets absorbed and heats up the surface. At night, Earth's surface cools, releasing this heat back into the air. But some of the heat is trapped by the greenhouse gases in the atmosphere. That's what keeps our Earth warm enough to support life as we know it.\nThe greenhouse effect increases on Earth when greenhouse gases are added to the atmosphere. They can be added to the air by a variety of sources.\nScientists have found that over the last 100 years extra greenhouse gases have mainly come from a few sources. These are things like burning coal and oil for energy or burning gasoline to run cars and planes. Other sources, such as erupting volcanoes, have also added some greenhouse gases to the air. But those natural additions have been too small to account for the amount of greenhouse gases we measure in the air today.\nTo reduce the greenhouse effect, greenhouse gases need to be taken out of the atmosphere. Earth has a few ways it does this with plants, soil, and oceans.\nAll plants \u2014 from tall trees to blades of grass, and even the tiny plant-like phytoplankton in the ocean \u2014 take in carbon dioxide and give off oxygen. They do this in a process known as photosynthesis. This is when plants take carbon dioxide, water, and sunlight and change it into food (sugar) and oxygen.\nThe soil and ocean also absorb carbon dioxide from the air. It changes into other things over time through chemical reactions. It can also make the soil and ocean more acidic, which can impact plants and animals. For example, ocean acidification can be harmful to many ocean creatures, such as shellfish and coral, as it weakens their shells and skeletons.\nThe Clouds and the Earth\u2019s Radiant Energy System (CERES) instruments measure changes in the greenhouse effect. They collect data to show how much heat is getting trapped on Earth compared to how much is escaping to space. This data has shown that more heat is getting trapped than what is leaving, which is warming the planet.\nNASA also tracks changes in greenhouse gases over time with satellites. The Orbiting Carbon Observatory-2, or OCO-2, and OCO-3 keep track of carbon dioxide in the air. The Earth Source Mineral Dust Source Investigation, or EMIT, satellite can track methane. Other satellites, like the Plankton, Aerosol, Cloud, ocean Ecosystem, or PACE, measure changes in the ocean.\nAqua\u2019s main goal is to improve our understanding of Earth's water cycle.\nOCO-2 is the first spacecraft dedicated to studying carbon dioxide in Earth\u2019s atmosphere.\nOCO-3 is a near replica of OCO-2 and measures carbon dioxide in our atmosphere to help us understand the relationship between plants and carbon dioxide.\nThis mission studies phytoplankton (a type of tiny algae), ocean color and measures atmospheric particles and clouds.\nNASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.\n\nProvide relevant evidence.",
+    "input_length_chars": 4514,
+    "input_tokens_estimated": 1128,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence clearly explains that greenhouse gases in Earth's atmosphere trap heat from the sun, which keeps the planet warmer than it would be without them. This process is directly compared to how a glass greenhouse retains heat, confirming the claim about greenhouse gases trapping heat and energy from the Sun.",
+      "overall_stance": "supports",
+      "key_quote": "The greenhouse effect is a process that occurs when certain gases in Earth's atmosphere trap the heat from the sun near the surface."
+    },
+    "output_length_chars": 533,
+    "output_tokens_estimated": 133,
+    "cost_usd": 0.000249,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Greenhouse gases trap heat and energy from the Sun.",
+      "query_index": 2,
+      "query_text": "How do greenhouse gases contribute to climate change by trapping heat"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:58:12.415451",
+    "latency_seconds": 2.32,
+    "input_prompt": "Claim:\nGreenhouse gases trap heat and energy from the Sun.\n\nArticle Title:\nFAQs \u2022 What are the \u201cGreenhouse Effect\u201d and \u201cGreenhouse Gase\n\nGoogle Search Snippet:\nA greenhouse is designed to trap heat from the sun's rays inside and acts to keep the plants inside warm, even when it is cold outside. Although the Earth ...\n\nFull Page Content:\nThe greenhouse effect is a process that occurs when certain gases in Earth's atmosphere trap the heat from the sun near the surface. This process keeps Earth\u2019s surface warmer than it would be without it. It is similar to how a glass greenhouse keeps plants warm.\nWatch this video to learn about the greenhouse effect!\nAs you might expect from the name, the greenhouse effect works \u2026 like a greenhouse! A greenhouse is a building with glass walls and a glass roof. Greenhouses are used to grow plants, such as tomatoes and tropical flowers. They are often used in places that are colder than a plant's natural environment.\nA greenhouse stays warm inside, even during the winter. In the daytime, sunlight passes through the glass into the greenhouse. It warms the soil, plants, and air inside. At night, the soil and plants slowly release this heat. But the glass traps it in, making the greenhouse warmer than it is outside.\nThe greenhouse effect on Earth works much the same way. Certain gases in the atmosphere trap heat like the glass of a greenhouse. These heat-trapping gases are called greenhouse gases.\nDuring the day, sunlight travels through the atmosphere and warms Earth\u2019s surface. Some of that sunlight bounces, or reflects, off the surface back into space. The rest of it gets absorbed and heats up the surface. At night, Earth's surface cools, releasing this heat back into the air. But some of the heat is trapped by the greenhouse gases in the atmosphere. That's what keeps our Earth warm enough to support life as we know it.\nThe greenhouse effect increases on Earth when greenhouse gases are added to the atmosphere. They can be added to the air by a variety of sources.\nScientists have found that over the last 100 years extra greenhouse gases have mainly come from a few sources. These are things like burning coal and oil for energy or burning gasoline to run cars and planes. Other sources, such as erupting volcanoes, have also added some greenhouse gases to the air. But those natural additions have been too small to account for the amount of greenhouse gases we measure in the air today.\nTo reduce the greenhouse effect, greenhouse gases need to be taken out of the atmosphere. Earth has a few ways it does this with plants, soil, and oceans.\nAll plants \u2014 from tall trees to blades of grass, and even the tiny plant-like phytoplankton in the ocean \u2014 take in carbon dioxide and give off oxygen. They do this in a process known as photosynthesis. This is when plants take carbon dioxide, water, and sunlight and change it into food (sugar) and oxygen.\nThe soil and ocean also absorb carbon dioxide from the air. It changes into other things over time through chemical reactions. It can also make the soil and ocean more acidic, which can impact plants and animals. For example, ocean acidification can be harmful to many ocean creatures, such as shellfish and coral, as it weakens their shells and skeletons.\nThe Clouds and the Earth\u2019s Radiant Energy System (CERES) instruments measure changes in the greenhouse effect. They collect data to show how much heat is getting trapped on Earth compared to how much is escaping to space. This data has shown that more heat is getting trapped than what is leaving, which is warming the planet.\nNASA also tracks changes in greenhouse gases over time with satellites. The Orbiting Carbon Observatory-2, or OCO-2, and OCO-3 keep track of carbon dioxide in the air. The Earth Source Mineral Dust Source Investigation, or EMIT, satellite can track methane. Other satellites, like the Plankton, Aerosol, Cloud, ocean Ecosystem, or PACE, measure changes in the ocean.\nAqua\u2019s main goal is to improve our understanding of Earth's water cycle.\nOCO-2 is the first spacecraft dedicated to studying carbon dioxide in Earth\u2019s atmosphere.\nOCO-3 is a near replica of OCO-2 and measures carbon dioxide in our atmosphere to help us understand the relationship between plants and carbon dioxide.\nThis mission studies phytoplankton (a type of tiny algae), ocean color and measures atmospheric particles and clouds.\nNASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.\n\nProvide relevant evidence.",
+    "input_length_chars": 4551,
+    "input_tokens_estimated": 1137,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence clearly explains that greenhouse gases in Earth's atmosphere trap heat from the sun, which keeps the planet warmer than it would be without them. This process is directly compared to how a glass greenhouse retains heat, supporting the claim that greenhouse gases trap heat and energy from the Sun.",
+      "overall_stance": "supports",
+      "key_quote": "The greenhouse effect is a process that occurs when certain gases in Earth's atmosphere trap the heat from the sun near the surface."
+    },
+    "output_length_chars": 528,
+    "output_tokens_estimated": 132,
+    "cost_usd": 0.00024975,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Greenhouse gases trap heat and energy from the Sun.",
+      "query_index": 2,
+      "query_text": "How do greenhouse gases contribute to climate change by trapping heat"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:58:12.478096",
+    "latency_seconds": 2.39,
+    "input_prompt": "Claim:\nGreenhouse gases trap heat and energy from the Sun.\n\nArticle Title:\nCauses and Effects of Climate Change | United Nations\n\nGoogle Search Snippet:\nAs greenhouse gas emissions blanket the Earth, they trap the sun's heat. Because of this, the planet is warming up and the climate is changing. The world is now ...\n\nFull Page Content:\nThe greenhouse effect is a process that occurs when certain gases in Earth's atmosphere trap the heat from the sun near the surface. This process keeps Earth\u2019s surface warmer than it would be without it. It is similar to how a glass greenhouse keeps plants warm.\nWatch this video to learn about the greenhouse effect!\nAs you might expect from the name, the greenhouse effect works \u2026 like a greenhouse! A greenhouse is a building with glass walls and a glass roof. Greenhouses are used to grow plants, such as tomatoes and tropical flowers. They are often used in places that are colder than a plant's natural environment.\nA greenhouse stays warm inside, even during the winter. In the daytime, sunlight passes through the glass into the greenhouse. It warms the soil, plants, and air inside. At night, the soil and plants slowly release this heat. But the glass traps it in, making the greenhouse warmer than it is outside.\nThe greenhouse effect on Earth works much the same way. Certain gases in the atmosphere trap heat like the glass of a greenhouse. These heat-trapping gases are called greenhouse gases.\nDuring the day, sunlight travels through the atmosphere and warms Earth\u2019s surface. Some of that sunlight bounces, or reflects, off the surface back into space. The rest of it gets absorbed and heats up the surface. At night, Earth's surface cools, releasing this heat back into the air. But some of the heat is trapped by the greenhouse gases in the atmosphere. That's what keeps our Earth warm enough to support life as we know it.\nThe greenhouse effect increases on Earth when greenhouse gases are added to the atmosphere. They can be added to the air by a variety of sources.\nScientists have found that over the last 100 years extra greenhouse gases have mainly come from a few sources. These are things like burning coal and oil for energy or burning gasoline to run cars and planes. Other sources, such as erupting volcanoes, have also added some greenhouse gases to the air. But those natural additions have been too small to account for the amount of greenhouse gases we measure in the air today.\nTo reduce the greenhouse effect, greenhouse gases need to be taken out of the atmosphere. Earth has a few ways it does this with plants, soil, and oceans.\nAll plants \u2014 from tall trees to blades of grass, and even the tiny plant-like phytoplankton in the ocean \u2014 take in carbon dioxide and give off oxygen. They do this in a process known as photosynthesis. This is when plants take carbon dioxide, water, and sunlight and change it into food (sugar) and oxygen.\nThe soil and ocean also absorb carbon dioxide from the air. It changes into other things over time through chemical reactions. It can also make the soil and ocean more acidic, which can impact plants and animals. For example, ocean acidification can be harmful to many ocean creatures, such as shellfish and coral, as it weakens their shells and skeletons.\nThe Clouds and the Earth\u2019s Radiant Energy System (CERES) instruments measure changes in the greenhouse effect. They collect data to show how much heat is getting trapped on Earth compared to how much is escaping to space. This data has shown that more heat is getting trapped than what is leaving, which is warming the planet.\nNASA also tracks changes in greenhouse gases over time with satellites. The Orbiting Carbon Observatory-2, or OCO-2, and OCO-3 keep track of carbon dioxide in the air. The Earth Source Mineral Dust Source Investigation, or EMIT, satellite can track methane. Other satellites, like the Plankton, Aerosol, Cloud, ocean Ecosystem, or PACE, measure changes in the ocean.\nAqua\u2019s main goal is to improve our understanding of Earth's water cycle.\nOCO-2 is the first spacecraft dedicated to studying carbon dioxide in Earth\u2019s atmosphere.\nOCO-3 is a near replica of OCO-2 and measures carbon dioxide in our atmosphere to help us understand the relationship between plants and carbon dioxide.\nThis mission studies phytoplankton (a type of tiny algae), ocean color and measures atmospheric particles and clouds.\nNASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.\n\nProvide relevant evidence.",
+    "input_length_chars": 4550,
+    "input_tokens_estimated": 1137,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence clearly explains that greenhouse gases in Earth's atmosphere trap heat from the sun, which is essential for maintaining the planet's temperature and supporting life. This process is described as the greenhouse effect, which is likened to how a glass greenhouse retains warmth.",
+      "overall_stance": "supports",
+      "key_quote": "The greenhouse effect is a process that occurs when certain gases in Earth's atmosphere trap the heat from the sun near the surface."
+    },
+    "output_length_chars": 507,
+    "output_tokens_estimated": 126,
+    "cost_usd": 0.00024615,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Greenhouse gases trap heat and energy from the Sun.",
+      "query_index": 2,
+      "query_text": "How do greenhouse gases contribute to climate change by trapping heat"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:58:13.205094",
+    "latency_seconds": 3.12,
+    "input_prompt": "Claim:\nGreenhouse gases trap heat and energy from the Sun.\n\nArticle Title:\nThe Sun's impact on the Earth\n\nGoogle Search Snippet:\nPart of this longwave radiation is absorbed by greenhouse gases which then radiate energy into all directions, including downwards and thereby trapping heat in ...\n\nFull Page Content:\nThe greenhouse effect is a process that occurs when certain gases in Earth's atmosphere trap the heat from the sun near the surface. This process keeps Earth\u2019s surface warmer than it would be without it. It is similar to how a glass greenhouse keeps plants warm.\nWatch this video to learn about the greenhouse effect!\nAs you might expect from the name, the greenhouse effect works \u2026 like a greenhouse! A greenhouse is a building with glass walls and a glass roof. Greenhouses are used to grow plants, such as tomatoes and tropical flowers. They are often used in places that are colder than a plant's natural environment.\nA greenhouse stays warm inside, even during the winter. In the daytime, sunlight passes through the glass into the greenhouse. It warms the soil, plants, and air inside. At night, the soil and plants slowly release this heat. But the glass traps it in, making the greenhouse warmer than it is outside.\nThe greenhouse effect on Earth works much the same way. Certain gases in the atmosphere trap heat like the glass of a greenhouse. These heat-trapping gases are called greenhouse gases.\nDuring the day, sunlight travels through the atmosphere and warms Earth\u2019s surface. Some of that sunlight bounces, or reflects, off the surface back into space. The rest of it gets absorbed and heats up the surface. At night, Earth's surface cools, releasing this heat back into the air. But some of the heat is trapped by the greenhouse gases in the atmosphere. That's what keeps our Earth warm enough to support life as we know it.\nThe greenhouse effect increases on Earth when greenhouse gases are added to the atmosphere. They can be added to the air by a variety of sources.\nScientists have found that over the last 100 years extra greenhouse gases have mainly come from a few sources. These are things like burning coal and oil for energy or burning gasoline to run cars and planes. Other sources, such as erupting volcanoes, have also added some greenhouse gases to the air. But those natural additions have been too small to account for the amount of greenhouse gases we measure in the air today.\nTo reduce the greenhouse effect, greenhouse gases need to be taken out of the atmosphere. Earth has a few ways it does this with plants, soil, and oceans.\nAll plants \u2014 from tall trees to blades of grass, and even the tiny plant-like phytoplankton in the ocean \u2014 take in carbon dioxide and give off oxygen. They do this in a process known as photosynthesis. This is when plants take carbon dioxide, water, and sunlight and change it into food (sugar) and oxygen.\nThe soil and ocean also absorb carbon dioxide from the air. It changes into other things over time through chemical reactions. It can also make the soil and ocean more acidic, which can impact plants and animals. For example, ocean acidification can be harmful to many ocean creatures, such as shellfish and coral, as it weakens their shells and skeletons.\nThe Clouds and the Earth\u2019s Radiant Energy System (CERES) instruments measure changes in the greenhouse effect. They collect data to show how much heat is getting trapped on Earth compared to how much is escaping to space. This data has shown that more heat is getting trapped than what is leaving, which is warming the planet.\nNASA also tracks changes in greenhouse gases over time with satellites. The Orbiting Carbon Observatory-2, or OCO-2, and OCO-3 keep track of carbon dioxide in the air. The Earth Source Mineral Dust Source Investigation, or EMIT, satellite can track methane. Other satellites, like the Plankton, Aerosol, Cloud, ocean Ecosystem, or PACE, measure changes in the ocean.\nAqua\u2019s main goal is to improve our understanding of Earth's water cycle.\nOCO-2 is the first spacecraft dedicated to studying carbon dioxide in Earth\u2019s atmosphere.\nOCO-3 is a near replica of OCO-2 and measures carbon dioxide in our atmosphere to help us understand the relationship between plants and carbon dioxide.\nThis mission studies phytoplankton (a type of tiny algae), ocean color and measures atmospheric particles and clouds.\nNASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.\n\nProvide relevant evidence.",
+    "input_length_chars": 4525,
+    "input_tokens_estimated": 1131,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence clearly explains that greenhouse gases trap heat from the sun, which is essential for maintaining Earth's temperature and supporting life. This aligns directly with the claim that greenhouse gases trap heat and energy from the Sun.",
+      "overall_stance": "supports",
+      "key_quote": "The greenhouse effect is a process that occurs when certain gases in Earth's atmosphere trap the heat from the sun near the surface."
+    },
+    "output_length_chars": 462,
+    "output_tokens_estimated": 115,
+    "cost_usd": 0.00023865,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Greenhouse gases trap heat and energy from the Sun.",
+      "query_index": 2,
+      "query_text": "How do greenhouse gases contribute to climate change by trapping heat"
+    }
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:58:14.853108",
+    "latency_seconds": 1.55,
+    "input_prompt": "\nClaim: Greenhouse gases trap heat and energy from the Sun.\nCategory: scientific\nExtraction confidence: 0.90\n\nEvidence:\nSUPPORTS (5 sources):\n  1. The Greenhouse Effect - UCAR Center for Science Education | reliability=high (1.00)\n     URL: https://scied.ucar.edu/learning-zone/how-climate-works/greenhouse-effect\n     Summary: The evidence clearly explains that greenhouse gases in Earth's atmosphere trap heat from the sun, which keeps the planet warmer than it would be without them. This process is directly compared to how a glass greenhouse retains heat, confirming the claim about greenhouse gases trapping heat and energy from the Sun.\n  2. What Is the Greenhouse Effect? - NASA Science | reliability=high (1.00)\n     URL: https://science.nasa.gov/kids/earth/what-is-the-greenhouse-effect/\n     Summary: The evidence clearly explains that greenhouse gases in Earth's atmosphere trap heat from the sun, preventing it from escaping back into space, which supports the claim about the greenhouse effect.\n  3. What is the greenhouse effect? - NASA Science | reliability=high (1.00)\n     URL: https://science.nasa.gov/climate-change/faq/what-is-the-greenhouse-effect/\n     Summary: The evidence confirms that greenhouse gases trap heat near Earth's surface, which is essential for maintaining a stable temperature on the planet. It explains how these gases function like a blanket, preventing heat from escaping and thus contributing to the greenhouse effect.\n  4. The Sun's impact on the Earth | reliability=high (0.90)\n     URL: https://wmo.int/suns-impact-earth\n     Summary: The evidence clearly explains that greenhouse gases trap heat from the sun, which is essential for maintaining Earth's temperature and supporting life. This aligns directly with the claim that greenhouse gases trap heat and energy from the Sun.\n  5. Heat-Trapping Pollution - Climate Central | reliability=high (0.85)\n     URL: https://www.climatecentral.org/climate-matters/heat-trapping-pollution-2024\n     Summary: The evidence confirms that greenhouse gases trap heat near the Earth's surface, which is a fundamental aspect of the greenhouse effect. It explains how these gases maintain a warmer temperature and highlights the role of human activities in increasing greenhouse gas concentrations, leading to additional heat retention.\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2354,
+    "input_tokens_estimated": 588,
+    "output": {
+      "overall_stance": "supports",
+      "confidence": "high",
+      "summary": "The evidence from multiple high-reliability sources, including NASA and UCAR, consistently confirms that greenhouse gases trap heat from the Sun, preventing it from escaping and thus maintaining Earth's temperature. This supports the claim about greenhouse gases trapping heat and energy."
+    },
+    "output_length_chars": 350,
+    "output_tokens_estimated": 87,
+    "cost_usd": 0.0001404,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Greenhouse gases trap heat and energy from the Sun.",
+      "query_index": 2,
+      "query_text": "How do greenhouse gases contribute to climate change by trapping heat"
+    }
+  }
+]

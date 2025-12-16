@@ -1,0 +1,353 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:33:50.760394",
+    "latency_seconds": 7.13,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nToday, we're making three super nourishing, super food packed, detox juices. To help you lose weight and get you that glow! [Music] Hey, beautiful people. It's Melissa from Choosing My Health, where I teach you how to easily transition to a whole food, plant-based lifestyle and thrive. And today we're making three of my favorite veggie juices. I love them because they're an easy way to reboot your metabolism, lose weight and cleanse your body to literally make you glow. I've been juicing for a minute and hands down, it is the easiest way to repair your body in a short span of time. But real talk, your juice gotta taste good. Cause ain't nobody want to be out here on these streets, drinking juice that tastes like dirt. I'm just going to keep it 100. Now, whether you're drinking these for a New Year's push or for three-day juice cleanse you'll find that they don't just taste good, they deliver a whole lot of life-giving nutrients to energize and revitalize your body. When I drink these literally feel like I can fly. Like that's how light I feel. And as always, if you're looking for the full recipe breakdown, I share those on my blog at choosingmyhealth.com, including modifications. I'm going to leave this link and others for you in the description box below. All right, let's get to it. [Music] I call this juice green power. It is loaded with phytonutrients and cleansing power to rid your body of excess weight and make you glow. To begin, we're gonna peel a washed lemon. I love lemons because they flush toxins from your system and purify the blood. Keep the lemon peel because it tastes great in tea and in hot porridge. Next core your washed apples. Apples are great for weight loss because they're high in pectin. Pectin binds with water and limits how much fat your cells can absorb. Isn't that cool?. They also taste great in this next cut all your ingredients into the appropriate size for your juicer. And now we're going to add all our ingredients to the juicer, kale, apple, celery. Cucumber, lime, and ginger. Each of these ingredients is especially formulated to help nourish your body. The celery, cucumber, and apples are vitamin-rich and super hydrating. Our superfood kale is rich in minerals and antioxidants to feed your cells, and lime and ginger increase your blood circulation, all while staying low in calories. You got to love this juice. [Music] Now the Beet Buzzer is my go-to juice to help me reset my body, especially when I'm feeling sluggish and need an energy boost. It's tangy, it's full-bodied and it has a lot of kick. First, peel your washed grapefruit. Grapefruits have one of the highest water contents of any food y'all, about 92% water, and they deliver a whole lot of nutrition with very little calories. We're also going to peel the lemon and cut the rest of our ingredients to an appropriate size for the juicer. Carrots- a juicing staple. Love that it's full of antioxidants including beta carotene, and lutein that are great for the eyes and beets. Beets are chocked full of nutrients and deliver maximum nutrition for your body. We're talking about potassium, magnesium, zinc, selenium. And beets also help you lower your blood pressure if you need help with that, and they give you extra stamina throughout the day. And did you know that beets even improve athletic performance? Professor: Yes, yes, and a yes-i-dy yes. If you'd allow me to just interject here for just a little bit. Beet juice, one to three hours before an athletic event can provide a one to three percent performance boost and give you a serious competitive edge. That's because beats raise nitric oxide levels increase blood flow, improve lung function and strengthen muscle contraction. Now, you know, Then lastly we add jalape\u00f1o. Jalape\u00f1os aren't a typical juice addition for me, but listen, if you can handle a little heat, jalape\u00f1o can boost your metabolism, increase fat burn and reduce your appetite. I will warn you though. It is not for you if you're sensitive to heat. And if you do like heat, very little goes a long way, my friend. So start with like one-fourth of an inch, no seeds please, then taste the juice and add more if you wish. Remember when you use this, you're juicing it. So you're getting the full undiluted effect. Alternatively, if you still want some spice without too much kick, ginger can also achieve the same purpose. [Music] Our last juice is Orange Blast. I call this my sweet treat because it's really flavorful and refreshing and super high in vitamin C, which is going to help the body absorb minerals. It's going to protect the body from chemical toxins and has anti-aging properties. Who doesn't want that? To begin let's peel a pineapple. Pineapple is perfect for detoxing because it contains bromelain, which is a digestive enzyme that will cleanse your colon and it aids digestion. And it's super juicy. Next, we'll cut a red bell pepper in half. Y'all, did you know that a cup of red bell pepper contains nearly three times more vitamin C than an orange? Professor: Oh yeah. I knew. And we're also going to add some ginger and turmeric. Ginger is awesome for circulation and digestion and turmeric, as you probably already know, is incredible for inflammation. And to maximize the benefits of turmeric, you can sprinkle a little black pepper into your drink because it can enhance the curcumin absorption in turmeric by up to 2,000 percent. That's a whole lot! This juice is extraordinarily enjoyable and will boost your immune system all while helping you flush and reset. I love these satisfying, and nutritionally-rich juices. They are perfect for a juice cleanse or for any day you need a boost. And, now if you're looking for more recipes, encouragement, plant-based education. I got you, honey. I have plenty of videos and resources on this channel and blog. I'm going to leave a link to them in the description box below. If you make any of these juices, please comment and let me know. I'd so appreciate that. And let me know if you have a favorite juice that you could share with us. Also, if you're interested in a plant-based lifestyle and you want to join the CMH crew, please subscribe to my channel to learn more. How to easily transition to a plant-based lifestyle and thrive. I would so love to have you here. Don't forget to hit the notification bell for my latest videos. And if you found this video helpful, please give it a thumbs up. You can also follow me on Instagram at choosingmyhealth. Now if you're new to this whole food plant-based thing, welcome. Check out my free gift for you packed with nearly 20 years of my life-tested strategies to boost your game for the win. Links are all in the description box below. Thanks so much for hanging out with me today. You could've been doing something else, but you chose to watch this video and I'm thankful for that. I hope you have an amazing day. I love you, and I will see you in the next one? [Music] [Bloopers] Oh, yes. I knew. Oh, pick me, pick me. Oh, I knew. I knew. I knew. I knew. Yes. Yes. And a yes-i-dy yes. Yes. If you'd let me just to inter.... (Laughs) Now you know. (Laughs) Must look like I was about to choke. (Lauhgs) [Music]",
+    "input_length_chars": 7254,
+    "input_tokens_estimated": 1813,
+    "output": {
+      "claims": [
+        {
+          "text": "Juicing is the easiest way to repair your body in a short span of time.",
+          "confidence": 0.8,
+          "category": "health",
+          "importance": 0.3,
+          "context": "Speaker: Melissa, discussing benefits of juicing."
+        },
+        {
+          "text": "Lemons flush toxins from your system and purify the blood.",
+          "confidence": 0.7,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Speaker: Melissa, discussing ingredients for juice."
+        },
+        {
+          "text": "Apples are high in pectin, which limits how much fat cells can absorb.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Speaker: Melissa, explaining benefits of apples."
+        },
+        {
+          "text": "Grapefruits have about 92% water content and deliver a lot of nutrition with few calories.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Speaker: Melissa, discussing grapefruit in juice."
+        },
+        {
+          "text": "Beets help lower blood pressure and improve athletic performance.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.8,
+          "context": "Speaker: Melissa, discussing benefits of beets."
+        },
+        {
+          "text": "Beet juice can provide a 1-3% performance boost before athletic events.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.8,
+          "context": "Speaker: Professor, discussing beet juice effects."
+        },
+        {
+          "text": "A cup of red bell pepper contains nearly three times more vitamin C than an orange.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Speaker: Melissa, comparing vitamin C content."
+        },
+        {
+          "text": "Turmeric's curcumin absorption can be enhanced by black pepper by up to 2,000%.",
+          "confidence": 0.8,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Speaker: Melissa, discussing turmeric benefits."
+        }
+      ],
+      "total_count": 8
+    },
+    "output_length_chars": 2352,
+    "output_tokens_estimated": 588,
+    "cost_usd": 0.00062475
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:33:56.926603",
+    "latency_seconds": 2.49,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Beets help lower blood pressure and improve athletic performance.\nContext: Speaker: Melissa, discussing benefits of beets.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 295,
+    "input_tokens_estimated": 73,
+    "output": {
+      "original_claim": "Beets help lower blood pressure and improve athletic performance.",
+      "queries": [
+        {
+          "query": "Beets lower blood pressure and improve athletic performance",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Benefits of beets for blood pressure and athletic performance",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 335,
+    "output_tokens_estimated": 83,
+    "cost_usd": 6.075e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "Apples are high in pectin, which limits how much fat cells can absorb."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:34:05.856346",
+    "latency_seconds": 11.42,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Beet juice can provide a 1-3% performance boost before athletic events.\nContext: Speaker: Professor, discussing beet juice effects.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 304,
+    "input_tokens_estimated": 76,
+    "output": {
+      "original_claim": "Beet juice can provide a 1-3% performance boost before athletic events.",
+      "queries": [
+        {
+          "query": "Beet juice performance boost athletic events 1-3%",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "effects of beet juice on athletic performance",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 315,
+    "output_tokens_estimated": 78,
+    "cost_usd": 5.82e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Beets help lower blood pressure and improve athletic performance.",
+      "query_index": 2,
+      "query_text": "Benefits of beets for blood pressure and athletic performance"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:34:05.981221",
+    "latency_seconds": 11.54,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Apples are high in pectin, which limits how much fat cells can absorb.\nContext: Speaker: Melissa, explaining benefits of apples.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 301,
+    "input_tokens_estimated": 75,
+    "output": {
+      "original_claim": "Apples are high in pectin, which limits how much fat cells can absorb.",
+      "queries": [
+        {
+          "query": "Apples pectin fat absorption",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Does pectin in apples reduce fat cell absorption",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 296,
+    "output_tokens_estimated": 74,
+    "cost_usd": 5.565e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "Beet juice can provide a 1-3% performance boost before athletic events.",
+      "query_index": 2,
+      "query_text": "effects of beet juice on athletic performance"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:34:22.179670",
+    "latency_seconds": 14.59,
+    "input_prompt": "Claim:\nBeets help lower blood pressure and improve athletic performance.\n\nArticle Title:\nCan Beetroot Powder Improve Athletic Performance?\n\nGoogle Search Snippet:\nNitrate-rich beetroot powder may boost athletic performance by expanding blood vessels to deliver more oxygen to your body.\n\nFull Page Content:\nAn official website of the United States government\nBeetroot juice (BR) has been shown to reduce blood pressure (BP) at rest and improve several performance parameters during exercise. However, the effect of BR on BP during submaximal exercise has not been investigated and its effects on VO2max are inconclusive. The purpose of this study was to investigate the effects of BR on VO2max and BP during submaximal exercise. 20 healthy, recreationally trained volunteers (age 21.8\u00b12.35 years, weight 75.10\u00b110.62 kg, height 177.4\u00b16.39 cm) participated in this study, which had a double-blind placebo controlled randomized crossover design. Participants supplemented with either 237 ml servings of placebo or 70 ml BR servings (nitrate concentration of 6.4 mmol/day) for 7 days. Participants completed a ramp treadmill protocol to determine VO2max. BP was taken at 70% max heart rate calculated using the Karvonen method. There was no significant change in VO2max after BR supplementation (51.07\u00b16.12 ml/kg/min) versus placebo (50.46\u00b16.06 ml/kg/min), t(19)=1.41, p=0.17. There was no significant change in either systolic BP after BR supplementation (180.65\u00b123.37 mm Hg) versus placebo (177.65\u00b122.07 mm Hg), t(19)=0.49, p=0.63, or in diastolic BP after BR (92.90\u00b118.89 mm Hg) versus placebo (90.75\u00b117.73 mm Hg), t(19)=0.51, p=0.62. BR did not affect VO2max, nor did it affect BP during submaximal exercise.\nKeywords: Ergogenic aid, supplement, performance, nitric oxide, aerobic capacity\nThe higher the VO2max value produced by an individual, the greater the rate at which an athlete\u2019s body can consume oxygen, and the higher their level of cardiovascular fitness. Minor increases in VO2max values can have remarkable advantages. For example, some researchers speculate that if every player on a soccer team has a VO2max of just 6 ml/kg/min higher than their opponent, the aerobic capability possessed would equate to essentially having an additional player on the field (32). VO2max can be increased in an individual by participating in different types of endurance training programs (22), but there may be a way to increase it using ergogenic supplemental aids.\nA higher VO2max corresponds to a greater delivery of oxygen from the blood to muscle tissue, so athletes may work at a higher intensity for a longer time. Increased blood flow is attributed mostly to increased cardiac output, but also to the muscle pump and local mediation of vasodilation near working muscle tissue. This occurs as a natural response to exercise and can increase blood flow exponentially compared to resting values (27, 29). Focusing on vasodilation, several sources (5, 7, 25) have suggested that nitric oxide (NO) is a prime solicitor in the process. NO is not ingested directly, rather it is derived from substances endogenously manufactured or ingested. NO is synthesized via at least two physiological pathways: NO synthase (NOS)-dependent and NOS-independent. Research pertaining to the NOS-dependent pathway does not appear to show any effects on VO2max (28, 6, 4, 1, 10). Thus, further research on the effects of NO on VO2max should shift its focus on investigating the NOS-independent pathway instead.\nResearch on supplementation through the NOS-independent pathway involves sodium nitrate and beetroot. In a study by Larsen et al. (18), supplementation with sodium nitrate (0.1 mmol /kg of body mass/day for 3 days) in moderately trained subjects showed a decrease in VO2 at submaximal intensities, indicating a beneficial reduced oxygen cost during exercise. Gross efficiency, which was defined as work rate divided by energy expenditure, was also significantly improved. A later study by Larsen et al. (19) on moderately trained subjects used the same loading scheme for 2 days and also showed a significantly lower VO2peak after sodium nitrate ingestion without any effect on time to exhaustion. A study done on welltrained subjects showed a similar significantly reduced VO2peak compared to placebo, but with no effects on VO2 at submaximal intensities. The dosage in this study was more acute (3 hours pre-exercise) compared to previous studies and used 10 mg/kg of body mass of sodium nitrate (3).\nIn a study done on physically active individuals, beetroot supplementation for 15 days showed a significant increase in peak power and VO2max. Additionally, steady-state VO2 at moderate-intensity exercise was significantly reduced 2.5 hours after ingestion (30). In other studies, it has been shown to increase power output (16), delay time to exhaustion, and increase efficiency not only at the onset of exercise, but also in moderate (80% of gas exchange threshold) and severe intensity exercise (70% of the difference between the power output at gas exchange threshold and VO2peak) (2, 17).\nNitric oxide supplements have been shown to increase mitochondrial efficiency by improving the amount of oxygen reduced per ATP produced, otherwise known as the mitochondrial P/O ratio (20). Theoretically, this would explain the suggested benefits that previous studies have shown on the cardiorespiratory components of aerobic exercise. Keeping this in consideration, along with all the aforementioned results, it could be hypothesized that a nitric oxide supplement would help increase VO2max. With respect to the NOS-independent pathway, results are contradicting between two forms of NO donor. There are two studies using sodium nitrate that showed a significantly reduced VO2peak and VO2max following supplementation (3, 19), while there is one study using beetroot juice that showed an increase in VO2max (30). Furthermore, the study that used beetroot juice used a ramp cycle ergometer test to gather VO2 data, while it has been shown that an individualized ramp treadmill protocol elicits higher, more valid values and is more likely to bring an individual to a true VO2max due to the increased volume of muscle mass used (12, 24). In addition, it is widely accepted that typical blood pressure responses du\n\nProvide relevant evidence.",
+    "input_length_chars": 6335,
+    "input_tokens_estimated": 1583,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that beetroot juice has been shown to reduce blood pressure at rest and improve performance parameters during exercise, although it did not significantly affect VO2max or blood pressure during submaximal exercise in the study referenced.",
+      "overall_stance": "mixed",
+      "key_quote": "Beetroot juice (BR) has been shown to reduce blood pressure (BP) at rest and improve several performance parameters during exercise."
+    },
+    "output_length_chars": 475,
+    "output_tokens_estimated": 118,
+    "cost_usd": 0.00030825,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "Apples are high in pectin, which limits how much fat cells can absorb.",
+      "query_index": 2,
+      "query_text": "Does pectin in apples reduce fat cell absorption"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:34:22.532322",
+    "latency_seconds": 14.94,
+    "input_prompt": "Claim:\nBeets help lower blood pressure and improve athletic performance.\n\nArticle Title:\nThe Effects of Beetroot Juice on VO2max and Blood Pressure during ...\n\nGoogle Search Snippet:\nBeetroot juice (BR) has been shown to reduce blood pressure (BP) at rest and improve several performance parameters during exercise.\n\nFull Page Content:\nAn official website of the United States government\nBeetroot juice (BR) has been shown to reduce blood pressure (BP) at rest and improve several performance parameters during exercise. However, the effect of BR on BP during submaximal exercise has not been investigated and its effects on VO2max are inconclusive. The purpose of this study was to investigate the effects of BR on VO2max and BP during submaximal exercise. 20 healthy, recreationally trained volunteers (age 21.8\u00b12.35 years, weight 75.10\u00b110.62 kg, height 177.4\u00b16.39 cm) participated in this study, which had a double-blind placebo controlled randomized crossover design. Participants supplemented with either 237 ml servings of placebo or 70 ml BR servings (nitrate concentration of 6.4 mmol/day) for 7 days. Participants completed a ramp treadmill protocol to determine VO2max. BP was taken at 70% max heart rate calculated using the Karvonen method. There was no significant change in VO2max after BR supplementation (51.07\u00b16.12 ml/kg/min) versus placebo (50.46\u00b16.06 ml/kg/min), t(19)=1.41, p=0.17. There was no significant change in either systolic BP after BR supplementation (180.65\u00b123.37 mm Hg) versus placebo (177.65\u00b122.07 mm Hg), t(19)=0.49, p=0.63, or in diastolic BP after BR (92.90\u00b118.89 mm Hg) versus placebo (90.75\u00b117.73 mm Hg), t(19)=0.51, p=0.62. BR did not affect VO2max, nor did it affect BP during submaximal exercise.\nKeywords: Ergogenic aid, supplement, performance, nitric oxide, aerobic capacity\nThe higher the VO2max value produced by an individual, the greater the rate at which an athlete\u2019s body can consume oxygen, and the higher their level of cardiovascular fitness. Minor increases in VO2max values can have remarkable advantages. For example, some researchers speculate that if every player on a soccer team has a VO2max of just 6 ml/kg/min higher than their opponent, the aerobic capability possessed would equate to essentially having an additional player on the field (32). VO2max can be increased in an individual by participating in different types of endurance training programs (22), but there may be a way to increase it using ergogenic supplemental aids.\nA higher VO2max corresponds to a greater delivery of oxygen from the blood to muscle tissue, so athletes may work at a higher intensity for a longer time. Increased blood flow is attributed mostly to increased cardiac output, but also to the muscle pump and local mediation of vasodilation near working muscle tissue. This occurs as a natural response to exercise and can increase blood flow exponentially compared to resting values (27, 29). Focusing on vasodilation, several sources (5, 7, 25) have suggested that nitric oxide (NO) is a prime solicitor in the process. NO is not ingested directly, rather it is derived from substances endogenously manufactured or ingested. NO is synthesized via at least two physiological pathways: NO synthase (NOS)-dependent and NOS-independent. Research pertaining to the NOS-dependent pathway does not appear to show any effects on VO2max (28, 6, 4, 1, 10). Thus, further research on the effects of NO on VO2max should shift its focus on investigating the NOS-independent pathway instead.\nResearch on supplementation through the NOS-independent pathway involves sodium nitrate and beetroot. In a study by Larsen et al. (18), supplementation with sodium nitrate (0.1 mmol /kg of body mass/day for 3 days) in moderately trained subjects showed a decrease in VO2 at submaximal intensities, indicating a beneficial reduced oxygen cost during exercise. Gross efficiency, which was defined as work rate divided by energy expenditure, was also significantly improved. A later study by Larsen et al. (19) on moderately trained subjects used the same loading scheme for 2 days and also showed a significantly lower VO2peak after sodium nitrate ingestion without any effect on time to exhaustion. A study done on welltrained subjects showed a similar significantly reduced VO2peak compared to placebo, but with no effects on VO2 at submaximal intensities. The dosage in this study was more acute (3 hours pre-exercise) compared to previous studies and used 10 mg/kg of body mass of sodium nitrate (3).\nIn a study done on physically active individuals, beetroot supplementation for 15 days showed a significant increase in peak power and VO2max. Additionally, steady-state VO2 at moderate-intensity exercise was significantly reduced 2.5 hours after ingestion (30). In other studies, it has been shown to increase power output (16), delay time to exhaustion, and increase efficiency not only at the onset of exercise, but also in moderate (80% of gas exchange threshold) and severe intensity exercise (70% of the difference between the power output at gas exchange threshold and VO2peak) (2, 17).\nNitric oxide supplements have been shown to increase mitochondrial efficiency by improving the amount of oxygen reduced per ATP produced, otherwise known as the mitochondrial P/O ratio (20). Theoretically, this would explain the suggested benefits that previous studies have shown on the cardiorespiratory components of aerobic exercise. Keeping this in consideration, along with all the aforementioned results, it could be hypothesized that a nitric oxide supplement would help increase VO2max. With respect to the NOS-independent pathway, results are contradicting between two forms of NO donor. There are two studies using sodium nitrate that showed a significantly reduced VO2peak and VO2max following supplementation (3, 19), while there is one study using beetroot juice that showed an increase in VO2max (30). Furthermore, the study that used beetroot juice used a ramp cycle ergometer test to gather VO2 data, while it has been shown that an individualized ramp treadmill protocol elicits higher, more valid values and is more likely to bring an individual to a true VO2max due to the increased volume of muscle mass used (12, 24). In addition, it is widely accepted that typical blood pressure responses du\n\nProvide relevant evidence.",
+    "input_length_chars": 6364,
+    "input_tokens_estimated": 1591,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that beetroot juice has been shown to reduce blood pressure at rest and improve performance parameters during exercise, although it did not significantly affect VO2max or blood pressure during submaximal exercise in the study referenced.",
+      "overall_stance": "mixed",
+      "key_quote": "Beetroot juice (BR) has been shown to reduce blood pressure (BP) at rest and improve several performance parameters during exercise."
+    },
+    "output_length_chars": 475,
+    "output_tokens_estimated": 118,
+    "cost_usd": 0.00030945,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "Apples are high in pectin, which limits how much fat cells can absorb.",
+      "query_index": 2,
+      "query_text": "Does pectin in apples reduce fat cell absorption"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:34:23.474353",
+    "latency_seconds": 5.49,
+    "input_prompt": "Claim:\nApples are high in pectin, which limits how much fat cells can absorb.\n\nArticle Title:\nDose-dependent effects of apple pectin on alleviating high fat ...\n\nGoogle Search Snippet:\nMoreover, many studies found that apple pectin helped to suppress weight gain, modify gut microbiota, protect gut barrier, attenuate metabolic endotoxemia, ...\n\nFull Page Content:\nAn official website of the United States government\nThis study was aimed at determining potential effects of apple-derived pectin on weight gain, gut microbiota, gut barrier and metabolic endotoxemia in rat models of diet-induced obesity. The rats received a standard diet (control; Chow group; n = 8) or a high-fat diet (HFD; n = 32) for eight weeks to induce obesity. The top 50th percentile of weight-gainers were selected as diet induced obese rats. Thereafter, the Chow group continued on chow, and the diet induced obese rats were randomly divided into two groups and received HFD (HF group; n = 8) or pectin-supplemented HFD (HF-P group; n = 8) for six weeks. Compared to the HF group, the HF-P group showed attenuated weight gain (207.38 \u00b1 7.96 g vs. 283.63 \u00b1 10.17 g, p < 0.01) and serum total cholesterol level (1.46 \u00b1 0.13 mmol/L vs. 2.06 \u00b1 0.26 mmol/L, p < 0.01). Compared to the Chow group, the HF group showed a decrease in Bacteroidetes phylum and an increase in Firmicutes phylum, as well as subordinate categories (p < 0.01). These changes were restored to the normal levels in the HF-P group. Furthermore, compared to the HF group, the HF-P group displayed improved intestinal alkaline phosphatase (0.57 \u00b1 0.20 vs. 0.30 \u00b1 0.19, p < 0.05) and claudin 1 (0.76 \u00b1 0.14 vs. 0.55 \u00b1 0.18, p < 0.05) expression, and decreased Toll-like receptor 4 expression in ileal tissue (0.76 \u00b1 0.58 vs. 2.04 \u00b1 0.89, p < 0.01). The HF-P group also showed decreased inflammation (TNF\u03b1: 316.13 \u00b1 7.62 EU/mL vs. 355.59 \u00b1 8.10 EU/mL, p < 0.01; IL-6: 51.78 \u00b1 2.35 EU/mL vs. 58.98 \u00b1 2.59 EU/mL, p < 0.01) and metabolic endotoxemia (2.83 \u00b1 0.42 EU/mL vs. 0.68 \u00b1 0.14 EU/mL, p < 0.01). These results suggest that apple-derived pectin could modulate gut microbiota, attenuate metabolic endotoxemia and inflammation, and consequently suppress weight gain and fat accumulation in diet induced obese rats.\nKeywords: obesity, apple-derived pectin, gut microbiota, gut barrier function, metabolic endotoxemia\nIn recent years, obesity and related metabolic disorders have emerged as major health concerns [1,2]. Obesity is associated with increased risks for developing type 2 diabetes mellitus (T2DM), hyperlipidemia, hypertension, coronary heart disease (CHD), stroke, and cancer. Development of these diseases can also lead to psychological and psychiatric illnesses, adding to the societal burden associated with these diseases [3,4,5].\nObesity and related metabolic disorders are attributable to a combination of genetics, unhealthy diet and lifestyle. Recent studies have demonstrated that disturbance of gut microbiota, especially the ratio of Bacteriodetes to Firmicutes phylum, is closely related to obesity and metabolic disorders [6,7,8,9,10,11]. In addition, obese subjects exhibit systemic chronic inflammation and a high level of serum endotoxins (lipopolysaccharides (LPS), a key component of the cell wall of gram-negative bacteria), termed \u201cmetabolic endotoxemia\u201d, which associates with gut barrier dysfunction [12,13,14,15,16].\nGut microbiota in the lumen is normally isolated by the intestinal epithelium from lamina propria and deeper layers [17,18], and LPS derived from gut microbiota is confined to the gut lumen and does not penetrate healthy intestinal epithelium [19]. However, a damaged intestinal epithelium or other gut barrier dysfunction can lead to disturbance of gut microbiota [16], allow for LPS permeation and cause metabolic endotoxemia [20,21,22]. Recognition of LPS by Toll-like receptor 4 (TLR4) of host cells triggers downstream inflammatory events [23,24] that contributes to the development of obesity and metabolic disorders such as insulin resistance [10,25].\nTight junctions are key components for maintaining gut barrier integrity [17,26]. Another important protein for gut barrier function is intestinal alkaline phosphatase (IAP) that is a type of glycoprotein anchored in the apical membrane of enterocytes. IAP has multiple roles in maintenance of gut barrier, including detoxification of LPS via its dephosphorylation, remission of systemic inflammation, protection of gut barrier function and modulation of gut microbiota [27,28].\nAlthough various approaches are recommended for obesity management [29], such as dieting, behavior therapy, exercise, pharmacotherapy, and bariatric surgery, they are often defective [29,30]. Here, we consider that modification of gut microbiota, protection of gut barrier, remission of metabolic endotoxemia, and relief of systemic inflammation may provide a novel strategy for the treatment of obesity and related metabolic disorders.\nDietary fiber consists of non-digestible carbohydrates that derived from plants. Recent animal experiments and clinical trials have shown that dietary fiber, such as whole-grain cereal, grape skin extract, yellow pea fiber and wheat-derived arabinoxylan oligosaccharides, has hypolipidemic and hypoglycemic effects and may contribute to weight loss [31,32,33,34,35]. Apple-derived pectin is the main soluble fiber in apples and can be fermented by gut microbiota in the colon to produce metabolites with local intestinal and systemic effects. Apple-derived pectin may also help to maintain the balance of gut microbiota [36].\nThe aim of the present study was to assess potential effects of apple-derived pectin on diet-induced obesity in rats. We found that apple-derived pectin could modulate gut microbiota, preserve gut barrier function, and alleviate metabolic endotoxemia and inflammation in diet-induced obese rats. Our findings suggest that apple-derived pectin may be useful for the clinical management of obesity.\nMale Sprague-Dawley rats were obtained from the Medical Experiment Animal Center of the Jinling Hospital, Nanjing, China, at 4 weeks of age with an initial weight of 90 \u00b1 10 g. Rats were housed in individual cages in an optimum environment at 23 \u00b1 2 \u00b0C and a relative air humidity of 55% \u00b1 10% with a 12 h light/dark cycle. Animals had free access to a standard chow diet (1\n\nProvide relevant evidence.",
+    "input_length_chars": 6393,
+    "input_tokens_estimated": 1598,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The study indicates that apple-derived pectin can suppress weight gain and fat accumulation in diet-induced obese rats, suggesting a potential mechanism by which pectin limits fat absorption.",
+      "overall_stance": "supports",
+      "key_quote": "\"Our findings suggest that apple-derived pectin may be useful for the clinical management of obesity.\""
+    },
+    "output_length_chars": 381,
+    "output_tokens_estimated": 95,
+    "cost_usd": 0.0002967,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "Apples are high in pectin, which limits how much fat cells can absorb.",
+      "query_index": 2,
+      "query_text": "Does pectin in apples reduce fat cell absorption"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:34:24.851232",
+    "latency_seconds": 4.19,
+    "input_prompt": "Claim:\nApples are high in pectin, which limits how much fat cells can absorb.\n\nArticle Title:\n10 Promising Benefits and Uses of Apple Pectin - Healthline\n\nGoogle Search Snippet:\nApple pectin may aid weight loss by delaying stomach emptying. Slower digestion may help you feel full for longer. In turn, this may reduce ...\n\nFull Page Content:\nAn official website of the United States government\nThe purpose of this study was to investigate the influence of apple pomace (AP) and apple juice concentrate (AC) supplementation on body weight and fat loss as well as lipid metabolism in obese rats fed a high-fat diet. Diet-induced obese rats were assigned to three groups (n=8 for each group): high fat diet (HFD) control, HFD containing 10% (w/w) AP, and HFD containing 10% (w/w) AC. There was also a normal diet group (n=8). After 5 weeks, body weight gain, adipose tissue weight, serum and hepatic lipid profiles, liver morphology, and adipocyte size were measured. Body weight gain, white adipose tissue (WAT) weight, serum total cholesterol, low-density lipoprotein cholesterol and triglyceride concentrations, epididymal adipocyte size, and lesion scores were significantly lower and serum high-density lipoprotein cholesterol concentration and brown adipose tissue weights were significantly higher in the AP and AC groups compared with the HFD group. In addition, atherogenic indices in the AP and AC groups were significantly lower than in the HFD group. These results indicate that supplementing apple products such as AP and AC may help suppress body weight and WAT gain, as well as improve lipid profiles in diet-induced obese rats.\nKey Words: apple products, body fat loss, diet-induced obese rats, lipid profile\nNumerous epidemiological studies have indicated that fruits and vegetable consumption is positively related to a lower prevalence of chronic diseases, including cardiovascular disease (CVD), cancer, and diabetes.1\u20134 The positive effects of fruits and vegetables are often attributed to dietary fiber (DF) and phenolic compounds. DF and polyphenols induce body weight and fat loss in obese people and improve lipid profiles of CVD patients.5,6 However, the biological mechanisms of these effects are not entirely clear.\nIn 2007, the consumption of apples and apple products by the Korean population reached \u223c8.9 kg per capita, second only to mandarin oranges at 16.8 kg per capita. Apples and their products are popular, partly because they are available year round in a variety of forms (fresh fruit, juice, jam and jellies, etc.).7 Apples contain nutritionally important phytochemicals such as polyphenols, flavonoids, and DF. Although the amount and type of phytochemicals can vary greatly depending on the processing procedure and maturity of the apple, it varies most depending on which part of the apple is consumed. In general, the apple peel is abundant in phytochemicals, whereas apple flesh is not, and unripe apples are richer in polyphenols than are ripe apples. The processing of apples for their juice causes a substantial loss of polyphenols.\nApple juice is obtained from fresh apples by pulping and straight pressing, with the apple pomace (AP) remaining as the residue after the extraction process. AP has a concentration of high polyphenols and flavonoids, including p-coumaric acid, gallic acid, ferulic acid, ptocatehuic acid, epicatechin, and vanillic acids.8 AP is also a rich source of soluble DF (pectin), which is recommended to be the source of \u223c30\u201350% of total DF intake because of its cholesterol-lowering effects.9 Diets high in DF are associated with the prevention and treatment of diverticular diseases, CVD, and colon cancer.10 Hence, dried AP is a potential food source of various bioactive compounds.\nRecently, claims have also been made that unsweetened, undiluted apple juice may prevent CVD and some cancers.11,12 A commercial apple juice that has been sweetened and diluted during the manufacturing process has relatively low polyphenols and scarce DF content.10 Apple juice concentrates (ACs) are routinely prepared from apple juice production by concentrating apple juice 3\u20135 times. Thus, unsweetened, undiluted apple juice is preferred compared with sweetened, diluted apple juice by health-conscious consumers nowadays.\nHealth benefits of apples are undoubtedly due in part to the presence of DF and/or phytochemicals. More specifically, the positive effects of apples may come from their potential to lower cholesterol: plasma and liver cholesterol levels drop significantly after eating lyophilized apples.6 Moreover, cholesterol excretion increases in the feces of rats fed apples, suggesting that the DF and/or polyphenols found in apples may reduce dietary cholesterol absorption.6 A search of scientific databases revealed no studies on the effect of apples on weight loss or body fat loss. It was shown that processed apple accounts for 67% of whole processed fruit foods,7 and that AP generated during the processing procedure accounts for \u223c20% of the entire apple weight.13 Some of the by-products are utilized as compost or feed for cattle, but most of it is discarded. Hence, as the demand for functional foods from natural plant sources is increased, identification of the physiological activity characteristics of AP may provide potential for the development of functional food, expand the range of utilization, reduce the expense of byproduct storage and disposal, and increase the added value of apples in the food industry.\nThis study investigated the effects of AP and AC on body weight gain, body fat, and lipid metabolism in diet-induced obese rats over 5 weeks.\nApple (Fuji apple, Malus pulmila var. dulcissima KOIDZ.) pomace and AC produced in 2008 were supplied by Gyeongbuk Apple Nonghyup Co. (Daegu, Korea). The AP was a hot-air dried powder, and the AC was in liquid form. The AP and AC were freeze dried for chemical component analysis. General composition, including moisture levels, carbohydrates, protein, fat, fiber, and ash, was measured following the AOAC method.14\nThe total polyphenol content of AP and AC was measured according to the spectrophotometric Folin\u2013Denis method with some modifications.15 Determination of total polyphenol compounds was carried out in triplicate and calculated from a calibration curve obtained using tannic acid (Y\n\nProvide relevant evidence.",
+    "input_length_chars": 6370,
+    "input_tokens_estimated": 1592,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that apple pectin may help suppress body weight and fat gain, as well as improve lipid profiles, suggesting a potential mechanism by which pectin limits fat absorption.",
+      "overall_stance": "supports",
+      "key_quote": "\"Diets high in DF are associated with the prevention and treatment of diverticular diseases, CVD, and colon cancer.\""
+    },
+    "output_length_chars": 395,
+    "output_tokens_estimated": 98,
+    "cost_usd": 0.0002976,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "Apples are high in pectin, which limits how much fat cells can absorb.",
+      "query_index": 2,
+      "query_text": "Does pectin in apples reduce fat cell absorption"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:34:40.330074",
+    "latency_seconds": 22.34,
+    "input_prompt": "Claim:\nApples are high in pectin, which limits how much fat cells can absorb.\n\nArticle Title:\n10 Promising Benefits and Uses of Apple Pectin - Healthline\n\nGoogle Search Snippet:\nApple pectin is a gel-forming fiber that easily absorbs water, helping relieve both constipation and diarrhea. 6. May enhance iron absorption.\n\nFull Page Content:\nAn official website of the United States government\nThis study was aimed at determining potential effects of apple-derived pectin on weight gain, gut microbiota, gut barrier and metabolic endotoxemia in rat models of diet-induced obesity. The rats received a standard diet (control; Chow group; n = 8) or a high-fat diet (HFD; n = 32) for eight weeks to induce obesity. The top 50th percentile of weight-gainers were selected as diet induced obese rats. Thereafter, the Chow group continued on chow, and the diet induced obese rats were randomly divided into two groups and received HFD (HF group; n = 8) or pectin-supplemented HFD (HF-P group; n = 8) for six weeks. Compared to the HF group, the HF-P group showed attenuated weight gain (207.38 \u00b1 7.96 g vs. 283.63 \u00b1 10.17 g, p < 0.01) and serum total cholesterol level (1.46 \u00b1 0.13 mmol/L vs. 2.06 \u00b1 0.26 mmol/L, p < 0.01). Compared to the Chow group, the HF group showed a decrease in Bacteroidetes phylum and an increase in Firmicutes phylum, as well as subordinate categories (p < 0.01). These changes were restored to the normal levels in the HF-P group. Furthermore, compared to the HF group, the HF-P group displayed improved intestinal alkaline phosphatase (0.57 \u00b1 0.20 vs. 0.30 \u00b1 0.19, p < 0.05) and claudin 1 (0.76 \u00b1 0.14 vs. 0.55 \u00b1 0.18, p < 0.05) expression, and decreased Toll-like receptor 4 expression in ileal tissue (0.76 \u00b1 0.58 vs. 2.04 \u00b1 0.89, p < 0.01). The HF-P group also showed decreased inflammation (TNF\u03b1: 316.13 \u00b1 7.62 EU/mL vs. 355.59 \u00b1 8.10 EU/mL, p < 0.01; IL-6: 51.78 \u00b1 2.35 EU/mL vs. 58.98 \u00b1 2.59 EU/mL, p < 0.01) and metabolic endotoxemia (2.83 \u00b1 0.42 EU/mL vs. 0.68 \u00b1 0.14 EU/mL, p < 0.01). These results suggest that apple-derived pectin could modulate gut microbiota, attenuate metabolic endotoxemia and inflammation, and consequently suppress weight gain and fat accumulation in diet induced obese rats.\nKeywords: obesity, apple-derived pectin, gut microbiota, gut barrier function, metabolic endotoxemia\nIn recent years, obesity and related metabolic disorders have emerged as major health concerns [1,2]. Obesity is associated with increased risks for developing type 2 diabetes mellitus (T2DM), hyperlipidemia, hypertension, coronary heart disease (CHD), stroke, and cancer. Development of these diseases can also lead to psychological and psychiatric illnesses, adding to the societal burden associated with these diseases [3,4,5].\nObesity and related metabolic disorders are attributable to a combination of genetics, unhealthy diet and lifestyle. Recent studies have demonstrated that disturbance of gut microbiota, especially the ratio of Bacteriodetes to Firmicutes phylum, is closely related to obesity and metabolic disorders [6,7,8,9,10,11]. In addition, obese subjects exhibit systemic chronic inflammation and a high level of serum endotoxins (lipopolysaccharides (LPS), a key component of the cell wall of gram-negative bacteria), termed \u201cmetabolic endotoxemia\u201d, which associates with gut barrier dysfunction [12,13,14,15,16].\nGut microbiota in the lumen is normally isolated by the intestinal epithelium from lamina propria and deeper layers [17,18], and LPS derived from gut microbiota is confined to the gut lumen and does not penetrate healthy intestinal epithelium [19]. However, a damaged intestinal epithelium or other gut barrier dysfunction can lead to disturbance of gut microbiota [16], allow for LPS permeation and cause metabolic endotoxemia [20,21,22]. Recognition of LPS by Toll-like receptor 4 (TLR4) of host cells triggers downstream inflammatory events [23,24] that contributes to the development of obesity and metabolic disorders such as insulin resistance [10,25].\nTight junctions are key components for maintaining gut barrier integrity [17,26]. Another important protein for gut barrier function is intestinal alkaline phosphatase (IAP) that is a type of glycoprotein anchored in the apical membrane of enterocytes. IAP has multiple roles in maintenance of gut barrier, including detoxification of LPS via its dephosphorylation, remission of systemic inflammation, protection of gut barrier function and modulation of gut microbiota [27,28].\nAlthough various approaches are recommended for obesity management [29], such as dieting, behavior therapy, exercise, pharmacotherapy, and bariatric surgery, they are often defective [29,30]. Here, we consider that modification of gut microbiota, protection of gut barrier, remission of metabolic endotoxemia, and relief of systemic inflammation may provide a novel strategy for the treatment of obesity and related metabolic disorders.\nDietary fiber consists of non-digestible carbohydrates that derived from plants. Recent animal experiments and clinical trials have shown that dietary fiber, such as whole-grain cereal, grape skin extract, yellow pea fiber and wheat-derived arabinoxylan oligosaccharides, has hypolipidemic and hypoglycemic effects and may contribute to weight loss [31,32,33,34,35]. Apple-derived pectin is the main soluble fiber in apples and can be fermented by gut microbiota in the colon to produce metabolites with local intestinal and systemic effects. Apple-derived pectin may also help to maintain the balance of gut microbiota [36].\nThe aim of the present study was to assess potential effects of apple-derived pectin on diet-induced obesity in rats. We found that apple-derived pectin could modulate gut microbiota, preserve gut barrier function, and alleviate metabolic endotoxemia and inflammation in diet-induced obese rats. Our findings suggest that apple-derived pectin may be useful for the clinical management of obesity.\nMale Sprague-Dawley rats were obtained from the Medical Experiment Animal Center of the Jinling Hospital, Nanjing, China, at 4 weeks of age with an initial weight of 90 \u00b1 10 g. Rats were housed in individual cages in an optimum environment at 23 \u00b1 2 \u00b0C and a relative air humidity of 55% \u00b1 10% with a 12 h light/dark cycle. Animals had free access to a standard chow diet (1\n\nProvide relevant evidence.",
+    "input_length_chars": 6369,
+    "input_tokens_estimated": 1592,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that apple-derived pectin can attenuate weight gain and fat accumulation in diet-induced obese rats, suggesting a potential mechanism by which pectin may limit fat absorption.",
+      "overall_stance": "supports",
+      "key_quote": "\"apple-derived pectin could modulate gut microbiota, attenuate metabolic endotoxemia and inflammation, and consequently suppress weight gain and fat accumulation in diet induced obese rats.\""
+    },
+    "output_length_chars": 476,
+    "output_tokens_estimated": 119,
+    "cost_usd": 0.0003102,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "Apples are high in pectin, which limits how much fat cells can absorb.",
+      "query_index": 2,
+      "query_text": "Does pectin in apples reduce fat cell absorption"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:34:48.415083",
+    "latency_seconds": 11.78,
+    "input_prompt": "Claim:\nBeet juice can provide a 1-3% performance boost before athletic events.\n\nArticle Title:\nBeetroot juice and exercise: pharmacodynamic and dose-response ...\n\nFull Page Content:\nFor example, it could improve 1,500-m running performance by \u223c2 s or 3,000-m running performance by approximately 4\u20135 s in international standard athletes. It ...\n\nProvide relevant evidence.",
+    "input_length_chars": 372,
+    "input_tokens_estimated": 93,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that beet juice can improve running performance by approximately 2 seconds for 1,500 meters and 4-5 seconds for 3,000 meters, which aligns with the claim of a 1-3% performance boost before athletic events.",
+      "overall_stance": "supports",
+      "key_quote": "it could improve 1,500-m running performance by \u223c2 s or 3,000-m running performance by approximately 4\u20135 s in international standard athletes."
+    },
+    "output_length_chars": 456,
+    "output_tokens_estimated": 114,
+    "cost_usd": 8.235e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "Apples are high in pectin, which limits how much fat cells can absorb.",
+      "query_index": 2,
+      "query_text": "Does pectin in apples reduce fat cell absorption"
+    }
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:35:08.815522",
+    "latency_seconds": 11.78,
+    "input_prompt": "\nClaim: Beet juice can provide a 1-3% performance boost before athletic events.\nCategory: scientific\nExtraction confidence: 0.85\n\nEvidence:\nUNCLEAR (6 sources):\n  1. Effects of Beetroot Juice Supplementation on Performance and ... - NIH | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC6164999/\n     Summary: As a nitric oxide precursor, beetroot juice (BJ) is known to enhance high-intensity exercise performance (80\u2013100% VO2max) yet its impacts on ...\n  2. Beetroot juice supplementation and exercise performance - Frontiers | reliability=high (0.85)\n     URL: https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2024.1347242/full\n     Summary: Exercise studies comparing the effects of beetroot juice (BRJ) vs. a nitrate salt. Herein we review the limited number of exercise-related ...\n  3. Effects of Beetroot Juice on Physical Performance in Professional ... | reliability=high (0.85)\n     URL: https://pubmed.ncbi.nlm.nih.gov/40573069/\n     Summary: Beetroot juice shows population-specific effects: proper beetroot juice supplementation improves muscular strength in professional athletes and aerobic ...\n  4. How Does Beet Juice Improve Athletic Performance? - Verywell Fit | reliability=high (0.85)\n     URL: https://www.verywellfit.com/how-does-beet-juice-improve-athletic-performance-4123855\n     Summary: Competitive cyclists who supplemented with beetroot juice improved their performance by 0.8 percent in a 50-mile test. Significant improvements ...\n  5. Beet Juice as a Pre-Workout: Boost Endurance and Speed Up ... | reliability=medium (0.60)\n     URL: https://stamox.com/blogs/pre-workout-fitness/boost-endurance-recovery?srsltid=AfmBOoqxlD0KIXXi6ag3hU3V2tIDC-obmbWSCxqlZ4_iWDkgIDMWv7v1\n     Summary: How Beet Juice Enhances Athletic Performance \u00b7 Improves blood flow. \u00b7 Enhances gas exchange. \u00b7 Strengthens muscle contractions.\n  6. Beetroot Juice Cycling Performance: Science-Backed Benefits and ... | reliability=medium (0.60)\n     URL: https://www.achieveptc.com/blog/beetroot-juice-cycling-performance-science-backed-benefits-and-athlete-strategies\n     Summary: You may expect up to a 2-3% performance gain in events lasting 4-30 minutes (8-30km time trials; hilly breakaways). Altitude Performance Beet ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2311,
+    "input_tokens_estimated": 577,
+    "output": {
+      "overall_stance": "mixed",
+      "confidence": "medium",
+      "summary": "The evidence regarding beet juice's performance boost is mixed. High-quality studies indicate that beetroot juice can enhance performance, with some reports suggesting improvements of around 0.8% to 3% in specific contexts, such as cycling. However, the variability in results and the specific conditions under which these benefits occur lead to uncertainty about the overall claim."
+    },
+    "output_length_chars": 443,
+    "output_tokens_estimated": 110,
+    "cost_usd": 0.00015255
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:35:11.883553",
+    "latency_seconds": 21.18,
+    "input_prompt": "\nClaim: Beets help lower blood pressure and improve athletic performance.\nCategory: scientific\nExtraction confidence: 0.90\n\nEvidence:\nMIXED (1 sources):\n  1. The Effects of Beetroot Juice on VO2max and Blood Pressure during ... | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC6413851/\n     Summary: The evidence indicates that beetroot juice has been shown to reduce blood pressure at rest and improve performance parameters during exercise, although it did not significantly affect VO2max or blood pressure during submaximal exercise in the study referenced.\nUNCLEAR (5 sources):\n  1. Effects of Beetroot Juice Supplementation on Cardiorespiratory ... | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC5295087/\n     Summary: In addition to increasing blood flow and improving muscle contraction and relaxation, beetroot juice supplementation may improve the efficiency ...\n  2. 9 Impressive Health Benefits of Beets - Healthline | reliability=high (0.85)\n     URL: https://www.healthline.com/nutrition/benefits-of-beets\n     Summary: 1. Many nutrients and few calories \u00b7 2. Could help keep your blood pressure in check \u00b7 3. Can improve athletic performance \u00b7 4. May help fight inflammation \u00b7 5. May ...\n  3. Beet juice and blood pressure: Study and benefits | reliability=high (0.85)\n     URL: https://www.medicalnewstoday.com/articles/288229\n     Summary: Beet juice may help lower blood pressure because it contains nitrates. \u00b7 Doctors may recommend beet juice to help manage high blood pressure.\n  4. Can Beetroot Powder Improve Athletic Performance? | reliability=medium (0.60)\n     URL: https://health.clevelandclinic.org/beetroot-powder-benefits\n     Summary: Nitrate-rich beetroot powder may boost athletic performance by expanding blood vessels to deliver more oxygen to your body.\n  5. The Shocking Vegetable That Can Improve Athletic Endurance | reliability=medium (0.60)\n     URL: https://www.vogue.com/article/beets-endurance\n     Summary: \u201cSome short-term studies show that eating vegetables high in nitrates (especially beets) may lower blood pressure In addition,\u201d Harvard Health ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2189,
+    "input_tokens_estimated": 547,
+    "output": {
+      "overall_stance": "mixed",
+      "confidence": "medium",
+      "summary": "The evidence presents mixed findings regarding beets' effects on blood pressure and athletic performance. A high-reliability study indicates that beetroot juice can reduce resting blood pressure and improve exercise performance, but does not significantly affect VO2max or blood pressure during submaximal exercise. Other high-reliability sources suggest potential benefits for blood pressure and athletic performance, but the overall impact remains unclear due to varying results."
+    },
+    "output_length_chars": 542,
+    "output_tokens_estimated": 135,
+    "cost_usd": 0.00016305
+  }
+]

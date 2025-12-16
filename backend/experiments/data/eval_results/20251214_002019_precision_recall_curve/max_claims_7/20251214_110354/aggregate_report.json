@@ -1,0 +1,48 @@
+{
+  "timestamp": "2025-12-14T11:04:00.265404",
+  "n_videos": 30,
+  "description": {
+    "precision_at_k": "Of k claims extracted, % that match ground truth (any GT claim)",
+    "recall": "Of all GT claims, % that were matched by extracted claims",
+    "f1": "Harmonic mean of precision and recall",
+    "map": "Mean Average Precision - ranking quality (ClaimBuster metric)",
+    "recall_at_important": "Recall for GT claims with importance >= 0.80",
+    "importance_weighted_coverage": "% of total GT importance covered by matches",
+    "verdict_overall_accuracy": "% of verdicts that match ground truth (both stance and factual assessment)",
+    "verdict_stance_accuracy": "% of verdicts where stance classification matches ground truth",
+    "latency": "Processing time in seconds per video",
+    "cost": "LLM API cost in USD per video"
+  },
+  "claim_extraction": {
+    "precision_at_k_mean": 0.7952380952380954,
+    "precision_at_k_std": 0.1756749213875878,
+    "recall_mean": 0.35917201987699365,
+    "recall_std": 0.12145236029605797,
+    "f1_mean": 0.48572853325903315,
+    "f1_std": 0.13320411127233314,
+    "map_mean": 0.861621693121693,
+    "map_std": 0.16702645335038896,
+    "recall_at_important_mean": 0.4884680134680135,
+    "recall_at_important_std": 0.1880930730117273,
+    "importance_weighted_coverage_mean": 0.3865771851982973,
+    "importance_weighted_coverage_std": 0.12147965106052513
+  },
+  "verdict": {
+    "overall_accuracy_mean": 0.3557142857142857,
+    "overall_accuracy_std": 0.3571246556208425,
+    "stance_accuracy_mean": 0.3557142857142857,
+    "stance_accuracy_std": 0.3571246556208425
+  },
+  "end_to_end": {
+    "coverage_mean": 0.35917201987699365,
+    "coverage_std": 0.12145236029605797,
+    "accuracy_mean": 0.3557142857142857,
+    "accuracy_std": 0.3571246556208425,
+    "latency_mean_seconds": 105.08824661572774,
+    "latency_std_seconds": 25.719695185756503,
+    "latency_total_seconds": 3152.6473984718323,
+    "cost_mean_usd": 0.008528215,
+    "cost_total_usd": 0.25584645
+  },
+  "max_claims": 7
+}

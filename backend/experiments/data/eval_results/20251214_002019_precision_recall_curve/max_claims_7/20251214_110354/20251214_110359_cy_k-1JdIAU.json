@@ -1,0 +1,158 @@
+{
+  "video_id": "cy_k-1JdIAU",
+  "timestamp": "2025-12-14T11:03:59.935468",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_7",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 1.0,
+    "recall": 0.3333333333333333,
+    "f1_score": 0.5,
+    "true_positives": 7,
+    "false_positives": 0,
+    "false_negatives": 14,
+    "mean_average_precision": 1.0,
+    "recall_at_important": 0.5,
+    "importance_weighted_coverage": 0.3544776119402985,
+    "matched_claims": [
+      {
+        "gt_text": "Beets help you lower your blood pressure",
+        "sys_text": "Beets help lower blood pressure and improve athletic performance.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.8,
+        "importance_error": 0.050000000000000044
+      },
+      {
+        "gt_text": "Apples are great for weight loss because they're high in pectin",
+        "sys_text": "Apples are high in pectin, which binds with water and limits fat absorption.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.7,
+        "importance_error": 0.0
+      },
+      {
+        "gt_text": "Grapefruits have one of the highest water contents of any food, about 92% water",
+        "sys_text": "Grapefruits have about 92% water content and deliver nutrition with few calories.",
+        "gt_importance": 0.4,
+        "sys_importance": 0.7,
+        "importance_error": 0.29999999999999993
+      },
+      {
+        "gt_text": "A cup of red bell pepper contains nearly three times more vitamin C than an orange",
+        "sys_text": "A cup of red bell pepper contains nearly three times more vitamin C than an orange.",
+        "gt_importance": 0.5,
+        "sys_importance": 0.7,
+        "importance_error": 0.19999999999999996
+      },
+      {
+        "gt_text": "Juicing is the easiest way to repair your body in a short span of time",
+        "sys_text": "Juicing is the easiest way to repair your body in a short span of time.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.6,
+        "importance_error": 0.30000000000000004
+      },
+      {
+        "gt_text": "Lemons flush toxins from your system and purify the blood",
+        "sys_text": "Lemons flush toxins from your system and purify the blood.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.6,
+        "importance_error": 0.25
+      },
+      {
+        "gt_text": "Black pepper can enhance the curcumin absorption in turmeric by up to 2,000 percent",
+        "sys_text": "Turmeric's curcumin absorption can be enhanced by black pepper by up to 2,000 percent.",
+        "gt_importance": 0.65,
+        "sys_importance": 0.6,
+        "importance_error": 0.050000000000000044
+      }
+    ],
+    "missed_claims": [
+      "Pectin binds with water and limits how much fat your cells can absorb",
+      "Carrots are full of antioxidants including beta carotene and lutein that are great for the eyes",
+      "Beets are chocked full of nutrients including potassium, magnesium, zinc, selenium",
+      "Beets give you extra stamina throughout the day",
+      "Beets improve athletic performance",
+      "Beet juice one to three hours before an athletic event can provide a one to three percent performance boost",
+      "Beets raise nitric oxide levels, increase blood flow, improve lung function and strengthen muscle contraction",
+      "Jalape\u00f1o can boost your metabolism, increase fat burn and reduce your appetite",
+      "Pineapple contains bromelain, which is a digestive enzyme that will cleanse your colon and aids digestion",
+      "Ginger is awesome for circulation and digestion",
+      "Turmeric is incredible for inflammation",
+      "Detox juices help you lose weight and cleanse your body to literally make you glow",
+      "Lime and ginger increase your blood circulation",
+      "Vitamin C helps the body absorb minerals and protects the body from chemical toxins and has anti-aging properties"
+    ],
+    "extra_claims": [],
+    "importance_mae": 0.1642857142857143,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.0,
+    "stance_accuracy": 0.0,
+    "correct_verdicts": 0,
+    "total_verdicts": 7,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "Beets help you lower your blood pressure",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Apples are great for weight loss because they're high in pectin",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Grapefruits have one of the highest water contents of any food, about 92% water",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "A cup of red bell pepper contains nearly three times more vitamin C than an orange",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Juicing is the easiest way to repair your body in a short span of time",
+        "gt_verdict": "REFUTES",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Lemons flush toxins from your system and purify the blood",
+        "gt_verdict": "REFUTES",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Black pepper can enhance the curcumin absorption in turmeric by up to 2,000 percent",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.3333333333333333,
+    "verdict_accuracy": 0.0,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.00164115,
+    "total_time_seconds": 98.42232394218445,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.5
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 24,
+      "medium": 11
+    },
+    "avg_evidence_per_claim": 5.0
+  },
+  "ground_truth_claims_count": 21,
+  "system_claims_count": 7
+}

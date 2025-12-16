@@ -1,0 +1,433 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:00:06.524167",
+    "latency_seconds": 18.26,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nif you're thinking about leading a more active lifestyle you're not alone in recent years an increasing number of Americans have started participating in more sports fitness and recreation whether you're trying to get fit build muscle or you're just tired of the couch here are some changes you can expect along the way during that first workout you might feel more alert and energized because ramping up your heart rate means a boost in overall blood flow and oxygen to the brain but prepare yourself for the day after when you'll almost certainly get a case of Dom's short for delayed onset muscle soreness the soreness will persist for about 72 hours but the good news is you're less likely to get it again as long as you continue to regularly exercise those same muscles over the next few weeks you'll slowly start to ramp up production of mitochondria via a process called mitochondrial biogenesis mitochondria are the parts of your cells that convert carbs fat and protein and to feel that your muscles use to do their job like flexing contract after six to eight weeks studies have shown that people can increase their mitochondria by up to 50% with more mitochondria in your cells you'll start to feel more fit and your endurance will increase so running three miles will no longer feel as difficult as it did during the first week once your six months in all of that hard work should finally start to show if your workouts focus on strength training you'll notice your muscles begin to take shape you're also less likely to fall off the workout wagon at this point exercise programs often see a 50% dropout rate within the first six months but after that more people stick with it now if you're more focused on cardio than by nine months of regular exercise you should see about a 25% increase in your vo2 max vo2 max is often used as a measure of fitness and refers to the rate your body can transport oxygen to your muscles for fuel basically higher vo2 max means you can run faster for longer so a 25% increase means you can run about 20% further in the same amount of time after one year of regular exercise your bones will be denser which reduces your of osteoporosis in fact researchers have found that regular resistance training when combined with aerobic exercise can actually reverse the effects of osteoporosis after 12 months now if you maintain your exercise program long term your body might not be the only thing to benefit your bank account may also be one study revealed that older people who exercise 5 days a week for at least 30 minutes saved on average $2,500 a year in medical costs for heart related health problems alone you'll also be at a lower risk of developing arthritis type-2 diabetes dementia and certain types of cancer like breast and colon in all probability you are going to live longer than you otherwise would and that longer life it will likely feel more fulfilling because exercise lowers the risk of anxiety and depression by reducing levels of stress hormones like cortisol and adrenaline of course all of these benefits depend on the type and intensity of your workout and how long you exercise for each week a balanced diet is also paramount to a healthy lifestyle for the average adult ages 18 to 64 the US Department of Health and Human Services recommends either a minimum of two and a half hours per week of moderately intense exercise like brisk walking or biking or at least one hour and 15 minutes each week that combines moderate and high intensity workouts like running and swimming sprints on top of that make sure and take two days each week to strengthen your muscles with some weights or resistance training this will help your overall speed and endurance as you begin it's important to pace yourself and not push too hard too fast or you risk serious injury you'll discover that the fitter you become the easier it will be to exert a little more energy the next week the week after and so forth exercise smart and often and you'll be running marathons in no time you",
+    "input_length_chars": 4091,
+    "input_tokens_estimated": 1022,
+    "output": {
+      "claims": [
+        {
+          "text": "An increasing number of Americans have started participating in more sports, fitness, and recreation.",
+          "confidence": 0.8,
+          "category": "statistical",
+          "importance": 0.3,
+          "context": "Context unknown"
+        },
+        {
+          "text": "During the first workout, you might feel more alert and energized due to increased blood flow and oxygen to the brain.",
+          "confidence": 0.7,
+          "category": "scientific",
+          "importance": 0.25,
+          "context": "Context unknown"
+        },
+        {
+          "text": "Delayed onset muscle soreness (DOMS) will persist for about 72 hours after a workout.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Context unknown"
+        },
+        {
+          "text": "Regular exercise can ramp up production of mitochondria via mitochondrial biogenesis.",
+          "confidence": 0.8,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Context unknown"
+        },
+        {
+          "text": "Studies have shown that people can increase their mitochondria by up to 50% after six to eight weeks of exercise.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Context unknown"
+        },
+        {
+          "text": "After six months of exercise, people are less likely to drop out of their workout programs, which often see a 50% dropout rate in the first six months.",
+          "confidence": 0.8,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Context unknown"
+        },
+        {
+          "text": "By nine months of regular exercise, you should see about a 25% increase in your VO2 max.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Context unknown"
+        },
+        {
+          "text": "After one year of regular exercise, your bones will be denser, reducing the risk of osteoporosis.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Context unknown"
+        },
+        {
+          "text": "Regular resistance training combined with aerobic exercise can reverse the effects of osteoporosis after 12 months.",
+          "confidence": 0.8,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Context unknown"
+        },
+        {
+          "text": "Older people who exercise 5 days a week for at least 30 minutes save on average $2,500 a year in medical costs for heart-related health problems.",
+          "confidence": 0.8,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Context unknown"
+        }
+      ],
+      "total_count": 10
+    },
+    "output_length_chars": 2973,
+    "output_tokens_estimated": 743,
+    "cost_usd": 0.0005991
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:00:13.505682",
+    "latency_seconds": 2.15,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Regular exercise can ramp up production of mitochondria via mitochondrial biogenesis.\nContext: Context unknown\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 283,
+    "input_tokens_estimated": 70,
+    "output": {
+      "original_claim": "Regular exercise can ramp up production of mitochondria via mitochondrial biogenesis.",
+      "queries": [
+        {
+          "query": "Regular exercise increases mitochondrial biogenesis",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "How does exercise affect mitochondrial production and biogenesis?",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 351,
+    "output_tokens_estimated": 87,
+    "cost_usd": 6.27e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "During the first workout, you might feel more alert and energized due to increased blood flow and oxygen to the brain."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:00:13.631868",
+    "latency_seconds": 2.28,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Studies have shown that people can increase their mitochondria by up to 50% after six to eight weeks of exercise.\nContext: Context unknown\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 311,
+    "input_tokens_estimated": 77,
+    "output": {
+      "original_claim": "Studies have shown that people can increase their mitochondria by up to 50% after six to eight weeks of exercise.",
+      "queries": [
+        {
+          "query": "increase mitochondria by 50% after six to eight weeks of exercise",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "mitochondrial biogenesis exercise six to eight weeks",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 380,
+    "output_tokens_estimated": 95,
+    "cost_usd": 6.855e-05,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "Regular exercise can ramp up production of mitochondria via mitochondrial biogenesis.",
+      "query_index": 2,
+      "query_text": "How does exercise affect mitochondrial production and biogenesis?"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:00:13.716004",
+    "latency_seconds": 2.36,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: An increasing number of Americans have started participating in more sports, fitness, and recreation.\nContext: Context unknown\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 299,
+    "input_tokens_estimated": 74,
+    "output": {
+      "original_claim": "An increasing number of Americans have started participating in more sports, fitness, and recreation.",
+      "queries": [
+        {
+          "query": "increase in American participation in sports and fitness 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "more Americans participating in sports and recreation trends 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 377,
+    "output_tokens_estimated": 94,
+    "cost_usd": 6.75e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Studies have shown that people can increase their mitochondria by up to 50% after six to eight weeks of exercise.",
+      "query_index": 2,
+      "query_text": "mitochondrial biogenesis exercise six to eight weeks"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:00:13.800039",
+    "latency_seconds": 2.45,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: During the first workout, you might feel more alert and energized due to increased blood flow and oxygen to the brain.\nContext: Context unknown\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 316,
+    "input_tokens_estimated": 79,
+    "output": {
+      "original_claim": "During the first workout, you might feel more alert and energized due to increased blood flow and oxygen to the brain.",
+      "queries": [
+        {
+          "query": "increased blood flow oxygen brain alert energized first workout",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "how exercise increases blood flow and oxygen to the brain",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 388,
+    "output_tokens_estimated": 97,
+    "cost_usd": 7.005e-05,
+    "context": {
+      "claim_index": 9,
+      "claim_text": "An increasing number of Americans have started participating in more sports, fitness, and recreation.",
+      "query_index": 2,
+      "query_text": "more Americans participating in sports and recreation trends 2023"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:00:13.800498",
+    "latency_seconds": 2.45,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: By nine months of regular exercise, you should see about a 25% increase in your VO2 max.\nContext: Context unknown\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 286,
+    "input_tokens_estimated": 71,
+    "output": {
+      "original_claim": "By nine months of regular exercise, you should see about a 25% increase in your VO2 max.",
+      "queries": [
+        {
+          "query": "25% increase in VO2 max after nine months of exercise",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "how much can VO2 max increase with nine months of regular exercise",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 357,
+    "output_tokens_estimated": 89,
+    "cost_usd": 6.405e-05,
+    "context": {
+      "claim_index": 9,
+      "claim_text": "An increasing number of Americans have started participating in more sports, fitness, and recreation.",
+      "query_index": 2,
+      "query_text": "more Americans participating in sports and recreation trends 2023"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:00:13.968333",
+    "latency_seconds": 2.62,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: After six months of exercise, people are less likely to drop out of their workout programs, which often see a 50% dropout rate in the first six months.\nContext: Context unknown\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 349,
+    "input_tokens_estimated": 87,
+    "output": {
+      "original_claim": "After six months of exercise, people are less likely to drop out of their workout programs, which often see a 50% dropout rate in the first six months.",
+      "queries": [
+        {
+          "query": "workout program dropout rates after six months",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "exercise dropout rates 50% first six months",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 390,
+    "output_tokens_estimated": 97,
+    "cost_usd": 7.125e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "By nine months of regular exercise, you should see about a 25% increase in your VO2 max.",
+      "query_index": 2,
+      "query_text": "how much can VO2 max increase with nine months of regular exercise"
+    }
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:00:59.774578",
+    "latency_seconds": 2.86,
+    "input_prompt": "\nClaim: Regular exercise can ramp up production of mitochondria via mitochondrial biogenesis.\nCategory: scientific\nExtraction confidence: 0.80\n\nEvidence:\nUNCLEAR (4 sources):\n  1. Resistance Exercise Training Alters Mitochondrial Function in ... - NIH | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC4478283/\n     Summary: Endurance exercise has long been known to increase mitochondrial function in skeletal muscle. Comparatively little is known regarding the impact of resistance ...\n  2. Exercise training increases mitochondrial biogenesis in the brain | reliability=high (0.85)\n     URL: https://pubmed.ncbi.nlm.nih.gov/21817111/\n     Summary: These findings suggest that exercise training increases brain mitochondrial biogenesis, which may have important implications, not only with regard to fatigue.\n  3. Physical Exercise: A Novel Tool to Protect Mitochondrial Health | reliability=high (0.85)\n     URL: https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2021.660068/full\n     Summary: Recent studies show that exercise improves mitochondrial quality and function by stimulating their turnover (Safdar et al., 2011; Cartee et al., ...\n  4. Too much of a good thing: Excess exercise can harm mitochondria | reliability=high (0.85)\n     URL: https://www.sciencedirect.com/science/article/pii/S1550413121001741\n     Summary: A principal effect of aerobic exercise is the enhancement of mitochondrial function in skeletal muscle (Holloszy, 1967), as well as in other ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1559,
+    "input_tokens_estimated": 389,
+    "output": {
+      "overall_stance": "mixed",
+      "confidence": "medium",
+      "summary": "The evidence presents a mixed view on the claim that regular exercise ramps up mitochondrial biogenesis. While studies indicate that endurance and resistance exercise can enhance mitochondrial function and biogenesis in skeletal muscle and the brain (NIH, PubMed, Frontiers), there are also concerns that excessive exercise may negatively impact mitochondrial health (ScienceDirect). This suggests that while exercise generally promotes mitochondrial biogenesis, the effects can vary based on the type and amount of exercise."
+    },
+    "output_length_chars": 586,
+    "output_tokens_estimated": 146,
+    "cost_usd": 0.00014595
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:01:07.471344",
+    "latency_seconds": 19.95,
+    "input_prompt": "Claim:\nStudies have shown that people can increase their mitochondria by up to 50% after six to eight weeks of exercise.\n\nArticle Title:\nExercise training increases mitochondrial biogenesis in the brain\n\nFull Page Content:\nEight weeks of treadmill exercise increases mitochondrial DNA (mtDNA) content in brain and soleus (Sol) muscle. The relative amount of mtDNA was determined ...\n\nProvide relevant evidence.",
+    "input_length_chars": 410,
+    "input_tokens_estimated": 102,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that eight weeks of treadmill exercise leads to an increase in mitochondrial DNA content, which supports the claim that exercise can enhance mitochondrial biogenesis.",
+      "overall_stance": "supports",
+      "key_quote": "Eight weeks of treadmill exercise increases mitochondrial DNA (mtDNA) content in brain and soleus (Sol) muscle."
+    },
+    "output_length_chars": 386,
+    "output_tokens_estimated": 96,
+    "cost_usd": 7.29e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:01:08.804720",
+    "latency_seconds": 21.36,
+    "input_prompt": "Claim:\nAfter six months of exercise, people are less likely to drop out of their workout programs, which often see a 50% dropout rate in the first six months.\n\nArticle Title:\nExercise Intensity and Enjoyment: A Trade-Off - Human Kinetics\n\nGoogle Search Snippet:\nThe dropout rate for adults who begin a new physical activity is known to be relatively high. As many as 50 percent drop out within the first six months.\n\nFull Page Content:\nWe use cookies and other technologies to personalize your experience, perform marketing, and collect analytics. Learn more in our Privacy Policy.\nCall Us\n800.747.4457\nHours\nMon-Fri 7am - 5pm CST\nContact Us\nGet in touch with our team\nFAQs\nFrequently asked questions\nOCTOBER 2019\nThe dropout rate for adults who begin a new physical activity is known to be relatively high. As many as 50 percent drop out within the first six months. Research suggests that one possible reason is that many people don\u2019t enjoy vigorous physical activity. In fact, various researchers have suggested that, for many people, an inverse relationship exists between physical activity enjoyment and the intensity of exercise. This relationship is illustrated in the accompanying figure.\nAs the intensity of physical activity increases, the enjoyment of the exercise (while performing it) decreases. For many people, moderate activity is more enjoyable than vigorous activity. But reaping health benefits from moderate exercise requires longer sessions, and lack of time is often cited as a reason for not being active. High-intensity exercise can be done in a short period of time, but it is not enjoyable for many people, which can lead to lack of adherence. This is known as the intensity\u2013enjoyment trade-off.\nAt first glance, the trade-off may cause some people to be discouraged about becoming more active: \u201cIf I have little time to exercise, I can do short-duration intense exercise, which may be unenjoyable. On the other hand, if I do less-intense exercise that I may find more enjoyable, it will take longer than the time I can spare.\u201d But recent research suggests that not all people find vigorous activity to be unenjoyable. The key seems to be self-selection: If you choose the vigorous activity that you perform, you are more likely to enjoy it.\nThis information has implications for physical education, especially since helping students to be active in and out of school is an important program goal. To help increase student engagement, consider the following options:\nChuck practices what he preaches. After 45 years of teaching, researching, writing, and promoting regular healthy lifestyles, he walks, plays golf, does his own yard work, and does regular core and muscle fitness exercises. He enjoys playing his guitar as well as traveling with his wife of 56 years and being with his four granddaughters. Learn more about the books written by Chuck, including Fitness for Life and Health for Life resources.\n1607 N. Market Street Champaign, IL 61820\np: 800-747-4457 / f: 217-351-1549\nCustomerSupport@hkusa.com\n\nProvide relevant evidence.",
+    "input_length_chars": 3065,
+    "input_tokens_estimated": 766,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses the high dropout rate of 50% within the first six months of starting a new physical activity, but it does not provide evidence that exercising for six months reduces the likelihood of dropping out thereafter.",
+      "overall_stance": "unclear",
+      "key_quote": "As many as 50 percent drop out within the first six months."
+    },
+    "output_length_chars": 374,
+    "output_tokens_estimated": 93,
+    "cost_usd": 0.0001707
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:01:09.647056",
+    "latency_seconds": 22.2,
+    "input_prompt": "Claim:\nAfter six months of exercise, people are less likely to drop out of their workout programs, which often see a 50% dropout rate in the first six months.\n\nArticle Title:\nDeterminants of Dropout from and Variation in Adherence to...\n\nGoogle Search Snippet:\nPer the literature, average exercise intervention dropout is about 20% (2\u20134), with 50% of dropouts occurring in the first 6 months of exercise onset (8,9,12,21 ...\n\nFull Page Content:\nWe use cookies and other technologies to personalize your experience, perform marketing, and collect analytics. Learn more in our Privacy Policy.\nCall Us\n800.747.4457\nHours\nMon-Fri 7am - 5pm CST\nContact Us\nGet in touch with our team\nFAQs\nFrequently asked questions\nOCTOBER 2019\nThe dropout rate for adults who begin a new physical activity is known to be relatively high. As many as 50 percent drop out within the first six months. Research suggests that one possible reason is that many people don\u2019t enjoy vigorous physical activity. In fact, various researchers have suggested that, for many people, an inverse relationship exists between physical activity enjoyment and the intensity of exercise. This relationship is illustrated in the accompanying figure.\nAs the intensity of physical activity increases, the enjoyment of the exercise (while performing it) decreases. For many people, moderate activity is more enjoyable than vigorous activity. But reaping health benefits from moderate exercise requires longer sessions, and lack of time is often cited as a reason for not being active. High-intensity exercise can be done in a short period of time, but it is not enjoyable for many people, which can lead to lack of adherence. This is known as the intensity\u2013enjoyment trade-off.\nAt first glance, the trade-off may cause some people to be discouraged about becoming more active: \u201cIf I have little time to exercise, I can do short-duration intense exercise, which may be unenjoyable. On the other hand, if I do less-intense exercise that I may find more enjoyable, it will take longer than the time I can spare.\u201d But recent research suggests that not all people find vigorous activity to be unenjoyable. The key seems to be self-selection: If you choose the vigorous activity that you perform, you are more likely to enjoy it.\nThis information has implications for physical education, especially since helping students to be active in and out of school is an important program goal. To help increase student engagement, consider the following options:\nChuck practices what he preaches. After 45 years of teaching, researching, writing, and promoting regular healthy lifestyles, he walks, plays golf, does his own yard work, and does regular core and muscle fitness exercises. He enjoys playing his guitar as well as traveling with his wife of 56 years and being with his four granddaughters. Learn more about the books written by Chuck, including Fitness for Life and Health for Life resources.\n1607 N. Market Street Champaign, IL 61820\np: 800-747-4457 / f: 217-351-1549\nCustomerSupport@hkusa.com\n\nProvide relevant evidence.",
+    "input_length_chars": 3074,
+    "input_tokens_estimated": 768,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that dropout rates for exercise programs can be as high as 50% within the first six months, suggesting that after this period, individuals may be less likely to drop out, aligning with the claim.",
+      "overall_stance": "supports",
+      "key_quote": "As many as 50 percent drop out within the first six months."
+    },
+    "output_length_chars": 363,
+    "output_tokens_estimated": 90,
+    "cost_usd": 0.0001692
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:01:36.140432",
+    "latency_seconds": 12.24,
+    "input_prompt": "Claim:\nAn increasing number of Americans have started participating in more sports, fitness, and recreation.\n\nArticle Title:\n[PDF] SFIA Report 2023 - USTA\n\nFull Page Content:\nThe team sports participation rate increased to 23.2% in 2022, which is just under the 2019 level of 23.4%. The biggest takeaway is quite ...\n\nProvide relevant evidence.",
+    "input_length_chars": 344,
+    "input_tokens_estimated": 86,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that team sports participation has increased slightly in 2022, suggesting a trend of more Americans engaging in sports, although it remains just below the 2019 level.",
+      "overall_stance": "supports",
+      "key_quote": "The team sports participation rate increased to 23.2% in 2022, which is just under the 2019 level of 23.4%."
+    },
+    "output_length_chars": 382,
+    "output_tokens_estimated": 95,
+    "cost_usd": 6.99e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:01:50.581300",
+    "latency_seconds": 20.36,
+    "input_prompt": "Claim:\nAn increasing number of Americans have started participating in more sports, fitness, and recreation.\n\nArticle Title:\nA Record Number of Americans Participated in Sports, Fitness ...\n\nGoogle Search Snippet:\nWhat's more, the number of Americans who participated in an activity has increased every single year for 10 years, growing by 5 million in 2023.\n\nFull Page Content:\nA total of 242 million people in the United States \u2014 nearly 80% of all Americans 6 years and older \u2014 participated in at least one sports or fitness activity in 2023. That\u2019s a 2.2% increase from 2022, making it the highest number of people that have ever participated in an activity in one year. What\u2019s more, the number of Americans who participated in an activity has increased every single year for 10 years, growing by 5 million in 2023.\nAll of this good news comes from the recently published \u201c2024 Sports, Fitness, and Leisure Activities Topline Participation Report,\u201d issued annually by the Sports & Fitness Industry Association (SFIA).\nAll seven major sport and fitness physical activity categories showed increased year-over-year rates of participation, according to the report, which SFIA says is considered the sports and fitness industry\u2019s essential reference for participation, as it tracks Americans 6 and up across 124 different sports, fitness and outdoor activities.\n\u201cThese participation numbers are positive for the country and for our industry,\u201d Tom Cove, SFIA president & CEO, said in a statement. \u201cFrankly, they are not a surprise, as we know Americans are valuing and pursuing active lifestyles post-pandemic. Our industry\u2019s role now is to fulfill that interest with positive sports and fitness experiences and quality, innovative and inspiring products.\u201d\nParticipation in winter sports, team sports, racquet sports and water sports all grew by more 9% last year. Winter sports, fueled by favorable weather conditions, led with 22% growth over 2022, and team sports weighed in with 10.8% growth. Notably, 20 of the 24 sports tracked in the team sports category showed increases (compared to only five the previous year). Swimming on a team lead the way with a 14.8% year-over-year increase, followed by court volleyball with a 13.4% year-over-year increase.\nThis reflects an increasing trend in the United States of strong demand for team sports opportunities, according to the SFIA, following dissolution of teams during the pandemic in 2020. The number of team sports participants now exceeds pre-COVID levels from 2019.\nAlso noteworthy is that, for the third year in a row, pickleball is the fastest-growing sport in America. Participation jumped 51.8% from 2022 to 2023 \u2014 and a whopping 223.5% in three years. The number of pickleball participants stands at 13.6 million, approaching the number of outdoor soccer players (14.1 million). Pickleball contributed to the overall healthy participation trends seen in racquet sports, which reflect continued robust participation numbers in tennis, too.\nTrend analysis from the SFIA report also highlights the fitness category, where many health club-based activities such as using a treadmill, stair-climber and rowing machine \u2014 plus group activities like barre, Pilates and yoga \u2014 saw participation gains in 2023.\nOther highlights of the report:\nIt\u2019s also worth noting that inactivity decreased to its lowest number since the SFIA began tracking the metric: Just 21.2%, or 64.9 million people, reported doing none of the 124 activities at least once. The report links inactivity to income and suggests that increased rates of inactivity correlate to decreased family income levels \u2014 \u201can area that calls out for greater attention,\u201d according to the association.\nThe 44-page 2024 Topline Participation Report is free to SFIA members and is available for purchase for $350 to non-members.\nE-mail Michael Popke\nAbout Michael Popke\n(c)2008-2025 Sports Destination Management and SDM Blitz are publications of Due North Media - a division of Due North Consulting, Inc.\nCopyright 2001-2025, Due North Consulting, Inc. -- All rights reserved.\nThe material on this site is protected by United States copyright and other intellectual property laws and may not be reproduced, rewritten, distributed, re-disseminated, transmitted, cached, displayed, published, broadcast, directly or indirectly, in any medium without the prior written permission of Due North Consulting, Inc.\nBy clicking \"Continue\" or continuing to use our site, you acknowledge that you accept our Privacy Policy and Terms of Use. We also use cookies to provide you with the best possible experience on our website. Feel free to check out our policies anytime for more information.\n\nProvide relevant evidence.",
+    "input_length_chars": 4714,
+    "input_tokens_estimated": 1178,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that participation in sports, fitness, and recreation activities among Americans has indeed increased, with 242 million people participating in 2023, marking a 2.2% rise from the previous year and a consistent increase over the past decade.",
+      "overall_stance": "supports",
+      "key_quote": "the number of Americans who participated in an activity has increased every single year for 10 years, growing by 5 million in 2023."
+    },
+    "output_length_chars": 480,
+    "output_tokens_estimated": 120,
+    "cost_usd": 0.0002487
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:01:50.758111",
+    "latency_seconds": 20.55,
+    "input_prompt": "Claim:\nAn increasing number of Americans have started participating in more sports, fitness, and recreation.\n\nArticle Title:\nMore Americans Are Playing Sports\u2014Especially This One | TIME\n\nGoogle Search Snippet:\nA new survey finds that 80% of Americans are active. Here are the fastest-growing types of exercise.\n\nFull Page Content:\nA total of 242 million people in the United States \u2014 nearly 80% of all Americans 6 years and older \u2014 participated in at least one sports or fitness activity in 2023. That\u2019s a 2.2% increase from 2022, making it the highest number of people that have ever participated in an activity in one year. What\u2019s more, the number of Americans who participated in an activity has increased every single year for 10 years, growing by 5 million in 2023.\nAll of this good news comes from the recently published \u201c2024 Sports, Fitness, and Leisure Activities Topline Participation Report,\u201d issued annually by the Sports & Fitness Industry Association (SFIA).\nAll seven major sport and fitness physical activity categories showed increased year-over-year rates of participation, according to the report, which SFIA says is considered the sports and fitness industry\u2019s essential reference for participation, as it tracks Americans 6 and up across 124 different sports, fitness and outdoor activities.\n\u201cThese participation numbers are positive for the country and for our industry,\u201d Tom Cove, SFIA president & CEO, said in a statement. \u201cFrankly, they are not a surprise, as we know Americans are valuing and pursuing active lifestyles post-pandemic. Our industry\u2019s role now is to fulfill that interest with positive sports and fitness experiences and quality, innovative and inspiring products.\u201d\nParticipation in winter sports, team sports, racquet sports and water sports all grew by more 9% last year. Winter sports, fueled by favorable weather conditions, led with 22% growth over 2022, and team sports weighed in with 10.8% growth. Notably, 20 of the 24 sports tracked in the team sports category showed increases (compared to only five the previous year). Swimming on a team lead the way with a 14.8% year-over-year increase, followed by court volleyball with a 13.4% year-over-year increase.\nThis reflects an increasing trend in the United States of strong demand for team sports opportunities, according to the SFIA, following dissolution of teams during the pandemic in 2020. The number of team sports participants now exceeds pre-COVID levels from 2019.\nAlso noteworthy is that, for the third year in a row, pickleball is the fastest-growing sport in America. Participation jumped 51.8% from 2022 to 2023 \u2014 and a whopping 223.5% in three years. The number of pickleball participants stands at 13.6 million, approaching the number of outdoor soccer players (14.1 million). Pickleball contributed to the overall healthy participation trends seen in racquet sports, which reflect continued robust participation numbers in tennis, too.\nTrend analysis from the SFIA report also highlights the fitness category, where many health club-based activities such as using a treadmill, stair-climber and rowing machine \u2014 plus group activities like barre, Pilates and yoga \u2014 saw participation gains in 2023.\nOther highlights of the report:\nIt\u2019s also worth noting that inactivity decreased to its lowest number since the SFIA began tracking the metric: Just 21.2%, or 64.9 million people, reported doing none of the 124 activities at least once. The report links inactivity to income and suggests that increased rates of inactivity correlate to decreased family income levels \u2014 \u201can area that calls out for greater attention,\u201d according to the association.\nThe 44-page 2024 Topline Participation Report is free to SFIA members and is available for purchase for $350 to non-members.\nE-mail Michael Popke\nAbout Michael Popke\n(c)2008-2025 Sports Destination Management and SDM Blitz are publications of Due North Media - a division of Due North Consulting, Inc.\nCopyright 2001-2025, Due North Consulting, Inc. -- All rights reserved.\nThe material on this site is protected by United States copyright and other intellectual property laws and may not be reproduced, rewritten, distributed, re-disseminated, transmitted, cached, displayed, published, broadcast, directly or indirectly, in any medium without the prior written permission of Due North Consulting, Inc.\nBy clicking \"Continue\" or continuing to use our site, you acknowledge that you accept our Privacy Policy and Terms of Use. We also use cookies to provide you with the best possible experience on our website. Feel free to check out our policies anytime for more information.\n\nProvide relevant evidence.",
+    "input_length_chars": 4666,
+    "input_tokens_estimated": 1166,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that nearly 80% of Americans participated in sports or fitness activities in 2023, marking a 2.2% increase from the previous year, and this trend of increasing participation has been consistent over the past decade.",
+      "overall_stance": "supports",
+      "key_quote": "A total of 242 million people in the United States \u2014 nearly 80% of all Americans 6 years and older \u2014 participated in at least one sports or fitness activity in 2023. That\u2019s a 2.2% increase from 2022, making it the highest number of people that have ever participated in an activity in one year."
+    },
+    "output_length_chars": 618,
+    "output_tokens_estimated": 154,
+    "cost_usd": 0.0002673
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:02:02.254006",
+    "latency_seconds": 11.36,
+    "input_prompt": "\nClaim: An increasing number of Americans have started participating in more sports, fitness, and recreation.\nCategory: statistical\nExtraction confidence: 0.80\n\nEvidence:\nSUPPORTS (1 sources):\n  1. A Record Number of Americans Participated in Sports, Fitness ... | reliability=medium (0.60)\n     URL: https://www.sportsdestinations.com/sports/all-sports/record-number-americans-participated-sports-33929\n     Summary: The evidence indicates that participation in sports, fitness, and recreation activities among Americans has indeed increased, with 242 million people participating in 2023, marking a 2.2% rise from the previous year and a consistent increase over the past decade.\nUNCLEAR (3 sources):\n  1. More Americans Are Playing Sports\u2014Especially This One | TIME | reliability=high (0.85)\n     URL: https://time.com/7309450/most-popular-sport-exercise-fitness/\n     Summary: It turns out a whopping 80% of us are physically active, according to a new report from the Sports and Fitness Industry Association.\n  2. SFIA Study: Record growth continues in 2023 for U.S. sports and ... | reliability=high (0.85)\n     URL: https://www.sportsbusinessjournal.com/Articles/2024/05/30/sports-fitness-industry-association-survey/\n     Summary: In 2023, the total number of active sports and fitness participants in the U.S. hit its highest level ever at 242 million, up 12.1% from 215.8 ...\n  3. [PDF] SFIA Report 2023 - USTA | reliability=medium (0.60)\n     URL: https://www.usta.com/es/content/dam/usta/sections/intermountain/districts/colorado/pdfs/sfia-reports/2023-sfia-topline.pdf\n     Summary: 237 million people, or 77.6% of all Americans (ages 6 and over), participated in at least one activity. This represents a 9.2% increase from ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1774,
+    "input_tokens_estimated": 443,
+    "output": {
+      "overall_stance": "mixed",
+      "confidence": "medium",
+      "summary": "While there is evidence supporting an increase in sports and fitness participation, with 242 million Americans participating in 2023 (a 2.2% rise), other sources present varying figures and percentages, indicating some ambiguity in the overall trend."
+    },
+    "output_length_chars": 311,
+    "output_tokens_estimated": 77,
+    "cost_usd": 0.00011265
+  }
+]

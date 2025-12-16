@@ -1,0 +1,567 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:38:08.323216",
+    "latency_seconds": 21.53,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nIt's 6:00 in the morning, pitch black outside. My 14-year-old son is fast asleep in his bed. I flip on the light and physically shake the poor boy awake. because I know that, like ripping off a Band-Aid, it's better to get it over with quickly. Sound brutal, but perhaps familiar? Every morning I ask myself, how can I, knowing what I know, be doing this to my own son? You see, I\u2019m a sleep researcher. So I know that I\u2019m depriving my son of sleep he desperately needs as a rapidly growing teenager. I also know that by waking him up hours before his natural biological clock tells him he\u2019s ready, I\u2019m literally robbing him of the type of sleep most associated with learning, memory consolidation, and emotional processing. But it's not just my kid that's being deprived of sleep. Sleep deprivation among American teenagers is an epidemic. Only about 1 in 10 gets the 8 to 10 hours of sleep per night recommended by sleep scientists and pediatricians. The major factor preventing teens from getting the sleep they need is a matter of public policy. Across the country, many schools are starting around 7:30 a.m. or earlier, despite the fact that major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m. These early start policies have a direct effect on how little sleep American teenagers are getting. They\u2019re also pitting teenagers in a fundamentally unwinnable fight against their own bodies. Around the time of puberty, teenagers experience a delay in their biological clock, which determines when we feel most awake and when we feel most sleepy. This is driven in part by a shift in the release of the hormone melatonin. Teenagers\u2019 bodies wait to start releasing melatonin until around 11 p.m., which is two hours later than what we see in adults or younger children. This means that waking a teenager up at 6 a.m. is the biological equivalent of waking an adult up at 4 a.m. Now, on the unfortunate days when I have to wake up at 4 a.m., I\u2019m a zombie. Functionally useless. I can't think straight. I\u2019m irritable, and I probably shouldn\u2019t be driving a car. But this is how many American teenagers feel every single school day. Many of the, shall we say, unpleasant characteristics that we chalk up to being a teenager\u2014 moodiness, irritability, laziness, depression\u2014 could be a product of chronic sleep deprivation. For many teens battling chronic sleep loss, their go-to strategy to compensate is consuming large quantities of caffeine in the form of venti Frappuccinos, or energy drinks and shots. So essentially, we've got an entire population of tired but wired youth. Advocates of sleep-friendly start times know that adolescence is a period of dramatic brain development, particularly in the parts of the brain that are responsible for those higher order thinking processes, including reasoning, problem solving, and good judgment. In other words, the very type of brain activity that\u2019s responsible for reining in those impulsive and often risky behaviors that are so characteristic of adolescence. They know that, like the rest of us, when teenagers don\u2019t get the sleep they need, their brains, their bodies, and behavior suffer. They can't concentrate. Their attention plummets, and many will even show behavioral signs that mimic ADHD. But the consequences of teen sleep loss go well beyond the classroom, sadly contributing to many of the mental health problems that skyrocket during adolescence. In our work with teens from LA Unified School District, we found that teens with sleep problems were 55% more likely to have used alcohol in the past month. In another study with over 30,000 high school students, they found that for each hour of lost sleep, there was a 38% increase in feeling sad or hopeless, and a 58% increase in teen suicide attempts. And if that's not enough, teens who skimp out on sleep are at increased risk for a host of physical health problems that plague our country, including obesity, heart disease, and diabetes. Then there\u2019s the risk of putting a sleep-deprived teen behind the wheel. Studies have shown that getting five hours or less of sleep per night is the equivalent of driving with a blood alcohol content above the legal limit. Researchers in this area have produced tremendous science showing the benefits of later start times. The findings are unequivocal. Teens from districts with later start times get more sleep. They're more likely to show up for school. School absences dropped by 25% in one district, and they're less likely to drop out. Not surprisingly, they do better academically. Standardized test scores in math and reading go up by 2 to 3 percentage points. That's as powerful as reducing class sizes by one third fewer students. Their mental and physical health improves, and their families are happier. Even their communities are safer because car crash rates go down\u2014 a 70% reduction in one district. Now, given these tremendous benefits, you might think, well, this is a no brainer, right? So why have we as a society failed to heed this call? Delaying start times presents many logistical challenges. Updating bus routes, increased transportation costs, impact on sports. Care before or after school. But these are problems we have to work through. They are not valid excuses for failing to do the right thing for our children, which is to start middle and high schools no earlier than 8:30 a.m. Districts around the country, big and small, who have made this change, they\u2019ve found that these fears are often unfounded and far outweighed by the tremendous benefits for our student health and performance and our collective public safety.",
+    "input_length_chars": 5710,
+    "input_tokens_estimated": 1427,
+    "output": {
+      "claims": [
+        {
+          "text": "Only about 1 in 10 American teenagers gets the recommended 8 to 10 hours of sleep per night.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.85,
+          "context": "Claim about sleep deprivation among American teenagers."
+        },
+        {
+          "text": "Major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m.",
+          "confidence": 0.95,
+          "category": "policy",
+          "importance": 0.85,
+          "context": "Recommendation from medical organizations regarding school start times."
+        },
+        {
+          "text": "Teenagers experience a delay in their biological clock around puberty, affecting sleep patterns.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Biological changes in teenagers affecting sleep."
+        },
+        {
+          "text": "Teenagers' bodies start releasing melatonin around 11 p.m., two hours later than adults.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Hormonal changes in teenagers affecting sleep timing."
+        },
+        {
+          "text": "Waking a teenager up at 6 a.m. is equivalent to waking an adult up at 4 a.m.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Comparison of sleep needs between teenagers and adults."
+        },
+        {
+          "text": "Teens with sleep problems are 55% more likely to have used alcohol in the past month.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "Study linking sleep problems and alcohol use among teens."
+        },
+        {
+          "text": "For each hour of lost sleep, there is a 38% increase in feeling sad or hopeless among teens.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "Study on the impact of sleep loss on teen mental health."
+        },
+        {
+          "text": "Teens who skimp on sleep are at increased risk for obesity, heart disease, and diabetes.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Health risks associated with sleep deprivation in teens."
+        },
+        {
+          "text": "Getting five hours or less of sleep per night is equivalent to driving with a blood alcohol content above the legal limit.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.8,
+          "context": "Comparison of sleep deprivation effects to impaired driving."
+        },
+        {
+          "text": "Teens from districts with later start times get more sleep and show improved academic performance.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.8,
+          "context": "Benefits of later school start times on teen sleep and academics."
+        },
+        {
+          "text": "School absences dropped by 25% in one district after changing to later start times.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Impact of later start times on school attendance."
+        },
+        {
+          "text": "Standardized test scores in math and reading go up by 2 to 3 percentage points with later start times.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Academic improvement linked to later school start times."
+        },
+        {
+          "text": "Car crash rates decreased by 70% in one district after implementing later start times.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "Safety improvements linked to later school start times."
+        },
+        {
+          "text": "Delaying school start times presents logistical challenges, including updating bus routes and increased transportation costs.",
+          "confidence": 0.8,
+          "category": "policy",
+          "importance": 0.5,
+          "context": "Challenges faced by schools in changing start times."
+        },
+        {
+          "text": "Many districts that changed start times found fears about logistical issues were often unfounded.",
+          "confidence": 0.8,
+          "category": "policy",
+          "importance": 0.5,
+          "context": "Outcome of districts that implemented later start times."
+        }
+      ],
+      "total_count": 15
+    },
+    "output_length_chars": 4840,
+    "output_tokens_estimated": 1210,
+    "cost_usd": 0.00094005
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:38:18.141216",
+    "latency_seconds": 2.12,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Many districts that changed start times found fears about logistical issues were often unfounded.\nContext: Outcome of districts that implemented later start times.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 336,
+    "input_tokens_estimated": 84,
+    "output": {
+      "original_claim": "Many districts that changed start times found fears about logistical issues were often unfounded.",
+      "queries": [
+        {
+          "query": "districts changing school start times logistical issues unfounded",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "impact of later school start times on logistics",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 359,
+    "output_tokens_estimated": 89,
+    "cost_usd": 6.6e-05,
+    "context": {
+      "claim_index": 15,
+      "claim_text": "Many districts that changed start times found fears about logistical issues were often unfounded."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:38:18.264071",
+    "latency_seconds": 2.25,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Getting five hours or less of sleep per night is equivalent to driving with a blood alcohol content above the legal limit.\nContext: Comparison of sleep deprivation effects to impaired driving.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 365,
+    "input_tokens_estimated": 91,
+    "output": {
+      "original_claim": "Getting five hours or less of sleep per night is equivalent to driving with a blood alcohol content above the legal limit.",
+      "queries": [
+        {
+          "query": "sleep deprivation effects equivalent to blood alcohol content",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "five hours of sleep equals impaired driving",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 376,
+    "output_tokens_estimated": 94,
+    "cost_usd": 7.005e-05,
+    "context": {
+      "claim_index": 15,
+      "claim_text": "Many districts that changed start times found fears about logistical issues were often unfounded.",
+      "query_index": 2,
+      "query_text": "impact of later school start times on logistics"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:38:18.348648",
+    "latency_seconds": 2.34,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Teenagers experience a delay in their biological clock around puberty, affecting sleep patterns.\nContext: Biological changes in teenagers affecting sleep.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 327,
+    "input_tokens_estimated": 81,
+    "output": {
+      "original_claim": "Teenagers experience a delay in their biological clock around puberty, affecting sleep patterns.",
+      "queries": [
+        {
+          "query": "Teenagers biological clock delay puberty sleep patterns",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "puberty sleep patterns teenagers biological clock delay",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 356,
+    "output_tokens_estimated": 89,
+    "cost_usd": 6.555e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "Getting five hours or less of sleep per night is equivalent to driving with a blood alcohol content above the legal limit.",
+      "query_index": 2,
+      "query_text": "five hours of sleep equals impaired driving"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:38:18.349168",
+    "latency_seconds": 2.33,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Car crash rates decreased by 70% in one district after implementing later start times.\nContext: Safety improvements linked to later school start times.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 324,
+    "input_tokens_estimated": 81,
+    "output": {
+      "original_claim": "Car crash rates decreased by 70% in one district after implementing later start times.",
+      "queries": [
+        {
+          "query": "Car crash rates decreased by 70% after later school start times",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "impact of later school start times on car crash rates",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 352,
+    "output_tokens_estimated": 88,
+    "cost_usd": 6.495e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "Getting five hours or less of sleep per night is equivalent to driving with a blood alcohol content above the legal limit.",
+      "query_index": 2,
+      "query_text": "five hours of sleep equals impaired driving"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:38:18.349596",
+    "latency_seconds": 2.33,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: School absences dropped by 25% in one district after changing to later start times.\nContext: Impact of later start times on school attendance.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 315,
+    "input_tokens_estimated": 78,
+    "output": {
+      "original_claim": "School absences dropped by 25% in one district after changing to later start times.",
+      "queries": [
+        {
+          "query": "School absences dropped by 25% after later start times",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "impact of later school start times on attendance rates",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 341,
+    "output_tokens_estimated": 85,
+    "cost_usd": 6.27e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "Getting five hours or less of sleep per night is equivalent to driving with a blood alcohol content above the legal limit.",
+      "query_index": 2,
+      "query_text": "five hours of sleep equals impaired driving"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:38:18.350026",
+    "latency_seconds": 2.34,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Teenagers' bodies start releasing melatonin around 11 p.m., two hours later than adults.\nContext: Hormonal changes in teenagers affecting sleep timing.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 324,
+    "input_tokens_estimated": 81,
+    "output": {
+      "original_claim": "Teenagers' bodies start releasing melatonin around 11 p.m., two hours later than adults.",
+      "queries": [
+        {
+          "query": "Teenagers melatonin release time 11 p.m. compared to adults",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "melatonin release time in teenagers vs adults",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 342,
+    "output_tokens_estimated": 85,
+    "cost_usd": 6.315e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "Getting five hours or less of sleep per night is equivalent to driving with a blood alcohol content above the legal limit.",
+      "query_index": 2,
+      "query_text": "five hours of sleep equals impaired driving"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:38:18.684824",
+    "latency_seconds": 2.67,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Waking a teenager up at 6 a.m. is equivalent to waking an adult up at 4 a.m.\nContext: Comparison of sleep needs between teenagers and adults.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 314,
+    "input_tokens_estimated": 78,
+    "output": {
+      "original_claim": "Waking a teenager up at 6 a.m. is equivalent to waking an adult up at 4 a.m.",
+      "queries": [
+        {
+          "query": "sleep needs teenagers vs adults waking times",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "teenagers sleep requirements compared to adults",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 317,
+    "output_tokens_estimated": 79,
+    "cost_usd": 5.91e-05,
+    "context": {
+      "claim_index": 6,
+      "claim_text": "Teenagers' bodies start releasing melatonin around 11 p.m., two hours later than adults.",
+      "query_index": 2,
+      "query_text": "melatonin release time in teenagers vs adults"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:38:18.770671",
+    "latency_seconds": 2.75,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Delaying school start times presents logistical challenges, including updating bus routes and increased transportation costs.\nContext: Challenges faced by schools in changing start times.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 360,
+    "input_tokens_estimated": 90,
+    "output": {
+      "original_claim": "Delaying school start times presents logistical challenges, including updating bus routes and increased transportation costs.",
+      "queries": [
+        {
+          "query": "logistical challenges of delaying school start times bus routes transportation costs",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "impact of changing school start times on transportation logistics and costs",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 434,
+    "output_tokens_estimated": 108,
+    "cost_usd": 7.83e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "Waking a teenager up at 6 a.m. is equivalent to waking an adult up at 4 a.m.",
+      "query_index": 2,
+      "query_text": "teenagers sleep requirements compared to adults"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:38:18.771321",
+    "latency_seconds": 2.76,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m.\nContext: Recommendation from medical organizations regarding school start times.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 352,
+    "input_tokens_estimated": 88,
+    "output": {
+      "original_claim": "Major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m.",
+      "queries": [
+        {
+          "query": "Major medical organizations recommend school start times 8:30 a.m.",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "school start time recommendations by medical organizations 8:30 a.m.",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 382,
+    "output_tokens_estimated": 95,
+    "cost_usd": 7.02e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "Waking a teenager up at 6 a.m. is equivalent to waking an adult up at 4 a.m.",
+      "query_index": 2,
+      "query_text": "teenagers sleep requirements compared to adults"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:38:18.940286",
+    "latency_seconds": 2.93,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Teens with sleep problems are 55% more likely to have used alcohol in the past month.\nContext: Study linking sleep problems and alcohol use among teens.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 325,
+    "input_tokens_estimated": 81,
+    "output": {
+      "original_claim": "Teens with sleep problems are 55% more likely to have used alcohol in the past month.",
+      "queries": [
+        {
+          "query": "Teens sleep problems alcohol use 55% more likely",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "relationship between sleep issues and alcohol consumption in teenagers",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 353,
+    "output_tokens_estimated": 88,
+    "cost_usd": 6.495e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "Major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m.",
+      "query_index": 2,
+      "query_text": "school start time recommendations by medical organizations 8:30 a.m."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:38:19.027215",
+    "latency_seconds": 3.02,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Only about 1 in 10 American teenagers gets the recommended 8 to 10 hours of sleep per night.\nContext: Claim about sleep deprivation among American teenagers.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 330,
+    "input_tokens_estimated": 82,
+    "output": {
+      "original_claim": "Only about 1 in 10 American teenagers gets the recommended 8 to 10 hours of sleep per night.",
+      "queries": [
+        {
+          "query": "American teenagers sleep statistics 8 to 10 hours 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "percentage of American teens getting recommended sleep 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 355,
+    "output_tokens_estimated": 88,
+    "cost_usd": 6.51e-05,
+    "context": {
+      "claim_index": 7,
+      "claim_text": "Teens with sleep problems are 55% more likely to have used alcohol in the past month.",
+      "query_index": 2,
+      "query_text": "relationship between sleep issues and alcohol consumption in teenagers"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:39:37.128876",
+    "latency_seconds": 12.74,
+    "input_prompt": "Claim:\nWaking a teenager up at 6 a.m. is equivalent to waking an adult up at 4 a.m.\n\nArticle Title:\nADOLESCENT SLEEP PATTERNS AND DAYTIME SLEEPINESS\n\nGoogle Search Snippet:\nSeventy percent of the teenagers delayed both bedtime and wake-up time by an hour or more on weekends to try to catch up on their sleep.\n\nFull Page Content:\nAn official website of the United States government\nWorkshop participants heard from a panel of researchers who reviewed findings from the United States and abroad on sleep patterns and problems in adolescents. They discussed findings indicating that the factors contributing to teenagers' sleep loss lie in both the biological and the social realms.\nMary A. Carskadon, director of the E. P. Bradley Hospital Sleep Research Laboratory and professor in the Department of Psychiatry and Human Behavior, Brown University School of Medicine, noted several major trends in adolescent sleep patterns. Data from cross-sectional surveys of students show that, from ages 10 to 17, students' self-reported bedtimes become later and later, on both weekdays and weekends (Carskadon, 1990; Wolfson and Carskadon, 1998). In middle adolescence, rising times become earlier during the week, due largely to school starting times. High school starting times, which typically are earlier than those of middle and elementary schools, have moved to even earlier hours in recent years. Many begin at or before 7:30 a.m., largely due to the timing and availability of school buses. Thus, while sleep needs remain unchanged, Carskadon said, adolescents are spending less time sleeping, and alterations in sleep schedules during the week compared with those on the weekend are becoming more pronounced. This is in sharp contrast to the stable pattern of sleep found in younger children, who get the same amount of sleep during the week as on weekends\u2014an average of 10 hours a night, Carskadon noted.\nThe effects of restricted sleep on sleep structure, mood, and performance in children and young people have been evaluated under different conditions (Carskadon and Dement, 1981). In a longitudinal study of sleep and sleepiness in young people, researchers assessed children in a summer \u201csleep camp\u201d laboratory at Stanford University (Carskadon, 1982). Researchers began studying the children when they were 10 to 12 years of age and followed them every summer for 4 to 6 years. Researchers measured their sleep according to the Multiple Sleep Latency Test (MSLT), a standard measure of sleepiness; the test is administered at designated periods throughout the day to determine the time it takes subjects to fall asleep (Carskadon et al., 1986).\nIn the laboratory the young study subjects wore electrodes that gauged their physiological reactions in sleep and while they were awake. Each night they had the same 10-hour window of time available for sleep, with sleep latency\u2014the time it takes to fall asleep\u2014tested throughout the day at 2-hour intervals. Starting with the hypothesis that the amount of sleep needed would decrease with age to a typical adult 7.5 hours a night, the study assessed the youngsters at various stages of pubertal development to shed light on the issue of sleep needs.\nThe results showed that the younger children slept 9 hours and 20 minutes on average and awoke spontaneously. As they progressed through adolescence, they continued to get the same amount of sleep, but they no longer woke spontaneously before the end of the sleep window. At midpuberty, adolescents also became sleepier during the day. According to the MSLT, prepubertal and early adolescents were unable to fall asleep in the daytime, but at midpuberty, even with 9 hours and 20 minutes of sleep, daytime drowsiness appeared and worsened. These older adolescents struggled to stay awake throughout the day, whereas the younger adolescents had no problem at all.\nA sleep habits survey administered to more than 3,000 Rhode Island 9th to 12th graders revealed that the median amount of reported sleep in this group was 7.5 hours (Wolfson and Carskadon, 1998). A quarter of these students reported sleeping 6.5 hours or less. For two-thirds of the students, bedtime was after 11 p.m. on school nights; 91 percent rose at 6:30 a.m. or earlier. Seventy percent of the teenagers delayed both bedtime and wake-up time by an hour or more on weekends to try to catch up on their sleep. Sleeping late on Saturday and Sunday, however, usually fosters a later sleep onset on Sunday night. Despite this, sleeping in on weekends allows adolescents to pay back some of their weeknight sleep debt, some workshop participants observed.\nThe various factors that influence how much adolescents sleep cluster into two major areas. One is intrinsic\u2014the biological processes going on internally in adolescents; the other is the external factors\u2014social, academic, and environmental\u2014that play a significant role in their sleep habits.\nInternal processes themselves fall into two types. One is the biological timing system\u2014the circadian rhythms of approximately 24-hour intervals that influence when and how much we sleep. The second is the internal system that tallies the balance of sleeping and waking\u2014the sleep/wake homeostasis system: when sleep is deprived, more sleep is needed. Thus, as discussed at the workshop, \u201csufficient\u201d sleep can be defined as the amount that satisfies the homeostatic process and is not associated with daytime sleepiness. This is analogous to the daily caloric requirement to maintain a stable weight.\nResearch findings suggest that changes occur in the \u201cbiological clock\u201d during adolescence. As a result, teenagers have a natural tendency to fall asleep later and to wake up later. This is referred to as sleep phase delay. Carskadon described research on college students that restricted their sleep to 5 hours a night for several nights. This study found that daytime sleepiness increased with each night of restricted sleep, indicating the cumulative effect of sleep loss. The research also showed that even with restricted sleep students felt more alert in the evening, encouraging the tendency to stay up late again (Carskadon and Dement, 1981). If additional tests of sleep latency are carried out at 8 and 10 p.m., a student who struggled and dozed through the early afternoon becomes energetic and internally \n\nProvide relevant evidence.",
+    "input_length_chars": 6358,
+    "input_tokens_estimated": 1589,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence discusses how adolescents have a natural tendency to fall asleep and wake up later due to biological changes, indicating that waking them up early may be more disruptive compared to adults.",
+      "overall_stance": "supports",
+      "key_quote": "Research findings suggest that changes occur in the 'biological clock' during adolescence. As a result, teenagers have a natural tendency to fall asleep later and to wake up later."
+    },
+    "output_length_chars": 468,
+    "output_tokens_estimated": 117,
+    "cost_usd": 0.00030855
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:39:37.812492",
+    "latency_seconds": 13.43,
+    "input_prompt": "Claim:\nWaking a teenager up at 6 a.m. is equivalent to waking an adult up at 4 a.m.\n\nArticle Title:\nWhat the Science Tells Us About Adolescent Sleep\n\nGoogle Search Snippet:\ndecrease with age throughout adolescence: 9 to 11 hours for 6- to 13-year-olds 8 to 10 hours for 14- to 17-year-olds 7 to 9 hours for 18- to 25-year-olds less ...\n\nFull Page Content:\nAn official website of the United States government\nWorkshop participants heard from a panel of researchers who reviewed findings from the United States and abroad on sleep patterns and problems in adolescents. They discussed findings indicating that the factors contributing to teenagers' sleep loss lie in both the biological and the social realms.\nMary A. Carskadon, director of the E. P. Bradley Hospital Sleep Research Laboratory and professor in the Department of Psychiatry and Human Behavior, Brown University School of Medicine, noted several major trends in adolescent sleep patterns. Data from cross-sectional surveys of students show that, from ages 10 to 17, students' self-reported bedtimes become later and later, on both weekdays and weekends (Carskadon, 1990; Wolfson and Carskadon, 1998). In middle adolescence, rising times become earlier during the week, due largely to school starting times. High school starting times, which typically are earlier than those of middle and elementary schools, have moved to even earlier hours in recent years. Many begin at or before 7:30 a.m., largely due to the timing and availability of school buses. Thus, while sleep needs remain unchanged, Carskadon said, adolescents are spending less time sleeping, and alterations in sleep schedules during the week compared with those on the weekend are becoming more pronounced. This is in sharp contrast to the stable pattern of sleep found in younger children, who get the same amount of sleep during the week as on weekends\u2014an average of 10 hours a night, Carskadon noted.\nThe effects of restricted sleep on sleep structure, mood, and performance in children and young people have been evaluated under different conditions (Carskadon and Dement, 1981). In a longitudinal study of sleep and sleepiness in young people, researchers assessed children in a summer \u201csleep camp\u201d laboratory at Stanford University (Carskadon, 1982). Researchers began studying the children when they were 10 to 12 years of age and followed them every summer for 4 to 6 years. Researchers measured their sleep according to the Multiple Sleep Latency Test (MSLT), a standard measure of sleepiness; the test is administered at designated periods throughout the day to determine the time it takes subjects to fall asleep (Carskadon et al., 1986).\nIn the laboratory the young study subjects wore electrodes that gauged their physiological reactions in sleep and while they were awake. Each night they had the same 10-hour window of time available for sleep, with sleep latency\u2014the time it takes to fall asleep\u2014tested throughout the day at 2-hour intervals. Starting with the hypothesis that the amount of sleep needed would decrease with age to a typical adult 7.5 hours a night, the study assessed the youngsters at various stages of pubertal development to shed light on the issue of sleep needs.\nThe results showed that the younger children slept 9 hours and 20 minutes on average and awoke spontaneously. As they progressed through adolescence, they continued to get the same amount of sleep, but they no longer woke spontaneously before the end of the sleep window. At midpuberty, adolescents also became sleepier during the day. According to the MSLT, prepubertal and early adolescents were unable to fall asleep in the daytime, but at midpuberty, even with 9 hours and 20 minutes of sleep, daytime drowsiness appeared and worsened. These older adolescents struggled to stay awake throughout the day, whereas the younger adolescents had no problem at all.\nA sleep habits survey administered to more than 3,000 Rhode Island 9th to 12th graders revealed that the median amount of reported sleep in this group was 7.5 hours (Wolfson and Carskadon, 1998). A quarter of these students reported sleeping 6.5 hours or less. For two-thirds of the students, bedtime was after 11 p.m. on school nights; 91 percent rose at 6:30 a.m. or earlier. Seventy percent of the teenagers delayed both bedtime and wake-up time by an hour or more on weekends to try to catch up on their sleep. Sleeping late on Saturday and Sunday, however, usually fosters a later sleep onset on Sunday night. Despite this, sleeping in on weekends allows adolescents to pay back some of their weeknight sleep debt, some workshop participants observed.\nThe various factors that influence how much adolescents sleep cluster into two major areas. One is intrinsic\u2014the biological processes going on internally in adolescents; the other is the external factors\u2014social, academic, and environmental\u2014that play a significant role in their sleep habits.\nInternal processes themselves fall into two types. One is the biological timing system\u2014the circadian rhythms of approximately 24-hour intervals that influence when and how much we sleep. The second is the internal system that tallies the balance of sleeping and waking\u2014the sleep/wake homeostasis system: when sleep is deprived, more sleep is needed. Thus, as discussed at the workshop, \u201csufficient\u201d sleep can be defined as the amount that satisfies the homeostatic process and is not associated with daytime sleepiness. This is analogous to the daily caloric requirement to maintain a stable weight.\nResearch findings suggest that changes occur in the \u201cbiological clock\u201d during adolescence. As a result, teenagers have a natural tendency to fall asleep later and to wake up later. This is referred to as sleep phase delay. Carskadon described research on college students that restricted their sleep to 5 hours a night for several nights. This study found that daytime sleepiness increased with each night of restricted sleep, indicating the cumulative effect of sleep loss. The research also showed that even with restricted sleep students felt more alert in the evening, encouraging the tendency to stay up late again (Carskadon and Dement, 1981). If additional tests of sleep latency are carried out at 8 and 10 p.m., a student who struggled and dozed through the early afternoon becomes energetic and internally \n\nProvide relevant evidence.",
+    "input_length_chars": 6384,
+    "input_tokens_estimated": 1596,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence discusses how adolescents have a natural tendency to fall asleep later and wake up later due to biological changes, suggesting that waking them up early (like at 6 a.m.) can be more detrimental compared to waking adults up earlier (like at 4 a.m.).",
+      "overall_stance": "refutes",
+      "key_quote": "Research findings suggest that changes occur in the 'biological clock' during adolescence. As a result, teenagers have a natural tendency to fall asleep later and to wake up later."
+    },
+    "output_length_chars": 526,
+    "output_tokens_estimated": 131,
+    "cost_usd": 0.000318
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:39:37.952818",
+    "latency_seconds": 13.57,
+    "input_prompt": "Claim:\nWaking a teenager up at 6 a.m. is equivalent to waking an adult up at 4 a.m.\n\nArticle Title:\nWhy Sleep is Important for Teens - Johns Hopkins Medicine\n\nGoogle Search Snippet:\nThe average teen needs 9-10 hours of sleep, some may need a little less and some may need a little bit more sleep each night.\n\nFull Page Content:\nAn official website of the United States government\nWorkshop participants heard from a panel of researchers who reviewed findings from the United States and abroad on sleep patterns and problems in adolescents. They discussed findings indicating that the factors contributing to teenagers' sleep loss lie in both the biological and the social realms.\nMary A. Carskadon, director of the E. P. Bradley Hospital Sleep Research Laboratory and professor in the Department of Psychiatry and Human Behavior, Brown University School of Medicine, noted several major trends in adolescent sleep patterns. Data from cross-sectional surveys of students show that, from ages 10 to 17, students' self-reported bedtimes become later and later, on both weekdays and weekends (Carskadon, 1990; Wolfson and Carskadon, 1998). In middle adolescence, rising times become earlier during the week, due largely to school starting times. High school starting times, which typically are earlier than those of middle and elementary schools, have moved to even earlier hours in recent years. Many begin at or before 7:30 a.m., largely due to the timing and availability of school buses. Thus, while sleep needs remain unchanged, Carskadon said, adolescents are spending less time sleeping, and alterations in sleep schedules during the week compared with those on the weekend are becoming more pronounced. This is in sharp contrast to the stable pattern of sleep found in younger children, who get the same amount of sleep during the week as on weekends\u2014an average of 10 hours a night, Carskadon noted.\nThe effects of restricted sleep on sleep structure, mood, and performance in children and young people have been evaluated under different conditions (Carskadon and Dement, 1981). In a longitudinal study of sleep and sleepiness in young people, researchers assessed children in a summer \u201csleep camp\u201d laboratory at Stanford University (Carskadon, 1982). Researchers began studying the children when they were 10 to 12 years of age and followed them every summer for 4 to 6 years. Researchers measured their sleep according to the Multiple Sleep Latency Test (MSLT), a standard measure of sleepiness; the test is administered at designated periods throughout the day to determine the time it takes subjects to fall asleep (Carskadon et al., 1986).\nIn the laboratory the young study subjects wore electrodes that gauged their physiological reactions in sleep and while they were awake. Each night they had the same 10-hour window of time available for sleep, with sleep latency\u2014the time it takes to fall asleep\u2014tested throughout the day at 2-hour intervals. Starting with the hypothesis that the amount of sleep needed would decrease with age to a typical adult 7.5 hours a night, the study assessed the youngsters at various stages of pubertal development to shed light on the issue of sleep needs.\nThe results showed that the younger children slept 9 hours and 20 minutes on average and awoke spontaneously. As they progressed through adolescence, they continued to get the same amount of sleep, but they no longer woke spontaneously before the end of the sleep window. At midpuberty, adolescents also became sleepier during the day. According to the MSLT, prepubertal and early adolescents were unable to fall asleep in the daytime, but at midpuberty, even with 9 hours and 20 minutes of sleep, daytime drowsiness appeared and worsened. These older adolescents struggled to stay awake throughout the day, whereas the younger adolescents had no problem at all.\nA sleep habits survey administered to more than 3,000 Rhode Island 9th to 12th graders revealed that the median amount of reported sleep in this group was 7.5 hours (Wolfson and Carskadon, 1998). A quarter of these students reported sleeping 6.5 hours or less. For two-thirds of the students, bedtime was after 11 p.m. on school nights; 91 percent rose at 6:30 a.m. or earlier. Seventy percent of the teenagers delayed both bedtime and wake-up time by an hour or more on weekends to try to catch up on their sleep. Sleeping late on Saturday and Sunday, however, usually fosters a later sleep onset on Sunday night. Despite this, sleeping in on weekends allows adolescents to pay back some of their weeknight sleep debt, some workshop participants observed.\nThe various factors that influence how much adolescents sleep cluster into two major areas. One is intrinsic\u2014the biological processes going on internally in adolescents; the other is the external factors\u2014social, academic, and environmental\u2014that play a significant role in their sleep habits.\nInternal processes themselves fall into two types. One is the biological timing system\u2014the circadian rhythms of approximately 24-hour intervals that influence when and how much we sleep. The second is the internal system that tallies the balance of sleeping and waking\u2014the sleep/wake homeostasis system: when sleep is deprived, more sleep is needed. Thus, as discussed at the workshop, \u201csufficient\u201d sleep can be defined as the amount that satisfies the homeostatic process and is not associated with daytime sleepiness. This is analogous to the daily caloric requirement to maintain a stable weight.\nResearch findings suggest that changes occur in the \u201cbiological clock\u201d during adolescence. As a result, teenagers have a natural tendency to fall asleep later and to wake up later. This is referred to as sleep phase delay. Carskadon described research on college students that restricted their sleep to 5 hours a night for several nights. This study found that daytime sleepiness increased with each night of restricted sleep, indicating the cumulative effect of sleep loss. The research also showed that even with restricted sleep students felt more alert in the evening, encouraging the tendency to stay up late again (Carskadon and Dement, 1981). If additional tests of sleep latency are carried out at 8 and 10 p.m., a student who struggled and dozed through the early afternoon becomes energetic and internally \n\nProvide relevant evidence.",
+    "input_length_chars": 6356,
+    "input_tokens_estimated": 1589,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses how adolescents have a natural tendency to fall asleep later and wake up later due to biological changes, which suggests that waking them up early (like at 6 a.m.) can be more detrimental compared to waking adults up earlier (like at 4 a.m.).",
+      "overall_stance": "supports",
+      "key_quote": "Research findings suggest that changes occur in the 'biological clock' during adolescence. As a result, teenagers have a natural tendency to fall asleep later and to wake up later."
+    },
+    "output_length_chars": 530,
+    "output_tokens_estimated": 132,
+    "cost_usd": 0.00031755
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:40:01.072576",
+    "latency_seconds": 20.21,
+    "input_prompt": "\nClaim: Many districts that changed start times found fears about logistical issues were often unfounded.\nCategory: policy\nExtraction confidence: 0.80\n\nEvidence:\nUNCLEAR (5 sources):\n  1. 6 Big Barriers to Restructuring School Schedules - Education Week | reliability=high (0.85)\n     URL: https://www.edweek.org/leadership/6-big-barriers-to-restructuring-school-schedules/2020/02\n     Summary: A significant change in the timing of the school day could force parents to alter their work schedules or put them in a logistical bind when it ...\n  2. Later school start times in the U.S. An economic analysis - RAND | reliability=high (0.85)\n     URL: https://www.rand.org/pubs/research_reports/RR2109.html\n     Summary: This study investigates the economic implications of later school start times by examining a policy experiment and its subsequent state-wide economic effects.\n  3. What's Stopping Later School Start Times That Support Teen Sleep ... | reliability=high (0.85)\n     URL: https://www.edweek.org/leadership/whats-stopping-later-school-start-times-that-support-teen-sleep-bus-schedules-for-one/2023/09\n     Summary: Start time changes, in turn, have proven to result in better physical and mental health, improved academics, and fewer teen-driving accidents.\n  4. Logistical Thinking Behind Later School Starts | AASA | reliability=medium (0.60)\n     URL: https://www.aasa.org/resources/resource/Logistical-Thinking-Behind-Later-School-Starts\n     Summary: Districts that were unable to move start times commonly point to obstacles such as increased transportation costs, opposition from working ...\n  5. Science backs Mayor O'Connell's later school start time policy ... | reliability=medium (0.60)\n     URL: https://wpln.org/post/science-backs-oconnells-later-school-start-time-policy-critics-say-its-a-logistics-problem/\n     Summary: Logistical challenges. A major concern has been busing. Even in normal times, districts use the same buses and drivers for students of all ages.\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2029,
+    "input_tokens_estimated": 507,
+    "output": {
+      "overall_stance": "mixed",
+      "confidence": "medium",
+      "summary": "The evidence presents a mixed view on the claim. While some sources highlight logistical challenges as significant barriers to changing school start times (Education Week, AASA), others suggest that these fears may be overstated, noting the positive outcomes of later start times (RAND, Education Week). The inconsistency in perspectives indicates that while some districts may face real logistical issues, others have successfully navigated these concerns."
+    },
+    "output_length_chars": 518,
+    "output_tokens_estimated": 129,
+    "cost_usd": 0.00015345
+  }
+]

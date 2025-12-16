@@ -1,0 +1,1411 @@
+{
+  "extracted_claims": {
+    "claims": [
+      {
+        "text": "A compound found in crushed garlic cloves can kill cancer cells.",
+        "confidence": 0.9,
+        "category": "scientific",
+        "importance": 0.8,
+        "context": "Dr. Kushula discusses garlic's effects on cancer.",
+        "transcript_char_start": 579,
+        "transcript_char_end": 651,
+        "transcript_match_score": 0.9333333333333333
+      },
+      {
+        "text": "Auine can disrupt the intracellular machinery in cancer cells.",
+        "confidence": 0.85,
+        "category": "scientific",
+        "importance": 0.8,
+        "context": "Mechanism of how auine affects cancer cells.",
+        "transcript_char_start": 1713,
+        "transcript_char_end": 1775,
+        "transcript_match_score": 0.8780487804878049
+      },
+      {
+        "text": "Scientists at UCT uncovered garlic's cancer-fighting properties.",
+        "confidence": 0.85,
+        "category": "scientific",
+        "importance": 0.7,
+        "context": "Research by UCT lecturer Dr. Katherine Kushula.",
+        "transcript_char_start": 424,
+        "transcript_char_end": 472,
+        "transcript_match_score": 0.8468468468468469
+      },
+      {
+        "text": "Heating crushed garlic transforms allicin into a cancer-fighting compound called auine.",
+        "confidence": 0.9,
+        "category": "scientific",
+        "importance": 0.7,
+        "context": "Details on the chemical transformation in garlic.",
+        "transcript_char_start": 1459,
+        "transcript_char_end": 1538,
+        "transcript_match_score": 0.6787878787878788
+      },
+      {
+        "text": "The compound allicin is released when garlic cloves are crushed.",
+        "confidence": 0.9,
+        "category": "scientific",
+        "importance": 0.6,
+        "context": "Explaining the chemistry of garlic preparation.",
+        "transcript_char_start": 1304,
+        "transcript_char_end": 1364,
+        "transcript_match_score": 0.6666666666666666
+      },
+      {
+        "text": "Populations consuming high quantities of garlic have lower incidence of gastrointestinal cancer.",
+        "confidence": 0.85,
+        "category": "statistical",
+        "importance": 0.6,
+        "context": "Epidemiological evidence linking garlic consumption to cancer rates.",
+        "transcript_char_start": 2425,
+        "transcript_char_end": 2517,
+        "transcript_match_score": 0.9197860962566845
+      },
+      {
+        "text": "Garlic has both culinary and medical benefits.",
+        "confidence": 0.9,
+        "category": "scientific",
+        "importance": 0.3,
+        "context": "General statement about garlic's uses.",
+        "transcript_char_start": 327,
+        "transcript_char_end": 372,
+        "transcript_match_score": 1.0
+      }
+    ],
+    "total_count": 7
+  },
+  "final_output": {
+    "extracted_claims": {
+      "claims": [
+        {
+          "text": "A compound found in crushed garlic cloves can kill cancer cells.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.8,
+          "context": "Dr. Kushula discusses garlic's effects on cancer.",
+          "transcript_char_start": 579,
+          "transcript_char_end": 651,
+          "transcript_match_score": 0.9333333333333333
+        },
+        {
+          "text": "Auine can disrupt the intracellular machinery in cancer cells.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.8,
+          "context": "Mechanism of how auine affects cancer cells.",
+          "transcript_char_start": 1713,
+          "transcript_char_end": 1775,
+          "transcript_match_score": 0.8780487804878049
+        },
+        {
+          "text": "Scientists at UCT uncovered garlic's cancer-fighting properties.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Research by UCT lecturer Dr. Katherine Kushula.",
+          "transcript_char_start": 424,
+          "transcript_char_end": 472,
+          "transcript_match_score": 0.8468468468468469
+        },
+        {
+          "text": "Heating crushed garlic transforms allicin into a cancer-fighting compound called auine.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Details on the chemical transformation in garlic.",
+          "transcript_char_start": 1459,
+          "transcript_char_end": 1538,
+          "transcript_match_score": 0.6787878787878788
+        },
+        {
+          "text": "The compound allicin is released when garlic cloves are crushed.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Explaining the chemistry of garlic preparation.",
+          "transcript_char_start": 1304,
+          "transcript_char_end": 1364,
+          "transcript_match_score": 0.6666666666666666
+        },
+        {
+          "text": "Populations consuming high quantities of garlic have lower incidence of gastrointestinal cancer.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Epidemiological evidence linking garlic consumption to cancer rates.",
+          "transcript_char_start": 2425,
+          "transcript_char_end": 2517,
+          "transcript_match_score": 0.9197860962566845
+        },
+        {
+          "text": "Garlic has both culinary and medical benefits.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.3,
+          "context": "General statement about garlic's uses.",
+          "transcript_char_start": 327,
+          "transcript_char_end": 372,
+          "transcript_match_score": 1.0
+        }
+      ],
+      "total_count": 7
+    },
+    "claim_reports": [
+      {
+        "claim_text": "Garlic has both culinary and medical benefits.",
+        "claim_confidence": 0.9,
+        "claim_category": "scientific",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Garlic - University of Rochester Medical Center",
+              "url": "https://www.urmc.rochester.edu/encyclopedia/Content?contentTypeID=19&ContentID=Garlic",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (39.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence supports the claim that garlic has both culinary and medical benefits, highlighting its use as a nutraceutical spice with various health-promoting properties and its historical medicinal applications.",
+              "snippet": "Garlic has been used as an antiseptic, antibacterial, and antifungal agent. It may help the body resist or destroy viruses and other microorganisms."
+            },
+            {
+              "title": "11 Proven Health Benefits of Garlic - Healthline",
+              "url": "https://www.healthline.com/nutrition/11-proven-health-benefits-of-garlic",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence supports the claim that garlic has both culinary and medical benefits, highlighting its use in cooking and its proven health-promoting effects against various diseases through its bioactive compounds.",
+              "snippet": "Garlic may have some real health benefits, such as protection against the common cold and the potential to help lower blood pressure and cholesterol levels."
+            }
+          ],
+          "mixed": [
+            {
+              "title": "Potential Health Benefit of Garlic Based on Human Intervention ...",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7402177/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "mixed",
+              "evidence_summary": "The evidence indicates that garlic has medical benefits, particularly in reducing the risk of various health conditions such as atherosclerosis and hypertension, which supports the claim of its medical benefits. However, the culinary benefits are not addressed in the provided content.",
+              "snippet": "Based on current research, garlic can significantly reduce the risk of atherosclerosis, hypertension, diabetes, hyperlipidemia, myocardial infarction, and ..."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "6 Garlic Benefits To Boost Your Health - Health Cleveland Clinic",
+              "url": "https://health.clevelandclinic.org/6-surprising-ways-garlic-boosts-your-health",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (27.9 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Is garlic good for you? \u00b7 Boosts immunity \u00b7 Works as an anti-inflammatory \u00b7 Improves heart health \u00b7 Clears up skin \u00b7 Protects your food \u00b7 Treats athlete's foot.",
+              "snippet": "Is garlic good for you? \u00b7 Boosts immunity \u00b7 Works as an anti-inflammatory \u00b7 Improves heart health \u00b7 Clears up skin \u00b7 Protects your food \u00b7 Treats athlete's foot."
+            }
+          ]
+        },
+        "total_sources": 4,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 16.08,
+        "timestamp_confidence": 1.0
+      },
+      {
+        "claim_text": "A compound found in crushed garlic cloves can kill cancer cells.",
+        "claim_confidence": 0.9,
+        "claim_category": "scientific",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "Updates on the anticancer potential of garlic organosulfur ... - NIH",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10067574/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "These organosulfur compounds encourage cell death, prevent breast cancer formation, and slow the growth of cancerous cells. There are very ...",
+              "snippet": "These organosulfur compounds encourage cell death, prevent breast cancer formation, and slow the growth of cancerous cells. There are very ..."
+            },
+            {
+              "title": "A novel therapeutic anticancer property of raw garlic extract via ...",
+              "url": "https://www.nature.com/articles/s41420-018-0122-x",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Prior studies suggest a possibility that the anticancer property of garlic is more effective only when exposed directly to cancer cells than ...",
+              "snippet": "Prior studies suggest a possibility that the anticancer property of garlic is more effective only when exposed directly to cancer cells than ..."
+            },
+            {
+              "title": "Allicin purified from fresh garlic cloves induces apoptosis in colon ...",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/20924970/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Allicin purified from fresh garlic cloves induces apoptosis in colon cancer cells via Nrf2 ... These results suggest that Nrf2 mediates the allicin-induced ...",
+              "snippet": "Allicin purified from fresh garlic cloves induces apoptosis in colon cancer cells via Nrf2 ... These results suggest that Nrf2 mediates the allicin-induced ..."
+            },
+            {
+              "title": "Does Garlic Reduce Your Risk of Cancer? - Verywell Health",
+              "url": "https://www.verywellhealth.com/garlic-reduces-your-cancer-risk-430030",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "It has been shown to have antibacterial and antioxidant properties. 1 It has also been linked to a reduced risk of developing certain cancers.",
+              "snippet": "It has been shown to have antibacterial and antioxidant properties. 1 It has also been linked to a reduced risk of developing certain cancers."
+            },
+            {
+              "title": "Phytochemicals of garlic: Promising candidates for cancer therapy",
+              "url": "https://www.sciencedirect.com/science/article/pii/S0753332219353521",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The main sulfur compound in both raw garlic and garlic powder is alliin. On average, garlic cloves contain 8 g/kg alliin. When raw garlic is chopped or crushed, ...",
+              "snippet": "The main sulfur compound in both raw garlic and garlic powder is alliin. On average, garlic cloves contain 8 g/kg alliin. When raw garlic is chopped or crushed, ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 31.679,
+        "timestamp_confidence": 0.9333333333333333
+      },
+      {
+        "claim_text": "Auine can disrupt the intracellular machinery in cancer cells.",
+        "claim_confidence": 0.85,
+        "claim_category": "scientific",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "Can the Tumor Microenvironment Alter Ion Channels? Unraveling ...",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11988140/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Despite the raised ATP demand, intracellular ATP concentrations are typically elevated in cancer cells; however, disruptions in ATP production can induce cancer ...",
+              "snippet": "Despite the raised ATP demand, intracellular ATP concentrations are typically elevated in cancer cells; however, disruptions in ATP production can induce cancer ..."
+            },
+            {
+              "title": "Emerging Roles of Urine-Derived Components for the Management ...",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7865365/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Urine is an underused resource of biological components shed from bladder tumors, such as exfoliated cells and extracellular vesicles, that could serve as ...",
+              "snippet": "Urine is an underused resource of biological components shed from bladder tumors, such as exfoliated cells and extracellular vesicles, that could serve as ..."
+            },
+            {
+              "title": "In vitro cytotoxicity of human urine and its potential toxic parameters ...",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9581372/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "According to in vitro experiments, both CaB and non-CaB urines had comparable effect on cell toxicity, proliferation, adhesion, invasion and colonies formation ...",
+              "snippet": "According to in vitro experiments, both CaB and non-CaB urines had comparable effect on cell toxicity, proliferation, adhesion, invasion and colonies formation ..."
+            },
+            {
+              "title": "Blood- and Urine-Based Liquid Biopsy for Early-Stage Cancer ...",
+              "url": "https://www.sciencedirect.com/science/article/pii/S1535947623001147",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Our results showed that both plasma and urine proteomes could reflect functional changes in tumor tissue. In plasma, cytoskeletal proteins and metabolic enzymes ...",
+              "snippet": "Our results showed that both plasma and urine proteomes could reflect functional changes in tumor tissue. In plasma, cytoskeletal proteins and metabolic enzymes ..."
+            },
+            {
+              "title": "Hijacking cellular machinery within cancer cells to promote ...",
+              "url": "https://www.news-medical.net/news/20251103/Hijacking-cellular-machinery-within-cancer-cells-to-promote-antitumor-immunity.aspx",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The study demonstrated that inducing cancer cells to produce an immune-activating molecule led to reduced tumor growth in preclinical models.",
+              "snippet": "The study demonstrated that inducing cancer cells to produce an immune-activating molecule led to reduced tumor growth in preclinical models."
+            },
+            {
+              "title": "Inhibiting intracellular CD28 in cancer cells enhances ... - PubMed",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/39672166/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Therefore, disrupting cancer cell CD28-mediated immune escape may provide a potential approach to improve breast cancer immunotherapy.",
+              "snippet": "Therefore, disrupting cancer cell CD28-mediated immune escape may provide a potential approach to improve breast cancer immunotherapy."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 93.439,
+        "timestamp_confidence": 0.8780487804878049
+      },
+      {
+        "claim_text": "Scientists at UCT uncovered garlic's cancer-fighting properties.",
+        "claim_confidence": 0.85,
+        "claim_category": "scientific",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "The Immunomodulation and Anti-Inflammatory Effects of Garlic ...",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3915757/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Garlic has been suggested to have both cancer-preventive potential as well as significant enhancing effects on the immune system.",
+              "snippet": "Garlic has been suggested to have both cancer-preventive potential as well as significant enhancing effects on the immune system."
+            },
+            {
+              "title": "(PDF) Garlic-derived anticancer agents: Structure and biological ...",
+              "url": "https://www.researchgate.net/publication/41167329_Garlic-derived_anticancer_agents_Structure_and_biological_activity_of_ajoene",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Garlic-derived anticancer agents: Structure and biological activity of ajoene ; Catherine Kaschula at University of Cape Town. Catherine Kaschula.",
+              "snippet": "Garlic-derived anticancer agents: Structure and biological activity of ajoene ; Catherine Kaschula at University of Cape Town. Catherine Kaschula."
+            },
+            {
+              "title": "Garlic-derived anticancer agents: structure and biological activity of ...",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/20108330/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Garlic has been used throughout the centuries to treat infections, heart disease, and cancer. Ajoene is one of the main compounds formed from heating crushed ...",
+              "snippet": "Garlic has been used throughout the centuries to treat infections, heart disease, and cancer. Ajoene is one of the main compounds formed from heating crushed ..."
+            },
+            {
+              "title": "The garlic compound ajoene covalently binds vimentin, disrupts the ...",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/30894168/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The garlic-derived phytochemical ajoene targets and covalently modifies vimentin in cancer cells by S-thiolating Cys-328.",
+              "snippet": "The garlic-derived phytochemical ajoene targets and covalently modifies vimentin in cancer cells by S-thiolating Cys-328."
+            },
+            {
+              "title": "Can Garlic prevent cancer? - YouTube",
+              "url": "https://www.youtube.com/watch?v=sO6Po_RItl8",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (20.8 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "... UCT lecturer Dr. Catherine Kaschula and her team have established how a compound found in crushed cloves of garlic killed cancer cells ...",
+              "snippet": "... UCT lecturer Dr. Catherine Kaschula and her team have established how a compound found in crushed cloves of garlic killed cancer cells ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 23.039,
+        "timestamp_confidence": 0.8468468468468469
+      },
+      {
+        "claim_text": "Heating crushed garlic transforms allicin into a cancer-fighting compound called auine.",
+        "claim_confidence": 0.9,
+        "claim_category": "scientific",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "The evidence regarding the claim that heating crushed garlic transforms allicin into auine, a cancer-fighting compound, is unclear. While some studies indicate that allicin has anticancer properties, others suggest that heating garlic can diminish its anti-cancer activity. There is no consensus on the transformation of allicin into auine or its effectiveness against cancer.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "Allicin in Digestive System Cancer: From Biological Effects to ...",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9234177/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Allicin is the main active ingredient in freshly-crushed garlic and some other allium plants, and its anticancer effect on cancers of digestive system has been ...",
+              "snippet": "Allicin is the main active ingredient in freshly-crushed garlic and some other allium plants, and its anticancer effect on cancers of digestive system has been ..."
+            },
+            {
+              "title": "Effect of Thermal Treatment on the Antiproliferative and Antioxidant ...",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12141922/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "The heating compromised the ability of heated garlic homogenate to inhibit the proliferation of human ovarian cancer cells of two different ...",
+              "snippet": "The heating compromised the ability of heated garlic homogenate to inhibit the proliferation of human ovarian cancer cells of two different ..."
+            },
+            {
+              "title": "Chopping And Cooking Affect Garlic's Anti-Cancer Activity",
+              "url": "https://www.sciencedaily.com/releases/1998/11/981117075803.htm",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Penn State researchers have shown that microwave heating or roasting garlic can diminish or destroy its anti-cancer activity - unless the herb is chopped or ...",
+              "snippet": "Penn State researchers have shown that microwave heating or roasting garlic can diminish or destroy its anti-cancer activity - unless the herb is chopped or ..."
+            },
+            {
+              "title": "Does Garlic Reduce Your Risk of Cancer? - Verywell Health",
+              "url": "https://www.verywellhealth.com/garlic-reduces-your-cancer-risk-430030",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Eating raw or lightly cooked garlic may help lower cancer risk. \u00b7 Garlic contains compounds that can stop cancer cells from growing. \u00b7 More ...",
+              "snippet": "Eating raw or lightly cooked garlic may help lower cancer risk. \u00b7 Garlic contains compounds that can stop cancer cells from growing. \u00b7 More ..."
+            },
+            {
+              "title": "Garlic and Cancer, Benefits of White & Black Garlic - AICR",
+              "url": "https://www.aicr.org/cancer-prevention/food-facts/garlic/",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (31.0 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Laboratory research shows that allium compounds in garlic offer anti-cancer activity, but support for garlic lowering cancer risk is lacking in human studies.",
+              "snippet": "Laboratory research shows that allium compounds in garlic offer anti-cancer activity, but support for garlic lowering cancer risk is lacking in human studies."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 76.0,
+        "timestamp_confidence": 0.6787878787878788
+      },
+      {
+        "claim_text": "The compound allicin is released when garlic cloves are crushed.",
+        "claim_confidence": 0.9,
+        "claim_category": "scientific",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "Allicin, the Odor of Freshly Crushed Garlic - PubMed Central - NIH",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8001868/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Allicin gives crushed garlic its characteristic odor, is membrane permeable and readily taken up by exposed cells.",
+              "snippet": "Allicin gives crushed garlic its characteristic odor, is membrane permeable and readily taken up by exposed cells."
+            },
+            {
+              "title": "Garlic | Linus Pauling Institute | Oregon State University",
+              "url": "https://lpi.oregonstate.edu/mic/food-beverages/garlic",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (26.8 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Garlic cloves yield about 2.5 to 4.5 mg of allicin per gram of fresh weight when crushed. One fresh garlic clove weighs 2 to 4 g (5).",
+              "snippet": "Garlic cloves yield about 2.5 to 4.5 mg of allicin per gram of fresh weight when crushed. One fresh garlic clove weighs 2 to 4 g (5)."
+            },
+            {
+              "title": "extraction of allicin - ResearchGate",
+              "url": "https://www.researchgate.net/post/extraction-of-allicin",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The easiest way to extract it is: 1. Using a mortar and pistle, crush cloves of garlic and transfer the contents (including any resulting garlic oil) into a ...",
+              "snippet": "The easiest way to extract it is: 1. Using a mortar and pistle, crush cloves of garlic and transfer the contents (including any resulting garlic oil) into a ..."
+            },
+            {
+              "title": "Fresh crushed garlic exhibits superior allicin and pyruvic acid ...",
+              "url": "https://www.sciencedirect.com/science/article/pii/S277250222500160X",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Garlic has a weak, undetectable odor until it is peeled. When peeled, sliced, or crushed, it forms a compound called allicin, which releases a strong odor ...",
+              "snippet": "Garlic has a weak, undetectable odor until it is peeled. When peeled, sliced, or crushed, it forms a compound called allicin, which releases a strong odor ..."
+            },
+            {
+              "title": "Someone could explain how allicin is created whilst crushing garlic ...",
+              "url": "https://www.reddit.com/r/nutrition/comments/9zqrvu/someone_could_explain_how_allicin_is_created/",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (20.6 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Allicin is created by the action of the alliinase enzyme on alliin. These two substances are found in seperate parts of the garlic clove and are mixed together ...",
+              "snippet": "Allicin is created by the action of the alliinase enzyme on alliin. These two substances are found in seperate parts of the garlic clove and are mixed together ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 69.04,
+        "timestamp_confidence": 0.6666666666666666
+      },
+      {
+        "claim_text": "Populations consuming high quantities of garlic have lower incidence of gastrointestinal cancer.",
+        "claim_confidence": 0.85,
+        "claim_category": "statistical",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "No reliable evidence sources were found for this claim. This may indicate the claim is difficult to verify, too specific, or references information not available in public sources.",
+        "evidence_by_stance": {},
+        "total_sources": 0,
+        "evidence_quality_score": 0.0,
+        "timestamp_hint": 130.16,
+        "timestamp_confidence": 0.9197860962566845
+      }
+    ],
+    "transcript_data": {
+      "text": "It's my feelgood breakfast show. A feel good breakfast show. This is Espresso. Thank you so much for joining us on our live show this morning. Now before the break, I said health properties and there might be something in it for all of us when we talk about garlic. Now aside from the fact that it tastes incredible. We all know that garlic has both culinary and medical benefits. But scientists at the UC tea uh they say that they've uncovered garlic's cancer fighting properties. So in this new research UCT lecturer Dr. Katherine Kushula and her team, they've established how a compound, a compound found in crushed garlic cloves can actually kill cancer cells. And with us in studio to talk about it is Dr. Kula herself. Dr. Welcome to the show. Hi, lovely to be here. I'm excited about this because we're saying cancer killing properties from a compound that's found in crushed garlic cloves. Now, I want to get down to this. Why it needs to be crushed? Does it need to be heated? How effective is it in killing cancer? I mean what what are we talking about here? Well, the thing is I suppose because we are scientists and we're coming from the chemistry department, we actually want to understand what the compounds are that are present in garlic that are having this effect. And in actual fact, when the clove is first crushed, there's a compound allisonin which is released which is more antibacterial properties. But this compound actually changes over time when the preparation is heated as in a food preparation into this cancer fighting compound called auine. And it's got dulfide bonds in it, which means it also has this potent garlic smell. And we've actually shown that auine is able to enter into the cancer cell and it's actually able to disrupt the intracellular machinery in the cancer cell and bring about a toxic effect and kill that cancer cell. I'm gobsmacked that we're going back to natural remedies. I mean, you guys are scientists. We expect you to work with chemicals and all kinds of crazy stuff, but here we're talking about stuff that's in our kitchen cupboards. Can this property or auine like you you mentioned can it fight any type of cancer or is it only effective in some? Well, it's been shown to be cytotoxic to a range of different types of cancers. Although I think what's more relevant to the human condition because it's a dietary compound and there's a lot of epidemiological um evidence to show that actually populations of people who consume high quantities of garlic have lower incidence of gastrointestinal cancer specifically of the stomach and colon. So um I would think that you know you would probably obtain the highest concentration of this compound through a meal which has been prepared with the akawine in it. In other words, being cooked and probably exposure to um you know, oral exposure to gastrointestinal cancers would probably have a greater effect. Although we have shown in the laboratory that it is also able um to act against other cancer cell types, but I think for the human condition, it's probably more gastrointestinal tract. It's exciting because now that means we can add more garlic to our food because you're saying that we need to do it while cooking. This is also the first time that you see this because like you said, scientists wants to see how the auin or how the garlic properties actually work. What's the best way to try and consume it? I mean, take us back there. Should it always be crushed or cooked? Yes. Well, if you want to get this cancer fighting chemical, and I say it's a chemical, it's a natural compound, but it is still a chemical, and it's present in your garlic. You actually need to take your crushed clove and actually you need to take your clove, crush it, and then in order to achieve um this transformation of what's in the crushed clove into what's what's going to be present in your food preparation, you actually need to heat the preparation and you actually get a chemical transformation which takes place between a compound which is produced in the crush clove and then it gets transformed through heating into this aching compound. So um the the preparation would involve cooking of the clove which I think is actually a process which we do do when we prepare. So possibly we knew about this in some way. I don't know in some way or another doctor it's exciting stuff and it's exciting that even scientists are coming back to our kitchen to show us how to prepare things and to make things better. So thank you so much for joining us on our show today. Well there you heard it an excuse to add more garlic to that pizza. It's really good news. So make sure you try some on your next dinner date especially if you know him for the first time. Okay, but there's loads more happening on our feelood breakfast show. In fact, even though it can leave a smile the next day, we all know that garlic is so good for us. And it looks like Andrea has more details on this.",
+      "segments": [
+        {
+          "text": "It's my feelgood breakfast show.",
+          "start": 0.16,
+          "duration": 5.84
+        },
+        {
+          "text": "A feel good breakfast show. This is",
+          "start": 4.16,
+          "duration": 3.599
+        },
+        {
+          "text": "Espresso. Thank you so much for joining",
+          "start": 6.0,
+          "duration": 3.519
+        },
+        {
+          "text": "us on our live show this morning. Now",
+          "start": 7.759,
+          "duration": 3.121
+        },
+        {
+          "text": "before the break, I said health",
+          "start": 9.519,
+          "duration": 2.881
+        },
+        {
+          "text": "properties and there might be something",
+          "start": 10.88,
+          "duration": 3.2
+        },
+        {
+          "text": "in it for all of us when we talk about",
+          "start": 12.4,
+          "duration": 3.68
+        },
+        {
+          "text": "garlic. Now aside from the fact that it",
+          "start": 14.08,
+          "duration": 3.52
+        },
+        {
+          "text": "tastes incredible. We all know that",
+          "start": 16.08,
+          "duration": 4.24
+        },
+        {
+          "text": "garlic has both culinary and medical",
+          "start": 17.6,
+          "duration": 5.439
+        },
+        {
+          "text": "benefits. But scientists at the UC tea",
+          "start": 20.32,
+          "duration": 4.24
+        },
+        {
+          "text": "uh they say that they've uncovered",
+          "start": 23.039,
+          "duration": 3.681
+        },
+        {
+          "text": "garlic's cancer fighting properties. So",
+          "start": 24.56,
+          "duration": 4.959
+        },
+        {
+          "text": "in this new research UCT lecturer Dr.",
+          "start": 26.72,
+          "duration": 4.959
+        },
+        {
+          "text": "Katherine Kushula and her team, they've",
+          "start": 29.519,
+          "duration": 4.401
+        },
+        {
+          "text": "established how a compound, a compound",
+          "start": 31.679,
+          "duration": 4.641
+        },
+        {
+          "text": "found in crushed garlic cloves can",
+          "start": 33.92,
+          "duration": 4.08
+        },
+        {
+          "text": "actually kill cancer cells. And with us",
+          "start": 36.32,
+          "duration": 3.759
+        },
+        {
+          "text": "in studio to talk about it is Dr. Kula",
+          "start": 38.0,
+          "duration": 3.92
+        },
+        {
+          "text": "herself. Dr. Welcome to the show. Hi,",
+          "start": 40.079,
+          "duration": 3.841
+        },
+        {
+          "text": "lovely to be here. I'm excited about",
+          "start": 41.92,
+          "duration": 4.24
+        },
+        {
+          "text": "this because we're saying cancer killing",
+          "start": 43.92,
+          "duration": 4.799
+        },
+        {
+          "text": "properties from a compound that's found",
+          "start": 46.16,
+          "duration": 5.04
+        },
+        {
+          "text": "in crushed garlic cloves. Now, I want to",
+          "start": 48.719,
+          "duration": 4.081
+        },
+        {
+          "text": "get down to this. Why it needs to be",
+          "start": 51.2,
+          "duration": 3.92
+        },
+        {
+          "text": "crushed? Does it need to be heated? How",
+          "start": 52.8,
+          "duration": 4.56
+        },
+        {
+          "text": "effective is it in killing cancer? I",
+          "start": 55.12,
+          "duration": 3.599
+        },
+        {
+          "text": "mean what what are we talking about",
+          "start": 57.36,
+          "duration": 3.28
+        },
+        {
+          "text": "here? Well, the thing is I suppose",
+          "start": 58.719,
+          "duration": 3.281
+        },
+        {
+          "text": "because we are scientists and we're",
+          "start": 60.64,
+          "duration": 3.04
+        },
+        {
+          "text": "coming from the chemistry department, we",
+          "start": 62.0,
+          "duration": 3.439
+        },
+        {
+          "text": "actually want to understand what the",
+          "start": 63.68,
+          "duration": 3.52
+        },
+        {
+          "text": "compounds are that are present in garlic",
+          "start": 65.439,
+          "duration": 3.601
+        },
+        {
+          "text": "that are having this effect. And in",
+          "start": 67.2,
+          "duration": 3.44
+        },
+        {
+          "text": "actual fact, when the clove is first",
+          "start": 69.04,
+          "duration": 3.28
+        },
+        {
+          "text": "crushed, there's a compound allisonin",
+          "start": 70.64,
+          "duration": 3.2
+        },
+        {
+          "text": "which is released which is more",
+          "start": 72.32,
+          "duration": 3.68
+        },
+        {
+          "text": "antibacterial properties. But this",
+          "start": 73.84,
+          "duration": 4.8
+        },
+        {
+          "text": "compound actually changes over time when",
+          "start": 76.0,
+          "duration": 5.28
+        },
+        {
+          "text": "the preparation is heated as in a food",
+          "start": 78.64,
+          "duration": 4.88
+        },
+        {
+          "text": "preparation into this cancer fighting",
+          "start": 81.28,
+          "duration": 5.199
+        },
+        {
+          "text": "compound called auine. And it's got",
+          "start": 83.52,
+          "duration": 5.12
+        },
+        {
+          "text": "dulfide bonds in it, which means it also",
+          "start": 86.479,
+          "duration": 4.721
+        },
+        {
+          "text": "has this potent garlic smell. And we've",
+          "start": 88.64,
+          "duration": 4.799
+        },
+        {
+          "text": "actually shown that auine is able to",
+          "start": 91.2,
+          "duration": 4.16
+        },
+        {
+          "text": "enter into the cancer cell and it's",
+          "start": 93.439,
+          "duration": 3.201
+        },
+        {
+          "text": "actually able to disrupt the",
+          "start": 95.36,
+          "duration": 3.119
+        },
+        {
+          "text": "intracellular machinery in the cancer",
+          "start": 96.64,
+          "duration": 4.159
+        },
+        {
+          "text": "cell and bring about a toxic effect and",
+          "start": 98.479,
+          "duration": 4.32
+        },
+        {
+          "text": "kill that cancer cell. I'm gobsmacked",
+          "start": 100.799,
+          "duration": 3.68
+        },
+        {
+          "text": "that we're going back to natural",
+          "start": 102.799,
+          "duration": 3.121
+        },
+        {
+          "text": "remedies. I mean, you guys are",
+          "start": 104.479,
+          "duration": 3.121
+        },
+        {
+          "text": "scientists. We expect you to work with",
+          "start": 105.92,
+          "duration": 3.44
+        },
+        {
+          "text": "chemicals and all kinds of crazy stuff,",
+          "start": 107.6,
+          "duration": 2.879
+        },
+        {
+          "text": "but here we're talking about stuff",
+          "start": 109.36,
+          "duration": 3.28
+        },
+        {
+          "text": "that's in our kitchen cupboards. Can",
+          "start": 110.479,
+          "duration": 4.881
+        },
+        {
+          "text": "this property or auine like you you",
+          "start": 112.64,
+          "duration": 4.799
+        },
+        {
+          "text": "mentioned can it fight any type of",
+          "start": 115.36,
+          "duration": 4.88
+        },
+        {
+          "text": "cancer or is it only effective in some?",
+          "start": 117.439,
+          "duration": 5.521
+        },
+        {
+          "text": "Well, it's been shown to be cytotoxic to",
+          "start": 120.24,
+          "duration": 4.64
+        },
+        {
+          "text": "a range of different types of cancers.",
+          "start": 122.96,
+          "duration": 3.839
+        },
+        {
+          "text": "Although I think what's more relevant to",
+          "start": 124.88,
+          "duration": 3.439
+        },
+        {
+          "text": "the human condition because it's a",
+          "start": 126.799,
+          "duration": 3.361
+        },
+        {
+          "text": "dietary compound and there's a lot of",
+          "start": 128.319,
+          "duration": 4.801
+        },
+        {
+          "text": "epidemiological um evidence to show that",
+          "start": 130.16,
+          "duration": 4.88
+        },
+        {
+          "text": "actually populations of people who",
+          "start": 133.12,
+          "duration": 4.08
+        },
+        {
+          "text": "consume high quantities of garlic have",
+          "start": 135.04,
+          "duration": 4.16
+        },
+        {
+          "text": "lower incidence of gastrointestinal",
+          "start": 137.2,
+          "duration": 3.759
+        },
+        {
+          "text": "cancer specifically of the stomach and",
+          "start": 139.2,
+          "duration": 4.399
+        },
+        {
+          "text": "colon. So um I would think that you know",
+          "start": 140.959,
+          "duration": 4.081
+        },
+        {
+          "text": "you would probably obtain the highest",
+          "start": 143.599,
+          "duration": 3.441
+        },
+        {
+          "text": "concentration of this compound through a",
+          "start": 145.04,
+          "duration": 3.6
+        },
+        {
+          "text": "meal which has been prepared with the",
+          "start": 147.04,
+          "duration": 3.279
+        },
+        {
+          "text": "akawine in it. In other words, being",
+          "start": 148.64,
+          "duration": 4.64
+        },
+        {
+          "text": "cooked and probably exposure to um you",
+          "start": 150.319,
+          "duration": 6.161
+        },
+        {
+          "text": "know, oral exposure to gastrointestinal",
+          "start": 153.28,
+          "duration": 4.8
+        },
+        {
+          "text": "cancers would probably have a greater",
+          "start": 156.48,
+          "duration": 3.44
+        },
+        {
+          "text": "effect. Although we have shown in the",
+          "start": 158.08,
+          "duration": 4.159
+        },
+        {
+          "text": "laboratory that it is also able um to",
+          "start": 159.92,
+          "duration": 4.399
+        },
+        {
+          "text": "act against other cancer cell types, but",
+          "start": 162.239,
+          "duration": 3.601
+        },
+        {
+          "text": "I think for the human condition, it's",
+          "start": 164.319,
+          "duration": 3.521
+        },
+        {
+          "text": "probably more gastrointestinal tract.",
+          "start": 165.84,
+          "duration": 3.92
+        },
+        {
+          "text": "It's exciting because now that means we",
+          "start": 167.84,
+          "duration": 3.679
+        },
+        {
+          "text": "can add more garlic to our food because",
+          "start": 169.76,
+          "duration": 3.199
+        },
+        {
+          "text": "you're saying that we need to do it",
+          "start": 171.519,
+          "duration": 2.961
+        },
+        {
+          "text": "while cooking. This is also the first",
+          "start": 172.959,
+          "duration": 3.121
+        },
+        {
+          "text": "time that you see this because like you",
+          "start": 174.48,
+          "duration": 3.68
+        },
+        {
+          "text": "said, scientists wants to see how the",
+          "start": 176.08,
+          "duration": 4.239
+        },
+        {
+          "text": "auin or how the garlic properties",
+          "start": 178.16,
+          "duration": 4.56
+        },
+        {
+          "text": "actually work. What's the best way to",
+          "start": 180.319,
+          "duration": 4.081
+        },
+        {
+          "text": "try and consume it? I mean, take us back",
+          "start": 182.72,
+          "duration": 3.72
+        },
+        {
+          "text": "there. Should it always be crushed or",
+          "start": 184.4,
+          "duration": 4.32
+        },
+        {
+          "text": "cooked? Yes. Well, if you want to get",
+          "start": 186.44,
+          "duration": 4.76
+        },
+        {
+          "text": "this cancer fighting chemical, and I say",
+          "start": 188.72,
+          "duration": 3.92
+        },
+        {
+          "text": "it's a chemical, it's a natural",
+          "start": 191.2,
+          "duration": 2.959
+        },
+        {
+          "text": "compound, but it is still a chemical,",
+          "start": 192.64,
+          "duration": 3.519
+        },
+        {
+          "text": "and it's present in your garlic. You",
+          "start": 194.159,
+          "duration": 3.601
+        },
+        {
+          "text": "actually need to take your crushed clove",
+          "start": 196.159,
+          "duration": 2.961
+        },
+        {
+          "text": "and actually you need to take your",
+          "start": 197.76,
+          "duration": 3.759
+        },
+        {
+          "text": "clove, crush it, and then in order to",
+          "start": 199.12,
+          "duration": 4.8
+        },
+        {
+          "text": "achieve um this transformation of what's",
+          "start": 201.519,
+          "duration": 4.8
+        },
+        {
+          "text": "in the crushed clove into what's what's",
+          "start": 203.92,
+          "duration": 3.76
+        },
+        {
+          "text": "going to be present in your food",
+          "start": 206.319,
+          "duration": 3.121
+        },
+        {
+          "text": "preparation, you actually need to heat",
+          "start": 207.68,
+          "duration": 4.32
+        },
+        {
+          "text": "the preparation and you actually get a",
+          "start": 209.44,
+          "duration": 4.24
+        },
+        {
+          "text": "chemical transformation which takes",
+          "start": 212.0,
+          "duration": 3.2
+        },
+        {
+          "text": "place between a compound which is",
+          "start": 213.68,
+          "duration": 3.44
+        },
+        {
+          "text": "produced in the crush clove and then it",
+          "start": 215.2,
+          "duration": 4.399
+        },
+        {
+          "text": "gets transformed through heating into",
+          "start": 217.12,
+          "duration": 5.199
+        },
+        {
+          "text": "this aching compound. So um the the",
+          "start": 219.599,
+          "duration": 4.401
+        },
+        {
+          "text": "preparation would involve cooking of the",
+          "start": 222.319,
+          "duration": 3.681
+        },
+        {
+          "text": "clove which I think is actually a",
+          "start": 224.0,
+          "duration": 4.08
+        },
+        {
+          "text": "process which we do do when we prepare.",
+          "start": 226.0,
+          "duration": 4.72
+        },
+        {
+          "text": "So possibly we knew about this in some",
+          "start": 228.08,
+          "duration": 4.56
+        },
+        {
+          "text": "way. I don't know in some way or another",
+          "start": 230.72,
+          "duration": 3.76
+        },
+        {
+          "text": "doctor it's exciting stuff and it's",
+          "start": 232.64,
+          "duration": 3.76
+        },
+        {
+          "text": "exciting that even scientists are coming",
+          "start": 234.48,
+          "duration": 3.679
+        },
+        {
+          "text": "back to our kitchen to show us how to",
+          "start": 236.4,
+          "duration": 3.039
+        },
+        {
+          "text": "prepare things and to make things",
+          "start": 238.159,
+          "duration": 2.8
+        },
+        {
+          "text": "better. So thank you so much for joining",
+          "start": 239.439,
+          "duration": 2.88
+        },
+        {
+          "text": "us on our show today. Well there you",
+          "start": 240.959,
+          "duration": 3.681
+        },
+        {
+          "text": "heard it an excuse to add more garlic to",
+          "start": 242.319,
+          "duration": 4.56
+        },
+        {
+          "text": "that pizza. It's really good news. So",
+          "start": 244.64,
+          "duration": 3.679
+        },
+        {
+          "text": "make sure you try some on your next",
+          "start": 246.879,
+          "duration": 2.801
+        },
+        {
+          "text": "dinner date especially if you know him",
+          "start": 248.319,
+          "duration": 3.441
+        },
+        {
+          "text": "for the first time. Okay, but there's",
+          "start": 249.68,
+          "duration": 3.68
+        },
+        {
+          "text": "loads more happening on our feelood",
+          "start": 251.76,
+          "duration": 3.759
+        },
+        {
+          "text": "breakfast show. In fact, even though it",
+          "start": 253.36,
+          "duration": 4.08
+        },
+        {
+          "text": "can leave a smile the next day, we all",
+          "start": 255.519,
+          "duration": 4.56
+        },
+        {
+          "text": "know that garlic is so good for us. And",
+          "start": 257.44,
+          "duration": 4.56
+        },
+        {
+          "text": "it looks like Andrea has more details on",
+          "start": 260.079,
+          "duration": 4.921
+        },
+        {
+          "text": "this.",
+          "start": 262.0,
+          "duration": 3.0
+        }
+      ],
+      "video_id": "sO6Po_RItl8"
+    }
+  }
+}

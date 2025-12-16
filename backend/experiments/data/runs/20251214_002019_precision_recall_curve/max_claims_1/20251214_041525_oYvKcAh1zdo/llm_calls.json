@@ -1,0 +1,349 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:15:44.331710",
+    "latency_seconds": 17.32,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\n\u201cGive me your tired, your poor, your huddled masses yearning to breathe free\u2026\u201d These poetic lines, engraved on a bronze plaque beneath the Statue of Liberty, speak to who we are: a nation of immigrants. Until now . . . As Senate Democrat Chuck Schumer lamented, \u201cTears are running down the cheeks of the Statue of Liberty.\u201d We\u2019ve turned our backs on those huddled masses. Closed our borders. Separated families. Hardened our hearts. Or so you would think if you only read the headlines or watch TV news. Just one problem: It\u2019s not true. The United States still maintains the most generous immigration policies in the world. Generous to a fault...because the overwhelming numbers have stymied our ability to assimilate the huddled masses. 50 million residents of America are foreign-born. In fact, today the United States has more immigrants as a percentage of its total population than at any time since 1890. That\u2019s why, to give one illustration, 176 different languages are spoken among students in the New York City school system. How did we get here? For starters, America grants permanent residence to a million people every single year. And that\u2019s just the tip of the iceberg because of something you\u2019ve probably heard referred to as \u201cchain migration.\u201d Chain migration allows immigrants to sponsor not only their immediate family\u2014parents, spouses and children under age 21, but much of their extended family once they gain citizenship: unmarried adult children and any children they might have, married adult children and their children, and brothers and sisters and their children. Princeton University researchers, using the most recently available data, found that immigrants sponsored an average of 3.45 additional relatives each. So, the one million immigrants granted permanent residence each year potentially adds, over time, another three and a half million. In addition, an estimated 100,000 refugees and asylum-seekers\u2014people who claim to be fleeing political or personal strife abroad\u2014enter the country annually. From 2008 to 2017, the U.S. gave green cards to well over a million people for humanitarian reasons, allowing them to live and work here permanently. After five years, they can apply for full citizenship. We\u2019re not done yet. In that same time frame, nearly half a million more people came to America through the diversity visa lottery\u2014a program designed to admit more people from \u201cunderrepresented\u201d countries into the U.S. Diversity visa applicants don't need a high school education, job skills \u2014or pretty much anything. And, thanks again to chain migration, spouses and unmarried children under 21 of visa lottery winners also get to come to America. This non-stop flow of new legal immigrants\u2014based on family ties instead of skills, abilities, and allegiance to American values\u2014has, of course, been supplemented by millions who enter the country illegally and stay illegally. Dominant media outlets use the euphemism \u201cundocumented,\u201d but the official U.S. government term used in federal statutes is \u201cillegal alien\u201d: an unlawful entrant who came without permission and stays in open defiance of our laws. The number of illegal aliens in the country is usually given as 11 million, but have you noticed that number never seems to change? Common sense suggests it\u2019s higher\u2014much higher. And though illegal aliens themselves don\u2019t qualify for welfare, they receive free health care in our clinics and hospitals, and through their American-born children they can expect to receive all manner of benefits\u2014cash aid, food stamps, and housing vouchers. Their children are entitled to a free education in public schools. Building a high-tech border barrier would certainly help stem this flow. Ending chain migration is another obvious remedy. E-Verify, the national database that allows employers to check workers\u2019 immigration status, is also essential. So is a fully-functioning entry-exit system to track visa overstayers. But all solutions will ultimately fail unless we get control of the numbers and enforce our laws consistently. It\u2019s Sovereignty 101: This is our home and we have not only the right, but the responsibility, to determine who comes in, how many come in, and what qualities and qualifications they bring. The truth is, we let in millions. And, of course, millions more want to come. Who can blame them? But it\u2019s simply not possible or desirable to let in everyone. And it\u2019s not hateful to say so. It\u2019s not hateful to protect our borders. It\u2019s not hateful to protect our citizens. It\u2019s not hateful to protect our values. Lady Liberty may be shedding tears\u2014not because we\u2019ve stopped welcoming immigrants, but because our ill-conceived immigration policies are threatening the American Dream. I\u2019m Michelle Malkin, CRTV host and author of Invasion and Sold Out, for Prager University.",
+    "input_length_chars": 4882,
+    "input_tokens_estimated": 1220,
+    "output": {
+      "claims": [
+        {
+          "text": "The United States maintains the most generous immigration policies in the world.",
+          "confidence": 0.9,
+          "category": "policy",
+          "importance": 0.85,
+          "context": "Speaker: Michelle Malkin, discussing immigration policies."
+        },
+        {
+          "text": "50 million residents of America are foreign-born.",
+          "confidence": 0.95,
+          "category": "demographic",
+          "importance": 0.8,
+          "context": "Current demographic data on foreign-born residents."
+        },
+        {
+          "text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+          "confidence": 0.9,
+          "category": "historical",
+          "importance": 0.7,
+          "context": "Historical immigration data comparison."
+        },
+        {
+          "text": "176 different languages are spoken among students in the New York City school system.",
+          "confidence": 0.85,
+          "category": "demographic",
+          "importance": 0.6,
+          "context": "Current data on language diversity in NYC schools."
+        },
+        {
+          "text": "America grants permanent residence to a million people every single year.",
+          "confidence": 0.9,
+          "category": "policy",
+          "importance": 0.7,
+          "context": "Annual immigration statistics."
+        },
+        {
+          "text": "Princeton University researchers found that immigrants sponsored an average of 3.45 additional relatives each.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Research data on family sponsorship in immigration."
+        },
+        {
+          "text": "An estimated 100,000 refugees and asylum-seekers enter the country annually.",
+          "confidence": 0.9,
+          "category": "demographic",
+          "importance": 0.6,
+          "context": "Annual statistics on refugees and asylum-seekers."
+        },
+        {
+          "text": "From 2008 to 2017, the U.S. gave green cards to well over a million people for humanitarian reasons.",
+          "confidence": 0.85,
+          "category": "policy",
+          "importance": 0.6,
+          "context": "Humanitarian immigration statistics from 2008 to 2017."
+        },
+        {
+          "text": "Nearly half a million more people came to America through the diversity visa lottery from 2008 to 2017.",
+          "confidence": 0.85,
+          "category": "policy",
+          "importance": 0.6,
+          "context": "Diversity visa lottery statistics from 2008 to 2017."
+        },
+        {
+          "text": "The number of illegal aliens in the country is usually given as 11 million.",
+          "confidence": 0.9,
+          "category": "demographic",
+          "importance": 0.6,
+          "context": "Commonly cited statistic on illegal immigration."
+        }
+      ],
+      "total_count": 10
+    },
+    "output_length_chars": 3053,
+    "output_tokens_estimated": 763,
+    "cost_usd": 0.0006408
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:15:50.168896",
+    "latency_seconds": 2.29,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The United States maintains the most generous immigration policies in the world.\nContext: Speaker: Michelle Malkin, discussing immigration policies.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 321,
+    "input_tokens_estimated": 80,
+    "output": {
+      "original_claim": "The United States maintains the most generous immigration policies in the world.",
+      "queries": [
+        {
+          "query": "United States immigration policies comparison 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "most generous immigration policies countries 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 329,
+    "output_tokens_estimated": 82,
+    "cost_usd": 6.12e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The United States maintains the most generous immigration policies in the world."
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:16:07.903684",
+    "latency_seconds": 1.01,
+    "input_prompt": "Claim:\nThe United States maintains the most generous immigration policies in the world.\n\nArticle Title:\nBest Countries to Migrate in 2025: Top Immigration Destinations\n\nGoogle Search Snippet:\nThe most desired destinations in 2025 include: UAE and Singapore \u2013 ideal for entrepreneurs and business owners seeking tax-efficient environments.\n\nFull Page Content:\nYahoo forma parte de la familia de marcas de Yahoo .\nSi no quieres que nosotros ni nuestros socios utilicemos cookies y datos personales para estos prop\u00f3sitos adicionales, haz clic en \u00abRechazar todo\u00bb.\nSi quieres personalizar tus opciones, haz clic en \u00abGestionar configuraci\u00f3n de privacidad\u00bb.\nPuedes revocar tu consentimiento o cambiar tus opciones en cualquier momento haciendo clic en el enlace \u00abConfiguraci\u00f3n de privacidad y cookies\u00bb o \u00abPanel de privacidad\u00bb de nuestros sitios y aplicaciones. Para obtener m\u00e1s informaci\u00f3n sobre c\u00f3mo utilizamos tus datos personales, consulta nuestra Pol\u00edtica de privacidad y la Pol\u00edtica de cookies.\n\nProvide relevant evidence.",
+    "input_length_chars": 1020,
+    "input_tokens_estimated": 255,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 5.145e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The United States maintains the most generous immigration policies in the world.",
+      "query_index": 2,
+      "query_text": "most generous immigration policies countries 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:16:07.909582",
+    "latency_seconds": 1.02,
+    "input_prompt": "Claim:\nThe United States maintains the most generous immigration policies in the world.\n\nArticle Title:\nImmigration Systems in Labor-Needy Japan and South Korea Have ...\n\nGoogle Search Snippet:\nUnlike countries such as Germany, Ireland, and Italy, which have provided citizenship for documented co-ethnics, Japan and South Korea situate ...\n\nFull Page Content:\nYahoo forma parte de la familia de marcas de Yahoo .\nSi no quieres que nosotros ni nuestros socios utilicemos cookies y datos personales para estos prop\u00f3sitos adicionales, haz clic en \u00abRechazar todo\u00bb.\nSi quieres personalizar tus opciones, haz clic en \u00abGestionar configuraci\u00f3n de privacidad\u00bb.\nPuedes revocar tu consentimiento o cambiar tus opciones en cualquier momento haciendo clic en el enlace \u00abConfiguraci\u00f3n de privacidad y cookies\u00bb o \u00abPanel de privacidad\u00bb de nuestros sitios y aplicaciones. Para obtener m\u00e1s informaci\u00f3n sobre c\u00f3mo utilizamos tus datos personales, consulta nuestra Pol\u00edtica de privacidad y la Pol\u00edtica de cookies.\n\nProvide relevant evidence.",
+    "input_length_chars": 1022,
+    "input_tokens_estimated": 255,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 5.145e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The United States maintains the most generous immigration policies in the world.",
+      "query_index": 2,
+      "query_text": "most generous immigration policies countries 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:16:07.928547",
+    "latency_seconds": 1.03,
+    "input_prompt": "Claim:\nThe United States maintains the most generous immigration policies in the world.\n\nArticle Title:\nBest Countries To Live In: 2023 - Next Generation Equity\n\nGoogle Search Snippet:\nWe've compiled a list of the 7 best countries to live in. From Portugal to Antigua and Barbuda- read on to find out which countries made our list for the year!\n\nFull Page Content:\nYahoo forma parte de la familia de marcas de Yahoo .\nSi no quieres que nosotros ni nuestros socios utilicemos cookies y datos personales para estos prop\u00f3sitos adicionales, haz clic en \u00abRechazar todo\u00bb.\nSi quieres personalizar tus opciones, haz clic en \u00abGestionar configuraci\u00f3n de privacidad\u00bb.\nPuedes revocar tu consentimiento o cambiar tus opciones en cualquier momento haciendo clic en el enlace \u00abConfiguraci\u00f3n de privacidad y cookies\u00bb o \u00abPanel de privacidad\u00bb de nuestros sitios y aplicaciones. Para obtener m\u00e1s informaci\u00f3n sobre c\u00f3mo utilizamos tus datos personales, consulta nuestra Pol\u00edtica de privacidad y la Pol\u00edtica de cookies.\n\nProvide relevant evidence.",
+    "input_length_chars": 1026,
+    "input_tokens_estimated": 256,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 5.16e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The United States maintains the most generous immigration policies in the world.",
+      "query_index": 2,
+      "query_text": "most generous immigration policies countries 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:16:07.942293",
+    "latency_seconds": 1.05,
+    "input_prompt": "Claim:\nThe United States maintains the most generous immigration policies in the world.\n\nArticle Title:\nWhat Is Canada's Immigration Policy? - Council on Foreign Relations\n\nGoogle Search Snippet:\nIn 2024, Canada resettled 49,300 refugees\u2014making it the second-largest resettlement country globally\u2014primarily from Eritrea, Afghanistan, Syria, and Somalia.\n\nFull Page Content:\nYahoo forma parte de la familia de marcas de Yahoo .\nSi no quieres que nosotros ni nuestros socios utilicemos cookies y datos personales para estos prop\u00f3sitos adicionales, haz clic en \u00abRechazar todo\u00bb.\nSi quieres personalizar tus opciones, haz clic en \u00abGestionar configuraci\u00f3n de privacidad\u00bb.\nPuedes revocar tu consentimiento o cambiar tus opciones en cualquier momento haciendo clic en el enlace \u00abConfiguraci\u00f3n de privacidad y cookies\u00bb o \u00abPanel de privacidad\u00bb de nuestros sitios y aplicaciones. Para obtener m\u00e1s informaci\u00f3n sobre c\u00f3mo utilizamos tus datos personales, consulta nuestra Pol\u00edtica de privacidad y la Pol\u00edtica de cookies.\n\nProvide relevant evidence.",
+    "input_length_chars": 1035,
+    "input_tokens_estimated": 258,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 5.19e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The United States maintains the most generous immigration policies in the world.",
+      "query_index": 2,
+      "query_text": "most generous immigration policies countries 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:16:07.958323",
+    "latency_seconds": 1.06,
+    "input_prompt": "Claim:\nThe United States maintains the most generous immigration policies in the world.\n\nArticle Title:\n20 Most Immigrant Friendly Countries In The World - Yahoo Finance\n\nGoogle Search Snippet:\nIn this detailed article, we'll discuss the most immigrant-friendly countries in the world and their migrants-to-population ratio.\n\nFull Page Content:\nYahoo forma parte de la familia de marcas de Yahoo .\nSi no quieres que nosotros ni nuestros socios utilicemos cookies y datos personales para estos prop\u00f3sitos adicionales, haz clic en \u00abRechazar todo\u00bb.\nSi quieres personalizar tus opciones, haz clic en \u00abGestionar configuraci\u00f3n de privacidad\u00bb.\nPuedes revocar tu consentimiento o cambiar tus opciones en cualquier momento haciendo clic en el enlace \u00abConfiguraci\u00f3n de privacidad y cookies\u00bb o \u00abPanel de privacidad\u00bb de nuestros sitios y aplicaciones. Para obtener m\u00e1s informaci\u00f3n sobre c\u00f3mo utilizamos tus datos personales, consulta nuestra Pol\u00edtica de privacidad y la Pol\u00edtica de cookies.\n\nProvide relevant evidence.",
+    "input_length_chars": 1006,
+    "input_tokens_estimated": 251,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 5.085e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The United States maintains the most generous immigration policies in the world.",
+      "query_index": 2,
+      "query_text": "most generous immigration policies countries 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:16:07.987541",
+    "latency_seconds": 1.09,
+    "input_prompt": "Claim:\nThe United States maintains the most generous immigration policies in the world.\n\nArticle Title:\nTop 10 Most Accepting Countries for Immigrants in 2023 - Y-Axis\n\nGoogle Search Snippet:\nDiscover the top 10 countries welcoming immigrants in 2023, their eligibility criteria, and opportunities for a better life abroad.\n\nFull Page Content:\nYahoo forma parte de la familia de marcas de Yahoo .\nSi no quieres que nosotros ni nuestros socios utilicemos cookies y datos personales para estos prop\u00f3sitos adicionales, haz clic en \u00abRechazar todo\u00bb.\nSi quieres personalizar tus opciones, haz clic en \u00abGestionar configuraci\u00f3n de privacidad\u00bb.\nPuedes revocar tu consentimiento o cambiar tus opciones en cualquier momento haciendo clic en el enlace \u00abConfiguraci\u00f3n de privacidad y cookies\u00bb o \u00abPanel de privacidad\u00bb de nuestros sitios y aplicaciones. Para obtener m\u00e1s informaci\u00f3n sobre c\u00f3mo utilizamos tus datos personales, consulta nuestra Pol\u00edtica de privacidad y la Pol\u00edtica de cookies.\n\nProvide relevant evidence.",
+    "input_length_chars": 1005,
+    "input_tokens_estimated": 251,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 5.085e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The United States maintains the most generous immigration policies in the world.",
+      "query_index": 2,
+      "query_text": "most generous immigration policies countries 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:16:11.673644",
+    "latency_seconds": 4.29,
+    "input_prompt": "Claim:\nThe United States maintains the most generous immigration policies in the world.\n\nArticle Title:\nArticle: Biden's Mixed Immigration Legacy - Migration Policy Institute\n\nGoogle Search Snippet:\nThe Biden administration demonstrated a record level of activity on immigration, advancing 605 immigration-related executive actions as of December 6.\n\nFull Page Content:\nSpecial thanks to Anjali Bhatt and Melina Kolb for additional editing and Michael Clemens for comments.\nAs the 2024 US presidential election approaches, immigration remains a top priority for over half of Americans. The Pew Research Center found that 80 percent of American voters across the political spectrum disapprove of the country's response to migrants at the US-Mexico border, where the influx reached an all-time record in 2023. While Americans are united in their disapproval of current immigration policy, they are divided on how to fix it. About half of Americans\u2014including 42 percent of Democrats\u2014support mass deportations of undocumented immigrants. Yet, 56 percent of Americans\u2014including 43 percent of Republicans\u2014support expanding legal immigration opportunities. Almost half of Americans support expanding legal work permission for asylum seekers, and 60 percent support faster processing of asylum seekers' claims.\nThis page provides a useful resource to track major US immigration policy changes between 2016 and June 2024 and compare the actions of former President Donald J. Trump and President Joseph R. Biden Jr. or their administrations. Actions are organized into four categories: border, asylum, legal immigration, and other policies. For a full list of Trump's executive actions on immigration, see the Migration Policy Institute's Four Years of Profound Change: Immigration Policy during the Trump Presidency.\nNote: Actions \"by Trump\" or \"by Biden\" in the tables refer to either the president or his administration.\nTable 1 Border wall\nStart Date: January 2017, by Trump\nWhat It Is: There are approximately 654 miles of barriers along the 1,933 mile US-Mexico border: 354 miles of physical barriers (i.e., fences, walls, bollards, \"Normandy\" barriers) and 300 miles of vehicle barriers. Building a physical wall along the entirety of the southern border\u2014and forcing Mexico to pay for it\u2014was one of Trump's critical campaign promises in the 2016 presidential race.\nCurrent Status: Continued on a smaller scale under Biden\nTrump\nOctober 1, 2016 - September 30, 2021: Between fiscal years 2017 and 2021, Congress appropriated and Trump authorized $5.8 billion for the construction and repair of physical barriers along the US-Mexico border. Trump also declared a national emergency at the southern border during this time to divert roughly $10.5 billion in federal funding to border wall construction. The Department of Homeland Security (DHS) built in total 458 miles of physical barriers using these funds, including 52 miles of new barriers\u2014walls and fences in \"locations where no barriers previously existed.\"\nJanuary 25, 2017: Trump signed Executive Order (EO) 13767, which directed DHS to \"plan, design, and construct a physical wall along the southern border\" using existing federal funding.\nBiden\nJanuary 20, 2021: Biden issued Proclamation 10142, which suspended all border wall construction, rescinded Trump's national emergency declaration, and redirected funds that Trump diverted for border wall construction.\nOctober 5, 2023: Biden's DHS announced plans to build up to 20 miles of physical barriers along the US-Mexico border. Biden said his administration was required by law to continue building the border wall because Congress had appropriated funding for this cause in 2019. Biden's DHS Secretary Alejandro Mayorkas instead said border wall construction was necessary \"to prevent unlawful entries into the United States.\"\nTable 2 Changes to Immigration and Customs Enforcement (ICE) policies: Interior enforcement\nStart Date: January 2017, by Trump\nWhat It Is: Expands the category of migrants classified as priorities for deportation and disqualifies \"sanctuary cities\" and other sanctuary jurisdictions that protect migrants from deportation from receiving federal grants. Prior to Trump, only migrants convicted of serious crimes were considered priorities for deportation. Under Trump, migrants convicted of any criminal offense (including minor crimes, such as moving violations) were considered priorities for deportation, as were migrants with pending criminal charges and migrants who had committed criminal acts\u2014even if they had not been charged.\nCurrent Status: Reversed by Biden in January 2021\nTrump\nJanuary 25, 2017: Trump issued EO 13768, which established a new, more aggressive interior enforcement regime within the United States.\nBiden\nJanuary 20, 2021: Biden issued EO 13993, which revoked Trump's EO 13768.\nTable 3 Changes to ICE policies: Detention of pregnant women\nStart Date: December 2017, by Trump\nWhat It Is: Permits ICE to hold pregnant women in detention facilities, ending the Obama-era practice of generally releasing them.\nCurrent Status: Reversed by Biden in July 2021\nTrump\nDecember 14, 2017: Trump's ICE issued Directive 11032.3, which outlined procedures on how to identify, monitor, track, and house pregnant detainees. Between calendar years 2017 and 2018, the number of total detentions of pregnant women increased from 1,160 to 2,098.\nBiden\nJuly 1, 2021: Biden's ICE issued Directive 11032.4, which ordered, \"Generally, ICE should not detain, arrest, or take into custody\u2026individuals known to be pregnant, postpartum, or nursing.\"\nTable 4 \"Metering\" at the US-Mexico border\nStart Date: February 2016, by President Barack Obama; practice expanded by Trump in April 2018\nWhat It Is: Limits the number of asylum seekers allowed to enter the United States each day at ports of entry along the southern border due to actual or perceived lack of asylum request processing capacity. Metered asylum seekers wait indefinitely in Mexico to enter the United States at a port of entry and apply for asylum. There is no way for asylum seekers to know how long they will need to wait and no official way to hold their \"spot\" in line. At its peak in August 2019, approximately 26,000 migrants were waiting on metering lists at the southern border.\nCurrent Status: Replaced by an electronic metering policy by Biden in May 2023\nTrum\n\nProvide relevant evidence.",
+    "input_length_chars": 6398,
+    "input_tokens_estimated": 1599,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses the mixed public opinion on U.S. immigration policies, indicating that while there is support for expanding legal immigration opportunities, there is also significant disapproval of current policies, suggesting that the U.S. may not have the most generous immigration policies in the world.",
+      "overall_stance": "mixed",
+      "key_quote": "80 percent of American voters across the political spectrum disapprove of the country's response to migrants at the US-Mexico border."
+    },
+    "output_length_chars": 528,
+    "output_tokens_estimated": 132,
+    "cost_usd": 0.00031905,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The United States maintains the most generous immigration policies in the world.",
+      "query_index": 2,
+      "query_text": "most generous immigration policies countries 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:16:11.680621",
+    "latency_seconds": 4.29,
+    "input_prompt": "Claim:\nThe United States maintains the most generous immigration policies in the world.\n\nArticle Title:\n100 days of immigration under the second Trump administration\n\nGoogle Search Snippet:\nThe Congressional Budget Office estimated overall net migration of 3.3 million in 2023, including migration of \u201cother foreign nationals\u201d far higher than ...\n\nFull Page Content:\nSpecial thanks to Anjali Bhatt and Melina Kolb for additional editing and Michael Clemens for comments.\nAs the 2024 US presidential election approaches, immigration remains a top priority for over half of Americans. The Pew Research Center found that 80 percent of American voters across the political spectrum disapprove of the country's response to migrants at the US-Mexico border, where the influx reached an all-time record in 2023. While Americans are united in their disapproval of current immigration policy, they are divided on how to fix it. About half of Americans\u2014including 42 percent of Democrats\u2014support mass deportations of undocumented immigrants. Yet, 56 percent of Americans\u2014including 43 percent of Republicans\u2014support expanding legal immigration opportunities. Almost half of Americans support expanding legal work permission for asylum seekers, and 60 percent support faster processing of asylum seekers' claims.\nThis page provides a useful resource to track major US immigration policy changes between 2016 and June 2024 and compare the actions of former President Donald J. Trump and President Joseph R. Biden Jr. or their administrations. Actions are organized into four categories: border, asylum, legal immigration, and other policies. For a full list of Trump's executive actions on immigration, see the Migration Policy Institute's Four Years of Profound Change: Immigration Policy during the Trump Presidency.\nNote: Actions \"by Trump\" or \"by Biden\" in the tables refer to either the president or his administration.\nTable 1 Border wall\nStart Date: January 2017, by Trump\nWhat It Is: There are approximately 654 miles of barriers along the 1,933 mile US-Mexico border: 354 miles of physical barriers (i.e., fences, walls, bollards, \"Normandy\" barriers) and 300 miles of vehicle barriers. Building a physical wall along the entirety of the southern border\u2014and forcing Mexico to pay for it\u2014was one of Trump's critical campaign promises in the 2016 presidential race.\nCurrent Status: Continued on a smaller scale under Biden\nTrump\nOctober 1, 2016 - September 30, 2021: Between fiscal years 2017 and 2021, Congress appropriated and Trump authorized $5.8 billion for the construction and repair of physical barriers along the US-Mexico border. Trump also declared a national emergency at the southern border during this time to divert roughly $10.5 billion in federal funding to border wall construction. The Department of Homeland Security (DHS) built in total 458 miles of physical barriers using these funds, including 52 miles of new barriers\u2014walls and fences in \"locations where no barriers previously existed.\"\nJanuary 25, 2017: Trump signed Executive Order (EO) 13767, which directed DHS to \"plan, design, and construct a physical wall along the southern border\" using existing federal funding.\nBiden\nJanuary 20, 2021: Biden issued Proclamation 10142, which suspended all border wall construction, rescinded Trump's national emergency declaration, and redirected funds that Trump diverted for border wall construction.\nOctober 5, 2023: Biden's DHS announced plans to build up to 20 miles of physical barriers along the US-Mexico border. Biden said his administration was required by law to continue building the border wall because Congress had appropriated funding for this cause in 2019. Biden's DHS Secretary Alejandro Mayorkas instead said border wall construction was necessary \"to prevent unlawful entries into the United States.\"\nTable 2 Changes to Immigration and Customs Enforcement (ICE) policies: Interior enforcement\nStart Date: January 2017, by Trump\nWhat It Is: Expands the category of migrants classified as priorities for deportation and disqualifies \"sanctuary cities\" and other sanctuary jurisdictions that protect migrants from deportation from receiving federal grants. Prior to Trump, only migrants convicted of serious crimes were considered priorities for deportation. Under Trump, migrants convicted of any criminal offense (including minor crimes, such as moving violations) were considered priorities for deportation, as were migrants with pending criminal charges and migrants who had committed criminal acts\u2014even if they had not been charged.\nCurrent Status: Reversed by Biden in January 2021\nTrump\nJanuary 25, 2017: Trump issued EO 13768, which established a new, more aggressive interior enforcement regime within the United States.\nBiden\nJanuary 20, 2021: Biden issued EO 13993, which revoked Trump's EO 13768.\nTable 3 Changes to ICE policies: Detention of pregnant women\nStart Date: December 2017, by Trump\nWhat It Is: Permits ICE to hold pregnant women in detention facilities, ending the Obama-era practice of generally releasing them.\nCurrent Status: Reversed by Biden in July 2021\nTrump\nDecember 14, 2017: Trump's ICE issued Directive 11032.3, which outlined procedures on how to identify, monitor, track, and house pregnant detainees. Between calendar years 2017 and 2018, the number of total detentions of pregnant women increased from 1,160 to 2,098.\nBiden\nJuly 1, 2021: Biden's ICE issued Directive 11032.4, which ordered, \"Generally, ICE should not detain, arrest, or take into custody\u2026individuals known to be pregnant, postpartum, or nursing.\"\nTable 4 \"Metering\" at the US-Mexico border\nStart Date: February 2016, by President Barack Obama; practice expanded by Trump in April 2018\nWhat It Is: Limits the number of asylum seekers allowed to enter the United States each day at ports of entry along the southern border due to actual or perceived lack of asylum request processing capacity. Metered asylum seekers wait indefinitely in Mexico to enter the United States at a port of entry and apply for asylum. There is no way for asylum seekers to know how long they will need to wait and no official way to hold their \"spot\" in line. At its peak in August 2019, approximately 26,000 migrants were waiting on metering lists at the southern border.\nCurrent Status: Replaced by an electronic metering policy by Biden in May 2023\nTrum\n\nProvide relevant evidence.",
+    "input_length_chars": 6395,
+    "input_tokens_estimated": 1598,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses the divided opinions among Americans regarding immigration policies, indicating that while there is support for expanding legal immigration opportunities, there is also significant disapproval of current policies. This suggests that the U.S. immigration policies may not be viewed as the most generous in the world, as many Americans support stricter measures like mass deportations.",
+      "overall_stance": "mixed",
+      "key_quote": "80 percent of American voters across the political spectrum disapprove of the country's response to migrants at the US-Mexico border."
+    },
+    "output_length_chars": 621,
+    "output_tokens_estimated": 155,
+    "cost_usd": 0.0003327,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The United States maintains the most generous immigration policies in the world.",
+      "query_index": 2,
+      "query_text": "most generous immigration policies countries 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:16:11.684810",
+    "latency_seconds": 4.3,
+    "input_prompt": "Claim:\nThe United States maintains the most generous immigration policies in the world.\n\nArticle Title:\n2023 Update on Key Federal Immigration Policies and Implications ...\n\nGoogle Search Snippet:\nThis issue brief provides the latest update on some key evolving immigration policies, including Title 42 as it applies to border ...\n\nFull Page Content:\nSpecial thanks to Anjali Bhatt and Melina Kolb for additional editing and Michael Clemens for comments.\nAs the 2024 US presidential election approaches, immigration remains a top priority for over half of Americans. The Pew Research Center found that 80 percent of American voters across the political spectrum disapprove of the country's response to migrants at the US-Mexico border, where the influx reached an all-time record in 2023. While Americans are united in their disapproval of current immigration policy, they are divided on how to fix it. About half of Americans\u2014including 42 percent of Democrats\u2014support mass deportations of undocumented immigrants. Yet, 56 percent of Americans\u2014including 43 percent of Republicans\u2014support expanding legal immigration opportunities. Almost half of Americans support expanding legal work permission for asylum seekers, and 60 percent support faster processing of asylum seekers' claims.\nThis page provides a useful resource to track major US immigration policy changes between 2016 and June 2024 and compare the actions of former President Donald J. Trump and President Joseph R. Biden Jr. or their administrations. Actions are organized into four categories: border, asylum, legal immigration, and other policies. For a full list of Trump's executive actions on immigration, see the Migration Policy Institute's Four Years of Profound Change: Immigration Policy during the Trump Presidency.\nNote: Actions \"by Trump\" or \"by Biden\" in the tables refer to either the president or his administration.\nTable 1 Border wall\nStart Date: January 2017, by Trump\nWhat It Is: There are approximately 654 miles of barriers along the 1,933 mile US-Mexico border: 354 miles of physical barriers (i.e., fences, walls, bollards, \"Normandy\" barriers) and 300 miles of vehicle barriers. Building a physical wall along the entirety of the southern border\u2014and forcing Mexico to pay for it\u2014was one of Trump's critical campaign promises in the 2016 presidential race.\nCurrent Status: Continued on a smaller scale under Biden\nTrump\nOctober 1, 2016 - September 30, 2021: Between fiscal years 2017 and 2021, Congress appropriated and Trump authorized $5.8 billion for the construction and repair of physical barriers along the US-Mexico border. Trump also declared a national emergency at the southern border during this time to divert roughly $10.5 billion in federal funding to border wall construction. The Department of Homeland Security (DHS) built in total 458 miles of physical barriers using these funds, including 52 miles of new barriers\u2014walls and fences in \"locations where no barriers previously existed.\"\nJanuary 25, 2017: Trump signed Executive Order (EO) 13767, which directed DHS to \"plan, design, and construct a physical wall along the southern border\" using existing federal funding.\nBiden\nJanuary 20, 2021: Biden issued Proclamation 10142, which suspended all border wall construction, rescinded Trump's national emergency declaration, and redirected funds that Trump diverted for border wall construction.\nOctober 5, 2023: Biden's DHS announced plans to build up to 20 miles of physical barriers along the US-Mexico border. Biden said his administration was required by law to continue building the border wall because Congress had appropriated funding for this cause in 2019. Biden's DHS Secretary Alejandro Mayorkas instead said border wall construction was necessary \"to prevent unlawful entries into the United States.\"\nTable 2 Changes to Immigration and Customs Enforcement (ICE) policies: Interior enforcement\nStart Date: January 2017, by Trump\nWhat It Is: Expands the category of migrants classified as priorities for deportation and disqualifies \"sanctuary cities\" and other sanctuary jurisdictions that protect migrants from deportation from receiving federal grants. Prior to Trump, only migrants convicted of serious crimes were considered priorities for deportation. Under Trump, migrants convicted of any criminal offense (including minor crimes, such as moving violations) were considered priorities for deportation, as were migrants with pending criminal charges and migrants who had committed criminal acts\u2014even if they had not been charged.\nCurrent Status: Reversed by Biden in January 2021\nTrump\nJanuary 25, 2017: Trump issued EO 13768, which established a new, more aggressive interior enforcement regime within the United States.\nBiden\nJanuary 20, 2021: Biden issued EO 13993, which revoked Trump's EO 13768.\nTable 3 Changes to ICE policies: Detention of pregnant women\nStart Date: December 2017, by Trump\nWhat It Is: Permits ICE to hold pregnant women in detention facilities, ending the Obama-era practice of generally releasing them.\nCurrent Status: Reversed by Biden in July 2021\nTrump\nDecember 14, 2017: Trump's ICE issued Directive 11032.3, which outlined procedures on how to identify, monitor, track, and house pregnant detainees. Between calendar years 2017 and 2018, the number of total detentions of pregnant women increased from 1,160 to 2,098.\nBiden\nJuly 1, 2021: Biden's ICE issued Directive 11032.4, which ordered, \"Generally, ICE should not detain, arrest, or take into custody\u2026individuals known to be pregnant, postpartum, or nursing.\"\nTable 4 \"Metering\" at the US-Mexico border\nStart Date: February 2016, by President Barack Obama; practice expanded by Trump in April 2018\nWhat It Is: Limits the number of asylum seekers allowed to enter the United States each day at ports of entry along the southern border due to actual or perceived lack of asylum request processing capacity. Metered asylum seekers wait indefinitely in Mexico to enter the United States at a port of entry and apply for asylum. There is no way for asylum seekers to know how long they will need to wait and no official way to hold their \"spot\" in line. At its peak in August 2019, approximately 26,000 migrants were waiting on metering lists at the southern border.\nCurrent Status: Replaced by an electronic metering policy by Biden in May 2023\nTrum\n\nProvide relevant evidence.",
+    "input_length_chars": 6379,
+    "input_tokens_estimated": 1594,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that while there is significant public support for expanding legal immigration opportunities, there is also widespread disapproval of current immigration policies, suggesting that the U.S. immigration system is viewed as inadequate rather than the most generous in the world.",
+      "overall_stance": "refutes",
+      "key_quote": "80 percent of American voters across the political spectrum disapprove of the country's response to migrants at the US-Mexico border."
+    },
+    "output_length_chars": 516,
+    "output_tokens_estimated": 129,
+    "cost_usd": 0.0003165,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The United States maintains the most generous immigration policies in the world.",
+      "query_index": 2,
+      "query_text": "most generous immigration policies countries 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:16:12.711509",
+    "latency_seconds": 5.33,
+    "input_prompt": "Claim:\nThe United States maintains the most generous immigration policies in the world.\n\nArticle Title:\nPrimer on U.S. Immigration Policy | Congress.gov\n\nGoogle Search Snippet:\nPreference immigrants are numerically limited to 226,000 per year and, unlike immediate relatives, are also bounded by the 7% per-country limit.\n\nFull Page Content:\nSpecial thanks to Anjali Bhatt and Melina Kolb for additional editing and Michael Clemens for comments.\nAs the 2024 US presidential election approaches, immigration remains a top priority for over half of Americans. The Pew Research Center found that 80 percent of American voters across the political spectrum disapprove of the country's response to migrants at the US-Mexico border, where the influx reached an all-time record in 2023. While Americans are united in their disapproval of current immigration policy, they are divided on how to fix it. About half of Americans\u2014including 42 percent of Democrats\u2014support mass deportations of undocumented immigrants. Yet, 56 percent of Americans\u2014including 43 percent of Republicans\u2014support expanding legal immigration opportunities. Almost half of Americans support expanding legal work permission for asylum seekers, and 60 percent support faster processing of asylum seekers' claims.\nThis page provides a useful resource to track major US immigration policy changes between 2016 and June 2024 and compare the actions of former President Donald J. Trump and President Joseph R. Biden Jr. or their administrations. Actions are organized into four categories: border, asylum, legal immigration, and other policies. For a full list of Trump's executive actions on immigration, see the Migration Policy Institute's Four Years of Profound Change: Immigration Policy during the Trump Presidency.\nNote: Actions \"by Trump\" or \"by Biden\" in the tables refer to either the president or his administration.\nTable 1 Border wall\nStart Date: January 2017, by Trump\nWhat It Is: There are approximately 654 miles of barriers along the 1,933 mile US-Mexico border: 354 miles of physical barriers (i.e., fences, walls, bollards, \"Normandy\" barriers) and 300 miles of vehicle barriers. Building a physical wall along the entirety of the southern border\u2014and forcing Mexico to pay for it\u2014was one of Trump's critical campaign promises in the 2016 presidential race.\nCurrent Status: Continued on a smaller scale under Biden\nTrump\nOctober 1, 2016 - September 30, 2021: Between fiscal years 2017 and 2021, Congress appropriated and Trump authorized $5.8 billion for the construction and repair of physical barriers along the US-Mexico border. Trump also declared a national emergency at the southern border during this time to divert roughly $10.5 billion in federal funding to border wall construction. The Department of Homeland Security (DHS) built in total 458 miles of physical barriers using these funds, including 52 miles of new barriers\u2014walls and fences in \"locations where no barriers previously existed.\"\nJanuary 25, 2017: Trump signed Executive Order (EO) 13767, which directed DHS to \"plan, design, and construct a physical wall along the southern border\" using existing federal funding.\nBiden\nJanuary 20, 2021: Biden issued Proclamation 10142, which suspended all border wall construction, rescinded Trump's national emergency declaration, and redirected funds that Trump diverted for border wall construction.\nOctober 5, 2023: Biden's DHS announced plans to build up to 20 miles of physical barriers along the US-Mexico border. Biden said his administration was required by law to continue building the border wall because Congress had appropriated funding for this cause in 2019. Biden's DHS Secretary Alejandro Mayorkas instead said border wall construction was necessary \"to prevent unlawful entries into the United States.\"\nTable 2 Changes to Immigration and Customs Enforcement (ICE) policies: Interior enforcement\nStart Date: January 2017, by Trump\nWhat It Is: Expands the category of migrants classified as priorities for deportation and disqualifies \"sanctuary cities\" and other sanctuary jurisdictions that protect migrants from deportation from receiving federal grants. Prior to Trump, only migrants convicted of serious crimes were considered priorities for deportation. Under Trump, migrants convicted of any criminal offense (including minor crimes, such as moving violations) were considered priorities for deportation, as were migrants with pending criminal charges and migrants who had committed criminal acts\u2014even if they had not been charged.\nCurrent Status: Reversed by Biden in January 2021\nTrump\nJanuary 25, 2017: Trump issued EO 13768, which established a new, more aggressive interior enforcement regime within the United States.\nBiden\nJanuary 20, 2021: Biden issued EO 13993, which revoked Trump's EO 13768.\nTable 3 Changes to ICE policies: Detention of pregnant women\nStart Date: December 2017, by Trump\nWhat It Is: Permits ICE to hold pregnant women in detention facilities, ending the Obama-era practice of generally releasing them.\nCurrent Status: Reversed by Biden in July 2021\nTrump\nDecember 14, 2017: Trump's ICE issued Directive 11032.3, which outlined procedures on how to identify, monitor, track, and house pregnant detainees. Between calendar years 2017 and 2018, the number of total detentions of pregnant women increased from 1,160 to 2,098.\nBiden\nJuly 1, 2021: Biden's ICE issued Directive 11032.4, which ordered, \"Generally, ICE should not detain, arrest, or take into custody\u2026individuals known to be pregnant, postpartum, or nursing.\"\nTable 4 \"Metering\" at the US-Mexico border\nStart Date: February 2016, by President Barack Obama; practice expanded by Trump in April 2018\nWhat It Is: Limits the number of asylum seekers allowed to enter the United States each day at ports of entry along the southern border due to actual or perceived lack of asylum request processing capacity. Metered asylum seekers wait indefinitely in Mexico to enter the United States at a port of entry and apply for asylum. There is no way for asylum seekers to know how long they will need to wait and no official way to hold their \"spot\" in line. At its peak in August 2019, approximately 26,000 migrants were waiting on metering lists at the southern border.\nCurrent Status: Replaced by an electronic metering policy by Biden in May 2023\nTrum\n\nProvide relevant evidence.",
+    "input_length_chars": 6370,
+    "input_tokens_estimated": 1592,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses various aspects of U.S. immigration policy, highlighting that while there is significant public support for expanding legal immigration opportunities, the policies in place, such as numerical limits on preference immigrants and metering at the border, suggest that the U.S. does not have the most generous immigration policies in the world.",
+      "overall_stance": "refutes",
+      "key_quote": "Preference immigrants are numerically limited to 226,000 per year and, unlike immediate relatives, are also bounded by the 7% per-country limit."
+    },
+    "output_length_chars": 591,
+    "output_tokens_estimated": 147,
+    "cost_usd": 0.000327,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The United States maintains the most generous immigration policies in the world.",
+      "query_index": 2,
+      "query_text": "most generous immigration policies countries 2023"
+    }
+  }
+]

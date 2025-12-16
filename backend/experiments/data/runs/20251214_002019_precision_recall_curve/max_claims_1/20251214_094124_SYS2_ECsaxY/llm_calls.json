@@ -1,0 +1,373 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:41:33.253319",
+    "latency_seconds": 7.14,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\naccording to this i have to say remarkable piece that you just put up late last night read it in bed at midnight that the fbi was organizing the riots of january 6th well yes it certainly suggests that possibility and i'm hearing from people that this is the most important and the darkest investigative piece they've seen in years but the american people deserve the truth about 1-6 not just for the sake of ashley babbitt not just for the sake of the hundreds of people held in prison unjustly as a violation of human rights but for the sake of the 70 plus million people who are trump supporters or just against the corrupt ruling class who have effectively been labeled de facto domestic extremists by our own government and i believe the key that unlocks the truth to 1-6 is the following question to what extent were the main militia groups imputed to the 1-6 so-called capital siege to what extent was their infiltration of those groups by undercover agents or informants and to what extent when we see the unindicted co-conspirators who occupy senior positions in those groups to what extent are those people being spared prosecution on account of a prior relationship with the federal government those two questions create a thread and when we pull that thread the ugly truth of that event and perhaps even the country we live in will be exposed i gotta ask because it it may answer one of the great mysteries is this i think there are 14 000 hours of unreleased video footage from that day the administration is hiding from us do you think this is why i think that's certainly a possibility um it's it's extremely suspicious even going back to this so-called pipe bomber video remember the pipe bomber the capital pipeliner the fbi has been extremely suspicious in withholding evidence video evidence that could help and identify this bomber which presumably they want to do but if you may i'd like to make a general point and it really after seeing all this you have to ask yourself does the national security apparatus do anything but conspire against the american people i'm led to conclude that we cannot have a democracy everything in our politics will be fake and performative until we bring the national security state including the fbi to heal it's not a left issue it's not a right issue every politician who cares about our country should demand a church committee 2.0 immediately and people of good faith on the left should join it uh immediately darren b i appreciate your coming on signing the work you do at revolver.news thank you",
+    "input_length_chars": 2613,
+    "input_tokens_estimated": 653,
+    "output": {
+      "claims": [
+        {
+          "text": "The FBI was organizing the riots of January 6th.",
+          "confidence": 0.8,
+          "category": "historical",
+          "importance": 0.85,
+          "context": "Discussion about the January 6th Capitol riots and FBI involvement."
+        },
+        {
+          "text": "There are 14,000 hours of unreleased video footage from January 6th.",
+          "confidence": 0.7,
+          "category": "historical",
+          "importance": 0.6,
+          "context": "Mentioned in relation to the Capitol riots."
+        },
+        {
+          "text": "The FBI has been withholding evidence related to the pipe bomber.",
+          "confidence": 0.75,
+          "category": "historical",
+          "importance": 0.6,
+          "context": "Referring to the investigation of the January 6th events."
+        },
+        {
+          "text": "70 plus million people are Trump supporters or against the corrupt ruling class.",
+          "confidence": 0.7,
+          "category": "statistical",
+          "importance": 0.3,
+          "context": "Context unknown."
+        },
+        {
+          "text": "People held in prison for January 6th are unjustly detained as a violation of human rights.",
+          "confidence": 0.8,
+          "category": "policy",
+          "importance": 0.7,
+          "context": "Referring to the treatment of January 6th participants."
+        }
+      ],
+      "total_count": 5
+    },
+    "output_length_chars": 1462,
+    "output_tokens_estimated": 365,
+    "cost_usd": 0.00031695
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:41:35.912227",
+    "latency_seconds": 1.9,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The FBI was organizing the riots of January 6th.\nContext: Discussion about the January 6th Capitol riots and FBI involvement.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 298,
+    "input_tokens_estimated": 74,
+    "output": {
+      "original_claim": "The FBI was organizing the riots of January 6th.",
+      "queries": [
+        {
+          "query": "FBI involvement in organizing January 6th Capitol riots",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Did the FBI organize the January 6th riots?",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 296,
+    "output_tokens_estimated": 74,
+    "cost_usd": 5.55e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The FBI was organizing the riots of January 6th."
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:41:53.495330",
+    "latency_seconds": 3.61,
+    "input_prompt": "Claim:\nThe FBI was organizing the riots of January 6th.\n\nArticle Title:\nNo undercover FBI agents at Jan. 6 riot, watchdog finds in rebuke to ...\n\nGoogle Search Snippet:\nThe FBI should have done more to gather intelligence before the Capitol riot, according to a watchdog report Thursday that also said no undercover FBI ...\n\nFull Page Content:\nNews\nShare on X X.com Share on Facebook Facebook Email Email\nStatement for the Record\nGood afternoon, Chairwoman Maloney, Ranking Member Comer, and members of the committee. Thank you for the opportunity to appear before you today to discuss the FBI\u2019s role and efforts leading up to, and in response to, the January 6, 2021 attack on the U.S. Capitol building. I am pleased to be here representing the dedicated men and women of the FBI.\nThe violence and destruction of property at the U.S. Capitol building on January 6 showed a blatant and appalling disregard for our institutions of government and the orderly administration of the democratic process. The FBI does not tolerate violent extremists who use the guise of First Amendment-protected activity to engage in violent criminal activity. The destruction of property, violent assaults on law enforcement officers, and imminent physical threats to elected officials betray the values of our democracy.\nOn a more personal note, I want to acknowledge the men and women who put their lives on the line to protect members of Congress and others present inside the U.S. Capitol complex on January 6. Those of us in public service, to include members of Congress and the U.S. Capitol Police, all take the same oath to protect and defend the Constitution. We feel strongly about the horrible events that transpired on the January 6.\nFBI Efforts Leading up to January 6, 2021\nIt is not possible to examine the January 6 attack on the U.S. Capitol without an understanding of the overall terrorism threat picture leading up to that day. In 2020, the FBI assessed the greatest terrorism threat to the homeland was from lone actors or small cells who typically become radicalized online and look to attack soft targets with easily accessible weapons; we remain confident in that assessment today. The FBI sees these threats manifested within both domestic violent extremists (DVEs) and homegrown violent extremists (HVEs), two distinct threats, both of which are located primarily in the United States and typically become radicalized and mobilized to violence on their own. Individuals who commit violent criminal acts in furtherance of social or political goals stemming from domestic influences\u2014some of which include racial or ethnic bias, or anti-government or anti-authority sentiments\u2014are described as DVEs, whereas HVEs are individuals who are inspired primarily by global jihad, but not receiving individualized direction from foreign terrorist organizations.\nThroughout 2020, the FBI authored approximately 12 intelligence products for our federal, state, local, tribal, and territorial law enforcement partners disseminating trends we saw in threat reporting and criminal activity involving domestic violent extremism. Over the last year, we observed activity that led us to assess there was potential for increased violent extremist activity at lawful protests taking place in communities across the United States. As such, in June 2020, we, with our partners at the Department of Homeland Security (DHS), issued two separate joint intelligence bulletins highlighting the potential for increased violent extremist activity at such demonstrations and noting that likely targets would include law enforcement and government personnel. More recently, in late August 2020, we published an analytical report informing our partners that DVEs with partisan political grievances likely posed an increased threat related to the 2020 election. In that product, we noted that DVE responses to the election outcome might not occur until after the election and could be based on potential or anticipated policy changes. In December 2020, we contributed to a DHS Intelligence In-Depth product, which advised our partners the threat posed by the diverse DVE landscape would probably persist due to enduring grievances.\nIn the weeks and months leading up to electoral certification, the FBI collected and shared intelligence; coordinated and communicated among federal, state, and local law enforcement partners; and positioned federal resources for potential deployment. Through these measures, the FBI worked in close coordination with the U.S. Capitol Police, the Metropolitan Police Department of Washington D.C., and other law enforcement partners leading up to the Joint Session of Congress and the planned demonstrations scheduled for January 6, 2021. The FBI and our federal, state, and local partners collected and shared intelligence and relevant public safety-related information in preparation for the various planned events.\nFBI\u2019s Response to Events on January 6, 2021\nThroughout the course of the day on January 6, 2021, the FBI was in constant communication with federal, state, and local partners, including through the FBI WFO Command Post and the National Crisis Coordination Center (NC3) at FBI Headquarters. Prior to the breach of the U.S. Capitol, FBI special agents, including bomb technicians, responded to assist the U.S. Capitol Police with securing two nearby locations where potential explosive devices had been found. While the FBI and the U.S. Capitol Police were responding to, and rendering safe, the devices, it became clear that some individuals had breached security barricades and were entering the U.S. Capitol complex. In response to requests from the U.S. Capitol Police, the FBI immediately deployed additional assistance.\nFBI tactical teams partnered with other responding law enforcement agencies to gain control of the area and offer protection to congressional members and staff. One of the FBI tactical teams communicated with the U.S. Capitol Police and the U.S. Secret Service to provide additional protection to a U.S. Secret Service protectee still in the building, although no support was ultimately required. FBI special agents on Special Weapons and Tactics (SWAT) teams were deployed to secure nearby congressional office buildings. The FBI Hostage Rescue Team deployed, FBI Evidence Response Teams arrived t\n\nProvide relevant evidence.",
+    "input_length_chars": 6372,
+    "input_tokens_estimated": 1593,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that the FBI did not have undercover agents organizing the January 6th riots, and instead, they were actively involved in intelligence gathering and response efforts leading up to and during the event.",
+      "overall_stance": "refutes",
+      "key_quote": "the watchdog report Thursday that also said no undercover FBI ..."
+    },
+    "output_length_chars": 374,
+    "output_tokens_estimated": 93,
+    "cost_usd": 0.00029475,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The FBI was organizing the riots of January 6th.",
+      "query_index": 2,
+      "query_text": "Did the FBI organize the January 6th riots?"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:41:54.285938",
+    "latency_seconds": 4.4,
+    "input_prompt": "Claim:\nThe FBI was organizing the riots of January 6th.\n\nArticle Title:\nExamining the January 6 Attack on the U.S. Capitol - FBI\n\nGoogle Search Snippet:\nThe violence and destruction of property at the US Capitol building on January 6 showed a blatant and appalling disregard for our institutions of government.\n\nFull Page Content:\nNews\nShare on X X.com Share on Facebook Facebook Email Email\nStatement for the Record\nGood afternoon, Chairwoman Maloney, Ranking Member Comer, and members of the committee. Thank you for the opportunity to appear before you today to discuss the FBI\u2019s role and efforts leading up to, and in response to, the January 6, 2021 attack on the U.S. Capitol building. I am pleased to be here representing the dedicated men and women of the FBI.\nThe violence and destruction of property at the U.S. Capitol building on January 6 showed a blatant and appalling disregard for our institutions of government and the orderly administration of the democratic process. The FBI does not tolerate violent extremists who use the guise of First Amendment-protected activity to engage in violent criminal activity. The destruction of property, violent assaults on law enforcement officers, and imminent physical threats to elected officials betray the values of our democracy.\nOn a more personal note, I want to acknowledge the men and women who put their lives on the line to protect members of Congress and others present inside the U.S. Capitol complex on January 6. Those of us in public service, to include members of Congress and the U.S. Capitol Police, all take the same oath to protect and defend the Constitution. We feel strongly about the horrible events that transpired on the January 6.\nFBI Efforts Leading up to January 6, 2021\nIt is not possible to examine the January 6 attack on the U.S. Capitol without an understanding of the overall terrorism threat picture leading up to that day. In 2020, the FBI assessed the greatest terrorism threat to the homeland was from lone actors or small cells who typically become radicalized online and look to attack soft targets with easily accessible weapons; we remain confident in that assessment today. The FBI sees these threats manifested within both domestic violent extremists (DVEs) and homegrown violent extremists (HVEs), two distinct threats, both of which are located primarily in the United States and typically become radicalized and mobilized to violence on their own. Individuals who commit violent criminal acts in furtherance of social or political goals stemming from domestic influences\u2014some of which include racial or ethnic bias, or anti-government or anti-authority sentiments\u2014are described as DVEs, whereas HVEs are individuals who are inspired primarily by global jihad, but not receiving individualized direction from foreign terrorist organizations.\nThroughout 2020, the FBI authored approximately 12 intelligence products for our federal, state, local, tribal, and territorial law enforcement partners disseminating trends we saw in threat reporting and criminal activity involving domestic violent extremism. Over the last year, we observed activity that led us to assess there was potential for increased violent extremist activity at lawful protests taking place in communities across the United States. As such, in June 2020, we, with our partners at the Department of Homeland Security (DHS), issued two separate joint intelligence bulletins highlighting the potential for increased violent extremist activity at such demonstrations and noting that likely targets would include law enforcement and government personnel. More recently, in late August 2020, we published an analytical report informing our partners that DVEs with partisan political grievances likely posed an increased threat related to the 2020 election. In that product, we noted that DVE responses to the election outcome might not occur until after the election and could be based on potential or anticipated policy changes. In December 2020, we contributed to a DHS Intelligence In-Depth product, which advised our partners the threat posed by the diverse DVE landscape would probably persist due to enduring grievances.\nIn the weeks and months leading up to electoral certification, the FBI collected and shared intelligence; coordinated and communicated among federal, state, and local law enforcement partners; and positioned federal resources for potential deployment. Through these measures, the FBI worked in close coordination with the U.S. Capitol Police, the Metropolitan Police Department of Washington D.C., and other law enforcement partners leading up to the Joint Session of Congress and the planned demonstrations scheduled for January 6, 2021. The FBI and our federal, state, and local partners collected and shared intelligence and relevant public safety-related information in preparation for the various planned events.\nFBI\u2019s Response to Events on January 6, 2021\nThroughout the course of the day on January 6, 2021, the FBI was in constant communication with federal, state, and local partners, including through the FBI WFO Command Post and the National Crisis Coordination Center (NC3) at FBI Headquarters. Prior to the breach of the U.S. Capitol, FBI special agents, including bomb technicians, responded to assist the U.S. Capitol Police with securing two nearby locations where potential explosive devices had been found. While the FBI and the U.S. Capitol Police were responding to, and rendering safe, the devices, it became clear that some individuals had breached security barricades and were entering the U.S. Capitol complex. In response to requests from the U.S. Capitol Police, the FBI immediately deployed additional assistance.\nFBI tactical teams partnered with other responding law enforcement agencies to gain control of the area and offer protection to congressional members and staff. One of the FBI tactical teams communicated with the U.S. Capitol Police and the U.S. Secret Service to provide additional protection to a U.S. Secret Service protectee still in the building, although no support was ultimately required. FBI special agents on Special Weapons and Tactics (SWAT) teams were deployed to secure nearby congressional office buildings. The FBI Hostage Rescue Team deployed, FBI Evidence Response Teams arrived t\n\nProvide relevant evidence.",
+    "input_length_chars": 6359,
+    "input_tokens_estimated": 1589,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence discusses the FBI's role in monitoring and responding to threats leading up to and during the January 6 attack, but it does not support the claim that the FBI was organizing the riots. Instead, it emphasizes the FBI's efforts to counter violent extremism and protect democratic institutions.",
+      "overall_stance": "refutes",
+      "key_quote": "The FBI does not tolerate violent extremists who use the guise of First Amendment-protected activity to engage in violent criminal activity."
+    },
+    "output_length_chars": 529,
+    "output_tokens_estimated": 132,
+    "cost_usd": 0.00031755,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The FBI was organizing the riots of January 6th.",
+      "query_index": 2,
+      "query_text": "Did the FBI organize the January 6th riots?"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:41:54.370849",
+    "latency_seconds": 4.48,
+    "input_prompt": "Claim:\nThe FBI was organizing the riots of January 6th.\n\nArticle Title:\n[PDF] FBI confirms there was no insurrection on Jan. 6\n\nGoogle Search Snippet:\n6 attack on the U.S.. Capitol was the result of an organized plot to overturn the presidential election result, according to four current and.\n\nFull Page Content:\nNews\nShare on X X.com Share on Facebook Facebook Email Email\nStatement for the Record\nGood afternoon, Chairwoman Maloney, Ranking Member Comer, and members of the committee. Thank you for the opportunity to appear before you today to discuss the FBI\u2019s role and efforts leading up to, and in response to, the January 6, 2021 attack on the U.S. Capitol building. I am pleased to be here representing the dedicated men and women of the FBI.\nThe violence and destruction of property at the U.S. Capitol building on January 6 showed a blatant and appalling disregard for our institutions of government and the orderly administration of the democratic process. The FBI does not tolerate violent extremists who use the guise of First Amendment-protected activity to engage in violent criminal activity. The destruction of property, violent assaults on law enforcement officers, and imminent physical threats to elected officials betray the values of our democracy.\nOn a more personal note, I want to acknowledge the men and women who put their lives on the line to protect members of Congress and others present inside the U.S. Capitol complex on January 6. Those of us in public service, to include members of Congress and the U.S. Capitol Police, all take the same oath to protect and defend the Constitution. We feel strongly about the horrible events that transpired on the January 6.\nFBI Efforts Leading up to January 6, 2021\nIt is not possible to examine the January 6 attack on the U.S. Capitol without an understanding of the overall terrorism threat picture leading up to that day. In 2020, the FBI assessed the greatest terrorism threat to the homeland was from lone actors or small cells who typically become radicalized online and look to attack soft targets with easily accessible weapons; we remain confident in that assessment today. The FBI sees these threats manifested within both domestic violent extremists (DVEs) and homegrown violent extremists (HVEs), two distinct threats, both of which are located primarily in the United States and typically become radicalized and mobilized to violence on their own. Individuals who commit violent criminal acts in furtherance of social or political goals stemming from domestic influences\u2014some of which include racial or ethnic bias, or anti-government or anti-authority sentiments\u2014are described as DVEs, whereas HVEs are individuals who are inspired primarily by global jihad, but not receiving individualized direction from foreign terrorist organizations.\nThroughout 2020, the FBI authored approximately 12 intelligence products for our federal, state, local, tribal, and territorial law enforcement partners disseminating trends we saw in threat reporting and criminal activity involving domestic violent extremism. Over the last year, we observed activity that led us to assess there was potential for increased violent extremist activity at lawful protests taking place in communities across the United States. As such, in June 2020, we, with our partners at the Department of Homeland Security (DHS), issued two separate joint intelligence bulletins highlighting the potential for increased violent extremist activity at such demonstrations and noting that likely targets would include law enforcement and government personnel. More recently, in late August 2020, we published an analytical report informing our partners that DVEs with partisan political grievances likely posed an increased threat related to the 2020 election. In that product, we noted that DVE responses to the election outcome might not occur until after the election and could be based on potential or anticipated policy changes. In December 2020, we contributed to a DHS Intelligence In-Depth product, which advised our partners the threat posed by the diverse DVE landscape would probably persist due to enduring grievances.\nIn the weeks and months leading up to electoral certification, the FBI collected and shared intelligence; coordinated and communicated among federal, state, and local law enforcement partners; and positioned federal resources for potential deployment. Through these measures, the FBI worked in close coordination with the U.S. Capitol Police, the Metropolitan Police Department of Washington D.C., and other law enforcement partners leading up to the Joint Session of Congress and the planned demonstrations scheduled for January 6, 2021. The FBI and our federal, state, and local partners collected and shared intelligence and relevant public safety-related information in preparation for the various planned events.\nFBI\u2019s Response to Events on January 6, 2021\nThroughout the course of the day on January 6, 2021, the FBI was in constant communication with federal, state, and local partners, including through the FBI WFO Command Post and the National Crisis Coordination Center (NC3) at FBI Headquarters. Prior to the breach of the U.S. Capitol, FBI special agents, including bomb technicians, responded to assist the U.S. Capitol Police with securing two nearby locations where potential explosive devices had been found. While the FBI and the U.S. Capitol Police were responding to, and rendering safe, the devices, it became clear that some individuals had breached security barricades and were entering the U.S. Capitol complex. In response to requests from the U.S. Capitol Police, the FBI immediately deployed additional assistance.\nFBI tactical teams partnered with other responding law enforcement agencies to gain control of the area and offer protection to congressional members and staff. One of the FBI tactical teams communicated with the U.S. Capitol Police and the U.S. Secret Service to provide additional protection to a U.S. Secret Service protectee still in the building, although no support was ultimately required. FBI special agents on Special Weapons and Tactics (SWAT) teams were deployed to secure nearby congressional office buildings. The FBI Hostage Rescue Team deployed, FBI Evidence Response Teams arrived t\n\nProvide relevant evidence.",
+    "input_length_chars": 6342,
+    "input_tokens_estimated": 1585,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that the FBI was actively involved in monitoring and responding to threats leading up to and during the January 6 events, but it does not support the claim that the FBI was organizing the riots. Instead, it emphasizes the FBI's role in countering violent extremism and protecting democratic processes.",
+      "overall_stance": "refutes",
+      "key_quote": "The FBI does not tolerate violent extremists who use the guise of First Amendment-protected activity to engage in violent criminal activity."
+    },
+    "output_length_chars": 549,
+    "output_tokens_estimated": 137,
+    "cost_usd": 0.00031995,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The FBI was organizing the riots of January 6th.",
+      "query_index": 2,
+      "query_text": "Did the FBI organize the January 6th riots?"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:41:55.362981",
+    "latency_seconds": 5.49,
+    "input_prompt": "Claim:\nThe FBI was organizing the riots of January 6th.\n\nArticle Title:\n[PDF] FBI did not send undercover operatives to join Jan. 6 attack ...\n\nGoogle Search Snippet:\nThe FBI has long denied having any involvement by its own staff or its informants in the riots at the Capitol, though conspiracy theories about ...\n\nFull Page Content:\nNews\nShare on X X.com Share on Facebook Facebook Email Email\nStatement for the Record\nGood afternoon, Chairwoman Maloney, Ranking Member Comer, and members of the committee. Thank you for the opportunity to appear before you today to discuss the FBI\u2019s role and efforts leading up to, and in response to, the January 6, 2021 attack on the U.S. Capitol building. I am pleased to be here representing the dedicated men and women of the FBI.\nThe violence and destruction of property at the U.S. Capitol building on January 6 showed a blatant and appalling disregard for our institutions of government and the orderly administration of the democratic process. The FBI does not tolerate violent extremists who use the guise of First Amendment-protected activity to engage in violent criminal activity. The destruction of property, violent assaults on law enforcement officers, and imminent physical threats to elected officials betray the values of our democracy.\nOn a more personal note, I want to acknowledge the men and women who put their lives on the line to protect members of Congress and others present inside the U.S. Capitol complex on January 6. Those of us in public service, to include members of Congress and the U.S. Capitol Police, all take the same oath to protect and defend the Constitution. We feel strongly about the horrible events that transpired on the January 6.\nFBI Efforts Leading up to January 6, 2021\nIt is not possible to examine the January 6 attack on the U.S. Capitol without an understanding of the overall terrorism threat picture leading up to that day. In 2020, the FBI assessed the greatest terrorism threat to the homeland was from lone actors or small cells who typically become radicalized online and look to attack soft targets with easily accessible weapons; we remain confident in that assessment today. The FBI sees these threats manifested within both domestic violent extremists (DVEs) and homegrown violent extremists (HVEs), two distinct threats, both of which are located primarily in the United States and typically become radicalized and mobilized to violence on their own. Individuals who commit violent criminal acts in furtherance of social or political goals stemming from domestic influences\u2014some of which include racial or ethnic bias, or anti-government or anti-authority sentiments\u2014are described as DVEs, whereas HVEs are individuals who are inspired primarily by global jihad, but not receiving individualized direction from foreign terrorist organizations.\nThroughout 2020, the FBI authored approximately 12 intelligence products for our federal, state, local, tribal, and territorial law enforcement partners disseminating trends we saw in threat reporting and criminal activity involving domestic violent extremism. Over the last year, we observed activity that led us to assess there was potential for increased violent extremist activity at lawful protests taking place in communities across the United States. As such, in June 2020, we, with our partners at the Department of Homeland Security (DHS), issued two separate joint intelligence bulletins highlighting the potential for increased violent extremist activity at such demonstrations and noting that likely targets would include law enforcement and government personnel. More recently, in late August 2020, we published an analytical report informing our partners that DVEs with partisan political grievances likely posed an increased threat related to the 2020 election. In that product, we noted that DVE responses to the election outcome might not occur until after the election and could be based on potential or anticipated policy changes. In December 2020, we contributed to a DHS Intelligence In-Depth product, which advised our partners the threat posed by the diverse DVE landscape would probably persist due to enduring grievances.\nIn the weeks and months leading up to electoral certification, the FBI collected and shared intelligence; coordinated and communicated among federal, state, and local law enforcement partners; and positioned federal resources for potential deployment. Through these measures, the FBI worked in close coordination with the U.S. Capitol Police, the Metropolitan Police Department of Washington D.C., and other law enforcement partners leading up to the Joint Session of Congress and the planned demonstrations scheduled for January 6, 2021. The FBI and our federal, state, and local partners collected and shared intelligence and relevant public safety-related information in preparation for the various planned events.\nFBI\u2019s Response to Events on January 6, 2021\nThroughout the course of the day on January 6, 2021, the FBI was in constant communication with federal, state, and local partners, including through the FBI WFO Command Post and the National Crisis Coordination Center (NC3) at FBI Headquarters. Prior to the breach of the U.S. Capitol, FBI special agents, including bomb technicians, responded to assist the U.S. Capitol Police with securing two nearby locations where potential explosive devices had been found. While the FBI and the U.S. Capitol Police were responding to, and rendering safe, the devices, it became clear that some individuals had breached security barricades and were entering the U.S. Capitol complex. In response to requests from the U.S. Capitol Police, the FBI immediately deployed additional assistance.\nFBI tactical teams partnered with other responding law enforcement agencies to gain control of the area and offer protection to congressional members and staff. One of the FBI tactical teams communicated with the U.S. Capitol Police and the U.S. Secret Service to provide additional protection to a U.S. Secret Service protectee still in the building, although no support was ultimately required. FBI special agents on Special Weapons and Tactics (SWAT) teams were deployed to secure nearby congressional office buildings. The FBI Hostage Rescue Team deployed, FBI Evidence Response Teams arrived t\n\nProvide relevant evidence.",
+    "input_length_chars": 6363,
+    "input_tokens_estimated": 1590,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence clearly states that the FBI has denied any involvement of its staff or informants in the January 6 riots, asserting that they do not tolerate violent extremism. This directly refutes the claim that the FBI was organizing the riots.",
+      "overall_stance": "refutes",
+      "key_quote": "The FBI has long denied having any involvement by its own staff or its informants in the riots at the Capitol."
+    },
+    "output_length_chars": 439,
+    "output_tokens_estimated": 109,
+    "cost_usd": 0.0003039,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The FBI was organizing the riots of January 6th.",
+      "query_index": 2,
+      "query_text": "Did the FBI organize the January 6th riots?"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:41:56.169723",
+    "latency_seconds": 6.29,
+    "input_prompt": "Claim:\nThe FBI was organizing the riots of January 6th.\n\nArticle Title:\n[PDF] STATEMENT OF FACTS I, am a Special Agent with the Federal ...\n\nGoogle Search Snippet:\nRestrictions around the. U.S. Capitol include permanent and temporary security barriers and posts manned by U.S. Capitol. Police. Only authorized people with ...\n\nFull Page Content:\nNews\nShare on X X.com Share on Facebook Facebook Email Email\nStatement for the Record\nGood afternoon, Chairwoman Maloney, Ranking Member Comer, and members of the committee. Thank you for the opportunity to appear before you today to discuss the FBI\u2019s role and efforts leading up to, and in response to, the January 6, 2021 attack on the U.S. Capitol building. I am pleased to be here representing the dedicated men and women of the FBI.\nThe violence and destruction of property at the U.S. Capitol building on January 6 showed a blatant and appalling disregard for our institutions of government and the orderly administration of the democratic process. The FBI does not tolerate violent extremists who use the guise of First Amendment-protected activity to engage in violent criminal activity. The destruction of property, violent assaults on law enforcement officers, and imminent physical threats to elected officials betray the values of our democracy.\nOn a more personal note, I want to acknowledge the men and women who put their lives on the line to protect members of Congress and others present inside the U.S. Capitol complex on January 6. Those of us in public service, to include members of Congress and the U.S. Capitol Police, all take the same oath to protect and defend the Constitution. We feel strongly about the horrible events that transpired on the January 6.\nFBI Efforts Leading up to January 6, 2021\nIt is not possible to examine the January 6 attack on the U.S. Capitol without an understanding of the overall terrorism threat picture leading up to that day. In 2020, the FBI assessed the greatest terrorism threat to the homeland was from lone actors or small cells who typically become radicalized online and look to attack soft targets with easily accessible weapons; we remain confident in that assessment today. The FBI sees these threats manifested within both domestic violent extremists (DVEs) and homegrown violent extremists (HVEs), two distinct threats, both of which are located primarily in the United States and typically become radicalized and mobilized to violence on their own. Individuals who commit violent criminal acts in furtherance of social or political goals stemming from domestic influences\u2014some of which include racial or ethnic bias, or anti-government or anti-authority sentiments\u2014are described as DVEs, whereas HVEs are individuals who are inspired primarily by global jihad, but not receiving individualized direction from foreign terrorist organizations.\nThroughout 2020, the FBI authored approximately 12 intelligence products for our federal, state, local, tribal, and territorial law enforcement partners disseminating trends we saw in threat reporting and criminal activity involving domestic violent extremism. Over the last year, we observed activity that led us to assess there was potential for increased violent extremist activity at lawful protests taking place in communities across the United States. As such, in June 2020, we, with our partners at the Department of Homeland Security (DHS), issued two separate joint intelligence bulletins highlighting the potential for increased violent extremist activity at such demonstrations and noting that likely targets would include law enforcement and government personnel. More recently, in late August 2020, we published an analytical report informing our partners that DVEs with partisan political grievances likely posed an increased threat related to the 2020 election. In that product, we noted that DVE responses to the election outcome might not occur until after the election and could be based on potential or anticipated policy changes. In December 2020, we contributed to a DHS Intelligence In-Depth product, which advised our partners the threat posed by the diverse DVE landscape would probably persist due to enduring grievances.\nIn the weeks and months leading up to electoral certification, the FBI collected and shared intelligence; coordinated and communicated among federal, state, and local law enforcement partners; and positioned federal resources for potential deployment. Through these measures, the FBI worked in close coordination with the U.S. Capitol Police, the Metropolitan Police Department of Washington D.C., and other law enforcement partners leading up to the Joint Session of Congress and the planned demonstrations scheduled for January 6, 2021. The FBI and our federal, state, and local partners collected and shared intelligence and relevant public safety-related information in preparation for the various planned events.\nFBI\u2019s Response to Events on January 6, 2021\nThroughout the course of the day on January 6, 2021, the FBI was in constant communication with federal, state, and local partners, including through the FBI WFO Command Post and the National Crisis Coordination Center (NC3) at FBI Headquarters. Prior to the breach of the U.S. Capitol, FBI special agents, including bomb technicians, responded to assist the U.S. Capitol Police with securing two nearby locations where potential explosive devices had been found. While the FBI and the U.S. Capitol Police were responding to, and rendering safe, the devices, it became clear that some individuals had breached security barricades and were entering the U.S. Capitol complex. In response to requests from the U.S. Capitol Police, the FBI immediately deployed additional assistance.\nFBI tactical teams partnered with other responding law enforcement agencies to gain control of the area and offer protection to congressional members and staff. One of the FBI tactical teams communicated with the U.S. Capitol Police and the U.S. Secret Service to provide additional protection to a U.S. Secret Service protectee still in the building, although no support was ultimately required. FBI special agents on Special Weapons and Tactics (SWAT) teams were deployed to secure nearby congressional office buildings. The FBI Hostage Rescue Team deployed, FBI Evidence Response Teams arrived t\n\nProvide relevant evidence.",
+    "input_length_chars": 6374,
+    "input_tokens_estimated": 1593,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence discusses the FBI's role in monitoring and responding to threats leading up to and during the January 6 events, but it does not support the claim that the FBI was organizing the riots. Instead, it emphasizes the FBI's efforts to counter violent extremism and protect democratic processes.",
+      "overall_stance": "refutes",
+      "key_quote": "The FBI does not tolerate violent extremists who use the guise of First Amendment-protected activity to engage in violent criminal activity."
+    },
+    "output_length_chars": 526,
+    "output_tokens_estimated": 131,
+    "cost_usd": 0.00031755,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The FBI was organizing the riots of January 6th.",
+      "query_index": 2,
+      "query_text": "Did the FBI organize the January 6th riots?"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:41:57.332522",
+    "latency_seconds": 2.79,
+    "input_prompt": "Claim:\nThe FBI was organizing the riots of January 6th.\n\nArticle Title:\nExamining the January 6 Attack on the U.S. Capitol - FBI\n\nGoogle Search Snippet:\nOver the last year, we observed activity that led us to assess there was potential for increased violent extremist activity at lawful protests ...\n\nFull Page Content:\nAn official website of the United States government\nREPORT FRAUD, WASTE & ABUSE\nDepartment of Justice (DOJ) Inspector General Michael E. Horowitz announced today the release of a review examining the Federal Bureau of Investigation\u2019s (FBI) handling of its confidential human sources (CHS) and intelligence collection efforts in the lead up to the events at the U.S. Capitol on January 6, 2021.\nConsistent with OIG practice, in spring 2022 the OIG paused aspects of our review to ensure that the OIG\u2019s investigative work did not conflict with or compromise any ongoing DOJ criminal investigations or prosecutions. Having been informed by federal prosecutors last year that our review would no longer potentially interfere with pending criminal prosecutions, we resumed our work on this matter. In doing so, we were cognizant of the amount of time that had passed, as well as the number of non-DOJ OIG oversight reports that had been publicly released regarding the events of January 6. We determined that an area that had not yet been thoroughly reviewed by other entities was the FBI\u2019s direction and handling of its CHSs in the lead-up to and on January 6, and whether the FBI exploited its CHSs and other available information to determine the nature of threats in advance of the electoral vote certification on January 6. Accordingly, we focused our review on that topic.\nThe findings in today\u2019s report include:\nToday\u2019s report also details our findings regarding FBI CHSs who were in Washington, D.C., on January 6. Our review determined that none of these FBI CHSs was authorized by the FBI to enter the Capitol or a restricted area or to otherwise break the law on January 6, nor was any CHS directed by the FBI to encourage others to commit illegal acts on January 6. Our findings also include:\nThe DOJ OIG made one recommendation to the FBI to assess the policies and procedures it uses to prepare for events that it determines present potential domestic security issues. The FBI agreed with this recommendation.\nDepartment of Justice\nIn memory of OIG Special Agent William \"Buddy\" Sentner Privacy Policy | EEO Policy | Legal Policies & Disclaimers | No Fear Act | Vulnerability Disclosure | Sitemap\n\nProvide relevant evidence.",
+    "input_length_chars": 2553,
+    "input_tokens_estimated": 638,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that the FBI did not authorize or direct its confidential human sources to enter the Capitol or engage in illegal activities during the January 6 riots, which contradicts the claim that the FBI was organizing the riots.",
+      "overall_stance": "refutes",
+      "key_quote": "none of these FBI CHSs was authorized by the FBI to enter the Capitol or a restricted area or to otherwise break the law on January 6, nor was any CHS directed by the FBI to encourage others to commit illegal acts on January 6."
+    },
+    "output_length_chars": 554,
+    "output_tokens_estimated": 138,
+    "cost_usd": 0.0001785,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The FBI was organizing the riots of January 6th.",
+      "query_index": 2,
+      "query_text": "Did the FBI organize the January 6th riots?"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:41:57.806112",
+    "latency_seconds": 3.28,
+    "input_prompt": "Claim:\nThe FBI was organizing the riots of January 6th.\n\nArticle Title:\n[PDF] FBI did not send undercover operatives to join Jan. 6 attack ...\n\nGoogle Search Snippet:\nThe FBI has long denied having any involvement by its own staff or its informants in the riots at the Capitol, though conspiracy theories about ...\n\nFull Page Content:\nAn official website of the United States government\nREPORT FRAUD, WASTE & ABUSE\nDepartment of Justice (DOJ) Inspector General Michael E. Horowitz announced today the release of a review examining the Federal Bureau of Investigation\u2019s (FBI) handling of its confidential human sources (CHS) and intelligence collection efforts in the lead up to the events at the U.S. Capitol on January 6, 2021.\nConsistent with OIG practice, in spring 2022 the OIG paused aspects of our review to ensure that the OIG\u2019s investigative work did not conflict with or compromise any ongoing DOJ criminal investigations or prosecutions. Having been informed by federal prosecutors last year that our review would no longer potentially interfere with pending criminal prosecutions, we resumed our work on this matter. In doing so, we were cognizant of the amount of time that had passed, as well as the number of non-DOJ OIG oversight reports that had been publicly released regarding the events of January 6. We determined that an area that had not yet been thoroughly reviewed by other entities was the FBI\u2019s direction and handling of its CHSs in the lead-up to and on January 6, and whether the FBI exploited its CHSs and other available information to determine the nature of threats in advance of the electoral vote certification on January 6. Accordingly, we focused our review on that topic.\nThe findings in today\u2019s report include:\nToday\u2019s report also details our findings regarding FBI CHSs who were in Washington, D.C., on January 6. Our review determined that none of these FBI CHSs was authorized by the FBI to enter the Capitol or a restricted area or to otherwise break the law on January 6, nor was any CHS directed by the FBI to encourage others to commit illegal acts on January 6. Our findings also include:\nThe DOJ OIG made one recommendation to the FBI to assess the policies and procedures it uses to prepare for events that it determines present potential domestic security issues. The FBI agreed with this recommendation.\nDepartment of Justice\nIn memory of OIG Special Agent William \"Buddy\" Sentner Privacy Policy | EEO Policy | Legal Policies & Disclaimers | No Fear Act | Vulnerability Disclosure | Sitemap\n\nProvide relevant evidence.",
+    "input_length_chars": 2568,
+    "input_tokens_estimated": 642,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that the FBI did not authorize any of its confidential human sources to enter the Capitol or engage in illegal activities during the January 6th riots, directly contradicting the claim that the FBI was organizing the riots.",
+      "overall_stance": "refutes",
+      "key_quote": "none of these FBI CHSs was authorized by the FBI to enter the Capitol or a restricted area or to otherwise break the law on January 6, nor was any CHS directed by the FBI to encourage others to commit illegal acts on January 6."
+    },
+    "output_length_chars": 558,
+    "output_tokens_estimated": 139,
+    "cost_usd": 0.0001797,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The FBI was organizing the riots of January 6th.",
+      "query_index": 2,
+      "query_text": "Did the FBI organize the January 6th riots?"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:41:58.384197",
+    "latency_seconds": 3.84,
+    "input_prompt": "Claim:\nThe FBI was organizing the riots of January 6th.\n\nArticle Title:\nDOJ OIG Releases Report on the FBI's Handling of Its Confidential ...\n\nGoogle Search Snippet:\n... role. The FBI Did Not Canvass Field Offices for Intelligence ... No Undercover FBI Employees at Protests or at the Capitol on January 6.\n\nFull Page Content:\nAn official website of the United States government\nREPORT FRAUD, WASTE & ABUSE\nDepartment of Justice (DOJ) Inspector General Michael E. Horowitz announced today the release of a review examining the Federal Bureau of Investigation\u2019s (FBI) handling of its confidential human sources (CHS) and intelligence collection efforts in the lead up to the events at the U.S. Capitol on January 6, 2021.\nConsistent with OIG practice, in spring 2022 the OIG paused aspects of our review to ensure that the OIG\u2019s investigative work did not conflict with or compromise any ongoing DOJ criminal investigations or prosecutions. Having been informed by federal prosecutors last year that our review would no longer potentially interfere with pending criminal prosecutions, we resumed our work on this matter. In doing so, we were cognizant of the amount of time that had passed, as well as the number of non-DOJ OIG oversight reports that had been publicly released regarding the events of January 6. We determined that an area that had not yet been thoroughly reviewed by other entities was the FBI\u2019s direction and handling of its CHSs in the lead-up to and on January 6, and whether the FBI exploited its CHSs and other available information to determine the nature of threats in advance of the electoral vote certification on January 6. Accordingly, we focused our review on that topic.\nThe findings in today\u2019s report include:\nToday\u2019s report also details our findings regarding FBI CHSs who were in Washington, D.C., on January 6. Our review determined that none of these FBI CHSs was authorized by the FBI to enter the Capitol or a restricted area or to otherwise break the law on January 6, nor was any CHS directed by the FBI to encourage others to commit illegal acts on January 6. Our findings also include:\nThe DOJ OIG made one recommendation to the FBI to assess the policies and procedures it uses to prepare for events that it determines present potential domestic security issues. The FBI agreed with this recommendation.\nDepartment of Justice\nIn memory of OIG Special Agent William \"Buddy\" Sentner Privacy Policy | EEO Policy | Legal Policies & Disclaimers | No Fear Act | Vulnerability Disclosure | Sitemap\n\nProvide relevant evidence.",
+    "input_length_chars": 2560,
+    "input_tokens_estimated": 640,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that the FBI did not organize or direct the riots on January 6th, as none of its confidential human sources were authorized to enter the Capitol or engage in illegal activities. This directly contradicts the claim that the FBI was organizing the riots.",
+      "overall_stance": "refutes",
+      "key_quote": "none of these FBI CHSs was authorized by the FBI to enter the Capitol or a restricted area or to otherwise break the law on January 6, nor was any CHS directed by the FBI to encourage others to commit illegal acts on January 6."
+    },
+    "output_length_chars": 587,
+    "output_tokens_estimated": 146,
+    "cost_usd": 0.0001836,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The FBI was organizing the riots of January 6th.",
+      "query_index": 2,
+      "query_text": "Did the FBI organize the January 6th riots?"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:41:58.866267",
+    "latency_seconds": 4.33,
+    "input_prompt": "Claim:\nThe FBI was organizing the riots of January 6th.\n\nArticle Title:\nFBI agent involved in Jan. 6 probes says Trump review is ... - YouTube\n\nGoogle Search Snippet:\nAnother federal judge has blocked the Justice Department from releasing a list of FBI agents involved in investigating the Jan. 6 Capitol riot ...\n\nFull Page Content:\nAn official website of the United States government\nREPORT FRAUD, WASTE & ABUSE\nDepartment of Justice (DOJ) Inspector General Michael E. Horowitz announced today the release of a review examining the Federal Bureau of Investigation\u2019s (FBI) handling of its confidential human sources (CHS) and intelligence collection efforts in the lead up to the events at the U.S. Capitol on January 6, 2021.\nConsistent with OIG practice, in spring 2022 the OIG paused aspects of our review to ensure that the OIG\u2019s investigative work did not conflict with or compromise any ongoing DOJ criminal investigations or prosecutions. Having been informed by federal prosecutors last year that our review would no longer potentially interfere with pending criminal prosecutions, we resumed our work on this matter. In doing so, we were cognizant of the amount of time that had passed, as well as the number of non-DOJ OIG oversight reports that had been publicly released regarding the events of January 6. We determined that an area that had not yet been thoroughly reviewed by other entities was the FBI\u2019s direction and handling of its CHSs in the lead-up to and on January 6, and whether the FBI exploited its CHSs and other available information to determine the nature of threats in advance of the electoral vote certification on January 6. Accordingly, we focused our review on that topic.\nThe findings in today\u2019s report include:\nToday\u2019s report also details our findings regarding FBI CHSs who were in Washington, D.C., on January 6. Our review determined that none of these FBI CHSs was authorized by the FBI to enter the Capitol or a restricted area or to otherwise break the law on January 6, nor was any CHS directed by the FBI to encourage others to commit illegal acts on January 6. Our findings also include:\nThe DOJ OIG made one recommendation to the FBI to assess the policies and procedures it uses to prepare for events that it determines present potential domestic security issues. The FBI agreed with this recommendation.\nDepartment of Justice\nIn memory of OIG Special Agent William \"Buddy\" Sentner Privacy Policy | EEO Policy | Legal Policies & Disclaimers | No Fear Act | Vulnerability Disclosure | Sitemap\n\nProvide relevant evidence.",
+    "input_length_chars": 2567,
+    "input_tokens_estimated": 641,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that the FBI did not authorize any of its confidential human sources to enter the Capitol or to engage in illegal activities during the January 6th events, which contradicts the claim that the FBI was organizing the riots.",
+      "overall_stance": "refutes",
+      "key_quote": "none of these FBI CHSs was authorized by the FBI to enter the Capitol or a restricted area or to otherwise break the law on January 6, nor was any CHS directed by the FBI to encourage others to commit illegal acts on January 6."
+    },
+    "output_length_chars": 557,
+    "output_tokens_estimated": 139,
+    "cost_usd": 0.00017955,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The FBI was organizing the riots of January 6th.",
+      "query_index": 2,
+      "query_text": "Did the FBI organize the January 6th riots?"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:41:59.268556",
+    "latency_seconds": 4.74,
+    "input_prompt": "Claim:\nThe FBI was organizing the riots of January 6th.\n\nArticle Title:\nNo undercover FBI agents at Jan. 6 riot, watchdog finds in rebuke to ...\n\nGoogle Search Snippet:\nThe FBI should have done more to gather intelligence before the Capitol riot, according to a watchdog report Thursday that also said no undercover FBI ...\n\nFull Page Content:\nAn official website of the United States government\nREPORT FRAUD, WASTE & ABUSE\nDepartment of Justice (DOJ) Inspector General Michael E. Horowitz announced today the release of a review examining the Federal Bureau of Investigation\u2019s (FBI) handling of its confidential human sources (CHS) and intelligence collection efforts in the lead up to the events at the U.S. Capitol on January 6, 2021.\nConsistent with OIG practice, in spring 2022 the OIG paused aspects of our review to ensure that the OIG\u2019s investigative work did not conflict with or compromise any ongoing DOJ criminal investigations or prosecutions. Having been informed by federal prosecutors last year that our review would no longer potentially interfere with pending criminal prosecutions, we resumed our work on this matter. In doing so, we were cognizant of the amount of time that had passed, as well as the number of non-DOJ OIG oversight reports that had been publicly released regarding the events of January 6. We determined that an area that had not yet been thoroughly reviewed by other entities was the FBI\u2019s direction and handling of its CHSs in the lead-up to and on January 6, and whether the FBI exploited its CHSs and other available information to determine the nature of threats in advance of the electoral vote certification on January 6. Accordingly, we focused our review on that topic.\nThe findings in today\u2019s report include:\nToday\u2019s report also details our findings regarding FBI CHSs who were in Washington, D.C., on January 6. Our review determined that none of these FBI CHSs was authorized by the FBI to enter the Capitol or a restricted area or to otherwise break the law on January 6, nor was any CHS directed by the FBI to encourage others to commit illegal acts on January 6. Our findings also include:\nThe DOJ OIG made one recommendation to the FBI to assess the policies and procedures it uses to prepare for events that it determines present potential domestic security issues. The FBI agreed with this recommendation.\nDepartment of Justice\nIn memory of OIG Special Agent William \"Buddy\" Sentner Privacy Policy | EEO Policy | Legal Policies & Disclaimers | No Fear Act | Vulnerability Disclosure | Sitemap\n\nProvide relevant evidence.",
+    "input_length_chars": 2577,
+    "input_tokens_estimated": 644,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that the FBI did not authorize any of its confidential human sources to enter the Capitol or engage in illegal activities during the January 6th riots, directly contradicting the claim that the FBI was organizing the riots.",
+      "overall_stance": "refutes",
+      "key_quote": "none of these FBI CHSs was authorized by the FBI to enter the Capitol or a restricted area or to otherwise break the law on January 6, nor was any CHS directed by the FBI to encourage others to commit illegal acts on January 6."
+    },
+    "output_length_chars": 558,
+    "output_tokens_estimated": 139,
+    "cost_usd": 0.00018,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The FBI was organizing the riots of January 6th.",
+      "query_index": 2,
+      "query_text": "Did the FBI organize the January 6th riots?"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:42:00.133684",
+    "latency_seconds": 5.6,
+    "input_prompt": "Claim:\nThe FBI was organizing the riots of January 6th.\n\nArticle Title:\nUS intelligence investigating whether FBI involved in 2021 Capitol riot\n\nGoogle Search Snippet:\n... January 6, 2021 assault on the Capitol by supporters of ... US intelligence investigating whether FBI involved in 2021 Capitol riot.\n\nFull Page Content:\nAn official website of the United States government\nREPORT FRAUD, WASTE & ABUSE\nDepartment of Justice (DOJ) Inspector General Michael E. Horowitz announced today the release of a review examining the Federal Bureau of Investigation\u2019s (FBI) handling of its confidential human sources (CHS) and intelligence collection efforts in the lead up to the events at the U.S. Capitol on January 6, 2021.\nConsistent with OIG practice, in spring 2022 the OIG paused aspects of our review to ensure that the OIG\u2019s investigative work did not conflict with or compromise any ongoing DOJ criminal investigations or prosecutions. Having been informed by federal prosecutors last year that our review would no longer potentially interfere with pending criminal prosecutions, we resumed our work on this matter. In doing so, we were cognizant of the amount of time that had passed, as well as the number of non-DOJ OIG oversight reports that had been publicly released regarding the events of January 6. We determined that an area that had not yet been thoroughly reviewed by other entities was the FBI\u2019s direction and handling of its CHSs in the lead-up to and on January 6, and whether the FBI exploited its CHSs and other available information to determine the nature of threats in advance of the electoral vote certification on January 6. Accordingly, we focused our review on that topic.\nThe findings in today\u2019s report include:\nToday\u2019s report also details our findings regarding FBI CHSs who were in Washington, D.C., on January 6. Our review determined that none of these FBI CHSs was authorized by the FBI to enter the Capitol or a restricted area or to otherwise break the law on January 6, nor was any CHS directed by the FBI to encourage others to commit illegal acts on January 6. Our findings also include:\nThe DOJ OIG made one recommendation to the FBI to assess the policies and procedures it uses to prepare for events that it determines present potential domestic security issues. The FBI agreed with this recommendation.\nDepartment of Justice\nIn memory of OIG Special Agent William \"Buddy\" Sentner Privacy Policy | EEO Policy | Legal Policies & Disclaimers | No Fear Act | Vulnerability Disclosure | Sitemap\n\nProvide relevant evidence.",
+    "input_length_chars": 2558,
+    "input_tokens_estimated": 639,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that the FBI did not authorize any of its confidential human sources to enter the Capitol or engage in illegal activities during the January 6th events, which contradicts the claim that the FBI was organizing the riots.",
+      "overall_stance": "refutes",
+      "key_quote": "none of these FBI CHSs was authorized by the FBI to enter the Capitol or a restricted area or to otherwise break the law on January 6, nor was any CHS directed by the FBI to encourage others to commit illegal acts on January 6."
+    },
+    "output_length_chars": 554,
+    "output_tokens_estimated": 138,
+    "cost_usd": 0.00017865,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The FBI was organizing the riots of January 6th.",
+      "query_index": 2,
+      "query_text": "Did the FBI organize the January 6th riots?"
+    }
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:42:05.505876",
+    "latency_seconds": 5.27,
+    "input_prompt": "\nClaim: The FBI was organizing the riots of January 6th.\nCategory: historical\nExtraction confidence: 0.80\n\nEvidence:\nREFUTES (4 sources):\n  1. [PDF] STATEMENT OF FACTS I, am a Special Agent with the Federal ... | reliability=high (1.00)\n     URL: https://www.justice.gov/d9/peterson_kurt_-_statement_of_facts_redacted_1_0.pdf\n     Summary: The evidence discusses the FBI's role in monitoring and responding to threats leading up to and during the January 6 events, but it does not support the claim that the FBI was organizing the riots. Instead, it emphasizes the FBI's efforts to counter violent extremism and protect democratic processes.\n  2. DOJ OIG Releases Report on the FBI's Handling of Its Confidential ... | reliability=high (1.00)\n     URL: https://oig.justice.gov/news/doj-oig-releases-report-fbis-handling-its-confidential-human-sources-and-intelligence\n     Summary: The evidence indicates that the FBI did not organize or direct the riots on January 6th, as none of its confidential human sources were authorized to enter the Capitol or engage in illegal activities. This directly contradicts the claim that the FBI was organizing the riots.\n  3. [PDF] FBI did not send undercover operatives to join Jan. 6 attack ... | reliability=high (0.85)\n     URL: https://www.congress.gov/119/meeting/house/117924/documents/HHRG-119-JU13-20250225-SD015-U15.pdf\n     Summary: The evidence indicates that the FBI did not authorize any of its confidential human sources to enter the Capitol or engage in illegal activities during the January 6th riots, directly contradicting the claim that the FBI was organizing the riots.\n  4. No undercover FBI agents at Jan. 6 riot, watchdog finds in rebuke to ... | reliability=high (0.85)\n     URL: https://www.pbs.org/newshour/politics/no-undercover-fbi-agents-at-jan-6-riot-watchdog-finds-in-rebuke-to-conspiracy-theories\n     Summary: The evidence indicates that the FBI did not authorize any of its confidential human sources to enter the Capitol or engage in illegal activities during the January 6th riots, directly contradicting the claim that the FBI was organizing the riots.\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2161,
+    "input_tokens_estimated": 540,
+    "output": {
+      "overall_stance": "refutes",
+      "confidence": "high",
+      "summary": "The evidence from multiple high-reliability sources, including official statements and reports, clearly indicates that the FBI did not organize or direct the January 6th riots. Instead, it highlights the FBI's role in monitoring threats and countering violent extremism, with no authorization for its agents or sources to engage in illegal activities during the events."
+    },
+    "output_length_chars": 430,
+    "output_tokens_estimated": 107,
+    "cost_usd": 0.0001452,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The FBI was organizing the riots of January 6th.",
+      "query_index": 2,
+      "query_text": "Did the FBI organize the January 6th riots?"
+    }
+  }
+]

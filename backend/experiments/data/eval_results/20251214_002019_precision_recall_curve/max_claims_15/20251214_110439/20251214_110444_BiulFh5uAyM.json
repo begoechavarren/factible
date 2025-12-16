@@ -1,0 +1,198 @@
+{
+  "video_id": "BiulFh5uAyM",
+  "timestamp": "2025-12-14T11:04:44.829097",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_15",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.8666666666666667,
+    "recall": 0.48148148148148145,
+    "f1_score": 0.6190476190476191,
+    "true_positives": 13,
+    "false_positives": 2,
+    "false_negatives": 14,
+    "mean_average_precision": 0.9101362312900773,
+    "recall_at_important": 0.25,
+    "importance_weighted_coverage": 0.4554973821989528,
+    "matched_claims": [
+      {
+        "gt_text": "Trump's declaration is the first time a president has used emergency power to pay for policy that had already been rejected by Congress",
+        "sys_text": "Trump's declaration is the first time a president has used national emergency powers to fund a policy rejected by Congress.",
+        "gt_importance": 0.95,
+        "sys_importance": 0.85,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "On February 26th, the House of Representatives voted to block a presidential national emergency for the first time ever",
+        "sys_text": "The House of Representatives voted to block a presidential national emergency for the first time ever on February 26th.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.85,
+        "importance_error": 0.0
+      },
+      {
+        "gt_text": "16 states are suing the president for what they say is an unconstitutional use of executive power",
+        "sys_text": "16 states are suing the president for what they claim is an unconstitutional use of executive power.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.8,
+        "importance_error": 0.050000000000000044
+      },
+      {
+        "gt_text": "President Obama issued 12 national emergency declarations",
+        "sys_text": "President Obama issued 12 national emergencies during his presidency.",
+        "gt_importance": 0.55,
+        "sys_importance": 0.6,
+        "importance_error": 0.04999999999999993
+      },
+      {
+        "gt_text": "President George W. Bush issued 13 national emergency declarations",
+        "sys_text": "President Bush declared 13 national emergencies during his presidency.",
+        "gt_importance": 0.55,
+        "sys_importance": 0.6,
+        "importance_error": 0.04999999999999993
+      },
+      {
+        "gt_text": "President Clinton issued 17 national emergency declarations",
+        "sys_text": "President Clinton declared 17 national emergencies during his presidency.",
+        "gt_importance": 0.55,
+        "sys_importance": 0.6,
+        "importance_error": 0.04999999999999993
+      },
+      {
+        "gt_text": "Franklin Roosevelt used emergency power to order the internment of over 100,000 Japanese-Americans during World War II",
+        "sys_text": "Franklin Roosevelt ordered the internment of over 100,000 Japanese-Americans during World War II using emergency powers.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.6,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "In addition to the recent one, there are 31 other active national emergencies which need to be renewed every year",
+        "sys_text": "There are 31 other active national emergencies that need to be renewed every year.",
+        "gt_importance": 0.6,
+        "sys_importance": 0.5,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "The oldest national emergency still in effect is from President Jimmy Carter in 1979, which were sanctions in response to the Iran hostage crisis",
+        "sys_text": "The oldest active national emergency is from President Jimmy Carter in 1979 regarding the Iran hostage crisis.",
+        "gt_importance": 0.6,
+        "sys_importance": 0.5,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "The U.S. Constitution doesn't explicitly give a president the right to declare a national emergency",
+        "sys_text": "The U.S. Constitution doesn\u2019t explicitly give a president the right to declare a national emergency.",
+        "gt_importance": 0.65,
+        "sys_importance": 0.5,
+        "importance_error": 0.15000000000000002
+      },
+      {
+        "gt_text": "President Woodrow Wilson was the first president to declare a national emergency during World War I",
+        "sys_text": "Woodrow Wilson was the first president to declare a national emergency during World War I.",
+        "gt_importance": 0.45,
+        "sys_importance": 0.5,
+        "importance_error": 0.04999999999999999
+      },
+      {
+        "gt_text": "In the 1950s, the Supreme Court blocked President Harry Truman's attempt to nationalize the steel industry during the Korean War",
+        "sys_text": "The Supreme Court blocked President Harry Truman\u2019s attempt to nationalize the steel industry during the Korean War.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.5,
+        "importance_error": 0.25
+      },
+      {
+        "gt_text": "The legislation formalized a president's ability to declare national emergencies but also aimed to give legislators the ability to check the president's power",
+        "sys_text": "The National Emergencies Act of 1976 aimed to give legislators the ability to check the president\u2019s power.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.5,
+        "importance_error": 0.25
+      }
+    ],
+    "missed_claims": [
+      "Trump signed the national emergency declaration on February 15, 2019",
+      "Presidents have signed national emergency declarations many times before",
+      "In December 2018, Trump said he would refuse to sign a budget into law unless it included $5.7 billion for his proposed border wall",
+      "The government shutdown was the longest government shutdown in U.S. history",
+      "On February 14th, a budget was passed but it did not include funding for the border wall",
+      "The declaration allows the president to unilaterally divert billions of dollars from military construction projects to fund the border wall",
+      "Congress would need a supermajority vote, two-thirds of both chambers, to override a presidential veto",
+      "The lawsuit claims the president has used a manufactured crisis to call for an emergency",
+      "Trump said 'I could do the wall over a longer period of time, I didn't need to do this, but I'd rather do it much faster'",
+      "Presidents have taken this type of unilateral action for some time now, claiming it's part of the executive powers granted to them in the constitution",
+      "Congress passed the National Emergencies Act of 1976",
+      "The law has failed to limit presidential powers the way it intended to",
+      "Emergency powers allow the president to shut down or take over radio stations",
+      "Emergency powers allow the president to freeze Americans' bank accounts and criminalize doing business with Americans designated by the government"
+    ],
+    "extra_claims": [
+      "Trump declared three national emergencies during his time in office.",
+      "Congress decided to take a hard look at executive power in the 1970s due to scandals like Watergate."
+    ],
+    "importance_mae": 0.09999999999999999,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.5384615384615384,
+    "stance_accuracy": 0.5384615384615384,
+    "correct_verdicts": 7,
+    "total_verdicts": 13,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "Trump's declaration is the first time a president has used emergency power to pay for policy that had already been rejected by Congress",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "President Clinton issued 17 national emergency declarations",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Franklin Roosevelt used emergency power to order the internment of over 100,000 Japanese-Americans during World War II",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "In addition to the recent one, there are 31 other active national emergencies which need to be renewed every year",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "MIXED"
+      },
+      {
+        "claim": "The U.S. Constitution doesn't explicitly give a president the right to declare a national emergency",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "The legislation formalized a president's ability to declare national emergencies but also aimed to give legislators the ability to check the president's power",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "MIXED"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.48148148148148145,
+    "verdict_accuracy": 0.5384615384615384,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.01486365,
+    "total_time_seconds": 690.4395608901978,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.4
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 63,
+      "medium": 9
+    },
+    "avg_evidence_per_claim": 4.8
+  },
+  "ground_truth_claims_count": 27,
+  "system_claims_count": 15
+}

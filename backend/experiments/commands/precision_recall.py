@@ -207,8 +207,7 @@ def _create_precision_recall_curve(eval_dir: Path, primary_k: int = 5) -> Path:
     plt.tight_layout()
 
     # Save the figure as PNG
-    run_name = eval_dir.name
-    output_path = eval_dir / f"precision_recall_curve_{run_name}.png"
+    output_path = eval_dir / "precision_recall_curve.png"
     plt.savefig(output_path, dpi=300, bbox_inches="tight")
     _logger.info(f"\nPrecision-Recall curve saved to: {output_path}")
 
@@ -246,7 +245,7 @@ def _create_precision_recall_curve(eval_dir: Path, primary_k: int = 5) -> Path:
         ],
     }
 
-    table_path = eval_dir / f"precision_recall_summary_{run_name}.json"
+    table_path = eval_dir / "precision_recall_summary.json"
     with open(table_path, "w") as f:
         json.dump(table_data, f, indent=2)
     _logger.info(f"\nSummary table saved to: {table_path}")

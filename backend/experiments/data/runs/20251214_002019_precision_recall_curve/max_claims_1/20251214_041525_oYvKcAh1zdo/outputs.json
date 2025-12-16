@@ -1,0 +1,547 @@
+{
+  "extracted_claims": {
+    "claims": [
+      {
+        "text": "The United States maintains the most generous immigration policies in the world.",
+        "confidence": 0.9,
+        "category": "policy",
+        "importance": 0.85,
+        "context": "Speaker: Michelle Malkin, discussing immigration policies.",
+        "transcript_char_start": 511,
+        "transcript_char_end": 596,
+        "transcript_match_score": 0.9634146341463414
+      }
+    ],
+    "total_count": 1
+  },
+  "final_output": {
+    "extracted_claims": {
+      "claims": [
+        {
+          "text": "The United States maintains the most generous immigration policies in the world.",
+          "confidence": 0.9,
+          "category": "policy",
+          "importance": 0.85,
+          "context": "Speaker: Michelle Malkin, discussing immigration policies.",
+          "transcript_char_start": 511,
+          "transcript_char_end": 596,
+          "transcript_match_score": 0.9634146341463414
+        }
+      ],
+      "total_count": 1
+    },
+    "claim_reports": [
+      {
+        "claim_text": "The United States maintains the most generous immigration policies in the world.",
+        "claim_confidence": 0.9,
+        "claim_category": "policy",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "refutes": [
+            {
+              "title": "2023 Update on Key Federal Immigration Policies and Implications ...",
+              "url": "https://www.kff.org/racial-equity-and-health-policy/2023-update-on-key-federal-immigration-policies-and-implications-for-health/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that while there is significant public support for expanding legal immigration opportunities, there is also widespread disapproval of current immigration policies, suggesting that the U.S. immigration system is viewed as inadequate rather than the most generous in the world.",
+              "snippet": "This issue brief provides the latest update on some key evolving immigration policies, including Title 42 as it applies to border ..."
+            },
+            {
+              "title": "Primer on U.S. Immigration Policy | Congress.gov",
+              "url": "https://www.congress.gov/crs-product/R45020",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The article discusses various aspects of U.S. immigration policy, highlighting that while there is significant public support for expanding legal immigration opportunities, the policies in place, such as numerical limits on preference immigrants and metering at the border, suggest that the U.S. does not have the most generous immigration policies in the world.",
+              "snippet": "Preference immigrants are numerically limited to 226,000 per year and, unlike immediate relatives, are also bounded by the 7% per-country limit."
+            }
+          ],
+          "mixed": [
+            {
+              "title": "100 days of immigration under the second Trump administration",
+              "url": "https://www.brookings.edu/articles/100-days-of-immigration-under-the-second-trump-administration/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "mixed",
+              "evidence_summary": "The article discusses the divided opinions among Americans regarding immigration policies, indicating that while there is support for expanding legal immigration opportunities, there is also significant disapproval of current policies. This suggests that the U.S. immigration policies may not be viewed as the most generous in the world, as many Americans support stricter measures like mass deportations.",
+              "snippet": "The Congressional Budget Office estimated overall net migration of 3.3 million in 2023, including migration of \u201cother foreign nationals\u201d far higher than ..."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "Immigration Systems in Labor-Needy Japan and South Korea Have ...",
+              "url": "https://www.migrationpolicy.org/article/japan-korea-immigration-evolve",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Unlike countries such as Germany, Ireland, and Italy, which have provided citizenship for documented co-ethnics, Japan and South Korea situate ...",
+              "snippet": "Unlike countries such as Germany, Ireland, and Italy, which have provided citizenship for documented co-ethnics, Japan and South Korea situate ..."
+            },
+            {
+              "title": "What Is Canada's Immigration Policy? - Council on Foreign Relations",
+              "url": "https://www.cfr.org/backgrounder/what-canadas-immigration-policy",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "In 2024, Canada resettled 49,300 refugees\u2014making it the second-largest resettlement country globally\u2014primarily from Eritrea, Afghanistan, Syria, and Somalia.",
+              "snippet": "In 2024, Canada resettled 49,300 refugees\u2014making it the second-largest resettlement country globally\u2014primarily from Eritrea, Afghanistan, Syria, and Somalia."
+            },
+            {
+              "title": "Top 10 Most Accepting Countries for Immigrants in 2023 - Y-Axis",
+              "url": "https://www.y-axis.com/blog/top-10-most-accepting-countries-for-immigrants-in-2023/",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (27.7 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Discover the top 10 countries welcoming immigrants in 2023, their eligibility criteria, and opportunities for a better life abroad.",
+              "snippet": "Discover the top 10 countries welcoming immigrants in 2023, their eligibility criteria, and opportunities for a better life abroad."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 36.18,
+        "timestamp_confidence": 0.9634146341463414
+      }
+    ],
+    "transcript_data": {
+      "text": "\u201cGive me your tired, your poor, your huddled masses yearning to breathe free\u2026\u201d These poetic lines, engraved on a bronze plaque beneath the Statue of Liberty, speak to who we are: a nation of immigrants. Until now . . . As Senate Democrat Chuck Schumer lamented, \u201cTears are running down the cheeks of the Statue of Liberty.\u201d We\u2019ve turned our backs on those huddled masses. Closed our borders. Separated families. Hardened our hearts. Or so you would think if you only read the headlines or watch TV news. Just one problem: It\u2019s not true. The United States still maintains the most generous immigration policies in the world. Generous to a fault...because the overwhelming numbers have stymied our ability to assimilate the huddled masses. 50 million residents of America are foreign-born. In fact, today the United States has more immigrants as a percentage of its total population than at any time since 1890. That\u2019s why, to give one illustration, 176 different languages are spoken among students in the New York City school system. How did we get here? For starters, America grants permanent residence to a million people every single year. And that\u2019s just the tip of the iceberg because of something you\u2019ve probably heard referred to as \u201cchain migration.\u201d Chain migration allows immigrants to sponsor not only their immediate family\u2014parents, spouses and children under age 21, but much of their extended family once they gain citizenship: unmarried adult children and any children they might have, married adult children and their children, and brothers and sisters and their children. Princeton University researchers, using the most recently available data, found that immigrants sponsored an average of 3.45 additional relatives each. So, the one million immigrants granted permanent residence each year potentially adds, over time, another three and a half million. In addition, an estimated 100,000 refugees and asylum-seekers\u2014people who claim to be fleeing political or personal strife abroad\u2014enter the country annually. From 2008 to 2017, the U.S. gave green cards to well over a million people for humanitarian reasons, allowing them to live and work here permanently. After five years, they can apply for full citizenship. We\u2019re not done yet. In that same time frame, nearly half a million more people came to America through the diversity visa lottery\u2014a program designed to admit more people from \u201cunderrepresented\u201d countries into the U.S. Diversity visa applicants don't need a high school education, job skills \u2014or pretty much anything. And, thanks again to chain migration, spouses and unmarried children under 21 of visa lottery winners also get to come to America. This non-stop flow of new legal immigrants\u2014based on family ties instead of skills, abilities, and allegiance to American values\u2014has, of course, been supplemented by millions who enter the country illegally and stay illegally. Dominant media outlets use the euphemism \u201cundocumented,\u201d but the official U.S. government term used in federal statutes is \u201cillegal alien\u201d: an unlawful entrant who came without permission and stays in open defiance of our laws. The number of illegal aliens in the country is usually given as 11 million, but have you noticed that number never seems to change? Common sense suggests it\u2019s higher\u2014much higher. And though illegal aliens themselves don\u2019t qualify for welfare, they receive free health care in our clinics and hospitals, and through their American-born children they can expect to receive all manner of benefits\u2014cash aid, food stamps, and housing vouchers. Their children are entitled to a free education in public schools. Building a high-tech border barrier would certainly help stem this flow. Ending chain migration is another obvious remedy. E-Verify, the national database that allows employers to check workers\u2019 immigration status, is also essential. So is a fully-functioning entry-exit system to track visa overstayers. But all solutions will ultimately fail unless we get control of the numbers and enforce our laws consistently. It\u2019s Sovereignty 101: This is our home and we have not only the right, but the responsibility, to determine who comes in, how many come in, and what qualities and qualifications they bring. The truth is, we let in millions. And, of course, millions more want to come. Who can blame them? But it\u2019s simply not possible or desirable to let in everyone. And it\u2019s not hateful to say so. It\u2019s not hateful to protect our borders. It\u2019s not hateful to protect our citizens. It\u2019s not hateful to protect our values. Lady Liberty may be shedding tears\u2014not because we\u2019ve stopped welcoming immigrants, but because our ill-conceived immigration policies are threatening the American Dream. I\u2019m Michelle Malkin, CRTV host and author of Invasion and Sold Out, for Prager University.",
+      "segments": [
+        {
+          "text": "\u201cGive me your tired, your poor, your huddled\nmasses yearning to breathe free\u2026\u201d",
+          "start": 2.4,
+          "duration": 5.68
+        },
+        {
+          "text": "These poetic lines, engraved on a bronze plaque\nbeneath the Statue of Liberty, speak to who",
+          "start": 8.08,
+          "duration": 5.06
+        },
+        {
+          "text": "we are: a nation of immigrants.",
+          "start": 13.14,
+          "duration": 3.46
+        },
+        {
+          "text": "Until now . . .",
+          "start": 16.6,
+          "duration": 1.4
+        },
+        {
+          "text": "As Senate Democrat Chuck Schumer lamented,\n\u201cTears are running down the cheeks of the",
+          "start": 18.0,
+          "duration": 4.72
+        },
+        {
+          "text": "Statue of Liberty.\u201d",
+          "start": 22.73,
+          "duration": 1.68
+        },
+        {
+          "text": "We\u2019ve turned our backs on those huddled\nmasses.",
+          "start": 24.41,
+          "duration": 2.23
+        },
+        {
+          "text": "Closed our borders.",
+          "start": 26.64,
+          "duration": 1.46
+        },
+        {
+          "text": "Separated families.",
+          "start": 28.1,
+          "duration": 1.44
+        },
+        {
+          "text": "Hardened our hearts.",
+          "start": 29.54,
+          "duration": 2.38
+        },
+        {
+          "text": "Or so you would think if you only read the\nheadlines or watch TV news.",
+          "start": 31.92,
+          "duration": 4.26
+        },
+        {
+          "text": "Just one problem: It\u2019s not true.",
+          "start": 36.18,
+          "duration": 3.62
+        },
+        {
+          "text": "The United States still maintains the most\ngenerous immigration policies in the world.",
+          "start": 39.8,
+          "duration": 5.16
+        },
+        {
+          "text": "Generous to a fault...because the overwhelming\nnumbers have stymied our ability to assimilate",
+          "start": 44.96,
+          "duration": 5.86
+        },
+        {
+          "text": "the huddled masses.",
+          "start": 50.82,
+          "duration": 2.02
+        },
+        {
+          "text": "50 million residents of America are foreign-born.",
+          "start": 52.84,
+          "duration": 3.24
+        },
+        {
+          "text": "In fact, today the United States has more\nimmigrants as a percentage of its total population",
+          "start": 56.08,
+          "duration": 5.279
+        },
+        {
+          "text": "than at any time since 1890.",
+          "start": 61.36,
+          "duration": 3.06
+        },
+        {
+          "text": "That\u2019s why, to give one illustration, 176\ndifferent languages are spoken among students",
+          "start": 64.42,
+          "duration": 6.36
+        },
+        {
+          "text": "in the New York City school system.",
+          "start": 70.78,
+          "duration": 2.64
+        },
+        {
+          "text": "How did we get here?",
+          "start": 73.42,
+          "duration": 2.06
+        },
+        {
+          "text": "For starters, America grants permanent residence\nto a million people every single year.",
+          "start": 75.48,
+          "duration": 6.12
+        },
+        {
+          "text": "And that\u2019s just the tip of the iceberg because\nof something you\u2019ve probably heard referred",
+          "start": 81.6,
+          "duration": 4.08
+        },
+        {
+          "text": "to as \u201cchain migration.\u201d",
+          "start": 85.68,
+          "duration": 2.78
+        },
+        {
+          "text": "Chain migration allows immigrants to sponsor\nnot only their immediate family\u2014parents,",
+          "start": 88.46,
+          "duration": 4.62
+        },
+        {
+          "text": "spouses and children under age 21, but much\nof their extended family once they gain citizenship:",
+          "start": 93.08,
+          "duration": 6.08
+        },
+        {
+          "text": "unmarried adult children and any children\nthey might have, married adult children and",
+          "start": 99.16,
+          "duration": 4.8
+        },
+        {
+          "text": "their children, and brothers and sisters and\ntheir children.",
+          "start": 103.96,
+          "duration": 4.08
+        },
+        {
+          "text": "Princeton University researchers, using the\nmost recently available data, found that immigrants",
+          "start": 108.04,
+          "duration": 4.96
+        },
+        {
+          "text": "sponsored an average of 3.45 additional relatives\neach.",
+          "start": 113.0,
+          "duration": 4.86
+        },
+        {
+          "text": "So, the one million immigrants granted permanent\nresidence each year potentially adds,",
+          "start": 117.86,
+          "duration": 4.72
+        },
+        {
+          "text": "over time, another three and a half million.",
+          "start": 122.58,
+          "duration": 3.9
+        },
+        {
+          "text": "In addition, an estimated 100,000 refugees\nand asylum-seekers\u2014people who claim to be",
+          "start": 126.48,
+          "duration": 5.26
+        },
+        {
+          "text": "fleeing political or personal strife abroad\u2014enter\nthe country annually.",
+          "start": 131.74,
+          "duration": 4.9
+        },
+        {
+          "text": "From 2008 to 2017, the U.S. gave green cards\nto well over a million people for humanitarian",
+          "start": 136.64,
+          "duration": 6.76
+        },
+        {
+          "text": "reasons, allowing them to live and work here\npermanently.",
+          "start": 143.409,
+          "duration": 3.67
+        },
+        {
+          "text": "After five years, they can apply for full\ncitizenship.",
+          "start": 147.08,
+          "duration": 3.82
+        },
+        {
+          "text": "We\u2019re not done yet.",
+          "start": 150.9,
+          "duration": 1.5
+        },
+        {
+          "text": "In that same time frame, nearly half a million\nmore people came to America through the diversity",
+          "start": 152.4,
+          "duration": 5.119
+        },
+        {
+          "text": "visa lottery\u2014a program designed to admit\nmore people from \u201cunderrepresented\u201d countries",
+          "start": 157.519,
+          "duration": 5.621
+        },
+        {
+          "text": "into the U.S.",
+          "start": 163.14,
+          "duration": 2.02
+        },
+        {
+          "text": "Diversity visa applicants don't need a high\nschool education, job skills",
+          "start": 165.16,
+          "duration": 4.04
+        },
+        {
+          "text": "\u2014or pretty much anything.",
+          "start": 169.2,
+          "duration": 1.74
+        },
+        {
+          "text": "And, thanks again to chain migration, spouses\nand unmarried children under 21 of visa lottery",
+          "start": 170.94,
+          "duration": 5.04
+        },
+        {
+          "text": "winners also get to come to America.",
+          "start": 175.98,
+          "duration": 3.5
+        },
+        {
+          "text": "This non-stop flow of new legal immigrants\u2014based\non family ties instead of skills, abilities,",
+          "start": 179.48,
+          "duration": 6.019
+        },
+        {
+          "text": "and allegiance to American values\u2014has, of\ncourse, been supplemented by millions who",
+          "start": 185.499,
+          "duration": 4.36
+        },
+        {
+          "text": "enter the country illegally and stay illegally.",
+          "start": 189.86,
+          "duration": 3.42
+        },
+        {
+          "text": "Dominant media outlets use the euphemism \u201cundocumented,\u201d but the official U.S. government term",
+          "start": 193.28,
+          "duration": 5.86
+        },
+        {
+          "text": "used in federal statutes is \u201cillegal alien\u201d:\nan unlawful entrant who came without permission",
+          "start": 199.14,
+          "duration": 6.0
+        },
+        {
+          "text": "and stays in open defiance of our laws.",
+          "start": 205.15,
+          "duration": 3.6
+        },
+        {
+          "text": "The number of illegal aliens in the country\nis usually given as 11 million, but have you",
+          "start": 208.75,
+          "duration": 4.62
+        },
+        {
+          "text": "noticed that number never seems to change?",
+          "start": 213.37,
+          "duration": 2.45
+        },
+        {
+          "text": "Common sense suggests it\u2019s higher\u2014much\nhigher.",
+          "start": 215.82,
+          "duration": 3.64
+        },
+        {
+          "text": "And though illegal aliens themselves don\u2019t\nqualify for welfare, they receive free health",
+          "start": 219.46,
+          "duration": 4.82
+        },
+        {
+          "text": "care in our clinics and hospitals, and through\ntheir American-born children they can expect",
+          "start": 224.28,
+          "duration": 4.329
+        },
+        {
+          "text": "to receive all manner of benefits\u2014cash aid,\nfood stamps, and housing vouchers.",
+          "start": 228.609,
+          "duration": 5.371
+        },
+        {
+          "text": "Their children are entitled to a free education\nin public schools.",
+          "start": 233.98,
+          "duration": 4.58
+        },
+        {
+          "text": "Building a high-tech border barrier would\ncertainly help stem this flow.",
+          "start": 238.56,
+          "duration": 3.8
+        },
+        {
+          "text": "Ending chain migration is another obvious\nremedy.",
+          "start": 242.36,
+          "duration": 3.219
+        },
+        {
+          "text": "E-Verify, the national database that allows\nemployers to check workers\u2019 immigration",
+          "start": 245.579,
+          "duration": 4.181
+        },
+        {
+          "text": "status, is also essential.",
+          "start": 249.76,
+          "duration": 2.24
+        },
+        {
+          "text": "So is a fully-functioning entry-exit system\nto track visa overstayers.",
+          "start": 252.0,
+          "duration": 5.6
+        },
+        {
+          "text": "But all solutions will ultimately fail unless\nwe get control of the numbers and enforce",
+          "start": 257.6,
+          "duration": 5.04
+        },
+        {
+          "text": "our laws consistently.",
+          "start": 262.64,
+          "duration": 1.96
+        },
+        {
+          "text": "It\u2019s Sovereignty 101: This is our home and\nwe have not only the right, but the responsibility,",
+          "start": 264.6,
+          "duration": 6.45
+        },
+        {
+          "text": "to determine who comes in, how many come in,\nand what qualities and qualifications they bring.",
+          "start": 271.05,
+          "duration": 6.25
+        },
+        {
+          "text": "The truth is, we let in millions.",
+          "start": 277.3,
+          "duration": 2.58
+        },
+        {
+          "text": "And, of course, millions more want to come.",
+          "start": 279.88,
+          "duration": 2.48
+        },
+        {
+          "text": "Who can blame them?",
+          "start": 282.36,
+          "duration": 1.38
+        },
+        {
+          "text": "But it\u2019s simply not possible or desirable\nto let in everyone.",
+          "start": 283.74,
+          "duration": 4.46
+        },
+        {
+          "text": "And it\u2019s not hateful to say so.",
+          "start": 288.2,
+          "duration": 1.98
+        },
+        {
+          "text": "It\u2019s not hateful to protect our borders.",
+          "start": 290.18,
+          "duration": 2.5
+        },
+        {
+          "text": "It\u2019s not hateful to protect our citizens.",
+          "start": 292.68,
+          "duration": 2.78
+        },
+        {
+          "text": "It\u2019s not hateful to protect our values.",
+          "start": 295.46,
+          "duration": 3.47
+        },
+        {
+          "text": "Lady Liberty may be shedding tears\u2014not because\nwe\u2019ve stopped welcoming immigrants,",
+          "start": 298.93,
+          "duration": 4.75
+        },
+        {
+          "text": "but because our ill-conceived immigration policies\nare threatening the American Dream.",
+          "start": 303.68,
+          "duration": 5.4
+        },
+        {
+          "text": "I\u2019m Michelle Malkin, CRTV host and author\nof Invasion and Sold Out, for Prager University.",
+          "start": 309.08,
+          "duration": 6.72
+        }
+      ],
+      "video_id": "oYvKcAh1zdo"
+    }
+  }
+}

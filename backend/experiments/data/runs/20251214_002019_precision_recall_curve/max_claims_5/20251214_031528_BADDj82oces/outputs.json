@@ -1,0 +1,833 @@
+{
+  "extracted_claims": {
+    "claims": [
+      {
+        "text": "HIV infects helper T-cells, which are central to the immune response.",
+        "confidence": 0.95,
+        "category": "biological",
+        "importance": 0.85,
+        "context": "HIV's impact on the immune system's function.",
+        "transcript_char_start": 322,
+        "transcript_char_end": 392,
+        "transcript_match_score": 0.656934306569343
+      },
+      {
+        "text": "Without treatment, exposure to harmless microbes can be fatal for AIDS patients.",
+        "confidence": 0.95,
+        "category": "medical",
+        "importance": 0.85,
+        "context": "Consequences of AIDS on immune function.",
+        "transcript_char_start": 2116,
+        "transcript_char_end": 2195,
+        "transcript_match_score": 0.8280254777070064
+      },
+      {
+        "text": "HIV uses reverse transcriptase to convert viral RNA into DNA.",
+        "confidence": 0.9,
+        "category": "scientific",
+        "importance": 0.8,
+        "context": "Mechanism of HIV replication inside host cells.",
+        "transcript_char_start": 573,
+        "transcript_char_end": 624,
+        "transcript_match_score": 0.8288288288288288
+      },
+      {
+        "text": "HIV levels rise rapidly in the body after infection.",
+        "confidence": 0.85,
+        "category": "biological",
+        "importance": 0.7,
+        "context": "Describes the progression of HIV infection.",
+        "transcript_char_start": 822,
+        "transcript_char_end": 872,
+        "transcript_match_score": 0.8316831683168316
+      },
+      {
+        "text": "The immune system produces neutralizing antibodies to combat HIV.",
+        "confidence": 0.9,
+        "category": "biological",
+        "importance": 0.6,
+        "context": "Role of antibodies in fighting HIV.",
+        "transcript_char_start": 1095,
+        "transcript_char_end": 1149,
+        "transcript_match_score": 0.6779661016949152
+      }
+    ],
+    "total_count": 5
+  },
+  "final_output": {
+    "extracted_claims": {
+      "claims": [
+        {
+          "text": "HIV infects helper T-cells, which are central to the immune response.",
+          "confidence": 0.95,
+          "category": "biological",
+          "importance": 0.85,
+          "context": "HIV's impact on the immune system's function.",
+          "transcript_char_start": 322,
+          "transcript_char_end": 392,
+          "transcript_match_score": 0.656934306569343
+        },
+        {
+          "text": "Without treatment, exposure to harmless microbes can be fatal for AIDS patients.",
+          "confidence": 0.95,
+          "category": "medical",
+          "importance": 0.85,
+          "context": "Consequences of AIDS on immune function.",
+          "transcript_char_start": 2116,
+          "transcript_char_end": 2195,
+          "transcript_match_score": 0.8280254777070064
+        },
+        {
+          "text": "HIV uses reverse transcriptase to convert viral RNA into DNA.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.8,
+          "context": "Mechanism of HIV replication inside host cells.",
+          "transcript_char_start": 573,
+          "transcript_char_end": 624,
+          "transcript_match_score": 0.8288288288288288
+        },
+        {
+          "text": "HIV levels rise rapidly in the body after infection.",
+          "confidence": 0.85,
+          "category": "biological",
+          "importance": 0.7,
+          "context": "Describes the progression of HIV infection.",
+          "transcript_char_start": 822,
+          "transcript_char_end": 872,
+          "transcript_match_score": 0.8316831683168316
+        },
+        {
+          "text": "The immune system produces neutralizing antibodies to combat HIV.",
+          "confidence": 0.9,
+          "category": "biological",
+          "importance": 0.6,
+          "context": "Role of antibodies in fighting HIV.",
+          "transcript_char_start": 1095,
+          "transcript_char_end": 1149,
+          "transcript_match_score": 0.6779661016949152
+        }
+      ],
+      "total_count": 5
+    },
+    "claim_reports": [
+      {
+        "claim_text": "HIV levels rise rapidly in the body after infection.",
+        "claim_confidence": 0.85,
+        "claim_category": "biological",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "The Stages of HIV Infection | NIH - HIVinfo",
+              "url": "https://hivinfo.nih.gov/understanding-hiv/fact-sheets/stages-hiv-infection",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that HIV levels rise rapidly in the body after infection, with viral load peaking in blood at over 1,000,000 copies/ml approximately 17 days after infection and in semen around four weeks after infection, confirming the claim.",
+              "snippet": "In the acute stage of infection, HIV multiplies rapidly and spreads throughout the body, attacking and destroying the infection-fighting CD4 ..."
+            },
+            {
+              "title": "Viral Loads Within 6 Weeks After Diagnosis of HIV Infection in Early ...",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6246969/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that HIV viral load peaks in the body approximately four weeks after infection, confirming that levels rise rapidly during the early stages of HIV infection. This supports the claim that HIV levels rise quickly after infection.",
+              "snippet": "Early (including acute) HIV infection is associated with viral loads higher than those in later stages. This study aimed to examine the ..."
+            },
+            {
+              "title": "HIV DNA Set Point is Rapidly Established in Acute HIV Infection and ...",
+              "url": "https://www.sciencedirect.com/science/article/pii/S2352396416303309",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that HIV levels rise rapidly in the body after infection, with viral load peaking in blood at over 1,000,000 copies/ml approximately 17 days after infection and in semen around four weeks after infection, confirming the claim.",
+              "snippet": "We show that HIV DNA in peripheral blood cells, a marker of the HIV reservoir size, establishes a set-point level during the first 6 weeks of infection."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "About HIV - CDC",
+              "url": "https://www.cdc.gov/hiv/about/index.html",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Most people have flu-like symptoms within 2 to 4 weeks after infection. Symptoms may last for a few days or several weeks. Having these symptoms ...",
+              "snippet": "Most people have flu-like symptoms within 2 to 4 weeks after infection. Symptoms may last for a few days or several weeks. Having these symptoms ..."
+            },
+            {
+              "title": "HIV and AIDS - World Health Organization (WHO)",
+              "url": "https://www.who.int/news-room/fact-sheets/detail/hiv-aids",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "In most cases, people develop antibodies to HIV within 28 days of infection. During this time, people are in the so-called \u201cwindow period\u201d when ...",
+              "snippet": "In most cases, people develop antibodies to HIV within 28 days of infection. During this time, people are in the so-called \u201cwindow period\u201d when ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 59.879,
+        "timestamp_confidence": 0.8316831683168316
+      },
+      {
+        "claim_text": "HIV infects helper T-cells, which are central to the immune response.",
+        "claim_confidence": 0.95,
+        "claim_category": "biological",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "What is the connection between AIDS and T cell count?",
+              "url": "https://www.medicalnewstoday.com/articles/aids-t-cell-count",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that HIV infects and destroys CD4 T lymphocytes, which are also known as helper T cells, and highlights their importance in the immune response.",
+              "snippet": "HIV destroys CD4 T lymphocytes (helper T cells). If CD4 levels are low, this may indicate that HIV has progressed into AIDS."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "Pathophysiology of CD4+ T-Cell Depletion in HIV-1 and HIV-2 ...",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5440548/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "The hall mark of human immunodeficiency virus (HIV) infection is a gradual loss of CD4+ T-cells and imbalance in CD4+ T-cell homeostasis, with progressive ...",
+              "snippet": "The hall mark of human immunodeficiency virus (HIV) infection is a gradual loss of CD4+ T-cells and imbalance in CD4+ T-cell homeostasis, with progressive ..."
+            },
+            {
+              "title": "The T-Cell Response to HIV - PMC - PubMed Central - NIH",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3543107/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "HIV infects and deletes CD4 + T cells that normally coordinate the adaptive T- and B-cell response to defend against intracellular pathogens.",
+              "snippet": "HIV infects and deletes CD4 + T cells that normally coordinate the adaptive T- and B-cell response to defend against intracellular pathogens."
+            },
+            {
+              "title": "Editorial: CD4+ T cells in HIV: A Friend or a Foe? - Frontiers",
+              "url": "https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2023.1203531/full",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "CD4+ T cell depletion: HIV infects and destroys CD4+ T cells during the replication process. If left untreated, HIV is the virus kills infected cells directly ...",
+              "snippet": "CD4+ T cell depletion: HIV infects and destroys CD4+ T cells during the replication process. If left untreated, HIV is the virus kills infected cells directly ..."
+            }
+          ]
+        },
+        "total_sources": 4,
+        "evidence_quality_score": 0.8,
+        "timestamp_hint": 27.539,
+        "timestamp_confidence": 0.656934306569343
+      },
+      {
+        "claim_text": "HIV uses reverse transcriptase to convert viral RNA into DNA.",
+        "claim_confidence": 0.9,
+        "claim_category": "scientific",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Core Concepts - Antiretroviral Medications and Initial Therapy",
+              "url": "https://www.hiv.uw.edu/go/antiretroviral-therapy/general-information/core-concept/all.%20Accessed%20Jun",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that HIV uses reverse transcriptase to convert its RNA genome into DNA, which is a critical step in the retroviral replication process.",
+              "snippet": "The key function of HIV reverse transcriptase is to convert single-stranded HIV RNA to. Figure 7 (Image Series). HIV Reverse Transcription. The key function ..."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "HIV-1 Reverse Transcription - PMC - PubMed Central",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3475395/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "In HIV-1, the pbs is approximately 180 nucleotides from the 5\u2032 end of genomic RNA. DNA synthesis creates an RNA\u2013DNA duplex, which is a substrate for RNase H.",
+              "snippet": "In HIV-1, the pbs is approximately 180 nucleotides from the 5\u2032 end of genomic RNA. DNA synthesis creates an RNA\u2013DNA duplex, which is a substrate for RNase H."
+            },
+            {
+              "title": "Reverse Transcription - Clinical Info .HIV.gov",
+              "url": "https://clinicalinfo.hiv.gov/en/glossary/reverse-transcription",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Once inside a CD4 cell, HIV releases and uses reverse transcriptase (an HIV enzyme) to convert its genetic material\u2014HIV RNA\u2014into HIV DNA. The conversion of HIV ...",
+              "snippet": "Once inside a CD4 cell, HIV releases and uses reverse transcriptase (an HIV enzyme) to convert its genetic material\u2014HIV RNA\u2014into HIV DNA. The conversion of HIV ..."
+            },
+            {
+              "title": "Structure of HIV-1 reverse transcriptase cleaving RNA in an ... - PNAS",
+              "url": "https://www.pnas.org/doi/10.1073/pnas.1719746115",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "HIV-1 reverse transcriptase (RT) contains both DNA polymerase and RNase H activities to convert the viral genomic RNA to dsDNA in infected host ...",
+              "snippet": "HIV-1 reverse transcriptase (RT) contains both DNA polymerase and RNase H activities to convert the viral genomic RNA to dsDNA in infected host ..."
+            }
+          ]
+        },
+        "total_sources": 4,
+        "evidence_quality_score": 0.8,
+        "timestamp_hint": 42.329,
+        "timestamp_confidence": 0.8288288288288288
+      },
+      {
+        "claim_text": "Without treatment, exposure to harmless microbes can be fatal for AIDS patients.",
+        "claim_confidence": 0.95,
+        "claim_category": "medical",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "HIV-1\u2013Associated Opportunistic Infections - StatPearls - NCBI",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK539787/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "HIV-1 associated opportunistic infections encompass a myriad of life-threatening infections seen in patients with advanced human immunodeficiency virus.",
+              "snippet": "HIV-1 associated opportunistic infections encompass a myriad of life-threatening infections seen in patients with advanced human immunodeficiency virus."
+            },
+            {
+              "title": "Opportunistic Infections - HIV.gov",
+              "url": "https://www.hiv.gov/hiv-basics/staying-in-hiv-care/other-related-health-issues/opportunistic-infections",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (11.3 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "People with HIV are at greatest risk for OIs when the count of their infection-fighting CD4 cells falls below 200. However, some OIs can occur when a person's ...",
+              "snippet": "People with HIV are at greatest risk for OIs when the count of their infection-fighting CD4 cells falls below 200. However, some OIs can occur when a person's ..."
+            },
+            {
+              "title": "What is an Opportunistic Infection? - HIVinfo - NIH",
+              "url": "https://hivinfo.nih.gov/understanding-hiv/fact-sheets/what-opportunistic-infection",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Some OIs that people with HIV may get include candidiasis, Salmonella infection, toxoplasmosis, and tuberculosis (TB).",
+              "snippet": "Some OIs that people with HIV may get include candidiasis, Salmonella infection, toxoplasmosis, and tuberculosis (TB)."
+            },
+            {
+              "title": "HIV and AIDS - World Health Organization (WHO)",
+              "url": "https://www.who.int/news-room/fact-sheets/detail/hiv-aids",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "HIV targets the body's white blood cells, weakening the immune system. This makes it easier to get sick with diseases like tuberculosis, ...",
+              "snippet": "HIV targets the body's white blood cells, weakening the immune system. This makes it easier to get sick with diseases like tuberculosis, ..."
+            },
+            {
+              "title": "The Most Dangerous Complications of HIV and AIDS - Healthline",
+              "url": "https://www.healthline.com/health/hiv-aids/most-dangerous-complications-of-hiv",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "If these bacteria enter the bloodstream, it often results in death. Pneumocystis carinii pneumonia (PCP). This OI is currently the leading ...",
+              "snippet": "If these bacteria enter the bloodstream, it often results in death. Pneumocystis carinii pneumonia (PCP). This OI is currently the leading ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 148.5,
+        "timestamp_confidence": 0.8280254777070064
+      },
+      {
+        "claim_text": "The immune system produces neutralizing antibodies to combat HIV.",
+        "claim_confidence": 0.9,
+        "claim_category": "biological",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "No reliable evidence sources were found for this claim. This may indicate the claim is difficult to verify, too specific, or references information not available in public sources.",
+        "evidence_by_stance": {},
+        "total_sources": 0,
+        "evidence_quality_score": 0.0,
+        "timestamp_hint": 80.009,
+        "timestamp_confidence": 0.6779661016949152
+      }
+    ],
+    "transcript_data": {
+      "text": "when a virus winds up inside the body it's usually met with a furious onslaught from the immune system white blood cells immediately respond by releasing anti viral proteins attacking infected cells and recruiting backup usually this is enough but there's one virus that pushes the immune system beyond its limits HIV HIV infects one of the immune cells that is central to the body's response to pathogens the helper t-cell first the virus attaches and enters once inside the virus moves towards the nucleus along with its enzymes and genetic material one of these enzymes reverse transcriptase converts the viral RNA into a length of DNA which inserts into the cell's genome forcing the cell to spew out HIV proteins and genetic material to make new copies of the virus these new viruses escape the cell to infect others HIV levels rise rapidly in the body but the immune system doesn't move down without a fight inside infected cells anti viral proteins called restriction factors work to shut down virus production while others stop the virus from escaping the cell outside white blood cells called fiy cells produce neutralizing antibodies which bind to surface spikes on HIV particles and stop them entering healthy helper t-cells the greatest assault comes from killer T cells and natural killer cells which seek and destroy infected cells directly they release a protein called perforin which punches the infected cells allowing enzymes to be injected triggering Auto destruction for a while the defense holds and virus levels drop but HIV begins its counter-attack it disables the cell's antiviral proteins allowing new virus particles to leave the cell it also constantly mutates inside the cell to evade protection the immune system can't fight what it can't see eventually the immune system wears itself out killer T cells activated for too long exhausted and no longer respond to infection also the body loses the ability to make new helper t-cells to replace those killed in the fight and as a result their numbers plummet ultimately the body becomes immunodeficient and this condition is known as AIDS without treatment exposure to otherwise harmless microbes can be fatal we still have no way of eliminating HIV from the body completely there is no cure and hidden reservoirs of HIV will rebound if treatment stops but treatment with antiretroviral drugs can swing the balance allowing the immune system to recover from battle and live to fight another day [Music]",
+      "segments": [
+        {
+          "text": "when a virus winds up inside the body",
+          "start": 3.23,
+          "duration": 5.02
+        },
+        {
+          "text": "it's usually met with a furious",
+          "start": 6.12,
+          "duration": 4.68
+        },
+        {
+          "text": "onslaught from the immune system white",
+          "start": 8.25,
+          "duration": 4.44
+        },
+        {
+          "text": "blood cells immediately respond by",
+          "start": 10.8,
+          "duration": 4.469
+        },
+        {
+          "text": "releasing anti viral proteins attacking",
+          "start": 12.69,
+          "duration": 4.88
+        },
+        {
+          "text": "infected cells and recruiting backup",
+          "start": 15.269,
+          "duration": 4.581
+        },
+        {
+          "text": "usually this is enough",
+          "start": 17.57,
+          "duration": 4.959
+        },
+        {
+          "text": "but there's one virus that pushes the",
+          "start": 19.85,
+          "duration": 7.689
+        },
+        {
+          "text": "immune system beyond its limits HIV HIV",
+          "start": 22.529,
+          "duration": 6.9
+        },
+        {
+          "text": "infects one of the immune cells that is",
+          "start": 27.539,
+          "duration": 3.691
+        },
+        {
+          "text": "central to the body's response to",
+          "start": 29.429,
+          "duration": 5.611
+        },
+        {
+          "text": "pathogens the helper t-cell first the",
+          "start": 31.23,
+          "duration": 7.11
+        },
+        {
+          "text": "virus attaches and enters once inside",
+          "start": 35.04,
+          "duration": 5.19
+        },
+        {
+          "text": "the virus moves towards the nucleus",
+          "start": 38.34,
+          "duration": 3.989
+        },
+        {
+          "text": "along with its enzymes and genetic",
+          "start": 40.23,
+          "duration": 4.95
+        },
+        {
+          "text": "material one of these enzymes reverse",
+          "start": 42.329,
+          "duration": 5.221
+        },
+        {
+          "text": "transcriptase converts the viral RNA",
+          "start": 45.18,
+          "duration": 5.129
+        },
+        {
+          "text": "into a length of DNA which inserts into",
+          "start": 47.55,
+          "duration": 5.099
+        },
+        {
+          "text": "the cell's genome forcing the cell to",
+          "start": 50.309,
+          "duration": 4.59
+        },
+        {
+          "text": "spew out HIV proteins and genetic",
+          "start": 52.649,
+          "duration": 4.311
+        },
+        {
+          "text": "material to make new copies of the virus",
+          "start": 54.899,
+          "duration": 4.98
+        },
+        {
+          "text": "these new viruses escape the cell to",
+          "start": 56.96,
+          "duration": 6.7
+        },
+        {
+          "text": "infect others HIV levels rise rapidly in",
+          "start": 59.879,
+          "duration": 6.301
+        },
+        {
+          "text": "the body but the immune system doesn't",
+          "start": 63.66,
+          "duration": 5.94
+        },
+        {
+          "text": "move down without a fight inside",
+          "start": 66.18,
+          "duration": 5.97
+        },
+        {
+          "text": "infected cells anti viral proteins",
+          "start": 69.6,
+          "duration": 5.04
+        },
+        {
+          "text": "called restriction factors work to shut",
+          "start": 72.15,
+          "duration": 5.07
+        },
+        {
+          "text": "down virus production while others stop",
+          "start": 74.64,
+          "duration": 5.369
+        },
+        {
+          "text": "the virus from escaping the cell outside",
+          "start": 77.22,
+          "duration": 5.219
+        },
+        {
+          "text": "white blood cells called fiy cells",
+          "start": 80.009,
+          "duration": 4.591
+        },
+        {
+          "text": "produce neutralizing antibodies which",
+          "start": 82.439,
+          "duration": 4.68
+        },
+        {
+          "text": "bind to surface spikes on HIV particles",
+          "start": 84.6,
+          "duration": 4.74
+        },
+        {
+          "text": "and stop them entering healthy helper",
+          "start": 87.119,
+          "duration": 5.221
+        },
+        {
+          "text": "t-cells the greatest assault comes from",
+          "start": 89.34,
+          "duration": 5.19
+        },
+        {
+          "text": "killer T cells and natural killer cells",
+          "start": 92.34,
+          "duration": 4.41
+        },
+        {
+          "text": "which seek and destroy infected cells",
+          "start": 94.53,
+          "duration": 5.46
+        },
+        {
+          "text": "directly they release a protein called",
+          "start": 96.75,
+          "duration": 5.28
+        },
+        {
+          "text": "perforin which punches the infected",
+          "start": 99.99,
+          "duration": 4.29
+        },
+        {
+          "text": "cells allowing enzymes to be injected",
+          "start": 102.03,
+          "duration": 5.61
+        },
+        {
+          "text": "triggering Auto destruction for a while",
+          "start": 104.28,
+          "duration": 6.15
+        },
+        {
+          "text": "the defense holds and virus levels drop",
+          "start": 107.64,
+          "duration": 6.65
+        },
+        {
+          "text": "but HIV begins its counter-attack it",
+          "start": 110.43,
+          "duration": 6.119
+        },
+        {
+          "text": "disables the cell's antiviral proteins",
+          "start": 114.29,
+          "duration": 4.63
+        },
+        {
+          "text": "allowing new virus particles to leave",
+          "start": 116.549,
+          "duration": 5.25
+        },
+        {
+          "text": "the cell it also constantly mutates",
+          "start": 118.92,
+          "duration": 5.549
+        },
+        {
+          "text": "inside the cell to evade protection the",
+          "start": 121.799,
+          "duration": 4.741
+        },
+        {
+          "text": "immune system can't fight what it can't",
+          "start": 124.469,
+          "duration": 5.13
+        },
+        {
+          "text": "see eventually the immune system wears",
+          "start": 126.54,
+          "duration": 6.12
+        },
+        {
+          "text": "itself out killer T cells activated for",
+          "start": 129.599,
+          "duration": 3.841
+        },
+        {
+          "text": "too long",
+          "start": 132.66,
+          "duration": 2.76
+        },
+        {
+          "text": "exhausted and no longer respond to",
+          "start": 133.44,
+          "duration": 4.65
+        },
+        {
+          "text": "infection also the body loses the",
+          "start": 135.42,
+          "duration": 4.8
+        },
+        {
+          "text": "ability to make new helper t-cells to",
+          "start": 138.09,
+          "duration": 4.32
+        },
+        {
+          "text": "replace those killed in the fight and as",
+          "start": 140.22,
+          "duration": 4.22
+        },
+        {
+          "text": "a result their numbers plummet",
+          "start": 142.41,
+          "duration": 3.96
+        },
+        {
+          "text": "ultimately the body becomes",
+          "start": 144.44,
+          "duration": 4.06
+        },
+        {
+          "text": "immunodeficient and this condition is",
+          "start": 146.37,
+          "duration": 5.37
+        },
+        {
+          "text": "known as AIDS without treatment exposure",
+          "start": 148.5,
+          "duration": 5.22
+        },
+        {
+          "text": "to otherwise harmless microbes can be",
+          "start": 151.74,
+          "duration": 2.61
+        },
+        {
+          "text": "fatal",
+          "start": 153.72,
+          "duration": 3.69
+        },
+        {
+          "text": "we still have no way of eliminating HIV",
+          "start": 154.35,
+          "duration": 4.83
+        },
+        {
+          "text": "from the body completely there is no",
+          "start": 157.41,
+          "duration": 4.47
+        },
+        {
+          "text": "cure and hidden reservoirs of HIV will",
+          "start": 159.18,
+          "duration": 5.85
+        },
+        {
+          "text": "rebound if treatment stops but treatment",
+          "start": 161.88,
+          "duration": 5.43
+        },
+        {
+          "text": "with antiretroviral drugs can swing the",
+          "start": 165.03,
+          "duration": 4.35
+        },
+        {
+          "text": "balance allowing the immune system to",
+          "start": 167.31,
+          "duration": 4.62
+        },
+        {
+          "text": "recover from battle and live to fight",
+          "start": 169.38,
+          "duration": 5.33
+        },
+        {
+          "text": "another day",
+          "start": 171.93,
+          "duration": 2.78
+        },
+        {
+          "text": "[Music]",
+          "start": 175.07,
+          "duration": 3.17
+        }
+      ],
+      "video_id": "BADDj82oces"
+    }
+  }
+}

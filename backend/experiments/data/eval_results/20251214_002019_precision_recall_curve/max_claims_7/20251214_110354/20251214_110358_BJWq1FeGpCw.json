@@ -1,0 +1,125 @@
+{
+  "video_id": "BJWq1FeGpCw",
+  "timestamp": "2025-12-14T11:03:58.694615",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_7",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.8571428571428571,
+    "recall": 0.5,
+    "f1_score": 0.631578947368421,
+    "true_positives": 6,
+    "false_positives": 1,
+    "false_negatives": 6,
+    "mean_average_precision": 0.9484126984126983,
+    "recall_at_important": 0.4444444444444444,
+    "importance_weighted_coverage": 0.46798029556650245,
+    "matched_claims": [
+      {
+        "gt_text": "There is a correlation between use of fossil fuels and access to clean water",
+        "sys_text": "There is a correlation between the use of fossil fuels and access to clean water.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.85,
+        "importance_error": 0.0
+      },
+      {
+        "gt_text": "Air pollution in the United States has shown a dramatic downward trend in emissions over the last half century, even though we use more fossil fuel than ever",
+        "sys_text": "Air pollution in the U.S. has decreased over the last half century despite increased fossil fuel use.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.85,
+        "importance_error": 0.050000000000000044
+      },
+      {
+        "gt_text": "In the last eighty years, as CO2 emissions have rapidly escalated, the annual rate of climate-related deaths worldwide has rapidly declined by 98%",
+        "sys_text": "Climate-related deaths have declined by 98% in the last eighty years despite rising CO2 emissions.",
+        "gt_importance": 0.95,
+        "sys_importance": 0.85,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "Fossil fuels help us solve our biggest environmental challenges, purify our water and air, make our cities and homes more sanitary",
+        "sys_text": "Fossil fuels can help solve environmental challenges and purify water and air.",
+        "gt_importance": 0.95,
+        "sys_importance": 0.75,
+        "importance_error": 0.19999999999999996
+      },
+      {
+        "gt_text": "Getting clean water to homes takes a massive amount of energy including man-made reservoirs, purification plants, and network of pipes",
+        "sys_text": "In the developed world, clean water is taken for granted due to energy use.",
+        "gt_importance": 0.5,
+        "sys_importance": 0.6,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "Indoor pollution caused by burning fire inside homes was a deadly global problem until late 19th century when cheap kerosene became available in America and Europe",
+        "sys_text": "Indoor pollution was a major issue until the late 19th century when kerosene became available.",
+        "gt_importance": 0.6,
+        "sys_importance": 0.6,
+        "importance_error": 0.0
+      }
+    ],
+    "missed_claims": [
+      "Anti-pollution technology powered by fossil fuel achieved the decrease in air emissions",
+      "Indoor pollution is still a major issue in the developing world today and the best solution is fossil fuel",
+      "In 1986 NASA climate scientist James Hansen predicted that if current trends are unchanged, temperatures would rise 2 to 4 degrees in the first decade of the 2000s",
+      "Since 2000 the temperature trend line is essentially flat, with little or no warming in the last 15 years",
+      "The reason climate-related deaths declined is that energy from fossil fuel has allowed the developed world to build a durable civilization highly resilient to extreme heat, cold, floods, and storms",
+      "Fossil fuels empower us to take a naturally dangerous environment and make it cleaner and safer"
+    ],
+    "extra_claims": [
+      "More fossil fuel usage leads to better sanitation."
+    ],
+    "importance_mae": 0.075,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.5,
+    "stance_accuracy": 0.5,
+    "correct_verdicts": 3,
+    "total_verdicts": 6,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "Air pollution in the United States has shown a dramatic downward trend in emissions over the last half century, even though we use more fossil fuel than ever",
+        "gt_verdict": "REFUTES",
+        "sys_verdict": "SUPPORTS"
+      },
+      {
+        "claim": "Fossil fuels help us solve our biggest environmental challenges, purify our water and air, make our cities and homes more sanitary",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "REFUTES"
+      },
+      {
+        "claim": "Indoor pollution caused by burning fire inside homes was a deadly global problem until late 19th century when cheap kerosene became available in America and Europe",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "MIXED"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.5,
+    "verdict_accuracy": 0.5,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.01004475,
+    "total_time_seconds": 129.82799005508423,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.5714285714285716
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 28,
+      "medium": 8
+    },
+    "avg_evidence_per_claim": 5.142857142857143
+  },
+  "ground_truth_claims_count": 12,
+  "system_claims_count": 7
+}

@@ -1,0 +1,275 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:26:22.671359",
+    "latency_seconds": 24.66,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nThe nation's historical preservation group, is now suing the Trump administration over its plans to build a giant ballroom over at the white House. Back in October, the Trump administration quickly demolished the white House East Wing to make room for the ballroom for this project. Want to bring in CNN's Brian Todd? Brian, why is the National Trust taking this dramatic step? And this is a lengthy lawsuit. It's a lengthy lawsuit, Wolf, 47 pages. It was filed just moments ago. We have a copy of this lawsuit now to answer your question, Wolf. They are suing because they want this project halted, first and foremost. And they're suing because they said that the white House and its allies and in certain agencies like the National Park Service, did not get the necessary approvals or conduct the necessary reviews. We have a copy of this lawsuit. You see the pictures here. This has been what many people have been complaining about, the demolition of the East wing of the white House that began in October for the construction of a 90,000 square foot ballroom. And just moments ago, as Wolf mentioned, we've obtained a copy of this lawsuit from the National Trust for Historic Preservation. They are suing the National Park Service. They are suing President Trump himself, plus the National Park Service, plus the Department of the Interior and Interior Secretary Douglas Burgum, and others over the construction of the ballroom where the east wing and the colonnade used to be. And here is just one quote from one of the initial pages of the lawsuit. No president is legally allowed to tear down portions of the white House without any review whatsoever. Not President Trump, not President Biden, and not anyone else. And no president is legally allowed to construct a ballroom on public property without giving the public the opportunity to weigh in. President Trump's efforts to do so should be immediately halted, and work on the ballroom project should be paused until the defendants complete the required reviews. Reviews that should have taken place before the defendants demolish the East Wing and before they began construction of the ballroom and secured the necessary approvals. What they are also saying is that there are two entities, from which the white House needed to seek approval and at least a review of this project. The National Capital Planning Commission and the Commission of Fine Arts. And according to this lawsuit from the National Trust for Historic Preservation, the white House did not seek any review from those agencies and did not seek any, public, input on this project. Now, I can I can tell you also, Wolf, we are reaching out to the white House for comment. Our colleague Kevin Liptak is handling that right now. We should be able to get that from Kevin in just a moment. But what I will say is that the president has had this in his, in his sights to to renovate this area, to do a ballroom for years, not just months, years, including before he came into office. He said he offered the Obama administration, you know, that he said he would pay for it. The Obama administration, he said, never got back to him. President Trump has said many times that he believes this is necessary, that people who come to the white House, for certain events, they have to go to a tent that's kind of separate from the main, main body of the white House. And in bad weather, a lot of people who are here for balls and things like that, they just get kind of, disheveled, having to walk through the rain and get into a tent. That's been his perspective. He's been eyeing this for a long time. His idea is to make this very much like the Donald Trump Ballroom at Mar-A-Lago. It's going to look a lot like that. And there are plenty of other ballrooms that I've been to, many of them. Right near the white House, huge ballrooms that they could go to, not just a. I've been to the tent on the backyard of the white House on this, on this on the North Lawn of the white House, and the South Lawn of the white House as well. And that east wing was beautiful. And too bad it's been destroyed. Ari. Brian, thank you very, very much. Kevin Liptak is over at the white House right now. This has been a huge priority for the president. And as Brian just said, you're working to get some reaction. Are you learning anything? Yeah. The white House hasn't responded to this lawsuit specifically, but I'll tell you that white House officials have sort of downplayed criticism from this particular group, the National Trust for Historic Preservation, which you'll remember back in October as this project was getting underway, actually wrote a letter to the white House asking them to pause work to, go through some of these various boards for review. And the white House said at the time that this, trust, the National Trust for Historic Preservation, was comprised of, quote, loser Democrats and liberal donors. And so you see them kind of shrugging off the criticism, we should say that this body is chartered by Congress, tasked with, preserving some of the nation's historic buildings. It actually does have a relationship with President Trump dating back to the 1990s. It worked with him on some projects at Mar-A-Lago. So he does have sort of an existing relationship with this, body, going back several decades. We should say that, the boards that this, group is now requesting and demanding that the court, require that the administration go through the National Capital Planning Commission is now stacked with President Trump's appointees. It's led by Will Scharf, who's the staff secretary at the white House. He has said previously that this project will eventually go before that body, but that it's purview and that its remit does not cover demolition. And that is why they say this project didn't go before that board, before they began tearing down the East wing, but that once sort of vertical construction begins, that it will go before that body. And so, whether this lawsuit sort of spurs that action and prompts them to go more quickly remains to be seen. But you're right. This is an absolute priority of the president. He still mentions that, on almost a weekly basis, you know, when, the crown Prince Mohammed bin Salman was here, for example, the president said, that the dinner he held in his honor on the white House state floor would have been a much grander occasion if they had had, that ballroom constructed in his honor. We should also say that there has been some, discord among the planning team. You know, the president has assigned a new architect, the previous architect still on board, but he had reportedly raised some questions about the sheer scale of this project. You know, the president is envisioning a 90,000 square foot ballroom. The white House itself is only about 55,000ft\u00b2. And one of the concerns that the National Trust for Historic Preservation has raised is that they would essentially dwarf the original building once it's completed. And so all of these concerns are now due to be, heard in court, Wolf, the president keeps pointing out that, this ballroom will be paid for by private donations, not taxpayers. Is that a factor here? It could be. And I think, you know, the president and the white House have said that they will be transparent and they have released, some of the names of the donors who will contribute to this project. One of the questions is how potentially they'll be honored as part of it, whether their names will be, written on the wall or whether they'll have sort of plaques, in the final, ballroom to designate who who donated and, what sort of contribution they were able to make to this project. But it has raised a certainly questions about what kind of influence those donors, might have with the white House and whether or not these individuals are essentially using these donations to curry favor with the president, recognizing that this is a major priority of his. All right. Kevin Liptak at the white House for us, Kevin, thank you very, very much.",
+    "input_length_chars": 8108,
+    "input_tokens_estimated": 2027,
+    "output": {
+      "claims": [
+        {
+          "text": "The Trump administration is being sued over plans to build a ballroom at the White House.",
+          "confidence": 0.9,
+          "category": "policy",
+          "importance": 0.85,
+          "context": "National Trust for Historic Preservation lawsuit against Trump administration."
+        },
+        {
+          "text": "The White House East Wing was demolished in October to make room for the ballroom.",
+          "confidence": 0.9,
+          "category": "historical",
+          "importance": 0.85,
+          "context": "Demolition occurred in October as part of the ballroom project."
+        },
+        {
+          "text": "The lawsuit claims the White House did not obtain necessary approvals for the ballroom project.",
+          "confidence": 0.85,
+          "category": "policy",
+          "importance": 0.75,
+          "context": "Claims made by the National Trust for Historic Preservation."
+        },
+        {
+          "text": "The ballroom is planned to be 90,000 square feet in size.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "Size of the proposed ballroom as mentioned in the lawsuit."
+        },
+        {
+          "text": "The White House is only about 55,000 square feet in size.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Comparison of the ballroom size to the White House."
+        },
+        {
+          "text": "The National Trust for Historic Preservation is chartered by Congress to preserve historic buildings.",
+          "confidence": 0.9,
+          "category": "biographical",
+          "importance": 0.5,
+          "context": "Background on the National Trust for Historic Preservation."
+        },
+        {
+          "text": "The lawsuit is 47 pages long.",
+          "confidence": 0.8,
+          "category": "statistical",
+          "importance": 0.25,
+          "context": "Length of the lawsuit filed by the National Trust."
+        },
+        {
+          "text": "The National Capital Planning Commission and the Commission of Fine Arts were not consulted for the project.",
+          "confidence": 0.85,
+          "category": "policy",
+          "importance": 0.6,
+          "context": "Claims made in the lawsuit regarding approvals."
+        }
+      ],
+      "total_count": 8
+    },
+    "output_length_chars": 2464,
+    "output_tokens_estimated": 616,
+    "cost_usd": 0.00067365
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:26:29.879332",
+    "latency_seconds": 2.85,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The Trump administration is being sued over plans to build a ballroom at the White House.\nContext: National Trust for Historic Preservation lawsuit against Trump administration.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 350,
+    "input_tokens_estimated": 87,
+    "output": {
+      "original_claim": "The Trump administration is being sued over plans to build a ballroom at the White House.",
+      "queries": [
+        {
+          "query": "Trump administration lawsuit ballroom White House National Trust for Historic Preservation",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "National Trust for Historic Preservation suing Trump White House ballroom plans",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 408,
+    "output_tokens_estimated": 102,
+    "cost_usd": 7.425e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The Trump administration is being sued over plans to build a ballroom at the White House."
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:26:46.939740",
+    "latency_seconds": 2.35,
+    "input_prompt": "Claim:\nThe Trump administration is being sued over plans to build a ballroom at the White House.\n\nArticle Title:\nPreservationists sue Trump for ballroom project reviews and ... - PBS\n\nGoogle Search Snippet:\nPresident Donald Trump was sued on Friday by preservationists asking a federal court to halt his White House ballroom project until it goes ...\n\nFull Page Content:\nES Sign in 0:00 / 0:15 Trump Admin. Sued Over Construction of White House Ballroom TODAY 4.93M subscribers Subscribe 540 Share Save 55,444 views 13 hours ago The National Trust for Historical Preservation is suing the Trump administration over the construction of a new ballroom to replace the demolished East Wing. The lawsuit would block him from building it until the project receives a series of federal approvals. NBC\u2019s Yamiche Alcindor reports for Saturday TODAY. \u2026 ...more 8:08 OMG: Fox host makes HUGE MISTAKE on air over Trump Brian Tyler Cohen 32K views \u2022 44 minutes ago New 3:24 Karoline Leavitt TORCHES CNN\u2019s Kaitlan Collins over soft Biden coverage New York Post 191K views \u2022 2 days ago New 7:35 National Trust sues Trump admin over ballroom plans CNN 514K views \u2022 1 day ago New 10:58 Woman with family ties to White House press secretary Karoline Leavitt released from ICE custody CNN 761K views \u2022 1 day ago New 13:39 How to Spot Autism in High-Masking Adults Auticate with Chris & Debby 1.3M views \u2022 10 months ago 6:41 Pentagon Press Conference Cold Open - SNL Saturday Night Live 5.8M views \u2022 6 days ago New 9:01 \u2018Absolutely extraordinary:\u2019 Buttigieg on Indiana Republicans' MAJOR rebuke of Trump MS NOW 106K views \u2022 2 days ago New 13:54 Karoline Refuses To Take Kaitlan\u2019s Follow-Up, Then This Reporter Ambushes Her In White House | Watch Hook Global 196K views \u2022 1 day ago New 13:37 15 Everyday French Habits That Blow Americans Away Les Frenchies 337K views \u2022 7 days ago 19:56 Surviving a -36\u00b0 Night - No Tent & No Sleeping Bag Kusk Bushcraft 21M views \u2022 2 years ago 14:02 Trump Selling Gold Card for U.S. Citizenship & Scrambles to Come Up with a Health Care Plan Jimmy Kimmel Live 2.4M views \u2022 1 day ago New 8:53 Fox News Clarifies Trump Loves \u201cMiners\u201d & Female Reporters Are on Trump\u2019s S**t List | The Daily Show The Daily Show and Michael Kosta 2M views \u2022 3 days ago New 10:30 How the White House is using misleading comparisons to make inflation sound better CNN 116K views \u2022 2 days ago New 5:04 Trump REPLACES White House Ballroom ARCHITECT Amid CLASHES: REPORT | RISING The Hill 24K views \u2022 8 days ago 24:39 We Tried Trump's Cognitive Test TLDR News Global 531K views \u2022 2 weeks ago 8:42 \u2018Unbelievable\u2019: Nicolle reacts to Kristi Noem\u2019s response when confronted over deporting veterans MS NOW 588K views \u2022 2 days ago New 2:51 Historic preservation group sues Trump over White House ballroom project CBS News 57K views \u2022 1 day ago New 20:21 Top 10 Hardest Impressions That SNL Cast Members Nailed MsMojo 895K views \u2022 3 months ago 16:35 Mix CEMENT with EPOXY RESIN and turn the impossible into a MILLION-DOLLAR idea! Inova ou inventa 334K views \u2022 3 days ago New 18:05 Inside the NEW $300M White House Ballroom Beyond Facts 1.5M views \u2022 1 month ago A Google company en Sign in Before you continue to YouTube We use cookies and data to Deliver and maintain Google services Track outages and protect against spam, fraud, and abuse Measure audience engagement and site statistics to understand how our services are used and enhance the quality of those services If you choose to \u201cAccept all,\u201d we will also use cookies and data to Develop and improve new services Deliver and measure the effectiveness of ads Show personalized content, depending on your settings Show personalized ads, depending on your settings If you choose to \u201cReject all,\u201d we will not use cookies for these additional purposes. Non-personalized content and ads are influenced by things like the content you\u2019re currently viewing and your location (ad serving is based on general location). Personalized content and ads can also include things like video recommendations, a customized YouTube homepage, and tailored ads based on past activity, like the videos you watch and the things you search for on YouTube. We also use cookies and data to tailor the experience to be age-appropriate, if relevant. Select \u201cMore options\u201d to see additional information, including details about managing your privacy settings. You can also visit g.co/privacytools at any time. Reject all Accept all More options Privacy Policy \u2022 Terms of Service\n\nProvide relevant evidence.",
+    "input_length_chars": 4513,
+    "input_tokens_estimated": 1128,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that the Trump administration is being sued by preservationists over plans to construct a new ballroom at the White House, specifically to halt the project until it receives necessary federal approvals.",
+      "overall_stance": "supports",
+      "key_quote": "The National Trust for Historical Preservation is suing the Trump administration over the construction of a new ballroom to replace the demolished East Wing."
+    },
+    "output_length_chars": 467,
+    "output_tokens_estimated": 116,
+    "cost_usd": 0.0002388,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The Trump administration is being sued over plans to build a ballroom at the White House.",
+      "query_index": 2,
+      "query_text": "National Trust for Historic Preservation suing Trump White House ballroom plans"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:26:47.073644",
+    "latency_seconds": 2.39,
+    "input_prompt": "Claim:\nThe Trump administration is being sued over plans to build a ballroom at the White House.\n\nArticle Title:\nHistoric preservation group sues Trump over White House ballroom ...\n\nGoogle Search Snippet:\nHistoric preservation group sues Trump over White House ballroom project \u00b7 Judge blocks Trump admin. from deploying California National Guard in ...\n\nFull Page Content:\nES Sign in 0:00 / 0:15 Trump Admin. Sued Over Construction of White House Ballroom TODAY 4.93M subscribers Subscribe 540 Share Save 55,444 views 13 hours ago The National Trust for Historical Preservation is suing the Trump administration over the construction of a new ballroom to replace the demolished East Wing. The lawsuit would block him from building it until the project receives a series of federal approvals. NBC\u2019s Yamiche Alcindor reports for Saturday TODAY. \u2026 ...more 8:08 OMG: Fox host makes HUGE MISTAKE on air over Trump Brian Tyler Cohen 32K views \u2022 44 minutes ago New 3:24 Karoline Leavitt TORCHES CNN\u2019s Kaitlan Collins over soft Biden coverage New York Post 191K views \u2022 2 days ago New 7:35 National Trust sues Trump admin over ballroom plans CNN 514K views \u2022 1 day ago New 10:58 Woman with family ties to White House press secretary Karoline Leavitt released from ICE custody CNN 761K views \u2022 1 day ago New 13:39 How to Spot Autism in High-Masking Adults Auticate with Chris & Debby 1.3M views \u2022 10 months ago 6:41 Pentagon Press Conference Cold Open - SNL Saturday Night Live 5.8M views \u2022 6 days ago New 9:01 \u2018Absolutely extraordinary:\u2019 Buttigieg on Indiana Republicans' MAJOR rebuke of Trump MS NOW 106K views \u2022 2 days ago New 13:54 Karoline Refuses To Take Kaitlan\u2019s Follow-Up, Then This Reporter Ambushes Her In White House | Watch Hook Global 196K views \u2022 1 day ago New 13:37 15 Everyday French Habits That Blow Americans Away Les Frenchies 337K views \u2022 7 days ago 19:56 Surviving a -36\u00b0 Night - No Tent & No Sleeping Bag Kusk Bushcraft 21M views \u2022 2 years ago 14:02 Trump Selling Gold Card for U.S. Citizenship & Scrambles to Come Up with a Health Care Plan Jimmy Kimmel Live 2.4M views \u2022 1 day ago New 8:53 Fox News Clarifies Trump Loves \u201cMiners\u201d & Female Reporters Are on Trump\u2019s S**t List | The Daily Show The Daily Show and Michael Kosta 2M views \u2022 3 days ago New 10:30 How the White House is using misleading comparisons to make inflation sound better CNN 116K views \u2022 2 days ago New 5:04 Trump REPLACES White House Ballroom ARCHITECT Amid CLASHES: REPORT | RISING The Hill 24K views \u2022 8 days ago 24:39 We Tried Trump's Cognitive Test TLDR News Global 531K views \u2022 2 weeks ago 8:42 \u2018Unbelievable\u2019: Nicolle reacts to Kristi Noem\u2019s response when confronted over deporting veterans MS NOW 588K views \u2022 2 days ago New 2:51 Historic preservation group sues Trump over White House ballroom project CBS News 57K views \u2022 1 day ago New 20:21 Top 10 Hardest Impressions That SNL Cast Members Nailed MsMojo 895K views \u2022 3 months ago 16:35 Mix CEMENT with EPOXY RESIN and turn the impossible into a MILLION-DOLLAR idea! Inova ou inventa 334K views \u2022 3 days ago New 18:05 Inside the NEW $300M White House Ballroom Beyond Facts 1.5M views \u2022 1 month ago A Google company en Sign in Before you continue to YouTube We use cookies and data to Deliver and maintain Google services Track outages and protect against spam, fraud, and abuse Measure audience engagement and site statistics to understand how our services are used and enhance the quality of those services If you choose to \u201cAccept all,\u201d we will also use cookies and data to Develop and improve new services Deliver and measure the effectiveness of ads Show personalized content, depending on your settings Show personalized ads, depending on your settings If you choose to \u201cReject all,\u201d we will not use cookies for these additional purposes. Non-personalized content and ads are influenced by things like the content you\u2019re currently viewing and your location (ad serving is based on general location). Personalized content and ads can also include things like video recommendations, a customized YouTube homepage, and tailored ads based on past activity, like the videos you watch and the things you search for on YouTube. We also use cookies and data to tailor the experience to be age-appropriate, if relevant. Select \u201cMore options\u201d to see additional information, including details about managing your privacy settings. You can also visit g.co/privacytools at any time. Reject all Accept all More options Privacy Policy \u2022 Terms of Service\n\nProvide relevant evidence.",
+    "input_length_chars": 4517,
+    "input_tokens_estimated": 1129,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The National Trust for Historical Preservation is suing the Trump administration over the construction of a new ballroom at the White House, aiming to block the project until it receives necessary federal approvals.",
+      "overall_stance": "supports",
+      "key_quote": "The National Trust for Historical Preservation is suing the Trump administration over the construction of a new ballroom to replace the demolished East Wing."
+    },
+    "output_length_chars": 458,
+    "output_tokens_estimated": 114,
+    "cost_usd": 0.00023775,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The Trump administration is being sued over plans to build a ballroom at the White House.",
+      "query_index": 2,
+      "query_text": "National Trust for Historic Preservation suing Trump White House ballroom plans"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:26:47.184265",
+    "latency_seconds": 2.32,
+    "input_prompt": "Claim:\nThe Trump administration is being sued over plans to build a ballroom at the White House.\n\nArticle Title:\nTrump Admin. Sued Over Construction of White House Ballroom\n\nGoogle Search Snippet:\nThe National Trust for Historical Preservation is suing the Trump administration over the construction of a new ballroom to replace the ...\n\nFull Page Content:\nES Sign in 0:00 / 0:15 Trump Admin. Sued Over Construction of White House Ballroom TODAY 4.93M subscribers Subscribe 540 Share Save 55,444 views 13 hours ago The National Trust for Historical Preservation is suing the Trump administration over the construction of a new ballroom to replace the demolished East Wing. The lawsuit would block him from building it until the project receives a series of federal approvals. NBC\u2019s Yamiche Alcindor reports for Saturday TODAY. \u2026 ...more 8:08 OMG: Fox host makes HUGE MISTAKE on air over Trump Brian Tyler Cohen 32K views \u2022 44 minutes ago New 3:24 Karoline Leavitt TORCHES CNN\u2019s Kaitlan Collins over soft Biden coverage New York Post 191K views \u2022 2 days ago New 7:35 National Trust sues Trump admin over ballroom plans CNN 514K views \u2022 1 day ago New 10:58 Woman with family ties to White House press secretary Karoline Leavitt released from ICE custody CNN 761K views \u2022 1 day ago New 13:39 How to Spot Autism in High-Masking Adults Auticate with Chris & Debby 1.3M views \u2022 10 months ago 6:41 Pentagon Press Conference Cold Open - SNL Saturday Night Live 5.8M views \u2022 6 days ago New 9:01 \u2018Absolutely extraordinary:\u2019 Buttigieg on Indiana Republicans' MAJOR rebuke of Trump MS NOW 106K views \u2022 2 days ago New 13:54 Karoline Refuses To Take Kaitlan\u2019s Follow-Up, Then This Reporter Ambushes Her In White House | Watch Hook Global 196K views \u2022 1 day ago New 13:37 15 Everyday French Habits That Blow Americans Away Les Frenchies 337K views \u2022 7 days ago 19:56 Surviving a -36\u00b0 Night - No Tent & No Sleeping Bag Kusk Bushcraft 21M views \u2022 2 years ago 14:02 Trump Selling Gold Card for U.S. Citizenship & Scrambles to Come Up with a Health Care Plan Jimmy Kimmel Live 2.4M views \u2022 1 day ago New 8:53 Fox News Clarifies Trump Loves \u201cMiners\u201d & Female Reporters Are on Trump\u2019s S**t List | The Daily Show The Daily Show and Michael Kosta 2M views \u2022 3 days ago New 10:30 How the White House is using misleading comparisons to make inflation sound better CNN 116K views \u2022 2 days ago New 5:04 Trump REPLACES White House Ballroom ARCHITECT Amid CLASHES: REPORT | RISING The Hill 24K views \u2022 8 days ago 24:39 We Tried Trump's Cognitive Test TLDR News Global 531K views \u2022 2 weeks ago 8:42 \u2018Unbelievable\u2019: Nicolle reacts to Kristi Noem\u2019s response when confronted over deporting veterans MS NOW 588K views \u2022 2 days ago New 2:51 Historic preservation group sues Trump over White House ballroom project CBS News 57K views \u2022 1 day ago New 20:21 Top 10 Hardest Impressions That SNL Cast Members Nailed MsMojo 895K views \u2022 3 months ago 16:35 Mix CEMENT with EPOXY RESIN and turn the impossible into a MILLION-DOLLAR idea! Inova ou inventa 334K views \u2022 3 days ago New 18:05 Inside the NEW $300M White House Ballroom Beyond Facts 1.5M views \u2022 1 month ago A Google company en Sign in Before you continue to YouTube We use cookies and data to Deliver and maintain Google services Track outages and protect against spam, fraud, and abuse Measure audience engagement and site statistics to understand how our services are used and enhance the quality of those services If you choose to \u201cAccept all,\u201d we will also use cookies and data to Develop and improve new services Deliver and measure the effectiveness of ads Show personalized content, depending on your settings Show personalized ads, depending on your settings If you choose to \u201cReject all,\u201d we will not use cookies for these additional purposes. Non-personalized content and ads are influenced by things like the content you\u2019re currently viewing and your location (ad serving is based on general location). Personalized content and ads can also include things like video recommendations, a customized YouTube homepage, and tailored ads based on past activity, like the videos you watch and the things you search for on YouTube. We also use cookies and data to tailor the experience to be age-appropriate, if relevant. Select \u201cMore options\u201d to see additional information, including details about managing your privacy settings. You can also visit g.co/privacytools at any time. Reject all Accept all More options Privacy Policy \u2022 Terms of Service\n\nProvide relevant evidence.",
+    "input_length_chars": 4499,
+    "input_tokens_estimated": 1124,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The National Trust for Historical Preservation is indeed suing the Trump administration over plans to construct a new ballroom at the White House, aiming to block the project until it receives necessary federal approvals.",
+      "overall_stance": "supports",
+      "key_quote": "The National Trust for Historical Preservation is suing the Trump administration over the construction of a new ballroom to replace the demolished East Wing."
+    },
+    "output_length_chars": 464,
+    "output_tokens_estimated": 116,
+    "cost_usd": 0.0002382,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The Trump administration is being sued over plans to build a ballroom at the White House.",
+      "query_index": 2,
+      "query_text": "National Trust for Historic Preservation suing Trump White House ballroom plans"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:26:47.882936",
+    "latency_seconds": 1.99,
+    "input_prompt": "Claim:\nThe Trump administration is being sued over plans to build a ballroom at the White House.\n\nArticle Title:\nHistoric preservation group sues Trump over White House ballroom ...\n\nGoogle Search Snippet:\nThe National Trust for Historic Preservation has filed a lawsuit to stop President Trump's White House ballroom construction.\n\nFull Page Content:\nES Sign in 0:00 / 2:33 Historic preservation group sues Trump over White House ballroom project CBS News 6.85M subscribers Subscribe 916 Share Save 57K views 1 day ago The National Trust for Historic Preservation has filed a lawsuit to stop President Trump's White House ballroom construction. CBS News White House reporter Willie James Inman has the details. CBS News 24/7 is the premier anchored streaming news service from CBS News and Stations that is available free to everyone with access to the internet and is the destination for breaking news, li \u2026 ...more Shop the CBS News store CBS News Logo Black Mug Black / 11 oz Limited shipping areas Paramount Shop CBS News Logo Hooded Sweatshirt Limited shipping areas Paramount Shop CBS News Logo Adult Short Sleeve T-Shirt Limited shipping areas Paramount Shop CBS News Vintage Logo Black Mug Limited shipping areas Paramount Shop CBS News Vintage Logo Fleece Zip-Up Hooded Sweatshirt Limited shipping areas Paramount Shop 8:08 OMG: Fox host makes HUGE MISTAKE on air over Trump Brian Tyler Cohen 32K views \u2022 44 minutes ago New 1:32:39 Why is it \"IMPOSSIBLE\" for Humans to Reach MARS | Michio Kaku The Universe of Michio Kaku 315K views \u2022 6 days ago New 7:35 National Trust sues Trump admin over ballroom plans CNN 514K views \u2022 1 day ago New 6:41 Pentagon Press Conference Cold Open - SNL Saturday Night Live 5.8M views \u2022 6 days ago New 18:05 Inside the NEW $300M White House Ballroom Beyond Facts 1.5M views \u2022 1 month ago 19:56 Surviving a -36\u00b0 Night - No Tent & No Sleeping Bag Kusk Bushcraft 21M views \u2022 2 years ago 13:54 Karoline Refuses To Take Kaitlan\u2019s Follow-Up, Then This Reporter Ambushes Her In White House | Watch Hook Global 196K views \u2022 1 day ago New 19:51 \ud83d\udea8EMERGENCY Hearing TO BLOCK TRUMP BALLROOM Scheduled MeidasTouch 335K views \u2022 6 hours ago New 13:39 How to Spot Autism in High-Masking Adults Auticate with Chris & Debby 1.3M views \u2022 10 months ago 14:02 Trump Selling Gold Card for U.S. Citizenship & Scrambles to Come Up with a Health Care Plan Jimmy Kimmel Live 2.4M views \u2022 1 day ago New 10:04 \u2018Awful politics for Republicans\u2019: Enten runs numbers on expiring Obamacare subsidies CNN 334K views \u2022 1 day ago New 8:53 Fox News Clarifies Trump Loves \u201cMiners\u201d & Female Reporters Are on Trump\u2019s S**t List | The Daily Show The Daily Show and Michael Kosta 2M views \u2022 3 days ago New 37:58 Nobel Prize-Winning Economist: How BAD Will the Economy Get Under Trump? Zeteo 337K views \u2022 2 days ago New 27:03 Schiff Takes To Senate Floor to Lay Out Trump's 10 Most Corrupt Acts So Far Sen. Adam Schiff 8.5M views \u2022 6 months ago 34:30 Arrogant CEO's Daughter Mocks Judge, Gets Maximum Sentence INSTANTLY angeltwin26 3.9M views \u2022 2 weeks ago 15:01 Lord Louis Mountbatten Was England's Worst Royal Failure History Expos\u00e9 719K views \u2022 4 weeks ago 29:17 Judge Caprio Left SPEECHLESS When Billionaire Said \"I Own You\" Judge Karma 370K views \u2022 5 days ago New 5:54 Social Media Users Ask JD Vance to \"Send Usha Back to India\" | Vantage with Palki Sharma | N18G Firstpost 736K views \u2022 5 days ago New 6:55 Secret government UFO program reveals paranormal events 8 News Now \u2014 Las Vegas 433K views \u2022 2 days ago New 19:09 SPAIN'S TOURISM CRISIS is far more complicated than it seems..... Spain Unfiltered 177K views \u2022 13 days ago A Google company en Sign in Before you continue to YouTube We use cookies and data to Deliver and maintain Google services Track outages and protect against spam, fraud, and abuse Measure audience engagement and site statistics to understand how our services are used and enhance the quality of those services If you choose to \u201cAccept all,\u201d we will also use cookies and data to Develop and improve new services Deliver and measure the effectiveness of ads Show personalized content, depending on your settings Show personalized ads, depending on your settings If you choose to \u201cReject all,\u201d we will not use cookies for these additional purposes. Non-personalized content and ads are influenced by things like the content you\u2019re currently viewing and your location (ad serving is based on general location). Personalized content and ads can also include things like video recommendations, a customized YouTube homepage, and tailored ads based on past activity, like the videos you watch and the things you search for on YouTube. We also use cookies and data to tailor the experience to be age-appropriate, if relevant. Select \u201cMore options\u201d to see additional information, including details about managing your privacy settings. You can also visit g.co/privacytools at any time. Reject all Accept all More options Privacy Policy \u2022 Terms of Service\n\nProvide relevant evidence.",
+    "input_length_chars": 5004,
+    "input_tokens_estimated": 1251,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The National Trust for Historic Preservation has indeed filed a lawsuit against the Trump administration to halt the construction of a ballroom at the White House, confirming the claim.",
+      "overall_stance": "supports",
+      "key_quote": "The National Trust for Historic Preservation has filed a lawsuit to stop President Trump's White House ballroom construction."
+    },
+    "output_length_chars": 396,
+    "output_tokens_estimated": 99,
+    "cost_usd": 0.00024705,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The Trump administration is being sued over plans to build a ballroom at the White House.",
+      "query_index": 2,
+      "query_text": "National Trust for Historic Preservation suing Trump White House ballroom plans"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:26:48.721135",
+    "latency_seconds": 2.94,
+    "input_prompt": "Claim:\nThe Trump administration is being sued over plans to build a ballroom at the White House.\n\nArticle Title:\nHistoric preservation group sues Trump over White House ballroom ...\n\nGoogle Search Snippet:\n\"No president is legally allowed to tear down portions of the White House without any review whatsoever,\" said the National Trust for ...\n\nFull Page Content:\nES Sign in 0:00 / 2:33 Historic preservation group sues Trump over White House ballroom project CBS News 6.85M subscribers Subscribe 916 Share Save 57K views 1 day ago The National Trust for Historic Preservation has filed a lawsuit to stop President Trump's White House ballroom construction. CBS News White House reporter Willie James Inman has the details. CBS News 24/7 is the premier anchored streaming news service from CBS News and Stations that is available free to everyone with access to the internet and is the destination for breaking news, li \u2026 ...more Shop the CBS News store CBS News Logo Black Mug Black / 11 oz Limited shipping areas Paramount Shop CBS News Logo Hooded Sweatshirt Limited shipping areas Paramount Shop CBS News Logo Adult Short Sleeve T-Shirt Limited shipping areas Paramount Shop CBS News Vintage Logo Black Mug Limited shipping areas Paramount Shop CBS News Vintage Logo Fleece Zip-Up Hooded Sweatshirt Limited shipping areas Paramount Shop 8:08 OMG: Fox host makes HUGE MISTAKE on air over Trump Brian Tyler Cohen 32K views \u2022 44 minutes ago New 1:32:39 Why is it \"IMPOSSIBLE\" for Humans to Reach MARS | Michio Kaku The Universe of Michio Kaku 315K views \u2022 6 days ago New 7:35 National Trust sues Trump admin over ballroom plans CNN 514K views \u2022 1 day ago New 6:41 Pentagon Press Conference Cold Open - SNL Saturday Night Live 5.8M views \u2022 6 days ago New 18:05 Inside the NEW $300M White House Ballroom Beyond Facts 1.5M views \u2022 1 month ago 19:56 Surviving a -36\u00b0 Night - No Tent & No Sleeping Bag Kusk Bushcraft 21M views \u2022 2 years ago 13:54 Karoline Refuses To Take Kaitlan\u2019s Follow-Up, Then This Reporter Ambushes Her In White House | Watch Hook Global 196K views \u2022 1 day ago New 19:51 \ud83d\udea8EMERGENCY Hearing TO BLOCK TRUMP BALLROOM Scheduled MeidasTouch 335K views \u2022 6 hours ago New 13:39 How to Spot Autism in High-Masking Adults Auticate with Chris & Debby 1.3M views \u2022 10 months ago 14:02 Trump Selling Gold Card for U.S. Citizenship & Scrambles to Come Up with a Health Care Plan Jimmy Kimmel Live 2.4M views \u2022 1 day ago New 10:04 \u2018Awful politics for Republicans\u2019: Enten runs numbers on expiring Obamacare subsidies CNN 334K views \u2022 1 day ago New 8:53 Fox News Clarifies Trump Loves \u201cMiners\u201d & Female Reporters Are on Trump\u2019s S**t List | The Daily Show The Daily Show and Michael Kosta 2M views \u2022 3 days ago New 37:58 Nobel Prize-Winning Economist: How BAD Will the Economy Get Under Trump? Zeteo 337K views \u2022 2 days ago New 27:03 Schiff Takes To Senate Floor to Lay Out Trump's 10 Most Corrupt Acts So Far Sen. Adam Schiff 8.5M views \u2022 6 months ago 34:30 Arrogant CEO's Daughter Mocks Judge, Gets Maximum Sentence INSTANTLY angeltwin26 3.9M views \u2022 2 weeks ago 15:01 Lord Louis Mountbatten Was England's Worst Royal Failure History Expos\u00e9 719K views \u2022 4 weeks ago 29:17 Judge Caprio Left SPEECHLESS When Billionaire Said \"I Own You\" Judge Karma 370K views \u2022 5 days ago New 5:54 Social Media Users Ask JD Vance to \"Send Usha Back to India\" | Vantage with Palki Sharma | N18G Firstpost 736K views \u2022 5 days ago New 6:55 Secret government UFO program reveals paranormal events 8 News Now \u2014 Las Vegas 433K views \u2022 2 days ago New 19:09 SPAIN'S TOURISM CRISIS is far more complicated than it seems..... Spain Unfiltered 177K views \u2022 13 days ago A Google company en Sign in Before you continue to YouTube We use cookies and data to Deliver and maintain Google services Track outages and protect against spam, fraud, and abuse Measure audience engagement and site statistics to understand how our services are used and enhance the quality of those services If you choose to \u201cAccept all,\u201d we will also use cookies and data to Develop and improve new services Deliver and measure the effectiveness of ads Show personalized content, depending on your settings Show personalized ads, depending on your settings If you choose to \u201cReject all,\u201d we will not use cookies for these additional purposes. Non-personalized content and ads are influenced by things like the content you\u2019re currently viewing and your location (ad serving is based on general location). Personalized content and ads can also include things like video recommendations, a customized YouTube homepage, and tailored ads based on past activity, like the videos you watch and the things you search for on YouTube. We also use cookies and data to tailor the experience to be age-appropriate, if relevant. Select \u201cMore options\u201d to see additional information, including details about managing your privacy settings. You can also visit g.co/privacytools at any time. Reject all Accept all More options Privacy Policy \u2022 Terms of Service\n\nProvide relevant evidence.",
+    "input_length_chars": 5016,
+    "input_tokens_estimated": 1254,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The National Trust for Historic Preservation has indeed filed a lawsuit against the Trump administration to halt the construction of a ballroom at the White House, indicating that the claim is accurate.",
+      "overall_stance": "supports",
+      "key_quote": "The National Trust for Historic Preservation has filed a lawsuit to stop President Trump's White House ballroom construction."
+    },
+    "output_length_chars": 413,
+    "output_tokens_estimated": 103,
+    "cost_usd": 0.0002499,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The Trump administration is being sued over plans to build a ballroom at the White House.",
+      "query_index": 2,
+      "query_text": "National Trust for Historic Preservation suing Trump White House ballroom plans"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:26:48.895050",
+    "latency_seconds": 4.12,
+    "input_prompt": "Claim:\nThe Trump administration is being sued over plans to build a ballroom at the White House.\n\nArticle Title:\nNational Trust for Historic Preservation sues to try to stop White ...\n\nGoogle Search Snippet:\nLawsuit challenges White House ballroom constructionPreservationists are asking a federal court to halt construction until the project undergoes ...\n\nFull Page Content:\nES Sign in 0:00 / 0:15 Trump Admin. Sued Over Construction of White House Ballroom TODAY 4.93M subscribers Subscribe 540 Share Save 55,444 views 13 hours ago The National Trust for Historical Preservation is suing the Trump administration over the construction of a new ballroom to replace the demolished East Wing. The lawsuit would block him from building it until the project receives a series of federal approvals. NBC\u2019s Yamiche Alcindor reports for Saturday TODAY. \u2026 ...more 8:08 OMG: Fox host makes HUGE MISTAKE on air over Trump Brian Tyler Cohen 32K views \u2022 44 minutes ago New 3:24 Karoline Leavitt TORCHES CNN\u2019s Kaitlan Collins over soft Biden coverage New York Post 191K views \u2022 2 days ago New 7:35 National Trust sues Trump admin over ballroom plans CNN 514K views \u2022 1 day ago New 10:58 Woman with family ties to White House press secretary Karoline Leavitt released from ICE custody CNN 761K views \u2022 1 day ago New 13:39 How to Spot Autism in High-Masking Adults Auticate with Chris & Debby 1.3M views \u2022 10 months ago 6:41 Pentagon Press Conference Cold Open - SNL Saturday Night Live 5.8M views \u2022 6 days ago New 9:01 \u2018Absolutely extraordinary:\u2019 Buttigieg on Indiana Republicans' MAJOR rebuke of Trump MS NOW 106K views \u2022 2 days ago New 13:54 Karoline Refuses To Take Kaitlan\u2019s Follow-Up, Then This Reporter Ambushes Her In White House | Watch Hook Global 196K views \u2022 1 day ago New 13:37 15 Everyday French Habits That Blow Americans Away Les Frenchies 337K views \u2022 7 days ago 19:56 Surviving a -36\u00b0 Night - No Tent & No Sleeping Bag Kusk Bushcraft 21M views \u2022 2 years ago 14:02 Trump Selling Gold Card for U.S. Citizenship & Scrambles to Come Up with a Health Care Plan Jimmy Kimmel Live 2.4M views \u2022 1 day ago New 8:53 Fox News Clarifies Trump Loves \u201cMiners\u201d & Female Reporters Are on Trump\u2019s S**t List | The Daily Show The Daily Show and Michael Kosta 2M views \u2022 3 days ago New 10:30 How the White House is using misleading comparisons to make inflation sound better CNN 116K views \u2022 2 days ago New 5:04 Trump REPLACES White House Ballroom ARCHITECT Amid CLASHES: REPORT | RISING The Hill 24K views \u2022 8 days ago 24:39 We Tried Trump's Cognitive Test TLDR News Global 531K views \u2022 2 weeks ago 8:42 \u2018Unbelievable\u2019: Nicolle reacts to Kristi Noem\u2019s response when confronted over deporting veterans MS NOW 588K views \u2022 2 days ago New 2:51 Historic preservation group sues Trump over White House ballroom project CBS News 57K views \u2022 1 day ago New 20:21 Top 10 Hardest Impressions That SNL Cast Members Nailed MsMojo 895K views \u2022 3 months ago 16:35 Mix CEMENT with EPOXY RESIN and turn the impossible into a MILLION-DOLLAR idea! Inova ou inventa 334K views \u2022 3 days ago New 18:05 Inside the NEW $300M White House Ballroom Beyond Facts 1.5M views \u2022 1 month ago A Google company en Sign in Before you continue to YouTube We use cookies and data to Deliver and maintain Google services Track outages and protect against spam, fraud, and abuse Measure audience engagement and site statistics to understand how our services are used and enhance the quality of those services If you choose to \u201cAccept all,\u201d we will also use cookies and data to Develop and improve new services Deliver and measure the effectiveness of ads Show personalized content, depending on your settings Show personalized ads, depending on your settings If you choose to \u201cReject all,\u201d we will not use cookies for these additional purposes. Non-personalized content and ads are influenced by things like the content you\u2019re currently viewing and your location (ad serving is based on general location). Personalized content and ads can also include things like video recommendations, a customized YouTube homepage, and tailored ads based on past activity, like the videos you watch and the things you search for on YouTube. We also use cookies and data to tailor the experience to be age-appropriate, if relevant. Select \u201cMore options\u201d to see additional information, including details about managing your privacy settings. You can also visit g.co/privacytools at any time. Reject all Accept all More options Privacy Policy \u2022 Terms of Service\n\nProvide relevant evidence.",
+    "input_length_chars": 4519,
+    "input_tokens_estimated": 1129,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The National Trust for Historic Preservation is suing the Trump administration to block the construction of a new ballroom at the White House, claiming that the project requires federal approvals before proceeding.",
+      "overall_stance": "supports",
+      "key_quote": "The National Trust for Historical Preservation is suing the Trump administration over the construction of a new ballroom to replace the demolished East Wing."
+    },
+    "output_length_chars": 457,
+    "output_tokens_estimated": 114,
+    "cost_usd": 0.00023775,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The Trump administration is being sued over plans to build a ballroom at the White House.",
+      "query_index": 2,
+      "query_text": "National Trust for Historic Preservation suing Trump White House ballroom plans"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:26:48.909129",
+    "latency_seconds": 4.43,
+    "input_prompt": "Claim:\nThe Trump administration is being sued over plans to build a ballroom at the White House.\n\nArticle Title:\nNational Trust Sues Trump Over Ballroom - The New York Times\n\nGoogle Search Snippet:\nThe National Trust for Historic Preservation has filed a lawsuit aimed to stop the construction of President Trump's ballroom at the White House ...\n\nFull Page Content:\nES Sign in 0:00 / 0:15 Trump Admin. Sued Over Construction of White House Ballroom TODAY 4.93M subscribers Subscribe 540 Share Save 55,444 views 13 hours ago The National Trust for Historical Preservation is suing the Trump administration over the construction of a new ballroom to replace the demolished East Wing. The lawsuit would block him from building it until the project receives a series of federal approvals. NBC\u2019s Yamiche Alcindor reports for Saturday TODAY. \u2026 ...more 8:08 OMG: Fox host makes HUGE MISTAKE on air over Trump Brian Tyler Cohen 32K views \u2022 44 minutes ago New 3:24 Karoline Leavitt TORCHES CNN\u2019s Kaitlan Collins over soft Biden coverage New York Post 191K views \u2022 2 days ago New 7:35 National Trust sues Trump admin over ballroom plans CNN 514K views \u2022 1 day ago New 10:58 Woman with family ties to White House press secretary Karoline Leavitt released from ICE custody CNN 761K views \u2022 1 day ago New 13:39 How to Spot Autism in High-Masking Adults Auticate with Chris & Debby 1.3M views \u2022 10 months ago 6:41 Pentagon Press Conference Cold Open - SNL Saturday Night Live 5.8M views \u2022 6 days ago New 9:01 \u2018Absolutely extraordinary:\u2019 Buttigieg on Indiana Republicans' MAJOR rebuke of Trump MS NOW 106K views \u2022 2 days ago New 13:54 Karoline Refuses To Take Kaitlan\u2019s Follow-Up, Then This Reporter Ambushes Her In White House | Watch Hook Global 196K views \u2022 1 day ago New 13:37 15 Everyday French Habits That Blow Americans Away Les Frenchies 337K views \u2022 7 days ago 19:56 Surviving a -36\u00b0 Night - No Tent & No Sleeping Bag Kusk Bushcraft 21M views \u2022 2 years ago 14:02 Trump Selling Gold Card for U.S. Citizenship & Scrambles to Come Up with a Health Care Plan Jimmy Kimmel Live 2.4M views \u2022 1 day ago New 8:53 Fox News Clarifies Trump Loves \u201cMiners\u201d & Female Reporters Are on Trump\u2019s S**t List | The Daily Show The Daily Show and Michael Kosta 2M views \u2022 3 days ago New 10:30 How the White House is using misleading comparisons to make inflation sound better CNN 116K views \u2022 2 days ago New 5:04 Trump REPLACES White House Ballroom ARCHITECT Amid CLASHES: REPORT | RISING The Hill 24K views \u2022 8 days ago 24:39 We Tried Trump's Cognitive Test TLDR News Global 531K views \u2022 2 weeks ago 8:42 \u2018Unbelievable\u2019: Nicolle reacts to Kristi Noem\u2019s response when confronted over deporting veterans MS NOW 588K views \u2022 2 days ago New 2:51 Historic preservation group sues Trump over White House ballroom project CBS News 57K views \u2022 1 day ago New 20:21 Top 10 Hardest Impressions That SNL Cast Members Nailed MsMojo 895K views \u2022 3 months ago 16:35 Mix CEMENT with EPOXY RESIN and turn the impossible into a MILLION-DOLLAR idea! Inova ou inventa 334K views \u2022 3 days ago New 18:05 Inside the NEW $300M White House Ballroom Beyond Facts 1.5M views \u2022 1 month ago A Google company en Sign in Before you continue to YouTube We use cookies and data to Deliver and maintain Google services Track outages and protect against spam, fraud, and abuse Measure audience engagement and site statistics to understand how our services are used and enhance the quality of those services If you choose to \u201cAccept all,\u201d we will also use cookies and data to Develop and improve new services Deliver and measure the effectiveness of ads Show personalized content, depending on your settings Show personalized ads, depending on your settings If you choose to \u201cReject all,\u201d we will not use cookies for these additional purposes. Non-personalized content and ads are influenced by things like the content you\u2019re currently viewing and your location (ad serving is based on general location). Personalized content and ads can also include things like video recommendations, a customized YouTube homepage, and tailored ads based on past activity, like the videos you watch and the things you search for on YouTube. We also use cookies and data to tailor the experience to be age-appropriate, if relevant. Select \u201cMore options\u201d to see additional information, including details about managing your privacy settings. You can also visit g.co/privacytools at any time. Reject all Accept all More options Privacy Policy \u2022 Terms of Service\n\nProvide relevant evidence.",
+    "input_length_chars": 4509,
+    "input_tokens_estimated": 1127,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The National Trust for Historic Preservation is suing the Trump administration to block the construction of a new ballroom at the White House, which is intended to replace the demolished East Wing, until federal approvals are obtained.",
+      "overall_stance": "supports",
+      "key_quote": "The National Trust for Historical Preservation is suing the Trump administration over the construction of a new ballroom to replace the demolished East Wing."
+    },
+    "output_length_chars": 478,
+    "output_tokens_estimated": 119,
+    "cost_usd": 0.00024045,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The Trump administration is being sued over plans to build a ballroom at the White House.",
+      "query_index": 2,
+      "query_text": "National Trust for Historic Preservation suing Trump White House ballroom plans"
+    }
+  }
+]

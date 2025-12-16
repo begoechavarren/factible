@@ -1,0 +1,815 @@
+{
+  "extracted_claims": {
+    "claims": [
+      {
+        "text": "The FBI was organizing the riots of January 6th.",
+        "confidence": 0.8,
+        "category": "historical",
+        "importance": 0.85,
+        "context": "Discussion about the January 6th Capitol riots.",
+        "transcript_char_start": 118,
+        "transcript_char_end": 165,
+        "transcript_match_score": 1.0
+      },
+      {
+        "text": "There are 14,000 hours of unreleased video footage from January 6th.",
+        "confidence": 0.7,
+        "category": "historical",
+        "importance": 0.6,
+        "context": "Referring to the events of January 6th.",
+        "transcript_char_start": 1435,
+        "transcript_char_end": 1503,
+        "transcript_match_score": 0.9185185185185185
+      },
+      {
+        "text": "The FBI has been withholding evidence related to the pipe bomber.",
+        "confidence": 0.75,
+        "category": "policy",
+        "importance": 0.6,
+        "context": "Mention of the FBI's actions regarding the pipe bomber case.",
+        "transcript_char_start": 1734,
+        "transcript_char_end": 1810,
+        "transcript_match_score": 0.6428571428571429
+      }
+    ],
+    "total_count": 3
+  },
+  "final_output": {
+    "extracted_claims": {
+      "claims": [
+        {
+          "text": "The FBI was organizing the riots of January 6th.",
+          "confidence": 0.8,
+          "category": "historical",
+          "importance": 0.85,
+          "context": "Discussion about the January 6th Capitol riots.",
+          "transcript_char_start": 118,
+          "transcript_char_end": 165,
+          "transcript_match_score": 1.0
+        },
+        {
+          "text": "There are 14,000 hours of unreleased video footage from January 6th.",
+          "confidence": 0.7,
+          "category": "historical",
+          "importance": 0.6,
+          "context": "Referring to the events of January 6th.",
+          "transcript_char_start": 1435,
+          "transcript_char_end": 1503,
+          "transcript_match_score": 0.9185185185185185
+        },
+        {
+          "text": "The FBI has been withholding evidence related to the pipe bomber.",
+          "confidence": 0.75,
+          "category": "policy",
+          "importance": 0.6,
+          "context": "Mention of the FBI's actions regarding the pipe bomber case.",
+          "transcript_char_start": 1734,
+          "transcript_char_end": 1810,
+          "transcript_match_score": 0.6428571428571429
+        }
+      ],
+      "total_count": 3
+    },
+    "claim_reports": [
+      {
+        "claim_text": "The FBI was organizing the riots of January 6th.",
+        "claim_confidence": 0.8,
+        "claim_category": "historical",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "refutes": [
+            {
+              "title": "Examining the January 6 Attack on the U.S. Capitol - FBI",
+              "url": "https://www.fbi.gov/news/speeches-and-testimony/examining-the-january-6-attack-on-the-us-capitol-wray-061521",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence discusses the FBI's assessment of potential violent extremist activity at lawful protests, but it does not support the claim that the FBI was organizing the January 6th riots.",
+              "snippet": "Over the last year, we observed activity that led us to assess there was potential for increased violent extremist activity at lawful protests ..."
+            },
+            {
+              "title": "[PDF] FBI did not send undercover operatives to join Jan. 6 attack ...",
+              "url": "https://www.congress.gov/119/meeting/house/117924/documents/HHRG-119-JU13-20250225-SD015-U15.pdf",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that the FBI has denied any involvement of its staff or informants in the January 6th riots, which contradicts the claim that the FBI was organizing the riots.",
+              "snippet": "The FBI has long denied having any involvement by its own staff or its informants in the riots at the Capitol, though conspiracy theories about ..."
+            },
+            {
+              "title": "No undercover FBI agents at Jan. 6 riot, watchdog finds in rebuke to ...",
+              "url": "https://www.pbs.org/newshour/politics/no-undercover-fbi-agents-at-jan-6-riot-watchdog-finds-in-rebuke-to-conspiracy-theories",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that a watchdog report found no undercover FBI agents were present at the January 6th riot, which contradicts the claim that the FBI was organizing the riots.",
+              "snippet": "The FBI should have done more to gather intelligence before the Capitol riot, according to a watchdog report Thursday that also said no undercover FBI ..."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "[PDF] STATEMENT OF FACTS I, am a Special Agent with the Federal ...",
+              "url": "https://www.justice.gov/d9/peterson_kurt_-_statement_of_facts_redacted_1_0.pdf",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (27.6 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Second, video footage posted to YouTube on January 9, 2021 which was titled \u201cJanuary 6 DC Riot RAW Video; Capitol building insurrection, clashes with police ...",
+              "snippet": "Second, video footage posted to YouTube on January 9, 2021 which was titled \u201cJanuary 6 DC Riot RAW Video; Capitol building insurrection, clashes with police ..."
+            },
+            {
+              "title": "Fact Check: Many Of 274 FBI Agents Noted In Internal Report Were ...",
+              "url": "https://www.yahoo.com/news/articles/fact-check-many-274-fbi-044816806.html",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The FBI secretly deployed more than 250 plainclothes agents to the U.S. Capitol during the Jan. 6, 2021 riot, an operation so disorganized it ...",
+              "snippet": "The FBI secretly deployed more than 250 plainclothes agents to the U.S. Capitol during the Jan. 6, 2021 riot, an operation so disorganized it ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 4.319,
+        "timestamp_confidence": 1.0
+      },
+      {
+        "claim_text": "The FBI has been withholding evidence related to the pipe bomber.",
+        "claim_confidence": 0.75,
+        "claim_category": "policy",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "refutes": [
+            {
+              "title": "Updated: Seeking Information on Capitol Hill Pipe Bomb Suspect - FBI",
+              "url": "https://www.fbi.gov/video-repository/wfo-pipebomb-oct-2025-update-v2.mp4/view",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "refutes",
+              "evidence_summary": "The article discusses the FBI's ongoing investigation into the pipe bomb incident and their efforts to gather information, but it does not provide evidence that the FBI is withholding evidence related to the case.",
+              "snippet": "The FBI is still offering a $500000 reward for information that helps identify the person who placed pipe bombs at the offices of the Democratic National ..."
+            },
+            {
+              "title": "Man accused of planting pipe bombs charged in case",
+              "url": "https://spectrumlocalnews.com/us/snplus/breaking-news/2025/12/04/fbi-arrest-dc-pipe-bomb-case",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The article discusses the FBI's ongoing investigation into the pipe bomb incidents and their efforts to gather information, but it does not provide any evidence that the FBI is withholding evidence related to the case. Instead, it emphasizes their call for public assistance and the release of new footage.",
+              "snippet": "The suspect in custody has been identified as Brian Cole Jr., according to Attorney General Pam Bondi."
+            },
+            {
+              "title": "WATCH: FBI arrests man accused of placing pipe bombs in ... - PBS",
+              "url": "https://www.pbs.org/newshour/politics/watch-fbi-makes-arrest-in-probe-of-pipe-bombs-placed-in-d-c-on-eve-of-jan-6-attack",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The article discusses the ongoing investigation by the FBI into the pipe bomb incidents, highlighting their efforts to gather information and identify the suspect, but does not provide evidence that the FBI is withholding evidence related to the case.",
+              "snippet": "The arrest marks the first time investigators have publicly identified a suspect in an act that has been an enduring mystery for nearly five ..."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "New Footage of Suspect Placing Bomb at DNC - FBI",
+              "url": "https://www.fbi.gov/video-repository/january-5-pipe-bomb-investigation-new-footage-of-suspect-placing-bomb-at-dnc/view",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "On January 5, 2021, an unidentified individual placed pipe bombs near the DNC and RNC offices in Washington, D.C., between 7:30 p.m. and 8:30 p.m. EST.",
+              "snippet": "On January 5, 2021, an unidentified individual placed pipe bombs near the DNC and RNC offices in Washington, D.C., between 7:30 p.m. and 8:30 p.m. EST."
+            },
+            {
+              "title": "Pipe bomb suspect told FBI he believed 2020 election conspiracy ...",
+              "url": "https://www.nbcnews.com/politics/justice-department/pipe-bomb-suspect-told-fbi-believed-2020-election-conspiracy-theories-rcna247544",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "WASHINGTON \u2014 The man charged with planting two pipe bombs near the Democratic and Republican party headquarters on the eve of the Jan.",
+              "snippet": "WASHINGTON \u2014 The man charged with planting two pipe bombs near the Democratic and Republican party headquarters on the eve of the Jan."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 119.759,
+        "timestamp_confidence": 0.6428571428571429
+      },
+      {
+        "claim_text": "There are 14,000 hours of unreleased video footage from January 6th.",
+        "claim_confidence": 0.7,
+        "claim_category": "historical",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "About this Collection | January 6th Attack on the U.S. Capitol Web ...",
+              "url": "https://www.loc.gov/collections/january-6th-attack-on-the-us-capitol-web-archive/about-this-collection/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "On January 6, 2021, the U.S. Capitol was attacked by a crowd attempting to stop a joint session of Congress from certifying the electoral votes of the 2020 ...",
+              "snippet": "On January 6, 2021, the U.S. Capitol was attacked by a crowd attempting to stop a joint session of Congress from certifying the electoral votes of the 2020 ..."
+            },
+            {
+              "title": "New Footage of Suspect Placing Bomb at DNC - FBI",
+              "url": "https://www.fbi.gov/video-repository/january-5-pipe-bomb-investigation-new-footage-of-suspect-placing-bomb-at-dnc/view",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "On January 5, 2021, an unidentified individual placed pipe bombs near the DNC and RNC offices in Washington, D.C., between 7:30 p.m. and 8:30 p.m. EST.",
+              "snippet": "On January 5, 2021, an unidentified individual placed pipe bombs near the DNC and RNC offices in Washington, D.C., between 7:30 p.m. and 8:30 p.m. EST."
+            },
+            {
+              "title": "Capitol Police provided more than 14,000 hours of Jan. 6 footage to ...",
+              "url": "https://www.politico.com/news/2021/03/29/capitol-police-jan6-footage-478439",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "6 surveillance camera footage with two key congressional committees investigating the mob attack on the building \u2014 and provided \u201cnumerous\u201d clips ...",
+              "snippet": "6 surveillance camera footage with two key congressional committees investigating the mob attack on the building \u2014 and provided \u201cnumerous\u201d clips ..."
+            },
+            {
+              "title": "Johnson makes Jan. 6 footage available to public - Spectrum News",
+              "url": "https://spectrumlocalnews.com/us/snplus/news/2023/11/17/jan-6-riot-trump-mob-speaker-johnson",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "House Speaker Mike Johnson said Friday that thousands of hours of footage from the Jan. 6, 2021, riot at the U.S. Capitol would be publicly ...",
+              "snippet": "House Speaker Mike Johnson said Friday that thousands of hours of footage from the Jan. 6, 2021, riot at the U.S. Capitol would be publicly ..."
+            },
+            {
+              "title": "Speaker McCarthy grants Tucker Carlson access to Jan. 6 ... - PBS",
+              "url": "https://www.pbs.org/newshour/politics/speaker-mccarthy-grants-tucker-carlson-access-to-jan-6-surveillance-footage",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Thousands of hours of surveillance footage from the Jan. 6, 2021, attack on the US Capitol are being made available to Fox News Channel host Tucker Carlson.",
+              "snippet": "Thousands of hours of surveillance footage from the Jan. 6, 2021, attack on the US Capitol are being made available to Fox News Channel host Tucker Carlson."
+            },
+            {
+              "title": "WATCH: Jan. 6 committee shows new footage of Capitol attack - PBS",
+              "url": "https://www.pbs.org/newshour/politics/watch-jan-6-committee-shows-new-footage-of-capitol-attack",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The House committee investigating the Jan. 6 Capitol insurrection presented 12 minutes of violent, previously unseen footage of rioters ...",
+              "snippet": "The House committee investigating the Jan. 6 Capitol insurrection presented 12 minutes of violent, previously unseen footage of rioters ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 97.2,
+        "timestamp_confidence": 0.9185185185185185
+      }
+    ],
+    "transcript_data": {
+      "text": "according to this i have to say remarkable piece that you just put up late last night read it in bed at midnight that the fbi was organizing the riots of january 6th well yes it certainly suggests that possibility and i'm hearing from people that this is the most important and the darkest investigative piece they've seen in years but the american people deserve the truth about 1-6 not just for the sake of ashley babbitt not just for the sake of the hundreds of people held in prison unjustly as a violation of human rights but for the sake of the 70 plus million people who are trump supporters or just against the corrupt ruling class who have effectively been labeled de facto domestic extremists by our own government and i believe the key that unlocks the truth to 1-6 is the following question to what extent were the main militia groups imputed to the 1-6 so-called capital siege to what extent was their infiltration of those groups by undercover agents or informants and to what extent when we see the unindicted co-conspirators who occupy senior positions in those groups to what extent are those people being spared prosecution on account of a prior relationship with the federal government those two questions create a thread and when we pull that thread the ugly truth of that event and perhaps even the country we live in will be exposed i gotta ask because it it may answer one of the great mysteries is this i think there are 14 000 hours of unreleased video footage from that day the administration is hiding from us do you think this is why i think that's certainly a possibility um it's it's extremely suspicious even going back to this so-called pipe bomber video remember the pipe bomber the capital pipeliner the fbi has been extremely suspicious in withholding evidence video evidence that could help and identify this bomber which presumably they want to do but if you may i'd like to make a general point and it really after seeing all this you have to ask yourself does the national security apparatus do anything but conspire against the american people i'm led to conclude that we cannot have a democracy everything in our politics will be fake and performative until we bring the national security state including the fbi to heal it's not a left issue it's not a right issue every politician who cares about our country should demand a church committee 2.0 immediately and people of good faith on the left should join it uh immediately darren b i appreciate your coming on signing the work you do at revolver.news thank you",
+      "segments": [
+        {
+          "text": "according to this i have to say",
+          "start": 0.08,
+          "duration": 3.359
+        },
+        {
+          "text": "remarkable piece that you just put up",
+          "start": 1.76,
+          "duration": 2.559
+        },
+        {
+          "text": "late last night",
+          "start": 3.439,
+          "duration": 4.241
+        },
+        {
+          "text": "read it in bed at midnight that the fbi",
+          "start": 4.319,
+          "duration": 8.561
+        },
+        {
+          "text": "was organizing the riots of january 6th",
+          "start": 7.68,
+          "duration": 5.2
+        },
+        {
+          "text": "well yes it certainly suggests that",
+          "start": 13.2,
+          "duration": 3.76
+        },
+        {
+          "text": "possibility and i'm hearing from people",
+          "start": 15.12,
+          "duration": 2.4
+        },
+        {
+          "text": "that this",
+          "start": 16.96,
+          "duration": 3.76
+        },
+        {
+          "text": "is the most important and the darkest",
+          "start": 17.52,
+          "duration": 5.12
+        },
+        {
+          "text": "investigative piece they've seen in",
+          "start": 20.72,
+          "duration": 4.319
+        },
+        {
+          "text": "years but the american people deserve",
+          "start": 22.64,
+          "duration": 4.879
+        },
+        {
+          "text": "the truth about 1-6 not just for the",
+          "start": 25.039,
+          "duration": 4.08
+        },
+        {
+          "text": "sake of ashley babbitt",
+          "start": 27.519,
+          "duration": 3.68
+        },
+        {
+          "text": "not just for the sake of the hundreds of",
+          "start": 29.119,
+          "duration": 3.041
+        },
+        {
+          "text": "people",
+          "start": 31.199,
+          "duration": 3.681
+        },
+        {
+          "text": "held in prison unjustly as a violation",
+          "start": 32.16,
+          "duration": 3.919
+        },
+        {
+          "text": "of human rights",
+          "start": 34.88,
+          "duration": 4.16
+        },
+        {
+          "text": "but for the sake of the 70 plus million",
+          "start": 36.079,
+          "duration": 4.881
+        },
+        {
+          "text": "people who are trump supporters",
+          "start": 39.04,
+          "duration": 4.64
+        },
+        {
+          "text": "or just against the corrupt ruling class",
+          "start": 40.96,
+          "duration": 4.8
+        },
+        {
+          "text": "who have effectively been labeled",
+          "start": 43.68,
+          "duration": 4.719
+        },
+        {
+          "text": "de facto domestic extremists by our own",
+          "start": 45.76,
+          "duration": 3.76
+        },
+        {
+          "text": "government",
+          "start": 48.399,
+          "duration": 3.521
+        },
+        {
+          "text": "and i believe the key that unlocks the",
+          "start": 49.52,
+          "duration": 4.4
+        },
+        {
+          "text": "truth to 1-6",
+          "start": 51.92,
+          "duration": 5.36
+        },
+        {
+          "text": "is the following question to what extent",
+          "start": 53.92,
+          "duration": 5.6
+        },
+        {
+          "text": "were the main militia groups",
+          "start": 57.28,
+          "duration": 5.759
+        },
+        {
+          "text": "imputed to the 1-6 so-called capital",
+          "start": 59.52,
+          "duration": 4.16
+        },
+        {
+          "text": "siege",
+          "start": 63.039,
+          "duration": 2.961
+        },
+        {
+          "text": "to what extent was their infiltration of",
+          "start": 63.68,
+          "duration": 4.32
+        },
+        {
+          "text": "those groups by undercover agents or",
+          "start": 66.0,
+          "duration": 2.96
+        },
+        {
+          "text": "informants",
+          "start": 68.0,
+          "duration": 3.6
+        },
+        {
+          "text": "and to what extent when we see the",
+          "start": 68.96,
+          "duration": 5.04
+        },
+        {
+          "text": "unindicted co-conspirators who occupy",
+          "start": 71.6,
+          "duration": 4.48
+        },
+        {
+          "text": "senior positions in those groups",
+          "start": 74.0,
+          "duration": 4.32
+        },
+        {
+          "text": "to what extent are those people being",
+          "start": 76.08,
+          "duration": 4.0
+        },
+        {
+          "text": "spared prosecution",
+          "start": 78.32,
+          "duration": 4.08
+        },
+        {
+          "text": "on account of a prior relationship with",
+          "start": 80.08,
+          "duration": 3.84
+        },
+        {
+          "text": "the federal government",
+          "start": 82.4,
+          "duration": 4.079
+        },
+        {
+          "text": "those two questions create a thread and",
+          "start": 83.92,
+          "duration": 3.519
+        },
+        {
+          "text": "when we pull that",
+          "start": 86.479,
+          "duration": 3.921
+        },
+        {
+          "text": "thread the ugly truth of that event and",
+          "start": 87.439,
+          "duration": 4.961
+        },
+        {
+          "text": "perhaps even the country we live in",
+          "start": 90.4,
+          "duration": 5.039
+        },
+        {
+          "text": "will be exposed i gotta ask",
+          "start": 92.4,
+          "duration": 4.8
+        },
+        {
+          "text": "because it it may answer one of the",
+          "start": 95.439,
+          "duration": 3.441
+        },
+        {
+          "text": "great mysteries is this i think there",
+          "start": 97.2,
+          "duration": 2.959
+        },
+        {
+          "text": "are 14 000",
+          "start": 98.88,
+          "duration": 4.4
+        },
+        {
+          "text": "hours of unreleased video footage from",
+          "start": 100.159,
+          "duration": 4.721
+        },
+        {
+          "text": "that day the administration is hiding",
+          "start": 103.28,
+          "duration": 2.32
+        },
+        {
+          "text": "from us",
+          "start": 104.88,
+          "duration": 3.76
+        },
+        {
+          "text": "do you think this is why",
+          "start": 105.6,
+          "duration": 3.04
+        },
+        {
+          "text": "i think that's certainly a possibility",
+          "start": 108.96,
+          "duration": 3.28
+        },
+        {
+          "text": "um it's",
+          "start": 111.36,
+          "duration": 3.28
+        },
+        {
+          "text": "it's extremely suspicious even going",
+          "start": 112.24,
+          "duration": 4.72
+        },
+        {
+          "text": "back to this so-called pipe bomber video",
+          "start": 114.64,
+          "duration": 4.24
+        },
+        {
+          "text": "remember the pipe bomber the capital",
+          "start": 116.96,
+          "duration": 2.799
+        },
+        {
+          "text": "pipeliner",
+          "start": 118.88,
+          "duration": 4.0
+        },
+        {
+          "text": "the fbi has been extremely suspicious in",
+          "start": 119.759,
+          "duration": 4.4
+        },
+        {
+          "text": "withholding",
+          "start": 122.88,
+          "duration": 3.36
+        },
+        {
+          "text": "evidence video evidence that could help",
+          "start": 124.159,
+          "duration": 4.16
+        },
+        {
+          "text": "and identify this bomber which",
+          "start": 126.24,
+          "duration": 5.44
+        },
+        {
+          "text": "presumably they want to do but if",
+          "start": 128.319,
+          "duration": 5.361
+        },
+        {
+          "text": "you may i'd like to make a general point",
+          "start": 131.68,
+          "duration": 3.199
+        },
+        {
+          "text": "and it really",
+          "start": 133.68,
+          "duration": 2.88
+        },
+        {
+          "text": "after seeing all this you have to ask",
+          "start": 134.879,
+          "duration": 3.761
+        },
+        {
+          "text": "yourself does the national security",
+          "start": 136.56,
+          "duration": 3.759
+        },
+        {
+          "text": "apparatus do anything",
+          "start": 138.64,
+          "duration": 4.239
+        },
+        {
+          "text": "but conspire against the american people",
+          "start": 140.319,
+          "duration": 3.441
+        },
+        {
+          "text": "i'm led",
+          "start": 142.879,
+          "duration": 3.121
+        },
+        {
+          "text": "to conclude that we cannot have a",
+          "start": 143.76,
+          "duration": 3.119
+        },
+        {
+          "text": "democracy",
+          "start": 146.0,
+          "duration": 3.04
+        },
+        {
+          "text": "everything in our politics will be fake",
+          "start": 146.879,
+          "duration": 3.521
+        },
+        {
+          "text": "and performative",
+          "start": 149.04,
+          "duration": 3.839
+        },
+        {
+          "text": "until we bring the national security",
+          "start": 150.4,
+          "duration": 3.119
+        },
+        {
+          "text": "state",
+          "start": 152.879,
+          "duration": 3.121
+        },
+        {
+          "text": "including the fbi to heal it's not a",
+          "start": 153.519,
+          "duration": 4.641
+        },
+        {
+          "text": "left issue it's not a right issue",
+          "start": 156.0,
+          "duration": 4.0
+        },
+        {
+          "text": "every politician who cares about our",
+          "start": 158.16,
+          "duration": 3.6
+        },
+        {
+          "text": "country should demand a",
+          "start": 160.0,
+          "duration": 5.2
+        },
+        {
+          "text": "church committee 2.0 immediately",
+          "start": 161.76,
+          "duration": 5.28
+        },
+        {
+          "text": "and people of good faith on the left",
+          "start": 165.2,
+          "duration": 3.52
+        },
+        {
+          "text": "should join it uh",
+          "start": 167.04,
+          "duration": 4.16
+        },
+        {
+          "text": "immediately darren b i appreciate your",
+          "start": 168.72,
+          "duration": 3.72
+        },
+        {
+          "text": "coming on signing the work you do at",
+          "start": 171.2,
+          "duration": 4.64
+        },
+        {
+          "text": "revolver.news thank you",
+          "start": 172.44,
+          "duration": 3.4
+        }
+      ],
+      "video_id": "SYS2_ECsaxY"
+    }
+  }
+}

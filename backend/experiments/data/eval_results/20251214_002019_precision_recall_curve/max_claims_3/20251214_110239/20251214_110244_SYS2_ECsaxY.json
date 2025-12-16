@@ -1,0 +1,103 @@
+{
+  "video_id": "SYS2_ECsaxY",
+  "timestamp": "2025-12-14T11:02:44.469902",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_3",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 1.0,
+    "recall": 0.2727272727272727,
+    "f1_score": 0.42857142857142855,
+    "true_positives": 3,
+    "false_positives": 0,
+    "false_negatives": 8,
+    "mean_average_precision": 1.0,
+    "recall_at_important": 0.25,
+    "importance_weighted_coverage": 0.3103448275862069,
+    "matched_claims": [
+      {
+        "gt_text": "The FBI was organizing the riots of January 6th",
+        "sys_text": "The FBI was organizing the riots of January 6th.",
+        "gt_importance": 1.0,
+        "sys_importance": 0.85,
+        "importance_error": 0.15000000000000002
+      },
+      {
+        "gt_text": "There are 14,000 hours of unreleased video footage from that day the administration is hiding from us",
+        "sys_text": "There are 14,000 hours of unreleased video footage from January 6th.",
+        "gt_importance": 0.65,
+        "sys_importance": 0.6,
+        "importance_error": 0.050000000000000044
+      },
+      {
+        "gt_text": "The pipe bomber - the FBI has been extremely suspicious in withholding evidence video evidence that could help identify this bomber",
+        "sys_text": "The FBI has been withholding evidence related to the pipe bomber.",
+        "gt_importance": 0.6,
+        "sys_importance": 0.6,
+        "importance_error": 0.0
+      }
+    ],
+    "missed_claims": [
+      "This is the most important and the darkest investigative piece they've seen in years",
+      "The American people deserve the truth about 1-6 not just for the sake of Ashley Babbitt",
+      "Hundreds of people held in prison unjustly as a violation of human rights",
+      "70 plus million people who are Trump supporters or just against the corrupt ruling class who have effectively been labeled de facto domestic extremists by our own government",
+      "To what extent were the main militia groups imputed to the 1-6 so-called capital siege infiltrated by undercover agents or informants",
+      "Unindicted co-conspirators who occupy senior positions in those groups are being spared prosecution on account of a prior relationship with the federal government",
+      "Does the national security apparatus do anything but conspire against the American people",
+      "Every politician who cares about our country should demand a church committee 2.0 immediately"
+    ],
+    "extra_claims": [],
+    "importance_mae": 0.0666666666666667,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.0,
+    "stance_accuracy": 0.0,
+    "correct_verdicts": 0,
+    "total_verdicts": 3,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "The FBI was organizing the riots of January 6th",
+        "gt_verdict": "REFUTES",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "There are 14,000 hours of unreleased video footage from that day the administration is hiding from us",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "The pipe bomber - the FBI has been extremely suspicious in withholding evidence video evidence that could help identify this bomber",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.2727272727272727,
+    "verdict_accuracy": 0.0,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.00134655,
+    "total_time_seconds": 109.6553008556366,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.6666666666666665
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 16
+    },
+    "avg_evidence_per_claim": 5.333333333333333
+  },
+  "ground_truth_claims_count": 11,
+  "system_claims_count": 3
+}

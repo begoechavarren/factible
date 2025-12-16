@@ -1,0 +1,377 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:28:07.304948",
+    "latency_seconds": 23.75,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nIt's my feelgood breakfast show. A feel good breakfast show. This is Espresso. Thank you so much for joining us on our live show this morning. Now before the break, I said health properties and there might be something in it for all of us when we talk about garlic. Now aside from the fact that it tastes incredible. We all know that garlic has both culinary and medical benefits. But scientists at the UC tea uh they say that they've uncovered garlic's cancer fighting properties. So in this new research UCT lecturer Dr. Katherine Kushula and her team, they've established how a compound, a compound found in crushed garlic cloves can actually kill cancer cells. And with us in studio to talk about it is Dr. Kula herself. Dr. Welcome to the show. Hi, lovely to be here. I'm excited about this because we're saying cancer killing properties from a compound that's found in crushed garlic cloves. Now, I want to get down to this. Why it needs to be crushed? Does it need to be heated? How effective is it in killing cancer? I mean what what are we talking about here? Well, the thing is I suppose because we are scientists and we're coming from the chemistry department, we actually want to understand what the compounds are that are present in garlic that are having this effect. And in actual fact, when the clove is first crushed, there's a compound allisonin which is released which is more antibacterial properties. But this compound actually changes over time when the preparation is heated as in a food preparation into this cancer fighting compound called auine. And it's got dulfide bonds in it, which means it also has this potent garlic smell. And we've actually shown that auine is able to enter into the cancer cell and it's actually able to disrupt the intracellular machinery in the cancer cell and bring about a toxic effect and kill that cancer cell. I'm gobsmacked that we're going back to natural remedies. I mean, you guys are scientists. We expect you to work with chemicals and all kinds of crazy stuff, but here we're talking about stuff that's in our kitchen cupboards. Can this property or auine like you you mentioned can it fight any type of cancer or is it only effective in some? Well, it's been shown to be cytotoxic to a range of different types of cancers. Although I think what's more relevant to the human condition because it's a dietary compound and there's a lot of epidemiological um evidence to show that actually populations of people who consume high quantities of garlic have lower incidence of gastrointestinal cancer specifically of the stomach and colon. So um I would think that you know you would probably obtain the highest concentration of this compound through a meal which has been prepared with the akawine in it. In other words, being cooked and probably exposure to um you know, oral exposure to gastrointestinal cancers would probably have a greater effect. Although we have shown in the laboratory that it is also able um to act against other cancer cell types, but I think for the human condition, it's probably more gastrointestinal tract. It's exciting because now that means we can add more garlic to our food because you're saying that we need to do it while cooking. This is also the first time that you see this because like you said, scientists wants to see how the auin or how the garlic properties actually work. What's the best way to try and consume it? I mean, take us back there. Should it always be crushed or cooked? Yes. Well, if you want to get this cancer fighting chemical, and I say it's a chemical, it's a natural compound, but it is still a chemical, and it's present in your garlic. You actually need to take your crushed clove and actually you need to take your clove, crush it, and then in order to achieve um this transformation of what's in the crushed clove into what's what's going to be present in your food preparation, you actually need to heat the preparation and you actually get a chemical transformation which takes place between a compound which is produced in the crush clove and then it gets transformed through heating into this aching compound. So um the the preparation would involve cooking of the clove which I think is actually a process which we do do when we prepare. So possibly we knew about this in some way. I don't know in some way or another doctor it's exciting stuff and it's exciting that even scientists are coming back to our kitchen to show us how to prepare things and to make things better. So thank you so much for joining us on our show today. Well there you heard it an excuse to add more garlic to that pizza. It's really good news. So make sure you try some on your next dinner date especially if you know him for the first time. Okay, but there's loads more happening on our feelood breakfast show. In fact, even though it can leave a smile the next day, we all know that garlic is so good for us. And it looks like Andrea has more details on this.",
+    "input_length_chars": 5031,
+    "input_tokens_estimated": 1257,
+    "output": {
+      "claims": [
+        {
+          "text": "Garlic has both culinary and medical benefits.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.3,
+          "context": "General statement about garlic's uses."
+        },
+        {
+          "text": "Scientists at UCT uncovered garlic's cancer-fighting properties.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Research by UCT lecturer Dr. Katherine Kushula."
+        },
+        {
+          "text": "A compound found in crushed garlic cloves can kill cancer cells.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.8,
+          "context": "Dr. Kushula discusses garlic's effects on cancer."
+        },
+        {
+          "text": "The compound allicin is released when garlic cloves are crushed.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Explaining the chemistry of garlic preparation."
+        },
+        {
+          "text": "Heating crushed garlic transforms allicin into a cancer-fighting compound called auine.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Details on the chemical transformation in garlic."
+        },
+        {
+          "text": "Auine can disrupt the intracellular machinery in cancer cells.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.8,
+          "context": "Mechanism of how auine affects cancer cells."
+        },
+        {
+          "text": "Populations consuming high quantities of garlic have lower incidence of gastrointestinal cancer.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Epidemiological evidence linking garlic consumption to cancer rates."
+        }
+      ],
+      "total_count": 7
+    },
+    "output_length_chars": 2040,
+    "output_tokens_estimated": 510,
+    "cost_usd": 0.00049455
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:28:10.622676",
+    "latency_seconds": 1.65,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: A compound found in crushed garlic cloves can kill cancer cells.\nContext: Dr. Kushula discusses garlic's effects on cancer.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 296,
+    "input_tokens_estimated": 74,
+    "output": {
+      "original_claim": "A compound found in crushed garlic cloves can kill cancer cells.",
+      "queries": [
+        {
+          "query": "compound in crushed garlic cloves cancer cell death",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "garlic cloves cancer treatment effectiveness",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 309,
+    "output_tokens_estimated": 77,
+    "cost_usd": 5.73e-05,
+    "context": {
+      "claim_index": 7,
+      "claim_text": "Garlic has both culinary and medical benefits."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:28:10.743734",
+    "latency_seconds": 1.76,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Garlic has both culinary and medical benefits.\nContext: General statement about garlic's uses.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 267,
+    "input_tokens_estimated": 66,
+    "output": {
+      "original_claim": "Garlic has both culinary and medical benefits.",
+      "queries": [
+        {
+          "query": "Garlic culinary and medical benefits",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "health benefits of garlic",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 257,
+    "output_tokens_estimated": 64,
+    "cost_usd": 4.83e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "A compound found in crushed garlic cloves can kill cancer cells.",
+      "query_index": 2,
+      "query_text": "garlic cloves cancer treatment effectiveness"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:28:10.826652",
+    "latency_seconds": 1.85,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Auine can disrupt the intracellular machinery in cancer cells.\nContext: Mechanism of how auine affects cancer cells.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 289,
+    "input_tokens_estimated": 72,
+    "output": {
+      "original_claim": "Auine can disrupt the intracellular machinery in cancer cells.",
+      "queries": [
+        {
+          "query": "Auine disrupt intracellular machinery cancer cells",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "mechanism of auine in cancer cell disruption",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 306,
+    "output_tokens_estimated": 76,
+    "cost_usd": 5.64e-05,
+    "context": {
+      "claim_index": 7,
+      "claim_text": "Garlic has both culinary and medical benefits.",
+      "query_index": 2,
+      "query_text": "health benefits of garlic"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:28:10.944961",
+    "latency_seconds": 1.97,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The compound allicin is released when garlic cloves are crushed.\nContext: Explaining the chemistry of garlic preparation.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 294,
+    "input_tokens_estimated": 73,
+    "output": {
+      "original_claim": "The compound allicin is released when garlic cloves are crushed.",
+      "queries": [
+        {
+          "query": "allicin release when garlic cloves are crushed",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "how is allicin produced from crushed garlic",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 303,
+    "output_tokens_estimated": 75,
+    "cost_usd": 5.595e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "Auine can disrupt the intracellular machinery in cancer cells.",
+      "query_index": 2,
+      "query_text": "mechanism of auine in cancer cell disruption"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:28:11.031311",
+    "latency_seconds": 2.05,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Scientists at UCT uncovered garlic's cancer-fighting properties.\nContext: Research by UCT lecturer Dr. Katherine Kushula.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 294,
+    "input_tokens_estimated": 73,
+    "output": {
+      "original_claim": "Scientists at UCT uncovered garlic's cancer-fighting properties.",
+      "queries": [
+        {
+          "query": "garlic cancer-fighting properties UCT Dr. Katherine Kushula",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "garlic cancer research University of Cape Town",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 319,
+    "output_tokens_estimated": 79,
+    "cost_usd": 5.835e-05,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "The compound allicin is released when garlic cloves are crushed.",
+      "query_index": 2,
+      "query_text": "how is allicin produced from crushed garlic"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:28:11.173440",
+    "latency_seconds": 2.2,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Heating crushed garlic transforms allicin into a cancer-fighting compound called auine.\nContext: Details on the chemical transformation in garlic.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 319,
+    "input_tokens_estimated": 79,
+    "output": {
+      "original_claim": "Heating crushed garlic transforms allicin into a cancer-fighting compound called auine.",
+      "queries": [
+        {
+          "query": "Heating crushed garlic allicin auine cancer-fighting compound",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Does heating garlic change allicin to auine and fight cancer?",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 359,
+    "output_tokens_estimated": 89,
+    "cost_usd": 6.525e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "Scientists at UCT uncovered garlic's cancer-fighting properties.",
+      "query_index": 2,
+      "query_text": "garlic cancer research University of Cape Town"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:28:52.031427",
+    "latency_seconds": 24.12,
+    "input_prompt": "Claim:\nThe compound allicin is released when garlic cloves are crushed.\n\nArticle Title:\nAllicin - Wikipedia\n\nGoogle Search Snippet:\nWhen fresh garlic is chopped or crushed, the enzyme alliinase converts alliin into allicin, which is responsible for the aroma of fresh garlic. Allicin is ...\n\nFull Page Content:\nAllicin is an organosulfur compound obtained from garlic and leeks.[1] When fresh garlic is chopped or crushed, the enzyme alliinase converts alliin into allicin, which is responsible for the aroma of fresh garlic.[2] Allicin is unstable and quickly changes into a series of other sulfur-containing compounds such as diallyl disulfide.[3] Allicin is an antifeedant, i.e. the defense mechanism against attacks by pests on the garlic plant.[4]\nAllicin is an oily, slightly yellow liquid that gives garlic its distinctive odor. It is a thioester of a sulfinic acid. It is also known as allyl thiosulfinate.[5] Its biological activity can be attributed to both its antioxidant activity and its reaction with thiol-containing proteins.[6]\nAllicin features the thiosulfinate functional group, R-S-(O)-S-R. The compound is not present in garlic unless tissue damage occurs,[1] and is formed by the action of the enzyme alliinase on alliin.[1] Allicin is chiral but occurs naturally only as a racemate.[7] The racemic form can also be generated by oxidation of diallyl disulfide:[8][9]\nAlliinase is irreversibly deactivated below pH 3; as such, allicin is generally not produced in the body from the consumption of fresh or powdered garlic.[10][11] Furthermore, allicin can be unstable, breaking down within 16 hours at 23 \u00b0C.[12]\nThe biosynthesis of allicin commences with the conversion of cysteine into S-allyl-L-cysteine. Oxidation of this thioether gives the sulfoxide (alliin). The enzyme alliinase, which contains pyridoxal phosphate (PLP), cleaves alliin, generating allylsulfenic acid (CH2=CHCH2SOH), pyruvate, and ammonium ions.[6] At room temperature, two molecules of allylsulfenic acid condense to form allicin.[5][9]\nAllicin has been studied for its potential to treat various kinds of multiple drug resistance bacterial infections, as well as viral and fungal infections in vitro, but as of 2016, the safety and efficacy of allicin to treat infections in people was unclear.[13]\nA Cochrane review found there to be insufficient clinical evidence regarding the effects of allicin in preventing or treating common cold.[14]\nIt was first isolated and studied in the laboratory by Chester J. Cavallito and John Hays Bailey in 1944.[15][7] Allicin was discovered as part of efforts to create thiamine derivatives in the 1940s, mainly in Japan. Allicin became a model for medicinal chemistry efforts to create other thiamine disulfides. The results included sulbutiamine, fursultiamine (thiamine tetrahydrofurfuryl disulfide) and benfothiamine. These compounds are hydrophobic, easily pass from the intestines to the bloodstream, and are reduced to thiamine by cysteine or glutathione.[16]: 302\n\nProvide relevant evidence.",
+    "input_length_chars": 3034,
+    "input_tokens_estimated": 758,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that allicin is released when garlic cloves are crushed, as the enzyme alliinase converts alliin into allicin during this process.",
+      "overall_stance": "supports",
+      "key_quote": "When fresh garlic is chopped or crushed, the enzyme alliinase converts alliin into allicin."
+    },
+    "output_length_chars": 329,
+    "output_tokens_estimated": 82,
+    "cost_usd": 0.0001629
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:28:53.413465",
+    "latency_seconds": 24.09,
+    "input_prompt": "Claim:\nGarlic has both culinary and medical benefits.\n\nArticle Title:\n11 Proven Health Benefits of Garlic - Healthline\n\nGoogle Search Snippet:\nGarlic may have some real health benefits, such as protection against the common cold and the potential to help lower blood pressure and cholesterol levels.\n\nFull Page Content:\nAn official website of the United States government\nGarlic is a polyphenolic and organosulfur enriched nutraceutical spice consumed since ancient times. Garlic and its secondary metabolites have shown excellent health-promoting and disease-preventing effects on many human common diseases, such as cancer, cardiovascular and metabolic disorders, blood pressure, and diabetes, through its antioxidant, anti-inflammatory, and lipid-lowering properties, as demonstrated in several in vitro, in vivo, and clinical studies. The present review aims to provide a comprehensive overview on the consumption of garlic, garlic preparation, garlic extract, and garlic extract-derived bioactive constituents on oxidative stress, inflammation, cancer, cardiovascular and metabolic disorders, skin, bone, and other common diseases. Among the 83 human interventional trials considered, the consumption of garlic has been reported to modulate multiple biomarkers of different diseases; in addition, its combination with drugs or other food matrices has been shown to be safe and to prolong their therapeutic effects. The rapid metabolism and poor bioavailability that have limited the therapeutic use of garlic in the last years are also discussed.\nKeywords: garlic, sulfur-containing compounds, polyphenols health benefits, metabolism and bioavailability\nSpices are not only used to increase the aroma, flavor, and color of food, but are also considered for therapeutic purposes for their potential prevention of different acute and chronic diseases. Various bioactive compounds of spices, including alkaloids, tannins, vitamins and phenolic diterpenes, flavonoids and polyphenols, as well as sulfur-containing compounds, are responsible for different types of therapeutic properties, thanks to their antioxidant, anticarcinogenic, antitumorigenic, anti-inflammatory, and glucose and cholesterol-lowering properties [1].\nGarlic (Allium sativum L.), a member of the Amaryllidaceae family that is cultivated all over the world, provides noteworthy health benefits. In 1550 B.C., antibiotics and pharmacy products were not available so garlic was used for medicinal purposes in different epidemics, such as typhus, dysentery, cholera, and influenza [2]. The therapeutic effects of garlic are mainly due to the impressive activity of its bioactive compounds, such as organic sulfides [3], saponins [4], phenolic compounds [5], and polysaccharides [6]. For example, several in vitro and in vivo studies have showed that garlic compounds are able to modulate various signaling pathways, including nuclear factor-\u03baB and wingless-related integration site [7], matrix metalloproteinases, nuclear factor erythroid 2 like 2, protein kinase B (pAkt), mitogen-activated protein kinase, c-Jun N-terminal kinases, caspases, p38, transforming growth factor beta 1 (TGF-\u03b21), TGF-\u03b2 type II receptor, psmad2/3, smad4 and smad7 [8,9], cytokines, intercellular adhesion molecule [10], notch pathway [11], 5\u2019 AMP-activated protein kinase pathway [12], vascular endothelial growth factor [13], cyclooxygenase 2, inducible nitric oxide synthase, Akt/mTOR [14], and Keap1 [15], leading to improved anti-inflammatory and antioxidant properties, as well as chemopreventive, antiproliferative, anti-angiogenic, antidiabetic, and cardioprotective effects. However, it should be taken into account that these compounds have a very low availability. For example, in a randomized controlled trial, after oral administration of 1 g or 3 g of dehydrated garlic powder, the organosulfur compound diallyl disulfide (DADS) and diallyl sulfide (DAS) were not detected in the urine samples after 6 and 24 h [16]. Furthermore, allyl thiosulfates of garlic preparation undergo extensive metabolism, producing allyl methyl sulfide, essentially present in breath [17].\nThus, the present review aims to provide a comprehensive overview of clinical trials in the last 20 years, assessing the therapeutic effects of garlic on different common human diseases, such as cancer, cardiovascular pathologies, diabetes, metabolic disorders, osteoporosis, and skin diseases, mostly focusing on its antioxidant, anti-inflammatory, and lipid lowering effects. This review also presents the main molecular mechanisms of garlic involved in its promising health benefits after consumption.\nA comprehensive revision was done, using electronic databases, including Medline, Scopus, Google Scholar, and Web of Science, and related clinical trials regarding garlic effects on human diseases have been considered. The keywords \u201cgarlic\u201d, \u201cgarlic effects\u201d, \u201cgarlic bioactive compounds\u201d, \u201cgarlic polyphenols\u201d, \u201callicin\u201d, \u201calliin\u201d, \u201callylpropyl disulfide\u201d, \u201cdiallyl trisulfide (DATS)\u201d, \u201cajoene\u201d, \u201cS-allylcysteine\u201d, \u201cS-allylmercaptocysteine\u201d (SAMC), \u201cvinyldithiins\u201d, \u201caged garlic\u201d, \u201cgarlic cloves\u201d, \u201cgarlic metabolism\u201d, \u201cgarlic absorption\u201d, \u201cgarlic bioavailability\u201d, \u201cgarlic antioxidant capacity\u201d, \u201cgarlic anti-inflammatory property\u201d, \u201cgarlic lipid lowering effect\u201d, as well as garlic with each specific disease (i.e., \u201cgarlic and cancer\u201d, \u201cgarlic and colon cancer\u201d, \u201cgarlic and prostate cancer\u201d, \u201cgarlic and esophageal cancer\u201d, \u201cgarlic and larynx cancer\u201d, etc.) have been used. All the articles included have been published from 2000\u20132020.\nGarlic is considered as a functional spice because of its diverse array of nutritional constituents, phytochemicals, and fiber. It contains high levels of potassium, phosphorus zinc, and sulfur, moderate levels of selenium, calcium, magnesium, manganese, iron, and low levels of sodium, vitamin A and C and B-complex [18]. In the last years, considerable attention has been given to its main bioactive compounds, particularly polyphenols, flavonoids, flavanols, tannins [5,19], saponins [4], polysaccharides [6], sulfur-containing compounds (including alliin, allicin, ajoene, allylpropyl disulfide, DATS, S-allylcysteine, vinyldithiins, SAMC), enzymes (like allinase, peroxidase, myrosinase), and other compounds, such as \u03b2-phellandrene, phell\n\nProvide relevant evidence.",
+    "input_length_chars": 6348,
+    "input_tokens_estimated": 1587,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence supports the claim that garlic has both culinary and medical benefits, highlighting its use in cooking and its proven health-promoting effects against various diseases through its bioactive compounds.",
+      "overall_stance": "supports",
+      "key_quote": "Garlic and its secondary metabolites have shown excellent health-promoting and disease-preventing effects on many human common diseases, such as cancer, cardiovascular and metabolic disorders, blood pressure, and diabetes."
+    },
+    "output_length_chars": 521,
+    "output_tokens_estimated": 130,
+    "cost_usd": 0.00031605
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:28:53.422979",
+    "latency_seconds": 24.09,
+    "input_prompt": "Claim:\nGarlic has both culinary and medical benefits.\n\nArticle Title:\nGarlic - University of Rochester Medical Center\n\nGoogle Search Snippet:\nGarlic has been used as an antiseptic, antibacterial, and antifungal agent. It may help the body resist or destroy viruses and other microorganisms.\n\nFull Page Content:\nAn official website of the United States government\nGarlic is a polyphenolic and organosulfur enriched nutraceutical spice consumed since ancient times. Garlic and its secondary metabolites have shown excellent health-promoting and disease-preventing effects on many human common diseases, such as cancer, cardiovascular and metabolic disorders, blood pressure, and diabetes, through its antioxidant, anti-inflammatory, and lipid-lowering properties, as demonstrated in several in vitro, in vivo, and clinical studies. The present review aims to provide a comprehensive overview on the consumption of garlic, garlic preparation, garlic extract, and garlic extract-derived bioactive constituents on oxidative stress, inflammation, cancer, cardiovascular and metabolic disorders, skin, bone, and other common diseases. Among the 83 human interventional trials considered, the consumption of garlic has been reported to modulate multiple biomarkers of different diseases; in addition, its combination with drugs or other food matrices has been shown to be safe and to prolong their therapeutic effects. The rapid metabolism and poor bioavailability that have limited the therapeutic use of garlic in the last years are also discussed.\nKeywords: garlic, sulfur-containing compounds, polyphenols health benefits, metabolism and bioavailability\nSpices are not only used to increase the aroma, flavor, and color of food, but are also considered for therapeutic purposes for their potential prevention of different acute and chronic diseases. Various bioactive compounds of spices, including alkaloids, tannins, vitamins and phenolic diterpenes, flavonoids and polyphenols, as well as sulfur-containing compounds, are responsible for different types of therapeutic properties, thanks to their antioxidant, anticarcinogenic, antitumorigenic, anti-inflammatory, and glucose and cholesterol-lowering properties [1].\nGarlic (Allium sativum L.), a member of the Amaryllidaceae family that is cultivated all over the world, provides noteworthy health benefits. In 1550 B.C., antibiotics and pharmacy products were not available so garlic was used for medicinal purposes in different epidemics, such as typhus, dysentery, cholera, and influenza [2]. The therapeutic effects of garlic are mainly due to the impressive activity of its bioactive compounds, such as organic sulfides [3], saponins [4], phenolic compounds [5], and polysaccharides [6]. For example, several in vitro and in vivo studies have showed that garlic compounds are able to modulate various signaling pathways, including nuclear factor-\u03baB and wingless-related integration site [7], matrix metalloproteinases, nuclear factor erythroid 2 like 2, protein kinase B (pAkt), mitogen-activated protein kinase, c-Jun N-terminal kinases, caspases, p38, transforming growth factor beta 1 (TGF-\u03b21), TGF-\u03b2 type II receptor, psmad2/3, smad4 and smad7 [8,9], cytokines, intercellular adhesion molecule [10], notch pathway [11], 5\u2019 AMP-activated protein kinase pathway [12], vascular endothelial growth factor [13], cyclooxygenase 2, inducible nitric oxide synthase, Akt/mTOR [14], and Keap1 [15], leading to improved anti-inflammatory and antioxidant properties, as well as chemopreventive, antiproliferative, anti-angiogenic, antidiabetic, and cardioprotective effects. However, it should be taken into account that these compounds have a very low availability. For example, in a randomized controlled trial, after oral administration of 1 g or 3 g of dehydrated garlic powder, the organosulfur compound diallyl disulfide (DADS) and diallyl sulfide (DAS) were not detected in the urine samples after 6 and 24 h [16]. Furthermore, allyl thiosulfates of garlic preparation undergo extensive metabolism, producing allyl methyl sulfide, essentially present in breath [17].\nThus, the present review aims to provide a comprehensive overview of clinical trials in the last 20 years, assessing the therapeutic effects of garlic on different common human diseases, such as cancer, cardiovascular pathologies, diabetes, metabolic disorders, osteoporosis, and skin diseases, mostly focusing on its antioxidant, anti-inflammatory, and lipid lowering effects. This review also presents the main molecular mechanisms of garlic involved in its promising health benefits after consumption.\nA comprehensive revision was done, using electronic databases, including Medline, Scopus, Google Scholar, and Web of Science, and related clinical trials regarding garlic effects on human diseases have been considered. The keywords \u201cgarlic\u201d, \u201cgarlic effects\u201d, \u201cgarlic bioactive compounds\u201d, \u201cgarlic polyphenols\u201d, \u201callicin\u201d, \u201calliin\u201d, \u201callylpropyl disulfide\u201d, \u201cdiallyl trisulfide (DATS)\u201d, \u201cajoene\u201d, \u201cS-allylcysteine\u201d, \u201cS-allylmercaptocysteine\u201d (SAMC), \u201cvinyldithiins\u201d, \u201caged garlic\u201d, \u201cgarlic cloves\u201d, \u201cgarlic metabolism\u201d, \u201cgarlic absorption\u201d, \u201cgarlic bioavailability\u201d, \u201cgarlic antioxidant capacity\u201d, \u201cgarlic anti-inflammatory property\u201d, \u201cgarlic lipid lowering effect\u201d, as well as garlic with each specific disease (i.e., \u201cgarlic and cancer\u201d, \u201cgarlic and colon cancer\u201d, \u201cgarlic and prostate cancer\u201d, \u201cgarlic and esophageal cancer\u201d, \u201cgarlic and larynx cancer\u201d, etc.) have been used. All the articles included have been published from 2000\u20132020.\nGarlic is considered as a functional spice because of its diverse array of nutritional constituents, phytochemicals, and fiber. It contains high levels of potassium, phosphorus zinc, and sulfur, moderate levels of selenium, calcium, magnesium, manganese, iron, and low levels of sodium, vitamin A and C and B-complex [18]. In the last years, considerable attention has been given to its main bioactive compounds, particularly polyphenols, flavonoids, flavanols, tannins [5,19], saponins [4], polysaccharides [6], sulfur-containing compounds (including alliin, allicin, ajoene, allylpropyl disulfide, DATS, S-allylcysteine, vinyldithiins, SAMC), enzymes (like allinase, peroxidase, myrosinase), and other compounds, such as \u03b2-phellandrene, phell\n\nProvide relevant evidence.",
+    "input_length_chars": 6339,
+    "input_tokens_estimated": 1584,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence supports the claim that garlic has both culinary and medical benefits, highlighting its use as a nutraceutical spice with various health-promoting properties and its historical medicinal applications.",
+      "overall_stance": "supports",
+      "key_quote": "Garlic and its secondary metabolites have shown excellent health-promoting and disease-preventing effects on many human common diseases, such as cancer, cardiovascular and metabolic disorders."
+    },
+    "output_length_chars": 491,
+    "output_tokens_estimated": 122,
+    "cost_usd": 0.0003108
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:28:53.908826",
+    "latency_seconds": 21.49,
+    "input_prompt": "Claim:\nGarlic has both culinary and medical benefits.\n\nArticle Title:\nPotential Health Benefit of Garlic Based on Human Intervention ...\n\nFull Page Content:\nBased on current research, garlic can significantly reduce the risk of atherosclerosis, hypertension, diabetes, hyperlipidemia, myocardial infarction, and ...\n\nProvide relevant evidence.",
+    "input_length_chars": 343,
+    "input_tokens_estimated": 85,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that garlic has medical benefits, particularly in reducing the risk of various health conditions such as atherosclerosis and hypertension, which supports the claim of its medical benefits. However, the culinary benefits are not addressed in the provided content.",
+      "overall_stance": "mixed",
+      "key_quote": "garlic can significantly reduce the risk of atherosclerosis, hypertension, diabetes, hyperlipidemia, myocardial infarction"
+    },
+    "output_length_chars": 490,
+    "output_tokens_estimated": 122,
+    "cost_usd": 8.595e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:28:54.573766",
+    "latency_seconds": 22.1,
+    "input_prompt": "Claim:\nGarlic has both culinary and medical benefits.\n\nArticle Title:\nHow Onions and Garlic Can Boost Your Health\n\nGoogle Search Snippet:\nGarlic brings its own strengths to the table, thanks to allicin, a compound that boosts immunity and has antibacterial and antiviral properties.\n\nFull Page Content:\nJanuary 4, 2025 by Onionista\nLife moves fast, and it\u2019s no surprise that many of us are looking for ways to stay healthy without overcomplicating things. That\u2019s where the idea of \u201cfood as medicine\u201d comes in, especially for younger generations keen on natural wellness solutions. Among the many ingredients that are good for the body, onions and garlic take center stage. They\u2019re not only flavorful but also packed with health benefits that have stood the test of time. Let\u2019s explore some easy, tasty recipes featuring onions and garlic that help turn everyday meals into something that\u2019s good for you.\nThese aren\u2019t just everyday kitchen staples \u2014they\u2019re powerhouses. Onions are loaded with antioxidants like quercetin, which help reduce inflammation and support heart health. Garlic brings its own strengths to the table, thanks to allicin, a compound that boosts immunity and has antibacterial and antiviral properties. Together, these two ingredients can elevate your meals while giving your health a real boost.\nImmune-Boosting Garlic and Onion Soup When it\u2019s cold out, nothing beats a comforting bowl of soup. This garlic and onion version is perfect for warding off sniffles. Saut\u00e9 sliced onions and garlic in olive oil until golden, then add vegetable or chicken broth, some thyme, and black pepper. Let it simmer for about 30 minutes, and you\u2019ve got a soup that\u2019s both soothing and packed with benefits. Add other favorites to the soup to make it yours: meats, more veggies or spices.\nQuick Garlic and Onion Stir-Fry Need dinner in a hurry? Stir-fries are a lifesaver. Start with sliced onions and garlic in a hot pan, then add your favorite vegetables like bell peppers, broccoli, or carrots. Throw in some tofu or chicken for protein and finish with a splash of soy sauce and a bit of fresh ginger. It\u2019s a dish that\u2019s bursting with flavor and brimming with nutrients.\nFlavorful Garlic and Onion Olive Oil Want an easy way to add extra goodness to any meal? Infuse olive oil with onions and garlic. Just heat up some olive oil with sliced onions and garlic until the flavors meld, strain it, and use it to drizzle over salads, roasted veggies, or pasta. It\u2019s simple, delicious, and full of health-boosting properties.\nRoasted Veggie Medley with Garlic and Onion Roasting vegetables brings out their natural sweetness, and onions and garlic are no exception. Toss chopped onions, whole garlic cloves, and your choice of veggies (think sweet potatoes, Brussels sprouts, or cauliflower) in olive oil with your favorite herbs. Roast at 400\u00b0F for 25\u201330 minutes, and you\u2019ll have a flavorful, nutrient-packed side dish.\nOnions and garlic pair perfectly to make your food work for you\nWhat makes these recipes great is how easy they are to whip up, yet they deliver big on both taste and health benefits. Onions and garlic might seem humble, but they have the power to turn simple dishes into wellness-packed meals. By adding them to your routine, you\u2019re making a choice to nourish your body with every bite.\nWith these onion- and garlic-forward recipes, you\u2019re not just cooking \u2014 you\u2019re caring for your health. Whether it\u2019s boosting your immune system, keeping inflammation at bay, or just enjoying a delicious home-cooked meal, these dishes can help. Remember, the food you eat isn\u2019t just fuel; it can also heal. So, next time you\u2019re in the kitchen, grab those onions and garlic and let them shine!\nView this quick tutorial on how to cut onions.\nDownload this Onion-cutting guide\nFiled Under: cooking short cuts, How to's Tagged With: garlic, healthy cooking, healthy foods, onions, onions and garlic\nHome | All About Onions | Recipes | Advocacy | Tips, Myths & FAQs | Chefs & Educators | News | About NOA | Contact Us\nNational Onion Association 218 Oak Avenue Eaton, CO 80615\n(970) 353-5895\n\u00a9 2025 National Onion Association. All rights reserved. Privacy Policy.\n\nProvide relevant evidence.",
+    "input_length_chars": 4195,
+    "input_tokens_estimated": 1048,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses garlic's health benefits, particularly highlighting allicin's role in boosting immunity and its antibacterial and antiviral properties, thus supporting the claim of garlic having medical benefits alongside its culinary uses.",
+      "overall_stance": "supports",
+      "key_quote": "Garlic brings its own strengths to the table, thanks to allicin, a compound that boosts immunity and has antibacterial and antiviral properties."
+    },
+    "output_length_chars": 476,
+    "output_tokens_estimated": 119,
+    "cost_usd": 0.0002286
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:29:49.101972",
+    "latency_seconds": 20.22,
+    "input_prompt": "\nClaim: Heating crushed garlic transforms allicin into a cancer-fighting compound called auine.\nCategory: scientific\nExtraction confidence: 0.90\n\nEvidence:\nUNCLEAR (5 sources):\n  1. Allicin in Digestive System Cancer: From Biological Effects to ... | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC9234177/\n     Summary: Allicin is the main active ingredient in freshly-crushed garlic and some other allium plants, and its anticancer effect on cancers of digestive system has been ...\n  2. Effect of Thermal Treatment on the Antiproliferative and Antioxidant ... | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC12141922/\n     Summary: The heating compromised the ability of heated garlic homogenate to inhibit the proliferation of human ovarian cancer cells of two different ...\n  3. Chopping And Cooking Affect Garlic's Anti-Cancer Activity | reliability=high (0.85)\n     URL: https://www.sciencedaily.com/releases/1998/11/981117075803.htm\n     Summary: Penn State researchers have shown that microwave heating or roasting garlic can diminish or destroy its anti-cancer activity - unless the herb is chopped or ...\n  4. Does Garlic Reduce Your Risk of Cancer? - Verywell Health | reliability=high (0.85)\n     URL: https://www.verywellhealth.com/garlic-reduces-your-cancer-risk-430030\n     Summary: Eating raw or lightly cooked garlic may help lower cancer risk. \u00b7 Garlic contains compounds that can stop cancer cells from growing. \u00b7 More ...\n  5. Garlic and Cancer, Benefits of White & Black Garlic - AICR | reliability=medium (0.60)\n     URL: https://www.aicr.org/cancer-prevention/food-facts/garlic/\n     Summary: Laboratory research shows that allium compounds in garlic offer anti-cancer activity, but support for garlic lowering cancer risk is lacking in human studies.\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1866,
+    "input_tokens_estimated": 466,
+    "output": {
+      "overall_stance": "unclear",
+      "confidence": "low",
+      "summary": "The evidence regarding the claim that heating crushed garlic transforms allicin into auine, a cancer-fighting compound, is unclear. While some studies indicate that allicin has anticancer properties, others suggest that heating garlic can diminish its anti-cancer activity. There is no consensus on the transformation of allicin into auine or its effectiveness against cancer."
+    },
+    "output_length_chars": 436,
+    "output_tokens_estimated": 109,
+    "cost_usd": 0.0001353
+  }
+]

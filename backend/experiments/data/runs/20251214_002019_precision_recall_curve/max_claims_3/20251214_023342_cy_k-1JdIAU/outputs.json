@@ -1,0 +1,1142 @@
+{
+  "extracted_claims": {
+    "claims": [
+      {
+        "text": "Beets help lower blood pressure and improve athletic performance.",
+        "confidence": 0.9,
+        "category": "scientific",
+        "importance": 0.8,
+        "context": "Speaker: Melissa, discussing benefits of beets.",
+        "transcript_char_start": 3207,
+        "transcript_char_end": 3256,
+        "transcript_match_score": 0.672566371681416
+      },
+      {
+        "text": "Beet juice can provide a 1-3% performance boost before athletic events.",
+        "confidence": 0.85,
+        "category": "scientific",
+        "importance": 0.8,
+        "context": "Speaker: Professor, discussing beet juice effects.",
+        "transcript_char_start": 3357,
+        "transcript_char_end": 3411,
+        "transcript_match_score": 0.6829268292682927
+      },
+      {
+        "text": "Apples are high in pectin, which limits how much fat cells can absorb.",
+        "confidence": 0.9,
+        "category": "scientific",
+        "importance": 0.7,
+        "context": "Speaker: Melissa, explaining benefits of apples.",
+        "transcript_char_start": 1688,
+        "transcript_char_end": 1764,
+        "transcript_match_score": 0.7083333333333334
+      }
+    ],
+    "total_count": 3
+  },
+  "final_output": {
+    "extracted_claims": {
+      "claims": [
+        {
+          "text": "Beets help lower blood pressure and improve athletic performance.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.8,
+          "context": "Speaker: Melissa, discussing benefits of beets.",
+          "transcript_char_start": 3207,
+          "transcript_char_end": 3256,
+          "transcript_match_score": 0.672566371681416
+        },
+        {
+          "text": "Beet juice can provide a 1-3% performance boost before athletic events.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.8,
+          "context": "Speaker: Professor, discussing beet juice effects.",
+          "transcript_char_start": 3357,
+          "transcript_char_end": 3411,
+          "transcript_match_score": 0.6829268292682927
+        },
+        {
+          "text": "Apples are high in pectin, which limits how much fat cells can absorb.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Speaker: Melissa, explaining benefits of apples.",
+          "transcript_char_start": 1688,
+          "transcript_char_end": 1764,
+          "transcript_match_score": 0.7083333333333334
+        }
+      ],
+      "total_count": 3
+    },
+    "claim_reports": [
+      {
+        "claim_text": "Apples are high in pectin, which limits how much fat cells can absorb.",
+        "claim_confidence": 0.9,
+        "claim_category": "scientific",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "10 Promising Benefits and Uses of Apple Pectin - Healthline",
+              "url": "https://www.healthline.com/nutrition/apple-pectin",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that apple-derived pectin can attenuate weight gain and fat accumulation in diet-induced obese rats, suggesting a potential mechanism by which pectin may limit fat absorption.",
+              "snippet": "Apple pectin is a gel-forming fiber that easily absorbs water, helping relieve both constipation and diarrhea. 6. May enhance iron absorption."
+            },
+            {
+              "title": "Dose-dependent effects of apple pectin on alleviating high fat ...",
+              "url": "https://www.sciencedirect.com/science/article/pii/S2213453021000811",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The study indicates that apple-derived pectin can suppress weight gain and fat accumulation in diet-induced obese rats, suggesting a potential mechanism by which pectin limits fat absorption.",
+              "snippet": "Moreover, many studies found that apple pectin helped to suppress weight gain, modify gut microbiota, protect gut barrier, attenuate metabolic endotoxemia, ..."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "Apple-Derived Pectin Modulates Gut Microbiota, Improves Gut ... - NIH",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4808856/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Apple-derived pectin modulates gut microbiota, improves gut barrier function, and attenuates metabolic endotoxemia in rats with diet-induced obesity.",
+              "snippet": "Apple-derived pectin modulates gut microbiota, improves gut barrier function, and attenuates metabolic endotoxemia in rats with diet-induced obesity."
+            },
+            {
+              "title": "Loss of Body Weight and Fat and Improved Lipid Profiles in Obese ...",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3778949/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "... apples may reduce dietary cholesterol absorption. A search of scientific databases revealed no studies on the effect of apples on weight loss or body fat loss.",
+              "snippet": "... apples may reduce dietary cholesterol absorption. A search of scientific databases revealed no studies on the effect of apples on weight loss or body fat loss."
+            },
+            {
+              "title": "Nutrition and health effects of pectin: A systematic scoping review of ...",
+              "url": "https://www.cambridge.org/core/journals/nutrition-research-reviews/article/nutrition-and-health-effects-of-pectin-a-systematic-scoping-review-of-human-intervention-studies/01BF0759F09A2BBC419F333B8B1D4FF9",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Of the thirty-four studies related to fat metabolism, twenty-eight reported positive effects of pectin on lowering cholesterol, triacylglycerol ...",
+              "snippet": "Of the thirty-four studies related to fat metabolism, twenty-eight reported positive effects of pectin on lowering cholesterol, triacylglycerol ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 0.9,
+        "timestamp_hint": 108.98,
+        "timestamp_confidence": 0.7083333333333334
+      },
+      {
+        "claim_text": "Beets help lower blood pressure and improve athletic performance.",
+        "claim_confidence": 0.9,
+        "claim_category": "scientific",
+        "overall_stance": "mixed",
+        "verdict_confidence": "medium",
+        "verdict_summary": "The evidence presents mixed findings regarding beets' effects on blood pressure and athletic performance. A high-reliability study indicates that beetroot juice can reduce resting blood pressure and improve exercise performance, but does not significantly affect VO2max or blood pressure during submaximal exercise. Other high-reliability sources suggest potential benefits for blood pressure and athletic performance, but the overall impact remains unclear due to varying results.",
+        "evidence_by_stance": {
+          "mixed": [
+            {
+              "title": "The Effects of Beetroot Juice on VO2max and Blood Pressure during ...",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6413851/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "mixed",
+              "evidence_summary": "The evidence indicates that beetroot juice has been shown to reduce blood pressure at rest and improve performance parameters during exercise, although it did not significantly affect VO2max or blood pressure during submaximal exercise in the study referenced.",
+              "snippet": "Beetroot juice (BR) has been shown to reduce blood pressure (BP) at rest and improve several performance parameters during exercise."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "Effects of Beetroot Juice Supplementation on Cardiorespiratory ...",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5295087/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "In addition to increasing blood flow and improving muscle contraction and relaxation, beetroot juice supplementation may improve the efficiency ...",
+              "snippet": "In addition to increasing blood flow and improving muscle contraction and relaxation, beetroot juice supplementation may improve the efficiency ..."
+            },
+            {
+              "title": "9 Impressive Health Benefits of Beets - Healthline",
+              "url": "https://www.healthline.com/nutrition/benefits-of-beets",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "1. Many nutrients and few calories \u00b7 2. Could help keep your blood pressure in check \u00b7 3. Can improve athletic performance \u00b7 4. May help fight inflammation \u00b7 5. May ...",
+              "snippet": "1. Many nutrients and few calories \u00b7 2. Could help keep your blood pressure in check \u00b7 3. Can improve athletic performance \u00b7 4. May help fight inflammation \u00b7 5. May ..."
+            },
+            {
+              "title": "Beet juice and blood pressure: Study and benefits",
+              "url": "https://www.medicalnewstoday.com/articles/288229",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Beet juice may help lower blood pressure because it contains nitrates. \u00b7 Doctors may recommend beet juice to help manage high blood pressure.",
+              "snippet": "Beet juice may help lower blood pressure because it contains nitrates. \u00b7 Doctors may recommend beet juice to help manage high blood pressure."
+            },
+            {
+              "title": "Can Beetroot Powder Improve Athletic Performance?",
+              "url": "https://health.clevelandclinic.org/beetroot-powder-benefits",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (27.9 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Nitrate-rich beetroot powder may boost athletic performance by expanding blood vessels to deliver more oxygen to your body.",
+              "snippet": "Nitrate-rich beetroot powder may boost athletic performance by expanding blood vessels to deliver more oxygen to your body."
+            },
+            {
+              "title": "The Shocking Vegetable That Can Improve Athletic Endurance",
+              "url": "https://www.vogue.com/article/beets-endurance",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (31.6 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "\u201cSome short-term studies show that eating vegetables high in nitrates (especially beets) may lower blood pressure In addition,\u201d Harvard Health ...",
+              "snippet": "\u201cSome short-term studies show that eating vegetables high in nitrates (especially beets) may lower blood pressure In addition,\u201d Harvard Health ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 0.8,
+        "timestamp_hint": 228.639,
+        "timestamp_confidence": 0.672566371681416
+      },
+      {
+        "claim_text": "Beet juice can provide a 1-3% performance boost before athletic events.",
+        "claim_confidence": 0.85,
+        "claim_category": "scientific",
+        "overall_stance": "mixed",
+        "verdict_confidence": "medium",
+        "verdict_summary": "The evidence regarding beet juice's performance boost is mixed. High-quality studies indicate that beetroot juice can enhance performance, with some reports suggesting improvements of around 0.8% to 3% in specific contexts, such as cycling. However, the variability in results and the specific conditions under which these benefits occur lead to uncertainty about the overall claim.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "Effects of Beetroot Juice Supplementation on Performance and ... - NIH",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6164999/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "As a nitric oxide precursor, beetroot juice (BJ) is known to enhance high-intensity exercise performance (80\u2013100% VO2max) yet its impacts on ...",
+              "snippet": "As a nitric oxide precursor, beetroot juice (BJ) is known to enhance high-intensity exercise performance (80\u2013100% VO2max) yet its impacts on ..."
+            },
+            {
+              "title": "Beetroot juice supplementation and exercise performance - Frontiers",
+              "url": "https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2024.1347242/full",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Exercise studies comparing the effects of beetroot juice (BRJ) vs. a nitrate salt. Herein we review the limited number of exercise-related ...",
+              "snippet": "Exercise studies comparing the effects of beetroot juice (BRJ) vs. a nitrate salt. Herein we review the limited number of exercise-related ..."
+            },
+            {
+              "title": "Effects of Beetroot Juice on Physical Performance in Professional ...",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/40573069/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Beetroot juice shows population-specific effects: proper beetroot juice supplementation improves muscular strength in professional athletes and aerobic ...",
+              "snippet": "Beetroot juice shows population-specific effects: proper beetroot juice supplementation improves muscular strength in professional athletes and aerobic ..."
+            },
+            {
+              "title": "How Does Beet Juice Improve Athletic Performance? - Verywell Fit",
+              "url": "https://www.verywellfit.com/how-does-beet-juice-improve-athletic-performance-4123855",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Competitive cyclists who supplemented with beetroot juice improved their performance by 0.8 percent in a 50-mile test. Significant improvements ...",
+              "snippet": "Competitive cyclists who supplemented with beetroot juice improved their performance by 0.8 percent in a 50-mile test. Significant improvements ..."
+            },
+            {
+              "title": "Beet Juice as a Pre-Workout: Boost Endurance and Speed Up ...",
+              "url": "https://stamox.com/blogs/pre-workout-fitness/boost-endurance-recovery?srsltid=AfmBOoqxlD0KIXXi6ag3hU3V2tIDC-obmbWSCxqlZ4_iWDkgIDMWv7v1",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (13.4 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "How Beet Juice Enhances Athletic Performance \u00b7 Improves blood flow. \u00b7 Enhances gas exchange. \u00b7 Strengthens muscle contractions.",
+              "snippet": "How Beet Juice Enhances Athletic Performance \u00b7 Improves blood flow. \u00b7 Enhances gas exchange. \u00b7 Strengthens muscle contractions."
+            },
+            {
+              "title": "Beetroot Juice Cycling Performance: Science-Backed Benefits and ...",
+              "url": "https://www.achieveptc.com/blog/beetroot-juice-cycling-performance-science-backed-benefits-and-athlete-strategies",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (12.7 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "You may expect up to a 2-3% performance gain in events lasting 4-30 minutes (8-30km time trials; hilly breakaways). Altitude Performance Beet ...",
+              "snippet": "You may expect up to a 2-3% performance gain in events lasting 4-30 minutes (8-30km time trials; hilly breakaways). Altitude Performance Beet ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 238.999,
+        "timestamp_confidence": 0.6829268292682927
+      }
+    ],
+    "transcript_data": {
+      "text": "Today, we're making three super nourishing, super food packed, detox juices. To help you lose weight and get you that glow! [Music] Hey, beautiful people. It's Melissa from Choosing My Health, where I teach you how to easily transition to a whole food, plant-based lifestyle and thrive. And today we're making three of my favorite veggie juices. I love them because they're an easy way to reboot your metabolism, lose weight and cleanse your body to literally make you glow. I've been juicing for a minute and hands down, it is the easiest way to repair your body in a short span of time. But real talk, your juice gotta taste good. Cause ain't nobody want to be out here on these streets, drinking juice that tastes like dirt. I'm just going to keep it 100. Now, whether you're drinking these for a New Year's push or for three-day juice cleanse you'll find that they don't just taste good, they deliver a whole lot of life-giving nutrients to energize and revitalize your body. When I drink these literally feel like I can fly. Like that's how light I feel. And as always, if you're looking for the full recipe breakdown, I share those on my blog at choosingmyhealth.com, including modifications. I'm going to leave this link and others for you in the description box below. All right, let's get to it. [Music] I call this juice green power. It is loaded with phytonutrients and cleansing power to rid your body of excess weight and make you glow. To begin, we're gonna peel a washed lemon. I love lemons because they flush toxins from your system and purify the blood. Keep the lemon peel because it tastes great in tea and in hot porridge. Next core your washed apples. Apples are great for weight loss because they're high in pectin. Pectin binds with water and limits how much fat your cells can absorb. Isn't that cool?. They also taste great in this next cut all your ingredients into the appropriate size for your juicer. And now we're going to add all our ingredients to the juicer, kale, apple, celery. Cucumber, lime, and ginger. Each of these ingredients is especially formulated to help nourish your body. The celery, cucumber, and apples are vitamin-rich and super hydrating. Our superfood kale is rich in minerals and antioxidants to feed your cells, and lime and ginger increase your blood circulation, all while staying low in calories. You got to love this juice. [Music] Now the Beet Buzzer is my go-to juice to help me reset my body, especially when I'm feeling sluggish and need an energy boost. It's tangy, it's full-bodied and it has a lot of kick. First, peel your washed grapefruit. Grapefruits have one of the highest water contents of any food y'all, about 92% water, and they deliver a whole lot of nutrition with very little calories. We're also going to peel the lemon and cut the rest of our ingredients to an appropriate size for the juicer. Carrots- a juicing staple. Love that it's full of antioxidants including beta carotene, and lutein that are great for the eyes and beets. Beets are chocked full of nutrients and deliver maximum nutrition for your body. We're talking about potassium, magnesium, zinc, selenium. And beets also help you lower your blood pressure if you need help with that, and they give you extra stamina throughout the day. And did you know that beets even improve athletic performance? Professor: Yes, yes, and a yes-i-dy yes. If you'd allow me to just interject here for just a little bit. Beet juice, one to three hours before an athletic event can provide a one to three percent performance boost and give you a serious competitive edge. That's because beats raise nitric oxide levels increase blood flow, improve lung function and strengthen muscle contraction. Now, you know, Then lastly we add jalape\u00f1o. Jalape\u00f1os aren't a typical juice addition for me, but listen, if you can handle a little heat, jalape\u00f1o can boost your metabolism, increase fat burn and reduce your appetite. I will warn you though. It is not for you if you're sensitive to heat. And if you do like heat, very little goes a long way, my friend. So start with like one-fourth of an inch, no seeds please, then taste the juice and add more if you wish. Remember when you use this, you're juicing it. So you're getting the full undiluted effect. Alternatively, if you still want some spice without too much kick, ginger can also achieve the same purpose. [Music] Our last juice is Orange Blast. I call this my sweet treat because it's really flavorful and refreshing and super high in vitamin C, which is going to help the body absorb minerals. It's going to protect the body from chemical toxins and has anti-aging properties. Who doesn't want that? To begin let's peel a pineapple. Pineapple is perfect for detoxing because it contains bromelain, which is a digestive enzyme that will cleanse your colon and it aids digestion. And it's super juicy. Next, we'll cut a red bell pepper in half. Y'all, did you know that a cup of red bell pepper contains nearly three times more vitamin C than an orange? Professor: Oh yeah. I knew. And we're also going to add some ginger and turmeric. Ginger is awesome for circulation and digestion and turmeric, as you probably already know, is incredible for inflammation. And to maximize the benefits of turmeric, you can sprinkle a little black pepper into your drink because it can enhance the curcumin absorption in turmeric by up to 2,000 percent. That's a whole lot! This juice is extraordinarily enjoyable and will boost your immune system all while helping you flush and reset. I love these satisfying, and nutritionally-rich juices. They are perfect for a juice cleanse or for any day you need a boost. And, now if you're looking for more recipes, encouragement, plant-based education. I got you, honey. I have plenty of videos and resources on this channel and blog. I'm going to leave a link to them in the description box below. If you make any of these juices, please comment and let me know. I'd so appreciate that. And let me know if you have a favorite juice that you could share with us. Also, if you're interested in a plant-based lifestyle and you want to join the CMH crew, please subscribe to my channel to learn more. How to easily transition to a plant-based lifestyle and thrive. I would so love to have you here. Don't forget to hit the notification bell for my latest videos. And if you found this video helpful, please give it a thumbs up. You can also follow me on Instagram at choosingmyhealth. Now if you're new to this whole food plant-based thing, welcome. Check out my free gift for you packed with nearly 20 years of my life-tested strategies to boost your game for the win. Links are all in the description box below. Thanks so much for hanging out with me today. You could've been doing something else, but you chose to watch this video and I'm thankful for that. I hope you have an amazing day. I love you, and I will see you in the next one? [Music] [Bloopers] Oh, yes. I knew. Oh, pick me, pick me. Oh, I knew. I knew. I knew. I knew. Yes. Yes. And a yes-i-dy yes. Yes. If you'd let me just to inter.... (Laughs) Now you know. (Laughs) Must look like I was about to choke. (Lauhgs) [Music]",
+      "segments": [
+        {
+          "text": "Today, we're making three super nourishing,\nsuper food packed, detox juices.",
+          "start": 0.12,
+          "duration": 5.239
+        },
+        {
+          "text": "To help you lose weight and get you that glow!",
+          "start": 5.359,
+          "duration": 3.751
+        },
+        {
+          "text": "[Music]",
+          "start": 9.11,
+          "duration": 1.189
+        },
+        {
+          "text": "Hey, beautiful people.",
+          "start": 10.299,
+          "duration": 3.59
+        },
+        {
+          "text": "It's Melissa from Choosing My Health, where\nI teach you how to easily transition to a",
+          "start": 13.889,
+          "duration": 4.451
+        },
+        {
+          "text": "whole food, plant-based lifestyle and thrive.",
+          "start": 18.34,
+          "duration": 3.61
+        },
+        {
+          "text": "And today we're making three of my favorite\nveggie juices.",
+          "start": 21.95,
+          "duration": 3.84
+        },
+        {
+          "text": "I love them because they're an easy way to\nreboot your metabolism, lose weight and cleanse",
+          "start": 25.79,
+          "duration": 5.18
+        },
+        {
+          "text": "your body to literally make you glow.",
+          "start": 30.97,
+          "duration": 2.41
+        },
+        {
+          "text": "I've been juicing for a minute and hands down,\nit is the easiest way to repair your body",
+          "start": 33.38,
+          "duration": 5.99
+        },
+        {
+          "text": "in a short span of time.",
+          "start": 39.37,
+          "duration": 2.02
+        },
+        {
+          "text": "But real talk, your juice gotta taste good.",
+          "start": 41.39,
+          "duration": 2.079
+        },
+        {
+          "text": "Cause ain't nobody want to be out here on\nthese streets, drinking juice that tastes",
+          "start": 43.469,
+          "duration": 3.061
+        },
+        {
+          "text": "like dirt.",
+          "start": 46.53,
+          "duration": 1.0
+        },
+        {
+          "text": "I'm just going to keep it 100.",
+          "start": 47.53,
+          "duration": 1.369
+        },
+        {
+          "text": "Now, whether you're drinking these for a New\nYear's push or for three-day juice cleanse",
+          "start": 48.899,
+          "duration": 5.51
+        },
+        {
+          "text": "you'll find that they don't just taste good,\nthey deliver a whole lot of life-giving nutrients",
+          "start": 54.409,
+          "duration": 5.211
+        },
+        {
+          "text": "to energize and revitalize your body.",
+          "start": 59.62,
+          "duration": 2.5
+        },
+        {
+          "text": "When I drink these literally feel like I can\nfly.",
+          "start": 62.12,
+          "duration": 2.04
+        },
+        {
+          "text": "Like that's how light I feel.",
+          "start": 64.16,
+          "duration": 2.17
+        },
+        {
+          "text": "And as always, if you're looking for the full\nrecipe breakdown, I share those on my blog",
+          "start": 66.33,
+          "duration": 5.08
+        },
+        {
+          "text": "at choosingmyhealth.com, including modifications.",
+          "start": 71.41,
+          "duration": 3.68
+        },
+        {
+          "text": "I'm going to leave this link and others for\nyou in the description box below.",
+          "start": 75.09,
+          "duration": 3.74
+        },
+        {
+          "text": "All right, let's get to it.",
+          "start": 78.83,
+          "duration": 1.6
+        },
+        {
+          "text": "[Music]",
+          "start": 80.43,
+          "duration": 1.0
+        },
+        {
+          "text": "I call this juice green power.",
+          "start": 81.43,
+          "duration": 2.78
+        },
+        {
+          "text": "It is loaded with phytonutrients and cleansing\npower to rid your body of excess weight and",
+          "start": 84.21,
+          "duration": 9.08
+        },
+        {
+          "text": "make you glow.",
+          "start": 93.29,
+          "duration": 1.37
+        },
+        {
+          "text": "To begin, we're gonna peel a washed lemon.",
+          "start": 94.66,
+          "duration": 2.13
+        },
+        {
+          "text": "I love lemons because they flush toxins from\nyour system and purify the blood.",
+          "start": 96.79,
+          "duration": 5.69
+        },
+        {
+          "text": "Keep the lemon peel because it tastes great\nin tea and in hot porridge.",
+          "start": 102.48,
+          "duration": 4.86
+        },
+        {
+          "text": "Next core your washed apples.",
+          "start": 107.34,
+          "duration": 1.64
+        },
+        {
+          "text": "Apples are great for weight loss because they're\nhigh in pectin.",
+          "start": 108.98,
+          "duration": 4.04
+        },
+        {
+          "text": "Pectin binds with water and limits how much\nfat your cells can absorb.",
+          "start": 113.02,
+          "duration": 4.0
+        },
+        {
+          "text": "Isn't that cool?.",
+          "start": 117.02,
+          "duration": 1.0
+        },
+        {
+          "text": "They also taste great in this next cut all\nyour ingredients into the appropriate size",
+          "start": 118.02,
+          "duration": 6.16
+        },
+        {
+          "text": "for your juicer.",
+          "start": 124.18,
+          "duration": 3.16
+        },
+        {
+          "text": "And now we're going to add all our ingredients\nto the juicer, kale, apple, celery.",
+          "start": 127.34,
+          "duration": 9.599
+        },
+        {
+          "text": "Cucumber, lime, and ginger.",
+          "start": 136.939,
+          "duration": 3.31
+        },
+        {
+          "text": "Each of these ingredients is especially formulated\nto help nourish your body.",
+          "start": 140.249,
+          "duration": 4.261
+        },
+        {
+          "text": "The celery, cucumber, and apples are vitamin-rich\nand super hydrating.",
+          "start": 144.51,
+          "duration": 5.759
+        },
+        {
+          "text": "Our superfood kale is rich in minerals and\nantioxidants to feed your cells, and lime",
+          "start": 150.269,
+          "duration": 5.3
+        },
+        {
+          "text": "and ginger increase your blood circulation,\nall while staying low in calories.",
+          "start": 155.569,
+          "duration": 5.091
+        },
+        {
+          "text": "You got to love this juice.",
+          "start": 160.66,
+          "duration": 14.839
+        },
+        {
+          "text": "[Music]",
+          "start": 175.499,
+          "duration": 4.57
+        },
+        {
+          "text": "Now the Beet Buzzer is my go-to juice to help\nme reset my body, especially when I'm feeling",
+          "start": 180.069,
+          "duration": 5.541
+        },
+        {
+          "text": "sluggish and need an energy boost.",
+          "start": 185.61,
+          "duration": 1.999
+        },
+        {
+          "text": "It's tangy, it's full-bodied and it has a\nlot of kick.",
+          "start": 187.609,
+          "duration": 4.701
+        },
+        {
+          "text": "First, peel your washed grapefruit.",
+          "start": 192.31,
+          "duration": 2.23
+        },
+        {
+          "text": "Grapefruits have one of the highest water\ncontents of any food y'all, about 92% water,",
+          "start": 194.54,
+          "duration": 5.75
+        },
+        {
+          "text": "and they deliver a whole lot of nutrition\nwith very little calories.",
+          "start": 200.29,
+          "duration": 3.709
+        },
+        {
+          "text": "We're also going to peel the lemon and cut\nthe rest of our ingredients to an appropriate",
+          "start": 203.999,
+          "duration": 4.67
+        },
+        {
+          "text": "size for the juicer.",
+          "start": 208.669,
+          "duration": 2.36
+        },
+        {
+          "text": "Carrots- a juicing staple.",
+          "start": 211.029,
+          "duration": 2.311
+        },
+        {
+          "text": "Love that it's full of antioxidants including\nbeta carotene, and lutein that are great for",
+          "start": 213.34,
+          "duration": 4.6
+        },
+        {
+          "text": "the eyes and beets.",
+          "start": 217.94,
+          "duration": 2.65
+        },
+        {
+          "text": "Beets are chocked full of nutrients and deliver\nmaximum nutrition for your body.",
+          "start": 220.59,
+          "duration": 4.72
+        },
+        {
+          "text": "We're talking about potassium, magnesium,\nzinc, selenium.",
+          "start": 225.31,
+          "duration": 3.329
+        },
+        {
+          "text": "And beets also help you lower your blood pressure\nif you need help with that, and they give",
+          "start": 228.639,
+          "duration": 3.631
+        },
+        {
+          "text": "you extra stamina throughout the day.",
+          "start": 232.27,
+          "duration": 2.21
+        },
+        {
+          "text": "And did you know that beets even improve athletic\nperformance?",
+          "start": 234.48,
+          "duration": 4.519
+        },
+        {
+          "text": "Professor: Yes, yes, and a yes-i-dy yes.",
+          "start": 238.999,
+          "duration": 1.871
+        },
+        {
+          "text": "If you'd allow me to just interject here for\njust a little bit.",
+          "start": 240.87,
+          "duration": 3.67
+        },
+        {
+          "text": "Beet juice, one to three hours before an athletic\nevent can provide a one to three percent performance",
+          "start": 244.54,
+          "duration": 5.179
+        },
+        {
+          "text": "boost and give you a serious competitive edge.",
+          "start": 249.719,
+          "duration": 3.651
+        },
+        {
+          "text": "That's because beats raise nitric oxide levels\nincrease blood flow, improve lung function",
+          "start": 253.37,
+          "duration": 4.839
+        },
+        {
+          "text": "and strengthen muscle contraction.",
+          "start": 258.209,
+          "duration": 2.131
+        },
+        {
+          "text": "Now, you know,",
+          "start": 260.34,
+          "duration": 6.28
+        },
+        {
+          "text": "Then lastly we add jalape\u00f1o.",
+          "start": 266.62,
+          "duration": 2.47
+        },
+        {
+          "text": "Jalape\u00f1os aren't a typical juice addition\nfor me, but listen, if you can handle a little",
+          "start": 269.09,
+          "duration": 4.67
+        },
+        {
+          "text": "heat, jalape\u00f1o can boost your metabolism,\nincrease fat burn and reduce your appetite.",
+          "start": 273.76,
+          "duration": 5.76
+        },
+        {
+          "text": "I will warn you though.",
+          "start": 279.52,
+          "duration": 1.859
+        },
+        {
+          "text": "It is not for you if you're sensitive to heat.",
+          "start": 281.379,
+          "duration": 3.01
+        },
+        {
+          "text": "And if you do like heat, very little goes\na long way, my friend.",
+          "start": 284.389,
+          "duration": 4.171
+        },
+        {
+          "text": "So start with like one-fourth of an inch,\nno seeds please, then taste the juice and",
+          "start": 288.56,
+          "duration": 4.78
+        },
+        {
+          "text": "add more if you wish.",
+          "start": 293.34,
+          "duration": 1.18
+        },
+        {
+          "text": "Remember when you use this, you're juicing\nit.",
+          "start": 294.52,
+          "duration": 3.22
+        },
+        {
+          "text": "So you're getting the full undiluted effect.",
+          "start": 297.74,
+          "duration": 2.85
+        },
+        {
+          "text": "Alternatively, if you still want some spice\nwithout too much kick, ginger can also achieve",
+          "start": 300.59,
+          "duration": 5.389
+        },
+        {
+          "text": "the same purpose.",
+          "start": 305.979,
+          "duration": 16.31
+        },
+        {
+          "text": "[Music]",
+          "start": 322.289,
+          "duration": 16.06
+        },
+        {
+          "text": "Our last juice is Orange Blast.",
+          "start": 338.349,
+          "duration": 1.951
+        },
+        {
+          "text": "I call this my sweet treat because it's really\nflavorful and refreshing and super high in",
+          "start": 340.3,
+          "duration": 5.53
+        },
+        {
+          "text": "vitamin C, which is going to help the body\nabsorb minerals.",
+          "start": 345.83,
+          "duration": 4.64
+        },
+        {
+          "text": "It's going to protect the body from chemical\ntoxins and has anti-aging properties.",
+          "start": 350.47,
+          "duration": 4.669
+        },
+        {
+          "text": "Who doesn't want that?",
+          "start": 355.139,
+          "duration": 1.441
+        },
+        {
+          "text": "To begin let's peel a pineapple.",
+          "start": 356.58,
+          "duration": 2.179
+        },
+        {
+          "text": "Pineapple is perfect for detoxing because\nit contains bromelain, which is a digestive",
+          "start": 358.759,
+          "duration": 6.171
+        },
+        {
+          "text": "enzyme that will cleanse your colon and it\naids digestion.",
+          "start": 364.93,
+          "duration": 3.82
+        },
+        {
+          "text": "And it's super juicy.",
+          "start": 368.75,
+          "duration": 1.25
+        },
+        {
+          "text": "Next, we'll cut a red bell pepper in half.",
+          "start": 370.0,
+          "duration": 3.919
+        },
+        {
+          "text": "Y'all, did you know that a cup of red bell\npepper contains nearly three times more vitamin",
+          "start": 373.919,
+          "duration": 5.931
+        },
+        {
+          "text": "C than an orange?",
+          "start": 379.85,
+          "duration": 2.33
+        },
+        {
+          "text": "Professor: Oh yeah.",
+          "start": 382.18,
+          "duration": 2.29
+        },
+        {
+          "text": "I knew.",
+          "start": 384.47,
+          "duration": 1.53
+        },
+        {
+          "text": "And we're also going to add some ginger and\nturmeric.",
+          "start": 386.0,
+          "duration": 4.12
+        },
+        {
+          "text": "Ginger is awesome for circulation and digestion\nand turmeric, as you probably already know,",
+          "start": 390.12,
+          "duration": 5.729
+        },
+        {
+          "text": "is incredible for inflammation.",
+          "start": 395.849,
+          "duration": 1.69
+        },
+        {
+          "text": "And to maximize the benefits of turmeric,\nyou can sprinkle a little black pepper into",
+          "start": 397.539,
+          "duration": 4.331
+        },
+        {
+          "text": "your drink because it can enhance the curcumin\nabsorption in turmeric by up to 2,000 percent.",
+          "start": 401.87,
+          "duration": 6.759
+        },
+        {
+          "text": "That's a whole lot!",
+          "start": 408.629,
+          "duration": 2.88
+        },
+        {
+          "text": "This juice is extraordinarily enjoyable and\nwill boost your immune system all while helping",
+          "start": 411.509,
+          "duration": 4.991
+        },
+        {
+          "text": "you flush and reset.",
+          "start": 416.5,
+          "duration": 16.479
+        },
+        {
+          "text": "I love these satisfying, and nutritionally-rich\njuices.",
+          "start": 432.979,
+          "duration": 3.771
+        },
+        {
+          "text": "They are perfect for a juice cleanse or for\nany day you need a boost.",
+          "start": 436.75,
+          "duration": 4.12
+        },
+        {
+          "text": "And, now if you're looking for more recipes,\nencouragement, plant-based education.",
+          "start": 440.87,
+          "duration": 3.62
+        },
+        {
+          "text": "I got you, honey.",
+          "start": 444.49,
+          "duration": 1.19
+        },
+        {
+          "text": "I have plenty of videos and resources on this\nchannel and blog.",
+          "start": 445.68,
+          "duration": 3.549
+        },
+        {
+          "text": "I'm going to leave a link to them in the description\nbox below.",
+          "start": 449.229,
+          "duration": 3.66
+        },
+        {
+          "text": "If you make any of these juices, please comment\nand let me know.",
+          "start": 452.889,
+          "duration": 3.411
+        },
+        {
+          "text": "I'd so appreciate that.",
+          "start": 456.3,
+          "duration": 2.76
+        },
+        {
+          "text": "And let me know if you have a favorite juice\nthat you could share with us.",
+          "start": 459.06,
+          "duration": 3.639
+        },
+        {
+          "text": "Also, if you're interested in a plant-based\nlifestyle and you want to join the CMH crew,",
+          "start": 462.699,
+          "duration": 5.071
+        },
+        {
+          "text": "please subscribe to my channel to learn more.",
+          "start": 467.77,
+          "duration": 2.69
+        },
+        {
+          "text": "How to easily transition to a plant-based\nlifestyle and thrive.",
+          "start": 470.46,
+          "duration": 3.47
+        },
+        {
+          "text": "I would so love to have you here.",
+          "start": 473.93,
+          "duration": 3.359
+        },
+        {
+          "text": "Don't forget to hit the notification bell\nfor my latest videos.",
+          "start": 477.289,
+          "duration": 3.31
+        },
+        {
+          "text": "And if you found this video helpful, please\ngive it a thumbs up.",
+          "start": 480.599,
+          "duration": 3.82
+        },
+        {
+          "text": "You can also follow me on Instagram at choosingmyhealth.",
+          "start": 484.419,
+          "duration": 3.43
+        },
+        {
+          "text": "Now if you're new to this whole food plant-based\nthing, welcome.",
+          "start": 487.849,
+          "duration": 3.801
+        },
+        {
+          "text": "Check out my free gift for you packed with\nnearly 20 years of my life-tested strategies",
+          "start": 491.65,
+          "duration": 4.84
+        },
+        {
+          "text": "to boost your game for the win.",
+          "start": 496.49,
+          "duration": 2.13
+        },
+        {
+          "text": "Links are all in the description box below.",
+          "start": 498.62,
+          "duration": 2.92
+        },
+        {
+          "text": "Thanks so much for hanging out with me today.",
+          "start": 501.54,
+          "duration": 1.779
+        },
+        {
+          "text": "You could've been doing something else, but\nyou chose to watch this video and I'm thankful",
+          "start": 503.319,
+          "duration": 3.291
+        },
+        {
+          "text": "for that.",
+          "start": 506.61,
+          "duration": 1.0
+        },
+        {
+          "text": "I hope you have an amazing day.",
+          "start": 507.61,
+          "duration": 1.32
+        },
+        {
+          "text": "I love you, and I will see you in the next\none?",
+          "start": 508.93,
+          "duration": 5.19
+        },
+        {
+          "text": "[Music]",
+          "start": 514.12,
+          "duration": 1.13
+        },
+        {
+          "text": "[Bloopers]",
+          "start": 515.25,
+          "duration": 1.13
+        },
+        {
+          "text": "Oh, yes.",
+          "start": 516.38,
+          "duration": 2.269
+        },
+        {
+          "text": "I knew.",
+          "start": 518.649,
+          "duration": 2.27
+        },
+        {
+          "text": "Oh, pick me, pick me.",
+          "start": 520.919,
+          "duration": 5.661
+        },
+        {
+          "text": "Oh, I knew.",
+          "start": 526.58,
+          "duration": 1.699
+        },
+        {
+          "text": "I knew.",
+          "start": 528.279,
+          "duration": 1.0
+        },
+        {
+          "text": "I knew.",
+          "start": 529.279,
+          "duration": 2.361
+        },
+        {
+          "text": "I knew.",
+          "start": 531.64,
+          "duration": 1.0
+        },
+        {
+          "text": "Yes.",
+          "start": 532.64,
+          "duration": 1.0
+        },
+        {
+          "text": "Yes.",
+          "start": 533.64,
+          "duration": 1.0
+        },
+        {
+          "text": "And a yes-i-dy yes.",
+          "start": 534.64,
+          "duration": 1.0
+        },
+        {
+          "text": "Yes.",
+          "start": 535.64,
+          "duration": 1.0
+        },
+        {
+          "text": "If you'd let me just to inter....",
+          "start": 536.64,
+          "duration": 1.0
+        },
+        {
+          "text": "(Laughs)",
+          "start": 537.64,
+          "duration": 1.0
+        },
+        {
+          "text": "Now you know.",
+          "start": 538.64,
+          "duration": 2.04
+        },
+        {
+          "text": "(Laughs)",
+          "start": 540.68,
+          "duration": 1.0
+        },
+        {
+          "text": "Must look like I was about to choke.",
+          "start": 541.68,
+          "duration": 5.87
+        },
+        {
+          "text": "(Lauhgs)",
+          "start": 547.55,
+          "duration": 1.0
+        },
+        {
+          "text": "[Music]",
+          "start": 548.55,
+          "duration": 0.53
+        }
+      ],
+      "video_id": "cy_k-1JdIAU"
+    }
+  }
+}

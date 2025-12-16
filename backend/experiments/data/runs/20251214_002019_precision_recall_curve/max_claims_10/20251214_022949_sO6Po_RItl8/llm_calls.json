@@ -1,0 +1,379 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:29:56.666642",
+    "latency_seconds": 6.38,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nIt's my feelgood breakfast show. A feel good breakfast show. This is Espresso. Thank you so much for joining us on our live show this morning. Now before the break, I said health properties and there might be something in it for all of us when we talk about garlic. Now aside from the fact that it tastes incredible. We all know that garlic has both culinary and medical benefits. But scientists at the UC tea uh they say that they've uncovered garlic's cancer fighting properties. So in this new research UCT lecturer Dr. Katherine Kushula and her team, they've established how a compound, a compound found in crushed garlic cloves can actually kill cancer cells. And with us in studio to talk about it is Dr. Kula herself. Dr. Welcome to the show. Hi, lovely to be here. I'm excited about this because we're saying cancer killing properties from a compound that's found in crushed garlic cloves. Now, I want to get down to this. Why it needs to be crushed? Does it need to be heated? How effective is it in killing cancer? I mean what what are we talking about here? Well, the thing is I suppose because we are scientists and we're coming from the chemistry department, we actually want to understand what the compounds are that are present in garlic that are having this effect. And in actual fact, when the clove is first crushed, there's a compound allisonin which is released which is more antibacterial properties. But this compound actually changes over time when the preparation is heated as in a food preparation into this cancer fighting compound called auine. And it's got dulfide bonds in it, which means it also has this potent garlic smell. And we've actually shown that auine is able to enter into the cancer cell and it's actually able to disrupt the intracellular machinery in the cancer cell and bring about a toxic effect and kill that cancer cell. I'm gobsmacked that we're going back to natural remedies. I mean, you guys are scientists. We expect you to work with chemicals and all kinds of crazy stuff, but here we're talking about stuff that's in our kitchen cupboards. Can this property or auine like you you mentioned can it fight any type of cancer or is it only effective in some? Well, it's been shown to be cytotoxic to a range of different types of cancers. Although I think what's more relevant to the human condition because it's a dietary compound and there's a lot of epidemiological um evidence to show that actually populations of people who consume high quantities of garlic have lower incidence of gastrointestinal cancer specifically of the stomach and colon. So um I would think that you know you would probably obtain the highest concentration of this compound through a meal which has been prepared with the akawine in it. In other words, being cooked and probably exposure to um you know, oral exposure to gastrointestinal cancers would probably have a greater effect. Although we have shown in the laboratory that it is also able um to act against other cancer cell types, but I think for the human condition, it's probably more gastrointestinal tract. It's exciting because now that means we can add more garlic to our food because you're saying that we need to do it while cooking. This is also the first time that you see this because like you said, scientists wants to see how the auin or how the garlic properties actually work. What's the best way to try and consume it? I mean, take us back there. Should it always be crushed or cooked? Yes. Well, if you want to get this cancer fighting chemical, and I say it's a chemical, it's a natural compound, but it is still a chemical, and it's present in your garlic. You actually need to take your crushed clove and actually you need to take your clove, crush it, and then in order to achieve um this transformation of what's in the crushed clove into what's what's going to be present in your food preparation, you actually need to heat the preparation and you actually get a chemical transformation which takes place between a compound which is produced in the crush clove and then it gets transformed through heating into this aching compound. So um the the preparation would involve cooking of the clove which I think is actually a process which we do do when we prepare. So possibly we knew about this in some way. I don't know in some way or another doctor it's exciting stuff and it's exciting that even scientists are coming back to our kitchen to show us how to prepare things and to make things better. So thank you so much for joining us on our show today. Well there you heard it an excuse to add more garlic to that pizza. It's really good news. So make sure you try some on your next dinner date especially if you know him for the first time. Okay, but there's loads more happening on our feelood breakfast show. In fact, even though it can leave a smile the next day, we all know that garlic is so good for us. And it looks like Andrea has more details on this.",
+    "input_length_chars": 5031,
+    "input_tokens_estimated": 1257,
+    "output": {
+      "claims": [
+        {
+          "text": "Scientists at UCT uncovered garlic's cancer-fighting properties.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.85,
+          "context": "Research by UCT on garlic's health benefits."
+        },
+        {
+          "text": "A compound found in crushed garlic cloves can kill cancer cells.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.85,
+          "context": "Dr. Katherine Kushula discusses garlic's effects."
+        },
+        {
+          "text": "The compound allicin is released when garlic cloves are crushed.",
+          "confidence": 0.8,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Discussion on garlic preparation methods."
+        },
+        {
+          "text": "Heating crushed garlic transforms allicin into a cancer-fighting compound called auine.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.85,
+          "context": "Dr. Kushula explains the chemical transformation."
+        },
+        {
+          "text": "Auine can disrupt the intracellular machinery in cancer cells.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.85,
+          "context": "Dr. Kushula explains auine's effect on cancer cells."
+        },
+        {
+          "text": "Garlic consumption is linked to lower incidence of gastrointestinal cancers.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.8,
+          "context": "Epidemiological evidence discussed by Dr. Kushula."
+        },
+        {
+          "text": "Auine has been shown to be cytotoxic to a range of different types of cancers.",
+          "confidence": 0.8,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Dr. Kushula discusses auine's effects on various cancers."
+        },
+        {
+          "text": "Crushed garlic needs to be heated to achieve the cancer-fighting transformation.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.85,
+          "context": "Dr. Kushula explains preparation for maximum benefit."
+        }
+      ],
+      "total_count": 8
+    },
+    "output_length_chars": 2356,
+    "output_tokens_estimated": 589,
+    "cost_usd": 0.00054195
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:30:00.970217",
+    "latency_seconds": 2.15,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Auine can disrupt the intracellular machinery in cancer cells.\nContext: Dr. Kushula explains auine's effect on cancer cells.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 297,
+    "input_tokens_estimated": 74,
+    "output": {
+      "original_claim": "Auine can disrupt the intracellular machinery in cancer cells.",
+      "queries": [
+        {
+          "query": "Auine disrupt intracellular machinery cancer cells",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "effects of Auine on cancer cell machinery",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 303,
+    "output_tokens_estimated": 75,
+    "cost_usd": 5.61e-05,
+    "context": {
+      "claim_index": 8,
+      "claim_text": "Auine has been shown to be cytotoxic to a range of different types of cancers."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:30:01.094000",
+    "latency_seconds": 2.28,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The compound allicin is released when garlic cloves are crushed.\nContext: Discussion on garlic preparation methods.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 288,
+    "input_tokens_estimated": 72,
+    "output": {
+      "original_claim": "The compound allicin is released when garlic cloves are crushed.",
+      "queries": [
+        {
+          "query": "allicin release when garlic cloves are crushed",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "how is allicin produced from crushed garlic",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 303,
+    "output_tokens_estimated": 75,
+    "cost_usd": 5.58e-05,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "Auine can disrupt the intracellular machinery in cancer cells.",
+      "query_index": 2,
+      "query_text": "effects of Auine on cancer cell machinery"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:30:01.178154",
+    "latency_seconds": 2.36,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Scientists at UCT uncovered garlic's cancer-fighting properties.\nContext: Research by UCT on garlic's health benefits.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 291,
+    "input_tokens_estimated": 72,
+    "output": {
+      "original_claim": "Scientists at UCT uncovered garlic's cancer-fighting properties.",
+      "queries": [
+        {
+          "query": "garlic cancer-fighting properties UCT research",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "University of Cape Town garlic health benefits cancer",
+          "query_type": "source",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 308,
+    "output_tokens_estimated": 77,
+    "cost_usd": 5.7e-05,
+    "context": {
+      "claim_index": 7,
+      "claim_text": "The compound allicin is released when garlic cloves are crushed.",
+      "query_index": 2,
+      "query_text": "how is allicin produced from crushed garlic"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:30:01.178551",
+    "latency_seconds": 2.36,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Heating crushed garlic transforms allicin into a cancer-fighting compound called auine.\nContext: Dr. Kushula explains the chemical transformation.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 319,
+    "input_tokens_estimated": 79,
+    "output": {
+      "original_claim": "Heating crushed garlic transforms allicin into a cancer-fighting compound called auine.",
+      "queries": [
+        {
+          "query": "Heating crushed garlic allicin auine cancer-fighting compound",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Does heating garlic change allicin to auine and fight cancer?",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 359,
+    "output_tokens_estimated": 89,
+    "cost_usd": 6.525e-05,
+    "context": {
+      "claim_index": 7,
+      "claim_text": "The compound allicin is released when garlic cloves are crushed.",
+      "query_index": 2,
+      "query_text": "how is allicin produced from crushed garlic"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:30:01.345218",
+    "latency_seconds": 2.53,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: A compound found in crushed garlic cloves can kill cancer cells.\nContext: Dr. Katherine Kushula discusses garlic's effects.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 296,
+    "input_tokens_estimated": 74,
+    "output": {
+      "original_claim": "A compound found in crushed garlic cloves can kill cancer cells.",
+      "queries": [
+        {
+          "query": "compound in crushed garlic cloves kills cancer cells",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "garlic cloves cancer cell death compound",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 306,
+    "output_tokens_estimated": 76,
+    "cost_usd": 5.67e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "Heating crushed garlic transforms allicin into a cancer-fighting compound called auine.",
+      "query_index": 2,
+      "query_text": "Does heating garlic change allicin to auine and fight cancer?"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:30:01.345732",
+    "latency_seconds": 2.53,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Garlic consumption is linked to lower incidence of gastrointestinal cancers.\nContext: Epidemiological evidence discussed by Dr. Kushula.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 309,
+    "input_tokens_estimated": 77,
+    "output": {
+      "original_claim": "Garlic consumption is linked to lower incidence of gastrointestinal cancers.",
+      "queries": [
+        {
+          "query": "Garlic consumption gastrointestinal cancers epidemiological evidence",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Does eating garlic reduce risk of gastrointestinal cancers?",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 353,
+    "output_tokens_estimated": 88,
+    "cost_usd": 6.435e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "Heating crushed garlic transforms allicin into a cancer-fighting compound called auine.",
+      "query_index": 2,
+      "query_text": "Does heating garlic change allicin to auine and fight cancer?"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:30:01.513940",
+    "latency_seconds": 2.7,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Crushed garlic needs to be heated to achieve the cancer-fighting transformation.\nContext: Dr. Kushula explains preparation for maximum benefit.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 316,
+    "input_tokens_estimated": 79,
+    "output": {
+      "original_claim": "Crushed garlic needs to be heated to achieve the cancer-fighting transformation.",
+      "queries": [
+        {
+          "query": "Crushed garlic heating cancer-fighting properties",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Does heating crushed garlic enhance its cancer-fighting effects?",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 343,
+    "output_tokens_estimated": 85,
+    "cost_usd": 6.285e-05,
+    "context": {
+      "claim_index": 6,
+      "claim_text": "Garlic consumption is linked to lower incidence of gastrointestinal cancers.",
+      "query_index": 2,
+      "query_text": "Does eating garlic reduce risk of gastrointestinal cancers?"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:30:01.514436",
+    "latency_seconds": 2.7,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Auine has been shown to be cytotoxic to a range of different types of cancers.\nContext: Dr. Kushula discusses auine's effects on various cancers.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 318,
+    "input_tokens_estimated": 79,
+    "output": {
+      "original_claim": "Auine has been shown to be cytotoxic to a range of different types of cancers.",
+      "queries": [
+        {
+          "query": "Auine cytotoxic effects on cancers",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Auine cancer treatment cytotoxicity",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 297,
+    "output_tokens_estimated": 74,
+    "cost_usd": 5.625e-05,
+    "context": {
+      "claim_index": 6,
+      "claim_text": "Garlic consumption is linked to lower incidence of gastrointestinal cancers.",
+      "query_index": 2,
+      "query_text": "Does eating garlic reduce risk of gastrointestinal cancers?"
+    }
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:31:31.175369",
+    "latency_seconds": 21.2,
+    "input_prompt": "\nClaim: Auine has been shown to be cytotoxic to a range of different types of cancers.\nCategory: scientific\nExtraction confidence: 0.80\n\nEvidence:\nUNCLEAR (5 sources):\n  1. An Evaluation of the Cytotoxicity and Safety Profile of Usnic Acid for ... | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC12298648/\n     Summary: This study assessed the cytotoxicity of UA enantiomers against colon, prostate, thyroid, brain, and breast cancer cell lines, as well as non-cancerous cells.\n  2. Cancer chemotherapy: not only a direct cytotoxic effect, but also an ... | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC11030219/\n     Summary: Treatment of metastatic cancer mainly relies on chemotherapy. Chemotherapeutic agents kill tumor cells by direct cytotoxicity, thus leading to tumor regression.\n  3. Multifaceted Properties of Usnic Acid in Disrupting Cancer Hallmarks | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC11505503/\n     Summary: UA dose-dependently decreased cancer cell viability with no effect on normal cells. It modulated the expression of apoptosis-related genes, such as these coding ...\n  4. Anti-tumor activities of Au(I) complexed with bisphosphines in HL-60 ... | reliability=high (0.85)\n     URL: https://www.sciencedirect.com/science/article/abs/pii/S0162013414001111\n     Summary: A Au(I) complexed with 2,3-bis(tert-butyl(methyl)phosphino) quinoxaline showed broad anti-tumor activity, and induced apoptosis in HL-60 cells. Download: ...\n  5. Cytotoxic T cells are able to efficiently eliminate cancer cells by ... | reliability=high (0.85)\n     URL: https://www.nature.com/articles/s41467-021-25282-3\n     Summary: For example, additive cytotoxicity could underlie the reduced tumor growth in response to combined anti-CTLA-4 and radiation therapy, which ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1900,
+    "input_tokens_estimated": 475,
+    "output": {
+      "overall_stance": "mixed",
+      "confidence": "medium",
+      "summary": "The evidence presents a mixed view on the cytotoxicity of Auine to various cancers. While studies on Usnic Acid (UA) indicate cytotoxic effects against several cancer cell lines, the specific claim about Auine lacks direct support from the provided sources. The most relevant evidence includes a study showing anti-tumor activity of a Au(I) complex, but it does not directly confirm Auine's cytotoxicity across a range of cancers."
+    },
+    "output_length_chars": 491,
+    "output_tokens_estimated": 122,
+    "cost_usd": 0.00014445
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:31:45.108379",
+    "latency_seconds": 11.39,
+    "input_prompt": "\nClaim: Heating crushed garlic transforms allicin into a cancer-fighting compound called auine.\nCategory: scientific\nExtraction confidence: 0.90\n\nEvidence:\nUNCLEAR (5 sources):\n  1. Allicin in Digestive System Cancer: From Biological Effects to ... | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC9234177/\n     Summary: Allicin is the main active ingredient in freshly-crushed garlic and some other allium plants, and its anticancer effect on cancers of digestive system has been ...\n  2. (PDF) The Influence of Heating on the Anticancer Properties of Garlic | reliability=high (0.85)\n     URL: https://www.researchgate.net/publication/12092847_The_Influence_of_Heating_on_the_Anticancer_Properties_of_Garlic\n     Summary: These studies suggest that heating destroyed garlic's active allyl sulfur compound formation, which may relate to its anticancer properties.\n  3. Anticancer potential of allicin: A review - ScienceDirect.com | reliability=high (0.85)\n     URL: https://www.sciencedirect.com/science/article/abs/pii/S1043661822000639\n     Summary: The research carried out so far revealed that allicin suppresses the growth of different types of tumors. In particular, it targets many signaling pathways ...\n  4. Does Garlic Reduce Your Risk of Cancer? - Verywell Health | reliability=high (0.85)\n     URL: https://www.verywellhealth.com/garlic-reduces-your-cancer-risk-430030\n     Summary: Three of the cancer-fighting compounds in garlic are: Allicin: This plant compound is antibiotic and antifungal (inhibits the growth of fungi).\n  5. Effect of Thermal Treatment on the Antiproliferative and Antioxidant ... | reliability=medium (0.60)\n     URL: https://onlinelibrary.wiley.com/doi/full/10.1002/fsn3.70375\n     Summary: Heating of garlic homogenate (40\u00b0C\u2013100\u00b0C for 10 min) did not decrease or even increase the content of phenolics and Total Antioxidant Activity ( ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1941,
+    "input_tokens_estimated": 485,
+    "output": {
+      "overall_stance": "mixed",
+      "confidence": "medium",
+      "summary": "The evidence presents mixed signals regarding the claim. While some studies indicate that heating garlic may destroy its active compounds, potentially reducing its anticancer properties (e.g., ResearchGate study), others suggest that allicin has significant anticancer effects (e.g., ScienceDirect review). Additionally, the effect of heating on garlic's overall health benefits remains unclear, as some sources report no decrease in beneficial compounds (e.g., Wiley study)."
+    },
+    "output_length_chars": 536,
+    "output_tokens_estimated": 134,
+    "cost_usd": 0.00015315
+  }
+]

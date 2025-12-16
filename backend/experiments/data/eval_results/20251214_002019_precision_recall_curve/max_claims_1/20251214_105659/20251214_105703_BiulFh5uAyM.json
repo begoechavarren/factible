@@ -1,0 +1,91 @@
+{
+  "video_id": "BiulFh5uAyM",
+  "timestamp": "2025-12-14T10:57:03.832279",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_1",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 1.0,
+    "recall": 0.037037037037037035,
+    "f1_score": 0.07142857142857142,
+    "true_positives": 1,
+    "false_positives": 0,
+    "false_negatives": 26,
+    "mean_average_precision": 1.0,
+    "recall_at_important": 0.125,
+    "importance_weighted_coverage": 0.049738219895287955,
+    "matched_claims": [
+      {
+        "gt_text": "Trump's declaration is the first time a president has used emergency power to pay for policy that had already been rejected by Congress",
+        "sys_text": "Trump's declaration is the first time a president has used national emergency powers to fund a policy rejected by Congress.",
+        "gt_importance": 0.95,
+        "sys_importance": 0.85,
+        "importance_error": 0.09999999999999998
+      }
+    ],
+    "missed_claims": [
+      "Trump signed the national emergency declaration on February 15, 2019",
+      "Presidents have signed national emergency declarations many times before",
+      "In December 2018, Trump said he would refuse to sign a budget into law unless it included $5.7 billion for his proposed border wall",
+      "The government shutdown was the longest government shutdown in U.S. history",
+      "On February 14th, a budget was passed but it did not include funding for the border wall",
+      "The declaration allows the president to unilaterally divert billions of dollars from military construction projects to fund the border wall",
+      "On February 26th, the House of Representatives voted to block a presidential national emergency for the first time ever",
+      "Congress would need a supermajority vote, two-thirds of both chambers, to override a presidential veto",
+      "16 states are suing the president for what they say is an unconstitutional use of executive power",
+      "The lawsuit claims the president has used a manufactured crisis to call for an emergency",
+      "Trump said 'I could do the wall over a longer period of time, I didn't need to do this, but I'd rather do it much faster'",
+      "President Obama issued 12 national emergency declarations",
+      "President George W. Bush issued 13 national emergency declarations",
+      "President Clinton issued 17 national emergency declarations",
+      "In addition to the recent one, there are 31 other active national emergencies which need to be renewed every year",
+      "The oldest national emergency still in effect is from President Jimmy Carter in 1979, which were sanctions in response to the Iran hostage crisis",
+      "The U.S. Constitution doesn't explicitly give a president the right to declare a national emergency",
+      "Presidents have taken this type of unilateral action for some time now, claiming it's part of the executive powers granted to them in the constitution",
+      "President Woodrow Wilson was the first president to declare a national emergency during World War I",
+      "Franklin Roosevelt used emergency power to order the internment of over 100,000 Japanese-Americans during World War II",
+      "In the 1950s, the Supreme Court blocked President Harry Truman's attempt to nationalize the steel industry during the Korean War",
+      "Congress passed the National Emergencies Act of 1976",
+      "The legislation formalized a president's ability to declare national emergencies but also aimed to give legislators the ability to check the president's power",
+      "The law has failed to limit presidential powers the way it intended to",
+      "Emergency powers allow the president to shut down or take over radio stations",
+      "Emergency powers allow the president to freeze Americans' bank accounts and criminalize doing business with Americans designated by the government"
+    ],
+    "extra_claims": [],
+    "importance_mae": 0.09999999999999998,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 1.0,
+    "stance_accuracy": 1.0,
+    "correct_verdicts": 1,
+    "total_verdicts": 1,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.037037037037037035,
+    "verdict_accuracy": 1.0,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.0026448,
+    "total_time_seconds": 80.5947630405426,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 3.0
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 6
+    },
+    "avg_evidence_per_claim": 6.0
+  },
+  "ground_truth_claims_count": 27,
+  "system_claims_count": 1
+}

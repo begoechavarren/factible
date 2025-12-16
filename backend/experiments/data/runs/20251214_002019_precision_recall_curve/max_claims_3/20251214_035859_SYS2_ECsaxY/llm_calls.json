@@ -1,0 +1,288 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:59:21.960939",
+    "latency_seconds": 20.72,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\naccording to this i have to say remarkable piece that you just put up late last night read it in bed at midnight that the fbi was organizing the riots of january 6th well yes it certainly suggests that possibility and i'm hearing from people that this is the most important and the darkest investigative piece they've seen in years but the american people deserve the truth about 1-6 not just for the sake of ashley babbitt not just for the sake of the hundreds of people held in prison unjustly as a violation of human rights but for the sake of the 70 plus million people who are trump supporters or just against the corrupt ruling class who have effectively been labeled de facto domestic extremists by our own government and i believe the key that unlocks the truth to 1-6 is the following question to what extent were the main militia groups imputed to the 1-6 so-called capital siege to what extent was their infiltration of those groups by undercover agents or informants and to what extent when we see the unindicted co-conspirators who occupy senior positions in those groups to what extent are those people being spared prosecution on account of a prior relationship with the federal government those two questions create a thread and when we pull that thread the ugly truth of that event and perhaps even the country we live in will be exposed i gotta ask because it it may answer one of the great mysteries is this i think there are 14 000 hours of unreleased video footage from that day the administration is hiding from us do you think this is why i think that's certainly a possibility um it's it's extremely suspicious even going back to this so-called pipe bomber video remember the pipe bomber the capital pipeliner the fbi has been extremely suspicious in withholding evidence video evidence that could help and identify this bomber which presumably they want to do but if you may i'd like to make a general point and it really after seeing all this you have to ask yourself does the national security apparatus do anything but conspire against the american people i'm led to conclude that we cannot have a democracy everything in our politics will be fake and performative until we bring the national security state including the fbi to heal it's not a left issue it's not a right issue every politician who cares about our country should demand a church committee 2.0 immediately and people of good faith on the left should join it uh immediately darren b i appreciate your coming on signing the work you do at revolver.news thank you",
+    "input_length_chars": 2613,
+    "input_tokens_estimated": 653,
+    "output": {
+      "claims": [
+        {
+          "text": "The FBI was organizing the riots of January 6th.",
+          "confidence": 0.8,
+          "category": "historical",
+          "importance": 0.85,
+          "context": "Discussion about the January 6th Capitol riots."
+        },
+        {
+          "text": "There are 14,000 hours of unreleased video footage from January 6th.",
+          "confidence": 0.7,
+          "category": "historical",
+          "importance": 0.6,
+          "context": "Referring to the events of January 6th."
+        },
+        {
+          "text": "The FBI has been withholding evidence related to the pipe bomber.",
+          "confidence": 0.75,
+          "category": "policy",
+          "importance": 0.6,
+          "context": "Mention of the FBI's actions regarding the pipe bomber case."
+        }
+      ],
+      "total_count": 3
+    },
+    "output_length_chars": 860,
+    "output_tokens_estimated": 215,
+    "cost_usd": 0.00022695
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:59:33.941949",
+    "latency_seconds": 11.6,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The FBI was organizing the riots of January 6th.\nContext: Discussion about the January 6th Capitol riots.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 278,
+    "input_tokens_estimated": 69,
+    "output": {
+      "original_claim": "The FBI was organizing the riots of January 6th.",
+      "queries": [
+        {
+          "query": "FBI organizing January 6th Capitol riots",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "FBI involvement in January 6th riots",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 274,
+    "output_tokens_estimated": 68,
+    "cost_usd": 5.115e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The FBI has been withholding evidence related to the pipe bomber."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:59:34.065953",
+    "latency_seconds": 11.72,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: There are 14,000 hours of unreleased video footage from January 6th.\nContext: Referring to the events of January 6th.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 290,
+    "input_tokens_estimated": 72,
+    "output": {
+      "original_claim": "There are 14,000 hours of unreleased video footage from January 6th.",
+      "queries": [
+        {
+          "query": "14,000 hours of unreleased video footage January 6th",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "January 6th Capitol riot unreleased video footage",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 319,
+    "output_tokens_estimated": 79,
+    "cost_usd": 5.82e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The FBI was organizing the riots of January 6th.",
+      "query_index": 2,
+      "query_text": "FBI involvement in January 6th riots"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:59:44.309879",
+    "latency_seconds": 21.97,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The FBI has been withholding evidence related to the pipe bomber.\nContext: Mention of the FBI's actions regarding the pipe bomber case.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 308,
+    "input_tokens_estimated": 77,
+    "output": {
+      "original_claim": "The FBI has been withholding evidence related to the pipe bomber.",
+      "queries": [
+        {
+          "query": "FBI withholding evidence pipe bomber",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "FBI evidence pipe bomber case",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 280,
+    "output_tokens_estimated": 70,
+    "cost_usd": 5.355e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "There are 14,000 hours of unreleased video footage from January 6th.",
+      "query_index": 2,
+      "query_text": "January 6th Capitol riot unreleased video footage"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:59:52.597230",
+    "latency_seconds": 1.71,
+    "input_prompt": "Claim:\nThe FBI was organizing the riots of January 6th.\n\nArticle Title:\n[PDF] FBI confirms there was no insurrection on Jan. 6\n\nFull Page Content:\nNone of this excuses the violent riot that happened on Jan. 6. The FBI has arrested 570 rioters and each and every one of them should be ...\n\nProvide relevant evidence.",
+    "input_length_chars": 315,
+    "input_tokens_estimated": 78,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 2.49e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The FBI has been withholding evidence related to the pipe bomber.",
+      "query_index": 2,
+      "query_text": "FBI evidence pipe bomber case"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:59:53.086444",
+    "latency_seconds": 2.2,
+    "input_prompt": "Claim:\nThe FBI was organizing the riots of January 6th.\n\nArticle Title:\nNo undercover FBI agents at Jan. 6 riot, watchdog finds in rebuke to ...\n\nFull Page Content:\nThe FBI should have done more to gather intelligence before the Capitol riot, according to a watchdog report Thursday that also said no undercover FBI ...\n\nProvide relevant evidence.",
+    "input_length_chars": 347,
+    "input_tokens_estimated": 86,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that a watchdog report found no undercover FBI agents were present at the January 6th riot, which contradicts the claim that the FBI was organizing the riots.",
+      "overall_stance": "refutes",
+      "key_quote": "no undercover FBI agents at Jan. 6 riot"
+    },
+    "output_length_chars": 305,
+    "output_tokens_estimated": 76,
+    "cost_usd": 5.85e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The FBI has been withholding evidence related to the pipe bomber.",
+      "query_index": 2,
+      "query_text": "FBI evidence pipe bomber case"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:59:53.473496",
+    "latency_seconds": 2.6,
+    "input_prompt": "Claim:\nThe FBI was organizing the riots of January 6th.\n\nArticle Title:\n[PDF] FBI did not send undercover operatives to join Jan. 6 attack ...\n\nFull Page Content:\nThe FBI has long denied having any involvement by its own staff or its informants in the riots at the Capitol, though conspiracy theories about ...\n\nProvide relevant evidence.",
+    "input_length_chars": 338,
+    "input_tokens_estimated": 84,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that the FBI has denied any involvement of its staff or informants in the January 6th riots, which contradicts the claim that the FBI was organizing the riots.",
+      "overall_stance": "refutes",
+      "key_quote": "The FBI has long denied having any involvement by its own staff or its informants in the riots at the Capitol."
+    },
+    "output_length_chars": 377,
+    "output_tokens_estimated": 94,
+    "cost_usd": 6.9e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The FBI has been withholding evidence related to the pipe bomber.",
+      "query_index": 2,
+      "query_text": "FBI evidence pipe bomber case"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:59:53.692004",
+    "latency_seconds": 2.81,
+    "input_prompt": "Claim:\nThe FBI was organizing the riots of January 6th.\n\nArticle Title:\nExamining the January 6 Attack on the U.S. Capitol - FBI\n\nFull Page Content:\nOver the last year, we observed activity that led us to assess there was potential for increased violent extremist activity at lawful protests ...\n\nProvide relevant evidence.",
+    "input_length_chars": 323,
+    "input_tokens_estimated": 80,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence discusses the FBI's assessment of potential violent extremist activity at lawful protests, but it does not support the claim that the FBI was organizing the January 6th riots.",
+      "overall_stance": "refutes",
+      "key_quote": "we observed activity that led us to assess there was potential for increased violent extremist activity at lawful protests"
+    },
+    "output_length_chars": 395,
+    "output_tokens_estimated": 98,
+    "cost_usd": 7.08e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The FBI has been withholding evidence related to the pipe bomber.",
+      "query_index": 2,
+      "query_text": "FBI evidence pipe bomber case"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:00:28.997291",
+    "latency_seconds": 20.57,
+    "input_prompt": "Claim:\nThe FBI has been withholding evidence related to the pipe bomber.\n\nArticle Title:\nMan accused of planting pipe bombs charged in case\n\nGoogle Search Snippet:\nThe suspect in custody has been identified as Brian Cole Jr., according to Attorney General Pam Bondi.\n\nFull Page Content:\nShare on X X.com Share on Facebook Facebook Email Email\nThe FBI is still offering a $500,000 reward for information that helps identify the person who placed pipe bombs at the offices of the Democratic National Committee and Republican National Committee on January 5, 2021. As part of our ongoing investigation, we're releasing an updated video of the subject, which includes previously unreleased footage, higher quality video, and longer clips of the subject's movements.\nOn January 5th, 2021, between 7:30 and 8:30 p.m., an unidentified individual placed pipe bombs near the offices of the Democratic National Committee and the Republican National Committee in Washington, D.C. The FBI and our partners are renewing our call for tips from the public to help us identify the suspect.\nA reward of up to $500,000 is available for information that leads to the arrest and conviction of the individual responsible for this attempted attack.\nIf you have any information, please call the FBI at 1-800-CALL-FBI. You can also submit tips online at tips.fbi.gov. The FBI's estimate is the suspect's height is approximately five-foot-seven inches tall. The suspect wore a face mask, a gray hooded sweatshirt, and black gloves. They used a backpack to transport each of the devices. They were wearing distinctive Nike Air Max Speed Turf shoes, which are black and gray with the yellow Nike logo. Fewer than 25,000 of these shoes were sold between August 2018 and January 2021.\nThe first time the suspect is seen is at approximately 7:34 p.m. at the intersection of First Street and North Carolina Avenue Southeast. The person walks southwest on North Carolina Avenue, turns north on New Jersey Avenue, west on D Street, and then south on South Capitol Street.\nThis footage of the suspect on South Capitol Street shows the person setting down their backpack, which is believed to contain one of the bombs at this time. The suspect appears to put on a pair of glasses and scan the area, standing on tiptoes. Before picking up the backpack, turning around, and heading back the way they came on South Capitol Street.\nAfter reaching the corner of D Street, the suspect turns around again and this time walks south all the way down South Capitol Street to a bench outside the Democratic National Committee headquarters building. Here we see the suspect sit on the bench for a few minutes. They do not place the bomb at this time.\nThe suspect then walks east on Ivy Street, turns north on New Jersey Avenue, and then pauses near the corner of D Street before retracing their steps back to the DNC bench, where the first bomb is placed.\nThis footage shows the suspect sitting on the DNC bench before placing the first bomb.\nHere we see the suspect placed the bomb at approximately 7:54 p.m. From there, the person walks north on South Capitol Street, east on D Street, south on New Jersey Avenue, northeast on North Carolina Avenue, when we lose video coverage of the suspect at approximately 8 p.m.\nEight minutes later, at about 8:08 p.m., we pick the suspect back up on camera heading north on Second Street. The suspect walks west on C Street, enters an alley that leads to Rumsey Court, and then walks west on Rumsey Court.\nThis footage shows the suspect passed between the RNC and the Capitol Hill Club, holding the backpack out to the side. The person continues between the RNC and the Capitol Hill Club, then continues north on First Street, east on C Street, back into the alley toward Rumsey Court, back onto Rumsey Court.\nThey place the second pipe bomb at approximately 8:16 p.m. The suspect then turns back onto Rumsey Court, walking east until the person is last seen on camera at approximately 8:18 p.m., wearing the backpack on their shoulders. The bomb is believed to have been placed shortly before this video, based on how the suspect is carrying the backpack. We still believe there is someone out there who has information they may not have realized was significant until now.\nWe're asking you to come forward to share that information with the FBI. Please call the FBI with any information at 1-800-CALL-FBI or submit tips online at tips.fbi.gov. Tips can remain anonymous. A $500,000 reward is available for information that leads to the arrest and conviction of the person responsible for this dangerous attempt to harm innocent people.\n\nProvide relevant evidence.",
+    "input_length_chars": 4659,
+    "input_tokens_estimated": 1164,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses the FBI's ongoing investigation into the pipe bomb incidents and their efforts to gather information, but it does not provide any evidence that the FBI is withholding evidence related to the case. Instead, it emphasizes their call for public assistance and the release of new footage.",
+      "overall_stance": "refutes",
+      "key_quote": "The FBI is still offering a $500,000 reward for information that helps identify the person who placed pipe bombs..."
+    },
+    "output_length_chars": 506,
+    "output_tokens_estimated": 126,
+    "cost_usd": 0.0002502
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:00:30.773244",
+    "latency_seconds": 22.35,
+    "input_prompt": "Claim:\nThe FBI has been withholding evidence related to the pipe bomber.\n\nArticle Title:\nWATCH: FBI arrests man accused of placing pipe bombs in ... - PBS\n\nGoogle Search Snippet:\nThe arrest marks the first time investigators have publicly identified a suspect in an act that has been an enduring mystery for nearly five ...\n\nFull Page Content:\nShare on X X.com Share on Facebook Facebook Email Email\nThe FBI is still offering a $500,000 reward for information that helps identify the person who placed pipe bombs at the offices of the Democratic National Committee and Republican National Committee on January 5, 2021. As part of our ongoing investigation, we're releasing an updated video of the subject, which includes previously unreleased footage, higher quality video, and longer clips of the subject's movements.\nOn January 5th, 2021, between 7:30 and 8:30 p.m., an unidentified individual placed pipe bombs near the offices of the Democratic National Committee and the Republican National Committee in Washington, D.C. The FBI and our partners are renewing our call for tips from the public to help us identify the suspect.\nA reward of up to $500,000 is available for information that leads to the arrest and conviction of the individual responsible for this attempted attack.\nIf you have any information, please call the FBI at 1-800-CALL-FBI. You can also submit tips online at tips.fbi.gov. The FBI's estimate is the suspect's height is approximately five-foot-seven inches tall. The suspect wore a face mask, a gray hooded sweatshirt, and black gloves. They used a backpack to transport each of the devices. They were wearing distinctive Nike Air Max Speed Turf shoes, which are black and gray with the yellow Nike logo. Fewer than 25,000 of these shoes were sold between August 2018 and January 2021.\nThe first time the suspect is seen is at approximately 7:34 p.m. at the intersection of First Street and North Carolina Avenue Southeast. The person walks southwest on North Carolina Avenue, turns north on New Jersey Avenue, west on D Street, and then south on South Capitol Street.\nThis footage of the suspect on South Capitol Street shows the person setting down their backpack, which is believed to contain one of the bombs at this time. The suspect appears to put on a pair of glasses and scan the area, standing on tiptoes. Before picking up the backpack, turning around, and heading back the way they came on South Capitol Street.\nAfter reaching the corner of D Street, the suspect turns around again and this time walks south all the way down South Capitol Street to a bench outside the Democratic National Committee headquarters building. Here we see the suspect sit on the bench for a few minutes. They do not place the bomb at this time.\nThe suspect then walks east on Ivy Street, turns north on New Jersey Avenue, and then pauses near the corner of D Street before retracing their steps back to the DNC bench, where the first bomb is placed.\nThis footage shows the suspect sitting on the DNC bench before placing the first bomb.\nHere we see the suspect placed the bomb at approximately 7:54 p.m. From there, the person walks north on South Capitol Street, east on D Street, south on New Jersey Avenue, northeast on North Carolina Avenue, when we lose video coverage of the suspect at approximately 8 p.m.\nEight minutes later, at about 8:08 p.m., we pick the suspect back up on camera heading north on Second Street. The suspect walks west on C Street, enters an alley that leads to Rumsey Court, and then walks west on Rumsey Court.\nThis footage shows the suspect passed between the RNC and the Capitol Hill Club, holding the backpack out to the side. The person continues between the RNC and the Capitol Hill Club, then continues north on First Street, east on C Street, back into the alley toward Rumsey Court, back onto Rumsey Court.\nThey place the second pipe bomb at approximately 8:16 p.m. The suspect then turns back onto Rumsey Court, walking east until the person is last seen on camera at approximately 8:18 p.m., wearing the backpack on their shoulders. The bomb is believed to have been placed shortly before this video, based on how the suspect is carrying the backpack. We still believe there is someone out there who has information they may not have realized was significant until now.\nWe're asking you to come forward to share that information with the FBI. Please call the FBI with any information at 1-800-CALL-FBI or submit tips online at tips.fbi.gov. Tips can remain anonymous. A $500,000 reward is available for information that leads to the arrest and conviction of the person responsible for this dangerous attempt to harm innocent people.\n\nProvide relevant evidence.",
+    "input_length_chars": 4716,
+    "input_tokens_estimated": 1179,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses the ongoing investigation by the FBI into the pipe bomb incidents, highlighting their efforts to gather information and identify the suspect, but does not provide evidence that the FBI is withholding evidence related to the case.",
+      "overall_stance": "refutes",
+      "key_quote": "The FBI is still offering a $500,000 reward for information that helps identify the person who placed pipe bombs..."
+    },
+    "output_length_chars": 451,
+    "output_tokens_estimated": 112,
+    "cost_usd": 0.00024405
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:00:30.858826",
+    "latency_seconds": 22.43,
+    "input_prompt": "Claim:\nThe FBI has been withholding evidence related to the pipe bomber.\n\nArticle Title:\nUpdated: Seeking Information on Capitol Hill Pipe Bomb Suspect - FBI\n\nGoogle Search Snippet:\nThe FBI is still offering a $500000 reward for information that helps identify the person who placed pipe bombs at the offices of the Democratic National ...\n\nFull Page Content:\nShare on X X.com Share on Facebook Facebook Email Email\nThe FBI is still offering a $500,000 reward for information that helps identify the person who placed pipe bombs at the offices of the Democratic National Committee and Republican National Committee on January 5, 2021. As part of our ongoing investigation, we're releasing an updated video of the subject, which includes previously unreleased footage, higher quality video, and longer clips of the subject's movements.\nOn January 5th, 2021, between 7:30 and 8:30 p.m., an unidentified individual placed pipe bombs near the offices of the Democratic National Committee and the Republican National Committee in Washington, D.C. The FBI and our partners are renewing our call for tips from the public to help us identify the suspect.\nA reward of up to $500,000 is available for information that leads to the arrest and conviction of the individual responsible for this attempted attack.\nIf you have any information, please call the FBI at 1-800-CALL-FBI. You can also submit tips online at tips.fbi.gov. The FBI's estimate is the suspect's height is approximately five-foot-seven inches tall. The suspect wore a face mask, a gray hooded sweatshirt, and black gloves. They used a backpack to transport each of the devices. They were wearing distinctive Nike Air Max Speed Turf shoes, which are black and gray with the yellow Nike logo. Fewer than 25,000 of these shoes were sold between August 2018 and January 2021.\nThe first time the suspect is seen is at approximately 7:34 p.m. at the intersection of First Street and North Carolina Avenue Southeast. The person walks southwest on North Carolina Avenue, turns north on New Jersey Avenue, west on D Street, and then south on South Capitol Street.\nThis footage of the suspect on South Capitol Street shows the person setting down their backpack, which is believed to contain one of the bombs at this time. The suspect appears to put on a pair of glasses and scan the area, standing on tiptoes. Before picking up the backpack, turning around, and heading back the way they came on South Capitol Street.\nAfter reaching the corner of D Street, the suspect turns around again and this time walks south all the way down South Capitol Street to a bench outside the Democratic National Committee headquarters building. Here we see the suspect sit on the bench for a few minutes. They do not place the bomb at this time.\nThe suspect then walks east on Ivy Street, turns north on New Jersey Avenue, and then pauses near the corner of D Street before retracing their steps back to the DNC bench, where the first bomb is placed.\nThis footage shows the suspect sitting on the DNC bench before placing the first bomb.\nHere we see the suspect placed the bomb at approximately 7:54 p.m. From there, the person walks north on South Capitol Street, east on D Street, south on New Jersey Avenue, northeast on North Carolina Avenue, when we lose video coverage of the suspect at approximately 8 p.m.\nEight minutes later, at about 8:08 p.m., we pick the suspect back up on camera heading north on Second Street. The suspect walks west on C Street, enters an alley that leads to Rumsey Court, and then walks west on Rumsey Court.\nThis footage shows the suspect passed between the RNC and the Capitol Hill Club, holding the backpack out to the side. The person continues between the RNC and the Capitol Hill Club, then continues north on First Street, east on C Street, back into the alley toward Rumsey Court, back onto Rumsey Court.\nThey place the second pipe bomb at approximately 8:16 p.m. The suspect then turns back onto Rumsey Court, walking east until the person is last seen on camera at approximately 8:18 p.m., wearing the backpack on their shoulders. The bomb is believed to have been placed shortly before this video, based on how the suspect is carrying the backpack. We still believe there is someone out there who has information they may not have realized was significant until now.\nWe're asking you to come forward to share that information with the FBI. Please call the FBI with any information at 1-800-CALL-FBI or submit tips online at tips.fbi.gov. Tips can remain anonymous. A $500,000 reward is available for information that leads to the arrest and conviction of the person responsible for this dangerous attempt to harm innocent people.\n\nProvide relevant evidence.",
+    "input_length_chars": 4732,
+    "input_tokens_estimated": 1183,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses the FBI's ongoing investigation into the pipe bomb incident and their efforts to gather information, but it does not provide evidence that the FBI is withholding evidence related to the case.",
+      "overall_stance": "refutes",
+      "key_quote": "The FBI is still offering a $500,000 reward for information that helps identify the person who placed pipe bombs..."
+    },
+    "output_length_chars": 413,
+    "output_tokens_estimated": 103,
+    "cost_usd": 0.00023925
+  }
+]

@@ -1,0 +1,370 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:45:55.880569",
+    "latency_seconds": 9.65,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nTrump's egg price warning comes true. Reality hits home. For months, President Donald Trump has falsely claimed that egg prices are tumbling. It wasn't true then, but it's true now. Egg prices fell 12.7% last month, the biggest monthly decline since 1984. The Bureau of Labor Statistics reported Tuesday, and they could continue to fall this month, too. The USDA reported last week that a dozen large white shell eggs now cost $330 on average, down a whopping 69 from a week before. It's a remarkable reversal after egg prices surged in each of the past 5 months and 17 of the past 19 months because of a deadly aven flu epidemic that necessitated the mass culling of egg laying hens. Maybe the worst of egg gate has passed. Tyler Shipper, associate professor in economics and data analysis at the University of St. Thomas in St. Paul, Minnesota, told CNN. Nevertheless, egg prices remain significantly higher now than before the latest bird flu outbreak, and they cost 49.3% more last month than they did a year earlier. Eggs are still more expensive than when Trump took office, according to the BLS. Egg prices this past Easter, which typically rise in the run-up to the holiday, were the highest for any Easter on record, the USDA reported. Well, before last month's decline, Trump had been touting falling egg prices as a sign that his administration's plan to lower prices for consumers has been working. In February, the USDA announced an initiative to lower egg prices, including increased biocurity on egg laying farms, aid to farmers who have lost flocks and temporary lifting of restrictions on egg imports. Despite agriculture secretary Brooke Rollins far more conservative estimate that egg prices would normalize in the summer, Trump last month said, \"As you know, the cost of eggs has come down like 93 94% since we took office. Those percentage declines, Trump stated, are not close to accurate. But we now know that consumer egg prices were indeed falling sharply when Trump made those remarks. The consumer price index data wasn't out yet to confirm or deny Trump's claims. It appears as though Trump may have been talking about wholesale prices, which had been tumbling throughout March before normalizing in recent weeks. Nevertheless, wholesale prices fell by half, not close to the 90% plus figures Trump was citing. Wholesale prices are the costs distributors pay to farmers or middlemen. Consumer prices are what customers pay at grocery stores. Those costs typically make their way through the supply chain at a slower pace because grocery stores may decide to keep prices at a certain price even when wholesale prices change to try to recoup loss profits from prior weeks according to Kevin Bergquist, sector manager at Wells Fargo Agri Food Institute. from prior weeks. According to Kevin Bergquist, sector manager at Wells Fargo Agri Food Institute, the USDA says consumer prices finally fell as demand for eggs decreased and aven flu cases have fallen. Many groceries, including large chains like Costco, had limited customers purchases because of egg shortages. So, Trump's claim that consumer egg prices are down is finally true, even if the timing of his claim and the wild percentages he threw around were grossly inaccurate. Don't forget to like and subscribe. Thanks.",
+    "input_length_chars": 3360,
+    "input_tokens_estimated": 840,
+    "output": {
+      "claims": [
+        {
+          "text": "Egg prices fell 12.7% last month, the biggest monthly decline since 1984.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.85,
+          "context": "Reported by the Bureau of Labor Statistics."
+        },
+        {
+          "text": "A dozen large white shell eggs now cost $3.30 on average, down $0.69 from a week before.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.85,
+          "context": "USDA report on current egg prices."
+        },
+        {
+          "text": "Egg prices surged in each of the past 5 months and 17 of the past 19 months due to a deadly avian flu epidemic.",
+          "confidence": 0.85,
+          "category": "historical",
+          "importance": 0.7,
+          "context": "Context of rising prices before recent decline."
+        },
+        {
+          "text": "Egg prices remain significantly higher now than before the latest bird flu outbreak.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Comparison to prices before the outbreak."
+        },
+        {
+          "text": "Egg prices cost 49.3% more last month than they did a year earlier.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "Year-over-year price comparison."
+        },
+        {
+          "text": "Egg prices this past Easter were the highest for any Easter on record.",
+          "confidence": 0.9,
+          "category": "historical",
+          "importance": 0.75,
+          "context": "USDA report on Easter egg prices."
+        },
+        {
+          "text": "Trump claimed that the cost of eggs has come down like 93-94% since he took office.",
+          "confidence": 0.8,
+          "category": "biographical",
+          "importance": 0.6,
+          "context": "Trump's statement regarding egg prices."
+        },
+        {
+          "text": "Wholesale prices fell by half, not close to the 90% plus figures Trump was citing.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "Clarification on the accuracy of Trump's claims."
+        },
+        {
+          "text": "Consumer prices finally fell as demand for eggs decreased and avian flu cases have fallen.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "USDA statement on factors affecting egg prices."
+        },
+        {
+          "text": "Many groceries had limited customer purchases because of egg shortages.",
+          "confidence": 0.8,
+          "category": "statistical",
+          "importance": 0.5,
+          "context": "Impact of shortages on consumer purchasing."
+        }
+      ],
+      "total_count": 10
+    },
+    "output_length_chars": 2961,
+    "output_tokens_estimated": 740,
+    "cost_usd": 0.00057
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:46:00.804065",
+    "latency_seconds": 2.51,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Consumer prices finally fell as demand for eggs decreased and avian flu cases have fallen.\nContext: USDA statement on factors affecting egg prices.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 320,
+    "input_tokens_estimated": 80,
+    "output": {
+      "original_claim": "Consumer prices finally fell as demand for eggs decreased and avian flu cases have fallen.",
+      "queries": [
+        {
+          "query": "USDA statement consumer prices eggs demand avian flu cases 2023",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "egg prices decrease avian flu demand 2023",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 344,
+    "output_tokens_estimated": 86,
+    "cost_usd": 6.36e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "Many groceries had limited customer purchases because of egg shortages."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:46:00.807436",
+    "latency_seconds": 2.51,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Many groceries had limited customer purchases because of egg shortages.\nContext: Impact of shortages on consumer purchasing.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 297,
+    "input_tokens_estimated": 74,
+    "output": {
+      "original_claim": "Many groceries had limited customer purchases because of egg shortages.",
+      "queries": [
+        {
+          "query": "egg shortages limited customer purchases grocery stores 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "grocery stores purchase limits due to egg shortage 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 336,
+    "output_tokens_estimated": 84,
+    "cost_usd": 6.15e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "Many groceries had limited customer purchases because of egg shortages."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:46:00.809465",
+    "latency_seconds": 2.52,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Egg prices fell 12.7% last month, the biggest monthly decline since 1984.\nContext: Reported by the Bureau of Labor Statistics.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 299,
+    "input_tokens_estimated": 74,
+    "output": {
+      "original_claim": "Egg prices fell 12.7% last month, the biggest monthly decline since 1984.",
+      "queries": [
+        {
+          "query": "Egg prices fell 12.7% last month Bureau of Labor Statistics",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "largest monthly decline in egg prices since 1984",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 330,
+    "output_tokens_estimated": 82,
+    "cost_usd": 6.03e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "Many groceries had limited customer purchases because of egg shortages."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:46:00.812109",
+    "latency_seconds": 2.52,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Trump claimed that the cost of eggs has come down like 93-94% since he took office.\nContext: Trump's statement regarding egg prices.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 305,
+    "input_tokens_estimated": 76,
+    "output": {
+      "original_claim": "Trump claimed that the cost of eggs has come down like 93-94% since he took office.",
+      "queries": [
+        {
+          "query": "Trump egg prices decrease 93-94% since taking office",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "egg prices drop significantly since Trump presidency",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 337,
+    "output_tokens_estimated": 84,
+    "cost_usd": 6.18e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "Many groceries had limited customer purchases because of egg shortages."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:46:01.180038",
+    "latency_seconds": 2.89,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: A dozen large white shell eggs now cost $3.30 on average, down $0.69 from a week before.\nContext: USDA report on current egg prices.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 305,
+    "input_tokens_estimated": 76,
+    "output": {
+      "original_claim": "A dozen large white shell eggs now cost $3.30 on average, down $0.69 from a week before.",
+      "queries": [
+        {
+          "query": "current average price of a dozen large white shell eggs USDA report October 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "USDA egg prices report October 2023",
+          "query_type": "SOURCE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 348,
+    "output_tokens_estimated": 87,
+    "cost_usd": 6.36e-05,
+    "context": {
+      "claim_index": 8,
+      "claim_text": "Trump claimed that the cost of eggs has come down like 93-94% since he took office.",
+      "query_index": 2,
+      "query_text": "egg prices drop significantly since Trump presidency"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:46:01.271739",
+    "latency_seconds": 2.98,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Egg prices surged in each of the past 5 months and 17 of the past 19 months due to a deadly avian flu epidemic.\nContext: Context of rising prices before recent decline.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 341,
+    "input_tokens_estimated": 85,
+    "output": {
+      "original_claim": "Egg prices surged in each of the past 5 months and 17 of the past 19 months due to a deadly avian flu epidemic.",
+      "queries": [
+        {
+          "query": "Egg prices surge past 5 months 17 of 19 months avian flu epidemic",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Reasons for rising egg prices avian flu outbreak 2022 2023",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 384,
+    "output_tokens_estimated": 96,
+    "cost_usd": 7.035e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "A dozen large white shell eggs now cost $3.30 on average, down $0.69 from a week before.",
+      "query_index": 2,
+      "query_text": "USDA egg prices report October 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:46:44.825012",
+    "latency_seconds": 0.79,
+    "input_prompt": "Claim:\nConsumer prices finally fell as demand for eggs decreased and avian flu cases have fallen.\n\nArticle Title:\nCage-free egg inventory recovers following avian flu outbreak\n\nGoogle Search Snippet:\nAn estimated 13.6 million birds, both cage-free and caged, were depopulated following an outbreak spanning November 2023 to January 2024.\n\nFull Page Content:\nMany, or all, of the products featured on this page are from our advertising partners who compensate us when you take certain actions on our website or click to take an action on their website. However, this does not influence our evaluations. Our opinions are our own. Here is a list of our partners and here's how we make money.\nDisclaimer: NerdWallet strives to keep its information accurate and up to date. This information may be different than what you see when you visit a financial institution, service provider or specific product's site. All financial products, shopping products and services are presented without warranty. When evaluating offers, please review the financial institution's Terms and Conditions. Pre-qualified offers are not binding. If you find discrepancies with your credit score or information from your credit report, please contact TransUnion\u00ae directly.\nNerdWallet Compare, Inc. NMLS ID# 1617539 NMLS Consumer Access |Licenses and Disclosures\nCalifornia: California Finance Lender loans arranged pursuant to Department of Financial Protection and Innovation Finance Lenders License #60DBO-74812\nInsurance Services offered through NerdWallet Insurance Services, Inc. (CA resident license no.OK92033) Insurance Licenses\nFundera, Inc. NMLS ID# 1240038 NMLS Consumer Access\nCalifornia: California Finance Lender loans arranged pursuant to the Department of Financial Protection and Innovation Finance Lenders License #603L288\nNerdWallet has engaged Atomic Invest LLC (\u201cAtomic\u201d), an SEC-registered investment adviser, to bring you the opportunity to open investment advisory accounts (Automated Investing Account and/or Treasury Account) with Atomic. NerdWallet receives compensation of 0% to 0.85% of assets under management annualized, payable monthly, for each referred client who opens an Atomic account and a percentage of free cash interest earned by clients, which creates a conflict of interest. Brokerage services for Atomic are provided by Atomic Brokerage LLC (\"Atomic Brokerage\"), member of FINRA/SIPC and an affiliate of Atomic, which creates a conflict of interest. See details about Atomic, in their Form CRS, Form ADV Part 2A and Privacy Policy. See details about Atomic Brokerage in their Form CRS, General Disclosures, fee schedule, and FINRA\u2019s BrokerCheck.\nYou also can open a Cash Account offered by Atomic Brokerage which allows you to earn interest on your cash through a cash sweep program. View Important Cash Account Disclosures.\nNeither Atomic Invest nor Atomic Brokerage, nor any of their affiliates is a bank. Investments in securities: Not FDIC Insured, Not Bank Guaranteed, May Lose Value. Investing involves risk, including the possible loss of principal. Before investing, consider your investment objectives and the fees and expenses charged.\nImages are for illustrative purposes only.\nNerdWallet\u2122 | 4150 N Drinkwater Blvd, Suite 200, Scottsdale, AZ 85251\n\nProvide relevant evidence.",
+    "input_length_chars": 3302,
+    "input_tokens_estimated": 825,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 0.00013695
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:46:44.986021",
+    "latency_seconds": 0.96,
+    "input_prompt": "Claim:\nConsumer prices finally fell as demand for eggs decreased and avian flu cases have fallen.\n\nArticle Title:\nUS Egg Prices Soar Amid Avian Flew - Trading Economics\n\nGoogle Search Snippet:\nUS egg prices rose to around $1.15 per dozen, rebounding from May 2023 lows of $1.06 seen October 10th as renewed spikes in avian influenza risk ...\n\nFull Page Content:\nMany, or all, of the products featured on this page are from our advertising partners who compensate us when you take certain actions on our website or click to take an action on their website. However, this does not influence our evaluations. Our opinions are our own. Here is a list of our partners and here's how we make money.\nDisclaimer: NerdWallet strives to keep its information accurate and up to date. This information may be different than what you see when you visit a financial institution, service provider or specific product's site. All financial products, shopping products and services are presented without warranty. When evaluating offers, please review the financial institution's Terms and Conditions. Pre-qualified offers are not binding. If you find discrepancies with your credit score or information from your credit report, please contact TransUnion\u00ae directly.\nNerdWallet Compare, Inc. NMLS ID# 1617539 NMLS Consumer Access |Licenses and Disclosures\nCalifornia: California Finance Lender loans arranged pursuant to Department of Financial Protection and Innovation Finance Lenders License #60DBO-74812\nInsurance Services offered through NerdWallet Insurance Services, Inc. (CA resident license no.OK92033) Insurance Licenses\nFundera, Inc. NMLS ID# 1240038 NMLS Consumer Access\nCalifornia: California Finance Lender loans arranged pursuant to the Department of Financial Protection and Innovation Finance Lenders License #603L288\nNerdWallet has engaged Atomic Invest LLC (\u201cAtomic\u201d), an SEC-registered investment adviser, to bring you the opportunity to open investment advisory accounts (Automated Investing Account and/or Treasury Account) with Atomic. NerdWallet receives compensation of 0% to 0.85% of assets under management annualized, payable monthly, for each referred client who opens an Atomic account and a percentage of free cash interest earned by clients, which creates a conflict of interest. Brokerage services for Atomic are provided by Atomic Brokerage LLC (\"Atomic Brokerage\"), member of FINRA/SIPC and an affiliate of Atomic, which creates a conflict of interest. See details about Atomic, in their Form CRS, Form ADV Part 2A and Privacy Policy. See details about Atomic Brokerage in their Form CRS, General Disclosures, fee schedule, and FINRA\u2019s BrokerCheck.\nYou also can open a Cash Account offered by Atomic Brokerage which allows you to earn interest on your cash through a cash sweep program. View Important Cash Account Disclosures.\nNeither Atomic Invest nor Atomic Brokerage, nor any of their affiliates is a bank. Investments in securities: Not FDIC Insured, Not Bank Guaranteed, May Lose Value. Investing involves risk, including the possible loss of principal. Before investing, consider your investment objectives and the fees and expenses charged.\nImages are for illustrative purposes only.\nNerdWallet\u2122 | 4150 N Drinkwater Blvd, Suite 200, Scottsdale, AZ 85251\n\nProvide relevant evidence.",
+    "input_length_chars": 3306,
+    "input_tokens_estimated": 826,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 0.0001371
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:46:46.882448",
+    "latency_seconds": 2.85,
+    "input_prompt": "Claim:\nConsumer prices finally fell as demand for eggs decreased and avian flu cases have fallen.\n\nArticle Title:\nEgg Prices: Trump Touts Prices Are 'Way Down' - Forbes\n\nGoogle Search Snippet:\nWholesale egg prices have fallen sharply this month as new bird flu outbreaks have slowed, a trend touted by President Donald Trump.\n\nFull Page Content:\nMany, or all, of the products featured on this page are from our advertising partners who compensate us when you take certain actions on our website or click to take an action on their website. However, this does not influence our evaluations. Our opinions are our own. Here is a list of our partners and here's how we make money.\nDisclaimer: NerdWallet strives to keep its information accurate and up to date. This information may be different than what you see when you visit a financial institution, service provider or specific product's site. All financial products, shopping products and services are presented without warranty. When evaluating offers, please review the financial institution's Terms and Conditions. Pre-qualified offers are not binding. If you find discrepancies with your credit score or information from your credit report, please contact TransUnion\u00ae directly.\nNerdWallet Compare, Inc. NMLS ID# 1617539 NMLS Consumer Access |Licenses and Disclosures\nCalifornia: California Finance Lender loans arranged pursuant to Department of Financial Protection and Innovation Finance Lenders License #60DBO-74812\nInsurance Services offered through NerdWallet Insurance Services, Inc. (CA resident license no.OK92033) Insurance Licenses\nFundera, Inc. NMLS ID# 1240038 NMLS Consumer Access\nCalifornia: California Finance Lender loans arranged pursuant to the Department of Financial Protection and Innovation Finance Lenders License #603L288\nNerdWallet has engaged Atomic Invest LLC (\u201cAtomic\u201d), an SEC-registered investment adviser, to bring you the opportunity to open investment advisory accounts (Automated Investing Account and/or Treasury Account) with Atomic. NerdWallet receives compensation of 0% to 0.85% of assets under management annualized, payable monthly, for each referred client who opens an Atomic account and a percentage of free cash interest earned by clients, which creates a conflict of interest. Brokerage services for Atomic are provided by Atomic Brokerage LLC (\"Atomic Brokerage\"), member of FINRA/SIPC and an affiliate of Atomic, which creates a conflict of interest. See details about Atomic, in their Form CRS, Form ADV Part 2A and Privacy Policy. See details about Atomic Brokerage in their Form CRS, General Disclosures, fee schedule, and FINRA\u2019s BrokerCheck.\nYou also can open a Cash Account offered by Atomic Brokerage which allows you to earn interest on your cash through a cash sweep program. View Important Cash Account Disclosures.\nNeither Atomic Invest nor Atomic Brokerage, nor any of their affiliates is a bank. Investments in securities: Not FDIC Insured, Not Bank Guaranteed, May Lose Value. Investing involves risk, including the possible loss of principal. Before investing, consider your investment objectives and the fees and expenses charged.\nImages are for illustrative purposes only.\nNerdWallet\u2122 | 4150 N Drinkwater Blvd, Suite 200, Scottsdale, AZ 85251\n\nProvide relevant evidence.",
+    "input_length_chars": 3290,
+    "input_tokens_estimated": 822,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that wholesale egg prices have fallen sharply due to a decrease in new bird flu outbreaks, which aligns with the claim about falling consumer prices and decreased demand for eggs.",
+      "overall_stance": "supports",
+      "key_quote": "Wholesale egg prices have fallen sharply this month as new bird flu outbreaks have slowed."
+    },
+    "output_length_chars": 378,
+    "output_tokens_estimated": 94,
+    "cost_usd": 0.0001797
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:46:47.457160",
+    "latency_seconds": 29.1,
+    "input_prompt": "Claim:\nEgg prices surged in each of the past 5 months and 17 of the past 19 months due to a deadly avian flu epidemic.\n\nArticle Title:\nEgg prices are skyrocketing amid inflation and avian influenza\n\nGoogle Search Snippet:\nThe price of a dozen eggs has nearly doubled since last year and hit a record high in January. An outbreak of avian influenza in primarily ...\n\nFull Page Content:\nES Sign in 0:00 / 2:33 Egg prices hit record high as US struggles with bird flu outbreak ABC 7 Chicago 1.18M subscribers Subscribe 35 Share Save 3.2K views 9 months ago Streaming now at https://abc7chicago.com/watch/live/11.... The CDC confirmed another human case of bird flu, the ongoing outbreak wreaking havoc on the nation's egg supply, sending prices to record levels across the U.S. https://abc7chicago.com/post/c \u2026 ...more 8:06 Saved Beaver Thinks Her Caretaker Is Mom Cuddle Buddies Shorts 952K views \u2022 3 weeks ago 20:04 Why Americans Eat What Europe Bans Type Ashton 1.8M views \u2022 3 months ago 13:43 McDonald's Secret Ingredients You Never Knew About Paul Saladino MD 4.7M views \u2022 1 year ago 13:39 How to Spot Autism in High-Masking Adults Auticate with Chris & Debby 1.3M views \u2022 10 months ago 12:46 Why beef prices are out of control in the U.S. CNBC 607K views \u2022 6 days ago New 11:27 The Loophole that Drowned America in Self Storage The Hustle 21K views \u2022 2 days ago New 6:21 How a bird flu pandemic could emerge CBS News 12K views \u2022 9 months ago 8:49 Why Are African Cities so Ugly? BantuCityDiaries 322K views \u2022 7 days ago 15:22 I Got EXPOSED\u2026 Anatoly Gym Prank GONE WRONG... | Pretended to be a Cleaner #54 ANATOLY 6.3M views \u2022 3 weeks ago 4:02 What is causing the price of eggs to rise? | Morning in America NewsNation 36K views \u2022 10 months ago 18:57 Crazy Summer Fails 2025 \ud83c\udf0a| Brutal Try Not to Laugh FailArmy 8.3M views \u2022 1 year ago 13:37 15 Everyday French Habits That Blow Americans Away Les Frenchies 335K views \u2022 7 days ago 7:57 She\u2019s 12. She Sings Aretha Franklin\u2026 Until Simon TELLS Her to Do It Acapella! \ud83d\ude33 Top Talent 3.4M views \u2022 1 month ago 6:36 Why a deadly strain of bird flu is making egg prices soar nationwide PBS NewsHour 46K views \u2022 10 months ago 10:11 Soaring egg prices impact diners, businesses and consumers across the tri-state | News 12 News 12 12K views \u2022 10 months ago 2:58 Good Samaritan walks girl to school after finding her alone in freezing weather WXYZ-TV Detroit | Channel 7 1.3M views \u2022 4 days ago New 18:38 He Learned 24 Languages\u2014Then They Scanned His Brain Olly Richards 1M views \u2022 8 months ago 5:25 Parent-Teacher Conference - SNL Saturday Night Live 6.5M views \u2022 4 years ago 35:14 I'm Building a Free Pallet House in 129 Days in the Forest Lesnoy 16M views \u2022 5 months ago 14:58 ChatGPT in a real robot shows we\u2019re close to disaster. InsideAI 926K views \u2022 13 days ago A Google company en Sign in Before you continue to YouTube We use cookies and data to Deliver and maintain Google services Track outages and protect against spam, fraud, and abuse Measure audience engagement and site statistics to understand how our services are used and enhance the quality of those services If you choose to \u201cAccept all,\u201d we will also use cookies and data to Develop and improve new services Deliver and measure the effectiveness of ads Show personalized content, depending on your settings Show personalized ads, depending on your settings If you choose to \u201cReject all,\u201d we will not use cookies for these additional purposes. Non-personalized content and ads are influenced by things like the content you\u2019re currently viewing and your location (ad serving is based on general location). Personalized content and ads can also include things like video recommendations, a customized YouTube homepage, and tailored ads based on past activity, like the videos you watch and the things you search for on YouTube. We also use cookies and data to tailor the experience to be age-appropriate, if relevant. Select \u201cMore options\u201d to see additional information, including details about managing your privacy settings. You can also visit g.co/privacytools at any time. Reject all Accept all More options Privacy Policy \u2022 Terms of Service\n\nProvide relevant evidence.",
+    "input_length_chars": 4180,
+    "input_tokens_estimated": 1045,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that egg prices have surged due to a deadly avian flu epidemic, which has significantly impacted the egg supply in the U.S.",
+      "overall_stance": "supports",
+      "key_quote": "the ongoing outbreak wreaking havoc on the nation's egg supply, sending prices to record levels across the U.S."
+    },
+    "output_length_chars": 343,
+    "output_tokens_estimated": 85,
+    "cost_usd": 0.00020775
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:47:22.414853",
+    "latency_seconds": 20.05,
+    "input_prompt": "\nClaim: Consumer prices finally fell as demand for eggs decreased and avian flu cases have fallen.\nCategory: statistical\nExtraction confidence: 0.85\n\nEvidence:\nSUPPORTS (1 sources):\n  1. Egg Prices: Trump Touts Prices Are 'Way Down' - Forbes | reliability=high (0.85)\n     URL: https://www.forbes.com/sites/mollybohannon/2025/03/21/egg-prices-trump-touts-prices-are-way-down-but-consumers-may-still-feel-high-prices/\n     Summary: The evidence indicates that wholesale egg prices have fallen sharply due to a decrease in new bird flu outbreaks, which aligns with the claim about falling consumer prices and decreased demand for eggs.\nUNCLEAR (4 sources):\n  1. Cage-free egg inventory recovers following avian flu outbreak | reliability=high (1.00)\n     URL: http://www.ers.usda.gov/data-products/charts-of-note/chart-detail?chartId=109075\n     Summary: An estimated 13.6 million birds, both cage-free and caged, were depopulated following an outbreak spanning November 2023 to January 2024.\n  2. Food Price Outlook - Summary Findings | Economic Research Service | reliability=high (1.00)\n     URL: http://www.ers.usda.gov/data-products/food-price-outlook/summary-findings\n     Summary: Food prices rose partly due to a highly pathogenic avian influenza (HPAI) outbreak that affected egg and poultry prices. Other factors included ...\n  3. Eggs Are Pricey Again. Bird Flu Is Taking a Toll. - Barron's | reliability=high (0.85)\n     URL: https://www.barrons.com/articles/egg-prices-rising-avian-influenza-250d307b?gaa_at=eafs&gaa_n=AWEtsqdxnf1JL2QXJN0av_MjVQ1mmz-ISlxJ5ZAjbzZ42qz-tJhqfVHc04fk&gaa_ts=693e286e&gaa_sig=P9jjAKUL2OS-Bn7Wc7SmaqgUh0urtXvAslxu6HmldFCTgGQtEFHY7Cdd5jkAB5jKq1xW_IDmKKru-4gfIBULJg%3D%3D\n     Summary: The agency says the average price of a dozen large Grade A eggs in a U.S. city was $3.82 in September, up from $2.07 in September 2023.\n  4. US Egg Prices Soar Amid Avian Flew - Trading Economics | reliability=high (0.85)\n     URL: https://tradingeconomics.com/commodity/eggs-us/news/496000\n     Summary: US egg prices rose to around $1.15 per dozen, rebounding from May 2023 lows of $1.06 seen October 10th as renewed spikes in avian influenza risk ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2209,
+    "input_tokens_estimated": 552,
+    "output": {
+      "overall_stance": "mixed",
+      "confidence": "medium",
+      "summary": "While the Forbes article indicates that wholesale egg prices have fallen due to decreased avian flu outbreaks, other sources suggest that egg prices have recently increased again, indicating a complex situation. The USDA reports on the impact of avian flu on prices, and other articles highlight rising prices, suggesting that the claim about falling consumer prices is not universally supported."
+    },
+    "output_length_chars": 457,
+    "output_tokens_estimated": 114,
+    "cost_usd": 0.0001512
+  }
+]

@@ -1,0 +1,971 @@
+{
+  "extracted_claims": {
+    "claims": [
+      {
+        "text": "Only about 1 in 10 American teenagers gets the recommended 8 to 10 hours of sleep per night.",
+        "confidence": 0.9,
+        "category": "statistical",
+        "importance": 0.85,
+        "context": "Claim about sleep deprivation among American teenagers.",
+        "transcript_char_start": 809,
+        "transcript_char_end": 878,
+        "transcript_match_score": 0.75
+      },
+      {
+        "text": "Major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m.",
+        "confidence": 0.95,
+        "category": "policy",
+        "importance": 0.85,
+        "context": "Recommendation from medical organizations regarding school start times.",
+        "transcript_char_start": 1119,
+        "transcript_char_end": 1216,
+        "transcript_match_score": 1.0
+      },
+      {
+        "text": "Teenagers experience a delay in their biological clock around puberty, affecting sleep patterns.",
+        "confidence": 0.9,
+        "category": "scientific",
+        "importance": 0.7,
+        "context": "Biological changes in teenagers affecting sleep.",
+        "transcript_char_start": 1435,
+        "transcript_char_end": 1511,
+        "transcript_match_score": 0.7294117647058823
+      },
+      {
+        "text": "Teenagers' bodies start releasing melatonin around 11 p.m., two hours later than adults.",
+        "confidence": 0.9,
+        "category": "scientific",
+        "importance": 0.7,
+        "context": "Hormonal changes in teenagers affecting sleep timing.",
+        "transcript_char_start": 1656,
+        "transcript_char_end": 1739,
+        "transcript_match_score": 0.7904191616766467
+      },
+      {
+        "text": "Teens with sleep problems were 55% more likely to have used alcohol in the past month.",
+        "confidence": 0.85,
+        "category": "statistical",
+        "importance": 0.6,
+        "context": "Study linking sleep problems and alcohol use among teens.",
+        "transcript_char_start": 3442,
+        "transcript_char_end": 3526,
+        "transcript_match_score": 1.0
+      }
+    ],
+    "total_count": 5
+  },
+  "final_output": {
+    "extracted_claims": {
+      "claims": [
+        {
+          "text": "Only about 1 in 10 American teenagers gets the recommended 8 to 10 hours of sleep per night.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.85,
+          "context": "Claim about sleep deprivation among American teenagers.",
+          "transcript_char_start": 809,
+          "transcript_char_end": 878,
+          "transcript_match_score": 0.75
+        },
+        {
+          "text": "Major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m.",
+          "confidence": 0.95,
+          "category": "policy",
+          "importance": 0.85,
+          "context": "Recommendation from medical organizations regarding school start times.",
+          "transcript_char_start": 1119,
+          "transcript_char_end": 1216,
+          "transcript_match_score": 1.0
+        },
+        {
+          "text": "Teenagers experience a delay in their biological clock around puberty, affecting sleep patterns.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Biological changes in teenagers affecting sleep.",
+          "transcript_char_start": 1435,
+          "transcript_char_end": 1511,
+          "transcript_match_score": 0.7294117647058823
+        },
+        {
+          "text": "Teenagers' bodies start releasing melatonin around 11 p.m., two hours later than adults.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Hormonal changes in teenagers affecting sleep timing.",
+          "transcript_char_start": 1656,
+          "transcript_char_end": 1739,
+          "transcript_match_score": 0.7904191616766467
+        },
+        {
+          "text": "Teens with sleep problems were 55% more likely to have used alcohol in the past month.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Study linking sleep problems and alcohol use among teens.",
+          "transcript_char_start": 3442,
+          "transcript_char_end": 3526,
+          "transcript_match_score": 1.0
+        }
+      ],
+      "total_count": 5
+    },
+    "claim_reports": [
+      {
+        "claim_text": "Major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m.",
+        "claim_confidence": 0.95,
+        "claim_category": "policy",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Sleep and Health | Physical Education and Physical Activity - CDC",
+              "url": "https://www.cdc.gov/physical-activity-education/staying-healthy/sleep.html",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "supports",
+              "evidence_summary": "The article states that the American Academy of Sleep Medicine recommends that middle and high schools start no earlier than 8:30 a.m. to improve student health and learning outcomes.",
+              "snippet": "In 2014, American Academy of Pediatrics recommended that middle schools and high schools start no earlier than 8:30 AM. This can allow ..."
+            },
+            {
+              "title": "School Start Times - American Academy of Sleep Medicine",
+              "url": "https://aasm.org/advocacy/initiatives/school-start-times/",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (28.8 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The American Academy of Sleep Medicine and the American Academy of Pediatrics recommend that middle and high schools start at 8:30 a.m. or later to promote better sleep and health for students, aligning with the claim that major medical organizations support this timing.",
+              "snippet": "Start times of 8:30 am or later for middle schools and high schools to ensure that every student arrives at school healthy, awake, alert, and ready to learn."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "School Start Times, Sleep, Behavioral, Health, and Academic ...",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4824552/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Most studies reviewed provide evidence that delaying school start time increases weeknight sleep duration among adolescents, primarily by delaying rise times.",
+              "snippet": "Most studies reviewed provide evidence that delaying school start time increases weeknight sleep duration among adolescents, primarily by delaying rise times."
+            },
+            {
+              "title": "AMA supports delayed school start times to improve adolescent ...",
+              "url": "https://www.ama-assn.org/press-center/ama-press-releases/ama-supports-delayed-school-start-times-improve-adolescent-wellness",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "New AMA policy encourages middle schools and high schools to start no earlier than 8:30 a.m..",
+              "snippet": "New AMA policy encourages middle schools and high schools to start no earlier than 8:30 a.m.."
+            },
+            {
+              "title": "School Start Times for Middle School and High School Students - CDC",
+              "url": "https://www.cdc.gov/mmwr/preview/mmwrhtml/mm6430a1.htm",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "AAP recommended that \"middle and high schools should aim for a starting time of no earlier than 8:30 a.m.\" (5). To assess state-specific ...",
+              "snippet": "AAP recommended that \"middle and high schools should aim for a starting time of no earlier than 8:30 a.m.\" (5). To assess state-specific ..."
+            },
+            {
+              "title": "Schools shift as evidence mounts that later start times improve teens ...",
+              "url": "https://www.apa.org/topics/children/school-start-times",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Later school starts correlate with improved mood, better attendance and grades, and fewer car crashes among youth.",
+              "snippet": "Later school starts correlate with improved mood, better attendance and grades, and fewer car crashes among youth."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 0.9,
+        "timestamp_hint": 77.323,
+        "timestamp_confidence": 1.0
+      },
+      {
+        "claim_text": "Teenagers experience a delay in their biological clock around puberty, affecting sleep patterns.",
+        "claim_confidence": 0.9,
+        "claim_category": "scientific",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Adolescent Changes in the Homeostatic and Circadian Regulation ...",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2820578/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that adolescents experience a delay in their circadian rhythms during puberty, which contributes to sleep deprivation and altered sleep patterns. This delay is supported by both human and animal studies, suggesting it is a common phenomenon across species.",
+              "snippet": "We argue that this sleep deprivation is due in part to pubertal changes in the homeostatic and circadian regulation of sleep."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "Developmental changes in sleep biology and potential effects on ...",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4658519/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Circadian rhythm changes and changes to the sleep-pressure system (sleep homeostasis) during adolescence both favor later timing of sleep.",
+              "snippet": "Circadian rhythm changes and changes to the sleep-pressure system (sleep homeostasis) during adolescence both favor later timing of sleep."
+            },
+            {
+              "title": "What the Science Tells Us About Adolescent Sleep",
+              "url": "https://developingadolescent.semel.ucla.edu/topics/item/science-of-adolescent-sleep",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Biological changes. Changes in the adolescent brain associated with puberty and maturation push adolescents' circadian rhythm toward a \u201cnight owl\u201d preference of ...",
+              "snippet": "Biological changes. Changes in the adolescent brain associated with puberty and maturation push adolescents' circadian rhythm toward a \u201cnight owl\u201d preference of ..."
+            },
+            {
+              "title": "Schools shift as evidence mounts that later start times improve teens ...",
+              "url": "https://www.apa.org/topics/children/school-start-times",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "During puberty, youth undergo a shift in their circadian clocks. That shift makes it hard for teens to fall asleep until later in the night.",
+              "snippet": "During puberty, youth undergo a shift in their circadian clocks. That shift makes it hard for teens to fall asleep until later in the night."
+            }
+          ]
+        },
+        "total_sources": 4,
+        "evidence_quality_score": 0.8,
+        "timestamp_hint": 100.847,
+        "timestamp_confidence": 0.7294117647058823
+      },
+      {
+        "claim_text": "Only about 1 in 10 American teenagers gets the recommended 8 to 10 hours of sleep per night.",
+        "claim_confidence": 0.9,
+        "claim_category": "statistical",
+        "overall_stance": "mixed",
+        "verdict_confidence": "medium",
+        "verdict_summary": "The evidence indicates that a significant percentage of American teenagers do not meet the recommended sleep guidelines, with only 22% of teen girls and 25% of boys getting at least 8 hours of sleep. However, the claim that only about 1 in 10 teenagers achieves this is not directly supported, as the data shows a higher percentage than 10%. Sources like the CDC and various studies confirm that many teens fall short of the recommended sleep, but the exact statistic of 10% is not substantiated.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "FastStats: Sleep in High School Students - CDC",
+              "url": "https://www.cdc.gov/sleep/data-research/facts-stats/high-school-students-sleep-facts-and-stats.html",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The recommended amount of sleep for high school students is 8 hours each day. High school students who do not get 8 hours of sleep each day ...",
+              "snippet": "The recommended amount of sleep for high school students is 8 hours each day. High school students who do not get 8 hours of sleep each day ..."
+            },
+            {
+              "title": "Most high school students don't get 8 hours of sleep on school nights",
+              "url": "https://www.spokesman.com/stories/2025/feb/10/most-high-school-students-dont-get-8-hours-of-slee/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "In 2023, 22 % of teen girls got at least eight hours of sleep vs. 25 % of boys. From 2013 to 2023, adolescents from all races and ethnicities ...",
+              "snippet": "In 2023, 22 % of teen girls got at least eight hours of sleep vs. 25 % of boys. From 2013 to 2023, adolescents from all races and ethnicities ..."
+            },
+            {
+              "title": "Schools shift as evidence mounts that later start times improve teens ...",
+              "url": "https://www.apa.org/topics/children/school-start-times",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Adolescents between the ages of 13 and 18 should sleep 8 to 10 hours per day, according to the American Academy of Sleep Medicine. But few ...",
+              "snippet": "Adolescents between the ages of 13 and 18 should sleep 8 to 10 hours per day, according to the American Academy of Sleep Medicine. But few ..."
+            },
+            {
+              "title": "Sleep Quality and Social Media - AAP",
+              "url": "https://www.aap.org/en/patient-care/media-and-children/center-of-excellence-on-social-media-and-youth-mental-health/qa-portal/qa-portal-library/qa-portal-library-questions/sleep-quality-and-social-media/?srsltid=AfmBOor5rqgviUvPxEL4btaYzlk6cd-peqUFRmJ0tH31QceOFIlJtESS",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The National Sleep Foundation (NSF) recommends that children 6-13 years of age get 9-11 hours of sleep per night, and adolescents 14-17 years of age get 8-10 ...",
+              "snippet": "The National Sleep Foundation (NSF) recommends that children 6-13 years of age get 9-11 hours of sleep per night, and adolescents 14-17 years of age get 8-10 ..."
+            },
+            {
+              "title": "The number of teens getting enough sleep, nutritious food ... - Yahoo",
+              "url": "https://www.yahoo.com/lifestyle/the-number-of-teens-getting-enough-sleep-nutritious-food-and-exercise-is-dropping-girls-are-faring-the-worst-100055792.html",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Only 22% of female students in 2023 reported getting at least the recommended eight hours of sleep on a typical school night, down from 29% in ...",
+              "snippet": "Only 22% of female students in 2023 reported getting at least the recommended eight hours of sleep on a typical school night, down from 29% in ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 59.013,
+        "timestamp_confidence": 0.75
+      },
+      {
+        "claim_text": "Teenagers' bodies start releasing melatonin around 11 p.m., two hours later than adults.",
+        "claim_confidence": 0.9,
+        "claim_category": "scientific",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "No reliable evidence sources were found for this claim. This may indicate the claim is difficult to verify, too specific, or references information not available in public sources.",
+        "evidence_by_stance": {},
+        "total_sources": 0,
+        "evidence_quality_score": 0.0,
+        "timestamp_hint": 112.15,
+        "timestamp_confidence": 0.7904191616766467
+      },
+      {
+        "claim_text": "Teens with sleep problems were 55% more likely to have used alcohol in the past month.",
+        "claim_confidence": 0.85,
+        "claim_category": "statistical",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "No reliable evidence sources were found for this claim. This may indicate the claim is difficult to verify, too specific, or references information not available in public sources.",
+        "evidence_by_stance": {},
+        "total_sources": 0,
+        "evidence_quality_score": 0.0,
+        "timestamp_hint": 231.018,
+        "timestamp_confidence": 1.0
+      }
+    ],
+    "transcript_data": {
+      "text": "It's 6:00 in the morning, pitch black outside. My 14-year-old son is fast asleep in his bed. I flip on the light and physically shake the poor boy awake. because I know that, like ripping off a Band-Aid, it's better to get it over with quickly. Sound brutal, but perhaps familiar? Every morning I ask myself, how can I, knowing what I know, be doing this to my own son? You see, I\u2019m a sleep researcher. So I know that I\u2019m depriving my son of sleep he desperately needs as a rapidly growing teenager. I also know that by waking him up hours before his natural biological clock tells him he\u2019s ready, I\u2019m literally robbing him of the type of sleep most associated with learning, memory consolidation, and emotional processing. But it's not just my kid that's being deprived of sleep. Sleep deprivation among American teenagers is an epidemic. Only about 1 in 10 gets the 8 to 10 hours of sleep per night recommended by sleep scientists and pediatricians. The major factor preventing teens from getting the sleep they need is a matter of public policy. Across the country, many schools are starting around 7:30 a.m. or earlier, despite the fact that major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m. These early start policies have a direct effect on how little sleep American teenagers are getting. They\u2019re also pitting teenagers in a fundamentally unwinnable fight against their own bodies. Around the time of puberty, teenagers experience a delay in their biological clock, which determines when we feel most awake and when we feel most sleepy. This is driven in part by a shift in the release of the hormone melatonin. Teenagers\u2019 bodies wait to start releasing melatonin until around 11 p.m., which is two hours later than what we see in adults or younger children. This means that waking a teenager up at 6 a.m. is the biological equivalent of waking an adult up at 4 a.m. Now, on the unfortunate days when I have to wake up at 4 a.m., I\u2019m a zombie. Functionally useless. I can't think straight. I\u2019m irritable, and I probably shouldn\u2019t be driving a car. But this is how many American teenagers feel every single school day. Many of the, shall we say, unpleasant characteristics that we chalk up to being a teenager\u2014 moodiness, irritability, laziness, depression\u2014 could be a product of chronic sleep deprivation. For many teens battling chronic sleep loss, their go-to strategy to compensate is consuming large quantities of caffeine in the form of venti Frappuccinos, or energy drinks and shots. So essentially, we've got an entire population of tired but wired youth. Advocates of sleep-friendly start times know that adolescence is a period of dramatic brain development, particularly in the parts of the brain that are responsible for those higher order thinking processes, including reasoning, problem solving, and good judgment. In other words, the very type of brain activity that\u2019s responsible for reining in those impulsive and often risky behaviors that are so characteristic of adolescence. They know that, like the rest of us, when teenagers don\u2019t get the sleep they need, their brains, their bodies, and behavior suffer. They can't concentrate. Their attention plummets, and many will even show behavioral signs that mimic ADHD. But the consequences of teen sleep loss go well beyond the classroom, sadly contributing to many of the mental health problems that skyrocket during adolescence. In our work with teens from LA Unified School District, we found that teens with sleep problems were 55% more likely to have used alcohol in the past month. In another study with over 30,000 high school students, they found that for each hour of lost sleep, there was a 38% increase in feeling sad or hopeless, and a 58% increase in teen suicide attempts. And if that's not enough, teens who skimp out on sleep are at increased risk for a host of physical health problems that plague our country, including obesity, heart disease, and diabetes. Then there\u2019s the risk of putting a sleep-deprived teen behind the wheel. Studies have shown that getting five hours or less of sleep per night is the equivalent of driving with a blood alcohol content above the legal limit. Researchers in this area have produced tremendous science showing the benefits of later start times. The findings are unequivocal. Teens from districts with later start times get more sleep. They're more likely to show up for school. School absences dropped by 25% in one district, and they're less likely to drop out. Not surprisingly, they do better academically. Standardized test scores in math and reading go up by 2 to 3 percentage points. That's as powerful as reducing class sizes by one third fewer students. Their mental and physical health improves, and their families are happier. Even their communities are safer because car crash rates go down\u2014 a 70% reduction in one district. Now, given these tremendous benefits, you might think, well, this is a no brainer, right? So why have we as a society failed to heed this call? Delaying start times presents many logistical challenges. Updating bus routes, increased transportation costs, impact on sports. Care before or after school. But these are problems we have to work through. They are not valid excuses for failing to do the right thing for our children, which is to start middle and high schools no earlier than 8:30 a.m. Districts around the country, big and small, who have made this change, they\u2019ve found that these fears are often unfounded and far outweighed by the tremendous benefits for our student health and performance and our collective public safety.",
+      "segments": [
+        {
+          "text": "It's 6:00 in the morning,\npitch black outside.",
+          "start": 7.462,
+          "duration": 2.919
+        },
+        {
+          "text": "My 14-year-old son is fast\nasleep in his bed.",
+          "start": 10.548,
+          "duration": 2.92
+        },
+        {
+          "text": "I flip on the light and physically\nshake the poor boy awake.",
+          "start": 13.593,
+          "duration": 3.336
+        },
+        {
+          "text": "because I know that,\nlike ripping off a Band-Aid,",
+          "start": 17.18,
+          "duration": 2.419
+        },
+        {
+          "text": "it's better to get it over with quickly.",
+          "start": 19.599,
+          "duration": 2.252
+        },
+        {
+          "text": "Sound brutal, but perhaps familiar?",
+          "start": 22.101,
+          "duration": 2.753
+        },
+        {
+          "text": "Every morning I ask myself,\nhow can I, knowing what I know,",
+          "start": 25.271,
+          "duration": 5.088
+        },
+        {
+          "text": "be doing this to my own son?",
+          "start": 30.651,
+          "duration": 1.877
+        },
+        {
+          "text": "You see, I\u2019m a sleep researcher.",
+          "start": 32.779,
+          "duration": 2.502
+        },
+        {
+          "text": "So I know that I\u2019m depriving my son\nof sleep he desperately needs",
+          "start": 35.573,
+          "duration": 4.004
+        },
+        {
+          "text": "as a rapidly growing teenager.",
+          "start": 39.619,
+          "duration": 1.96
+        },
+        {
+          "text": "I also know that by waking him up",
+          "start": 41.746,
+          "duration": 1.918
+        },
+        {
+          "text": "hours before his natural biological\nclock tells him he\u2019s ready,",
+          "start": 43.664,
+          "duration": 4.004
+        },
+        {
+          "text": "I\u2019m literally robbing him\nof the type of sleep",
+          "start": 47.668,
+          "duration": 2.586
+        },
+        {
+          "text": "most associated with learning, memory\nconsolidation, and emotional processing.",
+          "start": 50.254,
+          "duration": 5.714
+        },
+        {
+          "text": "But it's not just my kid\nthat's being deprived of sleep.",
+          "start": 56.052,
+          "duration": 2.919
+        },
+        {
+          "text": "Sleep deprivation among\nAmerican teenagers is an epidemic.",
+          "start": 59.013,
+          "duration": 3.67
+        },
+        {
+          "text": "Only about 1 in 10 gets the 8 to 10 hours\nof sleep per night",
+          "start": 62.934,
+          "duration": 4.212
+        },
+        {
+          "text": "recommended by sleep scientists\nand pediatricians.",
+          "start": 67.146,
+          "duration": 3.253
+        },
+        {
+          "text": "The major factor preventing teens\nfrom getting the sleep they need",
+          "start": 70.483,
+          "duration": 4.129
+        },
+        {
+          "text": "is a matter of public policy.",
+          "start": 74.612,
+          "duration": 2.127
+        },
+        {
+          "text": "Across the country, many schools are\nstarting around 7:30 a.m. or earlier,",
+          "start": 77.323,
+          "duration": 4.963
+        },
+        {
+          "text": "despite the fact that major medical\norganizations recommend",
+          "start": 82.411,
+          "duration": 3.671
+        },
+        {
+          "text": "that middle and high schools start\nno earlier than 8:30 a.m.",
+          "start": 86.082,
+          "duration": 4.463
+        },
+        {
+          "text": "These early start policies\nhave a direct effect",
+          "start": 90.92,
+          "duration": 2.544
+        },
+        {
+          "text": "on how little sleep\nAmerican teenagers are getting.",
+          "start": 93.464,
+          "duration": 3.045
+        },
+        {
+          "text": "They\u2019re also pitting teenagers in a\nfundamentally unwinnable fight",
+          "start": 96.843,
+          "duration": 4.004
+        },
+        {
+          "text": "against their own bodies.",
+          "start": 100.847,
+          "duration": 1.668
+        },
+        {
+          "text": "Around the time of puberty,",
+          "start": 103.307,
+          "duration": 1.544
+        },
+        {
+          "text": "teenagers experience a delay\nin their biological clock,",
+          "start": 104.851,
+          "duration": 3.42
+        },
+        {
+          "text": "which determines when we feel most awake\nand when we feel most sleepy.",
+          "start": 108.563,
+          "duration": 3.461
+        },
+        {
+          "text": "This is driven in part by a shift\nin the release of the hormone melatonin.",
+          "start": 112.15,
+          "duration": 3.878
+        },
+        {
+          "text": "Teenagers\u2019 bodies wait to start\nreleasing melatonin until around 11 p.m.,",
+          "start": 116.07,
+          "duration": 4.88
+        },
+        {
+          "text": "which is two hours later than what\nwe see in adults or younger children.",
+          "start": 121.117,
+          "duration": 4.129
+        },
+        {
+          "text": "This means that waking a teenager\nup at 6 a.m.",
+          "start": 125.705,
+          "duration": 3.795
+        },
+        {
+          "text": "is the biological equivalent\nof waking an adult up at 4 a.m.",
+          "start": 129.5,
+          "duration": 5.172
+        },
+        {
+          "text": "Now, on the unfortunate days\nwhen I have to wake up at 4 a.m.,",
+          "start": 135.089,
+          "duration": 3.587
+        },
+        {
+          "text": "I\u2019m a zombie.",
+          "start": 138.676,
+          "duration": 1.168
+        },
+        {
+          "text": "Functionally useless.",
+          "start": 139.844,
+          "duration": 1.335
+        },
+        {
+          "text": "I can't think straight.",
+          "start": 141.262,
+          "duration": 1.335
+        },
+        {
+          "text": "I\u2019m irritable, and I probably\nshouldn\u2019t be driving a car.",
+          "start": 142.638,
+          "duration": 3.337
+        },
+        {
+          "text": "But this is how many American teenagers\nfeel every single school day.",
+          "start": 146.475,
+          "duration": 4.171
+        },
+        {
+          "text": "Many of the, shall we say,",
+          "start": 151.022,
+          "duration": 1.668
+        },
+        {
+          "text": "unpleasant characteristics that we chalk\nup to being a teenager\u2014",
+          "start": 152.815,
+          "duration": 4.046
+        },
+        {
+          "text": "moodiness, irritability,\nlaziness, depression\u2014",
+          "start": 156.861,
+          "duration": 3.086
+        },
+        {
+          "text": "could be a product\nof chronic sleep deprivation.",
+          "start": 160.156,
+          "duration": 2.961
+        },
+        {
+          "text": "For many teens battling\nchronic sleep loss,",
+          "start": 163.284,
+          "duration": 2.711
+        },
+        {
+          "text": "their go-to strategy to compensate is\nconsuming large quantities of caffeine",
+          "start": 165.995,
+          "duration": 5.005
+        },
+        {
+          "text": "in the form of venti Frappuccinos,\nor energy drinks and shots.",
+          "start": 171.0,
+          "duration": 3.962
+        },
+        {
+          "text": "So essentially, we've got an entire\npopulation of tired but wired youth.",
+          "start": 175.213,
+          "duration": 6.297
+        },
+        {
+          "text": "Advocates of sleep-friendly start times",
+          "start": 182.136,
+          "duration": 2.294
+        },
+        {
+          "text": "know that adolescence is a period\nof dramatic brain development,",
+          "start": 184.43,
+          "duration": 4.087
+        },
+        {
+          "text": "particularly in the parts of the brain",
+          "start": 188.684,
+          "duration": 2.169
+        },
+        {
+          "text": "that are responsible for those\nhigher order thinking processes,",
+          "start": 190.853,
+          "duration": 3.42
+        },
+        {
+          "text": "including reasoning, problem solving,\nand good judgment.",
+          "start": 194.273,
+          "duration": 4.171
+        },
+        {
+          "text": "In other words, the very type of brain\nactivity that\u2019s responsible for reining in",
+          "start": 198.527,
+          "duration": 4.171
+        },
+        {
+          "text": "those impulsive and often risky behaviors\nthat are so characteristic of adolescence.",
+          "start": 202.698,
+          "duration": 5.589
+        },
+        {
+          "text": "They know that, like the rest of us,",
+          "start": 208.621,
+          "duration": 1.752
+        },
+        {
+          "text": "when teenagers don\u2019t get the sleep\nthey need,",
+          "start": 210.373,
+          "duration": 2.46
+        },
+        {
+          "text": "their brains, their bodies,\nand behavior suffer.",
+          "start": 212.833,
+          "duration": 2.92
+        },
+        {
+          "text": "They can't concentrate.",
+          "start": 215.878,
+          "duration": 1.502
+        },
+        {
+          "text": "Their attention plummets,",
+          "start": 217.672,
+          "duration": 1.501
+        },
+        {
+          "text": "and many will even show\nbehavioral signs that mimic ADHD.",
+          "start": 219.382,
+          "duration": 3.795
+        },
+        {
+          "text": "But the consequences of teen sleep\nloss go well beyond the classroom,",
+          "start": 223.552,
+          "duration": 3.838
+        },
+        {
+          "text": "sadly contributing to many\nof the mental health problems",
+          "start": 227.64,
+          "duration": 3.378
+        },
+        {
+          "text": "that skyrocket during adolescence.",
+          "start": 231.018,
+          "duration": 2.461
+        },
+        {
+          "text": "In our work with teens from\nLA Unified School District,",
+          "start": 234.146,
+          "duration": 2.962
+        },
+        {
+          "text": "we found that teens with sleep\nproblems were 55% more likely",
+          "start": 237.108,
+          "duration": 4.212
+        },
+        {
+          "text": "to have used alcohol in the past month.",
+          "start": 241.32,
+          "duration": 2.294
+        },
+        {
+          "text": "In another study with over\n30,000 high school students,",
+          "start": 243.823,
+          "duration": 3.545
+        },
+        {
+          "text": "they found that for each\nhour of lost sleep,",
+          "start": 247.493,
+          "duration": 2.92
+        },
+        {
+          "text": "there was a 38% increase\nin feeling sad or hopeless,",
+          "start": 250.454,
+          "duration": 3.754
+        },
+        {
+          "text": "and a 58% increase\nin teen suicide attempts.",
+          "start": 254.5,
+          "duration": 3.67
+        },
+        {
+          "text": "And if that's not enough,",
+          "start": 258.754,
+          "duration": 1.502
+        },
+        {
+          "text": "teens who skimp out on sleep are\nat increased risk",
+          "start": 260.381,
+          "duration": 2.628
+        },
+        {
+          "text": "for a host of physical health problems\nthat plague our country,",
+          "start": 263.009,
+          "duration": 3.837
+        },
+        {
+          "text": "including obesity, heart disease,\nand diabetes.",
+          "start": 266.846,
+          "duration": 3.962
+        },
+        {
+          "text": "Then there\u2019s the risk of putting a\nsleep-deprived teen behind the wheel.",
+          "start": 271.1,
+          "duration": 3.921
+        },
+        {
+          "text": "Studies have shown that getting five hours\nor less of sleep per night",
+          "start": 275.438,
+          "duration": 4.045
+        },
+        {
+          "text": "is the equivalent of driving with a blood\nalcohol content above the legal limit.",
+          "start": 279.483,
+          "duration": 5.339
+        },
+        {
+          "text": "Researchers in this area have produced\ntremendous science",
+          "start": 285.364,
+          "duration": 3.921
+        },
+        {
+          "text": "showing the benefits of later start times.",
+          "start": 289.285,
+          "duration": 2.794
+        },
+        {
+          "text": "The findings are unequivocal.",
+          "start": 292.121,
+          "duration": 1.919
+        },
+        {
+          "text": "Teens from districts with later\nstart times get more sleep.",
+          "start": 294.081,
+          "duration": 3.212
+        },
+        {
+          "text": "They're more likely to show up for school.",
+          "start": 297.668,
+          "duration": 2.169
+        },
+        {
+          "text": "School absences dropped by 25%\nin one district,",
+          "start": 299.837,
+          "duration": 3.587
+        },
+        {
+          "text": "and they're less likely to drop out.",
+          "start": 303.549,
+          "duration": 2.085
+        },
+        {
+          "text": "Not surprisingly,\nthey do better academically.",
+          "start": 305.926,
+          "duration": 2.545
+        },
+        {
+          "text": "Standardized test scores in math and\nreading go up by 2 to 3 percentage points.",
+          "start": 308.846,
+          "duration": 4.796
+        },
+        {
+          "text": "That's as powerful as reducing\nclass sizes by one third fewer students.",
+          "start": 313.893,
+          "duration": 4.88
+        },
+        {
+          "text": "Their mental and physical health improves,\nand their families are happier.",
+          "start": 319.106,
+          "duration": 4.38
+        },
+        {
+          "text": "Even their communities are safer\nbecause car crash rates go down\u2014",
+          "start": 323.569,
+          "duration": 4.046
+        },
+        {
+          "text": "a 70% reduction in one district.",
+          "start": 327.656,
+          "duration": 2.753
+        },
+        {
+          "text": "Now, given these tremendous benefits,\nyou might think,",
+          "start": 330.868,
+          "duration": 3.17
+        },
+        {
+          "text": "well, this is a no brainer, right?",
+          "start": 334.038,
+          "duration": 2.002
+        },
+        {
+          "text": "So why have we as a society failed\nto heed this call?",
+          "start": 336.29,
+          "duration": 3.879
+        },
+        {
+          "text": "Delaying start times presents many\nlogistical challenges.",
+          "start": 340.878,
+          "duration": 3.378
+        },
+        {
+          "text": "Updating bus routes, increased\ntransportation costs, impact on sports.",
+          "start": 344.256,
+          "duration": 4.839
+        },
+        {
+          "text": "Care before or after school.",
+          "start": 349.303,
+          "duration": 2.211
+        },
+        {
+          "text": "But these are problems\nwe have to work through.",
+          "start": 351.847,
+          "duration": 2.878
+        },
+        {
+          "text": "They are not valid excuses for failing\nto do the right thing for our children,",
+          "start": 354.975,
+          "duration": 4.964
+        },
+        {
+          "text": "which is to start middle and high\nschools no earlier than 8:30 a.m.",
+          "start": 360.231,
+          "duration": 4.671
+        },
+        {
+          "text": "Districts around the country, big and\nsmall, who have made this change,",
+          "start": 365.152,
+          "duration": 3.462
+        },
+        {
+          "text": "they\u2019ve found that these\nfears are often unfounded",
+          "start": 368.614,
+          "duration": 3.378
+        },
+        {
+          "text": "and far outweighed by the\ntremendous benefits",
+          "start": 371.992,
+          "duration": 3.254
+        },
+        {
+          "text": "for our student health\nand performance",
+          "start": 375.246,
+          "duration": 2.502
+        },
+        {
+          "text": "and our collective public safety.",
+          "start": 377.748,
+          "duration": 2.211
+        }
+      ],
+      "video_id": "WJhCa12UTsg"
+    }
+  }
+}

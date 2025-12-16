@@ -1,0 +1,714 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T05:02:40.133618",
+    "latency_seconds": 20.87,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nWhat you\u2019re about to see\u2026 is a historic moment. [TRUMP]: \u201c...we're very much working very closely with China and president Xi.\u201d [HOST]: Not that. [TRUMP]:\u201d...if you look at Idlib Province in Syria.\u201d [HOST]: Nope [TRUMP]:\u201cSo, Prime Minister Abe came here\u2026\u201d [HOST]: Not that either... But this... [TRUMP]: \u201cI'm going to be signing a national emergency. And it's been signed many times before. It's been signed by other presidents. There's rarely been a problem. They sign it; nobody cares. ..\u201d [HOST]: President Trump is right, many other presidents have used this power before. But his declaration isn\u2019t normal. At all. Why? Because by using it to fund his proposed border wall, he has made it the first time a president has used this power to pay for policy that had already been rejected by Congress. [GOITEIN]: \u201cThis this is an unprecedented abuse of power in terms of the president basically saying that Congress cannot limit him.\u201d [HOST]: That\u2019s Elizabeth Goitein from the Brennan Center for Justices. She\u2019s extensively studied presidential declarations of National Emergencies. And she\u2019ll help us better understand what\u2019s different about Trump\u2019s declaration. Let's start here, in December 2018: [TRUMP]: \u201cI am proud to shutdown the government for border security, Chuck. \u2026 I will take the mantle. I will be the one to shut it down. I\u2019m not going to blame you for it.\u201d [HOST]: Trump said he would refuse to sign a budget into law unless it included $5.7 billion dollars for his proposed border wall on the U.S. / Mexico border. Democrats, who took control of the House of Representatives in January, refused to give in to the president\u2019s demand. The result\u2026 a political stalemate and the longest government shutdown in U.S. history. Eventually, on February 14th, a budget was passed\u2026 but it did not include funding for the border wall. That\u2019s when Trump decided to take executive action to fund his border wall by declaring a \u201cnational emergency.\u201d [GOITEIN]: This president is pushing a very dangerous vision of constitutional government where the president gets to do what he wants. And that's not what the Constitution provides for. This is dangerous. It's undemocratic. [HOST]: The declaration allows the president to unilaterally divert billions of dollars from military construction projects to fund this border wall. But now, Trump\u2019s declaration is being challenged in the courts and Congress. In a historic vote on February 26th, the House of Representatives voted to block a presidential national emergency for the first time ever. The legislation now moves to the Senate. [GOITEIN]: I think it's has a good chance of passing the Senate. At that point of course the president would veto it and then the chances are overriding that veto are slim to be sure. [HOST]: That\u2019s because Congress would need a supermajority vote, two-thirds of both chambers, to override a presidential veto. And since some say it\u2019s unlikely that it will be blocked by Congress, it will be left up to the courts to determine whether it\u2019s legal or not. Right now, 16 states are suing the president for what they say is an \u201cunconstitutional\u201d use of executive power. The lawsuit claims the president has used a \u201cmanufactured crisis\u201d to call for an emergency. [GOITEIN]: \u201cIn this case it's very clear from the president's words and his actions that he is declaring this emergency for the purpose of getting around Congress\u2026 That's an abuse of power. [HOST]: What Goitein is saying there\u2026 isn\u2019t really controversial. In fact, the president even made this point himself in the very same speech where he first announced his declaration. [TRUMP]: \u201cI could do the wall over a longer period of time, I didn't need to do this, but I'd rather do it much faster.\u201d [HOST]: But let\u2019s take a step back. Despite this announcement being the first of its kind, presidential declarations of national emergencies definitely aren\u2019t anything new, or out of the ordinary. For example, in addition to this most recent one, President Trump has declared three others during his time in office. President Obama? He issued 12. Bush? 13. And Clinton? 17. In addition to the recent one, there are 31 other active national emergencies, which need to be renewed every year. The oldest one still in effect is from president Jimmy Carter in 1979 -- which were sanctions in response to the Iran hostage crisis. But when did this type of power first arise? First, it\u2019s important to know that the U.S. Constitution doesn\u2019t explicitly give a president the right to declare a national emergency. But presidents have taken this type of unilateral action for some time now -- claiming it\u2019s part of the \u201cexecutive powers\u201d granted to them in the constitution. President Woodrow Wilson was the first president to declare a national emergency during World War I. Since then, numerous presidents have used this type of executive power -- sometimes in really awful ways. Take Franklin Roosevelt for example\u2026 He used it to order the internment of over 100,000 Japanese-Americans during World War II . But this type of executive power has been successfully blocked too. In the 1950s, the Supreme Court blocked President Harry Truman\u2019s attempt to nationalize the steel industry during the the Korean War. With this type of presidential overreach fresh in the minds of Congress, it took action to scale back executive power in the 1970s. [GOITEIN]: \u201cThere had been several just massive scandals involving executive branch overreach. For example Watergate, the bombing of Cambodia during Vietnam, the CIA's domestic spying programs and all of these things came to light at around the same time. And so Congress just decided to take a very hard look at executive power in general.\u201d [HOST]: It passed the National Emergencies Act of 1976. The legislation formalized a president\u2019s ability to declare national emergencies, but also aimed to give legislators the ability to check the president\u2019s power. But Goitein says since it passed, the law has failed to limit presidential powers the way it intended to. And she argues that if Trump\u2019s recent declaration is allowed to stay in effect, it would set a really dangerous precedent. [GOITEIN]: It is not by any means the scariest of the emergency powers that become available to a president when he declares a national emergency. There are powers that allow the president simply by declaring a national emergency to shut down or take over radio stations. Powers that allow him to freeze Americans bank accounts and criminalize doing business with Americans that are designated by the government. [HOST]: Those examples of potential areas of abuse by a president are why Goiten says Congress needs to act now -- not only to place limits on President Trump\u2019s power, but for those who occupy the office after him as well.",
+    "input_length_chars": 6854,
+    "input_tokens_estimated": 1713,
+    "output": {
+      "claims": [
+        {
+          "text": "Trump's declaration is the first time a president has used national emergency powers to fund a policy rejected by Congress.",
+          "confidence": 0.9,
+          "category": "policy",
+          "importance": 0.85,
+          "context": "Trump's border wall funding declaration, 2019."
+        },
+        {
+          "text": "The House of Representatives voted to block a presidential national emergency for the first time ever on February 26th.",
+          "confidence": 0.9,
+          "category": "political",
+          "importance": 0.85,
+          "context": "Historic vote in Congress, February 26, 2019."
+        },
+        {
+          "text": "16 states are suing the president for what they say is an unconstitutional use of executive power.",
+          "confidence": 0.85,
+          "category": "legal",
+          "importance": 0.75,
+          "context": "Current legal challenges to Trump's national emergency declaration."
+        },
+        {
+          "text": "The oldest active national emergency is from President Jimmy Carter in 1979 regarding the Iran hostage crisis.",
+          "confidence": 0.95,
+          "category": "historical",
+          "importance": 0.7,
+          "context": "Historical context of national emergencies."
+        },
+        {
+          "text": "President Trump has declared three national emergencies during his time in office.",
+          "confidence": 0.9,
+          "category": "policy",
+          "importance": 0.6,
+          "context": "Trump's use of national emergency powers."
+        },
+        {
+          "text": "President Obama issued 12 national emergencies, Bush issued 13, and Clinton issued 17.",
+          "confidence": 0.9,
+          "category": "historical",
+          "importance": 0.6,
+          "context": "Comparison of national emergencies declared by past presidents."
+        },
+        {
+          "text": "The U.S. Constitution doesn\u2019t explicitly give a president the right to declare a national emergency.",
+          "confidence": 0.85,
+          "category": "legal",
+          "importance": 0.55,
+          "context": "Constitutional basis for national emergency declarations."
+        },
+        {
+          "text": "The National Emergencies Act of 1976 aimed to limit presidential powers but has failed to do so effectively.",
+          "confidence": 0.8,
+          "category": "policy",
+          "importance": 0.55,
+          "context": "Legislative context regarding presidential powers."
+        },
+        {
+          "text": "Franklin Roosevelt used national emergency powers to order the internment of over 100,000 Japanese-Americans during World War II.",
+          "confidence": 0.9,
+          "category": "historical",
+          "importance": 0.5,
+          "context": "Historical example of executive power abuse."
+        },
+        {
+          "text": "The Supreme Court blocked President Harry Truman\u2019s attempt to nationalize the steel industry during the Korean War.",
+          "confidence": 0.9,
+          "category": "legal",
+          "importance": 0.5,
+          "context": "Historical context of checks on presidential power."
+        }
+      ],
+      "total_count": 10
+    },
+    "output_length_chars": 3276,
+    "output_tokens_estimated": 819,
+    "cost_usd": 0.00074835
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T05:02:49.042800",
+    "latency_seconds": 1.97,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: President Trump has declared three national emergencies during his time in office.\nContext: Trump's use of national emergency powers.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 306,
+    "input_tokens_estimated": 76,
+    "output": {
+      "original_claim": "President Trump has declared three national emergencies during his time in office.",
+      "queries": [
+        {
+          "query": "Trump national emergencies declared",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "number of national emergencies declared by Trump",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 315,
+    "output_tokens_estimated": 78,
+    "cost_usd": 5.82e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "The Supreme Court blocked President Harry Truman\u2019s attempt to nationalize the steel industry during the Korean War."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T05:02:49.252459",
+    "latency_seconds": 2.18,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: 16 states are suing the president for what they say is an unconstitutional use of executive power.\nContext: Current legal challenges to Trump's national emergency declaration.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 348,
+    "input_tokens_estimated": 87,
+    "output": {
+      "original_claim": "16 states are suing the president for what they say is an unconstitutional use of executive power.",
+      "queries": [
+        {
+          "query": "16 states suing Trump unconstitutional executive power",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "lawsuit against Trump national emergency declaration 16 states",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 364,
+    "output_tokens_estimated": 91,
+    "cost_usd": 6.765e-05,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "President Trump has declared three national emergencies during his time in office.",
+      "query_index": 2,
+      "query_text": "number of national emergencies declared by Trump"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T05:02:49.339500",
+    "latency_seconds": 2.26,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Franklin Roosevelt used national emergency powers to order the internment of over 100,000 Japanese-Americans during World War II.\nContext: Historical example of executive power abuse.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 356,
+    "input_tokens_estimated": 89,
+    "output": {
+      "original_claim": "Franklin Roosevelt used national emergency powers to order the internment of over 100,000 Japanese-Americans during World War II.",
+      "queries": [
+        {
+          "query": "Franklin Roosevelt national emergency powers Japanese-American internment",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Japanese-American internment World War II executive order",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 409,
+    "output_tokens_estimated": 102,
+    "cost_usd": 7.455e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "16 states are suing the president for what they say is an unconstitutional use of executive power.",
+      "query_index": 2,
+      "query_text": "lawsuit against Trump national emergency declaration 16 states"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T05:02:49.426312",
+    "latency_seconds": 2.35,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The National Emergencies Act of 1976 aimed to limit presidential powers but has failed to do so effectively.\nContext: Legislative context regarding presidential powers.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 341,
+    "input_tokens_estimated": 85,
+    "output": {
+      "original_claim": "The National Emergencies Act of 1976 aimed to limit presidential powers but has failed to do so effectively.",
+      "queries": [
+        {
+          "query": "National Emergencies Act of 1976 presidential powers effectiveness",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "impact of National Emergencies Act 1976 on presidential authority",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 389,
+    "output_tokens_estimated": 97,
+    "cost_usd": 7.095e-05,
+    "context": {
+      "claim_index": 9,
+      "claim_text": "Franklin Roosevelt used national emergency powers to order the internment of over 100,000 Japanese-Americans during World War II.",
+      "query_index": 2,
+      "query_text": "Japanese-American internment World War II executive order"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T05:02:49.426699",
+    "latency_seconds": 2.35,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The U.S. Constitution doesn\u2019t explicitly give a president the right to declare a national emergency.\nContext: Constitutional basis for national emergency declarations.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 340,
+    "input_tokens_estimated": 85,
+    "output": {
+      "original_claim": "The U.S. Constitution doesn\u2019t explicitly give a president the right to declare a national emergency.",
+      "queries": [
+        {
+          "query": "U.S. Constitution president declare national emergency",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "presidential powers national emergency declaration Constitution",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 367,
+    "output_tokens_estimated": 91,
+    "cost_usd": 6.735e-05,
+    "context": {
+      "claim_index": 9,
+      "claim_text": "Franklin Roosevelt used national emergency powers to order the internment of over 100,000 Japanese-Americans during World War II.",
+      "query_index": 2,
+      "query_text": "Japanese-American internment World War II executive order"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T05:02:49.427144",
+    "latency_seconds": 2.35,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The Supreme Court blocked President Harry Truman\u2019s attempt to nationalize the steel industry during the Korean War.\nContext: Historical context of checks on presidential power.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 349,
+    "input_tokens_estimated": 87,
+    "output": {
+      "original_claim": "The Supreme Court blocked President Harry Truman\u2019s attempt to nationalize the steel industry during the Korean War.",
+      "queries": [
+        {
+          "query": "Supreme Court Truman nationalize steel industry Korean War",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Truman steel industry nationalization Supreme Court ruling",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 381,
+    "output_tokens_estimated": 95,
+    "cost_usd": 7.005e-05,
+    "context": {
+      "claim_index": 9,
+      "claim_text": "Franklin Roosevelt used national emergency powers to order the internment of over 100,000 Japanese-Americans during World War II.",
+      "query_index": 2,
+      "query_text": "Japanese-American internment World War II executive order"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T05:02:49.682504",
+    "latency_seconds": 2.61,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: President Obama issued 12 national emergencies, Bush issued 13, and Clinton issued 17.\nContext: Comparison of national emergencies declared by past presidents.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 332,
+    "input_tokens_estimated": 83,
+    "output": {
+      "original_claim": "President Obama issued 12 national emergencies, Bush issued 13, and Clinton issued 17.",
+      "queries": [
+        {
+          "query": "number of national emergencies declared by President Obama, Bush, and Clinton",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "national emergencies declared by US presidents comparison Obama Bush Clinton",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 389,
+    "output_tokens_estimated": 97,
+    "cost_usd": 7.065e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "The Supreme Court blocked President Harry Truman\u2019s attempt to nationalize the steel industry during the Korean War.",
+      "query_index": 2,
+      "query_text": "Truman steel industry nationalization Supreme Court ruling"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T05:02:49.682997",
+    "latency_seconds": 2.61,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Trump's declaration is the first time a president has used national emergency powers to fund a policy rejected by Congress.\nContext: Trump's border wall funding declaration, 2019.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 352,
+    "input_tokens_estimated": 88,
+    "output": {
+      "original_claim": "Trump's declaration is the first time a president has used national emergency powers to fund a policy rejected by Congress.",
+      "queries": [
+        {
+          "query": "Trump national emergency powers fund policy rejected by Congress 2019",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "first president use national emergency powers to fund rejected policy",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 411,
+    "output_tokens_estimated": 102,
+    "cost_usd": 7.44e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "The Supreme Court blocked President Harry Truman\u2019s attempt to nationalize the steel industry during the Korean War.",
+      "query_index": 2,
+      "query_text": "Truman steel industry nationalization Supreme Court ruling"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T05:02:49.852898",
+    "latency_seconds": 2.78,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The oldest active national emergency is from President Jimmy Carter in 1979 regarding the Iran hostage crisis.\nContext: Historical context of national emergencies.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 336,
+    "input_tokens_estimated": 84,
+    "output": {
+      "original_claim": "The oldest active national emergency is from President Jimmy Carter in 1979 regarding the Iran hostage crisis.",
+      "queries": [
+        {
+          "query": "oldest active national emergency President Jimmy Carter 1979 Iran hostage crisis",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "national emergency declared by Jimmy Carter 1979 Iran hostage crisis",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 408,
+    "output_tokens_estimated": 102,
+    "cost_usd": 7.38e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Trump's declaration is the first time a president has used national emergency powers to fund a policy rejected by Congress.",
+      "query_index": 2,
+      "query_text": "first president use national emergency powers to fund rejected policy"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T05:02:49.853424",
+    "latency_seconds": 2.78,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The House of Representatives voted to block a presidential national emergency for the first time ever on February 26th.\nContext: Historic vote in Congress, February 26, 2019.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 347,
+    "input_tokens_estimated": 86,
+    "output": {
+      "original_claim": "The House of Representatives voted to block a presidential national emergency for the first time ever on February 26th.",
+      "queries": [
+        {
+          "query": "House of Representatives vote block presidential national emergency February 26 2019",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "first time House of Representatives blocks presidential national emergency February 2019",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 441,
+    "output_tokens_estimated": 110,
+    "cost_usd": 7.89e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Trump's declaration is the first time a president has used national emergency powers to fund a policy rejected by Congress.",
+      "query_index": 2,
+      "query_text": "first president use national emergency powers to fund rejected policy"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T05:04:27.747941",
+    "latency_seconds": 31.78,
+    "input_prompt": "Claim:\n16 states are suing the president for what they say is an unconstitutional use of executive power.\n\nArticle Title:\nGovernor Newsom, Attorney General Becerra, and 15 Partner States ...\n\nGoogle Search Snippet:\nFifteen states join California to block Trump's fabricated emergency and unlawful diversion of Congressionally-appropriated funding to pay ...\n\nFull Page Content:\nA coalition of 16 US states led by California has sued Donald Trump\u2019s administration over his decision to declare a national emergency in order to fund a wall along the Mexico border.\nThe lawsuit was filed on Monday in the US district court for the northern district of California after Trump invoked emergency powers on Friday when Congress declined his request for $5.7bn to help create his signature policy promise.\nHis move aims to let him spend money appropriated by Congress for other purposes.\nThe states\u2019 lawsuit represents part of an unfolding wave of anticipated legal challenges to Trump\u2019s novel scheme for building a border wall, which polling shows a majority of voters do not want and which his own party declined to fund for two years when Republicans controlled both houses of Congress.\nDemocratic House speaker Nancy Pelosi, who was swept back to power in the midterm elections late last year, vowed that Congress would join the legal effort to block Trump\u2019s emergency declaration.\n\u201cThe president\u2019s actions clearly violate the Congress\u2019s exclusive power of the purse, which our founders enshrined in the constitution,\u201d said Pelosi in a joint statement with Senate majority leader Chuck Schumer. \u201cThe Congress will defend our constitutional authorities in the Congress, in the courts and in the public, using every remedy available.\u201d\nLegal scholars disagree about whether Trump\u2019s emergency declaration falls within constitutional bounds. In a rambling riff on the question delivered as an aside to his declaration of emergency on Friday, Trump predicted the matter would be appealed to the US supreme court.\n\u201cAnd we will have a national emergency, and we will then be sued, and they will sue us in the ninth circuit, even though it shouldn\u2019t be there, and we will possibly get a bad ruling,\u201d said Trump, \u201cand then we\u2019ll get another bad ruling, and then we\u2019ll end up in the supreme court, and hopefully we\u2019ll get a fair shake and we\u2019ll win in the supreme court.\u201d\nCalifornia attorney general Xavier Becerra is leading the states\u2019 lawsuit against the administration. He said: \u201cToday, on Presidents\u2019 Day, we take President Trump to court to block his misuse of presidential power.\u201d\nBecerra, a Democrat, added: \u201cWe\u2019re suing President Trump to stop him from unilaterally robbing taxpayer funds lawfully set aside by Congress for the people of our states. For most of us, the Office of the Presidency is not a place for theatre.\u201d\nTrump criticized California\u2019s lead role in the multi-state lawsuit challenging his emergency declaration to pay for the wall. On Twitter on Tuesday, Trump noted last week\u2019s decision by California Governor Gavin Newsom to cancel a high-speed rail line between Los Angeles and San Francisco. Trump claimed, without citing evidence, that the \u201cfailed Fast Train project\u201d had become \u201chundreds of times more expensive than the desperately needed Wall!\u201d\nThree Texas landowners and an environmental group filed the first lawsuit against Trump\u2019s move on Friday, saying it violated the constitution and would infringe on their property rights.\nThe legal challenges could slow Trump\u2019s efforts to build the wall, which he says is needed to check illegal immigration and drug trafficking, and the case is likely to end up in the conservative-leaning US supreme court.\nIn a budget deal passed by Congress to avert a second government shutdown, nearly $1.4bn was allocated to border fencing. Trump\u2019s emergency order would give him $6.7bn beyond what lawmakers authorised. The move allows the president to bypass Congress to use money from the Pentagon and other budgets.\n\nProvide relevant evidence.",
+    "input_length_chars": 4000,
+    "input_tokens_estimated": 1000,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article confirms that a coalition of 16 states is suing President Trump, claiming his use of emergency powers to fund a border wall is unconstitutional and violates Congress's exclusive power of the purse.",
+      "overall_stance": "supports",
+      "key_quote": "\"We\u2019re suing President Trump to stop him from unilaterally robbing taxpayer funds lawfully set aside by Congress for the people of our states.\""
+    },
+    "output_length_chars": 440,
+    "output_tokens_estimated": 110,
+    "cost_usd": 0.000216
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T05:04:28.161381",
+    "latency_seconds": 32.18,
+    "input_prompt": "Claim:\n16 states are suing the president for what they say is an unconstitutional use of executive power.\n\nArticle Title:\nCalifornia leads 16-state lawsuit over Trump's emergency declaration\n\nGoogle Search Snippet:\nA coalition of 16 US states led by California has sued Donald Trump's administration over his decision to declare a national emergency in order to fund a wall ...\n\nFull Page Content:\nA coalition of 16 US states led by California has sued Donald Trump\u2019s administration over his decision to declare a national emergency in order to fund a wall along the Mexico border.\nThe lawsuit was filed on Monday in the US district court for the northern district of California after Trump invoked emergency powers on Friday when Congress declined his request for $5.7bn to help create his signature policy promise.\nHis move aims to let him spend money appropriated by Congress for other purposes.\nThe states\u2019 lawsuit represents part of an unfolding wave of anticipated legal challenges to Trump\u2019s novel scheme for building a border wall, which polling shows a majority of voters do not want and which his own party declined to fund for two years when Republicans controlled both houses of Congress.\nDemocratic House speaker Nancy Pelosi, who was swept back to power in the midterm elections late last year, vowed that Congress would join the legal effort to block Trump\u2019s emergency declaration.\n\u201cThe president\u2019s actions clearly violate the Congress\u2019s exclusive power of the purse, which our founders enshrined in the constitution,\u201d said Pelosi in a joint statement with Senate majority leader Chuck Schumer. \u201cThe Congress will defend our constitutional authorities in the Congress, in the courts and in the public, using every remedy available.\u201d\nLegal scholars disagree about whether Trump\u2019s emergency declaration falls within constitutional bounds. In a rambling riff on the question delivered as an aside to his declaration of emergency on Friday, Trump predicted the matter would be appealed to the US supreme court.\n\u201cAnd we will have a national emergency, and we will then be sued, and they will sue us in the ninth circuit, even though it shouldn\u2019t be there, and we will possibly get a bad ruling,\u201d said Trump, \u201cand then we\u2019ll get another bad ruling, and then we\u2019ll end up in the supreme court, and hopefully we\u2019ll get a fair shake and we\u2019ll win in the supreme court.\u201d\nCalifornia attorney general Xavier Becerra is leading the states\u2019 lawsuit against the administration. He said: \u201cToday, on Presidents\u2019 Day, we take President Trump to court to block his misuse of presidential power.\u201d\nBecerra, a Democrat, added: \u201cWe\u2019re suing President Trump to stop him from unilaterally robbing taxpayer funds lawfully set aside by Congress for the people of our states. For most of us, the Office of the Presidency is not a place for theatre.\u201d\nTrump criticized California\u2019s lead role in the multi-state lawsuit challenging his emergency declaration to pay for the wall. On Twitter on Tuesday, Trump noted last week\u2019s decision by California Governor Gavin Newsom to cancel a high-speed rail line between Los Angeles and San Francisco. Trump claimed, without citing evidence, that the \u201cfailed Fast Train project\u201d had become \u201chundreds of times more expensive than the desperately needed Wall!\u201d\nThree Texas landowners and an environmental group filed the first lawsuit against Trump\u2019s move on Friday, saying it violated the constitution and would infringe on their property rights.\nThe legal challenges could slow Trump\u2019s efforts to build the wall, which he says is needed to check illegal immigration and drug trafficking, and the case is likely to end up in the conservative-leaning US supreme court.\nIn a budget deal passed by Congress to avert a second government shutdown, nearly $1.4bn was allocated to border fencing. Trump\u2019s emergency order would give him $6.7bn beyond what lawmakers authorised. The move allows the president to bypass Congress to use money from the Pentagon and other budgets.\n\nProvide relevant evidence.",
+    "input_length_chars": 4020,
+    "input_tokens_estimated": 1005,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article confirms that 16 states, led by California, are suing President Trump over his declaration of a national emergency, arguing that it constitutes an unconstitutional use of executive power to fund the border wall. The lawsuit claims that Trump's actions violate Congress's exclusive power of the purse as established in the Constitution.",
+      "overall_stance": "supports",
+      "key_quote": "\"We\u2019re suing President Trump to stop him from unilaterally robbing taxpayer funds lawfully set aside by Congress for the people of our states.\""
+    },
+    "output_length_chars": 578,
+    "output_tokens_estimated": 144,
+    "cost_usd": 0.00023715
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T05:04:28.231693",
+    "latency_seconds": 26.37,
+    "input_prompt": "Claim:\nThe National Emergencies Act of 1976 aimed to limit presidential powers but has failed to do so effectively.\n\nArticle Title:\n[PDF] 50 U.S.C. \u00a7\u00a71601-1651 Sec. 1601. Termination of existing declared ...\n\nGoogle Search Snippet:\n(b) Any provisions of law conferring powers and authorities to be exercised during a national emergency shall be effective and remain in effect (1) only when ...\n\nFull Page Content:\n16 JUNE 2025 / ARTICLE\nDeclaration of a national emergency grants the President temporary authority of enhanced executive powers on the rationale that the Congressional lawmaking process is too lengthy during times of crisis. With eight national emergencies declared already during his second term, the President is outpacing previous Administrations.\nThe National Emergencies Act of 1976 (NEA) terminated existing national emergencies and established procedures for how the Federal government responds to declared national emergencies. It limited the scope and duration of states of national emergency and formalized Congress\u2019 power to provide certain checks and balances on the emergency powers of the President. The NEA provides Congress with expedited procedures for consideration of a joint resolution terminating a national emergency, and it establishes a six-month congressional review period for ongoing national emergencies with the aim of granting Congress greater control over the use of emergency powers. Under Section 202(c) of the NEA (50 U.S.C. \u00a71622(c)), a joint resolution to terminate a national emergency can be introduced in either chamber at any time and referred to the appropriate committee.\nDemocratic Senator Frank Church, a critic of the Vietnam War, was furious when in 1970 President Nixon expanded the war into Cambodia without Congressional approval. Church drafted an amendment to prevent congressionally appropriated funds from being used for American war efforts in Cambodia. In response, Secretary of Defense Melvin Laird warned that the Pentagon would fund ground operations using the emergency provisions of the Feed and Forage Act, a Civil War-era law that granted the U.S. Cavalry the authority to purchase feed for its horses if appropriated money ran out while Congress was not in session. (Concerns over US military action in Cambodia and Congress\u2019 powers to declare war also led to enactment of the War Powers Resolution in 1973, overriding President Nixon\u2019s veto.)\nIn 1973, the Senate tasked a temporary committee with investigating \u201coutdated\u201d emergency powers Congress granted to Presidents in the previous half century. The Special Committee on the Termination of the National Emergency, was co-chaired by Church and Senator Charles Mathias (R-MD). The Committee identified a list of 470 powers that Congress had granted to Presidents in the previous half century during times of national crisis, and while those crises had ended, Congress had not officially revoked those powers. Further, the legislative branch had rarely limited Presidents\u2019 emergency powers. The findings of the Committee eventually led to passage of the National Emergencies Act in 1976, which President Ford signed.\nThe International Economic Emergency Powers Act of 1977 (IEEPA) gives the President authority to take certain steps to restrict commerce upon the declaration of a national emergency under the NEA. It grants the President broad authorities to impose economic sanctions and regulate economic transactions during national emergencies that involve an \u201cunusual and extraordinary\u201d threats to national security, foreign policy, or the economy. IEEPA also permits the President to \u201cregulate\u201d or \u201cprohibit\u201d imports, typically used to impose sanctions or to ban most or all transactions with a country, as when Iraq invaded Kuwait in 1990 or when Russia launched its second invasion of Ukraine in 2022.\nAs of June 2025, Presidents have declared 90 emergencies under the NEA, with IEEPA as the most frequently cited emergency authority. According to combined data from tracking by both the Congressional Research Service (CRS) and the Brennan Center, there are currently 52 ongoing national emergencies, all but three involving IEEPA.\nAccording to data from CRS, as of January 2024, Presidents have issued approximately 4.5 Executive Orders citing IEEPA and declared 1.5 new national emergencies citing IEEPA each year since 1990. Between 1977 and January 2024, national emergencies involving IEEPA last on average nearly nine years, with the majority targeting hostile states. However, new trends have emerged since 1990. In more recent decades, Presidents have increasingly declared non-geographically specific emergencies in response to concerns such as weapons proliferation, global terrorism, and malicious cyber activity. Rather than targeting foreign governments, IEEPA has increasingly been used to target groups, such as political parties, corporations, or terrorist organizations, and individuals, such as supporters of terrorism, suspected narcotics traffickers, and associates of the International Criminal Court.\nAnother significant trend is the expansion of rationale for declaring a state of emergency. Early rationales citing IEEPA being short and referencing a geographic area, such as \u201cthe situation in Iran,\u201d in EO 12170 following the seizure of the US Embassy in Tehran in 1979, the first declared national emergency since enactment of the NEA. Stated rationales now commonly include response to human and civil rights abuses, slavery, and denial of religious freedom, among others, with the majority of those referencing human rights declared in the last two decades.\nIn the first 100 days of the President\u2019s second term, the Administration declared eight states of emergency, more than any other modern President has in the same period. These emergencies concern issues such as the southern border, energy and critical minerals, drug cartels and terrorist organizations, and the International Criminal Court, among others.\nMost notable is the President\u2019s use of IEEPA regarding trade. He used this authority under IEEPA in February to declare a national emergency with respect to fentanyl and used this authority to impose tariffs on China, Mexico, and Canada (in the case of Canada, regulating the tariffs by imposing a lower tariff on Canadian energy imports). Later, on April 2, President Trump declared a national emergency with respect to large US tra\n\nProvide relevant evidence.",
+    "input_length_chars": 6442,
+    "input_tokens_estimated": 1610,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The National Emergencies Act of 1976 was designed to limit presidential powers by establishing procedures for declaring national emergencies and providing Congress with checks on these powers. However, the evidence indicates that the Act has not effectively curtailed presidential authority, as demonstrated by the significant number of national emergencies declared and the broad powers exercised by presidents since its enactment.",
+      "overall_stance": "supports",
+      "key_quote": "The legislative branch had rarely limited Presidents\u2019 emergency powers."
+    },
+    "output_length_chars": 589,
+    "output_tokens_estimated": 147,
+    "cost_usd": 0.0003297
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T05:04:28.375684",
+    "latency_seconds": 12.01,
+    "input_prompt": "Claim:\nThe U.S. Constitution doesn\u2019t explicitly give a president the right to declare a national emergency.\n\nArticle Title:\n50 USC 1621: Declaration of national emergency by President ...\n\nFull Page Content:\n1320b\u20135), do hereby find and proclaim that the COVID\u201319 outbreak in the United States constitutes a national emergency, beginning March 1, 2020. ... By the ...\n\nProvide relevant evidence.",
+    "input_length_chars": 395,
+    "input_tokens_estimated": 98,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that the U.S. Constitution does not explicitly grant the president the authority to declare a national emergency, as it focuses on the statutory framework established by 50 USC 1621.",
+      "overall_stance": "refutes",
+      "key_quote": "The U.S. Constitution doesn\u2019t explicitly give a president the right to declare a national emergency."
+    },
+    "output_length_chars": 390,
+    "output_tokens_estimated": 97,
+    "cost_usd": 7.29e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T05:04:28.695428",
+    "latency_seconds": 27.82,
+    "input_prompt": "Claim:\nThe National Emergencies Act of 1976 aimed to limit presidential powers but has failed to do so effectively.\n\nArticle Title:\nPresidential emergency powers, explained - Protect Democracy\n\nFull Page Content:\nThe act constrained executive overreach by allowing Congress to terminate a national emergency with a majority vote through a simple concurrent ...\n\nProvide relevant evidence.",
+    "input_length_chars": 388,
+    "input_tokens_estimated": 97,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The National Emergencies Act of 1976 was designed to limit presidential powers by enabling Congress to terminate a national emergency with a majority vote, suggesting that it aimed to constrain executive overreach.",
+      "overall_stance": "supports",
+      "key_quote": "The act constrained executive overreach by allowing Congress to terminate a national emergency with a majority vote."
+    },
+    "output_length_chars": 416,
+    "output_tokens_estimated": 104,
+    "cost_usd": 7.695e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T05:04:29.218252",
+    "latency_seconds": 33.24,
+    "input_prompt": "Claim:\n16 states are suing the president for what they say is an unconstitutional use of executive power.\n\nArticle Title:\n16 States Sue to Stop Trump's Use of Emergency Powers to Build ...\n\nGoogle Search Snippet:\nA coalition of 16 states, including California and New York, on Monday challenged President Trump in court over his plan to use emergency powers to spend ...\n\nFull Page Content:\nA coalition of 16 US states led by California has sued Donald Trump\u2019s administration over his decision to declare a national emergency in order to fund a wall along the Mexico border.\nThe lawsuit was filed on Monday in the US district court for the northern district of California after Trump invoked emergency powers on Friday when Congress declined his request for $5.7bn to help create his signature policy promise.\nHis move aims to let him spend money appropriated by Congress for other purposes.\nThe states\u2019 lawsuit represents part of an unfolding wave of anticipated legal challenges to Trump\u2019s novel scheme for building a border wall, which polling shows a majority of voters do not want and which his own party declined to fund for two years when Republicans controlled both houses of Congress.\nDemocratic House speaker Nancy Pelosi, who was swept back to power in the midterm elections late last year, vowed that Congress would join the legal effort to block Trump\u2019s emergency declaration.\n\u201cThe president\u2019s actions clearly violate the Congress\u2019s exclusive power of the purse, which our founders enshrined in the constitution,\u201d said Pelosi in a joint statement with Senate majority leader Chuck Schumer. \u201cThe Congress will defend our constitutional authorities in the Congress, in the courts and in the public, using every remedy available.\u201d\nLegal scholars disagree about whether Trump\u2019s emergency declaration falls within constitutional bounds. In a rambling riff on the question delivered as an aside to his declaration of emergency on Friday, Trump predicted the matter would be appealed to the US supreme court.\n\u201cAnd we will have a national emergency, and we will then be sued, and they will sue us in the ninth circuit, even though it shouldn\u2019t be there, and we will possibly get a bad ruling,\u201d said Trump, \u201cand then we\u2019ll get another bad ruling, and then we\u2019ll end up in the supreme court, and hopefully we\u2019ll get a fair shake and we\u2019ll win in the supreme court.\u201d\nCalifornia attorney general Xavier Becerra is leading the states\u2019 lawsuit against the administration. He said: \u201cToday, on Presidents\u2019 Day, we take President Trump to court to block his misuse of presidential power.\u201d\nBecerra, a Democrat, added: \u201cWe\u2019re suing President Trump to stop him from unilaterally robbing taxpayer funds lawfully set aside by Congress for the people of our states. For most of us, the Office of the Presidency is not a place for theatre.\u201d\nTrump criticized California\u2019s lead role in the multi-state lawsuit challenging his emergency declaration to pay for the wall. On Twitter on Tuesday, Trump noted last week\u2019s decision by California Governor Gavin Newsom to cancel a high-speed rail line between Los Angeles and San Francisco. Trump claimed, without citing evidence, that the \u201cfailed Fast Train project\u201d had become \u201chundreds of times more expensive than the desperately needed Wall!\u201d\nThree Texas landowners and an environmental group filed the first lawsuit against Trump\u2019s move on Friday, saying it violated the constitution and would infringe on their property rights.\nThe legal challenges could slow Trump\u2019s efforts to build the wall, which he says is needed to check illegal immigration and drug trafficking, and the case is likely to end up in the conservative-leaning US supreme court.\nIn a budget deal passed by Congress to avert a second government shutdown, nearly $1.4bn was allocated to border fencing. Trump\u2019s emergency order would give him $6.7bn beyond what lawmakers authorised. The move allows the president to bypass Congress to use money from the Pentagon and other budgets.\n\nProvide relevant evidence.",
+    "input_length_chars": 4013,
+    "input_tokens_estimated": 1003,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses a lawsuit filed by 16 states against President Trump, claiming his use of emergency powers to fund a border wall is unconstitutional, thus supporting the claim.",
+      "overall_stance": "supports",
+      "key_quote": "\"We\u2019re suing President Trump to stop him from unilaterally robbing taxpayer funds lawfully set aside by Congress for the people of our states.\""
+    },
+    "output_length_chars": 413,
+    "output_tokens_estimated": 103,
+    "cost_usd": 0.00021225
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T05:04:29.242156",
+    "latency_seconds": 33.27,
+    "input_prompt": "Claim:\n16 states are suing the president for what they say is an unconstitutional use of executive power.\n\nArticle Title:\n16 States Sue Over Trump's National Emergency Declaration - NPR\n\nGoogle Search Snippet:\nThis coalition of states in the lawsuit also includes Colorado, Connecticut, Delaware, Hawaii, Illinois, Maine, Maryland, Michigan, Minnesota, ...\n\nFull Page Content:\nA coalition of 16 US states led by California has sued Donald Trump\u2019s administration over his decision to declare a national emergency in order to fund a wall along the Mexico border.\nThe lawsuit was filed on Monday in the US district court for the northern district of California after Trump invoked emergency powers on Friday when Congress declined his request for $5.7bn to help create his signature policy promise.\nHis move aims to let him spend money appropriated by Congress for other purposes.\nThe states\u2019 lawsuit represents part of an unfolding wave of anticipated legal challenges to Trump\u2019s novel scheme for building a border wall, which polling shows a majority of voters do not want and which his own party declined to fund for two years when Republicans controlled both houses of Congress.\nDemocratic House speaker Nancy Pelosi, who was swept back to power in the midterm elections late last year, vowed that Congress would join the legal effort to block Trump\u2019s emergency declaration.\n\u201cThe president\u2019s actions clearly violate the Congress\u2019s exclusive power of the purse, which our founders enshrined in the constitution,\u201d said Pelosi in a joint statement with Senate majority leader Chuck Schumer. \u201cThe Congress will defend our constitutional authorities in the Congress, in the courts and in the public, using every remedy available.\u201d\nLegal scholars disagree about whether Trump\u2019s emergency declaration falls within constitutional bounds. In a rambling riff on the question delivered as an aside to his declaration of emergency on Friday, Trump predicted the matter would be appealed to the US supreme court.\n\u201cAnd we will have a national emergency, and we will then be sued, and they will sue us in the ninth circuit, even though it shouldn\u2019t be there, and we will possibly get a bad ruling,\u201d said Trump, \u201cand then we\u2019ll get another bad ruling, and then we\u2019ll end up in the supreme court, and hopefully we\u2019ll get a fair shake and we\u2019ll win in the supreme court.\u201d\nCalifornia attorney general Xavier Becerra is leading the states\u2019 lawsuit against the administration. He said: \u201cToday, on Presidents\u2019 Day, we take President Trump to court to block his misuse of presidential power.\u201d\nBecerra, a Democrat, added: \u201cWe\u2019re suing President Trump to stop him from unilaterally robbing taxpayer funds lawfully set aside by Congress for the people of our states. For most of us, the Office of the Presidency is not a place for theatre.\u201d\nTrump criticized California\u2019s lead role in the multi-state lawsuit challenging his emergency declaration to pay for the wall. On Twitter on Tuesday, Trump noted last week\u2019s decision by California Governor Gavin Newsom to cancel a high-speed rail line between Los Angeles and San Francisco. Trump claimed, without citing evidence, that the \u201cfailed Fast Train project\u201d had become \u201chundreds of times more expensive than the desperately needed Wall!\u201d\nThree Texas landowners and an environmental group filed the first lawsuit against Trump\u2019s move on Friday, saying it violated the constitution and would infringe on their property rights.\nThe legal challenges could slow Trump\u2019s efforts to build the wall, which he says is needed to check illegal immigration and drug trafficking, and the case is likely to end up in the conservative-leaning US supreme court.\nIn a budget deal passed by Congress to avert a second government shutdown, nearly $1.4bn was allocated to border fencing. Trump\u2019s emergency order would give him $6.7bn beyond what lawmakers authorised. The move allows the president to bypass Congress to use money from the Pentagon and other budgets.\n\nProvide relevant evidence.",
+    "input_length_chars": 3999,
+    "input_tokens_estimated": 999,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses a lawsuit filed by 16 states against President Trump, claiming his national emergency declaration to fund a border wall is unconstitutional and violates Congress's exclusive power of the purse.",
+      "overall_stance": "supports",
+      "key_quote": "\"The president\u2019s actions clearly violate the Congress\u2019s exclusive power of the purse, which our founders enshrined in the constitution.\""
+    },
+    "output_length_chars": 439,
+    "output_tokens_estimated": 109,
+    "cost_usd": 0.00021525
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T05:04:29.551933",
+    "latency_seconds": 7.26,
+    "input_prompt": "Claim:\nThe U.S. Constitution doesn\u2019t explicitly give a president the right to declare a national emergency.\n\nArticle Title:\nEmergency Powers | Brennan Center for Justice\n\nGoogle Search Snippet:\nIt allows the president to declare emergencies with nothing more than a signature on an executive order, and presidents can renew those emergencies every year ...\n\nFull Page Content:\nPresident Trump\u2019s Executive Order declaring a crime emergency in the District of Columbia triggers a complex legal and constitutional framework that could impact businesses nationwide. This action raises critical questions about the limits of D.C.\u2019s Home Rule powers, the scope of presidential authority under the National Emergency Act, and the potential activation of sweeping federal powers. As the situation evolves, understanding the implications for government contractors, local enterprises, and national commerce is essential.\nFifty-two years ago, Congress approved the D.C. Home Rule Act of 1973 (Home Rule), granting the District of Columbia limited self-governance or local rule. Home Rule allows D.C. residents to elect local officials to manage some local affairs. It allows the district to tailor its laws and regulations to the specific needs of the city\u2019s businesses and residents. Businesses then can make decisions based on local rules. Congress has retained oversight over the district\u2019s budget and can review all legislation passed by the district\u2019s council before the legislation becomes law. Alternatively, Congress can legislate directly for D.C.\nIn an emergency, the president has the sole power to control the D.C. Metropolitan Police Department and the D.C. National Guard under Section 740 of the Home Rule Act. A president cannot exercise those powers for more than 48 hours without giving notice to Congress. Even if the president provides Congress with notice, the president cannot use that authority for more than 30 days. To extend beyond the 30-day limit, Congress must pass a joint resolution.\nAt a press conference on Wednesday, August 13, 2025, the president suggested that he may circumvent Congress by declaring a national emergency if the Congress does not extend his control over the district. If the president declares a national emergency under the National Emergency Act (NEA), then he will unlock several emergency powers that can impact business transactions beyond the District of Columbia.\nThe president can invoke the International Emergency Economic Powers Act (IEEPA), found in Title 50, Chapter 35 of the U. S. Code to stabilize the economy during crisis. The IEEPA allows the president to impose economic sanctions, regulate commerce, and potentially freeze assets during emergencies. The act gives the president the power to prohibit international financial transactions in response to a national emergency arising from outside of the United States.\nUnder the Federal Acquisition Regulation (FAR) Part 18, the president can bypass normal bidding procedures for contracts related to national defense. If the president declares a national emergency, then he can bypass certain regulations and streamline procurement transactions. For instance, purchasing thresholds increase, agencies may use oral solicitations and waive publication requirements, and limit open competition.\nThe Communications Act of 1934 empowers the president to regulate or restrict communication systems. Section 606 of the Act allows the president to suspend or amend regulations, close communication facilities, or authorize government control of stations and their apparatus. This power extends to wire and radio communications and can be used to prioritize or restrict the flow of information during a crisis.\nThe president can access and allocate resources from national defense stockpiles to meet military, industrial, and civilian needs under the National Stockpile Act and the Defense Production Act (DPA). The DPA authorizes the president to prioritize contracts and incentivize increased production.\nThe Stafford Act allows the military or national guard to respond to natural disasters, public health crises or other similar events without waiving the restrictions of the Posse Comitatus Act.\nA national emergency allows the president to deploy the military and federalize the national guard under The Insurrection Act of 1807. When the United States Constitution was adopted, so too was the idea of having a central military force.\nAmerican tradition dictated that the military should not interfere with civilian affairs. These ideas were enshrined in the Posse Comitatus Act of 1878. However, exceptions apply when there is a natural disaster or a rebellion.\nThe Stafford Act covers using the military during natural disasters. The Insurrection Act lays out vague guidelines permitting the president to temporarily suspend the Posse Comitatus Act so the military can act as law enforcement, alongside the local police, in domestic situations.\nIf the president wants to use the National Guard for domestic law enforcement (e.g., riot control), usually, the president needs the governor\u2019s approval. This falls under Title 32 of the U.S. Code, which keeps control with the governor, even if federally funded. The president can use the military and the states\u2019 national guards to suppress civil disorder, such as an insurrection or rebellion, to enforce a federal court order, or to repel an invasion\u2014even over a state governor\u2019s objections.\nTroops can be deployed under three sections.\nThe second part of 253 allows the president to deploy troops to suppress insurrection, domestic violence, unlawful combination, or conspiracy in a state that opposes or obstructs the execution of the laws of the United States or impedes the course of justice under those laws.\nNothing in the text of the statute defines insurrection, rebellion, domestic violence, or any other prerequisites for setting the key terms for deployment. Without statutory guidance, the Supreme Court decided that this question is for the president alone to decide (Martin v. Mott, 25 U.S. 19 (1827)).\nIn a later case (Sterling v. Constatine, 287 U.S. 378 (1932)), the court clarified that courts may review the lawfulness of the military\u2019s actions once deployed. The president is obligated to periodically report to Congress on actions taken and the associated costs related to the emergency declaratio\n\nProvide relevant evidence.",
+    "input_length_chars": 6405,
+    "input_tokens_estimated": 1601,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that while the U.S. Constitution does not explicitly grant the president the right to declare a national emergency, the National Emergency Act allows the president to declare emergencies and access various powers through executive orders.",
+      "overall_stance": "mixed",
+      "key_quote": "It allows the president to declare emergencies with nothing more than a signature on an executive order."
+    },
+    "output_length_chars": 448,
+    "output_tokens_estimated": 112,
+    "cost_usd": 0.00030735
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T05:04:29.706423",
+    "latency_seconds": 27.84,
+    "input_prompt": "Claim:\nThe National Emergencies Act of 1976 aimed to limit presidential powers but has failed to do so effectively.\n\nArticle Title:\nNational Emergencies: Presidential Authority and Trends in Usage\n\nGoogle Search Snippet:\nDeclaration of a national emergency grants the President temporary authority of enhanced executive powers.\n\nFull Page Content:\n16 JUNE 2025 / ARTICLE\nDeclaration of a national emergency grants the President temporary authority of enhanced executive powers on the rationale that the Congressional lawmaking process is too lengthy during times of crisis. With eight national emergencies declared already during his second term, the President is outpacing previous Administrations.\nThe National Emergencies Act of 1976 (NEA) terminated existing national emergencies and established procedures for how the Federal government responds to declared national emergencies. It limited the scope and duration of states of national emergency and formalized Congress\u2019 power to provide certain checks and balances on the emergency powers of the President. The NEA provides Congress with expedited procedures for consideration of a joint resolution terminating a national emergency, and it establishes a six-month congressional review period for ongoing national emergencies with the aim of granting Congress greater control over the use of emergency powers. Under Section 202(c) of the NEA (50 U.S.C. \u00a71622(c)), a joint resolution to terminate a national emergency can be introduced in either chamber at any time and referred to the appropriate committee.\nDemocratic Senator Frank Church, a critic of the Vietnam War, was furious when in 1970 President Nixon expanded the war into Cambodia without Congressional approval. Church drafted an amendment to prevent congressionally appropriated funds from being used for American war efforts in Cambodia. In response, Secretary of Defense Melvin Laird warned that the Pentagon would fund ground operations using the emergency provisions of the Feed and Forage Act, a Civil War-era law that granted the U.S. Cavalry the authority to purchase feed for its horses if appropriated money ran out while Congress was not in session. (Concerns over US military action in Cambodia and Congress\u2019 powers to declare war also led to enactment of the War Powers Resolution in 1973, overriding President Nixon\u2019s veto.)\nIn 1973, the Senate tasked a temporary committee with investigating \u201coutdated\u201d emergency powers Congress granted to Presidents in the previous half century. The Special Committee on the Termination of the National Emergency, was co-chaired by Church and Senator Charles Mathias (R-MD). The Committee identified a list of 470 powers that Congress had granted to Presidents in the previous half century during times of national crisis, and while those crises had ended, Congress had not officially revoked those powers. Further, the legislative branch had rarely limited Presidents\u2019 emergency powers. The findings of the Committee eventually led to passage of the National Emergencies Act in 1976, which President Ford signed.\nThe International Economic Emergency Powers Act of 1977 (IEEPA) gives the President authority to take certain steps to restrict commerce upon the declaration of a national emergency under the NEA. It grants the President broad authorities to impose economic sanctions and regulate economic transactions during national emergencies that involve an \u201cunusual and extraordinary\u201d threats to national security, foreign policy, or the economy. IEEPA also permits the President to \u201cregulate\u201d or \u201cprohibit\u201d imports, typically used to impose sanctions or to ban most or all transactions with a country, as when Iraq invaded Kuwait in 1990 or when Russia launched its second invasion of Ukraine in 2022.\nAs of June 2025, Presidents have declared 90 emergencies under the NEA, with IEEPA as the most frequently cited emergency authority. According to combined data from tracking by both the Congressional Research Service (CRS) and the Brennan Center, there are currently 52 ongoing national emergencies, all but three involving IEEPA.\nAccording to data from CRS, as of January 2024, Presidents have issued approximately 4.5 Executive Orders citing IEEPA and declared 1.5 new national emergencies citing IEEPA each year since 1990. Between 1977 and January 2024, national emergencies involving IEEPA last on average nearly nine years, with the majority targeting hostile states. However, new trends have emerged since 1990. In more recent decades, Presidents have increasingly declared non-geographically specific emergencies in response to concerns such as weapons proliferation, global terrorism, and malicious cyber activity. Rather than targeting foreign governments, IEEPA has increasingly been used to target groups, such as political parties, corporations, or terrorist organizations, and individuals, such as supporters of terrorism, suspected narcotics traffickers, and associates of the International Criminal Court.\nAnother significant trend is the expansion of rationale for declaring a state of emergency. Early rationales citing IEEPA being short and referencing a geographic area, such as \u201cthe situation in Iran,\u201d in EO 12170 following the seizure of the US Embassy in Tehran in 1979, the first declared national emergency since enactment of the NEA. Stated rationales now commonly include response to human and civil rights abuses, slavery, and denial of religious freedom, among others, with the majority of those referencing human rights declared in the last two decades.\nIn the first 100 days of the President\u2019s second term, the Administration declared eight states of emergency, more than any other modern President has in the same period. These emergencies concern issues such as the southern border, energy and critical minerals, drug cartels and terrorist organizations, and the International Criminal Court, among others.\nMost notable is the President\u2019s use of IEEPA regarding trade. He used this authority under IEEPA in February to declare a national emergency with respect to fentanyl and used this authority to impose tariffs on China, Mexico, and Canada (in the case of Canada, regulating the tariffs by imposing a lower tariff on Canadian energy imports). Later, on April 2, President Trump declared a national emergency with respect to large US tra\n\nProvide relevant evidence.",
+    "input_length_chars": 6376,
+    "input_tokens_estimated": 1594,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses the National Emergencies Act of 1976, highlighting its intent to limit presidential powers and establish checks and balances through Congressional oversight. However, it notes that despite these provisions, Presidents have increasingly declared national emergencies, suggesting that the Act has not effectively curtailed executive power as intended.",
+      "overall_stance": "mixed",
+      "key_quote": "The legislative branch had rarely limited Presidents\u2019 emergency powers."
+    },
+    "output_length_chars": 525,
+    "output_tokens_estimated": 131,
+    "cost_usd": 0.0003177
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T05:04:29.770207",
+    "latency_seconds": 7.47,
+    "input_prompt": "Claim:\nThe U.S. Constitution doesn\u2019t explicitly give a president the right to declare a national emergency.\n\nArticle Title:\nDeclaration of National Emergency by Reason Of Certain Terrorist ...\n\nGoogle Search Snippet:\nA national emergency exists by reason of the terrorist attacks at the World Trade Center, New York, New York, and the Pentagon.\n\nFull Page Content:\nPresident Trump\u2019s Executive Order declaring a crime emergency in the District of Columbia triggers a complex legal and constitutional framework that could impact businesses nationwide. This action raises critical questions about the limits of D.C.\u2019s Home Rule powers, the scope of presidential authority under the National Emergency Act, and the potential activation of sweeping federal powers. As the situation evolves, understanding the implications for government contractors, local enterprises, and national commerce is essential.\nFifty-two years ago, Congress approved the D.C. Home Rule Act of 1973 (Home Rule), granting the District of Columbia limited self-governance or local rule. Home Rule allows D.C. residents to elect local officials to manage some local affairs. It allows the district to tailor its laws and regulations to the specific needs of the city\u2019s businesses and residents. Businesses then can make decisions based on local rules. Congress has retained oversight over the district\u2019s budget and can review all legislation passed by the district\u2019s council before the legislation becomes law. Alternatively, Congress can legislate directly for D.C.\nIn an emergency, the president has the sole power to control the D.C. Metropolitan Police Department and the D.C. National Guard under Section 740 of the Home Rule Act. A president cannot exercise those powers for more than 48 hours without giving notice to Congress. Even if the president provides Congress with notice, the president cannot use that authority for more than 30 days. To extend beyond the 30-day limit, Congress must pass a joint resolution.\nAt a press conference on Wednesday, August 13, 2025, the president suggested that he may circumvent Congress by declaring a national emergency if the Congress does not extend his control over the district. If the president declares a national emergency under the National Emergency Act (NEA), then he will unlock several emergency powers that can impact business transactions beyond the District of Columbia.\nThe president can invoke the International Emergency Economic Powers Act (IEEPA), found in Title 50, Chapter 35 of the U. S. Code to stabilize the economy during crisis. The IEEPA allows the president to impose economic sanctions, regulate commerce, and potentially freeze assets during emergencies. The act gives the president the power to prohibit international financial transactions in response to a national emergency arising from outside of the United States.\nUnder the Federal Acquisition Regulation (FAR) Part 18, the president can bypass normal bidding procedures for contracts related to national defense. If the president declares a national emergency, then he can bypass certain regulations and streamline procurement transactions. For instance, purchasing thresholds increase, agencies may use oral solicitations and waive publication requirements, and limit open competition.\nThe Communications Act of 1934 empowers the president to regulate or restrict communication systems. Section 606 of the Act allows the president to suspend or amend regulations, close communication facilities, or authorize government control of stations and their apparatus. This power extends to wire and radio communications and can be used to prioritize or restrict the flow of information during a crisis.\nThe president can access and allocate resources from national defense stockpiles to meet military, industrial, and civilian needs under the National Stockpile Act and the Defense Production Act (DPA). The DPA authorizes the president to prioritize contracts and incentivize increased production.\nThe Stafford Act allows the military or national guard to respond to natural disasters, public health crises or other similar events without waiving the restrictions of the Posse Comitatus Act.\nA national emergency allows the president to deploy the military and federalize the national guard under The Insurrection Act of 1807. When the United States Constitution was adopted, so too was the idea of having a central military force.\nAmerican tradition dictated that the military should not interfere with civilian affairs. These ideas were enshrined in the Posse Comitatus Act of 1878. However, exceptions apply when there is a natural disaster or a rebellion.\nThe Stafford Act covers using the military during natural disasters. The Insurrection Act lays out vague guidelines permitting the president to temporarily suspend the Posse Comitatus Act so the military can act as law enforcement, alongside the local police, in domestic situations.\nIf the president wants to use the National Guard for domestic law enforcement (e.g., riot control), usually, the president needs the governor\u2019s approval. This falls under Title 32 of the U.S. Code, which keeps control with the governor, even if federally funded. The president can use the military and the states\u2019 national guards to suppress civil disorder, such as an insurrection or rebellion, to enforce a federal court order, or to repel an invasion\u2014even over a state governor\u2019s objections.\nTroops can be deployed under three sections.\nThe second part of 253 allows the president to deploy troops to suppress insurrection, domestic violence, unlawful combination, or conspiracy in a state that opposes or obstructs the execution of the laws of the United States or impedes the course of justice under those laws.\nNothing in the text of the statute defines insurrection, rebellion, domestic violence, or any other prerequisites for setting the key terms for deployment. Without statutory guidance, the Supreme Court decided that this question is for the president alone to decide (Martin v. Mott, 25 U.S. 19 (1827)).\nIn a later case (Sterling v. Constatine, 287 U.S. 378 (1932)), the court clarified that courts may review the lawfulness of the military\u2019s actions once deployed. The president is obligated to periodically report to Congress on actions taken and the associated costs related to the emergency declaratio\n\nProvide relevant evidence.",
+    "input_length_chars": 6393,
+    "input_tokens_estimated": 1598,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence discusses the president's authority to declare a national emergency under the National Emergency Act, indicating that while the Constitution does not explicitly grant this power, the president can invoke it to access various emergency powers.",
+      "overall_stance": "mixed",
+      "key_quote": "If the president declares a national emergency under the National Emergency Act (NEA), then he will unlock several emergency powers that can impact business transactions beyond the District of Columbia."
+    },
+    "output_length_chars": 540,
+    "output_tokens_estimated": 135,
+    "cost_usd": 0.0003207
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T05:04:29.879265",
+    "latency_seconds": 7.58,
+    "input_prompt": "Claim:\nThe U.S. Constitution doesn\u2019t explicitly give a president the right to declare a national emergency.\n\nArticle Title:\nDeclaring a National Emergency Unlocks the President's ...\n\nGoogle Search Snippet:\nIf the president declares a national emergency under the National Emergency Act (NEA), then he will unlock several emergency powers that can ...\n\nFull Page Content:\nPresident Trump\u2019s Executive Order declaring a crime emergency in the District of Columbia triggers a complex legal and constitutional framework that could impact businesses nationwide. This action raises critical questions about the limits of D.C.\u2019s Home Rule powers, the scope of presidential authority under the National Emergency Act, and the potential activation of sweeping federal powers. As the situation evolves, understanding the implications for government contractors, local enterprises, and national commerce is essential.\nFifty-two years ago, Congress approved the D.C. Home Rule Act of 1973 (Home Rule), granting the District of Columbia limited self-governance or local rule. Home Rule allows D.C. residents to elect local officials to manage some local affairs. It allows the district to tailor its laws and regulations to the specific needs of the city\u2019s businesses and residents. Businesses then can make decisions based on local rules. Congress has retained oversight over the district\u2019s budget and can review all legislation passed by the district\u2019s council before the legislation becomes law. Alternatively, Congress can legislate directly for D.C.\nIn an emergency, the president has the sole power to control the D.C. Metropolitan Police Department and the D.C. National Guard under Section 740 of the Home Rule Act. A president cannot exercise those powers for more than 48 hours without giving notice to Congress. Even if the president provides Congress with notice, the president cannot use that authority for more than 30 days. To extend beyond the 30-day limit, Congress must pass a joint resolution.\nAt a press conference on Wednesday, August 13, 2025, the president suggested that he may circumvent Congress by declaring a national emergency if the Congress does not extend his control over the district. If the president declares a national emergency under the National Emergency Act (NEA), then he will unlock several emergency powers that can impact business transactions beyond the District of Columbia.\nThe president can invoke the International Emergency Economic Powers Act (IEEPA), found in Title 50, Chapter 35 of the U. S. Code to stabilize the economy during crisis. The IEEPA allows the president to impose economic sanctions, regulate commerce, and potentially freeze assets during emergencies. The act gives the president the power to prohibit international financial transactions in response to a national emergency arising from outside of the United States.\nUnder the Federal Acquisition Regulation (FAR) Part 18, the president can bypass normal bidding procedures for contracts related to national defense. If the president declares a national emergency, then he can bypass certain regulations and streamline procurement transactions. For instance, purchasing thresholds increase, agencies may use oral solicitations and waive publication requirements, and limit open competition.\nThe Communications Act of 1934 empowers the president to regulate or restrict communication systems. Section 606 of the Act allows the president to suspend or amend regulations, close communication facilities, or authorize government control of stations and their apparatus. This power extends to wire and radio communications and can be used to prioritize or restrict the flow of information during a crisis.\nThe president can access and allocate resources from national defense stockpiles to meet military, industrial, and civilian needs under the National Stockpile Act and the Defense Production Act (DPA). The DPA authorizes the president to prioritize contracts and incentivize increased production.\nThe Stafford Act allows the military or national guard to respond to natural disasters, public health crises or other similar events without waiving the restrictions of the Posse Comitatus Act.\nA national emergency allows the president to deploy the military and federalize the national guard under The Insurrection Act of 1807. When the United States Constitution was adopted, so too was the idea of having a central military force.\nAmerican tradition dictated that the military should not interfere with civilian affairs. These ideas were enshrined in the Posse Comitatus Act of 1878. However, exceptions apply when there is a natural disaster or a rebellion.\nThe Stafford Act covers using the military during natural disasters. The Insurrection Act lays out vague guidelines permitting the president to temporarily suspend the Posse Comitatus Act so the military can act as law enforcement, alongside the local police, in domestic situations.\nIf the president wants to use the National Guard for domestic law enforcement (e.g., riot control), usually, the president needs the governor\u2019s approval. This falls under Title 32 of the U.S. Code, which keeps control with the governor, even if federally funded. The president can use the military and the states\u2019 national guards to suppress civil disorder, such as an insurrection or rebellion, to enforce a federal court order, or to repel an invasion\u2014even over a state governor\u2019s objections.\nTroops can be deployed under three sections.\nThe second part of 253 allows the president to deploy troops to suppress insurrection, domestic violence, unlawful combination, or conspiracy in a state that opposes or obstructs the execution of the laws of the United States or impedes the course of justice under those laws.\nNothing in the text of the statute defines insurrection, rebellion, domestic violence, or any other prerequisites for setting the key terms for deployment. Without statutory guidance, the Supreme Court decided that this question is for the president alone to decide (Martin v. Mott, 25 U.S. 19 (1827)).\nIn a later case (Sterling v. Constatine, 287 U.S. 378 (1932)), the court clarified that courts may review the lawfulness of the military\u2019s actions once deployed. The president is obligated to periodically report to Congress on actions taken and the associated costs related to the emergency declaratio\n\nProvide relevant evidence.",
+    "input_length_chars": 6400,
+    "input_tokens_estimated": 1600,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence discusses the president's powers under the National Emergency Act and related laws, indicating that while the Constitution does not explicitly grant the president the right to declare a national emergency, the president can invoke emergency powers through legislation like the NEA.",
+      "overall_stance": "mixed",
+      "key_quote": "If the president declares a national emergency under the National Emergency Act (NEA), then he will unlock several emergency powers that can impact business transactions beyond the District of Columbia."
+    },
+    "output_length_chars": 579,
+    "output_tokens_estimated": 144,
+    "cost_usd": 0.0003264
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T05:04:29.928147",
+    "latency_seconds": 33.95,
+    "input_prompt": "Claim:\n16 states are suing the president for what they say is an unconstitutional use of executive power.\n\nArticle Title:\n16 states are suing to stop Trump's national emergency. Do they ...\n\nGoogle Search Snippet:\nAnalysis: California, Colorado and other states are making the case for why they are harmed by diverting federal funding to build a wall.\n\nFull Page Content:\nA coalition of 16 US states led by California has sued Donald Trump\u2019s administration over his decision to declare a national emergency in order to fund a wall along the Mexico border.\nThe lawsuit was filed on Monday in the US district court for the northern district of California after Trump invoked emergency powers on Friday when Congress declined his request for $5.7bn to help create his signature policy promise.\nHis move aims to let him spend money appropriated by Congress for other purposes.\nThe states\u2019 lawsuit represents part of an unfolding wave of anticipated legal challenges to Trump\u2019s novel scheme for building a border wall, which polling shows a majority of voters do not want and which his own party declined to fund for two years when Republicans controlled both houses of Congress.\nDemocratic House speaker Nancy Pelosi, who was swept back to power in the midterm elections late last year, vowed that Congress would join the legal effort to block Trump\u2019s emergency declaration.\n\u201cThe president\u2019s actions clearly violate the Congress\u2019s exclusive power of the purse, which our founders enshrined in the constitution,\u201d said Pelosi in a joint statement with Senate majority leader Chuck Schumer. \u201cThe Congress will defend our constitutional authorities in the Congress, in the courts and in the public, using every remedy available.\u201d\nLegal scholars disagree about whether Trump\u2019s emergency declaration falls within constitutional bounds. In a rambling riff on the question delivered as an aside to his declaration of emergency on Friday, Trump predicted the matter would be appealed to the US supreme court.\n\u201cAnd we will have a national emergency, and we will then be sued, and they will sue us in the ninth circuit, even though it shouldn\u2019t be there, and we will possibly get a bad ruling,\u201d said Trump, \u201cand then we\u2019ll get another bad ruling, and then we\u2019ll end up in the supreme court, and hopefully we\u2019ll get a fair shake and we\u2019ll win in the supreme court.\u201d\nCalifornia attorney general Xavier Becerra is leading the states\u2019 lawsuit against the administration. He said: \u201cToday, on Presidents\u2019 Day, we take President Trump to court to block his misuse of presidential power.\u201d\nBecerra, a Democrat, added: \u201cWe\u2019re suing President Trump to stop him from unilaterally robbing taxpayer funds lawfully set aside by Congress for the people of our states. For most of us, the Office of the Presidency is not a place for theatre.\u201d\nTrump criticized California\u2019s lead role in the multi-state lawsuit challenging his emergency declaration to pay for the wall. On Twitter on Tuesday, Trump noted last week\u2019s decision by California Governor Gavin Newsom to cancel a high-speed rail line between Los Angeles and San Francisco. Trump claimed, without citing evidence, that the \u201cfailed Fast Train project\u201d had become \u201chundreds of times more expensive than the desperately needed Wall!\u201d\nThree Texas landowners and an environmental group filed the first lawsuit against Trump\u2019s move on Friday, saying it violated the constitution and would infringe on their property rights.\nThe legal challenges could slow Trump\u2019s efforts to build the wall, which he says is needed to check illegal immigration and drug trafficking, and the case is likely to end up in the conservative-leaning US supreme court.\nIn a budget deal passed by Congress to avert a second government shutdown, nearly $1.4bn was allocated to border fencing. Trump\u2019s emergency order would give him $6.7bn beyond what lawmakers authorised. The move allows the president to bypass Congress to use money from the Pentagon and other budgets.\n\nProvide relevant evidence.",
+    "input_length_chars": 3994,
+    "input_tokens_estimated": 998,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses a lawsuit filed by 16 states against President Trump, claiming his use of executive power to declare a national emergency for funding a border wall is unconstitutional. The states argue that this action violates Congress's exclusive power of the purse, supporting the claim that the president's actions are unconstitutional.",
+      "overall_stance": "supports",
+      "key_quote": "\"The president\u2019s actions clearly violate the Congress\u2019s exclusive power of the purse, which our founders enshrined in the constitution.\""
+    },
+    "output_length_chars": 570,
+    "output_tokens_estimated": 142,
+    "cost_usd": 0.0002349
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T05:04:29.969363",
+    "latency_seconds": 7.67,
+    "input_prompt": "Claim:\nThe U.S. Constitution doesn\u2019t explicitly give a president the right to declare a national emergency.\n\nArticle Title:\nNational Emergencies Act - Wikipedia\n\nGoogle Search Snippet:\nSince passage of the National Emergencies Act in 1976, every U.S. President has declared multiple national emergencies: Carter (2); Reagan (6); H.W. Bush (4); ...\n\nFull Page Content:\nPresident Trump\u2019s Executive Order declaring a crime emergency in the District of Columbia triggers a complex legal and constitutional framework that could impact businesses nationwide. This action raises critical questions about the limits of D.C.\u2019s Home Rule powers, the scope of presidential authority under the National Emergency Act, and the potential activation of sweeping federal powers. As the situation evolves, understanding the implications for government contractors, local enterprises, and national commerce is essential.\nFifty-two years ago, Congress approved the D.C. Home Rule Act of 1973 (Home Rule), granting the District of Columbia limited self-governance or local rule. Home Rule allows D.C. residents to elect local officials to manage some local affairs. It allows the district to tailor its laws and regulations to the specific needs of the city\u2019s businesses and residents. Businesses then can make decisions based on local rules. Congress has retained oversight over the district\u2019s budget and can review all legislation passed by the district\u2019s council before the legislation becomes law. Alternatively, Congress can legislate directly for D.C.\nIn an emergency, the president has the sole power to control the D.C. Metropolitan Police Department and the D.C. National Guard under Section 740 of the Home Rule Act. A president cannot exercise those powers for more than 48 hours without giving notice to Congress. Even if the president provides Congress with notice, the president cannot use that authority for more than 30 days. To extend beyond the 30-day limit, Congress must pass a joint resolution.\nAt a press conference on Wednesday, August 13, 2025, the president suggested that he may circumvent Congress by declaring a national emergency if the Congress does not extend his control over the district. If the president declares a national emergency under the National Emergency Act (NEA), then he will unlock several emergency powers that can impact business transactions beyond the District of Columbia.\nThe president can invoke the International Emergency Economic Powers Act (IEEPA), found in Title 50, Chapter 35 of the U. S. Code to stabilize the economy during crisis. The IEEPA allows the president to impose economic sanctions, regulate commerce, and potentially freeze assets during emergencies. The act gives the president the power to prohibit international financial transactions in response to a national emergency arising from outside of the United States.\nUnder the Federal Acquisition Regulation (FAR) Part 18, the president can bypass normal bidding procedures for contracts related to national defense. If the president declares a national emergency, then he can bypass certain regulations and streamline procurement transactions. For instance, purchasing thresholds increase, agencies may use oral solicitations and waive publication requirements, and limit open competition.\nThe Communications Act of 1934 empowers the president to regulate or restrict communication systems. Section 606 of the Act allows the president to suspend or amend regulations, close communication facilities, or authorize government control of stations and their apparatus. This power extends to wire and radio communications and can be used to prioritize or restrict the flow of information during a crisis.\nThe president can access and allocate resources from national defense stockpiles to meet military, industrial, and civilian needs under the National Stockpile Act and the Defense Production Act (DPA). The DPA authorizes the president to prioritize contracts and incentivize increased production.\nThe Stafford Act allows the military or national guard to respond to natural disasters, public health crises or other similar events without waiving the restrictions of the Posse Comitatus Act.\nA national emergency allows the president to deploy the military and federalize the national guard under The Insurrection Act of 1807. When the United States Constitution was adopted, so too was the idea of having a central military force.\nAmerican tradition dictated that the military should not interfere with civilian affairs. These ideas were enshrined in the Posse Comitatus Act of 1878. However, exceptions apply when there is a natural disaster or a rebellion.\nThe Stafford Act covers using the military during natural disasters. The Insurrection Act lays out vague guidelines permitting the president to temporarily suspend the Posse Comitatus Act so the military can act as law enforcement, alongside the local police, in domestic situations.\nIf the president wants to use the National Guard for domestic law enforcement (e.g., riot control), usually, the president needs the governor\u2019s approval. This falls under Title 32 of the U.S. Code, which keeps control with the governor, even if federally funded. The president can use the military and the states\u2019 national guards to suppress civil disorder, such as an insurrection or rebellion, to enforce a federal court order, or to repel an invasion\u2014even over a state governor\u2019s objections.\nTroops can be deployed under three sections.\nThe second part of 253 allows the president to deploy troops to suppress insurrection, domestic violence, unlawful combination, or conspiracy in a state that opposes or obstructs the execution of the laws of the United States or impedes the course of justice under those laws.\nNothing in the text of the statute defines insurrection, rebellion, domestic violence, or any other prerequisites for setting the key terms for deployment. Without statutory guidance, the Supreme Court decided that this question is for the president alone to decide (Martin v. Mott, 25 U.S. 19 (1827)).\nIn a later case (Sterling v. Constatine, 287 U.S. 378 (1932)), the court clarified that courts may review the lawfulness of the military\u2019s actions once deployed. The president is obligated to periodically report to Congress on actions taken and the associated costs related to the emergency declaratio\n\nProvide relevant evidence.",
+    "input_length_chars": 6396,
+    "input_tokens_estimated": 1599,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence discusses the National Emergencies Act and the powers it grants to the president, indicating that while the Act allows for the declaration of a national emergency, it does not explicitly state that the Constitution grants this right to the president.",
+      "overall_stance": "mixed",
+      "key_quote": "\"If the president declares a national emergency under the National Emergency Act (NEA), then he will unlock several emergency powers that can impact business transactions beyond the District of Columbia.\""
+    },
+    "output_length_chars": 552,
+    "output_tokens_estimated": 138,
+    "cost_usd": 0.00032265
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T05:04:30.068744",
+    "latency_seconds": 34.09,
+    "input_prompt": "Claim:\n16 states are suing the president for what they say is an unconstitutional use of executive power.\n\nArticle Title:\nArizona Attorney General's Federal Action Lawsuits\n\nGoogle Search Snippet:\nArizona joined Washington, Oregon, and Illinois challenging President Donald Trump's unconstitutional order attempting to unilaterally strip citizenship from ...\n\nFull Page Content:\nA coalition of 16 US states led by California has sued Donald Trump\u2019s administration over his decision to declare a national emergency in order to fund a wall along the Mexico border.\nThe lawsuit was filed on Monday in the US district court for the northern district of California after Trump invoked emergency powers on Friday when Congress declined his request for $5.7bn to help create his signature policy promise.\nHis move aims to let him spend money appropriated by Congress for other purposes.\nThe states\u2019 lawsuit represents part of an unfolding wave of anticipated legal challenges to Trump\u2019s novel scheme for building a border wall, which polling shows a majority of voters do not want and which his own party declined to fund for two years when Republicans controlled both houses of Congress.\nDemocratic House speaker Nancy Pelosi, who was swept back to power in the midterm elections late last year, vowed that Congress would join the legal effort to block Trump\u2019s emergency declaration.\n\u201cThe president\u2019s actions clearly violate the Congress\u2019s exclusive power of the purse, which our founders enshrined in the constitution,\u201d said Pelosi in a joint statement with Senate majority leader Chuck Schumer. \u201cThe Congress will defend our constitutional authorities in the Congress, in the courts and in the public, using every remedy available.\u201d\nLegal scholars disagree about whether Trump\u2019s emergency declaration falls within constitutional bounds. In a rambling riff on the question delivered as an aside to his declaration of emergency on Friday, Trump predicted the matter would be appealed to the US supreme court.\n\u201cAnd we will have a national emergency, and we will then be sued, and they will sue us in the ninth circuit, even though it shouldn\u2019t be there, and we will possibly get a bad ruling,\u201d said Trump, \u201cand then we\u2019ll get another bad ruling, and then we\u2019ll end up in the supreme court, and hopefully we\u2019ll get a fair shake and we\u2019ll win in the supreme court.\u201d\nCalifornia attorney general Xavier Becerra is leading the states\u2019 lawsuit against the administration. He said: \u201cToday, on Presidents\u2019 Day, we take President Trump to court to block his misuse of presidential power.\u201d\nBecerra, a Democrat, added: \u201cWe\u2019re suing President Trump to stop him from unilaterally robbing taxpayer funds lawfully set aside by Congress for the people of our states. For most of us, the Office of the Presidency is not a place for theatre.\u201d\nTrump criticized California\u2019s lead role in the multi-state lawsuit challenging his emergency declaration to pay for the wall. On Twitter on Tuesday, Trump noted last week\u2019s decision by California Governor Gavin Newsom to cancel a high-speed rail line between Los Angeles and San Francisco. Trump claimed, without citing evidence, that the \u201cfailed Fast Train project\u201d had become \u201chundreds of times more expensive than the desperately needed Wall!\u201d\nThree Texas landowners and an environmental group filed the first lawsuit against Trump\u2019s move on Friday, saying it violated the constitution and would infringe on their property rights.\nThe legal challenges could slow Trump\u2019s efforts to build the wall, which he says is needed to check illegal immigration and drug trafficking, and the case is likely to end up in the conservative-leaning US supreme court.\nIn a budget deal passed by Congress to avert a second government shutdown, nearly $1.4bn was allocated to border fencing. Trump\u2019s emergency order would give him $6.7bn beyond what lawmakers authorised. The move allows the president to bypass Congress to use money from the Pentagon and other budgets.\n\nProvide relevant evidence.",
+    "input_length_chars": 4001,
+    "input_tokens_estimated": 1000,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses a lawsuit filed by a coalition of 16 states against President Trump, claiming his use of emergency powers to fund a border wall is unconstitutional. This aligns with the claim that these states are suing the president for an unconstitutional use of executive power.",
+      "overall_stance": "supports",
+      "key_quote": "\"A coalition of 16 US states led by California has sued Donald Trump\u2019s administration over his decision to declare a national emergency in order to fund a wall along the Mexico border.\""
+    },
+    "output_length_chars": 560,
+    "output_tokens_estimated": 140,
+    "cost_usd": 0.000234
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T05:04:30.378740",
+    "latency_seconds": 28.88,
+    "input_prompt": "Claim:\nThe National Emergencies Act of 1976 aimed to limit presidential powers but has failed to do so effectively.\n\nArticle Title:\nThe National Emergencies Act of 1976 - Senate.gov\n\nGoogle Search Snippet:\nThe committee's investigation found that the legislative branch had rarely limited presidents' emergency powers. The judicial branch, by ...\n\nFull Page Content:\n16 JUNE 2025 / ARTICLE\nDeclaration of a national emergency grants the President temporary authority of enhanced executive powers on the rationale that the Congressional lawmaking process is too lengthy during times of crisis. With eight national emergencies declared already during his second term, the President is outpacing previous Administrations.\nThe National Emergencies Act of 1976 (NEA) terminated existing national emergencies and established procedures for how the Federal government responds to declared national emergencies. It limited the scope and duration of states of national emergency and formalized Congress\u2019 power to provide certain checks and balances on the emergency powers of the President. The NEA provides Congress with expedited procedures for consideration of a joint resolution terminating a national emergency, and it establishes a six-month congressional review period for ongoing national emergencies with the aim of granting Congress greater control over the use of emergency powers. Under Section 202(c) of the NEA (50 U.S.C. \u00a71622(c)), a joint resolution to terminate a national emergency can be introduced in either chamber at any time and referred to the appropriate committee.\nDemocratic Senator Frank Church, a critic of the Vietnam War, was furious when in 1970 President Nixon expanded the war into Cambodia without Congressional approval. Church drafted an amendment to prevent congressionally appropriated funds from being used for American war efforts in Cambodia. In response, Secretary of Defense Melvin Laird warned that the Pentagon would fund ground operations using the emergency provisions of the Feed and Forage Act, a Civil War-era law that granted the U.S. Cavalry the authority to purchase feed for its horses if appropriated money ran out while Congress was not in session. (Concerns over US military action in Cambodia and Congress\u2019 powers to declare war also led to enactment of the War Powers Resolution in 1973, overriding President Nixon\u2019s veto.)\nIn 1973, the Senate tasked a temporary committee with investigating \u201coutdated\u201d emergency powers Congress granted to Presidents in the previous half century. The Special Committee on the Termination of the National Emergency, was co-chaired by Church and Senator Charles Mathias (R-MD). The Committee identified a list of 470 powers that Congress had granted to Presidents in the previous half century during times of national crisis, and while those crises had ended, Congress had not officially revoked those powers. Further, the legislative branch had rarely limited Presidents\u2019 emergency powers. The findings of the Committee eventually led to passage of the National Emergencies Act in 1976, which President Ford signed.\nThe International Economic Emergency Powers Act of 1977 (IEEPA) gives the President authority to take certain steps to restrict commerce upon the declaration of a national emergency under the NEA. It grants the President broad authorities to impose economic sanctions and regulate economic transactions during national emergencies that involve an \u201cunusual and extraordinary\u201d threats to national security, foreign policy, or the economy. IEEPA also permits the President to \u201cregulate\u201d or \u201cprohibit\u201d imports, typically used to impose sanctions or to ban most or all transactions with a country, as when Iraq invaded Kuwait in 1990 or when Russia launched its second invasion of Ukraine in 2022.\nAs of June 2025, Presidents have declared 90 emergencies under the NEA, with IEEPA as the most frequently cited emergency authority. According to combined data from tracking by both the Congressional Research Service (CRS) and the Brennan Center, there are currently 52 ongoing national emergencies, all but three involving IEEPA.\nAccording to data from CRS, as of January 2024, Presidents have issued approximately 4.5 Executive Orders citing IEEPA and declared 1.5 new national emergencies citing IEEPA each year since 1990. Between 1977 and January 2024, national emergencies involving IEEPA last on average nearly nine years, with the majority targeting hostile states. However, new trends have emerged since 1990. In more recent decades, Presidents have increasingly declared non-geographically specific emergencies in response to concerns such as weapons proliferation, global terrorism, and malicious cyber activity. Rather than targeting foreign governments, IEEPA has increasingly been used to target groups, such as political parties, corporations, or terrorist organizations, and individuals, such as supporters of terrorism, suspected narcotics traffickers, and associates of the International Criminal Court.\nAnother significant trend is the expansion of rationale for declaring a state of emergency. Early rationales citing IEEPA being short and referencing a geographic area, such as \u201cthe situation in Iran,\u201d in EO 12170 following the seizure of the US Embassy in Tehran in 1979, the first declared national emergency since enactment of the NEA. Stated rationales now commonly include response to human and civil rights abuses, slavery, and denial of religious freedom, among others, with the majority of those referencing human rights declared in the last two decades.\nIn the first 100 days of the President\u2019s second term, the Administration declared eight states of emergency, more than any other modern President has in the same period. These emergencies concern issues such as the southern border, energy and critical minerals, drug cartels and terrorist organizations, and the International Criminal Court, among others.\nMost notable is the President\u2019s use of IEEPA regarding trade. He used this authority under IEEPA in February to declare a national emergency with respect to fentanyl and used this authority to impose tariffs on China, Mexico, and Canada (in the case of Canada, regulating the tariffs by imposing a lower tariff on Canadian energy imports). Later, on April 2, President Trump declared a national emergency with respect to large US tra\n\nProvide relevant evidence.",
+    "input_length_chars": 6395,
+    "input_tokens_estimated": 1598,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that the National Emergencies Act of 1976 was intended to limit presidential powers but has not effectively done so, as the legislative branch has rarely limited presidents' emergency powers, allowing for a significant expansion of executive authority.",
+      "overall_stance": "supports",
+      "key_quote": "the legislative branch had rarely limited Presidents\u2019 emergency powers."
+    },
+    "output_length_chars": 432,
+    "output_tokens_estimated": 108,
+    "cost_usd": 0.0003045
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T05:13:41.227489",
+    "latency_seconds": 2.03,
+    "input_prompt": "\nClaim: 16 states are suing the president for what they say is an unconstitutional use of executive power.\nCategory: legal\nExtraction confidence: 0.85\n\nEvidence:\nSUPPORTS (3 sources):\n  1. Governor Newsom, Attorney General Becerra, and 15 Partner States ... | reliability=high (1.00)\n     URL: https://oag.ca.gov/news/press-releases/governor-newsom-attorney-general-becerra-and-15-partner-states-file-lawsuit\n     Summary: The article confirms that a coalition of 16 states is suing President Trump, claiming his use of emergency powers to fund a border wall is unconstitutional and violates Congress's exclusive power of the purse.\n  2. 16 States Sue Over Trump's National Emergency Declaration - NPR | reliability=high (0.85)\n     URL: https://www.npr.org/2019/02/18/695821740/16-states-sue-over-trumps-national-emergency-declaration\n     Summary: The article discusses a lawsuit filed by 16 states against President Trump, claiming his national emergency declaration to fund a border wall is unconstitutional and violates Congress's exclusive power of the purse.\n  3. 16 States Sue to Stop Trump's Use of Emergency Powers to Build ... | reliability=high (0.85)\n     URL: https://www.nytimes.com/2019/02/18/us/politics/national-emergency-lawsuits-trump.html\n     Summary: The article discusses a lawsuit filed by 16 states against President Trump, claiming his use of emergency powers to fund a border wall is unconstitutional, thus supporting the claim.\nUNCLEAR (2 sources):\n  1. 16 states sue over Trump's emergency wall declaration | PBS News | reliability=high (0.85)\n     URL: https://www.pbs.org/newshour/politics/16-states-sue-over-trumps-emergency-wall-declaration\n     Summary: California Attorney General Xavier Becerra released a statement Monday saying the suit alleges the Trump administration's action violates ...\n  2. California leads 16 states in lawsuit against Trump emergency ... | reliability=high (0.85)\n     URL: https://www.politico.com/story/2019/02/18/california-leads-16-states-in-lawsuit-against-trump-national-emergency-declaration-1173768\n     Summary: It's kind of awkward to say that on Presidents' Day we're going to be suing the president of the United States,\u201d California's attorney ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2257,
+    "input_tokens_estimated": 564,
+    "output": {
+      "overall_stance": "supports",
+      "confidence": "high",
+      "summary": "The evidence strongly supports the claim that 16 states are suing the president, asserting that his use of emergency powers to fund a border wall is unconstitutional. This is confirmed by multiple high-reliability sources, including NPR and the New York Times."
+    },
+    "output_length_chars": 322,
+    "output_tokens_estimated": 80,
+    "cost_usd": 0.0001326
+  }
+]

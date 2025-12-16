@@ -1,0 +1,331 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:48:31.554926",
+    "latency_seconds": 5.66,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nThis is the story of three plastic bottles, empty and discarded. Their journeys are about to diverge with outcomes that impact nothing less than the fate of the planet. But they weren't always this way. To understand where these bottles end up, we must first explore their origins. The heroes of our story were conceived in this oil refinery. The plastic in their bodies was formed by chemically bonding oil and gas molecules together to make monomers. In turn, these monomers were bonded into long polymer chains to make plastic in the form of millions of pellets. Those were melted at manufacturing plants and reformed in molds to create the resilient material that makes up the triplets' bodies. Machines filled the bottles with sweet bubbily liquid and they were then wrapped, shipped, bought, opened, consumed and unceremoniously discarded. And now here they lie, poised at the edge of the unknown. Bottle one, like hundreds of millions of tons of his plastic brethren, ends up in a landfill. This huge dump expands each day as more trash comes in and continues to take up space. As plastics sit there being compressed amongst layers of other junk, rainwater flows through the waste and absorbs the water-soluble compounds it contains, and some of those are highly toxic. Together, they create a harmful stew called leachate, which can move into groundwater, soil and streams, poisoning ecosystems and harming wildlife. It can take bottle one an agonizing 1,000 years to decompose. Bottle two's journey is stranger but, unfortunately, no happier. He floats on a trickle that reaches a stream, a stream that flows into a river, and a river that reaches the ocean. After months lost at sea, he's slowly drawn into a massive vortex, where trash accumulates, a place known as the Great Pacific Garbage Patch. Here the ocean's currents have trapped millions of pieces of plastic debris. This is one of five plastic-filled gyres in the world's seas. Places where the pollutants turn the water into a cloudy plastic soup. Some animals, like seabirds, get entangled in the mess. They, and others, mistake the brightly colored plastic bits for food. Plastic makes them feel full when they're not, so they starve to death and pass the toxins from the plastic up the food chain. For example, it's eaten by lanternfish, the lanternfish are eaten by squid, the squid are eaten by tuna, and the tuna are eaten by us. And most plastics don't biodegrade, which means they're destined to break down into smaller and smaller pieces called micro plastics, which might rotate in the sea eternally. But bottle three is spared the cruel purgatories of his brothers. A truck brings him to a plant where he and his companions are squeezed flat and compressed into a block. Okay, this sounds pretty bad, too, but hang in there. It gets better. The blocks are shredded into tiny pieces, which are washed and melted, so they become the raw materials that can be used again. As if by magic, bottle three is now ready to be reborn as something completely new. For this bit of plastic with such humble origins, suddenly the sky is the limit.",
+    "input_length_chars": 3174,
+    "input_tokens_estimated": 793,
+    "output": {
+      "claims": [
+        {
+          "text": "Plastic is formed by chemically bonding oil and gas molecules to make monomers.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Explaining the origin of plastic bottles."
+        },
+        {
+          "text": "It can take bottle one an agonizing 1,000 years to decompose.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.8,
+          "context": "Discussing the fate of discarded plastic bottles."
+        },
+        {
+          "text": "Bottle two ends up in the Great Pacific Garbage Patch, where millions of pieces of plastic debris accumulate.",
+          "confidence": 0.9,
+          "category": "geographical",
+          "importance": 0.75,
+          "context": "Describing the journey of the second bottle."
+        },
+        {
+          "text": "Some animals mistake plastic bits for food, leading to starvation and toxin transfer up the food chain.",
+          "confidence": 0.85,
+          "category": "biological",
+          "importance": 0.7,
+          "context": "Impact of plastic pollution on marine life."
+        },
+        {
+          "text": "Most plastics don't biodegrade and break down into microplastics that may persist in the sea indefinitely.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.8,
+          "context": "Discussing the long-term impact of plastic waste."
+        },
+        {
+          "text": "There are five plastic-filled gyres in the world's seas.",
+          "confidence": 0.8,
+          "category": "geographical",
+          "importance": 0.6,
+          "context": "Context on the distribution of plastic pollution."
+        },
+        {
+          "text": "Bottle three is recycled into raw materials after being compressed and melted.",
+          "confidence": 0.9,
+          "category": "policy",
+          "importance": 0.65,
+          "context": "Describing the recycling process of plastic bottles."
+        }
+      ],
+      "total_count": 7
+    },
+    "output_length_chars": 2134,
+    "output_tokens_estimated": 533,
+    "cost_usd": 0.00043875
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:48:34.961603",
+    "latency_seconds": 1.75,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: It can take bottle one an agonizing 1,000 years to decompose.\nContext: Discussing the fate of discarded plastic bottles.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 293,
+    "input_tokens_estimated": 73,
+    "output": {
+      "original_claim": "It can take bottle one an agonizing 1,000 years to decompose.",
+      "queries": [
+        {
+          "query": "How long does it take for plastic bottles to decompose?",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Plastic bottle decomposition time 1000 years",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 310,
+    "output_tokens_estimated": 77,
+    "cost_usd": 5.715e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "It can take bottle one an agonizing 1,000 years to decompose."
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:48:51.976809",
+    "latency_seconds": 0.85,
+    "input_prompt": "Claim:\nIt can take bottle one an agonizing 1,000 years to decompose.\n\nArticle Title:\nHow Long Does It Really Take for Plastics to Biodegrade?\n\nGoogle Search Snippet:\nPlastic bottles (PET): 450\u20131,000 years ; Plastic bags (PE/HDPE): 500\u20131,000 years ; Polystyrene products: 500+ years.\n\nFull Page Content:\nProve your humanity We\u2019re committed to safety and security. But not for bots. Complete the challenge below and let us know you\u2019re a real person. Reddit, Inc. \u00a9 \"2025\". All rights reserved. User Agreement Privacy Policy Content Policy Help\n\nProvide relevant evidence.",
+    "input_length_chars": 569,
+    "input_tokens_estimated": 142,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 3.45e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "It can take bottle one an agonizing 1,000 years to decompose.",
+      "query_index": 2,
+      "query_text": "Plastic bottle decomposition time 1000 years"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:48:52.022409",
+    "latency_seconds": 0.89,
+    "input_prompt": "Claim:\nIt can take bottle one an agonizing 1,000 years to decompose.\n\nArticle Title:\nELI5, How do we know plastic takes hundreds of years to decompose?\n\nGoogle Search Snippet:\nSo like, if you do a 10 year study and only 1% of the plastic's mass breaks down by the end, that gives you ~1000 years for full breakdown. It ...\n\nFull Page Content:\nProve your humanity We\u2019re committed to safety and security. But not for bots. Complete the challenge below and let us know you\u2019re a real person. Reddit, Inc. \u00a9 \"2025\". All rights reserved. User Agreement Privacy Policy Content Policy Help\n\nProvide relevant evidence.",
+    "input_length_chars": 609,
+    "input_tokens_estimated": 152,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 3.6e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "It can take bottle one an agonizing 1,000 years to decompose.",
+      "query_index": 2,
+      "query_text": "Plastic bottle decomposition time 1000 years"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:48:52.091076",
+    "latency_seconds": 0.97,
+    "input_prompt": "Claim:\nIt can take bottle one an agonizing 1,000 years to decompose.\n\nArticle Title:\nImpacts of Plastic Pollution | US EPA\n\nGoogle Search Snippet:\nOnce in the environment, research shows that plastic pollution is persistent and may take between 100 to 1,000 years or more to decompose, ...\n\nFull Page Content:\nProve your humanity We\u2019re committed to safety and security. But not for bots. Complete the challenge below and let us know you\u2019re a real person. Reddit, Inc. \u00a9 \"2025\". All rights reserved. User Agreement Privacy Policy Content Policy Help\n\nProvide relevant evidence.",
+    "input_length_chars": 576,
+    "input_tokens_estimated": 144,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 3.48e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "It can take bottle one an agonizing 1,000 years to decompose.",
+      "query_index": 2,
+      "query_text": "Plastic bottle decomposition time 1000 years"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:48:52.112836",
+    "latency_seconds": 0.99,
+    "input_prompt": "Claim:\nIt can take bottle one an agonizing 1,000 years to decompose.\n\nArticle Title:\nThe impact of plastic on climate change | Environmental Center\n\nGoogle Search Snippet:\nIt takes more than 1,000 years for plastic to decompose. Every plastic bottle, straw and container ever thrown away is still intact and ...\n\nFull Page Content:\nProve your humanity We\u2019re committed to safety and security. But not for bots. Complete the challenge below and let us know you\u2019re a real person. Reddit, Inc. \u00a9 \"2025\". All rights reserved. User Agreement Privacy Policy Content Policy Help\n\nProvide relevant evidence.",
+    "input_length_chars": 598,
+    "input_tokens_estimated": 149,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 3.555e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "It can take bottle one an agonizing 1,000 years to decompose.",
+      "query_index": 2,
+      "query_text": "Plastic bottle decomposition time 1000 years"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:48:53.262016",
+    "latency_seconds": 2.07,
+    "input_prompt": "Claim:\nIt can take bottle one an agonizing 1,000 years to decompose.\n\nArticle Title:\nHow Long Does It Take For Plastic To Decompose? | Chariot Energy\n\nGoogle Search Snippet:\nPlastics can take anywhere from 20 to 500 years to decompose, depending on the material and structure. Additionally, how fast a plastic breaks down depends on ...\n\nFull Page Content:\nFor decades we have relied on plastics to keep us safe, insulate our homes and make sure our food stays fresh. From cell phones to car parts, PPE to syringes, the use of plastic has made our lives easier.\nBut when does plastic\u2019s life come to an end?\nPlastic waste can take anywhere from 20 to 500 years to decompose, and even then, it never fully disappears; it just gets smaller and smaller.\nConsider this figure: 8,3 billion tonnes is the total amount of plastic ever made, half of which has been produced in the last 13 years.\nMicroplastics in particular have been found in every corner of the globe, from the peak of Mount Everest to the trough of the Mariana Trench. In fact, it has been estimated that humans ingest a credit card worth of plastic per week!\nREAD MORE\nA filter-feeding manta ray attempts to eat amidst the plastic in Bali's Nusa Penida. Recent research has shown that these manta rays ingest as much as 137 pieces of plastic an hour, which exposes their population to unknown long-term risks.\nPhoto by Vincent Kneefel (The Netherlands)\nA young sea turtle is trying to breathe in a puddle of water filled with plastic in Niteroi, Rio de Janeiro, Brazil.\nPhoto by Heidi Acampora (Brazil)\nA youngster takes a swim in a river polluted with plastic and other waste in Bocaue, Philippines.\nPhoto by Jophel Botero Ybiosa (Philippines)\nWhen deliveries of donated educational and medical supplies began in 2004, most of the area was still relatively clean. Now the patch of plastic waste stretches for at least a kilometre and is a good 100 metres wide.\nPhoto by Margarete Macoun (Germany)\nMajor drainage systems in Accra, Ghana's capital city, empty single-use plastic waste into the ocean through the Korle Lagoon. The urban poor sometimes swim in it to recover recyclable material.\nPhoto by Muntaka Chasant (Ghana)\nThese boys spend their days fighting for food and goods. It\u2019s a daily war for them in the depot of Chittagong, Bangladesh.\nPhoto by Muhammad Amdad Hossain (Bangladesh)\nThis girl is growing up in a squatter settlement around Sabah, Malaysia. Garbage piles collected in several such areas are estimated to amount to 216,000 kilograms per month.\nPhoto by Fakir Mohamad bin Md. Nor (Malaysia)\nIn Accra, Ghana, a plastic waste scavenger brings plastic he has recovered to a dumpsite where middlemen will buy it for recycling.\nPhoto by Muntaka Chasant (Ghana)\nThis woman is collecting and separating plastic bottles according to their type, so she can then sell them to recycling factories in Mandi Bahauddin Punjab, Pakistan.\nPhoto by Sufyan Arshad (Pakistan)\nThis local beach in Java, Indonesia, has become an illegal dumpsite for plastic waste. One of the residents can be seen burning the plastic, so it doesn\u2019t enter her house at high tide.\nPhoto by Vincent Kneefel (The Netherlands)\nPlastic waste has become part of our microcosmos, even found among the grains of sand on this Uruguayan beach.\nPhoto by Mauricio Ruiz (Uruguay)\nAgriculture is the main sector of Tanzania's economy, with almost 70% of the poor living in rural areas and working in farming. These days, plastic waste pollution has increased so much that it is affecting both the environment and livelihoods.\nPhoto by Paul Elias (Tanzania)\nPlastic waste can be found even in the most serene places. Here, it overshadows the beauty of the sunrise and the peacefulness symbolised by the cross.\nPhoto by Sienna Goldstein (Seychelles)\nIn Tuscany, near San Vincenzo, Italy, small pieces of broken-down plastic and industrial plastic pellets have been washed up on the beach along the coastline.\nPhoto by Alexandra Rudiak (Germany/Canada)\nA windstorm coming from the South washes up plastic on the shoreline of the Pelje\u0161ac peninsula, Croatia.\nPhoto by Anita Bubalo (Croatia)\nIn Bretagne\u2019s quaint village of Plouharnel, France, once the surfers leave for winter, sea currents fill the seaside with trash. An invasion of plastic monsters, if you will.\nPhoto by C\u00e9line Bellanger (France)\nThe Njoro River flows from the Mau Forest, continuing along several residential areas. By the time it reaches Lake Nakuru, a UNESCO World Heritage Site in Kenya, it is filled with plastic.\nPhoto by James Wakibia (Kenya)\nEver since ancient times, Lithuanian forests have been a place of tranquillity. Now nature is sending us a message, sadly in a plastic bottle.\nPhoto by Jurgita \u0160ukien\u0117 (Lithuania)\nA large number of homeless people in Dhaka, Bangladesh have lost their property due to natural disasters. For them, an asphalt street is the best they can hope for, otherwise they have to sleep on plastic trash.\nPhoto by Muhammad Amdad Hossain (Bangladesh)\nClean beaches are increasingly becoming a rare sight in tourist-friendly Croatia.\nPhoto by Paula Porobija (Croatia)\nIn the archipelago of islands off the coast of Panama, the indigenous communities of the Guna Yala tribe are suffering from a plastic invasion.\nPhoto by Sophie Dingwall (The United Kingdom)\nOn the reef of a small coastal village in the Indonesian Banggai Archipelago, the villagers are doing their best to fight against plastic pollution. Plastic bags like this one represent a hollow deceit for animals that prey on jellyfish, such as sea turtles.\nPhoto by Shannon Switzer Swanson (The United States of America)\nOnce an important commercial waterway, the Buriganga river in the southwest outskirts of Dhaka, Bangladesh, has now turned into a plastic river.\nPhoto by Shahriar Hossain (Bangladesh)\nAiming to engage young people in the fight against plastic pollution, a Zero Waste classroom in Berkeley, California has managed to generate only a jar of waste (a little less than a litre) during the entire school year.\nPhoto by Jacqueline Elbing-Omania (Germany and The United States of America)\nTrash heaps near the Adriatic Sea where the Bura wind spreads plastic waste onto the grazing fields.\nPhoto by Goran Dori\u0107 (Croatia)\nFishing in the Brantas river of the East Java province, Indonesia, means going through loads of plastic trash, discarded by the\n\nProvide relevant evidence.",
+    "input_length_chars": 6385,
+    "input_tokens_estimated": 1596,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that plastic waste can take anywhere from 20 to 500 years to decompose, which contradicts the claim that it can take 1,000 years for a bottle to decompose.",
+      "overall_stance": "refutes",
+      "key_quote": "Plastic waste can take anywhere from 20 to 500 years to decompose, and even then, it never fully disappears."
+    },
+    "output_length_chars": 371,
+    "output_tokens_estimated": 92,
+    "cost_usd": 0.0002946,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "It can take bottle one an agonizing 1,000 years to decompose.",
+      "query_index": 2,
+      "query_text": "Plastic bottle decomposition time 1000 years"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:48:53.882259",
+    "latency_seconds": 2.69,
+    "input_prompt": "Claim:\nIt can take bottle one an agonizing 1,000 years to decompose.\n\nArticle Title:\nIn Images: Plastic is Forever - the United Nations\n\nGoogle Search Snippet:\nPlastic waste can take anywhere from 20 to 500 years to decompose, and even then, it never fully disappears; it just gets smaller and smaller.\n\nFull Page Content:\nFor decades we have relied on plastics to keep us safe, insulate our homes and make sure our food stays fresh. From cell phones to car parts, PPE to syringes, the use of plastic has made our lives easier.\nBut when does plastic\u2019s life come to an end?\nPlastic waste can take anywhere from 20 to 500 years to decompose, and even then, it never fully disappears; it just gets smaller and smaller.\nConsider this figure: 8,3 billion tonnes is the total amount of plastic ever made, half of which has been produced in the last 13 years.\nMicroplastics in particular have been found in every corner of the globe, from the peak of Mount Everest to the trough of the Mariana Trench. In fact, it has been estimated that humans ingest a credit card worth of plastic per week!\nREAD MORE\nA filter-feeding manta ray attempts to eat amidst the plastic in Bali's Nusa Penida. Recent research has shown that these manta rays ingest as much as 137 pieces of plastic an hour, which exposes their population to unknown long-term risks.\nPhoto by Vincent Kneefel (The Netherlands)\nA young sea turtle is trying to breathe in a puddle of water filled with plastic in Niteroi, Rio de Janeiro, Brazil.\nPhoto by Heidi Acampora (Brazil)\nA youngster takes a swim in a river polluted with plastic and other waste in Bocaue, Philippines.\nPhoto by Jophel Botero Ybiosa (Philippines)\nWhen deliveries of donated educational and medical supplies began in 2004, most of the area was still relatively clean. Now the patch of plastic waste stretches for at least a kilometre and is a good 100 metres wide.\nPhoto by Margarete Macoun (Germany)\nMajor drainage systems in Accra, Ghana's capital city, empty single-use plastic waste into the ocean through the Korle Lagoon. The urban poor sometimes swim in it to recover recyclable material.\nPhoto by Muntaka Chasant (Ghana)\nThese boys spend their days fighting for food and goods. It\u2019s a daily war for them in the depot of Chittagong, Bangladesh.\nPhoto by Muhammad Amdad Hossain (Bangladesh)\nThis girl is growing up in a squatter settlement around Sabah, Malaysia. Garbage piles collected in several such areas are estimated to amount to 216,000 kilograms per month.\nPhoto by Fakir Mohamad bin Md. Nor (Malaysia)\nIn Accra, Ghana, a plastic waste scavenger brings plastic he has recovered to a dumpsite where middlemen will buy it for recycling.\nPhoto by Muntaka Chasant (Ghana)\nThis woman is collecting and separating plastic bottles according to their type, so she can then sell them to recycling factories in Mandi Bahauddin Punjab, Pakistan.\nPhoto by Sufyan Arshad (Pakistan)\nThis local beach in Java, Indonesia, has become an illegal dumpsite for plastic waste. One of the residents can be seen burning the plastic, so it doesn\u2019t enter her house at high tide.\nPhoto by Vincent Kneefel (The Netherlands)\nPlastic waste has become part of our microcosmos, even found among the grains of sand on this Uruguayan beach.\nPhoto by Mauricio Ruiz (Uruguay)\nAgriculture is the main sector of Tanzania's economy, with almost 70% of the poor living in rural areas and working in farming. These days, plastic waste pollution has increased so much that it is affecting both the environment and livelihoods.\nPhoto by Paul Elias (Tanzania)\nPlastic waste can be found even in the most serene places. Here, it overshadows the beauty of the sunrise and the peacefulness symbolised by the cross.\nPhoto by Sienna Goldstein (Seychelles)\nIn Tuscany, near San Vincenzo, Italy, small pieces of broken-down plastic and industrial plastic pellets have been washed up on the beach along the coastline.\nPhoto by Alexandra Rudiak (Germany/Canada)\nA windstorm coming from the South washes up plastic on the shoreline of the Pelje\u0161ac peninsula, Croatia.\nPhoto by Anita Bubalo (Croatia)\nIn Bretagne\u2019s quaint village of Plouharnel, France, once the surfers leave for winter, sea currents fill the seaside with trash. An invasion of plastic monsters, if you will.\nPhoto by C\u00e9line Bellanger (France)\nThe Njoro River flows from the Mau Forest, continuing along several residential areas. By the time it reaches Lake Nakuru, a UNESCO World Heritage Site in Kenya, it is filled with plastic.\nPhoto by James Wakibia (Kenya)\nEver since ancient times, Lithuanian forests have been a place of tranquillity. Now nature is sending us a message, sadly in a plastic bottle.\nPhoto by Jurgita \u0160ukien\u0117 (Lithuania)\nA large number of homeless people in Dhaka, Bangladesh have lost their property due to natural disasters. For them, an asphalt street is the best they can hope for, otherwise they have to sleep on plastic trash.\nPhoto by Muhammad Amdad Hossain (Bangladesh)\nClean beaches are increasingly becoming a rare sight in tourist-friendly Croatia.\nPhoto by Paula Porobija (Croatia)\nIn the archipelago of islands off the coast of Panama, the indigenous communities of the Guna Yala tribe are suffering from a plastic invasion.\nPhoto by Sophie Dingwall (The United Kingdom)\nOn the reef of a small coastal village in the Indonesian Banggai Archipelago, the villagers are doing their best to fight against plastic pollution. Plastic bags like this one represent a hollow deceit for animals that prey on jellyfish, such as sea turtles.\nPhoto by Shannon Switzer Swanson (The United States of America)\nOnce an important commercial waterway, the Buriganga river in the southwest outskirts of Dhaka, Bangladesh, has now turned into a plastic river.\nPhoto by Shahriar Hossain (Bangladesh)\nAiming to engage young people in the fight against plastic pollution, a Zero Waste classroom in Berkeley, California has managed to generate only a jar of waste (a little less than a litre) during the entire school year.\nPhoto by Jacqueline Elbing-Omania (Germany and The United States of America)\nTrash heaps near the Adriatic Sea where the Bura wind spreads plastic waste onto the grazing fields.\nPhoto by Goran Dori\u0107 (Croatia)\nFishing in the Brantas river of the East Java province, Indonesia, means going through loads of plastic trash, discarded by the\n\nProvide relevant evidence.",
+    "input_length_chars": 6351,
+    "input_tokens_estimated": 1587,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that plastic waste can take anywhere from 20 to 500 years to decompose, which contradicts the claim that it can take 1,000 years for a bottle to decompose.",
+      "overall_stance": "refutes",
+      "key_quote": "Plastic waste can take anywhere from 20 to 500 years to decompose, and even then, it never fully disappears; it just gets smaller and smaller."
+    },
+    "output_length_chars": 405,
+    "output_tokens_estimated": 101,
+    "cost_usd": 0.00029865,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "It can take bottle one an agonizing 1,000 years to decompose.",
+      "query_index": 2,
+      "query_text": "Plastic bottle decomposition time 1000 years"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:48:54.491015",
+    "latency_seconds": 3.3,
+    "input_prompt": "Claim:\nIt can take bottle one an agonizing 1,000 years to decompose.\n\nArticle Title:\nHow long it takes everyday items to decompose - Forge Recycling\n\nGoogle Search Snippet:\nA plastic bottle made from PET takes around 450 years to decompose. Plastic erodes into smaller, often undetectable nanoplastics, which can make ...\n\nFull Page Content:\nFor decades we have relied on plastics to keep us safe, insulate our homes and make sure our food stays fresh. From cell phones to car parts, PPE to syringes, the use of plastic has made our lives easier.\nBut when does plastic\u2019s life come to an end?\nPlastic waste can take anywhere from 20 to 500 years to decompose, and even then, it never fully disappears; it just gets smaller and smaller.\nConsider this figure: 8,3 billion tonnes is the total amount of plastic ever made, half of which has been produced in the last 13 years.\nMicroplastics in particular have been found in every corner of the globe, from the peak of Mount Everest to the trough of the Mariana Trench. In fact, it has been estimated that humans ingest a credit card worth of plastic per week!\nREAD MORE\nA filter-feeding manta ray attempts to eat amidst the plastic in Bali's Nusa Penida. Recent research has shown that these manta rays ingest as much as 137 pieces of plastic an hour, which exposes their population to unknown long-term risks.\nPhoto by Vincent Kneefel (The Netherlands)\nA young sea turtle is trying to breathe in a puddle of water filled with plastic in Niteroi, Rio de Janeiro, Brazil.\nPhoto by Heidi Acampora (Brazil)\nA youngster takes a swim in a river polluted with plastic and other waste in Bocaue, Philippines.\nPhoto by Jophel Botero Ybiosa (Philippines)\nWhen deliveries of donated educational and medical supplies began in 2004, most of the area was still relatively clean. Now the patch of plastic waste stretches for at least a kilometre and is a good 100 metres wide.\nPhoto by Margarete Macoun (Germany)\nMajor drainage systems in Accra, Ghana's capital city, empty single-use plastic waste into the ocean through the Korle Lagoon. The urban poor sometimes swim in it to recover recyclable material.\nPhoto by Muntaka Chasant (Ghana)\nThese boys spend their days fighting for food and goods. It\u2019s a daily war for them in the depot of Chittagong, Bangladesh.\nPhoto by Muhammad Amdad Hossain (Bangladesh)\nThis girl is growing up in a squatter settlement around Sabah, Malaysia. Garbage piles collected in several such areas are estimated to amount to 216,000 kilograms per month.\nPhoto by Fakir Mohamad bin Md. Nor (Malaysia)\nIn Accra, Ghana, a plastic waste scavenger brings plastic he has recovered to a dumpsite where middlemen will buy it for recycling.\nPhoto by Muntaka Chasant (Ghana)\nThis woman is collecting and separating plastic bottles according to their type, so she can then sell them to recycling factories in Mandi Bahauddin Punjab, Pakistan.\nPhoto by Sufyan Arshad (Pakistan)\nThis local beach in Java, Indonesia, has become an illegal dumpsite for plastic waste. One of the residents can be seen burning the plastic, so it doesn\u2019t enter her house at high tide.\nPhoto by Vincent Kneefel (The Netherlands)\nPlastic waste has become part of our microcosmos, even found among the grains of sand on this Uruguayan beach.\nPhoto by Mauricio Ruiz (Uruguay)\nAgriculture is the main sector of Tanzania's economy, with almost 70% of the poor living in rural areas and working in farming. These days, plastic waste pollution has increased so much that it is affecting both the environment and livelihoods.\nPhoto by Paul Elias (Tanzania)\nPlastic waste can be found even in the most serene places. Here, it overshadows the beauty of the sunrise and the peacefulness symbolised by the cross.\nPhoto by Sienna Goldstein (Seychelles)\nIn Tuscany, near San Vincenzo, Italy, small pieces of broken-down plastic and industrial plastic pellets have been washed up on the beach along the coastline.\nPhoto by Alexandra Rudiak (Germany/Canada)\nA windstorm coming from the South washes up plastic on the shoreline of the Pelje\u0161ac peninsula, Croatia.\nPhoto by Anita Bubalo (Croatia)\nIn Bretagne\u2019s quaint village of Plouharnel, France, once the surfers leave for winter, sea currents fill the seaside with trash. An invasion of plastic monsters, if you will.\nPhoto by C\u00e9line Bellanger (France)\nThe Njoro River flows from the Mau Forest, continuing along several residential areas. By the time it reaches Lake Nakuru, a UNESCO World Heritage Site in Kenya, it is filled with plastic.\nPhoto by James Wakibia (Kenya)\nEver since ancient times, Lithuanian forests have been a place of tranquillity. Now nature is sending us a message, sadly in a plastic bottle.\nPhoto by Jurgita \u0160ukien\u0117 (Lithuania)\nA large number of homeless people in Dhaka, Bangladesh have lost their property due to natural disasters. For them, an asphalt street is the best they can hope for, otherwise they have to sleep on plastic trash.\nPhoto by Muhammad Amdad Hossain (Bangladesh)\nClean beaches are increasingly becoming a rare sight in tourist-friendly Croatia.\nPhoto by Paula Porobija (Croatia)\nIn the archipelago of islands off the coast of Panama, the indigenous communities of the Guna Yala tribe are suffering from a plastic invasion.\nPhoto by Sophie Dingwall (The United Kingdom)\nOn the reef of a small coastal village in the Indonesian Banggai Archipelago, the villagers are doing their best to fight against plastic pollution. Plastic bags like this one represent a hollow deceit for animals that prey on jellyfish, such as sea turtles.\nPhoto by Shannon Switzer Swanson (The United States of America)\nOnce an important commercial waterway, the Buriganga river in the southwest outskirts of Dhaka, Bangladesh, has now turned into a plastic river.\nPhoto by Shahriar Hossain (Bangladesh)\nAiming to engage young people in the fight against plastic pollution, a Zero Waste classroom in Berkeley, California has managed to generate only a jar of waste (a little less than a litre) during the entire school year.\nPhoto by Jacqueline Elbing-Omania (Germany and The United States of America)\nTrash heaps near the Adriatic Sea where the Bura wind spreads plastic waste onto the grazing fields.\nPhoto by Goran Dori\u0107 (Croatia)\nFishing in the Brantas river of the East Java province, Indonesia, means going through loads of plastic trash, discarded by the\n\nProvide relevant evidence.",
+    "input_length_chars": 6370,
+    "input_tokens_estimated": 1592,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that plastic bottles, specifically those made from PET, take around 450 years to decompose, which contradicts the claim of 1,000 years.",
+      "overall_stance": "refutes",
+      "key_quote": "A plastic bottle made from PET takes around 450 years to decompose."
+    },
+    "output_length_chars": 310,
+    "output_tokens_estimated": 77,
+    "cost_usd": 0.000285,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "It can take bottle one an agonizing 1,000 years to decompose.",
+      "query_index": 2,
+      "query_text": "Plastic bottle decomposition time 1000 years"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:48:54.656368",
+    "latency_seconds": 3.47,
+    "input_prompt": "Claim:\nIt can take bottle one an agonizing 1,000 years to decompose.\n\nArticle Title:\n[PDF] How Long Does It Take Garbage to Decompose?\n\nGoogle Search Snippet:\nBut plastic bags we use in our everyday life take 10-20 years to decompose, while plastic bottles take 450 years. CONTINUE READING BELOW OUR VIDEO. What To Do ...\n\nFull Page Content:\nFor decades we have relied on plastics to keep us safe, insulate our homes and make sure our food stays fresh. From cell phones to car parts, PPE to syringes, the use of plastic has made our lives easier.\nBut when does plastic\u2019s life come to an end?\nPlastic waste can take anywhere from 20 to 500 years to decompose, and even then, it never fully disappears; it just gets smaller and smaller.\nConsider this figure: 8,3 billion tonnes is the total amount of plastic ever made, half of which has been produced in the last 13 years.\nMicroplastics in particular have been found in every corner of the globe, from the peak of Mount Everest to the trough of the Mariana Trench. In fact, it has been estimated that humans ingest a credit card worth of plastic per week!\nREAD MORE\nA filter-feeding manta ray attempts to eat amidst the plastic in Bali's Nusa Penida. Recent research has shown that these manta rays ingest as much as 137 pieces of plastic an hour, which exposes their population to unknown long-term risks.\nPhoto by Vincent Kneefel (The Netherlands)\nA young sea turtle is trying to breathe in a puddle of water filled with plastic in Niteroi, Rio de Janeiro, Brazil.\nPhoto by Heidi Acampora (Brazil)\nA youngster takes a swim in a river polluted with plastic and other waste in Bocaue, Philippines.\nPhoto by Jophel Botero Ybiosa (Philippines)\nWhen deliveries of donated educational and medical supplies began in 2004, most of the area was still relatively clean. Now the patch of plastic waste stretches for at least a kilometre and is a good 100 metres wide.\nPhoto by Margarete Macoun (Germany)\nMajor drainage systems in Accra, Ghana's capital city, empty single-use plastic waste into the ocean through the Korle Lagoon. The urban poor sometimes swim in it to recover recyclable material.\nPhoto by Muntaka Chasant (Ghana)\nThese boys spend their days fighting for food and goods. It\u2019s a daily war for them in the depot of Chittagong, Bangladesh.\nPhoto by Muhammad Amdad Hossain (Bangladesh)\nThis girl is growing up in a squatter settlement around Sabah, Malaysia. Garbage piles collected in several such areas are estimated to amount to 216,000 kilograms per month.\nPhoto by Fakir Mohamad bin Md. Nor (Malaysia)\nIn Accra, Ghana, a plastic waste scavenger brings plastic he has recovered to a dumpsite where middlemen will buy it for recycling.\nPhoto by Muntaka Chasant (Ghana)\nThis woman is collecting and separating plastic bottles according to their type, so she can then sell them to recycling factories in Mandi Bahauddin Punjab, Pakistan.\nPhoto by Sufyan Arshad (Pakistan)\nThis local beach in Java, Indonesia, has become an illegal dumpsite for plastic waste. One of the residents can be seen burning the plastic, so it doesn\u2019t enter her house at high tide.\nPhoto by Vincent Kneefel (The Netherlands)\nPlastic waste has become part of our microcosmos, even found among the grains of sand on this Uruguayan beach.\nPhoto by Mauricio Ruiz (Uruguay)\nAgriculture is the main sector of Tanzania's economy, with almost 70% of the poor living in rural areas and working in farming. These days, plastic waste pollution has increased so much that it is affecting both the environment and livelihoods.\nPhoto by Paul Elias (Tanzania)\nPlastic waste can be found even in the most serene places. Here, it overshadows the beauty of the sunrise and the peacefulness symbolised by the cross.\nPhoto by Sienna Goldstein (Seychelles)\nIn Tuscany, near San Vincenzo, Italy, small pieces of broken-down plastic and industrial plastic pellets have been washed up on the beach along the coastline.\nPhoto by Alexandra Rudiak (Germany/Canada)\nA windstorm coming from the South washes up plastic on the shoreline of the Pelje\u0161ac peninsula, Croatia.\nPhoto by Anita Bubalo (Croatia)\nIn Bretagne\u2019s quaint village of Plouharnel, France, once the surfers leave for winter, sea currents fill the seaside with trash. An invasion of plastic monsters, if you will.\nPhoto by C\u00e9line Bellanger (France)\nThe Njoro River flows from the Mau Forest, continuing along several residential areas. By the time it reaches Lake Nakuru, a UNESCO World Heritage Site in Kenya, it is filled with plastic.\nPhoto by James Wakibia (Kenya)\nEver since ancient times, Lithuanian forests have been a place of tranquillity. Now nature is sending us a message, sadly in a plastic bottle.\nPhoto by Jurgita \u0160ukien\u0117 (Lithuania)\nA large number of homeless people in Dhaka, Bangladesh have lost their property due to natural disasters. For them, an asphalt street is the best they can hope for, otherwise they have to sleep on plastic trash.\nPhoto by Muhammad Amdad Hossain (Bangladesh)\nClean beaches are increasingly becoming a rare sight in tourist-friendly Croatia.\nPhoto by Paula Porobija (Croatia)\nIn the archipelago of islands off the coast of Panama, the indigenous communities of the Guna Yala tribe are suffering from a plastic invasion.\nPhoto by Sophie Dingwall (The United Kingdom)\nOn the reef of a small coastal village in the Indonesian Banggai Archipelago, the villagers are doing their best to fight against plastic pollution. Plastic bags like this one represent a hollow deceit for animals that prey on jellyfish, such as sea turtles.\nPhoto by Shannon Switzer Swanson (The United States of America)\nOnce an important commercial waterway, the Buriganga river in the southwest outskirts of Dhaka, Bangladesh, has now turned into a plastic river.\nPhoto by Shahriar Hossain (Bangladesh)\nAiming to engage young people in the fight against plastic pollution, a Zero Waste classroom in Berkeley, California has managed to generate only a jar of waste (a little less than a litre) during the entire school year.\nPhoto by Jacqueline Elbing-Omania (Germany and The United States of America)\nTrash heaps near the Adriatic Sea where the Bura wind spreads plastic waste onto the grazing fields.\nPhoto by Goran Dori\u0107 (Croatia)\nFishing in the Brantas river of the East Java province, Indonesia, means going through loads of plastic trash, discarded by the\n\nProvide relevant evidence.",
+    "input_length_chars": 6370,
+    "input_tokens_estimated": 1592,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that plastic bottles take approximately 450 years to decompose, which contradicts the claim that it can take 1,000 years.",
+      "overall_stance": "refutes",
+      "key_quote": "Plastic bottles take 450 years to decompose."
+    },
+    "output_length_chars": 273,
+    "output_tokens_estimated": 68,
+    "cost_usd": 0.0002796,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "It can take bottle one an agonizing 1,000 years to decompose.",
+      "query_index": 2,
+      "query_text": "Plastic bottle decomposition time 1000 years"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:48:54.862697",
+    "latency_seconds": 3.67,
+    "input_prompt": "Claim:\nIt can take bottle one an agonizing 1,000 years to decompose.\n\nArticle Title:\nELI5, How do we know plastic takes hundreds of years to decompose?\n\nGoogle Search Snippet:\nIf you measure it for a year and 2% of the plastic mass is gone, then you can predict it will take ~50 years for 100% of the plastic to decompose.\n\nFull Page Content:\nFor decades we have relied on plastics to keep us safe, insulate our homes and make sure our food stays fresh. From cell phones to car parts, PPE to syringes, the use of plastic has made our lives easier.\nBut when does plastic\u2019s life come to an end?\nPlastic waste can take anywhere from 20 to 500 years to decompose, and even then, it never fully disappears; it just gets smaller and smaller.\nConsider this figure: 8,3 billion tonnes is the total amount of plastic ever made, half of which has been produced in the last 13 years.\nMicroplastics in particular have been found in every corner of the globe, from the peak of Mount Everest to the trough of the Mariana Trench. In fact, it has been estimated that humans ingest a credit card worth of plastic per week!\nREAD MORE\nA filter-feeding manta ray attempts to eat amidst the plastic in Bali's Nusa Penida. Recent research has shown that these manta rays ingest as much as 137 pieces of plastic an hour, which exposes their population to unknown long-term risks.\nPhoto by Vincent Kneefel (The Netherlands)\nA young sea turtle is trying to breathe in a puddle of water filled with plastic in Niteroi, Rio de Janeiro, Brazil.\nPhoto by Heidi Acampora (Brazil)\nA youngster takes a swim in a river polluted with plastic and other waste in Bocaue, Philippines.\nPhoto by Jophel Botero Ybiosa (Philippines)\nWhen deliveries of donated educational and medical supplies began in 2004, most of the area was still relatively clean. Now the patch of plastic waste stretches for at least a kilometre and is a good 100 metres wide.\nPhoto by Margarete Macoun (Germany)\nMajor drainage systems in Accra, Ghana's capital city, empty single-use plastic waste into the ocean through the Korle Lagoon. The urban poor sometimes swim in it to recover recyclable material.\nPhoto by Muntaka Chasant (Ghana)\nThese boys spend their days fighting for food and goods. It\u2019s a daily war for them in the depot of Chittagong, Bangladesh.\nPhoto by Muhammad Amdad Hossain (Bangladesh)\nThis girl is growing up in a squatter settlement around Sabah, Malaysia. Garbage piles collected in several such areas are estimated to amount to 216,000 kilograms per month.\nPhoto by Fakir Mohamad bin Md. Nor (Malaysia)\nIn Accra, Ghana, a plastic waste scavenger brings plastic he has recovered to a dumpsite where middlemen will buy it for recycling.\nPhoto by Muntaka Chasant (Ghana)\nThis woman is collecting and separating plastic bottles according to their type, so she can then sell them to recycling factories in Mandi Bahauddin Punjab, Pakistan.\nPhoto by Sufyan Arshad (Pakistan)\nThis local beach in Java, Indonesia, has become an illegal dumpsite for plastic waste. One of the residents can be seen burning the plastic, so it doesn\u2019t enter her house at high tide.\nPhoto by Vincent Kneefel (The Netherlands)\nPlastic waste has become part of our microcosmos, even found among the grains of sand on this Uruguayan beach.\nPhoto by Mauricio Ruiz (Uruguay)\nAgriculture is the main sector of Tanzania's economy, with almost 70% of the poor living in rural areas and working in farming. These days, plastic waste pollution has increased so much that it is affecting both the environment and livelihoods.\nPhoto by Paul Elias (Tanzania)\nPlastic waste can be found even in the most serene places. Here, it overshadows the beauty of the sunrise and the peacefulness symbolised by the cross.\nPhoto by Sienna Goldstein (Seychelles)\nIn Tuscany, near San Vincenzo, Italy, small pieces of broken-down plastic and industrial plastic pellets have been washed up on the beach along the coastline.\nPhoto by Alexandra Rudiak (Germany/Canada)\nA windstorm coming from the South washes up plastic on the shoreline of the Pelje\u0161ac peninsula, Croatia.\nPhoto by Anita Bubalo (Croatia)\nIn Bretagne\u2019s quaint village of Plouharnel, France, once the surfers leave for winter, sea currents fill the seaside with trash. An invasion of plastic monsters, if you will.\nPhoto by C\u00e9line Bellanger (France)\nThe Njoro River flows from the Mau Forest, continuing along several residential areas. By the time it reaches Lake Nakuru, a UNESCO World Heritage Site in Kenya, it is filled with plastic.\nPhoto by James Wakibia (Kenya)\nEver since ancient times, Lithuanian forests have been a place of tranquillity. Now nature is sending us a message, sadly in a plastic bottle.\nPhoto by Jurgita \u0160ukien\u0117 (Lithuania)\nA large number of homeless people in Dhaka, Bangladesh have lost their property due to natural disasters. For them, an asphalt street is the best they can hope for, otherwise they have to sleep on plastic trash.\nPhoto by Muhammad Amdad Hossain (Bangladesh)\nClean beaches are increasingly becoming a rare sight in tourist-friendly Croatia.\nPhoto by Paula Porobija (Croatia)\nIn the archipelago of islands off the coast of Panama, the indigenous communities of the Guna Yala tribe are suffering from a plastic invasion.\nPhoto by Sophie Dingwall (The United Kingdom)\nOn the reef of a small coastal village in the Indonesian Banggai Archipelago, the villagers are doing their best to fight against plastic pollution. Plastic bags like this one represent a hollow deceit for animals that prey on jellyfish, such as sea turtles.\nPhoto by Shannon Switzer Swanson (The United States of America)\nOnce an important commercial waterway, the Buriganga river in the southwest outskirts of Dhaka, Bangladesh, has now turned into a plastic river.\nPhoto by Shahriar Hossain (Bangladesh)\nAiming to engage young people in the fight against plastic pollution, a Zero Waste classroom in Berkeley, California has managed to generate only a jar of waste (a little less than a litre) during the entire school year.\nPhoto by Jacqueline Elbing-Omania (Germany and The United States of America)\nTrash heaps near the Adriatic Sea where the Bura wind spreads plastic waste onto the grazing fields.\nPhoto by Goran Dori\u0107 (Croatia)\nFishing in the Brantas river of the East Java province, Indonesia, means going through loads of plastic trash, discarded by the\n\nProvide relevant evidence.",
+    "input_length_chars": 6371,
+    "input_tokens_estimated": 1592,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that plastic waste can take anywhere from 20 to 500 years to decompose, which does not support the claim that it takes 1,000 years for a bottle to decompose.",
+      "overall_stance": "refutes",
+      "key_quote": "Plastic waste can take anywhere from 20 to 500 years to decompose."
+    },
+    "output_length_chars": 331,
+    "output_tokens_estimated": 82,
+    "cost_usd": 0.000288,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "It can take bottle one an agonizing 1,000 years to decompose.",
+      "query_index": 2,
+      "query_text": "Plastic bottle decomposition time 1000 years"
+    }
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:48:57.257715",
+    "latency_seconds": 2.3,
+    "input_prompt": "\nClaim: It can take bottle one an agonizing 1,000 years to decompose.\nCategory: scientific\nExtraction confidence: 0.85\n\nEvidence:\nREFUTES (3 sources):\n  1. [PDF] How Long Does It Take Garbage to Decompose? | reliability=high (0.90)\n     URL: https://www.richlandcenterwi.gov/sites/default/files/fileattachments/parks_amp_recreation/page/2534/howlonggarbagedecomposes.pdf\n     Summary: The evidence indicates that plastic bottles take approximately 450 years to decompose, which contradicts the claim that it can take 1,000 years.\n  2. How long it takes everyday items to decompose - Forge Recycling | reliability=medium (0.60)\n     URL: https://www.forgerecycling.co.uk/blog/how-long-it-takes-everyday-items-to-decompose/\n     Summary: The evidence indicates that plastic bottles, specifically those made from PET, take around 450 years to decompose, which contradicts the claim of 1,000 years.\n  3. In Images: Plastic is Forever - the United Nations | reliability=medium (0.60)\n     URL: https://www.un.org/en/exhibits/exhibit/in-images-plastic-forever\n     Summary: The evidence indicates that plastic waste can take anywhere from 20 to 500 years to decompose, which contradicts the claim that it can take 1,000 years for a bottle to decompose.\nUNCLEAR (3 sources):\n  1. The impact of plastic on climate change | Environmental Center | reliability=high (1.00)\n     URL: https://www.colorado.edu/ecenter/2023/12/15/impact-plastic-climate-change\n     Summary: It takes more than 1,000 years for plastic to decompose. Every plastic bottle, straw and container ever thrown away is still intact and ...\n  2. How Long Does It Really Take for Plastics to Biodegrade? | reliability=medium (0.60)\n     URL: https://goecopure.com/how-long-does-it-really-take-for-plastics-to-biodegrade/\n     Summary: Plastic bottles (PET): 450\u20131,000 years ; Plastic bags (PE/HDPE): 500\u20131,000 years ; Polystyrene products: 500+ years.\n  3. Impacts of Plastic Pollution | US EPA | reliability=medium (0.60)\n     URL: https://www.epa.gov/plastics/impacts-plastic-pollution\n     Summary: Once in the environment, research shows that plastic pollution is persistent and may take between 100 to 1,000 years or more to decompose, ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2236,
+    "input_tokens_estimated": 559,
+    "output": {
+      "overall_stance": "refutes",
+      "confidence": "high",
+      "summary": "The claim that it can take a bottle 1,000 years to decompose is refuted by multiple sources indicating that plastic bottles typically take around 450 years to decompose. While some sources mention a range that includes 1,000 years, the majority consensus points to a significantly shorter timeframe."
+    },
+    "output_length_chars": 360,
+    "output_tokens_estimated": 90,
+    "cost_usd": 0.00013785,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "It can take bottle one an agonizing 1,000 years to decompose.",
+      "query_index": 2,
+      "query_text": "Plastic bottle decomposition time 1000 years"
+    }
+  }
+]

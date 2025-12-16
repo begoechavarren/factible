@@ -1,0 +1,92 @@
+{
+  "video_id": "eeISzbk9SeE",
+  "timestamp": "2025-12-14T16:18:54.301814",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.6,
+    "recall": 0.25,
+    "f1_score": 0.35294117647058826,
+    "true_positives": 3,
+    "false_positives": 2,
+    "false_negatives": 9,
+    "mean_average_precision": 0.7555555555555555,
+    "recall_at_important": 0.2857142857142857,
+    "importance_weighted_coverage": 0.2712765957446808,
+    "matched_claims": [
+      {
+        "gt_text": "Human-induced global warming is a major underlying factor for extreme weather patterns",
+        "sys_text": "Human-induced global warming is a major underlying factor for changing weather patterns.",
+        "gt_importance": 0.95,
+        "sys_importance": 0.8,
+        "importance_error": 0.1499999999999999
+      },
+      {
+        "gt_text": "Increased human consumption of fossil fuels since the industrial revolution has led to more greenhouse gases being released such as carbon dioxide and methane into Earth's atmosphere",
+        "sys_text": "Increased human consumption of fossil fuels since the industrial revolution has led to more greenhouse gases being released.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.7,
+        "importance_error": 0.15000000000000002
+      },
+      {
+        "gt_text": "Heat waves are 10 times more likely now according to the UK's Met Office",
+        "sys_text": "It's estimated that heat waves are 10 times more likely now according to the UK's Met Office.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.6,
+        "importance_error": 0.15000000000000002
+      }
+    ],
+    "missed_claims": [
+      "Our planet has been experiencing more frequent and intense weather events in recent years",
+      "This has contributed to climate change in the form of increased global temperatures",
+      "Hot spells have more than doubled in duration in the past 50 years",
+      "Droughts are becoming more common and more severe in some areas due to climate change",
+      "Increased rainfall has affected most of the world due to human-course climate change",
+      "The Paris agreement is a legally binding treaty that 196 parties agreed to uphold",
+      "The goal is to limit global warming to well below 2 degrees Celsius preferably to 1.5 degrees celsius compared to pre-industrial levels",
+      "This Baseline was partly chosen because it's the earliest period with near Global observations",
+      "In order to keep temperatures under 1.5 degrees Celsius dramatic changes need to be made namely Global CO2 emissions must be at half of their 2010 Levels by 2030 and at Net Zero or as close to no total carbon emissions as possible by 2050"
+    ],
+    "extra_claims": [
+      "Earth's weather cycles have become increasingly erratic, severe, and prolonged.",
+      "Heat waves have more than doubled in duration in the past 50 years."
+    ],
+    "importance_mae": 0.15,
+    "claim_quality_avg": 0.71
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 1.0,
+    "stance_accuracy": 1.0,
+    "correct_verdicts": 3,
+    "total_verdicts": 3,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [],
+    "explanation_quality_avg": 0.7
+  },
+  "end_to_end": {
+    "claim_coverage": 0.25,
+    "verdict_accuracy": 1.0,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.0,
+    "total_time_seconds": 119.77423310279846,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.96,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.5
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.8100000000000002,
+    "source_reliability_distribution": {
+      "high": 22,
+      "medium": 3
+    },
+    "avg_evidence_per_claim": 5.0
+  },
+  "ground_truth_claims_count": 12,
+  "system_claims_count": 5
+}

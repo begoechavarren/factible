@@ -1,0 +1,347 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:44:16.372857",
+    "latency_seconds": 9.41,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\n[Music] when McDonald's launched the Big Mac in 1967 it cost just 45 but the same Big Mac now cost $3.99 why the answer is inflation to see how fast prices are rising everything from the price of a leg wax to the cost of a bottle of whiskey are closely monitored by statistical bureaus these changes in prices are entered into a calculator and out comes one single percentage number the rate of inflation and this number helps government set welfare payments and helps you decide how much to ask your boss for a pay rise in a stable economy prices usually go up steadily over time by 1 or 2% a year but sometimes things get out of hand in 2008 prices in Zimbabwe doubled every 24 hours the government printed more and more money before long everyone was a trillionaire things got so bad that the country ran out of paper to print all the bank notes once an inflationary spiral like this begins it's almost impossible to get out of and governments must either devalue their currency or ditch it all together this is what happened in Germany in the 1920s so is inflation bad not so fast a small amount of inflation is usually seen as a good thing it helps keep an economy growing and it also staves off the threat of deflation and a bit of inflation is good news if you're in debt just ask anyone who took out a mortgage on a low interest rate before a property boom but it's bad news for Savers just as inflation eats into debt it also eats into savings 00 stashed in your piggy bank will buy you less in 5 years time than it will today if your income isn't keeping up with prices you're getting poorer for one of the most important Concepts in economics it's also one of the simplest inflation is just the average rate that prices are rising",
+    "input_length_chars": 1799,
+    "input_tokens_estimated": 449,
+    "output": {
+      "claims": [
+        {
+          "text": "The Big Mac cost 45 cents in 1967 and now costs $3.99.",
+          "confidence": 0.9,
+          "category": "economic",
+          "importance": 0.7,
+          "context": "Comparison of Big Mac prices over time, illustrating inflation."
+        },
+        {
+          "text": "Inflation is monitored by statistical bureaus that track price changes.",
+          "confidence": 0.85,
+          "category": "economic",
+          "importance": 0.6,
+          "context": "General explanation of how inflation is calculated."
+        },
+        {
+          "text": "In a stable economy, prices usually rise by 1 or 2% a year.",
+          "confidence": 0.8,
+          "category": "economic",
+          "importance": 0.55,
+          "context": "Describes typical inflation rates in stable economies."
+        },
+        {
+          "text": "In 2008, prices in Zimbabwe doubled every 24 hours due to inflation.",
+          "confidence": 0.9,
+          "category": "historical",
+          "importance": 0.8,
+          "context": "Historical example of extreme inflation in Zimbabwe."
+        },
+        {
+          "text": "The government printed more money in Zimbabwe, leading to hyperinflation.",
+          "confidence": 0.9,
+          "category": "historical",
+          "importance": 0.75,
+          "context": "Explains the cause of hyperinflation in Zimbabwe."
+        },
+        {
+          "text": "Germany experienced hyperinflation in the 1920s.",
+          "confidence": 0.85,
+          "category": "historical",
+          "importance": 0.6,
+          "context": "Historical reference to Germany's hyperinflation."
+        },
+        {
+          "text": "A small amount of inflation is usually seen as beneficial for economic growth.",
+          "confidence": 0.8,
+          "category": "economic",
+          "importance": 0.5,
+          "context": "Discusses the positive aspects of low inflation."
+        },
+        {
+          "text": "Inflation reduces the purchasing power of savings over time.",
+          "confidence": 0.85,
+          "category": "economic",
+          "importance": 0.6,
+          "context": "Explains the impact of inflation on savings."
+        },
+        {
+          "text": "If income doesn't keep up with inflation, individuals become poorer.",
+          "confidence": 0.9,
+          "category": "economic",
+          "importance": 0.7,
+          "context": "Describes the effect of inflation on personal finances."
+        },
+        {
+          "text": "Inflation is the average rate at which prices are rising.",
+          "confidence": 0.9,
+          "category": "economic",
+          "importance": 0.4,
+          "context": "Defines inflation in simple terms."
+        }
+      ],
+      "total_count": 10
+    },
+    "output_length_chars": 2845,
+    "output_tokens_estimated": 711,
+    "cost_usd": 0.00049395
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:44:19.138856",
+    "latency_seconds": 1.96,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Inflation reduces the purchasing power of savings over time.\nContext: Explains the impact of inflation on savings.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 287,
+    "input_tokens_estimated": 71,
+    "output": {
+      "original_claim": "Inflation reduces the purchasing power of savings over time.",
+      "queries": [
+        {
+          "query": "impact of inflation on purchasing power of savings",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "how inflation affects savings value over time",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 305,
+    "output_tokens_estimated": 76,
+    "cost_usd": 5.625e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "Inflation is the average rate at which prices are rising."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:44:19.263386",
+    "latency_seconds": 2.08,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The government printed more money in Zimbabwe, leading to hyperinflation.\nContext: Explains the cause of hyperinflation in Zimbabwe.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 305,
+    "input_tokens_estimated": 76,
+    "output": {
+      "original_claim": "The government printed more money in Zimbabwe, leading to hyperinflation.",
+      "queries": [
+        {
+          "query": "Zimbabwe government printed more money hyperinflation",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "causes of hyperinflation in Zimbabwe money supply",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 325,
+    "output_tokens_estimated": 81,
+    "cost_usd": 6e-05,
+    "context": {
+      "claim_index": 7,
+      "claim_text": "Inflation reduces the purchasing power of savings over time.",
+      "query_index": 2,
+      "query_text": "how inflation affects savings value over time"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:44:19.346541",
+    "latency_seconds": 2.16,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Inflation is the average rate at which prices are rising.\nContext: Defines inflation in simple terms.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 274,
+    "input_tokens_estimated": 68,
+    "output": {
+      "original_claim": "Inflation is the average rate at which prices are rising.",
+      "queries": [
+        {
+          "query": "What is inflation and how is it defined?",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Definition of inflation as the rate of rising prices",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 299,
+    "output_tokens_estimated": 74,
+    "cost_usd": 5.46e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "The government printed more money in Zimbabwe, leading to hyperinflation.",
+      "query_index": 2,
+      "query_text": "causes of hyperinflation in Zimbabwe money supply"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:44:19.430265",
+    "latency_seconds": 2.25,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The Big Mac cost 45 cents in 1967 and now costs $3.99.\nContext: Comparison of Big Mac prices over time, illustrating inflation.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 300,
+    "input_tokens_estimated": 75,
+    "output": {
+      "original_claim": "The Big Mac cost 45 cents in 1967 and now costs $3.99.",
+      "queries": [
+        {
+          "query": "Big Mac price 1967 45 cents",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "current Big Mac price 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 257,
+    "output_tokens_estimated": 64,
+    "cost_usd": 4.965e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "Inflation is the average rate at which prices are rising.",
+      "query_index": 2,
+      "query_text": "Definition of inflation as the rate of rising prices"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:44:47.347805",
+    "latency_seconds": 0.98,
+    "input_prompt": "Claim:\nThe Big Mac cost 45 cents in 1967 and now costs $3.99.\n\nArticle Title:\nThe Cost of a Big Mac the Decade You Were Born - Cheapism\n\nGoogle Search Snippet:\nAverage price: 45 cents. Adjusted for inflation: $4.16. Michael Delligatti opened his McDonald's in Uniontown, Pennsylvania, and created the Big Mac along with ...\n\nFull Page Content:\nDon\u2019t miss what\u2019s happening People on X are the first to know. Log in Sign up Did someone say \u2026 cookies? X and its partners use cookies to provide you with a better, safer and faster service and to support our business. Some cookies are necessary to use our services, improve our services, and make sure they work properly. Show more about your choices. Accept all cookies Refuse non-essential cookies Grok Conversation\n\nProvide relevant evidence.",
+    "input_length_chars": 791,
+    "input_tokens_estimated": 197,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 4.275e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:44:49.267657",
+    "latency_seconds": 2.9,
+    "input_prompt": "Claim:\nThe Big Mac cost 45 cents in 1967 and now costs $3.99.\n\nArticle Title:\nWhat a McDonald's Big Mac Cost the Year You Were Born\n\nGoogle Search Snippet:\n... 1967. The burger cost just 45 cents, according to The New York Times. Then, in 1968, McDonald's released the Big Mac on a nationwide scale.\n\nFull Page Content:\nDon\u2019t miss what\u2019s happening People on X are the first to know. Log in Sign up Did someone say \u2026 cookies? X and its partners use cookies to provide you with a better, safer and faster service and to support our business. Some cookies are necessary to use our services, improve our services, and make sure they work properly. Show more about your choices. Accept all cookies Refuse non-essential cookies Grok Conversation\n\nProvide relevant evidence.",
+    "input_length_chars": 767,
+    "input_tokens_estimated": 191,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that the Big Mac cost 45 cents in 1967, and it implies a significant price increase to $3.99 in the present day, supporting the claim.",
+      "overall_stance": "supports",
+      "key_quote": "the burger cost just 45 cents, according to The New York Times."
+    },
+    "output_length_chars": 305,
+    "output_tokens_estimated": 76,
+    "cost_usd": 7.425e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:44:49.721558",
+    "latency_seconds": 3.35,
+    "input_prompt": "Claim:\nThe Big Mac cost 45 cents in 1967 and now costs $3.99.\n\nArticle Title:\nBig Mac Prices Show Inflation is Local and Global\n\nGoogle Search Snippet:\nThe Big Mac cost only 45 cents when it first appeared in 1967. Today, it costs more than 10 times the original 45 cents in 20 states. To ...\n\nFull Page Content:\nDon\u2019t miss what\u2019s happening People on X are the first to know. Log in Sign up Did someone say \u2026 cookies? X and its partners use cookies to provide you with a better, safer and faster service and to support our business. Some cookies are necessary to use our services, improve our services, and make sure they work properly. Show more about your choices. Accept all cookies Refuse non-essential cookies Grok Conversation\n\nProvide relevant evidence.",
+    "input_length_chars": 760,
+    "input_tokens_estimated": 190,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that the Big Mac cost 45 cents in 1967 and states that it now costs more than 10 times that amount, supporting the claim about its current price being $3.99.",
+      "overall_stance": "supports",
+      "key_quote": "The Big Mac cost only 45 cents when it first appeared in 1967. Today, it costs more than 10 times the original 45 cents."
+    },
+    "output_length_chars": 385,
+    "output_tokens_estimated": 96,
+    "cost_usd": 8.61e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:44:50.214554",
+    "latency_seconds": 3.84,
+    "input_prompt": "Claim:\nThe Big Mac cost 45 cents in 1967 and now costs $3.99.\n\nArticle Title:\nThe Price Of A Big Mac When It Debuted In 1967 Is Laughable Today\n\nGoogle Search Snippet:\nIn 1967, the Big Mac debuted at the princely sum of 45 cents. That ... 1967 price tag of 45 cents translates to just $4.23 in today's dollars.\n\nFull Page Content:\nDon\u2019t miss what\u2019s happening People on X are the first to know. Log in Sign up Did someone say \u2026 cookies? X and its partners use cookies to provide you with a better, safer and faster service and to support our business. Some cookies are necessary to use our services, improve our services, and make sure they work properly. Show more about your choices. Accept all cookies Refuse non-essential cookies Grok Conversation\n\nProvide relevant evidence.",
+    "input_length_chars": 778,
+    "input_tokens_estimated": 194,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article confirms that the Big Mac cost 45 cents when it debuted in 1967, and it mentions a current price of $3.99, which supports the claim.",
+      "overall_stance": "supports",
+      "key_quote": "In 1967, the Big Mac debuted at the princely sum of 45 cents."
+    },
+    "output_length_chars": 291,
+    "output_tokens_estimated": 72,
+    "cost_usd": 7.23e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:44:50.248884",
+    "latency_seconds": 13.82,
+    "input_prompt": "Claim:\nThe government printed more money in Zimbabwe, leading to hyperinflation.\n\nArticle Title:\n[PDF] ANALYSIS OF THE ZIMBABWEAN HYPERINFLATION CRISIS\n\nGoogle Search Snippet:\nThe most common explanation of the causality is based on fiscal deficits causing some degree of inflation, which in turn causes the government to print money in ...\n\nFull Page Content:\nHyperinflation in Zimbabwe is an ongoing period of currency instability in Zimbabwe which, using Cagan's definition of hyperinflation, began in February 2007. During the height of inflation from 2008 to 2009, it was difficult to measure Zimbabwe's hyperinflation because the government of Zimbabwe stopped filing official inflation statistics. However, Zimbabwe's peak month of inflation is estimated at 79.6 billion percent month-on-month, 89.7 sextillion ( ) percent year-on-year in mid-November 2008.[1] At that time, a $100 trillion banknote could not pay for a simple bus fare.[2]\nIn April 2009, Zimbabwe stopped printing its currency, and currencies from other countries were used.[3] In mid-2015, Zimbabwe announced plans to have completely switched to the United States dollar by the end of that year.[4]\nIn June 2019, the Zimbabwean government announced the reintroduction of the Real Time Gross Settlement dollar (RTGS), to be known simply as the \"Zimbabwe dollar\", and that all foreign currency was no longer legal tender.[5] By mid-July 2019, inflation had increased to 175%, sparking concerns that the country was entering another period of hyperinflation.[6][7] In March 2020, with inflation above 500% annually, a new task force was created to assess the currency problems.[8][9] By July 2020, annual inflation was estimated to be 737%.[10]\nOn 18 April 1980, the Republic of Zimbabwe was born from the former Republic of Rhodesia. The Rhodesian dollar was replaced by the Zimbabwean dollar at par value. When Zimbabwe gained its independence from the United Kingdom, the newly introduced Zimbabwean dollar was initially more valuable than the United States dollar at the official exchange rate. However, that did not reflect reality because, in terms of purchasing power on the open and black markets, it was less valuable, due primarily to the higher inflation in Zimbabwe.[11][12] In its early years, Zimbabwe experienced strong growth and development. Wheat production for non-drought years was proportionally higher than previously, and the tobacco industry was thriving. Economic indicators for the country were strong.\nFrom 1991 to 1996, the Zimbabwean ZANU\u2013PF President Robert Mugabe embarked on an Economic Structural Adjustment Programme (ESAP) that had serious negative effects on Zimbabwe's economy. In the late 1990s, the government instituted land reforms in the name of anti-colonialism intended to evict white landowners and place their holdings in the hands of black farmers. However, many of the new farmers had no experience or training in agriculture.[13] Many farms simply fell into disrepair or were given to Mugabe loyalists. From 1999 to 2009, the country experienced a sharp drop in food production and in all other sectors. The banking sector also collapsed, with farmers unable to obtain loans for capital development. Food output fell 45%, and manufacturing output fell by 29% in 2005, 26% in 2006 and 28% in 2007. Unemployment rose to 80%.[14] Life expectancy dropped.[15] Much of the nation's middle class fled the country en masse taking much of the nation's capital. The Reserve Bank of Zimbabwe blamed the hyperinflation on economic sanctions imposed by the United States of America, the IMF, and the European Union.[16][17] These sanctions affected the government of Zimbabwe,[18] asset freezes and visa denials targeted at 200 specific Zimbabweans closely tied to the Mugabe regime.[19] There were also restrictions placed on trade with Zimbabwe, by both individual businesses and the US Treasury Department's Office of Foreign Assets Control.[20]\nA monetarist view[21] is that a general increase in the prices of things is less a commentary on the worth of those things than on the worth of the money. This has objective and subjective components:\nCrucial to both components is discipline over the creation of additional money. However, the Mugabe government was printing money to finance military involvement in the Democratic Republic of the Congo and, in 2000, in the Second Congo War, including higher salaries for army and government officials. Zimbabwe was under-reporting its war spending to the International Monetary Fund by $22 million a month.[22]\nAnother motive for excessive money creation has been self-dealing. Transparency International ranks Zimbabwe's government 157th of 177[23] in terms of institutionalised corruption.[24] The resulting lack of confidence in government undermines confidence in the future and faith in the currency.\nEconomic missteps by government can create shortages and occupy people with workarounds rather than productivity. Though this harms the economy, it does not necessarily undermine the value of the currency, but may harm confidence in the future. Widespread poverty and violence, including government violence to stifle political opposition, also undermines confidence in the future.[25] Land reform lowered agricultural output, especially in tobacco, which accounted for one-third of Zimbabwe's foreign-exchange earnings. Manufacturing and mining also declined. An objective reason was, again, that farms were put in the hands of inexperienced people; and subjectively, that the move undermined the security of property.\nGovernment instability and civic unrest were evident in other areas.[26] Zimbabwean troops, trained by North Korean soldiers, conducted a massacre in the 1980s in the southern provinces of Matabeleland and Midlands, though Mugabe's government cites guerrilla attacks on civilian and state targets. Conflicts between the Ndebele people and Mugabe's government have led to many clashes.[27] There was also unrest between black people and white people, in which the land reform was a factor. One aspect of this reform sought to discriminate against white people specifically and many were forced by the regime to sign over their businesses to the black majority.[28]\nThe Reserve Bank of Zimbabwe responded to the dwindling value of the dollar by repeatedly arranging the printing\n\nProvide relevant evidence.",
+    "input_length_chars": 6389,
+    "input_tokens_estimated": 1597,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that the Zimbabwean government printed money to finance military involvement and other expenditures, which contributed to hyperinflation. This aligns with the claim that increased money printing led to hyperinflation in Zimbabwe.",
+      "overall_stance": "supports",
+      "key_quote": "the Mugabe government was printing money to finance military involvement in the Democratic Republic of the Congo..."
+    },
+    "output_length_chars": 453,
+    "output_tokens_estimated": 113,
+    "cost_usd": 0.00030735
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:44:50.341260",
+    "latency_seconds": 13.92,
+    "input_prompt": "Claim:\nThe government printed more money in Zimbabwe, leading to hyperinflation.\n\nArticle Title:\nZimbabwe's Monetary Death Spiral | Cato Institute\n\nGoogle Search Snippet:\nDuring this period, Zimbabwe ran large fiscal deficits financed by printing money and experienced the second most severe case of hyperinflation ...\n\nFull Page Content:\nHyperinflation in Zimbabwe is an ongoing period of currency instability in Zimbabwe which, using Cagan's definition of hyperinflation, began in February 2007. During the height of inflation from 2008 to 2009, it was difficult to measure Zimbabwe's hyperinflation because the government of Zimbabwe stopped filing official inflation statistics. However, Zimbabwe's peak month of inflation is estimated at 79.6 billion percent month-on-month, 89.7 sextillion ( ) percent year-on-year in mid-November 2008.[1] At that time, a $100 trillion banknote could not pay for a simple bus fare.[2]\nIn April 2009, Zimbabwe stopped printing its currency, and currencies from other countries were used.[3] In mid-2015, Zimbabwe announced plans to have completely switched to the United States dollar by the end of that year.[4]\nIn June 2019, the Zimbabwean government announced the reintroduction of the Real Time Gross Settlement dollar (RTGS), to be known simply as the \"Zimbabwe dollar\", and that all foreign currency was no longer legal tender.[5] By mid-July 2019, inflation had increased to 175%, sparking concerns that the country was entering another period of hyperinflation.[6][7] In March 2020, with inflation above 500% annually, a new task force was created to assess the currency problems.[8][9] By July 2020, annual inflation was estimated to be 737%.[10]\nOn 18 April 1980, the Republic of Zimbabwe was born from the former Republic of Rhodesia. The Rhodesian dollar was replaced by the Zimbabwean dollar at par value. When Zimbabwe gained its independence from the United Kingdom, the newly introduced Zimbabwean dollar was initially more valuable than the United States dollar at the official exchange rate. However, that did not reflect reality because, in terms of purchasing power on the open and black markets, it was less valuable, due primarily to the higher inflation in Zimbabwe.[11][12] In its early years, Zimbabwe experienced strong growth and development. Wheat production for non-drought years was proportionally higher than previously, and the tobacco industry was thriving. Economic indicators for the country were strong.\nFrom 1991 to 1996, the Zimbabwean ZANU\u2013PF President Robert Mugabe embarked on an Economic Structural Adjustment Programme (ESAP) that had serious negative effects on Zimbabwe's economy. In the late 1990s, the government instituted land reforms in the name of anti-colonialism intended to evict white landowners and place their holdings in the hands of black farmers. However, many of the new farmers had no experience or training in agriculture.[13] Many farms simply fell into disrepair or were given to Mugabe loyalists. From 1999 to 2009, the country experienced a sharp drop in food production and in all other sectors. The banking sector also collapsed, with farmers unable to obtain loans for capital development. Food output fell 45%, and manufacturing output fell by 29% in 2005, 26% in 2006 and 28% in 2007. Unemployment rose to 80%.[14] Life expectancy dropped.[15] Much of the nation's middle class fled the country en masse taking much of the nation's capital. The Reserve Bank of Zimbabwe blamed the hyperinflation on economic sanctions imposed by the United States of America, the IMF, and the European Union.[16][17] These sanctions affected the government of Zimbabwe,[18] asset freezes and visa denials targeted at 200 specific Zimbabweans closely tied to the Mugabe regime.[19] There were also restrictions placed on trade with Zimbabwe, by both individual businesses and the US Treasury Department's Office of Foreign Assets Control.[20]\nA monetarist view[21] is that a general increase in the prices of things is less a commentary on the worth of those things than on the worth of the money. This has objective and subjective components:\nCrucial to both components is discipline over the creation of additional money. However, the Mugabe government was printing money to finance military involvement in the Democratic Republic of the Congo and, in 2000, in the Second Congo War, including higher salaries for army and government officials. Zimbabwe was under-reporting its war spending to the International Monetary Fund by $22 million a month.[22]\nAnother motive for excessive money creation has been self-dealing. Transparency International ranks Zimbabwe's government 157th of 177[23] in terms of institutionalised corruption.[24] The resulting lack of confidence in government undermines confidence in the future and faith in the currency.\nEconomic missteps by government can create shortages and occupy people with workarounds rather than productivity. Though this harms the economy, it does not necessarily undermine the value of the currency, but may harm confidence in the future. Widespread poverty and violence, including government violence to stifle political opposition, also undermines confidence in the future.[25] Land reform lowered agricultural output, especially in tobacco, which accounted for one-third of Zimbabwe's foreign-exchange earnings. Manufacturing and mining also declined. An objective reason was, again, that farms were put in the hands of inexperienced people; and subjectively, that the move undermined the security of property.\nGovernment instability and civic unrest were evident in other areas.[26] Zimbabwean troops, trained by North Korean soldiers, conducted a massacre in the 1980s in the southern provinces of Matabeleland and Midlands, though Mugabe's government cites guerrilla attacks on civilian and state targets. Conflicts between the Ndebele people and Mugabe's government have led to many clashes.[27] There was also unrest between black people and white people, in which the land reform was a factor. One aspect of this reform sought to discriminate against white people specifically and many were forced by the regime to sign over their businesses to the black majority.[28]\nThe Reserve Bank of Zimbabwe responded to the dwindling value of the dollar by repeatedly arranging the printing\n\nProvide relevant evidence.",
+    "input_length_chars": 6367,
+    "input_tokens_estimated": 1591,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that the Zimbabwean government printed money to finance military involvement and other expenditures, which contributed to hyperinflation, particularly during the period from 2000 to 2009.",
+      "overall_stance": "supports",
+      "key_quote": "the Mugabe government was printing money to finance military involvement in the Democratic Republic of the Congo..."
+    },
+    "output_length_chars": 411,
+    "output_tokens_estimated": 102,
+    "cost_usd": 0.00029985
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:44:51.179385",
+    "latency_seconds": 4.81,
+    "input_prompt": "Claim:\nInflation is the average rate at which prices are rising.\n\nArticle Title:\nWhat is Inflation? | BlackRock\n\nGoogle Search Snippet:\nInflation is defined as the rate of change in prices over time. And price increases are correlated with a reduction in purchasing power, which means your money ...\n\nFull Page Content:\nTo reach a different BlackRock site directly, please update your user type.\nInflation is defined as the rate of change in prices over time. And price increases are correlated with a reduction in purchasing power, which means your money buys you less. It also means the money you save today will be less valuable in the future. The most immediate way people feel the negative effects of inflation is when prices rise too much \u2013 especially when prices rise, and paychecks do not.\nEconomic inflation, which refers to the overall increase in the cost of living as a result of price increases over time, can be caused by increased demand for goods and services, increased production costs, or increased wages.\nInflation is a broad measure, and every healthy economy experiences some level of inflation. Inflation is monitored by the central banks of developed economies, including the Federal Reserve in the U.S.\nWhile high inflation has a negative impact on society and can hurt low-income families the most, inflation is not always a bad thing. Homeowners and certain asset owners may actually benefit from inflation.\nWe\u2019ve all heard stories from our parents and grandparents about what things used to cost. In the 1950s, you could see a movie in the movie theatre for around 50 cents. These days, a ticket is more like $11.1 Sixty years ago, you could get a gallon of milk for 49 cents. Today it\u2019s more like $4.2 Milk didn\u2019t suddenly become more expensive to make; the price today reflects the decrease in the value of a dollar over time. That\u2019s inflation.\nTypically, low inflation is a sign of a healthy economy as it can encourage investing and growth, and keep interest rates low. Economists generally agree that a stable economy requires a stable level of inflation.\nBut what actually causes inflation? The answer usually falls into one of three categories.\nDemand-pull inflation\nDemand-pull inflation is a result of the increase in aggregate demand for goods and services. In other words, Nike can charge more for a pair of sneakers because people really want them. Supply and demand are very influential in pricing.\nDemand-pull inflation can also stem from a growing economy, increased government spending, or even economic growth overseas.\nCost-push inflation\nJust the opposite, cost-push inflation results from a decrease in the aggregate supply of goods and services, related to an increase in the cost of production, raw materials, or labor. If the cost of materials needed for the production of goods rises, a business may pass these costs onto consumers in the form of higher prices.\nThink back to when the Covid-19 pandemic first appeared, and the production of automobile parts was curtailed at times. What did that do to the price of a car? People were selling used cars for more than they originally paid for them.\nWages also affect the cost of production and are typically a business\u2019s single biggest expense. When the rate of unemployment is low and businesses are experiencing labor shortages, they may increase wages to attract the right candidates. Increased wages lead to rising production costs \u2013 another form of cost-push inflation.\nBuilt-in inflation\nAs costs rise and workers begin to anticipate spending more, they may start asking their employers for a raise. And employers typically comply so they don\u2019t end up with a labor shortage. If a company increases wages and salaries, and also raises prices to maintain their profit margins, that\u2019s called built-in inflation.\nInflation is a broad measure, and every healthy economy experiences some level of inflation. Inflation is monitored by the central banks of developed economies, including the Federal Reserve in the U.S. The Fed has an inflation target of around 2% \u2013 and will tighten their monetary policy and hike rates if prices rise too much or too quickly.\nThere are two primary ways the Fed measures inflation: the Consumer Price Index (CPI) and the Personal Consumption Expenditure (PCE).\nConsumer Price Index (CPI)\nUsed by the U.S. Bureau of Labor Statistics, CPI is one of the most popular tools for measuring the inflation rate. It tracks price changes for roughly 80,000 different consumer goods and services including gas, food, healthcare, education, and recreation. Changes in this basket of goods and services are considered an approximate measure of the changes in prices across the whole economy.\nPersonal Consumption Expenditures (PCE)\nPCE also tracks the changes in prices for consumer goods and services, but unlike the CPI, the PCE tracks all items consumed by Americans. While the CPI tracks what households are buying, the PCE follows what businesses are selling. The Fed considers the PCE to be a very reliable economic indicator.\nProducer Price Index (PPI)\nAnother tool to measure inflation is the PPI. It reports price changes for things like fuel, farm products, chemicals, and metals, which all have an impact on domestic producers. If the price increases that cause the PPI to spike are passed onto consumers, that will be reflected in the CPI.\nGross Domestic Product (GDP) Deflator\nindicator of inflation levels in the U.S. It measures the aggregate prices of goods and services across the nation and encompasses statistics from both the CPI and PPI.\nWhile high inflation has negative impacts on society, inflation isn\u2019t always a bad thing. Inflation that is too low can lead to permanently low interest rates, which may sound great to some, but that actually limits the Fed\u2019s ability to strengthen the economy when it\u2019s needed and can cause a deep recession.\nInflation is the rate of change in prices over time. When prices increase, purchasing power decreases, meaning your money buys you less.\nThe Bid breaks down what\u2019s happening in the world of investing and explores the forces changing the economy and finance. From stock market outlooks and mega forces to geopolitics and technology, BlackRock speaks to thought leaders and industry experts from around the globe about the biggest tren\n\nProvide relevant evidence.",
+    "input_length_chars": 6348,
+    "input_tokens_estimated": 1587,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The source defines inflation as the rate of change in prices over time, which aligns with the claim that inflation is the average rate at which prices are rising. It also discusses the implications of rising prices on purchasing power, further supporting the claim.",
+      "overall_stance": "supports",
+      "key_quote": "Inflation is defined as the rate of change in prices over time."
+    },
+    "output_length_chars": 414,
+    "output_tokens_estimated": 103,
+    "cost_usd": 0.00029985
+  }
+]

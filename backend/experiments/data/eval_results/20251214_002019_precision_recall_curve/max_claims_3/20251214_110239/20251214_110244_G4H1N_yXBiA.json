@@ -1,0 +1,87 @@
+{
+  "video_id": "G4H1N_yXBiA",
+  "timestamp": "2025-12-14T11:02:44.037654",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_3",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.6666666666666666,
+    "recall": 0.13333333333333333,
+    "f1_score": 0.2222222222222222,
+    "true_positives": 2,
+    "false_positives": 1,
+    "false_negatives": 13,
+    "mean_average_precision": 1.0,
+    "recall_at_important": 0.14285714285714285,
+    "importance_weighted_coverage": 0.13793103448275862,
+    "matched_claims": [
+      {
+        "gt_text": "Human activities like the burning of fossil fuels have increased the amount of CO2 in the atmosphere by more than a third since the Industrial Revolution",
+        "sys_text": "CO2 levels have increased by more than a third since the Industrial Revolution.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.8,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "Ice sheets such as Greenland and Antarctica are melting",
+        "sys_text": "Ice sheets in Greenland and Antarctica are melting, causing sea levels to rise.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.8,
+        "importance_error": 0.09999999999999998
+      }
+    ],
+    "missed_claims": [
+      "The greenhouse effect is a phenomenon where gases in the atmosphere let the sun's light in but keep some of the heat from escaping",
+      "Greenhouse gases include water vapor, carbon dioxide, methane, nitrous oxide, and chlorofluorocarbons",
+      "The more greenhouse gases in the atmosphere, the more heat gets trapped, strengthening the greenhouse effect and increasing the Earth's temperature",
+      "Atmospheric carbon dioxide hasn't reached today's levels in hundreds of thousands of years despite past climate fluctuations",
+      "The extra water that was once held in glaciers causes sea levels to rise and spills out of the oceans flooding coastal regions",
+      "Warmer temperatures make weather more extreme, meaning not only more intense major storms, floods, and heavy snowfall but also longer and more frequent droughts",
+      "Changes in weather pose challenges to growing crops, as it becomes more difficult, the areas where plants and animals can live shift, and water supplies are diminished",
+      "Climate change can directly affect people's physical health",
+      "In urban areas, the warmer atmosphere creates an environment that traps and increases the amount of smog",
+      "Smog contains ozone particles which increase rapidly at higher temperatures",
+      "Exposure to higher levels of smog can cause health problems such as asthma, heart disease, and lung cancer",
+      "The rapid rate of climate change is caused by humans",
+      "If we work to replace fossil fuels with renewable energy sources like solar and wind which don't produce greenhouse gas emissions, we might still be able to prevent some of the worst effects of climate change"
+    ],
+    "extra_claims": [
+      "Human activities are driving up the earth's temperature and changing the world."
+    ],
+    "importance_mae": 0.09999999999999998,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 1.0,
+    "stance_accuracy": 1.0,
+    "correct_verdicts": 2,
+    "total_verdicts": 2,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.13333333333333333,
+    "verdict_accuracy": 1.0,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.0101979,
+    "total_time_seconds": 57.615169048309326,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.3333333333333335
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 14
+    },
+    "avg_evidence_per_claim": 4.666666666666667
+  },
+  "ground_truth_claims_count": 15,
+  "system_claims_count": 3
+}

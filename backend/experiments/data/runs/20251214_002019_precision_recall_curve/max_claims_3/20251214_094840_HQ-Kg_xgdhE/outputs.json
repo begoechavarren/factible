@@ -1,0 +1,619 @@
+{
+  "extracted_claims": {
+    "claims": [
+      {
+        "text": "In 2008, prices in Zimbabwe doubled every 24 hours.",
+        "confidence": 0.85,
+        "category": "historical",
+        "importance": 0.8,
+        "context": "Example of extreme inflation in Zimbabwe.",
+        "transcript_char_start": 632,
+        "transcript_char_end": 681,
+        "transcript_match_score": 1.0
+      },
+      {
+        "text": "The Big Mac cost 45 cents in 1967 and now costs $3.99.",
+        "confidence": 0.9,
+        "category": "economic",
+        "importance": 0.7,
+        "context": "Comparison of Big Mac prices over time.",
+        "transcript_char_start": 31,
+        "transcript_char_end": 74,
+        "transcript_match_score": 0.5894736842105263
+      },
+      {
+        "text": "Inflation helps keep an economy growing and staves off deflation.",
+        "confidence": 0.8,
+        "category": "economic",
+        "importance": 0.6,
+        "context": "Discussion on the effects of inflation on the economy.",
+        "transcript_char_start": 1141,
+        "transcript_char_end": 1200,
+        "transcript_match_score": 0.7967479674796748
+      }
+    ],
+    "total_count": 3
+  },
+  "final_output": {
+    "extracted_claims": {
+      "claims": [
+        {
+          "text": "In 2008, prices in Zimbabwe doubled every 24 hours.",
+          "confidence": 0.85,
+          "category": "historical",
+          "importance": 0.8,
+          "context": "Example of extreme inflation in Zimbabwe.",
+          "transcript_char_start": 632,
+          "transcript_char_end": 681,
+          "transcript_match_score": 1.0
+        },
+        {
+          "text": "The Big Mac cost 45 cents in 1967 and now costs $3.99.",
+          "confidence": 0.9,
+          "category": "economic",
+          "importance": 0.7,
+          "context": "Comparison of Big Mac prices over time.",
+          "transcript_char_start": 31,
+          "transcript_char_end": 74,
+          "transcript_match_score": 0.5894736842105263
+        },
+        {
+          "text": "Inflation helps keep an economy growing and staves off deflation.",
+          "confidence": 0.8,
+          "category": "economic",
+          "importance": 0.6,
+          "context": "Discussion on the effects of inflation on the economy.",
+          "transcript_char_start": 1141,
+          "transcript_char_end": 1200,
+          "transcript_match_score": 0.7967479674796748
+        }
+      ],
+      "total_count": 3
+    },
+    "claim_reports": [
+      {
+        "claim_text": "In 2008, prices in Zimbabwe doubled every 24 hours.",
+        "claim_confidence": 0.85,
+        "claim_category": "historical",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence strongly supports the claim that prices in Zimbabwe doubled approximately every 24 hours in 2008, with multiple high-reliability sources indicating extraordinary inflation rates, including estimates of 79.6 billion percent month-on-month. This aligns with the findings from the Cato Institute, Economics Help, and other analyses.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "[PDF] ANALYSIS OF THE ZIMBABWEAN HYPERINFLATION CRISIS",
+              "url": "https://honors.libraries.psu.edu/files/final_submissions/953",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (39.4 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that during the height of hyperinflation in Zimbabwe from 2008 to 2009, inflation rates were extraordinarily high, with estimates suggesting a month-on-month inflation rate of 79.6 billion percent in November 2008, which implies that prices were indeed doubling at an alarming rate, potentially every 24 hours.",
+              "snippet": "Cagan defines hyperinflations as \u201cbeginning in the month the rise in prices exceeds 50 per cent and ending in the month before the monthly rise in prices drops."
+            },
+            {
+              "title": "Zimbabwe: Inflation at 6.5 quindecillion novemdecillion percent",
+              "url": "https://reliefweb.int/report/zimbabwe/zimbabwe-inflation-65-quindecillion-novemdecillion-percent",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that during the hyperinflation period in Zimbabwe, prices were indeed doubling approximately every 24.7 hours, which supports the claim that prices doubled every 24 hours in 2008.",
+              "snippet": "... inflation rate at around 6.5 quindecillion novemdecillion percent - 65 followed by 107 zeros. \"Prices double every 24.7 hours,\" he noted."
+            },
+            {
+              "title": "[PDF] On the Measurement of Zimbabwe's Hyperinflation - Cato Institute",
+              "url": "https://www.cato.org/sites/cato.org/files/serials/files/cato-journal/2009/5/cj29n2-8.pdf",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Right-Center"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that during the peak of hyperinflation in Zimbabwe in 2008, prices were rising at an extraordinary rate, with estimates suggesting inflation reached 79.6 billion percent month-on-month, which implies that prices could have doubled every 24 hours.",
+              "snippet": "Zimbabwe first breached the hyperinflation benchmark in March 2007 (Table 1). After falling below the 50 percent threshold in July, August, and September 2007, ..."
+            },
+            {
+              "title": "Hyper Inflation in Zimbabwe - Economics Help",
+              "url": "https://www.economicshelp.org/blog/390/inflation/hyper-inflation-in-zimbabwe/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that during the height of hyperinflation in Zimbabwe in 2008, prices were effectively doubling every day, which aligns with the claim.",
+              "snippet": "That is effectively a daily inflation rate of 98.0. Roughly every day, prices would double. It was also a time of real hardship and poverty, ..."
+            },
+            {
+              "title": "Hyperinflation in Zimbabwe - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Hyperinflation_in_Zimbabwe",
+              "reliability": {
+                "rating": "unknown",
+                "score": 0.5,
+                "reasons": [
+                  "No credibility data available"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that during the height of hyperinflation in Zimbabwe in 2008, prices were increasing at an extraordinary rate, with estimates of inflation reaching 79.6 billion percent month-on-month, suggesting that prices could indeed have doubled every 24 hours.",
+              "snippet": "In 2008, the inflation rate accelerated dramatically, from a rate in January of over 100,000% to an estimated rate of over 1,000,000% by May, and nearly 250, ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 41.48,
+        "timestamp_confidence": 1.0
+      },
+      {
+        "claim_text": "The Big Mac cost 45 cents in 1967 and now costs $3.99.",
+        "claim_confidence": 0.9,
+        "claim_category": "economic",
+        "overall_stance": "mixed",
+        "verdict_confidence": "medium",
+        "verdict_summary": "The evidence supports the claim that the Big Mac cost 45 cents in 1967, with multiple sources confirming this price. However, there is inconsistency regarding the current price, with estimates ranging from $3.99 to $6.05, leading to mixed signals about the current cost.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "What a McDonald's Big Mac Cost the Year You Were Born",
+              "url": "https://www.eatthis.com/big-mac-cost/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that the Big Mac cost 45 cents in 1967 and provides a current price of around $6.05 for a Big Mac meal, which supports the claim about the price increase over time.",
+              "snippet": "... 1967. The burger cost just 45 cents, according to The New York Times. Then, in 1968, McDonald's released the Big Mac on a nationwide scale."
+            },
+            {
+              "title": "The Price Of A Big Mac When It Debuted In 1967 Is Laughable Today",
+              "url": "https://www.foodie.com/1934109/original-price-mcdonalds-big-mac-60s/",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (25.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The article confirms that the Big Mac cost approximately 45 cents in 1967 and discusses its price increases over the decades, including a current price of around $4.33 for a Big Mac meal.",
+              "snippet": "... 1967 price tag of 45 cents translates to just $4.23 in today's dollars. Unless you grab a Big Mac on the lowest end in the Lone Star State ..."
+            },
+            {
+              "title": "The Cost of a Big Mac the Decade You Were Born - Cheapism",
+              "url": "https://www.cheapism.com/big-mac-cost-by-each-decade/",
+              "reliability": {
+                "rating": "unknown",
+                "score": 0.5,
+                "reasons": [
+                  "No credibility data available"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The article confirms that the Big Mac cost approximately 45 cents in 1967 and mentions current prices, indicating a significant increase to around $6.05 for a meal, which aligns with the claim about the price increase.",
+              "snippet": "Average price: 45 cents. Adjusted for inflation: $4.16. Michael Delligatti opened his McDonald's in Uniontown, Pennsylvania, and created the Big Mac along with ..."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "Big Mac index worldwide 2025 - Statista",
+              "url": "https://www.statista.com/statistics/274326/big-mac-index-global-prices-for-a-big-mac/?srsltid=AfmBOopOHqIE6rcH2gol8rv0HqY9JlrPW5EES4cdl33I-KG-I9cBqI2k",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Global price of a Big Mac as of January 2025, by country (in U.S. dollars).",
+              "snippet": "Global price of a Big Mac as of January 2025, by country (in U.S. dollars)."
+            },
+            {
+              "title": "Here's How Much A McDonald's Big Mac Cost In 2000 Vs 2025",
+              "url": "https://www.tastingtable.com/1839378/how-much-big-mac-cost-2000-vs-2025-mcdonalds/",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (20.8 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "In 2000, a Big Mac averaged about $2.24, but in 2025 the average price of a Big Mac in the US, according to The Economist's Big Mac index, is now $5.79.",
+              "snippet": "In 2000, a Big Mac averaged about $2.24, but in 2025 the average price of a Big Mac in the US, according to The Economist's Big Mac index, is now $5.79."
+            },
+            {
+              "title": "Here's How Much A McDonald's Big Mac Cost In 2000 Vs 2025",
+              "url": "https://finance.yahoo.com/news/heres-much-mcdonalds-big-mac-180000167.html",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (30.9 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "In fact, in 2023, a Big Mac ... With that said, between the end of 2024 and March 2025's $5.79 price tag, the price of a Big Mac has already ...",
+              "snippet": "In fact, in 2023, a Big Mac ... With that said, between the end of 2024 and March 2025's $5.79 price tag, the price of a Big Mac has already ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 1.68,
+        "timestamp_confidence": 0.5894736842105263
+      },
+      {
+        "claim_text": "Inflation helps keep an economy growing and staves off deflation.",
+        "claim_confidence": 0.8,
+        "claim_category": "economic",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence strongly supports the claim that inflation helps keep an economy growing and staves off deflation. Multiple high-reliability sources, including a study from the OECD and an article from Economics Help, indicate that moderate inflation drives consumption and prevents deflation, which can lead to economic stagnation.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "[PDF] Does Inflation Harm Economic Growth? Evidence from the OECD",
+              "url": "https://www.nber.org/system/files/chapters/c7777/c7777.pdf",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence suggests that moderate inflation is necessary for economic growth as it drives consumption and prevents deflation, which can lead to reduced aggregate demand and economic stagnation.",
+              "snippet": "The estimated benefit of a per- manent reduction in the inflation rate by a percentage point is an increase in the steady state level of per capita income that ..."
+            },
+            {
+              "title": "Inflation: advantages and disadvantages - Economics Help",
+              "url": "https://www.economicshelp.org/blog/315/inflation/inflation-advantages-and-disadvantages/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "supports",
+              "evidence_summary": "The article discusses how moderate inflation is believed to drive consumption and prevent deflation, which supports the claim that inflation helps keep an economy growing and staves off deflation.",
+              "snippet": "1. Deflation (a fall in prices \u2013 negative inflation) is very harmful. \u00b7 2. Moderate inflation enables adjustment of wages. \u00b7 3. Inflation enables ..."
+            },
+            {
+              "title": "Inflation: Prices on the Rise - International Monetary Fund",
+              "url": "https://www.imf.org/en/publications/fandd/issues/series/back-to-basics/inflation",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (32.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The article discusses how moderate inflation is believed to drive consumption and prevent deflation, which can lead to reduced economic activity. It highlights that inflation encourages spending and borrowing, which are essential for economic growth.",
+              "snippet": "Although high inflation hurts an economy, deflation, or falling prices, is not desirable either. When prices are falling, consumers delay making purchases if ..."
+            },
+            {
+              "title": "Understanding Inflation - PIMCO",
+              "url": "https://www.pimco.com/us/en/resources/education/understanding-inflation",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (31.5 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The article discusses how moderate inflation is associated with economic growth and highlights the negative impacts of deflation, suggesting that inflation can help maintain economic activity.",
+              "snippet": "Inflation is a sustained rise in overall price levels. Moderate inflation is associated with economic growth, while high inflation can signal an overheated ..."
+            },
+            {
+              "title": "When Is Inflation Good for the Economy? | Old National Bank",
+              "url": "https://www.oldnational.com/resources/insights/when-is-inflation-good-for-the-economy/",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (29.5 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The article discusses how inflation can boost consumer demand and consumption, which in turn drives economic growth, while also highlighting that deflation is typically viewed negatively as it indicates a weak economy.",
+              "snippet": "Inflation is viewed as a positive when it helps boost consumer demand and consumption, driving economic growth. Some believe inflation is meant ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 75.64,
+        "timestamp_confidence": 0.7967479674796748
+      }
+    ],
+    "transcript_data": {
+      "text": "[Music] when McDonald's launched the Big Mac in 1967 it cost just 45 but the same Big Mac now cost $3.99 why the answer is inflation to see how fast prices are rising everything from the price of a leg wax to the cost of a bottle of whiskey are closely monitored by statistical bureaus these changes in prices are entered into a calculator and out comes one single percentage number the rate of inflation and this number helps government set welfare payments and helps you decide how much to ask your boss for a pay rise in a stable economy prices usually go up steadily over time by 1 or 2% a year but sometimes things get out of hand in 2008 prices in Zimbabwe doubled every 24 hours the government printed more and more money before long everyone was a trillionaire things got so bad that the country ran out of paper to print all the bank notes once an inflationary spiral like this begins it's almost impossible to get out of and governments must either devalue their currency or ditch it all together this is what happened in Germany in the 1920s so is inflation bad not so fast a small amount of inflation is usually seen as a good thing it helps keep an economy growing and it also staves off the threat of deflation and a bit of inflation is good news if you're in debt just ask anyone who took out a mortgage on a low interest rate before a property boom but it's bad news for Savers just as inflation eats into debt it also eats into savings 00 stashed in your piggy bank will buy you less in 5 years time than it will today if your income isn't keeping up with prices you're getting poorer for one of the most important Concepts in economics it's also one of the simplest inflation is just the average rate that prices are rising",
+      "segments": [
+        {
+          "text": "[Music]",
+          "start": 0.67,
+          "duration": 3.129
+        },
+        {
+          "text": "when McDonald's launched the Big Mac in",
+          "start": 1.68,
+          "duration": 5.84
+        },
+        {
+          "text": "1967 it cost just 45 but the same Big",
+          "start": 3.799,
+          "duration": 5.401
+        },
+        {
+          "text": "Mac now cost",
+          "start": 7.52,
+          "duration": 3.199
+        },
+        {
+          "text": "$3.99",
+          "start": 9.2,
+          "duration": 5.24
+        },
+        {
+          "text": "why the answer is inflation to see how",
+          "start": 10.719,
+          "duration": 6.081
+        },
+        {
+          "text": "fast prices are rising everything from",
+          "start": 14.44,
+          "duration": 4.16
+        },
+        {
+          "text": "the price of a leg wax to the cost of a",
+          "start": 16.8,
+          "duration": 3.96
+        },
+        {
+          "text": "bottle of whiskey are closely monitored",
+          "start": 18.6,
+          "duration": 4.439
+        },
+        {
+          "text": "by statistical bureaus these changes in",
+          "start": 20.76,
+          "duration": 4.679
+        },
+        {
+          "text": "prices are entered into a calculator and",
+          "start": 23.039,
+          "duration": 4.681
+        },
+        {
+          "text": "out comes one single percentage number",
+          "start": 25.439,
+          "duration": 4.561
+        },
+        {
+          "text": "the rate of inflation and this number",
+          "start": 27.72,
+          "duration": 4.359
+        },
+        {
+          "text": "helps government set welfare payments",
+          "start": 30.0,
+          "duration": 3.879
+        },
+        {
+          "text": "and helps you decide how much to ask",
+          "start": 32.079,
+          "duration": 4.241
+        },
+        {
+          "text": "your boss for a pay rise in a stable",
+          "start": 33.879,
+          "duration": 4.281
+        },
+        {
+          "text": "economy prices usually go up steadily",
+          "start": 36.32,
+          "duration": 5.16
+        },
+        {
+          "text": "over time by 1 or 2% a year but",
+          "start": 38.16,
+          "duration": 6.6
+        },
+        {
+          "text": "sometimes things get out of hand in 2008",
+          "start": 41.48,
+          "duration": 6.12
+        },
+        {
+          "text": "prices in Zimbabwe doubled every 24",
+          "start": 44.76,
+          "duration": 4.68
+        },
+        {
+          "text": "hours the government printed more and",
+          "start": 47.6,
+          "duration": 4.279
+        },
+        {
+          "text": "more money before long everyone was a",
+          "start": 49.44,
+          "duration": 4.639
+        },
+        {
+          "text": "trillionaire things got so bad that the",
+          "start": 51.879,
+          "duration": 4.2
+        },
+        {
+          "text": "country ran out of paper to print all",
+          "start": 54.079,
+          "duration": 4.761
+        },
+        {
+          "text": "the bank notes once an inflationary",
+          "start": 56.079,
+          "duration": 4.881
+        },
+        {
+          "text": "spiral like this begins it's almost",
+          "start": 58.84,
+          "duration": 4.08
+        },
+        {
+          "text": "impossible to get out of and governments",
+          "start": 60.96,
+          "duration": 4.479
+        },
+        {
+          "text": "must either devalue their currency or",
+          "start": 62.92,
+          "duration": 4.4
+        },
+        {
+          "text": "ditch it all together this is what",
+          "start": 65.439,
+          "duration": 5.121
+        },
+        {
+          "text": "happened in Germany in the 1920s so is",
+          "start": 67.32,
+          "duration": 6.4
+        },
+        {
+          "text": "inflation bad not so fast a small amount",
+          "start": 70.56,
+          "duration": 5.08
+        },
+        {
+          "text": "of inflation is usually seen as a good",
+          "start": 73.72,
+          "duration": 4.039
+        },
+        {
+          "text": "thing it helps keep an economy growing",
+          "start": 75.64,
+          "duration": 4.08
+        },
+        {
+          "text": "and it also staves off the threat of",
+          "start": 77.759,
+          "duration": 4.201
+        },
+        {
+          "text": "deflation and a bit of inflation is good",
+          "start": 79.72,
+          "duration": 4.84
+        },
+        {
+          "text": "news if you're in debt just ask anyone",
+          "start": 81.96,
+          "duration": 3.96
+        },
+        {
+          "text": "who took out a mortgage on a low",
+          "start": 84.56,
+          "duration": 3.96
+        },
+        {
+          "text": "interest rate before a property boom but",
+          "start": 85.92,
+          "duration": 4.559
+        },
+        {
+          "text": "it's bad news for Savers just as",
+          "start": 88.52,
+          "duration": 4.36
+        },
+        {
+          "text": "inflation eats into debt it also eats",
+          "start": 90.479,
+          "duration": 5.081
+        },
+        {
+          "text": "into savings 00 stashed in your piggy",
+          "start": 92.88,
+          "duration": 4.519
+        },
+        {
+          "text": "bank will buy you less in 5 years time",
+          "start": 95.56,
+          "duration": 3.879
+        },
+        {
+          "text": "than it will today if your income isn't",
+          "start": 97.399,
+          "duration": 3.961
+        },
+        {
+          "text": "keeping up with prices you're getting",
+          "start": 99.439,
+          "duration": 4.0
+        },
+        {
+          "text": "poorer for one of the most important",
+          "start": 101.36,
+          "duration": 3.92
+        },
+        {
+          "text": "Concepts in economics it's also one of",
+          "start": 103.439,
+          "duration": 4.28
+        },
+        {
+          "text": "the simplest inflation is just the",
+          "start": 105.28,
+          "duration": 6.879
+        },
+        {
+          "text": "average rate that prices are rising",
+          "start": 107.719,
+          "duration": 4.44
+        }
+      ],
+      "video_id": "HQ-Kg_xgdhE"
+    }
+  }
+}

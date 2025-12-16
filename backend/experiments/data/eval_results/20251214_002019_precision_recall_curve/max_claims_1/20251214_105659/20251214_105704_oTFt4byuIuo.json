@@ -1,0 +1,82 @@
+{
+  "video_id": "oTFt4byuIuo",
+  "timestamp": "2025-12-14T10:57:04.922941",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_1",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 1.0,
+    "recall": 0.058823529411764705,
+    "f1_score": 0.1111111111111111,
+    "true_positives": 1,
+    "false_positives": 0,
+    "false_negatives": 16,
+    "mean_average_precision": 1.0,
+    "recall_at_important": 0.1111111111111111,
+    "importance_weighted_coverage": 0.06870229007633588,
+    "matched_claims": [
+      {
+        "gt_text": "Egg prices fell 12.7% last month, the biggest monthly decline since 1984",
+        "sys_text": "Egg prices fell 12.7% last month, the biggest monthly decline since 1984.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.8,
+        "importance_error": 0.09999999999999998
+      }
+    ],
+    "missed_claims": [
+      "The USDA reported that a dozen large white shell eggs cost $3.30 on average, down 69 cents from a week before",
+      "Egg prices surged in each of the past 5 months and 17 of the past 19 months",
+      "A deadly avian flu epidemic necessitated the mass culling of egg laying hens",
+      "Egg prices remain significantly higher now than before the latest bird flu outbreak, and they cost 49.3% more last month than they did a year earlier",
+      "Eggs are still more expensive than when Trump took office",
+      "Egg prices this past Easter were the highest for any Easter on record",
+      "Trump said the cost of eggs has come down like 93-94% since we took office",
+      "Those percentage declines Trump stated are not close to accurate",
+      "Consumer egg prices were indeed falling sharply when Trump made those remarks",
+      "Trump appears to have been talking about wholesale prices, which had been tumbling throughout March",
+      "Wholesale prices fell by half, not close to the 90% plus figures Trump was citing",
+      "Wholesale prices are the costs distributors pay to farmers or middlemen. Consumer prices are what customers pay at grocery stores",
+      "Consumer prices typically make their way through the supply chain at a slower pace than wholesale prices",
+      "Grocery stores may decide to keep prices at a certain level even when wholesale prices change to try to recoup lost profits from prior weeks",
+      "The USDA says consumer prices finally fell as demand for eggs decreased and avian flu cases have fallen",
+      "Many groceries, including large chains like Costco, had limited customer purchases because of egg shortages"
+    ],
+    "extra_claims": [],
+    "importance_mae": 0.09999999999999998,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 1.0,
+    "stance_accuracy": 1.0,
+    "correct_verdicts": 1,
+    "total_verdicts": 1,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.058823529411764705,
+    "verdict_accuracy": 1.0,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.00171915,
+    "total_time_seconds": 80.75568509101868,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.5
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 4,
+      "medium": 1
+    },
+    "avg_evidence_per_claim": 5.0
+  },
+  "ground_truth_claims_count": 17,
+  "system_claims_count": 1
+}

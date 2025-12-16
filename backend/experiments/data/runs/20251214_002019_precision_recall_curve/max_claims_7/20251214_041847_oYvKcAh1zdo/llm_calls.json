@@ -1,0 +1,342 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:19:04.303718",
+    "latency_seconds": 15.03,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\n\u201cGive me your tired, your poor, your huddled masses yearning to breathe free\u2026\u201d These poetic lines, engraved on a bronze plaque beneath the Statue of Liberty, speak to who we are: a nation of immigrants. Until now . . . As Senate Democrat Chuck Schumer lamented, \u201cTears are running down the cheeks of the Statue of Liberty.\u201d We\u2019ve turned our backs on those huddled masses. Closed our borders. Separated families. Hardened our hearts. Or so you would think if you only read the headlines or watch TV news. Just one problem: It\u2019s not true. The United States still maintains the most generous immigration policies in the world. Generous to a fault...because the overwhelming numbers have stymied our ability to assimilate the huddled masses. 50 million residents of America are foreign-born. In fact, today the United States has more immigrants as a percentage of its total population than at any time since 1890. That\u2019s why, to give one illustration, 176 different languages are spoken among students in the New York City school system. How did we get here? For starters, America grants permanent residence to a million people every single year. And that\u2019s just the tip of the iceberg because of something you\u2019ve probably heard referred to as \u201cchain migration.\u201d Chain migration allows immigrants to sponsor not only their immediate family\u2014parents, spouses and children under age 21, but much of their extended family once they gain citizenship: unmarried adult children and any children they might have, married adult children and their children, and brothers and sisters and their children. Princeton University researchers, using the most recently available data, found that immigrants sponsored an average of 3.45 additional relatives each. So, the one million immigrants granted permanent residence each year potentially adds, over time, another three and a half million. In addition, an estimated 100,000 refugees and asylum-seekers\u2014people who claim to be fleeing political or personal strife abroad\u2014enter the country annually. From 2008 to 2017, the U.S. gave green cards to well over a million people for humanitarian reasons, allowing them to live and work here permanently. After five years, they can apply for full citizenship. We\u2019re not done yet. In that same time frame, nearly half a million more people came to America through the diversity visa lottery\u2014a program designed to admit more people from \u201cunderrepresented\u201d countries into the U.S. Diversity visa applicants don't need a high school education, job skills \u2014or pretty much anything. And, thanks again to chain migration, spouses and unmarried children under 21 of visa lottery winners also get to come to America. This non-stop flow of new legal immigrants\u2014based on family ties instead of skills, abilities, and allegiance to American values\u2014has, of course, been supplemented by millions who enter the country illegally and stay illegally. Dominant media outlets use the euphemism \u201cundocumented,\u201d but the official U.S. government term used in federal statutes is \u201cillegal alien\u201d: an unlawful entrant who came without permission and stays in open defiance of our laws. The number of illegal aliens in the country is usually given as 11 million, but have you noticed that number never seems to change? Common sense suggests it\u2019s higher\u2014much higher. And though illegal aliens themselves don\u2019t qualify for welfare, they receive free health care in our clinics and hospitals, and through their American-born children they can expect to receive all manner of benefits\u2014cash aid, food stamps, and housing vouchers. Their children are entitled to a free education in public schools. Building a high-tech border barrier would certainly help stem this flow. Ending chain migration is another obvious remedy. E-Verify, the national database that allows employers to check workers\u2019 immigration status, is also essential. So is a fully-functioning entry-exit system to track visa overstayers. But all solutions will ultimately fail unless we get control of the numbers and enforce our laws consistently. It\u2019s Sovereignty 101: This is our home and we have not only the right, but the responsibility, to determine who comes in, how many come in, and what qualities and qualifications they bring. The truth is, we let in millions. And, of course, millions more want to come. Who can blame them? But it\u2019s simply not possible or desirable to let in everyone. And it\u2019s not hateful to say so. It\u2019s not hateful to protect our borders. It\u2019s not hateful to protect our citizens. It\u2019s not hateful to protect our values. Lady Liberty may be shedding tears\u2014not because we\u2019ve stopped welcoming immigrants, but because our ill-conceived immigration policies are threatening the American Dream. I\u2019m Michelle Malkin, CRTV host and author of Invasion and Sold Out, for Prager University.",
+    "input_length_chars": 4882,
+    "input_tokens_estimated": 1220,
+    "output": {
+      "claims": [
+        {
+          "text": "The Statue of Liberty has a plaque with the lines about huddled masses.",
+          "confidence": 0.9,
+          "category": "historical",
+          "importance": 0.3,
+          "context": "Context unknown"
+        },
+        {
+          "text": "The United States maintains the most generous immigration policies in the world.",
+          "confidence": 0.8,
+          "category": "policy",
+          "importance": 0.7,
+          "context": "Speaker: Michelle Malkin"
+        },
+        {
+          "text": "50 million residents of America are foreign-born.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Current immigration statistics"
+        },
+        {
+          "text": "The U.S. has more immigrants as a percentage of its total population than at any time since 1890.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "Historical immigration data"
+        },
+        {
+          "text": "176 different languages are spoken among students in the New York City school system.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.5,
+          "context": "Current educational statistics"
+        },
+        {
+          "text": "America grants permanent residence to a million people every single year.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Current immigration policy"
+        },
+        {
+          "text": "Chain migration allows immigrants to sponsor extended family once they gain citizenship.",
+          "confidence": 0.85,
+          "category": "policy",
+          "importance": 0.6,
+          "context": "Context unknown"
+        }
+      ],
+      "total_count": 7
+    },
+    "output_length_chars": 1919,
+    "output_tokens_estimated": 479,
+    "cost_usd": 0.0004704
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:19:09.220621",
+    "latency_seconds": 2.8,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Chain migration allows immigrants to sponsor extended family once they gain citizenship.\nContext: Context unknown\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 286,
+    "input_tokens_estimated": 71,
+    "output": {
+      "original_claim": "Chain migration allows immigrants to sponsor extended family once they gain citizenship.",
+      "queries": [
+        {
+          "query": "Chain migration immigrants sponsor extended family citizenship",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "immigrants citizenship family sponsorship chain migration",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 357,
+    "output_tokens_estimated": 89,
+    "cost_usd": 6.405e-05,
+    "context": {
+      "claim_index": 7,
+      "claim_text": "The Statue of Liberty has a plaque with the lines about huddled masses."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:19:09.343692",
+    "latency_seconds": 2.93,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The United States maintains the most generous immigration policies in the world.\nContext: Speaker: Michelle Malkin\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 287,
+    "input_tokens_estimated": 71,
+    "output": {
+      "original_claim": "The United States maintains the most generous immigration policies in the world.",
+      "queries": [
+        {
+          "query": "United States immigration policies comparison 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "most generous immigration policies by country 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 330,
+    "output_tokens_estimated": 82,
+    "cost_usd": 5.985e-05,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "Chain migration allows immigrants to sponsor extended family once they gain citizenship.",
+      "query_index": 2,
+      "query_text": "immigrants citizenship family sponsorship chain migration"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:19:09.427796",
+    "latency_seconds": 3.01,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: 176 different languages are spoken among students in the New York City school system.\nContext: Current educational statistics\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 298,
+    "input_tokens_estimated": 74,
+    "output": {
+      "original_claim": "176 different languages are spoken among students in the New York City school system.",
+      "queries": [
+        {
+          "query": "176 languages spoken in New York City schools 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "number of languages spoken by students in NYC schools 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 343,
+    "output_tokens_estimated": 85,
+    "cost_usd": 6.21e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The United States maintains the most generous immigration policies in the world.",
+      "query_index": 2,
+      "query_text": "most generous immigration policies by country 2023"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:19:09.428250",
+    "latency_seconds": 3.01,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: 50 million residents of America are foreign-born.\nContext: Current immigration statistics\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 262,
+    "input_tokens_estimated": 65,
+    "output": {
+      "original_claim": "50 million residents of America are foreign-born.",
+      "queries": [
+        {
+          "query": "current foreign-born population in the United States 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "how many foreign-born residents are in the US 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 306,
+    "output_tokens_estimated": 76,
+    "cost_usd": 5.535e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The United States maintains the most generous immigration policies in the world.",
+      "query_index": 2,
+      "query_text": "most generous immigration policies by country 2023"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:19:09.428622",
+    "latency_seconds": 3.01,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: America grants permanent residence to a million people every single year.\nContext: Current immigration policy\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 282,
+    "input_tokens_estimated": 70,
+    "output": {
+      "original_claim": "America grants permanent residence to a million people every single year.",
+      "queries": [
+        {
+          "query": "America grants permanent residence to one million people annually",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "US immigration policy permanent residency statistics 2023",
+          "query_type": "source",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 340,
+    "output_tokens_estimated": 85,
+    "cost_usd": 6.15e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The United States maintains the most generous immigration policies in the world.",
+      "query_index": 2,
+      "query_text": "most generous immigration policies by country 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:19:44.241699",
+    "latency_seconds": 24.49,
+    "input_prompt": "Claim:\nAmerica grants permanent residence to a million people every single year.\n\nArticle Title:\nLegal Immigration to the United States, 1820-Present\n\nFull Page Content:\nThis chart tracks the number of people who annually are granted legal permanent residence (also known as getting a green card).\n\nProvide relevant evidence.",
+    "input_length_chars": 325,
+    "input_tokens_estimated": 81,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 2.535e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:19:44.923329",
+    "latency_seconds": 25.18,
+    "input_prompt": "Claim:\nAmerica grants permanent residence to a million people every single year.\n\nArticle Title:\nPermanent Legal Immigration to the United States: Policy Overview\n\nFull Page Content:\nFrom FY2014 to FY2023, the United States granted LPR status to an average of about 1 million foreign nationals each year. Of these, 65% acquired ...\n\nProvide relevant evidence.",
+    "input_length_chars": 359,
+    "input_tokens_estimated": 89,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that the United States grants permanent residence to an average of about 1 million foreign nationals each year from FY2014 to FY2023.",
+      "overall_stance": "supports",
+      "key_quote": "the United States granted LPR status to an average of about 1 million foreign nationals each year."
+    },
+    "output_length_chars": 339,
+    "output_tokens_estimated": 84,
+    "cost_usd": 6.375e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:19:45.341695",
+    "latency_seconds": 26.53,
+    "input_prompt": "Claim:\n50 million residents of America are foreign-born.\n\nArticle Title:\nPopulation Level - Foreign Born (LNU00073395) - FRED\n\nGoogle Search Snippet:\nPopulation Level - Foreign Born (LNU00073395) ; Sep 2025: 48,409 ; Aug 2025: 48,543 ; Jul 2025: 48,510 ; Jun 2025: 49,135 ; May 2025: 49,593.\n\nFull Page Content:\nObservations\nUnits:\nFrequency:\nSource: U.S. Bureau of Labor Statistics\nRelease: Employment Situation\nUnits: Thousands of Persons, Not Seasonally Adjusted\nFrequency: Monthly\nCivilian noninstitutional population is defined as persons 16 years of age and older residing in the 50 states and the District of Columbia, who are not inmates of institutions (e.g., penal and mental facilities, homes for the aged), and who are not on active duty in the Armed Forces. The series comes from the 'Current Population Survey (Household Survey)' The source code is: LNU00073395\nU.S. Bureau of Labor Statistics, Population Level - Foreign Born [LNU00073395], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/LNU00073395, December 13, 2025.\n\nProvide relevant evidence.",
+    "input_length_chars": 1106,
+    "input_tokens_estimated": 276,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that the number of foreign-born residents in the U.S. is approximately 48 million, which is close to the claim of 50 million but does not confirm it as accurate.",
+      "overall_stance": "refutes",
+      "key_quote": "Sep 2025: 48,409"
+    },
+    "output_length_chars": 285,
+    "output_tokens_estimated": 71,
+    "cost_usd": 8.4e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:19:45.913179",
+    "latency_seconds": 23.5,
+    "input_prompt": "Claim:\n50 million residents of America are foreign-born.\n\nArticle Title:\nImmigration to the United States - Wikipedia\n\nGoogle Search Snippet:\nCensus estimates show 45.3 million foreign born residents in the United States as of March 2018 and 45.4 million in September 2021, the lowest three-year ...\n\nFull Page Content:\nAn official website of the United States government\nShare\nReceive Updates\nTo sign up for updates please enter your email address.\nStay Current\nAmerica Counts\nDirector\u2019s Blog\nDeputy Director\u2019s Blog\nRandom Samplings\nResearch Matters\nStay Connected\nContact\nSupport\nJobs\nFollow\nMeasuring America's People and Economy\n\nProvide relevant evidence.",
+    "input_length_chars": 660,
+    "input_tokens_estimated": 165,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that as of September 2021, there were 45.4 million foreign-born residents in the United States, which is below the claim of 50 million.",
+      "overall_stance": "refutes",
+      "key_quote": "Census estimates show 45.3 million foreign born residents in the United States as of March 2018 and 45.4 million in September 2021."
+    },
+    "output_length_chars": 374,
+    "output_tokens_estimated": 93,
+    "cost_usd": 8.055e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:19:47.564896",
+    "latency_seconds": 13.15,
+    "input_prompt": "Claim:\nChain migration allows immigrants to sponsor extended family once they gain citizenship.\n\nArticle Title:\nFamily Immigration - Travel.gov\n\nGoogle Search Snippet:\nTo be eligible to apply for an IV, a foreign citizen must be sponsored by an immediate relative who is at least 21 years of age and is either a U.S. citizen or ...\n\nFull Page Content:\nThe Immigration and Nationality Act, passed in 1952 and amended numerous times since, provides the foundation for U.S. immigration policy. It allows three major groups of people to get immigrant visas, known as green cards: family-sponsored immigrants; employment-based immigrants; and \u201cdiversity\u201d immigrants. A green card lets someone live permanently in the U.S. and eventually apply for citizenship, generally after a waiting period.\nThe colloquial term \u201cchain migration\u201d refers to an immigrant gaining either U.S. citizenship or a green card and petitioning for his or her family members to be let into the U.S., who then petition for their family members, and so on. Family-based immigration has been a key component of U.S. immigration policy since the INA was first enacted.\nThe law limits the number of green cards issued to applicants from each category. It generally provides up to 480,000 green cards for family-sponsored immigrants, 140,000 green cards for employment-based immigrants, and 50,000 green cards through the diversity visa program, issued via a lottery to immigrants from countries with low rates of emigration to the U.S. There is no cap on the number of green cards available to refugees and asylum seekers, who make up the other significant category of green card recipients every year.\nGreen cards issued to immediate relatives of U.S. citizens do not count against the family-sponsored immigrant cap. So the number of green cards issued every year to family members of U.S. citizens significantly exceeds the 480,000-visa limit. In keeping with the limits set by law, the majority of green cards are issued to family-sponsored immigrants. Although the precise numbers vary by year, family-sponsored immigrants generally receive around 70 percent of the green cards issued annually.\nAn unlimited number of green cards may be issued to immediate relatives of citizens. Immediate relatives include the minor children \u2013 younger than 21 years old \u2013 and spouses of citizens, and the parents of adult \u2013 at least 21 years old \u2013 citizens.\nThe INA also allows U.S. citizens and green card holders to petition for green cards for a wider circle of relatives. These categories are subject to a cap. Eligible family members include unmarried adult children of U.S. citizens, spouses and minor children of green card holders, unmarried adult children of green card holders, married adult children of U.S. citizens, and siblings of U.S. citizens.\nThe overall number of green cards available for these other categories of family members has a cap calculated annually, between 226,000 and 480,000. Green cards available for each type of family member are further limited and are subject to per-country caps. The number of applicants for the family-sponsored categories consistently exceeds the limits. There were 3,947,857 people on the family-sponsored visa waitlist as of November 1, 2017. Because there are limits on the number of green cards immigrants from any one country can receive, the expected wait time varies. Immigrants from countries that tend to have high immigration levels, like China, Mexico, India, and the Philippines, have long wait times to obtain a green card. For example, the number of green cards available in a given year for adult sons and daughters of U.S. citizens is 23,400. The current wait time for a green card for applicants in this category from Mexico exceeds 20 years, compared to around seven years for applicants from countries with low rates of immigration.\nIssue Tag: Judiciary\n\nProvide relevant evidence.",
+    "input_length_chars": 3912,
+    "input_tokens_estimated": 978,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article explains that chain migration allows immigrants to gain U.S. citizenship or a green card and then petition for their family members to enter the U.S., which aligns with the claim about sponsoring extended family after gaining citizenship.",
+      "overall_stance": "supports",
+      "key_quote": "The colloquial term \u201cchain migration\u201d refers to an immigrant gaining either U.S. citizenship or a green card and petitioning for his or her family members to be let into the U.S."
+    },
+    "output_length_chars": 514,
+    "output_tokens_estimated": 128,
+    "cost_usd": 0.0002235
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:19:47.643079",
+    "latency_seconds": 13.23,
+    "input_prompt": "Claim:\nChain migration allows immigrants to sponsor extended family once they gain citizenship.\n\nArticle Title:\nA Primer on Family Reunification/Chain Migration - Georgetown Law\n\nGoogle Search Snippet:\nUnder our plan, we focus on the immediate family by limiting sponsorships to spouses and minor children.\n\nFull Page Content:\nThe Immigration and Nationality Act, passed in 1952 and amended numerous times since, provides the foundation for U.S. immigration policy. It allows three major groups of people to get immigrant visas, known as green cards: family-sponsored immigrants; employment-based immigrants; and \u201cdiversity\u201d immigrants. A green card lets someone live permanently in the U.S. and eventually apply for citizenship, generally after a waiting period.\nThe colloquial term \u201cchain migration\u201d refers to an immigrant gaining either U.S. citizenship or a green card and petitioning for his or her family members to be let into the U.S., who then petition for their family members, and so on. Family-based immigration has been a key component of U.S. immigration policy since the INA was first enacted.\nThe law limits the number of green cards issued to applicants from each category. It generally provides up to 480,000 green cards for family-sponsored immigrants, 140,000 green cards for employment-based immigrants, and 50,000 green cards through the diversity visa program, issued via a lottery to immigrants from countries with low rates of emigration to the U.S. There is no cap on the number of green cards available to refugees and asylum seekers, who make up the other significant category of green card recipients every year.\nGreen cards issued to immediate relatives of U.S. citizens do not count against the family-sponsored immigrant cap. So the number of green cards issued every year to family members of U.S. citizens significantly exceeds the 480,000-visa limit. In keeping with the limits set by law, the majority of green cards are issued to family-sponsored immigrants. Although the precise numbers vary by year, family-sponsored immigrants generally receive around 70 percent of the green cards issued annually.\nAn unlimited number of green cards may be issued to immediate relatives of citizens. Immediate relatives include the minor children \u2013 younger than 21 years old \u2013 and spouses of citizens, and the parents of adult \u2013 at least 21 years old \u2013 citizens.\nThe INA also allows U.S. citizens and green card holders to petition for green cards for a wider circle of relatives. These categories are subject to a cap. Eligible family members include unmarried adult children of U.S. citizens, spouses and minor children of green card holders, unmarried adult children of green card holders, married adult children of U.S. citizens, and siblings of U.S. citizens.\nThe overall number of green cards available for these other categories of family members has a cap calculated annually, between 226,000 and 480,000. Green cards available for each type of family member are further limited and are subject to per-country caps. The number of applicants for the family-sponsored categories consistently exceeds the limits. There were 3,947,857 people on the family-sponsored visa waitlist as of November 1, 2017. Because there are limits on the number of green cards immigrants from any one country can receive, the expected wait time varies. Immigrants from countries that tend to have high immigration levels, like China, Mexico, India, and the Philippines, have long wait times to obtain a green card. For example, the number of green cards available in a given year for adult sons and daughters of U.S. citizens is 23,400. The current wait time for a green card for applicants in this category from Mexico exceeds 20 years, compared to around seven years for applicants from countries with low rates of immigration.\nIssue Tag: Judiciary\n\nProvide relevant evidence.",
+    "input_length_chars": 3887,
+    "input_tokens_estimated": 971,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article explains that chain migration allows immigrants to sponsor a wider circle of relatives once they gain citizenship or a green card, although there are caps on the number of visas available for these extended family members.",
+      "overall_stance": "supports",
+      "key_quote": "The INA also allows U.S. citizens and green card holders to petition for green cards for a wider circle of relatives."
+    },
+    "output_length_chars": 437,
+    "output_tokens_estimated": 109,
+    "cost_usd": 0.00021105
+  }
+]

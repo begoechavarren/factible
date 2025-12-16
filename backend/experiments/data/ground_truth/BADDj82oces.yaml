@@ -1,0 +1,125 @@
+video_id: BADDj82oces
+video_url: https://www.youtube.com/watch?v=BADDj82oces
+video_title: 'Immunology wars: The battle with HIV'
+video_duration_seconds: 178
+claims:
+- claim_text: White blood cells immediately respond to viruses by releasing anti-viral proteins, attacking infected cells, and recruiting backup
+  is_checkable: true
+  importance: 0.4
+  verdict:
+    overall_stance: SUPPORTS
+    reasoning: Basic immunology, accurate. White blood cells release anti-viral proteins, attack infected cells, recruit backup. Standard immune response confirmed in textbooks.
+- claim_text: HIV infects one of the immune cells that is central to the body's response to pathogens - the helper T-cell
+  is_checkable: true
+  importance: 0.95
+  verdict:
+    overall_stance: SUPPORTS
+    reasoning: Fundamental HIV fact. HIV targets CD4+ helper T-cells which are central to immune response. HIV.gov and Yale confirm. Well known.
+- claim_text: Once inside, the virus moves towards the nucleus along with its enzymes and genetic material
+  is_checkable: true
+  importance: 0.7
+  verdict:
+    overall_stance: SUPPORTS
+    reasoning: Correct. HIV moves to nucleus with its enzymes and genetic material in preintegration complex (PIC). Accurate description of HIV life cycle.
+- claim_text: One of these enzymes, reverse transcriptase, converts the viral RNA into a length of DNA
+  is_checkable: true
+  importance: 0.9
+  verdict:
+    overall_stance: SUPPORTS
+    reasoning: Core HIV biology. Reverse transcriptase converts viral RNA to DNA. This is defining characteristic of retroviruses. Well known.
+- claim_text: The viral DNA inserts into the cell's genome, forcing the cell to spew out HIV proteins and genetic material to make new copies of the virus
+  is_checkable: true
+  importance: 0.9
+  verdict:
+    overall_stance: SUPPORTS
+    reasoning: Accurate. Viral DNA integrates into cell genome, forces cell to make more virus. NIH confirms integrated provirus produces viral genes. Correct mechanism.
+- claim_text: Inside infected cells, anti-viral proteins called restriction factors work to shut down virus production
+  is_checkable: true
+  importance: 0.65
+  verdict:
+    overall_stance: SUPPORTS
+    reasoning: True. Cells have restriction factors (APOBEC3G, TRIM5α, tetherin) that are antiviral proteins trying to shut down virus. Well documented innate immunity.
+- claim_text: Some restriction factors stop the virus from escaping the cell
+  is_checkable: true
+  importance: 0.55
+  verdict:
+    overall_stance: SUPPORTS
+    reasoning: Yes. Tetherin (BST-2) prevents virus from escaping cell. Known restriction factor mechanism.
+- claim_text: White blood cells called phagocytes produce neutralizing antibodies which bind to surface spikes on HIV particles and stop them entering healthy helper T-cells
+  is_checkable: true
+  importance: 0.75
+  verdict:
+    overall_stance: REFUTES
+    reasoning: WRONG. Phagocytes don't make antibodies - B cells do! Phagocytes engulf pathogens. Basic immunology error. The part about neutralizing antibodies binding HIV is correct though.
+- claim_text: The greatest assault comes from killer T cells and natural killer cells which seek and destroy infected cells directly
+  is_checkable: true
+  importance: 0.7
+  verdict:
+    overall_stance: SUPPORTS
+    reasoning: Correct. Killer T cells (CD8+) and NK cells are main attackers against infected cells. Robust response documented in studies.
+- claim_text: They release a protein called perforin which punches holes in infected cells, allowing enzymes to be injected triggering auto-destruction
+  is_checkable: true
+  importance: 0.65
+  verdict:
+    overall_stance: SUPPORTS
+    reasoning: Yes. Perforin makes holes in cell membrane, enzymes (granzymes) go through and trigger cell death (apoptosis). Standard mechanism.
+- claim_text: HIV disables the cell's antiviral proteins allowing new virus particles to leave the cell
+  is_checkable: true
+  importance: 0.75
+  verdict:
+    overall_stance: SUPPORTS
+    reasoning: True. HIV proteins (Vif, Vpu, Nef) disable restriction factors. Vpu blocks tetherin so virus can escape. Clever immune evasion.
+- claim_text: HIV constantly mutates inside the cell to evade protection
+  is_checkable: true
+  importance: 0.8
+  verdict:
+    overall_stance: SUPPORTS
+    reasoning: Well documented. HIV reverse transcriptase makes errors = high mutation rate. Helps virus escape immune system. Major problem for vaccines/treatment.
+- claim_text: The immune system can't fight what it can't see
+  is_checkable: false
+  importance: 0.3
+  verdict:
+    overall_stance: UNCLEAR
+    reasoning: This is a metaphorical/rhetorical statement rather than a checkable factual claim. While it conceptually refers to immune evasion through mutation, it is not a precise scientific statement that can be fact-checked in the same way as specific mechanistic claims.
+- claim_text: Eventually the immune system wears itself out - killer T cells activated for too long become exhausted and no longer respond to infection
+  is_checkable: true
+  importance: 0.85
+  verdict:
+    overall_stance: SUPPORTS
+    reasoning: Accurate. Chronic infection causes T cell exhaustion - they lose function. Well characterized in HIV. This is major reason immune system fails.
+- claim_text: The body loses the ability to make new helper T-cells to replace those killed in the fight
+  is_checkable: true
+  importance: 0.8
+  verdict:
+    overall_stance: SUPPORTS
+    reasoning: True. HIV depletes CD4+ T-cells and body can't make them fast enough to replace. Thymus output decreases. Destruction outpaces production in advanced HIV.
+- claim_text: As a result their numbers plummet - ultimately the body becomes immunodeficient and this condition is known as AIDS
+  is_checkable: true
+  importance: 0.9
+  verdict:
+    overall_stance: SUPPORTS
+    reasoning: Accurate AIDS definition. CD4 count drops below 200 = AIDS diagnosis. Body becomes immunodeficient. CDC confirms.
+- claim_text: Without treatment, exposure to otherwise harmless microbes can be fatal
+  is_checkable: true
+  importance: 0.7
+  verdict:
+    overall_stance: SUPPORTS
+    reasoning: True. With AIDS, normally harmless microbes become dangerous (opportunistic infections). Pneumocystis pneumonia, etc. can be fatal. Well documented.
+- claim_text: We still have no way of eliminating HIV from the body completely - there is no cure
+  is_checkable: true
+  importance: 0.85
+  verdict:
+    overall_stance: SUPPORTS
+    reasoning: Correct. No cure exists currently. ART controls virus but doesn't eliminate it. Few people cured with stem cell transplants but no general cure. Ongoing research.
+- claim_text: Hidden reservoirs of HIV will rebound if treatment stops
+  is_checkable: true
+  importance: 0.8
+  verdict:
+    overall_stance: SUPPORTS
+    reasoning: True. HIV hides in latent reservoirs (long-lived cells). Virus rebounds if treatment stops. This is why ART must continue indefinitely. Well known.
+- claim_text: Treatment with antiretroviral drugs can swing the balance, allowing the immune system to recover
+  is_checkable: true
+  importance: 0.85
+  verdict:
+    overall_stance: SUPPORTS
+    reasoning: Accurate. ART suppresses virus, allows CD4+ counts to recover, immune system gets better. Can't cure but people live long healthy lives. Well known.

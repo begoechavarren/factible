@@ -1,0 +1,272 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:40:18.883996",
+    "latency_seconds": 16.38,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nTrump's egg price warning comes true. Reality hits home. For months, President Donald Trump has falsely claimed that egg prices are tumbling. It wasn't true then, but it's true now. Egg prices fell 12.7% last month, the biggest monthly decline since 1984. The Bureau of Labor Statistics reported Tuesday, and they could continue to fall this month, too. The USDA reported last week that a dozen large white shell eggs now cost $330 on average, down a whopping 69 from a week before. It's a remarkable reversal after egg prices surged in each of the past 5 months and 17 of the past 19 months because of a deadly aven flu epidemic that necessitated the mass culling of egg laying hens. Maybe the worst of egg gate has passed. Tyler Shipper, associate professor in economics and data analysis at the University of St. Thomas in St. Paul, Minnesota, told CNN. Nevertheless, egg prices remain significantly higher now than before the latest bird flu outbreak, and they cost 49.3% more last month than they did a year earlier. Eggs are still more expensive than when Trump took office, according to the BLS. Egg prices this past Easter, which typically rise in the run-up to the holiday, were the highest for any Easter on record, the USDA reported. Well, before last month's decline, Trump had been touting falling egg prices as a sign that his administration's plan to lower prices for consumers has been working. In February, the USDA announced an initiative to lower egg prices, including increased biocurity on egg laying farms, aid to farmers who have lost flocks and temporary lifting of restrictions on egg imports. Despite agriculture secretary Brooke Rollins far more conservative estimate that egg prices would normalize in the summer, Trump last month said, \"As you know, the cost of eggs has come down like 93 94% since we took office. Those percentage declines, Trump stated, are not close to accurate. But we now know that consumer egg prices were indeed falling sharply when Trump made those remarks. The consumer price index data wasn't out yet to confirm or deny Trump's claims. It appears as though Trump may have been talking about wholesale prices, which had been tumbling throughout March before normalizing in recent weeks. Nevertheless, wholesale prices fell by half, not close to the 90% plus figures Trump was citing. Wholesale prices are the costs distributors pay to farmers or middlemen. Consumer prices are what customers pay at grocery stores. Those costs typically make their way through the supply chain at a slower pace because grocery stores may decide to keep prices at a certain price even when wholesale prices change to try to recoup loss profits from prior weeks according to Kevin Bergquist, sector manager at Wells Fargo Agri Food Institute. from prior weeks. According to Kevin Bergquist, sector manager at Wells Fargo Agri Food Institute, the USDA says consumer prices finally fell as demand for eggs decreased and aven flu cases have fallen. Many groceries, including large chains like Costco, had limited customers purchases because of egg shortages. So, Trump's claim that consumer egg prices are down is finally true, even if the timing of his claim and the wild percentages he threw around were grossly inaccurate. Don't forget to like and subscribe. Thanks.",
+    "input_length_chars": 3360,
+    "input_tokens_estimated": 840,
+    "output": {
+      "claims": [
+        {
+          "text": "Egg prices fell 12.7% last month, the biggest monthly decline since 1984.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.8,
+          "context": "Bureau of Labor Statistics report, recent data."
+        },
+        {
+          "text": "A dozen large white shell eggs now cost $3.30 on average, down $0.69 from a week before.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "USDA report, recent egg price data."
+        },
+        {
+          "text": "Egg prices surged in each of the past 5 months and 17 of the past 19 months due to a deadly avian flu epidemic.",
+          "confidence": 0.85,
+          "category": "historical",
+          "importance": 0.7,
+          "context": "Context of egg price increases, avian flu impact."
+        },
+        {
+          "text": "Egg prices remain significantly higher now than before the latest bird flu outbreak, costing 49.3% more last month than a year earlier.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "Comparison of current prices to previous year."
+        },
+        {
+          "text": "Egg prices this past Easter were the highest for any Easter on record, according to the USDA.",
+          "confidence": 0.9,
+          "category": "historical",
+          "importance": 0.6,
+          "context": "USDA report on Easter egg prices."
+        },
+        {
+          "text": "Trump claimed that the cost of eggs has come down like 93-94% since he took office, which is not accurate.",
+          "confidence": 0.8,
+          "category": "policy",
+          "importance": 0.6,
+          "context": "Trump's statement about egg prices."
+        },
+        {
+          "text": "Wholesale prices fell by half, not close to the 90% figures Trump cited.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Comparison of wholesale prices to Trump's claims."
+        },
+        {
+          "text": "USDA announced an initiative to lower egg prices, including increased biosecurity on egg laying farms.",
+          "confidence": 0.8,
+          "category": "policy",
+          "importance": 0.5,
+          "context": "USDA initiative to address egg prices."
+        }
+      ],
+      "total_count": 8
+    },
+    "output_length_chars": 2491,
+    "output_tokens_estimated": 622,
+    "cost_usd": 0.0004992
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:40:24.104039",
+    "latency_seconds": 2.61,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Egg prices fell 12.7% last month, the biggest monthly decline since 1984.\nContext: Bureau of Labor Statistics report, recent data.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 303,
+    "input_tokens_estimated": 75,
+    "output": {
+      "original_claim": "Egg prices fell 12.7% last month, the biggest monthly decline since 1984.",
+      "queries": [
+        {
+          "query": "Egg prices fell 12.7% last month Bureau of Labor Statistics",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "largest monthly decline in egg prices since 1984",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 330,
+    "output_tokens_estimated": 82,
+    "cost_usd": 6.045e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Egg prices fell 12.7% last month, the biggest monthly decline since 1984."
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:40:42.729033",
+    "latency_seconds": 0.84,
+    "input_prompt": "Claim:\nEgg prices fell 12.7% last month, the biggest monthly decline since 1984.\n\nArticle Title:\nhttps://data.bls.gov/dataViewer/view/timeseries/AP...\n\nGoogle Search Snippet:\nNo information is available for this page. \u00b7 Learn why\n\nFull Page Content:\nAn official website of the United States government Here is how you know United States Department of Labor U.S. BUREAU OF LABOR STATISTICS Release Calendar | Subscribe HOME SUBJECTS DATA TOOLS PUBLICATIONS ECONOMIC RELEASES CLASSROOM BETA BLS Data Viewer Permalink Time Period: Start Year: 1980 1981 1982 1983 1984 1985 1986 1987 1988 1989 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 End Year: 1980 1981 1982 1983 1984 1985 1986 1987 1988 1989 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 Net Monthly Changes: 1-Month Net Change 3-Month Net Change 6-Month Net Change 12-Month Net Change Percent Monthly Changes: 1-Month % Change 3-Month % Change 6-Month % Change 12-Month % Change Created with Highcharts 10.3.3 Eggs, grade A, large, per doz. Export Chart Eggs, grade A, large, per doz. in U.S. city average, average price, not seasonally adjusted APU0000708111 Jan '23 May '23 Sep '23 Jan '24 May '24 Sep '24 Jan '25 May '25 Sep '25 2 3 4 5 6 7 Click and drag in the plot area to zoom in. Hover over chart to view data.Source: U.S. Bureau of Labor Statistics. Latest Observation: September 2025 3.488 Jan 2023 - Sep 2025 Minimum Value: August 2023 2.043 Maximum Value: March 2025 6.227 Data Availability: 1980 - 2025 Data extracted on: Dec 13, 2025 (9:40:39 PM) Consumer Price Index Average Price Data Series Title : Eggs, grade A, large, per doz. in U.S. city average, average price, not seasonally adjusted Series ID : APU0000708111 Survey Name : Consumer Price Index Average Price Data Measure Data Type : Eggs, grade A, large, per doz. Area : U.S. city average Item : Eggs, grade A, large, per doz. Year Period Label Value 2023 M01 2023 Jan 4.823 2023 M02 2023 Feb 4.211 2023 M03 2023 Mar 3.446 2023 M04 2023 Apr 3.270 2023 M05 2023 May 2.666 2023 M06 2023 Jun 2.219 2023 M07 2023 Jul 2.094 2023 M08 2023 Aug 2.043 2023 M09 2023 Sep 2.065 2023 M10 2023 Oct 2.072 2023 M11 2023 Nov 2.138 2023 M12 2023 Dec 2.507 2024 M01 2024 Jan 2.522 2024 M02 2024 Feb 2.996 2024 M03 2024 Mar 2.992 2024 M04 2024 Apr 2.864 2024 M05 2024 May 2.699 2024 M06 2024 Jun 2.715 2024 M07 2024 Jul 3.080 2024 M08 2024 Aug 3.204 2024 M09 2024 Sep 3.821 2024 M10 2024 Oct 3.370 2024 M11 2024 Nov 3.649 2024 M12 2024 Dec 4.146 2025 M01 2025 Jan 4.953 2025 M02 2025 Feb 5.897 2025 M03 2025 Mar 6.227 2025 M04 2025 Apr 5.122 2025 M05 2025 May 4.548 2025 M06 2025 Jun 3.775 2025 M07 2025 Jul 3.599 2025 M08 2025 Aug 3.587 2025 M09 2025 Sep 3.488 Home Subjects Data Tools Publications Economic Releases Classroom Beta Help improve this site U.S. BUREAU OF LABOR STATISTICS Office of Publications and Special Studies Suitland Federal Center Floor 7 4600 Silver Hill Road Washington, DC 20212-0002 Telephone: 202-691-5200 Telecommunications Relay Service: 7-1-1 www.bls.gov Contact Us RESOURCES Inspector General (OIG) Budget and Performance Department of Labor Grants No Fear Act USA.gov ABOUT THE SITE Sitemap Freedom of Information Act Privacy and Security Statement Disclaimers Linking and Copyright Info Important Website Notices Help and Tutorials Accessibility Statement Connect With BLS Instagram Twitter Threads Twitter Youtube Email\n\nProvide relevant evidence.",
+    "input_length_chars": 3662,
+    "input_tokens_estimated": 915,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 0.00015045,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Egg prices fell 12.7% last month, the biggest monthly decline since 1984.",
+      "query_index": 2,
+      "query_text": "largest monthly decline in egg prices since 1984"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:40:44.650696",
+    "latency_seconds": 2.79,
+    "input_prompt": "Claim:\nEgg prices fell 12.7% last month, the biggest monthly decline since 1984.\n\nArticle Title:\nEgg prices see largest monthly drop since 1984, further decline ...\n\nGoogle Search Snippet:\n... 12.7% decline last month, according to a Tuesday report from the Bureau of Labor Statistics. This marks the most significant monthly drop in ...\n\nFull Page Content:\nAn official website of the United States government Here is how you know United States Department of Labor U.S. BUREAU OF LABOR STATISTICS Release Calendar | Subscribe HOME SUBJECTS DATA TOOLS PUBLICATIONS ECONOMIC RELEASES CLASSROOM BETA BLS Data Viewer Permalink Time Period: Start Year: 1980 1981 1982 1983 1984 1985 1986 1987 1988 1989 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 End Year: 1980 1981 1982 1983 1984 1985 1986 1987 1988 1989 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 Net Monthly Changes: 1-Month Net Change 3-Month Net Change 6-Month Net Change 12-Month Net Change Percent Monthly Changes: 1-Month % Change 3-Month % Change 6-Month % Change 12-Month % Change Created with Highcharts 10.3.3 Eggs, grade A, large, per doz. Export Chart Eggs, grade A, large, per doz. in U.S. city average, average price, not seasonally adjusted APU0000708111 Jan '23 May '23 Sep '23 Jan '24 May '24 Sep '24 Jan '25 May '25 Sep '25 2 3 4 5 6 7 Click and drag in the plot area to zoom in. Hover over chart to view data.Source: U.S. Bureau of Labor Statistics. Latest Observation: September 2025 3.488 Jan 2023 - Sep 2025 Minimum Value: August 2023 2.043 Maximum Value: March 2025 6.227 Data Availability: 1980 - 2025 Data extracted on: Dec 13, 2025 (9:40:39 PM) Consumer Price Index Average Price Data Series Title : Eggs, grade A, large, per doz. in U.S. city average, average price, not seasonally adjusted Series ID : APU0000708111 Survey Name : Consumer Price Index Average Price Data Measure Data Type : Eggs, grade A, large, per doz. Area : U.S. city average Item : Eggs, grade A, large, per doz. Year Period Label Value 2023 M01 2023 Jan 4.823 2023 M02 2023 Feb 4.211 2023 M03 2023 Mar 3.446 2023 M04 2023 Apr 3.270 2023 M05 2023 May 2.666 2023 M06 2023 Jun 2.219 2023 M07 2023 Jul 2.094 2023 M08 2023 Aug 2.043 2023 M09 2023 Sep 2.065 2023 M10 2023 Oct 2.072 2023 M11 2023 Nov 2.138 2023 M12 2023 Dec 2.507 2024 M01 2024 Jan 2.522 2024 M02 2024 Feb 2.996 2024 M03 2024 Mar 2.992 2024 M04 2024 Apr 2.864 2024 M05 2024 May 2.699 2024 M06 2024 Jun 2.715 2024 M07 2024 Jul 3.080 2024 M08 2024 Aug 3.204 2024 M09 2024 Sep 3.821 2024 M10 2024 Oct 3.370 2024 M11 2024 Nov 3.649 2024 M12 2024 Dec 4.146 2025 M01 2025 Jan 4.953 2025 M02 2025 Feb 5.897 2025 M03 2025 Mar 6.227 2025 M04 2025 Apr 5.122 2025 M05 2025 May 4.548 2025 M06 2025 Jun 3.775 2025 M07 2025 Jul 3.599 2025 M08 2025 Aug 3.587 2025 M09 2025 Sep 3.488 Home Subjects Data Tools Publications Economic Releases Classroom Beta Help improve this site U.S. BUREAU OF LABOR STATISTICS Office of Publications and Special Studies Suitland Federal Center Floor 7 4600 Silver Hill Road Washington, DC 20212-0002 Telephone: 202-691-5200 Telecommunications Relay Service: 7-1-1 www.bls.gov Contact Us RESOURCES Inspector General (OIG) Budget and Performance Department of Labor Grants No Fear Act USA.gov ABOUT THE SITE Sitemap Freedom of Information Act Privacy and Security Statement Disclaimers Linking and Copyright Info Important Website Notices Help and Tutorials Accessibility Statement Connect With BLS Instagram Twitter Threads Twitter Youtube Email\n\nProvide relevant evidence.",
+    "input_length_chars": 3770,
+    "input_tokens_estimated": 942,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that egg prices fell by 12.7% last month, marking the largest monthly decline since 1984, as reported by the Bureau of Labor Statistics.",
+      "overall_stance": "supports",
+      "key_quote": "12.7% decline last month, according to a Tuesday report from the Bureau of Labor Statistics. This marks the most significant monthly drop in ..."
+    },
+    "output_length_chars": 388,
+    "output_tokens_estimated": 97,
+    "cost_usd": 0.0001995,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Egg prices fell 12.7% last month, the biggest monthly decline since 1984.",
+      "query_index": 2,
+      "query_text": "largest monthly decline in egg prices since 1984"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:40:44.792244",
+    "latency_seconds": 3.0,
+    "input_prompt": "Claim:\nEgg prices fell 12.7% last month, the biggest monthly decline since 1984.\n\nArticle Title:\nU.S. egg prices fall for the first time in months but remain near ... - NPR\n\nGoogle Search Snippet:\nThe average price for a dozen Grade A eggs declined to $5.12 last month after reaching a record $6.23 in March, according to the U.S. Bureau of ...\n\nFull Page Content:\nAn official website of the United States government Here is how you know United States Department of Labor U.S. BUREAU OF LABOR STATISTICS Release Calendar | Subscribe HOME SUBJECTS DATA TOOLS PUBLICATIONS ECONOMIC RELEASES CLASSROOM BETA BLS Data Viewer Permalink Time Period: Start Year: 1980 1981 1982 1983 1984 1985 1986 1987 1988 1989 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 End Year: 1980 1981 1982 1983 1984 1985 1986 1987 1988 1989 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 Net Monthly Changes: 1-Month Net Change 3-Month Net Change 6-Month Net Change 12-Month Net Change Percent Monthly Changes: 1-Month % Change 3-Month % Change 6-Month % Change 12-Month % Change Created with Highcharts 10.3.3 Eggs, grade A, large, per doz. Export Chart Eggs, grade A, large, per doz. in U.S. city average, average price, not seasonally adjusted APU0000708111 Jan '23 May '23 Sep '23 Jan '24 May '24 Sep '24 Jan '25 May '25 Sep '25 2 3 4 5 6 7 Click and drag in the plot area to zoom in. Hover over chart to view data.Source: U.S. Bureau of Labor Statistics. Latest Observation: September 2025 3.488 Jan 2023 - Sep 2025 Minimum Value: August 2023 2.043 Maximum Value: March 2025 6.227 Data Availability: 1980 - 2025 Data extracted on: Dec 13, 2025 (9:40:39 PM) Consumer Price Index Average Price Data Series Title : Eggs, grade A, large, per doz. in U.S. city average, average price, not seasonally adjusted Series ID : APU0000708111 Survey Name : Consumer Price Index Average Price Data Measure Data Type : Eggs, grade A, large, per doz. Area : U.S. city average Item : Eggs, grade A, large, per doz. Year Period Label Value 2023 M01 2023 Jan 4.823 2023 M02 2023 Feb 4.211 2023 M03 2023 Mar 3.446 2023 M04 2023 Apr 3.270 2023 M05 2023 May 2.666 2023 M06 2023 Jun 2.219 2023 M07 2023 Jul 2.094 2023 M08 2023 Aug 2.043 2023 M09 2023 Sep 2.065 2023 M10 2023 Oct 2.072 2023 M11 2023 Nov 2.138 2023 M12 2023 Dec 2.507 2024 M01 2024 Jan 2.522 2024 M02 2024 Feb 2.996 2024 M03 2024 Mar 2.992 2024 M04 2024 Apr 2.864 2024 M05 2024 May 2.699 2024 M06 2024 Jun 2.715 2024 M07 2024 Jul 3.080 2024 M08 2024 Aug 3.204 2024 M09 2024 Sep 3.821 2024 M10 2024 Oct 3.370 2024 M11 2024 Nov 3.649 2024 M12 2024 Dec 4.146 2025 M01 2025 Jan 4.953 2025 M02 2025 Feb 5.897 2025 M03 2025 Mar 6.227 2025 M04 2025 Apr 5.122 2025 M05 2025 May 4.548 2025 M06 2025 Jun 3.775 2025 M07 2025 Jul 3.599 2025 M08 2025 Aug 3.587 2025 M09 2025 Sep 3.488 Home Subjects Data Tools Publications Economic Releases Classroom Beta Help improve this site U.S. BUREAU OF LABOR STATISTICS Office of Publications and Special Studies Suitland Federal Center Floor 7 4600 Silver Hill Road Washington, DC 20212-0002 Telephone: 202-691-5200 Telecommunications Relay Service: 7-1-1 www.bls.gov Contact Us RESOURCES Inspector General (OIG) Budget and Performance Department of Labor Grants No Fear Act USA.gov ABOUT THE SITE Sitemap Freedom of Information Act Privacy and Security Statement Disclaimers Linking and Copyright Info Important Website Notices Help and Tutorials Accessibility Statement Connect With BLS Instagram Twitter Threads Twitter Youtube Email\n\nProvide relevant evidence.",
+    "input_length_chars": 3777,
+    "input_tokens_estimated": 944,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article confirms that egg prices fell to $5.12 last month, marking a significant decline from the previous record of $6.23 in March, but does not specify the percentage of the decline or its historical context since 1984.",
+      "overall_stance": "mixed",
+      "key_quote": "The average price for a dozen Grade A eggs declined to $5.12 last month after reaching a record $6.23 in March."
+    },
+    "output_length_chars": 419,
+    "output_tokens_estimated": 104,
+    "cost_usd": 0.000204,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Egg prices fell 12.7% last month, the biggest monthly decline since 1984.",
+      "query_index": 2,
+      "query_text": "largest monthly decline in egg prices since 1984"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:40:44.994490",
+    "latency_seconds": 3.18,
+    "input_prompt": "Claim:\nEgg prices fell 12.7% last month, the biggest monthly decline since 1984.\n\nArticle Title:\nApril CPI inflation report: Egg prices decline for first time in months\n\nGoogle Search Snippet:\nOverall, grocery prices fell 0.4% last month, pulled down in part by the big 12.7% drop in the price of eggs. It was the biggest drop in food ...\n\nFull Page Content:\nAn official website of the United States government Here is how you know United States Department of Labor U.S. BUREAU OF LABOR STATISTICS Release Calendar | Subscribe HOME SUBJECTS DATA TOOLS PUBLICATIONS ECONOMIC RELEASES CLASSROOM BETA BLS Data Viewer Permalink Time Period: Start Year: 1980 1981 1982 1983 1984 1985 1986 1987 1988 1989 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 End Year: 1980 1981 1982 1983 1984 1985 1986 1987 1988 1989 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 Net Monthly Changes: 1-Month Net Change 3-Month Net Change 6-Month Net Change 12-Month Net Change Percent Monthly Changes: 1-Month % Change 3-Month % Change 6-Month % Change 12-Month % Change Created with Highcharts 10.3.3 Eggs, grade A, large, per doz. Export Chart Eggs, grade A, large, per doz. in U.S. city average, average price, not seasonally adjusted APU0000708111 Jan '23 May '23 Sep '23 Jan '24 May '24 Sep '24 Jan '25 May '25 Sep '25 2 3 4 5 6 7 Click and drag in the plot area to zoom in. Hover over chart to view data.Source: U.S. Bureau of Labor Statistics. Latest Observation: September 2025 3.488 Jan 2023 - Sep 2025 Minimum Value: August 2023 2.043 Maximum Value: March 2025 6.227 Data Availability: 1980 - 2025 Data extracted on: Dec 13, 2025 (9:40:39 PM) Consumer Price Index Average Price Data Series Title : Eggs, grade A, large, per doz. in U.S. city average, average price, not seasonally adjusted Series ID : APU0000708111 Survey Name : Consumer Price Index Average Price Data Measure Data Type : Eggs, grade A, large, per doz. Area : U.S. city average Item : Eggs, grade A, large, per doz. Year Period Label Value 2023 M01 2023 Jan 4.823 2023 M02 2023 Feb 4.211 2023 M03 2023 Mar 3.446 2023 M04 2023 Apr 3.270 2023 M05 2023 May 2.666 2023 M06 2023 Jun 2.219 2023 M07 2023 Jul 2.094 2023 M08 2023 Aug 2.043 2023 M09 2023 Sep 2.065 2023 M10 2023 Oct 2.072 2023 M11 2023 Nov 2.138 2023 M12 2023 Dec 2.507 2024 M01 2024 Jan 2.522 2024 M02 2024 Feb 2.996 2024 M03 2024 Mar 2.992 2024 M04 2024 Apr 2.864 2024 M05 2024 May 2.699 2024 M06 2024 Jun 2.715 2024 M07 2024 Jul 3.080 2024 M08 2024 Aug 3.204 2024 M09 2024 Sep 3.821 2024 M10 2024 Oct 3.370 2024 M11 2024 Nov 3.649 2024 M12 2024 Dec 4.146 2025 M01 2025 Jan 4.953 2025 M02 2025 Feb 5.897 2025 M03 2025 Mar 6.227 2025 M04 2025 Apr 5.122 2025 M05 2025 May 4.548 2025 M06 2025 Jun 3.775 2025 M07 2025 Jul 3.599 2025 M08 2025 Aug 3.587 2025 M09 2025 Sep 3.488 Home Subjects Data Tools Publications Economic Releases Classroom Beta Help improve this site U.S. BUREAU OF LABOR STATISTICS Office of Publications and Special Studies Suitland Federal Center Floor 7 4600 Silver Hill Road Washington, DC 20212-0002 Telephone: 202-691-5200 Telecommunications Relay Service: 7-1-1 www.bls.gov Contact Us RESOURCES Inspector General (OIG) Budget and Performance Department of Labor Grants No Fear Act USA.gov ABOUT THE SITE Sitemap Freedom of Information Act Privacy and Security Statement Disclaimers Linking and Copyright Info Important Website Notices Help and Tutorials Accessibility Statement Connect With BLS Instagram Twitter Threads Twitter Youtube Email\n\nProvide relevant evidence.",
+    "input_length_chars": 3771,
+    "input_tokens_estimated": 942,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that egg prices fell by 12.7% last month, marking the largest monthly decline since 1984, as stated in the Google snippet.",
+      "overall_stance": "supports",
+      "key_quote": "Overall, grocery prices fell 0.4% last month, pulled down in part by the big 12.7% drop in the price of eggs."
+    },
+    "output_length_chars": 339,
+    "output_tokens_estimated": 84,
+    "cost_usd": 0.0001917,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Egg prices fell 12.7% last month, the biggest monthly decline since 1984.",
+      "query_index": 2,
+      "query_text": "largest monthly decline in egg prices since 1984"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:40:45.733825",
+    "latency_seconds": 3.89,
+    "input_prompt": "Claim:\nEgg prices fell 12.7% last month, the biggest monthly decline since 1984.\n\nArticle Title:\nUS Retail Egg Prices Fell 12.7% in April - Farm Policy News\n\nGoogle Search Snippet:\nThe average price for a dozen Grade A eggs declined to $5.12 last month after reaching a record $6.23 in March, according to the US Bureau of Labor Statistics.\n\nFull Page Content:\nAn official website of the United States government Here is how you know United States Department of Labor U.S. BUREAU OF LABOR STATISTICS Release Calendar | Subscribe HOME SUBJECTS DATA TOOLS PUBLICATIONS ECONOMIC RELEASES CLASSROOM BETA BLS Data Viewer Permalink Time Period: Start Year: 1980 1981 1982 1983 1984 1985 1986 1987 1988 1989 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 End Year: 1980 1981 1982 1983 1984 1985 1986 1987 1988 1989 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 Net Monthly Changes: 1-Month Net Change 3-Month Net Change 6-Month Net Change 12-Month Net Change Percent Monthly Changes: 1-Month % Change 3-Month % Change 6-Month % Change 12-Month % Change Created with Highcharts 10.3.3 Eggs, grade A, large, per doz. Export Chart Eggs, grade A, large, per doz. in U.S. city average, average price, not seasonally adjusted APU0000708111 Jan '23 May '23 Sep '23 Jan '24 May '24 Sep '24 Jan '25 May '25 Sep '25 2 3 4 5 6 7 Click and drag in the plot area to zoom in. Hover over chart to view data.Source: U.S. Bureau of Labor Statistics. Latest Observation: September 2025 3.488 Jan 2023 - Sep 2025 Minimum Value: August 2023 2.043 Maximum Value: March 2025 6.227 Data Availability: 1980 - 2025 Data extracted on: Dec 13, 2025 (9:40:39 PM) Consumer Price Index Average Price Data Series Title : Eggs, grade A, large, per doz. in U.S. city average, average price, not seasonally adjusted Series ID : APU0000708111 Survey Name : Consumer Price Index Average Price Data Measure Data Type : Eggs, grade A, large, per doz. Area : U.S. city average Item : Eggs, grade A, large, per doz. Year Period Label Value 2023 M01 2023 Jan 4.823 2023 M02 2023 Feb 4.211 2023 M03 2023 Mar 3.446 2023 M04 2023 Apr 3.270 2023 M05 2023 May 2.666 2023 M06 2023 Jun 2.219 2023 M07 2023 Jul 2.094 2023 M08 2023 Aug 2.043 2023 M09 2023 Sep 2.065 2023 M10 2023 Oct 2.072 2023 M11 2023 Nov 2.138 2023 M12 2023 Dec 2.507 2024 M01 2024 Jan 2.522 2024 M02 2024 Feb 2.996 2024 M03 2024 Mar 2.992 2024 M04 2024 Apr 2.864 2024 M05 2024 May 2.699 2024 M06 2024 Jun 2.715 2024 M07 2024 Jul 3.080 2024 M08 2024 Aug 3.204 2024 M09 2024 Sep 3.821 2024 M10 2024 Oct 3.370 2024 M11 2024 Nov 3.649 2024 M12 2024 Dec 4.146 2025 M01 2025 Jan 4.953 2025 M02 2025 Feb 5.897 2025 M03 2025 Mar 6.227 2025 M04 2025 Apr 5.122 2025 M05 2025 May 4.548 2025 M06 2025 Jun 3.775 2025 M07 2025 Jul 3.599 2025 M08 2025 Aug 3.587 2025 M09 2025 Sep 3.488 Home Subjects Data Tools Publications Economic Releases Classroom Beta Help improve this site U.S. BUREAU OF LABOR STATISTICS Office of Publications and Special Studies Suitland Federal Center Floor 7 4600 Silver Hill Road Washington, DC 20212-0002 Telephone: 202-691-5200 Telecommunications Relay Service: 7-1-1 www.bls.gov Contact Us RESOURCES Inspector General (OIG) Budget and Performance Department of Labor Grants No Fear Act USA.gov ABOUT THE SITE Sitemap Freedom of Information Act Privacy and Security Statement Disclaimers Linking and Copyright Info Important Website Notices Help and Tutorials Accessibility Statement Connect With BLS Instagram Twitter Threads Twitter Youtube Email\n\nProvide relevant evidence.",
+    "input_length_chars": 3773,
+    "input_tokens_estimated": 943,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that egg prices fell by 12.7% last month, marking the largest monthly decline since 1984, as reported by the U.S. Bureau of Labor Statistics.",
+      "overall_stance": "supports",
+      "key_quote": "The average price for a dozen Grade A eggs declined to $5.12 last month after reaching a record $6.23 in March."
+    },
+    "output_length_chars": 360,
+    "output_tokens_estimated": 90,
+    "cost_usd": 0.00019545,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Egg prices fell 12.7% last month, the biggest monthly decline since 1984.",
+      "query_index": 2,
+      "query_text": "largest monthly decline in egg prices since 1984"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:40:45.739137",
+    "latency_seconds": 2.83,
+    "input_prompt": "Claim:\nEgg prices fell 12.7% last month, the biggest monthly decline since 1984.\n\nArticle Title:\nEgg prices see largest monthly drop since 1984, further decline ...\n\nGoogle Search Snippet:\nEgg prices in the United States experienced a dramatic 12.7% decline last month, according to a Tuesday report from the Bureau of Labor Statistics.\n\nFull Page Content:\nDon\u2019t miss what\u2019s happening People on X are the first to know. Log in Sign up Did someone say \u2026 cookies? X and its partners use cookies to provide you with a better, safer and faster service and to support our business. Some cookies are necessary to use our services, improve our services, and make sure they work properly. Show more about your choices. Accept all cookies Refuse non-essential cookies Post Conversation Karoline Leavitt @PressSec President Trump was right. Again. CNN: \u201cEgg prices fell 12.7% last month, the biggest monthly decline since 1984\u2026It\u2019s a remarkable reversal after egg prices surged in each of the past five months\u201d Trump\u2019s egg price fiction has suddenly become reality | CNN Business From cnn.com 7:15 AM \u00b7 May 15, 2025 \u00b7 202.1K Views 885 1.3K 8.4K 99 Read 885 replies New to X? Sign up now to get your own personalized timeline! Sign up with Apple Create account By signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use. Something went wrong. Try reloading. Retry Terms of Service | Privacy Policy | Cookie Policy | Accessibility | Ads info | More \u00a9 2025 X Corp.\n\nProvide relevant evidence.",
+    "input_length_chars": 1510,
+    "input_tokens_estimated": 377,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that egg prices in the United States fell by 12.7% last month, marking the largest monthly decline since 1984, as reported by CNN.",
+      "overall_stance": "supports",
+      "key_quote": "Egg prices fell 12.7% last month, the biggest monthly decline since 1984."
+    },
+    "output_length_chars": 311,
+    "output_tokens_estimated": 77,
+    "cost_usd": 0.00010275,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Egg prices fell 12.7% last month, the biggest monthly decline since 1984.",
+      "query_index": 2,
+      "query_text": "largest monthly decline in egg prices since 1984"
+    }
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:41:21.858720",
+    "latency_seconds": 20.3,
+    "input_prompt": "\nClaim: Egg prices fell 12.7% last month, the biggest monthly decline since 1984.\nCategory: statistical\nExtraction confidence: 0.90\n\nEvidence:\nSUPPORTS (3 sources):\n  1. US Retail Egg Prices Fell 12.7% in April - Farm Policy News | reliability=high (1.00)\n     URL: https://farmpolicynews.illinois.edu/2025/05/us-retail-egg-prices-fall-12-7-in-april/\n     Summary: The evidence confirms that egg prices fell by 12.7% last month, marking the largest monthly decline since 1984, as reported by the U.S. Bureau of Labor Statistics.\n  2. April CPI inflation report: Egg prices decline for first time in months | reliability=high (0.85)\n     URL: https://www.fox13seattle.com/news/egg-prices-decline-first-time-months\n     Summary: The evidence confirms that egg prices fell by 12.7% last month, marking the largest monthly decline since 1984, as stated in the Google snippet.\n  3. Egg prices see largest monthly drop since 1984, further decline ... | reliability=medium (0.60)\n     URL: https://www.wbiw.com/2025/05/14/egg-prices-see-largest-monthly-drop-since-1984-further-decline-expected/\n     Summary: The evidence confirms that egg prices in the United States fell by 12.7% last month, marking the largest monthly decline since 1984, as reported by CNN.\nMIXED (1 sources):\n  1. U.S. egg prices fall for the first time in months but remain near ... - NPR | reliability=high (0.85)\n     URL: https://www.npr.org/2025/05/14/nx-s1-5397827/egg-prices-drop-inflation-bird-flu\n     Summary: The article confirms that egg prices fell to $5.12 last month, marking a significant decline from the previous record of $6.23 in March, but does not specify the percentage of the decline or its historical context since 1984.\nUNCLEAR (1 sources):\n  1. Eggs are finally getting cheaper as prices sink the most since 1984 | reliability=high (0.85)\n     URL: https://www.businessinsider.com/eggs-getting-cheaper-consumer-grocery-prices-inflation-2025-5\n     Summary: The Bureau of Labor Statistics' egg price index fell about 13% over the month in April, the biggest decline since March 1984.\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2108,
+    "input_tokens_estimated": 527,
+    "output": {
+      "overall_stance": "supports",
+      "confidence": "high",
+      "summary": "Multiple high-reliability sources confirm that egg prices fell by 12.7% last month, marking the largest monthly decline since 1984, as reported by the U.S. Bureau of Labor Statistics."
+    },
+    "output_length_chars": 245,
+    "output_tokens_estimated": 61,
+    "cost_usd": 0.00011565,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Egg prices fell 12.7% last month, the biggest monthly decline since 1984.",
+      "query_index": 2,
+      "query_text": "largest monthly decline in egg prices since 1984"
+    }
+  }
+]

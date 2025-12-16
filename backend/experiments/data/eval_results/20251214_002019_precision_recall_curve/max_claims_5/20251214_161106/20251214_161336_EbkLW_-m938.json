@@ -1,0 +1,115 @@
+{
+  "video_id": "EbkLW_-m938",
+  "timestamp": "2025-12-14T16:13:36.428273",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 1.0,
+    "recall": 0.2,
+    "f1_score": 0.33333333333333337,
+    "true_positives": 5,
+    "false_positives": 0,
+    "false_negatives": 20,
+    "mean_average_precision": 1.0,
+    "recall_at_important": 0.08333333333333333,
+    "importance_weighted_coverage": 0.19689119170984454,
+    "matched_claims": [
+      {
+        "gt_text": "Democracy is a system where the citizens of a country have the power to choose their leaders and influence the decisions made by the government",
+        "sys_text": "Democracy is a system where citizens have the power to choose their leaders.",
+        "gt_importance": 0.95,
+        "sys_importance": 0.85,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "In ancient Athens, only men who were citizens could vote while women and slaves were excluded",
+        "sys_text": "In ancient Athens, only men who were citizens could vote; women and slaves were excluded.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.6,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "The French Revolution marked a significant turning point in the 18th century",
+        "sys_text": "The French Revolution marked a significant turning point for democracy in the 18th century.",
+        "gt_importance": 0.65,
+        "sys_importance": 0.6,
+        "importance_error": 0.050000000000000044
+      },
+      {
+        "gt_text": "During the French Revolution, for the first time the idea of universal suffrage emerged",
+        "sys_text": "The idea of universal suffrage emerged during the French Revolution, allowing any citizen to vote regardless of wealth.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.6,
+        "importance_error": 0.15000000000000002
+      },
+      {
+        "gt_text": "The word democracy comes from ancient Greek meaning citizens power",
+        "sys_text": "The word democracy comes from ancient Greek meaning 'citizens power'.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.3,
+        "importance_error": 0.45
+      }
+    ],
+    "missed_claims": [
+      "In ancient Athens citizens would gather in an assembly to discuss and decide on laws and other important matters",
+      "During the French Revolution, French citizens overthrew the absolute monarchy",
+      "During the French Revolution, this meant that any citizen regardless of wealth could vote",
+      "During the French Revolution, women still couldn't vote at this time",
+      "Over time, democratic ideas spread to many other countries",
+      "Today democracy is based on the principle that everyone has equal rights and duties",
+      "Democracy is about respecting each other and ensuring that everyone has a say in how the country is run",
+      "In a democratic system citizens vote to elect their leaders and participate in the decision-making process",
+      "Elections are how people choose their representatives in a democracy",
+      "The government is accountable to the people in a democratic system",
+      "The rule of law ensures that everyone is treated fairly in a democratic system",
+      "Civic education plays a crucial role in sustaining democracy",
+      "Civic education teaches citizens about their rights and responsibilities",
+      "Civic education teaches citizens how to participate in the democratic process",
+      "Civic education helps people understand the complexities of political life",
+      "Civic education helps people make informed decisions",
+      "Democracy is about giving power to the people and ensuring everyone's voice is heard",
+      "Democracy maintains a fair and just society",
+      "Democracy is a system that has evolved over centuries",
+      "Democracy continues to be refined to ensure equality and justice for all"
+    ],
+    "extra_claims": [],
+    "importance_mae": 0.17,
+    "claim_quality_avg": 0.8
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 1.0,
+    "stance_accuracy": 1.0,
+    "correct_verdicts": 5,
+    "total_verdicts": 5,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [],
+    "explanation_quality_avg": 0.7000000000000001
+  },
+  "end_to_end": {
+    "claim_coverage": 0.2,
+    "verdict_accuracy": 1.0,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.01050375,
+    "total_time_seconds": 82.92568802833557,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.99,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.3
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.8099999999999999,
+    "source_reliability_distribution": {
+      "high": 12,
+      "medium": 8,
+      "unknown": 3
+    },
+    "avg_evidence_per_claim": 4.6
+  },
+  "ground_truth_claims_count": 25,
+  "system_claims_count": 5
+}

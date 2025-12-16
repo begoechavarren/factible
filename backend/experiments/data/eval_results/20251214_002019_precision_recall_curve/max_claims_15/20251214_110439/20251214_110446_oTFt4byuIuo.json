@@ -1,0 +1,178 @@
+{
+  "video_id": "oTFt4byuIuo",
+  "timestamp": "2025-12-14T11:04:46.417389",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_15",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.9,
+    "recall": 0.5294117647058824,
+    "f1_score": 0.6666666666666667,
+    "true_positives": 9,
+    "false_positives": 1,
+    "false_negatives": 8,
+    "mean_average_precision": 0.9888888888888889,
+    "recall_at_important": 0.6666666666666666,
+    "importance_weighted_coverage": 0.5534351145038168,
+    "matched_claims": [
+      {
+        "gt_text": "Egg prices fell 12.7% last month, the biggest monthly decline since 1984",
+        "sys_text": "Egg prices fell 12.7% last month, the biggest monthly decline since 1984.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.8,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "The USDA reported that a dozen large white shell eggs cost $3.30 on average, down 69 cents from a week before",
+        "sys_text": "A dozen large white shell eggs now cost $3.30 on average, down $0.69 from a week before.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.8,
+        "importance_error": 0.050000000000000044
+      },
+      {
+        "gt_text": "Egg prices surged in each of the past 5 months and 17 of the past 19 months",
+        "sys_text": "Egg prices surged in each of the past 5 months and 17 of the past 19 months due to a deadly avian flu epidemic.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.7,
+        "importance_error": 0.0
+      },
+      {
+        "gt_text": "Egg prices remain significantly higher now than before the latest bird flu outbreak, and they cost 49.3% more last month than they did a year earlier",
+        "sys_text": "Egg prices cost 49.3% more last month than they did a year earlier.",
+        "gt_importance": 0.8,
+        "sys_importance": 0.7,
+        "importance_error": 0.10000000000000009
+      },
+      {
+        "gt_text": "Wholesale prices fell by half, not close to the 90% plus figures Trump was citing",
+        "sys_text": "Wholesale prices fell by half, not close to the 90% plus figures Trump was citing.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.7,
+        "importance_error": 0.15000000000000002
+      },
+      {
+        "gt_text": "The USDA says consumer prices finally fell as demand for eggs decreased and avian flu cases have fallen",
+        "sys_text": "Egg prices remain significantly higher now than before the latest bird flu outbreak.",
+        "gt_importance": 0.8,
+        "sys_importance": 0.6,
+        "importance_error": 0.20000000000000007
+      },
+      {
+        "gt_text": "Egg prices this past Easter were the highest for any Easter on record",
+        "sys_text": "Egg prices this past Easter were the highest for any Easter on record.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.6,
+        "importance_error": 0.25
+      },
+      {
+        "gt_text": "Trump said the cost of eggs has come down like 93-94% since we took office",
+        "sys_text": "Trump claimed that the cost of eggs has come down like 93-94% since he took office.",
+        "gt_importance": 0.95,
+        "sys_importance": 0.6,
+        "importance_error": 0.35
+      },
+      {
+        "gt_text": "Consumer prices typically make their way through the supply chain at a slower pace than wholesale prices",
+        "sys_text": "Consumer prices are what customers pay at grocery stores, which change slower than wholesale prices.",
+        "gt_importance": 0.65,
+        "sys_importance": 0.5,
+        "importance_error": 0.15000000000000002
+      }
+    ],
+    "missed_claims": [
+      "A deadly avian flu epidemic necessitated the mass culling of egg laying hens",
+      "Eggs are still more expensive than when Trump took office",
+      "Those percentage declines Trump stated are not close to accurate",
+      "Consumer egg prices were indeed falling sharply when Trump made those remarks",
+      "Trump appears to have been talking about wholesale prices, which had been tumbling throughout March",
+      "Wholesale prices are the costs distributors pay to farmers or middlemen. Consumer prices are what customers pay at grocery stores",
+      "Grocery stores may decide to keep prices at a certain level even when wholesale prices change to try to recoup lost profits from prior weeks",
+      "Many groceries, including large chains like Costco, had limited customer purchases because of egg shortages"
+    ],
+    "extra_claims": [
+      "USDA announced an initiative to lower egg prices, including increased biosecurity on egg laying farms."
+    ],
+    "importance_mae": 0.15000000000000002,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.0,
+    "stance_accuracy": 0.0,
+    "correct_verdicts": 0,
+    "total_verdicts": 9,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "Egg prices fell 12.7% last month, the biggest monthly decline since 1984",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "The USDA reported that a dozen large white shell eggs cost $3.30 on average, down 69 cents from a week before",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Egg prices surged in each of the past 5 months and 17 of the past 19 months",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Egg prices remain significantly higher now than before the latest bird flu outbreak, and they cost 49.3% more last month than they did a year earlier",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Wholesale prices fell by half, not close to the 90% plus figures Trump was citing",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "The USDA says consumer prices finally fell as demand for eggs decreased and avian flu cases have fallen",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Egg prices this past Easter were the highest for any Easter on record",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Trump said the cost of eggs has come down like 93-94% since we took office",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Consumer prices typically make their way through the supply chain at a slower pace than wholesale prices",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.5294117647058824,
+    "verdict_accuracy": 0.0,
+    "evidence_quality_avg": 0.8,
+    "total_cost_usd": 0.0022521,
+    "total_time_seconds": 119.74240803718567,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 0.8,
+    "avg_sources_per_query": 2.1
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 36,
+      "medium": 6
+    },
+    "avg_evidence_per_claim": 4.2
+  },
+  "ground_truth_claims_count": 17,
+  "system_claims_count": 10
+}

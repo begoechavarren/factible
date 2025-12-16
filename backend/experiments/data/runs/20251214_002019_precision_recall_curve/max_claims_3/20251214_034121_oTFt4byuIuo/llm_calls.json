@@ -1,0 +1,202 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:41:35.374145",
+    "latency_seconds": 12.42,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nTrump's egg price warning comes true. Reality hits home. For months, President Donald Trump has falsely claimed that egg prices are tumbling. It wasn't true then, but it's true now. Egg prices fell 12.7% last month, the biggest monthly decline since 1984. The Bureau of Labor Statistics reported Tuesday, and they could continue to fall this month, too. The USDA reported last week that a dozen large white shell eggs now cost $330 on average, down a whopping 69 from a week before. It's a remarkable reversal after egg prices surged in each of the past 5 months and 17 of the past 19 months because of a deadly aven flu epidemic that necessitated the mass culling of egg laying hens. Maybe the worst of egg gate has passed. Tyler Shipper, associate professor in economics and data analysis at the University of St. Thomas in St. Paul, Minnesota, told CNN. Nevertheless, egg prices remain significantly higher now than before the latest bird flu outbreak, and they cost 49.3% more last month than they did a year earlier. Eggs are still more expensive than when Trump took office, according to the BLS. Egg prices this past Easter, which typically rise in the run-up to the holiday, were the highest for any Easter on record, the USDA reported. Well, before last month's decline, Trump had been touting falling egg prices as a sign that his administration's plan to lower prices for consumers has been working. In February, the USDA announced an initiative to lower egg prices, including increased biocurity on egg laying farms, aid to farmers who have lost flocks and temporary lifting of restrictions on egg imports. Despite agriculture secretary Brooke Rollins far more conservative estimate that egg prices would normalize in the summer, Trump last month said, \"As you know, the cost of eggs has come down like 93 94% since we took office. Those percentage declines, Trump stated, are not close to accurate. But we now know that consumer egg prices were indeed falling sharply when Trump made those remarks. The consumer price index data wasn't out yet to confirm or deny Trump's claims. It appears as though Trump may have been talking about wholesale prices, which had been tumbling throughout March before normalizing in recent weeks. Nevertheless, wholesale prices fell by half, not close to the 90% plus figures Trump was citing. Wholesale prices are the costs distributors pay to farmers or middlemen. Consumer prices are what customers pay at grocery stores. Those costs typically make their way through the supply chain at a slower pace because grocery stores may decide to keep prices at a certain price even when wholesale prices change to try to recoup loss profits from prior weeks according to Kevin Bergquist, sector manager at Wells Fargo Agri Food Institute. from prior weeks. According to Kevin Bergquist, sector manager at Wells Fargo Agri Food Institute, the USDA says consumer prices finally fell as demand for eggs decreased and aven flu cases have fallen. Many groceries, including large chains like Costco, had limited customers purchases because of egg shortages. So, Trump's claim that consumer egg prices are down is finally true, even if the timing of his claim and the wild percentages he threw around were grossly inaccurate. Don't forget to like and subscribe. Thanks.",
+    "input_length_chars": 3360,
+    "input_tokens_estimated": 840,
+    "output": {
+      "claims": [
+        {
+          "text": "Egg prices fell 12.7% last month, the biggest monthly decline since 1984.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.85,
+          "context": "Reported by the Bureau of Labor Statistics."
+        },
+        {
+          "text": "A dozen large white shell eggs now cost $3.30 on average, down $0.69 from a week before.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.85,
+          "context": "USDA reported last week."
+        },
+        {
+          "text": "Egg prices cost 49.3% more last month than they did a year earlier.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "Comparison to previous year's prices."
+        }
+      ],
+      "total_count": 3
+    },
+    "output_length_chars": 872,
+    "output_tokens_estimated": 218,
+    "cost_usd": 0.0002568
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:41:38.592762",
+    "latency_seconds": 2.53,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Egg prices cost 49.3% more last month than they did a year earlier.\nContext: Comparison to previous year's prices.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 287,
+    "input_tokens_estimated": 71,
+    "output": {
+      "original_claim": "Egg prices cost 49.3% more last month than they did a year earlier.",
+      "queries": [
+        {
+          "query": "Egg prices increase 49.3% year over year October 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Egg price comparison October 2022 to October 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 319,
+    "output_tokens_estimated": 79,
+    "cost_usd": 5.805e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "Egg prices cost 49.3% more last month than they did a year earlier."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:41:38.756659",
+    "latency_seconds": 2.7,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: A dozen large white shell eggs now cost $3.30 on average, down $0.69 from a week before.\nContext: USDA reported last week.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 295,
+    "input_tokens_estimated": 73,
+    "output": {
+      "original_claim": "A dozen large white shell eggs now cost $3.30 on average, down $0.69 from a week before.",
+      "queries": [
+        {
+          "query": "current price of a dozen large white shell eggs USDA report October 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "average cost of large white shell eggs October 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 361,
+    "output_tokens_estimated": 90,
+    "cost_usd": 6.495e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "Egg prices cost 49.3% more last month than they did a year earlier.",
+      "query_index": 2,
+      "query_text": "Egg price comparison October 2022 to October 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:41:53.974729",
+    "latency_seconds": 1.31,
+    "input_prompt": "Claim:\nA dozen large white shell eggs now cost $3.30 on average, down $0.69 from a week before.\n\nArticle Title:\nEggs US - Price - Chart - Historical Data - News - Trading Economics\n\nFull Page Content:\nUS egg prices rose to $2.2 per dozen, rebounding from May 2023 lows of $1.06 seen in October and approaching August highs as supply tightened just as demand ...\n\nProvide relevant evidence.",
+    "input_length_chars": 389,
+    "input_tokens_estimated": 97,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 2.775e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "A dozen large white shell eggs now cost $3.30 on average, down $0.69 from a week before.",
+      "query_index": 2,
+      "query_text": "average cost of large white shell eggs October 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:41:54.062797",
+    "latency_seconds": 1.4,
+    "input_prompt": "Claim:\nA dozen large white shell eggs now cost $3.30 on average, down $0.69 from a week before.\n\nArticle Title:\n[PDF] Monthly USDA Cage-Free Shell Egg Report\n\nFull Page Content:\nSummary of Advertised Prices for Cage-Free Eggs in One Dozen Cartons Featured Between 08/29/25 and 10/02/25. Cage-Free Extra Large White 12 Pack. Cage-Free ...\n\nProvide relevant evidence.",
+    "input_length_chars": 365,
+    "input_tokens_estimated": 91,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 2.685e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "A dozen large white shell eggs now cost $3.30 on average, down $0.69 from a week before.",
+      "query_index": 2,
+      "query_text": "average cost of large white shell eggs October 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:41:55.155046",
+    "latency_seconds": 2.25,
+    "input_prompt": "Claim:\nA dozen large white shell eggs now cost $3.30 on average, down $0.69 from a week before.\n\nArticle Title:\n[PDF] Egg Markets Overview - December 12, 2025\n\nFull Page Content:\nWholesale prices for national trading of trucklot quantities of graded, loose, white Large shell eggs decreased $0.46 to $1.45 per dozen with lower undertone.\n\nProvide relevant evidence.",
+    "input_length_chars": 365,
+    "input_tokens_estimated": 91,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that wholesale prices for large white shell eggs decreased by $0.46 to $1.45 per dozen, but it does not confirm the claim about the average retail price being $3.30 or the specific decrease of $0.69 from the previous week.",
+      "overall_stance": "refutes",
+      "key_quote": "Wholesale prices for national trading of trucklot quantities of graded, loose, white Large shell eggs decreased $0.46 to $1.45 per dozen."
+    },
+    "output_length_chars": 467,
+    "output_tokens_estimated": 116,
+    "cost_usd": 8.325e-05
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:42:25.449371",
+    "latency_seconds": 11.4,
+    "input_prompt": "\nClaim: Egg prices cost 49.3% more last month than they did a year earlier.\nCategory: statistical\nExtraction confidence: 0.90\n\nEvidence:\nUNCLEAR (6 sources):\n  1. Inflation and Food Price Update: May 2025 - farmdoc daily | reliability=high (1.00)\n     URL: https://farmdocdaily.illinois.edu/2025/05/inflation-and-food-price-update-may-2025.html\n     Summary: Egg prices, up 49.3% from last year, driven primarily by supply constrictions from bird-flu, also continue to be a sticking point for consumers ...\n  2. Eggs US - Price - Chart - Historical Data - News - Trading Economics | reliability=high (0.85)\n     URL: https://tradingeconomics.com/commodity/eggs-us\n     Summary: US egg prices rose to $2.2 per dozen, rebounding from May 2023 lows of $1.06 seen in October and approaching August highs as supply tightened just as demand ...\n  3. Why are eggs getting more expensive again? | PBS News | reliability=high (0.85)\n     URL: https://www.pbs.org/newshour/economy/why-are-eggs-getting-more-expensive-again\n     Summary: But it was up 63 percent from October 2023, when a dozen eggs cost an average of $2.07. Sometimes, supermarkets may be to blame for price spikes ...\n  4. [PDF] b - US Egg Prices and Costs 2023 | reliability=medium (0.60)\n     URL: https://www.eggindustrycenter.org/media/cms/Costs_and_Prices_for_December_2023__36ED6C7DE3179.pdf\n     Summary: Soybean Meal prices were $12/ton lower than December last year. The December 2023 egg value to producers was 269 cents/dozen (61%) lower than in December 2022.\n  5. Egg Prices Adjusted for Inflation | US Inflation Calculator | reliability=medium (0.60)\n     URL: https://www.usinflationcalculator.com/inflation/egg-prices-adjusted-for-inflation/\n     Summary: Over a longer period and averaging the BLS's monthly pricing data, the cost of a dozen eggs jumped to $3.17 in 2024 from $2.80 in 2023, representing a 13.2% ...\n  6. Grocery prices rose in April, egg prices up almost 50% | reliability=medium (0.60)\n     URL: https://talkbusiness.net/2025/05/grocery-prices-rose-in-april-egg-prices-up-almost-50/\n     Summary: Retail egg prices increased 49.3% year over year. Retail beef prices ... year, according to the December Consumer Price Index data released ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2267,
+    "input_tokens_estimated": 566,
+    "output": {
+      "overall_stance": "unclear",
+      "confidence": "low",
+      "summary": "The evidence presents mixed signals regarding the claim that egg prices cost 49.3% more last month than a year earlier. While multiple high-reliability sources, such as the farmdoc daily and PBS News, confirm a 49.3% increase, other sources provide conflicting data or focus on different time frames, leading to uncertainty."
+    },
+    "output_length_chars": 384,
+    "output_tokens_estimated": 96,
+    "cost_usd": 0.0001425
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:42:34.465391",
+    "latency_seconds": 20.21,
+    "input_prompt": "\nClaim: A dozen large white shell eggs now cost $3.30 on average, down $0.69 from a week before.\nCategory: statistical\nExtraction confidence: 0.90\n\nEvidence:\nREFUTES (1 sources):\n  1. [PDF] Egg Markets Overview - December 12, 2025 | reliability=high (1.00)\n     URL: https://www.ams.usda.gov/mnreports/ams_3725.pdf\n     Summary: The evidence indicates that wholesale prices for large white shell eggs decreased by $0.46 to $1.45 per dozen, but it does not confirm the claim about the average retail price being $3.30 or the specific decrease of $0.69 from the previous week.\nUNCLEAR (3 sources):\n  1. [PDF] Egg Market News Report | reliability=high (1.00)\n     URL: https://www.ams.usda.gov/mnreports/pybshellegg.pdf\n     Summary: The Daily National Shell Egg Index report is a daily summary of the current market conditions in the national egg market. The latest edition of this report ...\n  2. Eggs US - Price - Chart - Historical Data - News - Trading Economics | reliability=high (0.85)\n     URL: https://tradingeconomics.com/commodity/eggs-us\n     Summary: US egg prices rose to $2.2 per dozen, rebounding from May 2023 lows of $1.06 seen in October and approaching August highs as supply tightened just as demand ...\n  3. Wholesale egg prices have 'blown way past' record highs, analyst says | reliability=high (0.85)\n     URL: https://www.cnbc.com/2025/02/10/wholesale-egg-prices-have-blown-way-past-prior-record.html\n     Summary: On Friday, average wholesale prices for large, white shell eggs reached $8 a dozen, beating the previous record by a large degree.\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1603,
+    "input_tokens_estimated": 400,
+    "output": {
+      "overall_stance": "refutes",
+      "confidence": "high",
+      "summary": "The evidence from the USDA's Egg Markets Overview indicates that wholesale prices for large white shell eggs decreased by $0.46 to $1.45 per dozen, which does not support the claim of an average retail price of $3.30 or a decrease of $0.69 from the previous week."
+    },
+    "output_length_chars": 324,
+    "output_tokens_estimated": 81,
+    "cost_usd": 0.0001086
+  }
+]

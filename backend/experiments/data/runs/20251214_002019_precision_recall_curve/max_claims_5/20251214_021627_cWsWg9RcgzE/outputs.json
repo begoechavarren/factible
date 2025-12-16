@@ -1,0 +1,1962 @@
+{
+  "extracted_claims": {
+    "claims": [
+      {
+        "text": "AIDS was once a guaranteed death sentence.",
+        "confidence": 0.9,
+        "category": "medical",
+        "importance": 0.85,
+        "context": "historical context of AIDS in the past",
+        "transcript_char_start": 27,
+        "transcript_char_end": 63,
+        "transcript_match_score": 0.935064935064935
+      },
+      {
+        "text": "The rate of HIV infection in Australia has shot up again.",
+        "confidence": 0.8,
+        "category": "statistical",
+        "importance": 0.85,
+        "context": "current trends in HIV infection rates in Australia",
+        "transcript_char_start": 226,
+        "transcript_char_end": 285,
+        "transcript_match_score": 0.7478260869565218
+      },
+      {
+        "text": "1,000 Australians a year are now diagnosed with HIV.",
+        "confidence": 0.95,
+        "category": "statistical",
+        "importance": 0.85,
+        "context": "current statistics on HIV diagnoses in Australia",
+        "transcript_char_start": 1904,
+        "transcript_char_end": 1955,
+        "transcript_match_score": 1.0
+      },
+      {
+        "text": "The rate of new HIV infections is almost double that of 10 years ago.",
+        "confidence": 0.85,
+        "category": "statistical",
+        "importance": 0.7,
+        "context": "comparison of HIV infection rates over the last decade",
+        "transcript_char_start": 2024,
+        "transcript_char_end": 2080,
+        "transcript_match_score": 0.6935483870967742
+      },
+      {
+        "text": "98% of all new infections in women are contracted through heterosexual sex.",
+        "confidence": 0.9,
+        "category": "statistical",
+        "importance": 0.6,
+        "context": "demographic data on HIV infections among women",
+        "transcript_char_start": 2394,
+        "transcript_char_end": 2462,
+        "transcript_match_score": 0.8652482269503546
+      }
+    ],
+    "total_count": 5
+  },
+  "final_output": {
+    "extracted_claims": {
+      "claims": [
+        {
+          "text": "AIDS was once a guaranteed death sentence.",
+          "confidence": 0.9,
+          "category": "medical",
+          "importance": 0.85,
+          "context": "historical context of AIDS in the past",
+          "transcript_char_start": 27,
+          "transcript_char_end": 63,
+          "transcript_match_score": 0.935064935064935
+        },
+        {
+          "text": "The rate of HIV infection in Australia has shot up again.",
+          "confidence": 0.8,
+          "category": "statistical",
+          "importance": 0.85,
+          "context": "current trends in HIV infection rates in Australia",
+          "transcript_char_start": 226,
+          "transcript_char_end": 285,
+          "transcript_match_score": 0.7478260869565218
+        },
+        {
+          "text": "1,000 Australians a year are now diagnosed with HIV.",
+          "confidence": 0.95,
+          "category": "statistical",
+          "importance": 0.85,
+          "context": "current statistics on HIV diagnoses in Australia",
+          "transcript_char_start": 1904,
+          "transcript_char_end": 1955,
+          "transcript_match_score": 1.0
+        },
+        {
+          "text": "The rate of new HIV infections is almost double that of 10 years ago.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "comparison of HIV infection rates over the last decade",
+          "transcript_char_start": 2024,
+          "transcript_char_end": 2080,
+          "transcript_match_score": 0.6935483870967742
+        },
+        {
+          "text": "98% of all new infections in women are contracted through heterosexual sex.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "demographic data on HIV infections among women",
+          "transcript_char_start": 2394,
+          "transcript_char_end": 2462,
+          "transcript_match_score": 0.8652482269503546
+        }
+      ],
+      "total_count": 5
+    },
+    "claim_reports": [
+      {
+        "claim_text": "AIDS was once a guaranteed death sentence.",
+        "claim_confidence": 0.9,
+        "claim_category": "medical",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "refutes": [
+            {
+              "title": "HIV is no longer a death sentence. But states still have laws ...",
+              "url": "https://stateline.org/2024/03/26/hiv-is-no-longer-a-death-sentence-but-states-still-have-laws-targeting-people-who-live-with-it/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The article discusses the historical context of HIV/AIDS, indicating that advances in treatment have transformed it from a fatal disease to a manageable condition, thus refuting the claim that AIDS was once a guaranteed death sentence.",
+              "snippet": "In 1990, Congress passed the Ryan White Comprehensive AIDS Resources Emergency Act, named after a teenager who was diagnosed with HIV in 1984 ..."
+            }
+          ],
+          "supports": [
+            {
+              "title": "HIV is no longer a death sentence. But decades-old stigma persists.",
+              "url": "https://www.nbcnews.com/nbc-out/hiv-no-longer-death-sentence-decades-old-stigma-persists-rcna1181",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "supports",
+              "evidence_summary": "The article discusses how advances in HIV prevention, care, and treatment have transformed HIV/AIDS from a once fatal condition into a manageable health issue, indicating that it was indeed once considered a guaranteed death sentence.",
+              "snippet": "Forty years after the CDC's first scientific report describing what is now known as AIDS, advocates say HIV stigma persists."
+            },
+            {
+              "title": "Mortality attributable to HIV infection/AIDS--United States, 1981-1990",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/1898757/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The article discusses the historical context of AIDS mortality, indicating that from 1981 to 1990, there were 100,777 reported deaths among persons with AIDS, which supports the claim that AIDS was once considered a guaranteed death sentence due to the high mortality rates during that period.",
+              "snippet": "From 1981 through 1990, 100,777 deaths among persons with acquired immunodeficiency syndrome (AIDS) were reported to CDC by local, state, ..."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "A Timeline of HIV and AIDS",
+              "url": "https://www.hiv.gov/hiv-basics/overview/history/hiv-and-aids-timeline",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (11.3 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "The HIV.gov Timeline reflects the history of the domestic HIV/AIDS epidemic from the first reported cases in 1981 to the present.",
+              "snippet": "The HIV.gov Timeline reflects the history of the domestic HIV/AIDS epidemic from the first reported cases in 1981 to the present."
+            },
+            {
+              "title": "Current Trends Mortality Attributable to HIV Infection/AIDS - CDC",
+              "url": "https://www.cdc.gov/mmwr/preview/mmwrhtml/00001880.htm",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "From 1981 through 1990, 100,777 deaths among persons with acquired immunodeficiency syndrome (AIDS) were reported to CDC by local, state, and territorial ...",
+              "snippet": "From 1981 through 1990, 100,777 deaths among persons with acquired immunodeficiency syndrome (AIDS) were reported to CDC by local, state, and territorial ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 0.32,
+        "timestamp_confidence": 0.935064935064935
+      },
+      {
+        "claim_text": "The rate of new HIV infections is almost double that of 10 years ago.",
+        "claim_confidence": 0.85,
+        "claim_category": "statistical",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "refutes": [
+            {
+              "title": "HIV data and statistics - World Health Organization (WHO)",
+              "url": "https://www.who.int/teams/global-hiv-hepatitis-and-stis-programmes/hiv/strategic-information/hiv-data-and-statistics",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that new HIV infections have actually declined by 39% since 2010, contradicting the claim that the rate of new infections is almost double that of 10 years ago.",
+              "snippet": "The global HIV epidemic claimed 70% fewer lives in 2024 since the peak in 2004. 75 000 [50 000\u2013110 000] children died from HIV-related causes in 2024. 550 ..."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "Global Statistics | HIV.gov",
+              "url": "https://www.hiv.gov/hiv-basics/overview/data-and-trends/global-statistics",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (11.3 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "There were 39.9 million people across the globe living with HIV in 2023. Of these, 38.6 million were adults (>15 years old), and 1.4 million were children (<15 ...",
+              "snippet": "There were 39.9 million people across the globe living with HIV in 2023. Of these, 38.6 million were adults (>15 years old), and 1.4 million were children (<15 ..."
+            },
+            {
+              "title": "U.S. Statistics | HIV.gov",
+              "url": "https://www.hiv.gov/hiv-basics/overview/data-and-trends/statistics",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (11.3 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "CDC estimates show new HIV infections decreased 12% from 2018 (36,200) to 2022 (31,800). The decline was driven by a 30% decrease among young people aged 13-24 ...",
+              "snippet": "CDC estimates show new HIV infections decreased 12% from 2018 (36,200) to 2022 (31,800). The decline was driven by a 30% decrease among young people aged 13-24 ..."
+            },
+            {
+              "title": "Fast Facts: HIV in the United States - CDC",
+              "url": "https://www.cdc.gov/hiv/data-research/facts-stats/index.html",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "HIV remains a persistent problem in the United States. In the United States, estimated HIV infections decreased 12% overall from 2018 to 2022.",
+              "snippet": "HIV remains a persistent problem in the United States. In the United States, estimated HIV infections decreased 12% overall from 2018 to 2022."
+            },
+            {
+              "title": "The Global HIV/AIDS Epidemic - KFF",
+              "url": "https://www.kff.org/global-health-policy/the-global-hiv-aids-epidemic/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "There were 40 million people living with HIV in 2023, up from 32 million in 2010, the result of continuing new infections and people living ...",
+              "snippet": "There were 40 million people living with HIV in 2023, up from 32 million in 2010, the result of continuing new infections and people living ..."
+            },
+            {
+              "title": "The HIV/AIDS Epidemic in the United States: The Basics - KFF",
+              "url": "https://www.kff.org/hiv-aids/the-hiv-aids-epidemic-in-the-united-states-the-basics/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Number of estimated new HIV infections: 31,800 \u00b7 Number of estimated people living with HIV: 1.2 million \u00b7 Estimated percent of people with HIV ...",
+              "snippet": "Number of estimated new HIV infections: 31,800 \u00b7 Number of estimated people living with HIV: 1.2 million \u00b7 Estimated percent of people with HIV ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 0.8,
+        "timestamp_hint": 147.76,
+        "timestamp_confidence": 0.6935483870967742
+      },
+      {
+        "claim_text": "The rate of HIV infection in Australia has shot up again.",
+        "claim_confidence": 0.8,
+        "claim_category": "statistical",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "Progress towards the UNAIDS 2030 HIV prevention target in New ...",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12019848/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Accompanying the rebound in migration, during 2023 there was a 70% increase in HIV diagnoses in overseas-born GBM in NSW, compared to a 5% ...",
+              "snippet": "Accompanying the rebound in migration, during 2023 there was a 70% increase in HIV diagnoses in overseas-born GBM in NSW, compared to a 5% ..."
+            },
+            {
+              "title": "Australia - UNAIDS",
+              "url": "https://www.unaids.org/en/regionscountries/countries/australia",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (29.4 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Population size estimate (#), 79 100 ; HIV prevalence (%), 1.7 ; HIV testing and status awareness (%), 85 ; Condom use (%), 31.9 ; Safe injecting practices (%), 73.",
+              "snippet": "Population size estimate (#), 79 100 ; HIV prevalence (%), 1.7 ; HIV testing and status awareness (%), 85 ; Condom use (%), 31.9 ; Safe injecting practices (%), 73."
+            },
+            {
+              "title": "HIV diagnoses trending down in Australia despite 2023 increase",
+              "url": "https://www.eatg.org/hiv-news/hiv-diagnoses-trending-down-in-australia-despite-2023-increase/",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (27.9 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "While there were 722 new HIV diagnoses reported nationally in 2023 \u2013 up from 553 in 2022 \u2013 the researchers still reported a lower number of ...",
+              "snippet": "While there were 722 new HIV diagnoses reported nationally in 2023 \u2013 up from 553 in 2022 \u2013 the researchers still reported a lower number of ..."
+            },
+            {
+              "title": "HIV transmission virtually eliminated in Inner Sydney, Australia",
+              "url": "https://www.iasociety.org/news-release/hiv-transmission-virtually-eliminated-inner-sydney-australia",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (21.5 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "24 July 2023 (Brisbane, Australia) \u2013 Inner Sydney has reduced new HIV acquisitions by 88%, meaning it may be the first locality in the world ...",
+              "snippet": "24 July 2023 (Brisbane, Australia) \u2013 Inner Sydney has reduced new HIV acquisitions by 88%, meaning it may be the first locality in the world ..."
+            }
+          ]
+        },
+        "total_sources": 4,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 12.32,
+        "timestamp_confidence": 0.7478260869565218
+      },
+      {
+        "claim_text": "1,000 Australians a year are now diagnosed with HIV.",
+        "claim_confidence": 0.95,
+        "claim_category": "statistical",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "Progress towards the UNAIDS 2030 HIV prevention target in New ...",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12019848/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Overall, 1821 (40%) of diagnoses were classified as recent HIV infections. Recent HIV infections declined by 67% overall (from 151 to 50, with a ...",
+              "snippet": "Overall, 1821 (40%) of diagnoses were classified as recent HIV infections. Recent HIV infections declined by 67% overall (from 151 to 50, with a ..."
+            },
+            {
+              "title": "Trend and Associated Factors for Late and Advanced HIV ... - NIH",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12135748/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "This retrospective study manually reviewed e\u2010medical records of new HIV diagnoses between 2011 and 2022 at Melbourne Sexual Health Centre, Australia.",
+              "snippet": "This retrospective study manually reviewed e\u2010medical records of new HIV diagnoses between 2011 and 2022 at Melbourne Sexual Health Centre, Australia."
+            },
+            {
+              "title": "HIV transmission virtually eliminated in Inner Sydney, Australia",
+              "url": "https://www.iasociety.org/news-release/hiv-transmission-virtually-eliminated-inner-sydney-australia",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (21.5 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "24 July 2023 (Brisbane, Australia) \u2013 Inner Sydney has reduced new HIV acquisitions by 88%, meaning it may be the first locality in the world to reach the UN ...",
+              "snippet": "24 July 2023 (Brisbane, Australia) \u2013 Inner Sydney has reduced new HIV acquisitions by 88%, meaning it may be the first locality in the world to reach the UN ..."
+            }
+          ]
+        },
+        "total_sources": 3,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 138.879,
+        "timestamp_confidence": 1.0
+      },
+      {
+        "claim_text": "98% of all new infections in women are contracted through heterosexual sex.",
+        "claim_confidence": 0.9,
+        "claim_category": "statistical",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "[PDF] Heterosexual Contact - Illinois Department of Public Health",
+              "url": "https://dph.illinois.gov/content/dam/soi/en/web/idph/files/publications/1-22-16-ohp-hiv-factsheet-heterosexuals.pdf",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (23.0 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "From 2009\u20132013, 83% of women diagnosed with HIV disease with a known transmission risk category acquired HIV through heterosexual contact. Men. Although men who ...",
+              "snippet": "From 2009\u20132013, 83% of women diagnosed with HIV disease with a known transmission risk category acquired HIV through heterosexual contact. Men. Although men who ..."
+            },
+            {
+              "title": "Advances in the prevention of heterosexual transmission of HIV ...",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3671603/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Among HIV-infected women in the United States, 72% were exposed through heterosexual contact. Here we will review factors associated with women's increased ...",
+              "snippet": "Among HIV-infected women in the United States, 72% were exposed through heterosexual contact. Here we will review factors associated with women's increased ..."
+            },
+            {
+              "title": "U.S. Statistics | HIV.gov",
+              "url": "https://www.hiv.gov/hiv-basics/overview/data-and-trends/statistics",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (11.3 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Among females, most HIV infectious were attributed to heterosexual contact (83%). By region, in 2022, the South accounted for approximately half (49%) of the ...",
+              "snippet": "Among females, most HIV infectious were attributed to heterosexual contact (83%). By region, in 2022, the South accounted for approximately half (49%) of the ..."
+            },
+            {
+              "title": "Fast Facts: HIV in the United States - CDC",
+              "url": "https://www.cdc.gov/hiv/data-research/facts-stats/index.html",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Women reporting heterosexual contact accounted for 15% (4,900) of estimated new HIV infections. View LargerDownload. An estimated 7,900 HIV ...",
+              "snippet": "Women reporting heterosexual contact accounted for 15% (4,900) of estimated new HIV infections. View LargerDownload. An estimated 7,900 HIV ..."
+            },
+            {
+              "title": "HIV Diagnoses, Deaths, and Prevalence: 2025 Update - CDC",
+              "url": "https://www.cdc.gov/hiv-data/nhss/hiv-diagnoses-deaths-and-prevalence-2025.html",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "In 2023, in the United States and 6 territories and freely associated states, 66% of HIV diagnoses were attributed to male-to-male sexual ...",
+              "snippet": "In 2023, in the United States and 6 territories and freely associated states, 66% of HIV diagnoses were attributed to male-to-male sexual ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 169.76,
+        "timestamp_confidence": 0.8652482269503546
+      }
+    ],
+    "transcript_data": {
+      "text": "It wasn't so long ago that AIDS was a guaranteed death sentence. And thanks to those confronting ads in the 80s, we all knew it. They weren't exactly subtle. In fact, they scared the hell out of us. But the shock tactics worked and the rate of HIV infection in Australia plummeted. We thought we had it under control that we were playing it safe. But guess what? The infection rate has shot up again. And surprisingly, it's now straight women who are among the most vulnerable. A stunning morning in Apollo Bay on Victoria's Great Ocean Road while many sleep in. Line up there, mate. A few of Australia's fittest are about to hit the sand and surf in a dayong sports festival. Yeah, I woke up feeling good this morning, alert. Um, and I've gone for a couple of little light jogs and the body's responding. So, um, yeah, should have a good good run this morning. Deanna Bleg is a true Iron woman. She's 41, but competes against athletes half her age. Making your way fast. There's no doubt Deanna is in amazing shape, and this is what she loves doing, racing and pushing her body to the limit. But what's not obvious is that she's living with a lifethreatening illness. and doctors once told her she had just months to live. You're super fit and you seem to be an absolute picture of health. Is that entirely the case? I am fit. I am healthy. However, I also carry the HIV virus. It was 16 years ago that Deanna contracted HIV from unprotected sex with a former boyfriend. It's a grim reality that Deanna lives with amid the challenges of daily life as a busy mom to 13-year-old Tier and a son who's just turned eight. Tell me about that moment when you found out. Nothing nothing can prepare you for the words the test result being positive. It took me a while to get my head around it cuz I felt very very ashamed. I just felt you idiot Diana. You know, how on earth do you let this this get into you? They don't know. They assume it's like Alarmingly, 1,000 Australians a year are now diagnosed with HIV, the deadly virus that can lead to AIDS. It's a disgusting disease in their eyes. That's almost double the rate of 10 years ago. Cuz I was infected from traveling overseas. And these women are proof the virus is no longer confined to a single group. I think for for all of us when we were first diagnosed that it shatters the the spirit and I think I guess all of us just felt so isolated so cut off. They're all women all HIV positive and like 98% of all new infection they contracted HIV through heterosexual sex. I mean HIV is something that has never crossed my mind until it happened. It was something that's never spoken about. That's something that's never put you as a heterosexual woman. Sarah is 24 years old and was diagnosed with HIV in 2008. So, what did you know in school about HIV? What were you taught about HIV? Nothing. You know, you you get told about pregnancy, you get told about other STI, but you know, when you're a young heterosexual couple, you're not thinking about HIV. It's like, you know, because that happens in Africa, not in Australia. Sarah always heeded the warnings. She wasn't an IV drug user and never took chances with casual sex. But like many people, once in a relationship, she believed she was safe. And because you were in this relationship, you didn't think there was a risk. No. You know, we're in a long-term relationship, so you know, we weren't practicing safe sex. Um, I went and got tested, came back positive and told him about it and yeah, he sort of thought that it was possibly him that had it first. How do you deal with medical advances mean HIV can now be managed with proper treatment, but it's a long hard road. Sarah faces a lifetime of powerful medication. Do you get mad? Yeah. Yeah. I think everyone that gets sick gets mad. you know, you don't want this to happen. And it's not just the virus Sarah must live with. It's also the prejudice, fear, and stigma that still surrounds HIV. The stigma is still enormous. It is. It is. I mean, how have you experienced that? I've had people tell me that I should just go die and that, you know, you serious? Yeah. just, you know, that, you know, that I'm disgusting and that, you know, I don't sort of deserve to be breathing the same air, you know, like, and that still happens today. And how do you handle that? Well, you got to let those people go. [Music] If such ignorance exists today, just imagine what it was like for Deanna back in the early ' 90s when she was diagnosed while on a backpacking tour around the world. When did you first know? What were the first signs? I had really huge fevers. Um, hot and cold, sweating massive like I just drenched my clothes. I knew something wasn't quite right. Over a period of about 6 weeks of time, I lost about 20 kilos of weight. Like I just dropped off 20 kilos. I just went to skin and bone in in no time. And um it just got to a stage. I went to the doctors. I said, \"Look, test me for everything.\" And that's when I also requested a HIV test. The news was bad. And within months, the virus had progressed to AIDS. Deiana was on a cocktail of toxic drugs, almost 30 pills a day that ravaged her body even more. At one point, she even considered giving up the fight. I remember discussing with with the counselor talk about euthanasia. Like I just thought, I don't want to die. I don't want to fade away. You explored that how to die. Yeah. Not that I I didn't want to kill myself, but at that time I didn't want my strong body to fade. Yeah. 30 years ago, if you were diagnosed with HIV, what was your fate? Uh 30 years ago, HIV was universally a death sentence and a pretty awful one at that. So this is where um Professor Sharon Leuen is Australia's leading HIV expert. She coordinates three research teams at Melbourne's Alfred Hospital, MES University, and the Bernett Viology Center. People with HIV are leading really, really improved, almost normal lives. They still have to take tablets every day and there's still side effects from the tablets. Last year, Sharon and her teams made a breakthrough. They found where HIV cells hide in the body. It was a needle in a haystack discovery. It's a really really clever virus on a whole lot of levels. Not only in its capacity to change all the time and evade the immune system and evade drugs, but this capacity to go to sleep in some cells and hide in these small pockets of the body. I'm just going to show you some of the cells. The discovery means better treatment, but now people with HIV are living far longer. The drugs themselves are creating a whole new raft of health issues. So we see a lot of heart disease for example, diabetes, lipid problems. Is the virus changing or is that a result of the medicine? It's the result of people um living longer with the virus. Deanna Bleg has lived 11 years longer than doctors predicted, but remarkable success stories like hers have created new problems. There's now a widely held perception that the battle against HIV has been won. One of the the fallouts from having such improved prognosis is that people aren't as scared of HIV as they were before. That's a dangerous complacency. It's still not a walk in the park. People have to be in regular medical care on treatment lifelong and there still are ongoing toxicities and complications from the treatment. And we've all had those darks, right? picked each other up. And a number of support groups now operate specifically for heterosexual women. Meeting other women, it was like, oh, you oh, you've got it, too. And oh, really here they can open up about their health, their problems, and their men. Relationships. I mean, they do work the long-term ones, but it's like getting to that point. It's Do you find it difficult having relationships now? Yeah. Yeah. because it is it's that whole negotiating, you know, like when to tell a partner, um, stuff like that. And yeah, I mean, that's just an absolute minefield that will take a while to learn how to negotiate through, I guess. Have you been able to get into a relationship? I've had short-term relationships, but again, then it's just my fear of infecting them, so it's generally me that sort of backs away. Many more personal challenges lie ahead for Sarah. Perhaps the biggest for HIV positive women is motherhood. To have her two children, Deanna knew there was a very slim chance the virus could be passed on. How do you conceive without, you know, putting your partner at risk? Uh, fortunately, um, we had a few options to work with and we decided to go natural. Um, two consenting adults aware of our, um, risks. Um, we spoke with our doctor and um, we conceived first go. So that was when low exposure, but and your partner wasn't infected. That's right. He was not infected. Oh, thanks, sweetie. And happily, neither were Tia and her brother. And from the start, Deanna's been open with them about her condition. How proud are you of mom? Um, really bad. She's my mom. I love her. Doesn't really matter. And the gold medalist Diana Blle. Diana once thought she had just months to live. Now the finish line is a long way off. I have also learned through life that you can never predict your future. Um but I believe all being well that I will live a long life and I will see my daughter reach well above 21. And you weren't meant to live to 30. That's right. Yeah. And 41 now. and feel amazing and just I celebrate each year. I just don't you know 40 fantastic bring on 50. But Sarah's just starting her life with HIV and at times it's a lonely confusing journey. I feel like it's branded across me but you know I know that I don't look like I've got HIV but who does look like they have they have HIV? If you had one message for young women about HIV, what would it be? HIV exists. It's real and it can happen to anyone. Just to be aware and be safe and smart cuz it could happen to you. So, hello, I'm Amelia Adams. Thanks for watching 60 Minutes Australia. Subscribe to our channel now for brand new stories and exclusive clips every week. And don't miss out on our extra minute segments and full episodes of 60 Minutes on 9now.com.au",
+      "segments": [
+        {
+          "text": "It wasn't so long ago that AIDS was a",
+          "start": 0.32,
+          "duration": 4.88
+        },
+        {
+          "text": "guaranteed death sentence. And thanks to",
+          "start": 2.879,
+          "duration": 4.801
+        },
+        {
+          "text": "those confronting ads in the 80s, we all",
+          "start": 5.2,
+          "duration": 4.8
+        },
+        {
+          "text": "knew it. They weren't exactly subtle. In",
+          "start": 7.68,
+          "duration": 4.64
+        },
+        {
+          "text": "fact, they scared the hell out of us.",
+          "start": 10.0,
+          "duration": 4.24
+        },
+        {
+          "text": "But the shock tactics worked and the",
+          "start": 12.32,
+          "duration": 4.6
+        },
+        {
+          "text": "rate of HIV infection in Australia",
+          "start": 14.24,
+          "duration": 4.879
+        },
+        {
+          "text": "plummeted. We thought we had it under",
+          "start": 16.92,
+          "duration": 4.84
+        },
+        {
+          "text": "control that we were playing it safe.",
+          "start": 19.119,
+          "duration": 5.281
+        },
+        {
+          "text": "But guess what? The infection rate has",
+          "start": 21.76,
+          "duration": 4.96
+        },
+        {
+          "text": "shot up again. And surprisingly, it's",
+          "start": 24.4,
+          "duration": 4.719
+        },
+        {
+          "text": "now straight women who are among the",
+          "start": 26.72,
+          "duration": 4.639
+        },
+        {
+          "text": "most",
+          "start": 29.119,
+          "duration": 2.24
+        },
+        {
+          "text": "vulnerable. A stunning morning in Apollo",
+          "start": 35.239,
+          "duration": 7.48
+        },
+        {
+          "text": "Bay on Victoria's Great Ocean Road",
+          "start": 38.079,
+          "duration": 6.881
+        },
+        {
+          "text": "while many sleep in. Line up there,",
+          "start": 42.719,
+          "duration": 4.801
+        },
+        {
+          "text": "mate. A few of Australia's fittest are",
+          "start": 44.96,
+          "duration": 4.72
+        },
+        {
+          "text": "about to hit the sand and surf in a",
+          "start": 47.52,
+          "duration": 4.32
+        },
+        {
+          "text": "dayong sports festival. Yeah, I woke up",
+          "start": 49.68,
+          "duration": 3.92
+        },
+        {
+          "text": "feeling good this morning, alert. Um,",
+          "start": 51.84,
+          "duration": 3.039
+        },
+        {
+          "text": "and I've gone for a couple of little",
+          "start": 53.6,
+          "duration": 2.88
+        },
+        {
+          "text": "light jogs and the body's responding.",
+          "start": 54.879,
+          "duration": 3.52
+        },
+        {
+          "text": "So, um, yeah, should have a good good",
+          "start": 56.48,
+          "duration": 5.36
+        },
+        {
+          "text": "run this morning. Deanna Bleg is a true",
+          "start": 58.399,
+          "duration": 6.84
+        },
+        {
+          "text": "Iron woman.",
+          "start": 61.84,
+          "duration": 3.399
+        },
+        {
+          "text": "She's 41, but competes against athletes",
+          "start": 65.6,
+          "duration": 5.92
+        },
+        {
+          "text": "half her age. Making your way fast.",
+          "start": 68.64,
+          "duration": 5.04
+        },
+        {
+          "text": "There's no doubt Deanna is in amazing",
+          "start": 71.52,
+          "duration": 4.0
+        },
+        {
+          "text": "shape, and this is what she loves doing,",
+          "start": 73.68,
+          "duration": 3.52
+        },
+        {
+          "text": "racing and pushing her body to the",
+          "start": 75.52,
+          "duration": 4.239
+        },
+        {
+          "text": "limit. But what's not obvious is that",
+          "start": 77.2,
+          "duration": 4.64
+        },
+        {
+          "text": "she's living with a lifethreatening",
+          "start": 79.759,
+          "duration": 4.4
+        },
+        {
+          "text": "illness. and doctors once told her she",
+          "start": 81.84,
+          "duration": 6.279
+        },
+        {
+          "text": "had just months to live.",
+          "start": 84.159,
+          "duration": 3.96
+        },
+        {
+          "text": "You're super fit and you seem to be an",
+          "start": 88.24,
+          "duration": 4.4
+        },
+        {
+          "text": "absolute picture of health. Is that",
+          "start": 90.64,
+          "duration": 4.24
+        },
+        {
+          "text": "entirely the case? I am fit. I am",
+          "start": 92.64,
+          "duration": 4.479
+        },
+        {
+          "text": "healthy. However, I also carry the HIV",
+          "start": 94.88,
+          "duration": 5.239
+        },
+        {
+          "text": "virus.",
+          "start": 97.119,
+          "duration": 3.0
+        },
+        {
+          "text": "It was 16 years ago that Deanna",
+          "start": 100.4,
+          "duration": 5.759
+        },
+        {
+          "text": "contracted HIV from unprotected sex with",
+          "start": 102.799,
+          "duration": 5.521
+        },
+        {
+          "text": "a former boyfriend.",
+          "start": 106.159,
+          "duration": 4.401
+        },
+        {
+          "text": "It's a grim reality that Deanna lives",
+          "start": 108.32,
+          "duration": 5.28
+        },
+        {
+          "text": "with amid the challenges of daily life",
+          "start": 110.56,
+          "duration": 6.199
+        },
+        {
+          "text": "as a busy mom to 13-year-old",
+          "start": 113.6,
+          "duration": 7.519
+        },
+        {
+          "text": "Tier and a son who's just turned eight.",
+          "start": 116.759,
+          "duration": 6.201
+        },
+        {
+          "text": "Tell me about that moment when you found",
+          "start": 121.119,
+          "duration": 4.481
+        },
+        {
+          "text": "out. Nothing nothing can prepare you for",
+          "start": 122.96,
+          "duration": 4.519
+        },
+        {
+          "text": "the words the test result being",
+          "start": 125.6,
+          "duration": 4.079
+        },
+        {
+          "text": "positive. It took me a while to get my",
+          "start": 127.479,
+          "duration": 4.281
+        },
+        {
+          "text": "head around it cuz I felt very very",
+          "start": 129.679,
+          "duration": 4.401
+        },
+        {
+          "text": "ashamed. I just felt you idiot Diana.",
+          "start": 131.76,
+          "duration": 4.24
+        },
+        {
+          "text": "You know, how on earth do you let this",
+          "start": 134.08,
+          "duration": 4.799
+        },
+        {
+          "text": "this get into you?",
+          "start": 136.0,
+          "duration": 5.28
+        },
+        {
+          "text": "They don't know. They assume it's like",
+          "start": 138.879,
+          "duration": 5.841
+        },
+        {
+          "text": "Alarmingly, 1,000 Australians a year are",
+          "start": 141.28,
+          "duration": 6.48
+        },
+        {
+          "text": "now diagnosed with HIV, the deadly virus",
+          "start": 144.72,
+          "duration": 5.36
+        },
+        {
+          "text": "that can lead to AIDS. It's a disgusting",
+          "start": 147.76,
+          "duration": 4.16
+        },
+        {
+          "text": "disease in their eyes. That's almost",
+          "start": 150.08,
+          "duration": 3.92
+        },
+        {
+          "text": "double the rate of 10 years ago. Cuz I",
+          "start": 151.92,
+          "duration": 4.48
+        },
+        {
+          "text": "was infected from traveling overseas.",
+          "start": 154.0,
+          "duration": 5.12
+        },
+        {
+          "text": "And these women are proof the virus is",
+          "start": 156.4,
+          "duration": 5.04
+        },
+        {
+          "text": "no longer confined to a single group. I",
+          "start": 159.12,
+          "duration": 4.16
+        },
+        {
+          "text": "think for for all of us when we were",
+          "start": 161.44,
+          "duration": 4.879
+        },
+        {
+          "text": "first diagnosed that it shatters the the",
+          "start": 163.28,
+          "duration": 6.48
+        },
+        {
+          "text": "spirit and I think I guess all of us",
+          "start": 166.319,
+          "duration": 8.161
+        },
+        {
+          "text": "just felt so isolated so cut off.",
+          "start": 169.76,
+          "duration": 8.0
+        },
+        {
+          "text": "They're all women all HIV positive and",
+          "start": 174.48,
+          "duration": 6.16
+        },
+        {
+          "text": "like 98% of all new infection they",
+          "start": 177.76,
+          "duration": 6.64
+        },
+        {
+          "text": "contracted HIV through heterosexual sex.",
+          "start": 180.64,
+          "duration": 5.92
+        },
+        {
+          "text": "I mean HIV is something that has never",
+          "start": 184.4,
+          "duration": 4.4
+        },
+        {
+          "text": "crossed my mind until it happened. It",
+          "start": 186.56,
+          "duration": 3.759
+        },
+        {
+          "text": "was something that's never spoken about.",
+          "start": 188.8,
+          "duration": 3.439
+        },
+        {
+          "text": "That's something that's never put you as",
+          "start": 190.319,
+          "duration": 4.721
+        },
+        {
+          "text": "a heterosexual woman.",
+          "start": 192.239,
+          "duration": 6.161
+        },
+        {
+          "text": "Sarah is 24 years old and was diagnosed",
+          "start": 195.04,
+          "duration": 6.8
+        },
+        {
+          "text": "with HIV in 2008.",
+          "start": 198.4,
+          "duration": 5.759
+        },
+        {
+          "text": "So, what did you know in school about",
+          "start": 201.84,
+          "duration": 4.84
+        },
+        {
+          "text": "HIV? What were you taught about HIV?",
+          "start": 204.159,
+          "duration": 4.72
+        },
+        {
+          "text": "Nothing. You know, you you get told",
+          "start": 206.68,
+          "duration": 3.72
+        },
+        {
+          "text": "about pregnancy, you get told about",
+          "start": 208.879,
+          "duration": 3.44
+        },
+        {
+          "text": "other STI, but you know, when you're a",
+          "start": 210.4,
+          "duration": 3.6
+        },
+        {
+          "text": "young heterosexual couple, you're not",
+          "start": 212.319,
+          "duration": 4.48
+        },
+        {
+          "text": "thinking about HIV. It's like, you know,",
+          "start": 214.0,
+          "duration": 4.879
+        },
+        {
+          "text": "because that happens in Africa, not in",
+          "start": 216.799,
+          "duration": 4.401
+        },
+        {
+          "text": "Australia.",
+          "start": 218.879,
+          "duration": 4.801
+        },
+        {
+          "text": "Sarah always heeded the warnings. She",
+          "start": 221.2,
+          "duration": 4.8
+        },
+        {
+          "text": "wasn't an IV drug user and never took",
+          "start": 223.68,
+          "duration": 5.04
+        },
+        {
+          "text": "chances with casual sex. But like many",
+          "start": 226.0,
+          "duration": 5.36
+        },
+        {
+          "text": "people, once in a relationship, she",
+          "start": 228.72,
+          "duration": 5.519
+        },
+        {
+          "text": "believed she was safe. And because you",
+          "start": 231.36,
+          "duration": 4.159
+        },
+        {
+          "text": "were in this relationship, you didn't",
+          "start": 234.239,
+          "duration": 2.961
+        },
+        {
+          "text": "think there was a risk. No. You know,",
+          "start": 235.519,
+          "duration": 3.521
+        },
+        {
+          "text": "we're in a long-term relationship, so",
+          "start": 237.2,
+          "duration": 3.52
+        },
+        {
+          "text": "you know, we weren't practicing safe",
+          "start": 239.04,
+          "duration": 4.72
+        },
+        {
+          "text": "sex. Um, I went and got tested, came",
+          "start": 240.72,
+          "duration": 3.799
+        },
+        {
+          "text": "back",
+          "start": 243.76,
+          "duration": 4.8
+        },
+        {
+          "text": "positive and told him about it and yeah,",
+          "start": 244.519,
+          "duration": 6.681
+        },
+        {
+          "text": "he sort of thought that it was possibly",
+          "start": 248.56,
+          "duration": 4.8
+        },
+        {
+          "text": "him that had it first. How do you deal",
+          "start": 251.2,
+          "duration": 5.2
+        },
+        {
+          "text": "with medical advances mean HIV can now",
+          "start": 253.36,
+          "duration": 5.36
+        },
+        {
+          "text": "be managed with proper treatment, but",
+          "start": 256.4,
+          "duration": 6.079
+        },
+        {
+          "text": "it's a long hard road. Sarah faces a",
+          "start": 258.72,
+          "duration": 6.479
+        },
+        {
+          "text": "lifetime of powerful medication. Do you",
+          "start": 262.479,
+          "duration": 5.921
+        },
+        {
+          "text": "get mad? Yeah. Yeah. I think everyone",
+          "start": 265.199,
+          "duration": 5.201
+        },
+        {
+          "text": "that gets sick gets mad. you know, you",
+          "start": 268.4,
+          "duration": 4.48
+        },
+        {
+          "text": "don't want this to happen. And it's not",
+          "start": 270.4,
+          "duration": 4.88
+        },
+        {
+          "text": "just the virus Sarah must live with.",
+          "start": 272.88,
+          "duration": 5.28
+        },
+        {
+          "text": "It's also the prejudice, fear, and",
+          "start": 275.28,
+          "duration": 6.56
+        },
+        {
+          "text": "stigma that still surrounds HIV. The",
+          "start": 278.16,
+          "duration": 6.4
+        },
+        {
+          "text": "stigma is still enormous. It is. It is.",
+          "start": 281.84,
+          "duration": 4.88
+        },
+        {
+          "text": "I mean, how have you experienced that?",
+          "start": 284.56,
+          "duration": 3.76
+        },
+        {
+          "text": "I've had people tell me that I should",
+          "start": 286.72,
+          "duration": 3.919
+        },
+        {
+          "text": "just go die and that, you know, you",
+          "start": 288.32,
+          "duration": 4.08
+        },
+        {
+          "text": "serious? Yeah. just, you know, that, you",
+          "start": 290.639,
+          "duration": 3.681
+        },
+        {
+          "text": "know, that I'm disgusting and that, you",
+          "start": 292.4,
+          "duration": 4.32
+        },
+        {
+          "text": "know, I don't sort of deserve to be",
+          "start": 294.32,
+          "duration": 3.92
+        },
+        {
+          "text": "breathing the same air, you know, like,",
+          "start": 296.72,
+          "duration": 4.4
+        },
+        {
+          "text": "and that still happens today. And how do",
+          "start": 298.24,
+          "duration": 5.6
+        },
+        {
+          "text": "you handle that?",
+          "start": 301.12,
+          "duration": 5.6
+        },
+        {
+          "text": "Well, you got to let those people go.",
+          "start": 303.84,
+          "duration": 4.639
+        },
+        {
+          "text": "[Music]",
+          "start": 306.72,
+          "duration": 4.08
+        },
+        {
+          "text": "If such ignorance exists today, just",
+          "start": 308.479,
+          "duration": 4.481
+        },
+        {
+          "text": "imagine what it was like for Deanna back",
+          "start": 310.8,
+          "duration": 4.48
+        },
+        {
+          "text": "in the early ' 90s when she was",
+          "start": 312.96,
+          "duration": 4.799
+        },
+        {
+          "text": "diagnosed while on a backpacking tour",
+          "start": 315.28,
+          "duration": 4.8
+        },
+        {
+          "text": "around the world. When did you first",
+          "start": 317.759,
+          "duration": 5.521
+        },
+        {
+          "text": "know? What were the first signs? I had",
+          "start": 320.08,
+          "duration": 5.679
+        },
+        {
+          "text": "really huge fevers. Um, hot and cold,",
+          "start": 323.28,
+          "duration": 4.16
+        },
+        {
+          "text": "sweating massive like I just drenched my",
+          "start": 325.759,
+          "duration": 3.681
+        },
+        {
+          "text": "clothes. I knew something wasn't quite",
+          "start": 327.44,
+          "duration": 3.92
+        },
+        {
+          "text": "right. Over a period of about 6 weeks of",
+          "start": 329.44,
+          "duration": 3.92
+        },
+        {
+          "text": "time, I lost about 20 kilos of weight.",
+          "start": 331.36,
+          "duration": 4.8
+        },
+        {
+          "text": "Like I just dropped off 20 kilos. I just",
+          "start": 333.36,
+          "duration": 5.2
+        },
+        {
+          "text": "went to skin and bone in in no time. And",
+          "start": 336.16,
+          "duration": 4.319
+        },
+        {
+          "text": "um it just got to a stage. I went to the",
+          "start": 338.56,
+          "duration": 3.68
+        },
+        {
+          "text": "doctors. I said, \"Look, test me for",
+          "start": 340.479,
+          "duration": 3.44
+        },
+        {
+          "text": "everything.\" And that's when I also",
+          "start": 342.24,
+          "duration": 4.239
+        },
+        {
+          "text": "requested a HIV test.",
+          "start": 343.919,
+          "duration": 5.521
+        },
+        {
+          "text": "The news was bad. And within months, the",
+          "start": 346.479,
+          "duration": 6.16
+        },
+        {
+          "text": "virus had progressed to AIDS. Deiana was",
+          "start": 349.44,
+          "duration": 6.0
+        },
+        {
+          "text": "on a cocktail of toxic drugs, almost 30",
+          "start": 352.639,
+          "duration": 5.521
+        },
+        {
+          "text": "pills a day that ravaged her body even",
+          "start": 355.44,
+          "duration": 6.08
+        },
+        {
+          "text": "more. At one point, she even considered",
+          "start": 358.16,
+          "duration": 5.52
+        },
+        {
+          "text": "giving up the fight. I remember",
+          "start": 361.52,
+          "duration": 5.04
+        },
+        {
+          "text": "discussing with with the counselor talk",
+          "start": 363.68,
+          "duration": 4.799
+        },
+        {
+          "text": "about euthanasia. Like I just thought, I",
+          "start": 366.56,
+          "duration": 3.68
+        },
+        {
+          "text": "don't want to die. I don't want to fade",
+          "start": 368.479,
+          "duration": 5.121
+        },
+        {
+          "text": "away. You explored that how to die.",
+          "start": 370.24,
+          "duration": 5.28
+        },
+        {
+          "text": "Yeah. Not that I I didn't want to kill",
+          "start": 373.6,
+          "duration": 4.24
+        },
+        {
+          "text": "myself, but at that time I didn't want",
+          "start": 375.52,
+          "duration": 5.679
+        },
+        {
+          "text": "my strong body to fade. Yeah. 30 years",
+          "start": 377.84,
+          "duration": 5.44
+        },
+        {
+          "text": "ago, if you were diagnosed with HIV,",
+          "start": 381.199,
+          "duration": 6.321
+        },
+        {
+          "text": "what was your fate? Uh 30 years ago, HIV",
+          "start": 383.28,
+          "duration": 6.88
+        },
+        {
+          "text": "was universally a death sentence and a",
+          "start": 387.52,
+          "duration": 5.04
+        },
+        {
+          "text": "pretty awful one at that. So this is",
+          "start": 390.16,
+          "duration": 4.479
+        },
+        {
+          "text": "where um Professor Sharon Leuen is",
+          "start": 392.56,
+          "duration": 4.8
+        },
+        {
+          "text": "Australia's leading HIV expert. She",
+          "start": 394.639,
+          "duration": 4.881
+        },
+        {
+          "text": "coordinates three research teams at",
+          "start": 397.36,
+          "duration": 4.32
+        },
+        {
+          "text": "Melbourne's Alfred Hospital, MES",
+          "start": 399.52,
+          "duration": 4.48
+        },
+        {
+          "text": "University, and the Bernett Viology",
+          "start": 401.68,
+          "duration": 5.2
+        },
+        {
+          "text": "Center. People with HIV are leading",
+          "start": 404.0,
+          "duration": 5.6
+        },
+        {
+          "text": "really, really improved, almost normal",
+          "start": 406.88,
+          "duration": 4.72
+        },
+        {
+          "text": "lives. They still have to take tablets",
+          "start": 409.6,
+          "duration": 3.52
+        },
+        {
+          "text": "every day and there's still side effects",
+          "start": 411.6,
+          "duration": 3.439
+        },
+        {
+          "text": "from the tablets.",
+          "start": 413.12,
+          "duration": 4.4
+        },
+        {
+          "text": "Last year, Sharon and her teams made a",
+          "start": 415.039,
+          "duration": 5.761
+        },
+        {
+          "text": "breakthrough. They found where HIV cells",
+          "start": 417.52,
+          "duration": 6.16
+        },
+        {
+          "text": "hide in the body. It was a needle in a",
+          "start": 420.8,
+          "duration": 4.799
+        },
+        {
+          "text": "haystack discovery.",
+          "start": 423.68,
+          "duration": 4.4
+        },
+        {
+          "text": "It's a really really clever virus on a",
+          "start": 425.599,
+          "duration": 4.32
+        },
+        {
+          "text": "whole lot of levels. Not only in its",
+          "start": 428.08,
+          "duration": 4.16
+        },
+        {
+          "text": "capacity to change all the time and",
+          "start": 429.919,
+          "duration": 4.641
+        },
+        {
+          "text": "evade the immune system and evade drugs,",
+          "start": 432.24,
+          "duration": 5.44
+        },
+        {
+          "text": "but this capacity to go to sleep in some",
+          "start": 434.56,
+          "duration": 6.079
+        },
+        {
+          "text": "cells and hide in these small pockets of",
+          "start": 437.68,
+          "duration": 4.4
+        },
+        {
+          "text": "the body. I'm just going to show you",
+          "start": 440.639,
+          "duration": 3.68
+        },
+        {
+          "text": "some of the cells. The discovery means",
+          "start": 442.08,
+          "duration": 4.32
+        },
+        {
+          "text": "better treatment, but now people with",
+          "start": 444.319,
+          "duration": 5.041
+        },
+        {
+          "text": "HIV are living far longer. The drugs",
+          "start": 446.4,
+          "duration": 5.519
+        },
+        {
+          "text": "themselves are creating a whole new raft",
+          "start": 449.36,
+          "duration": 4.64
+        },
+        {
+          "text": "of health issues. So we see a lot of",
+          "start": 451.919,
+          "duration": 5.361
+        },
+        {
+          "text": "heart disease for example, diabetes,",
+          "start": 454.0,
+          "duration": 5.84
+        },
+        {
+          "text": "lipid problems. Is the virus changing or",
+          "start": 457.28,
+          "duration": 4.72
+        },
+        {
+          "text": "is that a result of the medicine? It's",
+          "start": 459.84,
+          "duration": 5.44
+        },
+        {
+          "text": "the result of people um living longer",
+          "start": 462.0,
+          "duration": 5.68
+        },
+        {
+          "text": "with the virus.",
+          "start": 465.28,
+          "duration": 4.88
+        },
+        {
+          "text": "Deanna Bleg has lived 11 years longer",
+          "start": 467.68,
+          "duration": 4.88
+        },
+        {
+          "text": "than doctors predicted, but remarkable",
+          "start": 470.16,
+          "duration": 4.879
+        },
+        {
+          "text": "success stories like hers have created",
+          "start": 472.56,
+          "duration": 4.8
+        },
+        {
+          "text": "new problems.",
+          "start": 475.039,
+          "duration": 4.481
+        },
+        {
+          "text": "There's now a widely held perception",
+          "start": 477.36,
+          "duration": 4.88
+        },
+        {
+          "text": "that the battle against HIV has been",
+          "start": 479.52,
+          "duration": 4.399
+        },
+        {
+          "text": "won.",
+          "start": 482.24,
+          "duration": 4.959
+        },
+        {
+          "text": "One of the the fallouts from having such",
+          "start": 483.919,
+          "duration": 5.12
+        },
+        {
+          "text": "improved prognosis is that people aren't",
+          "start": 487.199,
+          "duration": 4.241
+        },
+        {
+          "text": "as scared of HIV as they were before.",
+          "start": 489.039,
+          "duration": 4.321
+        },
+        {
+          "text": "That's a dangerous complacency. It's",
+          "start": 491.44,
+          "duration": 3.52
+        },
+        {
+          "text": "still not a walk in the park. People",
+          "start": 493.36,
+          "duration": 4.32
+        },
+        {
+          "text": "have to be in regular medical care on",
+          "start": 494.96,
+          "duration": 4.639
+        },
+        {
+          "text": "treatment lifelong and there still are",
+          "start": 497.68,
+          "duration": 4.32
+        },
+        {
+          "text": "ongoing toxicities and complications",
+          "start": 499.599,
+          "duration": 4.0
+        },
+        {
+          "text": "from the treatment. And we've all had",
+          "start": 502.0,
+          "duration": 4.16
+        },
+        {
+          "text": "those darks, right? picked each other",
+          "start": 503.599,
+          "duration": 4.801
+        },
+        {
+          "text": "up. And a number of support groups now",
+          "start": 506.16,
+          "duration": 4.719
+        },
+        {
+          "text": "operate specifically for heterosexual",
+          "start": 508.4,
+          "duration": 4.559
+        },
+        {
+          "text": "women. Meeting other women, it was like,",
+          "start": 510.879,
+          "duration": 4.481
+        },
+        {
+          "text": "oh, you oh, you've got it, too. And oh,",
+          "start": 512.959,
+          "duration": 5.2
+        },
+        {
+          "text": "really here they can open up about their",
+          "start": 515.36,
+          "duration": 5.679
+        },
+        {
+          "text": "health, their problems, and their men.",
+          "start": 518.159,
+          "duration": 4.481
+        },
+        {
+          "text": "Relationships. I mean, they do work the",
+          "start": 521.039,
+          "duration": 3.201
+        },
+        {
+          "text": "long-term ones, but it's like getting to",
+          "start": 522.64,
+          "duration": 3.199
+        },
+        {
+          "text": "that point. It's Do you find it",
+          "start": 524.24,
+          "duration": 3.599
+        },
+        {
+          "text": "difficult having relationships now?",
+          "start": 525.839,
+          "duration": 4.641
+        },
+        {
+          "text": "Yeah. Yeah. because it is it's that",
+          "start": 527.839,
+          "duration": 5.201
+        },
+        {
+          "text": "whole negotiating, you know, like when",
+          "start": 530.48,
+          "duration": 5.6
+        },
+        {
+          "text": "to tell a partner, um, stuff like that.",
+          "start": 533.04,
+          "duration": 4.64
+        },
+        {
+          "text": "And yeah, I mean, that's just an",
+          "start": 536.08,
+          "duration": 3.36
+        },
+        {
+          "text": "absolute minefield that will take a",
+          "start": 537.68,
+          "duration": 4.48
+        },
+        {
+          "text": "while to learn how to negotiate through,",
+          "start": 539.44,
+          "duration": 5.68
+        },
+        {
+          "text": "I guess. Have you been able to get into",
+          "start": 542.16,
+          "duration": 4.72
+        },
+        {
+          "text": "a relationship? I've had short-term",
+          "start": 545.12,
+          "duration": 4.719
+        },
+        {
+          "text": "relationships, but again, then it's just",
+          "start": 546.88,
+          "duration": 5.12
+        },
+        {
+          "text": "my fear of infecting them, so it's",
+          "start": 549.839,
+          "duration": 5.201
+        },
+        {
+          "text": "generally me that sort of backs away.",
+          "start": 552.0,
+          "duration": 5.2
+        },
+        {
+          "text": "Many more personal challenges lie ahead",
+          "start": 555.04,
+          "duration": 5.12
+        },
+        {
+          "text": "for Sarah. Perhaps the biggest for HIV",
+          "start": 557.2,
+          "duration": 5.92
+        },
+        {
+          "text": "positive women is motherhood. To have",
+          "start": 560.16,
+          "duration": 5.359
+        },
+        {
+          "text": "her two children, Deanna knew there was",
+          "start": 563.12,
+          "duration": 4.8
+        },
+        {
+          "text": "a very slim chance the virus could be",
+          "start": 565.519,
+          "duration": 6.401
+        },
+        {
+          "text": "passed on. How do you conceive without,",
+          "start": 567.92,
+          "duration": 6.479
+        },
+        {
+          "text": "you know, putting your partner at risk?",
+          "start": 571.92,
+          "duration": 4.88
+        },
+        {
+          "text": "Uh, fortunately, um, we had a few",
+          "start": 574.399,
+          "duration": 5.921
+        },
+        {
+          "text": "options to work with and we decided to",
+          "start": 576.8,
+          "duration": 6.0
+        },
+        {
+          "text": "go natural. Um, two consenting adults",
+          "start": 580.32,
+          "duration": 4.8
+        },
+        {
+          "text": "aware of our, um, risks. Um, we spoke",
+          "start": 582.8,
+          "duration": 5.44
+        },
+        {
+          "text": "with our doctor and um, we conceived",
+          "start": 585.12,
+          "duration": 6.48
+        },
+        {
+          "text": "first go. So that was when low exposure,",
+          "start": 588.24,
+          "duration": 6.32
+        },
+        {
+          "text": "but and your partner wasn't infected.",
+          "start": 591.6,
+          "duration": 5.12
+        },
+        {
+          "text": "That's right. He was not infected. Oh,",
+          "start": 594.56,
+          "duration": 4.64
+        },
+        {
+          "text": "thanks, sweetie. And happily, neither",
+          "start": 596.72,
+          "duration": 5.04
+        },
+        {
+          "text": "were Tia and her brother. And from the",
+          "start": 599.2,
+          "duration": 4.88
+        },
+        {
+          "text": "start, Deanna's been open with them",
+          "start": 601.76,
+          "duration": 4.32
+        },
+        {
+          "text": "about her condition. How proud are you",
+          "start": 604.08,
+          "duration": 6.12
+        },
+        {
+          "text": "of mom? Um, really bad. She's my",
+          "start": 606.08,
+          "duration": 9.84
+        },
+        {
+          "text": "mom. I love her. Doesn't really matter.",
+          "start": 610.2,
+          "duration": 5.72
+        },
+        {
+          "text": "And the gold medalist Diana Blle. Diana",
+          "start": 616.56,
+          "duration": 4.719
+        },
+        {
+          "text": "once thought she had just months to",
+          "start": 619.519,
+          "duration": 4.481
+        },
+        {
+          "text": "live. Now the finish line is a long way",
+          "start": 621.279,
+          "duration": 5.24
+        },
+        {
+          "text": "off. I have also learned through life",
+          "start": 624.0,
+          "duration": 6.079
+        },
+        {
+          "text": "that you can never predict your future.",
+          "start": 626.519,
+          "duration": 5.961
+        },
+        {
+          "text": "Um but I believe all being well that I",
+          "start": 630.079,
+          "duration": 5.041
+        },
+        {
+          "text": "will live a long life and I will see my",
+          "start": 632.48,
+          "duration": 5.12
+        },
+        {
+          "text": "daughter reach well above 21. And you",
+          "start": 635.12,
+          "duration": 4.24
+        },
+        {
+          "text": "weren't meant to live to 30. That's",
+          "start": 637.6,
+          "duration": 4.56
+        },
+        {
+          "text": "right. Yeah. And 41 now. and feel",
+          "start": 639.36,
+          "duration": 5.84
+        },
+        {
+          "text": "amazing and just I celebrate each year.",
+          "start": 642.16,
+          "duration": 6.0
+        },
+        {
+          "text": "I just don't you know 40 fantastic bring",
+          "start": 645.2,
+          "duration": 5.24
+        },
+        {
+          "text": "on",
+          "start": 648.16,
+          "duration": 5.44
+        },
+        {
+          "text": "50. But Sarah's just starting her life",
+          "start": 650.44,
+          "duration": 7.32
+        },
+        {
+          "text": "with HIV and at times it's a lonely",
+          "start": 653.6,
+          "duration": 6.72
+        },
+        {
+          "text": "confusing journey. I feel like it's",
+          "start": 657.76,
+          "duration": 4.56
+        },
+        {
+          "text": "branded across me but you know I know",
+          "start": 660.32,
+          "duration": 4.16
+        },
+        {
+          "text": "that I don't look like I've got HIV but",
+          "start": 662.32,
+          "duration": 3.759
+        },
+        {
+          "text": "who does look like they have they have",
+          "start": 664.48,
+          "duration": 3.68
+        },
+        {
+          "text": "HIV?",
+          "start": 666.079,
+          "duration": 5.44
+        },
+        {
+          "text": "If you had one message for young women",
+          "start": 668.16,
+          "duration": 7.6
+        },
+        {
+          "text": "about HIV, what would it be? HIV exists.",
+          "start": 671.519,
+          "duration": 7.201
+        },
+        {
+          "text": "It's real and it can happen to anyone.",
+          "start": 675.76,
+          "duration": 5.6
+        },
+        {
+          "text": "Just to be aware and be safe and smart",
+          "start": 678.72,
+          "duration": 6.32
+        },
+        {
+          "text": "cuz it could happen to you.",
+          "start": 681.36,
+          "duration": 3.68
+        },
+        {
+          "text": "So, hello, I'm Amelia Adams. Thanks for",
+          "start": 685.399,
+          "duration": 6.201
+        },
+        {
+          "text": "watching 60 Minutes Australia. Subscribe",
+          "start": 688.64,
+          "duration": 5.52
+        },
+        {
+          "text": "to our channel now for brand new stories",
+          "start": 691.6,
+          "duration": 5.679
+        },
+        {
+          "text": "and exclusive clips every week. And",
+          "start": 694.16,
+          "duration": 4.96
+        },
+        {
+          "text": "don't miss out on our extra minute",
+          "start": 697.279,
+          "duration": 4.481
+        },
+        {
+          "text": "segments and full episodes of 60 Minutes",
+          "start": 699.12,
+          "duration": 6.04
+        },
+        {
+          "text": "on 9now.com.au",
+          "start": 701.76,
+          "duration": 3.4
+        }
+      ],
+      "video_id": "cWsWg9RcgzE"
+    }
+  }
+}

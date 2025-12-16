@@ -1,0 +1,136 @@
+{
+  "video_id": "OwqIy8Ikv-c",
+  "timestamp": "2025-12-14T11:04:45.230285",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_15",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.4666666666666667,
+    "recall": 0.5,
+    "f1_score": 0.4827586206896552,
+    "true_positives": 7,
+    "false_positives": 8,
+    "false_negatives": 7,
+    "mean_average_precision": 0.7545918367346939,
+    "recall_at_important": 0.75,
+    "importance_weighted_coverage": 0.5987654320987654,
+    "matched_claims": [
+      {
+        "gt_text": "The IPCC acknowledged in its own 2007 report that 'The long-term prediction of future climate states is not possible'",
+        "sys_text": "The IPCC acknowledged in its 2007 report that long-term climate prediction is not possible.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.7,
+        "importance_error": 0.15000000000000002
+      },
+      {
+        "gt_text": "The scenario that the burning of fossil fuels leads to catastrophe isn't part of what either group of scientists asserts",
+        "sys_text": "The scenario that burning fossil fuels leads to catastrophe isn\u2019t part of what either group asserts.",
+        "gt_importance": 0.95,
+        "sys_importance": 0.7,
+        "importance_error": 0.25
+      },
+      {
+        "gt_text": "CO2 is a greenhouse gas without which life on earth is not possible",
+        "sys_text": "CO2 is a greenhouse gas without which life on earth is not possible.",
+        "gt_importance": 0.5,
+        "sys_importance": 0.6,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "Adding CO2 to the atmosphere should lead to some warming",
+        "sys_text": "Adding CO2 to the atmosphere should lead to some warming.",
+        "gt_importance": 0.65,
+        "sys_importance": 0.6,
+        "importance_error": 0.050000000000000044
+      },
+      {
+        "gt_text": "Atmospheric levels of CO2 have been increasing since the end of the Little Ice Age in the 19th century",
+        "sys_text": "Atmospheric levels of CO2 have been increasing since the end of the Little Ice Age in the 19th century.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.6,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "Over the past two centuries, the global mean temperature has increased slightly and erratically by about 1.8 degrees Fahrenheit or one degree Celsius",
+        "sys_text": "The global mean temperature has increased slightly and erratically by about 1.8 degrees Fahrenheit since the 1960s.",
+        "gt_importance": 0.8,
+        "sys_importance": 0.6,
+        "importance_error": 0.20000000000000007
+      },
+      {
+        "gt_text": "Over the last decade, scientists outside of climate physics have jumped on the bandwagon, publishing papers blaming global warming for everything from acne to the Syrian civil war",
+        "sys_text": "Scientists outside of climate physics have published papers blaming global warming for various issues.",
+        "gt_importance": 0.4,
+        "sys_importance": 0.55,
+        "importance_error": 0.15000000000000002
+      }
+    ],
+    "missed_claims": [
+      "Richard Lindzen is an atmospheric physicist who has published more than 200 scientific papers",
+      "Richard Lindzen taught at MIT for 30 years",
+      "During the 30 years Lindzen taught at MIT, the climate has changed remarkably little",
+      "Only since the 1960s have man's greenhouse emissions been sufficient to play a role in temperature changes",
+      "Given the complexity of climate, no confident prediction about future global mean temperature or its impact can be made",
+      "Global warming provides politicians with money and power",
+      "Global warming provides environmentalists with money for their organizations"
+    ],
+    "extra_claims": [
+      "The climate has changed remarkably little over the past 30 years.",
+      "I\u2019ve published more than 200 scientific papers.",
+      "I taught at MIT for 30 years.",
+      "Group one consists of scientists associated with the IPCC.",
+      "Group two consists of scientists who don\u2019t see climate change as a serious problem.",
+      "Group three consists mostly of politicians, environmentalists, and media.",
+      "The cry of 'global warming' has grown ever more shrill.",
+      "Group three is winning the argument because they have drowned out serious debate."
+    ],
+    "importance_mae": 0.14285714285714285,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.7142857142857143,
+    "stance_accuracy": 0.7142857142857143,
+    "correct_verdicts": 5,
+    "total_verdicts": 7,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "The scenario that the burning of fossil fuels leads to catastrophe isn't part of what either group of scientists asserts",
+        "gt_verdict": "REFUTES",
+        "sys_verdict": "MIXED"
+      },
+      {
+        "claim": "Over the past two centuries, the global mean temperature has increased slightly and erratically by about 1.8 degrees Fahrenheit or one degree Celsius",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "SUPPORTS"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.5,
+    "verdict_accuracy": 0.7142857142857143,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.0191589,
+    "total_time_seconds": 124.10408592224121,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.5
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 68,
+      "unknown": 3,
+      "medium": 4
+    },
+    "avg_evidence_per_claim": 5.0
+  },
+  "ground_truth_claims_count": 14,
+  "system_claims_count": 15
+}

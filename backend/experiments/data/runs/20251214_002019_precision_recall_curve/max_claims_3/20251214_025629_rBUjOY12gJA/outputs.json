@@ -1,0 +1,853 @@
+{
+  "extracted_claims": {
+    "claims": [
+      {
+        "text": "Studies have shown that people can increase their mitochondria by up to 50% after six to eight weeks of exercise.",
+        "confidence": 0.9,
+        "category": "scientific",
+        "importance": 0.7,
+        "context": "Context unknown.",
+        "transcript_char_start": 1076,
+        "transcript_char_end": 1181,
+        "transcript_match_score": 0.7962962962962963
+      },
+      {
+        "text": "After one year of regular exercise, your bones will be denser, reducing your risk of osteoporosis.",
+        "confidence": 0.85,
+        "category": "scientific",
+        "importance": 0.7,
+        "context": "Context unknown.",
+        "transcript_char_start": 2081,
+        "transcript_char_end": 2176,
+        "transcript_match_score": 0.9157894736842105
+      },
+      {
+        "text": "An increasing number of Americans have started participating in more sports, fitness, and recreation.",
+        "confidence": 0.9,
+        "category": "statistical",
+        "importance": 0.6,
+        "context": "Context unknown.",
+        "transcript_char_start": 90,
+        "transcript_char_end": 188,
+        "transcript_match_score": 1.0
+      }
+    ],
+    "total_count": 3
+  },
+  "final_output": {
+    "extracted_claims": {
+      "claims": [
+        {
+          "text": "Studies have shown that people can increase their mitochondria by up to 50% after six to eight weeks of exercise.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Context unknown.",
+          "transcript_char_start": 1076,
+          "transcript_char_end": 1181,
+          "transcript_match_score": 0.7962962962962963
+        },
+        {
+          "text": "After one year of regular exercise, your bones will be denser, reducing your risk of osteoporosis.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Context unknown.",
+          "transcript_char_start": 2081,
+          "transcript_char_end": 2176,
+          "transcript_match_score": 0.9157894736842105
+        },
+        {
+          "text": "An increasing number of Americans have started participating in more sports, fitness, and recreation.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Context unknown.",
+          "transcript_char_start": 90,
+          "transcript_char_end": 188,
+          "transcript_match_score": 1.0
+        }
+      ],
+      "total_count": 3
+    },
+    "claim_reports": [
+      {
+        "claim_text": "An increasing number of Americans have started participating in more sports, fitness, and recreation.",
+        "claim_confidence": 0.9,
+        "claim_category": "statistical",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "Multiple high-reliability sources indicate a significant increase in sports and fitness participation among Americans in 2023, with 242 million active participants reported, reflecting a 12.1% rise from the previous year. Additionally, 35 out of 56 tracked sports showed growth, further supporting the claim.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Americans engaged in leisure/sports US 2023 - Statista",
+              "url": "https://www.statista.com/statistics/189548/daily-engagement-of-the-us-population-in-leisure-and-sports/?srsltid=AfmBOorqtl7RDhl0b40UkdYhc0MXDPx9AHKn1Nek5E7JOv6fGdp8WZ47",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that participation in sports and recreational activities has increased in 2023, with 35 out of 56 tracked sports showing growth compared to the previous year, supporting the claim that more Americans are engaging in these activities.",
+              "snippet": "Approximately 95.5 percent of men were engaged in sport and leisure activities that year, and that figure was 92.7 percent for women."
+            },
+            {
+              "title": "SFIA Study: Record growth continues in 2023 for U.S. sports and ...",
+              "url": "https://www.sportsbusinessjournal.com/Articles/2024/05/30/sports-fitness-industry-association-survey/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that in 2023, the number of active sports and fitness participants in the U.S. reached a record high of 242 million, reflecting a significant increase of 12.1% from the previous year, which supports the claim of growing participation in sports and fitness activities.",
+              "snippet": "In 2023, the total number of active sports and fitness participants in the U.S. hit its highest level ever at 242 million, up 12.1% from 215.8 ..."
+            },
+            {
+              "title": "[PDF] SFIA Report 2023 - USTA",
+              "url": "https://www.usta.com/es/content/dam/usta/sections/intermountain/districts/colorado/pdfs/sfia-reports/2023-sfia-topline.pdf",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (30.8 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that participation in sports and recreational activities has been increasing, with 35 out of 56 tracked activities showing growth in 2023 compared to the previous year, supporting the claim that more Americans are engaging in sports and fitness.",
+              "snippet": "Namely, the number and percentage of Americans who engaged in some type of sport or fitness activity grew in 2022 for the fifth consecutive year ..."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "SFIA: Sports/fitness participation on the rise, with pickleball ...",
+              "url": "https://www.sportsbusinessjournal.com/Articles/2025/02/26/sfia-sportsfitness-participation-on-the-rise-with-pickleball-continuing-to-soar/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Participation rates across physical activities reached 80%, rising from 242 million in 2023 to 247.1 million Americans who said they participated in at least ...",
+              "snippet": "Participation rates across physical activities reached 80%, rising from 242 million in 2023 to 247.1 million Americans who said they participated in at least ..."
+            },
+            {
+              "title": "A Record Number of Americans Participated in Sports, Fitness ...",
+              "url": "https://www.sportsdestinations.com/sports/all-sports/record-number-americans-participated-sports-33929",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (22.0 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "What's more, the number of Americans who participated in an activity has increased every single year for 10 years, growing by 5 million in 2023.",
+              "snippet": "What's more, the number of Americans who participated in an activity has increased every single year for 10 years, growing by 5 million in 2023."
+            },
+            {
+              "title": "SFIA's Topline Report Shows 247.1 Million Americans Were Active ...",
+              "url": "https://sfia.org/resources/sfias-topline-participation-report-shows-247-1-million-americans-were-active-in-2024/",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (21.9 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "The participation rate for active Americans reached 80%, according to the newly released data from the 2025 Topline Participation Report.",
+              "snippet": "The participation rate for active Americans reached 80%, according to the newly released data from the 2025 Topline Participation Report."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 5.85,
+        "timestamp_confidence": 1.0
+      },
+      {
+        "claim_text": "Studies have shown that people can increase their mitochondria by up to 50% after six to eight weeks of exercise.",
+        "claim_confidence": 0.9,
+        "claim_category": "scientific",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "The evidence indicates that exercise can increase mitochondrial function and biogenesis, but it does not clearly support the specific claim of a 50% increase in mitochondria after six to eight weeks. While several studies show positive effects of exercise on mitochondrial activity, they do not quantify the increase to the claimed extent.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "Exercise Increases Mitochondrial Complex I Activity and DRP1 ...",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5346470/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "One recent study indirectly suggested that six weeks of exercise training could increase mitochondrial biogenesis in the hippocampus, as evidenced by increased ...",
+              "snippet": "One recent study indirectly suggested that six weeks of exercise training could increase mitochondrial biogenesis in the hippocampus, as evidenced by increased ..."
+            },
+            {
+              "title": "Resistance Exercise Training Alters Mitochondrial Function in ... - NIH",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4478283/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Endurance exercise has long been known to increase mitochondrial function in skeletal muscle. Comparatively little is known regarding the impact of resistance ...",
+              "snippet": "Endurance exercise has long been known to increase mitochondrial function in skeletal muscle. Comparatively little is known regarding the impact of resistance ..."
+            },
+            {
+              "title": "Stay Fit, Stay Young: Mitochondria in Movement - PubMed Central",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6607712/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "In addition, exercise training can improve mitochondrial metabolism by increasing the ATP supply per O2 molecule (P/O). In fact, oxidative ...",
+              "snippet": "In addition, exercise training can improve mitochondrial metabolism by increasing the ATP supply per O2 molecule (P/O). In fact, oxidative ..."
+            },
+            {
+              "title": "Aerobic exercise for eight weeks provides protective effects towards ...",
+              "url": "https://www.sciencedirect.com/science/article/pii/S0026049522000567",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Recent studies have demonstrated that exercise training not only increases mitochondrial biogenesis and function, but also browns white fat [6], [23], [24], [25] ...",
+              "snippet": "Recent studies have demonstrated that exercise training not only increases mitochondrial biogenesis and function, but also browns white fat [6], [23], [24], [25] ..."
+            },
+            {
+              "title": "Excessive exercise training causes mitochondrial functional ...",
+              "url": "https://www.sciencedirect.com/science/article/pii/S1550413121001029",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Exercise training positively affects metabolic health through increased mitochondrial oxidative capacity and improved glucose regulation.",
+              "snippet": "Exercise training positively affects metabolic health through increased mitochondrial oxidative capacity and improved glucose regulation."
+            },
+            {
+              "title": "The effects of different exercise training protocols on mitochondrial ...",
+              "url": "https://link.springer.com/article/10.1186/s13018-025-05809-w",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "In all three tissues, a significant increase in some mitochondrial fusion markers was observed after 8 weeks of training (p = < 0.0001\u20130.0452).",
+              "snippet": "In all three tissues, a significant increase in some mitochondrial fusion markers was observed after 8 weeks of training (p = < 0.0001\u20130.0452)."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 68.76,
+        "timestamp_confidence": 0.7962962962962963
+      },
+      {
+        "claim_text": "After one year of regular exercise, your bones will be denser, reducing your risk of osteoporosis.",
+        "claim_confidence": 0.85,
+        "claim_category": "scientific",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "No reliable evidence sources were found for this claim. This may indicate the claim is difficult to verify, too specific, or references information not available in public sources.",
+        "evidence_by_stance": {},
+        "total_sources": 0,
+        "evidence_quality_score": 0.0,
+        "timestamp_hint": 127.979,
+        "timestamp_confidence": 0.9157894736842105
+      }
+    ],
+    "transcript_data": {
+      "text": "if you're thinking about leading a more active lifestyle you're not alone in recent years an increasing number of Americans have started participating in more sports fitness and recreation whether you're trying to get fit build muscle or you're just tired of the couch here are some changes you can expect along the way during that first workout you might feel more alert and energized because ramping up your heart rate means a boost in overall blood flow and oxygen to the brain but prepare yourself for the day after when you'll almost certainly get a case of Dom's short for delayed onset muscle soreness the soreness will persist for about 72 hours but the good news is you're less likely to get it again as long as you continue to regularly exercise those same muscles over the next few weeks you'll slowly start to ramp up production of mitochondria via a process called mitochondrial biogenesis mitochondria are the parts of your cells that convert carbs fat and protein and to feel that your muscles use to do their job like flexing contract after six to eight weeks studies have shown that people can increase their mitochondria by up to 50% with more mitochondria in your cells you'll start to feel more fit and your endurance will increase so running three miles will no longer feel as difficult as it did during the first week once your six months in all of that hard work should finally start to show if your workouts focus on strength training you'll notice your muscles begin to take shape you're also less likely to fall off the workout wagon at this point exercise programs often see a 50% dropout rate within the first six months but after that more people stick with it now if you're more focused on cardio than by nine months of regular exercise you should see about a 25% increase in your vo2 max vo2 max is often used as a measure of fitness and refers to the rate your body can transport oxygen to your muscles for fuel basically higher vo2 max means you can run faster for longer so a 25% increase means you can run about 20% further in the same amount of time after one year of regular exercise your bones will be denser which reduces your of osteoporosis in fact researchers have found that regular resistance training when combined with aerobic exercise can actually reverse the effects of osteoporosis after 12 months now if you maintain your exercise program long term your body might not be the only thing to benefit your bank account may also be one study revealed that older people who exercise 5 days a week for at least 30 minutes saved on average $2,500 a year in medical costs for heart related health problems alone you'll also be at a lower risk of developing arthritis type-2 diabetes dementia and certain types of cancer like breast and colon in all probability you are going to live longer than you otherwise would and that longer life it will likely feel more fulfilling because exercise lowers the risk of anxiety and depression by reducing levels of stress hormones like cortisol and adrenaline of course all of these benefits depend on the type and intensity of your workout and how long you exercise for each week a balanced diet is also paramount to a healthy lifestyle for the average adult ages 18 to 64 the US Department of Health and Human Services recommends either a minimum of two and a half hours per week of moderately intense exercise like brisk walking or biking or at least one hour and 15 minutes each week that combines moderate and high intensity workouts like running and swimming sprints on top of that make sure and take two days each week to strengthen your muscles with some weights or resistance training this will help your overall speed and endurance as you begin it's important to pace yourself and not push too hard too fast or you risk serious injury you'll discover that the fitter you become the easier it will be to exert a little more energy the next week the week after and so forth exercise smart and often and you'll be running marathons in no time you",
+      "segments": [
+        {
+          "text": "if you're thinking about leading a more",
+          "start": 1.37,
+          "duration": 4.48
+        },
+        {
+          "text": "active lifestyle you're not alone in",
+          "start": 3.72,
+          "duration": 4.41
+        },
+        {
+          "text": "recent years an increasing number of",
+          "start": 5.85,
+          "duration": 4.32
+        },
+        {
+          "text": "Americans have started participating in",
+          "start": 8.13,
+          "duration": 4.56
+        },
+        {
+          "text": "more sports fitness and recreation",
+          "start": 10.17,
+          "duration": 4.71
+        },
+        {
+          "text": "whether you're trying to get fit build",
+          "start": 12.69,
+          "duration": 4.05
+        },
+        {
+          "text": "muscle or you're just tired of the couch",
+          "start": 14.88,
+          "duration": 3.81
+        },
+        {
+          "text": "here are some changes you can expect",
+          "start": 16.74,
+          "duration": 9.06
+        },
+        {
+          "text": "along the way during that first workout",
+          "start": 18.69,
+          "duration": 9.27
+        },
+        {
+          "text": "you might feel more alert and energized",
+          "start": 25.8,
+          "duration": 3.989
+        },
+        {
+          "text": "because ramping up your heart rate means",
+          "start": 27.96,
+          "duration": 3.989
+        },
+        {
+          "text": "a boost in overall blood flow and oxygen",
+          "start": 29.789,
+          "duration": 4.561
+        },
+        {
+          "text": "to the brain but prepare yourself for",
+          "start": 31.949,
+          "duration": 3.871
+        },
+        {
+          "text": "the day after when you'll almost",
+          "start": 34.35,
+          "duration": 4.17
+        },
+        {
+          "text": "certainly get a case of Dom's short for",
+          "start": 35.82,
+          "duration": 5.82
+        },
+        {
+          "text": "delayed onset muscle soreness the",
+          "start": 38.52,
+          "duration": 5.219
+        },
+        {
+          "text": "soreness will persist for about 72 hours",
+          "start": 41.64,
+          "duration": 4.32
+        },
+        {
+          "text": "but the good news is you're less likely",
+          "start": 43.739,
+          "duration": 4.201
+        },
+        {
+          "text": "to get it again as long as you continue",
+          "start": 45.96,
+          "duration": 4.29
+        },
+        {
+          "text": "to regularly exercise those same muscles",
+          "start": 47.94,
+          "duration": 4.619
+        },
+        {
+          "text": "over the next few weeks you'll slowly",
+          "start": 50.25,
+          "duration": 3.84
+        },
+        {
+          "text": "start to ramp up production of",
+          "start": 52.559,
+          "duration": 3.75
+        },
+        {
+          "text": "mitochondria via a process called",
+          "start": 54.09,
+          "duration": 5.64
+        },
+        {
+          "text": "mitochondrial biogenesis mitochondria",
+          "start": 56.309,
+          "duration": 4.951
+        },
+        {
+          "text": "are the parts of your cells that convert",
+          "start": 59.73,
+          "duration": 4.11
+        },
+        {
+          "text": "carbs fat and protein and to feel that",
+          "start": 61.26,
+          "duration": 4.8
+        },
+        {
+          "text": "your muscles use to do their job like",
+          "start": 63.84,
+          "duration": 4.92
+        },
+        {
+          "text": "flexing contract after six to eight",
+          "start": 66.06,
+          "duration": 4.559
+        },
+        {
+          "text": "weeks studies have shown that people can",
+          "start": 68.76,
+          "duration": 4.31
+        },
+        {
+          "text": "increase their mitochondria by up to 50%",
+          "start": 70.619,
+          "duration": 4.981
+        },
+        {
+          "text": "with more mitochondria in your cells",
+          "start": 73.07,
+          "duration": 4.78
+        },
+        {
+          "text": "you'll start to feel more fit and your",
+          "start": 75.6,
+          "duration": 4.47
+        },
+        {
+          "text": "endurance will increase so running three",
+          "start": 77.85,
+          "duration": 3.93
+        },
+        {
+          "text": "miles will no longer feel as difficult",
+          "start": 80.07,
+          "duration": 4.14
+        },
+        {
+          "text": "as it did during the first week once",
+          "start": 81.78,
+          "duration": 4.56
+        },
+        {
+          "text": "your six months in all of that hard work",
+          "start": 84.21,
+          "duration": 4.409
+        },
+        {
+          "text": "should finally start to show if your",
+          "start": 86.34,
+          "duration": 3.569
+        },
+        {
+          "text": "workouts focus on strength training",
+          "start": 88.619,
+          "duration": 3.601
+        },
+        {
+          "text": "you'll notice your muscles begin to take",
+          "start": 89.909,
+          "duration": 4.651
+        },
+        {
+          "text": "shape you're also less likely to fall",
+          "start": 92.22,
+          "duration": 4.039
+        },
+        {
+          "text": "off the workout wagon at this point",
+          "start": 94.56,
+          "duration": 4.559
+        },
+        {
+          "text": "exercise programs often see a 50%",
+          "start": 96.259,
+          "duration": 4.93
+        },
+        {
+          "text": "dropout rate within the first six months",
+          "start": 99.119,
+          "duration": 4.351
+        },
+        {
+          "text": "but after that more people stick with it",
+          "start": 101.189,
+          "duration": 4.71
+        },
+        {
+          "text": "now if you're more focused on cardio",
+          "start": 103.47,
+          "duration": 4.41
+        },
+        {
+          "text": "than by nine months of regular exercise",
+          "start": 105.899,
+          "duration": 4.981
+        },
+        {
+          "text": "you should see about a 25% increase in",
+          "start": 107.88,
+          "duration": 6.3
+        },
+        {
+          "text": "your vo2 max vo2 max is often used as a",
+          "start": 110.88,
+          "duration": 5.099
+        },
+        {
+          "text": "measure of fitness and refers to the",
+          "start": 114.18,
+          "duration": 3.719
+        },
+        {
+          "text": "rate your body can transport oxygen to",
+          "start": 115.979,
+          "duration": 4.381
+        },
+        {
+          "text": "your muscles for fuel basically higher",
+          "start": 117.899,
+          "duration": 4.741
+        },
+        {
+          "text": "vo2 max means you can run faster for",
+          "start": 120.36,
+          "duration": 5.039
+        },
+        {
+          "text": "longer so a 25% increase means you can",
+          "start": 122.64,
+          "duration": 5.339
+        },
+        {
+          "text": "run about 20% further in the same amount",
+          "start": 125.399,
+          "duration": 5.31
+        },
+        {
+          "text": "of time after one year of regular",
+          "start": 127.979,
+          "duration": 5.131
+        },
+        {
+          "text": "exercise your bones will be denser which",
+          "start": 130.709,
+          "duration": 3.221
+        },
+        {
+          "text": "reduces your",
+          "start": 133.11,
+          "duration": 3.7
+        },
+        {
+          "text": "of osteoporosis in fact researchers have",
+          "start": 133.93,
+          "duration": 5.039
+        },
+        {
+          "text": "found that regular resistance training",
+          "start": 136.81,
+          "duration": 4.289
+        },
+        {
+          "text": "when combined with aerobic exercise can",
+          "start": 138.969,
+          "duration": 3.75
+        },
+        {
+          "text": "actually reverse the effects of",
+          "start": 141.099,
+          "duration": 4.771
+        },
+        {
+          "text": "osteoporosis after 12 months now if you",
+          "start": 142.719,
+          "duration": 5.1
+        },
+        {
+          "text": "maintain your exercise program long term",
+          "start": 145.87,
+          "duration": 4.08
+        },
+        {
+          "text": "your body might not be the only thing to",
+          "start": 147.819,
+          "duration": 4.5
+        },
+        {
+          "text": "benefit your bank account may also be",
+          "start": 149.95,
+          "duration": 4.8
+        },
+        {
+          "text": " one study revealed that older",
+          "start": 152.319,
+          "duration": 4.53
+        },
+        {
+          "text": "people who exercise 5 days a week for at",
+          "start": 154.75,
+          "duration": 5.579
+        },
+        {
+          "text": "least 30 minutes saved on average $2,500",
+          "start": 156.849,
+          "duration": 5.431
+        },
+        {
+          "text": "a year in medical costs for heart",
+          "start": 160.329,
+          "duration": 4.44
+        },
+        {
+          "text": "related health problems alone you'll",
+          "start": 162.28,
+          "duration": 3.87
+        },
+        {
+          "text": "also be at a lower risk of developing",
+          "start": 164.769,
+          "duration": 4.47
+        },
+        {
+          "text": "arthritis type-2 diabetes dementia and",
+          "start": 166.15,
+          "duration": 4.949
+        },
+        {
+          "text": "certain types of cancer like breast and",
+          "start": 169.239,
+          "duration": 4.441
+        },
+        {
+          "text": "colon in all probability you are going",
+          "start": 171.099,
+          "duration": 4.051
+        },
+        {
+          "text": "to live longer than you otherwise would",
+          "start": 173.68,
+          "duration": 4.559
+        },
+        {
+          "text": "and that longer life it will likely feel",
+          "start": 175.15,
+          "duration": 5.369
+        },
+        {
+          "text": "more fulfilling because exercise lowers",
+          "start": 178.239,
+          "duration": 4.47
+        },
+        {
+          "text": "the risk of anxiety and depression by",
+          "start": 180.519,
+          "duration": 3.78
+        },
+        {
+          "text": "reducing levels of stress hormones like",
+          "start": 182.709,
+          "duration": 4.2
+        },
+        {
+          "text": "cortisol and adrenaline of course all of",
+          "start": 184.299,
+          "duration": 4.47
+        },
+        {
+          "text": "these benefits depend on the type and",
+          "start": 186.909,
+          "duration": 4.14
+        },
+        {
+          "text": "intensity of your workout and how long",
+          "start": 188.769,
+          "duration": 4.681
+        },
+        {
+          "text": "you exercise for each week a balanced",
+          "start": 191.049,
+          "duration": 4.201
+        },
+        {
+          "text": "diet is also paramount to a healthy",
+          "start": 193.45,
+          "duration": 4.409
+        },
+        {
+          "text": "lifestyle for the average adult ages 18",
+          "start": 195.25,
+          "duration": 5.04
+        },
+        {
+          "text": "to 64 the US Department of Health and",
+          "start": 197.859,
+          "duration": 3.96
+        },
+        {
+          "text": "Human Services recommends either a",
+          "start": 200.29,
+          "duration": 3.779
+        },
+        {
+          "text": "minimum of two and a half hours per week",
+          "start": 201.819,
+          "duration": 4.681
+        },
+        {
+          "text": "of moderately intense exercise like",
+          "start": 204.069,
+          "duration": 5.07
+        },
+        {
+          "text": "brisk walking or biking or at least one",
+          "start": 206.5,
+          "duration": 4.68
+        },
+        {
+          "text": "hour and 15 minutes each week that",
+          "start": 209.139,
+          "duration": 3.78
+        },
+        {
+          "text": "combines moderate and high intensity",
+          "start": 211.18,
+          "duration": 3.419
+        },
+        {
+          "text": "workouts like running and swimming",
+          "start": 212.919,
+          "duration": 4.29
+        },
+        {
+          "text": "sprints on top of that make sure and",
+          "start": 214.599,
+          "duration": 4.26
+        },
+        {
+          "text": "take two days each week to strengthen",
+          "start": 217.209,
+          "duration": 2.911
+        },
+        {
+          "text": "your muscles with some weights or",
+          "start": 218.859,
+          "duration": 3.361
+        },
+        {
+          "text": "resistance training this will help your",
+          "start": 220.12,
+          "duration": 4.739
+        },
+        {
+          "text": "overall speed and endurance as you begin",
+          "start": 222.22,
+          "duration": 4.62
+        },
+        {
+          "text": "it's important to pace yourself and not",
+          "start": 224.859,
+          "duration": 4.62
+        },
+        {
+          "text": "push too hard too fast or you risk",
+          "start": 226.84,
+          "duration": 5.25
+        },
+        {
+          "text": "serious injury you'll discover that the",
+          "start": 229.479,
+          "duration": 4.62
+        },
+        {
+          "text": "fitter you become the easier it will be",
+          "start": 232.09,
+          "duration": 3.899
+        },
+        {
+          "text": "to exert a little more energy the next",
+          "start": 234.099,
+          "duration": 4.07
+        },
+        {
+          "text": "week the week after and so forth",
+          "start": 235.989,
+          "duration": 5.101
+        },
+        {
+          "text": "exercise smart and often and you'll be",
+          "start": 238.169,
+          "duration": 6.331
+        },
+        {
+          "text": "running marathons in no time",
+          "start": 241.09,
+          "duration": 3.41
+        },
+        {
+          "text": "you",
+          "start": 257.13,
+          "duration": 2.06
+        }
+      ],
+      "video_id": "rBUjOY12gJA"
+    }
+  }
+}

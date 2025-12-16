@@ -1,0 +1,684 @@
+{
+  "extracted_claims": {
+    "claims": [
+      {
+        "text": "Fossil fuels can help solve environmental challenges and purify water and air.",
+        "confidence": 0.9,
+        "category": "environmental",
+        "importance": 0.85,
+        "context": "Claim made by speaker Alex Epstein, promoting fossil fuels.",
+        "transcript_char_start": 68,
+        "transcript_char_end": 149,
+        "transcript_match_score": 0.7468354430379747
+      },
+      {
+        "text": "The annual rate of climate-related deaths has declined by 98% in the last eighty years.",
+        "confidence": 0.85,
+        "category": "statistical",
+        "importance": 0.8,
+        "context": "Speaker references climate-related deaths in relation to fossil fuel use.",
+        "transcript_char_start": 3398,
+        "transcript_char_end": 3490,
+        "transcript_match_score": 0.7909604519774012
+      },
+      {
+        "text": "More fossil fuel usage correlates with increased access to clean water.",
+        "confidence": 0.8,
+        "category": "statistical",
+        "importance": 0.7,
+        "context": "Speaker discusses correlation between fossil fuel use and clean water access.",
+        "transcript_char_start": 659,
+        "transcript_char_end": 704,
+        "transcript_match_score": 0.6782608695652174
+      }
+    ],
+    "total_count": 3
+  },
+  "final_output": {
+    "extracted_claims": {
+      "claims": [
+        {
+          "text": "Fossil fuels can help solve environmental challenges and purify water and air.",
+          "confidence": 0.9,
+          "category": "environmental",
+          "importance": 0.85,
+          "context": "Claim made by speaker Alex Epstein, promoting fossil fuels.",
+          "transcript_char_start": 68,
+          "transcript_char_end": 149,
+          "transcript_match_score": 0.7468354430379747
+        },
+        {
+          "text": "The annual rate of climate-related deaths has declined by 98% in the last eighty years.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.8,
+          "context": "Speaker references climate-related deaths in relation to fossil fuel use.",
+          "transcript_char_start": 3398,
+          "transcript_char_end": 3490,
+          "transcript_match_score": 0.7909604519774012
+        },
+        {
+          "text": "More fossil fuel usage correlates with increased access to clean water.",
+          "confidence": 0.8,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "Speaker discusses correlation between fossil fuel use and clean water access.",
+          "transcript_char_start": 659,
+          "transcript_char_end": 704,
+          "transcript_match_score": 0.6782608695652174
+        }
+      ],
+      "total_count": 3
+    },
+    "claim_reports": [
+      {
+        "claim_text": "Fossil fuels can help solve environmental challenges and purify water and air.",
+        "claim_confidence": 0.9,
+        "claim_category": "environmental",
+        "overall_stance": "mixed",
+        "verdict_confidence": "medium",
+        "verdict_summary": "The evidence presents a mixed view on the claim that fossil fuels can help solve environmental challenges and purify water and air. While a Forbes article suggests that fossil fuels have positively impacted environmental quality, three high-reliability sources from the Sierra Club and NRDC strongly refute this by highlighting the significant environmental and health costs associated with fossil fuels, including air and water pollution. Additionally, two medium-reliability sources provide unclear signals regarding the overall impact of fossil fuels on environmental health.",
+        "evidence_by_stance": {
+          "refutes": [
+            {
+              "title": "Fossil Fuels - Sierra Club",
+              "url": "https://www.sierraclub.org/issues/climate/fossil-fuels",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Left"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence strongly indicates that fossil fuels contribute significantly to environmental challenges, including air and water pollution, and do not support the claim that they can help solve these issues.",
+              "snippet": "We must transition from fossil fuels to a world powered by clean, renewable energy to protect our communities from harmful air, ground, and water pollution."
+            },
+            {
+              "title": "Fossil Fuels: The Dirty Facts - NRDC",
+              "url": "https://www.nrdc.org/stories/fossil-fuels-dirty-facts",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Left"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence highlights the significant environmental and health costs associated with fossil fuels, including air and water pollution, which contradicts the claim that fossil fuels can help solve environmental challenges and purify water and air.",
+              "snippet": "Using fossil fuels for energy has exacted an enormous toll on humanity and the environment\u2014from air and water pollution to increasingly intense ..."
+            },
+            {
+              "title": "Sources and Solutions: Fossil Fuels | US EPA",
+              "url": "https://www.epa.gov/nutrientpollution/sources-and-solutions-fossil-fuels",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "MBFC credibility: medium",
+                  "Factual reporting: Mixed"
+                ],
+                "bias": "Right"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence highlights the significant environmental and health costs associated with fossil fuels, including air pollution and greenhouse gas emissions, which contradicts the claim that fossil fuels can help solve environmental challenges.",
+              "snippet": "When fossil fuels are burned, they release nitrogen oxides into the atmosphere, which contribute to the formation of smog and acid rain."
+            }
+          ],
+          "supports": [
+            {
+              "title": "How Fossil Fuels Cleaned Up Our Environment - Forbes",
+              "url": "https://www.forbes.com/sites/alexepstein/2015/01/28/how-fossil-fuels-cleaned-up-our-environment/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "supports",
+              "evidence_summary": "The article argues that fossil fuels have a tremendously positive impact on environmental quality and human health, suggesting they can help address environmental challenges.",
+              "snippet": "The overall impact of fossil fuels on environmental quality is tremendously positive. And more fundamentally, its impact on human health is ..."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "Climate, Environmental, and Health Impacts of Fossil Fuels (2021 ...",
+              "url": "https://www.eesi.org/papers/view/fact-sheet-climate-environmental-and-health-impacts-of-fossil-fuels-2021",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (30.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Air pollution from fossil fuels can cause acid rain, eutrophication (excessive nutrients that can harm aquatic ecosystems by lowering oxygen ...",
+              "snippet": "Air pollution from fossil fuels can cause acid rain, eutrophication (excessive nutrients that can harm aquatic ecosystems by lowering oxygen ..."
+            },
+            {
+              "title": "Progress Cleaning the Air and Improving People's Health | US EPA",
+              "url": "https://www.epa.gov/clean-air-act-overview/progress-cleaning-air-and-improving-peoples-health",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "MBFC credibility: medium",
+                  "Factual reporting: Mixed"
+                ],
+                "bias": "Right"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Americans breathe less pollution and face lower risks of premature death and other serious health effects. \u00b7 Environmental damage from air pollution is reduced.",
+              "snippet": "Americans breathe less pollution and face lower risks of premature death and other serious health effects. \u00b7 Environmental damage from air pollution is reduced."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 2.04,
+        "timestamp_confidence": 0.7468354430379747
+      },
+      {
+        "claim_text": "The annual rate of climate-related deaths has declined by 98% in the last eighty years.",
+        "claim_confidence": 0.85,
+        "claim_category": "statistical",
+        "overall_stance": "mixed",
+        "verdict_confidence": "medium",
+        "verdict_summary": "The evidence presents a mixed picture regarding the claim that the annual rate of climate-related deaths has declined by 98% in the last eighty years. While some sources, such as the Reuters fact check and a policy study, support the claim by indicating a significant reduction in deaths from climate-related disasters, other sources highlight the ongoing high rates of deaths attributable to fossil fuel-related air pollution, which contradicts the claim. This indicates that while there may be a decline in certain types of climate-related deaths, the overall situation remains critical.",
+        "evidence_by_stance": {
+          "refutes": [
+            {
+              "title": "Fossil fuels - Our World in Data",
+              "url": "https://ourworldindata.org/fossil-fuels",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The article discusses the significant number of deaths attributable to fossil fuels, indicating that air pollution from fossil fuels accounts for 5.1 million deaths annually, suggesting that the rate of climate-related deaths has not declined but rather remains a critical issue.",
+              "snippet": "This article presents the long-run and recent perspectives on coal, oil, and gas \u2013 how much countries produce and consume, where our fossil fuel reserves are."
+            },
+            {
+              "title": "The 2022 report of the Lancet Countdown on health and climate ...",
+              "url": "https://www.thelancet.com/article/S0140-6736(22)01540-9/fulltext",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence discusses the significant number of deaths attributable to fossil fuel-related air pollution, suggesting that phasing out fossil fuels could prevent millions of deaths annually. However, it does not support the specific claim that the annual rate of climate-related deaths has declined by 98% in the last eighty years.",
+              "snippet": "Improvements in air quality would help to prevent the 1\u00b72 million deaths resulting from exposure to fossil fuel-derived ambient PM2\u00b75 in 2020 alone (indicator ..."
+            },
+            {
+              "title": "Trump's Anti-Green Agenda Could Lead to 1.3 Million More Climate ...",
+              "url": "https://www.propublica.org/article/trump-climate-rollbacks-heat-deaths",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence discusses the significant number of deaths attributable to fossil fuel-related air pollution, suggesting that phasing out fossil fuels could prevent millions of deaths annually. However, it does not support the claim that the annual rate of climate-related deaths has declined by 98% in the last eighty years, as it indicates a high current rate of deaths due to air pollution.",
+              "snippet": "Drawing also on public health research, Bressler estimated the amount of additional carbon dioxide expected to cause one death over 80 years: ..."
+            }
+          ],
+          "supports": [
+            {
+              "title": "Fact Check: Drop in climate-related disaster deaths not evidence ...",
+              "url": "https://www.reuters.com/fact-check/drop-climate-related-disaster-deaths-not-evidence-against-climate-emergency-2023-09-19/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that climate-related deaths have significantly decreased over the past century, with a reported 98% reduction in fatalities from climate-related disasters compared to the 1920s. This supports the claim that the annual rate of climate-related deaths has declined by 98% in the last eighty years.",
+              "snippet": "Deaths are at their highest in the 1920s with an average of around 480,000, then decrease decade-upon-decade thereafter."
+            },
+            {
+              "title": "The Decline in Deaths from Extreme Weather, 1900",
+              "url": "https://reason.org/policy-study/decline-deaths-extreme-weather/",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (30.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that the climate disaster death rate has declined by 98% over the last century, supporting the claim that climate-related deaths have significantly decreased.",
+              "snippet": "Deaths and death rates for floods, responsible for over 30% of cumulative extreme weather deaths, have declined by over 98% since the 1930s."
+            },
+            {
+              "title": "Unspoken truth: Fewer people are dying of climate-related disasters ...",
+              "url": "https://nypost.com/2024/02/15/opinion/unspoken-truth-fewer-people-are-dying-of-climate-related-disasters-than-ever/",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "MBFC credibility: medium",
+                  "Factual reporting: Mixed"
+                ],
+                "bias": "Right-Center"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that climate-related deaths have significantly decreased, with a reported 98% reduction over the past century, confirming the claim that the annual rate of climate-related deaths has declined by 98% in the last eighty years.",
+              "snippet": "Over the past decade, climate-related disasters have killed 98% fewer people than a century ago. At least 100 residents have ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 228.83,
+        "timestamp_confidence": 0.7909604519774012
+      },
+      {
+        "claim_text": "More fossil fuel usage correlates with increased access to clean water.",
+        "claim_confidence": 0.8,
+        "claim_category": "statistical",
+        "overall_stance": "mixed",
+        "verdict_confidence": "medium",
+        "verdict_summary": "The evidence presents a mixed view on the claim. While a Forbes article suggests that increased fossil fuel usage has correlated with improved access to clean water through enhanced infrastructure, multiple high-reliability sources from the IEA and other analyses highlight the negative impacts of fossil fuels on water resources, including pollution and environmental damage. This indicates that the relationship is complex and not straightforward.",
+        "evidence_by_stance": {
+          "refutes": [
+            {
+              "title": "Clean energy can help to ease the water crisis \u2013 Analysis - IEA",
+              "url": "https://www.iea.org/commentaries/clean-energy-can-help-to-ease-the-water-crisis",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The article discusses the increasing water consumption associated with data centers, which correlates with energy usage, including fossil fuels. However, it does not support the claim that more fossil fuel usage correlates with increased access to clean water, as it highlights the negative impact of fossil fuel energy on water resources.",
+              "snippet": "Diminishing water needs for fossil energy are more than offset by higher water use for bioenergy production."
+            },
+            {
+              "title": "Energy is vital to a well-functioning water sector \u2013 Analysis - IEA",
+              "url": "https://www.iea.org/commentaries/energy-is-vital-to-a-well-functioning-water-sector",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that fossil fuel usage is linked to significant environmental damage, including water pollution, which contradicts the claim that more fossil fuel usage correlates with increased access to clean water.",
+              "snippet": "The energy sector accounts for roughly 10% of total global freshwater use. Meanwhile, maintaining global water supply is dependent on energy."
+            },
+            {
+              "title": "Exploring the interplay between access to clean water, sanitation ...",
+              "url": "https://www.sciencedirect.com/science/article/pii/S2405844024071287",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The article discusses the relationship between energy usage, carbon emissions, and water consumption in data centers, but it does not establish a direct correlation between increased fossil fuel usage and improved access to clean water. Instead, it highlights the complexities of water usage in the context of energy consumption without supporting the claim.",
+              "snippet": "Our research shows a reciprocal link between GDP per capita and CO2 emissions. Access to improved water exhibits a causal relationship with inclusive economic ..."
+            },
+            {
+              "title": "How Fossil Fuels Are Polluting Our Air & Water",
+              "url": "https://citizensclimatelobby.org/how-fossil-fuels-are-polluting-our-air-and-water/",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (18.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that fossil fuel usage, particularly through methods like fracking, is associated with groundwater pollution, which contradicts the claim that more fossil fuel usage correlates with increased access to clean water.",
+              "snippet": "Harmful byproducts of fossil fuels make it into the water we drink. Fracking, a method used to extract natural gas, has been linked to groundwater pollution."
+            }
+          ],
+          "supports": [
+            {
+              "title": "How To Solve The Water Crisis: Use More Fossil Fuels - Forbes",
+              "url": "https://www.forbes.com/sites/alexepstein/2015/02/25/how-fossil-fuels-can-solve-the-water-crisis/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "supports",
+              "evidence_summary": "The article suggests that increased fossil fuel usage has correlated with improved access to clean water over the past 25 years, as countries have utilized more fossil fuels to enhance their infrastructure and services, including water access.",
+              "snippet": "Access to clean water goes up dramatically in the last 25 years as countries have used more and more fossil fuels."
+            }
+          ],
+          "mixed": [
+            {
+              "title": "[PDF] Fossil Fuels and Water Quality",
+              "url": "https://www.worldwater.org/wp-content/uploads/2013/07/chapter_4_fossil_fuel_and_water_quality.pdf",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (28.0 years)"
+                ],
+                "bias": null
+              },
+              "stance": "mixed",
+              "evidence_summary": "The article discusses the relationship between fossil fuel usage and water consumption, particularly in data centers, but does not establish a direct correlation between increased fossil fuel usage and improved access to clean water.",
+              "snippet": "The large volumes of produced water are the greatest single connection between oil production and water quality, but each step of the oil extraction and ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 43.64,
+        "timestamp_confidence": 0.6782608695652174
+      }
+    ],
+    "transcript_data": {
+      "text": "What if I told you that someone had developed an energy source that could help us solve our biggest environmental challenges, purify our water and air, make our cities and homes more sanitary, and keep us safe from potential catastrophic climate change? What if I also told you that this energy source was cheap, plentiful, and reliable? Well, there is such a source. You probably know it as fossil fuel. Oil. Natural gas. Coal. But wait? Don\u2019t fossil fuels pollute our environment and make our climate unlivable? That, of course, is what we\u2019re told\u2026and what our children are taught. But let\u2019s look at the data. Here\u2019s a graph you\u2019ve probably never seen: the correlation between use of fossil fuels and access to clean water. More fossil fuel. More clean water. Am I saying the more we that we have used fossil fuel, the cleaner our water has become? Yes, that\u2019s exactly what I\u2019m saying. In the developed world, we take clean water for granted. We turn on a tap and it\u2019s there. But getting it there takes a massive amount of energy. Think of the man-made reservoirs, the purification plants, the network of pipes. In the undeveloped world, it\u2019s a much different story. They lack the energy, so they lack clean water. More fossil fuel. More clean water. The same is true of sanitation. By the use of cheap, plentiful, and reliable energy from fossil fuels, we have made our environment cleaner. Take a look at this graph. More fossil fuel. Better sanitation. Okay, what about air quality? Here\u2019s a graph of the air pollution trends in the United States over the last half century based on data from the Environmental Protection Agency. Note the dramatic downward trend in emissions, even though we use more fossil fuel than ever. How was this achieved? Above all, by using anti-pollution technology powered by\u2026 fossil fuel: oil, natural gas and coal. But even without modern pollution control technology, fossil fuel makes our air cleaner. Indoor pollution\u2014caused by burning a fire inside your house, cabin, hut or tent to cook and keep warm\u2014was a deadly global problem until the late 19th century when cheap kerosene, a fossil fuel byproduct, became available in America and Europe. Indoor pollution is still a major issue in the developing world today. The best solution? Fossil fuel. And now we come to the biggest fossil fuel concern of all\u2014global warming. On this very sensitive topic we need to get our terms straight: There is a big difference between mild global warming and catastrophic global warming. We can all agree on that, right? The issue isn\u2019t: does burning fossil fuel have some warming impact? It does. The issue is: is the climate warming dangerously fast? In 1986 NASA climate scientist James Hansen\u2014one of the world\u2019s most prominent critics of the use of fossil fuels\u2014predicted that \u201cif current trends are unchanged,\u201d temperatures would rise 2 to 4 degrees in the first decade of the 2000s. But as you can see from this graph, since 2000 the trend line is essentially flat\u2014little or no warming in the last 15 years. That\u2019s probably why we hear much less talk about \u201cglobal warming\u201d and much more talk about \u201cclimate change.\u201d Has this \u201cclimate change\u201d made our world more dangerous? The key statistic here, one that is, unfortunately, almost never mentioned, is \u201cclimate-related deaths,\u201d that is, how many people die each year from a climate-related cause, including droughts, floods, storms, and extreme temperatures. In the last eighty years, as CO2 emissions have rapidly escalated, the annual rate of climate-related deaths worldwide has rapidly declined -- by 98%. The reason is that the energy from fossil fuel has allowed the developed world to build a durable civilization, one highly resilient to extreme heat, extreme cold, floods, storms, and so on. The developing world\u2014where natural disasters can still wreak terrible havoc\u2014 would like the chance to do the same. But to do that they will need a lot more energy. The cheapest, fastest and easiest way to get that energy is from fossil fuels. In sum, fossil fuels don\u2019t take a naturally safe environment and make it dangerous; they empower us to take a naturally dangerous environment and make it cleaner and safer. I\u2019m Alex Epstein of the Center for Industrial Progress for Prager University.",
+      "segments": [
+        {
+          "text": "What if I told you that someone had developed\nan energy source that could help us solve",
+          "start": 2.04,
+          "duration": 4.72
+        },
+        {
+          "text": "our biggest environmental challenges, purify\nour water and air, make our cities and homes",
+          "start": 6.769,
+          "duration": 5.681
+        },
+        {
+          "text": "more sanitary, and keep us safe from potential\ncatastrophic climate change? What if I also",
+          "start": 12.45,
+          "duration": 6.33
+        },
+        {
+          "text": "told you that this energy source was cheap,\nplentiful, and reliable?",
+          "start": 18.78,
+          "duration": 4.96
+        },
+        {
+          "text": "Well, there is such a source. You probably\nknow it as fossil fuel. Oil. Natural gas. Coal.",
+          "start": 23.74,
+          "duration": 9.72
+        },
+        {
+          "text": "But wait? Don\u2019t fossil fuels pollute our\nenvironment and make our climate unlivable?",
+          "start": 33.46,
+          "duration": 5.86
+        },
+        {
+          "text": "That, of course, is what we\u2019re told\u2026and\nwhat our children are taught.",
+          "start": 39.32,
+          "duration": 4.32
+        },
+        {
+          "text": "But let\u2019s look at the data. Here\u2019s a graph you\u2019ve\nprobably never seen: the correlation between",
+          "start": 43.64,
+          "duration": 5.36
+        },
+        {
+          "text": "use of fossil fuels and access to clean water.\nMore fossil fuel. More clean water. Am I saying",
+          "start": 49.0,
+          "duration": 8.29
+        },
+        {
+          "text": "the more we that we have used fossil fuel,\nthe cleaner our water has become?",
+          "start": 57.29,
+          "duration": 4.44
+        },
+        {
+          "text": "Yes, that\u2019s exactly what I\u2019m saying.",
+          "start": 61.73,
+          "duration": 2.66
+        },
+        {
+          "text": "In the developed world, we take clean water\nfor granted. We turn on a tap and it\u2019s there.",
+          "start": 64.39,
+          "duration": 5.73
+        },
+        {
+          "text": "But getting it there takes a massive amount\nof energy. Think of the man-made reservoirs,",
+          "start": 70.13,
+          "duration": 5.54
+        },
+        {
+          "text": "the purification plants, the network of pipes.\nIn the undeveloped world, it\u2019s a much different story.",
+          "start": 75.67,
+          "duration": 6.37
+        },
+        {
+          "text": "They lack the energy, so they lack\nclean water. More fossil fuel. More clean water.",
+          "start": 82.04,
+          "duration": 6.72
+        },
+        {
+          "text": "The same is true of sanitation. By the use\nof cheap, plentiful, and reliable energy from",
+          "start": 88.76,
+          "duration": 5.18
+        },
+        {
+          "text": "fossil fuels, we have made our environment\ncleaner. Take a look at this graph.",
+          "start": 93.95,
+          "duration": 5.1
+        },
+        {
+          "text": "More fossil fuel. Better sanitation.",
+          "start": 99.05,
+          "duration": 3.17
+        },
+        {
+          "text": "Okay, what about air quality? Here\u2019s a graph\nof the air pollution trends in the United States",
+          "start": 102.229,
+          "duration": 6.011
+        },
+        {
+          "text": "over the last half century based on\ndata from the Environmental Protection Agency.",
+          "start": 108.24,
+          "duration": 4.62
+        },
+        {
+          "text": "Note the dramatic downward trend in emissions,\neven though we use more fossil fuel than ever.",
+          "start": 112.86,
+          "duration": 6.34
+        },
+        {
+          "text": "How was this achieved? Above all, by using\nanti-pollution technology powered by\u2026",
+          "start": 119.2,
+          "duration": 6.14
+        },
+        {
+          "text": "fossil fuel: oil, natural gas and coal.",
+          "start": 125.34,
+          "duration": 4.1
+        },
+        {
+          "text": "But even without modern pollution control\ntechnology, fossil fuel makes our air cleaner.",
+          "start": 129.44,
+          "duration": 5.66
+        },
+        {
+          "text": "Indoor pollution\u2014caused by burning a fire\ninside your house, cabin, hut or tent to cook",
+          "start": 135.1,
+          "duration": 5.84
+        },
+        {
+          "text": "and keep warm\u2014was a deadly global problem\nuntil the late 19th century when cheap kerosene,",
+          "start": 140.94,
+          "duration": 5.68
+        },
+        {
+          "text": "a fossil fuel byproduct, became available\nin America and Europe. Indoor pollution is",
+          "start": 146.62,
+          "duration": 5.82
+        },
+        {
+          "text": "still a major issue in the developing world\ntoday. The best solution? Fossil fuel.",
+          "start": 152.44,
+          "duration": 6.64
+        },
+        {
+          "text": "And now we come to the biggest fossil fuel\nconcern of all\u2014global warming. On this very",
+          "start": 159.08,
+          "duration": 5.6
+        },
+        {
+          "text": "sensitive topic we need to get our terms straight:\nThere is a big difference between mild global",
+          "start": 164.69,
+          "duration": 6.159
+        },
+        {
+          "text": "warming and catastrophic global warming. We\ncan all agree on that, right? The issue isn\u2019t:",
+          "start": 170.849,
+          "duration": 6.551
+        },
+        {
+          "text": "does burning fossil fuel have some warming\nimpact? It does.",
+          "start": 177.4,
+          "duration": 4.6
+        },
+        {
+          "text": "The issue is: is the climate warming dangerously fast?",
+          "start": 182.0,
+          "duration": 4.34
+        },
+        {
+          "text": "In 1986 NASA climate scientist James Hansen\u2014one\nof the world\u2019s most prominent critics of",
+          "start": 186.34,
+          "duration": 5.88
+        },
+        {
+          "text": "the use of fossil fuels\u2014predicted that \u201cif\ncurrent trends are unchanged,\u201d temperatures",
+          "start": 192.22,
+          "duration": 5.129
+        },
+        {
+          "text": "would rise 2 to 4 degrees in the first decade\nof the 2000s. But as you can see from this graph,",
+          "start": 197.349,
+          "duration": 6.331
+        },
+        {
+          "text": "since 2000 the trend line is essentially\nflat\u2014little or no warming in the last 15 years.",
+          "start": 203.68,
+          "duration": 6.76
+        },
+        {
+          "text": "That\u2019s probably why we hear much\nless talk about \u201cglobal warming\u201d",
+          "start": 210.44,
+          "duration": 4.18
+        },
+        {
+          "text": "and much more talk about \u201cclimate change.\u201d",
+          "start": 214.62,
+          "duration": 3.26
+        },
+        {
+          "text": "Has this \u201cclimate change\u201d made our world\nmore dangerous? The key statistic here,",
+          "start": 217.88,
+          "duration": 4.92
+        },
+        {
+          "text": "one that is, unfortunately, almost never mentioned,\nis \u201cclimate-related deaths,\u201d that is,",
+          "start": 222.8,
+          "duration": 6.02
+        },
+        {
+          "text": "how many people die each year from a climate-related\ncause, including droughts, floods, storms,",
+          "start": 228.83,
+          "duration": 5.739
+        },
+        {
+          "text": "and extreme temperatures. In the last eighty\nyears, as CO2 emissions have rapidly escalated,",
+          "start": 234.569,
+          "duration": 6.84
+        },
+        {
+          "text": "the annual rate of climate-related deaths\nworldwide has rapidly declined -- by 98%.",
+          "start": 241.409,
+          "duration": 7.151
+        },
+        {
+          "text": "The reason is that the energy from fossil\nfuel has allowed the developed world to build",
+          "start": 248.56,
+          "duration": 5.52
+        },
+        {
+          "text": "a durable civilization, one highly resilient\nto extreme heat, extreme cold, floods, storms,",
+          "start": 254.09,
+          "duration": 7.239
+        },
+        {
+          "text": "and so on. The developing world\u2014where natural\ndisasters can still wreak terrible havoc\u2014",
+          "start": 261.329,
+          "duration": 6.62
+        },
+        {
+          "text": "would like the chance to do the same. But to do\nthat they will need a lot more energy.",
+          "start": 267.949,
+          "duration": 5.94
+        },
+        {
+          "text": "The cheapest, fastest and easiest way to get that\nenergy is from fossil fuels.",
+          "start": 273.889,
+          "duration": 6.771
+        },
+        {
+          "text": "In sum, fossil fuels don\u2019t take a naturally\nsafe environment and make it dangerous; they",
+          "start": 280.66,
+          "duration": 6.56
+        },
+        {
+          "text": "empower us to take a naturally dangerous environment\nand make it cleaner and safer.",
+          "start": 287.229,
+          "duration": 6.231
+        },
+        {
+          "text": "I\u2019m Alex Epstein of the Center for Industrial\nProgress for Prager University.",
+          "start": 293.46,
+          "duration": 5.66
+        }
+      ],
+      "video_id": "BJWq1FeGpCw"
+    }
+  }
+}

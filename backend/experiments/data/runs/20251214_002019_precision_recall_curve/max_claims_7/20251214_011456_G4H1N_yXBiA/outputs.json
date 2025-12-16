@@ -1,0 +1,1122 @@
+{
+  "extracted_claims": {
+    "claims": [
+      {
+        "text": "Human activities are driving up the earth's temperature and changing the world.",
+        "confidence": 0.9,
+        "category": "scientific",
+        "importance": 0.85,
+        "context": "General statement about climate change causes.",
+        "transcript_char_start": 50,
+        "transcript_char_end": 125,
+        "transcript_match_score": 0.7973856209150327
+      },
+      {
+        "text": "The main cause of climate change is the greenhouse effect.",
+        "confidence": 0.9,
+        "category": "scientific",
+        "importance": 0.85,
+        "context": "Explains the primary mechanism behind climate change.",
+        "transcript_char_start": 136,
+        "transcript_char_end": 197,
+        "transcript_match_score": 0.6949152542372882
+      },
+      {
+        "text": "Human activities have increased the amount of CO2 in the atmosphere by more than a third since the Industrial Revolution.",
+        "confidence": 0.9,
+        "category": "statistical",
+        "importance": 0.85,
+        "context": "Quantifies human impact on atmospheric CO2 levels.",
+        "transcript_char_start": 593,
+        "transcript_char_end": 702,
+        "transcript_match_score": 0.9344978165938864
+      },
+      {
+        "text": "Atmospheric carbon dioxide hasn't reached today's levels in hundreds of thousands of years.",
+        "confidence": 0.9,
+        "category": "historical",
+        "importance": 0.8,
+        "context": "Historical context of CO2 levels.",
+        "transcript_char_start": 851,
+        "transcript_char_end": 941,
+        "transcript_match_score": 1.0
+      },
+      {
+        "text": "Ice sheets in Greenland and Antarctica are melting, causing sea levels to rise.",
+        "confidence": 0.9,
+        "category": "scientific",
+        "importance": 0.8,
+        "context": "Describes a consequence of climate change.",
+        "transcript_char_start": 1033,
+        "transcript_char_end": 1104,
+        "transcript_match_score": 0.7432432432432432
+      },
+      {
+        "text": "Warmer temperatures make weather more extreme, leading to intense storms, floods, and droughts.",
+        "confidence": 0.85,
+        "category": "scientific",
+        "importance": 0.7,
+        "context": "Explains the impact of climate change on weather patterns.",
+        "transcript_char_start": 1216,
+        "transcript_char_end": 1312,
+        "transcript_match_score": 0.7165775401069518
+      },
+      {
+        "text": "Greenhouse gases include water vapor, carbon dioxide, methane, nitrous oxide, and chlorofluorocarbons.",
+        "confidence": 0.95,
+        "category": "scientific",
+        "importance": 0.6,
+        "context": "List of gases contributing to the greenhouse effect.",
+        "transcript_char_start": 227,
+        "transcript_char_end": 302,
+        "transcript_match_score": 0.872093023255814
+      }
+    ],
+    "total_count": 7
+  },
+  "final_output": {
+    "extracted_claims": {
+      "claims": [
+        {
+          "text": "Human activities are driving up the earth's temperature and changing the world.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.85,
+          "context": "General statement about climate change causes.",
+          "transcript_char_start": 50,
+          "transcript_char_end": 125,
+          "transcript_match_score": 0.7973856209150327
+        },
+        {
+          "text": "The main cause of climate change is the greenhouse effect.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.85,
+          "context": "Explains the primary mechanism behind climate change.",
+          "transcript_char_start": 136,
+          "transcript_char_end": 197,
+          "transcript_match_score": 0.6949152542372882
+        },
+        {
+          "text": "Human activities have increased the amount of CO2 in the atmosphere by more than a third since the Industrial Revolution.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.85,
+          "context": "Quantifies human impact on atmospheric CO2 levels.",
+          "transcript_char_start": 593,
+          "transcript_char_end": 702,
+          "transcript_match_score": 0.9344978165938864
+        },
+        {
+          "text": "Atmospheric carbon dioxide hasn't reached today's levels in hundreds of thousands of years.",
+          "confidence": 0.9,
+          "category": "historical",
+          "importance": 0.8,
+          "context": "Historical context of CO2 levels.",
+          "transcript_char_start": 851,
+          "transcript_char_end": 941,
+          "transcript_match_score": 1.0
+        },
+        {
+          "text": "Ice sheets in Greenland and Antarctica are melting, causing sea levels to rise.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.8,
+          "context": "Describes a consequence of climate change.",
+          "transcript_char_start": 1033,
+          "transcript_char_end": 1104,
+          "transcript_match_score": 0.7432432432432432
+        },
+        {
+          "text": "Warmer temperatures make weather more extreme, leading to intense storms, floods, and droughts.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Explains the impact of climate change on weather patterns.",
+          "transcript_char_start": 1216,
+          "transcript_char_end": 1312,
+          "transcript_match_score": 0.7165775401069518
+        },
+        {
+          "text": "Greenhouse gases include water vapor, carbon dioxide, methane, nitrous oxide, and chlorofluorocarbons.",
+          "confidence": 0.95,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "List of gases contributing to the greenhouse effect.",
+          "transcript_char_start": 227,
+          "transcript_char_end": 302,
+          "transcript_match_score": 0.872093023255814
+        }
+      ],
+      "total_count": 7
+    },
+    "claim_reports": [
+      {
+        "claim_text": "Human activities are driving up the earth's temperature and changing the world.",
+        "claim_confidence": 0.9,
+        "claim_category": "scientific",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence overwhelmingly supports the claim that human activities are driving up the Earth's temperature and changing the world, with multiple high-reliability sources confirming that the burning of fossil fuels and other industrial activities significantly increase greenhouse gas emissions, leading to global warming.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Are humans causing or contributing to global warming? - Climate",
+              "url": "https://www.climate.gov/news-features/climate-qa/are-humans-causing-or-contributing-global-warming",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (26.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence clearly supports the claim that human activities are driving up the Earth's temperature by significantly increasing greenhouse gas emissions, particularly through the burning of fossil fuels and other industrial activities. It explains how these gases trap heat in the atmosphere, contributing to global warming.",
+              "snippet": "Yes, by increasing the abundance of greenhouse gases in the atmosphere, human activities are amplifying Earth's natural greenhouse effect."
+            },
+            {
+              "title": "Climate change: atmospheric carbon dioxide",
+              "url": "https://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (26.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence clearly states that human activities, particularly the burning of fossil fuels, are the main drivers of climate change, leading to significant increases in global temperatures and various environmental impacts. It emphasizes that human actions have caused virtually all global heating over the last 200 years, confirming the claim.",
+              "snippet": "Each year, human activities release more carbon dioxide into the atmosphere than natural processes can remove, causing the amount of carbon dioxide in the ..."
+            },
+            {
+              "title": "The Causes of Climate Change - NASA Science",
+              "url": "https://science.nasa.gov/climate-change/causes/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence clearly supports the claim that human activities are driving up the Earth's temperature and changing the world, primarily through the burning of fossil fuels which increases greenhouse gas emissions, leading to significant global warming and climate change effects.",
+              "snippet": "Human Activity Is the Cause of Increased Greenhouse Gas Concentrations. Over the last century, burning of fossil fuels like coal and oil has ..."
+            },
+            {
+              "title": "Human Impacts on the Environment: A Focus on Climate Change",
+              "url": "https://populationconnection.org/resources/human-activities-and-climate-change/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence clearly supports the claim that human activities are driving up the earth's temperature and changing the world, as it states that since the 1800s, human activities, particularly the burning of fossil fuels, have been the main driver of climate change, leading to significant increases in global temperatures and various environmental impacts.",
+              "snippet": "Human activities are driving large scale changes in terrestrial and aquatic environments through pollution, water withdrawals, the hunting and harvesting of ..."
+            }
+          ]
+        },
+        "total_sources": 4,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 2.639,
+        "timestamp_confidence": 0.7973856209150327
+      },
+      {
+        "claim_text": "The main cause of climate change is the greenhouse effect.",
+        "claim_confidence": 0.9,
+        "claim_category": "scientific",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence strongly supports the claim that the main cause of climate change is the greenhouse effect, as multiple high-reliability sources, including NASA and the NRDC, explain how human activities have intensified the greenhouse effect through increased greenhouse gas emissions, leading to global warming.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "What is the greenhouse effect? - NASA Science",
+              "url": "https://science.nasa.gov/climate-change/faq/what-is-the-greenhouse-effect/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The article explains that the greenhouse effect, primarily driven by greenhouse gases like carbon dioxide, is crucial for maintaining Earth's temperature. It also highlights that human activities have increased greenhouse gas concentrations, disrupting the natural balance and contributing to climate change.",
+              "snippet": "The greenhouse effect is the process through which heat is trapped near Earth's surface by substances known as 'greenhouse gases."
+            },
+            {
+              "title": "Greenhouse Effect 101 - NRDC",
+              "url": "https://www.nrdc.org/stories/greenhouse-effect-101",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Left"
+              },
+              "stance": "supports",
+              "evidence_summary": "The article explains that the greenhouse effect, primarily driven by human activities such as burning fossil fuels, is a significant factor in climate change due to the increase of greenhouse gases like carbon dioxide in the atmosphere, which traps heat and raises temperatures.",
+              "snippet": "These emissions, made up mostly of carbon dioxide and methane, stem primarily from burning natural gas and oil for heating and cooking, though ..."
+            },
+            {
+              "title": "Review Greenhouse gases emissions and global climate change",
+              "url": "https://www.sciencedirect.com/science/article/pii/S004896972403506X",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence explains that the greenhouse effect, enhanced by human activities through increased greenhouse gas emissions, is a significant driver of global warming and climate change.",
+              "snippet": "The increase in GHG concentrations as a result of human activity enhances the greenhouse effect, leading to global warming. This process ..."
+            },
+            {
+              "title": "Sources of Greenhouse Gas Emissions | US EPA",
+              "url": "https://www.epa.gov/ghgemissions/sources-greenhouse-gas-emissions",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "MBFC credibility: medium",
+                  "Factual reporting: Mixed"
+                ],
+                "bias": "Right"
+              },
+              "stance": "supports",
+              "evidence_summary": "The article explains that the greenhouse effect is a natural process that is being intensified by human activities, particularly through the burning of fossil fuels, which releases greenhouse gases and disrupts Earth's energy balance, leading to climate change.",
+              "snippet": "The largest source of greenhouse gas emissions from human activities in the United States is from burning fossil fuels for electricity, heat, and ..."
+            }
+          ]
+        },
+        "total_sources": 4,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 7.319,
+        "timestamp_confidence": 0.6949152542372882
+      },
+      {
+        "claim_text": "Human activities have increased the amount of CO2 in the atmosphere by more than a third since the Industrial Revolution.",
+        "claim_confidence": 0.9,
+        "claim_category": "statistical",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence overwhelmingly supports the claim that human activities have increased atmospheric CO2 levels by more than a third since the Industrial Revolution, with multiple high-reliability sources indicating increases of over 50% due to fossil fuel burning.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Climate change: atmospheric carbon dioxide",
+              "url": "https://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (26.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that atmospheric carbon dioxide levels have increased significantly due to human activities, specifically fossil fuel burning, which has raised CO2 levels by more than 50% since the Industrial Revolution.",
+              "snippet": "Atmospheric carbon dioxide is now 50 percent higher than it was before the Industrial Revolution. The annual rate of increase in atmospheric carbon dioxide over ..."
+            },
+            {
+              "title": "Evidence - NASA Science",
+              "url": "https://science.nasa.gov/climate-change/evidence/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that human activities have significantly increased atmospheric CO2 levels, stating that carbon dioxide from human activities is increasing about 250 times faster than it did from natural sources after the last Ice Age, and that the planet's average surface temperature has risen largely due to increased carbon dioxide emissions since the late 19th century.",
+              "snippet": "Carbon dioxide from human activities is increasing about 250 times faster than it did from natural sources after the last Ice Age. The ..."
+            },
+            {
+              "title": "Carbon dioxide now more than 50% higher than pre-industrial levels",
+              "url": "https://www.noaa.gov/news-release/carbon-dioxide-now-more-than-50-higher-than-pre-industrial-levels",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that human activities, particularly the burning of fossil fuels, have significantly increased atmospheric CO2 levels since the Industrial Revolution, with current levels being more than 50% higher than pre-industrial levels.",
+              "snippet": "Prior to the Industrial Revolution, CO2 levels were consistently around 280 ppm for almost 6,000 years of human civilization. Since then, humans ..."
+            },
+            {
+              "title": "How have CO2 levels changed since the industrial revolution?",
+              "url": "https://www.weforum.org/stories/2021/03/met-office-atmospheric-co2-industrial-levels-environment-climate-change/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that atmospheric carbon dioxide levels have increased significantly due to human activities, specifically the burning of fossil fuels since the Industrial Revolution, with current levels being about 50% higher than pre-industrial levels.",
+              "snippet": "Carbon dioxide (CO2) in the atmosphere is now reaching levels 50% higher than when humanity began large-scale burning of fossil fuels during the industrial ..."
+            },
+            {
+              "title": "The History of Carbon Dioxide Emissions | World Resources Institute",
+              "url": "https://www.wri.org/insights/history-carbon-dioxide-emissions",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that human activities have significantly increased carbon dioxide levels in the atmosphere, with current emissions being about 250 times faster than natural sources after the last Ice Age. This increase in CO2 is a primary driver of the observed warming since the Industrial Revolution.",
+              "snippet": "Carbon dioxide (CO2) emissions from human activities are now higher than at any point in our history. In fact, recent data reveals that global ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 43.32,
+        "timestamp_confidence": 0.9344978165938864
+      },
+      {
+        "claim_text": "Atmospheric carbon dioxide hasn't reached today's levels in hundreds of thousands of years.",
+        "claim_confidence": 0.9,
+        "claim_category": "historical",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "Multiple high-reliability sources, including NASA and climate.gov, confirm that current atmospheric carbon dioxide levels are significantly higher than those recorded in the past, particularly since the industrial era, indicating that today's levels have not been reached in hundreds of thousands of years.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Carbon Dioxide - Earth Indicator - NASA Science",
+              "url": "https://science.nasa.gov/earth/explore/earth-indicators/carbon-dioxide/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that current atmospheric carbon dioxide levels are significantly higher than those observed in the past, particularly since the start of the industrial era, suggesting that today's levels have not been reached in hundreds of thousands of years.",
+              "snippet": "Key Takeaway: The amount of carbon dioxide in Earth's atmosphere has increased sharply in the past 100 years as measured from the ground and from satellites ..."
+            },
+            {
+              "title": "Climate change: atmospheric carbon dioxide",
+              "url": "https://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (26.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that current atmospheric carbon dioxide levels are significantly higher than those observed at the end of the last ice age, suggesting that today's levels have not been reached in hundreds of thousands of years.",
+              "snippet": "In the past 60 years, carbon dioxide in the atmosphere has increased 100-200 times faster than it did during the end of the last ice age."
+            },
+            {
+              "title": "A New 66 Million-Year History of Carbon Dioxide Offers Little ...",
+              "url": "https://news.climate.columbia.edu/2023/12/07/a-new-66-million-year-history-of-carbon-dioxide-offers-little-comfort-for-today/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "supports",
+              "evidence_summary": "The article discusses the historical levels of atmospheric CO2, indicating that current levels of around 426.24 ppm have not been reached in hundreds of thousands of years, as the most reliable data spans back only 800,000 years, showing lower levels prior to industrialization.",
+              "snippet": "Which does not change the simple facts that atmospheric CO2 was naturally cycling from about 200ppm to about 250ppm for the past million years."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "Carbon dioxide concentrations in the atmosphere - Our World in Data",
+              "url": "https://ourworldindata.org/grapher/co2-long-term-concentration",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The data contains concentrations of carbon dioxide in the atmosphere from hundreds of thousands of years ago through 2021, measured in parts per million (ppm).",
+              "snippet": "The data contains concentrations of carbon dioxide in the atmosphere from hundreds of thousands of years ago through 2021, measured in parts per million (ppm)."
+            }
+          ]
+        },
+        "total_sources": 4,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 62.219,
+        "timestamp_confidence": 1.0
+      },
+      {
+        "claim_text": "Ice sheets in Greenland and Antarctica are melting, causing sea levels to rise.",
+        "claim_confidence": 0.9,
+        "claim_category": "scientific",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "Multiple high-reliability sources confirm that ice sheets in Greenland and Antarctica are melting due to rising temperatures, significantly contributing to sea level rise. For instance, NASA indicates that this melting leads to substantial increases in sea levels, with Greenland and Antarctica losing hundreds of billions of tons of ice annually. While one source notes a slowing trend in Antarctic surface melt, the overall evidence strongly supports the claim.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Climate change: mountain glaciers",
+              "url": "https://www.climate.gov/news-features/understanding-climate/climate-change-mountain-glaciers",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (26.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that glaciers are experiencing significant mass loss, which contributes to rising sea levels. Specifically, the article states that glacier melt in 2023 alone raised sea levels by approximately 1.5 mm, highlighting the connection between glacier melting and sea level rise.",
+              "snippet": "During 2023 alone, the glacier mass loss was about 80 Gt [80 billion metric tons] higher than any other year on record, corresponding to 6 % of ..."
+            },
+            {
+              "title": "Ice Sheets - Earth Indicator - NASA Science",
+              "url": "https://science.nasa.gov/earth/explore/earth-indicators/ice-sheets/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that ice sheets in Greenland and Antarctica are melting due to rising air and ocean temperatures, leading to significant contributions to sea level rise as the meltwater drains into the ocean.",
+              "snippet": "The animated map shows where ice melting occurred in Antarctica and Greenland from 2002-2023. Red and orange colors show where ice mass is ..."
+            },
+            {
+              "title": "Guest post: How the Greenland ice sheet fared in 2023 - Carbon Brief",
+              "url": "https://www.carbonbrief.org/guest-post-how-the-greenland-ice-sheet-fared-in-2023/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that ice sheets in Greenland and Antarctica are melting due to rising air and ocean temperatures, leading to significant contributions to sea level rise as the meltwater drains into the ocean.",
+              "snippet": "The Greenland ice sheet melt season 2023 saw very high melt but also higher than usual rain and snowfall in the late spring and early ..."
+            },
+            {
+              "title": "Hundreds of Earthquakes Detected at Antarctica's 'Doomsday' Glacier",
+              "url": "https://www.sciencealert.com/hundreds-of-earthquakes-detected-at-antarcticas-doomsday-glacier",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that ice sheets in Greenland and Antarctica are melting due to rising air and ocean temperatures, leading to significant contributions to sea level rise, with Antarctica losing about 135 billion tons and Greenland about 266 billion tons of ice mass per year.",
+              "snippet": "Thwaites Glacier is sometimes known as the Doomsday Glacier. If it were to collapse completely it would raise global sea levels by 3 meters, and ..."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "Ice sheet surface melt is accelerating in Greenland and slowing in ...",
+              "url": "https://news.uci.edu/2023/10/16/ice-sheet-surface-melt-is-accelerating-in-greenland-and-slowing-in-antarctica/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (40.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Surface ice in Greenland has been melting at an increasing rate in recent decades, while the trend in Antarctica has moved in the opposite direction.",
+              "snippet": "Surface ice in Greenland has been melting at an increasing rate in recent decades, while the trend in Antarctica has moved in the opposite direction."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 77.34,
+        "timestamp_confidence": 0.7432432432432432
+      },
+      {
+        "claim_text": "Warmer temperatures make weather more extreme, leading to intense storms, floods, and droughts.",
+        "claim_confidence": 0.85,
+        "claim_category": "scientific",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "Multiple high-reliability sources, including NASA and USGS, consistently indicate that climate change is increasing the frequency and intensity of extreme weather events such as storms, floods, and droughts, directly supporting the claim that warmer temperatures lead to more extreme weather.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Extreme Weather and Climate Change - NASA Science",
+              "url": "https://science.nasa.gov/climate-change/extreme-weather/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that climate change is increasing the frequency and intensity of extreme weather events, including storms, floods, and droughts, which aligns with the claim that warmer temperatures lead to more extreme weather.",
+              "snippet": "As Earth's climate changes, it is impacting extreme weather across the planet. Record-breaking heat waves on land and in the ocean, drenching rains, severe ..."
+            },
+            {
+              "title": "Extreme Weather and Climate Change: Population Health and ...",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9013542/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that climate change is increasing the frequency and intensity of extreme weather events, including storms, floods, and droughts, thereby supporting the claim that warmer temperatures lead to more extreme weather.",
+              "snippet": "These events and events influenced by climate change, such as wildfires, continue to cause significant human morbidity and mortality and adversely affect mental ..."
+            },
+            {
+              "title": "How can climate change affect natural disasters? - USGS.gov",
+              "url": "https://www.usgs.gov/faqs/how-can-climate-change-affect-natural-disasters",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that warmer temperatures are altering weather patterns and increasing the frequency and intensity of extreme weather events, such as storms and floods, which supports the claim.",
+              "snippet": "More heat in the atmosphere and warmer ocean surface temperatures can lead to increased wind speeds in tropical storms. Rising sea levels expose higher ..."
+            },
+            {
+              "title": "How Climate Change Is Fueling Extreme Weather - Earthjustice",
+              "url": "https://earthjustice.org/feature/how-climate-change-is-fueling-extreme-weather",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that climate change is increasing the frequency and intensity of extreme weather events, including storms, floods, and droughts, supporting the claim that warmer temperatures lead to more extreme weather.",
+              "snippet": "1. Hurricanes are becoming more intense \u00b7 2. Wildfires burn longer and wider \u00b7 3. Extreme heat gets hotter \u00b7 4. Drought conditions persist \u00b7 5."
+            },
+            {
+              "title": "How climate change worsens heatwaves, droughts, fires and floods",
+              "url": "https://www.bbc.com/news/articles/cy4dgp1p3p1o",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that warmer temperatures are linked to more extreme weather events, including intense storms, floods, and droughts, as rising temperatures increase moisture in the atmosphere and alter rainfall patterns. Specifically, it states that climate change has made heavy rainfall events more frequent and intense, and has significantly increased the likelihood of droughts.",
+              "snippet": "For every 1C rise in air temperature, the atmosphere can hold about 7% more moisture. With more moisture available, rainfall can become heavier."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 89.31,
+        "timestamp_confidence": 0.7165775401069518
+      },
+      {
+        "claim_text": "Greenhouse gases include water vapor, carbon dioxide, methane, nitrous oxide, and chlorofluorocarbons.",
+        "claim_confidence": 0.95,
+        "claim_category": "scientific",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence strongly supports the claim that greenhouse gases include water vapor, carbon dioxide, methane, nitrous oxide, and chlorofluorocarbons, with multiple high-reliability sources confirming this list.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Glossary of Terms - Environmental Sustainability Council - TCNJ",
+              "url": "https://climate.tcnj.edu/additional-resources/glossary-of-terms/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (29.3 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The source confirms that greenhouse gases include water vapor, carbon dioxide, methane, nitrous oxide, and chlorofluorocarbons, stating that these gases trap heat in the atmosphere and are essential for sustaining life on Earth.",
+              "snippet": "Greenhouse Gas (GHG): Any gas that absorbs infrared radiation in the atmosphere. Greenhouse gases include, but are not limited to, water vapor, carbon dioxide ..."
+            },
+            {
+              "title": "What is the greenhouse effect? - NASA Science",
+              "url": "https://science.nasa.gov/climate-change/faq/what-is-the-greenhouse-effect/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The source confirms that greenhouse gases include carbon dioxide, methane, nitrous oxide, chlorofluorocarbons, and water vapor, directly supporting the claim.",
+              "snippet": "Greenhouse gases consist of carbon dioxide, methane, ozone, nitrous oxide, chlorofluorocarbons, and water vapor. Water vapor, which reacts to ..."
+            },
+            {
+              "title": "Basics of the Carbon Cycle and the Greenhouse Effect - NOAA",
+              "url": "https://www.noaa.gov/basics-of-carbon-cycle-and-greenhouse-effect",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The source confirms that greenhouse gases include water vapor, carbon dioxide, methane, nitrous oxide, chlorofluorocarbons, and ozone, directly supporting the claim.",
+              "snippet": "The gases measured by the CCGG include carbon dioxide (the second most important GHG), methane, nitrous oxide, sulfur hexafluoride, ozone, and a few others."
+            },
+            {
+              "title": "Overview of Greenhouse Gases | US EPA",
+              "url": "https://www.epa.gov/ghgemissions/overview-greenhouse-gases",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "MBFC credibility: medium",
+                  "Factual reporting: Mixed"
+                ],
+                "bias": "Right"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that greenhouse gases include water vapor, carbon dioxide, methane, nitrous oxide, chlorofluorocarbons, and ozone, directly supporting the claim.",
+              "snippet": "Fluorinated gases: Hydrofluorocarbons, perfluorocarbons, sulfur hexafluoride, and nitrogen trifluoride are synthetic, powerful greenhouse gases ..."
+            }
+          ],
+          "mixed": [
+            {
+              "title": "NJDEP| Greenhouse Gas | About GHGs - NJ.gov",
+              "url": "https://dep.nj.gov/ghg/about/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (24.3 years)"
+                ],
+                "bias": null
+              },
+              "stance": "mixed",
+              "evidence_summary": "The source lists carbon dioxide, methane, nitrous oxide, and fluorinated gases as greenhouse gases, but does not explicitly mention water vapor as part of the list.",
+              "snippet": "Types of Greenhouse Gases \u00b7 Carbon dioxide (CO2), \u00b7 Methane (CH4), \u00b7 Nitrous oxide (N2O), and \u00b7 Fluorinated gases (hydrofluorocarbons, ..."
+            },
+            {
+              "title": "What Are Greenhouse Gases? - NASA Science",
+              "url": "https://science.nasa.gov/kids/earth/what-are-greenhouse-gases/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "mixed",
+              "evidence_summary": "The source confirms that greenhouse gases include carbon dioxide, methane, nitrous oxide, and water vapor, but does not mention chlorofluorocarbons.",
+              "snippet": "They do this through a process known as the greenhouse effect. Greenhouse gases include carbon dioxide, methane, nitrous oxide, and water vapor."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 18.84,
+        "timestamp_confidence": 0.872093023255814
+      }
+    ],
+    "transcript_data": {
+      "text": "human activities from pollution to overpopulation are driving up the earth's temperature and fundamentally changing the world around us the main cause is a phenomenon known as the greenhouse effect gases in the atmosphere such as water vapor carbon dioxide methane nitrous oxide and chlorofluorocarbons let the sun's light in but keep some of the heat from escaping like the glass walls of a greenhouse the more greenhouse gases in the atmosphere the more heat gets trapped strengthening the greenhouse effect and increasing the earth's temperature human activities like the burning of fossil fuels have increased the amount of co2 in the atmosphere by more than a third since the Industrial Revolution the rapid increase in greenhouse gases in the atmosphere has warmed the planet at an alarming rate while Earth's climate has fluctuated in the past atmospheric carbon dioxide hasn't reached today's levels in hundreds of thousands of years climate change has consequences for our oceans our weather our food sources and our health ice sheets such as Greenland and Antarctica are melting the extra water that was once held in glaciers causes sea levels to rise and spills out of the oceans flooding coastal regions warmer temperatures also make weather more extreme this means not only more intense major storms floods and heavy snowfall but also longer and more frequent droughts these changes in weather pose challenges growing crops becomes more difficult the areas where plants and animals can live shift and water supplies are diminished in addition to creating new agricultural challenges climate change can directly affect people's physical health in urban areas the warmer atmosphere creates an environment that traps and increases the amount of smog this is because smog contains ozone particles which increase rapidly at higher temperatures exposure to higher levels of smog can cause health problems such as asthma heart disease and lung cancer while the rapid rate of climate change is caused by humans humans are also the ones who can combat it if we work to replace fossil fuels with renewable energy sources like solar and wind which don't produce greenhouse gas emissions we might still be able to prevent some of the worst effects of climate change [Music] you",
+      "segments": [
+        {
+          "text": "human activities from pollution to",
+          "start": 0.0,
+          "duration": 5.069
+        },
+        {
+          "text": "overpopulation are driving up the",
+          "start": 2.639,
+          "duration": 4.68
+        },
+        {
+          "text": "earth's temperature and fundamentally",
+          "start": 5.069,
+          "duration": 9.331
+        },
+        {
+          "text": "changing the world around us the main",
+          "start": 7.319,
+          "duration": 9.121
+        },
+        {
+          "text": "cause is a phenomenon known as the",
+          "start": 14.4,
+          "duration": 4.44
+        },
+        {
+          "text": "greenhouse effect gases in the",
+          "start": 16.44,
+          "duration": 5.07
+        },
+        {
+          "text": "atmosphere such as water vapor carbon",
+          "start": 18.84,
+          "duration": 5.929
+        },
+        {
+          "text": "dioxide methane nitrous oxide and",
+          "start": 21.51,
+          "duration": 5.64
+        },
+        {
+          "text": "chlorofluorocarbons let the sun's light",
+          "start": 24.769,
+          "duration": 4.301
+        },
+        {
+          "text": "in but keep some of the heat from",
+          "start": 27.15,
+          "duration": 4.469
+        },
+        {
+          "text": "escaping like the glass walls of a",
+          "start": 29.07,
+          "duration": 5.61
+        },
+        {
+          "text": "greenhouse the more greenhouse gases in",
+          "start": 31.619,
+          "duration": 4.861
+        },
+        {
+          "text": "the atmosphere the more heat gets",
+          "start": 34.68,
+          "duration": 4.14
+        },
+        {
+          "text": "trapped strengthening the greenhouse",
+          "start": 36.48,
+          "duration": 3.87
+        },
+        {
+          "text": "effect and increasing the earth's",
+          "start": 38.82,
+          "duration": 4.5
+        },
+        {
+          "text": "temperature human activities like the",
+          "start": 40.35,
+          "duration": 5.25
+        },
+        {
+          "text": "burning of fossil fuels have increased",
+          "start": 43.32,
+          "duration": 4.89
+        },
+        {
+          "text": "the amount of co2 in the atmosphere by",
+          "start": 45.6,
+          "duration": 4.889
+        },
+        {
+          "text": "more than a third since the Industrial",
+          "start": 48.21,
+          "duration": 5.43
+        },
+        {
+          "text": "Revolution the rapid increase in",
+          "start": 50.489,
+          "duration": 5.611
+        },
+        {
+          "text": "greenhouse gases in the atmosphere has",
+          "start": 53.64,
+          "duration": 5.689
+        },
+        {
+          "text": "warmed the planet at an alarming rate",
+          "start": 56.1,
+          "duration": 6.119
+        },
+        {
+          "text": "while Earth's climate has fluctuated in",
+          "start": 59.329,
+          "duration": 5.47
+        },
+        {
+          "text": "the past atmospheric carbon dioxide",
+          "start": 62.219,
+          "duration": 4.921
+        },
+        {
+          "text": "hasn't reached today's levels in",
+          "start": 64.799,
+          "duration": 7.531
+        },
+        {
+          "text": "hundreds of thousands of years climate",
+          "start": 67.14,
+          "duration": 7.5
+        },
+        {
+          "text": "change has consequences for our oceans",
+          "start": 72.33,
+          "duration": 5.01
+        },
+        {
+          "text": "our weather our food sources and our",
+          "start": 74.64,
+          "duration": 6.119
+        },
+        {
+          "text": "health ice sheets such as Greenland and",
+          "start": 77.34,
+          "duration": 7.139
+        },
+        {
+          "text": "Antarctica are melting the extra water",
+          "start": 80.759,
+          "duration": 6.061
+        },
+        {
+          "text": "that was once held in glaciers causes",
+          "start": 84.479,
+          "duration": 4.831
+        },
+        {
+          "text": "sea levels to rise and spills out of the",
+          "start": 86.82,
+          "duration": 5.759
+        },
+        {
+          "text": "oceans flooding coastal regions warmer",
+          "start": 89.31,
+          "duration": 5.07
+        },
+        {
+          "text": "temperatures also make weather more",
+          "start": 92.579,
+          "duration": 5.341
+        },
+        {
+          "text": "extreme this means not only more intense",
+          "start": 94.38,
+          "duration": 6.15
+        },
+        {
+          "text": "major storms floods and heavy snowfall",
+          "start": 97.92,
+          "duration": 5.85
+        },
+        {
+          "text": "but also longer and more frequent",
+          "start": 100.53,
+          "duration": 6.269
+        },
+        {
+          "text": "droughts these changes in weather pose",
+          "start": 103.77,
+          "duration": 4.75
+        },
+        {
+          "text": "challenges",
+          "start": 106.799,
+          "duration": 4.871
+        },
+        {
+          "text": "growing crops becomes more difficult the",
+          "start": 108.52,
+          "duration": 5.16
+        },
+        {
+          "text": "areas where plants and animals can live",
+          "start": 111.67,
+          "duration": 4.86
+        },
+        {
+          "text": "shift and water supplies are diminished",
+          "start": 113.68,
+          "duration": 6.06
+        },
+        {
+          "text": "in addition to creating new agricultural",
+          "start": 116.53,
+          "duration": 5.82
+        },
+        {
+          "text": "challenges climate change can directly",
+          "start": 119.74,
+          "duration": 5.76
+        },
+        {
+          "text": "affect people's physical health in urban",
+          "start": 122.35,
+          "duration": 5.61
+        },
+        {
+          "text": "areas the warmer atmosphere creates an",
+          "start": 125.5,
+          "duration": 4.739
+        },
+        {
+          "text": "environment that traps and increases the",
+          "start": 127.96,
+          "duration": 5.19
+        },
+        {
+          "text": "amount of smog this is because smog",
+          "start": 130.239,
+          "duration": 5.61
+        },
+        {
+          "text": "contains ozone particles which increase",
+          "start": 133.15,
+          "duration": 5.97
+        },
+        {
+          "text": "rapidly at higher temperatures exposure",
+          "start": 135.849,
+          "duration": 5.281
+        },
+        {
+          "text": "to higher levels of smog can cause",
+          "start": 139.12,
+          "duration": 4.77
+        },
+        {
+          "text": "health problems such as asthma heart",
+          "start": 141.13,
+          "duration": 7.41
+        },
+        {
+          "text": "disease and lung cancer while the rapid",
+          "start": 143.89,
+          "duration": 6.54
+        },
+        {
+          "text": "rate of climate change is caused by",
+          "start": 148.54,
+          "duration": 5.19
+        },
+        {
+          "text": "humans humans are also the ones who can",
+          "start": 150.43,
+          "duration": 6.24
+        },
+        {
+          "text": "combat it if we work to replace fossil",
+          "start": 153.73,
+          "duration": 5.64
+        },
+        {
+          "text": "fuels with renewable energy sources like",
+          "start": 156.67,
+          "duration": 4.95
+        },
+        {
+          "text": "solar and wind which don't produce",
+          "start": 159.37,
+          "duration": 5.07
+        },
+        {
+          "text": "greenhouse gas emissions we might still",
+          "start": 161.62,
+          "duration": 4.77
+        },
+        {
+          "text": "be able to prevent some of the worst",
+          "start": 164.44,
+          "duration": 5.15
+        },
+        {
+          "text": "effects of climate change",
+          "start": 166.39,
+          "duration": 3.2
+        },
+        {
+          "text": "[Music]",
+          "start": 169.83,
+          "duration": 15.94
+        },
+        {
+          "text": "you",
+          "start": 183.71,
+          "duration": 2.06
+        }
+      ],
+      "video_id": "G4H1N_yXBiA"
+    }
+  }
+}

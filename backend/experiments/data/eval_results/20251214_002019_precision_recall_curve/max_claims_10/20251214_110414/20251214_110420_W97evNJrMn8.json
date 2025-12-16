@@ -1,0 +1,165 @@
+{
+  "video_id": "W97evNJrMn8",
+  "timestamp": "2025-12-14T11:04:20.044639",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_10",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.9,
+    "recall": 0.391304347826087,
+    "f1_score": 0.5454545454545454,
+    "true_positives": 9,
+    "false_positives": 1,
+    "false_negatives": 14,
+    "mean_average_precision": 0.7856701940035273,
+    "recall_at_important": 0.8,
+    "importance_weighted_coverage": 0.44295302013422816,
+    "matched_claims": [
+      {
+        "gt_text": "The Conservatives have been reduced to their lowest seat share ever, dropping below the 156 seats they won in the 1906 general election",
+        "sys_text": "The Conservatives have been reduced to their lowest seat share ever, dropping below 156 seats.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.8,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "Labour have achieved almost the highest seat share in their history, getting very close to the 418 seats they won in the 1997 general election",
+        "sys_text": "Labour achieved almost the highest seat share in their history, close to 418 seats from 1997.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.8,
+        "importance_error": 0.04999999999999993
+      },
+      {
+        "gt_text": "The Liberal Democrats have had a very good night with their seat share ticking up to a huge 71 seats, the highest seat share ever",
+        "sys_text": "The Liberal Democrats increased their seat share to 71, the highest ever, up from 11 in 2019.",
+        "gt_importance": 0.8,
+        "sys_importance": 0.75,
+        "importance_error": 0.050000000000000044
+      },
+      {
+        "gt_text": "The SNP received their lowest seat share since 2010, winning only nine seats",
+        "sys_text": "The SNP received their lowest seat share since 2010, winning only nine seats.",
+        "gt_importance": 0.8,
+        "sys_importance": 0.75,
+        "importance_error": 0.050000000000000044
+      },
+      {
+        "gt_text": "Reform UK achieved 14.3% of the vote",
+        "sys_text": "Reform UK went from no seats to four seats, achieving 14.3% of the vote.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.7,
+        "importance_error": 0.0
+      },
+      {
+        "gt_text": "The exit poll at 10pm predicted that Reform would get 13 seats",
+        "sys_text": "The exit poll predicted Reform UK would get 13 seats, but they achieved only four.",
+        "gt_importance": 0.55,
+        "sys_importance": 0.7,
+        "importance_error": 0.1499999999999999
+      },
+      {
+        "gt_text": "Jonathan Ashworth unexpectedly lost his seat to an independent candidate",
+        "sys_text": "Jonathan Ashworth lost his seat to an independent candidate, attributed to Labour's stance on Gaza.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.65,
+        "importance_error": 0.04999999999999993
+      },
+      {
+        "gt_text": "Jeremy Corbyn was deselected as a Labour MP and opted to stand in his constituency as an independent",
+        "sys_text": "Jeremy Corbyn was elected in Islington North as an independent after being deselected by Labour.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.65,
+        "importance_error": 0.04999999999999993
+      },
+      {
+        "gt_text": "In 2019 the SNP won 48 out of the 56 available seats in Scotland",
+        "sys_text": "The SNP won 48 out of 56 available seats in Scotland in 2019.",
+        "gt_importance": 0.6,
+        "sys_importance": 0.6,
+        "importance_error": 0.0
+      }
+    ],
+    "missed_claims": [
+      "14 years of Conservative rule has come to an end",
+      "This is even higher than their seat share in 2010 when they agreed to a formal coalition with the Conservative party",
+      "Reform UK have gone from no seats to a pretty respectable four seats",
+      "The Greens held on to Brighton Pavilion and gained Bristol Central, Waveney Valley and North Herefordshire",
+      "The exit poll predicted that the Tories were going to win 131 seats",
+      "Ashworth has previously been the Shadow Health Secretary and was the Shadow Paymaster General",
+      "The loss of Ashworth's seat has been a result of Labour's stance on Gaza",
+      "Corbyn did make the decision to stand rather late in the election cycle",
+      "Corbyn secured himself a pretty decent majority",
+      "Sunak has not yet announced his resignation as Conservative leader although he is expected to do so",
+      "Kemi Badenoch is in the strongest position for Conservative leadership; one of her key rivals Penny Mordaunt lost her seat",
+      "There has been an issue in Badenoch's constituency with postal votes",
+      "The new prime minister Keir Starmer will meet the king and agree to form a government in his name",
+      "Starmer could represent his party in a PMQs session before the imminent summer recess"
+    ],
+    "extra_claims": [
+      "The Labour party has won this general election, ending 14 years of Conservative rule."
+    ],
+    "importance_mae": 0.05555555555555553,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.4444444444444444,
+    "stance_accuracy": 0.4444444444444444,
+    "correct_verdicts": 4,
+    "total_verdicts": 9,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "The Conservatives have been reduced to their lowest seat share ever, dropping below the 156 seats they won in the 1906 general election",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "REFUTES"
+      },
+      {
+        "claim": "The Liberal Democrats have had a very good night with their seat share ticking up to a huge 71 seats, the highest seat share ever",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "SUPPORTS"
+      },
+      {
+        "claim": "Reform UK achieved 14.3% of the vote",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "MIXED"
+      },
+      {
+        "claim": "The exit poll at 10pm predicted that Reform would get 13 seats",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "REFUTES"
+      },
+      {
+        "claim": "Jonathan Ashworth unexpectedly lost his seat to an independent candidate",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "MIXED"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.391304347826087,
+    "verdict_accuracy": 0.4444444444444444,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.01610175,
+    "total_time_seconds": 123.47578597068787,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.7
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 27,
+      "medium": 22,
+      "unknown": 5
+    },
+    "avg_evidence_per_claim": 5.4
+  },
+  "ground_truth_claims_count": 23,
+  "system_claims_count": 10
+}

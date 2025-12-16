@@ -1,0 +1,169 @@
+{
+  "video_id": "-LDjqcvSbP4",
+  "timestamp": "2025-12-14T11:04:18.803352",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_10",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.9,
+    "recall": 0.5,
+    "f1_score": 0.6428571428571429,
+    "true_positives": 9,
+    "false_positives": 1,
+    "false_negatives": 9,
+    "mean_average_precision": 0.9282627865961199,
+    "recall_at_important": 0.5555555555555556,
+    "importance_weighted_coverage": 0.5465116279069767,
+    "matched_claims": [
+      {
+        "gt_text": "100% fruit juice is a good source of essential vitamins, especially vitamin C, which supports the immune system",
+        "sys_text": "100% fruit juice is a good source of vitamin C and potassium.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.7,
+        "importance_error": 0.050000000000000044
+      },
+      {
+        "gt_text": "100% fruit juice contains high amounts of naturally occurring sugars like fructose even without added sugars",
+        "sys_text": "100% fruit juice contains high amounts of naturally occurring sugars like fructose.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.7,
+        "importance_error": 0.20000000000000007
+      },
+      {
+        "gt_text": "Juice is calorie dense compared to whole fruits and consuming large amounts can contribute to weight gain",
+        "sys_text": "Juice is calorie dense compared to whole fruits and can contribute to weight gain.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.7,
+        "importance_error": 0.20000000000000007
+      },
+      {
+        "gt_text": "Regularly drinking large amounts of juice can lead to excess calorie consumption contributing to weight gain over time",
+        "sys_text": "Regularly drinking large amounts of juice can lead to excess calorie consumption and weight gain.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.7,
+        "importance_error": 0.15000000000000002
+      },
+      {
+        "gt_text": "Juice contains antioxidants which protect cells from damage",
+        "sys_text": "100% fruit juice is rich in vitamins and antioxidants.",
+        "gt_importance": 0.6,
+        "sys_importance": 0.6,
+        "importance_error": 0.0
+      },
+      {
+        "gt_text": "The vitamins and minerals in juice can be absorbed quickly by the body",
+        "sys_text": "Juice can be absorbed quickly by the body, providing a nutritional boost.",
+        "gt_importance": 0.55,
+        "sys_importance": 0.6,
+        "importance_error": 0.04999999999999993
+      },
+      {
+        "gt_text": "When fruit is juiced the fiber is removed, which helps regulate blood sugar and aids digestion",
+        "sys_text": "Fiber is removed during the juicing process, which aids digestion and regulates blood sugar.",
+        "gt_importance": 0.95,
+        "sys_importance": 0.6,
+        "importance_error": 0.35
+      },
+      {
+        "gt_text": "Nutrition experts often suggest limiting fruit juice intake to one small glass per day, around 4 to 6 ounces",
+        "sys_text": "Nutrition experts suggest limiting fruit juice intake to one small glass per day (4 to 6 ounces).",
+        "gt_importance": 0.8,
+        "sys_importance": 0.6,
+        "importance_error": 0.20000000000000007
+      },
+      {
+        "gt_text": "The sugar in juice can contribute to cavities especially when consumed frequently throughout the day",
+        "sys_text": "The sugar in juice can contribute to cavities, especially when consumed frequently.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.6,
+        "importance_error": 0.15000000000000002
+      }
+    ],
+    "missed_claims": [
+      "100% fruit juice is a good source of potassium which helps regulate blood pressure",
+      "Fruit juice helps with hydration since it is mostly water",
+      "Fruit juice can be a more palatable option for people who struggle to drink plain water",
+      "These sugars (fructose in juice) can spike blood sugar levels which may lead to insulin resistance over time",
+      "Without fiber, juice may cause rapid sugar absorption and hunger soon after consumption",
+      "Eating whole fruits provides all the vitamins and minerals found in juice along with fiber essential for digestion and blood sugar control",
+      "Whole fruits keep you fuller for longer compared to juice",
+      "Diluting juice with water can reduce sugar intake while still offering some nutritional benefits",
+      "Drinking juice with meals and using a straw may help reduce the risk of tooth decay"
+    ],
+    "extra_claims": [
+      "Drinking too much juice may lead to insulin resistance over time."
+    ],
+    "importance_mae": 0.15000000000000002,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.2222222222222222,
+    "stance_accuracy": 0.2222222222222222,
+    "correct_verdicts": 2,
+    "total_verdicts": 9,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "100% fruit juice contains high amounts of naturally occurring sugars like fructose even without added sugars",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Juice is calorie dense compared to whole fruits and consuming large amounts can contribute to weight gain",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "SUPPORTS"
+      },
+      {
+        "claim": "Regularly drinking large amounts of juice can lead to excess calorie consumption contributing to weight gain over time",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "The vitamins and minerals in juice can be absorbed quickly by the body",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "When fruit is juiced the fiber is removed, which helps regulate blood sugar and aids digestion",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "MIXED"
+      },
+      {
+        "claim": "Nutrition experts often suggest limiting fruit juice intake to one small glass per day, around 4 to 6 ounces",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "The sugar in juice can contribute to cavities especially when consumed frequently throughout the day",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.5,
+    "verdict_accuracy": 0.2222222222222222,
+    "evidence_quality_avg": 0.7,
+    "total_cost_usd": 0.0014961,
+    "total_time_seconds": 103.01887893676758,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 0.7,
+    "avg_sources_per_query": 1.55
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 27,
+      "medium": 4
+    },
+    "avg_evidence_per_claim": 3.1
+  },
+  "ground_truth_claims_count": 18,
+  "system_claims_count": 10
+}

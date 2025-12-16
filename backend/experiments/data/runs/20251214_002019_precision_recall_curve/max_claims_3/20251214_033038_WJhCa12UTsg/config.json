@@ -1,0 +1,23 @@
+{
+  "run_id": "20251214_033038_WJhCa12UTsg",
+  "experiment_name": "precision_recall_curve_claims3_sleep_teenage_brain",
+  "component": "end_to_end",
+  "timestamp": "2025-12-14T03:32:22.098591",
+  "video_url": "https://www.youtube.com/watch?v=WJhCa12UTsg",
+  "max_claims": 3,
+  "max_queries_per_claim": 2,
+  "max_results_per_query": 3,
+  "headless_search": true,
+  "model_config": {
+    "claim_extractor": "OPENAI_GPT4O_MINI",
+    "query_generator": "OPENAI_GPT4O_MINI",
+    "evidence_extractor": "OPENAI_GPT4O_MINI",
+    "output_generator": "OPENAI_GPT4O_MINI"
+  },
+  "model_summary": "CE:gpt-4o-mini | QG:gpt-4o-mini | EE:gpt-4o-mini | OG:gpt-4o-mini",
+  "parallelization": "async",
+  "video_title": "What lack of sleep does to the teenage brain - Wendy Troxel",
+  "transcript_length": 5652,
+  "transcript_tokens": 949,
+  "video_duration_seconds": 379.959
+}

@@ -1,0 +1,112 @@
+{
+  "video_id": "cWsWg9RcgzE",
+  "timestamp": "2025-12-14T11:02:44.844589",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_3",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 1.0,
+    "recall": 0.08571428571428572,
+    "f1_score": 0.15789473684210528,
+    "true_positives": 3,
+    "false_positives": 0,
+    "false_negatives": 32,
+    "mean_average_precision": 1.0,
+    "recall_at_important": 0.0,
+    "importance_weighted_coverage": 0.10653753026634384,
+    "matched_claims": [
+      {
+        "gt_text": "AIDS was a guaranteed death sentence not so long ago",
+        "sys_text": "AIDS was once a guaranteed death sentence.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.85,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "Alarmingly, 1,000 Australians a year are now diagnosed with HIV",
+        "sys_text": "1,000 Australians a year are now diagnosed with HIV.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.85,
+        "importance_error": 0.15000000000000002
+      },
+      {
+        "gt_text": "The infection rate of HIV in Australia is almost double what it was 10 years ago",
+        "sys_text": "The infection rate of HIV in Australia has almost doubled in the last 10 years.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.7,
+        "importance_error": 0.050000000000000044
+      }
+    ],
+    "missed_claims": [
+      "The infection rate of HIV in Australia plummeted following shock advertising campaigns in the 1980s",
+      "The infection rate of HIV in Australia has shot up again",
+      "Straight women are now among the most vulnerable groups for HIV infection in Australia",
+      "98% of new HIV infections among the women in the documentary were contracted through heterosexual sex",
+      "Deanna Bleg contracted HIV from unprotected sex with a former boyfriend 16 years ago",
+      "Deanna lost about 20 kilos over a period of 6 weeks when she first had symptoms",
+      "Within months of diagnosis, Deanna's HIV had progressed to AIDS",
+      "Deanna was on almost 30 pills a day for HIV treatment in the early 1990s",
+      "30 years ago, HIV was universally a death sentence",
+      "People with HIV are now leading almost normal lives with improved prognosis",
+      "People with HIV still have to take tablets every day and there are still side effects",
+      "HIV drugs are creating new health issues including heart disease, diabetes, and lipid problems",
+      "There's a widely held perception that the battle against HIV has been won, creating dangerous complacency",
+      "People have to be in regular medical care on treatment lifelong",
+      "One challenge for HIV positive women is motherhood, with a very slim chance the virus could be passed on",
+      "Professor Sharon Leuen and her teams made a breakthrough discovering where HIV cells hide in the body",
+      "HIV is a really clever virus that can change all the time, evade the immune system and drugs, and hide in small pockets of the body",
+      "About half of men with known HIV history were diagnosed through sexual health screens, but women's HIV was mostly detected through targeted screening",
+      "Sarah was 24 years old and diagnosed with HIV in 2008",
+      "Sarah was taught nothing about HIV in school as a young heterosexual",
+      "Medical advances mean HIV can now be managed with proper treatment but it's a long hard road",
+      "Sarah faces a lifetime of powerful medication for HIV",
+      "There is still enormous stigma surrounding HIV today, with people telling Sarah she should die and is disgusting",
+      "Professor Sharon Lewin coordinates three research teams at Melbourne's Alfred Hospital, Monash University, and the Burnet Institute",
+      "HIV cells hide in the body and can go to sleep in some cells in small pockets - it was a needle in a haystack discovery",
+      "Deanna Bleg has lived 11 years longer than doctors predicted",
+      "Deanna thought she had just months to live but is now 41 years old",
+      "Many heterosexual women support groups now operate for HIV positive individuals",
+      "Relationships are difficult for HIV positive women due to stigma and fear of transmission",
+      "Deanna conceived naturally with her partner who was aware of the risks and was not infected",
+      "Neither of Deanna's children were infected with HIV",
+      "HIV exists, it's real, and it can happen to anyone"
+    ],
+    "extra_claims": [],
+    "importance_mae": 0.10000000000000002,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 1.0,
+    "stance_accuracy": 1.0,
+    "correct_verdicts": 3,
+    "total_verdicts": 3,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.08571428571428572,
+    "verdict_accuracy": 1.0,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.00602175,
+    "total_time_seconds": 42.061723947525024,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.3333333333333335
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 10,
+      "medium": 4
+    },
+    "avg_evidence_per_claim": 4.666666666666667
+  },
+  "ground_truth_claims_count": 35,
+  "system_claims_count": 3
+}

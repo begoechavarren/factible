@@ -1,0 +1,302 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:07:08.376863",
+    "latency_seconds": 15.5,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nIf, for the same work, women make only 77 cents for every dollar a man makes, why don\u2019t businesses hire only women? Wages are the biggest expense for most businesses. So, hiring only women would reduce costs by nearly a quarter \u2013 and that would go right to the bottom line. Don\u2019t businesses want to be profitable? Or, are they just really bad at math? Well, actually, it\u2019s the feminists, celebrities and politicians spreading this wage gap myth who have the math problem. Here\u2019s why: The 77-cents-on-the-dollar statistic is calculated by dividing the median earnings of all women working full-time by the median earnings of all men working full-time. In other words, if the average income of all men is, say, 40,000 dollars a year, and the average annual income of all women is, say, 30,800 dollars, that would mean that women earn 77 cents for every dollar a man earns. 30,800 divided by 40,000 equals .77. But these calculations don\u2019t reveal a gender wage injustice because it doesn\u2019t take into account occupation, position, education or hours worked per week. Even a study by the American Association of University Women, a feminist organization, shows that the actual wage gap shrinks to only 6.6 cents when you factor in different choices men and women make. And the key word here is \u201cchoice.\u201d The small wage gap that does exist has nothing to do with paying women less, let alone with sexism; it has to do with differences in individual career choices that men and women make. In 2009, the U.S. Department of Labor released a paper that examined more than 50 peer-reviewed studies and concluded that the oft-cited 23 percent wage gap \u201cmay be almost entirely the result of individual choices being made by both male and female workers.\u201d Well, let\u2019s look at some of those choices. Georgetown University compiled a list of the five best-paying college majors, and the percentage of men or women majoring in those fields: Number 1 best-paying major: Petroleum Engineering: 87% male Number 2: Pharmaceutical Sciences: 48% male 3: Mathematics and Computer Science: 67% male 4: Aerospace Engineering: 88% male 5: Chemical Engineering: 72% male Notice that women out-represent men in only one of the five top-paying majors \u2013 by only a few percentage points. Now consider the same study\u2019s list of the five worst paying college majors: Number 1: Counseling and Psychology: 74% female Number 2: Early Childhood Education: 97% female 3: Theology and Religious Vocations: 66% male 4: Human Services and Community Organization: 81% female 5: Social Work: 88% female Here, it\u2019s the women who lead in all but one category. Even within the same profession, men and women make different career choices that impact how much money they make. Take nursing, where male nurses on the whole earn 18% more than female nurses. The reason? Male nurses gravitate to the best-paying nursing specialties, they work longer hours, and disproportionately find jobs in cities with the highest compensation. Now, here\u2019s how one expert on nursing compensation, Professor Linda Aiken of the University of Pennsylvania, sums up the data: \u201cCareer choices and educational differences explain most, if not all, the gender gap in nursing.\u201d The Department of Labor paper concluded that once these differences are accounted for across all professions, the unexplained wage gap is somewhere between 4.8 and 7 percent \u2013 almost identical to the 6.6 percentage gap found by the AAUW. But why is there any gap at all? No one knows for sure, as both the AAUW and the Labor Department concede. There are so many variables that drive wages that no single study can cover them all. Few wage gap studies control for variables such as dangerous work environment; men are vastly overrepresented, for example, on oil rigs. And here\u2019s another variable: men are more willing and able to work long hours without advance notice. According to Harvard economist Claudia Goldin, even if two lawyers have the same education, same specialty, and work the same number of hours \u2014 firms pay more to someone who is willing to always be \u201con call\u201d and ready to be in the office when the firm needs them, as opposed to wanting a more regular schedule. This isn\u2019t sexism, it\u2019s just common sense. With more realistic categories and definitions, whatever wage gap remains would certainly narrow to point of vanishing. So it seems that business leaders aren\u2019t bad at math simply because they don\u2019t only hire women. Those who claim that for the same work women earn 77 cents on the dollar compared to men, on the other hand, are not merely bad at math --but at telling the truth. I\u2019m Christina Hoff Sommers of the American Enterprise Institute for Prager University.",
+    "input_length_chars": 4752,
+    "input_tokens_estimated": 1188,
+    "output": {
+      "claims": [
+        {
+          "text": "Women make only 77 cents for every dollar a man makes.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.85,
+          "context": "Claim about gender wage gap, speaker: Christina Hoff Sommers"
+        },
+        {
+          "text": "The actual wage gap shrinks to only 6.6 cents when factoring in choices.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "Study by the American Association of University Women, speaker: Christina Hoff Sommers"
+        },
+        {
+          "text": "In 2009, the U.S. Department of Labor released a paper examining more than 50 peer-reviewed studies.",
+          "confidence": 0.9,
+          "category": "historical",
+          "importance": 0.6,
+          "context": "Reference to a Department of Labor paper, speaker: Christina Hoff Sommers"
+        },
+        {
+          "text": "Male nurses earn 18% more than female nurses.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Comparison of earnings in nursing, speaker: Christina Hoff Sommers"
+        },
+        {
+          "text": "The unexplained wage gap is somewhere between 4.8 and 7 percent.",
+          "confidence": 0.8,
+          "category": "statistical",
+          "importance": 0.65,
+          "context": "Conclusion from Department of Labor paper, speaker: Christina Hoff Sommers"
+        }
+      ],
+      "total_count": 5
+    },
+    "output_length_chars": 1575,
+    "output_tokens_estimated": 393,
+    "cost_usd": 0.000414
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:07:12.442938",
+    "latency_seconds": 2.71,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Women make only 77 cents for every dollar a man makes.\nContext: Claim about gender wage gap, speaker: Christina Hoff Sommers\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 297,
+    "input_tokens_estimated": 74,
+    "output": {
+      "original_claim": "Women make only 77 cents for every dollar a man makes.",
+      "queries": [
+        {
+          "query": "Women earn 77 cents for every dollar men earn gender wage gap",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "gender wage gap women 77 cents men dollar",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 306,
+    "output_tokens_estimated": 76,
+    "cost_usd": 5.67e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Women make only 77 cents for every dollar a man makes."
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:07:35.580209",
+    "latency_seconds": 3.24,
+    "input_prompt": "Claim:\nWomen make only 77 cents for every dollar a man makes.\n\nArticle Title:\nExplaining the Gender Wage Gap - Center for American Progress\n\nGoogle Search Snippet:\nThe most commonly cited statistic for the gender wage gap asserts that women earn only 77 cents for every dollar earned by men.\n\nFull Page Content:\nThis website uses cookies, including third party ones, to allow for analysis of how people use our website in order to improve your experience and our services. By continuing to use our website, you agree to the use of such cookies.\nOver half a century after pay discrimination became illegal in the United States, the persistent pay gap between men and women continues to hurt our nation\u2019s workers and our national economy.\nWomen working full time in the U.S. are still paid just 81 cents to every dollar earned by men \u2014 and the consequences of this gap affect women throughout their lives. The pay gap even follows women into retirement. As a result of lower lifetime earnings, women receive less in Social Security and pensions, having saved just 70% retirement income when compared to men.\nPay equity will remain an AAUW priority until the gap is fully eliminated. We hope The Simple Truth motivates and empowers you to join us in this cause.\nDOWNLOAD THE NOT SO SIMPLE TRUTH 2025 UPDATE\nAt the current rate of progress, the gender pay gap will not close until 2088. We can\u2019t \u2013 and won\u2019t \u2013 wait that long.\nThe history of the gender and racial wage gaps is inextricably linked to the history of labor in America. From depriving Black women of wages under slavery and its aftermath, to creating lasting disparities in health, education and opportunity for Native women through land theft, to the legal and cultural limitations on women\u2019s ability to earn money, our nation\u2019s story is replete with discrimination and its consequences.\nREAD THE SIMPLE TRUTH 2021 SUPPLEMENT\nAAUW believes that pay equity and equal employment opportunity are matters of simple fairness. AAUW is a leader in the fight to end wage discrimination and open doors for women in the workplace. See where we stand on important policy issues, make sure you know your legal rights and how to protect them, and join us in fighting for change by becoming an AAUW Two-Minute Activist.\nThere are lots of ways to get involved with AAUW\u2019s work to advance gender equity. Together, we can make a difference in the lives of women and girls.\nStay connected with AAUW and join our mission to advance gender equity. Sign up for our updates to receive the latest news, events, and opportunities to make an impact in the lives of women and girls.\n\nProvide relevant evidence.",
+    "input_length_chars": 2643,
+    "input_tokens_estimated": 660,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses the gender wage gap, stating that women earn 81 cents for every dollar earned by men, which is a more recent statistic than the 77 cents often cited. This indicates that the claim is somewhat outdated but still highlights the existence of a significant wage gap.",
+      "overall_stance": "supports",
+      "key_quote": "Women working full time in the U.S. are still paid just 81 cents to every dollar earned by men."
+    },
+    "output_length_chars": 465,
+    "output_tokens_estimated": 116,
+    "cost_usd": 0.0001686,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Women make only 77 cents for every dollar a man makes.",
+      "query_index": 2,
+      "query_text": "gender wage gap women 77 cents men dollar"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:07:35.826627",
+    "latency_seconds": 2.4,
+    "input_prompt": "Claim:\nWomen make only 77 cents for every dollar a man makes.\n\nArticle Title:\nThe Simple Truth About the Gender Pay Gap - AAUW\n\nGoogle Search Snippet:\nA Persistent Inequity\u200b\u200b Women working full time in the U.S. are still paid just 81 cents to every dollar earned by men \u2014 and the consequences of this gap affect ...\n\nFull Page Content:\nWASHINGTON, March 4, 2024\u2014The global gender gap for women in the workplace is far wider than previously thought, a groundbreaking new World Bank Group report shows. When legal differences involving violence and childcare are taken into account, women enjoy fewer than two-thirds the rights of men. No country provides equal opportunity for women\u2014not even the wealthiest economies.\nThe latest Women, Business, and the Law report offers a comprehensive picture of the obstacles that women face in entering the global workforce and contributing to greater prosperity\u2014for themselves, their families, and their communities. It expands the scope of its analysis, adding two indicators that can be critical in opening up or restricting women\u2019s options: safety from violence and access to childcare services. When those measures are included, women on average enjoy just 64% of the legal protections that men do\u2014far fewer than the previous estimate of 77%.\nThe gender gap is even wider in practice. For the first time, Women, Business and the Law assesses the gap between legal reforms and actual outcomes for women in 190 economies. The analysis reveals a shocking implementation gap. Although laws on the books imply that women enjoy roughly two-thirds the rights of men, countries on average have established less than 40% of the systems needed for full implementation. For example, 98 economies have enacted legislation mandating equal pay for women for work of equal value. Yet only 35 economies\u2014fewer than one out of every five\u2014have adopted pay-transparency measures or enforcement mechanisms to address the pay gap.\nEffective implementation of equal-opportunity laws depends on an adequate supporting framework, including strong enforcement mechanisms, a system for tracking gender-related pay disparities, and the availability of healthcare services for women who survive violence.\n\u201cWomen have the power to turbocharge the sputtering global economy,\u201d said Indermit Gill, Chief Economist of the World Bank Group and Senior Vice President for Development Economics. \u201cYet, all over the world, discriminatory laws and practices prevent women from working or starting businesses on an equal footing with men. Closing this gap could raise global gross domestic product by more than 20% \u2013 essentially doubling the global growth rate over the next decade\u2014but reforms have slowed to a crawl. WBL 2024 identifies what governments can do to accelerate progress toward gender equality in business and the law.\u201d\nThe implementation gap highlights how much hard work lies ahead even for countries that have been instituting equal-opportunity laws. Togo, for example, has been a standout among Sub-Saharan economies, enacting laws that give women roughly 77% of the rights available to men\u2014more than any other country in the continent. Yet Togo, so far, has established only 27% of systems necessary for full implementation. This rate is average for Sub-Saharan economies.\nIn 2023, governments were assertive in advancing three categories of legal equal-opportunity reforms\u2014pay, parental rights, and workplace protections. Still, nearly all countries performed poorly in the two categories being tracked for the first time\u2014access to childcare and women\u2019s safety.\nThe weakness is greatest in women\u2019s safety\u2014where the global average score is just 36, meaning women enjoy barely a third of the needed legal protections against domestic violence, sexual harassment, child marriage and femicide. Although 151 economies have laws in place prohibiting sexual harassment in the workplace, just 39 have laws prohibiting it in public spaces. This often prevents women from using public transportation to get to work.\nMost countries also score poorly for childcare laws. Women spend an average of 2.4 more hours a day on unpaid care work than men\u2014much of it on the care of children. Expanding access to childcare tends to increase women\u2019s participation in the labor force by about 1 percentage point initially\u2014and the effect more than doubles within five years. Today, only 78 economies\u2014fewer than half\u2014provide some financial or tax support for parents with young children. Only 62 economies\u2014fewer than a third\u2014have quality standards governing childcare services, without which women might think twice about going to work while they have children in their care.\nWomen also face significant obstacles in other areas. In the area of entrepreneurship, for example, just one in every five economies mandates gender-sensitive criteria for public procurement processes, meaning women are largely cut out of a $10-trillion-a-year economic opportunity. In the area of pay, women earn just 77 cents for every $1 paid to men. The rights gap extends all the way to retirement. In 62 economies, the ages at which men and women can retire are not the same. Women tend to live longer than men, but because they receive lower pay while they work, take time off when they have children, and retire earlier, they end up with smaller pension benefits and greater financial insecurity in old age.\n\u201cIt is more urgent than ever to accelerate efforts to reform laws and enact public policies that empower women to work and start and grow businesses,\u201d said Tea Trumbic, the report\u2019s lead author. \u201cToday, barely half of women participate in the global workforce, compared with nearly three out of every four men. This is not just unfair\u2014it\u2019s wasteful. Increasing women's economic participation is the key to amplifying their voices and shaping decisions that affect them directly. Countries simply cannot afford to sideline half of their population.\u201d\nSTAY CURRENT WITH OUR LATEST DATA & INSIGHTS\n\u00a9 2025 World Bank Group, All Rights Reserved.\nThis site uses cookies to optimize functionality and give you the best possible experience. If you continue to navigate this website beyond this page, cookies will be placed on your browser. To learn more about cookies, click here.\n\nProvide relevant evidence.",
+    "input_length_chars": 6286,
+    "input_tokens_estimated": 1571,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that women earn 77 cents for every dollar paid to men, which directly supports the claim regarding the gender pay gap.",
+      "overall_stance": "supports",
+      "key_quote": "In the area of pay, women earn just 77 cents for every $1 paid to men."
+    },
+    "output_length_chars": 297,
+    "output_tokens_estimated": 74,
+    "cost_usd": 0.00028005,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Women make only 77 cents for every dollar a man makes.",
+      "query_index": 2,
+      "query_text": "gender wage gap women 77 cents men dollar"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:07:36.051632",
+    "latency_seconds": 3.7,
+    "input_prompt": "Claim:\nWomen make only 77 cents for every dollar a man makes.\n\nArticle Title:\nThe Simple Truth About the Gender Pay Gap - AAUW\n\nGoogle Search Snippet:\nWomen working full time in the U.S. are still paid just 81 cents to every dollar earned by men \u2014 and the consequences of this gap affect women throughout their ...\n\nFull Page Content:\nThis website uses cookies, including third party ones, to allow for analysis of how people use our website in order to improve your experience and our services. By continuing to use our website, you agree to the use of such cookies.\nOver half a century after pay discrimination became illegal in the United States, the persistent pay gap between men and women continues to hurt our nation\u2019s workers and our national economy.\nWomen working full time in the U.S. are still paid just 81 cents to every dollar earned by men \u2014 and the consequences of this gap affect women throughout their lives. The pay gap even follows women into retirement. As a result of lower lifetime earnings, women receive less in Social Security and pensions, having saved just 70% retirement income when compared to men.\nPay equity will remain an AAUW priority until the gap is fully eliminated. We hope The Simple Truth motivates and empowers you to join us in this cause.\nDOWNLOAD THE NOT SO SIMPLE TRUTH 2025 UPDATE\nAt the current rate of progress, the gender pay gap will not close until 2088. We can\u2019t \u2013 and won\u2019t \u2013 wait that long.\nThe history of the gender and racial wage gaps is inextricably linked to the history of labor in America. From depriving Black women of wages under slavery and its aftermath, to creating lasting disparities in health, education and opportunity for Native women through land theft, to the legal and cultural limitations on women\u2019s ability to earn money, our nation\u2019s story is replete with discrimination and its consequences.\nREAD THE SIMPLE TRUTH 2021 SUPPLEMENT\nAAUW believes that pay equity and equal employment opportunity are matters of simple fairness. AAUW is a leader in the fight to end wage discrimination and open doors for women in the workplace. See where we stand on important policy issues, make sure you know your legal rights and how to protect them, and join us in fighting for change by becoming an AAUW Two-Minute Activist.\nThere are lots of ways to get involved with AAUW\u2019s work to advance gender equity. Together, we can make a difference in the lives of women and girls.\nStay connected with AAUW and join our mission to advance gender equity. Sign up for our updates to receive the latest news, events, and opportunities to make an impact in the lives of women and girls.\n\nProvide relevant evidence.",
+    "input_length_chars": 2666,
+    "input_tokens_estimated": 666,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence states that women working full time in the U.S. earn 81 cents for every dollar earned by men, which is a more recent figure than the claim of 77 cents. This indicates that the pay gap is still significant, but the specific figure in the claim is outdated.",
+      "overall_stance": "refutes",
+      "key_quote": "Women working full time in the U.S. are still paid just 81 cents to every dollar earned by men."
+    },
+    "output_length_chars": 448,
+    "output_tokens_estimated": 112,
+    "cost_usd": 0.0001671,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Women make only 77 cents for every dollar a man makes.",
+      "query_index": 2,
+      "query_text": "gender wage gap women 77 cents men dollar"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:07:36.503132",
+    "latency_seconds": 4.16,
+    "input_prompt": "Claim:\nWomen make only 77 cents for every dollar a man makes.\n\nArticle Title:\nCan someone explain both sides of the \"Women make only 77 cents ...\n\nGoogle Search Snippet:\nCan someone explain both sides of the \"Women make only 77 cents on the dollar to men\" argument? I've heard that it is true and I've heard it's misleading.\n\nFull Page Content:\nThis website uses cookies, including third party ones, to allow for analysis of how people use our website in order to improve your experience and our services. By continuing to use our website, you agree to the use of such cookies.\nOver half a century after pay discrimination became illegal in the United States, the persistent pay gap between men and women continues to hurt our nation\u2019s workers and our national economy.\nWomen working full time in the U.S. are still paid just 81 cents to every dollar earned by men \u2014 and the consequences of this gap affect women throughout their lives. The pay gap even follows women into retirement. As a result of lower lifetime earnings, women receive less in Social Security and pensions, having saved just 70% retirement income when compared to men.\nPay equity will remain an AAUW priority until the gap is fully eliminated. We hope The Simple Truth motivates and empowers you to join us in this cause.\nDOWNLOAD THE NOT SO SIMPLE TRUTH 2025 UPDATE\nAt the current rate of progress, the gender pay gap will not close until 2088. We can\u2019t \u2013 and won\u2019t \u2013 wait that long.\nThe history of the gender and racial wage gaps is inextricably linked to the history of labor in America. From depriving Black women of wages under slavery and its aftermath, to creating lasting disparities in health, education and opportunity for Native women through land theft, to the legal and cultural limitations on women\u2019s ability to earn money, our nation\u2019s story is replete with discrimination and its consequences.\nREAD THE SIMPLE TRUTH 2021 SUPPLEMENT\nAAUW believes that pay equity and equal employment opportunity are matters of simple fairness. AAUW is a leader in the fight to end wage discrimination and open doors for women in the workplace. See where we stand on important policy issues, make sure you know your legal rights and how to protect them, and join us in fighting for change by becoming an AAUW Two-Minute Activist.\nThere are lots of ways to get involved with AAUW\u2019s work to advance gender equity. Together, we can make a difference in the lives of women and girls.\nStay connected with AAUW and join our mission to advance gender equity. Sign up for our updates to receive the latest news, events, and opportunities to make an impact in the lives of women and girls.\n\nProvide relevant evidence.",
+    "input_length_chars": 2676,
+    "input_tokens_estimated": 669,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that women working full time in the U.S. earn 81 cents for every dollar earned by men, which is a related but slightly different statistic than the claim of 77 cents. This suggests that the claim may be outdated or misleading, as the current figure is higher.",
+      "overall_stance": "mixed",
+      "key_quote": "Women working full time in the U.S. are still paid just 81 cents to every dollar earned by men."
+    },
+    "output_length_chars": 460,
+    "output_tokens_estimated": 115,
+    "cost_usd": 0.00016935,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Women make only 77 cents for every dollar a man makes.",
+      "query_index": 2,
+      "query_text": "gender wage gap women 77 cents men dollar"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:07:37.406816",
+    "latency_seconds": 5.06,
+    "input_prompt": "Claim:\nWomen make only 77 cents for every dollar a man makes.\n\nArticle Title:\nDid You Know That Women Are Still Paid Less Than Men?\n\nGoogle Search Snippet:\nOn average, full-time working women earn just 78 cents for every dollar a man earns. This significant gap is more than a statistic -- it has real life ...\n\nFull Page Content:\nThis website uses cookies, including third party ones, to allow for analysis of how people use our website in order to improve your experience and our services. By continuing to use our website, you agree to the use of such cookies.\nOver half a century after pay discrimination became illegal in the United States, the persistent pay gap between men and women continues to hurt our nation\u2019s workers and our national economy.\nWomen working full time in the U.S. are still paid just 81 cents to every dollar earned by men \u2014 and the consequences of this gap affect women throughout their lives. The pay gap even follows women into retirement. As a result of lower lifetime earnings, women receive less in Social Security and pensions, having saved just 70% retirement income when compared to men.\nPay equity will remain an AAUW priority until the gap is fully eliminated. We hope The Simple Truth motivates and empowers you to join us in this cause.\nDOWNLOAD THE NOT SO SIMPLE TRUTH 2025 UPDATE\nAt the current rate of progress, the gender pay gap will not close until 2088. We can\u2019t \u2013 and won\u2019t \u2013 wait that long.\nThe history of the gender and racial wage gaps is inextricably linked to the history of labor in America. From depriving Black women of wages under slavery and its aftermath, to creating lasting disparities in health, education and opportunity for Native women through land theft, to the legal and cultural limitations on women\u2019s ability to earn money, our nation\u2019s story is replete with discrimination and its consequences.\nREAD THE SIMPLE TRUTH 2021 SUPPLEMENT\nAAUW believes that pay equity and equal employment opportunity are matters of simple fairness. AAUW is a leader in the fight to end wage discrimination and open doors for women in the workplace. See where we stand on important policy issues, make sure you know your legal rights and how to protect them, and join us in fighting for change by becoming an AAUW Two-Minute Activist.\nThere are lots of ways to get involved with AAUW\u2019s work to advance gender equity. Together, we can make a difference in the lives of women and girls.\nStay connected with AAUW and join our mission to advance gender equity. Sign up for our updates to receive the latest news, events, and opportunities to make an impact in the lives of women and girls.\n\nProvide relevant evidence.",
+    "input_length_chars": 2662,
+    "input_tokens_estimated": 665,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that women working full-time in the U.S. earn 81 cents for every dollar earned by men, which supports the claim of a gender pay gap, although it slightly differs from the 77 cents stated in the claim.",
+      "overall_stance": "supports",
+      "key_quote": "Women working full time in the U.S. are still paid just 81 cents to every dollar earned by men."
+    },
+    "output_length_chars": 404,
+    "output_tokens_estimated": 101,
+    "cost_usd": 0.00016035,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Women make only 77 cents for every dollar a man makes.",
+      "query_index": 2,
+      "query_text": "gender wage gap women 77 cents men dollar"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:07:37.414361",
+    "latency_seconds": 3.98,
+    "input_prompt": "Claim:\nWomen make only 77 cents for every dollar a man makes.\n\nArticle Title:\nNew Data Show Massive, Wider-than-Expected Global Gender Gap\n\nGoogle Search Snippet:\nIn the area of pay, women earn just 77 cents for every $1 paid to men. The rights gap extends all the way to retirement. In 62 economies ...\n\nFull Page Content:\nWASHINGTON, March 4, 2024\u2014The global gender gap for women in the workplace is far wider than previously thought, a groundbreaking new World Bank Group report shows. When legal differences involving violence and childcare are taken into account, women enjoy fewer than two-thirds the rights of men. No country provides equal opportunity for women\u2014not even the wealthiest economies.\nThe latest Women, Business, and the Law report offers a comprehensive picture of the obstacles that women face in entering the global workforce and contributing to greater prosperity\u2014for themselves, their families, and their communities. It expands the scope of its analysis, adding two indicators that can be critical in opening up or restricting women\u2019s options: safety from violence and access to childcare services. When those measures are included, women on average enjoy just 64% of the legal protections that men do\u2014far fewer than the previous estimate of 77%.\nThe gender gap is even wider in practice. For the first time, Women, Business and the Law assesses the gap between legal reforms and actual outcomes for women in 190 economies. The analysis reveals a shocking implementation gap. Although laws on the books imply that women enjoy roughly two-thirds the rights of men, countries on average have established less than 40% of the systems needed for full implementation. For example, 98 economies have enacted legislation mandating equal pay for women for work of equal value. Yet only 35 economies\u2014fewer than one out of every five\u2014have adopted pay-transparency measures or enforcement mechanisms to address the pay gap.\nEffective implementation of equal-opportunity laws depends on an adequate supporting framework, including strong enforcement mechanisms, a system for tracking gender-related pay disparities, and the availability of healthcare services for women who survive violence.\n\u201cWomen have the power to turbocharge the sputtering global economy,\u201d said Indermit Gill, Chief Economist of the World Bank Group and Senior Vice President for Development Economics. \u201cYet, all over the world, discriminatory laws and practices prevent women from working or starting businesses on an equal footing with men. Closing this gap could raise global gross domestic product by more than 20% \u2013 essentially doubling the global growth rate over the next decade\u2014but reforms have slowed to a crawl. WBL 2024 identifies what governments can do to accelerate progress toward gender equality in business and the law.\u201d\nThe implementation gap highlights how much hard work lies ahead even for countries that have been instituting equal-opportunity laws. Togo, for example, has been a standout among Sub-Saharan economies, enacting laws that give women roughly 77% of the rights available to men\u2014more than any other country in the continent. Yet Togo, so far, has established only 27% of systems necessary for full implementation. This rate is average for Sub-Saharan economies.\nIn 2023, governments were assertive in advancing three categories of legal equal-opportunity reforms\u2014pay, parental rights, and workplace protections. Still, nearly all countries performed poorly in the two categories being tracked for the first time\u2014access to childcare and women\u2019s safety.\nThe weakness is greatest in women\u2019s safety\u2014where the global average score is just 36, meaning women enjoy barely a third of the needed legal protections against domestic violence, sexual harassment, child marriage and femicide. Although 151 economies have laws in place prohibiting sexual harassment in the workplace, just 39 have laws prohibiting it in public spaces. This often prevents women from using public transportation to get to work.\nMost countries also score poorly for childcare laws. Women spend an average of 2.4 more hours a day on unpaid care work than men\u2014much of it on the care of children. Expanding access to childcare tends to increase women\u2019s participation in the labor force by about 1 percentage point initially\u2014and the effect more than doubles within five years. Today, only 78 economies\u2014fewer than half\u2014provide some financial or tax support for parents with young children. Only 62 economies\u2014fewer than a third\u2014have quality standards governing childcare services, without which women might think twice about going to work while they have children in their care.\nWomen also face significant obstacles in other areas. In the area of entrepreneurship, for example, just one in every five economies mandates gender-sensitive criteria for public procurement processes, meaning women are largely cut out of a $10-trillion-a-year economic opportunity. In the area of pay, women earn just 77 cents for every $1 paid to men. The rights gap extends all the way to retirement. In 62 economies, the ages at which men and women can retire are not the same. Women tend to live longer than men, but because they receive lower pay while they work, take time off when they have children, and retire earlier, they end up with smaller pension benefits and greater financial insecurity in old age.\n\u201cIt is more urgent than ever to accelerate efforts to reform laws and enact public policies that empower women to work and start and grow businesses,\u201d said Tea Trumbic, the report\u2019s lead author. \u201cToday, barely half of women participate in the global workforce, compared with nearly three out of every four men. This is not just unfair\u2014it\u2019s wasteful. Increasing women's economic participation is the key to amplifying their voices and shaping decisions that affect them directly. Countries simply cannot afford to sideline half of their population.\u201d\nSTAY CURRENT WITH OUR LATEST DATA & INSIGHTS\n\u00a9 2025 World Bank Group, All Rights Reserved.\nThis site uses cookies to optimize functionality and give you the best possible experience. If you continue to navigate this website beyond this page, cookies will be placed on your browser. To learn more about cookies, click here.\n\nProvide relevant evidence.",
+    "input_length_chars": 6274,
+    "input_tokens_estimated": 1568,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that women earn 77 cents for every dollar paid to men, highlighting the ongoing gender pay gap.",
+      "overall_stance": "supports",
+      "key_quote": "In the area of pay, women earn just 77 cents for every $1 paid to men."
+    },
+    "output_length_chars": 273,
+    "output_tokens_estimated": 68,
+    "cost_usd": 0.000276,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Women make only 77 cents for every dollar a man makes.",
+      "query_index": 2,
+      "query_text": "gender wage gap women 77 cents men dollar"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:07:37.819387",
+    "latency_seconds": 5.47,
+    "input_prompt": "Claim:\nWomen make only 77 cents for every dollar a man makes.\n\nArticle Title:\nInternational Equal Pay Day - the United Nations\n\nGoogle Search Snippet:\nWomen earn 77 cents for every dollar men earn for work of equal value \u2013 with an even wider wage gap for women with children. Women are more ...\n\nFull Page Content:\nThis website uses cookies, including third party ones, to allow for analysis of how people use our website in order to improve your experience and our services. By continuing to use our website, you agree to the use of such cookies.\nOver half a century after pay discrimination became illegal in the United States, the persistent pay gap between men and women continues to hurt our nation\u2019s workers and our national economy.\nWomen working full time in the U.S. are still paid just 81 cents to every dollar earned by men \u2014 and the consequences of this gap affect women throughout their lives. The pay gap even follows women into retirement. As a result of lower lifetime earnings, women receive less in Social Security and pensions, having saved just 70% retirement income when compared to men.\nPay equity will remain an AAUW priority until the gap is fully eliminated. We hope The Simple Truth motivates and empowers you to join us in this cause.\nDOWNLOAD THE NOT SO SIMPLE TRUTH 2025 UPDATE\nAt the current rate of progress, the gender pay gap will not close until 2088. We can\u2019t \u2013 and won\u2019t \u2013 wait that long.\nThe history of the gender and racial wage gaps is inextricably linked to the history of labor in America. From depriving Black women of wages under slavery and its aftermath, to creating lasting disparities in health, education and opportunity for Native women through land theft, to the legal and cultural limitations on women\u2019s ability to earn money, our nation\u2019s story is replete with discrimination and its consequences.\nREAD THE SIMPLE TRUTH 2021 SUPPLEMENT\nAAUW believes that pay equity and equal employment opportunity are matters of simple fairness. AAUW is a leader in the fight to end wage discrimination and open doors for women in the workplace. See where we stand on important policy issues, make sure you know your legal rights and how to protect them, and join us in fighting for change by becoming an AAUW Two-Minute Activist.\nThere are lots of ways to get involved with AAUW\u2019s work to advance gender equity. Together, we can make a difference in the lives of women and girls.\nStay connected with AAUW and join our mission to advance gender equity. Sign up for our updates to receive the latest news, events, and opportunities to make an impact in the lives of women and girls.\n\nProvide relevant evidence.",
+    "input_length_chars": 2646,
+    "input_tokens_estimated": 661,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that women earn 81 cents for every dollar earned by men, which is a related but different figure than the claim of 77 cents. However, it does confirm the existence of a gender pay gap.",
+      "overall_stance": "mixed",
+      "key_quote": "Women working full time in the U.S. are still paid just 81 cents to every dollar earned by men."
+    },
+    "output_length_chars": 385,
+    "output_tokens_estimated": 96,
+    "cost_usd": 0.00015675,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Women make only 77 cents for every dollar a man makes.",
+      "query_index": 2,
+      "query_text": "gender wage gap women 77 cents men dollar"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:07:38.309867",
+    "latency_seconds": 5.96,
+    "input_prompt": "Claim:\nWomen make only 77 cents for every dollar a man makes.\n\nArticle Title:\nEqual pay for work of equal value | UN Women \u2013 Headquarters\n\nGoogle Search Snippet:\nWorldwide, women only make 77 cents for every dollar earned by men. As a result, there's a lifetime of income inequality between men and women.\n\nFull Page Content:\nThis website uses cookies, including third party ones, to allow for analysis of how people use our website in order to improve your experience and our services. By continuing to use our website, you agree to the use of such cookies.\nOver half a century after pay discrimination became illegal in the United States, the persistent pay gap between men and women continues to hurt our nation\u2019s workers and our national economy.\nWomen working full time in the U.S. are still paid just 81 cents to every dollar earned by men \u2014 and the consequences of this gap affect women throughout their lives. The pay gap even follows women into retirement. As a result of lower lifetime earnings, women receive less in Social Security and pensions, having saved just 70% retirement income when compared to men.\nPay equity will remain an AAUW priority until the gap is fully eliminated. We hope The Simple Truth motivates and empowers you to join us in this cause.\nDOWNLOAD THE NOT SO SIMPLE TRUTH 2025 UPDATE\nAt the current rate of progress, the gender pay gap will not close until 2088. We can\u2019t \u2013 and won\u2019t \u2013 wait that long.\nThe history of the gender and racial wage gaps is inextricably linked to the history of labor in America. From depriving Black women of wages under slavery and its aftermath, to creating lasting disparities in health, education and opportunity for Native women through land theft, to the legal and cultural limitations on women\u2019s ability to earn money, our nation\u2019s story is replete with discrimination and its consequences.\nREAD THE SIMPLE TRUTH 2021 SUPPLEMENT\nAAUW believes that pay equity and equal employment opportunity are matters of simple fairness. AAUW is a leader in the fight to end wage discrimination and open doors for women in the workplace. See where we stand on important policy issues, make sure you know your legal rights and how to protect them, and join us in fighting for change by becoming an AAUW Two-Minute Activist.\nThere are lots of ways to get involved with AAUW\u2019s work to advance gender equity. Together, we can make a difference in the lives of women and girls.\nStay connected with AAUW and join our mission to advance gender equity. Sign up for our updates to receive the latest news, events, and opportunities to make an impact in the lives of women and girls.\n\nProvide relevant evidence.",
+    "input_length_chars": 2657,
+    "input_tokens_estimated": 664,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that women working full time in the U.S. earn 81 cents for every dollar earned by men, which is a related but slightly different statistic than the claim of 77 cents. However, it still supports the broader assertion of a gender pay gap.",
+      "overall_stance": "supports",
+      "key_quote": "Women working full time in the U.S. are still paid just 81 cents to every dollar earned by men."
+    },
+    "output_length_chars": 440,
+    "output_tokens_estimated": 110,
+    "cost_usd": 0.0001656,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Women make only 77 cents for every dollar a man makes.",
+      "query_index": 2,
+      "query_text": "gender wage gap women 77 cents men dollar"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:07:39.128615",
+    "latency_seconds": 5.7,
+    "input_prompt": "Claim:\nWomen make only 77 cents for every dollar a man makes.\n\nArticle Title:\nGender pay gap in U.S. has narrowed slightly over 2 decades\n\nGoogle Search Snippet:\nThe gender gap in pay has slightly narrowed in the United States over the past 20 years or so. In 2024, women earned an average of 85% of what men earned.\n\nFull Page Content:\nWASHINGTON, March 4, 2024\u2014The global gender gap for women in the workplace is far wider than previously thought, a groundbreaking new World Bank Group report shows. When legal differences involving violence and childcare are taken into account, women enjoy fewer than two-thirds the rights of men. No country provides equal opportunity for women\u2014not even the wealthiest economies.\nThe latest Women, Business, and the Law report offers a comprehensive picture of the obstacles that women face in entering the global workforce and contributing to greater prosperity\u2014for themselves, their families, and their communities. It expands the scope of its analysis, adding two indicators that can be critical in opening up or restricting women\u2019s options: safety from violence and access to childcare services. When those measures are included, women on average enjoy just 64% of the legal protections that men do\u2014far fewer than the previous estimate of 77%.\nThe gender gap is even wider in practice. For the first time, Women, Business and the Law assesses the gap between legal reforms and actual outcomes for women in 190 economies. The analysis reveals a shocking implementation gap. Although laws on the books imply that women enjoy roughly two-thirds the rights of men, countries on average have established less than 40% of the systems needed for full implementation. For example, 98 economies have enacted legislation mandating equal pay for women for work of equal value. Yet only 35 economies\u2014fewer than one out of every five\u2014have adopted pay-transparency measures or enforcement mechanisms to address the pay gap.\nEffective implementation of equal-opportunity laws depends on an adequate supporting framework, including strong enforcement mechanisms, a system for tracking gender-related pay disparities, and the availability of healthcare services for women who survive violence.\n\u201cWomen have the power to turbocharge the sputtering global economy,\u201d said Indermit Gill, Chief Economist of the World Bank Group and Senior Vice President for Development Economics. \u201cYet, all over the world, discriminatory laws and practices prevent women from working or starting businesses on an equal footing with men. Closing this gap could raise global gross domestic product by more than 20% \u2013 essentially doubling the global growth rate over the next decade\u2014but reforms have slowed to a crawl. WBL 2024 identifies what governments can do to accelerate progress toward gender equality in business and the law.\u201d\nThe implementation gap highlights how much hard work lies ahead even for countries that have been instituting equal-opportunity laws. Togo, for example, has been a standout among Sub-Saharan economies, enacting laws that give women roughly 77% of the rights available to men\u2014more than any other country in the continent. Yet Togo, so far, has established only 27% of systems necessary for full implementation. This rate is average for Sub-Saharan economies.\nIn 2023, governments were assertive in advancing three categories of legal equal-opportunity reforms\u2014pay, parental rights, and workplace protections. Still, nearly all countries performed poorly in the two categories being tracked for the first time\u2014access to childcare and women\u2019s safety.\nThe weakness is greatest in women\u2019s safety\u2014where the global average score is just 36, meaning women enjoy barely a third of the needed legal protections against domestic violence, sexual harassment, child marriage and femicide. Although 151 economies have laws in place prohibiting sexual harassment in the workplace, just 39 have laws prohibiting it in public spaces. This often prevents women from using public transportation to get to work.\nMost countries also score poorly for childcare laws. Women spend an average of 2.4 more hours a day on unpaid care work than men\u2014much of it on the care of children. Expanding access to childcare tends to increase women\u2019s participation in the labor force by about 1 percentage point initially\u2014and the effect more than doubles within five years. Today, only 78 economies\u2014fewer than half\u2014provide some financial or tax support for parents with young children. Only 62 economies\u2014fewer than a third\u2014have quality standards governing childcare services, without which women might think twice about going to work while they have children in their care.\nWomen also face significant obstacles in other areas. In the area of entrepreneurship, for example, just one in every five economies mandates gender-sensitive criteria for public procurement processes, meaning women are largely cut out of a $10-trillion-a-year economic opportunity. In the area of pay, women earn just 77 cents for every $1 paid to men. The rights gap extends all the way to retirement. In 62 economies, the ages at which men and women can retire are not the same. Women tend to live longer than men, but because they receive lower pay while they work, take time off when they have children, and retire earlier, they end up with smaller pension benefits and greater financial insecurity in old age.\n\u201cIt is more urgent than ever to accelerate efforts to reform laws and enact public policies that empower women to work and start and grow businesses,\u201d said Tea Trumbic, the report\u2019s lead author. \u201cToday, barely half of women participate in the global workforce, compared with nearly three out of every four men. This is not just unfair\u2014it\u2019s wasteful. Increasing women's economic participation is the key to amplifying their voices and shaping decisions that affect them directly. Countries simply cannot afford to sideline half of their population.\u201d\nSTAY CURRENT WITH OUR LATEST DATA & INSIGHTS\n\u00a9 2025 World Bank Group, All Rights Reserved.\nThis site uses cookies to optimize functionality and give you the best possible experience. If you continue to navigate this website beyond this page, cookies will be placed on your browser. To learn more about cookies, click here.\n\nProvide relevant evidence.",
+    "input_length_chars": 6287,
+    "input_tokens_estimated": 1571,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that women earn 77 cents for every dollar earned by men, which directly supports the claim about the gender pay gap.",
+      "overall_stance": "supports",
+      "key_quote": "In the area of pay, women earn just 77 cents for every $1 paid to men."
+    },
+    "output_length_chars": 295,
+    "output_tokens_estimated": 73,
+    "cost_usd": 0.00027945,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Women make only 77 cents for every dollar a man makes.",
+      "query_index": 2,
+      "query_text": "gender wage gap women 77 cents men dollar"
+    }
+  }
+]

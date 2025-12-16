@@ -1,0 +1,112 @@
+{
+  "video_id": "oTFt4byuIuo",
+  "timestamp": "2025-12-14T16:19:45.969176",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 1.0,
+    "recall": 0.29411764705882354,
+    "f1_score": 0.45454545454545453,
+    "true_positives": 5,
+    "false_positives": 0,
+    "false_negatives": 12,
+    "mean_average_precision": 1.0,
+    "recall_at_important": 0.3333333333333333,
+    "importance_weighted_coverage": 0.3053435114503817,
+    "matched_claims": [
+      {
+        "gt_text": "Egg prices fell 12.7% last month, the biggest monthly decline since 1984",
+        "sys_text": "Egg prices fell 12.7% last month, the biggest monthly decline since 1984.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.85,
+        "importance_error": 0.050000000000000044
+      },
+      {
+        "gt_text": "The USDA reported that a dozen large white shell eggs cost $3.30 on average, down 69 cents from a week before",
+        "sys_text": "A dozen large white shell eggs now cost $3.30 on average, down $0.69 from a week before.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.85,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "Egg prices surged in each of the past 5 months and 17 of the past 19 months",
+        "sys_text": "Egg prices surged in each of the past 5 months and 17 of the past 19 months due to a deadly avian flu epidemic.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.7,
+        "importance_error": 0.0
+      },
+      {
+        "gt_text": "Egg prices remain significantly higher now than before the latest bird flu outbreak, and they cost 49.3% more last month than they did a year earlier",
+        "sys_text": "Egg prices remain significantly higher now than before the latest bird flu outbreak, costing 49.3% more last month than a year earlier.",
+        "gt_importance": 0.8,
+        "sys_importance": 0.7,
+        "importance_error": 0.10000000000000009
+      },
+      {
+        "gt_text": "Egg prices this past Easter were the highest for any Easter on record",
+        "sys_text": "Egg prices this past Easter were the highest for any Easter on record, according to the USDA.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.6,
+        "importance_error": 0.25
+      }
+    ],
+    "missed_claims": [
+      "A deadly avian flu epidemic necessitated the mass culling of egg laying hens",
+      "Eggs are still more expensive than when Trump took office",
+      "Trump said the cost of eggs has come down like 93-94% since we took office",
+      "Those percentage declines Trump stated are not close to accurate",
+      "Consumer egg prices were indeed falling sharply when Trump made those remarks",
+      "Trump appears to have been talking about wholesale prices, which had been tumbling throughout March",
+      "Wholesale prices fell by half, not close to the 90% plus figures Trump was citing",
+      "Wholesale prices are the costs distributors pay to farmers or middlemen. Consumer prices are what customers pay at grocery stores",
+      "Consumer prices typically make their way through the supply chain at a slower pace than wholesale prices",
+      "Grocery stores may decide to keep prices at a certain level even when wholesale prices change to try to recoup lost profits from prior weeks",
+      "The USDA says consumer prices finally fell as demand for eggs decreased and avian flu cases have fallen",
+      "Many groceries, including large chains like Costco, had limited customer purchases because of egg shortages"
+    ],
+    "extra_claims": [],
+    "importance_mae": 0.10000000000000002,
+    "claim_quality_avg": 1.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.8,
+    "stance_accuracy": 0.8,
+    "correct_verdicts": 4,
+    "total_verdicts": 5,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "The USDA reported that a dozen large white shell eggs cost $3.30 on average, down 69 cents from a week before",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "REFUTES"
+      }
+    ],
+    "explanation_quality_avg": 0.7
+  },
+  "end_to_end": {
+    "claim_coverage": 0.29411764705882354,
+    "verdict_accuracy": 0.8,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.00964275,
+    "total_time_seconds": 144.06690406799316,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.95,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.5
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.6900000000000001,
+    "source_reliability_distribution": {
+      "high": 22,
+      "medium": 3
+    },
+    "avg_evidence_per_claim": 5.0
+  },
+  "ground_truth_claims_count": 17,
+  "system_claims_count": 5
+}

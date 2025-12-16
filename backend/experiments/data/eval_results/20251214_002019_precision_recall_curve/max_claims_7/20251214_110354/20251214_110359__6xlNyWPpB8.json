@@ -1,0 +1,116 @@
+{
+  "video_id": "_6xlNyWPpB8",
+  "timestamp": "2025-12-14T11:03:59.834452",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_7",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.7142857142857143,
+    "recall": 0.29411764705882354,
+    "f1_score": 0.4166666666666667,
+    "true_positives": 5,
+    "false_positives": 2,
+    "false_negatives": 12,
+    "mean_average_precision": 0.7861904761904762,
+    "recall_at_important": 0.18181818181818182,
+    "importance_weighted_coverage": 0.28148148148148144,
+    "matched_claims": [
+      {
+        "gt_text": "It can take a plastic bottle an agonizing 1,000 years to decompose in a landfill",
+        "sys_text": "It can take plastic bottles up to 1,000 years to decompose in landfills.",
+        "gt_importance": 0.8,
+        "sys_importance": 0.8,
+        "importance_error": 0.0
+      },
+      {
+        "gt_text": "Rainwater flows through landfill waste and absorbs water-soluble compounds, including highly toxic ones, creating a harmful stew called leachate",
+        "sys_text": "Rainwater absorbs toxic compounds from compressed plastic in landfills, creating leachate.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.7,
+        "importance_error": 0.15000000000000002
+      },
+      {
+        "gt_text": "Microplastics might rotate in the sea eternally",
+        "sys_text": "Plastics break down into smaller pieces called microplastics, which can persist in the ocean.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.7,
+        "importance_error": 0.0
+      },
+      {
+        "gt_text": "The plastic in bottles was formed by chemically bonding oil and gas molecules together to make monomers, which were then bonded into long polymer chains",
+        "sys_text": "Plastic bottles are made by chemically bonding oil and gas molecules to create monomers.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.6,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "The Great Pacific Garbage Patch is one of five plastic-filled gyres in the world's seas",
+        "sys_text": "The Great Pacific Garbage Patch contains millions of pieces of plastic debris.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.6,
+        "importance_error": 0.15000000000000002
+      }
+    ],
+    "missed_claims": [
+      "Polymers were made into millions of pellets that were melted at manufacturing plants and reformed in molds",
+      "Plastic bottles can end up in landfills where the dump expands each day as more trash comes in",
+      "Leachate can move into groundwater, soil and streams, poisoning ecosystems and harming wildlife",
+      "Plastic bottles can float to the ocean and be drawn into a massive vortex where trash accumulates, known as the Great Pacific Garbage Patch",
+      "Ocean plastic pollution turns the water into a cloudy plastic soup",
+      "Some animals, like seabirds, get entangled in the mess of plastic debris",
+      "Animals mistake brightly colored plastic bits for food",
+      "Plastic makes animals feel full when they're not, so they starve to death",
+      "Animals pass the toxins from the plastic up the food chain",
+      "Plastic is eaten by lanternfish, the lanternfish are eaten by squid, the squid are eaten by tuna, and the tuna are eaten by us",
+      "Most plastics don't biodegrade, which means they're destined to break down into smaller and smaller pieces called micro plastics",
+      "Recycled plastic bottles are squeezed flat and compressed into a block, then shredded into tiny pieces, washed and melted to become raw materials that can be used again"
+    ],
+    "extra_claims": [
+      "Some seabirds mistake plastic for food, leading to starvation and toxin accumulation in the food chain.",
+      "Monomers are bonded into long polymer chains to make plastic pellets."
+    ],
+    "importance_mae": 0.08,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.8,
+    "stance_accuracy": 0.8,
+    "correct_verdicts": 4,
+    "total_verdicts": 5,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "Microplastics might rotate in the sea eternally",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "SUPPORTS"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.29411764705882354,
+    "verdict_accuracy": 0.8,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.01603635,
+    "total_time_seconds": 93.27415800094604,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.5714285714285716
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "medium": 12,
+      "high": 23,
+      "unknown": 1
+    },
+    "avg_evidence_per_claim": 5.142857142857143
+  },
+  "ground_truth_claims_count": 17,
+  "system_claims_count": 7
+}

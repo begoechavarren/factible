@@ -1,0 +1,429 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:31:57.454007",
+    "latency_seconds": 12.08,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nThe week of Valentine's Day 2021, the temperature dropped below zero. Nobody could remember it being this cold for this long. This was Texas, not Siberia. But Texas is the energy state. There was nothing to fear. Just go home, turn on the heat, and hunker down. That's how it should have gone. Instead, over five days, four million Texans lost power during what turned out to be the coldest winter storm in a half a century. Hundreds died, including an 11-year-old boy who froze to death in his sleep. The state's electric grid operator, the Electric Reliability Council of Texas, ERCOT, later reported the state was just four minutes away from total grid collapse. The media was quick to blame the state government for not being fully prepared and not acting fast enough. This may be true, but ERCOT's mistakes were symptoms, not the cause, of the problem. The real cause is decades of misguided policies that have left the Lone Star state with an unreliable energy infrastructure. It's a cautionary tale that the rest of the country needs to learn from. From 2010 to 2020, the population of Texas increased by 4 million people, and the state's economy grew by 35%. But while all this growth was happening, the state's reliable energy capacity was actually shrinking. Meanwhile, its unreliable energy capacity was surging. In fact, it almost tripled. Let's break this down. Reliable energy is fossil fuels\u2014coal and natural gas\u2014and nuclear. These fuels produce a near-constant flow of electricity. Unreliable, or variable energy, is renewable energy\u2014wind and solar. They're unreliable because they depend on the whims of Mother Nature. In 2020, Texans got 25% of their energy from renewables. During the February storm, however, that fell to 8%, at one point reaching a deadly low of just 1.5%. The reason? Renewable energy only works when the weather cooperates, but it's useless when it doesn't\u2014like when it conjures up a giant snowstorm. Solar panels don't capture sunlight and wind turbines don't spin when covered in snow and ice. Given renewables' unreliability, how is it that Texas, of all places, became so dependent on them? That story begins in 1999, when Texas politicians on the left and the right fell in love with the idea that they could turn the state into a green energy powerhouse. It sounded like a great idea at the time: Instead of passing any new mandates, they would do it by offering massive subsidies, marketed as \"incentives,\" to produce wind and solar power. This ended up working out great for the wind and solar companies, but not so great for reliable energy providers. To illustrate this, imagine that you own a restaurant. One day you learn that your competitor down the street is getting government support. He gets so much help that, instead of charging his customers, he can pay them to eat his food. Not surprisingly, your customers abandon your restaurant for his. Your competitor prospers off the taxpayers' backs while your business withers. Let's apply this analogy to the real world of renewable energy. Wind and solar get so much in subsidies they're guaranteed a profit. And unlike fossil fuel producers, they're not even required to provide reliable power. It's no wonder fossil fuel plants are closing, and nuclear plants are not being built. The wind and solar companies are protected from the laws of supply and demand. They can't lose, and the fossil fuel plants can't compete. That's how out of whack the Texas electricity market has become. Since 2006, the state has subsidized renewable energy to the tune of $19 billion. All of this came right out of Texans' wallets, courtesy of ever-increasing electric bills and rising property taxes. And what does Texas have to show for it? An electric grid that failed when Texans needed it most. Unfortunately, this scenario is playing out across America. Over the past decade, the federal government has spent over $230 billion on energy subsidies, and that doesn't even include subsidies the states give away. It's true that Uncle Sam also grants favors to fossil fuel companies. Renewable energy advocates love to point this out, but here's what they neglect to mention: compared to fossil fuel companies, for every unit of electricity generated, Washington subsidizes wind 17 times and solar 75 times more. Yet, despite all this aid, renewables provide just 4 percent of the country's total energy supply. The verdict is in: renewable energy is expensive and unreliable. And if it can render America's leading power producer powerless, it can do the same to your state. Government meddling got us into this mess. It's time for politicians to step aside and let the free market get us out of it. I'm Jason Isaac from the Texas Public Policy Foundation, for Prager University.",
+    "input_length_chars": 4829,
+    "input_tokens_estimated": 1207,
+    "output": {
+      "claims": [
+        {
+          "text": "The temperature dropped below zero in Texas during Valentine's Day week 2021.",
+          "confidence": 0.9,
+          "category": "geographical",
+          "importance": 0.6,
+          "context": "February 2021 winter storm in Texas."
+        },
+        {
+          "text": "Over five days, four million Texans lost power during the coldest winter storm in fifty years.",
+          "confidence": 0.95,
+          "category": "statistical",
+          "importance": 0.85,
+          "context": "February 2021 winter storm."
+        },
+        {
+          "text": "Hundreds died during the storm, including an 11-year-old boy who froze to death.",
+          "confidence": 0.9,
+          "category": "biographical",
+          "importance": 0.7,
+          "context": "February 2021 winter storm."
+        },
+        {
+          "text": "ERCOT reported the state was four minutes away from total grid collapse.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.75,
+          "context": "ERCOT report during February 2021 storm."
+        },
+        {
+          "text": "From 2010 to 2020, Texas's population increased by 4 million people.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Population growth in Texas."
+        },
+        {
+          "text": "Texas's economy grew by 35% from 2010 to 2020.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Economic growth in Texas."
+        },
+        {
+          "text": "Reliable energy capacity in Texas was shrinking while unreliable energy capacity was surging.",
+          "confidence": 0.85,
+          "category": "policy",
+          "importance": 0.7,
+          "context": "Energy capacity trends in Texas."
+        },
+        {
+          "text": "In 2020, Texans got 25% of their energy from renewables, which fell to 8% during the storm.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.8,
+          "context": "Energy sources during February 2021 storm."
+        },
+        {
+          "text": "Renewable energy capacity in Texas almost tripled in the past years.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Trends in renewable energy capacity."
+        },
+        {
+          "text": "Since 2006, Texas has subsidized renewable energy by $19 billion.",
+          "confidence": 0.9,
+          "category": "policy",
+          "importance": 0.7,
+          "context": "Subsidies for renewable energy in Texas."
+        },
+        {
+          "text": "The federal government has spent over $230 billion on energy subsidies in the past decade.",
+          "confidence": 0.9,
+          "category": "policy",
+          "importance": 0.7,
+          "context": "Federal energy subsidies."
+        },
+        {
+          "text": "For every unit of electricity generated, Washington subsidizes wind 17 times and solar 75 times more than fossil fuels.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.75,
+          "context": "Comparison of energy subsidies."
+        },
+        {
+          "text": "Renewables provide just 4 percent of the country's total energy supply.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.8,
+          "context": "Renewable energy contribution to total energy supply."
+        }
+      ],
+      "total_count": 13
+    },
+    "output_length_chars": 3708,
+    "output_tokens_estimated": 927,
+    "cost_usd": 0.00073725
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:32:03.999669",
+    "latency_seconds": 2.41,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Over five days, four million Texans lost power during the coldest winter storm in fifty years.\nContext: February 2021 winter storm.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 304,
+    "input_tokens_estimated": 76,
+    "output": {
+      "original_claim": "Over five days, four million Texans lost power during the coldest winter storm in fifty years.",
+      "queries": [
+        {
+          "query": "four million Texans lost power February 2021 winter storm",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Texas power outage February 2021 coldest winter storm",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 354,
+    "output_tokens_estimated": 88,
+    "cost_usd": 6.42e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Over five days, four million Texans lost power during the coldest winter storm in fifty years."
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:32:21.580433",
+    "latency_seconds": 2.51,
+    "input_prompt": "Claim:\nOver five days, four million Texans lost power during the coldest winter storm in fifty years.\n\nArticle Title:\nWinter Storm Uri 2021 - Texas Comptroller\n\nGoogle Search Snippet:\nThe UT-Austin report found that Uri, although not the most severe Texas winter storm on record, caused the most loss of electricity.\n\nFull Page Content:\nIn February 2021, an extreme winter storm event caused a massive electricity generation failure in the state of Texas, which resulted in a loss of power for more than 4.5 million homes. This failure has resulted in at least 57 deaths across 25 Texas counties and over $195 billion in property damage, bringing attention to the energy system crisis and its potential causes. While much press has been dedicated to identifying the entities and individuals potentially at fault, determining exact causes and accurately assigning responsibility for an event this complex requires expert input and opinion. There is a strong public need for reliable information about the fundamental causes of the crisis and for identification of core market design, regulatory, and policy gaps that can be addressed to make the Texas energy system more robust and resilient to such massive shocks in the future.\nTo address these needs, The University of Texas at Austin Energy Institute convened a diverse expert committee, to offer an unbiased assessment of the data and events of the blackout. This report is not intended to comprehensively address all issues stemming from such a complex event, but may inform subsequent assessments and the public policy debate about how to best design and operate the ERCOT grid. This report does not recommend policies or solutions.\nRead the Full Report View author disclosures of potential conflicts of interest.\nThe POWER Committee welcomes inquiries from the public and media. For inquiries on Committee deliverables and analysis, please contact a Committee Co-Chair. To contact a specific Committee member, follow the link in their bio to the corresponding department website.\nDr. Carey King | Dr. Josh Rhodes | Dr. Jay Zarnikau\n\u00a9 The University of Texas at Austin 2025\n\nProvide relevant evidence.",
+    "input_length_chars": 2157,
+    "input_tokens_estimated": 539,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that during the winter storm in February 2021, over 4.5 million homes in Texas lost power, which aligns with the claim about four million Texans losing power during the storm.",
+      "overall_stance": "supports",
+      "key_quote": "In February 2021, an extreme winter storm event caused a massive electricity generation failure in the state of Texas, which resulted in a loss of power for more than 4.5 million homes."
+    },
+    "output_length_chars": 468,
+    "output_tokens_estimated": 117,
+    "cost_usd": 0.00015105,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Over five days, four million Texans lost power during the coldest winter storm in fifty years.",
+      "query_index": 2,
+      "query_text": "Texas power outage February 2021 coldest winter storm"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:32:22.197370",
+    "latency_seconds": 3.12,
+    "input_prompt": "Claim:\nOver five days, four million Texans lost power during the coldest winter storm in fifty years.\n\nArticle Title:\nERCOT Blackout 2021 - UT Energy Institute\n\nGoogle Search Snippet:\nIn February 2021, an extreme winter storm event caused a massive electricity generation failure in the state of Texas, which resulted in a loss of power for ...\n\nFull Page Content:\nIn February 2021, an extreme winter storm event caused a massive electricity generation failure in the state of Texas, which resulted in a loss of power for more than 4.5 million homes. This failure has resulted in at least 57 deaths across 25 Texas counties and over $195 billion in property damage, bringing attention to the energy system crisis and its potential causes. While much press has been dedicated to identifying the entities and individuals potentially at fault, determining exact causes and accurately assigning responsibility for an event this complex requires expert input and opinion. There is a strong public need for reliable information about the fundamental causes of the crisis and for identification of core market design, regulatory, and policy gaps that can be addressed to make the Texas energy system more robust and resilient to such massive shocks in the future.\nTo address these needs, The University of Texas at Austin Energy Institute convened a diverse expert committee, to offer an unbiased assessment of the data and events of the blackout. This report is not intended to comprehensively address all issues stemming from such a complex event, but may inform subsequent assessments and the public policy debate about how to best design and operate the ERCOT grid. This report does not recommend policies or solutions.\nRead the Full Report View author disclosures of potential conflicts of interest.\nThe POWER Committee welcomes inquiries from the public and media. For inquiries on Committee deliverables and analysis, please contact a Committee Co-Chair. To contact a specific Committee member, follow the link in their bio to the corresponding department website.\nDr. Carey King | Dr. Josh Rhodes | Dr. Jay Zarnikau\n\u00a9 The University of Texas at Austin 2025\n\nProvide relevant evidence.",
+    "input_length_chars": 2185,
+    "input_tokens_estimated": 546,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that in February 2021, an extreme winter storm caused a significant electricity generation failure in Texas, resulting in a loss of power for more than 4.5 million homes, which aligns with the claim about four million Texans losing power during the storm.",
+      "overall_stance": "supports",
+      "key_quote": "In February 2021, an extreme winter storm event caused a massive electricity generation failure in the state of Texas, which resulted in a loss of power for more than 4.5 million homes."
+    },
+    "output_length_chars": 548,
+    "output_tokens_estimated": 137,
+    "cost_usd": 0.0001641,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Over five days, four million Texans lost power during the coldest winter storm in fifty years.",
+      "query_index": 2,
+      "query_text": "Texas power outage February 2021 coldest winter storm"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:32:22.297467",
+    "latency_seconds": 3.23,
+    "input_prompt": "Claim:\nOver five days, four million Texans lost power during the coldest winter storm in fifty years.\n\nArticle Title:\n\u201cWe're in it alone\u201d: Power outages leave millions of Texans ...\n\nGoogle Search Snippet:\nMillions suffered through Monday night without power as a massive winter blitz sent temperatures plunging, shuttered grocery stores and caused widespread ...\n\nFull Page Content:\nIn February 2021, an extreme winter storm event caused a massive electricity generation failure in the state of Texas, which resulted in a loss of power for more than 4.5 million homes. This failure has resulted in at least 57 deaths across 25 Texas counties and over $195 billion in property damage, bringing attention to the energy system crisis and its potential causes. While much press has been dedicated to identifying the entities and individuals potentially at fault, determining exact causes and accurately assigning responsibility for an event this complex requires expert input and opinion. There is a strong public need for reliable information about the fundamental causes of the crisis and for identification of core market design, regulatory, and policy gaps that can be addressed to make the Texas energy system more robust and resilient to such massive shocks in the future.\nTo address these needs, The University of Texas at Austin Energy Institute convened a diverse expert committee, to offer an unbiased assessment of the data and events of the blackout. This report is not intended to comprehensively address all issues stemming from such a complex event, but may inform subsequent assessments and the public policy debate about how to best design and operate the ERCOT grid. This report does not recommend policies or solutions.\nRead the Full Report View author disclosures of potential conflicts of interest.\nThe POWER Committee welcomes inquiries from the public and media. For inquiries on Committee deliverables and analysis, please contact a Committee Co-Chair. To contact a specific Committee member, follow the link in their bio to the corresponding department website.\nDr. Carey King | Dr. Josh Rhodes | Dr. Jay Zarnikau\n\u00a9 The University of Texas at Austin 2025\n\nProvide relevant evidence.",
+    "input_length_chars": 2204,
+    "input_tokens_estimated": 551,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that in February 2021, an extreme winter storm caused a significant electricity generation failure in Texas, resulting in over 4.5 million homes losing power, which aligns with the claim about the power outages during the coldest winter storm in fifty years.",
+      "overall_stance": "supports",
+      "key_quote": "In February 2021, an extreme winter storm event caused a massive electricity generation failure in the state of Texas, which resulted in a loss of power for more than 4.5 million homes."
+    },
+    "output_length_chars": 551,
+    "output_tokens_estimated": 137,
+    "cost_usd": 0.00016485,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Over five days, four million Texans lost power during the coldest winter storm in fifty years.",
+      "query_index": 2,
+      "query_text": "Texas power outage February 2021 coldest winter storm"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:32:22.826599",
+    "latency_seconds": 3.76,
+    "input_prompt": "Claim:\nOver five days, four million Texans lost power during the coldest winter storm in fifty years.\n\nArticle Title:\n2021 Texas Power Grid Failure \u2013 a preventable disaster - DEITABASE\n\nGoogle Search Snippet:\nIn 2021, Winter Storm Uri brought record-breaking low temperatures to the people of Texas, overwhelming the under-designed Texas power grid.\n\nFull Page Content:\nIn February 2021, an extreme winter storm event caused a massive electricity generation failure in the state of Texas, which resulted in a loss of power for more than 4.5 million homes. This failure has resulted in at least 57 deaths across 25 Texas counties and over $195 billion in property damage, bringing attention to the energy system crisis and its potential causes. While much press has been dedicated to identifying the entities and individuals potentially at fault, determining exact causes and accurately assigning responsibility for an event this complex requires expert input and opinion. There is a strong public need for reliable information about the fundamental causes of the crisis and for identification of core market design, regulatory, and policy gaps that can be addressed to make the Texas energy system more robust and resilient to such massive shocks in the future.\nTo address these needs, The University of Texas at Austin Energy Institute convened a diverse expert committee, to offer an unbiased assessment of the data and events of the blackout. This report is not intended to comprehensively address all issues stemming from such a complex event, but may inform subsequent assessments and the public policy debate about how to best design and operate the ERCOT grid. This report does not recommend policies or solutions.\nRead the Full Report View author disclosures of potential conflicts of interest.\nThe POWER Committee welcomes inquiries from the public and media. For inquiries on Committee deliverables and analysis, please contact a Committee Co-Chair. To contact a specific Committee member, follow the link in their bio to the corresponding department website.\nDr. Carey King | Dr. Josh Rhodes | Dr. Jay Zarnikau\n\u00a9 The University of Texas at Austin 2025\n\nProvide relevant evidence.",
+    "input_length_chars": 2190,
+    "input_tokens_estimated": 547,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that in February 2021, an extreme winter storm caused a significant electricity generation failure in Texas, resulting in over 4.5 million homes losing power, which aligns with the claim about four million Texans losing power during the storm.",
+      "overall_stance": "supports",
+      "key_quote": "In February 2021, an extreme winter storm event caused a massive electricity generation failure in the state of Texas, which resulted in a loss of power for more than 4.5 million homes."
+    },
+    "output_length_chars": 536,
+    "output_tokens_estimated": 134,
+    "cost_usd": 0.00016245,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Over five days, four million Texans lost power during the coldest winter storm in fifty years.",
+      "query_index": 2,
+      "query_text": "Texas power outage February 2021 coldest winter storm"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:32:23.385027",
+    "latency_seconds": 4.31,
+    "input_prompt": "Claim:\nOver five days, four million Texans lost power during the coldest winter storm in fifty years.\n\nArticle Title:\nFinal Report on February 2021 Freeze Underscores Winterization ...\n\nGoogle Search Snippet:\nMore than 4.5 million people in Texas lost power \u2013 some for as long as four days. Tragically, the loss of electricity caused the deaths of ...\n\nFull Page Content:\nIn February 2021, an extreme winter storm event caused a massive electricity generation failure in the state of Texas, which resulted in a loss of power for more than 4.5 million homes. This failure has resulted in at least 57 deaths across 25 Texas counties and over $195 billion in property damage, bringing attention to the energy system crisis and its potential causes. While much press has been dedicated to identifying the entities and individuals potentially at fault, determining exact causes and accurately assigning responsibility for an event this complex requires expert input and opinion. There is a strong public need for reliable information about the fundamental causes of the crisis and for identification of core market design, regulatory, and policy gaps that can be addressed to make the Texas energy system more robust and resilient to such massive shocks in the future.\nTo address these needs, The University of Texas at Austin Energy Institute convened a diverse expert committee, to offer an unbiased assessment of the data and events of the blackout. This report is not intended to comprehensively address all issues stemming from such a complex event, but may inform subsequent assessments and the public policy debate about how to best design and operate the ERCOT grid. This report does not recommend policies or solutions.\nRead the Full Report View author disclosures of potential conflicts of interest.\nThe POWER Committee welcomes inquiries from the public and media. For inquiries on Committee deliverables and analysis, please contact a Committee Co-Chair. To contact a specific Committee member, follow the link in their bio to the corresponding department website.\nDr. Carey King | Dr. Josh Rhodes | Dr. Jay Zarnikau\n\u00a9 The University of Texas at Austin 2025\n\nProvide relevant evidence.",
+    "input_length_chars": 2192,
+    "input_tokens_estimated": 548,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that over 4.5 million homes in Texas lost power during the February 2021 winter storm, which aligns with the claim about the number of Texans affected by the power outage.",
+      "overall_stance": "supports",
+      "key_quote": "In February 2021, an extreme winter storm event caused a massive electricity generation failure in the state of Texas, which resulted in a loss of power for more than 4.5 million homes."
+    },
+    "output_length_chars": 464,
+    "output_tokens_estimated": 116,
+    "cost_usd": 0.0001518,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Over five days, four million Texans lost power during the coldest winter storm in fifty years.",
+      "query_index": 2,
+      "query_text": "Texas power outage February 2021 coldest winter storm"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:32:23.882077",
+    "latency_seconds": 4.81,
+    "input_prompt": "Claim:\nOver five days, four million Texans lost power during the coldest winter storm in fifty years.\n\nArticle Title:\nThe 2021 Texas Power Crisis: Distribution, Duration, and Disparities\n\nGoogle Search Snippet:\nPrecipitated by an unusual winter storm, the 2021 Texas Power Crisis lasted February 10 to 27 leaving millions of customers without power.\n\nFull Page Content:\nIn February 2021, an extreme winter storm event caused a massive electricity generation failure in the state of Texas, which resulted in a loss of power for more than 4.5 million homes. This failure has resulted in at least 57 deaths across 25 Texas counties and over $195 billion in property damage, bringing attention to the energy system crisis and its potential causes. While much press has been dedicated to identifying the entities and individuals potentially at fault, determining exact causes and accurately assigning responsibility for an event this complex requires expert input and opinion. There is a strong public need for reliable information about the fundamental causes of the crisis and for identification of core market design, regulatory, and policy gaps that can be addressed to make the Texas energy system more robust and resilient to such massive shocks in the future.\nTo address these needs, The University of Texas at Austin Energy Institute convened a diverse expert committee, to offer an unbiased assessment of the data and events of the blackout. This report is not intended to comprehensively address all issues stemming from such a complex event, but may inform subsequent assessments and the public policy debate about how to best design and operate the ERCOT grid. This report does not recommend policies or solutions.\nRead the Full Report View author disclosures of potential conflicts of interest.\nThe POWER Committee welcomes inquiries from the public and media. For inquiries on Committee deliverables and analysis, please contact a Committee Co-Chair. To contact a specific Committee member, follow the link in their bio to the corresponding department website.\nDr. Carey King | Dr. Josh Rhodes | Dr. Jay Zarnikau\n\u00a9 The University of Texas at Austin 2025\n\nProvide relevant evidence.",
+    "input_length_chars": 2190,
+    "input_tokens_estimated": 547,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that over 4.5 million homes in Texas lost power during the extreme winter storm in February 2021, which aligns with the claim about the number of Texans affected by the power outage.",
+      "overall_stance": "supports",
+      "key_quote": "the 2021 Texas Power Crisis... resulted in a loss of power for more than 4.5 million homes."
+    },
+    "output_length_chars": 381,
+    "output_tokens_estimated": 95,
+    "cost_usd": 0.00013905,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Over five days, four million Texans lost power during the coldest winter storm in fifty years.",
+      "query_index": 2,
+      "query_text": "Texas power outage February 2021 coldest winter storm"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:32:25.524343",
+    "latency_seconds": 1.95,
+    "input_prompt": "Claim:\nOver five days, four million Texans lost power during the coldest winter storm in fifty years.\n\nArticle Title:\n2021 Texas Power Grid Failure \u2013 a preventable disaster - DEITABASE\n\nGoogle Search Snippet:\nIn 2021, Winter Storm Uri brought record-breaking low temperatures to the people of Texas, overwhelming the under-designed Texas power grid.\n\nFull Page Content:\nFERC, the North American Electric Reliability Corporation (NERC) and NERC\u2019s regional entities today issued the final report examining the impact the February 2021 freeze had on the bulk electric system in Texas and other parts of the South Central U.S. This 300-page analysis underscores preliminary recommendations released earlier this fall. The final report includes additional details regarding the need to strengthen rules for cold weather preparedness and coordination to prevent a recurrence of last winter\u2019s blackouts.\nIn February 2021, a severe cold weather event \u2013 also known as Winter Storm Uri \u2013 caused numerous outages, derates or failures to start at electric generating plants scattered across the region. The Texas grid operator (Electric Reliability Council of Texas or ERCOT) ordered a total of 20,000 MW of rolling blackouts in an effort to prevent grid collapse; this represents the largest manually controlled load shedding event in U.S. history. More than 4.5 million people in Texas lost power \u2013 some for as long as four days. Tragically, the loss of electricity caused the deaths of numerous Texans.\n\u201cThe final report on Winter Storm Uri is a sobering analysis that highlights the significant work that needs to be done. I previously committed to take the recommendations seriously, and I plan to do exactly that,\u201d FERC Chairman Rich Glick said. \u201cThe devastating effects of extreme cold on our bulk power system\u2019s ability to operate in 2011 and now, 2021, must not be allowed to happen again. We have a duty to protect the bulk power system and public safety and we will do just that.\u201d\n\u201cExtreme weather events, such as the one in February 2021, are unfortunately becoming more commonplace and the electricity ecosystem needs to come together to plan for and prepare to operate under more extreme, longer duration, and wide area weather events,\u201d NERC President and Chief Executive Officer Jim Robb said. \u201cThe FERC-NERC-Regional Entity Staff Report also highlights the need for substantially better coordination between the natural gas system and the electric system to ensure a reliable supply that nearly 400 million people across North America depend upon to support their way of life.\u201d\nToday\u2019s final report highlights the critical need for stronger mandatory electric reliability standards, particularly with respect to generator cold weather-critical components and systems. Notably, a combination of freezing issues (44.2 percent) and fuel issues (31.4 percent) caused 75.6 percent of the unplanned generating unit outages, derates and failures to start. Of particular note, protecting just four types of power plant components from icing and freezing could have reduced outages by 67 percent in the ERCOT region, 47 percent in the Southwest Power Pool (SPP) and 55 percent in the Midcontinent Independent System Operator South (MISO) regions. Natural gas-fired units represented 58 percent of all generating units experiencing unplanned outages, derates or failures to start. The remaining portion was comprised of wind (27 percent), coal (6 percent), solar (2 percent) and other generation types (7 percent), with four nuclear units making up less than 1 percent.\nToday\u2019s final report provides more details:\nThe Final Report includes 28 formal recommendations that seek to prevent a recurrence of the failures experienced during the February 2021 cold weather event. These recommendations include important revisions to the NERC Reliability Standards surrounding generator winterization and gas-electric coordination.\nAdditional recommendations are included regarding topics such as cold weather impacts on mechanical and electrical components, utilization of weather forecasts to better predict electric demand, and increasing the ability to rotate rolling blackouts, amongst other recommendations. The report also encourages additional study of the ERCOT system\u2019s reliability issues, guidance on identification of natural gas infrastructure for protection from rolling blackouts, and additional ways to address natural gas fuel supply shortfalls during extreme cold weather events.\nThe full report is available here.\nThe presentation of the preliminary findings released in September 2021 is available here.\nR22-6\nThis page was last updated on November 16, 2021\n\nProvide relevant evidence.",
+    "input_length_chars": 4691,
+    "input_tokens_estimated": 1172,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that during Winter Storm Uri in February 2021, over 4.5 million Texans lost power, with some experiencing outages for as long as four days, due to the extreme cold and failures in the power grid.",
+      "overall_stance": "supports",
+      "key_quote": "More than 4.5 million people in Texas lost power \u2013 some for as long as four days."
+    },
+    "output_length_chars": 384,
+    "output_tokens_estimated": 96,
+    "cost_usd": 0.0002334,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Over five days, four million Texans lost power during the coldest winter storm in fifty years.",
+      "query_index": 2,
+      "query_text": "Texas power outage February 2021 coldest winter storm"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:32:25.631557",
+    "latency_seconds": 2.06,
+    "input_prompt": "Claim:\nOver five days, four million Texans lost power during the coldest winter storm in fifty years.\n\nArticle Title:\nERCOT Blackout 2021 - UT Energy Institute\n\nGoogle Search Snippet:\nIn February 2021, an extreme winter storm event caused a massive electricity generation failure in the state of Texas, which resulted in a loss of power for ...\n\nFull Page Content:\nFERC, the North American Electric Reliability Corporation (NERC) and NERC\u2019s regional entities today issued the final report examining the impact the February 2021 freeze had on the bulk electric system in Texas and other parts of the South Central U.S. This 300-page analysis underscores preliminary recommendations released earlier this fall. The final report includes additional details regarding the need to strengthen rules for cold weather preparedness and coordination to prevent a recurrence of last winter\u2019s blackouts.\nIn February 2021, a severe cold weather event \u2013 also known as Winter Storm Uri \u2013 caused numerous outages, derates or failures to start at electric generating plants scattered across the region. The Texas grid operator (Electric Reliability Council of Texas or ERCOT) ordered a total of 20,000 MW of rolling blackouts in an effort to prevent grid collapse; this represents the largest manually controlled load shedding event in U.S. history. More than 4.5 million people in Texas lost power \u2013 some for as long as four days. Tragically, the loss of electricity caused the deaths of numerous Texans.\n\u201cThe final report on Winter Storm Uri is a sobering analysis that highlights the significant work that needs to be done. I previously committed to take the recommendations seriously, and I plan to do exactly that,\u201d FERC Chairman Rich Glick said. \u201cThe devastating effects of extreme cold on our bulk power system\u2019s ability to operate in 2011 and now, 2021, must not be allowed to happen again. We have a duty to protect the bulk power system and public safety and we will do just that.\u201d\n\u201cExtreme weather events, such as the one in February 2021, are unfortunately becoming more commonplace and the electricity ecosystem needs to come together to plan for and prepare to operate under more extreme, longer duration, and wide area weather events,\u201d NERC President and Chief Executive Officer Jim Robb said. \u201cThe FERC-NERC-Regional Entity Staff Report also highlights the need for substantially better coordination between the natural gas system and the electric system to ensure a reliable supply that nearly 400 million people across North America depend upon to support their way of life.\u201d\nToday\u2019s final report highlights the critical need for stronger mandatory electric reliability standards, particularly with respect to generator cold weather-critical components and systems. Notably, a combination of freezing issues (44.2 percent) and fuel issues (31.4 percent) caused 75.6 percent of the unplanned generating unit outages, derates and failures to start. Of particular note, protecting just four types of power plant components from icing and freezing could have reduced outages by 67 percent in the ERCOT region, 47 percent in the Southwest Power Pool (SPP) and 55 percent in the Midcontinent Independent System Operator South (MISO) regions. Natural gas-fired units represented 58 percent of all generating units experiencing unplanned outages, derates or failures to start. The remaining portion was comprised of wind (27 percent), coal (6 percent), solar (2 percent) and other generation types (7 percent), with four nuclear units making up less than 1 percent.\nToday\u2019s final report provides more details:\nThe Final Report includes 28 formal recommendations that seek to prevent a recurrence of the failures experienced during the February 2021 cold weather event. These recommendations include important revisions to the NERC Reliability Standards surrounding generator winterization and gas-electric coordination.\nAdditional recommendations are included regarding topics such as cold weather impacts on mechanical and electrical components, utilization of weather forecasts to better predict electric demand, and increasing the ability to rotate rolling blackouts, amongst other recommendations. The report also encourages additional study of the ERCOT system\u2019s reliability issues, guidance on identification of natural gas infrastructure for protection from rolling blackouts, and additional ways to address natural gas fuel supply shortfalls during extreme cold weather events.\nThe full report is available here.\nThe presentation of the preliminary findings released in September 2021 is available here.\nR22-6\nThis page was last updated on November 16, 2021\n\nProvide relevant evidence.",
+    "input_length_chars": 4686,
+    "input_tokens_estimated": 1171,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that over 4.5 million Texans lost power during the February 2021 winter storm, which was described as the coldest in fifty years, and that some individuals were without power for as long as four days.",
+      "overall_stance": "supports",
+      "key_quote": "More than 4.5 million people in Texas lost power \u2013 some for as long as four days."
+    },
+    "output_length_chars": 389,
+    "output_tokens_estimated": 97,
+    "cost_usd": 0.00023385,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Over five days, four million Texans lost power during the coldest winter storm in fifty years.",
+      "query_index": 2,
+      "query_text": "Texas power outage February 2021 coldest winter storm"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:32:25.761603",
+    "latency_seconds": 2.18,
+    "input_prompt": "Claim:\nOver five days, four million Texans lost power during the coldest winter storm in fifty years.\n\nArticle Title:\nFinal Report on February 2021 Freeze Underscores Winterization ...\n\nGoogle Search Snippet:\nIn February 2021, a severe cold weather event \u2013 also known as Winter Storm Uri \u2013 caused numerous outages, derates or failures to start at ...\n\nFull Page Content:\nFERC, the North American Electric Reliability Corporation (NERC) and NERC\u2019s regional entities today issued the final report examining the impact the February 2021 freeze had on the bulk electric system in Texas and other parts of the South Central U.S. This 300-page analysis underscores preliminary recommendations released earlier this fall. The final report includes additional details regarding the need to strengthen rules for cold weather preparedness and coordination to prevent a recurrence of last winter\u2019s blackouts.\nIn February 2021, a severe cold weather event \u2013 also known as Winter Storm Uri \u2013 caused numerous outages, derates or failures to start at electric generating plants scattered across the region. The Texas grid operator (Electric Reliability Council of Texas or ERCOT) ordered a total of 20,000 MW of rolling blackouts in an effort to prevent grid collapse; this represents the largest manually controlled load shedding event in U.S. history. More than 4.5 million people in Texas lost power \u2013 some for as long as four days. Tragically, the loss of electricity caused the deaths of numerous Texans.\n\u201cThe final report on Winter Storm Uri is a sobering analysis that highlights the significant work that needs to be done. I previously committed to take the recommendations seriously, and I plan to do exactly that,\u201d FERC Chairman Rich Glick said. \u201cThe devastating effects of extreme cold on our bulk power system\u2019s ability to operate in 2011 and now, 2021, must not be allowed to happen again. We have a duty to protect the bulk power system and public safety and we will do just that.\u201d\n\u201cExtreme weather events, such as the one in February 2021, are unfortunately becoming more commonplace and the electricity ecosystem needs to come together to plan for and prepare to operate under more extreme, longer duration, and wide area weather events,\u201d NERC President and Chief Executive Officer Jim Robb said. \u201cThe FERC-NERC-Regional Entity Staff Report also highlights the need for substantially better coordination between the natural gas system and the electric system to ensure a reliable supply that nearly 400 million people across North America depend upon to support their way of life.\u201d\nToday\u2019s final report highlights the critical need for stronger mandatory electric reliability standards, particularly with respect to generator cold weather-critical components and systems. Notably, a combination of freezing issues (44.2 percent) and fuel issues (31.4 percent) caused 75.6 percent of the unplanned generating unit outages, derates and failures to start. Of particular note, protecting just four types of power plant components from icing and freezing could have reduced outages by 67 percent in the ERCOT region, 47 percent in the Southwest Power Pool (SPP) and 55 percent in the Midcontinent Independent System Operator South (MISO) regions. Natural gas-fired units represented 58 percent of all generating units experiencing unplanned outages, derates or failures to start. The remaining portion was comprised of wind (27 percent), coal (6 percent), solar (2 percent) and other generation types (7 percent), with four nuclear units making up less than 1 percent.\nToday\u2019s final report provides more details:\nThe Final Report includes 28 formal recommendations that seek to prevent a recurrence of the failures experienced during the February 2021 cold weather event. These recommendations include important revisions to the NERC Reliability Standards surrounding generator winterization and gas-electric coordination.\nAdditional recommendations are included regarding topics such as cold weather impacts on mechanical and electrical components, utilization of weather forecasts to better predict electric demand, and increasing the ability to rotate rolling blackouts, amongst other recommendations. The report also encourages additional study of the ERCOT system\u2019s reliability issues, guidance on identification of natural gas infrastructure for protection from rolling blackouts, and additional ways to address natural gas fuel supply shortfalls during extreme cold weather events.\nThe full report is available here.\nThe presentation of the preliminary findings released in September 2021 is available here.\nR22-6\nThis page was last updated on November 16, 2021\n\nProvide relevant evidence.",
+    "input_length_chars": 4692,
+    "input_tokens_estimated": 1173,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that during the February 2021 winter storm, over 4.5 million Texans lost power, with some experiencing outages for as long as four days, which aligns with the claim about the impact of the storm.",
+      "overall_stance": "supports",
+      "key_quote": "More than 4.5 million people in Texas lost power \u2013 some for as long as four days."
+    },
+    "output_length_chars": 384,
+    "output_tokens_estimated": 96,
+    "cost_usd": 0.00023355,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Over five days, four million Texans lost power during the coldest winter storm in fifty years.",
+      "query_index": 2,
+      "query_text": "Texas power outage February 2021 coldest winter storm"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:32:25.941190",
+    "latency_seconds": 2.36,
+    "input_prompt": "Claim:\nOver five days, four million Texans lost power during the coldest winter storm in fifty years.\n\nArticle Title:\nThe Great Texas Freeze: February 11-20, 2021 | News\n\nGoogle Search Snippet:\nIt was the coldest winter storm for Texas since December 1989. Map ... Though power outages occurred throughout the South, they were ...\n\nFull Page Content:\nFERC, the North American Electric Reliability Corporation (NERC) and NERC\u2019s regional entities today issued the final report examining the impact the February 2021 freeze had on the bulk electric system in Texas and other parts of the South Central U.S. This 300-page analysis underscores preliminary recommendations released earlier this fall. The final report includes additional details regarding the need to strengthen rules for cold weather preparedness and coordination to prevent a recurrence of last winter\u2019s blackouts.\nIn February 2021, a severe cold weather event \u2013 also known as Winter Storm Uri \u2013 caused numerous outages, derates or failures to start at electric generating plants scattered across the region. The Texas grid operator (Electric Reliability Council of Texas or ERCOT) ordered a total of 20,000 MW of rolling blackouts in an effort to prevent grid collapse; this represents the largest manually controlled load shedding event in U.S. history. More than 4.5 million people in Texas lost power \u2013 some for as long as four days. Tragically, the loss of electricity caused the deaths of numerous Texans.\n\u201cThe final report on Winter Storm Uri is a sobering analysis that highlights the significant work that needs to be done. I previously committed to take the recommendations seriously, and I plan to do exactly that,\u201d FERC Chairman Rich Glick said. \u201cThe devastating effects of extreme cold on our bulk power system\u2019s ability to operate in 2011 and now, 2021, must not be allowed to happen again. We have a duty to protect the bulk power system and public safety and we will do just that.\u201d\n\u201cExtreme weather events, such as the one in February 2021, are unfortunately becoming more commonplace and the electricity ecosystem needs to come together to plan for and prepare to operate under more extreme, longer duration, and wide area weather events,\u201d NERC President and Chief Executive Officer Jim Robb said. \u201cThe FERC-NERC-Regional Entity Staff Report also highlights the need for substantially better coordination between the natural gas system and the electric system to ensure a reliable supply that nearly 400 million people across North America depend upon to support their way of life.\u201d\nToday\u2019s final report highlights the critical need for stronger mandatory electric reliability standards, particularly with respect to generator cold weather-critical components and systems. Notably, a combination of freezing issues (44.2 percent) and fuel issues (31.4 percent) caused 75.6 percent of the unplanned generating unit outages, derates and failures to start. Of particular note, protecting just four types of power plant components from icing and freezing could have reduced outages by 67 percent in the ERCOT region, 47 percent in the Southwest Power Pool (SPP) and 55 percent in the Midcontinent Independent System Operator South (MISO) regions. Natural gas-fired units represented 58 percent of all generating units experiencing unplanned outages, derates or failures to start. The remaining portion was comprised of wind (27 percent), coal (6 percent), solar (2 percent) and other generation types (7 percent), with four nuclear units making up less than 1 percent.\nToday\u2019s final report provides more details:\nThe Final Report includes 28 formal recommendations that seek to prevent a recurrence of the failures experienced during the February 2021 cold weather event. These recommendations include important revisions to the NERC Reliability Standards surrounding generator winterization and gas-electric coordination.\nAdditional recommendations are included regarding topics such as cold weather impacts on mechanical and electrical components, utilization of weather forecasts to better predict electric demand, and increasing the ability to rotate rolling blackouts, amongst other recommendations. The report also encourages additional study of the ERCOT system\u2019s reliability issues, guidance on identification of natural gas infrastructure for protection from rolling blackouts, and additional ways to address natural gas fuel supply shortfalls during extreme cold weather events.\nThe full report is available here.\nThe presentation of the preliminary findings released in September 2021 is available here.\nR22-6\nThis page was last updated on November 16, 2021\n\nProvide relevant evidence.",
+    "input_length_chars": 4672,
+    "input_tokens_estimated": 1168,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that during the February 2021 winter storm, over 4.5 million Texans lost power, with some experiencing outages for as long as four days, which aligns with the claim about the impact of the coldest winter storm in fifty years.",
+      "overall_stance": "supports",
+      "key_quote": "More than 4.5 million people in Texas lost power \u2013 some for as long as four days."
+    },
+    "output_length_chars": 414,
+    "output_tokens_estimated": 103,
+    "cost_usd": 0.000237,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Over five days, four million Texans lost power during the coldest winter storm in fifty years.",
+      "query_index": 2,
+      "query_text": "Texas power outage February 2021 coldest winter storm"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:32:26.513160",
+    "latency_seconds": 2.94,
+    "input_prompt": "Claim:\nOver five days, four million Texans lost power during the coldest winter storm in fifty years.\n\nArticle Title:\n[PDF] The February 2021 Cold Weather Outages in Texas and the South ...\n\nGoogle Search Snippet:\nDuring the week of February 14, 2021, for over two consecutive days, ERCOT averaged 34,000 megawatts (MW) of generation outages, nearly half of ERCOT's 2021 all ...\n\nFull Page Content:\nFERC, the North American Electric Reliability Corporation (NERC) and NERC\u2019s regional entities today issued the final report examining the impact the February 2021 freeze had on the bulk electric system in Texas and other parts of the South Central U.S. This 300-page analysis underscores preliminary recommendations released earlier this fall. The final report includes additional details regarding the need to strengthen rules for cold weather preparedness and coordination to prevent a recurrence of last winter\u2019s blackouts.\nIn February 2021, a severe cold weather event \u2013 also known as Winter Storm Uri \u2013 caused numerous outages, derates or failures to start at electric generating plants scattered across the region. The Texas grid operator (Electric Reliability Council of Texas or ERCOT) ordered a total of 20,000 MW of rolling blackouts in an effort to prevent grid collapse; this represents the largest manually controlled load shedding event in U.S. history. More than 4.5 million people in Texas lost power \u2013 some for as long as four days. Tragically, the loss of electricity caused the deaths of numerous Texans.\n\u201cThe final report on Winter Storm Uri is a sobering analysis that highlights the significant work that needs to be done. I previously committed to take the recommendations seriously, and I plan to do exactly that,\u201d FERC Chairman Rich Glick said. \u201cThe devastating effects of extreme cold on our bulk power system\u2019s ability to operate in 2011 and now, 2021, must not be allowed to happen again. We have a duty to protect the bulk power system and public safety and we will do just that.\u201d\n\u201cExtreme weather events, such as the one in February 2021, are unfortunately becoming more commonplace and the electricity ecosystem needs to come together to plan for and prepare to operate under more extreme, longer duration, and wide area weather events,\u201d NERC President and Chief Executive Officer Jim Robb said. \u201cThe FERC-NERC-Regional Entity Staff Report also highlights the need for substantially better coordination between the natural gas system and the electric system to ensure a reliable supply that nearly 400 million people across North America depend upon to support their way of life.\u201d\nToday\u2019s final report highlights the critical need for stronger mandatory electric reliability standards, particularly with respect to generator cold weather-critical components and systems. Notably, a combination of freezing issues (44.2 percent) and fuel issues (31.4 percent) caused 75.6 percent of the unplanned generating unit outages, derates and failures to start. Of particular note, protecting just four types of power plant components from icing and freezing could have reduced outages by 67 percent in the ERCOT region, 47 percent in the Southwest Power Pool (SPP) and 55 percent in the Midcontinent Independent System Operator South (MISO) regions. Natural gas-fired units represented 58 percent of all generating units experiencing unplanned outages, derates or failures to start. The remaining portion was comprised of wind (27 percent), coal (6 percent), solar (2 percent) and other generation types (7 percent), with four nuclear units making up less than 1 percent.\nToday\u2019s final report provides more details:\nThe Final Report includes 28 formal recommendations that seek to prevent a recurrence of the failures experienced during the February 2021 cold weather event. These recommendations include important revisions to the NERC Reliability Standards surrounding generator winterization and gas-electric coordination.\nAdditional recommendations are included regarding topics such as cold weather impacts on mechanical and electrical components, utilization of weather forecasts to better predict electric demand, and increasing the ability to rotate rolling blackouts, amongst other recommendations. The report also encourages additional study of the ERCOT system\u2019s reliability issues, guidance on identification of natural gas infrastructure for protection from rolling blackouts, and additional ways to address natural gas fuel supply shortfalls during extreme cold weather events.\nThe full report is available here.\nThe presentation of the preliminary findings released in September 2021 is available here.\nR22-6\nThis page was last updated on November 16, 2021\n\nProvide relevant evidence.",
+    "input_length_chars": 4720,
+    "input_tokens_estimated": 1180,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that during the February 2021 cold weather event, over 4.5 million Texans lost power, with some experiencing outages for as long as four days, which aligns with the claim about the power loss during the storm.",
+      "overall_stance": "supports",
+      "key_quote": "More than 4.5 million people in Texas lost power \u2013 some for as long as four days."
+    },
+    "output_length_chars": 398,
+    "output_tokens_estimated": 99,
+    "cost_usd": 0.0002364,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Over five days, four million Texans lost power during the coldest winter storm in fifty years.",
+      "query_index": 2,
+      "query_text": "Texas power outage February 2021 coldest winter storm"
+    }
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:32:29.070660",
+    "latency_seconds": 2.44,
+    "input_prompt": "\nClaim: Over five days, four million Texans lost power during the coldest winter storm in fifty years.\nCategory: statistical\nExtraction confidence: 0.95\n\nEvidence:\nSUPPORTS (5 sources):\n  1. ERCOT Blackout 2021 - UT Energy Institute | reliability=high (1.00)\n     URL: https://energy.utexas.edu/research/ercot-blackout-2021\n     Summary: The evidence confirms that over 4.5 million Texans lost power during the February 2021 winter storm, which was described as the coldest in fifty years, and that some individuals were without power for as long as four days.\n  2. The Great Texas Freeze: February 11-20, 2021 | News | reliability=high (1.00)\n     URL: https://www.ncei.noaa.gov/news/great-texas-freeze-february-2021\n     Summary: The evidence confirms that during the February 2021 winter storm, over 4.5 million Texans lost power, with some experiencing outages for as long as four days, which aligns with the claim about the impact of the coldest winter storm in fifty years.\n  3. 2021 Texas Power Grid Failure \u2013 a preventable disaster - DEITABASE | reliability=high (0.90)\n     URL: https://limos.engin.umich.edu/deitabase/2024/12/27/2021-texas-power-grid-failure/\n     Summary: The evidence confirms that in February 2021, an extreme winter storm caused a significant electricity generation failure in Texas, resulting in over 4.5 million homes losing power, which aligns with the claim about four million Texans losing power during the storm.\n  4. Final Report on February 2021 Freeze Underscores Winterization ... | reliability=high (0.90)\n     URL: https://www.ferc.gov/news-events/news/final-report-february-2021-freeze-underscores-winterization-recommendations\n     Summary: The evidence confirms that over 4.5 million homes in Texas lost power during the February 2021 winter storm, which aligns with the claim about the number of Texans affected by the power outage.\n  5. Winter Storm Uri 2021 - Texas Comptroller | reliability=high (0.90)\n     URL: https://comptroller.texas.gov/economy/fiscal-notes/archive/2021/oct/winter-storm-impact.php\n     Summary: The evidence confirms that during the winter storm in February 2021, over 4.5 million homes in Texas lost power, which aligns with the claim about four million Texans losing power during the storm.\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2300,
+    "input_tokens_estimated": 575,
+    "output": {
+      "overall_stance": "supports",
+      "confidence": "high",
+      "summary": "The evidence strongly supports the claim that over four million Texans lost power during the February 2021 winter storm, described as the coldest in fifty years, with multiple high-reliability sources confirming that over 4.5 million homes experienced outages."
+    },
+    "output_length_chars": 322,
+    "output_tokens_estimated": 80,
+    "cost_usd": 0.00013425,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Over five days, four million Texans lost power during the coldest winter storm in fifty years.",
+      "query_index": 2,
+      "query_text": "Texas power outage February 2021 coldest winter storm"
+    }
+  }
+]

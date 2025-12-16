@@ -1,0 +1,128 @@
+{
+  "video_id": "HQ-Kg_xgdhE",
+  "timestamp": "2025-12-14T11:03:58.987245",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_7",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.5714285714285714,
+    "recall": 0.2,
+    "f1_score": 0.29629629629629634,
+    "true_positives": 4,
+    "false_positives": 3,
+    "false_negatives": 16,
+    "mean_average_precision": 0.7928571428571429,
+    "recall_at_important": 0.14285714285714285,
+    "importance_weighted_coverage": 0.18596491228070175,
+    "matched_claims": [
+      {
+        "gt_text": "When McDonald's launched the Big Mac in 1967 it cost just 45 cents",
+        "sys_text": "The Big Mac cost 45 cents in 1967 and now costs $3.99.",
+        "gt_importance": 0.35,
+        "sys_importance": 0.85,
+        "importance_error": 0.5
+      },
+      {
+        "gt_text": "In 2008 prices in Zimbabwe doubled every 24 hours",
+        "sys_text": "In 2008, prices in Zimbabwe doubled every 24 hours due to inflation.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.85,
+        "importance_error": 0.0
+      },
+      {
+        "gt_text": "Just as inflation eats into debt it also eats into savings",
+        "sys_text": "Inflation reduces the purchasing power of savings over time.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.7,
+        "importance_error": 0.0
+      },
+      {
+        "gt_text": "In a stable economy prices usually go up steadily over time by 1 or 2 percent a year",
+        "sys_text": "In a stable economy, prices usually rise by 1 or 2% a year.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.6,
+        "importance_error": 0.15000000000000002
+      }
+    ],
+    "missed_claims": [
+      "The same Big Mac now costs $3.99",
+      "The government printed more and more money",
+      "Before long everyone was a trillionaire",
+      "Things got so bad that the country ran out of paper to print all the bank notes",
+      "Once an inflationary spiral like this begins it's almost impossible to get out of",
+      "Governments must either devalue their currency or ditch it all together",
+      "This is what happened in Germany in the 1920s",
+      "A small amount of inflation is usually seen as a good thing",
+      "It helps keep an economy growing",
+      "It also staves off the threat of deflation",
+      "A bit of inflation is good news if you're in debt",
+      "Just ask anyone who took out a mortgage on a low interest rate before a property boom",
+      "It's bad news for savers",
+      "Money stashed in your piggy bank will buy you less in 5 years time than it will today",
+      "If your income isn't keeping up with prices you're getting poorer",
+      "Inflation is just the average rate that prices are rising"
+    ],
+    "extra_claims": [
+      "The government of Zimbabwe printed more money, leading to hyperinflation.",
+      "Germany experienced hyperinflation in the 1920s, leading to currency devaluation.",
+      "Inflation is monitored by statistical bureaus that track price changes."
+    ],
+    "importance_mae": 0.1625,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.0,
+    "stance_accuracy": 0.0,
+    "correct_verdicts": 0,
+    "total_verdicts": 4,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "When McDonald's launched the Big Mac in 1967 it cost just 45 cents",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "In 2008 prices in Zimbabwe doubled every 24 hours",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Just as inflation eats into debt it also eats into savings",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "In a stable economy prices usually go up steadily over time by 1 or 2 percent a year",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.2,
+    "verdict_accuracy": 0.0,
+    "evidence_quality_avg": 0.5714285714285714,
+    "total_cost_usd": 0.00196815,
+    "total_time_seconds": 97.04776883125305,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 0.5714285714285714,
+    "avg_sources_per_query": 1.5714285714285714
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 17,
+      "medium": 5
+    },
+    "avg_evidence_per_claim": 3.142857142857143
+  },
+  "ground_truth_claims_count": 20,
+  "system_claims_count": 7
+}

@@ -1,0 +1,717 @@
+{
+  "extracted_claims": {
+    "claims": [
+      {
+        "text": "The Big Mac cost 45 cents in 1967 and now costs $3.99.",
+        "confidence": 0.9,
+        "category": "economic",
+        "importance": 0.85,
+        "context": "Comparison of Big Mac prices over time, illustrating inflation.",
+        "transcript_char_start": 31,
+        "transcript_char_end": 74,
+        "transcript_match_score": 0.5894736842105263
+      },
+      {
+        "text": "In 2008, prices in Zimbabwe doubled every 24 hours due to inflation.",
+        "confidence": 0.9,
+        "category": "historical",
+        "importance": 0.8,
+        "context": "Historical example of extreme inflation in Zimbabwe.",
+        "transcript_char_start": 632,
+        "transcript_char_end": 685,
+        "transcript_match_score": 0.8571428571428571
+      },
+      {
+        "text": "The government printed more money in Zimbabwe, leading to hyperinflation.",
+        "confidence": 0.85,
+        "category": "historical",
+        "importance": 0.75,
+        "context": "Explanation of the cause of hyperinflation in Zimbabwe.",
+        "transcript_char_start": 682,
+        "transcript_char_end": 745,
+        "transcript_match_score": 0.6716417910447762
+      },
+      {
+        "text": "Inflation is the average rate at which prices are rising.",
+        "confidence": 0.95,
+        "category": "economic",
+        "importance": 0.7,
+        "context": "Definition of inflation as a key economic concept.",
+        "transcript_char_start": 1680,
+        "transcript_char_end": 1737,
+        "transcript_match_score": 0.8849557522123894
+      },
+      {
+        "text": "In a stable economy, prices usually go up by 1 or 2% a year.",
+        "confidence": 0.8,
+        "category": "economic",
+        "importance": 0.6,
+        "context": "General statement about inflation rates in stable economies.",
+        "transcript_char_start": 521,
+        "transcript_char_end": 594,
+        "transcript_match_score": 0.8307692307692308
+      }
+    ],
+    "total_count": 5
+  },
+  "final_output": {
+    "extracted_claims": {
+      "claims": [
+        {
+          "text": "The Big Mac cost 45 cents in 1967 and now costs $3.99.",
+          "confidence": 0.9,
+          "category": "economic",
+          "importance": 0.85,
+          "context": "Comparison of Big Mac prices over time, illustrating inflation.",
+          "transcript_char_start": 31,
+          "transcript_char_end": 74,
+          "transcript_match_score": 0.5894736842105263
+        },
+        {
+          "text": "In 2008, prices in Zimbabwe doubled every 24 hours due to inflation.",
+          "confidence": 0.9,
+          "category": "historical",
+          "importance": 0.8,
+          "context": "Historical example of extreme inflation in Zimbabwe.",
+          "transcript_char_start": 632,
+          "transcript_char_end": 685,
+          "transcript_match_score": 0.8571428571428571
+        },
+        {
+          "text": "The government printed more money in Zimbabwe, leading to hyperinflation.",
+          "confidence": 0.85,
+          "category": "historical",
+          "importance": 0.75,
+          "context": "Explanation of the cause of hyperinflation in Zimbabwe.",
+          "transcript_char_start": 682,
+          "transcript_char_end": 745,
+          "transcript_match_score": 0.6716417910447762
+        },
+        {
+          "text": "Inflation is the average rate at which prices are rising.",
+          "confidence": 0.95,
+          "category": "economic",
+          "importance": 0.7,
+          "context": "Definition of inflation as a key economic concept.",
+          "transcript_char_start": 1680,
+          "transcript_char_end": 1737,
+          "transcript_match_score": 0.8849557522123894
+        },
+        {
+          "text": "In a stable economy, prices usually go up by 1 or 2% a year.",
+          "confidence": 0.8,
+          "category": "economic",
+          "importance": 0.6,
+          "context": "General statement about inflation rates in stable economies.",
+          "transcript_char_start": 521,
+          "transcript_char_end": 594,
+          "transcript_match_score": 0.8307692307692308
+        }
+      ],
+      "total_count": 5
+    },
+    "claim_reports": [
+      {
+        "claim_text": "The Big Mac cost 45 cents in 1967 and now costs $3.99.",
+        "claim_confidence": 0.9,
+        "claim_category": "economic",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "Big Mac index worldwide 2025 - Statista",
+              "url": "https://www.statista.com/statistics/274326/big-mac-index-global-prices-for-a-big-mac/?srsltid=AfmBOopPWrQLHjP-upRAt_ollt3O6Yks4UMt6fev-OAjJ_LU6q7tauYq",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Global price of a Big Mac as of January 2025, by country (in U.S. dollars).",
+              "snippet": "Global price of a Big Mac as of January 2025, by country (in U.S. dollars)."
+            },
+            {
+              "title": "What a McDonald's Big Mac Cost the Year You Were Born",
+              "url": "https://www.eatthis.com/big-mac-cost/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "... 1967. The burger cost just 45 cents, according to The New York Times. Then, in 1968, McDonald's released the Big Mac on a nationwide scale.",
+              "snippet": "... 1967. The burger cost just 45 cents, according to The New York Times. Then, in 1968, McDonald's released the Big Mac on a nationwide scale."
+            },
+            {
+              "title": "Big Mac Prices Show Inflation is Local and Global",
+              "url": "https://www.pinnaclefinancialwealthmgmt.com/big-mac-prices-show-inflation-is-local-and-global/",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (10.6 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "The Big Mac cost only 45 cents when it first appeared in 1967. Today, it costs more than 10 times the original 45 cents in 20 states. To ...",
+              "snippet": "The Big Mac cost only 45 cents when it first appeared in 1967. Today, it costs more than 10 times the original 45 cents in 20 states. To ..."
+            },
+            {
+              "title": "Here's How Much A McDonald's Big Mac Cost In 2000 Vs 2025",
+              "url": "https://www.tastingtable.com/1839378/how-much-big-mac-cost-2000-vs-2025-mcdonalds/",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (20.8 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "In 2000, a Big Mac averaged about $2.24, but in 2025 the average price of a Big Mac in the US, according to The Economist's Big Mac index, is now $5.79.",
+              "snippet": "In 2000, a Big Mac averaged about $2.24, but in 2025 the average price of a Big Mac in the US, according to The Economist's Big Mac index, is now $5.79."
+            },
+            {
+              "title": "Here's How Much A McDonald's Big Mac Cost In 2000 Vs 2025",
+              "url": "https://finance.yahoo.com/news/heres-much-mcdonalds-big-mac-180000167.html",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (30.9 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "In fact, in 2023, a Big Mac ... With that said, between the end of 2024 and March 2025's $5.79 price tag, the price of a Big Mac has already ...",
+              "snippet": "In fact, in 2023, a Big Mac ... With that said, between the end of 2024 and March 2025's $5.79 price tag, the price of a Big Mac has already ..."
+            },
+            {
+              "title": "The Cost of a Big Mac the Decade You Were Born - Cheapism",
+              "url": "https://www.cheapism.com/big-mac-cost-by-each-decade/",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (16.8 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Average price: 45 cents. Adjusted for inflation: $4.16. Michael Delligatti opened his McDonald's in Uniontown, Pennsylvania, and created the Big Mac along with ...",
+              "snippet": "Average price: 45 cents. Adjusted for inflation: $4.16. Michael Delligatti opened his McDonald's in Uniontown, Pennsylvania, and created the Big Mac along with ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 1.68,
+        "timestamp_confidence": 0.5894736842105263
+      },
+      {
+        "claim_text": "In 2008, prices in Zimbabwe doubled every 24 hours due to inflation.",
+        "claim_confidence": 0.9,
+        "claim_category": "historical",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "Multiple high-reliability sources confirm that during 2008, prices in Zimbabwe doubled approximately every 24 hours due to extreme hyperinflation, with specific references to a doubling time of about 24.7 hours noted in both the ReliefWeb report and the Mises Institute article.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "[PDF] ANALYSIS OF THE ZIMBABWEAN HYPERINFLATION CRISIS",
+              "url": "https://honors.libraries.psu.edu/files/final_submissions/953",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Cagan defines hyperinflations as \u201cbeginning in the month the rise in prices exceeds 50 per cent and ending in the month before the monthly rise in prices drops.",
+              "snippet": "Cagan defines hyperinflations as \u201cbeginning in the month the rise in prices exceeds 50 per cent and ending in the month before the monthly rise in prices drops."
+            },
+            {
+              "title": "Zimbabwe: Inflation at 6.5 quindecillion novemdecillion percent",
+              "url": "https://reliefweb.int/report/zimbabwe/zimbabwe-inflation-65-quindecillion-novemdecillion-percent",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "... inflation rate at around 6.5 quindecillion novemdecillion percent - 65 followed by 107 zeros. \"Prices double every 24.7 hours,\" he noted.",
+              "snippet": "... inflation rate at around 6.5 quindecillion novemdecillion percent - 65 followed by 107 zeros. \"Prices double every 24.7 hours,\" he noted."
+            },
+            {
+              "title": "[PDF] On the Measurement of Zimbabwe's Hyperinflation - Cato Institute",
+              "url": "https://www.cato.org/sites/cato.org/files/serials/files/cato-journal/2009/5/cj29n2-8.pdf",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Right-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Zimbabwe first breached the hyperinflation benchmark in March 2007 (Table 1). After falling below the 50 percent threshold in July, August, and September 2007, ...",
+              "snippet": "Zimbabwe first breached the hyperinflation benchmark in March 2007 (Table 1). After falling below the 50 percent threshold in July, August, and September 2007, ..."
+            },
+            {
+              "title": "Hyper Inflation in Zimbabwe - Economics Help",
+              "url": "https://www.economicshelp.org/blog/390/inflation/hyper-inflation-in-zimbabwe/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "That is effectively a daily inflation rate of 98.0. Roughly every day, prices would double. It was also a time of real hardship and poverty, ...",
+              "snippet": "That is effectively a daily inflation rate of 98.0. Roughly every day, prices would double. It was also a time of real hardship and poverty, ..."
+            },
+            {
+              "title": "Hyperinflation in Zimbabwe - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Hyperinflation_in_Zimbabwe",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (24.9 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "In 2008, the inflation rate accelerated dramatically, from a rate in January of over 100,000% to an estimated rate of over 1,000,000% by May, and nearly 250, ...",
+              "snippet": "In 2008, the inflation rate accelerated dramatically, from a rate in January of over 100,000% to an estimated rate of over 1,000,000% by May, and nearly 250, ..."
+            },
+            {
+              "title": "The Return of Hyperinflation in Zimbabwe - Mises Institute",
+              "url": "https://mises.org/mises-wire/return-hyperinflation-zimbabwe",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "MBFC credibility: medium",
+                  "Factual reporting: Mixed"
+                ],
+                "bias": "Right"
+              },
+              "stance": "unclear",
+              "evidence_summary": "... hyperinflation, reaching 79,600,000,000 percent as prices doubled approximately every 24.7 hours in November of 2008. Today under new ...",
+              "snippet": "... hyperinflation, reaching 79,600,000,000 percent as prices doubled approximately every 24.7 hours in November of 2008. Today under new ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 41.48,
+        "timestamp_confidence": 0.8571428571428571
+      },
+      {
+        "claim_text": "Inflation is the average rate at which prices are rising.",
+        "claim_confidence": 0.95,
+        "claim_category": "economic",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "What is inflation, and how does the Federal Reserve evaluate ...",
+              "url": "https://www.federalreserve.gov/faqs/economy_14419.htm",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (27.7 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Inflation is the increase in the prices of goods and services over time. Inflation cannot be measured by an increase in the cost of one product or service.",
+              "snippet": "Inflation is the increase in the prices of goods and services over time. Inflation cannot be measured by an increase in the cost of one product or service."
+            },
+            {
+              "title": "How does the government measure inflation? - Brookings Institution",
+              "url": "https://www.brookings.edu/articles/how-does-the-government-measure-inflation/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The government measures inflation by comparing the current prices of a set of goods and services to previous prices.",
+              "snippet": "The government measures inflation by comparing the current prices of a set of goods and services to previous prices."
+            },
+            {
+              "title": "Introduction to U.S. Economy: Inflation - Congress.gov",
+              "url": "https://www.congress.gov/crs-product/IF10477",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Inflation is defined as a general increase in the price of goods and services across the economy, or, in other words, a general decrease in the value of money.",
+              "snippet": "Inflation is defined as a general increase in the price of goods and services across the economy, or, in other words, a general decrease in the value of money."
+            },
+            {
+              "title": "Overview of BLS Statistics on Inflation and Prices",
+              "url": "https://www.bls.gov/bls/inflation.htm",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Inflation can be defined as the overall general upward price movement of goods and services in an economy. BLS has various indexes that measure different ...",
+              "snippet": "Inflation can be defined as the overall general upward price movement of goods and services in an economy. BLS has various indexes that measure different ..."
+            },
+            {
+              "title": "What is inflation and how is it measured? - USAFacts",
+              "url": "https://usafacts.org/articles/what-is-inflation-and-how-is-it-measured/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Inflation measures a nation's economic wellbeing, in part because it reflects consumer experience \u2014 rising inflation means an increase in cost of living.",
+              "snippet": "Inflation measures a nation's economic wellbeing, in part because it reflects consumer experience \u2014 rising inflation means an increase in cost of living."
+            },
+            {
+              "title": "What It Is and How to Control Inflation Rates - Investopedia",
+              "url": "https://www.investopedia.com/terms/i/inflation.asp",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Inflation is an increase in the average price of goods and services over time, which reduces the purchasing power of money.",
+              "snippet": "Inflation is an increase in the average price of goods and services over time, which reduces the purchasing power of money."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 105.28,
+        "timestamp_confidence": 0.8849557522123894
+      },
+      {
+        "claim_text": "The government printed more money in Zimbabwe, leading to hyperinflation.",
+        "claim_confidence": 0.85,
+        "claim_category": "historical",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "No reliable evidence sources were found for this claim. This may indicate the claim is difficult to verify, too specific, or references information not available in public sources.",
+        "evidence_by_stance": {},
+        "total_sources": 0,
+        "evidence_quality_score": 0.0,
+        "timestamp_hint": 47.6,
+        "timestamp_confidence": 0.6716417910447762
+      },
+      {
+        "claim_text": "In a stable economy, prices usually go up by 1 or 2% a year.",
+        "claim_confidence": 0.8,
+        "claim_category": "economic",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "No reliable evidence sources were found for this claim. This may indicate the claim is difficult to verify, too specific, or references information not available in public sources.",
+        "evidence_by_stance": {},
+        "total_sources": 0,
+        "evidence_quality_score": 0.0,
+        "timestamp_hint": 33.879,
+        "timestamp_confidence": 0.8307692307692308
+      }
+    ],
+    "transcript_data": {
+      "text": "[Music] when McDonald's launched the Big Mac in 1967 it cost just 45 but the same Big Mac now cost $3.99 why the answer is inflation to see how fast prices are rising everything from the price of a leg wax to the cost of a bottle of whiskey are closely monitored by statistical bureaus these changes in prices are entered into a calculator and out comes one single percentage number the rate of inflation and this number helps government set welfare payments and helps you decide how much to ask your boss for a pay rise in a stable economy prices usually go up steadily over time by 1 or 2% a year but sometimes things get out of hand in 2008 prices in Zimbabwe doubled every 24 hours the government printed more and more money before long everyone was a trillionaire things got so bad that the country ran out of paper to print all the bank notes once an inflationary spiral like this begins it's almost impossible to get out of and governments must either devalue their currency or ditch it all together this is what happened in Germany in the 1920s so is inflation bad not so fast a small amount of inflation is usually seen as a good thing it helps keep an economy growing and it also staves off the threat of deflation and a bit of inflation is good news if you're in debt just ask anyone who took out a mortgage on a low interest rate before a property boom but it's bad news for Savers just as inflation eats into debt it also eats into savings 00 stashed in your piggy bank will buy you less in 5 years time than it will today if your income isn't keeping up with prices you're getting poorer for one of the most important Concepts in economics it's also one of the simplest inflation is just the average rate that prices are rising",
+      "segments": [
+        {
+          "text": "[Music]",
+          "start": 0.67,
+          "duration": 3.129
+        },
+        {
+          "text": "when McDonald's launched the Big Mac in",
+          "start": 1.68,
+          "duration": 5.84
+        },
+        {
+          "text": "1967 it cost just 45 but the same Big",
+          "start": 3.799,
+          "duration": 5.401
+        },
+        {
+          "text": "Mac now cost",
+          "start": 7.52,
+          "duration": 3.199
+        },
+        {
+          "text": "$3.99",
+          "start": 9.2,
+          "duration": 5.24
+        },
+        {
+          "text": "why the answer is inflation to see how",
+          "start": 10.719,
+          "duration": 6.081
+        },
+        {
+          "text": "fast prices are rising everything from",
+          "start": 14.44,
+          "duration": 4.16
+        },
+        {
+          "text": "the price of a leg wax to the cost of a",
+          "start": 16.8,
+          "duration": 3.96
+        },
+        {
+          "text": "bottle of whiskey are closely monitored",
+          "start": 18.6,
+          "duration": 4.439
+        },
+        {
+          "text": "by statistical bureaus these changes in",
+          "start": 20.76,
+          "duration": 4.679
+        },
+        {
+          "text": "prices are entered into a calculator and",
+          "start": 23.039,
+          "duration": 4.681
+        },
+        {
+          "text": "out comes one single percentage number",
+          "start": 25.439,
+          "duration": 4.561
+        },
+        {
+          "text": "the rate of inflation and this number",
+          "start": 27.72,
+          "duration": 4.359
+        },
+        {
+          "text": "helps government set welfare payments",
+          "start": 30.0,
+          "duration": 3.879
+        },
+        {
+          "text": "and helps you decide how much to ask",
+          "start": 32.079,
+          "duration": 4.241
+        },
+        {
+          "text": "your boss for a pay rise in a stable",
+          "start": 33.879,
+          "duration": 4.281
+        },
+        {
+          "text": "economy prices usually go up steadily",
+          "start": 36.32,
+          "duration": 5.16
+        },
+        {
+          "text": "over time by 1 or 2% a year but",
+          "start": 38.16,
+          "duration": 6.6
+        },
+        {
+          "text": "sometimes things get out of hand in 2008",
+          "start": 41.48,
+          "duration": 6.12
+        },
+        {
+          "text": "prices in Zimbabwe doubled every 24",
+          "start": 44.76,
+          "duration": 4.68
+        },
+        {
+          "text": "hours the government printed more and",
+          "start": 47.6,
+          "duration": 4.279
+        },
+        {
+          "text": "more money before long everyone was a",
+          "start": 49.44,
+          "duration": 4.639
+        },
+        {
+          "text": "trillionaire things got so bad that the",
+          "start": 51.879,
+          "duration": 4.2
+        },
+        {
+          "text": "country ran out of paper to print all",
+          "start": 54.079,
+          "duration": 4.761
+        },
+        {
+          "text": "the bank notes once an inflationary",
+          "start": 56.079,
+          "duration": 4.881
+        },
+        {
+          "text": "spiral like this begins it's almost",
+          "start": 58.84,
+          "duration": 4.08
+        },
+        {
+          "text": "impossible to get out of and governments",
+          "start": 60.96,
+          "duration": 4.479
+        },
+        {
+          "text": "must either devalue their currency or",
+          "start": 62.92,
+          "duration": 4.4
+        },
+        {
+          "text": "ditch it all together this is what",
+          "start": 65.439,
+          "duration": 5.121
+        },
+        {
+          "text": "happened in Germany in the 1920s so is",
+          "start": 67.32,
+          "duration": 6.4
+        },
+        {
+          "text": "inflation bad not so fast a small amount",
+          "start": 70.56,
+          "duration": 5.08
+        },
+        {
+          "text": "of inflation is usually seen as a good",
+          "start": 73.72,
+          "duration": 4.039
+        },
+        {
+          "text": "thing it helps keep an economy growing",
+          "start": 75.64,
+          "duration": 4.08
+        },
+        {
+          "text": "and it also staves off the threat of",
+          "start": 77.759,
+          "duration": 4.201
+        },
+        {
+          "text": "deflation and a bit of inflation is good",
+          "start": 79.72,
+          "duration": 4.84
+        },
+        {
+          "text": "news if you're in debt just ask anyone",
+          "start": 81.96,
+          "duration": 3.96
+        },
+        {
+          "text": "who took out a mortgage on a low",
+          "start": 84.56,
+          "duration": 3.96
+        },
+        {
+          "text": "interest rate before a property boom but",
+          "start": 85.92,
+          "duration": 4.559
+        },
+        {
+          "text": "it's bad news for Savers just as",
+          "start": 88.52,
+          "duration": 4.36
+        },
+        {
+          "text": "inflation eats into debt it also eats",
+          "start": 90.479,
+          "duration": 5.081
+        },
+        {
+          "text": "into savings 00 stashed in your piggy",
+          "start": 92.88,
+          "duration": 4.519
+        },
+        {
+          "text": "bank will buy you less in 5 years time",
+          "start": 95.56,
+          "duration": 3.879
+        },
+        {
+          "text": "than it will today if your income isn't",
+          "start": 97.399,
+          "duration": 3.961
+        },
+        {
+          "text": "keeping up with prices you're getting",
+          "start": 99.439,
+          "duration": 4.0
+        },
+        {
+          "text": "poorer for one of the most important",
+          "start": 101.36,
+          "duration": 3.92
+        },
+        {
+          "text": "Concepts in economics it's also one of",
+          "start": 103.439,
+          "duration": 4.28
+        },
+        {
+          "text": "the simplest inflation is just the",
+          "start": 105.28,
+          "duration": 6.879
+        },
+        {
+          "text": "average rate that prices are rising",
+          "start": 107.719,
+          "duration": 4.44
+        }
+      ],
+      "video_id": "HQ-Kg_xgdhE"
+    }
+  }
+}

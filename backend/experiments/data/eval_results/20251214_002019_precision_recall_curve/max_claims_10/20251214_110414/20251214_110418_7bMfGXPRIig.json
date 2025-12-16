@@ -1,0 +1,151 @@
+{
+  "video_id": "7bMfGXPRIig",
+  "timestamp": "2025-12-14T11:04:18.791473",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_10",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.7,
+    "recall": 0.4666666666666667,
+    "f1_score": 0.56,
+    "true_positives": 7,
+    "false_positives": 3,
+    "false_negatives": 8,
+    "mean_average_precision": 0.7375850340136055,
+    "recall_at_important": 0.5,
+    "importance_weighted_coverage": 0.5079365079365079,
+    "matched_claims": [
+      {
+        "gt_text": "A three-day juice cleanse can jump start health, help get off medications, bolster the immune system, and burn fat quickly",
+        "sys_text": "A three-day juice cleanse can bolster the immune system and aid fat loss.",
+        "gt_importance": 0.95,
+        "sys_importance": 0.85,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "Doing a juice cleanse right will trigger autophagy",
+        "sys_text": "Autophagy occurs when the body recycles old cells and materials during fasting or juice cleansing.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.75,
+        "importance_error": 0.15000000000000002
+      },
+      {
+        "gt_text": "Green apples (Granny Smith) have lower sugar content than red apples, which helps keep insulin down",
+        "sys_text": "Green apples have a lower sugar content than red apples, which helps keep insulin levels down.",
+        "gt_importance": 0.55,
+        "sys_importance": 0.6,
+        "importance_error": 0.04999999999999993
+      },
+      {
+        "gt_text": "The gut microbiome makes up 70 plus percent of your immune system",
+        "sys_text": "The microbiome makes up over 70% of the immune system.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.6,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "Your digestive system uses more energy than anything else you could possibly do on this planet, not a marathon, not anything",
+        "sys_text": "The digestive system expends more energy than any other activity, including marathons.",
+        "gt_importance": 0.65,
+        "sys_importance": 0.55,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "Celery is amazing for your digestive tract especially your stomach and for supporting your liver and detoxing",
+        "sys_text": "Celery juice is beneficial for the digestive tract and liver detoxification.",
+        "gt_importance": 0.55,
+        "sys_importance": 0.5,
+        "importance_error": 0.050000000000000044
+      },
+      {
+        "gt_text": "Parsley has more iron than spinach and is really good for anemia",
+        "sys_text": "Parsley juice contains more iron than spinach and helps with anemia.",
+        "gt_importance": 0.5,
+        "sys_importance": 0.5,
+        "importance_error": 0.0
+      }
+    ],
+    "missed_claims": [
+      "A juice cleanse will lower your insulin if you make it right",
+      "A juice cleanse is going to help increase your human growth hormone",
+      "When you start burning fat, the fat contains toxins which are released into the system and if not eliminated quickly, they take back up into tissue and are restored as fat (the rebounding effect)",
+      "Kale is always at the top of the scoring system for most nutritious food",
+      "Broccoli is very anti-cancer",
+      "Dandelion has a very good detox of iron effect",
+      "Broth or collagen are very insulin friendly and won't spike insulin levels",
+      "You should aim for 64 to 128 ounces of juice during the cleanse"
+    ],
+    "extra_claims": [
+      "Research out of California supports the effectiveness of a juice cleanse for fat loss and immune support.",
+      "Detoxing during a juice cleanse helps eliminate toxins released from fat.",
+      "Juicing can increase human growth hormone, which helps build muscle and metabolism."
+    ],
+    "importance_mae": 0.07857142857142856,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.14285714285714285,
+    "stance_accuracy": 0.14285714285714285,
+    "correct_verdicts": 1,
+    "total_verdicts": 7,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "Doing a juice cleanse right will trigger autophagy",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Green apples (Granny Smith) have lower sugar content than red apples, which helps keep insulin down",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "The gut microbiome makes up 70 plus percent of your immune system",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Your digestive system uses more energy than anything else you could possibly do on this planet, not a marathon, not anything",
+        "gt_verdict": "REFUTES",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Celery is amazing for your digestive tract especially your stomach and for supporting your liver and detoxing",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Parsley has more iron than spinach and is really good for anemia",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.4666666666666667,
+    "verdict_accuracy": 0.14285714285714285,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.001941,
+    "total_time_seconds": 139.35598516464233,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.55
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 32,
+      "medium": 19
+    },
+    "avg_evidence_per_claim": 5.1
+  },
+  "ground_truth_claims_count": 15,
+  "system_claims_count": 10
+}

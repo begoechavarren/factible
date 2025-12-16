@@ -1,0 +1,1276 @@
+{
+  "extracted_claims": {
+    "claims": [
+      {
+        "text": "The FBI was organizing the riots of January 6th.",
+        "confidence": 0.8,
+        "category": "historical",
+        "importance": 0.85,
+        "context": "Discussion about the January 6th Capitol riots and FBI involvement.",
+        "transcript_char_start": 118,
+        "transcript_char_end": 165,
+        "transcript_match_score": 1.0
+      },
+      {
+        "text": "There are 14,000 hours of unreleased video footage from January 6th.",
+        "confidence": 0.9,
+        "category": "statistical",
+        "importance": 0.8,
+        "context": "Claim about the amount of unreleased footage related to the Capitol riots.",
+        "transcript_char_start": 1435,
+        "transcript_char_end": 1503,
+        "transcript_match_score": 0.9185185185185185
+      },
+      {
+        "text": "The FBI has withheld evidence related to the pipe bomber video.",
+        "confidence": 0.8,
+        "category": "historical",
+        "importance": 0.7,
+        "context": "Discussion about the FBI's actions regarding evidence from January 6th.",
+        "transcript_char_start": 1640,
+        "transcript_char_end": 1686,
+        "transcript_match_score": 0.5370370370370371
+      },
+      {
+        "text": "The American people deserve the truth about January 6th.",
+        "confidence": 0.7,
+        "category": "policy",
+        "importance": 0.6,
+        "context": "Speaker emphasizes the need for transparency regarding January 6th.",
+        "transcript_char_start": 336,
+        "transcript_char_end": 383,
+        "transcript_match_score": 0.9019607843137255
+      },
+      {
+        "text": "Over 70 million people are Trump supporters or against the ruling class.",
+        "confidence": 0.75,
+        "category": "statistical",
+        "importance": 0.6,
+        "context": "Claim about the number of Trump supporters in the context of January 6th.",
+        "transcript_char_start": 559,
+        "transcript_char_end": 639,
+        "transcript_match_score": 0.8344370860927153
+      },
+      {
+        "text": "The national security apparatus conspires against the American people.",
+        "confidence": 0.7,
+        "category": "policy",
+        "importance": 0.6,
+        "context": "Speaker's conclusion about the national security state and its impact on democracy.",
+        "transcript_char_start": 2003,
+        "transcript_char_end": 2083,
+        "transcript_match_score": 0.8590604026845637
+      },
+      {
+        "text": "A Church Committee 2.0 should be demanded by politicians.",
+        "confidence": 0.65,
+        "category": "policy",
+        "importance": 0.55,
+        "context": "Call for a new investigation into national security practices.",
+        "transcript_char_start": 2366,
+        "transcript_char_end": 2411,
+        "transcript_match_score": 0.6336633663366337
+      }
+    ],
+    "total_count": 7
+  },
+  "final_output": {
+    "extracted_claims": {
+      "claims": [
+        {
+          "text": "The FBI was organizing the riots of January 6th.",
+          "confidence": 0.8,
+          "category": "historical",
+          "importance": 0.85,
+          "context": "Discussion about the January 6th Capitol riots and FBI involvement.",
+          "transcript_char_start": 118,
+          "transcript_char_end": 165,
+          "transcript_match_score": 1.0
+        },
+        {
+          "text": "There are 14,000 hours of unreleased video footage from January 6th.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.8,
+          "context": "Claim about the amount of unreleased footage related to the Capitol riots.",
+          "transcript_char_start": 1435,
+          "transcript_char_end": 1503,
+          "transcript_match_score": 0.9185185185185185
+        },
+        {
+          "text": "The FBI has withheld evidence related to the pipe bomber video.",
+          "confidence": 0.8,
+          "category": "historical",
+          "importance": 0.7,
+          "context": "Discussion about the FBI's actions regarding evidence from January 6th.",
+          "transcript_char_start": 1640,
+          "transcript_char_end": 1686,
+          "transcript_match_score": 0.5370370370370371
+        },
+        {
+          "text": "The American people deserve the truth about January 6th.",
+          "confidence": 0.7,
+          "category": "policy",
+          "importance": 0.6,
+          "context": "Speaker emphasizes the need for transparency regarding January 6th.",
+          "transcript_char_start": 336,
+          "transcript_char_end": 383,
+          "transcript_match_score": 0.9019607843137255
+        },
+        {
+          "text": "Over 70 million people are Trump supporters or against the ruling class.",
+          "confidence": 0.75,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Claim about the number of Trump supporters in the context of January 6th.",
+          "transcript_char_start": 559,
+          "transcript_char_end": 639,
+          "transcript_match_score": 0.8344370860927153
+        },
+        {
+          "text": "The national security apparatus conspires against the American people.",
+          "confidence": 0.7,
+          "category": "policy",
+          "importance": 0.6,
+          "context": "Speaker's conclusion about the national security state and its impact on democracy.",
+          "transcript_char_start": 2003,
+          "transcript_char_end": 2083,
+          "transcript_match_score": 0.8590604026845637
+        },
+        {
+          "text": "A Church Committee 2.0 should be demanded by politicians.",
+          "confidence": 0.65,
+          "category": "policy",
+          "importance": 0.55,
+          "context": "Call for a new investigation into national security practices.",
+          "transcript_char_start": 2366,
+          "transcript_char_end": 2411,
+          "transcript_match_score": 0.6336633663366337
+        }
+      ],
+      "total_count": 7
+    },
+    "claim_reports": [
+      {
+        "claim_text": "The American people deserve the truth about January 6th.",
+        "claim_confidence": 0.7,
+        "claim_category": "policy",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "About this Collection | January 6th Attack on the U.S. Capitol Web ...",
+              "url": "https://www.loc.gov/collections/january-6th-attack-on-the-us-capitol-web-archive/about-this-collection/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence discusses the January 6th attack on the U.S. Capitol and the ongoing efforts to archive related information, suggesting a commitment to transparency and providing the American people with access to the truth about the events surrounding that day.",
+              "snippet": "On January 6, 2021, the U.S. Capitol was attacked by a crowd attempting to stop a joint session of Congress from certifying the electoral votes of the 2020 ..."
+            },
+            {
+              "title": "NEW: DoD IG Transcripts Contradict Pentagon January 6 Report ...",
+              "url": "https://cha.house.gov/2024/9/new-dod-ig-transcripts-contradict-pentagon-january-6-report-outline-optics-concerns-as-reason-for-dcng-delay",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence emphasizes the need for transparency regarding the events of January 6th, asserting that the American people deserve the truth about what occurred during that day.",
+              "snippet": "These transcripts indicate that senior Pentagon officials unnecessarily delayed the DC National Guard response to the Capitol on January 6 due to \u201coptics\u201d ..."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "Issues: capitol riot - FactCheck.org",
+              "url": "https://www.factcheck.org/issue/capitol-riot/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "In his final hours as president, Joe Biden issued preemptive pardons for House committee members who investigated the Jan. 6, 2021, attack on the Capitol and ...",
+              "snippet": "In his final hours as president, Joe Biden issued preemptive pardons for House committee members who investigated the Jan. 6, 2021, attack on the Capitol and ..."
+            },
+            {
+              "title": "The battle over the truth of January 6 : Consider This from NPR",
+              "url": "https://www.npr.org/2025/01/06/1223291766/january-6-history-legacy",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "On January 6, 2021, a violent mob supporting then president Donald Trump stormed the US Capitol. It was an attempt to stop the count of electoral votes.",
+              "snippet": "On January 6, 2021, a violent mob supporting then president Donald Trump stormed the US Capitol. It was an attempt to stop the count of electoral votes."
+            },
+            {
+              "title": "United States Must Deliver Full Transparency and Accountability for ...",
+              "url": "https://freedomhouse.org/article/united-states-must-deliver-full-transparency-and-accountability-january-6-attack",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Right-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "On the first anniversary of the January 6, 2021 attack on the US Capitol, Freedom House issued the following statement:.",
+              "snippet": "On the first anniversary of the January 6, 2021 attack on the US Capitol, Freedom House issued the following statement:."
+            },
+            {
+              "title": "Statement From Acting Secretary of Defense Christopher Miller on ...",
+              "url": "https://www.war.gov/News/Releases/Release/Article/2473925/statement-from-acting-secretary-of-defense-christopher-miller-on-announcement-o/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.75,
+                "reasons": [
+                  "Government or educational institution",
+                  "New domain (less than 1 year)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Acting Defense Secretary Chris Miller issues a statement on the Defense Department inspector general investigation. ,",
+              "snippet": "Acting Defense Secretary Chris Miller issues a statement on the Defense Department inspector general investigation. ,"
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 0.9,
+        "timestamp_hint": 22.64,
+        "timestamp_confidence": 0.9019607843137255
+      },
+      {
+        "claim_text": "The FBI was organizing the riots of January 6th.",
+        "claim_confidence": 0.8,
+        "claim_category": "historical",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "[PDF] STATEMENT OF FACTS I, am a Special Agent with the Federal ...",
+              "url": "https://www.justice.gov/d9/peterson_kurt_-_statement_of_facts_redacted_1_0.pdf",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (27.6 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Restrictions around the. U.S. Capitol include permanent and temporary security barriers and posts manned by U.S. Capitol. Police. Only authorized people with ...",
+              "snippet": "Restrictions around the. U.S. Capitol include permanent and temporary security barriers and posts manned by U.S. Capitol. Police. Only authorized people with ..."
+            },
+            {
+              "title": "DOJ OIG Releases Report on the FBI's Handling of Its Confidential ...",
+              "url": "https://oig.justice.gov/news/doj-oig-releases-report-fbis-handling-its-confidential-human-sources-and-intelligence",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (27.6 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "... role. The FBI Did Not Canvass Field Offices for Intelligence ... No Undercover FBI Employees at Protests or at the Capitol on January 6.",
+              "snippet": "... role. The FBI Did Not Canvass Field Offices for Intelligence ... No Undercover FBI Employees at Protests or at the Capitol on January 6."
+            },
+            {
+              "title": "[PDF] FBI did not send undercover operatives to join Jan. 6 attack ...",
+              "url": "https://www.congress.gov/119/meeting/house/117924/documents/HHRG-119-JU13-20250225-SD015-U15.pdf",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The FBI has long denied having any involvement by its own staff or its informants in the riots at the Capitol, though conspiracy theories about ...",
+              "snippet": "The FBI has long denied having any involvement by its own staff or its informants in the riots at the Capitol, though conspiracy theories about ..."
+            },
+            {
+              "title": "No undercover FBI agents at Jan. 6 riot, watchdog finds in rebuke to ...",
+              "url": "https://www.pbs.org/newshour/politics/no-undercover-fbi-agents-at-jan-6-riot-watchdog-finds-in-rebuke-to-conspiracy-theories",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The FBI should have done more to gather intelligence before the Capitol riot, according to a watchdog report Thursday that also said no undercover FBI ...",
+              "snippet": "The FBI should have done more to gather intelligence before the Capitol riot, according to a watchdog report Thursday that also said no undercover FBI ..."
+            }
+          ]
+        },
+        "total_sources": 4,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 4.319,
+        "timestamp_confidence": 1.0
+      },
+      {
+        "claim_text": "There are 14,000 hours of unreleased video footage from January 6th.",
+        "claim_confidence": 0.9,
+        "claim_category": "statistical",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "Committee on House Administration Releases 5000 More Hours of ...",
+              "url": "https://cha.house.gov/2024/3/committee-on-house-administration-releases-5-000-more-hours-of-january-6-footage",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "WASHINGTON - The Committee on House Administration today released 5,000 additional hours of U.S. Capitol security footage from January 6, 2021.",
+              "snippet": "WASHINGTON - The Committee on House Administration today released 5,000 additional hours of U.S. Capitol security footage from January 6, 2021."
+            },
+            {
+              "title": "Capitol Police provided more than 14,000 hours of Jan. 6 footage to ...",
+              "url": "https://www.politico.com/news/2021/03/29/capitol-police-jan6-footage-478439",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Democrats leveled the charge in the immediate aftermath of the attack, suggesting Republican lawmakers or aides may have aided the rioters, but ...",
+              "snippet": "Democrats leveled the charge in the immediate aftermath of the attack, suggesting Republican lawmakers or aides may have aided the rioters, but ..."
+            },
+            {
+              "title": "Capitol Riot Surveillance Footage Released - BuzzFeed News",
+              "url": "https://www.buzzfeednews.com/article/zoetillman/capitol-footage-lawsuit-release-insurrection",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "More on this. Eight Months After The Capitol Riots, Thousands Of Hours Of Surveillance Footage Remain Secret Zoe Tillman \u00b7 Aug. ... 6 Protests ...",
+              "snippet": "More on this. Eight Months After The Capitol Riots, Thousands Of Hours Of Surveillance Footage Remain Secret Zoe Tillman \u00b7 Aug. ... 6 Protests ..."
+            },
+            {
+              "title": "House Republicans release more Jan. 6 tapes, but now ... - ABC News",
+              "url": "https://abcnews.go.com/Politics/house-republicans-release-jan-6-tapes-now-face/story?id=107720562",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Rioters loyal to President Donald Trump rally at the Capitol, Jan. 6, 2021. Jose Luis Magana/AP, FILE. Johnson previously announced in ...",
+              "snippet": "Rioters loyal to President Donald Trump rally at the Capitol, Jan. 6, 2021. Jose Luis Magana/AP, FILE. Johnson previously announced in ..."
+            },
+            {
+              "title": "Jan. 6: Fox host Tucker Carlson says he's gained access ... - abc7NY",
+              "url": "https://abc7ny.com/post/tucker-carlson-fox-news-jan-6-security-footage-riot-40000-hours/12859987/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Fox News host Tucker Carlson was given exclusive access to more than 40000 hours of unreleased security footage from the Jan. 6 riot at the ...",
+              "snippet": "Fox News host Tucker Carlson was given exclusive access to more than 40000 hours of unreleased security footage from the Jan. 6 riot at the ..."
+            },
+            {
+              "title": "Johnson makes Jan. 6 footage available to public - Spectrum News",
+              "url": "https://spectrumlocalnews.com/us/snplus/news/2023/11/17/jan-6-riot-trump-mob-speaker-johnson",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "... Jan. 6, 2021, riot at the U.S. Capitol; By ... The hours of footage detail not only the shocking assault rioters made on U.S. Capitol ...",
+              "snippet": "... Jan. 6, 2021, riot at the U.S. Capitol; By ... The hours of footage detail not only the shocking assault rioters made on U.S. Capitol ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 97.2,
+        "timestamp_confidence": 0.9185185185185185
+      },
+      {
+        "claim_text": "The FBI has withheld evidence related to the pipe bomber video.",
+        "claim_confidence": 0.8,
+        "claim_category": "historical",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "New Footage of Suspect Placing Bomb at DNC - FBI",
+              "url": "https://www.fbi.gov/video-repository/january-5-pipe-bomb-investigation-new-footage-of-suspect-placing-bomb-at-dnc/view",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "On January 5, 2021, an unidentified individual placed pipe bombs near the DNC and RNC offices in Washington, D.C., between 7:30 p.m. and 8:30 p.m. EST.",
+              "snippet": "On January 5, 2021, an unidentified individual placed pipe bombs near the DNC and RNC offices in Washington, D.C., between 7:30 p.m. and 8:30 p.m. EST."
+            },
+            {
+              "title": "Updated: Seeking Information on Capitol Hill Pipe Bomb Suspect - FBI",
+              "url": "https://www.fbi.gov/video-repository/wfo-pipebomb-oct-2025-update-v2.mp4/view",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "The FBI is still offering a $500000 reward for information that helps identify the person who placed pipe bombs at the offices of the Democratic National ...",
+              "snippet": "The FBI is still offering a $500000 reward for information that helps identify the person who placed pipe bombs at the offices of the Democratic National ..."
+            },
+            {
+              "title": "WATCH: FBI arrests man accused of placing pipe bombs in ... - PBS",
+              "url": "https://www.pbs.org/newshour/politics/watch-fbi-makes-arrest-in-probe-of-pipe-bombs-placed-in-d-c-on-eve-of-jan-6-attack",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The arrest marks the first time investigators have publicly identified a suspect in an act that has been an enduring mystery for nearly five ...",
+              "snippet": "The arrest marks the first time investigators have publicly identified a suspect in an act that has been an enduring mystery for nearly five ..."
+            }
+          ]
+        },
+        "total_sources": 3,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 112.24,
+        "timestamp_confidence": 0.5370370370370371
+      },
+      {
+        "claim_text": "Over 70 million people are Trump supporters or against the ruling class.",
+        "claim_confidence": 0.75,
+        "claim_category": "statistical",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "Presidential Approval Highs & Lows - Roper Center",
+              "url": "https://ropercenter.cornell.edu/presidential-approval/highslows",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (40.4 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "President, Highest %, Polling Organization & Dates, Lowest %, Polling Organization & Dates. Donald Trump, 49%, McLaughlin & Associates",
+              "snippet": "President, Highest %, Polling Organization & Dates, Lowest %, Polling Organization & Dates. Donald Trump, 49%, McLaughlin & Associates"
+            },
+            {
+              "title": "4 Years Later: Americans Still Divided Over January 6 | Statista",
+              "url": "https://www.statista.com/chart/33714/public-view-of-the-events-of-january-6-2021/?srsltid=AfmBOoq_iqOCIepVE57YQQypFTOFpDjGsg32yIha461qMEipPPm1FHzE",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "This chart shows how the American public views the events of January 6, 2021 four years later.",
+              "snippet": "This chart shows how the American public views the events of January 6, 2021 four years later."
+            },
+            {
+              "title": "Capitol riots timeline: What happened on 6 January 2021? - BBC",
+              "url": "https://www.bbc.com/news/world-us-canada-56004916",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The indictment caps an inquiry into events which led up to the 6 January 2021 riot at the US Capitol - when supporters of Mr Trump stormed Congress.",
+              "snippet": "The indictment caps an inquiry into events which led up to the 6 January 2021 riot at the US Capitol - when supporters of Mr Trump stormed Congress."
+            },
+            {
+              "title": "Donald Trump's approval rating | The Economist",
+              "url": "https://www.economist.com/interactive/trump-approval-tracker",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Follow our presidential approval rating poll tracker to see how favourably Americans view Mr Trump.",
+              "snippet": "Follow our presidential approval rating poll tracker to see how favourably Americans view Mr Trump."
+            },
+            {
+              "title": "January 6 U.S. Capitol Attack - Britannica",
+              "url": "https://www.britannica.com/event/January-6-U-S-Capitol-attack",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The January 6 attack on the U.S. Capitol was carried out in 2021 by a mob of supporters of President Donald J. Trump. After hearing Trump speak at a rally, ...",
+              "snippet": "The January 6 attack on the U.S. Capitol was carried out in 2021 by a mob of supporters of President Donald J. Trump. After hearing Trump speak at a rally, ..."
+            },
+            {
+              "title": "Presidential Approval Ratings -- Donald Trump - Gallup News",
+              "url": "https://news.gallup.com/poll/203198/presidential-approval-ratings-donald-trump.aspx",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Do you approve or disapprove of the way Donald Trump is handling his job as president?",
+              "snippet": "Do you approve or disapprove of the way Donald Trump is handling his job as president?"
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 36.079,
+        "timestamp_confidence": 0.8344370860927153
+      },
+      {
+        "claim_text": "The national security apparatus conspires against the American people.",
+        "claim_confidence": 0.7,
+        "claim_category": "policy",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "New Evidence of Obama Administration Conspiracy to Subvert ...",
+              "url": "https://www.dni.gov/index.php/newsroom/press-releases/press-releases-2025/4086-pr-15-25",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (20.8 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Obama officials leaked false statements to media outlets, including The Washington Post, claiming, \u201cRussia has attempted through cyber means to ...",
+              "snippet": "Obama officials leaked false statements to media outlets, including The Washington Post, claiming, \u201cRussia has attempted through cyber means to ..."
+            },
+            {
+              "title": "Breaking down Trump's 2025 National Security Strategy | Brookings",
+              "url": "https://www.brookings.edu/articles/breaking-down-trumps-2025-national-security-strategy/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Brookings experts break down what to take away from the Trump administration's 2025 National Security Strategy.",
+              "snippet": "Brookings experts break down what to take away from the Trump administration's 2025 National Security Strategy."
+            },
+            {
+              "title": "NSA Spying | Electronic Frontier Foundation",
+              "url": "https://www.eff.org/nsa-spying",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "News reports in December 2005 first revealed that the National Security Agency (NSA) has been intercepting Americans' phone calls and Internet communications.",
+              "snippet": "News reports in December 2005 first revealed that the National Security Agency (NSA) has been intercepting Americans' phone calls and Internet communications."
+            },
+            {
+              "title": "The National Security Strategy: The Good, the Not So Great ... - CSIS",
+              "url": "https://www.csis.org/analysis/national-security-strategy-good-not-so-great-and-alarm-bells",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Two elements of the strategy highlight this approach most starkly\u2014the language on economic growth and the clear end of the democracy strategy.",
+              "snippet": "Two elements of the strategy highlight this approach most starkly\u2014the language on economic growth and the clear end of the democracy strategy."
+            },
+            {
+              "title": "Trump's new security strategy endangers democracy - Salon.com",
+              "url": "https://www.salon.com/2025/12/09/trumps-new-security-strategy-endangers-democracy/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Left"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The president's retrograde National Security Strategy emphasizes profit and bluster at democracy's expense.",
+              "snippet": "The president's retrograde National Security Strategy emphasizes profit and bluster at democracy's expense."
+            },
+            {
+              "title": "NSA spying controversy | Research Starters - EBSCO",
+              "url": "https://www.ebsco.com/research-starters/military-history-and-science/nsa-spying-controversy",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (35.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "The NSA spying controversy centers around the National Security Agency's practices concerning surveillance, particularly involving American citizens.",
+              "snippet": "The NSA spying controversy centers around the National Security Agency's practices concerning surveillance, particularly involving American citizens."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 136.56,
+        "timestamp_confidence": 0.8590604026845637
+      },
+      {
+        "claim_text": "A Church Committee 2.0 should be demanded by politicians.",
+        "claim_confidence": 0.65,
+        "claim_category": "policy",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "Senate Select Committee to Study Governmental Operations with ...",
+              "url": "https://www.senate.gov/about/powers-procedures/investigations/church-committee.htm",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "The Church Committee investigated and identified a wide range of intelligence abuses by federal agencies, including the CIA, FBI, Internal Revenue Service, and ...",
+              "snippet": "The Church Committee investigated and identified a wide range of intelligence abuses by federal agencies, including the CIA, FBI, Internal Revenue Service, and ..."
+            },
+            {
+              "title": "CIA Assassination Plots: The Church Committee Report 50 Years ...",
+              "url": "https://nsarchive.gwu.edu/briefing-book/intelligence/2025-11-20/cia-assassination-plots-church-committee-report-50-years",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "As the Church Committee begins its investigation into controversial CIA operations such as assassination plots, Secretary of State/National ...",
+              "snippet": "As the Church Committee begins its investigation into controversial CIA operations such as assassination plots, Secretary of State/National ..."
+            },
+            {
+              "title": "House Republicans' inauspicious start to 'Benghazi 2.0' - The Hill",
+              "url": "https://thehill.com/opinion/campaign/3884493-house-republicans-inauspicious-start-to-benghazi-2-0/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "House Republicans' priority this year is investigations \u2014 and they are, as advertised, modeled after the Church Committee.",
+              "snippet": "House Republicans' priority this year is investigations \u2014 and they are, as advertised, modeled after the Church Committee."
+            },
+            {
+              "title": "Jim Jordan's 'Weaponization Committee' Is Misfiring - POLITICO",
+              "url": "https://www.politico.com/news/magazine/2023/02/24/gop-church-committee-00083835",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The GOP has compared their new committee to the Church Committee, which uncovered rampant crimes in the '70s. Really?",
+              "snippet": "The GOP has compared their new committee to the Church Committee, which uncovered rampant crimes in the '70s. Really?"
+            },
+            {
+              "title": "The U.S. Needs a New Church Committee | Brennan Center for Justice",
+              "url": "https://www.brennancenter.org/our-work/analysis-opinion/us-needs-new-church-committee",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The Church Committee report warned that a new national security crisis would test its recommended reforms, and the terrorist attacks of ...",
+              "snippet": "The Church Committee report warned that a new national security crisis would test its recommended reforms, and the terrorist attacks of ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 160.0,
+        "timestamp_confidence": 0.6336633663366337
+      }
+    ],
+    "transcript_data": {
+      "text": "according to this i have to say remarkable piece that you just put up late last night read it in bed at midnight that the fbi was organizing the riots of january 6th well yes it certainly suggests that possibility and i'm hearing from people that this is the most important and the darkest investigative piece they've seen in years but the american people deserve the truth about 1-6 not just for the sake of ashley babbitt not just for the sake of the hundreds of people held in prison unjustly as a violation of human rights but for the sake of the 70 plus million people who are trump supporters or just against the corrupt ruling class who have effectively been labeled de facto domestic extremists by our own government and i believe the key that unlocks the truth to 1-6 is the following question to what extent were the main militia groups imputed to the 1-6 so-called capital siege to what extent was their infiltration of those groups by undercover agents or informants and to what extent when we see the unindicted co-conspirators who occupy senior positions in those groups to what extent are those people being spared prosecution on account of a prior relationship with the federal government those two questions create a thread and when we pull that thread the ugly truth of that event and perhaps even the country we live in will be exposed i gotta ask because it it may answer one of the great mysteries is this i think there are 14 000 hours of unreleased video footage from that day the administration is hiding from us do you think this is why i think that's certainly a possibility um it's it's extremely suspicious even going back to this so-called pipe bomber video remember the pipe bomber the capital pipeliner the fbi has been extremely suspicious in withholding evidence video evidence that could help and identify this bomber which presumably they want to do but if you may i'd like to make a general point and it really after seeing all this you have to ask yourself does the national security apparatus do anything but conspire against the american people i'm led to conclude that we cannot have a democracy everything in our politics will be fake and performative until we bring the national security state including the fbi to heal it's not a left issue it's not a right issue every politician who cares about our country should demand a church committee 2.0 immediately and people of good faith on the left should join it uh immediately darren b i appreciate your coming on signing the work you do at revolver.news thank you",
+      "segments": [
+        {
+          "text": "according to this i have to say",
+          "start": 0.08,
+          "duration": 3.359
+        },
+        {
+          "text": "remarkable piece that you just put up",
+          "start": 1.76,
+          "duration": 2.559
+        },
+        {
+          "text": "late last night",
+          "start": 3.439,
+          "duration": 4.241
+        },
+        {
+          "text": "read it in bed at midnight that the fbi",
+          "start": 4.319,
+          "duration": 8.561
+        },
+        {
+          "text": "was organizing the riots of january 6th",
+          "start": 7.68,
+          "duration": 5.2
+        },
+        {
+          "text": "well yes it certainly suggests that",
+          "start": 13.2,
+          "duration": 3.76
+        },
+        {
+          "text": "possibility and i'm hearing from people",
+          "start": 15.12,
+          "duration": 2.4
+        },
+        {
+          "text": "that this",
+          "start": 16.96,
+          "duration": 3.76
+        },
+        {
+          "text": "is the most important and the darkest",
+          "start": 17.52,
+          "duration": 5.12
+        },
+        {
+          "text": "investigative piece they've seen in",
+          "start": 20.72,
+          "duration": 4.319
+        },
+        {
+          "text": "years but the american people deserve",
+          "start": 22.64,
+          "duration": 4.879
+        },
+        {
+          "text": "the truth about 1-6 not just for the",
+          "start": 25.039,
+          "duration": 4.08
+        },
+        {
+          "text": "sake of ashley babbitt",
+          "start": 27.519,
+          "duration": 3.68
+        },
+        {
+          "text": "not just for the sake of the hundreds of",
+          "start": 29.119,
+          "duration": 3.041
+        },
+        {
+          "text": "people",
+          "start": 31.199,
+          "duration": 3.681
+        },
+        {
+          "text": "held in prison unjustly as a violation",
+          "start": 32.16,
+          "duration": 3.919
+        },
+        {
+          "text": "of human rights",
+          "start": 34.88,
+          "duration": 4.16
+        },
+        {
+          "text": "but for the sake of the 70 plus million",
+          "start": 36.079,
+          "duration": 4.881
+        },
+        {
+          "text": "people who are trump supporters",
+          "start": 39.04,
+          "duration": 4.64
+        },
+        {
+          "text": "or just against the corrupt ruling class",
+          "start": 40.96,
+          "duration": 4.8
+        },
+        {
+          "text": "who have effectively been labeled",
+          "start": 43.68,
+          "duration": 4.719
+        },
+        {
+          "text": "de facto domestic extremists by our own",
+          "start": 45.76,
+          "duration": 3.76
+        },
+        {
+          "text": "government",
+          "start": 48.399,
+          "duration": 3.521
+        },
+        {
+          "text": "and i believe the key that unlocks the",
+          "start": 49.52,
+          "duration": 4.4
+        },
+        {
+          "text": "truth to 1-6",
+          "start": 51.92,
+          "duration": 5.36
+        },
+        {
+          "text": "is the following question to what extent",
+          "start": 53.92,
+          "duration": 5.6
+        },
+        {
+          "text": "were the main militia groups",
+          "start": 57.28,
+          "duration": 5.759
+        },
+        {
+          "text": "imputed to the 1-6 so-called capital",
+          "start": 59.52,
+          "duration": 4.16
+        },
+        {
+          "text": "siege",
+          "start": 63.039,
+          "duration": 2.961
+        },
+        {
+          "text": "to what extent was their infiltration of",
+          "start": 63.68,
+          "duration": 4.32
+        },
+        {
+          "text": "those groups by undercover agents or",
+          "start": 66.0,
+          "duration": 2.96
+        },
+        {
+          "text": "informants",
+          "start": 68.0,
+          "duration": 3.6
+        },
+        {
+          "text": "and to what extent when we see the",
+          "start": 68.96,
+          "duration": 5.04
+        },
+        {
+          "text": "unindicted co-conspirators who occupy",
+          "start": 71.6,
+          "duration": 4.48
+        },
+        {
+          "text": "senior positions in those groups",
+          "start": 74.0,
+          "duration": 4.32
+        },
+        {
+          "text": "to what extent are those people being",
+          "start": 76.08,
+          "duration": 4.0
+        },
+        {
+          "text": "spared prosecution",
+          "start": 78.32,
+          "duration": 4.08
+        },
+        {
+          "text": "on account of a prior relationship with",
+          "start": 80.08,
+          "duration": 3.84
+        },
+        {
+          "text": "the federal government",
+          "start": 82.4,
+          "duration": 4.079
+        },
+        {
+          "text": "those two questions create a thread and",
+          "start": 83.92,
+          "duration": 3.519
+        },
+        {
+          "text": "when we pull that",
+          "start": 86.479,
+          "duration": 3.921
+        },
+        {
+          "text": "thread the ugly truth of that event and",
+          "start": 87.439,
+          "duration": 4.961
+        },
+        {
+          "text": "perhaps even the country we live in",
+          "start": 90.4,
+          "duration": 5.039
+        },
+        {
+          "text": "will be exposed i gotta ask",
+          "start": 92.4,
+          "duration": 4.8
+        },
+        {
+          "text": "because it it may answer one of the",
+          "start": 95.439,
+          "duration": 3.441
+        },
+        {
+          "text": "great mysteries is this i think there",
+          "start": 97.2,
+          "duration": 2.959
+        },
+        {
+          "text": "are 14 000",
+          "start": 98.88,
+          "duration": 4.4
+        },
+        {
+          "text": "hours of unreleased video footage from",
+          "start": 100.159,
+          "duration": 4.721
+        },
+        {
+          "text": "that day the administration is hiding",
+          "start": 103.28,
+          "duration": 2.32
+        },
+        {
+          "text": "from us",
+          "start": 104.88,
+          "duration": 3.76
+        },
+        {
+          "text": "do you think this is why",
+          "start": 105.6,
+          "duration": 3.04
+        },
+        {
+          "text": "i think that's certainly a possibility",
+          "start": 108.96,
+          "duration": 3.28
+        },
+        {
+          "text": "um it's",
+          "start": 111.36,
+          "duration": 3.28
+        },
+        {
+          "text": "it's extremely suspicious even going",
+          "start": 112.24,
+          "duration": 4.72
+        },
+        {
+          "text": "back to this so-called pipe bomber video",
+          "start": 114.64,
+          "duration": 4.24
+        },
+        {
+          "text": "remember the pipe bomber the capital",
+          "start": 116.96,
+          "duration": 2.799
+        },
+        {
+          "text": "pipeliner",
+          "start": 118.88,
+          "duration": 4.0
+        },
+        {
+          "text": "the fbi has been extremely suspicious in",
+          "start": 119.759,
+          "duration": 4.4
+        },
+        {
+          "text": "withholding",
+          "start": 122.88,
+          "duration": 3.36
+        },
+        {
+          "text": "evidence video evidence that could help",
+          "start": 124.159,
+          "duration": 4.16
+        },
+        {
+          "text": "and identify this bomber which",
+          "start": 126.24,
+          "duration": 5.44
+        },
+        {
+          "text": "presumably they want to do but if",
+          "start": 128.319,
+          "duration": 5.361
+        },
+        {
+          "text": "you may i'd like to make a general point",
+          "start": 131.68,
+          "duration": 3.199
+        },
+        {
+          "text": "and it really",
+          "start": 133.68,
+          "duration": 2.88
+        },
+        {
+          "text": "after seeing all this you have to ask",
+          "start": 134.879,
+          "duration": 3.761
+        },
+        {
+          "text": "yourself does the national security",
+          "start": 136.56,
+          "duration": 3.759
+        },
+        {
+          "text": "apparatus do anything",
+          "start": 138.64,
+          "duration": 4.239
+        },
+        {
+          "text": "but conspire against the american people",
+          "start": 140.319,
+          "duration": 3.441
+        },
+        {
+          "text": "i'm led",
+          "start": 142.879,
+          "duration": 3.121
+        },
+        {
+          "text": "to conclude that we cannot have a",
+          "start": 143.76,
+          "duration": 3.119
+        },
+        {
+          "text": "democracy",
+          "start": 146.0,
+          "duration": 3.04
+        },
+        {
+          "text": "everything in our politics will be fake",
+          "start": 146.879,
+          "duration": 3.521
+        },
+        {
+          "text": "and performative",
+          "start": 149.04,
+          "duration": 3.839
+        },
+        {
+          "text": "until we bring the national security",
+          "start": 150.4,
+          "duration": 3.119
+        },
+        {
+          "text": "state",
+          "start": 152.879,
+          "duration": 3.121
+        },
+        {
+          "text": "including the fbi to heal it's not a",
+          "start": 153.519,
+          "duration": 4.641
+        },
+        {
+          "text": "left issue it's not a right issue",
+          "start": 156.0,
+          "duration": 4.0
+        },
+        {
+          "text": "every politician who cares about our",
+          "start": 158.16,
+          "duration": 3.6
+        },
+        {
+          "text": "country should demand a",
+          "start": 160.0,
+          "duration": 5.2
+        },
+        {
+          "text": "church committee 2.0 immediately",
+          "start": 161.76,
+          "duration": 5.28
+        },
+        {
+          "text": "and people of good faith on the left",
+          "start": 165.2,
+          "duration": 3.52
+        },
+        {
+          "text": "should join it uh",
+          "start": 167.04,
+          "duration": 4.16
+        },
+        {
+          "text": "immediately darren b i appreciate your",
+          "start": 168.72,
+          "duration": 3.72
+        },
+        {
+          "text": "coming on signing the work you do at",
+          "start": 171.2,
+          "duration": 4.64
+        },
+        {
+          "text": "revolver.news thank you",
+          "start": 172.44,
+          "duration": 3.4
+        }
+      ],
+      "video_id": "SYS2_ECsaxY"
+    }
+  }
+}

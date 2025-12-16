@@ -1,0 +1,23 @@
+{
+  "run_id": "20251214_020201_rIcXeueo0O8",
+  "experiment_name": "precision_recall_curve_claims10_greenhouse_gases_measured",
+  "component": "end_to_end",
+  "timestamp": "2025-12-14T02:04:19.772958",
+  "video_url": "https://www.youtube.com/watch?v=rIcXeueo0O8",
+  "max_claims": 10,
+  "max_queries_per_claim": 2,
+  "max_results_per_query": 3,
+  "headless_search": true,
+  "model_config": {
+    "claim_extractor": "OPENAI_GPT4O_MINI",
+    "query_generator": "OPENAI_GPT4O_MINI",
+    "evidence_extractor": "OPENAI_GPT4O_MINI",
+    "output_generator": "OPENAI_GPT4O_MINI"
+  },
+  "model_summary": "CE:gpt-4o-mini | QG:gpt-4o-mini | EE:gpt-4o-mini | OG:gpt-4o-mini",
+  "parallelization": "async",
+  "video_title": "What are Greenhouse Gases and How are they Measured? | #EarthMonth Activity Series",
+  "transcript_length": 4153,
+  "transcript_tokens": 759,
+  "video_duration_seconds": 280.40999999999997
+}

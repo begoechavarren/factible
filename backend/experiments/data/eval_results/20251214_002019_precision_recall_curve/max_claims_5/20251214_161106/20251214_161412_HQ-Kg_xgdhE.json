@@ -1,0 +1,121 @@
+{
+  "video_id": "HQ-Kg_xgdhE",
+  "timestamp": "2025-12-14T16:14:12.382280",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.8,
+    "recall": 0.2,
+    "f1_score": 0.32000000000000006,
+    "true_positives": 4,
+    "false_positives": 1,
+    "false_negatives": 16,
+    "mean_average_precision": 0.8875,
+    "recall_at_important": 0.2857142857142857,
+    "importance_weighted_coverage": 0.19298245614035087,
+    "matched_claims": [
+      {
+        "gt_text": "When McDonald's launched the Big Mac in 1967 it cost just 45 cents",
+        "sys_text": "The Big Mac cost 45 cents in 1967 and now costs $3.99.",
+        "gt_importance": 0.35,
+        "sys_importance": 0.85,
+        "importance_error": 0.5
+      },
+      {
+        "gt_text": "In 2008 prices in Zimbabwe doubled every 24 hours",
+        "sys_text": "In 2008, prices in Zimbabwe doubled every 24 hours due to inflation.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.8,
+        "importance_error": 0.04999999999999993
+      },
+      {
+        "gt_text": "Inflation is just the average rate that prices are rising",
+        "sys_text": "Inflation is the average rate at which prices are rising.",
+        "gt_importance": 0.8,
+        "sys_importance": 0.7,
+        "importance_error": 0.10000000000000009
+      },
+      {
+        "gt_text": "In a stable economy prices usually go up steadily over time by 1 or 2 percent a year",
+        "sys_text": "In a stable economy, prices usually go up by 1 or 2% a year.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.6,
+        "importance_error": 0.15000000000000002
+      }
+    ],
+    "missed_claims": [
+      "The same Big Mac now costs $3.99",
+      "The government printed more and more money",
+      "Before long everyone was a trillionaire",
+      "Things got so bad that the country ran out of paper to print all the bank notes",
+      "Once an inflationary spiral like this begins it's almost impossible to get out of",
+      "Governments must either devalue their currency or ditch it all together",
+      "This is what happened in Germany in the 1920s",
+      "A small amount of inflation is usually seen as a good thing",
+      "It helps keep an economy growing",
+      "It also staves off the threat of deflation",
+      "A bit of inflation is good news if you're in debt",
+      "Just ask anyone who took out a mortgage on a low interest rate before a property boom",
+      "It's bad news for savers",
+      "Just as inflation eats into debt it also eats into savings",
+      "Money stashed in your piggy bank will buy you less in 5 years time than it will today",
+      "If your income isn't keeping up with prices you're getting poorer"
+    ],
+    "extra_claims": [
+      "The government printed more money in Zimbabwe, leading to hyperinflation."
+    ],
+    "importance_mae": 0.2,
+    "claim_quality_avg": 0.8100000000000002
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.25,
+    "stance_accuracy": 0.25,
+    "correct_verdicts": 1,
+    "total_verdicts": 4,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "When McDonald's launched the Big Mac in 1967 it cost just 45 cents",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Inflation is just the average rate that prices are rising",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "In a stable economy prices usually go up steadily over time by 1 or 2 percent a year",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      }
+    ],
+    "explanation_quality_avg": 0.42000000000000004
+  },
+  "end_to_end": {
+    "claim_coverage": 0.2,
+    "verdict_accuracy": 0.25,
+    "evidence_quality_avg": 0.6,
+    "total_cost_usd": 0.0007998,
+    "total_time_seconds": 89.6788158416748,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.9166666666666666,
+    "evidence_retrieval_success_rate": 0.6,
+    "avg_sources_per_query": 1.8
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.8666666666666667,
+    "source_reliability_distribution": {
+      "high": 12,
+      "medium": 6
+    },
+    "avg_evidence_per_claim": 3.6
+  },
+  "ground_truth_claims_count": 20,
+  "system_claims_count": 5
+}

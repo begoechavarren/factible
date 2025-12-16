@@ -1,0 +1,326 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:38:46.284211",
+    "latency_seconds": 7.89,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nToday, we're making three super nourishing, super food packed, detox juices. To help you lose weight and get you that glow! [Music] Hey, beautiful people. It's Melissa from Choosing My Health, where I teach you how to easily transition to a whole food, plant-based lifestyle and thrive. And today we're making three of my favorite veggie juices. I love them because they're an easy way to reboot your metabolism, lose weight and cleanse your body to literally make you glow. I've been juicing for a minute and hands down, it is the easiest way to repair your body in a short span of time. But real talk, your juice gotta taste good. Cause ain't nobody want to be out here on these streets, drinking juice that tastes like dirt. I'm just going to keep it 100. Now, whether you're drinking these for a New Year's push or for three-day juice cleanse you'll find that they don't just taste good, they deliver a whole lot of life-giving nutrients to energize and revitalize your body. When I drink these literally feel like I can fly. Like that's how light I feel. And as always, if you're looking for the full recipe breakdown, I share those on my blog at choosingmyhealth.com, including modifications. I'm going to leave this link and others for you in the description box below. All right, let's get to it. [Music] I call this juice green power. It is loaded with phytonutrients and cleansing power to rid your body of excess weight and make you glow. To begin, we're gonna peel a washed lemon. I love lemons because they flush toxins from your system and purify the blood. Keep the lemon peel because it tastes great in tea and in hot porridge. Next core your washed apples. Apples are great for weight loss because they're high in pectin. Pectin binds with water and limits how much fat your cells can absorb. Isn't that cool?. They also taste great in this next cut all your ingredients into the appropriate size for your juicer. And now we're going to add all our ingredients to the juicer, kale, apple, celery. Cucumber, lime, and ginger. Each of these ingredients is especially formulated to help nourish your body. The celery, cucumber, and apples are vitamin-rich and super hydrating. Our superfood kale is rich in minerals and antioxidants to feed your cells, and lime and ginger increase your blood circulation, all while staying low in calories. You got to love this juice. [Music] Now the Beet Buzzer is my go-to juice to help me reset my body, especially when I'm feeling sluggish and need an energy boost. It's tangy, it's full-bodied and it has a lot of kick. First, peel your washed grapefruit. Grapefruits have one of the highest water contents of any food y'all, about 92% water, and they deliver a whole lot of nutrition with very little calories. We're also going to peel the lemon and cut the rest of our ingredients to an appropriate size for the juicer. Carrots- a juicing staple. Love that it's full of antioxidants including beta carotene, and lutein that are great for the eyes and beets. Beets are chocked full of nutrients and deliver maximum nutrition for your body. We're talking about potassium, magnesium, zinc, selenium. And beets also help you lower your blood pressure if you need help with that, and they give you extra stamina throughout the day. And did you know that beets even improve athletic performance? Professor: Yes, yes, and a yes-i-dy yes. If you'd allow me to just interject here for just a little bit. Beet juice, one to three hours before an athletic event can provide a one to three percent performance boost and give you a serious competitive edge. That's because beats raise nitric oxide levels increase blood flow, improve lung function and strengthen muscle contraction. Now, you know, Then lastly we add jalape\u00f1o. Jalape\u00f1os aren't a typical juice addition for me, but listen, if you can handle a little heat, jalape\u00f1o can boost your metabolism, increase fat burn and reduce your appetite. I will warn you though. It is not for you if you're sensitive to heat. And if you do like heat, very little goes a long way, my friend. So start with like one-fourth of an inch, no seeds please, then taste the juice and add more if you wish. Remember when you use this, you're juicing it. So you're getting the full undiluted effect. Alternatively, if you still want some spice without too much kick, ginger can also achieve the same purpose. [Music] Our last juice is Orange Blast. I call this my sweet treat because it's really flavorful and refreshing and super high in vitamin C, which is going to help the body absorb minerals. It's going to protect the body from chemical toxins and has anti-aging properties. Who doesn't want that? To begin let's peel a pineapple. Pineapple is perfect for detoxing because it contains bromelain, which is a digestive enzyme that will cleanse your colon and it aids digestion. And it's super juicy. Next, we'll cut a red bell pepper in half. Y'all, did you know that a cup of red bell pepper contains nearly three times more vitamin C than an orange? Professor: Oh yeah. I knew. And we're also going to add some ginger and turmeric. Ginger is awesome for circulation and digestion and turmeric, as you probably already know, is incredible for inflammation. And to maximize the benefits of turmeric, you can sprinkle a little black pepper into your drink because it can enhance the curcumin absorption in turmeric by up to 2,000 percent. That's a whole lot! This juice is extraordinarily enjoyable and will boost your immune system all while helping you flush and reset. I love these satisfying, and nutritionally-rich juices. They are perfect for a juice cleanse or for any day you need a boost. And, now if you're looking for more recipes, encouragement, plant-based education. I got you, honey. I have plenty of videos and resources on this channel and blog. I'm going to leave a link to them in the description box below. If you make any of these juices, please comment and let me know. I'd so appreciate that. And let me know if you have a favorite juice that you could share with us. Also, if you're interested in a plant-based lifestyle and you want to join the CMH crew, please subscribe to my channel to learn more. How to easily transition to a plant-based lifestyle and thrive. I would so love to have you here. Don't forget to hit the notification bell for my latest videos. And if you found this video helpful, please give it a thumbs up. You can also follow me on Instagram at choosingmyhealth. Now if you're new to this whole food plant-based thing, welcome. Check out my free gift for you packed with nearly 20 years of my life-tested strategies to boost your game for the win. Links are all in the description box below. Thanks so much for hanging out with me today. You could've been doing something else, but you chose to watch this video and I'm thankful for that. I hope you have an amazing day. I love you, and I will see you in the next one? [Music] [Bloopers] Oh, yes. I knew. Oh, pick me, pick me. Oh, I knew. I knew. I knew. I knew. Yes. Yes. And a yes-i-dy yes. Yes. If you'd let me just to inter.... (Laughs) Now you know. (Laughs) Must look like I was about to choke. (Lauhgs) [Music]",
+    "input_length_chars": 7254,
+    "input_tokens_estimated": 1813,
+    "output": {
+      "claims": [
+        {
+          "text": "Juicing is the easiest way to repair your body in a short span of time.",
+          "confidence": 0.8,
+          "category": "health",
+          "importance": 0.6,
+          "context": "Speaker: Melissa, discussing benefits of juicing."
+        },
+        {
+          "text": "Lemons flush toxins from your system and purify the blood.",
+          "confidence": 0.7,
+          "category": "health",
+          "importance": 0.6,
+          "context": "Ingredient: lemon, discussing health benefits."
+        },
+        {
+          "text": "Apples are high in pectin, which binds with water and limits fat absorption.",
+          "confidence": 0.9,
+          "category": "health",
+          "importance": 0.7,
+          "context": "Ingredient: apples, discussing weight loss benefits."
+        },
+        {
+          "text": "Celery, cucumber, and apples are vitamin-rich and super hydrating.",
+          "confidence": 0.8,
+          "category": "health",
+          "importance": 0.5,
+          "context": "Ingredients in green juice, discussing nutritional benefits."
+        },
+        {
+          "text": "Kale is rich in minerals and antioxidants.",
+          "confidence": 0.8,
+          "category": "health",
+          "importance": 0.5,
+          "context": "Ingredient: kale, discussing nutritional benefits."
+        },
+        {
+          "text": "Beets help lower blood pressure and improve athletic performance.",
+          "confidence": 0.9,
+          "category": "health",
+          "importance": 0.7,
+          "context": "Ingredient: beets, discussing health benefits."
+        },
+        {
+          "text": "Beet juice can provide a 1-3% performance boost before athletic events.",
+          "confidence": 0.85,
+          "category": "health",
+          "importance": 0.8,
+          "context": "Professor discussing beet juice benefits for athletes."
+        },
+        {
+          "text": "A cup of red bell pepper contains nearly three times more vitamin C than an orange.",
+          "confidence": 0.9,
+          "category": "health",
+          "importance": 0.7,
+          "context": "Ingredient: red bell pepper, discussing nutritional comparison."
+        },
+        {
+          "text": "Turmeric enhances curcumin absorption by up to 2,000% when combined with black pepper.",
+          "confidence": 0.85,
+          "category": "health",
+          "importance": 0.8,
+          "context": "Discussing benefits of turmeric in juice."
+        },
+        {
+          "text": "Pineapple contains bromelain, which aids digestion and cleanses the colon.",
+          "confidence": 0.9,
+          "category": "health",
+          "importance": 0.7,
+          "context": "Ingredient: pineapple, discussing health benefits."
+        }
+      ],
+      "total_count": 10
+    },
+    "output_length_chars": 2884,
+    "output_tokens_estimated": 721,
+    "cost_usd": 0.00070455
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:38:52.736858",
+    "latency_seconds": 2.39,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Kale is rich in minerals and antioxidants.\nContext: Ingredient: kale, discussing nutritional benefits.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 275,
+    "input_tokens_estimated": 68,
+    "output": {
+      "original_claim": "Kale is rich in minerals and antioxidants.",
+      "queries": [
+        {
+          "query": "Kale nutritional benefits minerals antioxidants",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Nutritional value of kale minerals and antioxidants",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 290,
+    "output_tokens_estimated": 72,
+    "cost_usd": 5.34e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "Kale is rich in minerals and antioxidants."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:38:52.738766",
+    "latency_seconds": 2.4,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Apples are high in pectin, which binds with water and limits fat absorption.\nContext: Ingredient: apples, discussing weight loss benefits.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 311,
+    "input_tokens_estimated": 77,
+    "output": {
+      "original_claim": "Apples are high in pectin, which binds with water and limits fat absorption.",
+      "queries": [
+        {
+          "query": "Apples pectin fat absorption weight loss",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Does pectin in apples help with fat absorption and weight loss?",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 329,
+    "output_tokens_estimated": 82,
+    "cost_usd": 6.075e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "Kale is rich in minerals and antioxidants."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:38:52.943077",
+    "latency_seconds": 2.6,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Celery, cucumber, and apples are vitamin-rich and super hydrating.\nContext: Ingredients in green juice, discussing nutritional benefits.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 309,
+    "input_tokens_estimated": 77,
+    "output": {
+      "original_claim": "Celery, cucumber, and apples are vitamin-rich and super hydrating.",
+      "queries": [
+        {
+          "query": "nutritional benefits of celery cucumber and apples",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "are celery cucumber and apples hydrating and rich in vitamins",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 327,
+    "output_tokens_estimated": 81,
+    "cost_usd": 6.015e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "Apples are high in pectin, which binds with water and limits fat absorption.",
+      "query_index": 2,
+      "query_text": "Does pectin in apples help with fat absorption and weight loss?"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:38:52.943563",
+    "latency_seconds": 2.6,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Lemons flush toxins from your system and purify the blood.\nContext: Ingredient: lemon, discussing health benefits.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 287,
+    "input_tokens_estimated": 71,
+    "output": {
+      "original_claim": "Lemons flush toxins from your system and purify the blood.",
+      "queries": [
+        {
+          "query": "Do lemons flush toxins from the body and purify the blood?",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Health benefits of lemons for detoxification and blood purification",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 333,
+    "output_tokens_estimated": 83,
+    "cost_usd": 6.045e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "Apples are high in pectin, which binds with water and limits fat absorption.",
+      "query_index": 2,
+      "query_text": "Does pectin in apples help with fat absorption and weight loss?"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:38:53.126111",
+    "latency_seconds": 2.78,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Pineapple contains bromelain, which aids digestion and cleanses the colon.\nContext: Ingredient: pineapple, discussing health benefits.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 307,
+    "input_tokens_estimated": 76,
+    "output": {
+      "original_claim": "Pineapple contains bromelain, which aids digestion and cleanses the colon.",
+      "queries": [
+        {
+          "query": "Pineapple bromelain digestion benefits",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "health benefits of bromelain in pineapple",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 303,
+    "output_tokens_estimated": 75,
+    "cost_usd": 5.64e-05,
+    "context": {
+      "claim_index": 8,
+      "claim_text": "Lemons flush toxins from your system and purify the blood.",
+      "query_index": 2,
+      "query_text": "Health benefits of lemons for detoxification and blood purification"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:39:34.488064",
+    "latency_seconds": 14.35,
+    "input_prompt": "Claim:\nLemons flush toxins from your system and purify the blood.\n\nArticle Title:\n7 Benefits of Lemon Water, Explained by the Experts | Vogue\n\nGoogle Search Snippet:\nStudies show that lemon contains minerals that help lower blood pressure, supporting our overall health. Provides Antiaging Skin Benefits. It ...\n\nFull Page Content:\nDrinking water with a slice of lemon first thing in the morning is one of the most vouched-for wellness tips\u2014and not just for its purifying properties. The benefits of lemon water go beyond just detoxing. \u201cIt amplifies the benefits of water, adding both mental and physical virtues,\u201d says Kylie Bensley, MS, RD, registered dietitian and founder of Sulinu. \u201cWhile drinking water can help us hit our hydration goals, infusing water with lemon is a very simple, quick task that boosts the function of water itself.\u201d\nThe health benefits of lemon water are many and worth diving into. Below, Bensley and nutritionist Laura Parada, director of Slow Life House, break down everything we need to know about lemon water and how to drink it the right way (because yes, there is a wrong way to do it). Read on to see what they had to say.\nWater supports our overall health and helps keep us hydrated. Adding this citrus fruit to it is a nice bonus for even more health benefits. A glass of lemon water has six main ones, according to Bensley and Parada. These benefits include the following:\n\u201cIt helps kick-start the digestion process in the morning,\u201d says Parada, adding that it also helps fight indigestion, heartburn, and bloating. Additionally, lemon is known to stimulate bile and gastric-juice production, which can help prevent gas formation.\n\u201c[Lemon water] improves gut transit and hydrates the colon,\u201d says Parada, which is why it can help with constipation, especially on an empty stomach first thing in the morning. In addition, lemon, rich in fiber, supports gut health.\n\u201cIt strengthens the immune system,\u201d says Parada, referring to the high vitamin C content of lemon juice. Additionally, it is also rich in vitamin B, calcium, iron, magnesium, potassium, and enzymes. Studies show that lemon contains minerals that help lower blood pressure, supporting our overall health.\nIt is good for the skin because of its high content of antioxidants that \u201cprevent damage from free radicals,\u201d says Parada. Bensley agrees and says that lemon peels have been found to have antiaging benefits, reduce oxidative stress in skin cells, and boost collagen.\nYou always need to make sure you\u2019re drinking enough water. Lemon water hydrates the body and, especially first thing in the morning on an empty stomach, is an effective way to stimulate the metabolism. Another benefit of upgrading a glass of water with lemon juice? It can help you reach your water-intake goals. \u201c[It] can give it a pleasant taste that makes [drinking plenty of water] easier,\u201d says Parada.\nA lemon\u2019s scent is more than just pleasant. Bensley points to a study where orthopedic surgery patients who used lemons as a form of aromatherapy experienced lowered pre-procedure anxiety. Though more studies need to be done to definitively prove its effect on anxiety and stress, wanting to take a whiff of lemon water before you drink it isn\u2019t harmful if this has piqued your interest.\nPreliminary research suggests that lemon water is associated with weight loss. Bensley points to a study that showed lemon polyphenols can suppress diet-induced obesity. \u201cSo while it may not help lose weight through its chemical properties, it can suppress the risk of obesity,\u201d she says. But more studies are needed on the relationship between lemon water and weight loss. As with anything health related, experts always advise seeking medical advice from your doctor or health care provider to develop a safe plan to incorporate lemon water into your diet.\nThis is true for certain types of kidney stones. Heather Viola, DO, assistant professor of general internal medicine at Mount Sinai, explains that lemon water is high in citrate, a compound that binds to calcium in the urine and helps reduce the formation of crystals that can turn into stones. So drinking lemon water increases your urine volume and dilutes stone-forming substances.\nThe side effects of lemon water are few, but there are certain things to keep in mind. Among all the benefits this offers, alkalizing is not one of them, says Parada. \u201cIt is often heard that lemon water could modify the pH of the blood with an alkalizing effect,\u201d she says. \u201cHowever, this is false since it\u2019s the kidneys, liver, and lungs that are in charge of regulating blood acidity, keeping it in a range of 7.3 to 7.5.\u201d\nBensley advises against drinking water with lemon on an empty stomach, as it can be acidic and worsen already existing digestive problems, such as gastroesophageal reflux or frequent heartburn. She adds that the citric acid in lemons can worsen incontinence, as its acidity can irritate the bladder.\nThere is also a chance that the lemon may erode the tooth enamel. If you decide to make drinking lemon water a daily habit, she says drinking it through a straw could help reduce the risk of damage. She says that you can also give your mouth a quick swish of plain water after you finish your drink.\nYou\u2019ll also want to be very careful using lemons from restaurants. She says that lemon peels served while you\u2019re dining out have been shown to contain high levels of bacteria, including fecal matter.\nWhile Dr. Viola says temperature doesn\u2019t matter, Parada recommends the temperature of the water be lukewarm and not hot because \u201cbeing at the same temperature as our body, it is absorbed much faster since it does not have to lower its temperature to be digested.\u201d But you can\u2019t go wrong either way.\nThere\u2019s also a difference between fresh lemon water and bottled lemon water. Dr. Viola says fresh lemon water contains real lemon juice and all its nutritional value, including its vitamin C, citrate, and antioxidant properties. Lemon juice in a bottle usually doesn\u2019t contain actual lemon juice, she says, and will have minimal nutrients (and can be a very acidic drink). \u201cSo overall, fresh lemon water is significantly better for health benefits,\u201d she says.\nIf you\u2019re preparing it at home, here is how to make lemon water correctly: Choose a lemon with a thin peel, Bensley recommends, as th\n\nProvide relevant evidence.",
+    "input_length_chars": 6360,
+    "input_tokens_estimated": 1590,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses various health benefits of lemon water, but it explicitly states that lemon water does not have an alkalizing effect on blood pH and that the body regulates blood acidity through organs like the kidneys and liver, which contradicts the claim about purifying the blood.",
+      "overall_stance": "refutes",
+      "key_quote": "\"However, this is false since it\u2019s the kidneys, liver, and lungs that are in charge of regulating blood acidity, keeping it in a range of 7.3 to 7.5.\""
+    },
+    "output_length_chars": 527,
+    "output_tokens_estimated": 131,
+    "cost_usd": 0.0003171
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:39:36.707012",
+    "latency_seconds": 26.42,
+    "input_prompt": "Claim:\nPineapple contains bromelain, which aids digestion and cleanses the colon.\n\nArticle Title:\nBromelain: Benefits, risks, sources, and side effects\n\nGoogle Search Snippet:\nBromelain is an enzyme mixture found in pineapples. It has various potential health benefits, including reducing inflammation and improving digestion.\n\nFull Page Content:\nAlex Caspero, MA, RD, introduces us to bromelain, the pineapple enzyme, and, details its benefits for digestion, skin, and more.\nStruggling with digestive issues or simply looking to give your system a boost? Enter: bromelain, an enzyme that does wonders for your gut, skin, and bones. If you\u2019re searching for a digestion miracle worker, look no further. Found in pineapples, this enzyme works to digest protein (which can often be difficult for your system to process). People with a medical condition called pancreatic insufficiency may be prescribed bromelain as part of a combination of digestive enzymes because their pancreas does not make enough on its own. Research has also shown that high doses of bromelain may help improve indigestion, circulation, and cardiovascular health. Plus, it boasts some serious anti-inflammatory properties.Read on to learn about bromelain, what bromelain is good for, and some bromelain benefits to know about.\nFirst things first: What is bromelain?\nBromelain is a protein-digesting enzyme derived from the pineapple plant. While our body naturally produces digestive enzymes to help break down foods, for aided digestion, you can get them from supplemental sources. Historically, it\u2019s been used to treat many medical ailments. In fact, native people in Central and South America used to apply pineapple dressings to wounds and skin injuries to reduce inflammation and drank pineapple juice to ease stomach aches and indigestion. Because of its health benefits, bromelain is often found in digestive supplements (including HUM\u2019s Flatter Me).\nSo\u2026 is eating a little pineapple every day enough to get your bromelain fix? Even though there are small amounts of bromelain in fresh pineapple and pineapple juice, it\u2019s likely not a large enough dose for it to have benefits shown in clinical studies. Why? The enzyme is mostly concentrated in the parts you don\u2019t eat, particularly the stem. For that reason, it\u2019s much easier to take a supplement that contains bromelain to experience its benefits.\nBy now we know that bromelain comes from a pineapple. Bromelain can be extracted from the core, stem, and other parts of the pineapple using various methods freezing and pressing certain parts of the fruit.\nWhat is bromelain good for? Here are the key benefits of this enzyme all-star.\nIf you\u2019re struggling with indigestion, bromelain can help. Here\u2019s how it works: Our bodies make enzymes, which then help to break down food and improve our digestion of macronutrients. Some help break down fat, others break down carbs, and others break down protein. However, several factors can decrease natural levels of digestive enzymes, such as:\nThese factors can lead to a number of digestive imbalances, including bloating, gas, and other GI disturbances.\nBromelain is a protein-digesting enzyme (called proteases) which means it\u2019s especially beneficial to take alongside any meal that includes meat or plant-based protein sources to aid digestion and nutrient absorption. And if you\u2019re struggling with indigestion (specifically diarrhea), in vitro research has found that in studies of cells, bromelain can work to degrade certain intestinal pathogens that can cause diarrhea.\nBromelain benefits for skin are tried and true. This potent pineapple enzyme is often used topically (read: applied onto your skin instead of ingested) as an exfoliant to remove dead skin and to help calm irritated skin. It eats through the dead cells that can dull complexion to reveal fresh, new skin. Because bromelain benefits the complexion, many skincare products and treatments contain traces of pineapple.\nPro Tip: Take a DIY approach to yield bromelain\u2019s skin-supporting benefits. (Just be cautious if you have sensitive skin.)\nBromelain\u2019s anti-inflammatory properties have been studied for a variety of health issues that arise from inflammation in the body, including joint stiffness and cardiovascular health. In a review analysis of osteoarthritis patients, many patients saw positive clinical effects, especially in reducing swelling, stiffness, and pain with doses of 80 mg to almost 2000 mg per day.\nResearch has shown the enzyme may support cardiovascular health benefits. Specifically, high doses of supplemental bromelain has been shown to be an effective treatment against cardiovascular diseases, as it inhibits blood platelet aggregation.\nStudies have found that, when administered before surgery, bromelain can reduce the average number of days for complete disappearance of pain and post-surgery inflammation. Small trials have indicated that bromelain might be effective in reducing swelling, bruising, and pain in women having an episiotomy.\nHow long does it take for bromelain to work? Bromelain may start showing effects within a few hours to days, depending on its purpose (e.g., digestion, inflammation relief).\nWhat is bromelain good for? Bromelain supports digestion, reduces inflammation, alleviates sinus issues, and may aid in healing injuries or surgeries.\nWhat does bromelain do? It acts as a proteolytic enzyme to break down proteins and has anti-inflammatory and immune-modulating properties.\nAre there any side effects of taking bromelain supplements? Side effects can include gastrointestinal discomfort, diarrhea, or allergic reactions, especially for those allergic to pineapples.\nCan bromelain help with sinusitis or respiratory issues? Yes, bromelain may reduce sinus inflammation and improve symptoms of sinusitis when used alongside standard treatments.\nIs bromelain safe to take during pregnancy? Consult a healthcare provider, as high doses may carry risks such as uterine contractions.\nHow does bromelain compare to other digestive enzymes? Bromelain uniquely combines digestive and anti-inflammatory benefits, while other enzymes may target digestion more specifically.\nCan bromelain assist in weight loss? While bromelain aids digestion, evidence directly linking it to significant weight loss is limited.\nWhat is the recommended dosage of brome\n\nProvide relevant evidence.",
+    "input_length_chars": 6375,
+    "input_tokens_estimated": 1593,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that bromelain, found in pineapples, aids digestion by breaking down proteins and may help alleviate digestive issues such as indigestion and diarrhea. However, it also notes that the amount of bromelain in fresh pineapple may not be sufficient to achieve the benefits seen in clinical studies, suggesting that supplements may be more effective for digestive support.",
+      "overall_stance": "mixed",
+      "key_quote": "Bromelain is a protein-digesting enzyme... If you\u2019re struggling with indigestion, bromelain can help."
+    },
+    "output_length_chars": 574,
+    "output_tokens_estimated": 143,
+    "cost_usd": 0.00032475
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:39:36.972314",
+    "latency_seconds": 26.68,
+    "input_prompt": "Claim:\nPineapple contains bromelain, which aids digestion and cleanses the colon.\n\nArticle Title:\nBromelain: The Pineapple Enzyme with Powerful Benefits - Health\n\nGoogle Search Snippet:\nBromelain is a pineapple enzyme that may relieve pain and reduce inflammation. It may also help relieve sinusitis and aid in digestion, but more ...\n\nFull Page Content:\nAlex Caspero, MA, RD, introduces us to bromelain, the pineapple enzyme, and, details its benefits for digestion, skin, and more.\nStruggling with digestive issues or simply looking to give your system a boost? Enter: bromelain, an enzyme that does wonders for your gut, skin, and bones. If you\u2019re searching for a digestion miracle worker, look no further. Found in pineapples, this enzyme works to digest protein (which can often be difficult for your system to process). People with a medical condition called pancreatic insufficiency may be prescribed bromelain as part of a combination of digestive enzymes because their pancreas does not make enough on its own. Research has also shown that high doses of bromelain may help improve indigestion, circulation, and cardiovascular health. Plus, it boasts some serious anti-inflammatory properties.Read on to learn about bromelain, what bromelain is good for, and some bromelain benefits to know about.\nFirst things first: What is bromelain?\nBromelain is a protein-digesting enzyme derived from the pineapple plant. While our body naturally produces digestive enzymes to help break down foods, for aided digestion, you can get them from supplemental sources. Historically, it\u2019s been used to treat many medical ailments. In fact, native people in Central and South America used to apply pineapple dressings to wounds and skin injuries to reduce inflammation and drank pineapple juice to ease stomach aches and indigestion. Because of its health benefits, bromelain is often found in digestive supplements (including HUM\u2019s Flatter Me).\nSo\u2026 is eating a little pineapple every day enough to get your bromelain fix? Even though there are small amounts of bromelain in fresh pineapple and pineapple juice, it\u2019s likely not a large enough dose for it to have benefits shown in clinical studies. Why? The enzyme is mostly concentrated in the parts you don\u2019t eat, particularly the stem. For that reason, it\u2019s much easier to take a supplement that contains bromelain to experience its benefits.\nBy now we know that bromelain comes from a pineapple. Bromelain can be extracted from the core, stem, and other parts of the pineapple using various methods freezing and pressing certain parts of the fruit.\nWhat is bromelain good for? Here are the key benefits of this enzyme all-star.\nIf you\u2019re struggling with indigestion, bromelain can help. Here\u2019s how it works: Our bodies make enzymes, which then help to break down food and improve our digestion of macronutrients. Some help break down fat, others break down carbs, and others break down protein. However, several factors can decrease natural levels of digestive enzymes, such as:\nThese factors can lead to a number of digestive imbalances, including bloating, gas, and other GI disturbances.\nBromelain is a protein-digesting enzyme (called proteases) which means it\u2019s especially beneficial to take alongside any meal that includes meat or plant-based protein sources to aid digestion and nutrient absorption. And if you\u2019re struggling with indigestion (specifically diarrhea), in vitro research has found that in studies of cells, bromelain can work to degrade certain intestinal pathogens that can cause diarrhea.\nBromelain benefits for skin are tried and true. This potent pineapple enzyme is often used topically (read: applied onto your skin instead of ingested) as an exfoliant to remove dead skin and to help calm irritated skin. It eats through the dead cells that can dull complexion to reveal fresh, new skin. Because bromelain benefits the complexion, many skincare products and treatments contain traces of pineapple.\nPro Tip: Take a DIY approach to yield bromelain\u2019s skin-supporting benefits. (Just be cautious if you have sensitive skin.)\nBromelain\u2019s anti-inflammatory properties have been studied for a variety of health issues that arise from inflammation in the body, including joint stiffness and cardiovascular health. In a review analysis of osteoarthritis patients, many patients saw positive clinical effects, especially in reducing swelling, stiffness, and pain with doses of 80 mg to almost 2000 mg per day.\nResearch has shown the enzyme may support cardiovascular health benefits. Specifically, high doses of supplemental bromelain has been shown to be an effective treatment against cardiovascular diseases, as it inhibits blood platelet aggregation.\nStudies have found that, when administered before surgery, bromelain can reduce the average number of days for complete disappearance of pain and post-surgery inflammation. Small trials have indicated that bromelain might be effective in reducing swelling, bruising, and pain in women having an episiotomy.\nHow long does it take for bromelain to work? Bromelain may start showing effects within a few hours to days, depending on its purpose (e.g., digestion, inflammation relief).\nWhat is bromelain good for? Bromelain supports digestion, reduces inflammation, alleviates sinus issues, and may aid in healing injuries or surgeries.\nWhat does bromelain do? It acts as a proteolytic enzyme to break down proteins and has anti-inflammatory and immune-modulating properties.\nAre there any side effects of taking bromelain supplements? Side effects can include gastrointestinal discomfort, diarrhea, or allergic reactions, especially for those allergic to pineapples.\nCan bromelain help with sinusitis or respiratory issues? Yes, bromelain may reduce sinus inflammation and improve symptoms of sinusitis when used alongside standard treatments.\nIs bromelain safe to take during pregnancy? Consult a healthcare provider, as high doses may carry risks such as uterine contractions.\nHow does bromelain compare to other digestive enzymes? Bromelain uniquely combines digestive and anti-inflammatory benefits, while other enzymes may target digestion more specifically.\nCan bromelain assist in weight loss? While bromelain aids digestion, evidence directly linking it to significant weight loss is limited.\nWhat is the recommended dosage of brome\n\nProvide relevant evidence.",
+    "input_length_chars": 6383,
+    "input_tokens_estimated": 1595,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that bromelain, an enzyme found in pineapples, aids digestion by breaking down proteins and may help alleviate digestive issues such as indigestion. However, it also notes that the amounts in fresh pineapple may not be sufficient for significant benefits, suggesting that supplements may be more effective.",
+      "overall_stance": "supports",
+      "key_quote": "Bromelain is a protein-digesting enzyme (called proteases) which means it\u2019s especially beneficial to take alongside any meal that includes meat or plant-based protein sources to aid digestion and nutrient absorption."
+    },
+    "output_length_chars": 631,
+    "output_tokens_estimated": 157,
+    "cost_usd": 0.00033345
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:39:58.854717",
+    "latency_seconds": 21.77,
+    "input_prompt": "\nClaim: Pineapple contains bromelain, which aids digestion and cleanses the colon.\nCategory: health\nExtraction confidence: 0.90\n\nEvidence:\nSUPPORTS (1 sources):\n  1. Bromelain: The Pineapple Enzyme with Powerful Benefits - Health | reliability=medium (0.60)\n     URL: https://www.health.com/bromelain-benefits-7501168\n     Summary: The evidence indicates that bromelain, an enzyme found in pineapples, aids digestion by breaking down proteins and may help alleviate digestive issues such as indigestion. However, it also notes that the amounts in fresh pineapple may not be sufficient for significant benefits, suggesting that supplements may be more effective.\nMIXED (1 sources):\n  1. Bromelain: Benefits, risks, sources, and side effects | reliability=high (0.85)\n     URL: https://www.medicalnewstoday.com/articles/323783\n     Summary: The evidence indicates that bromelain, found in pineapples, aids digestion by breaking down proteins and may help alleviate digestive issues such as indigestion and diarrhea. However, it also notes that the amount of bromelain in fresh pineapple may not be sufficient to achieve the benefits seen in clinical studies, suggesting that supplements may be more effective for digestive support.\nUNCLEAR (2 sources):\n  1. Bromelain - Uses, Side Effects, and More - WebMD | reliability=high (0.85)\n     URL: https://www.webmd.com/vitamins/ai/ingredientmono-895/bromelain\n     Summary: It is found in pineapple juice and in the pineapple stem. Bromelain causes the body to make substances that fight pain and swelling. Bromelain also contains ...\n  2. Bromelain: Dosage, Benefits, and Side Effects - Healthline | reliability=high (0.85)\n     URL: https://www.healthline.com/health/bromelain\n     Summary: Bromelain is a dietary supplement derived from pineapples that may have benefits for people with osteoarthritis, heart disease, and sinusitis.\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1913,
+    "input_tokens_estimated": 478,
+    "output": {
+      "overall_stance": "mixed",
+      "confidence": "medium",
+      "summary": "Bromelain, an enzyme in pineapples, is indicated to aid digestion by breaking down proteins, as noted in both the Health article and the Medical News Today source. However, both sources suggest that the amounts in fresh pineapple may not be sufficient for significant benefits, implying that supplements might be more effective. Other sources like WebMD and Healthline provide unclear signals regarding the specific digestive benefits of bromelain from pineapple."
+    },
+    "output_length_chars": 524,
+    "output_tokens_estimated": 131,
+    "cost_usd": 0.0001503
+  }
+]

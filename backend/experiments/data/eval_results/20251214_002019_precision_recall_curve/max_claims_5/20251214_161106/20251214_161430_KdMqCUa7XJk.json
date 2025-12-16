@@ -1,0 +1,105 @@
+{
+  "video_id": "KdMqCUa7XJk",
+  "timestamp": "2025-12-14T16:14:30.054451",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.8,
+    "recall": 0.2857142857142857,
+    "f1_score": 0.4210526315789473,
+    "true_positives": 4,
+    "false_positives": 1,
+    "false_negatives": 10,
+    "mean_average_precision": 0.95,
+    "recall_at_important": 0.2857142857142857,
+    "importance_weighted_coverage": 0.2785388127853881,
+    "matched_claims": [
+      {
+        "gt_text": "Over five days, four million Texans lost power during what turned out to be the coldest winter storm in a half a century",
+        "sys_text": "Over five days, four million Texans lost power during the coldest winter storm in fifty years.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.85,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "ERCOT later reported the state was just four minutes away from total grid collapse",
+        "sys_text": "ERCOT reported that Texas was four minutes away from total grid collapse during the storm.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.75,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "Hundreds died, including an 11-year-old boy who froze to death in his sleep",
+        "sys_text": "Hundreds died during the February 2021 storm, including an 11-year-old boy who froze to death.",
+        "gt_importance": 0.8,
+        "sys_importance": 0.7,
+        "importance_error": 0.10000000000000009
+      },
+      {
+        "gt_text": "From 2010 to 2020, the population of Texas increased by 4 million people",
+        "sys_text": "From 2010 to 2020, Texas's population increased by 4 million people and the economy grew by 35%.",
+        "gt_importance": 0.65,
+        "sys_importance": 0.6,
+        "importance_error": 0.050000000000000044
+      }
+    ],
+    "missed_claims": [
+      "The state's economy grew by 35%",
+      "While all this growth was happening, the state's reliable energy capacity was actually shrinking. Meanwhile, its unreliable energy capacity was surging. In fact, it almost tripled.",
+      "In 2020, Texans got 25% of their energy from renewables",
+      "During the February storm, that fell to 8%, at one point reaching a deadly low of just 1.5%",
+      "That story begins in 1999, when Texas politicians on the left and the right fell in love with the idea that they could turn the state into a green energy powerhouse",
+      "Since 2006, the state has subsidized renewable energy to the tune of $19 billion",
+      "Over the past decade, the federal government has spent over $230 billion on energy subsidies, and that doesn't even include subsidies the states give away",
+      "Compared to fossil fuel companies, for every unit of electricity generated, Washington subsidizes wind 17 times and solar 75 times more",
+      "Despite all this aid, renewables provide just 4 percent of the country's total energy supply",
+      "The verdict is in: renewable energy is expensive and unreliable"
+    ],
+    "extra_claims": [
+      "The temperature in Texas dropped below zero during the week of Valentine's Day 2021."
+    ],
+    "importance_mae": 0.08750000000000002,
+    "claim_quality_avg": 0.9400000000000001
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.75,
+    "stance_accuracy": 0.75,
+    "correct_verdicts": 3,
+    "total_verdicts": 4,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "From 2010 to 2020, the population of Texas increased by 4 million people",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "MIXED"
+      }
+    ],
+    "explanation_quality_avg": 0.7300000000000001
+  },
+  "end_to_end": {
+    "claim_coverage": 0.2857142857142857,
+    "verdict_accuracy": 0.75,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.0,
+    "total_time_seconds": 144.70980787277222,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.9800000000000001,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.7
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.8299999999999998,
+    "source_reliability_distribution": {
+      "high": 26,
+      "medium": 1
+    },
+    "avg_evidence_per_claim": 5.4
+  },
+  "ground_truth_claims_count": 14,
+  "system_claims_count": 5
+}

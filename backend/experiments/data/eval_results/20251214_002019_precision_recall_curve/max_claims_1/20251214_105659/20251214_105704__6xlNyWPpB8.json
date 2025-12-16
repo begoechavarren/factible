@@ -1,0 +1,82 @@
+{
+  "video_id": "_6xlNyWPpB8",
+  "timestamp": "2025-12-14T10:57:04.673284",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_1",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 1.0,
+    "recall": 0.058823529411764705,
+    "f1_score": 0.1111111111111111,
+    "true_positives": 1,
+    "false_positives": 0,
+    "false_negatives": 16,
+    "mean_average_precision": 1.0,
+    "recall_at_important": 0.09090909090909091,
+    "importance_weighted_coverage": 0.05925925925925926,
+    "matched_claims": [
+      {
+        "gt_text": "It can take a plastic bottle an agonizing 1,000 years to decompose in a landfill",
+        "sys_text": "It can take bottle one an agonizing 1,000 years to decompose.",
+        "gt_importance": 0.8,
+        "sys_importance": 0.8,
+        "importance_error": 0.0
+      }
+    ],
+    "missed_claims": [
+      "The plastic in bottles was formed by chemically bonding oil and gas molecules together to make monomers, which were then bonded into long polymer chains",
+      "Polymers were made into millions of pellets that were melted at manufacturing plants and reformed in molds",
+      "Plastic bottles can end up in landfills where the dump expands each day as more trash comes in",
+      "Rainwater flows through landfill waste and absorbs water-soluble compounds, including highly toxic ones, creating a harmful stew called leachate",
+      "Leachate can move into groundwater, soil and streams, poisoning ecosystems and harming wildlife",
+      "Plastic bottles can float to the ocean and be drawn into a massive vortex where trash accumulates, known as the Great Pacific Garbage Patch",
+      "The Great Pacific Garbage Patch is one of five plastic-filled gyres in the world's seas",
+      "Ocean plastic pollution turns the water into a cloudy plastic soup",
+      "Some animals, like seabirds, get entangled in the mess of plastic debris",
+      "Animals mistake brightly colored plastic bits for food",
+      "Plastic makes animals feel full when they're not, so they starve to death",
+      "Animals pass the toxins from the plastic up the food chain",
+      "Plastic is eaten by lanternfish, the lanternfish are eaten by squid, the squid are eaten by tuna, and the tuna are eaten by us",
+      "Most plastics don't biodegrade, which means they're destined to break down into smaller and smaller pieces called micro plastics",
+      "Microplastics might rotate in the sea eternally",
+      "Recycled plastic bottles are squeezed flat and compressed into a block, then shredded into tiny pieces, washed and melted to become raw materials that can be used again"
+    ],
+    "extra_claims": [],
+    "importance_mae": 0.0,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 1.0,
+    "stance_accuracy": 1.0,
+    "correct_verdicts": 1,
+    "total_verdicts": 1,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.058823529411764705,
+    "verdict_accuracy": 1.0,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.00222045,
+    "total_time_seconds": 32.53097987174988,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 3.0
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 2,
+      "medium": 4
+    },
+    "avg_evidence_per_claim": 6.0
+  },
+  "ground_truth_claims_count": 17,
+  "system_claims_count": 1
+}

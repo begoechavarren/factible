@@ -1,0 +1,418 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:12:18.006278",
+    "latency_seconds": 7.03,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nhuman activities from pollution to overpopulation are driving up the earth's temperature and fundamentally changing the world around us the main cause is a phenomenon known as the greenhouse effect gases in the atmosphere such as water vapor carbon dioxide methane nitrous oxide and chlorofluorocarbons let the sun's light in but keep some of the heat from escaping like the glass walls of a greenhouse the more greenhouse gases in the atmosphere the more heat gets trapped strengthening the greenhouse effect and increasing the earth's temperature human activities like the burning of fossil fuels have increased the amount of co2 in the atmosphere by more than a third since the Industrial Revolution the rapid increase in greenhouse gases in the atmosphere has warmed the planet at an alarming rate while Earth's climate has fluctuated in the past atmospheric carbon dioxide hasn't reached today's levels in hundreds of thousands of years climate change has consequences for our oceans our weather our food sources and our health ice sheets such as Greenland and Antarctica are melting the extra water that was once held in glaciers causes sea levels to rise and spills out of the oceans flooding coastal regions warmer temperatures also make weather more extreme this means not only more intense major storms floods and heavy snowfall but also longer and more frequent droughts these changes in weather pose challenges growing crops becomes more difficult the areas where plants and animals can live shift and water supplies are diminished in addition to creating new agricultural challenges climate change can directly affect people's physical health in urban areas the warmer atmosphere creates an environment that traps and increases the amount of smog this is because smog contains ozone particles which increase rapidly at higher temperatures exposure to higher levels of smog can cause health problems such as asthma heart disease and lung cancer while the rapid rate of climate change is caused by humans humans are also the ones who can combat it if we work to replace fossil fuels with renewable energy sources like solar and wind which don't produce greenhouse gas emissions we might still be able to prevent some of the worst effects of climate change [Music] you",
+    "input_length_chars": 2336,
+    "input_tokens_estimated": 584,
+    "output": {
+      "claims": [
+        {
+          "text": "Human activities are driving up the earth's temperature and changing the world.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.75,
+          "context": "General statement about climate change causes."
+        },
+        {
+          "text": "The main cause of climate change is the greenhouse effect.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Explains the primary mechanism behind climate change."
+        },
+        {
+          "text": "Gases like carbon dioxide and methane trap heat in the atmosphere.",
+          "confidence": 0.95,
+          "category": "scientific",
+          "importance": 0.8,
+          "context": "Describes how greenhouse gases function."
+        },
+        {
+          "text": "CO2 levels have increased by more than a third since the Industrial Revolution.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.75,
+          "context": "Quantifies the rise in CO2 due to human activities."
+        },
+        {
+          "text": "Atmospheric carbon dioxide hasn't reached today's levels in hundreds of thousands of years.",
+          "confidence": 0.9,
+          "category": "historical",
+          "importance": 0.7,
+          "context": "Historical context of CO2 levels."
+        },
+        {
+          "text": "Ice sheets in Greenland and Antarctica are melting, causing sea levels to rise.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.75,
+          "context": "Describes a consequence of climate change."
+        },
+        {
+          "text": "Warmer temperatures make weather more extreme, leading to intense storms and droughts.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Explains the impact of climate change on weather patterns."
+        },
+        {
+          "text": "Higher levels of smog can cause health problems like asthma and heart disease.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.65,
+          "context": "Links climate change to public health issues."
+        }
+      ],
+      "total_count": 8
+    },
+    "output_length_chars": 2373,
+    "output_tokens_estimated": 593,
+    "cost_usd": 0.0004434
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:12:20.902051",
+    "latency_seconds": 1.78,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Gases like carbon dioxide and methane trap heat in the atmosphere.\nContext: Describes how greenhouse gases function.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 289,
+    "input_tokens_estimated": 72,
+    "output": {
+      "original_claim": "Gases like carbon dioxide and methane trap heat in the atmosphere.",
+      "queries": [
+        {
+          "query": "how do carbon dioxide and methane trap heat in the atmosphere",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "greenhouse gases carbon dioxide methane heat retention",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 331,
+    "output_tokens_estimated": 82,
+    "cost_usd": 6e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Gases like carbon dioxide and methane trap heat in the atmosphere."
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:12:37.190602",
+    "latency_seconds": 2.13,
+    "input_prompt": "Claim:\nGases like carbon dioxide and methane trap heat in the atmosphere.\n\nArticle Title:\nGreenhouse effect - Wikipedia\n\nGoogle Search Snippet:\nThe greenhouse effect occurs when heat-trapping gases in a planet's atmosphere prevent the planet from losing heat to space, raising its surface temperature.\n\nFull Page Content:\nThe greenhouse effect is the process through which heat is trapped near Earth's surface by substances known as 'greenhouse gases.' Imagine these gases as a cozy blanket enveloping our planet, helping to maintain a warmer temperature than it would have otherwise. Greenhouse gases consist of carbon dioxide, methane, ozone, nitrous oxide, chlorofluorocarbons, and water vapor. Water vapor, which reacts to temperature changes, is referred to as a 'feedback', because it amplifies the effect of forces that initially caused the warming.\nScientists have determined that carbon dioxide plays a crucial role in maintaining the stability of Earth's atmosphere. If carbon dioxide were removed, the terrestrial greenhouse effect would collapse, and Earth's surface temperature would drop significantly, by approximately 33\u00b0C (59\u00b0F).\nGreenhouse gases are part of Earth's atmosphere. This is why Earth is often called the 'Goldilocks' planet \u2013 its conditions are just right, not too hot or too cold, allowing life to thrive. Part of what makes Earth so amenable is its natural greenhouse effect, which maintains an average temperature of 15 \u00b0C (59 \u00b0F) . However, in the last century, human activities, primarily from burning fossil fuels that have led to the release of carbon dioxide and other greenhouse gases into the atmosphere, have disrupted Earth's energy balance. This has led to an increase in carbon dioxide in the atmosphere and ocean. The level of carbon dioxide in Earth\u2019s atmosphere has been rising consistently for decades and traps extra heat near Earth's surface, causing temperatures to rise.\nREAD MORE\nExplore Earth Science\nNASA's unique vantage point helps us inform solutions to enhance decision-making, improve livelihoods, and protect our planet.\nEarth Science Data\nFacts About Earth\nNASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.\n\nProvide relevant evidence.",
+    "input_length_chars": 2271,
+    "input_tokens_estimated": 567,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that gases like carbon dioxide and methane trap heat in the atmosphere, contributing to the greenhouse effect, which raises Earth's surface temperature.",
+      "overall_stance": "supports",
+      "key_quote": "Greenhouse gases consist of carbon dioxide, methane, ozone, nitrous oxide, chlorofluorocarbons, and water vapor."
+    },
+    "output_length_chars": 372,
+    "output_tokens_estimated": 93,
+    "cost_usd": 0.00014085,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Gases like carbon dioxide and methane trap heat in the atmosphere.",
+      "query_index": 2,
+      "query_text": "greenhouse gases carbon dioxide methane heat retention"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:12:37.348538",
+    "latency_seconds": 2.28,
+    "input_prompt": "Claim:\nGases like carbon dioxide and methane trap heat in the atmosphere.\n\nArticle Title:\nWhat is the greenhouse effect? - NASA Science\n\nGoogle Search Snippet:\nThe greenhouse effect is the process through which heat is trapped near Earth's surface by substances known as 'greenhouse gases.\n\nFull Page Content:\nThe greenhouse effect is the process through which heat is trapped near Earth's surface by substances known as 'greenhouse gases.' Imagine these gases as a cozy blanket enveloping our planet, helping to maintain a warmer temperature than it would have otherwise. Greenhouse gases consist of carbon dioxide, methane, ozone, nitrous oxide, chlorofluorocarbons, and water vapor. Water vapor, which reacts to temperature changes, is referred to as a 'feedback', because it amplifies the effect of forces that initially caused the warming.\nScientists have determined that carbon dioxide plays a crucial role in maintaining the stability of Earth's atmosphere. If carbon dioxide were removed, the terrestrial greenhouse effect would collapse, and Earth's surface temperature would drop significantly, by approximately 33\u00b0C (59\u00b0F).\nGreenhouse gases are part of Earth's atmosphere. This is why Earth is often called the 'Goldilocks' planet \u2013 its conditions are just right, not too hot or too cold, allowing life to thrive. Part of what makes Earth so amenable is its natural greenhouse effect, which maintains an average temperature of 15 \u00b0C (59 \u00b0F) . However, in the last century, human activities, primarily from burning fossil fuels that have led to the release of carbon dioxide and other greenhouse gases into the atmosphere, have disrupted Earth's energy balance. This has led to an increase in carbon dioxide in the atmosphere and ocean. The level of carbon dioxide in Earth\u2019s atmosphere has been rising consistently for decades and traps extra heat near Earth's surface, causing temperatures to rise.\nREAD MORE\nExplore Earth Science\nNASA's unique vantage point helps us inform solutions to enhance decision-making, improve livelihoods, and protect our planet.\nEarth Science Data\nFacts About Earth\nNASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.\n\nProvide relevant evidence.",
+    "input_length_chars": 2259,
+    "input_tokens_estimated": 564,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that gases like carbon dioxide and methane are greenhouse gases that trap heat in the atmosphere, contributing to the greenhouse effect and maintaining Earth's temperature.",
+      "overall_stance": "supports",
+      "key_quote": "The greenhouse effect is the process through which heat is trapped near Earth's surface by substances known as 'greenhouse gases.'"
+    },
+    "output_length_chars": 410,
+    "output_tokens_estimated": 102,
+    "cost_usd": 0.0001458,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Gases like carbon dioxide and methane trap heat in the atmosphere.",
+      "query_index": 2,
+      "query_text": "greenhouse gases carbon dioxide methane heat retention"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:12:37.426781",
+    "latency_seconds": 2.37,
+    "input_prompt": "Claim:\nGases like carbon dioxide and methane trap heat in the atmosphere.\n\nArticle Title:\nMain Greenhouse Gases\n\nGoogle Search Snippet:\nGreenhouse gases are molecules in our atmosphere that absorb heat radiating from Earth's surface, preventing it from being emitted into space. The most common ...\n\nFull Page Content:\nThe greenhouse effect is the process through which heat is trapped near Earth's surface by substances known as 'greenhouse gases.' Imagine these gases as a cozy blanket enveloping our planet, helping to maintain a warmer temperature than it would have otherwise. Greenhouse gases consist of carbon dioxide, methane, ozone, nitrous oxide, chlorofluorocarbons, and water vapor. Water vapor, which reacts to temperature changes, is referred to as a 'feedback', because it amplifies the effect of forces that initially caused the warming.\nScientists have determined that carbon dioxide plays a crucial role in maintaining the stability of Earth's atmosphere. If carbon dioxide were removed, the terrestrial greenhouse effect would collapse, and Earth's surface temperature would drop significantly, by approximately 33\u00b0C (59\u00b0F).\nGreenhouse gases are part of Earth's atmosphere. This is why Earth is often called the 'Goldilocks' planet \u2013 its conditions are just right, not too hot or too cold, allowing life to thrive. Part of what makes Earth so amenable is its natural greenhouse effect, which maintains an average temperature of 15 \u00b0C (59 \u00b0F) . However, in the last century, human activities, primarily from burning fossil fuels that have led to the release of carbon dioxide and other greenhouse gases into the atmosphere, have disrupted Earth's energy balance. This has led to an increase in carbon dioxide in the atmosphere and ocean. The level of carbon dioxide in Earth\u2019s atmosphere has been rising consistently for decades and traps extra heat near Earth's surface, causing temperatures to rise.\nREAD MORE\nExplore Earth Science\nNASA's unique vantage point helps us inform solutions to enhance decision-making, improve livelihoods, and protect our planet.\nEarth Science Data\nFacts About Earth\nNASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.\n\nProvide relevant evidence.",
+    "input_length_chars": 2268,
+    "input_tokens_estimated": 567,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that gases like carbon dioxide and methane trap heat in the atmosphere, contributing to the greenhouse effect which maintains Earth's temperature.",
+      "overall_stance": "supports",
+      "key_quote": "Greenhouse gases consist of carbon dioxide, methane, ozone, nitrous oxide, chlorofluorocarbons, and water vapor."
+    },
+    "output_length_chars": 366,
+    "output_tokens_estimated": 91,
+    "cost_usd": 0.00013965,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Gases like carbon dioxide and methane trap heat in the atmosphere.",
+      "query_index": 2,
+      "query_text": "greenhouse gases carbon dioxide methane heat retention"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:12:37.531489",
+    "latency_seconds": 2.47,
+    "input_prompt": "Claim:\nGases like carbon dioxide and methane trap heat in the atmosphere.\n\nArticle Title:\nBasics of the Carbon Cycle and the Greenhouse Effect - NOAA\n\nGoogle Search Snippet:\nDue to their ability to absorb infrared radiation, GHG molecules have a significant impact on Earth's climate by acting as a barrier for escaping \"heat\". For ...\n\nFull Page Content:\nThe greenhouse effect is the process through which heat is trapped near Earth's surface by substances known as 'greenhouse gases.' Imagine these gases as a cozy blanket enveloping our planet, helping to maintain a warmer temperature than it would have otherwise. Greenhouse gases consist of carbon dioxide, methane, ozone, nitrous oxide, chlorofluorocarbons, and water vapor. Water vapor, which reacts to temperature changes, is referred to as a 'feedback', because it amplifies the effect of forces that initially caused the warming.\nScientists have determined that carbon dioxide plays a crucial role in maintaining the stability of Earth's atmosphere. If carbon dioxide were removed, the terrestrial greenhouse effect would collapse, and Earth's surface temperature would drop significantly, by approximately 33\u00b0C (59\u00b0F).\nGreenhouse gases are part of Earth's atmosphere. This is why Earth is often called the 'Goldilocks' planet \u2013 its conditions are just right, not too hot or too cold, allowing life to thrive. Part of what makes Earth so amenable is its natural greenhouse effect, which maintains an average temperature of 15 \u00b0C (59 \u00b0F) . However, in the last century, human activities, primarily from burning fossil fuels that have led to the release of carbon dioxide and other greenhouse gases into the atmosphere, have disrupted Earth's energy balance. This has led to an increase in carbon dioxide in the atmosphere and ocean. The level of carbon dioxide in Earth\u2019s atmosphere has been rising consistently for decades and traps extra heat near Earth's surface, causing temperatures to rise.\nREAD MORE\nExplore Earth Science\nNASA's unique vantage point helps us inform solutions to enhance decision-making, improve livelihoods, and protect our planet.\nEarth Science Data\nFacts About Earth\nNASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.\n\nProvide relevant evidence.",
+    "input_length_chars": 2305,
+    "input_tokens_estimated": 576,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that gases like carbon dioxide and methane trap heat in the atmosphere, describing the greenhouse effect as a process where these gases act as a barrier for escaping heat, thus maintaining Earth's temperature.",
+      "overall_stance": "supports",
+      "key_quote": "Greenhouse gases consist of carbon dioxide, methane, ozone, nitrous oxide, chlorofluorocarbons, and water vapor."
+    },
+    "output_length_chars": 429,
+    "output_tokens_estimated": 107,
+    "cost_usd": 0.0001506,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Gases like carbon dioxide and methane trap heat in the atmosphere.",
+      "query_index": 2,
+      "query_text": "greenhouse gases carbon dioxide methane heat retention"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:12:37.700990",
+    "latency_seconds": 2.64,
+    "input_prompt": "Claim:\nGases like carbon dioxide and methane trap heat in the atmosphere.\n\nArticle Title:\nUnderstanding Global Warming Potentials | US EPA\n\nGoogle Search Snippet:\nGreenhouse gases (GHGs) warm the Earth by absorbing energy and slowing the rate at which the energy escapes to space; they act like a ...\n\nFull Page Content:\nThe greenhouse effect is the process through which heat is trapped near Earth's surface by substances known as 'greenhouse gases.' Imagine these gases as a cozy blanket enveloping our planet, helping to maintain a warmer temperature than it would have otherwise. Greenhouse gases consist of carbon dioxide, methane, ozone, nitrous oxide, chlorofluorocarbons, and water vapor. Water vapor, which reacts to temperature changes, is referred to as a 'feedback', because it amplifies the effect of forces that initially caused the warming.\nScientists have determined that carbon dioxide plays a crucial role in maintaining the stability of Earth's atmosphere. If carbon dioxide were removed, the terrestrial greenhouse effect would collapse, and Earth's surface temperature would drop significantly, by approximately 33\u00b0C (59\u00b0F).\nGreenhouse gases are part of Earth's atmosphere. This is why Earth is often called the 'Goldilocks' planet \u2013 its conditions are just right, not too hot or too cold, allowing life to thrive. Part of what makes Earth so amenable is its natural greenhouse effect, which maintains an average temperature of 15 \u00b0C (59 \u00b0F) . However, in the last century, human activities, primarily from burning fossil fuels that have led to the release of carbon dioxide and other greenhouse gases into the atmosphere, have disrupted Earth's energy balance. This has led to an increase in carbon dioxide in the atmosphere and ocean. The level of carbon dioxide in Earth\u2019s atmosphere has been rising consistently for decades and traps extra heat near Earth's surface, causing temperatures to rise.\nREAD MORE\nExplore Earth Science\nNASA's unique vantage point helps us inform solutions to enhance decision-making, improve livelihoods, and protect our planet.\nEarth Science Data\nFacts About Earth\nNASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.\n\nProvide relevant evidence.",
+    "input_length_chars": 2270,
+    "input_tokens_estimated": 567,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that gases like carbon dioxide and methane trap heat in the atmosphere by absorbing energy and slowing its escape, which is a fundamental aspect of the greenhouse effect.",
+      "overall_stance": "supports",
+      "key_quote": "Greenhouse gases (GHGs) warm the Earth by absorbing energy and slowing the rate at which the energy escapes to space."
+    },
+    "output_length_chars": 395,
+    "output_tokens_estimated": 98,
+    "cost_usd": 0.00014385,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Gases like carbon dioxide and methane trap heat in the atmosphere.",
+      "query_index": 2,
+      "query_text": "greenhouse gases carbon dioxide methane heat retention"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:12:38.055421",
+    "latency_seconds": 2.99,
+    "input_prompt": "Claim:\nGases like carbon dioxide and methane trap heat in the atmosphere.\n\nArticle Title:\nMethane | Climate & Clean Air Coalition\n\nGoogle Search Snippet:\nPer unit of mass, methane has a warming effect 86 times stronger than CO 2 over 20 years. Over a 100-year period methane is 28 times stronger. Methane's ...\n\nFull Page Content:\nThe greenhouse effect is the process through which heat is trapped near Earth's surface by substances known as 'greenhouse gases.' Imagine these gases as a cozy blanket enveloping our planet, helping to maintain a warmer temperature than it would have otherwise. Greenhouse gases consist of carbon dioxide, methane, ozone, nitrous oxide, chlorofluorocarbons, and water vapor. Water vapor, which reacts to temperature changes, is referred to as a 'feedback', because it amplifies the effect of forces that initially caused the warming.\nScientists have determined that carbon dioxide plays a crucial role in maintaining the stability of Earth's atmosphere. If carbon dioxide were removed, the terrestrial greenhouse effect would collapse, and Earth's surface temperature would drop significantly, by approximately 33\u00b0C (59\u00b0F).\nGreenhouse gases are part of Earth's atmosphere. This is why Earth is often called the 'Goldilocks' planet \u2013 its conditions are just right, not too hot or too cold, allowing life to thrive. Part of what makes Earth so amenable is its natural greenhouse effect, which maintains an average temperature of 15 \u00b0C (59 \u00b0F) . However, in the last century, human activities, primarily from burning fossil fuels that have led to the release of carbon dioxide and other greenhouse gases into the atmosphere, have disrupted Earth's energy balance. This has led to an increase in carbon dioxide in the atmosphere and ocean. The level of carbon dioxide in Earth\u2019s atmosphere has been rising consistently for decades and traps extra heat near Earth's surface, causing temperatures to rise.\nREAD MORE\nExplore Earth Science\nNASA's unique vantage point helps us inform solutions to enhance decision-making, improve livelihoods, and protect our planet.\nEarth Science Data\nFacts About Earth\nNASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.\n\nProvide relevant evidence.",
+    "input_length_chars": 2280,
+    "input_tokens_estimated": 570,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article explains that greenhouse gases, including carbon dioxide and methane, trap heat in the atmosphere, contributing to the greenhouse effect that maintains Earth's temperature. It specifically states that carbon dioxide is crucial for this process, and the increase in these gases due to human activities has led to rising temperatures.",
+      "overall_stance": "supports",
+      "key_quote": "The greenhouse effect is the process through which heat is trapped near Earth's surface by substances known as 'greenhouse gases.'"
+    },
+    "output_length_chars": 560,
+    "output_tokens_estimated": 140,
+    "cost_usd": 0.0001695,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Gases like carbon dioxide and methane trap heat in the atmosphere.",
+      "query_index": 2,
+      "query_text": "greenhouse gases carbon dioxide methane heat retention"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:12:41.773211",
+    "latency_seconds": 4.04,
+    "input_prompt": "Claim:\nGases like carbon dioxide and methane trap heat in the atmosphere.\n\nArticle Title:\nHeat-Trapping Pollution - Climate Central\n\nGoogle Search Snippet:\nGreenhouse gases warm the Earth by trapping heat near the surface. Heat-trapping greenhouse gases emitted by humans, mainly from burning fossil ...\n\nFull Page Content:\nThis website is an ARCHIVED version of NOAA Climate.gov as of June 25, 2025. Content is not being updated or maintained, and some links may no longer work.\nThe modern record of atmospheric carbon dioxide levels began with observations recorded at Mauna Loa Observatory in Hawaii. This graph shows the station's monthly average carbon dioxide measurements since 1958 in parts per million (ppm). The seasonal cycle of highs and lows (small peaks and valleys) is driven by Northern Hemisphere summer vegetation growth, which reduces atmospheric carbon dioxide, and winter decay, which increases it. The long-term trend of rising carbon dioxide levels is driven by human activities. At Mauna Loa, the highest monthly value each year occurs in May. In May 2024, carbon dioxide hit just under 427 ppm\u2014a new record. NOAA Climate.gov image, based on Mauna Loa monthly mean data from NOAA Global Monitoring Lab.\nBased on the annual analysis from NOAA\u2019s Global Monitoring Lab, global average atmospheric carbon dioxide was 422.8 parts per million (\u201cppm,\u201d for short) in 2024, a new record high. The increase during 2024 was 3.75 ppm\u2014the largest one-year increase on record. At Mauna Loa Observatory in Hawaii (graph above), where the modern carbon dioxide record began in 1958, the annual average carbon dioxide in 2024 was 424.61 ppm, also a new record.\nThe years with the largest annual carbon dioxide growth tend to be associated with the strongest El Ni\u00f1os\u2014the warm phase of a natural climate pattern in the tropical Pacific\u2014which lead to high temperatures over land and sea and an expansion of global drought area. In turn, these weather conditions typically lead to less plant growth, which reduces carbon dioxide uptake, as well as increased decomposition of carbon in soil and increased carbon dioxide emissions from forest fires. Together, these impacts cause atmospheric carbon dioxide levels to rise faster than normal.\nEven though the 2023-24 El Ni\u00f1o had waned by April, record high air temperatures and drought in all of 2024, similar to those during an El Nino, were likely drivers of the large increase in atmospheric carbon dioxide in 2024. In addition to other factors, large forest fires in both the Amazon and Canada contributed to the 2024 global increase.\nCarbon dioxide concentrations are rising mostly because of the fossil fuels that people have been burning for energy since the start of the Industrial Revolution. Fossil fuels like coal and oil contain the carbon from millions of years of photosynthesis\u2014the process by which plants remove carbon dioxide from the atmosphere. We are returning that carbon to the atmosphere in just a few hundred years. Since the middle of the 20th century, annual emissions of carbon dioxide from burning fossil fuels have increased every decade, from close to 11 billion tons of carbon dioxide per year in the 1960s to an estimated 37.4 billion tons in 2024 according to the Global Carbon Budget 2024.\nThe amount of carbon dioxide in the atmosphere (blue line) has increased along with human emissions (gray line) since the start of the Industrial Revolution in 1750. Emissions rose slowly to about 5 gigatons (1 gigaton is 1 billion metric tons per year) in the mid-20th century before rapidly increasing to more than 35 billion tons per year by the end of the century. NOAA Climate.gov graph, adapted from original by Dr. Howard Diamond (NOAA ARL). Atmospheric carbon dioxide data from NOAA and ETHZ. Carbon dioxide emissions data from Our World in Data and the Global Carbon Project.\nCarbon cycle experts estimate that natural \u201csinks,\u201d including plant growth and ocean absorption, remove about half of carbon dioxide humans emit into the atmosphere from fossil fuel burning. The rest stays in the atmosphere. Every year, we are adding more carbon dioxide to the atmosphere than natural sinks can remove, and so the total amount of carbon dioxide in the atmosphere goes up. The bigger the overshoot, the faster atmospheric carbon dioxide increases.\nIn the 1960s, atmospheric carbon dioxide increased by about 0.8 ppm per year on average. That growth rate doubled to an average of 1.6 ppm per year in the 1980s and 1.5 ppm per year in the 1990s. In the last decade (2015-2024), the annual increase has accelerated to 2.6 ppm per year. As a result, the annual rate of increase in atmospheric carbon dioxide over the past 60 years is 100-200 times faster than the increase that occurred at the end of the last ice age 11,000-17,000 years ago.\nCarbon dioxide is Earth\u2019s most important long-lived greenhouse gas: a gas that absorbs and radiates heat. Unlike oxygen or nitrogen (which make up most of Earth's atmosphere), greenhouse gases absorb heat radiating from the Earth\u2019s surface and re-release it in all directions\u2014including back toward Earth\u2019s surface. Without any carbon dioxide, Earth\u2019s natural greenhouse effect would be too weak to keep the average global surface temperature above freezing.\nBy adding more carbon dioxide to the atmosphere, people are amplifying the natural greenhouse effect, causing global temperature to rise. According to observations and analysis by the NOAA Global Monitoring Laboratory, carbon dioxide alone is responsible for about 80 percent of the total heating influence of all human-produced greenhouse gases since 1990.\nAnother reason carbon dioxide is important in the Earth system is that it dissolves into the ocean like the fizz in a can of soda. It reacts with water molecules, producing carbonic acid and lowering the ocean's pH (raising its acidity). Since the start of the Industrial Revolution, the pH of the ocean's surface waters has dropped from 8.21 to 8.10. This drop in pH is called ocean acidification, and it interferes with the ability of marine life to extract calcium from sea water to build skeletons and shells.\n(left) A healthy ocean snail has a transparent shell with smoothly contoured ridges. (right) A shell exposed to more acidic, corrosive waters is cloudy, ragged, and pockmarked wit\n\nProvide relevant evidence.",
+    "input_length_chars": 6352,
+    "input_tokens_estimated": 1588,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that gases like carbon dioxide and methane trap heat in the atmosphere, contributing to the greenhouse effect and global warming.",
+      "overall_stance": "supports",
+      "key_quote": "Carbon dioxide is Earth\u2019s most important long-lived greenhouse gas: a gas that absorbs and radiates heat."
+    },
+    "output_length_chars": 342,
+    "output_tokens_estimated": 85,
+    "cost_usd": 0.0002892,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Gases like carbon dioxide and methane trap heat in the atmosphere.",
+      "query_index": 2,
+      "query_text": "greenhouse gases carbon dioxide methane heat retention"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:12:41.817282",
+    "latency_seconds": 4.09,
+    "input_prompt": "Claim:\nGases like carbon dioxide and methane trap heat in the atmosphere.\n\nArticle Title:\nHow Exactly Does Carbon Dioxide Cause Global Warming?\n\nGoogle Search Snippet:\nAs carbon dioxide and other greenhouse gases heat up the planet, more water evaporates into the atmosphere, which in turn raises the temperature ...\n\nFull Page Content:\nThis website is an ARCHIVED version of NOAA Climate.gov as of June 25, 2025. Content is not being updated or maintained, and some links may no longer work.\nThe modern record of atmospheric carbon dioxide levels began with observations recorded at Mauna Loa Observatory in Hawaii. This graph shows the station's monthly average carbon dioxide measurements since 1958 in parts per million (ppm). The seasonal cycle of highs and lows (small peaks and valleys) is driven by Northern Hemisphere summer vegetation growth, which reduces atmospheric carbon dioxide, and winter decay, which increases it. The long-term trend of rising carbon dioxide levels is driven by human activities. At Mauna Loa, the highest monthly value each year occurs in May. In May 2024, carbon dioxide hit just under 427 ppm\u2014a new record. NOAA Climate.gov image, based on Mauna Loa monthly mean data from NOAA Global Monitoring Lab.\nBased on the annual analysis from NOAA\u2019s Global Monitoring Lab, global average atmospheric carbon dioxide was 422.8 parts per million (\u201cppm,\u201d for short) in 2024, a new record high. The increase during 2024 was 3.75 ppm\u2014the largest one-year increase on record. At Mauna Loa Observatory in Hawaii (graph above), where the modern carbon dioxide record began in 1958, the annual average carbon dioxide in 2024 was 424.61 ppm, also a new record.\nThe years with the largest annual carbon dioxide growth tend to be associated with the strongest El Ni\u00f1os\u2014the warm phase of a natural climate pattern in the tropical Pacific\u2014which lead to high temperatures over land and sea and an expansion of global drought area. In turn, these weather conditions typically lead to less plant growth, which reduces carbon dioxide uptake, as well as increased decomposition of carbon in soil and increased carbon dioxide emissions from forest fires. Together, these impacts cause atmospheric carbon dioxide levels to rise faster than normal.\nEven though the 2023-24 El Ni\u00f1o had waned by April, record high air temperatures and drought in all of 2024, similar to those during an El Nino, were likely drivers of the large increase in atmospheric carbon dioxide in 2024. In addition to other factors, large forest fires in both the Amazon and Canada contributed to the 2024 global increase.\nCarbon dioxide concentrations are rising mostly because of the fossil fuels that people have been burning for energy since the start of the Industrial Revolution. Fossil fuels like coal and oil contain the carbon from millions of years of photosynthesis\u2014the process by which plants remove carbon dioxide from the atmosphere. We are returning that carbon to the atmosphere in just a few hundred years. Since the middle of the 20th century, annual emissions of carbon dioxide from burning fossil fuels have increased every decade, from close to 11 billion tons of carbon dioxide per year in the 1960s to an estimated 37.4 billion tons in 2024 according to the Global Carbon Budget 2024.\nThe amount of carbon dioxide in the atmosphere (blue line) has increased along with human emissions (gray line) since the start of the Industrial Revolution in 1750. Emissions rose slowly to about 5 gigatons (1 gigaton is 1 billion metric tons per year) in the mid-20th century before rapidly increasing to more than 35 billion tons per year by the end of the century. NOAA Climate.gov graph, adapted from original by Dr. Howard Diamond (NOAA ARL). Atmospheric carbon dioxide data from NOAA and ETHZ. Carbon dioxide emissions data from Our World in Data and the Global Carbon Project.\nCarbon cycle experts estimate that natural \u201csinks,\u201d including plant growth and ocean absorption, remove about half of carbon dioxide humans emit into the atmosphere from fossil fuel burning. The rest stays in the atmosphere. Every year, we are adding more carbon dioxide to the atmosphere than natural sinks can remove, and so the total amount of carbon dioxide in the atmosphere goes up. The bigger the overshoot, the faster atmospheric carbon dioxide increases.\nIn the 1960s, atmospheric carbon dioxide increased by about 0.8 ppm per year on average. That growth rate doubled to an average of 1.6 ppm per year in the 1980s and 1.5 ppm per year in the 1990s. In the last decade (2015-2024), the annual increase has accelerated to 2.6 ppm per year. As a result, the annual rate of increase in atmospheric carbon dioxide over the past 60 years is 100-200 times faster than the increase that occurred at the end of the last ice age 11,000-17,000 years ago.\nCarbon dioxide is Earth\u2019s most important long-lived greenhouse gas: a gas that absorbs and radiates heat. Unlike oxygen or nitrogen (which make up most of Earth's atmosphere), greenhouse gases absorb heat radiating from the Earth\u2019s surface and re-release it in all directions\u2014including back toward Earth\u2019s surface. Without any carbon dioxide, Earth\u2019s natural greenhouse effect would be too weak to keep the average global surface temperature above freezing.\nBy adding more carbon dioxide to the atmosphere, people are amplifying the natural greenhouse effect, causing global temperature to rise. According to observations and analysis by the NOAA Global Monitoring Laboratory, carbon dioxide alone is responsible for about 80 percent of the total heating influence of all human-produced greenhouse gases since 1990.\nAnother reason carbon dioxide is important in the Earth system is that it dissolves into the ocean like the fizz in a can of soda. It reacts with water molecules, producing carbonic acid and lowering the ocean's pH (raising its acidity). Since the start of the Industrial Revolution, the pH of the ocean's surface waters has dropped from 8.21 to 8.10. This drop in pH is called ocean acidification, and it interferes with the ability of marine life to extract calcium from sea water to build skeletons and shells.\n(left) A healthy ocean snail has a transparent shell with smoothly contoured ridges. (right) A shell exposed to more acidic, corrosive waters is cloudy, ragged, and pockmarked wit\n\nProvide relevant evidence.",
+    "input_length_chars": 6365,
+    "input_tokens_estimated": 1591,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that carbon dioxide and other greenhouse gases absorb and radiate heat, which contributes to the greenhouse effect and global warming.",
+      "overall_stance": "supports",
+      "key_quote": "Carbon dioxide is Earth\u2019s most important long-lived greenhouse gas: a gas that absorbs and radiates heat."
+    },
+    "output_length_chars": 347,
+    "output_tokens_estimated": 86,
+    "cost_usd": 0.00029025,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Gases like carbon dioxide and methane trap heat in the atmosphere.",
+      "query_index": 2,
+      "query_text": "greenhouse gases carbon dioxide methane heat retention"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:12:41.876755",
+    "latency_seconds": 4.14,
+    "input_prompt": "Claim:\nGases like carbon dioxide and methane trap heat in the atmosphere.\n\nArticle Title:\nOverview of Greenhouse Gases | US EPA\n\nGoogle Search Snippet:\nGases that trap heat in the atmosphere are called greenhouse gases. This section provides information on emissions and removals of the main greenhouse gases.\n\nFull Page Content:\nThis website is an ARCHIVED version of NOAA Climate.gov as of June 25, 2025. Content is not being updated or maintained, and some links may no longer work.\nThe modern record of atmospheric carbon dioxide levels began with observations recorded at Mauna Loa Observatory in Hawaii. This graph shows the station's monthly average carbon dioxide measurements since 1958 in parts per million (ppm). The seasonal cycle of highs and lows (small peaks and valleys) is driven by Northern Hemisphere summer vegetation growth, which reduces atmospheric carbon dioxide, and winter decay, which increases it. The long-term trend of rising carbon dioxide levels is driven by human activities. At Mauna Loa, the highest monthly value each year occurs in May. In May 2024, carbon dioxide hit just under 427 ppm\u2014a new record. NOAA Climate.gov image, based on Mauna Loa monthly mean data from NOAA Global Monitoring Lab.\nBased on the annual analysis from NOAA\u2019s Global Monitoring Lab, global average atmospheric carbon dioxide was 422.8 parts per million (\u201cppm,\u201d for short) in 2024, a new record high. The increase during 2024 was 3.75 ppm\u2014the largest one-year increase on record. At Mauna Loa Observatory in Hawaii (graph above), where the modern carbon dioxide record began in 1958, the annual average carbon dioxide in 2024 was 424.61 ppm, also a new record.\nThe years with the largest annual carbon dioxide growth tend to be associated with the strongest El Ni\u00f1os\u2014the warm phase of a natural climate pattern in the tropical Pacific\u2014which lead to high temperatures over land and sea and an expansion of global drought area. In turn, these weather conditions typically lead to less plant growth, which reduces carbon dioxide uptake, as well as increased decomposition of carbon in soil and increased carbon dioxide emissions from forest fires. Together, these impacts cause atmospheric carbon dioxide levels to rise faster than normal.\nEven though the 2023-24 El Ni\u00f1o had waned by April, record high air temperatures and drought in all of 2024, similar to those during an El Nino, were likely drivers of the large increase in atmospheric carbon dioxide in 2024. In addition to other factors, large forest fires in both the Amazon and Canada contributed to the 2024 global increase.\nCarbon dioxide concentrations are rising mostly because of the fossil fuels that people have been burning for energy since the start of the Industrial Revolution. Fossil fuels like coal and oil contain the carbon from millions of years of photosynthesis\u2014the process by which plants remove carbon dioxide from the atmosphere. We are returning that carbon to the atmosphere in just a few hundred years. Since the middle of the 20th century, annual emissions of carbon dioxide from burning fossil fuels have increased every decade, from close to 11 billion tons of carbon dioxide per year in the 1960s to an estimated 37.4 billion tons in 2024 according to the Global Carbon Budget 2024.\nThe amount of carbon dioxide in the atmosphere (blue line) has increased along with human emissions (gray line) since the start of the Industrial Revolution in 1750. Emissions rose slowly to about 5 gigatons (1 gigaton is 1 billion metric tons per year) in the mid-20th century before rapidly increasing to more than 35 billion tons per year by the end of the century. NOAA Climate.gov graph, adapted from original by Dr. Howard Diamond (NOAA ARL). Atmospheric carbon dioxide data from NOAA and ETHZ. Carbon dioxide emissions data from Our World in Data and the Global Carbon Project.\nCarbon cycle experts estimate that natural \u201csinks,\u201d including plant growth and ocean absorption, remove about half of carbon dioxide humans emit into the atmosphere from fossil fuel burning. The rest stays in the atmosphere. Every year, we are adding more carbon dioxide to the atmosphere than natural sinks can remove, and so the total amount of carbon dioxide in the atmosphere goes up. The bigger the overshoot, the faster atmospheric carbon dioxide increases.\nIn the 1960s, atmospheric carbon dioxide increased by about 0.8 ppm per year on average. That growth rate doubled to an average of 1.6 ppm per year in the 1980s and 1.5 ppm per year in the 1990s. In the last decade (2015-2024), the annual increase has accelerated to 2.6 ppm per year. As a result, the annual rate of increase in atmospheric carbon dioxide over the past 60 years is 100-200 times faster than the increase that occurred at the end of the last ice age 11,000-17,000 years ago.\nCarbon dioxide is Earth\u2019s most important long-lived greenhouse gas: a gas that absorbs and radiates heat. Unlike oxygen or nitrogen (which make up most of Earth's atmosphere), greenhouse gases absorb heat radiating from the Earth\u2019s surface and re-release it in all directions\u2014including back toward Earth\u2019s surface. Without any carbon dioxide, Earth\u2019s natural greenhouse effect would be too weak to keep the average global surface temperature above freezing.\nBy adding more carbon dioxide to the atmosphere, people are amplifying the natural greenhouse effect, causing global temperature to rise. According to observations and analysis by the NOAA Global Monitoring Laboratory, carbon dioxide alone is responsible for about 80 percent of the total heating influence of all human-produced greenhouse gases since 1990.\nAnother reason carbon dioxide is important in the Earth system is that it dissolves into the ocean like the fizz in a can of soda. It reacts with water molecules, producing carbonic acid and lowering the ocean's pH (raising its acidity). Since the start of the Industrial Revolution, the pH of the ocean's surface waters has dropped from 8.21 to 8.10. This drop in pH is called ocean acidification, and it interferes with the ability of marine life to extract calcium from sea water to build skeletons and shells.\n(left) A healthy ocean snail has a transparent shell with smoothly contoured ridges. (right) A shell exposed to more acidic, corrosive waters is cloudy, ragged, and pockmarked wit\n\nProvide relevant evidence.",
+    "input_length_chars": 6358,
+    "input_tokens_estimated": 1589,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that gases like carbon dioxide and methane are greenhouse gases that trap heat in the atmosphere, contributing to the greenhouse effect and global warming.",
+      "overall_stance": "supports",
+      "key_quote": "Carbon dioxide is Earth\u2019s most important long-lived greenhouse gas: a gas that absorbs and radiates heat."
+    },
+    "output_length_chars": 368,
+    "output_tokens_estimated": 92,
+    "cost_usd": 0.00029355,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Gases like carbon dioxide and methane trap heat in the atmosphere.",
+      "query_index": 2,
+      "query_text": "greenhouse gases carbon dioxide methane heat retention"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:12:41.882180",
+    "latency_seconds": 4.14,
+    "input_prompt": "Claim:\nGases like carbon dioxide and methane trap heat in the atmosphere.\n\nArticle Title:\nWhat is the greenhouse effect? - NASA Science\n\nGoogle Search Snippet:\nThe greenhouse effect is the process through which heat is trapped near Earth's surface by substances known as 'greenhouse gases.'\n\nFull Page Content:\nThis website is an ARCHIVED version of NOAA Climate.gov as of June 25, 2025. Content is not being updated or maintained, and some links may no longer work.\nThe modern record of atmospheric carbon dioxide levels began with observations recorded at Mauna Loa Observatory in Hawaii. This graph shows the station's monthly average carbon dioxide measurements since 1958 in parts per million (ppm). The seasonal cycle of highs and lows (small peaks and valleys) is driven by Northern Hemisphere summer vegetation growth, which reduces atmospheric carbon dioxide, and winter decay, which increases it. The long-term trend of rising carbon dioxide levels is driven by human activities. At Mauna Loa, the highest monthly value each year occurs in May. In May 2024, carbon dioxide hit just under 427 ppm\u2014a new record. NOAA Climate.gov image, based on Mauna Loa monthly mean data from NOAA Global Monitoring Lab.\nBased on the annual analysis from NOAA\u2019s Global Monitoring Lab, global average atmospheric carbon dioxide was 422.8 parts per million (\u201cppm,\u201d for short) in 2024, a new record high. The increase during 2024 was 3.75 ppm\u2014the largest one-year increase on record. At Mauna Loa Observatory in Hawaii (graph above), where the modern carbon dioxide record began in 1958, the annual average carbon dioxide in 2024 was 424.61 ppm, also a new record.\nThe years with the largest annual carbon dioxide growth tend to be associated with the strongest El Ni\u00f1os\u2014the warm phase of a natural climate pattern in the tropical Pacific\u2014which lead to high temperatures over land and sea and an expansion of global drought area. In turn, these weather conditions typically lead to less plant growth, which reduces carbon dioxide uptake, as well as increased decomposition of carbon in soil and increased carbon dioxide emissions from forest fires. Together, these impacts cause atmospheric carbon dioxide levels to rise faster than normal.\nEven though the 2023-24 El Ni\u00f1o had waned by April, record high air temperatures and drought in all of 2024, similar to those during an El Nino, were likely drivers of the large increase in atmospheric carbon dioxide in 2024. In addition to other factors, large forest fires in both the Amazon and Canada contributed to the 2024 global increase.\nCarbon dioxide concentrations are rising mostly because of the fossil fuels that people have been burning for energy since the start of the Industrial Revolution. Fossil fuels like coal and oil contain the carbon from millions of years of photosynthesis\u2014the process by which plants remove carbon dioxide from the atmosphere. We are returning that carbon to the atmosphere in just a few hundred years. Since the middle of the 20th century, annual emissions of carbon dioxide from burning fossil fuels have increased every decade, from close to 11 billion tons of carbon dioxide per year in the 1960s to an estimated 37.4 billion tons in 2024 according to the Global Carbon Budget 2024.\nThe amount of carbon dioxide in the atmosphere (blue line) has increased along with human emissions (gray line) since the start of the Industrial Revolution in 1750. Emissions rose slowly to about 5 gigatons (1 gigaton is 1 billion metric tons per year) in the mid-20th century before rapidly increasing to more than 35 billion tons per year by the end of the century. NOAA Climate.gov graph, adapted from original by Dr. Howard Diamond (NOAA ARL). Atmospheric carbon dioxide data from NOAA and ETHZ. Carbon dioxide emissions data from Our World in Data and the Global Carbon Project.\nCarbon cycle experts estimate that natural \u201csinks,\u201d including plant growth and ocean absorption, remove about half of carbon dioxide humans emit into the atmosphere from fossil fuel burning. The rest stays in the atmosphere. Every year, we are adding more carbon dioxide to the atmosphere than natural sinks can remove, and so the total amount of carbon dioxide in the atmosphere goes up. The bigger the overshoot, the faster atmospheric carbon dioxide increases.\nIn the 1960s, atmospheric carbon dioxide increased by about 0.8 ppm per year on average. That growth rate doubled to an average of 1.6 ppm per year in the 1980s and 1.5 ppm per year in the 1990s. In the last decade (2015-2024), the annual increase has accelerated to 2.6 ppm per year. As a result, the annual rate of increase in atmospheric carbon dioxide over the past 60 years is 100-200 times faster than the increase that occurred at the end of the last ice age 11,000-17,000 years ago.\nCarbon dioxide is Earth\u2019s most important long-lived greenhouse gas: a gas that absorbs and radiates heat. Unlike oxygen or nitrogen (which make up most of Earth's atmosphere), greenhouse gases absorb heat radiating from the Earth\u2019s surface and re-release it in all directions\u2014including back toward Earth\u2019s surface. Without any carbon dioxide, Earth\u2019s natural greenhouse effect would be too weak to keep the average global surface temperature above freezing.\nBy adding more carbon dioxide to the atmosphere, people are amplifying the natural greenhouse effect, causing global temperature to rise. According to observations and analysis by the NOAA Global Monitoring Laboratory, carbon dioxide alone is responsible for about 80 percent of the total heating influence of all human-produced greenhouse gases since 1990.\nAnother reason carbon dioxide is important in the Earth system is that it dissolves into the ocean like the fizz in a can of soda. It reacts with water molecules, producing carbonic acid and lowering the ocean's pH (raising its acidity). Since the start of the Industrial Revolution, the pH of the ocean's surface waters has dropped from 8.21 to 8.10. This drop in pH is called ocean acidification, and it interferes with the ability of marine life to extract calcium from sea water to build skeletons and shells.\n(left) A healthy ocean snail has a transparent shell with smoothly contoured ridges. (right) A shell exposed to more acidic, corrosive waters is cloudy, ragged, and pockmarked wit\n\nProvide relevant evidence.",
+    "input_length_chars": 6339,
+    "input_tokens_estimated": 1584,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that gases like carbon dioxide and methane trap heat in the atmosphere, as they are described as greenhouse gases that absorb and radiate heat, contributing to the greenhouse effect.",
+      "overall_stance": "supports",
+      "key_quote": "Carbon dioxide is Earth\u2019s most important long-lived greenhouse gas: a gas that absorbs and radiates heat."
+    },
+    "output_length_chars": 395,
+    "output_tokens_estimated": 98,
+    "cost_usd": 0.0002964,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Gases like carbon dioxide and methane trap heat in the atmosphere.",
+      "query_index": 2,
+      "query_text": "greenhouse gases carbon dioxide methane heat retention"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:12:42.508342",
+    "latency_seconds": 4.77,
+    "input_prompt": "Claim:\nGases like carbon dioxide and methane trap heat in the atmosphere.\n\nArticle Title:\nBasics of the Carbon Cycle and the Greenhouse Effect - NOAA\n\nGoogle Search Snippet:\nThese \"trace\" gases contribute substantially to warming of the Earth's surface and atmosphere due to their abilities to contain the infrared radiation emitted ...\n\nFull Page Content:\nThis website is an ARCHIVED version of NOAA Climate.gov as of June 25, 2025. Content is not being updated or maintained, and some links may no longer work.\nThe modern record of atmospheric carbon dioxide levels began with observations recorded at Mauna Loa Observatory in Hawaii. This graph shows the station's monthly average carbon dioxide measurements since 1958 in parts per million (ppm). The seasonal cycle of highs and lows (small peaks and valleys) is driven by Northern Hemisphere summer vegetation growth, which reduces atmospheric carbon dioxide, and winter decay, which increases it. The long-term trend of rising carbon dioxide levels is driven by human activities. At Mauna Loa, the highest monthly value each year occurs in May. In May 2024, carbon dioxide hit just under 427 ppm\u2014a new record. NOAA Climate.gov image, based on Mauna Loa monthly mean data from NOAA Global Monitoring Lab.\nBased on the annual analysis from NOAA\u2019s Global Monitoring Lab, global average atmospheric carbon dioxide was 422.8 parts per million (\u201cppm,\u201d for short) in 2024, a new record high. The increase during 2024 was 3.75 ppm\u2014the largest one-year increase on record. At Mauna Loa Observatory in Hawaii (graph above), where the modern carbon dioxide record began in 1958, the annual average carbon dioxide in 2024 was 424.61 ppm, also a new record.\nThe years with the largest annual carbon dioxide growth tend to be associated with the strongest El Ni\u00f1os\u2014the warm phase of a natural climate pattern in the tropical Pacific\u2014which lead to high temperatures over land and sea and an expansion of global drought area. In turn, these weather conditions typically lead to less plant growth, which reduces carbon dioxide uptake, as well as increased decomposition of carbon in soil and increased carbon dioxide emissions from forest fires. Together, these impacts cause atmospheric carbon dioxide levels to rise faster than normal.\nEven though the 2023-24 El Ni\u00f1o had waned by April, record high air temperatures and drought in all of 2024, similar to those during an El Nino, were likely drivers of the large increase in atmospheric carbon dioxide in 2024. In addition to other factors, large forest fires in both the Amazon and Canada contributed to the 2024 global increase.\nCarbon dioxide concentrations are rising mostly because of the fossil fuels that people have been burning for energy since the start of the Industrial Revolution. Fossil fuels like coal and oil contain the carbon from millions of years of photosynthesis\u2014the process by which plants remove carbon dioxide from the atmosphere. We are returning that carbon to the atmosphere in just a few hundred years. Since the middle of the 20th century, annual emissions of carbon dioxide from burning fossil fuels have increased every decade, from close to 11 billion tons of carbon dioxide per year in the 1960s to an estimated 37.4 billion tons in 2024 according to the Global Carbon Budget 2024.\nThe amount of carbon dioxide in the atmosphere (blue line) has increased along with human emissions (gray line) since the start of the Industrial Revolution in 1750. Emissions rose slowly to about 5 gigatons (1 gigaton is 1 billion metric tons per year) in the mid-20th century before rapidly increasing to more than 35 billion tons per year by the end of the century. NOAA Climate.gov graph, adapted from original by Dr. Howard Diamond (NOAA ARL). Atmospheric carbon dioxide data from NOAA and ETHZ. Carbon dioxide emissions data from Our World in Data and the Global Carbon Project.\nCarbon cycle experts estimate that natural \u201csinks,\u201d including plant growth and ocean absorption, remove about half of carbon dioxide humans emit into the atmosphere from fossil fuel burning. The rest stays in the atmosphere. Every year, we are adding more carbon dioxide to the atmosphere than natural sinks can remove, and so the total amount of carbon dioxide in the atmosphere goes up. The bigger the overshoot, the faster atmospheric carbon dioxide increases.\nIn the 1960s, atmospheric carbon dioxide increased by about 0.8 ppm per year on average. That growth rate doubled to an average of 1.6 ppm per year in the 1980s and 1.5 ppm per year in the 1990s. In the last decade (2015-2024), the annual increase has accelerated to 2.6 ppm per year. As a result, the annual rate of increase in atmospheric carbon dioxide over the past 60 years is 100-200 times faster than the increase that occurred at the end of the last ice age 11,000-17,000 years ago.\nCarbon dioxide is Earth\u2019s most important long-lived greenhouse gas: a gas that absorbs and radiates heat. Unlike oxygen or nitrogen (which make up most of Earth's atmosphere), greenhouse gases absorb heat radiating from the Earth\u2019s surface and re-release it in all directions\u2014including back toward Earth\u2019s surface. Without any carbon dioxide, Earth\u2019s natural greenhouse effect would be too weak to keep the average global surface temperature above freezing.\nBy adding more carbon dioxide to the atmosphere, people are amplifying the natural greenhouse effect, causing global temperature to rise. According to observations and analysis by the NOAA Global Monitoring Laboratory, carbon dioxide alone is responsible for about 80 percent of the total heating influence of all human-produced greenhouse gases since 1990.\nAnother reason carbon dioxide is important in the Earth system is that it dissolves into the ocean like the fizz in a can of soda. It reacts with water molecules, producing carbonic acid and lowering the ocean's pH (raising its acidity). Since the start of the Industrial Revolution, the pH of the ocean's surface waters has dropped from 8.21 to 8.10. This drop in pH is called ocean acidification, and it interferes with the ability of marine life to extract calcium from sea water to build skeletons and shells.\n(left) A healthy ocean snail has a transparent shell with smoothly contoured ridges. (right) A shell exposed to more acidic, corrosive waters is cloudy, ragged, and pockmarked wit\n\nProvide relevant evidence.",
+    "input_length_chars": 6385,
+    "input_tokens_estimated": 1596,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that gases like carbon dioxide and methane trap heat in the atmosphere, contributing significantly to the greenhouse effect and global warming.",
+      "overall_stance": "supports",
+      "key_quote": "Carbon dioxide is Earth\u2019s most important long-lived greenhouse gas: a gas that absorbs and radiates heat."
+    },
+    "output_length_chars": 356,
+    "output_tokens_estimated": 89,
+    "cost_usd": 0.0002928,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Gases like carbon dioxide and methane trap heat in the atmosphere.",
+      "query_index": 2,
+      "query_text": "greenhouse gases carbon dioxide methane heat retention"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:12:42.509860",
+    "latency_seconds": 4.77,
+    "input_prompt": "Claim:\nGases like carbon dioxide and methane trap heat in the atmosphere.\n\nArticle Title:\nClimate change: atmospheric carbon dioxide\n\nGoogle Search Snippet:\nBy adding more carbon dioxide to the atmosphere, people are amplifying the natural greenhouse effect, causing global temperature to rise. According to ...\n\nFull Page Content:\nThis website is an ARCHIVED version of NOAA Climate.gov as of June 25, 2025. Content is not being updated or maintained, and some links may no longer work.\nThe modern record of atmospheric carbon dioxide levels began with observations recorded at Mauna Loa Observatory in Hawaii. This graph shows the station's monthly average carbon dioxide measurements since 1958 in parts per million (ppm). The seasonal cycle of highs and lows (small peaks and valleys) is driven by Northern Hemisphere summer vegetation growth, which reduces atmospheric carbon dioxide, and winter decay, which increases it. The long-term trend of rising carbon dioxide levels is driven by human activities. At Mauna Loa, the highest monthly value each year occurs in May. In May 2024, carbon dioxide hit just under 427 ppm\u2014a new record. NOAA Climate.gov image, based on Mauna Loa monthly mean data from NOAA Global Monitoring Lab.\nBased on the annual analysis from NOAA\u2019s Global Monitoring Lab, global average atmospheric carbon dioxide was 422.8 parts per million (\u201cppm,\u201d for short) in 2024, a new record high. The increase during 2024 was 3.75 ppm\u2014the largest one-year increase on record. At Mauna Loa Observatory in Hawaii (graph above), where the modern carbon dioxide record began in 1958, the annual average carbon dioxide in 2024 was 424.61 ppm, also a new record.\nThe years with the largest annual carbon dioxide growth tend to be associated with the strongest El Ni\u00f1os\u2014the warm phase of a natural climate pattern in the tropical Pacific\u2014which lead to high temperatures over land and sea and an expansion of global drought area. In turn, these weather conditions typically lead to less plant growth, which reduces carbon dioxide uptake, as well as increased decomposition of carbon in soil and increased carbon dioxide emissions from forest fires. Together, these impacts cause atmospheric carbon dioxide levels to rise faster than normal.\nEven though the 2023-24 El Ni\u00f1o had waned by April, record high air temperatures and drought in all of 2024, similar to those during an El Nino, were likely drivers of the large increase in atmospheric carbon dioxide in 2024. In addition to other factors, large forest fires in both the Amazon and Canada contributed to the 2024 global increase.\nCarbon dioxide concentrations are rising mostly because of the fossil fuels that people have been burning for energy since the start of the Industrial Revolution. Fossil fuels like coal and oil contain the carbon from millions of years of photosynthesis\u2014the process by which plants remove carbon dioxide from the atmosphere. We are returning that carbon to the atmosphere in just a few hundred years. Since the middle of the 20th century, annual emissions of carbon dioxide from burning fossil fuels have increased every decade, from close to 11 billion tons of carbon dioxide per year in the 1960s to an estimated 37.4 billion tons in 2024 according to the Global Carbon Budget 2024.\nThe amount of carbon dioxide in the atmosphere (blue line) has increased along with human emissions (gray line) since the start of the Industrial Revolution in 1750. Emissions rose slowly to about 5 gigatons (1 gigaton is 1 billion metric tons per year) in the mid-20th century before rapidly increasing to more than 35 billion tons per year by the end of the century. NOAA Climate.gov graph, adapted from original by Dr. Howard Diamond (NOAA ARL). Atmospheric carbon dioxide data from NOAA and ETHZ. Carbon dioxide emissions data from Our World in Data and the Global Carbon Project.\nCarbon cycle experts estimate that natural \u201csinks,\u201d including plant growth and ocean absorption, remove about half of carbon dioxide humans emit into the atmosphere from fossil fuel burning. The rest stays in the atmosphere. Every year, we are adding more carbon dioxide to the atmosphere than natural sinks can remove, and so the total amount of carbon dioxide in the atmosphere goes up. The bigger the overshoot, the faster atmospheric carbon dioxide increases.\nIn the 1960s, atmospheric carbon dioxide increased by about 0.8 ppm per year on average. That growth rate doubled to an average of 1.6 ppm per year in the 1980s and 1.5 ppm per year in the 1990s. In the last decade (2015-2024), the annual increase has accelerated to 2.6 ppm per year. As a result, the annual rate of increase in atmospheric carbon dioxide over the past 60 years is 100-200 times faster than the increase that occurred at the end of the last ice age 11,000-17,000 years ago.\nCarbon dioxide is Earth\u2019s most important long-lived greenhouse gas: a gas that absorbs and radiates heat. Unlike oxygen or nitrogen (which make up most of Earth's atmosphere), greenhouse gases absorb heat radiating from the Earth\u2019s surface and re-release it in all directions\u2014including back toward Earth\u2019s surface. Without any carbon dioxide, Earth\u2019s natural greenhouse effect would be too weak to keep the average global surface temperature above freezing.\nBy adding more carbon dioxide to the atmosphere, people are amplifying the natural greenhouse effect, causing global temperature to rise. According to observations and analysis by the NOAA Global Monitoring Laboratory, carbon dioxide alone is responsible for about 80 percent of the total heating influence of all human-produced greenhouse gases since 1990.\nAnother reason carbon dioxide is important in the Earth system is that it dissolves into the ocean like the fizz in a can of soda. It reacts with water molecules, producing carbonic acid and lowering the ocean's pH (raising its acidity). Since the start of the Industrial Revolution, the pH of the ocean's surface waters has dropped from 8.21 to 8.10. This drop in pH is called ocean acidification, and it interferes with the ability of marine life to extract calcium from sea water to build skeletons and shells.\n(left) A healthy ocean snail has a transparent shell with smoothly contoured ridges. (right) A shell exposed to more acidic, corrosive waters is cloudy, ragged, and pockmarked wit\n\nProvide relevant evidence.",
+    "input_length_chars": 6360,
+    "input_tokens_estimated": 1590,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that gases like carbon dioxide and methane trap heat in the atmosphere by amplifying the natural greenhouse effect, which is essential for maintaining Earth's temperature.",
+      "overall_stance": "supports",
+      "key_quote": "Carbon dioxide is Earth\u2019s most important long-lived greenhouse gas: a gas that absorbs and radiates heat."
+    },
+    "output_length_chars": 384,
+    "output_tokens_estimated": 96,
+    "cost_usd": 0.0002961,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Gases like carbon dioxide and methane trap heat in the atmosphere.",
+      "query_index": 2,
+      "query_text": "greenhouse gases carbon dioxide methane heat retention"
+    }
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T01:12:44.623655",
+    "latency_seconds": 1.98,
+    "input_prompt": "\nClaim: Gases like carbon dioxide and methane trap heat in the atmosphere.\nCategory: scientific\nExtraction confidence: 0.95\n\nEvidence:\nSUPPORTS (5 sources):\n  1. What is the greenhouse effect? - NASA Science | reliability=high (1.00)\n     URL: https://science.nasa.gov/climate-change/faq/what-is-the-greenhouse-effect/\n     Summary: The evidence confirms that gases like carbon dioxide and methane trap heat in the atmosphere, as they are described as greenhouse gases that absorb and radiate heat, contributing to the greenhouse effect.\n  2. Basics of the Carbon Cycle and the Greenhouse Effect - NOAA | reliability=high (0.85)\n     URL: https://www.noaa.gov/basics-of-carbon-cycle-and-greenhouse-effect\n     Summary: The evidence confirms that gases like carbon dioxide and methane trap heat in the atmosphere, describing the greenhouse effect as a process where these gases act as a barrier for escaping heat, thus maintaining Earth's temperature.\n  3. Heat-Trapping Pollution - Climate Central | reliability=high (0.85)\n     URL: https://www.climatecentral.org/climate-matters/heat-trapping-pollution-2024\n     Summary: The evidence confirms that gases like carbon dioxide and methane trap heat in the atmosphere, contributing to the greenhouse effect and global warming.\n  4. How Exactly Does Carbon Dioxide Cause Global Warming? | reliability=high (0.85)\n     URL: https://news.climate.columbia.edu/2021/02/25/carbon-dioxide-cause-global-warming/\n     Summary: The evidence confirms that carbon dioxide and other greenhouse gases absorb and radiate heat, which contributes to the greenhouse effect and global warming.\n  5. Understanding Global Warming Potentials | US EPA | reliability=medium (0.60)\n     URL: https://www.epa.gov/ghgemissions/understanding-global-warming-potentials\n     Summary: The evidence confirms that gases like carbon dioxide and methane trap heat in the atmosphere by absorbing energy and slowing its escape, which is a fundamental aspect of the greenhouse effect.\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2029,
+    "input_tokens_estimated": 507,
+    "output": {
+      "overall_stance": "supports",
+      "confidence": "high",
+      "summary": "The evidence strongly supports the claim that gases like carbon dioxide and methane trap heat in the atmosphere, as confirmed by multiple high-reliability sources including NASA and NOAA, which describe these gases as greenhouse gases that absorb and radiate heat, contributing to the greenhouse effect."
+    },
+    "output_length_chars": 365,
+    "output_tokens_estimated": 91,
+    "cost_usd": 0.00013065,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Gases like carbon dioxide and methane trap heat in the atmosphere.",
+      "query_index": 2,
+      "query_text": "greenhouse gases carbon dioxide methane heat retention"
+    }
+  }
+]

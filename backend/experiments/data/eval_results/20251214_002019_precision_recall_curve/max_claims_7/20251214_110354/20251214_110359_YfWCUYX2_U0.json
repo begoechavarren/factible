@@ -1,0 +1,108 @@
+{
+  "video_id": "YfWCUYX2_U0",
+  "timestamp": "2025-12-14T11:03:59.732286",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_7",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.8571428571428571,
+    "recall": 0.5,
+    "f1_score": 0.631578947368421,
+    "true_positives": 6,
+    "false_positives": 1,
+    "false_negatives": 6,
+    "mean_average_precision": 0.9761904761904762,
+    "recall_at_important": 0.6666666666666666,
+    "importance_weighted_coverage": 0.5454545454545455,
+    "matched_claims": [
+      {
+        "gt_text": "Climate is changing due to increasing greenhouse gases from human activity",
+        "sys_text": "Climate change is due to increasing greenhouse gases from human activity.",
+        "gt_importance": 0.95,
+        "sys_importance": 0.85,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "The last years have been the warmest since modern record-keeping began",
+        "sys_text": "The last years have been the warmest since modern record-keeping began.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.7,
+        "importance_error": 0.20000000000000007
+      },
+      {
+        "gt_text": "The planet's climate is changing",
+        "sys_text": "The planet's climate is changing.",
+        "gt_importance": 0.95,
+        "sys_importance": 0.6,
+        "importance_error": 0.35
+      },
+      {
+        "gt_text": "Sea levels are rising",
+        "sys_text": "Sea levels are rising.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.6,
+        "importance_error": 0.30000000000000004
+      },
+      {
+        "gt_text": "We're seeing more extreme events like heatwaves and heavy rainfall and wildfire",
+        "sys_text": "We're seeing more extreme events like heatwaves and heavy rainfall and wildfire.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.6,
+        "importance_error": 0.30000000000000004
+      },
+      {
+        "gt_text": "Computer models help us understand how much climate might change in the future",
+        "sys_text": "We develop computer models to understand future climate change.",
+        "gt_importance": 0.8,
+        "sys_importance": 0.3,
+        "importance_error": 0.5
+      }
+    ],
+    "missed_claims": [
+      "Even a little change in temperature can have big effects",
+      "A lot of those effects are going to increase with more warming",
+      "Climate change is affecting decisions like farmers thinking about what crops to grow or homeowners thinking about flood risk",
+      "We know more about our planet than we have ever before",
+      "Technologies are being developed at NASA and around the world that can help limit future warming or respond to the warming we're experiencing",
+      "Earth's average temperature has risen more than 2 degrees Fahrenheit (1.2 degrees Celsius) since the late 19th century"
+    ],
+    "extra_claims": [
+      "Scientists at NASA and around the world are researching climate change."
+    ],
+    "importance_mae": 0.2916666666666667,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 1.0,
+    "stance_accuracy": 1.0,
+    "correct_verdicts": 6,
+    "total_verdicts": 6,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.5,
+    "verdict_accuracy": 1.0,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.01874235,
+    "total_time_seconds": 75.55640816688538,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.4285714285714284
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 34
+    },
+    "avg_evidence_per_claim": 4.857142857142857
+  },
+  "ground_truth_claims_count": 12,
+  "system_claims_count": 7
+}

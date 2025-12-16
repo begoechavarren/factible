@@ -1,0 +1,23 @@
+{
+  "run_id": "20251214_040049_SYS2_ECsaxY",
+  "experiment_name": "precision_recall_curve_claims5_fbi_orchestrated_jan6",
+  "component": "end_to_end",
+  "timestamp": "2025-12-14T04:02:24.309564",
+  "video_url": "https://www.youtube.com/watch?v=SYS2_ECsaxY",
+  "max_claims": 5,
+  "max_queries_per_claim": 2,
+  "max_results_per_query": 3,
+  "headless_search": true,
+  "model_config": {
+    "claim_extractor": "OPENAI_GPT4O_MINI",
+    "query_generator": "OPENAI_GPT4O_MINI",
+    "evidence_extractor": "OPENAI_GPT4O_MINI",
+    "output_generator": "OPENAI_GPT4O_MINI"
+  },
+  "model_summary": "CE:gpt-4o-mini | QG:gpt-4o-mini | EE:gpt-4o-mini | OG:gpt-4o-mini",
+  "parallelization": "async",
+  "video_title": "FBI orchestrated Jan 6th",
+  "transcript_length": 2555,
+  "transcript_tokens": 452,
+  "video_duration_seconds": 175.84
+}

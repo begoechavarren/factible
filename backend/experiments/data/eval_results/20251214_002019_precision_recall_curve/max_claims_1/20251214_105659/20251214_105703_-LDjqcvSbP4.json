@@ -1,0 +1,88 @@
+{
+  "video_id": "-LDjqcvSbP4",
+  "timestamp": "2025-12-14T10:57:03.657149",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_1",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 1.0,
+    "recall": 0.05555555555555555,
+    "f1_score": 0.10526315789473684,
+    "true_positives": 1,
+    "false_positives": 0,
+    "false_negatives": 17,
+    "mean_average_precision": 1.0,
+    "recall_at_important": 0.0,
+    "importance_weighted_coverage": 0.05813953488372093,
+    "matched_claims": [
+      {
+        "gt_text": "100% fruit juice is a good source of essential vitamins, especially vitamin C, which supports the immune system",
+        "sys_text": "100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.7,
+        "importance_error": 0.050000000000000044
+      }
+    ],
+    "missed_claims": [
+      "100% fruit juice is a good source of potassium which helps regulate blood pressure",
+      "Juice contains antioxidants which protect cells from damage",
+      "The vitamins and minerals in juice can be absorbed quickly by the body",
+      "Fruit juice helps with hydration since it is mostly water",
+      "Fruit juice can be a more palatable option for people who struggle to drink plain water",
+      "100% fruit juice contains high amounts of naturally occurring sugars like fructose even without added sugars",
+      "These sugars (fructose in juice) can spike blood sugar levels which may lead to insulin resistance over time",
+      "Juice is calorie dense compared to whole fruits and consuming large amounts can contribute to weight gain",
+      "When fruit is juiced the fiber is removed, which helps regulate blood sugar and aids digestion",
+      "Without fiber, juice may cause rapid sugar absorption and hunger soon after consumption",
+      "Nutrition experts often suggest limiting fruit juice intake to one small glass per day, around 4 to 6 ounces",
+      "Eating whole fruits provides all the vitamins and minerals found in juice along with fiber essential for digestion and blood sugar control",
+      "Whole fruits keep you fuller for longer compared to juice",
+      "Diluting juice with water can reduce sugar intake while still offering some nutritional benefits",
+      "Regularly drinking large amounts of juice can lead to excess calorie consumption contributing to weight gain over time",
+      "The sugar in juice can contribute to cavities especially when consumed frequently throughout the day",
+      "Drinking juice with meals and using a straw may help reduce the risk of tooth decay"
+    ],
+    "extra_claims": [],
+    "importance_mae": 0.050000000000000044,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.0,
+    "stance_accuracy": 0.0,
+    "correct_verdicts": 0,
+    "total_verdicts": 1,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "100% fruit juice is a good source of essential vitamins, especially vitamin C, which supports the immune system",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.05555555555555555,
+    "verdict_accuracy": 0.0,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.0015987,
+    "total_time_seconds": 93.25760674476624,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.5
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 5
+    },
+    "avg_evidence_per_claim": 5.0
+  },
+  "ground_truth_claims_count": 18,
+  "system_claims_count": 1
+}

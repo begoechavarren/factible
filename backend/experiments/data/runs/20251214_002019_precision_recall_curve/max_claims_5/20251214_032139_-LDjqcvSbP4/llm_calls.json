@@ -1,0 +1,332 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:21:54.064838",
+    "latency_seconds": 13.45,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\ntoday's medical Centric topic is is 100% fruit juice good for you 100% fruit juice is often viewed as a healthy alternative to sugary drinks but its benefits and potential drawbacks need to be considered while it contains vitamins and nutrients drinking too much juice may have negative effects on your health one nutritional benefits of 100% fruit juice rich in vitamins vitamins and antioxidants 100% fruit juice is a good source of essential vitamins especially vitamin C which supports the immune system and potassium which helps regulate blood pressure juice also contains antioxidants which protect cells from damage nutrient absorption the vitamins and minerals and Juice can be absorbed quickly by the body making it a convenient way to get a nutritional boost hydration fluid intake since fruit juice is mostly water it helps with hydration for people who struggle to drink plain water juice can be a more palatable option two potential drawbacks of 100% fruit juice high in natural sugars fructose content even though 100% fruit juice doesn't have added sugars it still contains high amounts of naturally occurring sugar sugars like fructose these sugars can Spike blood sugar levels which may lead to insulin resistance over time calories juice is calorie dense compared to whole fruits and consuming large amounts can contribute to weight gain if not balanced with physical activity LAX fiber removed during processing one of the biggest differences between fruit juice and whole fruit is the fiber content when fruit is Juiced the fiber is removed which helps regulate blood sugar and AIDS digestion without fiber juice may cause rapid sugar absorption and hunger soon after consumption three how much is too much portion control recommended intake nutrition experts often suggest limiting fruit juice intake to one small glass per day around 4 to 6 ounces drinking juice in moderation can provide health benefits balancing diet it's essential to balance juice intake with other sources of hydration and nutrition such as water and whole fruits four alternatives to fruit juice whole fruits better nutritional value eating whole fruits provides all the vitamins and minerals found in juice along with fiber which is essential for digestion and blood sugar control whole fruits also keep you Fuller for longer diluting juice reducing sugar for those who enjoy juice dilating it with water can reduce sugar intake while still offering a refreshing taste and some nutritional benefits five long-term health effects weight gain and dental health caloric impact regularly drinking large amounts of juice can lead to excess calorie consumption contributing to weight gain over time tooth decay the sugar and Juice can contribute to cavities especially when consumed frequently throughout the day drinking juice with meals and using a straw may help reduce this risk thank you for watching our video please do not forget to like and share the video also please subscribe to the channel to stay updated on our latest videos",
+    "input_length_chars": 3086,
+    "input_tokens_estimated": 771,
+    "output": {
+      "claims": [
+        {
+          "text": "100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.",
+          "confidence": 0.9,
+          "category": "nutritional",
+          "importance": 0.7,
+          "context": "discussing nutritional benefits of 100% fruit juice"
+        },
+        {
+          "text": "Juice contains antioxidants which protect cells from damage.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "mentioning health benefits of antioxidants in juice"
+        },
+        {
+          "text": "100% fruit juice contains high amounts of naturally occurring sugars like fructose.",
+          "confidence": 0.9,
+          "category": "nutritional",
+          "importance": 0.7,
+          "context": "discussing potential drawbacks of 100% fruit juice"
+        },
+        {
+          "text": "Nutrition experts often suggest limiting fruit juice intake to one small glass per day, around 4 to 6 ounces.",
+          "confidence": 0.8,
+          "category": "policy",
+          "importance": 0.6,
+          "context": "recommendation on portion control for fruit juice consumption"
+        },
+        {
+          "text": "Regularly drinking large amounts of juice can lead to excess calorie consumption, contributing to weight gain over time.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "discussing long-term health effects of juice consumption"
+        }
+      ],
+      "total_count": 5
+    },
+    "output_length_chars": 1606,
+    "output_tokens_estimated": 401,
+    "cost_usd": 0.00035625
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:22:06.200240",
+    "latency_seconds": 10.97,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Juice contains antioxidants which protect cells from damage.\nContext: mentioning health benefits of antioxidants in juice\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 294,
+    "input_tokens_estimated": 73,
+    "output": {
+      "original_claim": "Juice contains antioxidants which protect cells from damage.",
+      "queries": [
+        {
+          "query": "Juice antioxidants protect cells from damage",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Health benefits of antioxidants in juice",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 294,
+    "output_tokens_estimated": 73,
+    "cost_usd": 5.475e-05,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "Nutrition experts often suggest limiting fruit juice intake to one small glass per day, around 4 to 6 ounces."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:22:06.324608",
+    "latency_seconds": 11.1,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: 100% fruit juice contains high amounts of naturally occurring sugars like fructose.\nContext: discussing potential drawbacks of 100% fruit juice\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 316,
+    "input_tokens_estimated": 79,
+    "output": {
+      "original_claim": "100% fruit juice contains high amounts of naturally occurring sugars like fructose.",
+      "queries": [
+        {
+          "query": "100% fruit juice naturally occurring sugars fructose",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "high sugar content in 100% fruit juice",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 323,
+    "output_tokens_estimated": 80,
+    "cost_usd": 5.985e-05,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "Juice contains antioxidants which protect cells from damage.",
+      "query_index": 2,
+      "query_text": "Health benefits of antioxidants in juice"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:22:06.509365",
+    "latency_seconds": 11.28,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Nutrition experts often suggest limiting fruit juice intake to one small glass per day, around 4 to 6 ounces.\nContext: recommendation on portion control for fruit juice consumption\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 353,
+    "input_tokens_estimated": 88,
+    "output": {
+      "original_claim": "Nutrition experts often suggest limiting fruit juice intake to one small glass per day, around 4 to 6 ounces.",
+      "queries": [
+        {
+          "query": "Nutrition experts recommend limiting fruit juice intake to 4 to 6 ounces per day",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "recommended daily limit for fruit juice consumption by nutritionists",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 407,
+    "output_tokens_estimated": 101,
+    "cost_usd": 7.38e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "100% fruit juice contains high amounts of naturally occurring sugars like fructose.",
+      "query_index": 2,
+      "query_text": "high sugar content in 100% fruit juice"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:22:06.607176",
+    "latency_seconds": 11.38,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Regularly drinking large amounts of juice can lead to excess calorie consumption, contributing to weight gain over time.\nContext: discussing long-term health effects of juice consumption\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 359,
+    "input_tokens_estimated": 89,
+    "output": {
+      "original_claim": "Regularly drinking large amounts of juice can lead to excess calorie consumption, contributing to weight gain over time.",
+      "queries": [
+        {
+          "query": "effects of drinking large amounts of juice on calorie consumption and weight gain",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "long-term health effects of excessive juice consumption and weight gain",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 422,
+    "output_tokens_estimated": 105,
+    "cost_usd": 7.635e-05,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "Nutrition experts often suggest limiting fruit juice intake to one small glass per day, around 4 to 6 ounces.",
+      "query_index": 2,
+      "query_text": "recommended daily limit for fruit juice consumption by nutritionists"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:22:35.430796",
+    "latency_seconds": 17.76,
+    "input_prompt": "Claim:\nRegularly drinking large amounts of juice can lead to excess calorie consumption, contributing to weight gain over time.\n\nArticle Title:\nConsumption of 100% Fruit Juice and Body Weight in Children and ...\n\nGoogle Search Snippet:\nImportance: Concerns have been raised that frequent consumption of 100% fruit juice may promote weight gain. Current evidence on fruit juice and ...\n\nFull Page Content:\nSupport the School\nYour gift powers excellence in research and education to advance public health.\nBy\nStaff Writer\nJanuary 25, 2024 \u2014 A large daily glass of 100% fruit juice may contribute to weight gain in children and adults, according to a new study by Harvard T.H. Chan School of Public Health researchers and colleagues.\nFor the meta-analysis, published January 16, 2024, in JAMA Pediatrics, the researchers looked at 42 studies: 17 of children and 25 of adults. They found that among children, each additional daily serving of 100% fruit juice was associated with a 0.03 higher body mass index (BMI), and among adults, a 0.02 change.\nThe researchers noted in a January 16 CNN article that a standard serving of juice is four ounces, but many people drink much more than that. Drinking large amounts of fruit juice can be unhealthy because it is metabolized differently than whole fruit, which contains fiber.\n\u201cHow often do we eat three oranges? Yet, a glass of OJ is about three oranges that can be consumed in a minute or two, and we can go back and have another, and that will add many calories and lead to a spike in blood glucose,\u201d study co-author Walter Willett, professor of epidemiology and nutrition, said in the article.\nRead the CNN article: Weight gain in children and adults linked to 100% fruit juice, study says\nStay connected with Harvard Chan School\nIn addition to our degree programs, we offer highly targeted executive and continuing education, directed and taught by Harvard faculty.\nStay connected with newsletters on climate, nutrition, communication \u2014 and the latest from Harvard Chan School.\n\nProvide relevant evidence.",
+    "input_length_chars": 2053,
+    "input_tokens_estimated": 513,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that regularly consuming large amounts of 100% fruit juice can lead to weight gain, as each additional serving is associated with an increase in body mass index (BMI) for both children and adults.",
+      "overall_stance": "supports",
+      "key_quote": "A large daily glass of 100% fruit juice may contribute to weight gain in children and adults... each additional daily serving of 100% fruit juice was associated with a 0.03 higher body mass index (BMI) for children and a 0.02 change for adults."
+    },
+    "output_length_chars": 549,
+    "output_tokens_estimated": 137,
+    "cost_usd": 0.00015915
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:22:36.193479",
+    "latency_seconds": 3.78,
+    "input_prompt": "Claim:\n100% fruit juice contains high amounts of naturally occurring sugars like fructose.\n\nArticle Title:\nReview of 100% Fruit Juice and Chronic Health Conditions\n\nGoogle Search Snippet:\nConsumers perceive 100% fruit juice as a healthier alternative to SSBs (7), but it is high in naturally occurring sugars and some studies have suggested that it ...\n\nFull Page Content:\nYour body is constantly working to protect and heal itself, and in this free guide, I explain the five key defense systems your body uses to stay healthy and resist disease. Enter your email below, and I'll send you the secrets to giving your body the tools it needs to defend itself and thrive.\nIt is great that more light has been shed on the dangers of consuming too much refined sugar in recent years. Overconsumption of some added sugars can have seriously harmful effects such as weight gain, cardiovascular issues, negative impacts on the skin, increased sugar cravings, mental health-related problems like anxiety and depression, liver disease, pre-diabetes, and more.\nThere is no lack of science to illustrate the damaging effects of consuming too much sugar. A study published in The American Journal of Clinical Nutrition determined a positive association between the regular consumption of sugar-sweetened beverages and the rising obesity epidemic. A 2008 study strengthened the argument that sugar may be addictive when its results showed that rodents who were given unlimited access to sugar exhibited multiple signs of addiction.\nAnother study published in The Journal of Clinical and Aesthetic Dermatology in 2014 acknowledged the potential connection between consuming high glycemic foods and skin issues. Evidence shows that inflammation can have a negative impact on stress levels, and it is known that consuming too much sugar can increase inflammation. Basically, we can all agree that eating too much sugar is bad for your overall health.\nHowever, it is important to understand what type of sugar you are consuming because all sugar is not created equal. These days, it is not uncommon for people to avoid different fruits because of their high sugar content. But natural sugars are not the enemy and, unless you are prediabetic or have a fruit allergy, there is no need to avoid them.\nFruits contain fructose, a form of sugar that is only harmful in high amounts. It is difficult to consume too much fruit, especially since most fruit contains fiber. Fiber slows down the digestion process, allowing the fruit to be an efficient form of energy. Other forms of sugar warrant more of a concern.\nHarmful added sugars typically take the form of sucrose (think table sugar) and high fructose corn syrup which is commonly found in ultra-processed foods. Both of these forms of sugar are a blend of fructose and glucose and are often associated with high fat, high sodium food products that contain lots of unnecessary additives and preservatives. These types of sugar should not be put in the same category as the sugar found in fruit.\nIn my book Eat to Beat Disease, I discuss the impressive powers of pomegranate juice. Pomegranate juice is high in ellagitannins, which are bioactive polyphenols that have been shown to inhibit the growth of prostate cancer. Pomegranate juice has also been shown to encourage the growth of Akkermansia \u2013 a beneficial bacteria that can help to manage the immune system, improve blood glucose metabolism in the body, decrease gut inflammation, and combat obesity. So, pomegranate juice is not only free from the harmful forms of sugar, but it has opposing beneficial effects that combat many of the damaging consequences of \u2018bad\u2019 sugar.\nIf you were to pick up a bottle of 100-percent pure pomegranate juice at the grocery store, you may notice that a standard 8-ounce serving contains upwards of 30 grams of sugar. But look closer and you will see that there are 0 grams of added sugar. That is the key. I do not recommend downing half a bottle of pomegranate juice (or any type of sweet beverage) in one sitting, but it is completely safe and even beneficial to have a serving of it multiple times per week.\nWith that said, just as all sugars are not created equal, neither are all 100-percent juices. Some fruit juices, like orange juice, do not contain as many health benefits and are not as worth their calories and high amounts of sugar \u2013 even if it is natural.\nNext time you are at the grocery store, take a quick look at the levels of sugar in the different 100-percent fruit juices. Think twice about buying juices that are high in calories or have more than one or two ingredients. Be sure to avoid any products that describe \u201cjuice cocktail,\u201d \u201cjuice drink,\u201d or \u201cjuice-flavored beverage\u201d as those are clear indicators that the product contains added sweeteners.\nOct 22, 2025 | Cancer, Lifestyle, Nutrition\nOct 10, 2018 | Exercise\n\nProvide relevant evidence.",
+    "input_length_chars": 4890,
+    "input_tokens_estimated": 1222,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article confirms that 100% fruit juice contains high amounts of naturally occurring sugars, specifically mentioning fructose as a component of fruit sugars.",
+      "overall_stance": "supports",
+      "key_quote": "A standard 8-ounce serving contains upwards of 30 grams of sugar."
+    },
+    "output_length_chars": 311,
+    "output_tokens_estimated": 77,
+    "cost_usd": 0.0002295
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:22:36.622190",
+    "latency_seconds": 18.94,
+    "input_prompt": "Claim:\nRegularly drinking large amounts of juice can lead to excess calorie consumption, contributing to weight gain over time.\n\nArticle Title:\nLiquid calories, sugar, and body weight - ScienceDirect.com\n\nGoogle Search Snippet:\nNumerous clinical studies have shown that sugar-containing liquids, when consumed in place of usual meals, can lead to a significant and sustained weight loss.\n\nFull Page Content:\nSupport the School\nYour gift powers excellence in research and education to advance public health.\nBy\nStaff Writer\nJanuary 25, 2024 \u2014 A large daily glass of 100% fruit juice may contribute to weight gain in children and adults, according to a new study by Harvard T.H. Chan School of Public Health researchers and colleagues.\nFor the meta-analysis, published January 16, 2024, in JAMA Pediatrics, the researchers looked at 42 studies: 17 of children and 25 of adults. They found that among children, each additional daily serving of 100% fruit juice was associated with a 0.03 higher body mass index (BMI), and among adults, a 0.02 change.\nThe researchers noted in a January 16 CNN article that a standard serving of juice is four ounces, but many people drink much more than that. Drinking large amounts of fruit juice can be unhealthy because it is metabolized differently than whole fruit, which contains fiber.\n\u201cHow often do we eat three oranges? Yet, a glass of OJ is about three oranges that can be consumed in a minute or two, and we can go back and have another, and that will add many calories and lead to a spike in blood glucose,\u201d study co-author Walter Willett, professor of epidemiology and nutrition, said in the article.\nRead the CNN article: Weight gain in children and adults linked to 100% fruit juice, study says\nStay connected with Harvard Chan School\nIn addition to our degree programs, we offer highly targeted executive and continuing education, directed and taught by Harvard faculty.\nStay connected with newsletters on climate, nutrition, communication \u2014 and the latest from Harvard Chan School.\n\nProvide relevant evidence.",
+    "input_length_chars": 2056,
+    "input_tokens_estimated": 514,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that regularly drinking large amounts of 100% fruit juice is associated with weight gain in both children and adults, as each additional serving correlates with an increase in body mass index (BMI).",
+      "overall_stance": "supports",
+      "key_quote": "A large daily glass of 100% fruit juice may contribute to weight gain in children and adults... each additional daily serving of 100% fruit juice was associated with a 0.03 higher body mass index (BMI) for children, and a 0.02 change for adults."
+    },
+    "output_length_chars": 552,
+    "output_tokens_estimated": 138,
+    "cost_usd": 0.0001599
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:22:36.727968",
+    "latency_seconds": 19.19,
+    "input_prompt": "Claim:\nJuice contains antioxidants which protect cells from damage.\n\nArticle Title:\nImpact of Natural Juice Consumption on Plasma Antioxidant Status\n\nGoogle Search Snippet:\nThe antioxidants delay or inhibit cellular damage mainly through their free radical scavenging property and can safely interact with free radicals and terminate ...\n\nFull Page Content:\n+ Author Affiliations\nDietary supplements such as vitamin C have become popular for their perceived ability to enhance the body\u2019s antioxidant defenses. Reactive oxygen species (ROS) have been shown to cause a broad spectrum of damage to biological systems. Scavenging of ROS is part of a healthy, well-balanced, antioxidant defense system. The present study used the Fenton reaction as a source of hydroxyl radicals and xanthine/xanthine oxidase as a source of superoxide radicals to investigate the scavenging capabilities of various fruit and vegetable juices against these radicals. Electron spin resonance (ESR) spin trapping was used for free radical detection and measurement. Using a colormetric assay, the present study also investigated the protective effects of fruit and vegetable juices against lipid peroxidation induced in cell membranes by hydroxyl radicals. The present study showed that the free radical scavenging capability of each individual juice, but not its ascorbic acid content, is correlated with its protective effect on free radical induced lipid peroxidation. The results indicate that ascorbic acid is only one facet of the protective effect of fruit and vegetable juices. It appears that consumption of whole fruits and vegetables would be superior to an ascorbic acid supplement for antioxidant effectiveness.\nRecent reports have indicated a need for increased dietary intake of ascorbic acid as a source for antioxidants [1,2]. One proposed method to increase ascorbic acid (vitamin C) intake is to ingest it as a supplemental tablet. However, studies have shown that vitamin C marketed as a dietary supplement may also act as a pro-oxidant [3] and may even react with iron to cause a cycle of hydroxyl radical (\u2022OH) production [4]. Two laboratories have described the antioxidant capacity of fruits, in general [5,] and apples, specifically [6], by measuring total antioxidant capacities.\nReactive oxygen species (ROS) have been shown to play important roles in carcinogenesis by directly damaging DNA and acting as tumor promoters [7,8]. ROS include, but are not limited to, \u2022OH and superoxide radical (O2\u2212\u2022) and hydrogenperoxide (H2O2). ROS-mediated reactions are believed to be involved in various pathogenic processes [7\u20139]. Initiation of diseases can be associated with an imbalance caused by an excessive generation of ROS, resulting in oxidative stress.\nUsing electron spin resonance (ESR), the present study investigated the antioxidant properties of fruits and vegetable juices against specific radical types, \u2022OH and O2\u2212\u2022 radicals. The present study also determined the ability of these natural foods to protect against lipid peroxidation caused by ROS. These radicals are highly reactive and other studies have shown that they can cause cellular injury through various mechanisms, such as DNA damage, lipid peroxidation, and activation of the nuclear factor kappa B (NF-\u03baB) and tumor necrosis factor alpha (TNF-\u03b1) signaling pathways [10,11]. The present study also measured the ascorbic acid contents of various natural food juices and attempted to correlate their ascorbic acid levels with their abilities to quench specific radicals and to protect cell membranes from ROS-induced damage.\nSeveral varieties of fresh fruits and vegetables were obtained from Kroger, Inc. The fruits and vegetables were washed with a mild detergent and rinsed with distilled/deionized water (dH2O) to remove possible pesticide and preservative residues. Fruit and vegetable samples were obtained by excising 100 mg of skin and pulp, crushing it, and homogenizing the sample on ice with a \u201ctissue tearor\u201d (Biospec Products, Racine, WI). Each sample was diluted to 1.0 ml with dH2O, homogenized again, and filtered through a nitrocellulose membrane (pore size, 0.45 \u03bcm) in order to yield the juice.\nESR spin trapping was used to detect short-lived free radical intermediates [12]. This technique involved the addition-type reaction of a short-lived radical with a paramagnetic compound (spin trap) to form a relatively long-lived free radical product (spin adduct), which was then studied using conventional ESR. The intensity of the signal was used to measure the amount of short-lived radicals trapped. The hyperfine couplings of the spin adduct were generally characteristic of the original trapped radicals.\nSpin trapping is a method of choice for detection and identification of free radical generation, owing to its specificity and sensitivity. Hyperfine couplings were measured (to 0.1 G) directly from magnetic field separation using potassium tetraperoxochromate (K3CrO8) and 1,1-diphenyl-2-picrylhydrazyl (DPPH) as reference standards.\nThe relative radical concentration was estimated by multiplying half of the peak height by (\u0394Hpp)2, where \u0394Hpp represents peak-to-peak width. A SPEX 300 program (U.S. EPR, Clarksville, MD) was used for data acquisition and analyses. Both \u2022OH and O2\u2212\u2022 radicals were measured by ESR (Model ESP 300E, Bruker Instruments, Billerica, MA), using a flat cell assembly with 5,5-dimethyl-1-pyrroline N-oxide (DMPO) as a spin trap. Hydroxyl radicals were generated by the Fenton reaction (Fe(II) + H2O2 \u2192 Fe(III) + OH\u2212 + \u2022OH). Superoxide radicals were generated by xanthine/xanthine oxidase. For \u2022OH measurement, spectra were taken 3 min after reaction initiation; for O2\u2212\u2022 measurement, the spectra were recorded 1 min after reaction initiation. All experiments were performed at room temperature in phosphate buffered saline (PBS) that had been purified by filtration through Chelex 100 resin (Sigma Chemical Co, St. Louis, MO).\nLipid peroxidation of RAW 264.7 mouse peritoneal monocytes was measured by a colormetric assay for lipid peroxidation products (LPO-586 kit, Oxis International Inc. Portland, OR). A typical reaction mixture contained FeSO4 (0.1 mM) + H2O2 (1 mM) and 1 \u00d7 107 cells in a total volume of 1.0 ml of PBS (pH 7.4). Fruit and vegetable juices were added (100 mg/ml) to this mixture to measure their effect on lipid p\n\nProvide relevant evidence.",
+    "input_length_chars": 6386,
+    "input_tokens_estimated": 1596,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The study demonstrates that fruit and vegetable juices possess free radical scavenging capabilities, which protect against cellular damage caused by reactive oxygen species (ROS). This supports the claim that juice contains antioxidants that protect cells from damage.",
+      "overall_stance": "supports",
+      "key_quote": "The present study showed that the free radical scavenging capability of each individual juice... is correlated with its protective effect on free radical induced lipid peroxidation."
+    },
+    "output_length_chars": 535,
+    "output_tokens_estimated": 133,
+    "cost_usd": 0.0003192
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:22:36.931735",
+    "latency_seconds": 19.26,
+    "input_prompt": "Claim:\nRegularly drinking large amounts of juice can lead to excess calorie consumption, contributing to weight gain over time.\n\nArticle Title:\nConsumption of 100% Fruit Juice and Body Weight in Children and ...\n\nGoogle Search Snippet:\nStudy findings support guidance to limit consumption of fruit juice to prevent the intake of excess calories and weight gain.\n\nFull Page Content:\nSupport the School\nYour gift powers excellence in research and education to advance public health.\nBy\nStaff Writer\nJanuary 25, 2024 \u2014 A large daily glass of 100% fruit juice may contribute to weight gain in children and adults, according to a new study by Harvard T.H. Chan School of Public Health researchers and colleagues.\nFor the meta-analysis, published January 16, 2024, in JAMA Pediatrics, the researchers looked at 42 studies: 17 of children and 25 of adults. They found that among children, each additional daily serving of 100% fruit juice was associated with a 0.03 higher body mass index (BMI), and among adults, a 0.02 change.\nThe researchers noted in a January 16 CNN article that a standard serving of juice is four ounces, but many people drink much more than that. Drinking large amounts of fruit juice can be unhealthy because it is metabolized differently than whole fruit, which contains fiber.\n\u201cHow often do we eat three oranges? Yet, a glass of OJ is about three oranges that can be consumed in a minute or two, and we can go back and have another, and that will add many calories and lead to a spike in blood glucose,\u201d study co-author Walter Willett, professor of epidemiology and nutrition, said in the article.\nRead the CNN article: Weight gain in children and adults linked to 100% fruit juice, study says\nStay connected with Harvard Chan School\nIn addition to our degree programs, we offer highly targeted executive and continuing education, directed and taught by Harvard faculty.\nStay connected with newsletters on climate, nutrition, communication \u2014 and the latest from Harvard Chan School.\n\nProvide relevant evidence.",
+    "input_length_chars": 2030,
+    "input_tokens_estimated": 507,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that regularly consuming large amounts of 100% fruit juice can lead to increased calorie intake and weight gain, as shown by the association between additional servings of juice and higher body mass index (BMI) in both children and adults.",
+      "overall_stance": "supports",
+      "key_quote": "Drinking large amounts of fruit juice can be unhealthy because it is metabolized differently than whole fruit, which contains fiber."
+    },
+    "output_length_chars": 480,
+    "output_tokens_estimated": 120,
+    "cost_usd": 0.00014805
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:22:37.005978",
+    "latency_seconds": 18.31,
+    "input_prompt": "Claim:\nRegularly drinking large amounts of juice can lead to excess calorie consumption, contributing to weight gain over time.\n\nArticle Title:\nConsumption of 100% Fruit Juice and Body Weight in Children and ...\n\nGoogle Search Snippet:\nCurrent evidence on fruit juice and weight gain has yielded mixed findings from both observational studies and clinical trials.\n\nFull Page Content:\nAn official website of the United States government\nThe association between drinking 100% fruit juice and long-term weight gain is controversial and has been investigated in few studies. We examined whether 100% fruit juice consumption was associated with weight change in a large prospective cohort of postmenopausal women. We analyzed data from 49,106 postmenopausal women in the United States enrolled in the Women\u2019s Health Initiative between 1993 and 1998. Food frequency questionnaires at baseline and year 3 assessed food and beverage intake. Body weight was measured at in-person clinic visits. We used multivariable linear regression to determine the association between change in 100% fruit juice consumption and 3-year weight change over the same time. Covariates of interest included age, demographic factors, smoking, body mass index, hormone replacement therapy, lifestyle factors, change in whole fruit intake, and change in sugar-sweetened beverage intake. The mean weight change was 3.2 lbs. over 3 years. In multivariable adjusted analyses, each 1 serving/day increase in 100% fruit juice intake was associated with a 3-year weight gain of 0.39 lbs. (95% confidence interval: 0.10, 0.69). In conclusion, an increase in 100% fruit juice consumption was associated with a small amount of long-term weight gain in postmenopausal women.\nAmerican adults gain an average of 1 pound (lb.) per year, and it is a public health priority to determine which foods and beverages contribute most to this gradual weight gain.1 Two analyses of the Nurses Health Studies (NHS) I and II and Health Professionals Follow-Up Study (HPFS) found that each 1 serving/day (1 small glass, about 6 oz.) increase in 100% fruit juice consumption was independently associated with gaining 0.31\u20130.49 lbs. over 4 years.1,2 We know of no other prospective studies on this topic in adults.3 Our objective was to confirm whether an increase in 100% fruit juice consumption is associated with weight gain in the Women\u2019s Health Initiative (WHI), which is a large prospective study of postmenopausal American women.\nThe design and methods of the WHI have been described elsewhere.4 Between 1993\u20131998, 122,970 postmenopausal women ages 50\u201379 years were enrolled into the WHI Observational Study and the comparison arm of the Dietary Modification Clinical Trial (participants received no dietary intervention). After excluding participants with missing baseline weight (n=388), year 3 weight (n=20,016), baseline 100% fruit juice intake (n=129), year 3 100% fruit juice intake (n=25,291), baseline age > 65 years (n=18,730), body mass index > 35.0 kg/m2 (n=6685), and implausible energy intake (n=2425), 49,106 participants remained for inclusion in this study (Supplemental Table A1). Institutional review boards at each WHI site approved the study protocol, and all participants provided written informed consent.\nThe primary exposure was the change in daily 100% fruit juice consumption, measured at baseline and year 3 by a semi-quantitative food frequency questionnaire designed for the WHI and validated for measuring changes in diet over time.5 Participants were asked about their usual serving size (3 oz., 6 oz., or 12 oz.) and frequency of consuming all types of 100% fruit juice. Total daily 100% fruit juice consumption was estimated by multiplying the serving size by frequency. One serving of 100% fruit juice was defined as 6 oz.\nThe primary outcome was 3-year weight change. Study personnel measured body weight using a standardized protocol and calibrated scales. Twelve covariates of interest were assessed and included in the final models: baseline age, education level (11 levels), total household income (9 levels), race/ethnicity, baseline current smoking, baseline body mass index (BMI), baseline hormone replacement therapy status, baseline recreational physical activity level (MET-hours/week), study arm, change in the Healthy Eating Index diet quality score,6 change in whole fruit intake, and change in sugar-sweetened beverage (SSB) intake. Adjustment for change in total energy intake, a mediator in the relationship between change in 100% fruit juice consumption and weight change, was included as a thirteenth covariate of interest in a separate model. Fruit juice, whole fruit, and SSB intake was standardized to 2000 kilocalories/day using the residual method.7\nWe created a linear mixed effects model to determine the association of each one serving/day increase in 100% fruit juice consumption with weight change during the same 3-year study period. Because age and BMI may modify the relationship between change in 100% fruit juice intake and long-term weight gain, we performed subgroup analyses of 5-year increments of baseline age and baseline BMI category (normal [18.5\u201324.9 kg/m2], overweight [25.0\u201329.9 kg/m2], and class I obesity [30.0\u201334.9 kg/m2]). We also created interaction terms between change in 100% fruit juice intake and (1) baseline age, and (2) BMI (both as continuous variables), and tested each interaction term in the adjusted linear mixed model. Finally, we conducted a sensitivity analysis using multiple imputation to estimate missing exposure data from 25,291 participants with missing year 3 exposure data for 100% fruit juice, sugar-sweetened beverages, or whole fruit. All tests were two-sided and P values < 0.05 were considered statistically significant. Data were analyzed using Stata (version 14, StataCorpLP, College Station, Texas).\nOn average, included women at baseline were 58 years old, had a BMI of 26.2 kg/m2, were predominantly white, did not smoke, and consumed less than 1 serving/day of 100% fruit juice (Table 1). Compared to included participants, participants who were excluded due to missing data were more likely to be African American or Latino, less likely to have a college degree, and less likely to use postmenopausal hormones (Supplemental Table A2). On average included participants gained 3.2 lbs. over 3 years. Estimated weight \n\nProvide relevant evidence.",
+    "input_length_chars": 6412,
+    "input_tokens_estimated": 1603,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that an increase in 100% fruit juice consumption is associated with a small amount of long-term weight gain, specifically noting that each additional serving per day correlates with a weight gain of approximately 0.39 lbs over three years.",
+      "overall_stance": "supports",
+      "key_quote": "each 1 serving/day increase in 100% fruit juice intake was associated with a 3-year weight gain of 0.39 lbs."
+    },
+    "output_length_chars": 456,
+    "output_tokens_estimated": 114,
+    "cost_usd": 0.00030885
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:22:37.081208",
+    "latency_seconds": 9.97,
+    "input_prompt": "Claim:\n100% fruit juice contains high amounts of naturally occurring sugars like fructose.\n\nArticle Title:\nSugar and 100% Orange Juice: Your Questions Answered\n\nGoogle Search Snippet:\nOne 8-ounce glass of 100% orange juice contains about 21 grams of naturally occurring sugar, which is similar to eating about 1 \u00bd to 2 whole oranges. The ...\n\nFull Page Content:\nJuice contains vitamins and nutrients, but high levels of sugar call for moderation\nDrinking 100% fruit juice certainly sounds like a perfect choice for your health, but that\u2019s not necessarily a 100% accurate assessment.\nSure, there are positives to drinking fruit juice \u2014 starting with an impressive list of vitamins and nutrients that fill every glass. But 100% fruit juice is also loaded with enough sugar to draw unflattering comparisons to soda.\nKind of surprising, right? Well, to get a better understanding of the pros and cons of juice, let\u2019s squeeze some information out of registered dietitian Beth Czerwony, RD.\nIf what you\u2019re drinking is 100% fruit juice, it\u2019s basically liquid that has been pressed, squeezed or otherwise extracted from fruit. Glance at the nutrition labels on these bottles and you should see familiar fruit names.\nDrinks with a lower percentage of fruit juice \u2014 10%, for example \u2014 carry different labeling. You\u2019ll find these on the shelf under names like:\nCheck the ingredient list on these bottles and you\u2019ll probably see added sweeteners such as high-fructose corn syrup.\nFruit juice contains many of the vitamins and nutrients that make fruit a recommended part of a healthy diet. The U.S. Department of Agriculture recommends eating about 2 cups of fruit per day.\nWhat is a \u201ccup\u201d of fruit? Glad you asked! If fruit is in its natural form, that\u2019s roughly equal to a large orange or banana, a small apple or eight strawberries.\nWhen juiced, a cup of fruit is \u2026 well, an 8-ounce cup of juice. (We\u2019ll come back to that number.)\nThe short answer is no. Some of the fabulous benefits of fruit disappear during the juicing process. The biggest loss is in fiber content, a perk of whole fruit that is great for your digestive system.\nWhole fruit also gives you more of a full-belly feeling than juice given the \u201cfruit meat\u201d you consume. That means you\u2019ll be less apt to get hungry 30 minutes later and start foraging for snacks.\n\u201cYou get so much more than just juice when eating whole fruit,\u201d notes Czerwony. \u201cIt\u2019s not the same thing.\u201d\nMany types of fruit are packed with natural sugars \u2014 one of the reasons fruit is often dubbed \u201cnature\u2019s candy.\u201d When you juice fruit, you concentrate that sugar into one extremely sippable drink.\nThink of it this way, says Czerwony: It might take the juice of five or six oranges to fill a cup. That\u2019s a lot of sugary fluid, which can cause an immediate spike in blood sugar levels.\nLet\u2019s put some numbers to it. A glass of orange juice contains about 23 grams of sugar \u2014 which isn\u2019t far off the daily limit of sugar recommended by the American Heart Association. (The AHA recommends no more than 36 grams of sugar for men and 25 grams for women.)\n\u201cSo, a single cup of orange juice basically has all the sugar you should have in a day,\u201d says Czerwony. \u201cAnd how many of us only have an 8-ounce glass of juice? It\u2019s usually more.\u201d\nThe high-sugar content in juice nearly matches what\u2019s found in sugary sodas, which are not exactly known for being healthy. (The vitamins in juice make the drink better for you than soda, of course.)\n\u201cBut if you\u2019re looking at it from a sugar perspective, they\u2019re basically one and the same,\u201d notes Czerwony.\nIs sugar in juice a bit of a concern? You bet. But there\u2019s also the reality that many people simply don\u2019t fill their diet with much fruit.\nThe Centers for Disease Control and Prevention (CDC) reports that only about 12% of adults in the United States consume the recommended amount of fruit per day. Juice consumption is included in the tally.\nSo, in many ways, consuming too little fruit stands as a bigger issue than people drinking too much 100% fruit juice.\n\u201cJuice is an easy way to add servings of fruit to your diet, and there\u2019s nothing wrong with enjoying a glass,\u201d says Czerwony. \u201cThe key is moderation. Just make sure you\u2019re not overdoing it.\u201d\nLearn more about our editorial process.\nAdvertisement\nCleveland Clinic is a non-profit academic medical center. Advertising on our site helps support our mission. We do not endorse non-Cleveland Clinic products or services. Policy\nAdvertisement\nAdvertisement\nAdvertisement\nAdvertisement\nOptions for sober social drinking are abundant, but be mindful about additives and triggers\nPickle juice has a reputation as a probiotic powerhouse, workout recovery aid, hangover cure and more\nIf you\u2019re looking to boost your gut health, it\u2019s better to get fiber from whole foods\nWhile it isn\u2019t bad for you, celery juice isn\u2019t the detox phenom it\u2019s claimed to be\nRegularly drinking these sugar-fueled, stimulant-laden beverages can increase your risk of adverse health effects\nThis spicy concoction can do more harm than good, upsetting your stomach and causing painful acid reflux\nJuicing removes beneficial fiber from fruits and veggies and raises your blood sugar\nSports drinks can give your body a boost, but it\u2019s important not to overuse them\nBabies can get congested easily, but you can calm their cough by keeping them hydrated, using nasal drops and running a humidifier\nWeight loss may cause loose, sagging skin and muscle loss to your rear\nSeveral conditions, like vitiligo and fungal infection, can cause a loss of pigmentation, leading to white spots or patches on your skin\n\nProvide relevant evidence.",
+    "input_length_chars": 5617,
+    "input_tokens_estimated": 1404,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article confirms that 100% fruit juice, such as orange juice, contains high amounts of naturally occurring sugars, with a typical 8-ounce glass containing about 23 grams of sugar, which is comparable to the sugar content found in sodas.",
+      "overall_stance": "supports",
+      "key_quote": "\"A glass of orange juice contains about 23 grams of sugar \u2014 which isn\u2019t far off the daily limit of sugar recommended by the American Heart Association.\""
+    },
+    "output_length_chars": 480,
+    "output_tokens_estimated": 120,
+    "cost_usd": 0.0002826
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:22:37.421325",
+    "latency_seconds": 10.31,
+    "input_prompt": "Claim:\n100% fruit juice contains high amounts of naturally occurring sugars like fructose.\n\nArticle Title:\n100% Fruit Juice Products: Is Sugar a Concern? - Dr William Li\n\nGoogle Search Snippet:\nFruits contain fructose, a form of sugar that is only harmful in high amounts. It is difficult to consume too much fruit, especially since most fruit contains ...\n\nFull Page Content:\nJuice contains vitamins and nutrients, but high levels of sugar call for moderation\nDrinking 100% fruit juice certainly sounds like a perfect choice for your health, but that\u2019s not necessarily a 100% accurate assessment.\nSure, there are positives to drinking fruit juice \u2014 starting with an impressive list of vitamins and nutrients that fill every glass. But 100% fruit juice is also loaded with enough sugar to draw unflattering comparisons to soda.\nKind of surprising, right? Well, to get a better understanding of the pros and cons of juice, let\u2019s squeeze some information out of registered dietitian Beth Czerwony, RD.\nIf what you\u2019re drinking is 100% fruit juice, it\u2019s basically liquid that has been pressed, squeezed or otherwise extracted from fruit. Glance at the nutrition labels on these bottles and you should see familiar fruit names.\nDrinks with a lower percentage of fruit juice \u2014 10%, for example \u2014 carry different labeling. You\u2019ll find these on the shelf under names like:\nCheck the ingredient list on these bottles and you\u2019ll probably see added sweeteners such as high-fructose corn syrup.\nFruit juice contains many of the vitamins and nutrients that make fruit a recommended part of a healthy diet. The U.S. Department of Agriculture recommends eating about 2 cups of fruit per day.\nWhat is a \u201ccup\u201d of fruit? Glad you asked! If fruit is in its natural form, that\u2019s roughly equal to a large orange or banana, a small apple or eight strawberries.\nWhen juiced, a cup of fruit is \u2026 well, an 8-ounce cup of juice. (We\u2019ll come back to that number.)\nThe short answer is no. Some of the fabulous benefits of fruit disappear during the juicing process. The biggest loss is in fiber content, a perk of whole fruit that is great for your digestive system.\nWhole fruit also gives you more of a full-belly feeling than juice given the \u201cfruit meat\u201d you consume. That means you\u2019ll be less apt to get hungry 30 minutes later and start foraging for snacks.\n\u201cYou get so much more than just juice when eating whole fruit,\u201d notes Czerwony. \u201cIt\u2019s not the same thing.\u201d\nMany types of fruit are packed with natural sugars \u2014 one of the reasons fruit is often dubbed \u201cnature\u2019s candy.\u201d When you juice fruit, you concentrate that sugar into one extremely sippable drink.\nThink of it this way, says Czerwony: It might take the juice of five or six oranges to fill a cup. That\u2019s a lot of sugary fluid, which can cause an immediate spike in blood sugar levels.\nLet\u2019s put some numbers to it. A glass of orange juice contains about 23 grams of sugar \u2014 which isn\u2019t far off the daily limit of sugar recommended by the American Heart Association. (The AHA recommends no more than 36 grams of sugar for men and 25 grams for women.)\n\u201cSo, a single cup of orange juice basically has all the sugar you should have in a day,\u201d says Czerwony. \u201cAnd how many of us only have an 8-ounce glass of juice? It\u2019s usually more.\u201d\nThe high-sugar content in juice nearly matches what\u2019s found in sugary sodas, which are not exactly known for being healthy. (The vitamins in juice make the drink better for you than soda, of course.)\n\u201cBut if you\u2019re looking at it from a sugar perspective, they\u2019re basically one and the same,\u201d notes Czerwony.\nIs sugar in juice a bit of a concern? You bet. But there\u2019s also the reality that many people simply don\u2019t fill their diet with much fruit.\nThe Centers for Disease Control and Prevention (CDC) reports that only about 12% of adults in the United States consume the recommended amount of fruit per day. Juice consumption is included in the tally.\nSo, in many ways, consuming too little fruit stands as a bigger issue than people drinking too much 100% fruit juice.\n\u201cJuice is an easy way to add servings of fruit to your diet, and there\u2019s nothing wrong with enjoying a glass,\u201d says Czerwony. \u201cThe key is moderation. Just make sure you\u2019re not overdoing it.\u201d\nLearn more about our editorial process.\nAdvertisement\nCleveland Clinic is a non-profit academic medical center. Advertising on our site helps support our mission. We do not endorse non-Cleveland Clinic products or services. Policy\nAdvertisement\nAdvertisement\nAdvertisement\nAdvertisement\nOptions for sober social drinking are abundant, but be mindful about additives and triggers\nPickle juice has a reputation as a probiotic powerhouse, workout recovery aid, hangover cure and more\nIf you\u2019re looking to boost your gut health, it\u2019s better to get fiber from whole foods\nWhile it isn\u2019t bad for you, celery juice isn\u2019t the detox phenom it\u2019s claimed to be\nRegularly drinking these sugar-fueled, stimulant-laden beverages can increase your risk of adverse health effects\nThis spicy concoction can do more harm than good, upsetting your stomach and causing painful acid reflux\nJuicing removes beneficial fiber from fruits and veggies and raises your blood sugar\nSports drinks can give your body a boost, but it\u2019s important not to overuse them\nBabies can get congested easily, but you can calm their cough by keeping them hydrated, using nasal drops and running a humidifier\nWeight loss may cause loose, sagging skin and muscle loss to your rear\nSeveral conditions, like vitiligo and fungal infection, can cause a loss of pigmentation, leading to white spots or patches on your skin\n\nProvide relevant evidence.",
+    "input_length_chars": 5632,
+    "input_tokens_estimated": 1408,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses that 100% fruit juice contains high levels of natural sugars, particularly fructose, which can lead to significant sugar intake comparable to soda. It emphasizes that juicing concentrates these sugars, making it easy to consume high amounts in a single serving.",
+      "overall_stance": "supports",
+      "key_quote": "\"Many types of fruit are packed with natural sugars \u2014 one of the reasons fruit is often dubbed 'nature\u2019s candy.' When you juice fruit, you concentrate that sugar into one extremely sippable drink.\""
+    },
+    "output_length_chars": 568,
+    "output_tokens_estimated": 142,
+    "cost_usd": 0.0002964
+  }
+]

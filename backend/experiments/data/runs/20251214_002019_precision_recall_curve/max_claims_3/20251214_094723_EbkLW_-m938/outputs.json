@@ -1,0 +1,651 @@
+{
+  "extracted_claims": {
+    "claims": [
+      {
+        "text": "Democracy is a system where citizens have the power to choose their leaders.",
+        "confidence": 0.9,
+        "category": "political",
+        "importance": 0.85,
+        "context": "Definition of democracy, central to the video's thesis.",
+        "transcript_char_start": 180,
+        "transcript_char_end": 259,
+        "transcript_match_score": 0.8051948051948052
+      },
+      {
+        "text": "Today, democracy is based on the principle that everyone has equal rights and duties.",
+        "confidence": 0.9,
+        "category": "political",
+        "importance": 0.85,
+        "context": "Current understanding of democracy, central to the video's thesis.",
+        "transcript_char_start": 1007,
+        "transcript_char_end": 1090,
+        "transcript_match_score": 1.0
+      },
+      {
+        "text": "In ancient Athens, only men who were citizens could vote; women and slaves were excluded.",
+        "confidence": 0.9,
+        "category": "historical",
+        "importance": 0.7,
+        "context": "Historical voting rights in Athens, illustrating early democratic limitations.",
+        "transcript_char_start": 567,
+        "transcript_char_end": 641,
+        "transcript_match_score": 0.85
+      }
+    ],
+    "total_count": 3
+  },
+  "final_output": {
+    "extracted_claims": {
+      "claims": [
+        {
+          "text": "Democracy is a system where citizens have the power to choose their leaders.",
+          "confidence": 0.9,
+          "category": "political",
+          "importance": 0.85,
+          "context": "Definition of democracy, central to the video's thesis.",
+          "transcript_char_start": 180,
+          "transcript_char_end": 259,
+          "transcript_match_score": 0.8051948051948052
+        },
+        {
+          "text": "Today, democracy is based on the principle that everyone has equal rights and duties.",
+          "confidence": 0.9,
+          "category": "political",
+          "importance": 0.85,
+          "context": "Current understanding of democracy, central to the video's thesis.",
+          "transcript_char_start": 1007,
+          "transcript_char_end": 1090,
+          "transcript_match_score": 1.0
+        },
+        {
+          "text": "In ancient Athens, only men who were citizens could vote; women and slaves were excluded.",
+          "confidence": 0.9,
+          "category": "historical",
+          "importance": 0.7,
+          "context": "Historical voting rights in Athens, illustrating early democratic limitations.",
+          "transcript_char_start": 567,
+          "transcript_char_end": 641,
+          "transcript_match_score": 0.85
+        }
+      ],
+      "total_count": 3
+    },
+    "claim_reports": [
+      {
+        "claim_text": "Democracy is a system where citizens have the power to choose their leaders.",
+        "claim_confidence": 0.9,
+        "claim_category": "political",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence strongly supports the claim that democracy is a system where citizens have the power to choose their leaders. Multiple high-reliability sources, including a Congresswoman's statement and a Stanford lecture, emphasize the fundamental right of citizens to vote and select their representatives.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Democracy and Voting Rights | Congresswoman Jan Schakowsky",
+              "url": "http://schakowsky.house.gov/issues/voter",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence clearly supports the claim that democracy allows citizens to choose their leaders, as it emphasizes the fundamental right of American citizens to vote and select their representatives.",
+              "snippet": "A fundamental building block of our democracy is the right of American citizens to vote and choose their representatives."
+            },
+            {
+              "title": "What is Democracy?",
+              "url": "https://diamond-democracy.stanford.edu/events/lecture/what-democracy",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (40.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence clearly defines democracy as a system where the people have the power to choose their leaders through free and fair elections, confirming the claim.",
+              "snippet": "Democracy is a means for the people to choose their leaders and to hold their leaders accountable for their policies and their conduct in office ..."
+            },
+            {
+              "title": "Democracy - Manual for Human Rights Education with Young people",
+              "url": "https://www.coe.int/en/web/compass/democracy",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence supports the claim by emphasizing that a fundamental aspect of democracy is the right of citizens to vote and choose their representatives, highlighting the importance of citizen participation in the democratic process.",
+              "snippet": "There are so many different models of democratic government around the world that it is sometimes easier to understand the idea of democracy in terms of what it ..."
+            },
+            {
+              "title": "What Is Democracy, and Why Does Defending It Matter?",
+              "url": "https://freedomhouse.org/article/what-democracy-and-why-does-defending-it-matter",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Right-Center"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence describes democracy as a system based on the will and consent of the governed, which implies that citizens have the power to choose their leaders.",
+              "snippet": "Democracy is a governing system based on the will and consent of the governed, institutions that are accountable to all citizens, adherence to the rule of law,"
+            },
+            {
+              "title": "Who Decides What Is Democratic? | Journal of Democracy",
+              "url": "https://www.journalofdemocracy.org/articles/who-decides-what-is-democratic/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that democracy involves citizens collectively deciding who governs them, which aligns with the claim that citizens have the power to choose their leaders.",
+              "snippet": "Democracy is a system in which citizens collectively decide by whom and, to some extent, how they will be governed."
+            },
+            {
+              "title": "[PDF] Democracy in the United States - USCIS",
+              "url": "https://www.uscis.gov/sites/default/files/document/lesson-plans/Government_and_You_handouts.pdf",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "MBFC credibility: medium",
+                  "Factual reporting: Mixed"
+                ],
+                "bias": "Right"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that democracy involves the right of citizens to vote and choose their representatives, emphasizing the importance of maintaining this right for effective governance.",
+              "snippet": "Here, citizens vote for their government officials. These officials represent the citizens' ideas and concerns in government. Voting is one way to participate ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 13.16,
+        "timestamp_confidence": 0.8051948051948052
+      },
+      {
+        "claim_text": "Today, democracy is based on the principle that everyone has equal rights and duties.",
+        "claim_confidence": 0.9,
+        "claim_category": "political",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence strongly supports the claim that democracy is based on the principle of equal rights and duties. Multiple high-reliability sources, including the State Department and the OHCHR, emphasize the connection between democracy and the respect for individual rights, highlighting that all individuals must be treated equally without discrimination.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "2023 Country Reports on Human Rights Practices - State Department",
+              "url": "https://www.state.gov/reports/2023-country-reports-on-human-rights-practices",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The article discusses the U.S. commitment to promoting democracy and human rights, emphasizing that democracy is linked to the respect for individual rights and duties as outlined in the Universal Declaration of Human Rights.",
+              "snippet": "The annual Human Rights Reports cover internationally recognized individual, civil, political, and worker rights, as set forth in the ..."
+            },
+            {
+              "title": "[PDF] DEMOCRACY - USEmbassy.gov",
+              "url": "https://common.usembassy.gov/wp-content/uploads/sites/32/2016/07/Democracy-in-Brief_In-Brief-Series_English_Lo-Res.pdf",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (26.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence supports the claim by stating that in a democracy, all individuals must be treated equally, with no discrimination based on ethnicity, religion, gender, or sexual orientation, and that every vote counts the same, affirming the principle of equal rights and duties for all citizens.",
+              "snippet": "More specifically, in democracies, these fundamental or inalienable rights include freedom of speech and expression, freedom of religion and conscience, freedom."
+            },
+            {
+              "title": "Advancing Equity and Racial Justice Through the Federal Government",
+              "url": "https://bidenwhitehouse.archives.gov/equity/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (24.9 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The article discusses the U.S. commitment to advancing human rights and democracy, emphasizing the importance of equal rights for all citizens, which aligns with the claim that democracy is based on equal rights and duties.",
+              "snippet": "The Biden-Harris Administration has championed racial equity and further advanced equal opportunity for underserved communities through landmark legislation."
+            },
+            {
+              "title": "About democracy and human rights | OHCHR",
+              "url": "https://www.ohchr.org/en/about-democracy-and-human-rights",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence discusses the importance of human rights and fundamental freedoms, which are essential components of democracy, implying that democracy is indeed based on the principle of equal rights and duties for all individuals.",
+              "snippet": "Respect for human rights and fundamental freedoms, including freedom of opinion and expression, and freedom of association; \u00b7 Access to power and its exercise in ..."
+            },
+            {
+              "title": "Sustaining Our Democracy Act 118th Congress (2023-2024)",
+              "url": "https://www.congress.gov/bill/118th-congress/house-bill/5292",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence discusses the U.S. commitment to advancing human rights and democracy, emphasizing the importance of equal rights for all citizens, which aligns with the claim that democracy is based on equal rights and duties.",
+              "snippet": "The bill prohibits states from using funds for certain activities, including any activity that diminishes the ability of any eligible voter to participate in ..."
+            },
+            {
+              "title": "Principles of Democracy - League of Women Voters of Wake County",
+              "url": "https://www.lwvwake.org/content.aspx?page_id=22&club_id=289772&module_id=734704",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (22.8 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence supports the claim by stating that in a democracy, all individuals must be treated equally, without discrimination based on ethnicity, religion, gender, or sexual orientation, and that everyone has equal access to their rights, including voting.",
+              "snippet": "Equality\u200b\u200b All individuals must be treated equally in a democracy. This means they are not discriminated against based on their ethnicity, religion, gender, or ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 67.08,
+        "timestamp_confidence": 1.0
+      },
+      {
+        "claim_text": "In ancient Athens, only men who were citizens could vote; women and slaves were excluded.",
+        "claim_confidence": 0.9,
+        "claim_category": "historical",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence consistently confirms that in ancient Athens, only adult, free male citizens were allowed to vote, explicitly excluding women and slaves. This is supported by multiple reliable sources, including a high-reliability article from Smithsonian.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Ancient Greeks Voted to Kick Politicians Out of Athens if Enough ...",
+              "url": "https://www.smithsonianmag.com/history/ancient-athenians-voted-kick-politicians-out-if-enough-people-didnt-them-180976138/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that in ancient Athens, only adult, free male citizens were allowed to participate in the democratic process, explicitly excluding women, slaves, and metics (foreign residents).",
+              "snippet": "... excluded women, enslaved workers and foreign-born residents. Though ... Athens to vote a particular citizen to be ostracised from the polis."
+            },
+            {
+              "title": "Athenian democracy - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Athenian_democracy",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (24.9 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that in ancient Athens, only adult, free male citizens were allowed to participate in the democratic process, explicitly excluding women, slaves, and metics (foreign residents).",
+              "snippet": "Participation was open to adult, free male citizens (i.e., not a metic, woman or slave). ... slaves, children, women and metics (foreign residents in Athens). The ..."
+            },
+            {
+              "title": "Democracy (Ancient Greece) - National Geographic Education",
+              "url": "https://education.nationalgeographic.org/resource/democracy-ancient-greece/",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (27.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that in ancient Athens, only adult, free male citizens were allowed to participate in the democratic process, explicitly excluding women and slaves from voting rights.",
+              "snippet": "Women, children, and slaves were not considered citizens and therefore could not vote. Each year 500 names were chosen from all the citizens of ..."
+            },
+            {
+              "title": "How People Voted in Ancient Elections - History.com",
+              "url": "https://www.history.com/articles/ancient-elections-voting",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (31.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that women and enslaved people were excluded from voting in ancient Athens, supporting the claim that only male citizens could vote.",
+              "snippet": "Women and enslaved people did not have a vote. Advertisement ... There were very few elections in Athens, because the ancient Athenians ..."
+            }
+          ]
+        },
+        "total_sources": 4,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 37.04,
+        "timestamp_confidence": 0.85
+      }
+    ],
+    "transcript_data": {
+      "text": "what is democracy have you ever wondered how the people in a country get to decide who their leaders are and what rules they should follow this is all about democracy democracy is a system where the citizens of a country have the power to choose their leaders and influence the decisions made by the government the word democracy comes from ancient Greek meaning citizens power let's go back in time to see where this idea started in ient Athens citizens would Gather in an assembly to discuss and decide on laws and other important matters however it wasn't perfect only men who were citizens could vote while women and slaves were excluded fast forward to the 18th century the French Revolution marked a significant Turning Point French citizens overthrew the absolute monarchy and for the first time the idea of universal suffrage emerged this meant that any citizen regardless of wealth could vote however women still couldn't vote at this time over time Democratic ideas spread to many other countries today democracy is based on the principle that everyone has equal rights and duties it's about respecting each other and ensuring that everyone has a say in how the country is run in a democratic system citizens vote to elect their leaders and participate in the decision- making process this is done through elections where people choose their representatives the government is accountable to the people and the rule of law ensures that everyone is treated fairly civic education plays a crucial role in sustaining democracy it teaches citizens about their rights responsibilities and how to participate in the Democratic process this education helps people understand the complexities of political life and how to make informed decisions in summary democracy is about giving power to the people ensuring everyone's voice is heard and maintaining a fair and just Society it's a system that has evolved over centuries and continues to be refined to ensure equality and justice for all",
+      "segments": [
+        {
+          "text": "what is",
+          "start": 3.24,
+          "duration": 3.559
+        },
+        {
+          "text": "democracy have you ever wondered how the",
+          "start": 4.48,
+          "duration": 4.039
+        },
+        {
+          "text": "people in a country get to decide who",
+          "start": 6.799,
+          "duration": 3.72
+        },
+        {
+          "text": "their leaders are and what rules they",
+          "start": 8.519,
+          "duration": 4.641
+        },
+        {
+          "text": "should follow this is all about",
+          "start": 10.519,
+          "duration": 4.961
+        },
+        {
+          "text": "democracy democracy is a system where",
+          "start": 13.16,
+          "duration": 4.6
+        },
+        {
+          "text": "the citizens of a country have the power",
+          "start": 15.48,
+          "duration": 4.08
+        },
+        {
+          "text": "to choose their leaders and influence",
+          "start": 17.76,
+          "duration": 3.84
+        },
+        {
+          "text": "the decisions made by the government the",
+          "start": 19.56,
+          "duration": 4.6
+        },
+        {
+          "text": "word democracy comes from ancient Greek",
+          "start": 21.6,
+          "duration": 6.04
+        },
+        {
+          "text": "meaning citizens power let's go back in",
+          "start": 24.16,
+          "duration": 5.84
+        },
+        {
+          "text": "time to see where this idea started in",
+          "start": 27.64,
+          "duration": 4.599
+        },
+        {
+          "text": "ient Athens citizens would Gather in an",
+          "start": 30.0,
+          "duration": 4.239
+        },
+        {
+          "text": "assembly to discuss and decide on laws",
+          "start": 32.239,
+          "duration": 4.801
+        },
+        {
+          "text": "and other important matters however it",
+          "start": 34.239,
+          "duration": 4.601
+        },
+        {
+          "text": "wasn't perfect only men who were",
+          "start": 37.04,
+          "duration": 3.88
+        },
+        {
+          "text": "citizens could vote while women and",
+          "start": 38.84,
+          "duration": 4.92
+        },
+        {
+          "text": "slaves were excluded fast forward to the",
+          "start": 40.92,
+          "duration": 5.2
+        },
+        {
+          "text": "18th century the French Revolution",
+          "start": 43.76,
+          "duration": 4.639
+        },
+        {
+          "text": "marked a significant Turning Point",
+          "start": 46.12,
+          "duration": 4.36
+        },
+        {
+          "text": "French citizens overthrew the absolute",
+          "start": 48.399,
+          "duration": 5.041
+        },
+        {
+          "text": "monarchy and for the first time the idea",
+          "start": 50.48,
+          "duration": 5.96
+        },
+        {
+          "text": "of universal suffrage emerged this meant",
+          "start": 53.44,
+          "duration": 5.119
+        },
+        {
+          "text": "that any citizen regardless of wealth",
+          "start": 56.44,
+          "duration": 5.079
+        },
+        {
+          "text": "could vote however women still couldn't",
+          "start": 58.559,
+          "duration": 6.401
+        },
+        {
+          "text": "vote at this time over time Democratic",
+          "start": 61.519,
+          "duration": 5.561
+        },
+        {
+          "text": "ideas spread to many other",
+          "start": 64.96,
+          "duration": 4.799
+        },
+        {
+          "text": "countries today democracy is based on",
+          "start": 67.08,
+          "duration": 4.56
+        },
+        {
+          "text": "the principle that everyone has equal",
+          "start": 69.759,
+          "duration": 4.481
+        },
+        {
+          "text": "rights and duties it's about respecting",
+          "start": 71.64,
+          "duration": 4.6
+        },
+        {
+          "text": "each other and ensuring that everyone",
+          "start": 74.24,
+          "duration": 5.16
+        },
+        {
+          "text": "has a say in how the country is run in a",
+          "start": 76.24,
+          "duration": 5.72
+        },
+        {
+          "text": "democratic system citizens vote to elect",
+          "start": 79.4,
+          "duration": 4.28
+        },
+        {
+          "text": "their leaders and participate in the",
+          "start": 81.96,
+          "duration": 4.36
+        },
+        {
+          "text": "decision- making process this is done",
+          "start": 83.68,
+          "duration": 4.759
+        },
+        {
+          "text": "through elections where people choose",
+          "start": 86.32,
+          "duration": 3.96
+        },
+        {
+          "text": "their representatives the government is",
+          "start": 88.439,
+          "duration": 3.72
+        },
+        {
+          "text": "accountable to the people and the rule",
+          "start": 90.28,
+          "duration": 4.24
+        },
+        {
+          "text": "of law ensures that everyone is treated",
+          "start": 92.159,
+          "duration": 5.201
+        },
+        {
+          "text": "fairly civic education plays a crucial",
+          "start": 94.52,
+          "duration": 5.72
+        },
+        {
+          "text": "role in sustaining democracy it teaches",
+          "start": 97.36,
+          "duration": 4.799
+        },
+        {
+          "text": "citizens about their rights",
+          "start": 100.24,
+          "duration": 4.12
+        },
+        {
+          "text": "responsibilities and how to participate",
+          "start": 102.159,
+          "duration": 5.081
+        },
+        {
+          "text": "in the Democratic process this education",
+          "start": 104.36,
+          "duration": 5.16
+        },
+        {
+          "text": "helps people understand the complexities",
+          "start": 107.24,
+          "duration": 4.159
+        },
+        {
+          "text": "of political life and how to make",
+          "start": 109.52,
+          "duration": 4.08
+        },
+        {
+          "text": "informed decisions in",
+          "start": 111.399,
+          "duration": 4.76
+        },
+        {
+          "text": "summary democracy is about giving power",
+          "start": 113.6,
+          "duration": 4.72
+        },
+        {
+          "text": "to the people ensuring everyone's voice",
+          "start": 116.159,
+          "duration": 5.201
+        },
+        {
+          "text": "is heard and maintaining a fair and just",
+          "start": 118.32,
+          "duration": 5.36
+        },
+        {
+          "text": "Society it's a system that has evolved",
+          "start": 121.36,
+          "duration": 4.24
+        },
+        {
+          "text": "over centuries and continues to be",
+          "start": 123.68,
+          "duration": 4.2
+        },
+        {
+          "text": "refined to ensure equality and justice",
+          "start": 125.6,
+          "duration": 5.48
+        },
+        {
+          "text": "for all",
+          "start": 127.88,
+          "duration": 3.2
+        }
+      ],
+      "video_id": "EbkLW_-m938"
+    }
+  }
+}

@@ -1,0 +1,1150 @@
+{
+  "extracted_claims": {
+    "claims": [
+      {
+        "text": "Greenhouse gases trap heat and energy from the Sun.",
+        "confidence": 0.95,
+        "category": "scientific",
+        "importance": 0.7,
+        "context": "Explanation of greenhouse gases' function.",
+        "transcript_char_start": 276,
+        "transcript_char_end": 324,
+        "transcript_match_score": 0.8571428571428571
+      },
+      {
+        "text": "Human-produced gases can have bad effects on the planet, including changing the climate and weather.",
+        "confidence": 0.85,
+        "category": "scientific",
+        "importance": 0.6,
+        "context": "Discussing the impact of greenhouse gases.",
+        "transcript_char_start": 116,
+        "transcript_char_end": 208,
+        "transcript_match_score": 0.9578947368421052
+      },
+      {
+        "text": "Fertilizers used in farming can lose nutrients to the atmosphere.",
+        "confidence": 0.8,
+        "category": "scientific",
+        "importance": 0.6,
+        "context": "Research on farming practices and atmospheric impact.",
+        "transcript_char_start": 2808,
+        "transcript_char_end": 2877,
+        "transcript_match_score": 0.631578947368421
+      },
+      {
+        "text": "Eric's team measures the levels of gases in the atmosphere, including greenhouse gases.",
+        "confidence": 0.9,
+        "category": "scientific",
+        "importance": 0.5,
+        "context": "Describing Eric's research focus.",
+        "transcript_char_start": 558,
+        "transcript_char_end": 632,
+        "transcript_match_score": 0.7924528301886793
+      },
+      {
+        "text": "The atmosphere is a mix of gases that surrounds our planet.",
+        "confidence": 0.9,
+        "category": "scientific",
+        "importance": 0.3,
+        "context": "Introduction to atmospheric composition.",
+        "transcript_char_start": 32,
+        "transcript_char_end": 99,
+        "transcript_match_score": 0.848
+      }
+    ],
+    "total_count": 5
+  },
+  "final_output": {
+    "extracted_claims": {
+      "claims": [
+        {
+          "text": "Greenhouse gases trap heat and energy from the Sun.",
+          "confidence": 0.95,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Explanation of greenhouse gases' function.",
+          "transcript_char_start": 276,
+          "transcript_char_end": 324,
+          "transcript_match_score": 0.8571428571428571
+        },
+        {
+          "text": "Human-produced gases can have bad effects on the planet, including changing the climate and weather.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Discussing the impact of greenhouse gases.",
+          "transcript_char_start": 116,
+          "transcript_char_end": 208,
+          "transcript_match_score": 0.9578947368421052
+        },
+        {
+          "text": "Fertilizers used in farming can lose nutrients to the atmosphere.",
+          "confidence": 0.8,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Research on farming practices and atmospheric impact.",
+          "transcript_char_start": 2808,
+          "transcript_char_end": 2877,
+          "transcript_match_score": 0.631578947368421
+        },
+        {
+          "text": "Eric's team measures the levels of gases in the atmosphere, including greenhouse gases.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.5,
+          "context": "Describing Eric's research focus.",
+          "transcript_char_start": 558,
+          "transcript_char_end": 632,
+          "transcript_match_score": 0.7924528301886793
+        },
+        {
+          "text": "The atmosphere is a mix of gases that surrounds our planet.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.3,
+          "context": "Introduction to atmospheric composition.",
+          "transcript_char_start": 32,
+          "transcript_char_end": 99,
+          "transcript_match_score": 0.848
+        }
+      ],
+      "total_count": 5
+    },
+    "claim_reports": [
+      {
+        "claim_text": "Greenhouse gases trap heat and energy from the Sun.",
+        "claim_confidence": 0.95,
+        "claim_category": "scientific",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "Multiple high-reliability sources confirm that greenhouse gases absorb and re-radiate heat energy emitted from the Earth's surface, effectively trapping heat in the atmosphere. This is consistently supported by the UCAR Center for Science Education, NASA, the WMO, and Climate Central.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "The Greenhouse Effect - UCAR Center for Science Education",
+              "url": "https://scied.ucar.edu/learning-zone/how-climate-works/greenhouse-effect",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (39.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that greenhouse gases absorb heat energy emitted from the Earth's surface and re-radiate some of it back toward the surface, effectively trapping heat in the atmosphere.",
+              "snippet": "The greenhouse effect causes some of this energy to be waylaid in the atmosphere, absorbed and released by greenhouse gases."
+            },
+            {
+              "title": "What Is the Greenhouse Effect? - NASA Science",
+              "url": "https://science.nasa.gov/kids/earth/what-is-the-greenhouse-effect/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that greenhouse gases absorb heat energy emitted from the Earth's surface and re-radiate some of it back toward the surface, effectively trapping heat in the atmosphere.",
+              "snippet": "Greenhouse gases in Earth's atmosphere trap some of the heat from the sun. It prevents the heat from escaping back into space at night. This ..."
+            },
+            {
+              "title": "The Sun's impact on the Earth",
+              "url": "https://wmo.int/suns-impact-earth",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that greenhouse gases absorb heat energy emitted from the Earth's surface and re-radiate some of it back towards the surface, effectively trapping heat in the atmosphere.",
+              "snippet": "Part of this longwave radiation is absorbed by greenhouse gases which then radiate energy into all directions, including downwards and thereby trapping heat in ..."
+            },
+            {
+              "title": "Heat-Trapping Pollution - Climate Central",
+              "url": "https://www.climatecentral.org/climate-matters/heat-trapping-pollution-2024",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence clearly explains that greenhouse gases trap heat from the sun near the Earth's surface, which is essential for maintaining a warm climate that supports life. This process is directly compared to how a glass greenhouse retains heat, confirming the claim.",
+              "snippet": "Greenhouse gases warm the Earth by trapping heat near the surface. Earth's atmosphere contains a mix of gases that sustain life by absorbing ..."
+            }
+          ]
+        },
+        "total_sources": 4,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 27.52,
+        "timestamp_confidence": 0.8571428571428571
+      },
+      {
+        "claim_text": "Human-produced gases can have bad effects on the planet, including changing the climate and weather.",
+        "claim_confidence": 0.85,
+        "claim_category": "scientific",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence strongly supports the claim that human-produced gases negatively affect the planet, particularly through climate change and altered weather patterns. Multiple high-reliability sources, including NASA and the U.S. Energy Information Administration, confirm that greenhouse gases are linked to rising global temperatures and extreme weather events.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Climate change: global temperature",
+              "url": "https://www.climate.gov/news-features/understanding-climate/climate-change-global-temperature",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (26.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that human-produced greenhouse gases are causing an increase in Earth's average surface temperature, which is linked to changes in climate and weather patterns.",
+              "snippet": "Earth's average surface temperature has been rising because human-produced greenhouse gases are causing Earth to absorb more energy than it ..."
+            },
+            {
+              "title": "Greenhouse gases' effect on climate - U.S. Energy Information ... - EIA",
+              "url": "https://www.eia.gov/energyexplained/energy-and-the-environment/greenhouse-gases-and-the-climate.php",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (16.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that human-produced greenhouse gases are causing an increase in Earth's average surface temperature, which is linked to significant changes in climate and weather patterns.",
+              "snippet": "In computer-based models, rising concentrations of greenhouse gases result in a rising average surface temperature of the earth over time."
+            },
+            {
+              "title": "What is the greenhouse effect? - NASA Science",
+              "url": "https://science.nasa.gov/climate-change/faq/what-is-the-greenhouse-effect/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that human-produced greenhouse gases are causing an increase in Earth's average surface temperature, which is linked to significant changes in climate and weather patterns.",
+              "snippet": "The greenhouse effect is the process through which heat is trapped near Earth's surface by substances known as 'greenhouse gases."
+            },
+            {
+              "title": "Extreme Weather and Climate Change - NASA Science",
+              "url": "https://science.nasa.gov/climate-change/extreme-weather/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence discusses how human-produced greenhouse gases (GHGs) like carbon dioxide and methane contribute to climate change and extreme weather events, confirming the claim that human activities can negatively impact the planet's climate and weather patterns.",
+              "snippet": "This warming affects the water cycle, shifts weather patterns, and melts land ice \u2014 all impacts that can make extreme weather worse. According ..."
+            }
+          ]
+        },
+        "total_sources": 4,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 16.51,
+        "timestamp_confidence": 0.9578947368421052
+      },
+      {
+        "claim_text": "Fertilizers used in farming can lose nutrients to the atmosphere.",
+        "claim_confidence": 0.8,
+        "claim_category": "scientific",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "Multiple high-reliability sources confirm that fertilizers used in farming can lose significant amounts of nutrients, particularly nitrogen, to the atmosphere in gaseous forms such as ammonia and nitrogen oxides. This is supported by evidence from the USDA, UNEP, and other reputable organizations.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "The Nutrient Challenge of Sustainable Fertilizer Management - USDA",
+              "url": "https://www.usda.gov/about-usda/news/blog/nutrient-challenge-sustainable-fertilizer-management",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that a significant portion of fertilizers applied in farming, specifically 40-80%, is lost to the environment, which includes losses to the atmosphere. This supports the claim that fertilizers can lose nutrients to the atmosphere.",
+              "snippet": "Eutrophication is a process where fertilizer stimulates dense marine and fresh water plant growth, which can lead to the death of animal life ..."
+            },
+            {
+              "title": "Excess fertilizer use: which countries cause environmental damage ...",
+              "url": "https://ourworldindata.org/excess-fertilizer",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that fertilizers can indeed lose nutrients to the atmosphere, specifically nitrogen, which can be released as gaseous compounds like ammonia and nitrogen oxides. This supports the claim that fertilizers used in farming can lose nutrients to the atmosphere.",
+              "snippet": "Research presented here shows that nearly two-thirds of the nitrogen we use on our crops becomes a pollutant; more than half of applied phosphorus does."
+            },
+            {
+              "title": "Fertilizers are Necessary \u2013 And Only As Evil As We Let Them Be",
+              "url": "https://www.climaterealityproject.org/blog/fertilizers-are-necessary-and-only-evil-we-let-them-be",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Left"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that a significant portion of fertilizers applied in farming, specifically 40-80%, is lost to the environment, which supports the claim that fertilizers can lose nutrients to the atmosphere.",
+              "snippet": "Chemical runoff from haphazardly applied fertilizer can drain into streams and lakes, leading to recurrent algal blooms that kill fish and ..."
+            },
+            {
+              "title": "Fertilizers: challenges and solutions - UNEP",
+              "url": "https://www.unep.org/news-and-stories/story/fertilizers-challenges-and-solutions",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that fertilizers can lose nutrients to the atmosphere, specifically nitrogen in the form of gaseous compounds like ammonia and nitrogen oxides, which can negatively impact air quality.",
+              "snippet": "Nutrient run-off from farms laced with synthetic fertilizer has adversely affected land ecosystems, according to the United Nations-backed ..."
+            },
+            {
+              "title": "Sources and Solutions: Agriculture | US EPA",
+              "url": "https://www.epa.gov/nutrientpollution/sources-and-solutions-agriculture",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "MBFC credibility: medium",
+                  "Factual reporting: Mixed"
+                ],
+                "bias": "Right"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that fertilizers used in farming can lose nutrients to the atmosphere, specifically nitrogen, which can be lost in gaseous forms such as ammonia and nitrogen oxides.",
+              "snippet": "Fertilized soils, as well as livestock operations, are also vulnerable to nutrient losses to the air. Nitrogen can be lost from farm fields in ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 188.14,
+        "timestamp_confidence": 0.631578947368421
+      },
+      {
+        "claim_text": "Eric's team measures the levels of gases in the atmosphere, including greenhouse gases.",
+        "claim_confidence": 0.9,
+        "claim_category": "scientific",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "Multiple reliable sources confirm that Eric's team is actively involved in measuring greenhouse gases, including carbon dioxide and methane, at specialized atmospheric stations, as detailed in the CIRES article and the ICOS ERIC documentation.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Global greenhouse gas levels continued to increase in 2023 | CIRES",
+              "url": "https://cires.colorado.edu/news/global-greenhouse-gas-levels-continued-increase-2023",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (39.5 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The article provides evidence that Eric's team is involved in long-term measurements of greenhouse gases, including carbon dioxide, methane, and nitrous oxide, at a specialized atmospheric station.",
+              "snippet": "Atmospheric carbon dioxide is now 50 percent higher than pre-industrial levels. \u201cThe 2023 increase is the third-largest in the past decade, ..."
+            },
+            {
+              "title": "Integrated Carbon Observation System (ICOS ERIC) | OGS",
+              "url": "https://www.ogs.it/en/integrated-carbon-observation-system-icos-eric",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (26.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that Eric's team is involved in long-term measurements of greenhouse gases, including carbon dioxide, methane, and others, as part of their research activities.",
+              "snippet": "ICOS is an infrastructure that promotes technological development and measurements related to greenhouse gases by connecting research, education and innovation."
+            },
+            {
+              "title": "Research group of Atmospheric Matter Fluxes and Long-range ...",
+              "url": "https://www.czechglobe.cz/en/institute-structure/research-sector/ii-domain-ecosystems-analysis/research-group-of-atmospheric-matter-fluxes-and-long-range-transport/",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (16.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that Eric's team is involved in the measurement of greenhouse gases, including carbon dioxide (CO2), methane (CH4), and others, as part of their research activities.",
+              "snippet": "The research and activities of our department are primarily focused on a long-term and continual greenhouse gases measurement (carbon dioxide (CO2), ..."
+            },
+            {
+              "title": "What are Greenhouse Gases and How are they Measured? - YouTube",
+              "url": "https://www.youtube.com/watch?v=rIcXeueo0O8",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (20.8 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that Eric's team is involved in measuring greenhouse gas levels in the atmosphere, as indicated in the Google snippet.",
+              "snippet": "What are greenhouse gases? How do greenhouse gases cause global warming? Eric ... air to measure greenhouse gas levels in the atmosphere."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "Identifying and quantifying greenhouse gas emissions with the ...",
+              "url": "https://www.sciencedirect.com/science/article/pii/S0034425725004626",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "We validate the ability of the Airborne Visible/Infrared Imaging Spectrometer 3 (AVIRIS-3), a NASA imaging spectrometer, to detect greenhouse gas enhancements ...",
+              "snippet": "We validate the ability of the Airborne Visible/Infrared Imaging Spectrometer 3 (AVIRIS-3), a NASA imaging spectrometer, to detect greenhouse gas enhancements ..."
+            },
+            {
+              "title": "You Asked: If CO2 Is Only 0.04% of the Atmosphere, How Does it ...",
+              "url": "https://news.climate.columbia.edu/2019/07/30/co2-drives-global-warming/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Scientists say that if CO2 doubles, it could raise the average global temperature of the Earth between two and five degrees Celsius.",
+              "snippet": "Scientists say that if CO2 doubles, it could raise the average global temperature of the Earth between two and five degrees Celsius."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 45.42,
+        "timestamp_confidence": 0.7924528301886793
+      },
+      {
+        "claim_text": "The atmosphere is a mix of gases that surrounds our planet.",
+        "claim_confidence": 0.9,
+        "claim_category": "scientific",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence overwhelmingly supports the claim that the atmosphere is a mix of gases surrounding our planet, with multiple high-reliability sources confirming its composition primarily of nitrogen and oxygen, along with trace gases.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Earth's Atmosphere - The Driver of Climate",
+              "url": "https://www.ces.fau.edu/nasa/module-2/atmosphere/earth.php",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (36.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that the atmosphere is composed of a mixture of gases, primarily nitrogen and oxygen, along with trace gases and aerosols, which aligns with the claim.",
+              "snippet": "Earth's relatively thin atmosphere primarily consists of a mixture of nitrogen (78%) and oxygen (21%) gases. The remaining 1% contains several inactive gases."
+            },
+            {
+              "title": "What's in the Air? - UCAR Center for Science Education",
+              "url": "https://scied.ucar.edu/learning-zone/air-quality/whats-in-the-air",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (39.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that the atmosphere is composed of a mix of gases, primarily nitrogen and oxygen, along with argon and various trace gases, which supports the claim that the atmosphere surrounds our planet as a mixture of gases.",
+              "snippet": "The dry composition of the atmosphere is mostly nitrogen and oxygen. It also contains fractional amounts of argon and carbon dioxide and trace amounts of other ..."
+            },
+            {
+              "title": "The Atmosphere - PMC - PubMed Central - NIH",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7426726/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The article confirms that the atmosphere is composed of various gases, including nitrogen, oxygen, argon, and trace gases, which supports the claim that the atmosphere is a mix of gases surrounding the planet.",
+              "snippet": "The atmosphere is composed of nitrogen, oxygen and argon, a variety of trace gases, and particles or aerosols from a variety of sources."
+            },
+            {
+              "title": "The Atmosphere: Getting a Handle on Carbon Dioxide",
+              "url": "https://science.nasa.gov/earth/climate-change/greenhouse-gases/the-atmosphere-getting-a-handle-on-carbon-dioxide/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The article confirms that Earth's atmosphere is composed of various gases, specifically noting that dry air consists of approximately 78.08% nitrogen, 20.95% oxygen, and 0.93% argon, thus supporting the claim that the atmosphere is a mix of gases surrounding our planet.",
+              "snippet": "By volume, the dry air in Earth's atmosphere is about 78.08 percent nitrogen, 20.95 percent oxygen, and 0.93 percent argon. A brew of trace ..."
+            },
+            {
+              "title": "The Atmosphere - NOAA",
+              "url": "https://www.noaa.gov/jetstream/atmosphere",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The article confirms that the atmosphere is a layer of gases surrounding the Earth, discussing its composition and the impact of human activities on it. It emphasizes the resilience of the atmosphere while detailing changes in gas concentrations, particularly carbon dioxide and methane, due to human actions.",
+              "snippet": "The atmosphere is a layer of gas and suspended solids extending from the Earth's surface up many thousands of miles, becoming increasingly thinner with ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 11.429,
+        "timestamp_confidence": 0.848
+      }
+    ],
+    "transcript_data": {
+      "text": "[Music] [Music] we can think of the atmosphere as a mix of all sorts of gases that surrounds our planet some gases that humans produce can have bad effects on the planet including changing the climate and weather many of the human produced gases are called greenhouse gases these are gases that trap heat and energy from the Sun hi my name is Eric I'm an atmospheric scientist I study climate and greenhouse gases my group's research we really try to understand what's impact in the atmosphere and how that impacts climate Eric and his team study the atmosphere and measure the levels of gases that make it up including greenhouse gases the goals are to better understand where harmful gases are coming from but first they have to collect gases in the atmosphere and to do this they collect samples of air using special tools our instruments are designed to measure the contents of the atmosphere much like weather station would measure wind or rainfall or snowfall our instruments are designed to measure the molecules the components of the air that were actually in these instruments are able to take snapshots of the amount of different gases in the atmosphere at a given time which helps scientists investigate sources of greenhouse gases but since Eric and his team are thinking about the atmosphere they have an interesting approach to collecting their samples we have instrumentation that will put in different places sometimes we'll put it on an airplane and we'll actually fly the airplane around to different regions that were interested in studying the sources will collect air into inlets on the side of the airplane and actually measure it on instruments in the airplane by collecting samples in flight they are able to identify different emission sources that may not be measurable on the ground pretty cool but how does collecting air above the ground tell us about what is happening on the ground we can think about it this bees fly around from flower to flower as they fly pollen gets attached to them if we looked at a bee after a day of flying around we would be able to tell where it had been by looking at the types of pollen it collected Eric and his team are kind of like bees they fly around collecting samples of air and the samples are able to tell us about what is in the air they spend a lot of time flying and collecting samples over farms for this project we very much want to understand the impacts of how we grow our crops on the atmosphere so in order to grow crops you need to plant seeds you might put quite a lot of fertilizer down a lot of the nutrients from fertilizer going to the growing of the crops but not all of the nutrients make their way into the crops and the number of them are lost to the atmosphere by focusing on flying over farms they are able to tell if the fertilizers that farmers are using are good or bad for the atmosphere as we get towards answers we can help inform farmers on what our optimal practices to have them both get their best crop yields but minimize the losses to the atmosphere but their research doesn't just stop at farms they also fly over cities and other areas or fly downwind of cities to try to understand how much is being emitted from all the cars and vehicles in the city how much is coming out of landfills and power plants this research is important because in order to understand how the atmosphere is changing we have to understand what is making it change this research helps us determine where the problem is so we can fix it but don't let just the scientist do it all themselves you can help reduce your impact on the earth too so if one is concerned about what impacts you have on the atmosphere there are different actions that can be taken the most important thing is to simply be cognizant and aware of what you're doing being aware of subtle things even light bulbs on leaving the TV on when you're not watching it all of those small things do add up but there's also simply power being aware of the problem and then collective action that can come out of that do you want to be a scientist like Eric and his team try making your own sampling device [Music]",
+      "segments": [
+        {
+          "text": "[Music]",
+          "start": 2.1,
+          "duration": 3.06
+        },
+        {
+          "text": "[Music]",
+          "start": 9.8,
+          "duration": 4.61
+        },
+        {
+          "text": "we can think of the atmosphere as a mix",
+          "start": 11.429,
+          "duration": 5.081
+        },
+        {
+          "text": "of all sorts of gases that surrounds our",
+          "start": 14.41,
+          "duration": 4.8
+        },
+        {
+          "text": "planet some gases that humans produce",
+          "start": 16.51,
+          "duration": 4.89
+        },
+        {
+          "text": "can have bad effects on the planet",
+          "start": 19.21,
+          "duration": 4.5
+        },
+        {
+          "text": "including changing the climate and",
+          "start": 21.4,
+          "duration": 5.61
+        },
+        {
+          "text": "weather many of the human produced gases",
+          "start": 23.71,
+          "duration": 3.81
+        },
+        {
+          "text": "are called",
+          "start": 27.01,
+          "duration": 3.36
+        },
+        {
+          "text": "greenhouse gases these are gases that",
+          "start": 27.52,
+          "duration": 5.49
+        },
+        {
+          "text": "trap heat and energy from the Sun hi my",
+          "start": 30.37,
+          "duration": 4.62
+        },
+        {
+          "text": "name is Eric I'm an atmospheric",
+          "start": 33.01,
+          "duration": 4.95
+        },
+        {
+          "text": "scientist I study climate and greenhouse",
+          "start": 34.99,
+          "duration": 5.91
+        },
+        {
+          "text": "gases my group's research we really try",
+          "start": 37.96,
+          "duration": 5.55
+        },
+        {
+          "text": "to understand what's impact in the",
+          "start": 40.9,
+          "duration": 4.52
+        },
+        {
+          "text": "atmosphere and how that impacts climate",
+          "start": 43.51,
+          "duration": 4.95
+        },
+        {
+          "text": "Eric and his team study the atmosphere",
+          "start": 45.42,
+          "duration": 4.84
+        },
+        {
+          "text": "and measure the levels of gases that",
+          "start": 48.46,
+          "duration": 4.71
+        },
+        {
+          "text": "make it up including greenhouse gases",
+          "start": 50.26,
+          "duration": 5.729
+        },
+        {
+          "text": "the goals are to better understand where",
+          "start": 53.17,
+          "duration": 5.729
+        },
+        {
+          "text": "harmful gases are coming from but first",
+          "start": 55.989,
+          "duration": 5.041
+        },
+        {
+          "text": "they have to collect gases in the",
+          "start": 58.899,
+          "duration": 4.531
+        },
+        {
+          "text": "atmosphere and to do this they collect",
+          "start": 61.03,
+          "duration": 5.58
+        },
+        {
+          "text": "samples of air using special tools our",
+          "start": 63.43,
+          "duration": 5.49
+        },
+        {
+          "text": "instruments are designed to measure the",
+          "start": 66.61,
+          "duration": 5.46
+        },
+        {
+          "text": "contents of the atmosphere much like",
+          "start": 68.92,
+          "duration": 5.91
+        },
+        {
+          "text": "weather station would measure wind or",
+          "start": 72.07,
+          "duration": 6.03
+        },
+        {
+          "text": "rainfall or snowfall our instruments are",
+          "start": 74.83,
+          "duration": 5.16
+        },
+        {
+          "text": "designed to measure the molecules the",
+          "start": 78.1,
+          "duration": 4.71
+        },
+        {
+          "text": "components of the air that were actually",
+          "start": 79.99,
+          "duration": 5.43
+        },
+        {
+          "text": "in these instruments are able to take",
+          "start": 82.81,
+          "duration": 4.44
+        },
+        {
+          "text": "snapshots of the amount of different",
+          "start": 85.42,
+          "duration": 3.989
+        },
+        {
+          "text": "gases in the atmosphere at a given time",
+          "start": 87.25,
+          "duration": 4.32
+        },
+        {
+          "text": "which helps scientists investigate",
+          "start": 89.409,
+          "duration": 5.371
+        },
+        {
+          "text": "sources of greenhouse gases but since",
+          "start": 91.57,
+          "duration": 5.31
+        },
+        {
+          "text": "Eric and his team are thinking about the",
+          "start": 94.78,
+          "duration": 4.11
+        },
+        {
+          "text": "atmosphere they have an interesting",
+          "start": 96.88,
+          "duration": 4.68
+        },
+        {
+          "text": "approach to collecting their samples we",
+          "start": 98.89,
+          "duration": 5.01
+        },
+        {
+          "text": "have instrumentation that will put in",
+          "start": 101.56,
+          "duration": 3.21
+        },
+        {
+          "text": "different places",
+          "start": 103.9,
+          "duration": 3.09
+        },
+        {
+          "text": "sometimes we'll put it on an airplane",
+          "start": 104.77,
+          "duration": 3.9
+        },
+        {
+          "text": "and we'll actually fly the airplane",
+          "start": 106.99,
+          "duration": 3.36
+        },
+        {
+          "text": "around to different regions that were",
+          "start": 108.67,
+          "duration": 3.66
+        },
+        {
+          "text": "interested in studying the sources will",
+          "start": 110.35,
+          "duration": 4.14
+        },
+        {
+          "text": "collect air into inlets on the side of",
+          "start": 112.33,
+          "duration": 3.87
+        },
+        {
+          "text": "the airplane and actually measure it on",
+          "start": 114.49,
+          "duration": 3.269
+        },
+        {
+          "text": "instruments in the airplane by",
+          "start": 116.2,
+          "duration": 3.84
+        },
+        {
+          "text": "collecting samples in flight they are",
+          "start": 117.759,
+          "duration": 4.11
+        },
+        {
+          "text": "able to identify different emission",
+          "start": 120.04,
+          "duration": 4.17
+        },
+        {
+          "text": "sources that may not be measurable on",
+          "start": 121.869,
+          "duration": 5.07
+        },
+        {
+          "text": "the ground pretty cool but how does",
+          "start": 124.21,
+          "duration": 5.309
+        },
+        {
+          "text": "collecting air above the ground tell us",
+          "start": 126.939,
+          "duration": 5.19
+        },
+        {
+          "text": "about what is happening on the ground we",
+          "start": 129.519,
+          "duration": 3.841
+        },
+        {
+          "text": "can think about it",
+          "start": 132.129,
+          "duration": 4.111
+        },
+        {
+          "text": "this bees fly around from flower to",
+          "start": 133.36,
+          "duration": 6.09
+        },
+        {
+          "text": "flower as they fly pollen gets attached",
+          "start": 136.24,
+          "duration": 5.64
+        },
+        {
+          "text": "to them if we looked at a bee after a",
+          "start": 139.45,
+          "duration": 4.65
+        },
+        {
+          "text": "day of flying around we would be able to",
+          "start": 141.88,
+          "duration": 4.56
+        },
+        {
+          "text": "tell where it had been by looking at the",
+          "start": 144.1,
+          "duration": 4.86
+        },
+        {
+          "text": "types of pollen it collected Eric and",
+          "start": 146.44,
+          "duration": 5.04
+        },
+        {
+          "text": "his team are kind of like bees they fly",
+          "start": 148.96,
+          "duration": 5.13
+        },
+        {
+          "text": "around collecting samples of air and the",
+          "start": 151.48,
+          "duration": 4.74
+        },
+        {
+          "text": "samples are able to tell us about what",
+          "start": 154.09,
+          "duration": 4.68
+        },
+        {
+          "text": "is in the air they spend a lot of time",
+          "start": 156.22,
+          "duration": 5.01
+        },
+        {
+          "text": "flying and collecting samples over farms",
+          "start": 158.77,
+          "duration": 5.55
+        },
+        {
+          "text": "for this project we very much want to",
+          "start": 161.23,
+          "duration": 6.63
+        },
+        {
+          "text": "understand the impacts of how we grow",
+          "start": 164.32,
+          "duration": 6.12
+        },
+        {
+          "text": "our crops on the atmosphere so in order",
+          "start": 167.86,
+          "duration": 4.68
+        },
+        {
+          "text": "to grow crops you need to plant seeds",
+          "start": 170.44,
+          "duration": 4.53
+        },
+        {
+          "text": "you might put quite a lot of fertilizer",
+          "start": 172.54,
+          "duration": 4.62
+        },
+        {
+          "text": "down a lot of the nutrients from",
+          "start": 174.97,
+          "duration": 4.02
+        },
+        {
+          "text": "fertilizer going to the growing of the",
+          "start": 177.16,
+          "duration": 3.75
+        },
+        {
+          "text": "crops but not all of the nutrients make",
+          "start": 178.99,
+          "duration": 3.81
+        },
+        {
+          "text": "their way into the crops and the number",
+          "start": 180.91,
+          "duration": 4.59
+        },
+        {
+          "text": "of them are lost to the atmosphere by",
+          "start": 182.8,
+          "duration": 5.34
+        },
+        {
+          "text": "focusing on flying over farms they are",
+          "start": 185.5,
+          "duration": 4.47
+        },
+        {
+          "text": "able to tell if the fertilizers that",
+          "start": 188.14,
+          "duration": 3.78
+        },
+        {
+          "text": "farmers are using are good or bad for",
+          "start": 189.97,
+          "duration": 4.83
+        },
+        {
+          "text": "the atmosphere as we get towards answers",
+          "start": 191.92,
+          "duration": 6.06
+        },
+        {
+          "text": "we can help inform farmers on what our",
+          "start": 194.8,
+          "duration": 5.7
+        },
+        {
+          "text": "optimal practices to have them both get",
+          "start": 197.98,
+          "duration": 6.18
+        },
+        {
+          "text": "their best crop yields but minimize the",
+          "start": 200.5,
+          "duration": 6.0
+        },
+        {
+          "text": "losses to the atmosphere but their",
+          "start": 204.16,
+          "duration": 4.859
+        },
+        {
+          "text": "research doesn't just stop at farms they",
+          "start": 206.5,
+          "duration": 5.25
+        },
+        {
+          "text": "also fly over cities and other areas or",
+          "start": 209.019,
+          "duration": 4.651
+        },
+        {
+          "text": "fly downwind of cities to try to",
+          "start": 211.75,
+          "duration": 3.989
+        },
+        {
+          "text": "understand how much is being emitted",
+          "start": 213.67,
+          "duration": 4.17
+        },
+        {
+          "text": "from all the cars and vehicles in the",
+          "start": 215.739,
+          "duration": 4.741
+        },
+        {
+          "text": "city how much is coming out of landfills",
+          "start": 217.84,
+          "duration": 5.19
+        },
+        {
+          "text": "and power plants this research is",
+          "start": 220.48,
+          "duration": 4.89
+        },
+        {
+          "text": "important because in order to understand",
+          "start": 223.03,
+          "duration": 4.32
+        },
+        {
+          "text": "how the atmosphere is changing we have",
+          "start": 225.37,
+          "duration": 4.13
+        },
+        {
+          "text": "to understand what is making it change",
+          "start": 227.35,
+          "duration": 5.22
+        },
+        {
+          "text": "this research helps us determine where",
+          "start": 229.5,
+          "duration": 5.8
+        },
+        {
+          "text": "the problem is so we can fix it but",
+          "start": 232.57,
+          "duration": 4.56
+        },
+        {
+          "text": "don't let just the scientist do it all",
+          "start": 235.3,
+          "duration": 3.84
+        },
+        {
+          "text": "themselves you can help reduce your",
+          "start": 237.13,
+          "duration": 4.26
+        },
+        {
+          "text": "impact on the earth too so if one is",
+          "start": 239.14,
+          "duration": 5.7
+        },
+        {
+          "text": "concerned about what impacts you have on",
+          "start": 241.39,
+          "duration": 5.91
+        },
+        {
+          "text": "the atmosphere there are different",
+          "start": 244.84,
+          "duration": 4.35
+        },
+        {
+          "text": "actions that can be taken the most",
+          "start": 247.3,
+          "duration": 5.07
+        },
+        {
+          "text": "important thing is to simply be",
+          "start": 249.19,
+          "duration": 5.37
+        },
+        {
+          "text": "cognizant and aware of what you're doing",
+          "start": 252.37,
+          "duration": 6.06
+        },
+        {
+          "text": "being aware of subtle things even light",
+          "start": 254.56,
+          "duration": 6.33
+        },
+        {
+          "text": "bulbs on leaving the TV on when you're",
+          "start": 258.43,
+          "duration": 4.32
+        },
+        {
+          "text": "not watching it all of those small",
+          "start": 260.89,
+          "duration": 4.29
+        },
+        {
+          "text": "things do add up but there's also simply",
+          "start": 262.75,
+          "duration": 3.34
+        },
+        {
+          "text": "power",
+          "start": 265.18,
+          "duration": 3.28
+        },
+        {
+          "text": "being aware of the problem and then",
+          "start": 266.09,
+          "duration": 4.29
+        },
+        {
+          "text": "collective action that can come out of",
+          "start": 268.46,
+          "duration": 4.679
+        },
+        {
+          "text": "that do you want to be a scientist like",
+          "start": 270.38,
+          "duration": 5.07
+        },
+        {
+          "text": "Eric and his team try making your own",
+          "start": 273.139,
+          "duration": 3.891
+        },
+        {
+          "text": "sampling device",
+          "start": 275.45,
+          "duration": 4.96
+        },
+        {
+          "text": "[Music]",
+          "start": 277.03,
+          "duration": 3.38
+        }
+      ],
+      "video_id": "rIcXeueo0O8"
+    }
+  }
+}

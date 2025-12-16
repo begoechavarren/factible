@@ -1,0 +1,482 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:32:58.957498",
+    "latency_seconds": 20.05,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nThe nation's historical preservation group, is now suing the Trump administration over its plans to build a giant ballroom over at the white House. Back in October, the Trump administration quickly demolished the white House East Wing to make room for the ballroom for this project. Want to bring in CNN's Brian Todd? Brian, why is the National Trust taking this dramatic step? And this is a lengthy lawsuit. It's a lengthy lawsuit, Wolf, 47 pages. It was filed just moments ago. We have a copy of this lawsuit now to answer your question, Wolf. They are suing because they want this project halted, first and foremost. And they're suing because they said that the white House and its allies and in certain agencies like the National Park Service, did not get the necessary approvals or conduct the necessary reviews. We have a copy of this lawsuit. You see the pictures here. This has been what many people have been complaining about, the demolition of the East wing of the white House that began in October for the construction of a 90,000 square foot ballroom. And just moments ago, as Wolf mentioned, we've obtained a copy of this lawsuit from the National Trust for Historic Preservation. They are suing the National Park Service. They are suing President Trump himself, plus the National Park Service, plus the Department of the Interior and Interior Secretary Douglas Burgum, and others over the construction of the ballroom where the east wing and the colonnade used to be. And here is just one quote from one of the initial pages of the lawsuit. No president is legally allowed to tear down portions of the white House without any review whatsoever. Not President Trump, not President Biden, and not anyone else. And no president is legally allowed to construct a ballroom on public property without giving the public the opportunity to weigh in. President Trump's efforts to do so should be immediately halted, and work on the ballroom project should be paused until the defendants complete the required reviews. Reviews that should have taken place before the defendants demolish the East Wing and before they began construction of the ballroom and secured the necessary approvals. What they are also saying is that there are two entities, from which the white House needed to seek approval and at least a review of this project. The National Capital Planning Commission and the Commission of Fine Arts. And according to this lawsuit from the National Trust for Historic Preservation, the white House did not seek any review from those agencies and did not seek any, public, input on this project. Now, I can I can tell you also, Wolf, we are reaching out to the white House for comment. Our colleague Kevin Liptak is handling that right now. We should be able to get that from Kevin in just a moment. But what I will say is that the president has had this in his, in his sights to to renovate this area, to do a ballroom for years, not just months, years, including before he came into office. He said he offered the Obama administration, you know, that he said he would pay for it. The Obama administration, he said, never got back to him. President Trump has said many times that he believes this is necessary, that people who come to the white House, for certain events, they have to go to a tent that's kind of separate from the main, main body of the white House. And in bad weather, a lot of people who are here for balls and things like that, they just get kind of, disheveled, having to walk through the rain and get into a tent. That's been his perspective. He's been eyeing this for a long time. His idea is to make this very much like the Donald Trump Ballroom at Mar-A-Lago. It's going to look a lot like that. And there are plenty of other ballrooms that I've been to, many of them. Right near the white House, huge ballrooms that they could go to, not just a. I've been to the tent on the backyard of the white House on this, on this on the North Lawn of the white House, and the South Lawn of the white House as well. And that east wing was beautiful. And too bad it's been destroyed. Ari. Brian, thank you very, very much. Kevin Liptak is over at the white House right now. This has been a huge priority for the president. And as Brian just said, you're working to get some reaction. Are you learning anything? Yeah. The white House hasn't responded to this lawsuit specifically, but I'll tell you that white House officials have sort of downplayed criticism from this particular group, the National Trust for Historic Preservation, which you'll remember back in October as this project was getting underway, actually wrote a letter to the white House asking them to pause work to, go through some of these various boards for review. And the white House said at the time that this, trust, the National Trust for Historic Preservation, was comprised of, quote, loser Democrats and liberal donors. And so you see them kind of shrugging off the criticism, we should say that this body is chartered by Congress, tasked with, preserving some of the nation's historic buildings. It actually does have a relationship with President Trump dating back to the 1990s. It worked with him on some projects at Mar-A-Lago. So he does have sort of an existing relationship with this, body, going back several decades. We should say that, the boards that this, group is now requesting and demanding that the court, require that the administration go through the National Capital Planning Commission is now stacked with President Trump's appointees. It's led by Will Scharf, who's the staff secretary at the white House. He has said previously that this project will eventually go before that body, but that it's purview and that its remit does not cover demolition. And that is why they say this project didn't go before that board, before they began tearing down the East wing, but that once sort of vertical construction begins, that it will go before that body. And so, whether this lawsuit sort of spurs that action and prompts them to go more quickly remains to be seen. But you're right. This is an absolute priority of the president. He still mentions that, on almost a weekly basis, you know, when, the crown Prince Mohammed bin Salman was here, for example, the president said, that the dinner he held in his honor on the white House state floor would have been a much grander occasion if they had had, that ballroom constructed in his honor. We should also say that there has been some, discord among the planning team. You know, the president has assigned a new architect, the previous architect still on board, but he had reportedly raised some questions about the sheer scale of this project. You know, the president is envisioning a 90,000 square foot ballroom. The white House itself is only about 55,000ft\u00b2. And one of the concerns that the National Trust for Historic Preservation has raised is that they would essentially dwarf the original building once it's completed. And so all of these concerns are now due to be, heard in court, Wolf, the president keeps pointing out that, this ballroom will be paid for by private donations, not taxpayers. Is that a factor here? It could be. And I think, you know, the president and the white House have said that they will be transparent and they have released, some of the names of the donors who will contribute to this project. One of the questions is how potentially they'll be honored as part of it, whether their names will be, written on the wall or whether they'll have sort of plaques, in the final, ballroom to designate who who donated and, what sort of contribution they were able to make to this project. But it has raised a certainly questions about what kind of influence those donors, might have with the white House and whether or not these individuals are essentially using these donations to curry favor with the president, recognizing that this is a major priority of his. All right. Kevin Liptak at the white House for us, Kevin, thank you very, very much.",
+    "input_length_chars": 8108,
+    "input_tokens_estimated": 2027,
+    "output": {
+      "claims": [
+        {
+          "text": "The National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.",
+          "confidence": 0.9,
+          "category": "policy",
+          "importance": 0.85,
+          "context": "Lawsuit filed against Trump administration regarding White House construction."
+        },
+        {
+          "text": "The lawsuit is 47 pages long and was filed recently.",
+          "confidence": 0.8,
+          "category": "policy",
+          "importance": 0.3,
+          "context": "Details about the lawsuit's length and filing."
+        },
+        {
+          "text": "The Trump administration demolished the White House East Wing in October.",
+          "confidence": 0.9,
+          "category": "historical",
+          "importance": 0.85,
+          "context": "Timeline of events related to the ballroom construction."
+        },
+        {
+          "text": "The ballroom project is planned to be 90,000 square feet.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Size of the proposed ballroom in relation to the East Wing."
+        },
+        {
+          "text": "No president is legally allowed to tear down portions of the White House without review.",
+          "confidence": 0.95,
+          "category": "policy",
+          "importance": 0.85,
+          "context": "Legal claim regarding presidential authority over White House modifications."
+        },
+        {
+          "text": "The National Trust claims the White House did not seek necessary approvals from the National Capital Planning Commission and the Commission of Fine Arts.",
+          "confidence": 0.9,
+          "category": "policy",
+          "importance": 0.85,
+          "context": "Claims about lack of approvals for the ballroom project."
+        },
+        {
+          "text": "The White House has not responded to the lawsuit specifically.",
+          "confidence": 0.8,
+          "category": "policy",
+          "importance": 0.3,
+          "context": "Current status of the White House's response to the lawsuit."
+        },
+        {
+          "text": "The White House is only about 55,000 square feet, smaller than the proposed ballroom.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Comparison of sizes between the White House and the proposed ballroom."
+        },
+        {
+          "text": "The ballroom will be funded by private donations, not taxpayers.",
+          "confidence": 0.9,
+          "category": "policy",
+          "importance": 0.6,
+          "context": "Funding source for the ballroom project."
+        },
+        {
+          "text": "The National Trust for Historic Preservation is chartered by Congress to preserve historic buildings.",
+          "confidence": 0.85,
+          "category": "biographical",
+          "importance": 0.3,
+          "context": "Background on the National Trust's role."
+        }
+      ],
+      "total_count": 10
+    },
+    "output_length_chars": 3150,
+    "output_tokens_estimated": 787,
+    "cost_usd": 0.00077625
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:33:07.864681",
+    "latency_seconds": 2.48,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: No president is legally allowed to tear down portions of the White House without review.\nContext: Legal claim regarding presidential authority over White House modifications.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 347,
+    "input_tokens_estimated": 86,
+    "output": {
+      "original_claim": "No president is legally allowed to tear down portions of the White House without review.",
+      "queries": [
+        {
+          "query": "presidential authority to modify White House",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "legal restrictions on tearing down White House",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 328,
+    "output_tokens_estimated": 82,
+    "cost_usd": 6.21e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "The National Trust for Historic Preservation is chartered by Congress to preserve historic buildings."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:33:07.987172",
+    "latency_seconds": 2.6,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The White House has not responded to the lawsuit specifically.\nContext: Current status of the White House's response to the lawsuit.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 305,
+    "input_tokens_estimated": 76,
+    "output": {
+      "original_claim": "The White House has not responded to the lawsuit specifically.",
+      "queries": [
+        {
+          "query": "White House response lawsuit 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "White House lawsuit response status",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 280,
+    "output_tokens_estimated": 70,
+    "cost_usd": 5.34e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "No president is legally allowed to tear down portions of the White House without review.",
+      "query_index": 2,
+      "query_text": "legal restrictions on tearing down White House"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:33:07.987651",
+    "latency_seconds": 2.6,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The National Trust for Historic Preservation is chartered by Congress to preserve historic buildings.\nContext: Background on the National Trust's role.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 324,
+    "input_tokens_estimated": 81,
+    "output": {
+      "original_claim": "The National Trust for Historic Preservation is chartered by Congress to preserve historic buildings.",
+      "queries": [
+        {
+          "query": "National Trust for Historic Preservation chartered by Congress",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Is the National Trust for Historic Preservation a congressional charter organization?",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 398,
+    "output_tokens_estimated": 99,
+    "cost_usd": 7.155e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "No president is legally allowed to tear down portions of the White House without review.",
+      "query_index": 2,
+      "query_text": "legal restrictions on tearing down White House"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:33:08.154711",
+    "latency_seconds": 2.76,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The lawsuit is 47 pages long and was filed recently.\nContext: Details about the lawsuit's length and filing.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 281,
+    "input_tokens_estimated": 70,
+    "output": {
+      "original_claim": "The lawsuit is 47 pages long and was filed recently.",
+      "queries": [
+        {
+          "query": "lawsuit 47 pages long filed recently",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "recent lawsuit length 47 pages",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 268,
+    "output_tokens_estimated": 67,
+    "cost_usd": 5.07e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "The National Trust for Historic Preservation is chartered by Congress to preserve historic buildings.",
+      "query_index": 2,
+      "query_text": "Is the National Trust for Historic Preservation a congressional charter organization?"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:33:08.155149",
+    "latency_seconds": 2.77,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The Trump administration demolished the White House East Wing in October.\nContext: Timeline of events related to the ballroom construction.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 312,
+    "input_tokens_estimated": 78,
+    "output": {
+      "original_claim": "The Trump administration demolished the White House East Wing in October.",
+      "queries": [
+        {
+          "query": "Trump administration White House East Wing demolition October",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "White House East Wing construction events October 2020",
+          "query_type": "context",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 334,
+    "output_tokens_estimated": 83,
+    "cost_usd": 6.15e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "The National Trust for Historic Preservation is chartered by Congress to preserve historic buildings.",
+      "query_index": 2,
+      "query_text": "Is the National Trust for Historic Preservation a congressional charter organization?"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:33:08.322494",
+    "latency_seconds": 2.94,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.\nContext: Lawsuit filed against Trump administration regarding White House construction.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 390,
+    "input_tokens_estimated": 97,
+    "output": {
+      "original_claim": "The National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.",
+      "queries": [
+        {
+          "query": "National Trust for Historic Preservation lawsuit Trump administration White House ballroom",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Trump administration National Trust lawsuit White House construction ballroom",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 446,
+    "output_tokens_estimated": 111,
+    "cost_usd": 8.115e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "The Trump administration demolished the White House East Wing in October.",
+      "query_index": 2,
+      "query_text": "White House East Wing construction events October 2020"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:33:08.407782",
+    "latency_seconds": 3.02,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The ballroom project is planned to be 90,000 square feet.\nContext: Size of the proposed ballroom in relation to the East Wing.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 299,
+    "input_tokens_estimated": 74,
+    "output": {
+      "original_claim": "The ballroom project is planned to be 90,000 square feet.",
+      "queries": [
+        {
+          "query": "ballroom project 90,000 square feet",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "size of East Wing ballroom 90,000 sq ft",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 281,
+    "output_tokens_estimated": 70,
+    "cost_usd": 5.31e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.",
+      "query_index": 2,
+      "query_text": "Trump administration National Trust lawsuit White House construction ballroom"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:33:08.494874",
+    "latency_seconds": 3.11,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The National Trust claims the White House did not seek necessary approvals from the National Capital Planning Commission and the Commission of Fine Arts.\nContext: Claims about lack of approvals for the ballroom project.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 392,
+    "input_tokens_estimated": 98,
+    "output": {
+      "original_claim": "The National Trust claims the White House did not seek necessary approvals from the National Capital Planning Commission and the Commission of Fine Arts.",
+      "queries": [
+        {
+          "query": "National Trust White House ballroom project approvals National Capital Planning Commission Commission of Fine Arts",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "White House ballroom project National Capital Planning Commission Commission of Fine Arts approval controversy",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 527,
+    "output_tokens_estimated": 131,
+    "cost_usd": 9.33e-05,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "The ballroom project is planned to be 90,000 square feet.",
+      "query_index": 2,
+      "query_text": "size of East Wing ballroom 90,000 sq ft"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:34:02.370314",
+    "latency_seconds": 2.49,
+    "input_prompt": "Claim:\nThe National Trust for Historic Preservation is chartered by Congress to preserve historic buildings.\n\nArticle Title:\nThe National Trust for Historic Preservation\n\nGoogle Search Snippet:\nThe National Trust for Historic Preservation (NTHP), chartered by Congress as a private organization in 1949, entered a new phase of public responsibility.\n\nFull Page Content:\nphoto by: Paul Burk\nThe National Trust for Historic Preservation is a private nonprofit organization leading the movement to save places where our history happened.\nO ld places are where our lives, memories, and stories began. They connect us to the past, anchor us to the present, and lead us into the future. These places inspire us to create a stronger nation, because they belong to all of us.\nFor more than 75 years, the National Trust for Historic Preservation has led the movement to save America\u2019s historic places. A privately funded nonprofit organization, we work to save America's historic sites; tell the full American story; build stronger communities; and invest in preservation's future.\nThanks to the passion and dedication of our advocates and supporters, we\u2019re able to protect hundreds of places every year. Help us save places that matter\u2014for ourselves, each other, and our future together.\nDonate to the National Trust for Historic Preservation today and you'll help preserve places that tell our stories, reflect our culture, and shape our shared American experience.\nWe are committed to transparency and accountability. Download our latest IRS form 990, our congressional charter, audited financials, and other documentation.\nIn this year\u2019s Annual Report, we celebrate the generosity and support of our donors, leaders, and partners\u2014and the work they make possible through the power of place to champion preservation for all in communities around the country.\nThese organizations and entities are closely tied to the National Trust by brand, governance, and mission.\nMain Street America leads a movement committed to strengthening communities through preservation-based economic development in older and historic downtowns and neighborhood commercial districts. We revitalize older and historic commercial districts to build vibrant neighborhoods and thriving economies.\nNational Trust Community Investment Corporation (NTCIC) enables tax credit equity investments that support sustainable communities nationwide.\nNational Trust Insurance Services (NTIS) is the nation's leading insurance agency specifically designed to offer comprehensive insurance solutions to historic property owners and preservation organizations.\nFor more than 45 years, National Trust Tours has been offering life-enriching programs that explore the traditions and cultures of the world, placing a special emphasis on the roles of art and architecture.\nRePurpose Capital (RPC) is the first national loan fund dedicated to financing adaptive reuse projects. At RePurpose Capital, we\u2019re breathing new life into communities by pairing flexible loans with the personalized technical help needed to get these vital projects done.\nUpdates\n600 14th Street NW Suite 500 Washington, DC 20005\ninfo@savingplaces.org\n\u00a9 2025 National Trust for Historic Preservation. All Rights Reserved. The National Trust for Historic Preservation is a private 501(c)(3) nonprofit organization. The National Trust\u2019s federal tax identification number is 53-0210807.\nThis website uses cookies and other tracking technologies to enhance user experience, to analyze performance and traffic on our website, and for other purposes described in our Privacy Policy.\n\nProvide relevant evidence.",
+    "input_length_chars": 3624,
+    "input_tokens_estimated": 906,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The National Trust for Historic Preservation is indeed chartered by Congress as a private organization, which supports the claim that it has a formal role in preserving historic buildings.",
+      "overall_stance": "supports",
+      "key_quote": "The National Trust for Historic Preservation (NTHP), chartered by Congress as a private organization in 1949."
+    },
+    "output_length_chars": 383,
+    "output_tokens_estimated": 95,
+    "cost_usd": 0.0001929
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:34:02.884970",
+    "latency_seconds": 2.99,
+    "input_prompt": "Claim:\nThe National Trust for Historic Preservation is chartered by Congress to preserve historic buildings.\n\nArticle Title:\nA Brief History of the National Trust\n\nGoogle Search Snippet:\nFrom the National Trust's Congressional Charter. The founders ... Congress and elevate the importance of historic preservation in your communities.\n\nFull Page Content:\nphoto by: Paul Burk\nThe National Trust for Historic Preservation is a private nonprofit organization leading the movement to save places where our history happened.\nO ld places are where our lives, memories, and stories began. They connect us to the past, anchor us to the present, and lead us into the future. These places inspire us to create a stronger nation, because they belong to all of us.\nFor more than 75 years, the National Trust for Historic Preservation has led the movement to save America\u2019s historic places. A privately funded nonprofit organization, we work to save America's historic sites; tell the full American story; build stronger communities; and invest in preservation's future.\nThanks to the passion and dedication of our advocates and supporters, we\u2019re able to protect hundreds of places every year. Help us save places that matter\u2014for ourselves, each other, and our future together.\nDonate to the National Trust for Historic Preservation today and you'll help preserve places that tell our stories, reflect our culture, and shape our shared American experience.\nWe are committed to transparency and accountability. Download our latest IRS form 990, our congressional charter, audited financials, and other documentation.\nIn this year\u2019s Annual Report, we celebrate the generosity and support of our donors, leaders, and partners\u2014and the work they make possible through the power of place to champion preservation for all in communities around the country.\nThese organizations and entities are closely tied to the National Trust by brand, governance, and mission.\nMain Street America leads a movement committed to strengthening communities through preservation-based economic development in older and historic downtowns and neighborhood commercial districts. We revitalize older and historic commercial districts to build vibrant neighborhoods and thriving economies.\nNational Trust Community Investment Corporation (NTCIC) enables tax credit equity investments that support sustainable communities nationwide.\nNational Trust Insurance Services (NTIS) is the nation's leading insurance agency specifically designed to offer comprehensive insurance solutions to historic property owners and preservation organizations.\nFor more than 45 years, National Trust Tours has been offering life-enriching programs that explore the traditions and cultures of the world, placing a special emphasis on the roles of art and architecture.\nRePurpose Capital (RPC) is the first national loan fund dedicated to financing adaptive reuse projects. At RePurpose Capital, we\u2019re breathing new life into communities by pairing flexible loans with the personalized technical help needed to get these vital projects done.\nUpdates\n600 14th Street NW Suite 500 Washington, DC 20005\ninfo@savingplaces.org\n\u00a9 2025 National Trust for Historic Preservation. All Rights Reserved. The National Trust for Historic Preservation is a private 501(c)(3) nonprofit organization. The National Trust\u2019s federal tax identification number is 53-0210807.\nThis website uses cookies and other tracking technologies to enhance user experience, to analyze performance and traffic on our website, and for other purposes described in our Privacy Policy.\n\nProvide relevant evidence.",
+    "input_length_chars": 3609,
+    "input_tokens_estimated": 902,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The National Trust for Historic Preservation is described as a private nonprofit organization, but the mention of its congressional charter suggests it has a formal recognition by Congress, which aligns with the claim about its chartering to preserve historic buildings.",
+      "overall_stance": "supports",
+      "key_quote": "\"Download our latest IRS form 990, our congressional charter, audited financials, and other documentation.\""
+    },
+    "output_length_chars": 465,
+    "output_tokens_estimated": 116,
+    "cost_usd": 0.0002049
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:34:02.885765",
+    "latency_seconds": 2.99,
+    "input_prompt": "Claim:\nThe National Trust for Historic Preservation is chartered by Congress to preserve historic buildings.\n\nArticle Title:\nAbout Us - National Trust for Historic Preservation\n\nGoogle Search Snippet:\nDownload our latest IRS form 990, our congressional charter, audited financials, and other documentation. Read More. Governance & Transparency: Annual Report.\n\nFull Page Content:\nphoto by: Paul Burk\nThe National Trust for Historic Preservation is a private nonprofit organization leading the movement to save places where our history happened.\nO ld places are where our lives, memories, and stories began. They connect us to the past, anchor us to the present, and lead us into the future. These places inspire us to create a stronger nation, because they belong to all of us.\nFor more than 75 years, the National Trust for Historic Preservation has led the movement to save America\u2019s historic places. A privately funded nonprofit organization, we work to save America's historic sites; tell the full American story; build stronger communities; and invest in preservation's future.\nThanks to the passion and dedication of our advocates and supporters, we\u2019re able to protect hundreds of places every year. Help us save places that matter\u2014for ourselves, each other, and our future together.\nDonate to the National Trust for Historic Preservation today and you'll help preserve places that tell our stories, reflect our culture, and shape our shared American experience.\nWe are committed to transparency and accountability. Download our latest IRS form 990, our congressional charter, audited financials, and other documentation.\nIn this year\u2019s Annual Report, we celebrate the generosity and support of our donors, leaders, and partners\u2014and the work they make possible through the power of place to champion preservation for all in communities around the country.\nThese organizations and entities are closely tied to the National Trust by brand, governance, and mission.\nMain Street America leads a movement committed to strengthening communities through preservation-based economic development in older and historic downtowns and neighborhood commercial districts. We revitalize older and historic commercial districts to build vibrant neighborhoods and thriving economies.\nNational Trust Community Investment Corporation (NTCIC) enables tax credit equity investments that support sustainable communities nationwide.\nNational Trust Insurance Services (NTIS) is the nation's leading insurance agency specifically designed to offer comprehensive insurance solutions to historic property owners and preservation organizations.\nFor more than 45 years, National Trust Tours has been offering life-enriching programs that explore the traditions and cultures of the world, placing a special emphasis on the roles of art and architecture.\nRePurpose Capital (RPC) is the first national loan fund dedicated to financing adaptive reuse projects. At RePurpose Capital, we\u2019re breathing new life into communities by pairing flexible loans with the personalized technical help needed to get these vital projects done.\nUpdates\n600 14th Street NW Suite 500 Washington, DC 20005\ninfo@savingplaces.org\n\u00a9 2025 National Trust for Historic Preservation. All Rights Reserved. The National Trust for Historic Preservation is a private 501(c)(3) nonprofit organization. The National Trust\u2019s federal tax identification number is 53-0210807.\nThis website uses cookies and other tracking technologies to enhance user experience, to analyze performance and traffic on our website, and for other purposes described in our Privacy Policy.\n\nProvide relevant evidence.",
+    "input_length_chars": 3634,
+    "input_tokens_estimated": 908,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The National Trust for Historic Preservation is described as a private nonprofit organization, but it also mentions having a congressional charter, which implies a formal recognition by Congress. However, the text does not explicitly state that this charter mandates the preservation of historic buildings.",
+      "overall_stance": "mixed",
+      "key_quote": "Download our latest IRS form 990, our congressional charter, audited financials, and other documentation."
+    },
+    "output_length_chars": 494,
+    "output_tokens_estimated": 123,
+    "cost_usd": 0.00021
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:34:03.497500",
+    "latency_seconds": 3.61,
+    "input_prompt": "Claim:\nThe National Trust for Historic Preservation is chartered by Congress to preserve historic buildings.\n\nArticle Title:\nPresident Wilson House - National Trust for Historic Preservation\n\nGoogle Search Snippet:\n... chartered by Congress to \u201creceive donations of sites, buildings and objects significant in American history and culture, to preserve and administer them for ...\n\nFull Page Content:\nphoto by: Paul Burk\nThe National Trust for Historic Preservation is a private nonprofit organization leading the movement to save places where our history happened.\nO ld places are where our lives, memories, and stories began. They connect us to the past, anchor us to the present, and lead us into the future. These places inspire us to create a stronger nation, because they belong to all of us.\nFor more than 75 years, the National Trust for Historic Preservation has led the movement to save America\u2019s historic places. A privately funded nonprofit organization, we work to save America's historic sites; tell the full American story; build stronger communities; and invest in preservation's future.\nThanks to the passion and dedication of our advocates and supporters, we\u2019re able to protect hundreds of places every year. Help us save places that matter\u2014for ourselves, each other, and our future together.\nDonate to the National Trust for Historic Preservation today and you'll help preserve places that tell our stories, reflect our culture, and shape our shared American experience.\nWe are committed to transparency and accountability. Download our latest IRS form 990, our congressional charter, audited financials, and other documentation.\nIn this year\u2019s Annual Report, we celebrate the generosity and support of our donors, leaders, and partners\u2014and the work they make possible through the power of place to champion preservation for all in communities around the country.\nThese organizations and entities are closely tied to the National Trust by brand, governance, and mission.\nMain Street America leads a movement committed to strengthening communities through preservation-based economic development in older and historic downtowns and neighborhood commercial districts. We revitalize older and historic commercial districts to build vibrant neighborhoods and thriving economies.\nNational Trust Community Investment Corporation (NTCIC) enables tax credit equity investments that support sustainable communities nationwide.\nNational Trust Insurance Services (NTIS) is the nation's leading insurance agency specifically designed to offer comprehensive insurance solutions to historic property owners and preservation organizations.\nFor more than 45 years, National Trust Tours has been offering life-enriching programs that explore the traditions and cultures of the world, placing a special emphasis on the roles of art and architecture.\nRePurpose Capital (RPC) is the first national loan fund dedicated to financing adaptive reuse projects. At RePurpose Capital, we\u2019re breathing new life into communities by pairing flexible loans with the personalized technical help needed to get these vital projects done.\nUpdates\n600 14th Street NW Suite 500 Washington, DC 20005\ninfo@savingplaces.org\n\u00a9 2025 National Trust for Historic Preservation. All Rights Reserved. The National Trust for Historic Preservation is a private 501(c)(3) nonprofit organization. The National Trust\u2019s federal tax identification number is 53-0210807.\nThis website uses cookies and other tracking technologies to enhance user experience, to analyze performance and traffic on our website, and for other purposes described in our Privacy Policy.\n\nProvide relevant evidence.",
+    "input_length_chars": 3654,
+    "input_tokens_estimated": 913,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The National Trust for Historic Preservation is described as a private nonprofit organization that has a congressional charter allowing it to receive donations for the preservation of significant sites, buildings, and objects in American history and culture.",
+      "overall_stance": "supports",
+      "key_quote": "chartered by Congress to 'receive donations of sites, buildings and objects significant in American history and culture, to preserve and administer them for ...'"
+    },
+    "output_length_chars": 505,
+    "output_tokens_estimated": 126,
+    "cost_usd": 0.00021255
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:34:34.182611",
+    "latency_seconds": 20.01,
+    "input_prompt": "\nClaim: The ballroom project is planned to be 90,000 square feet.\nCategory: statistical\nExtraction confidence: 0.90\n\nEvidence:\nUNCLEAR (5 sources):\n  1. 9 things to know about the $250 million ballroom Trump is adding to ... | reliability=high (0.85)\n     URL: https://www.pbs.org/newshour/politics/9-things-to-know-about-the-250-million-ballroom-trump-is-adding-to-the-white-house\n     Summary: The 90,000-square-foot ballroom will dwarf the main White House itself, at nearly double the size, and Trump says it will accommodate 999 people ...\n  2. Trump replaces architect on ballroom project after clashes - NPR | reliability=high (0.85)\n     URL: https://www.npr.org/2025/12/05/nx-s1-5633463/trump-replaces-architect-on-ballroom-project-after-clashes\n     Summary: The mansion itself is 55,000 square feet, which is pretty big. But the ballroom was to be 90,000 square feet. It would be larger than the ...\n  3. Trump sued over White House ballroom construction - CNBC | reliability=high (0.85)\n     URL: https://www.cnbc.com/2025/12/12/trump-lawsuit-ballroom-white-house-east-wing.html\n     Summary: President Donald Trump and his administration were sued over the construction of a massive White House ballroom in place of the demolished ...\n  4. Trump's New Architect Is Sticking With Ballroom's Giant Size | reliability=high (0.85)\n     URL: https://www.bloomberg.com/news/articles/2025-12-10/trump-s-white-house-ballroom-project-remains-huge-despite-new-architect\n     Summary: Trump's ballroom project will still be 90,000 square feet under the new architect, according to a person familiar with the project. Flatbed ...\n  5. Who is paying for Donald Trump's new White House ballroom? - BBC | reliability=high (0.85)\n     URL: https://www.bbc.com/news/articles/c891yxgj44ko\n     Summary: Groundbreaking for the ornate 90,000 sq ft (8,360 sq m) project began on Monday, with excavators and construction workers tearing out portions ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1978,
+    "input_tokens_estimated": 494,
+    "output": {
+      "overall_stance": "supports",
+      "confidence": "high",
+      "summary": "Multiple high-reliability sources consistently report that the ballroom project is planned to be 90,000 square feet, including details from PBS, NPR, CNBC, Bloomberg, and BBC."
+    },
+    "output_length_chars": 237,
+    "output_tokens_estimated": 59,
+    "cost_usd": 0.0001095
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:34:34.427656",
+    "latency_seconds": 19.91,
+    "input_prompt": "\nClaim: The White House has not responded to the lawsuit specifically.\nCategory: policy\nExtraction confidence: 0.80\n\nEvidence:\nUNCLEAR (5 sources):\n  1. Litigation Tracker: Legal Challenges to Trump Administration Actions | reliability=high (0.85)\n     URL: https://www.justsecurity.org/107087/tracker-litigation-legal-challenges-trump-administration/\n     Summary: According to Politico, there were \u201cmore than 100 lawsuits and 50 restraining orders from dozens of federal judges,\u201d before the government reversed its decision ...\n  2. Preservationists sue Trump for ballroom project reviews and ... - PBS | reliability=high (0.85)\n     URL: https://www.pbs.org/newshour/politics/preservationists-sue-trump-for-ballroom-project-reviews-and-congressional-approval\n     Summary: President Donald Trump was sued on Friday by preservationists asking a federal court to halt his White House ballroom project until it goes ...\n  3. Trump administration says sign language services 'intrude' on ... | reliability=high (0.85)\n     URL: https://www.mprnews.org/story/2025/12/12/trump-administration-says-sign-language-services-intrude-on-trumps-image\n     Summary: The National Association for the Deaf sued the Trump administration in May, arguing that the cessation of American Sign Language interpretation ...\n  4. White House raises concerns about Trump's 'image' in lawsuit over ... | reliability=high (0.85)\n     URL: https://www.yahoo.com/news/articles/white-house-raises-concerns-trump-214041784.html\n     Summary: The White House is appealing court orders to restore interpretation services at press briefings.\n  5. Trump sued over East Wing demolition | CNN Politics | reliability=medium (0.60)\n     URL: https://www.cnn.com/2025/12/12/politics/white-house-ballroom-trump-preservation-group-lawsuit\n     Summary: The case is assigned to District Judge Richard Leon, a George W. Bush appointee. \u201cPresident Trump has full legal authority to modernize, ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1987,
+    "input_tokens_estimated": 496,
+    "output": {
+      "overall_stance": "unclear",
+      "confidence": "low",
+      "summary": "The evidence presents a mix of lawsuits involving the Trump administration, but it does not clearly indicate whether the White House has specifically responded to the lawsuit in question. Sources like PBS and CNN discuss various lawsuits but do not confirm a direct response from the White House."
+    },
+    "output_length_chars": 356,
+    "output_tokens_estimated": 89,
+    "cost_usd": 0.0001278
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:34:34.631968",
+    "latency_seconds": 10.62,
+    "input_prompt": "\nClaim: No president is legally allowed to tear down portions of the White House without review.\nCategory: policy\nExtraction confidence: 0.95\n\nEvidence:\nUNCLEAR (6 sources):\n  1. National Trust for Historic Preservation sues to try to stop White ... | reliability=high (0.85)\n     URL: https://abcnews.go.com/Politics/national-trust-historic-preservation-sues-stop-white-house/story?id=128351219\n     Summary: \"No president is legally allowed to tear down portions of the White House without any review whatsoever\u2014not President Trump, not President ...\n  2. The decades-old exemption that lets Trump fast-track White House ... | reliability=high (0.85)\n     URL: https://www.bbc.com/news/articles/c397jvrrm4mo\n     Summary: The White House and several other buildings are exempt from the National Historic Preservation Act of 1966.\n  3. Trump sued over White House ballroom construction - CNBC | reliability=high (0.85)\n     URL: https://www.cnbc.com/2025/12/12/trump-lawsuit-ballroom-white-house-east-wing.html\n     Summary: \"No president is legally allowed to tear down portions of the White House without any review whatsoever \u2014 not President Trump, not President ...\n  4. Preservationists sue to halt Trump's White House ballroom project | reliability=medium (0.60)\n     URL: https://www.wvtm13.com/article/trump-white-house-ballroom-project-lawsuit/69716942\n     Summary: In response, a White House spokesperson insisted that President Trump has \"full legal authority to modernize, renovate, and beautify the White ...\n  5. Trump sued by preservation group over $300m White House ... | reliability=medium (0.60)\n     URL: https://www.theguardian.com/us-news/2025/dec/12/lawsuit-trump-white-house-ballroom\n     Summary: \u201cNo president is legally allowed to tear down portions of the White House without any review whatsoever \u2013 not President Trump, not President ...\n  6. Was it within the President's authority to demolish part of the White ... | reliability=medium (0.60)\n     URL: https://www.reddit.com/r/PoliticalDiscussion/comments/1odvsyr/was_it_within_the_presidents_authority_to/\n     Summary: It's also known that every president for the last 70 years has modified the White House ever since Truman completely gutted it during his tenure ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2287,
+    "input_tokens_estimated": 571,
+    "output": {
+      "overall_stance": "mixed",
+      "confidence": "medium",
+      "summary": "The evidence presents conflicting views on the legal authority of a president to tear down portions of the White House. While several high-reliability sources assert that no president can do so without review, other sources indicate that the White House is exempt from certain preservation laws, suggesting some legal leeway. This inconsistency leads to a mixed stance on the claim."
+    },
+    "output_length_chars": 443,
+    "output_tokens_estimated": 110,
+    "cost_usd": 0.00015165
+  }
+]

@@ -1,0 +1,337 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:31:08.033688",
+    "latency_seconds": 26.76,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nThe nation's historical preservation group, is now suing the Trump administration over its plans to build a giant ballroom over at the white House. Back in October, the Trump administration quickly demolished the white House East Wing to make room for the ballroom for this project. Want to bring in CNN's Brian Todd? Brian, why is the National Trust taking this dramatic step? And this is a lengthy lawsuit. It's a lengthy lawsuit, Wolf, 47 pages. It was filed just moments ago. We have a copy of this lawsuit now to answer your question, Wolf. They are suing because they want this project halted, first and foremost. And they're suing because they said that the white House and its allies and in certain agencies like the National Park Service, did not get the necessary approvals or conduct the necessary reviews. We have a copy of this lawsuit. You see the pictures here. This has been what many people have been complaining about, the demolition of the East wing of the white House that began in October for the construction of a 90,000 square foot ballroom. And just moments ago, as Wolf mentioned, we've obtained a copy of this lawsuit from the National Trust for Historic Preservation. They are suing the National Park Service. They are suing President Trump himself, plus the National Park Service, plus the Department of the Interior and Interior Secretary Douglas Burgum, and others over the construction of the ballroom where the east wing and the colonnade used to be. And here is just one quote from one of the initial pages of the lawsuit. No president is legally allowed to tear down portions of the white House without any review whatsoever. Not President Trump, not President Biden, and not anyone else. And no president is legally allowed to construct a ballroom on public property without giving the public the opportunity to weigh in. President Trump's efforts to do so should be immediately halted, and work on the ballroom project should be paused until the defendants complete the required reviews. Reviews that should have taken place before the defendants demolish the East Wing and before they began construction of the ballroom and secured the necessary approvals. What they are also saying is that there are two entities, from which the white House needed to seek approval and at least a review of this project. The National Capital Planning Commission and the Commission of Fine Arts. And according to this lawsuit from the National Trust for Historic Preservation, the white House did not seek any review from those agencies and did not seek any, public, input on this project. Now, I can I can tell you also, Wolf, we are reaching out to the white House for comment. Our colleague Kevin Liptak is handling that right now. We should be able to get that from Kevin in just a moment. But what I will say is that the president has had this in his, in his sights to to renovate this area, to do a ballroom for years, not just months, years, including before he came into office. He said he offered the Obama administration, you know, that he said he would pay for it. The Obama administration, he said, never got back to him. President Trump has said many times that he believes this is necessary, that people who come to the white House, for certain events, they have to go to a tent that's kind of separate from the main, main body of the white House. And in bad weather, a lot of people who are here for balls and things like that, they just get kind of, disheveled, having to walk through the rain and get into a tent. That's been his perspective. He's been eyeing this for a long time. His idea is to make this very much like the Donald Trump Ballroom at Mar-A-Lago. It's going to look a lot like that. And there are plenty of other ballrooms that I've been to, many of them. Right near the white House, huge ballrooms that they could go to, not just a. I've been to the tent on the backyard of the white House on this, on this on the North Lawn of the white House, and the South Lawn of the white House as well. And that east wing was beautiful. And too bad it's been destroyed. Ari. Brian, thank you very, very much. Kevin Liptak is over at the white House right now. This has been a huge priority for the president. And as Brian just said, you're working to get some reaction. Are you learning anything? Yeah. The white House hasn't responded to this lawsuit specifically, but I'll tell you that white House officials have sort of downplayed criticism from this particular group, the National Trust for Historic Preservation, which you'll remember back in October as this project was getting underway, actually wrote a letter to the white House asking them to pause work to, go through some of these various boards for review. And the white House said at the time that this, trust, the National Trust for Historic Preservation, was comprised of, quote, loser Democrats and liberal donors. And so you see them kind of shrugging off the criticism, we should say that this body is chartered by Congress, tasked with, preserving some of the nation's historic buildings. It actually does have a relationship with President Trump dating back to the 1990s. It worked with him on some projects at Mar-A-Lago. So he does have sort of an existing relationship with this, body, going back several decades. We should say that, the boards that this, group is now requesting and demanding that the court, require that the administration go through the National Capital Planning Commission is now stacked with President Trump's appointees. It's led by Will Scharf, who's the staff secretary at the white House. He has said previously that this project will eventually go before that body, but that it's purview and that its remit does not cover demolition. And that is why they say this project didn't go before that board, before they began tearing down the East wing, but that once sort of vertical construction begins, that it will go before that body. And so, whether this lawsuit sort of spurs that action and prompts them to go more quickly remains to be seen. But you're right. This is an absolute priority of the president. He still mentions that, on almost a weekly basis, you know, when, the crown Prince Mohammed bin Salman was here, for example, the president said, that the dinner he held in his honor on the white House state floor would have been a much grander occasion if they had had, that ballroom constructed in his honor. We should also say that there has been some, discord among the planning team. You know, the president has assigned a new architect, the previous architect still on board, but he had reportedly raised some questions about the sheer scale of this project. You know, the president is envisioning a 90,000 square foot ballroom. The white House itself is only about 55,000ft\u00b2. And one of the concerns that the National Trust for Historic Preservation has raised is that they would essentially dwarf the original building once it's completed. And so all of these concerns are now due to be, heard in court, Wolf, the president keeps pointing out that, this ballroom will be paid for by private donations, not taxpayers. Is that a factor here? It could be. And I think, you know, the president and the white House have said that they will be transparent and they have released, some of the names of the donors who will contribute to this project. One of the questions is how potentially they'll be honored as part of it, whether their names will be, written on the wall or whether they'll have sort of plaques, in the final, ballroom to designate who who donated and, what sort of contribution they were able to make to this project. But it has raised a certainly questions about what kind of influence those donors, might have with the white House and whether or not these individuals are essentially using these donations to curry favor with the president, recognizing that this is a major priority of his. All right. Kevin Liptak at the white House for us, Kevin, thank you very, very much.",
+    "input_length_chars": 8108,
+    "input_tokens_estimated": 2027,
+    "output": {
+      "claims": [
+        {
+          "text": "The National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.",
+          "confidence": 0.9,
+          "category": "legal",
+          "importance": 0.85,
+          "context": "Current lawsuit against Trump administration regarding White House construction plans."
+        },
+        {
+          "text": "The lawsuit is 47 pages long and was filed recently.",
+          "confidence": 0.8,
+          "category": "legal",
+          "importance": 0.3,
+          "context": "Details about the lawsuit's length and filing date."
+        },
+        {
+          "text": "The Trump administration demolished the White House East Wing in October to make room for the ballroom.",
+          "confidence": 0.9,
+          "category": "historical",
+          "importance": 0.85,
+          "context": "Timeline of events related to the ballroom construction."
+        },
+        {
+          "text": "The ballroom is planned to be 90,000 square feet.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Size of the proposed ballroom in relation to the East Wing."
+        },
+        {
+          "text": "No president is legally allowed to tear down portions of the White House without review.",
+          "confidence": 0.95,
+          "category": "legal",
+          "importance": 0.85,
+          "context": "Legal claim regarding presidential authority over White House modifications."
+        },
+        {
+          "text": "The White House did not seek review from the National Capital Planning Commission and the Commission of Fine Arts.",
+          "confidence": 0.85,
+          "category": "legal",
+          "importance": 0.7,
+          "context": "Claims about necessary approvals not obtained for the project."
+        },
+        {
+          "text": "The White House is only about 55,000 square feet, while the ballroom is envisioned to be 90,000 square feet.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Comparison of sizes between the White House and the proposed ballroom."
+        }
+      ],
+      "total_count": 7
+    },
+    "output_length_chars": 2301,
+    "output_tokens_estimated": 575,
+    "cost_usd": 0.00064905
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:31:15.739760",
+    "latency_seconds": 2.56,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The lawsuit is 47 pages long and was filed recently.\nContext: Details about the lawsuit's length and filing date.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 286,
+    "input_tokens_estimated": 71,
+    "output": {
+      "original_claim": "The lawsuit is 47 pages long and was filed recently.",
+      "queries": [
+        {
+          "query": "lawsuit 47 pages long filed recently",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "recent lawsuit length 47 pages",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 268,
+    "output_tokens_estimated": 67,
+    "cost_usd": 5.085e-05,
+    "context": {
+      "claim_index": 7,
+      "claim_text": "The lawsuit is 47 pages long and was filed recently."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:31:15.865422",
+    "latency_seconds": 2.68,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The ballroom is planned to be 90,000 square feet.\nContext: Size of the proposed ballroom in relation to the East Wing.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 291,
+    "input_tokens_estimated": 72,
+    "output": {
+      "original_claim": "The ballroom is planned to be 90,000 square feet.",
+      "queries": [
+        {
+          "query": "ballroom planned size 90,000 square feet East Wing",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "East Wing ballroom dimensions 90,000 square feet",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 297,
+    "output_tokens_estimated": 74,
+    "cost_usd": 5.52e-05,
+    "context": {
+      "claim_index": 7,
+      "claim_text": "The lawsuit is 47 pages long and was filed recently.",
+      "query_index": 2,
+      "query_text": "recent lawsuit length 47 pages"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:31:15.865824",
+    "latency_seconds": 2.68,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The White House did not seek review from the National Capital Planning Commission and the Commission of Fine Arts.\nContext: Claims about necessary approvals not obtained for the project.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 359,
+    "input_tokens_estimated": 89,
+    "output": {
+      "original_claim": "The White House did not seek review from the National Capital Planning Commission and the Commission of Fine Arts.",
+      "queries": [
+        {
+          "query": "White House National Capital Planning Commission review approval",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Did the White House seek approval from the Commission of Fine Arts?",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 395,
+    "output_tokens_estimated": 98,
+    "cost_usd": 7.215e-05,
+    "context": {
+      "claim_index": 7,
+      "claim_text": "The lawsuit is 47 pages long and was filed recently.",
+      "query_index": 2,
+      "query_text": "recent lawsuit length 47 pages"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:31:16.034089",
+    "latency_seconds": 2.85,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.\nContext: Current lawsuit against Trump administration regarding White House construction plans.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 398,
+    "input_tokens_estimated": 99,
+    "output": {
+      "original_claim": "The National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.",
+      "queries": [
+        {
+          "query": "National Trust for Historic Preservation lawsuit Trump administration White House ballroom",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Trump administration National Trust lawsuit White House construction plans",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 443,
+    "output_tokens_estimated": 110,
+    "cost_usd": 8.085e-05,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "The White House did not seek review from the National Capital Planning Commission and the Commission of Fine Arts.",
+      "query_index": 2,
+      "query_text": "Did the White House seek approval from the Commission of Fine Arts?"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:31:16.118449",
+    "latency_seconds": 2.93,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The White House is only about 55,000 square feet, while the ballroom is envisioned to be 90,000 square feet.\nContext: Comparison of sizes between the White House and the proposed ballroom.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 361,
+    "input_tokens_estimated": 90,
+    "output": {
+      "original_claim": "The White House is only about 55,000 square feet, while the ballroom is envisioned to be 90,000 square feet.",
+      "queries": [
+        {
+          "query": "size of the White House in square feet",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "proposed ballroom size 90000 square feet",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 336,
+    "output_tokens_estimated": 84,
+    "cost_usd": 6.39e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.",
+      "query_index": 2,
+      "query_text": "Trump administration National Trust lawsuit White House construction plans"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:31:50.988708",
+    "latency_seconds": 23.28,
+    "input_prompt": "Claim:\nThe lawsuit is 47 pages long and was filed recently.\n\nArticle Title:\nOpen AI, Microsoft sued over ChatGPT's alleged role in ... - CBS News\n\nGoogle Search Snippet:\nThe suit alleges the artificial intelligence chatbot intensified a man's \"paranoid delusions\" and helped direct them at his mother before he ...\n\nFull Page Content:\n\u201cInvestigative journalism and independent reporting at the state level is critical.\u201d \u2014CalMatters member Paisley of Temecula\nIN SUMMARY\nGov. Gavin Newsom, Santa Clara County and San Francisco are suing the Trump administration over a huge shift in homelessness policy.\nWelcome to CalMatters, the only nonprofit newsroom devoted solely to covering issues that affect all Californians. Sign up for WhatMatters to receive the latest news and commentary on the most important issues in the Golden State.\nCalifornia is fighting back after President Donald Trump\u2019s administration instigated homeless housing cuts that local service providers said would be \u201cdevastating.\u201d\nTwo recently filed lawsuits accuse the U.S. Department of Housing and Urban Development of illegally going over Congress\u2019 head to make massive changes to the way federal homelessness funds are distributed.\n\u201cHUD\u2019s new grant rules would effectively defund permanent supportive housing and rapid rehousing programs across the nation, eliminating proven tools that help residents exit homelessness sustainably,\u201d Santa Clara County Counsel Tony LoPresti said in a statement. \u201cThis is another instance of the Trump administration prioritizing its political agenda above the needs of our most vulnerable community members.\u201d\nSanta Clara County and San Francisco sued the Trump administration this week, in conjunction with the National Alliance to End Homelessness and the National Low Income Housing Coalition. A separate lawsuit was filed last week by Gov. Gavin Newsom\u2019s administration and a group of other states. It marked the 47th time California sued the Trump administration in 44 weeks.\nNow, homeless service providers are waiting anxiously to see how the litigation plays out and wondering if the impending legal battle will further delay the money they desperately need.\n\u201cIt\u2019s just the matter of how long it\u2019s going to take that concerns me,\u201d said Robert Ratner, director of Santa Cruz County\u2019s Housing for Health, which coordinates the county\u2019s homelessness response. \u201cBecause while we\u2019re waiting for these issues to get resolved, we have programs that are going to run out of money to support people.\u201d\nThe Department of Housing and Urban Development did not respond to a request for comment.\nIn a statement last month, HUD Secretary Scott Turner said the changes are aimed at \u201cstopping the Biden-era slush fund that fueled the homelessness crisis, shut out faith-based providers simply because of their values, and incentivized never-ending government dependency.\u201d\nAt issue are changes the Trump administration made to its funding policy last month. Jurisdictions applying for a piece of about $4 billion in federal homelessness funds now can\u2019t spend more than 30% of that money on permanent housing \u2014 a significant decrease. Los Angeles County, for example, currently spends more than 80% on permanent housing. Instead, the federal government wants localities to prioritize emergency shelter and temporary housing programs that require participants to be sober or participate in treatment.\nWhile shelters offer a temporary respite from the streets, permanent housing can end someone\u2019s homelessness. For years, the federal government has prioritized funding permanent housing using the \u201chousing first\u201d method \u2014 a strategy that moves people into housing as quickly as possible, without requiring them to first get sober or agree to addiction treatment. Veering away from both of those principles marks a major policy shift.\nLast year, California communities won more than $683 million in federal homelessness funds through what is called the Continuum of Care program. About 90% of that went to permanent housing projects, which currently house tens of thousands of Californians, according to Newsom. The new rule threatens to put those people back out onto the street, he said in a news release.\n\u201cWhile we\u2019re waiting for these issues to get resolved, we have programs that are going to run out of money to support people.\u201d\nThe new policy also prohibits the use of federal funds for diversity and inclusion efforts, support of transgender clients, and use of \u201charm reduction\u201d strategies that seek to reduce overdose deaths by helping people in active addiction use drugs more safely. And it gives preference for projects in cities, counties and states that ban homeless encampments.\nBoth lawsuits allege that the Trump administration\u2019s funding changes violate the Administrative Procedure Act and the Constitution by defying the rules Congress set out for distributing the funds. Congress authorized a two-year grant cycle in 2024, meaning local jurisdictions wouldn\u2019t have to reapply for funds in 2025. The Trump administration flouted that decision when it suddenly forced jurisdictions to reapply, the lawsuits allege.\nThe lawsuits also claim the administration didn\u2019t go through proper protocol before enacting the changes to its funding strategy, which would have included giving cities and counties more time to comply with the new rules, and allowing stakeholders to comment on the changes.\nIn Santa Cruz County, Ratner is of two minds about the lawsuits. On one hand, he believes the abrupt way the Trump administration rolled out the funding changes was \u201cvery inappropriate.\u201d But he worries a lengthy court battle could tie up funds his county needs to pay people\u2019s rents.\nThe National Alliance to End Homelessness sued the Trump administration over similar allegations tied to a smaller, $75 million pot of homelessness funding in September. A judge sided with the Alliance, and temporarily barred the federal government from distributing those funds. But now that money is frozen, unable to help unhoused residents as the case moves forward.\nRatner worries that could happen again in this case. Santa Cruz County is set to start hitting serious financial problems as soon as February, Ratner said. That\u2019s when a $1.2 million supportive housing grant, which currently houses about 50 people in different apartments around \n\nProvide relevant evidence.",
+    "input_length_chars": 6363,
+    "input_tokens_estimated": 1590,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 0.0002517
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:31:51.001518",
+    "latency_seconds": 23.29,
+    "input_prompt": "Claim:\nThe lawsuit is 47 pages long and was filed recently.\n\nArticle Title:\nKaren Read, the 'McAlberts' and more expected to testify under oath ...\n\nGoogle Search Snippet:\nKaren Read filed a lawsuit alleging a conspiracy by law enforcement officials to frame her for her boyfriend's death after her acquittal on murder charges.\n\nFull Page Content:\n\u201cInvestigative journalism and independent reporting at the state level is critical.\u201d \u2014CalMatters member Paisley of Temecula\nIN SUMMARY\nGov. Gavin Newsom, Santa Clara County and San Francisco are suing the Trump administration over a huge shift in homelessness policy.\nWelcome to CalMatters, the only nonprofit newsroom devoted solely to covering issues that affect all Californians. Sign up for WhatMatters to receive the latest news and commentary on the most important issues in the Golden State.\nCalifornia is fighting back after President Donald Trump\u2019s administration instigated homeless housing cuts that local service providers said would be \u201cdevastating.\u201d\nTwo recently filed lawsuits accuse the U.S. Department of Housing and Urban Development of illegally going over Congress\u2019 head to make massive changes to the way federal homelessness funds are distributed.\n\u201cHUD\u2019s new grant rules would effectively defund permanent supportive housing and rapid rehousing programs across the nation, eliminating proven tools that help residents exit homelessness sustainably,\u201d Santa Clara County Counsel Tony LoPresti said in a statement. \u201cThis is another instance of the Trump administration prioritizing its political agenda above the needs of our most vulnerable community members.\u201d\nSanta Clara County and San Francisco sued the Trump administration this week, in conjunction with the National Alliance to End Homelessness and the National Low Income Housing Coalition. A separate lawsuit was filed last week by Gov. Gavin Newsom\u2019s administration and a group of other states. It marked the 47th time California sued the Trump administration in 44 weeks.\nNow, homeless service providers are waiting anxiously to see how the litigation plays out and wondering if the impending legal battle will further delay the money they desperately need.\n\u201cIt\u2019s just the matter of how long it\u2019s going to take that concerns me,\u201d said Robert Ratner, director of Santa Cruz County\u2019s Housing for Health, which coordinates the county\u2019s homelessness response. \u201cBecause while we\u2019re waiting for these issues to get resolved, we have programs that are going to run out of money to support people.\u201d\nThe Department of Housing and Urban Development did not respond to a request for comment.\nIn a statement last month, HUD Secretary Scott Turner said the changes are aimed at \u201cstopping the Biden-era slush fund that fueled the homelessness crisis, shut out faith-based providers simply because of their values, and incentivized never-ending government dependency.\u201d\nAt issue are changes the Trump administration made to its funding policy last month. Jurisdictions applying for a piece of about $4 billion in federal homelessness funds now can\u2019t spend more than 30% of that money on permanent housing \u2014 a significant decrease. Los Angeles County, for example, currently spends more than 80% on permanent housing. Instead, the federal government wants localities to prioritize emergency shelter and temporary housing programs that require participants to be sober or participate in treatment.\nWhile shelters offer a temporary respite from the streets, permanent housing can end someone\u2019s homelessness. For years, the federal government has prioritized funding permanent housing using the \u201chousing first\u201d method \u2014 a strategy that moves people into housing as quickly as possible, without requiring them to first get sober or agree to addiction treatment. Veering away from both of those principles marks a major policy shift.\nLast year, California communities won more than $683 million in federal homelessness funds through what is called the Continuum of Care program. About 90% of that went to permanent housing projects, which currently house tens of thousands of Californians, according to Newsom. The new rule threatens to put those people back out onto the street, he said in a news release.\n\u201cWhile we\u2019re waiting for these issues to get resolved, we have programs that are going to run out of money to support people.\u201d\nThe new policy also prohibits the use of federal funds for diversity and inclusion efforts, support of transgender clients, and use of \u201charm reduction\u201d strategies that seek to reduce overdose deaths by helping people in active addiction use drugs more safely. And it gives preference for projects in cities, counties and states that ban homeless encampments.\nBoth lawsuits allege that the Trump administration\u2019s funding changes violate the Administrative Procedure Act and the Constitution by defying the rules Congress set out for distributing the funds. Congress authorized a two-year grant cycle in 2024, meaning local jurisdictions wouldn\u2019t have to reapply for funds in 2025. The Trump administration flouted that decision when it suddenly forced jurisdictions to reapply, the lawsuits allege.\nThe lawsuits also claim the administration didn\u2019t go through proper protocol before enacting the changes to its funding strategy, which would have included giving cities and counties more time to comply with the new rules, and allowing stakeholders to comment on the changes.\nIn Santa Cruz County, Ratner is of two minds about the lawsuits. On one hand, he believes the abrupt way the Trump administration rolled out the funding changes was \u201cvery inappropriate.\u201d But he worries a lengthy court battle could tie up funds his county needs to pay people\u2019s rents.\nThe National Alliance to End Homelessness sued the Trump administration over similar allegations tied to a smaller, $75 million pot of homelessness funding in September. A judge sided with the Alliance, and temporarily barred the federal government from distributing those funds. But now that money is frozen, unable to help unhoused residents as the case moves forward.\nRatner worries that could happen again in this case. Santa Cruz County is set to start hitting serious financial problems as soon as February, Ratner said. That\u2019s when a $1.2 million supportive housing grant, which currently houses about 50 people in different apartments around \n\nProvide relevant evidence.",
+    "input_length_chars": 6376,
+    "input_tokens_estimated": 1594,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 0.0002523
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:31:53.213164",
+    "latency_seconds": 23.01,
+    "input_prompt": "Claim:\nThe White House did not seek review from the National Capital Planning Commission and the Commission of Fine Arts.\n\nArticle Title:\nNational Trust for Historic Preservation sues to try to stop White ...\n\nGoogle Search Snippet:\nIn its complaint, the Trust argues that the project has not been filed with the National Capital Planning Commission as required by law; that it ...\n\nFull Page Content:\nThe National Trust for Historic Preservation argues the Trump administration must seek congressional approval and consult federal commissions and the public before work continues.\nConstruction workers, bottom right, atop the U.S. Treasury, watch watch as demolition continues on the East Wing of the White House to make room for a new ballroom, in Washington, Oct. 22, 2025. | Jacquelyn Martin/AP\nA preservationist group is suing President Donald Trump for his construction of the East Wing ballroom, arguing in a lawsuit filed Friday that the wing\u2019s demolition did not undergo appropriate reviews and demanding the rebuilding cease immediately.\nThe National Trust for Historic Preservation \u2014 a nonprofit chartered by Congress to support the preservation of historic U.S. buildings and neighborhoods \u2014 is asking the U.S. District Court for the District of Columbia to block the ongoing construction until the administration seeks congressional approval and consults federal commissions and the public.\n\u201cNo president is legally allowed to tear down portions of the White House without any review whatsoever\u2014not President Trump, not President Biden, and not anyone else,\u201d the group wrote in the lawsuit. \u201cAnd no president is legally allowed to construct a ballroom on public property without giving the public the opportunity to weigh in.\u201d\nThe group argued the construction violated the Administrative Procedure Act and the National Environmental Policy Act on multiple occasions, including by failing to consult the National Capital Planning Commission \u2014 a federal agency designated to provide guidance on urban planning \u2014 on the large-scale project.\nA Virginia couple filed a similar lawsuit in October attempting to block the demolition, but the case was voluntarily dismissed days later. But Friday\u2019s lawsuit from the prominent preservation group is the largest stride yet in effectively halting the renovations.\nThe White House declined to comment on whether it would pause construction in response to the pending litigation but continued to defend Trump\u2019s project as legal.\n\u201cPresident Trump has full legal authority to modernize, renovate, and beautify the White House \u2013 just like all of his predecessors did,\u201d White House spokesperson Davis Ingle said in a statement.\nThe 90,000 square foot ballroom \u2014 which the administration began razing for in September \u2014 sparked a wave of outcry from preservationist groups, activists and Washington locals who deplored the changes as destruction to the historic building.\nThe White House is expected to submit plans to a federal planning commission this month, and the administration has said it has recruited additional architects to oversee the renovation.\nYour guide to Donald Trump\u2019s unprecedented overhaul of the federal government.\nBy signing up, you acknowledge and agree to our Privacy Policy and Terms of Service. You may unsubscribe at any time by following the directions at the bottom of the email or by contacting us here. This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.\n\nProvide relevant evidence.",
+    "input_length_chars": 3503,
+    "input_tokens_estimated": 875,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The National Trust for Historic Preservation claims that the White House did not consult the National Capital Planning Commission as required by law, which supports the assertion that the White House did not seek the necessary reviews.",
+      "overall_stance": "supports",
+      "key_quote": "the construction violated the Administrative Procedure Act and the National Environmental Policy Act on multiple occasions, including by failing to consult the National Capital Planning Commission."
+    },
+    "output_length_chars": 518,
+    "output_tokens_estimated": 129,
+    "cost_usd": 0.00020865
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:32:19.022422",
+    "latency_seconds": 19.62,
+    "input_prompt": "\nClaim: The ballroom is planned to be 90,000 square feet.\nCategory: statistical\nExtraction confidence: 0.90\n\nEvidence:\nUNCLEAR (3 sources):\n  1. Trump hires new architect for White House ballroom - BBC | reliability=high (0.85)\n     URL: https://www.bbc.com/news/articles/cjdrzd41j9po\n     Summary: According to US media, Mr McCrery was concerned the ornate 90,000 sq ft (8,360 sq m) project would overshadow the rest of the White House.\n  2. Trump's New Architect Is Sticking With Ballroom's Giant Size | reliability=high (0.85)\n     URL: https://www.bloomberg.com/news/articles/2025-12-10/trump-s-white-house-ballroom-project-remains-huge-despite-new-architect\n     Summary: Trump's ballroom project will still be 90,000 square feet under the new architect, and will seat 999 guests when set up as a banquet. The ...\n  3. White House construction site photos show rubble where East Wing ... | reliability=high (0.85)\n     URL: https://www.axios.com/2025/12/10/white-house-ballroom-construction-east-wing-site-photos\n     Summary: The big picture: Trump said on Truth Social over the weekend that the ballroom would be \"double the size\" than was originally planned and ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1207,
+    "input_tokens_estimated": 301,
+    "output": {
+      "overall_stance": "supports",
+      "confidence": "high",
+      "summary": "Multiple high-reliability sources confirm that the ballroom is planned to be 90,000 square feet, with consistent statements from BBC, Bloomberg, and Axios."
+    },
+    "output_length_chars": 217,
+    "output_tokens_estimated": 54,
+    "cost_usd": 7.755e-05
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:32:32.843062",
+    "latency_seconds": 19.86,
+    "input_prompt": "\nClaim: The White House did not seek review from the National Capital Planning Commission and the Commission of Fine Arts.\nCategory: legal\nExtraction confidence: 0.85\n\nEvidence:\nSUPPORTS (1 sources):\n  1. National Trust for Historic Preservation sues to try to stop White ... | reliability=high (0.85)\n     URL: https://abcnews.go.com/Politics/national-trust-historic-preservation-sues-stop-white-house/story?id=128351219\n     Summary: The National Trust for Historic Preservation claims that the White House did not consult the National Capital Planning Commission as required by law, which supports the assertion that the White House did not seek the necessary reviews.\nUNCLEAR (4 sources):\n  1. Legislative History | Commission of Fine Arts | reliability=high (0.90)\n     URL: https://www.cfa.gov/about-cfa/legislative-history\n     Summary: President William Howard Taft signed the legislation to create the Commission of Fine Arts in May 1910, and Taft's personal interest in the design of the ...\n  2. National preservation group sues to halt East Wing ballroom ... | reliability=high (0.85)\n     URL: https://www.politico.com/news/2025/12/12/trump-east-wing-ballroom-lawsuit-00689260\n     Summary: A preservationist group is suing President Donald Trump for his construction of the East Wing ballroom, arguing in a lawsuit filed Friday ...\n  3. Preservationists sue Trump for ballroom project reviews and ... - PBS | reliability=high (0.85)\n     URL: https://www.pbs.org/newshour/politics/preservationists-sue-trump-for-ballroom-project-reviews-and-congressional-approval\n     Summary: The White House is expected to submit plans for Trump's new ballroom to a federal planning commission before the year ends, about three months ...\n  4. White House fires commission charged with advising the president ... | reliability=medium (0.60)\n     URL: https://www.cnn.com/2025/10/28/politics/trump-fine-arts-commission-firings\n     Summary: The White House has fired all six members of the Commission of Fine Arts, an independent federal agency charged with advising the president ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2117,
+    "input_tokens_estimated": 529,
+    "output": {
+      "overall_stance": "supports",
+      "confidence": "high",
+      "summary": "The National Trust for Historic Preservation claims that the White House did not consult the National Capital Planning Commission as required by law, strongly supporting the assertion that the White House did not seek the necessary reviews."
+    },
+    "output_length_chars": 302,
+    "output_tokens_estimated": 75,
+    "cost_usd": 0.00012435
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:32:33.458121",
+    "latency_seconds": 20.1,
+    "input_prompt": "\nClaim: The White House is only about 55,000 square feet, while the ballroom is envisioned to be 90,000 square feet.\nCategory: statistical\nExtraction confidence: 0.90\n\nEvidence:\nUNCLEAR (6 sources):\n  1. White House: 1792 - Ben's Guide To the U.S. Government | reliability=high (0.90)\n     URL: https://bensguide.gpo.gov/j-white-house\n     Summary: The White House is 168 feet long. It is 152 feet wide (with porticoes). It ... The floor area is about 55,000 square feet. To learn more, including an ...\n  2. 9 things to know about the $250 million ballroom Trump is adding to ... | reliability=high (0.85)\n     URL: https://www.pbs.org/newshour/politics/9-things-to-know-about-the-250-million-ballroom-trump-is-adding-to-the-white-house\n     Summary: The 90,000-square-foot ballroom will dwarf the main White House itself, at nearly double the size, and Trump says it will accommodate 999 people ...\n  3. Trump's New Architect Is Sticking With Ballroom's Giant Size | reliability=high (0.85)\n     URL: https://www.bloomberg.com/news/articles/2025-12-10/trump-s-white-house-ballroom-project-remains-huge-despite-new-architect\n     Summary: Trump's ballroom project will still be 90,000 square feet under the new architect, and will seat 999 guests when set up as a banquet. The ...\n  4. Who is paying for Donald Trump's new White House ballroom? - BBC | reliability=high (0.85)\n     URL: https://www.bbc.com/news/articles/c891yxgj44ko\n     Summary: Groundbreaking for the ornate 90,000 sq ft (8,360 sq m) project began on Monday, with excavators and construction workers tearing out portions ...\n  5. What are the dimensions of the White House? | reliability=medium (0.60)\n     URL: https://www.whitehousehistory.org/questions/how-big-is-the-white-house\n     Summary: What are the dimensions of the White House? The Ground Floor, State Floor, and residence floors of the White House are approximately 55,000 square feet.\n  6. White House - Wikipedia | reliability=medium (0.60)\n     URL: https://en.wikipedia.org/wiki/White_House\n     Summary: White House ; Federal government of the United States \u00b7 55,000 sq ft (5,100 m2).\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2158,
+    "input_tokens_estimated": 539,
+    "output": {
+      "overall_stance": "supports",
+      "confidence": "high",
+      "summary": "The evidence consistently supports the claim that the White House is approximately 55,000 square feet, with multiple reliable sources confirming this figure. Additionally, the ballroom is reported to be 90,000 square feet, which is nearly double the size of the White House, as stated in several high-reliability sources."
+    },
+    "output_length_chars": 383,
+    "output_tokens_estimated": 95,
+    "cost_usd": 0.00013785
+  }
+]

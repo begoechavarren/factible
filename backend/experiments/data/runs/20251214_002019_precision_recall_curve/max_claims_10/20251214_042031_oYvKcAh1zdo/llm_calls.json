@@ -1,0 +1,643 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:20:55.203916",
+    "latency_seconds": 22.46,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\n\u201cGive me your tired, your poor, your huddled masses yearning to breathe free\u2026\u201d These poetic lines, engraved on a bronze plaque beneath the Statue of Liberty, speak to who we are: a nation of immigrants. Until now . . . As Senate Democrat Chuck Schumer lamented, \u201cTears are running down the cheeks of the Statue of Liberty.\u201d We\u2019ve turned our backs on those huddled masses. Closed our borders. Separated families. Hardened our hearts. Or so you would think if you only read the headlines or watch TV news. Just one problem: It\u2019s not true. The United States still maintains the most generous immigration policies in the world. Generous to a fault...because the overwhelming numbers have stymied our ability to assimilate the huddled masses. 50 million residents of America are foreign-born. In fact, today the United States has more immigrants as a percentage of its total population than at any time since 1890. That\u2019s why, to give one illustration, 176 different languages are spoken among students in the New York City school system. How did we get here? For starters, America grants permanent residence to a million people every single year. And that\u2019s just the tip of the iceberg because of something you\u2019ve probably heard referred to as \u201cchain migration.\u201d Chain migration allows immigrants to sponsor not only their immediate family\u2014parents, spouses and children under age 21, but much of their extended family once they gain citizenship: unmarried adult children and any children they might have, married adult children and their children, and brothers and sisters and their children. Princeton University researchers, using the most recently available data, found that immigrants sponsored an average of 3.45 additional relatives each. So, the one million immigrants granted permanent residence each year potentially adds, over time, another three and a half million. In addition, an estimated 100,000 refugees and asylum-seekers\u2014people who claim to be fleeing political or personal strife abroad\u2014enter the country annually. From 2008 to 2017, the U.S. gave green cards to well over a million people for humanitarian reasons, allowing them to live and work here permanently. After five years, they can apply for full citizenship. We\u2019re not done yet. In that same time frame, nearly half a million more people came to America through the diversity visa lottery\u2014a program designed to admit more people from \u201cunderrepresented\u201d countries into the U.S. Diversity visa applicants don't need a high school education, job skills \u2014or pretty much anything. And, thanks again to chain migration, spouses and unmarried children under 21 of visa lottery winners also get to come to America. This non-stop flow of new legal immigrants\u2014based on family ties instead of skills, abilities, and allegiance to American values\u2014has, of course, been supplemented by millions who enter the country illegally and stay illegally. Dominant media outlets use the euphemism \u201cundocumented,\u201d but the official U.S. government term used in federal statutes is \u201cillegal alien\u201d: an unlawful entrant who came without permission and stays in open defiance of our laws. The number of illegal aliens in the country is usually given as 11 million, but have you noticed that number never seems to change? Common sense suggests it\u2019s higher\u2014much higher. And though illegal aliens themselves don\u2019t qualify for welfare, they receive free health care in our clinics and hospitals, and through their American-born children they can expect to receive all manner of benefits\u2014cash aid, food stamps, and housing vouchers. Their children are entitled to a free education in public schools. Building a high-tech border barrier would certainly help stem this flow. Ending chain migration is another obvious remedy. E-Verify, the national database that allows employers to check workers\u2019 immigration status, is also essential. So is a fully-functioning entry-exit system to track visa overstayers. But all solutions will ultimately fail unless we get control of the numbers and enforce our laws consistently. It\u2019s Sovereignty 101: This is our home and we have not only the right, but the responsibility, to determine who comes in, how many come in, and what qualities and qualifications they bring. The truth is, we let in millions. And, of course, millions more want to come. Who can blame them? But it\u2019s simply not possible or desirable to let in everyone. And it\u2019s not hateful to say so. It\u2019s not hateful to protect our borders. It\u2019s not hateful to protect our citizens. It\u2019s not hateful to protect our values. Lady Liberty may be shedding tears\u2014not because we\u2019ve stopped welcoming immigrants, but because our ill-conceived immigration policies are threatening the American Dream. I\u2019m Michelle Malkin, CRTV host and author of Invasion and Sold Out, for Prager University.",
+    "input_length_chars": 4882,
+    "input_tokens_estimated": 1220,
+    "output": {
+      "claims": [
+        {
+          "text": "The United States maintains the most generous immigration policies in the world.",
+          "confidence": 0.8,
+          "category": "policy",
+          "importance": 0.85,
+          "context": "Speaker: Michelle Malkin, discussing immigration policies."
+        },
+        {
+          "text": "50 million residents of America are foreign-born.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.8,
+          "context": "Current demographic data on foreign-born residents."
+        },
+        {
+          "text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.75,
+          "context": "Historical immigration data comparison."
+        },
+        {
+          "text": "176 different languages are spoken among students in the New York City school system.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "Demographic data on New York City schools."
+        },
+        {
+          "text": "America grants permanent residence to a million people every single year.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.8,
+          "context": "Annual immigration statistics."
+        },
+        {
+          "text": "Immigrants sponsored an average of 3.45 additional relatives each.",
+          "confidence": 0.8,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Research data on family sponsorship in immigration."
+        },
+        {
+          "text": "An estimated 100,000 refugees and asylum-seekers enter the country annually.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Annual statistics on refugees and asylum-seekers."
+        },
+        {
+          "text": "From 2008 to 2017, the U.S. gave green cards to well over a million people for humanitarian reasons.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.65,
+          "context": "Historical data on humanitarian green cards."
+        },
+        {
+          "text": "Nearly half a million more people came to America through the diversity visa lottery from 2008 to 2017.",
+          "confidence": 0.8,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Data on diversity visa lottery admissions."
+        },
+        {
+          "text": "The number of illegal aliens in the country is usually given as 11 million.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "Commonly cited statistic on illegal immigration."
+        }
+      ],
+      "total_count": 10
+    },
+    "output_length_chars": 2998,
+    "output_tokens_estimated": 749,
+    "cost_usd": 0.0006324
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:21:00.425173",
+    "latency_seconds": 1.89,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: America grants permanent residence to a million people every single year.\nContext: Annual immigration statistics.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 286,
+    "input_tokens_estimated": 71,
+    "output": {
+      "original_claim": "America grants permanent residence to a million people every single year.",
+      "queries": [
+        {
+          "query": "America grants permanent residence to one million people annually",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "annual permanent residency statistics in the United States",
+          "query_type": "SOURCE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 341,
+    "output_tokens_estimated": 85,
+    "cost_usd": 6.165e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "Nearly half a million more people came to America through the diversity visa lottery from 2008 to 2017."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:21:00.546202",
+    "latency_seconds": 2.01,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: 176 different languages are spoken among students in the New York City school system.\nContext: Demographic data on New York City schools.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 310,
+    "input_tokens_estimated": 77,
+    "output": {
+      "original_claim": "176 different languages are spoken among students in the New York City school system.",
+      "queries": [
+        {
+          "query": "176 languages spoken in New York City schools",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "languages spoken by students in NYC schools 2023",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 328,
+    "output_tokens_estimated": 82,
+    "cost_usd": 6.075e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "America grants permanent residence to a million people every single year.",
+      "query_index": 2,
+      "query_text": "annual permanent residency statistics in the United States"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:21:00.546599",
+    "latency_seconds": 2.01,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The United States maintains the most generous immigration policies in the world.\nContext: Speaker: Michelle Malkin, discussing immigration policies.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 321,
+    "input_tokens_estimated": 80,
+    "output": {
+      "original_claim": "The United States maintains the most generous immigration policies in the world.",
+      "queries": [
+        {
+          "query": "United States immigration policies comparison 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "most generous immigration policies by country 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 330,
+    "output_tokens_estimated": 82,
+    "cost_usd": 6.12e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "America grants permanent residence to a million people every single year.",
+      "query_index": 2,
+      "query_text": "annual permanent residency statistics in the United States"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:21:00.546920",
+    "latency_seconds": 2.0,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Nearly half a million more people came to America through the diversity visa lottery from 2008 to 2017.\nContext: Data on diversity visa lottery admissions.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 328,
+    "input_tokens_estimated": 82,
+    "output": {
+      "original_claim": "Nearly half a million more people came to America through the diversity visa lottery from 2008 to 2017.",
+      "queries": [
+        {
+          "query": "diversity visa lottery admissions statistics 2008 to 2017",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "number of people admitted through diversity visa lottery 2008-2017",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 376,
+    "output_tokens_estimated": 94,
+    "cost_usd": 6.87e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "America grants permanent residence to a million people every single year.",
+      "query_index": 2,
+      "query_text": "annual permanent residency statistics in the United States"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:21:00.797263",
+    "latency_seconds": 2.26,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The number of illegal aliens in the country is usually given as 11 million.\nContext: Commonly cited statistic on illegal immigration.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 306,
+    "input_tokens_estimated": 76,
+    "output": {
+      "original_claim": "The number of illegal aliens in the country is usually given as 11 million.",
+      "queries": [
+        {
+          "query": "number of illegal aliens in the US 11 million",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "current estimate of illegal immigrants in the United States 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 334,
+    "output_tokens_estimated": 83,
+    "cost_usd": 6.12e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "Nearly half a million more people came to America through the diversity visa lottery from 2008 to 2017.",
+      "query_index": 2,
+      "query_text": "number of people admitted through diversity visa lottery 2008-2017"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:21:00.797770",
+    "latency_seconds": 2.26,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Immigrants sponsored an average of 3.45 additional relatives each.\nContext: Research data on family sponsorship in immigration.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 300,
+    "input_tokens_estimated": 75,
+    "output": {
+      "original_claim": "Immigrants sponsored an average of 3.45 additional relatives each.",
+      "queries": [
+        {
+          "query": "average number of relatives sponsored by immigrants 3.45",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "family sponsorship immigration statistics 2023",
+          "query_type": "SOURCE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 313,
+    "output_tokens_estimated": 78,
+    "cost_usd": 5.805e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "Nearly half a million more people came to America through the diversity visa lottery from 2008 to 2017.",
+      "query_index": 2,
+      "query_text": "number of people admitted through diversity visa lottery 2008-2017"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:21:00.798204",
+    "latency_seconds": 2.26,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: From 2008 to 2017, the U.S. gave green cards to well over a million people for humanitarian reasons.\nContext: Historical data on humanitarian green cards.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 327,
+    "input_tokens_estimated": 81,
+    "output": {
+      "original_claim": "From 2008 to 2017, the U.S. gave green cards to well over a million people for humanitarian reasons.",
+      "queries": [
+        {
+          "query": "U.S. green cards humanitarian reasons 2008 to 2017 statistics",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "humanitarian green cards issued by U.S. 2008-2017",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 360,
+    "output_tokens_estimated": 90,
+    "cost_usd": 6.615e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "Nearly half a million more people came to America through the diversity visa lottery from 2008 to 2017.",
+      "query_index": 2,
+      "query_text": "number of people admitted through diversity visa lottery 2008-2017"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:21:00.798702",
+    "latency_seconds": 2.26,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: 50 million residents of America are foreign-born.\nContext: Current demographic data on foreign-born residents.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 283,
+    "input_tokens_estimated": 70,
+    "output": {
+      "original_claim": "50 million residents of America are foreign-born.",
+      "queries": [
+        {
+          "query": "current number of foreign-born residents in the United States 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "how many foreign-born people live in America 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 314,
+    "output_tokens_estimated": 78,
+    "cost_usd": 5.73e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "Nearly half a million more people came to America through the diversity visa lottery from 2008 to 2017.",
+      "query_index": 2,
+      "query_text": "number of people admitted through diversity visa lottery 2008-2017"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:21:01.136533",
+    "latency_seconds": 2.59,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: An estimated 100,000 refugees and asylum-seekers enter the country annually.\nContext: Annual statistics on refugees and asylum-seekers.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 308,
+    "input_tokens_estimated": 77,
+    "output": {
+      "original_claim": "An estimated 100,000 refugees and asylum-seekers enter the country annually.",
+      "queries": [
+        {
+          "query": "annual statistics on refugees and asylum-seekers entering the country 100000",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "number of refugees and asylum-seekers entering the country each year",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 370,
+    "output_tokens_estimated": 92,
+    "cost_usd": 6.675e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "50 million residents of America are foreign-born.",
+      "query_index": 2,
+      "query_text": "how many foreign-born people live in America 2023"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:21:01.136977",
+    "latency_seconds": 2.6,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The United States has more immigrants as a percentage of its total population than at any time since 1890.\nContext: Historical immigration data comparison.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 328,
+    "input_tokens_estimated": 82,
+    "output": {
+      "original_claim": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "queries": [
+        {
+          "query": "United States immigrants percentage of total population historical data 1890",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "current immigrant population percentage in the US compared to 1890",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 398,
+    "output_tokens_estimated": 99,
+    "cost_usd": 7.17e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "50 million residents of America are foreign-born.",
+      "query_index": 2,
+      "query_text": "how many foreign-born people live in America 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:22:16.425897",
+    "latency_seconds": 10.0,
+    "input_prompt": "Claim:\nAmerica grants permanent residence to a million people every single year.\n\nArticle Title:\nTrump launches the million-dollar 'Gold Card' visa - El Pais in English\n\nGoogle Search Snippet:\nThe program, which will give priority to wealthy investors and entrepreneurs, is now accepting applications.\n\nFull Page Content:\nES Sign in 0:00 / 5:35 $1M for US Citizenship? Trump\u2019s Gold Card Program Breaks the Internet | US News | Gold Card Visa The Financial Express 264K subscribers Subscribe 26 Share Save 2.5K views 2 days ago #donaldtrump #uscitizenship #goldcard Trump Gold Card: US President Donald Trump has introduced a new \u2018Gold Card\u2019 visa that grants permanent residency to foreigners who donate $1 million to the U.S. Treasury. Applicants must also pay a $15,000 processing fee, with the administration promising faster security vetting. \u2026 ...more 13:29 Trump's Gold Card is Illegal? Immigration Lawyer Explains Why | Firstpost PoV | N18G Firstpost 6.2K views \u2022 1 day ago New 14:11 New Bill Will KILL Dual Citizenship for Americans Nomad Capitalist 203K views \u2022 8 days ago 7:32 Why the Push to END DUAL CITIZENSHIP is Unconstitutional: Can the Government Strip your Citizenship? Adrian Pandev 32K views \u2022 4 days ago New 6:44 Trump Launches $1 Million \u2018Gold Card\u2019 Visa \u2014 But Will Anyone Pay for It? | Brass Tacks | News18 CNN-News18 19K views \u2022 2 days ago New 8:06 Trump Unveils Gold Card Visa for $1 Million | Vantage With Palki Sharma Firstpost 135K views \u2022 2 days ago New 9:01 Trump Golden Card = Scam - \u0b86 ? Makkal Pechu 30K views \u2022 1 day ago New 5:22 Donald Trump Launches $1M Gold Card Visa Programme: What Is It, Cost, And How Can You Apply? ET Now 876 views \u2022 2 days ago New 19:56 Surviving a -36\u00b0 Night - No Tent & No Sleeping Bag Kusk Bushcraft 21M views \u2022 2 years ago 6:41 Pentagon Press Conference Cold Open - SNL Saturday Night Live 5.8M views \u2022 6 days ago New 7:42 Trump's New H-1B Rules Leave Thousands Stranded in India | Vantage With Palki Sharma Firstpost 314K views \u2022 1 day ago New 37:44 Mark Kelly Claps Back At Trump Amid \u2018Death Threats\u2019 Over US Army Remark: \u2018I\u2019m Not Gonna Be Silenced\u2019 Hook Global 1.2M views \u2022 11 days ago 8:01 \"Path To Citizenship\" Trump's $1mn 'Gold Card' Visa Program Is Drawing Skepticism | Crux Decode | 4K CRUX and CNN-News18 4.8K views \u2022 2 days ago New 3:11 Trump calls it a shame that students return to India, China after graduating moneycontrol 3.3K views \u2022 2 days ago New 8:38 Ahead Of 2026 Tax Season, White House Reveals How Much Extra Refund Americans Will Get Mint 8.2K views \u2022 1 day ago New 26:17 Warren Buffett: Sell These 5 Things Before You Retire Warren Buffett Academy 289K views \u2022 2 weeks ago 1:03:15 FULL: Trump announces launch of 'Trump Gold Cards' for foreign workers during business roundtable Dayton 24/7 Now 109 views \u2022 10 hours ago New 27:51 13 Customs & Immigration Questions at the Airport (You MUST Know in 2026) | Airport NOW Airport NOW 127K views \u2022 10 days ago 23:11 We Sent Our CEO To Dubai\u2019s Supercar Junkyards Business Explains The World 495K views \u2022 1 month ago 19:09 SPAIN'S TOURISM CRISIS is far more complicated than it seems..... Spain Unfiltered 177K views \u2022 13 days ago 13:05 Trevor Noah: Why Britain Can't Complain About Immigration (Hilarious) | Stand-up Comedy Global Gaffes 638K views \u2022 10 days ago A Google company en Sign in Before you continue to YouTube We use cookies and data to Deliver and maintain Google services Track outages and protect against spam, fraud, and abuse Measure audience engagement and site statistics to understand how our services are used and enhance the quality of those services If you choose to \u201cAccept all,\u201d we will also use cookies and data to Develop and improve new services Deliver and measure the effectiveness of ads Show personalized content, depending on your settings Show personalized ads, depending on your settings If you choose to \u201cReject all,\u201d we will not use cookies for these additional purposes. Non-personalized content and ads are influenced by things like the content you\u2019re currently viewing and your location (ad serving is based on general location). Personalized content and ads can also include things like video recommendations, a customized YouTube homepage, and tailored ads based on past activity, like the videos you watch and the things you search for on YouTube. We also use cookies and data to tailor the experience to be age-appropriate, if relevant. Select \u201cMore options\u201d to see additional information, including details about managing your privacy settings. You can also visit g.co/privacytools at any time. Reject all Accept all More options Privacy Policy \u2022 Terms of Service\n\nProvide relevant evidence.",
+    "input_length_chars": 4667,
+    "input_tokens_estimated": 1166,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 0.0001881,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant population percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:22:16.426767",
+    "latency_seconds": 15.02,
+    "input_prompt": "Claim:\nNearly half a million more people came to America through the diversity visa lottery from 2008 to 2017.\n\nArticle Title:\nPERCENTAGE OF WINNING THE DV LOTTERY - YouTube\n\nGoogle Search Snippet:\nPERCENTAGE OF WINNING THE DV LOTTERY: GREEN CARD WINNERS IN NUMBERS FROM 2008-2017 IN EACH CONTINENT Visas Issued from 2008 - 2017 ...\n\nFull Page Content:\nTourism & Visit\nBusiness\nEmployment\nStudy & Exchange\nImmigrate\nOther Visa Categories\nU.S. Visa: Reciprocity and Civil Documents by Country\nShare this page:\nNumber of Online Entries Received During Each Registration Period\nNumber of Selected Entrants for Recent DV Programs\nNumber of Visa Issuances and Adjustments of Status in the Diversity Immigrant Category\nA-Z Index Denials DV Program - USCIS Website Diversity Visa Program E-DV Website Find a U.S. Embassy or Consulate Fraud Warning Rewards for Justice\nKentucky Consular Center Information\n\nProvide relevant evidence.",
+    "input_length_chars": 925,
+    "input_tokens_estimated": 231,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 4.785e-05,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant population percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:22:16.427575",
+    "latency_seconds": 9.89,
+    "input_prompt": "Claim:\nAmerica grants permanent residence to a million people every single year.\n\nArticle Title:\n$1M for US Citizenship? Trump's Gold Card Program ... - YouTube\n\nGoogle Search Snippet:\n... grants permanent residency to foreigners who donate $1 million to the U.S. Treasury. Applicants must also pay a $15000 processing fee, with ...\n\nFull Page Content:\nES Sign in 0:00 / 5:35 $1M for US Citizenship? Trump\u2019s Gold Card Program Breaks the Internet | US News | Gold Card Visa The Financial Express 264K subscribers Subscribe 26 Share Save 2.5K views 2 days ago #donaldtrump #uscitizenship #goldcard Trump Gold Card: US President Donald Trump has introduced a new \u2018Gold Card\u2019 visa that grants permanent residency to foreigners who donate $1 million to the U.S. Treasury. Applicants must also pay a $15,000 processing fee, with the administration promising faster security vetting. \u2026 ...more 13:29 Trump's Gold Card is Illegal? Immigration Lawyer Explains Why | Firstpost PoV | N18G Firstpost 6.2K views \u2022 1 day ago New 14:11 New Bill Will KILL Dual Citizenship for Americans Nomad Capitalist 203K views \u2022 8 days ago 7:32 Why the Push to END DUAL CITIZENSHIP is Unconstitutional: Can the Government Strip your Citizenship? Adrian Pandev 32K views \u2022 4 days ago New 6:44 Trump Launches $1 Million \u2018Gold Card\u2019 Visa \u2014 But Will Anyone Pay for It? | Brass Tacks | News18 CNN-News18 19K views \u2022 2 days ago New 8:06 Trump Unveils Gold Card Visa for $1 Million | Vantage With Palki Sharma Firstpost 135K views \u2022 2 days ago New 9:01 Trump Golden Card = Scam - \u0b86 ? Makkal Pechu 30K views \u2022 1 day ago New 5:22 Donald Trump Launches $1M Gold Card Visa Programme: What Is It, Cost, And How Can You Apply? ET Now 876 views \u2022 2 days ago New 19:56 Surviving a -36\u00b0 Night - No Tent & No Sleeping Bag Kusk Bushcraft 21M views \u2022 2 years ago 6:41 Pentagon Press Conference Cold Open - SNL Saturday Night Live 5.8M views \u2022 6 days ago New 7:42 Trump's New H-1B Rules Leave Thousands Stranded in India | Vantage With Palki Sharma Firstpost 314K views \u2022 1 day ago New 37:44 Mark Kelly Claps Back At Trump Amid \u2018Death Threats\u2019 Over US Army Remark: \u2018I\u2019m Not Gonna Be Silenced\u2019 Hook Global 1.2M views \u2022 11 days ago 8:01 \"Path To Citizenship\" Trump's $1mn 'Gold Card' Visa Program Is Drawing Skepticism | Crux Decode | 4K CRUX and CNN-News18 4.8K views \u2022 2 days ago New 3:11 Trump calls it a shame that students return to India, China after graduating moneycontrol 3.3K views \u2022 2 days ago New 8:38 Ahead Of 2026 Tax Season, White House Reveals How Much Extra Refund Americans Will Get Mint 8.2K views \u2022 1 day ago New 26:17 Warren Buffett: Sell These 5 Things Before You Retire Warren Buffett Academy 289K views \u2022 2 weeks ago 1:03:15 FULL: Trump announces launch of 'Trump Gold Cards' for foreign workers during business roundtable Dayton 24/7 Now 109 views \u2022 10 hours ago New 27:51 13 Customs & Immigration Questions at the Airport (You MUST Know in 2026) | Airport NOW Airport NOW 127K views \u2022 10 days ago 23:11 We Sent Our CEO To Dubai\u2019s Supercar Junkyards Business Explains The World 495K views \u2022 1 month ago 19:09 SPAIN'S TOURISM CRISIS is far more complicated than it seems..... Spain Unfiltered 177K views \u2022 13 days ago 13:05 Trevor Noah: Why Britain Can't Complain About Immigration (Hilarious) | Stand-up Comedy Global Gaffes 638K views \u2022 10 days ago A Google company en Sign in Before you continue to YouTube We use cookies and data to Deliver and maintain Google services Track outages and protect against spam, fraud, and abuse Measure audience engagement and site statistics to understand how our services are used and enhance the quality of those services If you choose to \u201cAccept all,\u201d we will also use cookies and data to Develop and improve new services Deliver and measure the effectiveness of ads Show personalized content, depending on your settings Show personalized ads, depending on your settings If you choose to \u201cReject all,\u201d we will not use cookies for these additional purposes. Non-personalized content and ads are influenced by things like the content you\u2019re currently viewing and your location (ad serving is based on general location). Personalized content and ads can also include things like video recommendations, a customized YouTube homepage, and tailored ads based on past activity, like the videos you watch and the things you search for on YouTube. We also use cookies and data to tailor the experience to be age-appropriate, if relevant. Select \u201cMore options\u201d to see additional information, including details about managing your privacy settings. You can also visit g.co/privacytools at any time. Reject all Accept all More options Privacy Policy \u2022 Terms of Service\n\nProvide relevant evidence.",
+    "input_length_chars": 4698,
+    "input_tokens_estimated": 1174,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 0.0001893,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant population percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:22:16.988549",
+    "latency_seconds": 15.59,
+    "input_prompt": "Claim:\nNearly half a million more people came to America through the diversity visa lottery from 2008 to 2017.\n\nArticle Title:\nDiversity Immigrant Visa - Wikipedia\n\nGoogle Search Snippet:\nMore than 22 million people apply for the lottery each year, which means that fewer than 1 in 400 applicants receive visas. Applicants enter the lottery by ...\n\nFull Page Content:\nTourism & Visit\nBusiness\nEmployment\nStudy & Exchange\nImmigrate\nOther Visa Categories\nU.S. Visa: Reciprocity and Civil Documents by Country\nShare this page:\nNumber of Online Entries Received During Each Registration Period\nNumber of Selected Entrants for Recent DV Programs\nNumber of Visa Issuances and Adjustments of Status in the Diversity Immigrant Category\nA-Z Index Denials DV Program - USCIS Website Diversity Visa Program E-DV Website Find a U.S. Embassy or Consulate Fraud Warning Rewards for Justice\nKentucky Consular Center Information\n\nProvide relevant evidence.",
+    "input_length_chars": 940,
+    "input_tokens_estimated": 235,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 4.845e-05,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant population percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:22:18.424508",
+    "latency_seconds": 17.03,
+    "input_prompt": "Claim:\nNearly half a million more people came to America through the diversity visa lottery from 2008 to 2017.\n\nArticle Title:\nUS diversity visa lottery saw near-record number of applicants in 2017\n\nGoogle Search Snippet:\nMore than 22.4 million people applied in 2017 to a U.S. visa program that provides 50,000 green cards, or lawful permanent residence, each year ...\n\nFull Page Content:\nTourism & Visit\nBusiness\nEmployment\nStudy & Exchange\nImmigrate\nOther Visa Categories\nU.S. Visa: Reciprocity and Civil Documents by Country\nShare this page:\nNumber of Online Entries Received During Each Registration Period\nNumber of Selected Entrants for Recent DV Programs\nNumber of Visa Issuances and Adjustments of Status in the Diversity Immigrant Category\nA-Z Index Denials DV Program - USCIS Website Diversity Visa Program E-DV Website Find a U.S. Embassy or Consulate Fraud Warning Rewards for Justice\nKentucky Consular Center Information\n\nProvide relevant evidence.",
+    "input_length_chars": 962,
+    "input_tokens_estimated": 240,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses the number of applicants for the diversity visa lottery, indicating a significant interest in the program, but does not provide specific data on the number of people who actually immigrated to the U.S. from 2008 to 2017.",
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 329,
+    "output_tokens_estimated": 82,
+    "cost_usd": 8.52e-05,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant population percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:22:19.221277",
+    "latency_seconds": 21.56,
+    "input_prompt": "Claim:\nAn estimated 100,000 refugees and asylum-seekers enter the country annually.\n\nArticle Title:\nU.S. Annual Refugee Resettlement Ceilings and Numb..\n\nGoogle Search Snippet:\nFor FY 2019, the number of admitted refugees matched the annual ceiling, both at 30,000. The original ceiling set for FY 2021 was 15,000, the lowest level on ...\n\nFull Page Content:\nNUMBERS, FACTS AND TRENDS SHAPING YOUR WORLD\nRead our research on:\n|\nAfter more than 50 years of rapid growth, the nation\u2019s immigrant population is now in decline.\nIn January 2025, 53.3 million immigrants lived in the United States \u2013 the largest number ever recorded. In the ensuing months, however, more immigrants left the country or were deported than arrived. By June, the country\u2019s foreign-born population had shrunk by more than a million people, marking its first decline since the 1960s.\nA new Pew Research Center analysis of Census Bureau data finds that, as of June 2025:\nStarting in mid-2024, several policy changes have affected the U.S. immigrant population:\nPew Research Center regularly publishes research on the U.S. immigrant population and international migration trends. Here are answers to some key questions about U.S. immigrants, based on the most recent detailed data available. (In some cases, this data is from mid-2023.)\nAs of June 2025, 51.9 million immigrants lived in the U.S., making up 15.4% of the nation\u2019s population. This was down from January, when there were a record 53.3 million immigrants in the U.S., accounting for 15.8% of the country\u2019s population \u2013 the highest percentage on record.\nEven as the nation\u2019s immigrant population has declined in recent months \u2013 a change that may be partly artificial due to a declining survey response rate among immigrants \u2013 the U.S. is home to more immigrants than any other country.\nAs of 2024, the second-largest immigrant population is in Germany, numbering around 17 million, according to the latest estimates from the United Nations.\nWhile the U.S. is home to the largest number of immigrants, dozens of countries (including Germany) have a higher proportion of immigrants in their populations than the U.S. does. In neighboring Canada, for example, immigrants account for 22% of the population. And in the United Arab Emirates, about three-quarters of all residents were born elsewhere.\nAs of mid-2023 \u2013 the latest year for which detailed data is available \u2013 more than 11 million U.S. residents were born in Mexico, representing 22% of all immigrants nationally. The second-largest immigrant group was from India (3.2 million, or 6%), followed by China (3 million, or 6%), the Philippines (2.1 million, or 4%) and Cuba (1.7 million, or 3%).\nAbout half of all U.S. immigrants (52%, or 26.7 million people) were born in Latin America. In addition to the millions of migrants from Mexico and Cuba, more than a million hail from El Salvador (1.6 million), Guatemala (1.4 million), the Dominican Republic (1.4 million), Colombia (1.2 million), Honduras (1.1 million) and Venezuela (1.1 million).\nAfter Latin America, Asia is the second-largest region of birth for U.S. immigrants. In 2023, around a quarter of all immigrants (27%, or nearly 14 million people) were born in Asia.\nAs of 2023, there were about 11 million immigrants from every other world region combined, accounting for 22% of the U.S. foreign-born population: 10% were born in Europe, 5% in sub-Saharan Africa, 4% in the Middle East-North Africa region, and 2% in Canada or another North American country (a category that includes Bermuda and some smaller countries).\nAn unprecedented number of immigrants \u2013 more than 11 million \u2013 arrived in the U.S. between 2020 and 2025. That included more than 3 million in 2023 alone, the largest annual total ever recorded, according to a Center analysis of government data sources.\nAlongside this increase, immigrants\u2019 origin regions have also shifted, with a growing share coming from South America and Europe and a declining share coming from Asia and sub-Saharan Africa.\nBetween 2021 and 2023, 20% of newly arrived immigrants were from South America, up from 13% in the period between 2015 and 2019. Another 12% of new arrivals between 2021 and 2023 were from Europe or Canada, up from 9% in the earlier period.\nAt the same time, 24% of new arrivals between 2021 and 2023 were from South and East Asia, down from 29% in 2015-19. And 5% of new arrivals between 2021 and 2023 involved people from sub-Saharan Africa, down from 8% in 2015-19.\nMexico was the largest origin country for immigrants who arrived between 2021 and 2023. About 11% of immigrants who came to the U.S. during this period were born in Mexico. Rounding out the top five countries of origin for immigrants who arrived during this period were India (8%), Venezuela (7%), Cuba (6%) and Colombia (5%).\nThroughout this period, unauthorized immigrants accounted for most new immigrant arrivals, with many coming from Central and South America.\nSince 1965, more than 76 million immigrants have come to the U.S.\nBefore then, U.S. immigration law favored immigrants from Northern and Western Europe and mostly barred immigration from Asia. The 1965 Immigration and Nationality Act opened up immigration from Asia and Latin America. The Immigration Act of 1990 further increased legal immigration and allowed immigrants from more countries to enter the U.S. legally.\nImmigration flows after 1965 have been larger and come from different and more countries than earlier flows:\nToday, Mexico remains the largest origin country among U.S. immigrants. However, immigration from Mexico has slowed since 2007, and the Mexican-born population in the U.S. has since dropped. The Mexican share of the U.S. immigrant population declined from 29% in 2010 to 22% in 2023.\nAs of 2023, 46% of immigrants were naturalized U.S. citizens. Nearly a quarter (23%) were lawful permanent residents, often referred to as \u201cgreen card holders,\u201d and another 4% were lawful temporary residents who were permitted to stay in the U.S. for a limited period of time, usually for work or study. The remaining immigrants in the U.S. fell into the \u201cunauthorized\u201d category and constituted 27% of all U.S. immigrants.\nRelated: U.S. Unauthorized Immigrant Population Reached a Record 14 Million in 2023\nUnauthorized immigrants are those without full legal status. As of 2023, this population h\n\nProvide relevant evidence.",
+    "input_length_chars": 6387,
+    "input_tokens_estimated": 1596,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses the number of immigrants entering the U.S. but does not support the claim of 100,000 refugees and asylum-seekers entering annually, as it mentions specific ceilings for refugee admissions that are significantly lower.",
+      "overall_stance": "refutes",
+      "key_quote": "For FY 2019, the number of admitted refugees matched the annual ceiling, both at 30,000."
+    },
+    "output_length_chars": 412,
+    "output_tokens_estimated": 103,
+    "cost_usd": 0.0003012,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant population percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:22:19.464821",
+    "latency_seconds": 21.81,
+    "input_prompt": "Claim:\nAn estimated 100,000 refugees and asylum-seekers enter the country annually.\n\nArticle Title:\nRefugee Data Finder - Key Indicators - UNHCR\n\nGoogle Search Snippet:\nBetween 2018 and 2024, an average of 337,800 children were born as refugees per year. 2. MILLION. refugees returned or were resettled. Almost 2 ...\n\nFull Page Content:\nNUMBERS, FACTS AND TRENDS SHAPING YOUR WORLD\nRead our research on:\n|\nAfter more than 50 years of rapid growth, the nation\u2019s immigrant population is now in decline.\nIn January 2025, 53.3 million immigrants lived in the United States \u2013 the largest number ever recorded. In the ensuing months, however, more immigrants left the country or were deported than arrived. By June, the country\u2019s foreign-born population had shrunk by more than a million people, marking its first decline since the 1960s.\nA new Pew Research Center analysis of Census Bureau data finds that, as of June 2025:\nStarting in mid-2024, several policy changes have affected the U.S. immigrant population:\nPew Research Center regularly publishes research on the U.S. immigrant population and international migration trends. Here are answers to some key questions about U.S. immigrants, based on the most recent detailed data available. (In some cases, this data is from mid-2023.)\nAs of June 2025, 51.9 million immigrants lived in the U.S., making up 15.4% of the nation\u2019s population. This was down from January, when there were a record 53.3 million immigrants in the U.S., accounting for 15.8% of the country\u2019s population \u2013 the highest percentage on record.\nEven as the nation\u2019s immigrant population has declined in recent months \u2013 a change that may be partly artificial due to a declining survey response rate among immigrants \u2013 the U.S. is home to more immigrants than any other country.\nAs of 2024, the second-largest immigrant population is in Germany, numbering around 17 million, according to the latest estimates from the United Nations.\nWhile the U.S. is home to the largest number of immigrants, dozens of countries (including Germany) have a higher proportion of immigrants in their populations than the U.S. does. In neighboring Canada, for example, immigrants account for 22% of the population. And in the United Arab Emirates, about three-quarters of all residents were born elsewhere.\nAs of mid-2023 \u2013 the latest year for which detailed data is available \u2013 more than 11 million U.S. residents were born in Mexico, representing 22% of all immigrants nationally. The second-largest immigrant group was from India (3.2 million, or 6%), followed by China (3 million, or 6%), the Philippines (2.1 million, or 4%) and Cuba (1.7 million, or 3%).\nAbout half of all U.S. immigrants (52%, or 26.7 million people) were born in Latin America. In addition to the millions of migrants from Mexico and Cuba, more than a million hail from El Salvador (1.6 million), Guatemala (1.4 million), the Dominican Republic (1.4 million), Colombia (1.2 million), Honduras (1.1 million) and Venezuela (1.1 million).\nAfter Latin America, Asia is the second-largest region of birth for U.S. immigrants. In 2023, around a quarter of all immigrants (27%, or nearly 14 million people) were born in Asia.\nAs of 2023, there were about 11 million immigrants from every other world region combined, accounting for 22% of the U.S. foreign-born population: 10% were born in Europe, 5% in sub-Saharan Africa, 4% in the Middle East-North Africa region, and 2% in Canada or another North American country (a category that includes Bermuda and some smaller countries).\nAn unprecedented number of immigrants \u2013 more than 11 million \u2013 arrived in the U.S. between 2020 and 2025. That included more than 3 million in 2023 alone, the largest annual total ever recorded, according to a Center analysis of government data sources.\nAlongside this increase, immigrants\u2019 origin regions have also shifted, with a growing share coming from South America and Europe and a declining share coming from Asia and sub-Saharan Africa.\nBetween 2021 and 2023, 20% of newly arrived immigrants were from South America, up from 13% in the period between 2015 and 2019. Another 12% of new arrivals between 2021 and 2023 were from Europe or Canada, up from 9% in the earlier period.\nAt the same time, 24% of new arrivals between 2021 and 2023 were from South and East Asia, down from 29% in 2015-19. And 5% of new arrivals between 2021 and 2023 involved people from sub-Saharan Africa, down from 8% in 2015-19.\nMexico was the largest origin country for immigrants who arrived between 2021 and 2023. About 11% of immigrants who came to the U.S. during this period were born in Mexico. Rounding out the top five countries of origin for immigrants who arrived during this period were India (8%), Venezuela (7%), Cuba (6%) and Colombia (5%).\nThroughout this period, unauthorized immigrants accounted for most new immigrant arrivals, with many coming from Central and South America.\nSince 1965, more than 76 million immigrants have come to the U.S.\nBefore then, U.S. immigration law favored immigrants from Northern and Western Europe and mostly barred immigration from Asia. The 1965 Immigration and Nationality Act opened up immigration from Asia and Latin America. The Immigration Act of 1990 further increased legal immigration and allowed immigrants from more countries to enter the U.S. legally.\nImmigration flows after 1965 have been larger and come from different and more countries than earlier flows:\nToday, Mexico remains the largest origin country among U.S. immigrants. However, immigration from Mexico has slowed since 2007, and the Mexican-born population in the U.S. has since dropped. The Mexican share of the U.S. immigrant population declined from 29% in 2010 to 22% in 2023.\nAs of 2023, 46% of immigrants were naturalized U.S. citizens. Nearly a quarter (23%) were lawful permanent residents, often referred to as \u201cgreen card holders,\u201d and another 4% were lawful temporary residents who were permitted to stay in the U.S. for a limited period of time, usually for work or study. The remaining immigrants in the U.S. fell into the \u201cunauthorized\u201d category and constituted 27% of all U.S. immigrants.\nRelated: U.S. Unauthorized Immigrant Population Reached a Record 14 Million in 2023\nUnauthorized immigrants are those without full legal status. As of 2023, this population h\n\nProvide relevant evidence.",
+    "input_length_chars": 6365,
+    "input_tokens_estimated": 1591,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that there has been an unprecedented number of immigrants arriving in the U.S., with more than 11 million arriving between 2020 and 2025, including over 3 million in 2023 alone. However, it does not specify that 100,000 refugees and asylum-seekers enter the country annually, making the claim unsupported by the data provided.",
+      "overall_stance": "refutes",
+      "key_quote": "An unprecedented number of immigrants \u2013 more than 11 million \u2013 arrived in the U.S. between 2020 and 2025. That included more than 3 million in 2023 alone, the largest annual total ever recorded."
+    },
+    "output_length_chars": 628,
+    "output_tokens_estimated": 157,
+    "cost_usd": 0.00033285,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant population percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:22:19.769809",
+    "latency_seconds": 21.52,
+    "input_prompt": "Claim:\nAmerica grants permanent residence to a million people every single year.\n\nArticle Title:\nTrump's 'Gold Card' touts US residency for foreigners in 'record time'\n\nGoogle Search Snippet:\nThe applicants will then be vetted and approved by the DHS and following a $1 million donation can expect to receive U.S. residency in \"record ...\n\nFull Page Content:\nSorry Lady Liberty \u2013 no unwashed masses need apply.\nForeign elites awash with cash and looking to \"Unlock life in America\" now have the golden opportunity to pay less than initially thought for a visa and a path to citizenship, according to the newly revamped trumpcard.gov website which debuted on Dec. 10.\nPresident Donald Trump\u2019s long-touted \"Trump Gold Card\" which he said back in February would cost $5 million, is now on offer for the low, low price of $1 million.\n\"THE UNITED STATES GOVERNMENT\u2019S TRUMP GOLD CARD IS HERE TODAY!,\" wrote Trump on Truth Social on Dec. 10. \"A direct path to Citizenship for all qualified and vetted people. SO EXCITING! Our Great American Companies can finally keep their invaluable Talent.\"\nFor a $5 million contribution, foreign high-rollers can now also avail of a \"Platinum Card,\" which comes with the ability to spend up to 270 days in the U.S. without being subject to U.S. taxes on non-U.S. income.\nThe first step to apply requires a non-refundable $15,000 processing fee to the Department of Homeland Security. The applicants will then be vetted and approved by the DHS and following a $1 million donation can expect to receive U.S. residency in \"record time,\" according to the website.\nThere\u2019s also a remedy for corporations looking to procure foreign talent. But that would require a $2 million gift. While Trump has defended H-1B visas, which corporations utilize to bring in foreign skilled workers, he's made it harder for companies by increasing the application cost to $100,000. But his defense of the program has drawn ire from his MAGA base.\nFor an individual applicant or corporate sponsor looking to sponsor a spouse or unmarried children under the age of 21, they'd be required to pay an additional $15,000 DHS processing fee and $1 million gift per person, according to the site, which accepts the fees online.\nA family of four would be looking at shelling out north of $4.6 million.\nTrump has said that he is not seeking approval from Congress as he is not providing gold card buyers with citizenship \u2013 only a path to citizenship.\nOther countries also have immigration programs that offer permanent residency or citizenship to foreign investors in exchange for investment. Portugal, for example, offers residency and a path to EU citizenship after five years.\nWhen he first floated the idea in February, Trump said the card would replace the \"EB-5\" immigrant investor green card visa program. However, according to the website, the immigrants coming on the new gold card would be on an EB-1 or EB-2 visa, which are employment-based visas for highly skilled professionals with advanced degrees or exceptional ability in a particular field.\n\"A $1 million gift upon completion of the individual\u2019s vetting is evidence that the individual will substantially benefit the United States,\" the site says.\nThe EB-5 visa allows immigrant investors the option to invest between $800,000 and $1.05 million to obtain a green card. The investment money is used to help create or preserve U.S. jobs. And at some point, the investment is also something the immigrant can claim back. However, the program currently has long wait times and country caps.\nThe new $1 million Trump Gold Card is a donation, with no indication of any of the money ever going back to the people buying it.\n\"Wealthy people will be coming into our country by buying this card,\" Trump said in February when he first introduced the concept. \"They'll be wealthy, and they'll be successful, and they'll be spending a lot of money, and paying a lot of taxes and employing a lot of people.\"\nSwapna Venugopal Ramaswamy is a White House correspondent for USA TODAY. You can follow her on X @SwapnaVenugopal\n\nProvide relevant evidence.",
+    "input_length_chars": 4100,
+    "input_tokens_estimated": 1025,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses the Trump Gold Card, which offers a path to U.S. residency for wealthy individuals who make a significant financial contribution. However, it does not provide evidence that America grants permanent residence to a million people every year, nor does it confirm the claim directly.",
+      "overall_stance": "refutes",
+      "key_quote": "The EB-5 visa allows immigrant investors the option to invest between $800,000 and $1.05 million to obtain a green card."
+    },
+    "output_length_chars": 506,
+    "output_tokens_estimated": 126,
+    "cost_usd": 0.00022935,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant population percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:23:22.963435",
+    "latency_seconds": 19.55,
+    "input_prompt": "Claim:\nFrom 2008 to 2017, the U.S. gave green cards to well over a million people for humanitarian reasons.\n\nArticle Title:\nYearbook of Immigration Statistics | OHSS\n\nFull Page Content:\nSummarizes a year in immigration, including counts of immigrants by type, including green card holders, and immigration enforcement, including\n\nProvide relevant evidence.",
+    "input_length_chars": 356,
+    "input_tokens_estimated": 89,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 2.655e-05
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:23:34.636577",
+    "latency_seconds": 11.54,
+    "input_prompt": "\nClaim: From 2008 to 2017, the U.S. gave green cards to well over a million people for humanitarian reasons.\nCategory: statistical\nExtraction confidence: 0.85\n\nEvidence:\nUNCLEAR (6 sources):\n  1. Yearbook of Immigration Statistics | OHSS | reliability=high (1.00)\n     URL: https://ohss.dhs.gov/topics/immigration/yearbook\n     Summary: Summarizes a year in immigration, including counts of immigrants by type, including green card holders, and immigration enforcement, including\n  2. Frequently Requested Statistics on I.. | migrationpolicy.org | reliability=high (0.85)\n     URL: https://www.migrationpolicy.org/article/frequently-requested-statistics-immigrants-and-immigration-united-states-2018\n     Summary: Almost half (49 percent, or 549,000) of the 1.1 million new LPRs in 2017 received green cards from within the United States. Many of these ...\n  3. The U.S. benefits from immigration but policy reforms needed to ... | reliability=high (0.85)\n     URL: https://www.epi.org/publication/u-s-benefits-from-immigration/\n     Summary: Green cards give immigrant workers the ability to shop around for the best fit for their skills and abilities, which breaks employers' power over these workers ...\n  4. Trump administration will re-examine Green Card holders from 19 ... | reliability=high (0.85)\n     URL: https://www.bbc.com/news/articles/ckgl8j24ky1o\n     Summary: The Trump administration has said it will re-examine green cards issued to individuals who migrated to the US from 19 countries.\n  5. U.S. Employment-Based Immigration Policy | Congress.gov | reliability=high (0.85)\n     URL: https://www.congress.gov/crs-product/R47164\n     Summary: Each year, the United States grants lawful permanent resident (LPR) status, or green cards, to about 140,000 foreign workers and their family members. These ...\n  6. US immigration authorities reviewing status of 3.3 million \u201cgreen ... | reliability=high (0.85)\n     URL: https://www.wsws.org/en/articles/2025/12/02/ubsr-d02.html\n     Summary: The review of green card holders will affect 3.3 million people, the bulk of them, 2.2 million, from three countries in the Caribbean basin\u20141 ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2184,
+    "input_tokens_estimated": 546,
+    "output": {
+      "overall_stance": "unclear",
+      "confidence": "low",
+      "summary": "The evidence regarding the claim that the U.S. granted over a million green cards for humanitarian reasons from 2008 to 2017 is unclear. While the Yearbook of Immigration Statistics and other reliable sources provide data on green card issuance, they do not specifically confirm the humanitarian aspect or the total number for that period. The statistics indicate significant numbers of green cards issued, but the humanitarian context is not explicitly detailed."
+    },
+    "output_length_chars": 523,
+    "output_tokens_estimated": 130,
+    "cost_usd": 0.0001599
+  }
+]

@@ -1,0 +1,87 @@
+{
+  "video_id": "rIcXeueo0O8",
+  "timestamp": "2025-12-14T16:20:42.765239",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.4,
+    "recall": 0.16666666666666666,
+    "f1_score": 0.23529411764705882,
+    "true_positives": 2,
+    "false_positives": 3,
+    "false_negatives": 10,
+    "mean_average_precision": 0.8333333333333333,
+    "recall_at_important": 0.2857142857142857,
+    "importance_weighted_coverage": 0.2,
+    "matched_claims": [
+      {
+        "gt_text": "Greenhouse gases trap heat and energy from the Sun",
+        "sys_text": "Greenhouse gases trap heat and energy from the Sun.",
+        "gt_importance": 0.95,
+        "sys_importance": 0.7,
+        "importance_error": 0.25
+      },
+      {
+        "gt_text": "Fertilizer is used to grow crops, and a lot of nutrients from fertilizer go to growing crops, but not all nutrients make their way into crops and some are lost to the atmosphere",
+        "sys_text": "Fertilizers can lose nutrients to the atmosphere during crop growth.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.6,
+        "importance_error": 0.30000000000000004
+      }
+    ],
+    "missed_claims": [
+      "Many of the human produced gases are called greenhouse gases",
+      "Atmospheric scientists study climate and greenhouse gases by measuring the contents of the atmosphere, much like weather stations measure wind, rainfall, or snowfall",
+      "Instruments are designed to measure the molecules and components of the air",
+      "Scientists put instruments on airplanes and fly around to different regions to collect air samples and measure them",
+      "Scientists fly over farms to understand the impacts of how we grow crops on the atmosphere",
+      "Scientists fly downwind of cities to understand emissions from cars, vehicles, landfills, and power plants",
+      "Landfills emit carbon dioxide and methane as garbage decays",
+      "Garbage in incinerators emits carbon dioxide as a product of combustion",
+      "Individual actions like being aware of leaving lights on or TV on when not using them can reduce atmospheric impact",
+      "Collective action that comes from awareness of the problem can help reduce greenhouse gas emissions"
+    ],
+    "extra_claims": [
+      "Human-produced gases can have bad effects on the planet, including changing the climate and weather.",
+      "Eric's team measures the levels of gases in the atmosphere, including greenhouse gases.",
+      "The atmosphere is a mix of gases that surrounds our planet."
+    ],
+    "importance_mae": 0.275,
+    "claim_quality_avg": 0.72
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 1.0,
+    "stance_accuracy": 1.0,
+    "correct_verdicts": 2,
+    "total_verdicts": 2,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [],
+    "explanation_quality_avg": 0.66
+  },
+  "end_to_end": {
+    "claim_coverage": 0.16666666666666666,
+    "verdict_accuracy": 1.0,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.0,
+    "total_time_seconds": 107.99624109268188,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.99,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.5
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.9,
+    "source_reliability_distribution": {
+      "high": 23,
+      "medium": 2
+    },
+    "avg_evidence_per_claim": 5.0
+  },
+  "ground_truth_claims_count": 12,
+  "system_claims_count": 5
+}

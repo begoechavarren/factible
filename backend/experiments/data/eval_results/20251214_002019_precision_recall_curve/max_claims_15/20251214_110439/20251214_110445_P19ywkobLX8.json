@@ -1,0 +1,124 @@
+{
+  "video_id": "P19ywkobLX8",
+  "timestamp": "2025-12-14T11:04:45.364582",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_15",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.6666666666666666,
+    "recall": 0.6666666666666666,
+    "f1_score": 0.6666666666666666,
+    "true_positives": 6,
+    "false_positives": 3,
+    "false_negatives": 3,
+    "mean_average_precision": 0.9484126984126983,
+    "recall_at_important": 0.6666666666666666,
+    "importance_weighted_coverage": 0.6644295302013423,
+    "matched_claims": [
+      {
+        "gt_text": "Heat waves in the US are now no more common than they were in 1900",
+        "sys_text": "Heat waves in the US are no more common than they were in 1900.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.7,
+        "importance_error": 0.20000000000000007
+      },
+      {
+        "gt_text": "Hurricane activity is no different than it was a century ago",
+        "sys_text": "Hurricane activity is no different than it was a century ago.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.7,
+        "importance_error": 0.20000000000000007
+      },
+      {
+        "gt_text": "Floods have not increased across the globe over more than seventy years",
+        "sys_text": "Floods have not increased across the globe over more than seventy years.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.7,
+        "importance_error": 0.15000000000000002
+      },
+      {
+        "gt_text": "Greenland's ice sheet isn't shrinking any more rapidly today than it was 80 years ago",
+        "sys_text": "Greenland\u2019s ice sheet isn\u2019t shrinking any more rapidly today than it was 80 years ago.",
+        "gt_importance": 0.95,
+        "sys_importance": 0.7,
+        "importance_error": 0.25
+      },
+      {
+        "gt_text": "We get over 80% of the world's energy from fossil fuels",
+        "sys_text": "We get over 80% of the world\u2019s energy from fossil fuels.",
+        "gt_importance": 0.6,
+        "sys_importance": 0.6,
+        "importance_error": 0.0
+      },
+      {
+        "gt_text": "About 60 percent of any CO2 that we emit today will remain in the atmosphere 20 years from now, between 30 and 55 percent will still be there after a century, and between 15 and 30 percent will remain after one thousand years",
+        "sys_text": "About 60 percent of any CO2 that we emit today will remain in the atmosphere 20 years from now.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.6,
+        "importance_error": 0.15000000000000002
+      }
+    ],
+    "missed_claims": [
+      "Climate models require considerable judgment in assumptions about clouds, and different modelers make different assumptions, leading to widely varying results",
+      "The globe is warming, and humans are exerting a warming influence upon it",
+      "Computer climate models project what the climate will be like 20, 40, or even 100 years from now based on considerable judgment and varying assumptions"
+    ],
+    "extra_claims": [
+      "The planet is warming catastrophically because of certain human behaviors.",
+      "Between 30 and 55 percent of CO2 will still be there after a century.",
+      "Between 15 and 30 percent of CO2 will remain after one thousand years."
+    ],
+    "importance_mae": 0.15833333333333335,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.5,
+    "stance_accuracy": 0.5,
+    "correct_verdicts": 3,
+    "total_verdicts": 6,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "Heat waves in the US are now no more common than they were in 1900",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "REFUTES"
+      },
+      {
+        "claim": "Floods have not increased across the globe over more than seventy years",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "REFUTES"
+      },
+      {
+        "claim": "About 60 percent of any CO2 that we emit today will remain in the atmosphere 20 years from now, between 30 and 55 percent will still be there after a century, and between 15 and 30 percent will remain after one thousand years",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.6666666666666666,
+    "verdict_accuracy": 0.5,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.01731825,
+    "total_time_seconds": 89.88775086402893,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.7222222222222223
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 45,
+      "medium": 4
+    },
+    "avg_evidence_per_claim": 5.444444444444445
+  },
+  "ground_truth_claims_count": 9,
+  "system_claims_count": 9
+}

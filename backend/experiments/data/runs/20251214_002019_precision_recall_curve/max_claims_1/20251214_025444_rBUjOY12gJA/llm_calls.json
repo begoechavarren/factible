@@ -1,0 +1,368 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:54:56.772701",
+    "latency_seconds": 10.35,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nif you're thinking about leading a more active lifestyle you're not alone in recent years an increasing number of Americans have started participating in more sports fitness and recreation whether you're trying to get fit build muscle or you're just tired of the couch here are some changes you can expect along the way during that first workout you might feel more alert and energized because ramping up your heart rate means a boost in overall blood flow and oxygen to the brain but prepare yourself for the day after when you'll almost certainly get a case of Dom's short for delayed onset muscle soreness the soreness will persist for about 72 hours but the good news is you're less likely to get it again as long as you continue to regularly exercise those same muscles over the next few weeks you'll slowly start to ramp up production of mitochondria via a process called mitochondrial biogenesis mitochondria are the parts of your cells that convert carbs fat and protein and to feel that your muscles use to do their job like flexing contract after six to eight weeks studies have shown that people can increase their mitochondria by up to 50% with more mitochondria in your cells you'll start to feel more fit and your endurance will increase so running three miles will no longer feel as difficult as it did during the first week once your six months in all of that hard work should finally start to show if your workouts focus on strength training you'll notice your muscles begin to take shape you're also less likely to fall off the workout wagon at this point exercise programs often see a 50% dropout rate within the first six months but after that more people stick with it now if you're more focused on cardio than by nine months of regular exercise you should see about a 25% increase in your vo2 max vo2 max is often used as a measure of fitness and refers to the rate your body can transport oxygen to your muscles for fuel basically higher vo2 max means you can run faster for longer so a 25% increase means you can run about 20% further in the same amount of time after one year of regular exercise your bones will be denser which reduces your of osteoporosis in fact researchers have found that regular resistance training when combined with aerobic exercise can actually reverse the effects of osteoporosis after 12 months now if you maintain your exercise program long term your body might not be the only thing to benefit your bank account may also be one study revealed that older people who exercise 5 days a week for at least 30 minutes saved on average $2,500 a year in medical costs for heart related health problems alone you'll also be at a lower risk of developing arthritis type-2 diabetes dementia and certain types of cancer like breast and colon in all probability you are going to live longer than you otherwise would and that longer life it will likely feel more fulfilling because exercise lowers the risk of anxiety and depression by reducing levels of stress hormones like cortisol and adrenaline of course all of these benefits depend on the type and intensity of your workout and how long you exercise for each week a balanced diet is also paramount to a healthy lifestyle for the average adult ages 18 to 64 the US Department of Health and Human Services recommends either a minimum of two and a half hours per week of moderately intense exercise like brisk walking or biking or at least one hour and 15 minutes each week that combines moderate and high intensity workouts like running and swimming sprints on top of that make sure and take two days each week to strengthen your muscles with some weights or resistance training this will help your overall speed and endurance as you begin it's important to pace yourself and not push too hard too fast or you risk serious injury you'll discover that the fitter you become the easier it will be to exert a little more energy the next week the week after and so forth exercise smart and often and you'll be running marathons in no time you",
+    "input_length_chars": 4091,
+    "input_tokens_estimated": 1022,
+    "output": {
+      "claims": [
+        {
+          "text": "An increasing number of Americans have started participating in more sports, fitness, and recreation in recent years.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Context unknown."
+        },
+        {
+          "text": "During the first workout, you might feel more alert and energized due to increased blood flow and oxygen to the brain.",
+          "confidence": 0.8,
+          "category": "scientific",
+          "importance": 0.3,
+          "context": "Context unknown."
+        },
+        {
+          "text": "Delayed onset muscle soreness (DOMS) will persist for about 72 hours after a workout.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Context unknown."
+        },
+        {
+          "text": "Regular exercise can ramp up production of mitochondria via mitochondrial biogenesis.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Context unknown."
+        },
+        {
+          "text": "Studies have shown that people can increase their mitochondria by up to 50% after six to eight weeks of exercise.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Context unknown."
+        },
+        {
+          "text": "After six months of exercise, people are less likely to drop out of their workout programs, which often see a 50% dropout rate in the first six months.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Context unknown."
+        },
+        {
+          "text": "After nine months of regular exercise, you should see about a 25% increase in your VO2 max.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Context unknown."
+        },
+        {
+          "text": "After one year of regular exercise, your bones will be denser, reducing your risk of osteoporosis.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Context unknown."
+        },
+        {
+          "text": "Regular resistance training combined with aerobic exercise can reverse the effects of osteoporosis after 12 months.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Context unknown."
+        },
+        {
+          "text": "Older people who exercise 5 days a week for at least 30 minutes save on average $2,500 a year in medical costs for heart-related health problems.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Context unknown."
+        },
+        {
+          "text": "Regular exercise lowers the risk of anxiety and depression by reducing levels of stress hormones like cortisol and adrenaline.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Context unknown."
+        },
+        {
+          "text": "The US Department of Health and Human Services recommends a minimum of 2.5 hours of moderately intense exercise per week for adults aged 18 to 64.",
+          "confidence": 0.9,
+          "category": "policy",
+          "importance": 0.6,
+          "context": "Context unknown."
+        }
+      ],
+      "total_count": 12
+    },
+    "output_length_chars": 3641,
+    "output_tokens_estimated": 910,
+    "cost_usd": 0.0006993
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:55:05.772168",
+    "latency_seconds": 2.52,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: An increasing number of Americans have started participating in more sports, fitness, and recreation in recent years.\nContext: Context unknown.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 316,
+    "input_tokens_estimated": 79,
+    "output": {
+      "original_claim": "An increasing number of Americans have started participating in more sports, fitness, and recreation in recent years.",
+      "queries": [
+        {
+          "query": "increase in American participation in sports and fitness activities 2020 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "more Americans engaging in sports and recreation activities trends 2020 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 420,
+    "output_tokens_estimated": 105,
+    "cost_usd": 7.485e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "An increasing number of Americans have started participating in more sports, fitness, and recreation in recent years."
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:55:35.509762",
+    "latency_seconds": 1.15,
+    "input_prompt": "Claim:\nAn increasing number of Americans have started participating in more sports, fitness, and recreation in recent years.\n\nArticle Title:\nAmericans engaged in leisure/sports US 2023 - Statista\n\nGoogle Search Snippet:\nApproximately 95.5 percent of men were engaged in sport and leisure activities that year, and that figure was 92.7 percent for women.\n\nFull Page Content:\nSIGN IN CONTACT JOIN NOW About Membership Research Events Advocacy Resources Press Releases JENNY KARN JOINS THE SPORTS & FITNESS INDUSTRY ASSOCIATION AS SENIOR DIRECTOR READ MORE Press Releases SFIA AND DUPR TEAM UP TO PROVIDE INDUSTRY-FIRST PICKLEBALL MARKET PLAYBOOK WITH UNMATCHED INSIGHTS ON PLAYER SPENDING AND PLAYING HABITS READ MORE Press Releases SIX INNOVATIVE COMPANIES SELECTED AS SEMI-FINALISTS FOR THE 2025 START-UP CHALLENGE READ MORE Press Releases ANEYSHA BHAT JOINS THE SPORTS & FITNESS INDUSTRY ASSOCIATION AS DIRECTOR OF GOVERNMENT AFFAIRS & STRATEGIC ADVOCACY READ MORE Enter Your Email Address to get the latest from SFIA Contact Us SFIA Newsletter Privacy Policy FAQ Leadership Awards Copyright 2025 SFIA | All Rights Reserved.\n\nProvide relevant evidence.",
+    "input_length_chars": 1153,
+    "input_tokens_estimated": 288,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 5.64e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "An increasing number of Americans have started participating in more sports, fitness, and recreation in recent years.",
+      "query_index": 2,
+      "query_text": "more Americans engaging in sports and recreation activities trends 2020 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:55:36.760627",
+    "latency_seconds": 2.39,
+    "input_prompt": "Claim:\nAn increasing number of Americans have started participating in more sports, fitness, and recreation in recent years.\n\nArticle Title:\nA Record Number of Americans Participated in Sports, Fitness ...\n\nGoogle Search Snippet:\nWhat's more, the number of Americans who participated in an activity has increased every single year for 10 years, growing by 5 million in 2023.\n\nFull Page Content:\nSIGN IN CONTACT JOIN NOW About Membership Research Events Advocacy Resources Press Releases JENNY KARN JOINS THE SPORTS & FITNESS INDUSTRY ASSOCIATION AS SENIOR DIRECTOR READ MORE Press Releases SFIA AND DUPR TEAM UP TO PROVIDE INDUSTRY-FIRST PICKLEBALL MARKET PLAYBOOK WITH UNMATCHED INSIGHTS ON PLAYER SPENDING AND PLAYING HABITS READ MORE Press Releases SIX INNOVATIVE COMPANIES SELECTED AS SEMI-FINALISTS FOR THE 2025 START-UP CHALLENGE READ MORE Press Releases ANEYSHA BHAT JOINS THE SPORTS & FITNESS INDUSTRY ASSOCIATION AS DIRECTOR OF GOVERNMENT AFFAIRS & STRATEGIC ADVOCACY READ MORE Enter Your Email Address to get the latest from SFIA Contact Us SFIA Newsletter Privacy Policy FAQ Leadership Awards Copyright 2025 SFIA | All Rights Reserved.\n\nProvide relevant evidence.",
+    "input_length_chars": 1174,
+    "input_tokens_estimated": 293,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that the number of Americans participating in sports and fitness activities has consistently increased over the past decade, with a notable growth of 5 million participants in 2023 alone.",
+      "overall_stance": "supports",
+      "key_quote": "the number of Americans who participated in an activity has increased every single year for 10 years, growing by 5 million in 2023."
+    },
+    "output_length_chars": 427,
+    "output_tokens_estimated": 106,
+    "cost_usd": 0.00010755,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "An increasing number of Americans have started participating in more sports, fitness, and recreation in recent years.",
+      "query_index": 2,
+      "query_text": "more Americans engaging in sports and recreation activities trends 2020 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:55:37.371675",
+    "latency_seconds": 3.0,
+    "input_prompt": "Claim:\nAn increasing number of Americans have started participating in more sports, fitness, and recreation in recent years.\n\nArticle Title:\n[PDF] SFIA Report 2023 - USTA\n\nGoogle Search Snippet:\n237 million people, or 77.6% of all Americans (ages 6 and over), participated in at least one activity. This represents a 9.2% increase from ...\n\nFull Page Content:\nSIGN IN CONTACT JOIN NOW About Membership Research Events Advocacy Resources Press Releases JENNY KARN JOINS THE SPORTS & FITNESS INDUSTRY ASSOCIATION AS SENIOR DIRECTOR READ MORE Press Releases SFIA AND DUPR TEAM UP TO PROVIDE INDUSTRY-FIRST PICKLEBALL MARKET PLAYBOOK WITH UNMATCHED INSIGHTS ON PLAYER SPENDING AND PLAYING HABITS READ MORE Press Releases SIX INNOVATIVE COMPANIES SELECTED AS SEMI-FINALISTS FOR THE 2025 START-UP CHALLENGE READ MORE Press Releases ANEYSHA BHAT JOINS THE SPORTS & FITNESS INDUSTRY ASSOCIATION AS DIRECTOR OF GOVERNMENT AFFAIRS & STRATEGIC ADVOCACY READ MORE Enter Your Email Address to get the latest from SFIA Contact Us SFIA Newsletter Privacy Policy FAQ Leadership Awards Copyright 2025 SFIA | All Rights Reserved.\n\nProvide relevant evidence.",
+    "input_length_chars": 1139,
+    "input_tokens_estimated": 284,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that 237 million Americans, or 77.6% of the population aged 6 and over, participated in at least one sports or fitness activity, reflecting a 9.2% increase in participation from previous years.",
+      "overall_stance": "supports",
+      "key_quote": "This represents a 9.2% increase from ..."
+    },
+    "output_length_chars": 342,
+    "output_tokens_estimated": 85,
+    "cost_usd": 9.36e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "An increasing number of Americans have started participating in more sports, fitness, and recreation in recent years.",
+      "query_index": 2,
+      "query_text": "more Americans engaging in sports and recreation activities trends 2020 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:55:37.820618",
+    "latency_seconds": 3.44,
+    "input_prompt": "Claim:\nAn increasing number of Americans have started participating in more sports, fitness, and recreation in recent years.\n\nArticle Title:\nSFIA | 2023 U.S. Trends in Team Sports Report\n\nGoogle Search Snippet:\nSFIA data revealed the total number of participants in team sports in the United States to be 70.8 million in 2022, which is the same amount as ...\n\nFull Page Content:\nSIGN IN CONTACT JOIN NOW About Membership Research Events Advocacy Resources Press Releases JENNY KARN JOINS THE SPORTS & FITNESS INDUSTRY ASSOCIATION AS SENIOR DIRECTOR READ MORE Press Releases SFIA AND DUPR TEAM UP TO PROVIDE INDUSTRY-FIRST PICKLEBALL MARKET PLAYBOOK WITH UNMATCHED INSIGHTS ON PLAYER SPENDING AND PLAYING HABITS READ MORE Press Releases SIX INNOVATIVE COMPANIES SELECTED AS SEMI-FINALISTS FOR THE 2025 START-UP CHALLENGE READ MORE Press Releases ANEYSHA BHAT JOINS THE SPORTS & FITNESS INDUSTRY ASSOCIATION AS DIRECTOR OF GOVERNMENT AFFAIRS & STRATEGIC ADVOCACY READ MORE Enter Your Email Address to get the latest from SFIA Contact Us SFIA Newsletter Privacy Policy FAQ Leadership Awards Copyright 2025 SFIA | All Rights Reserved.\n\nProvide relevant evidence.",
+    "input_length_chars": 1158,
+    "input_tokens_estimated": 289,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The SFIA report indicates that the total number of participants in team sports in the U.S. was 70.8 million in 2022, suggesting a stable level of participation rather than an increase in recent years.",
+      "overall_stance": "refutes",
+      "key_quote": "the total number of participants in team sports in the United States to be 70.8 million in 2022, which is the same amount as ..."
+    },
+    "output_length_chars": 413,
+    "output_tokens_estimated": 103,
+    "cost_usd": 0.00010515,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "An increasing number of Americans have started participating in more sports, fitness, and recreation in recent years.",
+      "query_index": 2,
+      "query_text": "more Americans engaging in sports and recreation activities trends 2020 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:55:38.256239",
+    "latency_seconds": 3.9,
+    "input_prompt": "Claim:\nAn increasing number of Americans have started participating in more sports, fitness, and recreation in recent years.\n\nArticle Title:\nSFIA Study: Record growth continues in 2023 for U.S. sports and ...\n\nGoogle Search Snippet:\nIn 2023, the total number of active sports and fitness participants in the U.S. hit its highest level ever at 242 million, up 12.1% from 215.8 ...\n\nFull Page Content:\nSIGN IN CONTACT JOIN NOW About Membership Research Events Advocacy Resources Press Releases JENNY KARN JOINS THE SPORTS & FITNESS INDUSTRY ASSOCIATION AS SENIOR DIRECTOR READ MORE Press Releases SFIA AND DUPR TEAM UP TO PROVIDE INDUSTRY-FIRST PICKLEBALL MARKET PLAYBOOK WITH UNMATCHED INSIGHTS ON PLAYER SPENDING AND PLAYING HABITS READ MORE Press Releases SIX INNOVATIVE COMPANIES SELECTED AS SEMI-FINALISTS FOR THE 2025 START-UP CHALLENGE READ MORE Press Releases ANEYSHA BHAT JOINS THE SPORTS & FITNESS INDUSTRY ASSOCIATION AS DIRECTOR OF GOVERNMENT AFFAIRS & STRATEGIC ADVOCACY READ MORE Enter Your Email Address to get the latest from SFIA Contact Us SFIA Newsletter Privacy Policy FAQ Leadership Awards Copyright 2025 SFIA | All Rights Reserved.\n\nProvide relevant evidence.",
+    "input_length_chars": 1179,
+    "input_tokens_estimated": 294,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that in 2023, the number of active sports and fitness participants in the U.S. reached a record high of 242 million, representing a 12.1% increase from the previous year, which supports the claim of increased participation in sports and fitness.",
+      "overall_stance": "supports",
+      "key_quote": "the total number of active sports and fitness participants in the U.S. hit its highest level ever at 242 million, up 12.1% from 215.8 ..."
+    },
+    "output_length_chars": 491,
+    "output_tokens_estimated": 122,
+    "cost_usd": 0.0001173,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "An increasing number of Americans have started participating in more sports, fitness, and recreation in recent years.",
+      "query_index": 2,
+      "query_text": "more Americans engaging in sports and recreation activities trends 2020 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:55:49.689852",
+    "latency_seconds": 2.5,
+    "input_prompt": "Claim:\nAn increasing number of Americans have started participating in more sports, fitness, and recreation in recent years.\n\nArticle Title:\n[PDF] 2023 OUTDOOR PARTICIPATION TRENDS REPORT\n\nFull Page Content:\nThe outdoor recreation participant base grew 2.3% in 2022 to a record 168.1 million participants or 55% of the U.S. population ages 6 and older.\n\nProvide relevant evidence.",
+    "input_length_chars": 380,
+    "input_tokens_estimated": 95,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that outdoor recreation participation in the U.S. increased by 2.3% in 2022, reaching a record 168.1 million participants, which supports the claim that more Americans are engaging in sports, fitness, and recreation activities.",
+      "overall_stance": "supports",
+      "key_quote": "The outdoor recreation participant base grew 2.3% in 2022 to a record 168.1 million participants or 55% of the U.S. population ages 6 and older."
+    },
+    "output_length_chars": 480,
+    "output_tokens_estimated": 120,
+    "cost_usd": 8.625e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "An increasing number of Americans have started participating in more sports, fitness, and recreation in recent years.",
+      "query_index": 2,
+      "query_text": "more Americans engaging in sports and recreation activities trends 2020 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:55:59.192727",
+    "latency_seconds": 10.07,
+    "input_prompt": "Claim:\nAn increasing number of Americans have started participating in more sports, fitness, and recreation in recent years.\n\nArticle Title:\nAmericans engaged in leisure/sports US 2023 - Statista\n\nGoogle Search Snippet:\nApproximately 95.5 percent of men were engaged in sport and leisure activities that year, and that figure was 92.7 percent for women.\n\nFull Page Content:\nSIGN IN CONTACT JOIN NOW About Membership Research Events Advocacy Resources Press Releases JENNY KARN JOINS THE SPORTS & FITNESS INDUSTRY ASSOCIATION AS SENIOR DIRECTOR READ MORE Press Releases SFIA AND DUPR TEAM UP TO PROVIDE INDUSTRY-FIRST PICKLEBALL MARKET PLAYBOOK WITH UNMATCHED INSIGHTS ON PLAYER SPENDING AND PLAYING HABITS READ MORE Press Releases SIX INNOVATIVE COMPANIES SELECTED AS SEMI-FINALISTS FOR THE 2025 START-UP CHALLENGE READ MORE Press Releases ANEYSHA BHAT JOINS THE SPORTS & FITNESS INDUSTRY ASSOCIATION AS DIRECTOR OF GOVERNMENT AFFAIRS & STRATEGIC ADVOCACY READ MORE Enter Your Email Address to get the latest from SFIA Contact Us SFIA Newsletter Privacy Policy FAQ Leadership Awards Copyright 2025 SFIA | All Rights Reserved.\n\nProvide relevant evidence.",
+    "input_length_chars": 1153,
+    "input_tokens_estimated": 288,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 5.64e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "An increasing number of Americans have started participating in more sports, fitness, and recreation in recent years.",
+      "query_index": 2,
+      "query_text": "more Americans engaging in sports and recreation activities trends 2020 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:55:59.435065",
+    "latency_seconds": 10.31,
+    "input_prompt": "Claim:\nAn increasing number of Americans have started participating in more sports, fitness, and recreation in recent years.\n\nArticle Title:\n2023 SFIA Topline Participation Report Now Availabile\n\nGoogle Search Snippet:\nThe 2023 SFIA Topline Report tracks participation rates of Americans aged six and older, across 124 different sports, fitness, and outdoor activities.\n\nFull Page Content:\nSIGN IN CONTACT JOIN NOW About Membership Research Events Advocacy Resources Press Releases JENNY KARN JOINS THE SPORTS & FITNESS INDUSTRY ASSOCIATION AS SENIOR DIRECTOR READ MORE Press Releases SFIA AND DUPR TEAM UP TO PROVIDE INDUSTRY-FIRST PICKLEBALL MARKET PLAYBOOK WITH UNMATCHED INSIGHTS ON PLAYER SPENDING AND PLAYING HABITS READ MORE Press Releases SIX INNOVATIVE COMPANIES SELECTED AS SEMI-FINALISTS FOR THE 2025 START-UP CHALLENGE READ MORE Press Releases ANEYSHA BHAT JOINS THE SPORTS & FITNESS INDUSTRY ASSOCIATION AS DIRECTOR OF GOVERNMENT AFFAIRS & STRATEGIC ADVOCACY READ MORE Enter Your Email Address to get the latest from SFIA Contact Us SFIA Newsletter Privacy Policy FAQ Leadership Awards Copyright 2025 SFIA | All Rights Reserved.\n\nProvide relevant evidence.",
+    "input_length_chars": 1169,
+    "input_tokens_estimated": 292,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 5.7e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "An increasing number of Americans have started participating in more sports, fitness, and recreation in recent years.",
+      "query_index": 2,
+      "query_text": "more Americans engaging in sports and recreation activities trends 2020 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:56:00.479068",
+    "latency_seconds": 11.34,
+    "input_prompt": "Claim:\nAn increasing number of Americans have started participating in more sports, fitness, and recreation in recent years.\n\nArticle Title:\nA Record Number of Americans Participated in Sports, Fitness ...\n\nGoogle Search Snippet:\nWhat's more, the number of Americans who participated in an activity has increased every single year for 10 years, growing by 5 million in 2023.\n\nFull Page Content:\nSIGN IN CONTACT JOIN NOW About Membership Research Events Advocacy Resources Press Releases JENNY KARN JOINS THE SPORTS & FITNESS INDUSTRY ASSOCIATION AS SENIOR DIRECTOR READ MORE Press Releases SFIA AND DUPR TEAM UP TO PROVIDE INDUSTRY-FIRST PICKLEBALL MARKET PLAYBOOK WITH UNMATCHED INSIGHTS ON PLAYER SPENDING AND PLAYING HABITS READ MORE Press Releases SIX INNOVATIVE COMPANIES SELECTED AS SEMI-FINALISTS FOR THE 2025 START-UP CHALLENGE READ MORE Press Releases ANEYSHA BHAT JOINS THE SPORTS & FITNESS INDUSTRY ASSOCIATION AS DIRECTOR OF GOVERNMENT AFFAIRS & STRATEGIC ADVOCACY READ MORE Enter Your Email Address to get the latest from SFIA Contact Us SFIA Newsletter Privacy Policy FAQ Leadership Awards Copyright 2025 SFIA | All Rights Reserved.\n\nProvide relevant evidence.",
+    "input_length_chars": 1174,
+    "input_tokens_estimated": 293,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that the number of Americans participating in sports and fitness activities has consistently increased over the past decade, with a notable growth of 5 million participants in 2023 alone.",
+      "overall_stance": "supports",
+      "key_quote": "the number of Americans who participated in an activity has increased every single year for 10 years, growing by 5 million in 2023."
+    },
+    "output_length_chars": 427,
+    "output_tokens_estimated": 106,
+    "cost_usd": 0.00010755,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "An increasing number of Americans have started participating in more sports, fitness, and recreation in recent years.",
+      "query_index": 2,
+      "query_text": "more Americans engaging in sports and recreation activities trends 2020 2023"
+    }
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:56:29.246788",
+    "latency_seconds": 21.67,
+    "input_prompt": "\nClaim: An increasing number of Americans have started participating in more sports, fitness, and recreation in recent years.\nCategory: statistical\nExtraction confidence: 0.90\n\nEvidence:\nREFUTES (1 sources):\n  1. SFIA | 2023 U.S. Trends in Team Sports Report | reliability=medium (0.60)\n     URL: https://sfia.org/resources/team-sport-participation-recovered-to-pre-pandemic-levels-last-year/\n     Summary: The SFIA report indicates that the total number of participants in team sports in the U.S. was 70.8 million in 2022, suggesting a stable level of participation rather than an increase in recent years.\nSUPPORTS (3 sources):\n  1. [PDF] 2023 OUTDOOR PARTICIPATION TRENDS REPORT | reliability=high (1.00)\n     URL: https://outdoorrecreation.wi.gov/Documents/Research%20Library%20Page%20files/US%20-%20Demographics%20%26%20Participation/2023_OutdoorFoundation_Participation_Report.pdf\n     Summary: The evidence indicates that outdoor recreation participation in the U.S. increased by 2.3% in 2022, reaching a record 168.1 million participants, which supports the claim that more Americans are engaging in sports, fitness, and recreation activities.\n  2. SFIA Study: Record growth continues in 2023 for U.S. sports and ... | reliability=high (0.85)\n     URL: https://www.sportsbusinessjournal.com/Articles/2024/05/30/sports-fitness-industry-association-survey/\n     Summary: The evidence indicates that in 2023, the number of active sports and fitness participants in the U.S. reached a record high of 242 million, representing a 12.1% increase from the previous year, which supports the claim of increased participation in sports and fitness.\n  3. A Record Number of Americans Participated in Sports, Fitness ... | reliability=medium (0.60)\n     URL: https://www.sportsdestinations.com/sports/all-sports/record-number-americans-participated-sports-33929\n     Summary: The evidence indicates that the number of Americans participating in sports and fitness activities has consistently increased over the past decade, with a notable growth of 5 million participants in 2023 alone.\nUNCLEAR (2 sources):\n  1. Americans engaged in leisure/sports US 2023 - Statista | reliability=high (0.85)\n     URL: https://www.statista.com/statistics/189548/daily-engagement-of-the-us-population-in-leisure-and-sports/?srsltid=AfmBOooShjN7wlyOqtrnDoDDqna3onqiUt5KbjJgPGWGhgTB10ZftG-7\n     Summary: Approximately 95.5 percent of men were engaged in sport and leisure activities that year, and that figure was 92.7 percent for women.\n  2. Ready to Play: Sports and fitness participation grows steadily | reliability=high (0.85)\n     URL: https://www.sportsbusinessjournal.com/Articles/2024/06/03/sports-participation/\n     Summary: \u201cWe went from just under 73% of Americans participating in one of the 200-plus activities that we monitor in 2018 to 78.8% in 2023,\u201d said SFIA ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2894,
+    "input_tokens_estimated": 723,
+    "output": {
+      "overall_stance": "mixed",
+      "confidence": "medium",
+      "summary": "The evidence presents a mixed picture regarding participation in sports, fitness, and recreation among Americans. While the SFIA report indicates stable participation in team sports at 70.8 million in 2022, other sources, such as the Outdoor Participation Trends Report and the SFIA study, show significant increases in outdoor recreation and overall sports participation, with 242 million active participants in 2023, marking a 12.1% increase. Additionally, Statista and another SFIA report suggest a steady growth in overall participation rates, indicating that while team sports may not be increasing, broader engagement in sports and fitness activities is on the rise."
+    },
+    "output_length_chars": 733,
+    "output_tokens_estimated": 183,
+    "cost_usd": 0.00021825,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "An increasing number of Americans have started participating in more sports, fitness, and recreation in recent years.",
+      "query_index": 2,
+      "query_text": "more Americans engaging in sports and recreation activities trends 2020 2023"
+    }
+  }
+]

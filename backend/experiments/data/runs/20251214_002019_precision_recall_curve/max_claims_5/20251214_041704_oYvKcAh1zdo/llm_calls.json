@@ -1,0 +1,295 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:17:28.156018",
+    "latency_seconds": 22.93,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\n\u201cGive me your tired, your poor, your huddled masses yearning to breathe free\u2026\u201d These poetic lines, engraved on a bronze plaque beneath the Statue of Liberty, speak to who we are: a nation of immigrants. Until now . . . As Senate Democrat Chuck Schumer lamented, \u201cTears are running down the cheeks of the Statue of Liberty.\u201d We\u2019ve turned our backs on those huddled masses. Closed our borders. Separated families. Hardened our hearts. Or so you would think if you only read the headlines or watch TV news. Just one problem: It\u2019s not true. The United States still maintains the most generous immigration policies in the world. Generous to a fault...because the overwhelming numbers have stymied our ability to assimilate the huddled masses. 50 million residents of America are foreign-born. In fact, today the United States has more immigrants as a percentage of its total population than at any time since 1890. That\u2019s why, to give one illustration, 176 different languages are spoken among students in the New York City school system. How did we get here? For starters, America grants permanent residence to a million people every single year. And that\u2019s just the tip of the iceberg because of something you\u2019ve probably heard referred to as \u201cchain migration.\u201d Chain migration allows immigrants to sponsor not only their immediate family\u2014parents, spouses and children under age 21, but much of their extended family once they gain citizenship: unmarried adult children and any children they might have, married adult children and their children, and brothers and sisters and their children. Princeton University researchers, using the most recently available data, found that immigrants sponsored an average of 3.45 additional relatives each. So, the one million immigrants granted permanent residence each year potentially adds, over time, another three and a half million. In addition, an estimated 100,000 refugees and asylum-seekers\u2014people who claim to be fleeing political or personal strife abroad\u2014enter the country annually. From 2008 to 2017, the U.S. gave green cards to well over a million people for humanitarian reasons, allowing them to live and work here permanently. After five years, they can apply for full citizenship. We\u2019re not done yet. In that same time frame, nearly half a million more people came to America through the diversity visa lottery\u2014a program designed to admit more people from \u201cunderrepresented\u201d countries into the U.S. Diversity visa applicants don't need a high school education, job skills \u2014or pretty much anything. And, thanks again to chain migration, spouses and unmarried children under 21 of visa lottery winners also get to come to America. This non-stop flow of new legal immigrants\u2014based on family ties instead of skills, abilities, and allegiance to American values\u2014has, of course, been supplemented by millions who enter the country illegally and stay illegally. Dominant media outlets use the euphemism \u201cundocumented,\u201d but the official U.S. government term used in federal statutes is \u201cillegal alien\u201d: an unlawful entrant who came without permission and stays in open defiance of our laws. The number of illegal aliens in the country is usually given as 11 million, but have you noticed that number never seems to change? Common sense suggests it\u2019s higher\u2014much higher. And though illegal aliens themselves don\u2019t qualify for welfare, they receive free health care in our clinics and hospitals, and through their American-born children they can expect to receive all manner of benefits\u2014cash aid, food stamps, and housing vouchers. Their children are entitled to a free education in public schools. Building a high-tech border barrier would certainly help stem this flow. Ending chain migration is another obvious remedy. E-Verify, the national database that allows employers to check workers\u2019 immigration status, is also essential. So is a fully-functioning entry-exit system to track visa overstayers. But all solutions will ultimately fail unless we get control of the numbers and enforce our laws consistently. It\u2019s Sovereignty 101: This is our home and we have not only the right, but the responsibility, to determine who comes in, how many come in, and what qualities and qualifications they bring. The truth is, we let in millions. And, of course, millions more want to come. Who can blame them? But it\u2019s simply not possible or desirable to let in everyone. And it\u2019s not hateful to say so. It\u2019s not hateful to protect our borders. It\u2019s not hateful to protect our citizens. It\u2019s not hateful to protect our values. Lady Liberty may be shedding tears\u2014not because we\u2019ve stopped welcoming immigrants, but because our ill-conceived immigration policies are threatening the American Dream. I\u2019m Michelle Malkin, CRTV host and author of Invasion and Sold Out, for Prager University.",
+    "input_length_chars": 4882,
+    "input_tokens_estimated": 1220,
+    "output": {
+      "claims": [
+        {
+          "text": "The United States maintains the most generous immigration policies in the world.",
+          "confidence": 0.85,
+          "category": "policy",
+          "importance": 0.85,
+          "context": "Speaker: Michelle Malkin, discussing immigration policies."
+        },
+        {
+          "text": "50 million residents of America are foreign-born.",
+          "confidence": 0.9,
+          "category": "demographic",
+          "importance": 0.8,
+          "context": "Current demographic data on foreign-born residents."
+        },
+        {
+          "text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+          "confidence": 0.9,
+          "category": "historical",
+          "importance": 0.8,
+          "context": "Historical comparison of immigration rates."
+        },
+        {
+          "text": "America grants permanent residence to a million people every single year.",
+          "confidence": 0.9,
+          "category": "policy",
+          "importance": 0.7,
+          "context": "Annual immigration statistics."
+        },
+        {
+          "text": "An estimated 100,000 refugees and asylum-seekers enter the country annually.",
+          "confidence": 0.85,
+          "category": "demographic",
+          "importance": 0.6,
+          "context": "Annual statistics on refugees and asylum-seekers."
+        }
+      ],
+      "total_count": 5
+    },
+    "output_length_chars": 1485,
+    "output_tokens_estimated": 371,
+    "cost_usd": 0.0004056
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:17:31.840808",
+    "latency_seconds": 2.16,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: An estimated 100,000 refugees and asylum-seekers enter the country annually.\nContext: Annual statistics on refugees and asylum-seekers.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 308,
+    "input_tokens_estimated": 77,
+    "output": {
+      "original_claim": "An estimated 100,000 refugees and asylum-seekers enter the country annually.",
+      "queries": [
+        {
+          "query": "annual statistics on refugees and asylum-seekers entering the country 100000",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "number of refugees and asylum-seekers entering the country each year",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 370,
+    "output_tokens_estimated": 92,
+    "cost_usd": 6.675e-05,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "An estimated 100,000 refugees and asylum-seekers enter the country annually."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:17:31.962069",
+    "latency_seconds": 2.29,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The United States maintains the most generous immigration policies in the world.\nContext: Speaker: Michelle Malkin, discussing immigration policies.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 321,
+    "input_tokens_estimated": 80,
+    "output": {
+      "original_claim": "The United States maintains the most generous immigration policies in the world.",
+      "queries": [
+        {
+          "query": "United States immigration policies comparison 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "most generous immigration policies by country 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 330,
+    "output_tokens_estimated": 82,
+    "cost_usd": 6.12e-05,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "An estimated 100,000 refugees and asylum-seekers enter the country annually.",
+      "query_index": 2,
+      "query_text": "number of refugees and asylum-seekers entering the country each year"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:17:32.046836",
+    "latency_seconds": 2.37,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: 50 million residents of America are foreign-born.\nContext: Current demographic data on foreign-born residents.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 283,
+    "input_tokens_estimated": 70,
+    "output": {
+      "original_claim": "50 million residents of America are foreign-born.",
+      "queries": [
+        {
+          "query": "current number of foreign-born residents in America 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "how many foreign-born residents are in the United States 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 316,
+    "output_tokens_estimated": 79,
+    "cost_usd": 5.79e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The United States maintains the most generous immigration policies in the world.",
+      "query_index": 2,
+      "query_text": "most generous immigration policies by country 2023"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:17:32.131736",
+    "latency_seconds": 2.45,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The United States has more immigrants as a percentage of its total population than at any time since 1890.\nContext: Historical comparison of immigration rates.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 332,
+    "input_tokens_estimated": 83,
+    "output": {
+      "original_claim": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "queries": [
+        {
+          "query": "United States immigrants percentage of total population historical data 1890",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "current immigration rate in the United States compared to 1890",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 394,
+    "output_tokens_estimated": 98,
+    "cost_usd": 7.125e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "50 million residents of America are foreign-born.",
+      "query_index": 2,
+      "query_text": "how many foreign-born residents are in the United States 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:18:03.905274",
+    "latency_seconds": 20.55,
+    "input_prompt": "Claim:\nAn estimated 100,000 refugees and asylum-seekers enter the country annually.\n\nArticle Title:\nU.S. Annual Refugee Resettlement Ceilings and Numb..\n\nGoogle Search Snippet:\nFor FY 2019, the number of admitted refugees matched the annual ceiling, both at 30,000. The original ceiling set for FY 2021 was 15,000, the lowest level on ...\n\nFull Page Content:\nNUMBERS, FACTS AND TRENDS SHAPING YOUR WORLD\nRead our research on:\n|\nAfter more than 50 years of rapid growth, the nation\u2019s immigrant population is now in decline.\nIn January 2025, 53.3 million immigrants lived in the United States \u2013 the largest number ever recorded. In the ensuing months, however, more immigrants left the country or were deported than arrived. By June, the country\u2019s foreign-born population had shrunk by more than a million people, marking its first decline since the 1960s.\nA new Pew Research Center analysis of Census Bureau data finds that, as of June 2025:\nStarting in mid-2024, several policy changes have affected the U.S. immigrant population:\nPew Research Center regularly publishes research on the U.S. immigrant population and international migration trends. Here are answers to some key questions about U.S. immigrants, based on the most recent detailed data available. (In some cases, this data is from mid-2023.)\nAs of June 2025, 51.9 million immigrants lived in the U.S., making up 15.4% of the nation\u2019s population. This was down from January, when there were a record 53.3 million immigrants in the U.S., accounting for 15.8% of the country\u2019s population \u2013 the highest percentage on record.\nEven as the nation\u2019s immigrant population has declined in recent months \u2013 a change that may be partly artificial due to a declining survey response rate among immigrants \u2013 the U.S. is home to more immigrants than any other country.\nAs of 2024, the second-largest immigrant population is in Germany, numbering around 17 million, according to the latest estimates from the United Nations.\nWhile the U.S. is home to the largest number of immigrants, dozens of countries (including Germany) have a higher proportion of immigrants in their populations than the U.S. does. In neighboring Canada, for example, immigrants account for 22% of the population. And in the United Arab Emirates, about three-quarters of all residents were born elsewhere.\nAs of mid-2023 \u2013 the latest year for which detailed data is available \u2013 more than 11 million U.S. residents were born in Mexico, representing 22% of all immigrants nationally. The second-largest immigrant group was from India (3.2 million, or 6%), followed by China (3 million, or 6%), the Philippines (2.1 million, or 4%) and Cuba (1.7 million, or 3%).\nAbout half of all U.S. immigrants (52%, or 26.7 million people) were born in Latin America. In addition to the millions of migrants from Mexico and Cuba, more than a million hail from El Salvador (1.6 million), Guatemala (1.4 million), the Dominican Republic (1.4 million), Colombia (1.2 million), Honduras (1.1 million) and Venezuela (1.1 million).\nAfter Latin America, Asia is the second-largest region of birth for U.S. immigrants. In 2023, around a quarter of all immigrants (27%, or nearly 14 million people) were born in Asia.\nAs of 2023, there were about 11 million immigrants from every other world region combined, accounting for 22% of the U.S. foreign-born population: 10% were born in Europe, 5% in sub-Saharan Africa, 4% in the Middle East-North Africa region, and 2% in Canada or another North American country (a category that includes Bermuda and some smaller countries).\nAn unprecedented number of immigrants \u2013 more than 11 million \u2013 arrived in the U.S. between 2020 and 2025. That included more than 3 million in 2023 alone, the largest annual total ever recorded, according to a Center analysis of government data sources.\nAlongside this increase, immigrants\u2019 origin regions have also shifted, with a growing share coming from South America and Europe and a declining share coming from Asia and sub-Saharan Africa.\nBetween 2021 and 2023, 20% of newly arrived immigrants were from South America, up from 13% in the period between 2015 and 2019. Another 12% of new arrivals between 2021 and 2023 were from Europe or Canada, up from 9% in the earlier period.\nAt the same time, 24% of new arrivals between 2021 and 2023 were from South and East Asia, down from 29% in 2015-19. And 5% of new arrivals between 2021 and 2023 involved people from sub-Saharan Africa, down from 8% in 2015-19.\nMexico was the largest origin country for immigrants who arrived between 2021 and 2023. About 11% of immigrants who came to the U.S. during this period were born in Mexico. Rounding out the top five countries of origin for immigrants who arrived during this period were India (8%), Venezuela (7%), Cuba (6%) and Colombia (5%).\nThroughout this period, unauthorized immigrants accounted for most new immigrant arrivals, with many coming from Central and South America.\nSince 1965, more than 76 million immigrants have come to the U.S.\nBefore then, U.S. immigration law favored immigrants from Northern and Western Europe and mostly barred immigration from Asia. The 1965 Immigration and Nationality Act opened up immigration from Asia and Latin America. The Immigration Act of 1990 further increased legal immigration and allowed immigrants from more countries to enter the U.S. legally.\nImmigration flows after 1965 have been larger and come from different and more countries than earlier flows:\nToday, Mexico remains the largest origin country among U.S. immigrants. However, immigration from Mexico has slowed since 2007, and the Mexican-born population in the U.S. has since dropped. The Mexican share of the U.S. immigrant population declined from 29% in 2010 to 22% in 2023.\nAs of 2023, 46% of immigrants were naturalized U.S. citizens. Nearly a quarter (23%) were lawful permanent residents, often referred to as \u201cgreen card holders,\u201d and another 4% were lawful temporary residents who were permitted to stay in the U.S. for a limited period of time, usually for work or study. The remaining immigrants in the U.S. fell into the \u201cunauthorized\u201d category and constituted 27% of all U.S. immigrants.\nRelated: U.S. Unauthorized Immigrant Population Reached a Record 14 Million in 2023\nUnauthorized immigrants are those without full legal status. As of 2023, this population h\n\nProvide relevant evidence.",
+    "input_length_chars": 6387,
+    "input_tokens_estimated": 1596,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses the U.S. immigrant population and trends, but it does not provide specific evidence supporting the claim of 100,000 refugees and asylum-seekers entering the country annually. Instead, it mentions that the number of admitted refugees was 30,000 for FY 2019 and a ceiling of 15,000 for FY 2021, indicating a much lower figure than the claim suggests.",
+      "overall_stance": "refutes",
+      "key_quote": "\"For FY 2019, the number of admitted refugees matched the annual ceiling, both at 30,000. The original ceiling set for FY 2021 was 15,000, the lowest level on ...\""
+    },
+    "output_length_chars": 620,
+    "output_tokens_estimated": 155,
+    "cost_usd": 0.0003324
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:18:04.406153",
+    "latency_seconds": 21.05,
+    "input_prompt": "Claim:\nAn estimated 100,000 refugees and asylum-seekers enter the country annually.\n\nArticle Title:\nKey findings about U.S. immigrants - Pew Research Center\n\nGoogle Search Snippet:\nAn unprecedented number of immigrants \u2013 more than 11 million \u2013 arrived in the U.S. between 2020 and 2025. That included more than 3 million in ...\n\nFull Page Content:\nNUMBERS, FACTS AND TRENDS SHAPING YOUR WORLD\nRead our research on:\n|\nAfter more than 50 years of rapid growth, the nation\u2019s immigrant population is now in decline.\nIn January 2025, 53.3 million immigrants lived in the United States \u2013 the largest number ever recorded. In the ensuing months, however, more immigrants left the country or were deported than arrived. By June, the country\u2019s foreign-born population had shrunk by more than a million people, marking its first decline since the 1960s.\nA new Pew Research Center analysis of Census Bureau data finds that, as of June 2025:\nStarting in mid-2024, several policy changes have affected the U.S. immigrant population:\nPew Research Center regularly publishes research on the U.S. immigrant population and international migration trends. Here are answers to some key questions about U.S. immigrants, based on the most recent detailed data available. (In some cases, this data is from mid-2023.)\nAs of June 2025, 51.9 million immigrants lived in the U.S., making up 15.4% of the nation\u2019s population. This was down from January, when there were a record 53.3 million immigrants in the U.S., accounting for 15.8% of the country\u2019s population \u2013 the highest percentage on record.\nEven as the nation\u2019s immigrant population has declined in recent months \u2013 a change that may be partly artificial due to a declining survey response rate among immigrants \u2013 the U.S. is home to more immigrants than any other country.\nAs of 2024, the second-largest immigrant population is in Germany, numbering around 17 million, according to the latest estimates from the United Nations.\nWhile the U.S. is home to the largest number of immigrants, dozens of countries (including Germany) have a higher proportion of immigrants in their populations than the U.S. does. In neighboring Canada, for example, immigrants account for 22% of the population. And in the United Arab Emirates, about three-quarters of all residents were born elsewhere.\nAs of mid-2023 \u2013 the latest year for which detailed data is available \u2013 more than 11 million U.S. residents were born in Mexico, representing 22% of all immigrants nationally. The second-largest immigrant group was from India (3.2 million, or 6%), followed by China (3 million, or 6%), the Philippines (2.1 million, or 4%) and Cuba (1.7 million, or 3%).\nAbout half of all U.S. immigrants (52%, or 26.7 million people) were born in Latin America. In addition to the millions of migrants from Mexico and Cuba, more than a million hail from El Salvador (1.6 million), Guatemala (1.4 million), the Dominican Republic (1.4 million), Colombia (1.2 million), Honduras (1.1 million) and Venezuela (1.1 million).\nAfter Latin America, Asia is the second-largest region of birth for U.S. immigrants. In 2023, around a quarter of all immigrants (27%, or nearly 14 million people) were born in Asia.\nAs of 2023, there were about 11 million immigrants from every other world region combined, accounting for 22% of the U.S. foreign-born population: 10% were born in Europe, 5% in sub-Saharan Africa, 4% in the Middle East-North Africa region, and 2% in Canada or another North American country (a category that includes Bermuda and some smaller countries).\nAn unprecedented number of immigrants \u2013 more than 11 million \u2013 arrived in the U.S. between 2020 and 2025. That included more than 3 million in 2023 alone, the largest annual total ever recorded, according to a Center analysis of government data sources.\nAlongside this increase, immigrants\u2019 origin regions have also shifted, with a growing share coming from South America and Europe and a declining share coming from Asia and sub-Saharan Africa.\nBetween 2021 and 2023, 20% of newly arrived immigrants were from South America, up from 13% in the period between 2015 and 2019. Another 12% of new arrivals between 2021 and 2023 were from Europe or Canada, up from 9% in the earlier period.\nAt the same time, 24% of new arrivals between 2021 and 2023 were from South and East Asia, down from 29% in 2015-19. And 5% of new arrivals between 2021 and 2023 involved people from sub-Saharan Africa, down from 8% in 2015-19.\nMexico was the largest origin country for immigrants who arrived between 2021 and 2023. About 11% of immigrants who came to the U.S. during this period were born in Mexico. Rounding out the top five countries of origin for immigrants who arrived during this period were India (8%), Venezuela (7%), Cuba (6%) and Colombia (5%).\nThroughout this period, unauthorized immigrants accounted for most new immigrant arrivals, with many coming from Central and South America.\nSince 1965, more than 76 million immigrants have come to the U.S.\nBefore then, U.S. immigration law favored immigrants from Northern and Western Europe and mostly barred immigration from Asia. The 1965 Immigration and Nationality Act opened up immigration from Asia and Latin America. The Immigration Act of 1990 further increased legal immigration and allowed immigrants from more countries to enter the U.S. legally.\nImmigration flows after 1965 have been larger and come from different and more countries than earlier flows:\nToday, Mexico remains the largest origin country among U.S. immigrants. However, immigration from Mexico has slowed since 2007, and the Mexican-born population in the U.S. has since dropped. The Mexican share of the U.S. immigrant population declined from 29% in 2010 to 22% in 2023.\nAs of 2023, 46% of immigrants were naturalized U.S. citizens. Nearly a quarter (23%) were lawful permanent residents, often referred to as \u201cgreen card holders,\u201d and another 4% were lawful temporary residents who were permitted to stay in the U.S. for a limited period of time, usually for work or study. The remaining immigrants in the U.S. fell into the \u201cunauthorized\u201d category and constituted 27% of all U.S. immigrants.\nRelated: U.S. Unauthorized Immigrant Population Reached a Record 14 Million in 2023\nUnauthorized immigrants are those without full legal status. As of 2023, this population h\n\nProvide relevant evidence.",
+    "input_length_chars": 6376,
+    "input_tokens_estimated": 1594,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article indicates that more than 11 million immigrants arrived in the U.S. between 2020 and 2025, with over 3 million arriving in 2023 alone, but it does not specify that 100,000 of these were refugees and asylum-seekers annually.",
+      "overall_stance": "mixed",
+      "key_quote": "An unprecedented number of immigrants \u2013 more than 11 million \u2013 arrived in the U.S. between 2020 and 2025. That included more than 3 million in 2023 alone, the largest annual total ever recorded."
+    },
+    "output_length_chars": 511,
+    "output_tokens_estimated": 127,
+    "cost_usd": 0.0003153
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:18:25.294656",
+    "latency_seconds": 20.85,
+    "input_prompt": "Claim:\n50 million residents of America are foreign-born.\n\nArticle Title:\nU.S. Foreign-Born Population: 2019-2023 - U.S. Census Bureau\n\nGoogle Search Snippet:\nOur population statistics cover age, sex, race, Hispanic origin, migration, ancestry, language use, veterans, as well as population estimates ...\n\nFull Page Content:\nParticipate in the 2025 international science photo competition!\nImmigration has been a major source of population growth and cultural change in the United States throughout much of its history. As of January 2025, the United States has the largest immigrant population in the world in absolute terms, with 53.3 million foreign-born residents, representing 15.8% of the total U.S. population\u2014both record highs.[1] While the United States represented about 4% of the total global population in 2024, 17% of all international migrants resided in the United States.[2] In March 2025, the Federation for American Immigration Reform (FAIR) estimated that approximately 18.6 million illegal immigrants resided in the United States.[3] In 2024, immigrants and their U.S.-born children number more than 93 million people, or 28% of the total U.S. population.[2] According to the 2016 Yearbook of Immigration Statistics, the United States admitted a total of 1.18 million legal immigrants (618k new arrivals, 565k status adjustments) in 2016.[4] Of these, 48% were the immediate relatives of United States citizens, 20% were family-sponsored, 13% were refugees or asylum seekers, 12% were employment-based preferences, 4.2% were part of the Diversity Immigrant Visa program, 1.4% were victims of a crime (U1) or their family members were (U2 to U5),[5] and 1.0% who were granted the Special Immigrant Visa (SIV) for Iraqis and Afghans employed by the United States Government.[4] The remaining 0.4% included small numbers from several other categories, including 0.2% who were granted suspension of deportation as an immediate relative of a citizen (Z13);[6] persons admitted under the Nicaraguan and Central American Relief Act; children born after the issuance of a parent's visa; and certain parolees from the former Soviet Union, Cambodia, Laos, and Vietnam who were denied refugee status.[4]\nBetween 1921 and 1965 policies such as the National Origins Formula limited immigration and naturalization opportunities for people from areas outside Northwestern Europe. Exclusion laws enacted as early as the 1880s generally prohibited or severely restricted immigration from Asia, and quota laws enacted in the 1920s curtailed Southern and Eastern European immigration. The civil rights movement led to the replacement[7] of these ethnic quotas with per-country limits for family-sponsored and employment-based preference visas.[8] Between 1970 and 2007, the number of first-generation immigrants living in the United States quadrupled from 9.6 million to 38.1 million residents.[9][10] Census estimates show 45.3 million foreign born residents in the United States as of March 2018 and 45.4 million in September 2021, the lowest three-year increase in decades.[11]\nIn 2017, out of the U.S. foreign-born population, some 45% (20.7 million) were naturalized citizens, 27% (12.3 million) were lawful permanent residents, 6% (2.2 million) were temporary lawful residents, and 23% (10.5 million) were unauthorized immigrants.[12] The United States led the world in refugee resettlement for decades, admitting more refugees than the rest of the world combined.[13]\nCauses of migration include poverty, crime[14][15] and environmental degradation.[16]\nSome research suggests that immigration is beneficial to the United States economy. With few exceptions, the evidence suggests that on average, immigration has positive economic effects on the native population, but it is mixed as to whether low-skilled immigration adversely affects low-skilled natives. Studies also show that immigrants have lower crime rates than natives in the United States.[17][18][19] The economic, social, and political aspects of immigration have caused controversy regarding such issues as maintaining ethnic homogeneity, workers for employers versus jobs for non-immigrants, settlement patterns, impact on upward social mobility, crime, and voting behavior.\nDue to its history the United States can be described as an immigration country. American immigration history can be viewed in four epochs: the colonial period, the mid-19th century, the start of the 20th century, and post-1965. Each period brought distinct national groups, races, and ethnicities to the United States.\nDuring the 17th century, approximately 400,000 English people migrated to America under European colonization.[20] They comprised 83.5% of the white population at the time of the first census in 1790.[21] From 1700 to 1775, between 350,000 and 500,000 Europeans immigrated: estimates vary in sources. Regarding English settlers of the 18th century, one source says 52,000 English migrated during the period of 1701 to 1775, although this figure is likely too low.[22][23] 400,000\u2013450,000 of the 18th-century migrants were Scots, Scots-Irish from Ulster, Germans, Swiss, and French Huguenots.[24] Over half of all European immigrants to Colonial America during the 17th and 18th centuries arrived as indentured servants.[25] They numbered 350,000.[26] From 1770 to 1775 (the latter year being when the American Revolutionary War began), 7,000 English, 15,000 Scots, 13,200 Scots-Irish, 5,200 Germans, and 3,900 Irish Catholics migrated to the Thirteen Colonies.[27] According to Butler (2000), up to half of English migrants in the 18th century may have been young, single men who were well-skilled, trained artisans, like the Huguenots.[28] Based on scholarly analysis, English was the largest single ancestry in all U.S. states at the time of the first census in 1790, ranging from a high of 82% in Massachusetts to a low of 35.3% in Pennsylvania, where Germans accounted for 33.3%.\nThe Census Bureau published preliminary estimates of the origins of the colonial American population by scholarly classification of the names of all White heads of families recorded in the 1790 census in a 1909 report entitled A Century of Population Growth.[29] These initial estimates were scrutinized and rejected following passage of the Immigration Act of 1924, when t\n\nProvide relevant evidence.",
+    "input_length_chars": 6352,
+    "input_tokens_estimated": 1588,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that as of January 2025, the United States has approximately 53.3 million foreign-born residents, which supports the claim that a significant number of residents are foreign-born, exceeding the 50 million figure stated in the claim.",
+      "overall_stance": "supports",
+      "key_quote": "As of January 2025, the United States has the largest immigrant population in the world in absolute terms, with 53.3 million foreign-born residents."
+    },
+    "output_length_chars": 489,
+    "output_tokens_estimated": 122,
+    "cost_usd": 0.0003114
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:18:25.379706",
+    "latency_seconds": 20.93,
+    "input_prompt": "Claim:\n50 million residents of America are foreign-born.\n\nArticle Title:\nhow many immigrants are in the United States - Population - USAFacts\n\nGoogle Search Snippet:\nThe number of foreign-born residents in the United States grew from 42.4 million in 2014 to 50.2 million in 2024. This occurred alongside changes in the native- ...\n\nFull Page Content:\nParticipate in the 2025 international science photo competition!\nImmigration has been a major source of population growth and cultural change in the United States throughout much of its history. As of January 2025, the United States has the largest immigrant population in the world in absolute terms, with 53.3 million foreign-born residents, representing 15.8% of the total U.S. population\u2014both record highs.[1] While the United States represented about 4% of the total global population in 2024, 17% of all international migrants resided in the United States.[2] In March 2025, the Federation for American Immigration Reform (FAIR) estimated that approximately 18.6 million illegal immigrants resided in the United States.[3] In 2024, immigrants and their U.S.-born children number more than 93 million people, or 28% of the total U.S. population.[2] According to the 2016 Yearbook of Immigration Statistics, the United States admitted a total of 1.18 million legal immigrants (618k new arrivals, 565k status adjustments) in 2016.[4] Of these, 48% were the immediate relatives of United States citizens, 20% were family-sponsored, 13% were refugees or asylum seekers, 12% were employment-based preferences, 4.2% were part of the Diversity Immigrant Visa program, 1.4% were victims of a crime (U1) or their family members were (U2 to U5),[5] and 1.0% who were granted the Special Immigrant Visa (SIV) for Iraqis and Afghans employed by the United States Government.[4] The remaining 0.4% included small numbers from several other categories, including 0.2% who were granted suspension of deportation as an immediate relative of a citizen (Z13);[6] persons admitted under the Nicaraguan and Central American Relief Act; children born after the issuance of a parent's visa; and certain parolees from the former Soviet Union, Cambodia, Laos, and Vietnam who were denied refugee status.[4]\nBetween 1921 and 1965 policies such as the National Origins Formula limited immigration and naturalization opportunities for people from areas outside Northwestern Europe. Exclusion laws enacted as early as the 1880s generally prohibited or severely restricted immigration from Asia, and quota laws enacted in the 1920s curtailed Southern and Eastern European immigration. The civil rights movement led to the replacement[7] of these ethnic quotas with per-country limits for family-sponsored and employment-based preference visas.[8] Between 1970 and 2007, the number of first-generation immigrants living in the United States quadrupled from 9.6 million to 38.1 million residents.[9][10] Census estimates show 45.3 million foreign born residents in the United States as of March 2018 and 45.4 million in September 2021, the lowest three-year increase in decades.[11]\nIn 2017, out of the U.S. foreign-born population, some 45% (20.7 million) were naturalized citizens, 27% (12.3 million) were lawful permanent residents, 6% (2.2 million) were temporary lawful residents, and 23% (10.5 million) were unauthorized immigrants.[12] The United States led the world in refugee resettlement for decades, admitting more refugees than the rest of the world combined.[13]\nCauses of migration include poverty, crime[14][15] and environmental degradation.[16]\nSome research suggests that immigration is beneficial to the United States economy. With few exceptions, the evidence suggests that on average, immigration has positive economic effects on the native population, but it is mixed as to whether low-skilled immigration adversely affects low-skilled natives. Studies also show that immigrants have lower crime rates than natives in the United States.[17][18][19] The economic, social, and political aspects of immigration have caused controversy regarding such issues as maintaining ethnic homogeneity, workers for employers versus jobs for non-immigrants, settlement patterns, impact on upward social mobility, crime, and voting behavior.\nDue to its history the United States can be described as an immigration country. American immigration history can be viewed in four epochs: the colonial period, the mid-19th century, the start of the 20th century, and post-1965. Each period brought distinct national groups, races, and ethnicities to the United States.\nDuring the 17th century, approximately 400,000 English people migrated to America under European colonization.[20] They comprised 83.5% of the white population at the time of the first census in 1790.[21] From 1700 to 1775, between 350,000 and 500,000 Europeans immigrated: estimates vary in sources. Regarding English settlers of the 18th century, one source says 52,000 English migrated during the period of 1701 to 1775, although this figure is likely too low.[22][23] 400,000\u2013450,000 of the 18th-century migrants were Scots, Scots-Irish from Ulster, Germans, Swiss, and French Huguenots.[24] Over half of all European immigrants to Colonial America during the 17th and 18th centuries arrived as indentured servants.[25] They numbered 350,000.[26] From 1770 to 1775 (the latter year being when the American Revolutionary War began), 7,000 English, 15,000 Scots, 13,200 Scots-Irish, 5,200 Germans, and 3,900 Irish Catholics migrated to the Thirteen Colonies.[27] According to Butler (2000), up to half of English migrants in the 18th century may have been young, single men who were well-skilled, trained artisans, like the Huguenots.[28] Based on scholarly analysis, English was the largest single ancestry in all U.S. states at the time of the first census in 1790, ranging from a high of 82% in Massachusetts to a low of 35.3% in Pennsylvania, where Germans accounted for 33.3%.\nThe Census Bureau published preliminary estimates of the origins of the colonial American population by scholarly classification of the names of all White heads of families recorded in the 1790 census in a 1909 report entitled A Century of Population Growth.[29] These initial estimates were scrutinized and rejected following passage of the Immigration Act of 1924, when t\n\nProvide relevant evidence.",
+    "input_length_chars": 6379,
+    "input_tokens_estimated": 1594,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that as of January 2025, there are 53.3 million foreign-born residents in the United States, which supports the claim that 50 million residents are foreign-born, as it confirms that the number has reached and exceeded that figure.",
+      "overall_stance": "supports",
+      "key_quote": "As of January 2025, the United States has the largest immigrant population in the world in absolute terms, with 53.3 million foreign-born residents."
+    },
+    "output_length_chars": 487,
+    "output_tokens_estimated": 121,
+    "cost_usd": 0.0003117
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:18:26.518505",
+    "latency_seconds": 22.06,
+    "input_prompt": "Claim:\n50 million residents of America are foreign-born.\n\nArticle Title:\nFrequently Requested Statistics on Immigr.. - Migration Policy Institute\n\nGoogle Search Snippet:\nThere were 47.8 million immigrants residing in the United States as of 2023, according to the latest American Community Survey (ACS) from the US Census Bureau.\n\nFull Page Content:\nParticipate in the 2025 international science photo competition!\nImmigration has been a major source of population growth and cultural change in the United States throughout much of its history. As of January 2025, the United States has the largest immigrant population in the world in absolute terms, with 53.3 million foreign-born residents, representing 15.8% of the total U.S. population\u2014both record highs.[1] While the United States represented about 4% of the total global population in 2024, 17% of all international migrants resided in the United States.[2] In March 2025, the Federation for American Immigration Reform (FAIR) estimated that approximately 18.6 million illegal immigrants resided in the United States.[3] In 2024, immigrants and their U.S.-born children number more than 93 million people, or 28% of the total U.S. population.[2] According to the 2016 Yearbook of Immigration Statistics, the United States admitted a total of 1.18 million legal immigrants (618k new arrivals, 565k status adjustments) in 2016.[4] Of these, 48% were the immediate relatives of United States citizens, 20% were family-sponsored, 13% were refugees or asylum seekers, 12% were employment-based preferences, 4.2% were part of the Diversity Immigrant Visa program, 1.4% were victims of a crime (U1) or their family members were (U2 to U5),[5] and 1.0% who were granted the Special Immigrant Visa (SIV) for Iraqis and Afghans employed by the United States Government.[4] The remaining 0.4% included small numbers from several other categories, including 0.2% who were granted suspension of deportation as an immediate relative of a citizen (Z13);[6] persons admitted under the Nicaraguan and Central American Relief Act; children born after the issuance of a parent's visa; and certain parolees from the former Soviet Union, Cambodia, Laos, and Vietnam who were denied refugee status.[4]\nBetween 1921 and 1965 policies such as the National Origins Formula limited immigration and naturalization opportunities for people from areas outside Northwestern Europe. Exclusion laws enacted as early as the 1880s generally prohibited or severely restricted immigration from Asia, and quota laws enacted in the 1920s curtailed Southern and Eastern European immigration. The civil rights movement led to the replacement[7] of these ethnic quotas with per-country limits for family-sponsored and employment-based preference visas.[8] Between 1970 and 2007, the number of first-generation immigrants living in the United States quadrupled from 9.6 million to 38.1 million residents.[9][10] Census estimates show 45.3 million foreign born residents in the United States as of March 2018 and 45.4 million in September 2021, the lowest three-year increase in decades.[11]\nIn 2017, out of the U.S. foreign-born population, some 45% (20.7 million) were naturalized citizens, 27% (12.3 million) were lawful permanent residents, 6% (2.2 million) were temporary lawful residents, and 23% (10.5 million) were unauthorized immigrants.[12] The United States led the world in refugee resettlement for decades, admitting more refugees than the rest of the world combined.[13]\nCauses of migration include poverty, crime[14][15] and environmental degradation.[16]\nSome research suggests that immigration is beneficial to the United States economy. With few exceptions, the evidence suggests that on average, immigration has positive economic effects on the native population, but it is mixed as to whether low-skilled immigration adversely affects low-skilled natives. Studies also show that immigrants have lower crime rates than natives in the United States.[17][18][19] The economic, social, and political aspects of immigration have caused controversy regarding such issues as maintaining ethnic homogeneity, workers for employers versus jobs for non-immigrants, settlement patterns, impact on upward social mobility, crime, and voting behavior.\nDue to its history the United States can be described as an immigration country. American immigration history can be viewed in four epochs: the colonial period, the mid-19th century, the start of the 20th century, and post-1965. Each period brought distinct national groups, races, and ethnicities to the United States.\nDuring the 17th century, approximately 400,000 English people migrated to America under European colonization.[20] They comprised 83.5% of the white population at the time of the first census in 1790.[21] From 1700 to 1775, between 350,000 and 500,000 Europeans immigrated: estimates vary in sources. Regarding English settlers of the 18th century, one source says 52,000 English migrated during the period of 1701 to 1775, although this figure is likely too low.[22][23] 400,000\u2013450,000 of the 18th-century migrants were Scots, Scots-Irish from Ulster, Germans, Swiss, and French Huguenots.[24] Over half of all European immigrants to Colonial America during the 17th and 18th centuries arrived as indentured servants.[25] They numbered 350,000.[26] From 1770 to 1775 (the latter year being when the American Revolutionary War began), 7,000 English, 15,000 Scots, 13,200 Scots-Irish, 5,200 Germans, and 3,900 Irish Catholics migrated to the Thirteen Colonies.[27] According to Butler (2000), up to half of English migrants in the 18th century may have been young, single men who were well-skilled, trained artisans, like the Huguenots.[28] Based on scholarly analysis, English was the largest single ancestry in all U.S. states at the time of the first census in 1790, ranging from a high of 82% in Massachusetts to a low of 35.3% in Pennsylvania, where Germans accounted for 33.3%.\nThe Census Bureau published preliminary estimates of the origins of the colonial American population by scholarly classification of the names of all White heads of families recorded in the 1790 census in a 1909 report entitled A Century of Population Growth.[29] These initial estimates were scrutinized and rejected following passage of the Immigration Act of 1924, when t\n\nProvide relevant evidence.",
+    "input_length_chars": 6378,
+    "input_tokens_estimated": 1594,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that as of January 2025, there are 53.3 million foreign-born residents in the United States, which exceeds the claim of 50 million.",
+      "overall_stance": "supports",
+      "key_quote": "the United States has the largest immigrant population in the world in absolute terms, with 53.3 million foreign-born residents"
+    },
+    "output_length_chars": 367,
+    "output_tokens_estimated": 91,
+    "cost_usd": 0.0002937
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:18:47.716138",
+    "latency_seconds": 21.08,
+    "input_prompt": "\nClaim: 50 million residents of America are foreign-born.\nCategory: demographic\nExtraction confidence: 0.90\n\nEvidence:\nSUPPORTS (1 sources):\n  1. Frequently Requested Statistics on Immigr.. - Migration Policy Institute | reliability=high (0.85)\n     URL: https://www.migrationpolicy.org/article/frequently-requested-statistics-immigrants-and-immigration-united-states\n     Summary: The evidence indicates that as of January 2025, there are 53.3 million foreign-born residents in the United States, which exceeds the claim of 50 million.\nUNCLEAR (3 sources):\n  1. U.S. Foreign-Born Population: 2019-2023 - U.S. Census Bureau | reliability=high (1.00)\n     URL: https://www.census.gov/library/visualizations/interactive/foreign-born-population-2019-2023.html\n     Summary: Our population statistics cover age, sex, race, Hispanic origin, migration, ancestry, language use, veterans, as well as population estimates and projections.\n  2. Citizenship and Immigration Statuses of the U.S. Foreign-Born ... | reliability=high (0.85)\n     URL: https://www.congress.gov/crs-product/IF11806\n     Summary: In 2023, according to the American Community Survey (ACS), an estimated 47.8 million foreign-born people resided in the United States, ...\n  3. how many immigrants are in the United States - Population - USAFacts | reliability=high (0.85)\n     URL: https://usafacts.org/answers/how-many-immigrants-are-in-the-us/country/united-states/\n     Summary: The number of foreign-born residents in the United States grew from 42.4 million in 2014 to 50.2 million in 2024. This occurred alongside changes in the native- ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1643,
+    "input_tokens_estimated": 410,
+    "output": {
+      "overall_stance": "mixed",
+      "confidence": "medium",
+      "summary": "The Migration Policy Institute reports 53.3 million foreign-born residents in the U.S. as of January 2025, supporting the claim. However, the U.S. Census Bureau and other sources estimate the number at around 47.8 to 50.2 million, creating uncertainty about the exact figure."
+    },
+    "output_length_chars": 336,
+    "output_tokens_estimated": 84,
+    "cost_usd": 0.0001119
+  }
+]

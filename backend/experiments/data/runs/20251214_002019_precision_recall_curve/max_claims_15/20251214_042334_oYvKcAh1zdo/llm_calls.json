@@ -1,0 +1,649 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:23:52.761588",
+    "latency_seconds": 16.6,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\n\u201cGive me your tired, your poor, your huddled masses yearning to breathe free\u2026\u201d These poetic lines, engraved on a bronze plaque beneath the Statue of Liberty, speak to who we are: a nation of immigrants. Until now . . . As Senate Democrat Chuck Schumer lamented, \u201cTears are running down the cheeks of the Statue of Liberty.\u201d We\u2019ve turned our backs on those huddled masses. Closed our borders. Separated families. Hardened our hearts. Or so you would think if you only read the headlines or watch TV news. Just one problem: It\u2019s not true. The United States still maintains the most generous immigration policies in the world. Generous to a fault...because the overwhelming numbers have stymied our ability to assimilate the huddled masses. 50 million residents of America are foreign-born. In fact, today the United States has more immigrants as a percentage of its total population than at any time since 1890. That\u2019s why, to give one illustration, 176 different languages are spoken among students in the New York City school system. How did we get here? For starters, America grants permanent residence to a million people every single year. And that\u2019s just the tip of the iceberg because of something you\u2019ve probably heard referred to as \u201cchain migration.\u201d Chain migration allows immigrants to sponsor not only their immediate family\u2014parents, spouses and children under age 21, but much of their extended family once they gain citizenship: unmarried adult children and any children they might have, married adult children and their children, and brothers and sisters and their children. Princeton University researchers, using the most recently available data, found that immigrants sponsored an average of 3.45 additional relatives each. So, the one million immigrants granted permanent residence each year potentially adds, over time, another three and a half million. In addition, an estimated 100,000 refugees and asylum-seekers\u2014people who claim to be fleeing political or personal strife abroad\u2014enter the country annually. From 2008 to 2017, the U.S. gave green cards to well over a million people for humanitarian reasons, allowing them to live and work here permanently. After five years, they can apply for full citizenship. We\u2019re not done yet. In that same time frame, nearly half a million more people came to America through the diversity visa lottery\u2014a program designed to admit more people from \u201cunderrepresented\u201d countries into the U.S. Diversity visa applicants don't need a high school education, job skills \u2014or pretty much anything. And, thanks again to chain migration, spouses and unmarried children under 21 of visa lottery winners also get to come to America. This non-stop flow of new legal immigrants\u2014based on family ties instead of skills, abilities, and allegiance to American values\u2014has, of course, been supplemented by millions who enter the country illegally and stay illegally. Dominant media outlets use the euphemism \u201cundocumented,\u201d but the official U.S. government term used in federal statutes is \u201cillegal alien\u201d: an unlawful entrant who came without permission and stays in open defiance of our laws. The number of illegal aliens in the country is usually given as 11 million, but have you noticed that number never seems to change? Common sense suggests it\u2019s higher\u2014much higher. And though illegal aliens themselves don\u2019t qualify for welfare, they receive free health care in our clinics and hospitals, and through their American-born children they can expect to receive all manner of benefits\u2014cash aid, food stamps, and housing vouchers. Their children are entitled to a free education in public schools. Building a high-tech border barrier would certainly help stem this flow. Ending chain migration is another obvious remedy. E-Verify, the national database that allows employers to check workers\u2019 immigration status, is also essential. So is a fully-functioning entry-exit system to track visa overstayers. But all solutions will ultimately fail unless we get control of the numbers and enforce our laws consistently. It\u2019s Sovereignty 101: This is our home and we have not only the right, but the responsibility, to determine who comes in, how many come in, and what qualities and qualifications they bring. The truth is, we let in millions. And, of course, millions more want to come. Who can blame them? But it\u2019s simply not possible or desirable to let in everyone. And it\u2019s not hateful to say so. It\u2019s not hateful to protect our borders. It\u2019s not hateful to protect our citizens. It\u2019s not hateful to protect our values. Lady Liberty may be shedding tears\u2014not because we\u2019ve stopped welcoming immigrants, but because our ill-conceived immigration policies are threatening the American Dream. I\u2019m Michelle Malkin, CRTV host and author of Invasion and Sold Out, for Prager University.",
+    "input_length_chars": 4882,
+    "input_tokens_estimated": 1220,
+    "output": {
+      "claims": [
+        {
+          "text": "The Statue of Liberty has a plaque with the lines about huddled masses.",
+          "confidence": 0.9,
+          "category": "historical",
+          "importance": 0.25,
+          "context": "Context unknown"
+        },
+        {
+          "text": "The United States maintains the most generous immigration policies in the world.",
+          "confidence": 0.8,
+          "category": "policy",
+          "importance": 0.85,
+          "context": "Speaker: Michelle Malkin, discussing immigration policies."
+        },
+        {
+          "text": "50 million residents of America are foreign-born.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Current demographic data on immigration."
+        },
+        {
+          "text": "The U.S. has more immigrants as a percentage of its total population than at any time since 1890.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "Historical comparison of immigration rates."
+        },
+        {
+          "text": "176 different languages are spoken among students in the New York City school system.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Current data on language diversity in NYC schools."
+        },
+        {
+          "text": "America grants permanent residence to a million people every single year.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Annual immigration statistics."
+        },
+        {
+          "text": "Immigrants sponsored an average of 3.45 additional relatives each.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Research data from Princeton University."
+        },
+        {
+          "text": "An estimated 100,000 refugees and asylum-seekers enter the country annually.",
+          "confidence": 0.8,
+          "category": "statistical",
+          "importance": 0.55,
+          "context": "Annual immigration statistics."
+        },
+        {
+          "text": "From 2008 to 2017, the U.S. gave green cards to well over a million people for humanitarian reasons.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Historical immigration data."
+        },
+        {
+          "text": "Nearly half a million more people came to America through the diversity visa lottery from 2008 to 2017.",
+          "confidence": 0.8,
+          "category": "statistical",
+          "importance": 0.55,
+          "context": "Historical immigration data."
+        },
+        {
+          "text": "The number of illegal aliens in the country is usually given as 11 million.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Commonly cited statistic on illegal immigration."
+        },
+        {
+          "text": "Illegal aliens receive free health care in clinics and hospitals.",
+          "confidence": 0.85,
+          "category": "policy",
+          "importance": 0.6,
+          "context": "Discussion on benefits received by illegal immigrants."
+        },
+        {
+          "text": "Their children are entitled to a free education in public schools.",
+          "confidence": 0.9,
+          "category": "policy",
+          "importance": 0.6,
+          "context": "Legal rights of children of illegal immigrants."
+        },
+        {
+          "text": "E-Verify is essential for checking workers\u2019 immigration status.",
+          "confidence": 0.8,
+          "category": "policy",
+          "importance": 0.55,
+          "context": "Discussion on immigration enforcement measures."
+        },
+        {
+          "text": "A fully-functioning entry-exit system is essential to track visa overstayers.",
+          "confidence": 0.8,
+          "category": "policy",
+          "importance": 0.55,
+          "context": "Discussion on immigration enforcement measures."
+        }
+      ],
+      "total_count": 15
+    },
+    "output_length_chars": 4314,
+    "output_tokens_estimated": 1078,
+    "cost_usd": 0.0008298
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:23:59.521807",
+    "latency_seconds": 2.33,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The United States maintains the most generous immigration policies in the world.\nContext: Speaker: Michelle Malkin, discussing immigration policies.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 321,
+    "input_tokens_estimated": 80,
+    "output": {
+      "original_claim": "The United States maintains the most generous immigration policies in the world.",
+      "queries": [
+        {
+          "query": "United States immigration policies comparison 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "most generous immigration policies by country 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 330,
+    "output_tokens_estimated": 82,
+    "cost_usd": 6.12e-05,
+    "context": {
+      "claim_index": 15,
+      "claim_text": "The Statue of Liberty has a plaque with the lines about huddled masses."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:23:59.643157",
+    "latency_seconds": 2.45,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: America grants permanent residence to a million people every single year.\nContext: Annual immigration statistics.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 286,
+    "input_tokens_estimated": 71,
+    "output": {
+      "original_claim": "America grants permanent residence to a million people every single year.",
+      "queries": [
+        {
+          "query": "America grants permanent residence to one million people annually",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "annual permanent residency statistics in the United States",
+          "query_type": "source",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 341,
+    "output_tokens_estimated": 85,
+    "cost_usd": 6.165e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The United States maintains the most generous immigration policies in the world.",
+      "query_index": 2,
+      "query_text": "most generous immigration policies by country 2023"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:23:59.643643",
+    "latency_seconds": 2.45,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: 50 million residents of America are foreign-born.\nContext: Current demographic data on immigration.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 272,
+    "input_tokens_estimated": 68,
+    "output": {
+      "original_claim": "50 million residents of America are foreign-born.",
+      "queries": [
+        {
+          "query": "current number of foreign-born residents in America 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "how many immigrants live in the United States 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 305,
+    "output_tokens_estimated": 76,
+    "cost_usd": 5.58e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The United States maintains the most generous immigration policies in the world.",
+      "query_index": 2,
+      "query_text": "most generous immigration policies by country 2023"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:23:59.644049",
+    "latency_seconds": 2.44,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: E-Verify is essential for checking workers\u2019 immigration status.\nContext: Discussion on immigration enforcement measures.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 293,
+    "input_tokens_estimated": 73,
+    "output": {
+      "original_claim": "E-Verify is essential for checking workers\u2019 immigration status.",
+      "queries": [
+        {
+          "query": "E-Verify immigration status verification importance",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Is E-Verify necessary for verifying workers' immigration status?",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 328,
+    "output_tokens_estimated": 82,
+    "cost_usd": 6.015e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The United States maintains the most generous immigration policies in the world.",
+      "query_index": 2,
+      "query_text": "most generous immigration policies by country 2023"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:23:59.644476",
+    "latency_seconds": 2.44,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Illegal aliens receive free health care in clinics and hospitals.\nContext: Discussion on benefits received by illegal immigrants.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 302,
+    "input_tokens_estimated": 75,
+    "output": {
+      "original_claim": "Illegal aliens receive free health care in clinics and hospitals.",
+      "queries": [
+        {
+          "query": "Do illegal immigrants receive free health care in clinics and hospitals?",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Health care access for undocumented immigrants in clinics and hospitals",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 358,
+    "output_tokens_estimated": 89,
+    "cost_usd": 6.465e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The United States maintains the most generous immigration policies in the world.",
+      "query_index": 2,
+      "query_text": "most generous immigration policies by country 2023"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:23:59.977658",
+    "latency_seconds": 2.78,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The number of illegal aliens in the country is usually given as 11 million.\nContext: Commonly cited statistic on illegal immigration.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 306,
+    "input_tokens_estimated": 76,
+    "output": {
+      "original_claim": "The number of illegal aliens in the country is usually given as 11 million.",
+      "queries": [
+        {
+          "query": "number of illegal aliens in the US 11 million",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "current estimate of undocumented immigrants in the US",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 323,
+    "output_tokens_estimated": 80,
+    "cost_usd": 5.94e-05,
+    "context": {
+      "claim_index": 9,
+      "claim_text": "Illegal aliens receive free health care in clinics and hospitals.",
+      "query_index": 2,
+      "query_text": "Health care access for undocumented immigrants in clinics and hospitals"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:24:00.062228",
+    "latency_seconds": 2.86,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Their children are entitled to a free education in public schools.\nContext: Legal rights of children of illegal immigrants.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 296,
+    "input_tokens_estimated": 74,
+    "output": {
+      "original_claim": "Their children are entitled to a free education in public schools.",
+      "queries": [
+        {
+          "query": "Are children of illegal immigrants entitled to free public education?",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Legal rights of undocumented immigrants' children to public education",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 354,
+    "output_tokens_estimated": 88,
+    "cost_usd": 6.39e-05,
+    "context": {
+      "claim_index": 8,
+      "claim_text": "The number of illegal aliens in the country is usually given as 11 million.",
+      "query_index": 2,
+      "query_text": "current estimate of undocumented immigrants in the US"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:24:00.062718",
+    "latency_seconds": 2.86,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: A fully-functioning entry-exit system is essential to track visa overstayers.\nContext: Discussion on immigration enforcement measures.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 307,
+    "input_tokens_estimated": 76,
+    "output": {
+      "original_claim": "A fully-functioning entry-exit system is essential to track visa overstayers.",
+      "queries": [
+        {
+          "query": "importance of entry-exit system for tracking visa overstayers",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "how entry-exit systems help monitor visa overstayers",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 340,
+    "output_tokens_estimated": 85,
+    "cost_usd": 6.24e-05,
+    "context": {
+      "claim_index": 8,
+      "claim_text": "The number of illegal aliens in the country is usually given as 11 million.",
+      "query_index": 2,
+      "query_text": "current estimate of undocumented immigrants in the US"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:24:00.232125",
+    "latency_seconds": 3.03,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The Statue of Liberty has a plaque with the lines about huddled masses.\nContext: Context unknown\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 269,
+    "input_tokens_estimated": 67,
+    "output": {
+      "original_claim": "The Statue of Liberty has a plaque with the lines about huddled masses.",
+      "queries": [
+        {
+          "query": "Statue of Liberty plaque huddled masses",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Statue of Liberty poem about huddled masses",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 303,
+    "output_tokens_estimated": 75,
+    "cost_usd": 5.505e-05,
+    "context": {
+      "claim_index": 14,
+      "claim_text": "A fully-functioning entry-exit system is essential to track visa overstayers.",
+      "query_index": 2,
+      "query_text": "how entry-exit systems help monitor visa overstayers"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:24:00.232706",
+    "latency_seconds": 3.04,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: 176 different languages are spoken among students in the New York City school system.\nContext: Current data on language diversity in NYC schools.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 318,
+    "input_tokens_estimated": 79,
+    "output": {
+      "original_claim": "176 different languages are spoken among students in the New York City school system.",
+      "queries": [
+        {
+          "query": "176 languages spoken in New York City schools 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "language diversity in New York City schools 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 333,
+    "output_tokens_estimated": 83,
+    "cost_usd": 6.165e-05,
+    "context": {
+      "claim_index": 14,
+      "claim_text": "A fully-functioning entry-exit system is essential to track visa overstayers.",
+      "query_index": 2,
+      "query_text": "how entry-exit systems help monitor visa overstayers"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:24:00.233386",
+    "latency_seconds": 3.03,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Nearly half a million more people came to America through the diversity visa lottery from 2008 to 2017.\nContext: Historical immigration data.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 314,
+    "input_tokens_estimated": 78,
+    "output": {
+      "original_claim": "Nearly half a million more people came to America through the diversity visa lottery from 2008 to 2017.",
+      "queries": [
+        {
+          "query": "Diversity visa lottery immigration statistics 2008 to 2017",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Diversity visa lottery number of immigrants 2008 to 2017",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 367,
+    "output_tokens_estimated": 91,
+    "cost_usd": 6.63e-05,
+    "context": {
+      "claim_index": 14,
+      "claim_text": "A fully-functioning entry-exit system is essential to track visa overstayers.",
+      "query_index": 2,
+      "query_text": "how entry-exit systems help monitor visa overstayers"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:24:00.233970",
+    "latency_seconds": 3.03,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: An estimated 100,000 refugees and asylum-seekers enter the country annually.\nContext: Annual immigration statistics.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 289,
+    "input_tokens_estimated": 72,
+    "output": {
+      "original_claim": "An estimated 100,000 refugees and asylum-seekers enter the country annually.",
+      "queries": [
+        {
+          "query": "annual immigration statistics refugees asylum-seekers 100000",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "how many refugees and asylum-seekers enter the country each year",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 350,
+    "output_tokens_estimated": 87,
+    "cost_usd": 6.3e-05,
+    "context": {
+      "claim_index": 14,
+      "claim_text": "A fully-functioning entry-exit system is essential to track visa overstayers.",
+      "query_index": 2,
+      "query_text": "how entry-exit systems help monitor visa overstayers"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:24:00.234508",
+    "latency_seconds": 3.04,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Immigrants sponsored an average of 3.45 additional relatives each.\nContext: Research data from Princeton University.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 289,
+    "input_tokens_estimated": 72,
+    "output": {
+      "original_claim": "Immigrants sponsored an average of 3.45 additional relatives each.",
+      "queries": [
+        {
+          "query": "Immigrants sponsored an average of 3.45 additional relatives each site:princeton.edu",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "average number of relatives sponsored by immigrants Princeton University research",
+          "query_type": "source",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 376,
+    "output_tokens_estimated": 94,
+    "cost_usd": 6.72e-05,
+    "context": {
+      "claim_index": 14,
+      "claim_text": "A fully-functioning entry-exit system is essential to track visa overstayers.",
+      "query_index": 2,
+      "query_text": "how entry-exit systems help monitor visa overstayers"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:24:00.235030",
+    "latency_seconds": 3.04,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: From 2008 to 2017, the U.S. gave green cards to well over a million people for humanitarian reasons.\nContext: Historical immigration data.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 311,
+    "input_tokens_estimated": 77,
+    "output": {
+      "original_claim": "From 2008 to 2017, the U.S. gave green cards to well over a million people for humanitarian reasons.",
+      "queries": [
+        {
+          "query": "U.S. green cards humanitarian reasons 2008 to 2017 statistics",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "humanitarian immigration green cards USA 2008-2017",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 361,
+    "output_tokens_estimated": 90,
+    "cost_usd": 6.555e-05,
+    "context": {
+      "claim_index": 14,
+      "claim_text": "A fully-functioning entry-exit system is essential to track visa overstayers.",
+      "query_index": 2,
+      "query_text": "how entry-exit systems help monitor visa overstayers"
+    }
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:25:55.224497",
+    "latency_seconds": 11.32,
+    "input_prompt": "\nClaim: 176 different languages are spoken among students in the New York City school system.\nCategory: statistical\nExtraction confidence: 0.90\n\nEvidence:\nUNCLEAR (5 sources):\n  1. 2023 | NYC PUBLIC SCHOOLS - English Language Learners Data | reliability=high (1.00)\n     URL: https://data.nysed.gov/ell.php?year=2023&instid=7889678368\n     Summary: NYC PUBLIC SCHOOLS ENGLISH LANGUAGE LEARNERS ENROLLMENT (2022 - 23). K-12 ELL Enrollment: 143,080. K-12 Former ELL Enrollment: 54,131 ...\n  2. NYCPS Data at a Glance | reliability=high (1.00)\n     URL: https://www.schools.nyc.gov/about-us/reports/nycps-data-at-a-glance\n     Summary: School Environment; NYC Public Schools Speak Your Language; Understanding Respect for All: NYCPS's Commitment to Safe and Supportive Learning Environment ...\n  3. [PDF] The New York State Seal of Biliteracy Annual Report (2023-24) - ERIC | reliability=high (0.90)\n     URL: https://files.eric.ed.gov/fulltext/ED673399.pdf\n     Summary: The NYSSB is an award that formally recognizes students who have attained a high level of proficiency in two or more world languages (one of which must be ...\n  4. Language Access Policy - NYC Public Schools | reliability=high (0.90)\n     URL: https://www.schools.nyc.gov/about-us/policies/language-access-policy\n     Summary: These languages are Albanian, Arabic, Bangla, Chinese, French, Haitian Creole, Korean, Russian, Spanish, Ukrainian, Urdu and Uzbek. These languages, including ...\n  5. [PDF] Our Schools Speak Your Language | reliability=medium (0.60)\n     URL: https://pwsblobprd.schools.nyc/prd-pws/docs/default-source/default-document-library/enrollment/36504-ps-you-issue-44---language-diversity-english.pdf?sfvrsn=838525d4_2\n     Summary: Dear New Yorkers,. Our students and families speak over 180 languages. 180 ... of 12 languages, ranging from Bengali to Haitian Creole, Japanese to Polish.\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1911,
+    "input_tokens_estimated": 477,
+    "output": {
+      "overall_stance": "unclear",
+      "confidence": "low",
+      "summary": "The evidence presents conflicting information regarding the number of languages spoken among students in NYC schools. While one source indicates that students and families speak over 180 languages, another source does not confirm the specific number of 176 languages, leading to uncertainty."
+    },
+    "output_length_chars": 351,
+    "output_tokens_estimated": 87,
+    "cost_usd": 0.00012375
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:25:55.947207",
+    "latency_seconds": 20.6,
+    "input_prompt": "\nClaim: The number of illegal aliens in the country is usually given as 11 million.\nCategory: statistical\nExtraction confidence: 0.90\n\nEvidence:\nUNCLEAR (5 sources):\n  1. Estimates of the Illegal Alien Population Residing in the United States | reliability=high (0.90)\n     URL: https://ohss.dhs.gov/topics/immigration/illegal/population-estimates\n     Summary: Office of Homeland Security Statistics report on illegal (or unauthorized) aliens (or immigrants) for FY 1990-2022 by period of entry, ...\n  2. A Turning Point for the Unauthorized Immigrant Pop.. | reliability=high (0.85)\n     URL: https://www.migrationpolicy.org/news/turning-point-us-unauthorized-immigrant-population\n     Summary: Approximately 11.2 million unauthorized immigrants lived in the United States in 2021, up from 11.0 million in 2019, according to new Migration Policy ...\n  3. Record 14 Million Unauthorized Immigrants Lived in the US in 2023 | reliability=high (0.85)\n     URL: https://www.pewresearch.org/race-and-ethnicity/2025/08/21/u-s-unauthorized-immigrant-population-reached-a-record-14-million-in-2023/\n     Summary: In the years after the COVID-19 pandemic, U.S. immigration policy changes fueled a sharp rise in both legal and illegal immigration.\n  4. Unauthorized immigrants and the economy - Economic Policy Institute | reliability=high (0.85)\n     URL: https://www.epi.org/publication/unauthorized-immigrants/\n     Summary: Robert Warren, US Undocumented Population Increased to 11.7 Million in July 2023: Provisional CMS Estimates Derived from CPS Data, Center for ...\n  5. What we know about unauthorized immigrants living in the U.S. | reliability=high (0.85)\n     URL: https://www.pewresearch.org/short-reads/2024/07/22/what-we-know-about-unauthorized-immigrants-living-in-the-us/\n     Summary: The unauthorized immigrant population in the U.S. grew to 11 million in 2022, but remained below the peak of 12.2 million in 2007.\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1958,
+    "input_tokens_estimated": 489,
+    "output": {
+      "overall_stance": "mixed",
+      "confidence": "medium",
+      "summary": "Estimates of the illegal alien population in the U.S. vary, with some sources reporting around 11 million (e.g., Migration Policy report) while others indicate higher figures, such as 14 million (Pew Research). This discrepancy suggests that the commonly cited figure of 11 million may not reflect the current reality."
+    },
+    "output_length_chars": 379,
+    "output_tokens_estimated": 94,
+    "cost_usd": 0.00012975
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:25:56.559537",
+    "latency_seconds": 12.23,
+    "input_prompt": "\nClaim: Nearly half a million more people came to America through the diversity visa lottery from 2008 to 2017.\nCategory: statistical\nExtraction confidence: 0.80\n\nEvidence:\nUNCLEAR (4 sources):\n  1. [PDF] Immigrant Number Use for Visa Issuances and Adjustments of ... | reliability=high (1.00)\n     URL: https://travel.state.gov/content/dam/visas/Statistics/AnnualReports/FY2017AnnualReport/FY17AnnualReport-TableVII.pdf\n     Summary: 2017. Table VII. Immigrant Number Use for Visa Issuances and Adjustments of Status in the Diversity Immigrant. Category. Fiscal Years 2008-2017. Sierra Leone.\n  2. Diversity Visa Program Statistics - Travel.gov | reliability=high (0.90)\n     URL: https://travel.state.gov/content/travel/en/us-visas/immigrate/diversity-visa-program-entry/diversity-visa-program-statistics.html\n     Summary: Diversity Visa Program Statistics \u00b7 DV Statistics 2019-2021 \u00b7 DV Statistics 2016-2018 \u00b7 DV Statistics 2013-2015 \u00b7 DV Statistics 2010-2012 \u00b7 DV Statistics 2007-2009.\n  3. Yearbook of Immigration Statistics | OHSS | reliability=high (0.90)\n     URL: https://ohss.dhs.gov/topics/immigration/yearbook\n     Summary: Summarizes a year in immigration, including counts of immigrants by type, including green card holders, and immigration enforcement, ...\n  4. US diversity visa lottery saw near-record number of applicants in 2017 | reliability=high (0.85)\n     URL: https://www.pewresearch.org/short-reads/2018/08/23/applications-for-u-s-visa-lottery-more-than-doubled-since-2007/\n     Summary: More than 22.4 million people applied in 2017 to a U.S. visa program that provides 50,000 green cards, or lawful permanent residence, each year ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1696,
+    "input_tokens_estimated": 424,
+    "output": {
+      "overall_stance": "unclear",
+      "confidence": "low",
+      "summary": "The evidence regarding the diversity visa lottery from 2008 to 2017 is unclear. While high-reliability sources provide statistics on visa issuances and adjustments, they do not confirm the specific claim of nearly half a million more people coming through the lottery during that period. The data from the Travel.gov and Pew Research sources indicate significant application numbers but do not directly support the claim about the increase in arrivals."
+    },
+    "output_length_chars": 512,
+    "output_tokens_estimated": 128,
+    "cost_usd": 0.0001404
+  }
+]

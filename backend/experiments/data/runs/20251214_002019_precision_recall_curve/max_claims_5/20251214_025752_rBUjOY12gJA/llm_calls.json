@@ -1,0 +1,433 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:58:10.863267",
+    "latency_seconds": 16.6,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nif you're thinking about leading a more active lifestyle you're not alone in recent years an increasing number of Americans have started participating in more sports fitness and recreation whether you're trying to get fit build muscle or you're just tired of the couch here are some changes you can expect along the way during that first workout you might feel more alert and energized because ramping up your heart rate means a boost in overall blood flow and oxygen to the brain but prepare yourself for the day after when you'll almost certainly get a case of Dom's short for delayed onset muscle soreness the soreness will persist for about 72 hours but the good news is you're less likely to get it again as long as you continue to regularly exercise those same muscles over the next few weeks you'll slowly start to ramp up production of mitochondria via a process called mitochondrial biogenesis mitochondria are the parts of your cells that convert carbs fat and protein and to feel that your muscles use to do their job like flexing contract after six to eight weeks studies have shown that people can increase their mitochondria by up to 50% with more mitochondria in your cells you'll start to feel more fit and your endurance will increase so running three miles will no longer feel as difficult as it did during the first week once your six months in all of that hard work should finally start to show if your workouts focus on strength training you'll notice your muscles begin to take shape you're also less likely to fall off the workout wagon at this point exercise programs often see a 50% dropout rate within the first six months but after that more people stick with it now if you're more focused on cardio than by nine months of regular exercise you should see about a 25% increase in your vo2 max vo2 max is often used as a measure of fitness and refers to the rate your body can transport oxygen to your muscles for fuel basically higher vo2 max means you can run faster for longer so a 25% increase means you can run about 20% further in the same amount of time after one year of regular exercise your bones will be denser which reduces your of osteoporosis in fact researchers have found that regular resistance training when combined with aerobic exercise can actually reverse the effects of osteoporosis after 12 months now if you maintain your exercise program long term your body might not be the only thing to benefit your bank account may also be one study revealed that older people who exercise 5 days a week for at least 30 minutes saved on average $2,500 a year in medical costs for heart related health problems alone you'll also be at a lower risk of developing arthritis type-2 diabetes dementia and certain types of cancer like breast and colon in all probability you are going to live longer than you otherwise would and that longer life it will likely feel more fulfilling because exercise lowers the risk of anxiety and depression by reducing levels of stress hormones like cortisol and adrenaline of course all of these benefits depend on the type and intensity of your workout and how long you exercise for each week a balanced diet is also paramount to a healthy lifestyle for the average adult ages 18 to 64 the US Department of Health and Human Services recommends either a minimum of two and a half hours per week of moderately intense exercise like brisk walking or biking or at least one hour and 15 minutes each week that combines moderate and high intensity workouts like running and swimming sprints on top of that make sure and take two days each week to strengthen your muscles with some weights or resistance training this will help your overall speed and endurance as you begin it's important to pace yourself and not push too hard too fast or you risk serious injury you'll discover that the fitter you become the easier it will be to exert a little more energy the next week the week after and so forth exercise smart and often and you'll be running marathons in no time you",
+    "input_length_chars": 4091,
+    "input_tokens_estimated": 1022,
+    "output": {
+      "claims": [
+        {
+          "text": "An increasing number of Americans have started participating in more sports, fitness, and recreation.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Context unknown."
+        },
+        {
+          "text": "During the first workout, you might feel more alert and energized due to increased blood flow and oxygen to the brain.",
+          "confidence": 0.8,
+          "category": "scientific",
+          "importance": 0.3,
+          "context": "Context unknown."
+        },
+        {
+          "text": "Delayed onset muscle soreness (DOMS) will persist for about 72 hours after a workout.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Context unknown."
+        },
+        {
+          "text": "Studies have shown that people can increase their mitochondria by up to 50% after six to eight weeks of exercise.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Context unknown."
+        },
+        {
+          "text": "After one year of regular exercise, your bones will be denser, reducing your risk of osteoporosis.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Context unknown."
+        },
+        {
+          "text": "Regular resistance training combined with aerobic exercise can reverse the effects of osteoporosis after 12 months.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Context unknown."
+        },
+        {
+          "text": "Older people who exercise 5 days a week for at least 30 minutes save on average $2,500 a year in medical costs for heart-related health problems.",
+          "confidence": 0.8,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Context unknown."
+        },
+        {
+          "text": "Regular exercise lowers the risk of anxiety and depression by reducing levels of stress hormones like cortisol and adrenaline.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Context unknown."
+        }
+      ],
+      "total_count": 8
+    },
+    "output_length_chars": 2414,
+    "output_tokens_estimated": 603,
+    "cost_usd": 0.0005151
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:58:16.846182",
+    "latency_seconds": 2.0,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Delayed onset muscle soreness (DOMS) will persist for about 72 hours after a workout.\nContext: Context unknown.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 284,
+    "input_tokens_estimated": 71,
+    "output": {
+      "original_claim": "Delayed onset muscle soreness (DOMS) will persist for about 72 hours after a workout.",
+      "queries": [
+        {
+          "query": "Delayed onset muscle soreness duration 72 hours",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "How long does delayed onset muscle soreness last after exercise?",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 346,
+    "output_tokens_estimated": 86,
+    "cost_usd": 6.225e-05,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "After one year of regular exercise, your bones will be denser, reducing your risk of osteoporosis."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:58:16.966541",
+    "latency_seconds": 2.12,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: After one year of regular exercise, your bones will be denser, reducing your risk of osteoporosis.\nContext: Context unknown.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 297,
+    "input_tokens_estimated": 74,
+    "output": {
+      "original_claim": "After one year of regular exercise, your bones will be denser, reducing your risk of osteoporosis.",
+      "queries": [
+        {
+          "query": "Does regular exercise for one year increase bone density and reduce osteoporosis risk?",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Impact of one year of exercise on bone density and osteoporosis prevention",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 408,
+    "output_tokens_estimated": 102,
+    "cost_usd": 7.23e-05,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "Delayed onset muscle soreness (DOMS) will persist for about 72 hours after a workout.",
+      "query_index": 2,
+      "query_text": "How long does delayed onset muscle soreness last after exercise?"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:58:16.966939",
+    "latency_seconds": 2.12,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Regular resistance training combined with aerobic exercise can reverse the effects of osteoporosis after 12 months.\nContext: Context unknown.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 314,
+    "input_tokens_estimated": 78,
+    "output": {
+      "original_claim": "Regular resistance training combined with aerobic exercise can reverse the effects of osteoporosis after 12 months.",
+      "queries": [
+        {
+          "query": "Can resistance training and aerobic exercise reverse osteoporosis after 12 months?",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Effects of resistance training and aerobic exercise on osteoporosis reversal in 12 months",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 436,
+    "output_tokens_estimated": 109,
+    "cost_usd": 7.71e-05,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "Delayed onset muscle soreness (DOMS) will persist for about 72 hours after a workout.",
+      "query_index": 2,
+      "query_text": "How long does delayed onset muscle soreness last after exercise?"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:58:16.967253",
+    "latency_seconds": 2.12,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Studies have shown that people can increase their mitochondria by up to 50% after six to eight weeks of exercise.\nContext: Context unknown.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 312,
+    "input_tokens_estimated": 78,
+    "output": {
+      "original_claim": "Studies have shown that people can increase their mitochondria by up to 50% after six to eight weeks of exercise.",
+      "queries": [
+        {
+          "query": "increase mitochondria by 50% after six to eight weeks of exercise",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "mitochondrial biogenesis exercise six to eight weeks",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 380,
+    "output_tokens_estimated": 95,
+    "cost_usd": 6.87e-05,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "Delayed onset muscle soreness (DOMS) will persist for about 72 hours after a workout.",
+      "query_index": 2,
+      "query_text": "How long does delayed onset muscle soreness last after exercise?"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:58:17.223888",
+    "latency_seconds": 2.38,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: An increasing number of Americans have started participating in more sports, fitness, and recreation.\nContext: Context unknown.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 300,
+    "input_tokens_estimated": 75,
+    "output": {
+      "original_claim": "An increasing number of Americans have started participating in more sports, fitness, and recreation.",
+      "queries": [
+        {
+          "query": "increase in American participation in sports fitness recreation 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "trends in sports and fitness participation among Americans 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 382,
+    "output_tokens_estimated": 95,
+    "cost_usd": 6.825e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Studies have shown that people can increase their mitochondria by up to 50% after six to eight weeks of exercise.",
+      "query_index": 2,
+      "query_text": "mitochondrial biogenesis exercise six to eight weeks"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:58:47.838797",
+    "latency_seconds": 10.64,
+    "input_prompt": "Claim:\nAn increasing number of Americans have started participating in more sports, fitness, and recreation.\n\nArticle Title:\nSFIA | 2023 U.S. Trends in Team Sports Report\n\nGoogle Search Snippet:\nThe SFIA has released its 2023 U.S. Trends in Team Sports Report, which examines participation and market trends from 2022 in team sports.\n\nFull Page Content:\nSIGN IN CONTACT JOIN NOW About Membership Research Events Advocacy Resources Press Releases JENNY KARN JOINS THE SPORTS & FITNESS INDUSTRY ASSOCIATION AS SENIOR DIRECTOR READ MORE Press Releases SFIA AND DUPR TEAM UP TO PROVIDE INDUSTRY-FIRST PICKLEBALL MARKET PLAYBOOK WITH UNMATCHED INSIGHTS ON PLAYER SPENDING AND PLAYING HABITS READ MORE Press Releases SIX INNOVATIVE COMPANIES SELECTED AS SEMI-FINALISTS FOR THE 2025 START-UP CHALLENGE READ MORE Press Releases ANEYSHA BHAT JOINS THE SPORTS & FITNESS INDUSTRY ASSOCIATION AS DIRECTOR OF GOVERNMENT AFFAIRS & STRATEGIC ADVOCACY READ MORE Enter Your Email Address to get the latest from SFIA Contact Us SFIA Newsletter Privacy Policy FAQ Leadership Awards Copyright 2025 SFIA | All Rights Reserved.\n\nProvide relevant evidence.",
+    "input_length_chars": 1133,
+    "input_tokens_estimated": 283,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 5.565e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "An increasing number of Americans have started participating in more sports, fitness, and recreation.",
+      "query_index": 2,
+      "query_text": "trends in sports and fitness participation among Americans 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:58:48.888391",
+    "latency_seconds": 11.71,
+    "input_prompt": "Claim:\nAn increasing number of Americans have started participating in more sports, fitness, and recreation.\n\nArticle Title:\nFirst Batch of 2023 Sports Participation Reports Released\n\nGoogle Search Snippet:\nAs reported in the 2023 Topline Participation Report, more Americans participated in at least one sport, fitness exercise, or outdoor recreation activity in ...\n\nFull Page Content:\nSIGN IN CONTACT JOIN NOW About Membership Research Events Advocacy Resources Press Releases JENNY KARN JOINS THE SPORTS & FITNESS INDUSTRY ASSOCIATION AS SENIOR DIRECTOR READ MORE Press Releases SFIA AND DUPR TEAM UP TO PROVIDE INDUSTRY-FIRST PICKLEBALL MARKET PLAYBOOK WITH UNMATCHED INSIGHTS ON PLAYER SPENDING AND PLAYING HABITS READ MORE Press Releases SIX INNOVATIVE COMPANIES SELECTED AS SEMI-FINALISTS FOR THE 2025 START-UP CHALLENGE READ MORE Press Releases ANEYSHA BHAT JOINS THE SPORTS & FITNESS INDUSTRY ASSOCIATION AS DIRECTOR OF GOVERNMENT AFFAIRS & STRATEGIC ADVOCACY READ MORE Enter Your Email Address to get the latest from SFIA Contact Us SFIA Newsletter Privacy Policy FAQ Leadership Awards Copyright 2025 SFIA | All Rights Reserved.\n\nProvide relevant evidence.",
+    "input_length_chars": 1167,
+    "input_tokens_estimated": 291,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The 2023 Topline Participation Report indicates that more Americans are engaging in sports, fitness exercises, and outdoor recreation activities, confirming the claim of increased participation.",
+      "overall_stance": "supports",
+      "key_quote": "more Americans participated in at least one sport, fitness exercise, or outdoor recreation activity in ..."
+    },
+    "output_length_chars": 386,
+    "output_tokens_estimated": 96,
+    "cost_usd": 0.00010125,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "An increasing number of Americans have started participating in more sports, fitness, and recreation.",
+      "query_index": 2,
+      "query_text": "trends in sports and fitness participation among Americans 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:58:49.334644",
+    "latency_seconds": 13.41,
+    "input_prompt": "Claim:\nAn increasing number of Americans have started participating in more sports, fitness, and recreation.\n\nArticle Title:\nAmericans engaged in leisure/sports US 2023 - Statista\n\nFull Page Content:\nApproximately 95.5 percent of men were engaged in sport and leisure activities that year, and that figure was 92.7 percent for women.\n\nProvide relevant evidence.",
+    "input_length_chars": 361,
+    "input_tokens_estimated": 90,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that a high percentage of both men (95.5%) and women (92.7%) in the U.S. were engaged in sports and leisure activities, suggesting an increasing participation in these areas.",
+      "overall_stance": "supports",
+      "key_quote": "Approximately 95.5 percent of men were engaged in sport and leisure activities that year, and that figure was 92.7 percent for women."
+    },
+    "output_length_chars": 416,
+    "output_tokens_estimated": 104,
+    "cost_usd": 7.59e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "An increasing number of Americans have started participating in more sports, fitness, and recreation.",
+      "query_index": 2,
+      "query_text": "trends in sports and fitness participation among Americans 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:58:50.377107",
+    "latency_seconds": 16.21,
+    "input_prompt": "Claim:\nRegular resistance training combined with aerobic exercise can reverse the effects of osteoporosis after 12 months.\n\nArticle Title:\nEffects of Resistance Exercise on Bone Health - PubMed Central - NIH\n\nGoogle Search Snippet:\nExercise training has been recommended as a promising therapeutic strategy to encounter the loss of bone and muscle mass due to osteosarcopenia.\n\nFull Page Content:\n1 year ago\nOsteoporosis is a global public health concern, particularly affecting older adults and postmenopausal women, resulting in weakened bones and increased fracture risk. However, strength training has emerged as an effective, evidence-based approach for improving bone health and reducing osteoporosis risk. Regular strength training exercises enhance bone mineral density (BMD), increase muscle mass, and improve balance, thereby minimizing the likelihood of falls and fractures.\nRecent Evidence Supporting Strength Training\nFunctional Exercises for Bone Health\nStrength training offers a highly effective method for preventing osteoporosis and maintaining bone health. Functional exercises such as bodyweight squats, step-ups, and wall push-ups are accessible to most people and can easily be integrated into daily routines. These exercises enhance muscle and bone strength, reducing the risk of fractures and improving the overall quality of life for individuals at risk of osteoporosis.\nKey Words: strength training, osteoporosis, bone mineral density, functional exercises, fracture prevention, bone health, resistance training\nAuthor declares no competing interests.\nDipti Shah, PT, MsPT, MHA, Cert MDT, Cert CLSSBB, a physical therapist with over a decade of experience, offers insights from her clinical and administrative work. Holding a master\u2019s in healthcare administration from Rutgers University and a Lean Six Sigma Black Belt, she is passionate about improving patient care outcomes and enhancing operational efficiency. Currently working as a Clinical Manager at a large chain PT clinic.\n10 months ago\n10 months ago\n1 year ago\n1 year ago\n1 year ago\n\nProvide relevant evidence.",
+    "input_length_chars": 2097,
+    "input_tokens_estimated": 524,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that regular strength training is effective in improving bone health and reducing osteoporosis risk, which supports the claim that resistance training combined with aerobic exercise can reverse osteoporosis effects over time.",
+      "overall_stance": "supports",
+      "key_quote": "Strength training has emerged as an effective, evidence-based approach for improving bone health and reducing osteoporosis risk."
+    },
+    "output_length_chars": 462,
+    "output_tokens_estimated": 115,
+    "cost_usd": 0.0001476,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "An increasing number of Americans have started participating in more sports, fitness, and recreation.",
+      "query_index": 2,
+      "query_text": "trends in sports and fitness participation among Americans 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:58:50.536533",
+    "latency_seconds": 16.38,
+    "input_prompt": "Claim:\nRegular resistance training combined with aerobic exercise can reverse the effects of osteoporosis after 12 months.\n\nArticle Title:\nRecent advances in the mechanisms and rehabilitation strategies of ...\n\nGoogle Search Snippet:\nRobust evidence supports the efficacy of various exercise modalities\u2014including aerobic, resistance, and balance training\u2014in improving bone health (Mohebbi et al ...\n\nFull Page Content:\n1 year ago\nOsteoporosis is a global public health concern, particularly affecting older adults and postmenopausal women, resulting in weakened bones and increased fracture risk. However, strength training has emerged as an effective, evidence-based approach for improving bone health and reducing osteoporosis risk. Regular strength training exercises enhance bone mineral density (BMD), increase muscle mass, and improve balance, thereby minimizing the likelihood of falls and fractures.\nRecent Evidence Supporting Strength Training\nFunctional Exercises for Bone Health\nStrength training offers a highly effective method for preventing osteoporosis and maintaining bone health. Functional exercises such as bodyweight squats, step-ups, and wall push-ups are accessible to most people and can easily be integrated into daily routines. These exercises enhance muscle and bone strength, reducing the risk of fractures and improving the overall quality of life for individuals at risk of osteoporosis.\nKey Words: strength training, osteoporosis, bone mineral density, functional exercises, fracture prevention, bone health, resistance training\nAuthor declares no competing interests.\nDipti Shah, PT, MsPT, MHA, Cert MDT, Cert CLSSBB, a physical therapist with over a decade of experience, offers insights from her clinical and administrative work. Holding a master\u2019s in healthcare administration from Rutgers University and a Lean Six Sigma Black Belt, she is passionate about improving patient care outcomes and enhancing operational efficiency. Currently working as a Clinical Manager at a large chain PT clinic.\n10 months ago\n10 months ago\n1 year ago\n1 year ago\n1 year ago\n\nProvide relevant evidence.",
+    "input_length_chars": 2119,
+    "input_tokens_estimated": 529,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that regular strength training is effective in improving bone health and reducing osteoporosis risk, which supports the claim that combining resistance training with aerobic exercise can reverse osteoporosis effects over time.",
+      "overall_stance": "supports",
+      "key_quote": "Strength training has emerged as an effective, evidence-based approach for improving bone health and reducing osteoporosis risk."
+    },
+    "output_length_chars": 463,
+    "output_tokens_estimated": 115,
+    "cost_usd": 0.00014835,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "An increasing number of Americans have started participating in more sports, fitness, and recreation.",
+      "query_index": 2,
+      "query_text": "trends in sports and fitness participation among Americans 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:58:50.680247",
+    "latency_seconds": 17.47,
+    "input_prompt": "Claim:\nStudies have shown that people can increase their mitochondria by up to 50% after six to eight weeks of exercise.\n\nArticle Title:\nLong-term development: Why workout times don't always translate to ...\n\nGoogle Search Snippet:\nAs we've seen, on the micro level, mitochondria density peaks at 8-12 weeks of training. Likewise, the positive adaptations to mitochondria you realize from ...\n\nFull Page Content:\nHave you ever had a perfect marathon training cycle and made breakthroughs in all your workouts times, only to find that your workout fitness doesn\u2019t seem to translate to a similar performance on race day? Don\u2019t worry, you\u2019re not alone. This is something many of your RunnersConnect teammates also struggle with and this article is going to attempt to explain why this happens and how it works at the physiological level.\nIn one of my previous articles, I detailed the process of how long it will take you to benefit from a workout. While that was a useful piece to help identify when you\u2019ll start realizing the benefits of a particular training session on a micro level, I didn\u2019t mention how workouts benefit your fitness in the long-term. However, by understanding how the long-term process of training works, we can shed a little light on why runners can sometimes workout faster than they can race, especially in the marathon.\nIn non-scientific terms, I call this phenomenon the \u201cbacklog\u201d of fitness. Think of it like investing \u2013 you\u2019re banking fitness and miles, but you can\u2019t withdraw them yet because the investment hasn\u2019t matured.\nPhysiologically, this all relates to the development and life-cycle of mitochondria (the aerobic powerhouse that supplies our muscles with energy). By examining how mitochondria contribute to your racing performance and analyzing how they are developed, you get a clear understanding of how this \u201cbacklog\u201d of fitness works and why it pays to keep training year after year. (Don\u2019t worry, this isn\u2019t going to be a complicated scientific discussion; I\u2019ll keep things simple and easy to understand, so don\u2019t crucify me if you\u2019re PhD in exercise physiology \u2013 that\u2019s not my purpose here.)\nFirst, we\u2019re going to take a look at the role of mitochondria and how they are developed. Second, we\u2019ll examine how the density and volume of mitochondria play a role in both your short and long-term development. Finally, we\u2019ll put it all together for you so you can appreciate how your body adapts to the workload and gets better each training segment. By the end of this article, you\u2019ll have a very clear understanding how micro and macro cycles work in regards to your aerobic progression.\nMitochondria are microscopic organelle found in your muscles cells that contribute to the production of ATP (energy). In the presence of oxygen, mitochondria breakdown carbohydrate, fat, and protein into usable energy. Therefore, the more mitochondria you have, and the greater their density, the more energy you can generate during exercise, which will enable you to run faster and longer.\nContrary to popular belief, you can increase the volume and density of your mitochondria with both long, slow runs (research study) and more intense training sessions (research study). This is one reason it\u2019s critical to have a mix of training stimuli in your training plan, which includes long runs at both easy and faster paces as well as tempo runs and more intense VO2max sessions. Neglecting one of these energy systems for a long period of time limits your long-term mitochondrial development.\nNow that we can appreciate the value of mitochondria to your performance on race day, we can examine how mitochondria contribute to your long-term development.\nMost importantly, the volume (total number) of mitochondria contained in each muscle cell takes years to fully develop. In fact, most coaches believe that you can infinitely increase mitochondria volume; however, there is a point after a few years where increases are minuscule. Therefore, after years of running you\u2019ll develop a mitochondria powerhouse that will enable you to realize continual gains in your fitness.\nMitochondria volume represents the macro cycle of training. Each training cycle, you\u2019ll develop more mitochondria and carry over those positive gains to your next training cycle. It\u2019s a slow process, but it\u2019s why Olympic caliber athletes train for many years to get to the top of their sport. For reference, in The Anatomy of a Medal, Dr. Joe Vigil outlined the training of Deena Kastor during her transition from a good college runner to bronze medalist at the 2004 Athens Olympics. Dr. Vigil attributes the majority of Deena\u2019s success to the slow and gradual progression from 40 miles per week to 110+ miles per week.\nThe other spectrum of mitochondria development is their density (the size of each mitochondrial). Like volume, mitochondria density can be developed with both slower and faster training sessions. However, mitochondria density is more effected by training volume \u2013 the more you run, the faster you will increase the density.\nUnlike mitochondria volume, which can be developed infinitely, there is an absolute mitochondrial density that each individual can attain, usually reached after 8-12 weeks of training. Not surprisingly, this time frame usually correlates with when you start feeling fit during your training segment.\nThe final aspect to consider when looking at the short and long-term effect of training is at what rate you realize the benefits of mitochondria development.\nMitochondria have a half life of one week. Simply speaking, you\u2019re able to gain half of the potential benefits to your mitochondria each week that you train. For example, if went from no training to running 25 miles, you\u2019ll realize 50% of the benefits of that 25 mile week. Run 25 miles the next week at the same intensity and you\u2019ll realize 25% of the benefits from week one. This continues until you reach 100%. Here\u2019s a simple chart to explain it:\nThis is a simplistic progression since it assumes you do not increase you mileage or intensity over this six week period. However, it does demonstrate how you benefit from mitochondria development and how it is critical to slowly increase training stimulus and training volume with time.\nNow that you\u2019ve learned how mitochondria work and how they can benefit you as a runner, how does this relate to the \u201cbacklog of fitness\u201d theory mentioned earlier?\nThe backlog\n\nProvide relevant evidence.",
+    "input_length_chars": 6441,
+    "input_tokens_estimated": 1610,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses how mitochondrial density can increase significantly within 8-12 weeks of training, suggesting that a 50% increase in mitochondria is plausible within that timeframe, aligning with the claim.",
+      "overall_stance": "supports",
+      "key_quote": "Unlike mitochondria volume, which can be developed infinitely, there is an absolute mitochondrial density that each individual can attain, usually reached after 8-12 weeks of training."
+    },
+    "output_length_chars": 483,
+    "output_tokens_estimated": 120,
+    "cost_usd": 0.0003135,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "An increasing number of Americans have started participating in more sports, fitness, and recreation.",
+      "query_index": 2,
+      "query_text": "trends in sports and fitness participation among Americans 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:58:50.999077",
+    "latency_seconds": 17.83,
+    "input_prompt": "Claim:\nDelayed onset muscle soreness (DOMS) will persist for about 72 hours after a workout.\n\nArticle Title:\nDelayed onset muscle soreness - Wikipedia\n\nGoogle Search Snippet:\nIt peaks from 24 to 72 hours, then subsides and disappears up to seven days after exercise.\n\nFull Page Content:\nAn official website of the United States government\nPost-exercise muscle soreness is a dull, aching sensation that follows unaccustomed muscular exertion. Primarily on the basis of previous laboratory-based research on eccentric exercise, soreness is usually said to follow an inverted U-shaped curve over time, peaking 24 \u2013 48 hours after exercise. As such, it is often described as \"delayed-onset\" muscle soreness. In a study of long-distance runners, soreness seemed to peak immediately and then reduce gradually over time. The study is a secondary analysis of clinical trial data that aims to determine whether the time course of soreness following a natural exercise, long-distance running, is different from that following a laboratory-based exercise, bench-stepping.\nThis is a reanalysis of data from three previous clinical trials. The trials included 400 runners taking part in long-distance races and 82 untrained volunteers performing a bench-stepping test. Subjects completed a Likert scale of muscle soreness every morning and evening for the five days following their exercise.\nInteraction between trial and time is highly significant, suggesting a different time course of soreness following running and bench-stepping. 45% of subjects in the bench-stepping trial experienced peak soreness at the third or fourth follow-up (approximately 36 \u2013 48 hours after exercise) compared to only 14% of those in the running trial. The difference between groups is robust to multivariate analysis incorporating possible confounding variables.\nSoreness in runners following long-distance running follows a different time course to that in untrained individuals undertaking bench-stepping. Research on exercise taking place in the laboratory context does not necessarily generalize to exercise undertaken by trained athletes when engaged in their chosen sport.\nPost-exercise muscle soreness \u2013 a dull, aching sensation following unaccustomed muscular exertion \u2013 is usually said to follow an inverted U-shaped curve over time. Typical statements found in the literature are that soreness: \"develops\" 24 to 48 hours after exercise [1] ; \"is usually perceived approximately 24 hours after the exercise bout [and] may linger for an additional 24 to 48 hours\" [2] and \"peaks 24\u201348 hours after exercise\" [3].\nThese claims are well supported by data from studies which have measured soreness at various times following an exercise bout. For example. High et al. [4] assessed soreness at 24 and 48 hours after eccentric contractions of the elbow flexors. Soreness scores were higher at the 48 hour follow-up. Similarly, Byrnes et al. [5] reported that muscle soreness steadily increased when measured 6, 18 and 42 hours following 30 minutes of downhill treadmill running. Soreness has also been found to be higher at 48 hours than at 24 hours in untreated controls undertaking bench-stepping [2] and to peak at 48 hours in three separate studies of eccentric exercise of the elbow flexors [6-8]. In our own studies of soreness following bench-stepping, soreness scores peaked at 48 hours [9] (see figure 1). Perhaps the only study inconsistent with these findings was that of Donelly et al, who found that soreness induced by downhill running on a treadmill was slightly higher at 24 than at 48 hours [3]. That said, a classic inverted U-shaped curve was reported, with soreness low immediately following exercise, highest at 24 and 48 hours and falling again at 72 hours. Such findings are so prevalent that post-exercise muscle soreness is generally described in the literature as \"delayed-onset\" muscle soreness.\nTime course of muscle soreness following long-distance running and benchstepping\nThe studies above involved exercise undertaken in a laboratory setting. With rare exceptions [10], post-exercise soreness has not been investigated in athletes undertaking their chosen sport. Whilst conducting data analysis on a study of long distance running, we noticed that soreness seemed to peak immediately and then reduce gradually over time (see figure 1). This was a similar time course to two previous studies in long-distance runners for which we had obtained original data [11,12]. We therefore decided to examine the hypothesis that the time course of post-exercise soreness is different for long-distance running than for bench-stepping by examining data from three clinical trials we had completed. If the time course of soreness resulting from an \"artificial\" laboratory based exercise (bench-stepping) is different from that resulting from a sport (long-distance running) it is plausible that these two methods of soreness induction have different physiological consequences.\nWe compared data from a study in which soreness was induced by a bench-stepping regime with those from a trial in which soreness resulted from long-distance running. In the bench-stepping trial, healthy volunteers undertook a 10 minute period of bench-stepping while carrying a backpack containing sandbags equivalent to 10% of their body weight. This is a previously validated method of soreness induction [2]. Only untrained individuals were eligible. Subjects were excluded if they regularly participated in vigorous exercise in the previous six months. \"Vigorous exercise\" was defined as playing a sport or undertaking an activity designed to increase physical fitness; \"regular participation\" was defined as undertaking the activity three or more times a week for more than three consecutive weeks and for more than 15 minutes at a time. We included data from 82 subjects in two trials in which the eligibility criteria and method of soreness induction were identical [9]. The running trial studied 400 runners expecting soreness after a long-distance run [13]. Subjects took part in a number of different runs. Mean race length was 21.4 miles SD (7.79). The shortest race was just under 2 miles (one subject) and the longest 50 miles (one subject) but 95% of the races were between 6.2 and 26.2 miles. Approximat\n\nProvide relevant evidence.",
+    "input_length_chars": 6315,
+    "input_tokens_estimated": 1578,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that delayed onset muscle soreness (DOMS) typically peaks between 24 to 48 hours after exercise and may linger for an additional 24 to 48 hours, suggesting that it can persist for up to 72 hours post-exercise.",
+      "overall_stance": "supports",
+      "key_quote": "Soreness is usually perceived approximately 24 hours after the exercise bout [and] may linger for an additional 24 to 48 hours."
+    },
+    "output_length_chars": 445,
+    "output_tokens_estimated": 111,
+    "cost_usd": 0.0003033,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "An increasing number of Americans have started participating in more sports, fitness, and recreation.",
+      "query_index": 2,
+      "query_text": "trends in sports and fitness participation among Americans 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:58:51.782288",
+    "latency_seconds": 18.57,
+    "input_prompt": "Claim:\nStudies have shown that people can increase their mitochondria by up to 50% after six to eight weeks of exercise.\n\nArticle Title:\nResistance Exercise Training Alters Mitochondrial Function in ... - NIH\n\nGoogle Search Snippet:\nEndurance exercise has long been known to increase mitochondrial function in skeletal muscle. Comparatively little is known regarding the impact of resistance ...\n\nFull Page Content:\nHave you ever had a perfect marathon training cycle and made breakthroughs in all your workouts times, only to find that your workout fitness doesn\u2019t seem to translate to a similar performance on race day? Don\u2019t worry, you\u2019re not alone. This is something many of your RunnersConnect teammates also struggle with and this article is going to attempt to explain why this happens and how it works at the physiological level.\nIn one of my previous articles, I detailed the process of how long it will take you to benefit from a workout. While that was a useful piece to help identify when you\u2019ll start realizing the benefits of a particular training session on a micro level, I didn\u2019t mention how workouts benefit your fitness in the long-term. However, by understanding how the long-term process of training works, we can shed a little light on why runners can sometimes workout faster than they can race, especially in the marathon.\nIn non-scientific terms, I call this phenomenon the \u201cbacklog\u201d of fitness. Think of it like investing \u2013 you\u2019re banking fitness and miles, but you can\u2019t withdraw them yet because the investment hasn\u2019t matured.\nPhysiologically, this all relates to the development and life-cycle of mitochondria (the aerobic powerhouse that supplies our muscles with energy). By examining how mitochondria contribute to your racing performance and analyzing how they are developed, you get a clear understanding of how this \u201cbacklog\u201d of fitness works and why it pays to keep training year after year. (Don\u2019t worry, this isn\u2019t going to be a complicated scientific discussion; I\u2019ll keep things simple and easy to understand, so don\u2019t crucify me if you\u2019re PhD in exercise physiology \u2013 that\u2019s not my purpose here.)\nFirst, we\u2019re going to take a look at the role of mitochondria and how they are developed. Second, we\u2019ll examine how the density and volume of mitochondria play a role in both your short and long-term development. Finally, we\u2019ll put it all together for you so you can appreciate how your body adapts to the workload and gets better each training segment. By the end of this article, you\u2019ll have a very clear understanding how micro and macro cycles work in regards to your aerobic progression.\nMitochondria are microscopic organelle found in your muscles cells that contribute to the production of ATP (energy). In the presence of oxygen, mitochondria breakdown carbohydrate, fat, and protein into usable energy. Therefore, the more mitochondria you have, and the greater their density, the more energy you can generate during exercise, which will enable you to run faster and longer.\nContrary to popular belief, you can increase the volume and density of your mitochondria with both long, slow runs (research study) and more intense training sessions (research study). This is one reason it\u2019s critical to have a mix of training stimuli in your training plan, which includes long runs at both easy and faster paces as well as tempo runs and more intense VO2max sessions. Neglecting one of these energy systems for a long period of time limits your long-term mitochondrial development.\nNow that we can appreciate the value of mitochondria to your performance on race day, we can examine how mitochondria contribute to your long-term development.\nMost importantly, the volume (total number) of mitochondria contained in each muscle cell takes years to fully develop. In fact, most coaches believe that you can infinitely increase mitochondria volume; however, there is a point after a few years where increases are minuscule. Therefore, after years of running you\u2019ll develop a mitochondria powerhouse that will enable you to realize continual gains in your fitness.\nMitochondria volume represents the macro cycle of training. Each training cycle, you\u2019ll develop more mitochondria and carry over those positive gains to your next training cycle. It\u2019s a slow process, but it\u2019s why Olympic caliber athletes train for many years to get to the top of their sport. For reference, in The Anatomy of a Medal, Dr. Joe Vigil outlined the training of Deena Kastor during her transition from a good college runner to bronze medalist at the 2004 Athens Olympics. Dr. Vigil attributes the majority of Deena\u2019s success to the slow and gradual progression from 40 miles per week to 110+ miles per week.\nThe other spectrum of mitochondria development is their density (the size of each mitochondrial). Like volume, mitochondria density can be developed with both slower and faster training sessions. However, mitochondria density is more effected by training volume \u2013 the more you run, the faster you will increase the density.\nUnlike mitochondria volume, which can be developed infinitely, there is an absolute mitochondrial density that each individual can attain, usually reached after 8-12 weeks of training. Not surprisingly, this time frame usually correlates with when you start feeling fit during your training segment.\nThe final aspect to consider when looking at the short and long-term effect of training is at what rate you realize the benefits of mitochondria development.\nMitochondria have a half life of one week. Simply speaking, you\u2019re able to gain half of the potential benefits to your mitochondria each week that you train. For example, if went from no training to running 25 miles, you\u2019ll realize 50% of the benefits of that 25 mile week. Run 25 miles the next week at the same intensity and you\u2019ll realize 25% of the benefits from week one. This continues until you reach 100%. Here\u2019s a simple chart to explain it:\nThis is a simplistic progression since it assumes you do not increase you mileage or intensity over this six week period. However, it does demonstrate how you benefit from mitochondria development and how it is critical to slowly increase training stimulus and training volume with time.\nNow that you\u2019ve learned how mitochondria work and how they can benefit you as a runner, how does this relate to the \u201cbacklog of fitness\u201d theory mentioned earlier?\nThe backlog\n\nProvide relevant evidence.",
+    "input_length_chars": 6444,
+    "input_tokens_estimated": 1611,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses how both the volume and density of mitochondria can be increased through training, noting that mitochondrial density can be developed significantly within 8-12 weeks of training, which aligns with the claim about increasing mitochondria after six to eight weeks of exercise.",
+      "overall_stance": "supports",
+      "key_quote": "Unlike mitochondria volume, which can be developed infinitely, there is an absolute mitochondrial density that each individual can attain, usually reached after 8-12 weeks of training."
+    },
+    "output_length_chars": 566,
+    "output_tokens_estimated": 141,
+    "cost_usd": 0.00032625,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "An increasing number of Americans have started participating in more sports, fitness, and recreation.",
+      "query_index": 2,
+      "query_text": "trends in sports and fitness participation among Americans 2023"
+    }
+  }
+]

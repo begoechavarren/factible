@@ -1,0 +1,3285 @@
+{
+  "aggregate_report": {
+    "timestamp": "2025-12-14T16:21:02.619513",
+    "n_videos": 30,
+    "description": {
+      "precision_at_k": "Of k claims extracted, % that match ground truth (any GT claim)",
+      "recall": "Of all GT claims, % that were matched by extracted claims",
+      "f1": "Harmonic mean of precision and recall",
+      "map": "Mean Average Precision - ranking quality (ClaimBuster metric)",
+      "recall_at_important": "Recall for GT claims with importance >= 0.80",
+      "importance_weighted_coverage": "% of total GT importance covered by matches",
+      "verdict_overall_accuracy": "% of verdicts that match ground truth (both stance and factual assessment)",
+      "verdict_stance_accuracy": "% of verdicts where stance classification matches ground truth",
+      "latency": "Processing time in seconds per video",
+      "cost": "LLM API cost in USD per video"
+    },
+    "claim_extraction": {
+      "precision_at_k_mean": 0.8133333333333332,
+      "precision_at_k_std": 0.17074997966487593,
+      "recall_mean": 0.2619143691539595,
+      "recall_std": 0.08823232405351668,
+      "f1_mean": 0.38997849457642164,
+      "f1_std": 0.11076466658185839,
+      "map_mean": 0.8700462962962963,
+      "map_std": 0.14632530918361922,
+      "recall_at_important_mean": 0.3949362674362675,
+      "recall_at_important_std": 0.17794823710107227,
+      "importance_weighted_coverage_mean": 0.29180380240480563,
+      "importance_weighted_coverage_std": 0.0956395771487642
+    },
+    "verdict": {
+      "overall_accuracy_mean": 0.7333333333333333,
+      "overall_accuracy_std": 0.33424874303760993,
+      "stance_accuracy_mean": 0.7333333333333333,
+      "stance_accuracy_std": 0.33424874303760993
+    },
+    "end_to_end": {
+      "coverage_mean": 0.2619143691539595,
+      "coverage_std": 0.08823232405351668,
+      "accuracy_mean": 0.7333333333333333,
+      "accuracy_std": 0.33424874303760993,
+      "latency_mean_seconds": 129.56563595136006,
+      "latency_std_seconds": 101.80719830548071,
+      "latency_total_seconds": 3886.969078540802,
+      "cost_mean_usd": 0.0029837700000000006,
+      "cost_total_usd": 0.08951310000000001
+    },
+    "max_claims": 5
+  },
+  "video_results": [
+    {
+      "video_id": "-LDjqcvSbP4",
+      "timestamp": "2025-12-14T16:11:30.351661",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 1.0,
+        "recall": 0.2777777777777778,
+        "f1_score": 0.4347826086956522,
+        "true_positives": 5,
+        "false_positives": 0,
+        "false_negatives": 13,
+        "mean_average_precision": 1.0,
+        "recall_at_important": 0.3333333333333333,
+        "importance_weighted_coverage": 0.3062015503875969,
+        "matched_claims": [
+          {
+            "gt_text": "100% fruit juice is a good source of essential vitamins, especially vitamin C, which supports the immune system",
+            "sys_text": "100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.",
+            "gt_importance": 0.75,
+            "sys_importance": 0.7,
+            "importance_error": 0.050000000000000044
+          },
+          {
+            "gt_text": "100% fruit juice contains high amounts of naturally occurring sugars like fructose even without added sugars",
+            "sys_text": "100% fruit juice contains high amounts of naturally occurring sugars like fructose.",
+            "gt_importance": 0.9,
+            "sys_importance": 0.7,
+            "importance_error": 0.20000000000000007
+          },
+          {
+            "gt_text": "Juice contains antioxidants which protect cells from damage",
+            "sys_text": "Juice contains antioxidants which protect cells from damage.",
+            "gt_importance": 0.6,
+            "sys_importance": 0.6,
+            "importance_error": 0.0
+          },
+          {
+            "gt_text": "Juice is calorie dense compared to whole fruits and consuming large amounts can contribute to weight gain",
+            "sys_text": "Juice is calorie dense compared to whole fruits and can contribute to weight gain if not balanced with physical activity.",
+            "gt_importance": 0.9,
+            "sys_importance": 0.6,
+            "importance_error": 0.30000000000000004
+          },
+          {
+            "gt_text": "Nutrition experts often suggest limiting fruit juice intake to one small glass per day, around 4 to 6 ounces",
+            "sys_text": "Nutrition experts often suggest limiting fruit juice intake to one small glass per day, around 4 to 6 ounces.",
+            "gt_importance": 0.8,
+            "sys_importance": 0.6,
+            "importance_error": 0.20000000000000007
+          }
+        ],
+        "missed_claims": [
+          "100% fruit juice is a good source of potassium which helps regulate blood pressure",
+          "The vitamins and minerals in juice can be absorbed quickly by the body",
+          "Fruit juice helps with hydration since it is mostly water",
+          "Fruit juice can be a more palatable option for people who struggle to drink plain water",
+          "These sugars (fructose in juice) can spike blood sugar levels which may lead to insulin resistance over time",
+          "When fruit is juiced the fiber is removed, which helps regulate blood sugar and aids digestion",
+          "Without fiber, juice may cause rapid sugar absorption and hunger soon after consumption",
+          "Eating whole fruits provides all the vitamins and minerals found in juice along with fiber essential for digestion and blood sugar control",
+          "Whole fruits keep you fuller for longer compared to juice",
+          "Diluting juice with water can reduce sugar intake while still offering some nutritional benefits",
+          "Regularly drinking large amounts of juice can lead to excess calorie consumption contributing to weight gain over time",
+          "The sugar in juice can contribute to cavities especially when consumed frequently throughout the day",
+          "Drinking juice with meals and using a straw may help reduce the risk of tooth decay"
+        ],
+        "extra_claims": [],
+        "importance_mae": 0.15000000000000005,
+        "claim_quality_avg": 0.705
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 0.2,
+        "stance_accuracy": 0.2,
+        "correct_verdicts": 1,
+        "total_verdicts": 5,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [
+          {
+            "claim": "100% fruit juice contains high amounts of naturally occurring sugars like fructose even without added sugars",
+            "gt_verdict": "MIXED",
+            "sys_verdict": "UNCLEAR"
+          },
+          {
+            "claim": "Juice contains antioxidants which protect cells from damage",
+            "gt_verdict": "SUPPORTS",
+            "sys_verdict": "UNCLEAR"
+          },
+          {
+            "claim": "Juice is calorie dense compared to whole fruits and consuming large amounts can contribute to weight gain",
+            "gt_verdict": "MIXED",
+            "sys_verdict": "UNCLEAR"
+          },
+          {
+            "claim": "Nutrition experts often suggest limiting fruit juice intake to one small glass per day, around 4 to 6 ounces",
+            "gt_verdict": "SUPPORTS",
+            "sys_verdict": "UNCLEAR"
+          }
+        ],
+        "explanation_quality_avg": 0.45999999999999996
+      },
+      "end_to_end": {
+        "claim_coverage": 0.2777777777777778,
+        "verdict_accuracy": 0.2,
+        "evidence_quality_avg": 0.2,
+        "total_cost_usd": 0.0,
+        "total_time_seconds": 36.54269218444824,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 0.9600000000000002,
+        "evidence_retrieval_success_rate": 0.2,
+        "avg_sources_per_query": 0.3
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.0,
+        "source_reliability_distribution": {
+          "high": 3
+        },
+        "avg_evidence_per_claim": 0.6
+      },
+      "ground_truth_claims_count": 18,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "7bMfGXPRIig",
+      "timestamp": "2025-12-14T16:11:49.828926",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 0.8,
+        "recall": 0.26666666666666666,
+        "f1_score": 0.4,
+        "true_positives": 4,
+        "false_positives": 1,
+        "false_negatives": 11,
+        "mean_average_precision": 0.95,
+        "recall_at_important": 0.5,
+        "importance_weighted_coverage": 0.3280423280423281,
+        "matched_claims": [
+          {
+            "gt_text": "A three-day juice cleanse can jump start health, help get off medications, bolster the immune system, and burn fat quickly",
+            "sys_text": "A three-day juice cleanse can bolster the immune system and aid fat loss.",
+            "gt_importance": 0.95,
+            "sys_importance": 0.85,
+            "importance_error": 0.09999999999999998
+          },
+          {
+            "gt_text": "Doing a juice cleanse right will trigger autophagy",
+            "sys_text": "Autophagy occurs when the body recycles old materials for cell production during a juice cleanse.",
+            "gt_importance": 0.9,
+            "sys_importance": 0.85,
+            "importance_error": 0.050000000000000044
+          },
+          {
+            "gt_text": "Green apples (Granny Smith) have lower sugar content than red apples, which helps keep insulin down",
+            "sys_text": "Green apples have a lower sugar content than red apples, which helps keep insulin lower.",
+            "gt_importance": 0.55,
+            "sys_importance": 0.6,
+            "importance_error": 0.04999999999999993
+          },
+          {
+            "gt_text": "The gut microbiome makes up 70 plus percent of your immune system",
+            "sys_text": "The microbiome makes up over 70% of the immune system.",
+            "gt_importance": 0.7,
+            "sys_importance": 0.6,
+            "importance_error": 0.09999999999999998
+          }
+        ],
+        "missed_claims": [
+          "A juice cleanse will lower your insulin if you make it right",
+          "A juice cleanse is going to help increase your human growth hormone",
+          "When you start burning fat, the fat contains toxins which are released into the system and if not eliminated quickly, they take back up into tissue and are restored as fat (the rebounding effect)",
+          "Kale is always at the top of the scoring system for most nutritious food",
+          "Celery is amazing for your digestive tract especially your stomach and for supporting your liver and detoxing",
+          "Parsley has more iron than spinach and is really good for anemia",
+          "Broccoli is very anti-cancer",
+          "Dandelion has a very good detox of iron effect",
+          "Your digestive system uses more energy than anything else you could possibly do on this planet, not a marathon, not anything",
+          "Broth or collagen are very insulin friendly and won't spike insulin levels",
+          "You should aim for 64 to 128 ounces of juice during the cleanse"
+        ],
+        "extra_claims": [
+          "Juicing can increase human growth hormone, which helps build muscle and metabolism."
+        ],
+        "importance_mae": 0.07499999999999998,
+        "claim_quality_avg": 0.646
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 0.75,
+        "stance_accuracy": 0.75,
+        "correct_verdicts": 3,
+        "total_verdicts": 4,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [
+          {
+            "claim": "The gut microbiome makes up 70 plus percent of your immune system",
+            "gt_verdict": "MIXED",
+            "sys_verdict": "REFUTES"
+          }
+        ],
+        "explanation_quality_avg": 0.7300000000000001
+      },
+      "end_to_end": {
+        "claim_coverage": 0.26666666666666666,
+        "verdict_accuracy": 0.75,
+        "evidence_quality_avg": 1.0,
+        "total_cost_usd": 0.0,
+        "total_time_seconds": 44.21935486793518,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 0.9199999999999999,
+        "evidence_retrieval_success_rate": 1.0,
+        "avg_sources_per_query": 2.6
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.73,
+        "source_reliability_distribution": {
+          "high": 15,
+          "medium": 10,
+          "unknown": 1
+        },
+        "avg_evidence_per_claim": 5.2
+      },
+      "ground_truth_claims_count": 15,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "BADDj82oces",
+      "timestamp": "2025-12-14T16:12:07.335617",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 0.8,
+        "recall": 0.2,
+        "f1_score": 0.32000000000000006,
+        "true_positives": 4,
+        "false_positives": 1,
+        "false_negatives": 16,
+        "mean_average_precision": 0.95,
+        "recall_at_important": 0.2,
+        "importance_weighted_coverage": 0.22372881355932203,
+        "matched_claims": [
+          {
+            "gt_text": "HIV infects one of the immune cells that is central to the body's response to pathogens - the helper T-cell",
+            "sys_text": "HIV infects helper T-cells, which are central to the immune response.",
+            "gt_importance": 0.95,
+            "sys_importance": 0.85,
+            "importance_error": 0.09999999999999998
+          },
+          {
+            "gt_text": "Without treatment, exposure to otherwise harmless microbes can be fatal",
+            "sys_text": "Without treatment, exposure to harmless microbes can be fatal due to AIDS.",
+            "gt_importance": 0.7,
+            "sys_importance": 0.85,
+            "importance_error": 0.15000000000000002
+          },
+          {
+            "gt_text": "One of these enzymes, reverse transcriptase, converts the viral RNA into a length of DNA",
+            "sys_text": "HIV uses reverse transcriptase to convert viral RNA into DNA.",
+            "gt_importance": 0.9,
+            "sys_importance": 0.8,
+            "importance_error": 0.09999999999999998
+          },
+          {
+            "gt_text": "HIV disables the cell's antiviral proteins allowing new virus particles to leave the cell",
+            "sys_text": "HIV disables the cell's antiviral proteins, allowing new virus particles to leave the cell.",
+            "gt_importance": 0.75,
+            "sys_importance": 0.75,
+            "importance_error": 0.0
+          }
+        ],
+        "missed_claims": [
+          "White blood cells immediately respond to viruses by releasing anti-viral proteins, attacking infected cells, and recruiting backup",
+          "Once inside, the virus moves towards the nucleus along with its enzymes and genetic material",
+          "The viral DNA inserts into the cell's genome, forcing the cell to spew out HIV proteins and genetic material to make new copies of the virus",
+          "Inside infected cells, anti-viral proteins called restriction factors work to shut down virus production",
+          "Some restriction factors stop the virus from escaping the cell",
+          "White blood cells called phagocytes produce neutralizing antibodies which bind to surface spikes on HIV particles and stop them entering healthy helper T-cells",
+          "The greatest assault comes from killer T cells and natural killer cells which seek and destroy infected cells directly",
+          "They release a protein called perforin which punches holes in infected cells, allowing enzymes to be injected triggering auto-destruction",
+          "HIV constantly mutates inside the cell to evade protection",
+          "The immune system can't fight what it can't see",
+          "Eventually the immune system wears itself out - killer T cells activated for too long become exhausted and no longer respond to infection",
+          "The body loses the ability to make new helper T-cells to replace those killed in the fight",
+          "As a result their numbers plummet - ultimately the body becomes immunodeficient and this condition is known as AIDS",
+          "We still have no way of eliminating HIV from the body completely - there is no cure",
+          "Hidden reservoirs of HIV will rebound if treatment stops",
+          "Treatment with antiretroviral drugs can swing the balance, allowing the immune system to recover"
+        ],
+        "extra_claims": [
+          "The body loses the ability to make new helper T-cells as a result of HIV infection."
+        ],
+        "importance_mae": 0.0875,
+        "claim_quality_avg": 0.82
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 1.0,
+        "stance_accuracy": 1.0,
+        "correct_verdicts": 4,
+        "total_verdicts": 4,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [],
+        "explanation_quality_avg": 0.74
+      },
+      "end_to_end": {
+        "claim_coverage": 0.2,
+        "verdict_accuracy": 1.0,
+        "evidence_quality_avg": 1.0,
+        "total_cost_usd": 0.0,
+        "total_time_seconds": 53.32175016403198,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 0.9099999999999999,
+        "evidence_retrieval_success_rate": 1.0,
+        "avg_sources_per_query": 2.3
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.9099999999999999,
+        "source_reliability_distribution": {
+          "high": 23
+        },
+        "avg_evidence_per_claim": 4.6
+      },
+      "ground_truth_claims_count": 20,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "BHY0FxzoKZE",
+      "timestamp": "2025-12-14T16:12:24.377005",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 0.8,
+        "recall": 0.26666666666666666,
+        "f1_score": 0.4,
+        "true_positives": 4,
+        "false_positives": 1,
+        "false_negatives": 11,
+        "mean_average_precision": 0.6791666666666667,
+        "recall_at_important": 0.3333333333333333,
+        "importance_weighted_coverage": 0.3034188034188034,
+        "matched_claims": [
+          {
+            "gt_text": "With increased exercise over your lifetime, you create the strongest, biggest hippocampus and prefrontal cortex so it takes longer for neurodegenerative diseases to have an effect",
+            "sys_text": "Exercise can protect the brain from conditions like depression, Alzheimer's disease, or dementia.",
+            "gt_importance": 0.95,
+            "sys_importance": 0.85,
+            "importance_error": 0.09999999999999998
+          },
+          {
+            "gt_text": "A single workout immediately increases levels of neurotransmitters like dopamine, serotonin, and noradrenaline",
+            "sys_text": "A single workout increases levels of neurotransmitters like dopamine, serotonin, and noradrenaline.",
+            "gt_importance": 0.9,
+            "sys_importance": 0.8,
+            "importance_error": 0.09999999999999998
+          },
+          {
+            "gt_text": "Exercise produces brand new brain cells, new brain cells in the hippocampus, that increase its volume",
+            "sys_text": "Exercise produces new brain cells in the hippocampus, increasing its volume and improving long-term memory.",
+            "gt_importance": 0.95,
+            "sys_importance": 0.8,
+            "importance_error": 0.1499999999999999
+          },
+          {
+            "gt_text": "The prefrontal cortex and hippocampus are the two areas most susceptible to neurodegenerative diseases and normal cognitive decline in aging",
+            "sys_text": "The prefrontal cortex and hippocampus are most susceptible to neurodegenerative diseases and cognitive decline.",
+            "gt_importance": 0.75,
+            "sys_importance": 0.7,
+            "importance_error": 0.050000000000000044
+          }
+        ],
+        "missed_claims": [
+          "A single workout will increase your mood right after that workout",
+          "A single workout can improve your ability to shift and focus attention, and that focus improvement will last for at least two hours",
+          "A single workout will improve your reaction times",
+          "Exercise improves your long-term memory",
+          "Exercise improves attention function dependent on your prefrontal cortex",
+          "The volume of the hippocampus increases with exercise",
+          "You want to get three to four times a week exercise, minimum 30 minutes an exercise session, and you want to get aerobic exercise",
+          "The prefrontal cortex is critical for things like decision-making, focus, attention and your personality",
+          "The hippocampus is critical for your ability to form and retain new long-term memories for facts and events",
+          "Exercise is the most transformative thing that you can do for your brain today",
+          "You have two temporal lobes in your brain, the right and the left"
+        ],
+        "extra_claims": [
+          "Physical activity has immediate, long-lasting, and protective benefits for the brain."
+        ],
+        "importance_mae": 0.09999999999999998,
+        "claim_quality_avg": 0.6950000000000001
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 1.0,
+        "stance_accuracy": 1.0,
+        "correct_verdicts": 4,
+        "total_verdicts": 4,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [],
+        "explanation_quality_avg": 0.6900000000000001
+      },
+      "end_to_end": {
+        "claim_coverage": 0.26666666666666666,
+        "verdict_accuracy": 1.0,
+        "evidence_quality_avg": 1.0,
+        "total_cost_usd": 0.0,
+        "total_time_seconds": 48.2385687828064,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 0.97,
+        "evidence_retrieval_success_rate": 1.0,
+        "avg_sources_per_query": 2.5
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.82,
+        "source_reliability_distribution": {
+          "high": 24,
+          "medium": 1
+        },
+        "avg_evidence_per_claim": 5.0
+      },
+      "ground_truth_claims_count": 15,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "BJWq1FeGpCw",
+      "timestamp": "2025-12-14T16:12:43.592887",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 0.8,
+        "recall": 0.3333333333333333,
+        "f1_score": 0.47058823529411764,
+        "true_positives": 4,
+        "false_positives": 1,
+        "false_negatives": 8,
+        "mean_average_precision": 0.95,
+        "recall_at_important": 0.3333333333333333,
+        "importance_weighted_coverage": 0.31527093596059114,
+        "matched_claims": [
+          {
+            "gt_text": "Air pollution in the United States has shown a dramatic downward trend in emissions over the last half century, even though we use more fossil fuel than ever",
+            "sys_text": "Air pollution emissions in the U.S. have dramatically decreased despite increased fossil fuel use.",
+            "gt_importance": 0.9,
+            "sys_importance": 0.8,
+            "importance_error": 0.09999999999999998
+          },
+          {
+            "gt_text": "In the last eighty years, as CO2 emissions have rapidly escalated, the annual rate of climate-related deaths worldwide has rapidly declined by 98%",
+            "sys_text": "Climate-related deaths have declined by 98% in the last eighty years despite rising CO2 emissions.",
+            "gt_importance": 0.95,
+            "sys_importance": 0.75,
+            "importance_error": 0.19999999999999996
+          },
+          {
+            "gt_text": "There is a correlation between use of fossil fuels and access to clean water",
+            "sys_text": "More fossil fuel usage correlates with increased access to clean water.",
+            "gt_importance": 0.85,
+            "sys_importance": 0.7,
+            "importance_error": 0.15000000000000002
+          },
+          {
+            "gt_text": "Getting clean water to homes takes a massive amount of energy including man-made reservoirs, purification plants, and network of pipes",
+            "sys_text": "In the developed world, clean water is taken for granted due to energy use.",
+            "gt_importance": 0.5,
+            "sys_importance": 0.6,
+            "importance_error": 0.09999999999999998
+          }
+        ],
+        "missed_claims": [
+          "Fossil fuels help us solve our biggest environmental challenges, purify our water and air, make our cities and homes more sanitary",
+          "Anti-pollution technology powered by fossil fuel achieved the decrease in air emissions",
+          "Indoor pollution caused by burning fire inside homes was a deadly global problem until late 19th century when cheap kerosene became available in America and Europe",
+          "Indoor pollution is still a major issue in the developing world today and the best solution is fossil fuel",
+          "In 1986 NASA climate scientist James Hansen predicted that if current trends are unchanged, temperatures would rise 2 to 4 degrees in the first decade of the 2000s",
+          "Since 2000 the temperature trend line is essentially flat, with little or no warming in the last 15 years",
+          "The reason climate-related deaths declined is that energy from fossil fuel has allowed the developed world to build a durable civilization highly resilient to extreme heat, cold, floods, and storms",
+          "Fossil fuels empower us to take a naturally dangerous environment and make it cleaner and safer"
+        ],
+        "extra_claims": [
+          "Fossil fuels are cheap, plentiful, and reliable energy sources."
+        ],
+        "importance_mae": 0.13749999999999998,
+        "claim_quality_avg": 0.5439999999999999
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 1.0,
+        "stance_accuracy": 1.0,
+        "correct_verdicts": 4,
+        "total_verdicts": 4,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [],
+        "explanation_quality_avg": 0.65
+      },
+      "end_to_end": {
+        "claim_coverage": 0.3333333333333333,
+        "verdict_accuracy": 1.0,
+        "evidence_quality_avg": 1.0,
+        "total_cost_usd": 0.0,
+        "total_time_seconds": 117.45703029632568,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 0.8699999999999999,
+        "evidence_retrieval_success_rate": 1.0,
+        "avg_sources_per_query": 2.7
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.58,
+        "source_reliability_distribution": {
+          "high": 18,
+          "medium": 9
+        },
+        "avg_evidence_per_claim": 5.4
+      },
+      "ground_truth_claims_count": 12,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "BiulFh5uAyM",
+      "timestamp": "2025-12-14T16:13:02.109620",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 0.8,
+        "recall": 0.14814814814814814,
+        "f1_score": 0.25,
+        "true_positives": 4,
+        "false_positives": 1,
+        "false_negatives": 23,
+        "mean_average_precision": 0.95,
+        "recall_at_important": 0.25,
+        "importance_weighted_coverage": 0.16492146596858637,
+        "matched_claims": [
+          {
+            "gt_text": "Trump's declaration is the first time a president has used emergency power to pay for policy that had already been rejected by Congress",
+            "sys_text": "Trump's declaration is the first time a president has used national emergency powers to fund a policy rejected by Congress.",
+            "gt_importance": 0.95,
+            "sys_importance": 0.85,
+            "importance_error": 0.09999999999999998
+          },
+          {
+            "gt_text": "On February 26th, the House of Representatives voted to block a presidential national emergency for the first time ever",
+            "sys_text": "The House of Representatives voted to block a presidential national emergency for the first time ever on February 26th.",
+            "gt_importance": 0.85,
+            "sys_importance": 0.85,
+            "importance_error": 0.0
+          },
+          {
+            "gt_text": "16 states are suing the president for what they say is an unconstitutional use of executive power",
+            "sys_text": "16 states are suing the president for what they claim is an unconstitutional use of executive power.",
+            "gt_importance": 0.75,
+            "sys_importance": 0.75,
+            "importance_error": 0.0
+          },
+          {
+            "gt_text": "The oldest national emergency still in effect is from President Jimmy Carter in 1979, which were sanctions in response to the Iran hostage crisis",
+            "sys_text": "The oldest active national emergency is from President Jimmy Carter in 1979, related to the Iran hostage crisis.",
+            "gt_importance": 0.6,
+            "sys_importance": 0.6,
+            "importance_error": 0.0
+          }
+        ],
+        "missed_claims": [
+          "Trump signed the national emergency declaration on February 15, 2019",
+          "Presidents have signed national emergency declarations many times before",
+          "In December 2018, Trump said he would refuse to sign a budget into law unless it included $5.7 billion for his proposed border wall",
+          "The government shutdown was the longest government shutdown in U.S. history",
+          "On February 14th, a budget was passed but it did not include funding for the border wall",
+          "The declaration allows the president to unilaterally divert billions of dollars from military construction projects to fund the border wall",
+          "Congress would need a supermajority vote, two-thirds of both chambers, to override a presidential veto",
+          "The lawsuit claims the president has used a manufactured crisis to call for an emergency",
+          "Trump said 'I could do the wall over a longer period of time, I didn't need to do this, but I'd rather do it much faster'",
+          "President Obama issued 12 national emergency declarations",
+          "President George W. Bush issued 13 national emergency declarations",
+          "President Clinton issued 17 national emergency declarations",
+          "In addition to the recent one, there are 31 other active national emergencies which need to be renewed every year",
+          "The U.S. Constitution doesn't explicitly give a president the right to declare a national emergency",
+          "Presidents have taken this type of unilateral action for some time now, claiming it's part of the executive powers granted to them in the constitution",
+          "President Woodrow Wilson was the first president to declare a national emergency during World War I",
+          "Franklin Roosevelt used emergency power to order the internment of over 100,000 Japanese-Americans during World War II",
+          "In the 1950s, the Supreme Court blocked President Harry Truman's attempt to nationalize the steel industry during the Korean War",
+          "Congress passed the National Emergencies Act of 1976",
+          "The legislation formalized a president's ability to declare national emergencies but also aimed to give legislators the ability to check the president's power",
+          "The law has failed to limit presidential powers the way it intended to",
+          "Emergency powers allow the president to shut down or take over radio stations",
+          "Emergency powers allow the president to freeze Americans' bank accounts and criminalize doing business with Americans designated by the government"
+        ],
+        "extra_claims": [
+          "President Trump has declared three national emergencies during his time in office."
+        ],
+        "importance_mae": 0.024999999999999994,
+        "claim_quality_avg": 0.9400000000000001
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 0.0,
+        "stance_accuracy": 0.0,
+        "correct_verdicts": 0,
+        "total_verdicts": 4,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [
+          {
+            "claim": "Trump's declaration is the first time a president has used emergency power to pay for policy that had already been rejected by Congress",
+            "gt_verdict": "SUPPORTS",
+            "sys_verdict": "UNCLEAR"
+          },
+          {
+            "claim": "On February 26th, the House of Representatives voted to block a presidential national emergency for the first time ever",
+            "gt_verdict": "SUPPORTS",
+            "sys_verdict": "UNCLEAR"
+          },
+          {
+            "claim": "16 states are suing the president for what they say is an unconstitutional use of executive power",
+            "gt_verdict": "SUPPORTS",
+            "sys_verdict": "UNCLEAR"
+          },
+          {
+            "claim": "The oldest national emergency still in effect is from President Jimmy Carter in 1979, which were sanctions in response to the Iran hostage crisis",
+            "gt_verdict": "SUPPORTS",
+            "sys_verdict": "MIXED"
+          }
+        ],
+        "explanation_quality_avg": 0.41
+      },
+      "end_to_end": {
+        "claim_coverage": 0.14814814814814814,
+        "verdict_accuracy": 0.0,
+        "evidence_quality_avg": 0.6,
+        "total_cost_usd": 0.0023898,
+        "total_time_seconds": 109.29896283149719,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 1.0,
+        "evidence_retrieval_success_rate": 0.6,
+        "avg_sources_per_query": 1.6
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.85,
+        "source_reliability_distribution": {
+          "high": 15,
+          "medium": 1
+        },
+        "avg_evidence_per_claim": 3.2
+      },
+      "ground_truth_claims_count": 27,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "EKxxTfZveUw",
+      "timestamp": "2025-12-14T16:13:18.616179",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 0.8,
+        "recall": 0.25,
+        "f1_score": 0.38095238095238093,
+        "true_positives": 4,
+        "false_positives": 1,
+        "false_negatives": 12,
+        "mean_average_precision": 0.6791666666666667,
+        "recall_at_important": 0.5,
+        "importance_weighted_coverage": 0.2987012987012987,
+        "matched_claims": [
+          {
+            "gt_text": "In Wisconsin, 220,244 votes were cast from individuals who were exempted from showing voter ID under the indefinitely confined status",
+            "sys_text": "In Wisconsin, 220,044 votes were cast without showing ID, while the vote difference was 20,625.",
+            "gt_importance": 0.8,
+            "sys_importance": 0.7,
+            "importance_error": 0.10000000000000009
+          },
+          {
+            "gt_text": "Pennsylvania had 121,240 more votes than voters according to the SURE system",
+            "sys_text": "In Pennsylvania, there were 121,240 more votes than registered voters, with a vote difference of 8,555.",
+            "gt_importance": 0.9,
+            "sys_importance": 0.7,
+            "importance_error": 0.20000000000000007
+          },
+          {
+            "gt_text": "Maricopa County accepted 20,500 mail-in ballots after election day, which were illegal votes",
+            "sys_text": "In Arizona, Maricopa County accepted 20,500 mail-in ballots after Election Day, with a vote margin of 10,457.",
+            "gt_importance": 0.9,
+            "sys_importance": 0.7,
+            "importance_error": 0.20000000000000007
+          },
+          {
+            "gt_text": "Michigan had 271,000 ballots delivered in a van at 3:30 a.m. past the 8:00 p.m. deadline",
+            "sys_text": "Michigan had 271,000 ballots delivered after the 8:00 p.m. deadline on Election Day.",
+            "gt_importance": 0.85,
+            "sys_importance": 0.7,
+            "importance_error": 0.15000000000000002
+          }
+        ],
+        "missed_claims": [
+          "Ruby Freeman ran the same stack of ballots through the counting machines multiple times",
+          "Ruby Freeman was given the presidential citizens medal by Joe Biden for her work during the 2020 election",
+          "Rudy Giuliani was not allowed during the trial to submit one piece of evidence to the court in the defamation case",
+          "Fulton County certified 59,400 in-person votes on Election Day despite the fact that only 14,522 voted in person, inflating the vote total by approximately 37,000 votes",
+          "In Georgia, likely 67,184 votes were cast from voters with invalid residency who did not actually live in Georgia",
+          "Nursing homes in Milwaukee, Dane and Racine counties had 100% turnout",
+          "Merill Barrett who was 104 years old and did not recognize her own children had a ballot cast in her name in the 2020 presidential election",
+          "The Maricopa County elections Department withheld information about late ballots from public records requests for 7 months after the elections",
+          "Two precincts in Puma County had over 100% turnout for mail-in ballots",
+          "Katie Hobbs was the Arizona Secretary of State during the 2020 election and she certified her own election count naming herself the winner in 2022",
+          "GBI Strategies was raided by police in Michigan and thousands of fraudulent voter registrations were found",
+          "GBI Strategies was funded by a super PAC called Black PAC which paid the firm 11,254,919 dollars to register voters for Joe Biden in 2020"
+        ],
+        "extra_claims": [
+          "In Georgia, Trump lost by 11,779 votes, but evidence suggests 37,000 fake ballots were counted."
+        ],
+        "importance_mae": 0.16250000000000006,
+        "claim_quality_avg": 0.85
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 0.25,
+        "stance_accuracy": 0.25,
+        "correct_verdicts": 1,
+        "total_verdicts": 4,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [
+          {
+            "claim": "In Wisconsin, 220,244 votes were cast from individuals who were exempted from showing voter ID under the indefinitely confined status",
+            "gt_verdict": "MIXED",
+            "sys_verdict": "UNCLEAR"
+          },
+          {
+            "claim": "Pennsylvania had 121,240 more votes than voters according to the SURE system",
+            "gt_verdict": "REFUTES",
+            "sys_verdict": "UNCLEAR"
+          },
+          {
+            "claim": "Maricopa County accepted 20,500 mail-in ballots after election day, which were illegal votes",
+            "gt_verdict": "UNCLEAR",
+            "sys_verdict": "REFUTES"
+          }
+        ],
+        "explanation_quality_avg": 0.62
+      },
+      "end_to_end": {
+        "claim_coverage": 0.25,
+        "verdict_accuracy": 0.25,
+        "evidence_quality_avg": 1.0,
+        "total_cost_usd": 0.00735705,
+        "total_time_seconds": 137.14666891098022,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 0.96,
+        "evidence_retrieval_success_rate": 1.0,
+        "avg_sources_per_query": 2.7
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.5599999999999999,
+        "source_reliability_distribution": {
+          "high": 27
+        },
+        "avg_evidence_per_claim": 5.4
+      },
+      "ground_truth_claims_count": 16,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "EbkLW_-m938",
+      "timestamp": "2025-12-14T16:13:36.428273",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 1.0,
+        "recall": 0.2,
+        "f1_score": 0.33333333333333337,
+        "true_positives": 5,
+        "false_positives": 0,
+        "false_negatives": 20,
+        "mean_average_precision": 1.0,
+        "recall_at_important": 0.08333333333333333,
+        "importance_weighted_coverage": 0.19689119170984454,
+        "matched_claims": [
+          {
+            "gt_text": "Democracy is a system where the citizens of a country have the power to choose their leaders and influence the decisions made by the government",
+            "sys_text": "Democracy is a system where citizens have the power to choose their leaders.",
+            "gt_importance": 0.95,
+            "sys_importance": 0.85,
+            "importance_error": 0.09999999999999998
+          },
+          {
+            "gt_text": "In ancient Athens, only men who were citizens could vote while women and slaves were excluded",
+            "sys_text": "In ancient Athens, only men who were citizens could vote; women and slaves were excluded.",
+            "gt_importance": 0.7,
+            "sys_importance": 0.6,
+            "importance_error": 0.09999999999999998
+          },
+          {
+            "gt_text": "The French Revolution marked a significant turning point in the 18th century",
+            "sys_text": "The French Revolution marked a significant turning point for democracy in the 18th century.",
+            "gt_importance": 0.65,
+            "sys_importance": 0.6,
+            "importance_error": 0.050000000000000044
+          },
+          {
+            "gt_text": "During the French Revolution, for the first time the idea of universal suffrage emerged",
+            "sys_text": "The idea of universal suffrage emerged during the French Revolution, allowing any citizen to vote regardless of wealth.",
+            "gt_importance": 0.75,
+            "sys_importance": 0.6,
+            "importance_error": 0.15000000000000002
+          },
+          {
+            "gt_text": "The word democracy comes from ancient Greek meaning citizens power",
+            "sys_text": "The word democracy comes from ancient Greek meaning 'citizens power'.",
+            "gt_importance": 0.75,
+            "sys_importance": 0.3,
+            "importance_error": 0.45
+          }
+        ],
+        "missed_claims": [
+          "In ancient Athens citizens would gather in an assembly to discuss and decide on laws and other important matters",
+          "During the French Revolution, French citizens overthrew the absolute monarchy",
+          "During the French Revolution, this meant that any citizen regardless of wealth could vote",
+          "During the French Revolution, women still couldn't vote at this time",
+          "Over time, democratic ideas spread to many other countries",
+          "Today democracy is based on the principle that everyone has equal rights and duties",
+          "Democracy is about respecting each other and ensuring that everyone has a say in how the country is run",
+          "In a democratic system citizens vote to elect their leaders and participate in the decision-making process",
+          "Elections are how people choose their representatives in a democracy",
+          "The government is accountable to the people in a democratic system",
+          "The rule of law ensures that everyone is treated fairly in a democratic system",
+          "Civic education plays a crucial role in sustaining democracy",
+          "Civic education teaches citizens about their rights and responsibilities",
+          "Civic education teaches citizens how to participate in the democratic process",
+          "Civic education helps people understand the complexities of political life",
+          "Civic education helps people make informed decisions",
+          "Democracy is about giving power to the people and ensuring everyone's voice is heard",
+          "Democracy maintains a fair and just society",
+          "Democracy is a system that has evolved over centuries",
+          "Democracy continues to be refined to ensure equality and justice for all"
+        ],
+        "extra_claims": [],
+        "importance_mae": 0.17,
+        "claim_quality_avg": 0.8
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 1.0,
+        "stance_accuracy": 1.0,
+        "correct_verdicts": 5,
+        "total_verdicts": 5,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [],
+        "explanation_quality_avg": 0.7000000000000001
+      },
+      "end_to_end": {
+        "claim_coverage": 0.2,
+        "verdict_accuracy": 1.0,
+        "evidence_quality_avg": 1.0,
+        "total_cost_usd": 0.01050375,
+        "total_time_seconds": 82.92568802833557,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 0.99,
+        "evidence_retrieval_success_rate": 1.0,
+        "avg_sources_per_query": 2.3
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.8099999999999999,
+        "source_reliability_distribution": {
+          "high": 12,
+          "medium": 8,
+          "unknown": 3
+        },
+        "avg_evidence_per_claim": 4.6
+      },
+      "ground_truth_claims_count": 25,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "G4H1N_yXBiA",
+      "timestamp": "2025-12-14T16:13:54.249626",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 0.8,
+        "recall": 0.26666666666666666,
+        "f1_score": 0.4,
+        "true_positives": 4,
+        "false_positives": 1,
+        "false_negatives": 11,
+        "mean_average_precision": 0.6791666666666667,
+        "recall_at_important": 0.2857142857142857,
+        "importance_weighted_coverage": 0.27586206896551724,
+        "matched_claims": [
+          {
+            "gt_text": "The more greenhouse gases in the atmosphere, the more heat gets trapped, strengthening the greenhouse effect and increasing the Earth's temperature",
+            "sys_text": "The main cause of climate change is the greenhouse effect.",
+            "gt_importance": 0.95,
+            "sys_importance": 0.85,
+            "importance_error": 0.09999999999999998
+          },
+          {
+            "gt_text": "Human activities like the burning of fossil fuels have increased the amount of CO2 in the atmosphere by more than a third since the Industrial Revolution",
+            "sys_text": "The amount of CO2 in the atmosphere has increased by more than a third since the Industrial Revolution.",
+            "gt_importance": 0.9,
+            "sys_importance": 0.8,
+            "importance_error": 0.09999999999999998
+          },
+          {
+            "gt_text": "Ice sheets such as Greenland and Antarctica are melting",
+            "sys_text": "Ice sheets in Greenland and Antarctica are melting, causing sea levels to rise.",
+            "gt_importance": 0.9,
+            "sys_importance": 0.75,
+            "importance_error": 0.15000000000000002
+          },
+          {
+            "gt_text": "Atmospheric carbon dioxide hasn't reached today's levels in hundreds of thousands of years despite past climate fluctuations",
+            "sys_text": "Atmospheric carbon dioxide hasn't reached today's levels in hundreds of thousands of years.",
+            "gt_importance": 0.85,
+            "sys_importance": 0.7,
+            "importance_error": 0.15000000000000002
+          }
+        ],
+        "missed_claims": [
+          "The greenhouse effect is a phenomenon where gases in the atmosphere let the sun's light in but keep some of the heat from escaping",
+          "Greenhouse gases include water vapor, carbon dioxide, methane, nitrous oxide, and chlorofluorocarbons",
+          "The extra water that was once held in glaciers causes sea levels to rise and spills out of the oceans flooding coastal regions",
+          "Warmer temperatures make weather more extreme, meaning not only more intense major storms, floods, and heavy snowfall but also longer and more frequent droughts",
+          "Changes in weather pose challenges to growing crops, as it becomes more difficult, the areas where plants and animals can live shift, and water supplies are diminished",
+          "Climate change can directly affect people's physical health",
+          "In urban areas, the warmer atmosphere creates an environment that traps and increases the amount of smog",
+          "Smog contains ozone particles which increase rapidly at higher temperatures",
+          "Exposure to higher levels of smog can cause health problems such as asthma, heart disease, and lung cancer",
+          "The rapid rate of climate change is caused by humans",
+          "If we work to replace fossil fuels with renewable energy sources like solar and wind which don't produce greenhouse gas emissions, we might still be able to prevent some of the worst effects of climate change"
+        ],
+        "extra_claims": [
+          "Human activities are driving up the earth's temperature and changing the world."
+        ],
+        "importance_mae": 0.125,
+        "claim_quality_avg": 0.746
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 1.0,
+        "stance_accuracy": 1.0,
+        "correct_verdicts": 4,
+        "total_verdicts": 4,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [],
+        "explanation_quality_avg": 0.71
+      },
+      "end_to_end": {
+        "claim_coverage": 0.26666666666666666,
+        "verdict_accuracy": 1.0,
+        "evidence_quality_avg": 1.0,
+        "total_cost_usd": 0.0,
+        "total_time_seconds": 168.6744740009308,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 0.99,
+        "evidence_retrieval_success_rate": 1.0,
+        "avg_sources_per_query": 2.3
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.9800000000000001,
+        "source_reliability_distribution": {
+          "high": 22,
+          "medium": 1
+        },
+        "avg_evidence_per_claim": 4.6
+      },
+      "ground_truth_claims_count": 15,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "HQ-Kg_xgdhE",
+      "timestamp": "2025-12-14T16:14:12.382280",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 0.8,
+        "recall": 0.2,
+        "f1_score": 0.32000000000000006,
+        "true_positives": 4,
+        "false_positives": 1,
+        "false_negatives": 16,
+        "mean_average_precision": 0.8875,
+        "recall_at_important": 0.2857142857142857,
+        "importance_weighted_coverage": 0.19298245614035087,
+        "matched_claims": [
+          {
+            "gt_text": "When McDonald's launched the Big Mac in 1967 it cost just 45 cents",
+            "sys_text": "The Big Mac cost 45 cents in 1967 and now costs $3.99.",
+            "gt_importance": 0.35,
+            "sys_importance": 0.85,
+            "importance_error": 0.5
+          },
+          {
+            "gt_text": "In 2008 prices in Zimbabwe doubled every 24 hours",
+            "sys_text": "In 2008, prices in Zimbabwe doubled every 24 hours due to inflation.",
+            "gt_importance": 0.85,
+            "sys_importance": 0.8,
+            "importance_error": 0.04999999999999993
+          },
+          {
+            "gt_text": "Inflation is just the average rate that prices are rising",
+            "sys_text": "Inflation is the average rate at which prices are rising.",
+            "gt_importance": 0.8,
+            "sys_importance": 0.7,
+            "importance_error": 0.10000000000000009
+          },
+          {
+            "gt_text": "In a stable economy prices usually go up steadily over time by 1 or 2 percent a year",
+            "sys_text": "In a stable economy, prices usually go up by 1 or 2% a year.",
+            "gt_importance": 0.75,
+            "sys_importance": 0.6,
+            "importance_error": 0.15000000000000002
+          }
+        ],
+        "missed_claims": [
+          "The same Big Mac now costs $3.99",
+          "The government printed more and more money",
+          "Before long everyone was a trillionaire",
+          "Things got so bad that the country ran out of paper to print all the bank notes",
+          "Once an inflationary spiral like this begins it's almost impossible to get out of",
+          "Governments must either devalue their currency or ditch it all together",
+          "This is what happened in Germany in the 1920s",
+          "A small amount of inflation is usually seen as a good thing",
+          "It helps keep an economy growing",
+          "It also staves off the threat of deflation",
+          "A bit of inflation is good news if you're in debt",
+          "Just ask anyone who took out a mortgage on a low interest rate before a property boom",
+          "It's bad news for savers",
+          "Just as inflation eats into debt it also eats into savings",
+          "Money stashed in your piggy bank will buy you less in 5 years time than it will today",
+          "If your income isn't keeping up with prices you're getting poorer"
+        ],
+        "extra_claims": [
+          "The government printed more money in Zimbabwe, leading to hyperinflation."
+        ],
+        "importance_mae": 0.2,
+        "claim_quality_avg": 0.8100000000000002
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 0.25,
+        "stance_accuracy": 0.25,
+        "correct_verdicts": 1,
+        "total_verdicts": 4,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [
+          {
+            "claim": "When McDonald's launched the Big Mac in 1967 it cost just 45 cents",
+            "gt_verdict": "SUPPORTS",
+            "sys_verdict": "UNCLEAR"
+          },
+          {
+            "claim": "Inflation is just the average rate that prices are rising",
+            "gt_verdict": "SUPPORTS",
+            "sys_verdict": "UNCLEAR"
+          },
+          {
+            "claim": "In a stable economy prices usually go up steadily over time by 1 or 2 percent a year",
+            "gt_verdict": "SUPPORTS",
+            "sys_verdict": "UNCLEAR"
+          }
+        ],
+        "explanation_quality_avg": 0.42000000000000004
+      },
+      "end_to_end": {
+        "claim_coverage": 0.2,
+        "verdict_accuracy": 0.25,
+        "evidence_quality_avg": 0.6,
+        "total_cost_usd": 0.0007998,
+        "total_time_seconds": 89.6788158416748,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 0.9166666666666666,
+        "evidence_retrieval_success_rate": 0.6,
+        "avg_sources_per_query": 1.8
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.8666666666666667,
+        "source_reliability_distribution": {
+          "high": 12,
+          "medium": 6
+        },
+        "avg_evidence_per_claim": 3.6
+      },
+      "ground_truth_claims_count": 20,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "KdMqCUa7XJk",
+      "timestamp": "2025-12-14T16:14:30.054451",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 0.8,
+        "recall": 0.2857142857142857,
+        "f1_score": 0.4210526315789473,
+        "true_positives": 4,
+        "false_positives": 1,
+        "false_negatives": 10,
+        "mean_average_precision": 0.95,
+        "recall_at_important": 0.2857142857142857,
+        "importance_weighted_coverage": 0.2785388127853881,
+        "matched_claims": [
+          {
+            "gt_text": "Over five days, four million Texans lost power during what turned out to be the coldest winter storm in a half a century",
+            "sys_text": "Over five days, four million Texans lost power during the coldest winter storm in fifty years.",
+            "gt_importance": 0.75,
+            "sys_importance": 0.85,
+            "importance_error": 0.09999999999999998
+          },
+          {
+            "gt_text": "ERCOT later reported the state was just four minutes away from total grid collapse",
+            "sys_text": "ERCOT reported that Texas was four minutes away from total grid collapse during the storm.",
+            "gt_importance": 0.85,
+            "sys_importance": 0.75,
+            "importance_error": 0.09999999999999998
+          },
+          {
+            "gt_text": "Hundreds died, including an 11-year-old boy who froze to death in his sleep",
+            "sys_text": "Hundreds died during the February 2021 storm, including an 11-year-old boy who froze to death.",
+            "gt_importance": 0.8,
+            "sys_importance": 0.7,
+            "importance_error": 0.10000000000000009
+          },
+          {
+            "gt_text": "From 2010 to 2020, the population of Texas increased by 4 million people",
+            "sys_text": "From 2010 to 2020, Texas's population increased by 4 million people and the economy grew by 35%.",
+            "gt_importance": 0.65,
+            "sys_importance": 0.6,
+            "importance_error": 0.050000000000000044
+          }
+        ],
+        "missed_claims": [
+          "The state's economy grew by 35%",
+          "While all this growth was happening, the state's reliable energy capacity was actually shrinking. Meanwhile, its unreliable energy capacity was surging. In fact, it almost tripled.",
+          "In 2020, Texans got 25% of their energy from renewables",
+          "During the February storm, that fell to 8%, at one point reaching a deadly low of just 1.5%",
+          "That story begins in 1999, when Texas politicians on the left and the right fell in love with the idea that they could turn the state into a green energy powerhouse",
+          "Since 2006, the state has subsidized renewable energy to the tune of $19 billion",
+          "Over the past decade, the federal government has spent over $230 billion on energy subsidies, and that doesn't even include subsidies the states give away",
+          "Compared to fossil fuel companies, for every unit of electricity generated, Washington subsidizes wind 17 times and solar 75 times more",
+          "Despite all this aid, renewables provide just 4 percent of the country's total energy supply",
+          "The verdict is in: renewable energy is expensive and unreliable"
+        ],
+        "extra_claims": [
+          "The temperature in Texas dropped below zero during the week of Valentine's Day 2021."
+        ],
+        "importance_mae": 0.08750000000000002,
+        "claim_quality_avg": 0.9400000000000001
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 0.75,
+        "stance_accuracy": 0.75,
+        "correct_verdicts": 3,
+        "total_verdicts": 4,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [
+          {
+            "claim": "From 2010 to 2020, the population of Texas increased by 4 million people",
+            "gt_verdict": "SUPPORTS",
+            "sys_verdict": "MIXED"
+          }
+        ],
+        "explanation_quality_avg": 0.7300000000000001
+      },
+      "end_to_end": {
+        "claim_coverage": 0.2857142857142857,
+        "verdict_accuracy": 0.75,
+        "evidence_quality_avg": 1.0,
+        "total_cost_usd": 0.0,
+        "total_time_seconds": 144.70980787277222,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 0.9800000000000001,
+        "evidence_retrieval_success_rate": 1.0,
+        "avg_sources_per_query": 2.7
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.8299999999999998,
+        "source_reliability_distribution": {
+          "high": 26,
+          "medium": 1
+        },
+        "avg_evidence_per_claim": 5.4
+      },
+      "ground_truth_claims_count": 14,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "OMBxolu127k",
+      "timestamp": "2025-12-14T16:14:47.088859",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 0.8,
+        "recall": 0.17391304347826086,
+        "f1_score": 0.2857142857142857,
+        "true_positives": 4,
+        "false_positives": 1,
+        "false_negatives": 19,
+        "mean_average_precision": 0.8875,
+        "recall_at_important": 0.3333333333333333,
+        "importance_weighted_coverage": 0.21333333333333335,
+        "matched_claims": [
+          {
+            "gt_text": "The National Trust for Historic Preservation is now suing the Trump administration over its plans to build a giant ballroom at the White House",
+            "sys_text": "The National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.",
+            "gt_importance": 0.95,
+            "sys_importance": 0.85,
+            "importance_error": 0.09999999999999998
+          },
+          {
+            "gt_text": "In October, the Trump administration quickly demolished the White House East Wing to make room for the ballroom",
+            "sys_text": "The Trump administration demolished the White House East Wing in October to make room for the ballroom.",
+            "gt_importance": 0.85,
+            "sys_importance": 0.85,
+            "importance_error": 0.0
+          },
+          {
+            "gt_text": "The president is envisioning a 90,000 square foot ballroom. The White House itself is only about 55,000 square feet",
+            "sys_text": "The ballroom is planned to be 90,000 square feet, which is larger than the White House itself, which is about 55,000 square feet.",
+            "gt_importance": 0.75,
+            "sys_importance": 0.7,
+            "importance_error": 0.050000000000000044
+          },
+          {
+            "gt_text": "The White House officials have downplayed criticism from the National Trust for Historic Preservation, calling them 'loser Democrats and liberal donors'",
+            "sys_text": "The White House officials referred to the National Trust for Historic Preservation as 'loser Democrats and liberal donors.'",
+            "gt_importance": 0.65,
+            "sys_importance": 0.6,
+            "importance_error": 0.050000000000000044
+          }
+        ],
+        "missed_claims": [
+          "The lawsuit is 47 pages",
+          "The National Trust is suing because they want this project halted and because the White House and its allies did not get the necessary approvals or conduct the necessary reviews",
+          "The National Trust is suing the National Park Service, President Trump himself, the Department of the Interior, Interior Secretary Douglas Burgum, and others over the construction of the ballroom",
+          "No president is legally allowed to tear down portions of the White House without any review whatsoever",
+          "The White House needed to seek approval from the National Capital Planning Commission and the Commission of Fine Arts",
+          "The White House did not seek any review from those agencies and did not seek any public input on this project",
+          "President Trump has had this project in his sights for years, including before he came into office, and he said he offered the Obama administration to pay for it but they never got back to him",
+          "President Trump has said many times that he believes this is necessary because people who come to the White House for certain events have to go to a tent that's separate from the main body of the White House, and in bad weather a lot of people get disheveled having to walk through the rain",
+          "Trump's idea is to make this very much like the Donald Trump Ballroom at Mar-a-Lago. It's going to look a lot like that.",
+          "Mark Walter is still the chairman of the Dodgers",
+          "The National Trust for Historic Preservation is chartered by Congress and tasked with preserving some of the nation's historic buildings",
+          "The National Trust has a relationship with President Trump dating back to the 1990s and worked with him on some projects at Mar-a-Lago",
+          "The National Capital Planning Commission is now stacked with President Trump's appointees and led by Will Scharf, who's the staff secretary at the White House",
+          "Will Scharf has said previously that this project will eventually go before that body, but that its purview and remit does not cover demolition",
+          "When the Crown Prince Mohammed bin Salman was visiting, the president said that the dinner he held in his honor on the White House state floor would have been a much grander occasion if they had had that ballroom constructed",
+          "There has been some discord among the planning team. The president has assigned a new architect, the previous architect still on board, but he had reportedly raised some questions about the sheer scale of this project",
+          "The National Trust for Historic Preservation has raised concerns that the ballroom would essentially dwarf the original building once it's completed",
+          "President Trump says the ballroom will be paid for by private donations, not taxpayers",
+          "There are questions about what kind of influence those donors might have with the White House and whether these individuals are essentially using these donations to curry favor with the president"
+        ],
+        "extra_claims": [
+          "The lawsuit claims the White House did not obtain necessary approvals from the National Capital Planning Commission and the Commission of Fine Arts."
+        ],
+        "importance_mae": 0.05000000000000002,
+        "claim_quality_avg": 0.7849999999999999
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 0.75,
+        "stance_accuracy": 0.75,
+        "correct_verdicts": 3,
+        "total_verdicts": 4,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [
+          {
+            "claim": "In October, the Trump administration quickly demolished the White House East Wing to make room for the ballroom",
+            "gt_verdict": "SUPPORTS",
+            "sys_verdict": "MIXED"
+          }
+        ],
+        "explanation_quality_avg": 0.6799999999999999
+      },
+      "end_to_end": {
+        "claim_coverage": 0.17391304347826086,
+        "verdict_accuracy": 0.75,
+        "evidence_quality_avg": 1.0,
+        "total_cost_usd": 0.00703935,
+        "total_time_seconds": 164.12634205818176,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 0.97,
+        "evidence_retrieval_success_rate": 1.0,
+        "avg_sources_per_query": 2.7
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.6799999999999999,
+        "source_reliability_distribution": {
+          "high": 24,
+          "medium": 3
+        },
+        "avg_evidence_per_claim": 5.4
+      },
+      "ground_truth_claims_count": 23,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "OwqIy8Ikv-c",
+      "timestamp": "2025-12-14T16:15:05.742657",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 0.4,
+        "recall": 0.14285714285714285,
+        "f1_score": 0.21052631578947364,
+        "true_positives": 2,
+        "false_positives": 3,
+        "false_negatives": 12,
+        "mean_average_precision": 0.41666666666666663,
+        "recall_at_important": 0.5,
+        "importance_weighted_coverage": 0.2037037037037037,
+        "matched_claims": [
+          {
+            "gt_text": "Over the past two centuries, the global mean temperature has increased slightly and erratically by about 1.8 degrees Fahrenheit or one degree Celsius",
+            "sys_text": "The global mean temperature has increased slightly and erratically by about 1.8 degrees Fahrenheit or one degree Celsius over the past two centuries.",
+            "gt_importance": 0.8,
+            "sys_importance": 0.7,
+            "importance_error": 0.10000000000000009
+          },
+          {
+            "gt_text": "The IPCC acknowledged in its own 2007 report that 'The long-term prediction of future climate states is not possible'",
+            "sys_text": "The IPCC acknowledged in its 2007 report that long-term prediction of future climate states is not possible.",
+            "gt_importance": 0.85,
+            "sys_importance": 0.7,
+            "importance_error": 0.15000000000000002
+          }
+        ],
+        "missed_claims": [
+          "Richard Lindzen is an atmospheric physicist who has published more than 200 scientific papers",
+          "Richard Lindzen taught at MIT for 30 years",
+          "During the 30 years Lindzen taught at MIT, the climate has changed remarkably little",
+          "CO2 is a greenhouse gas without which life on earth is not possible",
+          "Adding CO2 to the atmosphere should lead to some warming",
+          "Atmospheric levels of CO2 have been increasing since the end of the Little Ice Age in the 19th century",
+          "Only since the 1960s have man's greenhouse emissions been sufficient to play a role in temperature changes",
+          "Given the complexity of climate, no confident prediction about future global mean temperature or its impact can be made",
+          "The scenario that the burning of fossil fuels leads to catastrophe isn't part of what either group of scientists asserts",
+          "Global warming provides politicians with money and power",
+          "Global warming provides environmentalists with money for their organizations",
+          "Over the last decade, scientists outside of climate physics have jumped on the bandwagon, publishing papers blaming global warming for everything from acne to the Syrian civil war"
+        ],
+        "extra_claims": [
+          "The climate has changed remarkably little over the past 30 years.",
+          "There is no evidence that CO2 emissions are the dominant factor in climate change.",
+          "Group one believes recent climate change is primarily due to man\u2019s burning of fossil fuels."
+        ],
+        "importance_mae": 0.12500000000000006,
+        "claim_quality_avg": 0.616
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 0.5,
+        "stance_accuracy": 0.5,
+        "correct_verdicts": 1,
+        "total_verdicts": 2,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [
+          {
+            "claim": "The IPCC acknowledged in its own 2007 report that 'The long-term prediction of future climate states is not possible'",
+            "gt_verdict": "MIXED",
+            "sys_verdict": "UNCLEAR"
+          }
+        ],
+        "explanation_quality_avg": 0.6
+      },
+      "end_to_end": {
+        "claim_coverage": 0.14285714285714285,
+        "verdict_accuracy": 0.5,
+        "evidence_quality_avg": 1.0,
+        "total_cost_usd": 0.0,
+        "total_time_seconds": 150.73725986480713,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 0.9,
+        "evidence_retrieval_success_rate": 1.0,
+        "avg_sources_per_query": 2.7
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.8700000000000001,
+        "source_reliability_distribution": {
+          "high": 24,
+          "medium": 3
+        },
+        "avg_evidence_per_claim": 5.4
+      },
+      "ground_truth_claims_count": 14,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "P19ywkobLX8",
+      "timestamp": "2025-12-14T16:15:30.348870",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 0.8,
+        "recall": 0.4444444444444444,
+        "f1_score": 0.5714285714285714,
+        "true_positives": 4,
+        "false_positives": 1,
+        "false_negatives": 5,
+        "mean_average_precision": 0.6791666666666667,
+        "recall_at_important": 0.6666666666666666,
+        "importance_weighted_coverage": 0.48322147651006714,
+        "matched_claims": [
+          {
+            "gt_text": "Heat waves in the US are now no more common than they were in 1900",
+            "sys_text": "Heat waves in the US are no more common than they were in 1900.",
+            "gt_importance": 0.9,
+            "sys_importance": 0.85,
+            "importance_error": 0.050000000000000044
+          },
+          {
+            "gt_text": "Hurricane activity is no different than it was a century ago",
+            "sys_text": "Hurricane activity is no different than it was a century ago.",
+            "gt_importance": 0.9,
+            "sys_importance": 0.85,
+            "importance_error": 0.050000000000000044
+          },
+          {
+            "gt_text": "Floods have not increased across the globe over more than seventy years",
+            "sys_text": "Floods have not increased across the globe over more than seventy years.",
+            "gt_importance": 0.85,
+            "sys_importance": 0.85,
+            "importance_error": 0.0
+          },
+          {
+            "gt_text": "Greenland's ice sheet isn't shrinking any more rapidly today than it was 80 years ago",
+            "sys_text": "Greenland\u2019s ice sheet isn\u2019t shrinking any more rapidly today than it was 80 years ago.",
+            "gt_importance": 0.95,
+            "sys_importance": 0.85,
+            "importance_error": 0.09999999999999998
+          }
+        ],
+        "missed_claims": [
+          "About 60 percent of any CO2 that we emit today will remain in the atmosphere 20 years from now, between 30 and 55 percent will still be there after a century, and between 15 and 30 percent will remain after one thousand years",
+          "Climate models require considerable judgment in assumptions about clouds, and different modelers make different assumptions, leading to widely varying results",
+          "We get over 80% of the world's energy from fossil fuels",
+          "The globe is warming, and humans are exerting a warming influence upon it",
+          "Computer climate models project what the climate will be like 20, 40, or even 100 years from now based on considerable judgment and varying assumptions"
+        ],
+        "extra_claims": [
+          "The planet is warming catastrophically because of certain human behaviors."
+        ],
+        "importance_mae": 0.05000000000000002,
+        "claim_quality_avg": 0.556
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 1.0,
+        "stance_accuracy": 1.0,
+        "correct_verdicts": 4,
+        "total_verdicts": 4,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [],
+        "explanation_quality_avg": 0.7100000000000001
+      },
+      "end_to_end": {
+        "claim_coverage": 0.4444444444444444,
+        "verdict_accuracy": 1.0,
+        "evidence_quality_avg": 1.0,
+        "total_cost_usd": 0.0,
+        "total_time_seconds": 121.15622925758362,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 0.9700000000000001,
+        "evidence_retrieval_success_rate": 1.0,
+        "avg_sources_per_query": 2.7
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.8699999999999999,
+        "source_reliability_distribution": {
+          "high": 23,
+          "medium": 4
+        },
+        "avg_evidence_per_claim": 5.4
+      },
+      "ground_truth_claims_count": 9,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "QcDrE5YvqTs",
+      "timestamp": "2025-12-14T16:15:48.419169",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 0.8,
+        "recall": 0.26666666666666666,
+        "f1_score": 0.4,
+        "true_positives": 4,
+        "false_positives": 1,
+        "false_negatives": 11,
+        "mean_average_precision": 0.8875,
+        "recall_at_important": 0.3333333333333333,
+        "importance_weighted_coverage": 0.2821576763485477,
+        "matched_claims": [
+          {
+            "gt_text": "Women make only 77 cents for every dollar a man makes",
+            "sys_text": "Women make only 77 cents for every dollar a man makes.",
+            "gt_importance": 0.9,
+            "sys_importance": 0.85,
+            "importance_error": 0.050000000000000044
+          },
+          {
+            "gt_text": "An AAUW study shows that the actual wage gap shrinks to only 6.6 cents when you factor in different choices men and women make",
+            "sys_text": "The wage gap shrinks to only 6.6 cents when factoring in different choices.",
+            "gt_importance": 0.9,
+            "sys_importance": 0.8,
+            "importance_error": 0.09999999999999998
+          },
+          {
+            "gt_text": "Male nurses earn 18% more than female nurses on the whole",
+            "sys_text": "Male nurses earn 18% more than female nurses.",
+            "gt_importance": 0.75,
+            "sys_importance": 0.6,
+            "importance_error": 0.15000000000000002
+          },
+          {
+            "gt_text": "Once differences are accounted for across all professions, the unexplained wage gap is somewhere between 4.8 and 7 percent",
+            "sys_text": "The unexplained wage gap is between 4.8 and 7 percent.",
+            "gt_importance": 0.85,
+            "sys_importance": 0.6,
+            "importance_error": 0.25
+          }
+        ],
+        "missed_claims": [
+          "The 77-cents-on-the-dollar statistic is calculated by dividing the median earnings of all women working full-time by the median earnings of all men working full-time",
+          "The 77-cent calculation doesn't take into account occupation, position, education or hours worked per week",
+          "In 2009, the U.S. Department of Labor released a paper that examined more than 50 peer-reviewed studies and concluded that the oft-cited 23 percent wage gap may be almost entirely the result of individual choices being made by both male and female workers",
+          "Georgetown University compiled a list of the five best-paying college majors: #1 Petroleum Engineering (87% male), #2 Pharmaceutical Sciences (48% male), #3 Mathematics and Computer Science (67% male), #4 Aerospace Engineering (88% male), #5 Chemical Engineering (72% male)",
+          "The five worst paying college majors include: #1 Counseling and Psychology (74% female), #2 Early Childhood Education (97% female), #4 Human Services and Community Organization (81% female), #5 Social Work (88% female)",
+          "Male nurses gravitate to the best-paying nursing specialties, they work longer hours, and disproportionately find jobs in cities with the highest compensation",
+          "Career choices and educational differences explain most, if not all, the gender gap in nursing, according to Professor Linda Aiken of the University of Pennsylvania",
+          "Men are vastly overrepresented on oil rigs as an example of dangerous work environments",
+          "According to Harvard economist Claudia Goldin, even if two lawyers have the same education, same specialty, and work the same number of hours, firms pay more to someone who is willing to always be on call and ready to be in the office when the firm needs them",
+          "This isn't sexism, it's just common sense",
+          "Those who claim that for the same work women earn 77 cents on the dollar compared to men are not merely bad at math but at telling the truth"
+        ],
+        "extra_claims": [
+          "In 2009, the U.S. Department of Labor released a paper examining more than 50 peer-reviewed studies."
+        ],
+        "importance_mae": 0.1375,
+        "claim_quality_avg": 0.86
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 0.5,
+        "stance_accuracy": 0.5,
+        "correct_verdicts": 2,
+        "total_verdicts": 4,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [
+          {
+            "claim": "Women make only 77 cents for every dollar a man makes",
+            "gt_verdict": "MIXED",
+            "sys_verdict": "REFUTES"
+          },
+          {
+            "claim": "Once differences are accounted for across all professions, the unexplained wage gap is somewhere between 4.8 and 7 percent",
+            "gt_verdict": "SUPPORTS",
+            "sys_verdict": "MIXED"
+          }
+        ],
+        "explanation_quality_avg": 0.65
+      },
+      "end_to_end": {
+        "claim_coverage": 0.26666666666666666,
+        "verdict_accuracy": 0.5,
+        "evidence_quality_avg": 1.0,
+        "total_cost_usd": 0.0099729,
+        "total_time_seconds": 102.95257782936096,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 0.9400000000000001,
+        "evidence_retrieval_success_rate": 1.0,
+        "avg_sources_per_query": 2.7
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.8400000000000001,
+        "source_reliability_distribution": {
+          "high": 19,
+          "medium": 8
+        },
+        "avg_evidence_per_claim": 5.4
+      },
+      "ground_truth_claims_count": 15,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "RegC520C6ec",
+      "timestamp": "2025-12-14T16:16:11.143605",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 0.4,
+        "recall": 0.13333333333333333,
+        "f1_score": 0.2,
+        "true_positives": 2,
+        "false_positives": 3,
+        "false_negatives": 13,
+        "mean_average_precision": 0.8333333333333333,
+        "recall_at_important": 0.2857142857142857,
+        "importance_weighted_coverage": 0.18686868686868688,
+        "matched_claims": [
+          {
+            "gt_text": "Decades of global geoengineering development is directly and deliberately responsible for all of the super storms, hurricanes, tornadoes, and floods",
+            "sys_text": "Decades of global geoengineering development is responsible for extreme weather events.",
+            "gt_importance": 1.0,
+            "sys_importance": 0.85,
+            "importance_error": 0.15000000000000002
+          },
+          {
+            "gt_text": "Artificial precipitation generation occurs in coordinated bursts visible on infrared satellite as superheated water vapor from no natural source",
+            "sys_text": "Artificial precipitation generation is visible on infrared satellite images.",
+            "gt_importance": 0.85,
+            "sys_importance": 0.6,
+            "importance_error": 0.25
+          }
+        ],
+        "missed_claims": [
+          "7.1 billion people on this planet are completely in the dark about continuous and escalating extreme weather events",
+          "Water vapor is artificially introduced into the air in place of the natural evaporation stage and is artificially cooled and condensed to produce rain on a global scale",
+          "The same primary source of CO2 emissions on this planet is the same source of artificial precipitation",
+          "Hexagonal center of vortex with flat sides proves geoengineering manufacture",
+          "Contrails are actually chemtrails composed of heavy metal nanoparticles and ice nucleation used to control storm systems",
+          "Man-made global artificial precipitation cycle is the singular reason for massive and continuous flooding worldwide",
+          "Mother nature and monsoons are not responsible for worldwide flooding",
+          "Cloud seeding and weather modification technology exists and is being used",
+          "The U.S. military used weather modification during Operation Popeye in the Vietnam War",
+          "Industrial facilities and power plants deliberately generate coordinated artificial precipitation on a nightly cycle",
+          "Evaporation is a natural process where water changes from liquid to water vapor and enters the atmosphere",
+          "Condensation occurs when water vapor in warm air meets cold air or cold surfaces and forms water droplets",
+          "Flooding events in 2024-2025 including North Carolina, Mississippi, New Mexico, and Arizona were shown in news reports"
+        ],
+        "extra_claims": [
+          "At least nine states have flash flood watches due to flooding.",
+          "Water evaporates from ponds, lakes, rivers, and oceans every hour.",
+          "7.1 billion people are on this planet."
+        ],
+        "importance_mae": 0.2,
+        "claim_quality_avg": 0.77
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 1.0,
+        "stance_accuracy": 1.0,
+        "correct_verdicts": 2,
+        "total_verdicts": 2,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [],
+        "explanation_quality_avg": 0.6799999999999999
+      },
+      "end_to_end": {
+        "claim_coverage": 0.13333333333333333,
+        "verdict_accuracy": 1.0,
+        "evidence_quality_avg": 1.0,
+        "total_cost_usd": 0.0,
+        "total_time_seconds": 100.68832087516785,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 0.9200000000000002,
+        "evidence_retrieval_success_rate": 1.0,
+        "avg_sources_per_query": 2.8
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.71,
+        "source_reliability_distribution": {
+          "high": 27,
+          "medium": 1
+        },
+        "avg_evidence_per_claim": 5.6
+      },
+      "ground_truth_claims_count": 15,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "SYS2_ECsaxY",
+      "timestamp": "2025-12-14T16:16:29.610853",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 0.8,
+        "recall": 0.36363636363636365,
+        "f1_score": 0.5000000000000001,
+        "true_positives": 4,
+        "false_positives": 1,
+        "false_negatives": 7,
+        "mean_average_precision": 0.8875,
+        "recall_at_important": 0.5,
+        "importance_weighted_coverage": 0.42758620689655175,
+        "matched_claims": [
+          {
+            "gt_text": "The FBI was organizing the riots of January 6th",
+            "sys_text": "The FBI was organizing the riots of January 6th.",
+            "gt_importance": 1.0,
+            "sys_importance": 0.85,
+            "importance_error": 0.15000000000000002
+          },
+          {
+            "gt_text": "There are 14,000 hours of unreleased video footage from that day the administration is hiding from us",
+            "sys_text": "There are 14,000 hours of unreleased video footage from January 6th.",
+            "gt_importance": 0.65,
+            "sys_importance": 0.7,
+            "importance_error": 0.04999999999999993
+          },
+          {
+            "gt_text": "The pipe bomber - the FBI has been extremely suspicious in withholding evidence video evidence that could help identify this bomber",
+            "sys_text": "The FBI has withheld evidence that could help identify the Capitol pipe bomber.",
+            "gt_importance": 0.6,
+            "sys_importance": 0.6,
+            "importance_error": 0.0
+          },
+          {
+            "gt_text": "70 plus million people who are Trump supporters or just against the corrupt ruling class who have effectively been labeled de facto domestic extremists by our own government",
+            "sys_text": "70 plus million people are Trump supporters or against the corrupt ruling class.",
+            "gt_importance": 0.85,
+            "sys_importance": 0.3,
+            "importance_error": 0.55
+          }
+        ],
+        "missed_claims": [
+          "This is the most important and the darkest investigative piece they've seen in years",
+          "The American people deserve the truth about 1-6 not just for the sake of Ashley Babbitt",
+          "Hundreds of people held in prison unjustly as a violation of human rights",
+          "To what extent were the main militia groups imputed to the 1-6 so-called capital siege infiltrated by undercover agents or informants",
+          "Unindicted co-conspirators who occupy senior positions in those groups are being spared prosecution on account of a prior relationship with the federal government",
+          "Does the national security apparatus do anything but conspire against the American people",
+          "Every politician who cares about our country should demand a church committee 2.0 immediately"
+        ],
+        "extra_claims": [
+          "The administration is hiding evidence related to the January 6th events."
+        ],
+        "importance_mae": 0.1875,
+        "claim_quality_avg": 0.56
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 0.5,
+        "stance_accuracy": 0.5,
+        "correct_verdicts": 2,
+        "total_verdicts": 4,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [
+          {
+            "claim": "The pipe bomber - the FBI has been extremely suspicious in withholding evidence video evidence that could help identify this bomber",
+            "gt_verdict": "MIXED",
+            "sys_verdict": "REFUTES"
+          },
+          {
+            "claim": "70 plus million people who are Trump supporters or just against the corrupt ruling class who have effectively been labeled de facto domestic extremists by our own government",
+            "gt_verdict": "REFUTES",
+            "sys_verdict": "MIXED"
+          }
+        ],
+        "explanation_quality_avg": 0.6799999999999999
+      },
+      "end_to_end": {
+        "claim_coverage": 0.36363636363636365,
+        "verdict_accuracy": 0.5,
+        "evidence_quality_avg": 1.0,
+        "total_cost_usd": 0.00684195,
+        "total_time_seconds": 151.73734283447266,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 0.96,
+        "evidence_retrieval_success_rate": 1.0,
+        "avg_sources_per_query": 2.3
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.6900000000000001,
+        "source_reliability_distribution": {
+          "high": 23
+        },
+        "avg_evidence_per_claim": 4.6
+      },
+      "ground_truth_claims_count": 11,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "W97evNJrMn8",
+      "timestamp": "2025-12-14T16:16:49.317513",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 0.8,
+        "recall": 0.17391304347826086,
+        "f1_score": 0.2857142857142857,
+        "true_positives": 4,
+        "false_positives": 1,
+        "false_negatives": 19,
+        "mean_average_precision": 0.6791666666666667,
+        "recall_at_important": 0.8,
+        "importance_weighted_coverage": 0.22483221476510068,
+        "matched_claims": [
+          {
+            "gt_text": "The Conservatives have been reduced to their lowest seat share ever, dropping below the 156 seats they won in the 1906 general election",
+            "sys_text": "The Conservatives have been reduced to their lowest seat share ever, dropping below 156 seats.",
+            "gt_importance": 0.9,
+            "sys_importance": 0.8,
+            "importance_error": 0.09999999999999998
+          },
+          {
+            "gt_text": "Labour have achieved almost the highest seat share in their history, getting very close to the 418 seats they won in the 1997 general election",
+            "sys_text": "Labour achieved almost the highest seat share in their history, close to 418 seats from 1997.",
+            "gt_importance": 0.85,
+            "sys_importance": 0.8,
+            "importance_error": 0.04999999999999993
+          },
+          {
+            "gt_text": "The Liberal Democrats have had a very good night with their seat share ticking up to a huge 71 seats, the highest seat share ever",
+            "sys_text": "The Liberal Democrats increased their seat share to 71, the highest ever, up from 11 in 2019.",
+            "gt_importance": 0.8,
+            "sys_importance": 0.75,
+            "importance_error": 0.050000000000000044
+          },
+          {
+            "gt_text": "The SNP received their lowest seat share since 2010, winning only nine seats",
+            "sys_text": "The SNP won only 9 seats, their lowest seat share since 2010, down from 48 in 2019.",
+            "gt_importance": 0.8,
+            "sys_importance": 0.7,
+            "importance_error": 0.10000000000000009
+          }
+        ],
+        "missed_claims": [
+          "14 years of Conservative rule has come to an end",
+          "This is even higher than their seat share in 2010 when they agreed to a formal coalition with the Conservative party",
+          "Reform UK have gone from no seats to a pretty respectable four seats",
+          "Reform UK achieved 14.3% of the vote",
+          "The Greens held on to Brighton Pavilion and gained Bristol Central, Waveney Valley and North Herefordshire",
+          "In 2019 the SNP won 48 out of the 56 available seats in Scotland",
+          "The exit poll at 10pm predicted that Reform would get 13 seats",
+          "The exit poll predicted that the Tories were going to win 131 seats",
+          "Jonathan Ashworth unexpectedly lost his seat to an independent candidate",
+          "Ashworth has previously been the Shadow Health Secretary and was the Shadow Paymaster General",
+          "The loss of Ashworth's seat has been a result of Labour's stance on Gaza",
+          "Jeremy Corbyn was deselected as a Labour MP and opted to stand in his constituency as an independent",
+          "Corbyn did make the decision to stand rather late in the election cycle",
+          "Corbyn secured himself a pretty decent majority",
+          "Sunak has not yet announced his resignation as Conservative leader although he is expected to do so",
+          "Kemi Badenoch is in the strongest position for Conservative leadership; one of her key rivals Penny Mordaunt lost her seat",
+          "There has been an issue in Badenoch's constituency with postal votes",
+          "The new prime minister Keir Starmer will meet the king and agree to form a government in his name",
+          "Starmer could represent his party in a PMQs session before the imminent summer recess"
+        ],
+        "extra_claims": [
+          "The Labour party has won this general election, ending 14 years of Conservative rule."
+        ],
+        "importance_mae": 0.07500000000000001,
+        "claim_quality_avg": 0.8800000000000001
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 0.75,
+        "stance_accuracy": 0.75,
+        "correct_verdicts": 3,
+        "total_verdicts": 4,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [
+          {
+            "claim": "The Liberal Democrats have had a very good night with their seat share ticking up to a huge 71 seats, the highest seat share ever",
+            "gt_verdict": "MIXED",
+            "sys_verdict": "SUPPORTS"
+          }
+        ],
+        "explanation_quality_avg": 0.7100000000000001
+      },
+      "end_to_end": {
+        "claim_coverage": 0.17391304347826086,
+        "verdict_accuracy": 0.75,
+        "evidence_quality_avg": 1.0,
+        "total_cost_usd": 0.0095808,
+        "total_time_seconds": 137.1481969356537,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 1.0,
+        "evidence_retrieval_success_rate": 1.0,
+        "avg_sources_per_query": 2.8
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.74,
+        "source_reliability_distribution": {
+          "high": 20,
+          "medium": 8
+        },
+        "avg_evidence_per_claim": 5.6
+      },
+      "ground_truth_claims_count": 23,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "WJhCa12UTsg",
+      "timestamp": "2025-12-14T16:17:11.188226",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 1.0,
+        "recall": 0.3125,
+        "f1_score": 0.47619047619047616,
+        "true_positives": 5,
+        "false_positives": 0,
+        "false_negatives": 11,
+        "mean_average_precision": 1.0,
+        "recall_at_important": 0.625,
+        "importance_weighted_coverage": 0.3481781376518219,
+        "matched_claims": [
+          {
+            "gt_text": "Only about 1 in 10 teenagers gets the 8 to 10 hours of sleep per night recommended by sleep scientists and pediatricians",
+            "sys_text": "Only about 1 in 10 American teenagers gets the recommended 8 to 10 hours of sleep per night.",
+            "gt_importance": 0.85,
+            "sys_importance": 0.85,
+            "importance_error": 0.0
+          },
+          {
+            "gt_text": "Major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m.",
+            "sys_text": "Major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m.",
+            "gt_importance": 0.9,
+            "sys_importance": 0.85,
+            "importance_error": 0.050000000000000044
+          },
+          {
+            "gt_text": "Around the time of puberty, teenagers experience a delay in their biological clock",
+            "sys_text": "Teenagers experience a delay in their biological clock around puberty, affecting sleep patterns.",
+            "gt_importance": 0.85,
+            "sys_importance": 0.7,
+            "importance_error": 0.15000000000000002
+          },
+          {
+            "gt_text": "For each hour of lost sleep, there was a 38% increase in feeling sad or hopeless, and a 58% increase in teen suicide attempts",
+            "sys_text": "For each hour of lost sleep, there was a 38% increase in feeling sad or hopeless, and a 58% increase in teen suicide attempts.",
+            "gt_importance": 0.9,
+            "sys_importance": 0.7,
+            "importance_error": 0.20000000000000007
+          },
+          {
+            "gt_text": "Teens with sleep problems were 55% more likely to have used alcohol in the past month",
+            "sys_text": "Teens with sleep problems were 55% more likely to have used alcohol in the past month.",
+            "gt_importance": 0.8,
+            "sys_importance": 0.6,
+            "importance_error": 0.20000000000000007
+          }
+        ],
+        "missed_claims": [
+          "Teenagers' bodies wait to start releasing melatonin until around 11 p.m., which is two hours later than what we see in adults or younger children",
+          "Waking a teenager up at 6 a.m. is the biological equivalent of waking an adult up at 4 a.m.",
+          "Many of the unpleasant characteristics we chalk up to being a teenager\u2014moodiness, irritability, laziness, depression\u2014could be a product of chronic sleep deprivation",
+          "Adolescence is a period of dramatic brain development, particularly in the parts of the brain responsible for higher order thinking processes, including reasoning, problem solving, and good judgment",
+          "Getting five hours or less of sleep per night is the equivalent of driving with a blood alcohol content above the legal limit",
+          "Teens from districts with later start times get more sleep",
+          "School absences dropped by 25% in one district after implementing later start times",
+          "Standardized test scores in math and reading go up by 2 to 3 percentage points with later start times",
+          "Later start times produce benefits as powerful as reducing class sizes by one third fewer students",
+          "Car crash rates for teen drivers went down by 70% in one district that changed school start times",
+          "Only about 17.7% of public middle and high schools in the United States started school at 8:30 a.m. or later before 2014"
+        ],
+        "extra_claims": [],
+        "importance_mae": 0.12000000000000004,
+        "claim_quality_avg": 0.89
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 0.2,
+        "stance_accuracy": 0.2,
+        "correct_verdicts": 1,
+        "total_verdicts": 5,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [
+          {
+            "claim": "Only about 1 in 10 teenagers gets the 8 to 10 hours of sleep per night recommended by sleep scientists and pediatricians",
+            "gt_verdict": "UNCLEAR",
+            "sys_verdict": "REFUTES"
+          },
+          {
+            "claim": "Around the time of puberty, teenagers experience a delay in their biological clock",
+            "gt_verdict": "UNCLEAR",
+            "sys_verdict": "SUPPORTS"
+          },
+          {
+            "claim": "For each hour of lost sleep, there was a 38% increase in feeling sad or hopeless, and a 58% increase in teen suicide attempts",
+            "gt_verdict": "UNCLEAR",
+            "sys_verdict": "SUPPORTS"
+          },
+          {
+            "claim": "Teens with sleep problems were 55% more likely to have used alcohol in the past month",
+            "gt_verdict": "UNCLEAR",
+            "sys_verdict": "SUPPORTS"
+          }
+        ],
+        "explanation_quality_avg": 0.7200000000000001
+      },
+      "end_to_end": {
+        "claim_coverage": 0.3125,
+        "verdict_accuracy": 0.2,
+        "evidence_quality_avg": 1.0,
+        "total_cost_usd": 0.01504305,
+        "total_time_seconds": 107.53561067581177,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 0.9600000000000002,
+        "evidence_retrieval_success_rate": 1.0,
+        "avg_sources_per_query": 2.5
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.9100000000000001,
+        "source_reliability_distribution": {
+          "high": 22,
+          "medium": 3
+        },
+        "avg_evidence_per_claim": 5.0
+      },
+      "ground_truth_claims_count": 16,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "YfWCUYX2_U0",
+      "timestamp": "2025-12-14T16:17:30.014459",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 1.0,
+        "recall": 0.4166666666666667,
+        "f1_score": 0.5882352941176471,
+        "true_positives": 5,
+        "false_positives": 0,
+        "false_negatives": 7,
+        "mean_average_precision": 1.0,
+        "recall_at_important": 0.5555555555555556,
+        "importance_weighted_coverage": 0.4646464646464646,
+        "matched_claims": [
+          {
+            "gt_text": "Climate is changing due to increasing greenhouse gases from human activity",
+            "sys_text": "Climate change is due to increasing greenhouse gases from human activity.",
+            "gt_importance": 0.95,
+            "sys_importance": 0.8,
+            "importance_error": 0.1499999999999999
+          },
+          {
+            "gt_text": "The last years have been the warmest since modern record-keeping began",
+            "sys_text": "The last years have been the warmest since modern record-keeping began.",
+            "gt_importance": 0.9,
+            "sys_importance": 0.7,
+            "importance_error": 0.20000000000000007
+          },
+          {
+            "gt_text": "The planet's climate is changing",
+            "sys_text": "The planet's climate is changing.",
+            "gt_importance": 0.95,
+            "sys_importance": 0.6,
+            "importance_error": 0.35
+          },
+          {
+            "gt_text": "Sea levels are rising",
+            "sys_text": "Sea levels are rising.",
+            "gt_importance": 0.9,
+            "sys_importance": 0.6,
+            "importance_error": 0.30000000000000004
+          },
+          {
+            "gt_text": "We're seeing more extreme events like heatwaves and heavy rainfall and wildfire",
+            "sys_text": "We're seeing more extreme events like heatwaves and heavy rainfall and wildfire.",
+            "gt_importance": 0.9,
+            "sys_importance": 0.6,
+            "importance_error": 0.30000000000000004
+          }
+        ],
+        "missed_claims": [
+          "Even a little change in temperature can have big effects",
+          "A lot of those effects are going to increase with more warming",
+          "Climate change is affecting decisions like farmers thinking about what crops to grow or homeowners thinking about flood risk",
+          "We know more about our planet than we have ever before",
+          "Computer models help us understand how much climate might change in the future",
+          "Technologies are being developed at NASA and around the world that can help limit future warming or respond to the warming we're experiencing",
+          "Earth's average temperature has risen more than 2 degrees Fahrenheit (1.2 degrees Celsius) since the late 19th century"
+        ],
+        "extra_claims": [],
+        "importance_mae": 0.26,
+        "claim_quality_avg": 0.5399999999999999
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 1.0,
+        "stance_accuracy": 1.0,
+        "correct_verdicts": 5,
+        "total_verdicts": 5,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [],
+        "explanation_quality_avg": 0.7
+      },
+      "end_to_end": {
+        "claim_coverage": 0.4166666666666667,
+        "verdict_accuracy": 1.0,
+        "evidence_quality_avg": 1.0,
+        "total_cost_usd": 0.0,
+        "total_time_seconds": 156.11589574813843,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 0.9400000000000001,
+        "evidence_retrieval_success_rate": 1.0,
+        "avg_sources_per_query": 2.5
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.9800000000000001,
+        "source_reliability_distribution": {
+          "high": 25
+        },
+        "avg_evidence_per_claim": 5.0
+      },
+      "ground_truth_claims_count": 12,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "_6xlNyWPpB8",
+      "timestamp": "2025-12-14T16:17:50.648985",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 0.8,
+        "recall": 0.23529411764705882,
+        "f1_score": 0.3636363636363636,
+        "true_positives": 4,
+        "false_positives": 1,
+        "false_negatives": 13,
+        "mean_average_precision": 1.0,
+        "recall_at_important": 0.18181818181818182,
+        "importance_weighted_coverage": 0.23703703703703705,
+        "matched_claims": [
+          {
+            "gt_text": "It can take a plastic bottle an agonizing 1,000 years to decompose in a landfill",
+            "sys_text": "It can take bottle one an agonizing 1,000 years to decompose.",
+            "gt_importance": 0.8,
+            "sys_importance": 0.8,
+            "importance_error": 0.0
+          },
+          {
+            "gt_text": "Most plastics don't biodegrade, which means they're destined to break down into smaller and smaller pieces called micro plastics",
+            "sys_text": "Most plastics don't biodegrade and break down into microplastics.",
+            "gt_importance": 0.95,
+            "sys_importance": 0.75,
+            "importance_error": 0.19999999999999996
+          },
+          {
+            "gt_text": "The plastic in bottles was formed by chemically bonding oil and gas molecules together to make monomers, which were then bonded into long polymer chains",
+            "sys_text": "Plastic is formed by chemically bonding oil and gas molecules to make monomers.",
+            "gt_importance": 0.7,
+            "sys_importance": 0.7,
+            "importance_error": 0.0
+          },
+          {
+            "gt_text": "The Great Pacific Garbage Patch is one of five plastic-filled gyres in the world's seas",
+            "sys_text": "The Great Pacific Garbage Patch traps millions of pieces of plastic debris.",
+            "gt_importance": 0.75,
+            "sys_importance": 0.7,
+            "importance_error": 0.050000000000000044
+          }
+        ],
+        "missed_claims": [
+          "Polymers were made into millions of pellets that were melted at manufacturing plants and reformed in molds",
+          "Plastic bottles can end up in landfills where the dump expands each day as more trash comes in",
+          "Rainwater flows through landfill waste and absorbs water-soluble compounds, including highly toxic ones, creating a harmful stew called leachate",
+          "Leachate can move into groundwater, soil and streams, poisoning ecosystems and harming wildlife",
+          "Plastic bottles can float to the ocean and be drawn into a massive vortex where trash accumulates, known as the Great Pacific Garbage Patch",
+          "Ocean plastic pollution turns the water into a cloudy plastic soup",
+          "Some animals, like seabirds, get entangled in the mess of plastic debris",
+          "Animals mistake brightly colored plastic bits for food",
+          "Plastic makes animals feel full when they're not, so they starve to death",
+          "Animals pass the toxins from the plastic up the food chain",
+          "Plastic is eaten by lanternfish, the lanternfish are eaten by squid, the squid are eaten by tuna, and the tuna are eaten by us",
+          "Microplastics might rotate in the sea eternally",
+          "Recycled plastic bottles are squeezed flat and compressed into a block, then shredded into tiny pieces, washed and melted to become raw materials that can be used again"
+        ],
+        "extra_claims": [
+          "Monomers are bonded into long polymer chains to make plastic pellets."
+        ],
+        "importance_mae": 0.0625,
+        "claim_quality_avg": 0.8
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 1.0,
+        "stance_accuracy": 1.0,
+        "correct_verdicts": 4,
+        "total_verdicts": 4,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [],
+        "explanation_quality_avg": 0.74
+      },
+      "end_to_end": {
+        "claim_coverage": 0.23529411764705882,
+        "verdict_accuracy": 1.0,
+        "evidence_quality_avg": 1.0,
+        "total_cost_usd": 0.0,
+        "total_time_seconds": 109.23003721237183,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 0.9400000000000001,
+        "evidence_retrieval_success_rate": 1.0,
+        "avg_sources_per_query": 2.6
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.78,
+        "source_reliability_distribution": {
+          "medium": 10,
+          "high": 13,
+          "unknown": 3
+        },
+        "avg_evidence_per_claim": 5.2
+      },
+      "ground_truth_claims_count": 17,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "cWsWg9RcgzE",
+      "timestamp": "2025-12-14T16:18:10.496548",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 1.0,
+        "recall": 0.14285714285714285,
+        "f1_score": 0.25,
+        "true_positives": 5,
+        "false_positives": 0,
+        "false_negatives": 30,
+        "mean_average_precision": 1.0,
+        "recall_at_important": 0.2,
+        "importance_weighted_coverage": 0.18159806295399517,
+        "matched_claims": [
+          {
+            "gt_text": "AIDS was a guaranteed death sentence not so long ago",
+            "sys_text": "AIDS was once a guaranteed death sentence.",
+            "gt_importance": 0.75,
+            "sys_importance": 0.85,
+            "importance_error": 0.09999999999999998
+          },
+          {
+            "gt_text": "The infection rate of HIV in Australia has shot up again",
+            "sys_text": "The rate of HIV infection in Australia has shot up again.",
+            "gt_importance": 0.8,
+            "sys_importance": 0.85,
+            "importance_error": 0.04999999999999993
+          },
+          {
+            "gt_text": "Alarmingly, 1,000 Australians a year are now diagnosed with HIV",
+            "sys_text": "1,000 Australians a year are now diagnosed with HIV.",
+            "gt_importance": 0.7,
+            "sys_importance": 0.8,
+            "importance_error": 0.10000000000000009
+          },
+          {
+            "gt_text": "The infection rate of HIV in Australia is almost double what it was 10 years ago",
+            "sys_text": "The rate of new HIV infections among women is almost double the rate of 10 years ago.",
+            "gt_importance": 0.75,
+            "sys_importance": 0.7,
+            "importance_error": 0.050000000000000044
+          },
+          {
+            "gt_text": "30 years ago, HIV was universally a death sentence",
+            "sys_text": "30 years ago, HIV was universally a death sentence.",
+            "gt_importance": 0.75,
+            "sys_importance": 0.6,
+            "importance_error": 0.15000000000000002
+          }
+        ],
+        "missed_claims": [
+          "The infection rate of HIV in Australia plummeted following shock advertising campaigns in the 1980s",
+          "Straight women are now among the most vulnerable groups for HIV infection in Australia",
+          "98% of new HIV infections among the women in the documentary were contracted through heterosexual sex",
+          "Deanna Bleg contracted HIV from unprotected sex with a former boyfriend 16 years ago",
+          "Deanna lost about 20 kilos over a period of 6 weeks when she first had symptoms",
+          "Within months of diagnosis, Deanna's HIV had progressed to AIDS",
+          "Deanna was on almost 30 pills a day for HIV treatment in the early 1990s",
+          "People with HIV are now leading almost normal lives with improved prognosis",
+          "People with HIV still have to take tablets every day and there are still side effects",
+          "HIV drugs are creating new health issues including heart disease, diabetes, and lipid problems",
+          "There's a widely held perception that the battle against HIV has been won, creating dangerous complacency",
+          "People have to be in regular medical care on treatment lifelong",
+          "One challenge for HIV positive women is motherhood, with a very slim chance the virus could be passed on",
+          "Professor Sharon Leuen and her teams made a breakthrough discovering where HIV cells hide in the body",
+          "HIV is a really clever virus that can change all the time, evade the immune system and drugs, and hide in small pockets of the body",
+          "About half of men with known HIV history were diagnosed through sexual health screens, but women's HIV was mostly detected through targeted screening",
+          "Sarah was 24 years old and diagnosed with HIV in 2008",
+          "Sarah was taught nothing about HIV in school as a young heterosexual",
+          "Medical advances mean HIV can now be managed with proper treatment but it's a long hard road",
+          "Sarah faces a lifetime of powerful medication for HIV",
+          "There is still enormous stigma surrounding HIV today, with people telling Sarah she should die and is disgusting",
+          "Professor Sharon Lewin coordinates three research teams at Melbourne's Alfred Hospital, Monash University, and the Burnet Institute",
+          "HIV cells hide in the body and can go to sleep in some cells in small pockets - it was a needle in a haystack discovery",
+          "Deanna Bleg has lived 11 years longer than doctors predicted",
+          "Deanna thought she had just months to live but is now 41 years old",
+          "Many heterosexual women support groups now operate for HIV positive individuals",
+          "Relationships are difficult for HIV positive women due to stigma and fear of transmission",
+          "Deanna conceived naturally with her partner who was aware of the risks and was not infected",
+          "Neither of Deanna's children were infected with HIV",
+          "HIV exists, it's real, and it can happen to anyone"
+        ],
+        "extra_claims": [],
+        "importance_mae": 0.09000000000000001,
+        "claim_quality_avg": 0.646
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 1.0,
+        "stance_accuracy": 1.0,
+        "correct_verdicts": 5,
+        "total_verdicts": 5,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [],
+        "explanation_quality_avg": 0.78
+      },
+      "end_to_end": {
+        "claim_coverage": 0.14285714285714285,
+        "verdict_accuracy": 1.0,
+        "evidence_quality_avg": 1.0,
+        "total_cost_usd": 0.0,
+        "total_time_seconds": 135.18453407287598,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 0.9,
+        "evidence_retrieval_success_rate": 1.0,
+        "avg_sources_per_query": 2.3
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.68,
+        "source_reliability_distribution": {
+          "high": 18,
+          "medium": 5
+        },
+        "avg_evidence_per_claim": 4.6
+      },
+      "ground_truth_claims_count": 35,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "cy_k-1JdIAU",
+      "timestamp": "2025-12-14T16:18:34.170423",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 1.0,
+        "recall": 0.23809523809523808,
+        "f1_score": 0.3846153846153846,
+        "true_positives": 5,
+        "false_positives": 0,
+        "false_negatives": 16,
+        "mean_average_precision": 1.0,
+        "recall_at_important": 0.5,
+        "importance_weighted_coverage": 0.26865671641791045,
+        "matched_claims": [
+          {
+            "gt_text": "Beets help you lower your blood pressure",
+            "sys_text": "Beets help lower blood pressure and improve athletic performance.",
+            "gt_importance": 0.75,
+            "sys_importance": 0.8,
+            "importance_error": 0.050000000000000044
+          },
+          {
+            "gt_text": "Apples are great for weight loss because they're high in pectin",
+            "sys_text": "Apples are high in pectin, which binds with water and limits fat absorption.",
+            "gt_importance": 0.7,
+            "sys_importance": 0.7,
+            "importance_error": 0.0
+          },
+          {
+            "gt_text": "Juicing is the easiest way to repair your body in a short span of time",
+            "sys_text": "Juicing is the easiest way to repair your body in a short span of time.",
+            "gt_importance": 0.9,
+            "sys_importance": 0.6,
+            "importance_error": 0.30000000000000004
+          },
+          {
+            "gt_text": "Lemons flush toxins from your system and purify the blood",
+            "sys_text": "Lemons flush toxins from your system and purify the blood.",
+            "gt_importance": 0.85,
+            "sys_importance": 0.6,
+            "importance_error": 0.25
+          },
+          {
+            "gt_text": "Grapefruits have one of the highest water contents of any food, about 92% water",
+            "sys_text": "Grapefruits have about 92% water content and deliver nutrition with few calories.",
+            "gt_importance": 0.4,
+            "sys_importance": 0.6,
+            "importance_error": 0.19999999999999996
+          }
+        ],
+        "missed_claims": [
+          "Pectin binds with water and limits how much fat your cells can absorb",
+          "Carrots are full of antioxidants including beta carotene and lutein that are great for the eyes",
+          "Beets are chocked full of nutrients including potassium, magnesium, zinc, selenium",
+          "Beets give you extra stamina throughout the day",
+          "Beets improve athletic performance",
+          "Beet juice one to three hours before an athletic event can provide a one to three percent performance boost",
+          "Beets raise nitric oxide levels, increase blood flow, improve lung function and strengthen muscle contraction",
+          "Jalape\u00f1o can boost your metabolism, increase fat burn and reduce your appetite",
+          "Pineapple contains bromelain, which is a digestive enzyme that will cleanse your colon and aids digestion",
+          "A cup of red bell pepper contains nearly three times more vitamin C than an orange",
+          "Ginger is awesome for circulation and digestion",
+          "Turmeric is incredible for inflammation",
+          "Black pepper can enhance the curcumin absorption in turmeric by up to 2,000 percent",
+          "Detox juices help you lose weight and cleanse your body to literally make you glow",
+          "Lime and ginger increase your blood circulation",
+          "Vitamin C helps the body absorb minerals and protects the body from chemical toxins and has anti-aging properties"
+        ],
+        "extra_claims": [],
+        "importance_mae": 0.16,
+        "claim_quality_avg": 0.636
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 1.0,
+        "stance_accuracy": 1.0,
+        "correct_verdicts": 5,
+        "total_verdicts": 5,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [],
+        "explanation_quality_avg": 0.73
+      },
+      "end_to_end": {
+        "claim_coverage": 0.23809523809523808,
+        "verdict_accuracy": 1.0,
+        "evidence_quality_avg": 1.0,
+        "total_cost_usd": 0.0,
+        "total_time_seconds": 643.731479883194,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 0.9199999999999999,
+        "evidence_retrieval_success_rate": 1.0,
+        "avg_sources_per_query": 2.5
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.8200000000000001,
+        "source_reliability_distribution": {
+          "high": 18,
+          "medium": 7
+        },
+        "avg_evidence_per_claim": 5.0
+      },
+      "ground_truth_claims_count": 21,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "eeISzbk9SeE",
+      "timestamp": "2025-12-14T16:18:54.301814",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 0.6,
+        "recall": 0.25,
+        "f1_score": 0.35294117647058826,
+        "true_positives": 3,
+        "false_positives": 2,
+        "false_negatives": 9,
+        "mean_average_precision": 0.7555555555555555,
+        "recall_at_important": 0.2857142857142857,
+        "importance_weighted_coverage": 0.2712765957446808,
+        "matched_claims": [
+          {
+            "gt_text": "Human-induced global warming is a major underlying factor for extreme weather patterns",
+            "sys_text": "Human-induced global warming is a major underlying factor for changing weather patterns.",
+            "gt_importance": 0.95,
+            "sys_importance": 0.8,
+            "importance_error": 0.1499999999999999
+          },
+          {
+            "gt_text": "Increased human consumption of fossil fuels since the industrial revolution has led to more greenhouse gases being released such as carbon dioxide and methane into Earth's atmosphere",
+            "sys_text": "Increased human consumption of fossil fuels since the industrial revolution has led to more greenhouse gases being released.",
+            "gt_importance": 0.85,
+            "sys_importance": 0.7,
+            "importance_error": 0.15000000000000002
+          },
+          {
+            "gt_text": "Heat waves are 10 times more likely now according to the UK's Met Office",
+            "sys_text": "It's estimated that heat waves are 10 times more likely now according to the UK's Met Office.",
+            "gt_importance": 0.75,
+            "sys_importance": 0.6,
+            "importance_error": 0.15000000000000002
+          }
+        ],
+        "missed_claims": [
+          "Our planet has been experiencing more frequent and intense weather events in recent years",
+          "This has contributed to climate change in the form of increased global temperatures",
+          "Hot spells have more than doubled in duration in the past 50 years",
+          "Droughts are becoming more common and more severe in some areas due to climate change",
+          "Increased rainfall has affected most of the world due to human-course climate change",
+          "The Paris agreement is a legally binding treaty that 196 parties agreed to uphold",
+          "The goal is to limit global warming to well below 2 degrees Celsius preferably to 1.5 degrees celsius compared to pre-industrial levels",
+          "This Baseline was partly chosen because it's the earliest period with near Global observations",
+          "In order to keep temperatures under 1.5 degrees Celsius dramatic changes need to be made namely Global CO2 emissions must be at half of their 2010 Levels by 2030 and at Net Zero or as close to no total carbon emissions as possible by 2050"
+        ],
+        "extra_claims": [
+          "Earth's weather cycles have become increasingly erratic, severe, and prolonged.",
+          "Heat waves have more than doubled in duration in the past 50 years."
+        ],
+        "importance_mae": 0.15,
+        "claim_quality_avg": 0.71
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 1.0,
+        "stance_accuracy": 1.0,
+        "correct_verdicts": 3,
+        "total_verdicts": 3,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [],
+        "explanation_quality_avg": 0.7
+      },
+      "end_to_end": {
+        "claim_coverage": 0.25,
+        "verdict_accuracy": 1.0,
+        "evidence_quality_avg": 1.0,
+        "total_cost_usd": 0.0,
+        "total_time_seconds": 119.77423310279846,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 0.96,
+        "evidence_retrieval_success_rate": 1.0,
+        "avg_sources_per_query": 2.5
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.8100000000000002,
+        "source_reliability_distribution": {
+          "high": 22,
+          "medium": 3
+        },
+        "avg_evidence_per_claim": 5.0
+      },
+      "ground_truth_claims_count": 12,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "oFmGG3k8naQ",
+      "timestamp": "2025-12-14T16:19:16.775283",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 1.0,
+        "recall": 0.4166666666666667,
+        "f1_score": 0.5882352941176471,
+        "true_positives": 5,
+        "false_positives": 0,
+        "false_negatives": 7,
+        "mean_average_precision": 1.0,
+        "recall_at_important": 0.8,
+        "importance_weighted_coverage": 0.47953216374269,
+        "matched_claims": [
+          {
+            "gt_text": "Harvard University published a study in the federal government's journal on July 27, 2012 that confirms fluoride lowers IQs",
+            "sys_text": "Fluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.",
+            "gt_importance": 0.95,
+            "sys_importance": 0.85,
+            "importance_error": 0.09999999999999998
+          },
+          {
+            "gt_text": "A Harvard University study published on July 26 in the National Institute of Health journal finds that fluoride lowers children's IQ",
+            "sys_text": "Another Harvard study published on July 26, 2012, finds fluoride lowers children's IQ.",
+            "gt_importance": 0.85,
+            "sys_importance": 0.85,
+            "importance_error": 0.0
+          },
+          {
+            "gt_text": "Fluoridation of water supply causes retardation in children, making children's IQs lower",
+            "sys_text": "Fluoridation of water is causing a decline in children's IQs in America.",
+            "gt_importance": 0.95,
+            "sys_importance": 0.7,
+            "importance_error": 0.25
+          },
+          {
+            "gt_text": "Harvard University studies published in April 2006 show a link between fluorinated water and bone cancer in boys",
+            "sys_text": "A Harvard study from April 5, 2006, shows a link between fluorinated water and bone cancer in boys.",
+            "gt_importance": 0.9,
+            "sys_importance": 0.6,
+            "importance_error": 0.30000000000000004
+          },
+          {
+            "gt_text": "People in Austin, Texas live in an area with naturally over-fluorinated water and have white spots on their teeth and act like dumbasses with low IQ",
+            "sys_text": "People in Austin, Texas, have white spots on their teeth due to natural fluoridation.",
+            "gt_importance": 0.45,
+            "sys_importance": 0.3,
+            "importance_error": 0.15000000000000002
+          }
+        ],
+        "missed_claims": [
+          "An OBGYN doctor recommended that babies be fed special water with extra fluoride for their feedings to help their teeth",
+          "Infant formula mixed with fluoridated water delivers 100-200 times more fluoride than breastmilk",
+          "White spots on teeth indicate fluorosis caused by too much fluoride",
+          "People who are angry or afraid have lower IQs and fluoride consumption contributes to this",
+          "America's children have the lowest IQs in the world due to fluoride consumption",
+          "Fluoride is absorbed through the teeth topically, not through the body by drinking it",
+          "Baby teeth fall out and get replaced, so it doesn't make sense to give fluoride to babies for teeth that will be lost"
+        ],
+        "extra_claims": [],
+        "importance_mae": 0.16,
+        "claim_quality_avg": 0.75
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 1.0,
+        "stance_accuracy": 1.0,
+        "correct_verdicts": 5,
+        "total_verdicts": 5,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [],
+        "explanation_quality_avg": 0.6900000000000001
+      },
+      "end_to_end": {
+        "claim_coverage": 0.4166666666666667,
+        "verdict_accuracy": 1.0,
+        "evidence_quality_avg": 1.0,
+        "total_cost_usd": 0.0,
+        "total_time_seconds": 115.81980204582214,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 0.96,
+        "evidence_retrieval_success_rate": 1.0,
+        "avg_sources_per_query": 2.1
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.8300000000000001,
+        "source_reliability_distribution": {
+          "high": 18,
+          "medium": 3
+        },
+        "avg_evidence_per_claim": 4.2
+      },
+      "ground_truth_claims_count": 12,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "oTFt4byuIuo",
+      "timestamp": "2025-12-14T16:19:45.969176",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 1.0,
+        "recall": 0.29411764705882354,
+        "f1_score": 0.45454545454545453,
+        "true_positives": 5,
+        "false_positives": 0,
+        "false_negatives": 12,
+        "mean_average_precision": 1.0,
+        "recall_at_important": 0.3333333333333333,
+        "importance_weighted_coverage": 0.3053435114503817,
+        "matched_claims": [
+          {
+            "gt_text": "Egg prices fell 12.7% last month, the biggest monthly decline since 1984",
+            "sys_text": "Egg prices fell 12.7% last month, the biggest monthly decline since 1984.",
+            "gt_importance": 0.9,
+            "sys_importance": 0.85,
+            "importance_error": 0.050000000000000044
+          },
+          {
+            "gt_text": "The USDA reported that a dozen large white shell eggs cost $3.30 on average, down 69 cents from a week before",
+            "sys_text": "A dozen large white shell eggs now cost $3.30 on average, down $0.69 from a week before.",
+            "gt_importance": 0.75,
+            "sys_importance": 0.85,
+            "importance_error": 0.09999999999999998
+          },
+          {
+            "gt_text": "Egg prices surged in each of the past 5 months and 17 of the past 19 months",
+            "sys_text": "Egg prices surged in each of the past 5 months and 17 of the past 19 months due to a deadly avian flu epidemic.",
+            "gt_importance": 0.7,
+            "sys_importance": 0.7,
+            "importance_error": 0.0
+          },
+          {
+            "gt_text": "Egg prices remain significantly higher now than before the latest bird flu outbreak, and they cost 49.3% more last month than they did a year earlier",
+            "sys_text": "Egg prices remain significantly higher now than before the latest bird flu outbreak, costing 49.3% more last month than a year earlier.",
+            "gt_importance": 0.8,
+            "sys_importance": 0.7,
+            "importance_error": 0.10000000000000009
+          },
+          {
+            "gt_text": "Egg prices this past Easter were the highest for any Easter on record",
+            "sys_text": "Egg prices this past Easter were the highest for any Easter on record, according to the USDA.",
+            "gt_importance": 0.85,
+            "sys_importance": 0.6,
+            "importance_error": 0.25
+          }
+        ],
+        "missed_claims": [
+          "A deadly avian flu epidemic necessitated the mass culling of egg laying hens",
+          "Eggs are still more expensive than when Trump took office",
+          "Trump said the cost of eggs has come down like 93-94% since we took office",
+          "Those percentage declines Trump stated are not close to accurate",
+          "Consumer egg prices were indeed falling sharply when Trump made those remarks",
+          "Trump appears to have been talking about wholesale prices, which had been tumbling throughout March",
+          "Wholesale prices fell by half, not close to the 90% plus figures Trump was citing",
+          "Wholesale prices are the costs distributors pay to farmers or middlemen. Consumer prices are what customers pay at grocery stores",
+          "Consumer prices typically make their way through the supply chain at a slower pace than wholesale prices",
+          "Grocery stores may decide to keep prices at a certain level even when wholesale prices change to try to recoup lost profits from prior weeks",
+          "The USDA says consumer prices finally fell as demand for eggs decreased and avian flu cases have fallen",
+          "Many groceries, including large chains like Costco, had limited customer purchases because of egg shortages"
+        ],
+        "extra_claims": [],
+        "importance_mae": 0.10000000000000002,
+        "claim_quality_avg": 1.0
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 0.8,
+        "stance_accuracy": 0.8,
+        "correct_verdicts": 4,
+        "total_verdicts": 5,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [
+          {
+            "claim": "The USDA reported that a dozen large white shell eggs cost $3.30 on average, down 69 cents from a week before",
+            "gt_verdict": "SUPPORTS",
+            "sys_verdict": "REFUTES"
+          }
+        ],
+        "explanation_quality_avg": 0.7
+      },
+      "end_to_end": {
+        "claim_coverage": 0.29411764705882354,
+        "verdict_accuracy": 0.8,
+        "evidence_quality_avg": 1.0,
+        "total_cost_usd": 0.00964275,
+        "total_time_seconds": 144.06690406799316,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 0.95,
+        "evidence_retrieval_success_rate": 1.0,
+        "avg_sources_per_query": 2.5
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.6900000000000001,
+        "source_reliability_distribution": {
+          "high": 22,
+          "medium": 3
+        },
+        "avg_evidence_per_claim": 5.0
+      },
+      "ground_truth_claims_count": 17,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "oYvKcAh1zdo",
+      "timestamp": "2025-12-14T16:20:04.417245",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 0.8,
+        "recall": 0.36363636363636365,
+        "f1_score": 0.5000000000000001,
+        "true_positives": 4,
+        "false_positives": 1,
+        "false_negatives": 7,
+        "mean_average_precision": 0.6791666666666667,
+        "recall_at_important": 0.5,
+        "importance_weighted_coverage": 0.38562091503267976,
+        "matched_claims": [
+          {
+            "gt_text": "50 million residents of America are foreign-born",
+            "sys_text": "50 million residents of America are foreign-born.",
+            "gt_importance": 0.7,
+            "sys_importance": 0.85,
+            "importance_error": 0.15000000000000002
+          },
+          {
+            "gt_text": "Today the United States has more immigrants as a percentage of its total population than at any time since 1890",
+            "sys_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+            "gt_importance": 0.75,
+            "sys_importance": 0.8,
+            "importance_error": 0.050000000000000044
+          },
+          {
+            "gt_text": "America grants permanent residence to a million people every single year",
+            "sys_text": "America grants permanent residence to a million people every single year.",
+            "gt_importance": 0.85,
+            "sys_importance": 0.7,
+            "importance_error": 0.15000000000000002
+          },
+          {
+            "gt_text": "An estimated 100,000 refugees and asylum-seekers enter the country annually",
+            "sys_text": "An estimated 100,000 refugees and asylum-seekers enter the country annually.",
+            "gt_importance": 0.65,
+            "sys_importance": 0.6,
+            "importance_error": 0.050000000000000044
+          }
+        ],
+        "missed_claims": [
+          "176 different languages are spoken among students in the New York City school system",
+          "Princeton University researchers found that immigrants sponsored an average of 3.45 additional relatives each",
+          "From 2008 to 2017, the U.S. gave green cards to well over a million people for humanitarian reasons",
+          "Nearly half a million more people came to America through the diversity visa lottery from 2008 to 2017",
+          "The number of illegal aliens in the country is usually given as 11 million, but have you noticed that number never seems to change",
+          "Illegal aliens themselves don't qualify for welfare, but receive free health care in clinics and hospitals, and through their American-born children can receive all manner of benefits including cash aid, food stamps, and housing vouchers",
+          "Their children are entitled to a free education in public schools"
+        ],
+        "extra_claims": [
+          "The United States maintains the most generous immigration policies in the world."
+        ],
+        "importance_mae": 0.10000000000000003,
+        "claim_quality_avg": 0.8699999999999999
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 0.0,
+        "stance_accuracy": 0.0,
+        "correct_verdicts": 0,
+        "total_verdicts": 4,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [
+          {
+            "claim": "50 million residents of America are foreign-born",
+            "gt_verdict": "SUPPORTS",
+            "sys_verdict": "MIXED"
+          },
+          {
+            "claim": "Today the United States has more immigrants as a percentage of its total population than at any time since 1890",
+            "gt_verdict": "SUPPORTS",
+            "sys_verdict": "MIXED"
+          },
+          {
+            "claim": "America grants permanent residence to a million people every single year",
+            "gt_verdict": "SUPPORTS",
+            "sys_verdict": "MIXED"
+          },
+          {
+            "claim": "An estimated 100,000 refugees and asylum-seekers enter the country annually",
+            "gt_verdict": "MIXED",
+            "sys_verdict": "REFUTES"
+          }
+        ],
+        "explanation_quality_avg": 0.71
+      },
+      "end_to_end": {
+        "claim_coverage": 0.36363636363636365,
+        "verdict_accuracy": 0.0,
+        "evidence_quality_avg": 1.0,
+        "total_cost_usd": 0.0103419,
+        "total_time_seconds": 112.20007705688477,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 0.96,
+        "evidence_retrieval_success_rate": 1.0,
+        "avg_sources_per_query": 2.9
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.72,
+        "source_reliability_distribution": {
+          "high": 26,
+          "medium": 3
+        },
+        "avg_evidence_per_claim": 5.8
+      },
+      "ground_truth_claims_count": 11,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "rBUjOY12gJA",
+      "timestamp": "2025-12-14T16:20:25.115937",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 0.8,
+        "recall": 0.21052631578947367,
+        "f1_score": 0.3333333333333333,
+        "true_positives": 4,
+        "false_positives": 1,
+        "false_negatives": 15,
+        "mean_average_precision": 0.8875,
+        "recall_at_important": 0.2,
+        "importance_weighted_coverage": 0.21453287197231835,
+        "matched_claims": [
+          {
+            "gt_text": "After one year of regular exercise your bones will be denser which reduces your risk of osteoporosis",
+            "sys_text": "After one year of regular exercise, your bones will be denser, reducing your risk of osteoporosis.",
+            "gt_importance": 0.85,
+            "sys_importance": 0.8,
+            "importance_error": 0.04999999999999993
+          },
+          {
+            "gt_text": "After six to eight weeks studies have shown people can increase their mitochondria by up to 50%",
+            "sys_text": "Studies have shown that people can increase their mitochondria by up to 50% after six to eight weeks of exercise.",
+            "gt_importance": 0.9,
+            "sys_importance": 0.7,
+            "importance_error": 0.20000000000000007
+          },
+          {
+            "gt_text": "Delayed onset muscle soreness (DOMS) will persist for about 72 hours",
+            "sys_text": "Delayed onset muscle soreness (DOMS) will persist for about 72 hours after a workout.",
+            "gt_importance": 0.7,
+            "sys_importance": 0.6,
+            "importance_error": 0.09999999999999998
+          },
+          {
+            "gt_text": "During your first workout, you might feel more alert and energized because ramping up your heart rate means a boost in overall blood flow and oxygen to the brain",
+            "sys_text": "During the first workout, you might feel more alert and energized due to increased blood flow and oxygen to the brain.",
+            "gt_importance": 0.65,
+            "sys_importance": 0.3,
+            "importance_error": 0.35000000000000003
+          }
+        ],
+        "missed_claims": [
+          "You're less likely to get DOMS again as long as you continue to regularly exercise those same muscles",
+          "Over the next few weeks you'll slowly start to ramp up production of mitochondria via mitochondrial biogenesis",
+          "With more mitochondria in your cells you'll start to feel more fit and your endurance will increase",
+          "Exercise programs often see a 50% dropout rate within the first six months",
+          "After six months people are more likely to stick with exercise programs",
+          "By nine months of regular cardio exercise you should see about a 25% increase in your VO2 max",
+          "VO2 max is a measure of fitness and refers to the rate your body can transport oxygen to your muscles for fuel",
+          "A higher VO2 max means you can run faster for longer, so a 25% increase means you can run about 20% further in the same amount of time",
+          "Regular resistance training when combined with aerobic exercise can actually reverse the effects of osteoporosis after 12 months",
+          "Older people who exercise 5 days a week for at least 30 minutes saved on average $2,500 a year in medical costs for heart related health problems",
+          "Exercise lowers the risk of developing arthritis, type-2 diabetes, dementia, and certain types of cancer like breast and colon",
+          "Exercise lowers the risk of anxiety and depression by reducing levels of stress hormones like cortisol and adrenaline",
+          "US Department of Health recommends a minimum of 2.5 hours per week of moderately intense exercise like brisk walking or biking",
+          "US Department of Health recommends at least 1 hour and 15 minutes each week of high intensity workouts like running and swimming sprints",
+          "On top of aerobic exercise recommendations, take two days each week to strengthen your muscles with weights or resistance training"
+        ],
+        "extra_claims": [
+          "An increasing number of Americans have started participating in more sports, fitness, and recreation in recent years."
+        ],
+        "importance_mae": 0.175,
+        "claim_quality_avg": 0.716
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 1.0,
+        "stance_accuracy": 1.0,
+        "correct_verdicts": 4,
+        "total_verdicts": 4,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [],
+        "explanation_quality_avg": 0.7300000000000001
+      },
+      "end_to_end": {
+        "claim_coverage": 0.21052631578947367,
+        "verdict_accuracy": 1.0,
+        "evidence_quality_avg": 1.0,
+        "total_cost_usd": 0.0,
+        "total_time_seconds": 57.34610104560852,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 0.99,
+        "evidence_retrieval_success_rate": 1.0,
+        "avg_sources_per_query": 2.6
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.86,
+        "source_reliability_distribution": {
+          "high": 18,
+          "unknown": 2,
+          "medium": 6
+        },
+        "avg_evidence_per_claim": 5.2
+      },
+      "ground_truth_claims_count": 19,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "rIcXeueo0O8",
+      "timestamp": "2025-12-14T16:20:42.765239",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 0.4,
+        "recall": 0.16666666666666666,
+        "f1_score": 0.23529411764705882,
+        "true_positives": 2,
+        "false_positives": 3,
+        "false_negatives": 10,
+        "mean_average_precision": 0.8333333333333333,
+        "recall_at_important": 0.2857142857142857,
+        "importance_weighted_coverage": 0.2,
+        "matched_claims": [
+          {
+            "gt_text": "Greenhouse gases trap heat and energy from the Sun",
+            "sys_text": "Greenhouse gases trap heat and energy from the Sun.",
+            "gt_importance": 0.95,
+            "sys_importance": 0.7,
+            "importance_error": 0.25
+          },
+          {
+            "gt_text": "Fertilizer is used to grow crops, and a lot of nutrients from fertilizer go to growing crops, but not all nutrients make their way into crops and some are lost to the atmosphere",
+            "sys_text": "Fertilizers can lose nutrients to the atmosphere during crop growth.",
+            "gt_importance": 0.9,
+            "sys_importance": 0.6,
+            "importance_error": 0.30000000000000004
+          }
+        ],
+        "missed_claims": [
+          "Many of the human produced gases are called greenhouse gases",
+          "Atmospheric scientists study climate and greenhouse gases by measuring the contents of the atmosphere, much like weather stations measure wind, rainfall, or snowfall",
+          "Instruments are designed to measure the molecules and components of the air",
+          "Scientists put instruments on airplanes and fly around to different regions to collect air samples and measure them",
+          "Scientists fly over farms to understand the impacts of how we grow crops on the atmosphere",
+          "Scientists fly downwind of cities to understand emissions from cars, vehicles, landfills, and power plants",
+          "Landfills emit carbon dioxide and methane as garbage decays",
+          "Garbage in incinerators emits carbon dioxide as a product of combustion",
+          "Individual actions like being aware of leaving lights on or TV on when not using them can reduce atmospheric impact",
+          "Collective action that comes from awareness of the problem can help reduce greenhouse gas emissions"
+        ],
+        "extra_claims": [
+          "Human-produced gases can have bad effects on the planet, including changing the climate and weather.",
+          "Eric's team measures the levels of gases in the atmosphere, including greenhouse gases.",
+          "The atmosphere is a mix of gases that surrounds our planet."
+        ],
+        "importance_mae": 0.275,
+        "claim_quality_avg": 0.72
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 1.0,
+        "stance_accuracy": 1.0,
+        "correct_verdicts": 2,
+        "total_verdicts": 2,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [],
+        "explanation_quality_avg": 0.66
+      },
+      "end_to_end": {
+        "claim_coverage": 0.16666666666666666,
+        "verdict_accuracy": 1.0,
+        "evidence_quality_avg": 1.0,
+        "total_cost_usd": 0.0,
+        "total_time_seconds": 107.99624109268188,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 0.99,
+        "evidence_retrieval_success_rate": 1.0,
+        "avg_sources_per_query": 2.5
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.9,
+        "source_reliability_distribution": {
+          "high": 23,
+          "medium": 2
+        },
+        "avg_evidence_per_claim": 5.0
+      },
+      "ground_truth_claims_count": 12,
+      "system_claims_count": 5
+    },
+    {
+      "video_id": "sO6Po_RItl8",
+      "timestamp": "2025-12-14T16:21:02.597426",
+      "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+      "ground_truth_dir": "factible/experiments/data/ground_truth",
+      "claim_extraction": {
+        "precision": 1.0,
+        "recall": 0.4166666666666667,
+        "f1_score": 0.5882352941176471,
+        "true_positives": 5,
+        "false_positives": 0,
+        "false_negatives": 7,
+        "mean_average_precision": 1.0,
+        "recall_at_important": 0.5714285714285714,
+        "importance_weighted_coverage": 0.4914285714285714,
+        "matched_claims": [
+          {
+            "gt_text": "Scientists at UCT have uncovered garlic's cancer fighting properties",
+            "sys_text": "Scientists at UCT uncovered garlic's cancer-fighting properties.",
+            "gt_importance": 0.95,
+            "sys_importance": 0.85,
+            "importance_error": 0.09999999999999998
+          },
+          {
+            "gt_text": "To get the cancer fighting compound ajoene, you need to crush the garlic clove and then heat the preparation",
+            "sys_text": "A compound found in crushed garlic cloves can kill cancer cells.",
+            "gt_importance": 0.85,
+            "sys_importance": 0.85,
+            "importance_error": 0.0
+          },
+          {
+            "gt_text": "Allicin changes over time when heated during food preparation into a cancer fighting compound called ajoene",
+            "sys_text": "Heating crushed garlic transforms allicin into the cancer-fighting compound auine.",
+            "gt_importance": 0.9,
+            "sys_importance": 0.85,
+            "importance_error": 0.050000000000000044
+          },
+          {
+            "gt_text": "Epidemiological evidence shows populations who consume high quantities of garlic have lower incidence of gastrointestinal cancer, specifically stomach and colon",
+            "sys_text": "High garlic consumption is linked to lower incidence of gastrointestinal cancers.",
+            "gt_importance": 0.9,
+            "sys_importance": 0.7,
+            "importance_error": 0.20000000000000007
+          },
+          {
+            "gt_text": "When garlic cloves are first crushed, a compound called allicin is released which has antibacterial properties",
+            "sys_text": "The compound allicin is released when garlic cloves are crushed.",
+            "gt_importance": 0.7,
+            "sys_importance": 0.6,
+            "importance_error": 0.09999999999999998
+          }
+        ],
+        "missed_claims": [
+          "Dr. Catherine Kaschula is a lecturer in the department of Chemistry at UCT",
+          "Ajoene contains disulfide bonds which give it the potent garlic smell",
+          "Ajoene is able to enter into cancer cells and disrupt the intracellular machinery, bringing about a toxic effect that kills the cancer cell",
+          "Ajoene has been shown to be cytotoxic to a range of different types of cancers",
+          "Oral exposure through eating cooked garlic would probably have the greatest effect on gastrointestinal cancers",
+          "Garlic has been used throughout the centuries for culinary and medical benefits",
+          "A chemical transformation takes place when crushed garlic is heated, converting compounds in the crushed clove into ajoene"
+        ],
+        "extra_claims": [],
+        "importance_mae": 0.09000000000000001,
+        "claim_quality_avg": 0.726
+      },
+      "verdict_accuracy": {
+        "overall_accuracy": 0.8,
+        "stance_accuracy": 0.8,
+        "correct_verdicts": 4,
+        "total_verdicts": 5,
+        "per_class_f1": {},
+        "confusion_matrix": [],
+        "verdict_errors": [
+          {
+            "claim": "To get the cancer fighting compound ajoene, you need to crush the garlic clove and then heat the preparation",
+            "gt_verdict": "SUPPORTS",
+            "sys_verdict": "MIXED"
+          }
+        ],
+        "explanation_quality_avg": 0.72
+      },
+      "end_to_end": {
+        "claim_coverage": 0.4166666666666667,
+        "verdict_accuracy": 0.8,
+        "evidence_quality_avg": 1.0,
+        "total_cost_usd": 0.0,
+        "total_time_seconds": 117.20807909965515,
+        "claim_quality_avg": null,
+        "explanation_quality_avg": null,
+        "user_satisfaction_score": null
+      },
+      "query_generation": {
+        "query_claim_relevance_avg": 0.99,
+        "evidence_retrieval_success_rate": 1.0,
+        "avg_sources_per_query": 2.4
+      },
+      "evidence_search": {
+        "evidence_relevance_avg": 0.89,
+        "source_reliability_distribution": {
+          "high": 23,
+          "medium": 1
+        },
+        "avg_evidence_per_claim": 4.8
+      },
+      "ground_truth_claims_count": 12,
+      "system_claims_count": 5
+    }
+  ]
+}

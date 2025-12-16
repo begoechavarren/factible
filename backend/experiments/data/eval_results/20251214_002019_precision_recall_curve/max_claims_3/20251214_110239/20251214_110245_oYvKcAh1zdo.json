@@ -1,0 +1,95 @@
+{
+  "video_id": "oYvKcAh1zdo",
+  "timestamp": "2025-12-14T11:02:45.010454",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_3",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.6666666666666666,
+    "recall": 0.18181818181818182,
+    "f1_score": 0.28571428571428575,
+    "true_positives": 2,
+    "false_positives": 1,
+    "false_negatives": 9,
+    "mean_average_precision": 0.5833333333333333,
+    "recall_at_important": 0.0,
+    "importance_weighted_coverage": 0.1895424836601307,
+    "matched_claims": [
+      {
+        "gt_text": "50 million residents of America are foreign-born",
+        "sys_text": "50 million residents of America are foreign-born.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.85,
+        "importance_error": 0.15000000000000002
+      },
+      {
+        "gt_text": "Today the United States has more immigrants as a percentage of its total population than at any time since 1890",
+        "sys_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.8,
+        "importance_error": 0.050000000000000044
+      }
+    ],
+    "missed_claims": [
+      "176 different languages are spoken among students in the New York City school system",
+      "America grants permanent residence to a million people every single year",
+      "Princeton University researchers found that immigrants sponsored an average of 3.45 additional relatives each",
+      "An estimated 100,000 refugees and asylum-seekers enter the country annually",
+      "From 2008 to 2017, the U.S. gave green cards to well over a million people for humanitarian reasons",
+      "Nearly half a million more people came to America through the diversity visa lottery from 2008 to 2017",
+      "The number of illegal aliens in the country is usually given as 11 million, but have you noticed that number never seems to change",
+      "Illegal aliens themselves don't qualify for welfare, but receive free health care in clinics and hospitals, and through their American-born children can receive all manner of benefits including cash aid, food stamps, and housing vouchers",
+      "Their children are entitled to a free education in public schools"
+    ],
+    "extra_claims": [
+      "The United States maintains the most generous immigration policies in the world."
+    ],
+    "importance_mae": 0.10000000000000003,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.0,
+    "stance_accuracy": 0.0,
+    "correct_verdicts": 0,
+    "total_verdicts": 2,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "50 million residents of America are foreign-born",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "MIXED"
+      },
+      {
+        "claim": "Today the United States has more immigrants as a percentage of its total population than at any time since 1890",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "MIXED"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.18181818181818182,
+    "verdict_accuracy": 0.0,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.00674475,
+    "total_time_seconds": 68.49644708633423,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.6666666666666665
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 14,
+      "medium": 2
+    },
+    "avg_evidence_per_claim": 5.333333333333333
+  },
+  "ground_truth_claims_count": 11,
+  "system_claims_count": 3
+}

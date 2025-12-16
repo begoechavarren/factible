@@ -1,0 +1,381 @@
+{
+  "extracted_claims": {
+    "claims": [
+      {
+        "text": "The climate has changed remarkably little over the past 30 years.",
+        "confidence": 0.8,
+        "category": "scientific",
+        "importance": 0.7,
+        "context": "Speaker: Richard Lindzen",
+        "transcript_char_start": 123,
+        "transcript_char_end": 176,
+        "transcript_match_score": 0.8205128205128205
+      }
+    ],
+    "total_count": 1
+  },
+  "final_output": {
+    "extracted_claims": {
+      "claims": [
+        {
+          "text": "The climate has changed remarkably little over the past 30 years.",
+          "confidence": 0.8,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Speaker: Richard Lindzen",
+          "transcript_char_start": 123,
+          "transcript_char_end": 176,
+          "transcript_match_score": 0.8205128205128205
+        }
+      ],
+      "total_count": 1
+    },
+    "claim_reports": [
+      {
+        "claim_text": "The climate has changed remarkably little over the past 30 years.",
+        "claim_confidence": 0.8,
+        "claim_category": "scientific",
+        "overall_stance": "refutes",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence from multiple high-reliability sources, including the Climate.gov and NASA, clearly indicates that global temperatures have risen significantly over the past 30 years, directly contradicting the claim that climate has changed remarkably little during this period.",
+        "evidence_by_stance": {
+          "refutes": [
+            {
+              "title": "Climate change: global temperature",
+              "url": "https://www.climate.gov/news-features/understanding-climate/climate-change-global-temperature",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (26.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that global temperatures have risen significantly over the past 30 years, contradicting the claim that climate has changed remarkably little during this period.",
+              "snippet": "Earth's temperature has risen by an average of 0.11\u00b0 Fahrenheit (0.06\u00b0 Celsius) per decade since 1850, or about 2\u00b0 F in total."
+            },
+            {
+              "title": "World of Change: Global Temperatures - NASA Science",
+              "url": "https://earthobservatory.nasa.gov/world-of-change/global-temperatures",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that global temperatures have significantly increased over the past 30 years, with the majority of warming occurring since 1975, contradicting the claim that climate has changed remarkably little during this period.",
+              "snippet": "The average global temperature has increased by a little more than 1 degree Celsius since 1880. Two-thirds of the warming has occurred since 1975."
+            },
+            {
+              "title": "CO\u2082 and Greenhouse Gas Emissions - Our World in Data",
+              "url": "https://ourworldindata.org/co2-and-greenhouse-gas-emissions",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that global temperatures have been rising significantly, particularly over the past few decades, contradicting the claim that the climate has changed remarkably little over the past 30 years.",
+              "snippet": "Human greenhouse gas emissions have increased global average temperatures \u00b7 Global emissions have increased rapidly over the last 50 years and have not yet ..."
+            }
+          ],
+          "mixed": [
+            {
+              "title": "Presentation Slides Misrepresenting the Causes of Climate Change ...",
+              "url": "https://climate.law.columbia.edu/content/presentation-slides-misrepresenting-causes-climate-change-published-epa",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (40.4 years)"
+                ],
+                "bias": null
+              },
+              "stance": "mixed",
+              "evidence_summary": "The evidence discusses the complexities of climate change and suggests that while there is a discernible human influence, the climate's natural variability complicates the assessment of significant changes over the past 30 years.",
+              "snippet": "The presentation posits several thoroughly debunked theories which cast doubt on the causes of climate change."
+            },
+            {
+              "title": "Professors Debate Climate Change Science, Policy - UVA Law",
+              "url": "https://www.law.virginia.edu/static/uvalawyer/html/alumni/uvalawyer/f10/climate.htm",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (39.7 years)"
+                ],
+                "bias": null
+              },
+              "stance": "mixed",
+              "evidence_summary": "The article discusses the complexities of climate change and suggests that while there is a discernible human influence on climate, the ability to quantify this influence is limited due to natural variability and uncertainties in models. It implies that the climate may not have changed significantly over the past 30 years, as the observed changes could be within the range of natural variability.",
+              "snippet": "The models used by scientists are \u201cexaggerating [global] warming,\u201d according to Lindzen. \u201cThe claim of incontrovertibility is far more suspicious than the claim ..."
+            },
+            {
+              "title": "Statement of Richard S. Lindzen, Climate Change, July 10, 1997",
+              "url": "https://www.epw.senate.gov/105th/lind0710.htm",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "mixed",
+              "evidence_summary": "The evidence discusses the complexities of climate change and suggests that while there is a discernible human influence on climate, the magnitude of this influence compared to natural variability is uncertain. It implies that significant changes in climate over the past 30 years are not well established, which aligns with the claim that the climate has changed remarkably little.",
+              "snippet": "To the credit of the IPCC, it extensively documented the shortcomings of various projections, and made few claims for any confidence. The document was deeply ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 8.559,
+        "timestamp_confidence": 0.8205128205128205
+      }
+    ],
+    "transcript_data": {
+      "text": "I\u2019m an atmospheric physicist. I\u2019ve published more than 200 scientific papers. For 30 years I taught at MIT, during which time the climate has changed remarkably little. But the cry of \u201cglobal warming\u201d has grown ever more shrill. In fact, it seems that the less the climate changes, the louder the voices of the climate alarmists get. So, let\u2019s clear the air and create a more accurate picture of where we really stand on the issue of global warming or, as it is now called -- climate change. There are basically three groups of people dealing with this issue. Groups one and two are scientists. Group three consists mostly, at its core, of politicians, environmentalists and media. Group one is associated with the scientific part of the United Nation\u2019s International Panel on Climate Change or IPCC (Working Group 1). These are scientists who mostly believe that recent climate change is primarily due to man\u2019s burning of fossil fuels -- oil, coal and natural gas. This releases C02, carbon dioxide, into the atmosphere and, they believe, this might eventually dangerously heat the planet. Group two is made up of scientists who don\u2019t see this as an especially serious problem. This is the group I belong to. We\u2019re usually referred to as skeptics. We note that there are many reasons why the climate changes -- the sun, clouds, oceans, the orbital variations of the earth, as well as a myriad of other inputs. None of these is fully understood, and there is no evidence that CO2 emissions are the dominant factor. But actually there is much agreement between both groups of scientists. The following are such points of agreement: 1) The climate is always changing. 2) CO2 is a greenhouse gas without which life on earth is not possible, but adding it to the atmosphere should lead to some warming. 3) Atmospheric levels of CO2 have been increasing since the end of the Little Ice Age in the 19th century. 4) Over this period (the past two centuries), the global mean temperature has increased slightly and erratically by about 1.8 degrees Fahrenheit or one degree Celsius; but only since the 1960\u2019s have man\u2019s greenhouse emissions been sufficient to play a role. 5) Given the complexity of climate, no confident prediction about future global mean temperature or its impact can be made. The IPCC, acknowledged in its own 2007 report that \u201cThe long-term prediction of future climate states is not possible.\u201d Most importantly, the scenario that the burning of fossil fuels leads to catastrophe isn\u2019t part of what either group asserts. So why are so many people worried, indeed, panic stricken about this issue. Here\u2019s where Group Three comes in -- the politicians, environmentalists, and media. Global Warming Alarmism provides them, more than any other issue, with the things they most want: For politicians it\u2019s money and power. For environmentalists it\u2019s money for their organizations and confirmation of their near religious devotion to the idea that man is a destructive force acting upon nature. And for the media it\u2019s ideology, money, and headlines -- doomsday scenarios sell. Meanwhile, over the last decade, scientists outside of climate physics have jumped on the bandwagon, publishing papers blaming global warming for everything from acne to the Syrian civil war. And, crony capitalists have eagerly grabbed for the subsidies that governments have so lavishly provided. Unfortunately, group three is winning the argument because they have drowned out the serious debate that should be going on. But while politicians, environmentalists and media types can waste a lot of money and scare a lot of people, they won\u2019t be able to bury the truth. The climate will have the final word on that. I\u2019m Richard Lindzen, emeritus professor of Atmospheric Sciences at MIT, for PragerUniversity.",
+      "segments": [
+        {
+          "text": "I\u2019m an atmospheric physicist. I\u2019ve published\nmore than 200 scientific papers. For 30 years",
+          "start": 2.42,
+          "duration": 6.139
+        },
+        {
+          "text": "I taught at MIT, during which time the climate\nhas changed remarkably little. But the cry",
+          "start": 8.559,
+          "duration": 6.71
+        },
+        {
+          "text": "of \u201cglobal warming\u201d has grown ever more\nshrill. In fact, it seems that the less the",
+          "start": 15.269,
+          "duration": 4.911
+        },
+        {
+          "text": "climate changes, the louder the voices of\nthe climate alarmists get. So, let\u2019s clear",
+          "start": 20.18,
+          "duration": 6.13
+        },
+        {
+          "text": "the air and create a more accurate picture\nof where we really stand on the issue of global",
+          "start": 26.31,
+          "duration": 6.17
+        },
+        {
+          "text": "warming or, as it is now called -- climate\nchange.",
+          "start": 32.48,
+          "duration": 4.78
+        },
+        {
+          "text": "There are basically three groups of people\ndealing with this issue. Groups one and two",
+          "start": 37.26,
+          "duration": 5.559
+        },
+        {
+          "text": "are scientists. Group three consists mostly,\nat its core, of politicians, environmentalists",
+          "start": 42.819,
+          "duration": 6.851
+        },
+        {
+          "text": "and media.\nGroup one is associated with the scientific",
+          "start": 49.67,
+          "duration": 4.219
+        },
+        {
+          "text": "part of the United Nation\u2019s International\nPanel on Climate Change or IPCC (Working Group 1).",
+          "start": 53.889,
+          "duration": 8.251
+        },
+        {
+          "text": "These are scientists who mostly believe\nthat recent climate change is primarily due",
+          "start": 62.14,
+          "duration": 7.06
+        },
+        {
+          "text": "to man\u2019s burning of fossil fuels -- oil,\ncoal and natural gas. This releases C02, carbon dioxide,",
+          "start": 69.2,
+          "duration": 8.7
+        },
+        {
+          "text": "into the atmosphere and, they believe,\nthis might eventually dangerously heat the planet.",
+          "start": 77.9,
+          "duration": 6.2
+        },
+        {
+          "text": "Group two is made up of scientists who don\u2019t see this as an especially serious problem.",
+          "start": 84.1,
+          "duration": 5.68
+        },
+        {
+          "text": "This is the group I belong to. We\u2019re usually referred to as skeptics. We note that there are many reasons why the",
+          "start": 89.78,
+          "duration": 6.5
+        },
+        {
+          "text": "climate changes -- the sun, clouds, oceans,\nthe orbital variations of the earth,",
+          "start": 96.28,
+          "duration": 5.4
+        },
+        {
+          "text": "as well as a myriad of other inputs. None of these\nis fully understood, and there is no evidence",
+          "start": 101.68,
+          "duration": 7.2
+        },
+        {
+          "text": "that CO2 emissions are the dominant factor.\nBut actually there is much agreement between",
+          "start": 108.89,
+          "duration": 6.35
+        },
+        {
+          "text": "both groups of scientists. The following are\nsuch points of agreement:",
+          "start": 115.24,
+          "duration": 5.84
+        },
+        {
+          "text": "1) The climate is always changing.\n2) CO2 is a greenhouse gas without which life",
+          "start": 121.08,
+          "duration": 7.44
+        },
+        {
+          "text": "on earth is not possible, but adding it to\nthe atmosphere should lead to some warming.",
+          "start": 128.53,
+          "duration": 6.26
+        },
+        {
+          "text": "3) Atmospheric levels of CO2 have been increasing\nsince the end of the Little Ice Age in the 19th century.",
+          "start": 134.79,
+          "duration": 8.25
+        },
+        {
+          "text": "4) Over this period (the past two centuries),",
+          "start": 143.04,
+          "duration": 4.419
+        },
+        {
+          "text": "the global mean temperature has increased\nslightly and erratically by about 1.8 degrees",
+          "start": 147.459,
+          "duration": 5.87
+        },
+        {
+          "text": "Fahrenheit or one degree Celsius; but only\nsince the 1960\u2019s have man\u2019s greenhouse",
+          "start": 153.329,
+          "duration": 7.44
+        },
+        {
+          "text": "emissions been sufficient to play a role.\n5) Given the complexity of climate, no confident",
+          "start": 160.769,
+          "duration": 7.931
+        },
+        {
+          "text": "prediction about future global mean temperature\nor its impact can be made. The IPCC, acknowledged",
+          "start": 168.7,
+          "duration": 7.95
+        },
+        {
+          "text": "in its own 2007 report that \u201cThe long-term\nprediction of future climate states is not possible.\u201d",
+          "start": 176.65,
+          "duration": 10.35
+        },
+        {
+          "text": "Most importantly, the scenario that the burning of fossil fuels",
+          "start": 187.0,
+          "duration": 5.36
+        },
+        {
+          "text": "leads to catastrophe isn\u2019t part of what either group asserts.",
+          "start": 192.36,
+          "duration": 5.54
+        },
+        {
+          "text": "So why are so many people worried, indeed, panic\nstricken about this issue.",
+          "start": 197.9,
+          "duration": 5.94
+        },
+        {
+          "text": "Here\u2019s where Group Three comes in -- the politicians, environmentalists, and media.",
+          "start": 203.84,
+          "duration": 6.3
+        },
+        {
+          "text": "Global Warming Alarmism provides them, more\nthan any other issue, with the things they",
+          "start": 210.14,
+          "duration": 6.04
+        },
+        {
+          "text": "most want: For politicians it\u2019s money and\npower. For environmentalists it\u2019s money",
+          "start": 216.18,
+          "duration": 6.0
+        },
+        {
+          "text": "for their organizations and confirmation of\ntheir near religious devotion to the idea",
+          "start": 222.18,
+          "duration": 6.11
+        },
+        {
+          "text": "that man is a destructive force acting upon\nnature. And for the media it\u2019s ideology,",
+          "start": 228.29,
+          "duration": 7.129
+        },
+        {
+          "text": "money, and headlines -- doomsday scenarios\nsell.",
+          "start": 235.419,
+          "duration": 4.921
+        },
+        {
+          "text": "Meanwhile, over the last decade, scientists\noutside of climate physics have jumped on",
+          "start": 240.34,
+          "duration": 5.939
+        },
+        {
+          "text": "the bandwagon, publishing papers blaming global\nwarming for everything from acne to the Syrian",
+          "start": 246.279,
+          "duration": 7.091
+        },
+        {
+          "text": "civil war. And, crony capitalists have eagerly\ngrabbed for the subsidies that governments",
+          "start": 253.37,
+          "duration": 6.51
+        },
+        {
+          "text": "have so lavishly provided.\nUnfortunately, group three is winning the",
+          "start": 259.88,
+          "duration": 5.25
+        },
+        {
+          "text": "argument because they have drowned out the\nserious debate that should be going on.",
+          "start": 265.13,
+          "duration": 5.4
+        },
+        {
+          "text": "But while politicians, environmentalists and\nmedia types can waste a lot of money and scare",
+          "start": 270.53,
+          "duration": 6.69
+        },
+        {
+          "text": "a lot of people, they won\u2019t be able to bury\nthe truth. The climate will have the final word on that.",
+          "start": 277.22,
+          "duration": 8.96
+        },
+        {
+          "text": "I\u2019m Richard Lindzen, emeritus professor of Atmospheric Sciences at MIT, for PragerUniversity.",
+          "start": 286.18,
+          "duration": 8.42
+        }
+      ],
+      "video_id": "OwqIy8Ikv-c"
+    }
+  }
+}

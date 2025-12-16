@@ -1,0 +1,378 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:33:54.575342",
+    "latency_seconds": 7.17,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nIt's 6:00 in the morning, pitch black outside. My 14-year-old son is fast asleep in his bed. I flip on the light and physically shake the poor boy awake. because I know that, like ripping off a Band-Aid, it's better to get it over with quickly. Sound brutal, but perhaps familiar? Every morning I ask myself, how can I, knowing what I know, be doing this to my own son? You see, I\u2019m a sleep researcher. So I know that I\u2019m depriving my son of sleep he desperately needs as a rapidly growing teenager. I also know that by waking him up hours before his natural biological clock tells him he\u2019s ready, I\u2019m literally robbing him of the type of sleep most associated with learning, memory consolidation, and emotional processing. But it's not just my kid that's being deprived of sleep. Sleep deprivation among American teenagers is an epidemic. Only about 1 in 10 gets the 8 to 10 hours of sleep per night recommended by sleep scientists and pediatricians. The major factor preventing teens from getting the sleep they need is a matter of public policy. Across the country, many schools are starting around 7:30 a.m. or earlier, despite the fact that major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m. These early start policies have a direct effect on how little sleep American teenagers are getting. They\u2019re also pitting teenagers in a fundamentally unwinnable fight against their own bodies. Around the time of puberty, teenagers experience a delay in their biological clock, which determines when we feel most awake and when we feel most sleepy. This is driven in part by a shift in the release of the hormone melatonin. Teenagers\u2019 bodies wait to start releasing melatonin until around 11 p.m., which is two hours later than what we see in adults or younger children. This means that waking a teenager up at 6 a.m. is the biological equivalent of waking an adult up at 4 a.m. Now, on the unfortunate days when I have to wake up at 4 a.m., I\u2019m a zombie. Functionally useless. I can't think straight. I\u2019m irritable, and I probably shouldn\u2019t be driving a car. But this is how many American teenagers feel every single school day. Many of the, shall we say, unpleasant characteristics that we chalk up to being a teenager\u2014 moodiness, irritability, laziness, depression\u2014 could be a product of chronic sleep deprivation. For many teens battling chronic sleep loss, their go-to strategy to compensate is consuming large quantities of caffeine in the form of venti Frappuccinos, or energy drinks and shots. So essentially, we've got an entire population of tired but wired youth. Advocates of sleep-friendly start times know that adolescence is a period of dramatic brain development, particularly in the parts of the brain that are responsible for those higher order thinking processes, including reasoning, problem solving, and good judgment. In other words, the very type of brain activity that\u2019s responsible for reining in those impulsive and often risky behaviors that are so characteristic of adolescence. They know that, like the rest of us, when teenagers don\u2019t get the sleep they need, their brains, their bodies, and behavior suffer. They can't concentrate. Their attention plummets, and many will even show behavioral signs that mimic ADHD. But the consequences of teen sleep loss go well beyond the classroom, sadly contributing to many of the mental health problems that skyrocket during adolescence. In our work with teens from LA Unified School District, we found that teens with sleep problems were 55% more likely to have used alcohol in the past month. In another study with over 30,000 high school students, they found that for each hour of lost sleep, there was a 38% increase in feeling sad or hopeless, and a 58% increase in teen suicide attempts. And if that's not enough, teens who skimp out on sleep are at increased risk for a host of physical health problems that plague our country, including obesity, heart disease, and diabetes. Then there\u2019s the risk of putting a sleep-deprived teen behind the wheel. Studies have shown that getting five hours or less of sleep per night is the equivalent of driving with a blood alcohol content above the legal limit. Researchers in this area have produced tremendous science showing the benefits of later start times. The findings are unequivocal. Teens from districts with later start times get more sleep. They're more likely to show up for school. School absences dropped by 25% in one district, and they're less likely to drop out. Not surprisingly, they do better academically. Standardized test scores in math and reading go up by 2 to 3 percentage points. That's as powerful as reducing class sizes by one third fewer students. Their mental and physical health improves, and their families are happier. Even their communities are safer because car crash rates go down\u2014 a 70% reduction in one district. Now, given these tremendous benefits, you might think, well, this is a no brainer, right? So why have we as a society failed to heed this call? Delaying start times presents many logistical challenges. Updating bus routes, increased transportation costs, impact on sports. Care before or after school. But these are problems we have to work through. They are not valid excuses for failing to do the right thing for our children, which is to start middle and high schools no earlier than 8:30 a.m. Districts around the country, big and small, who have made this change, they\u2019ve found that these fears are often unfounded and far outweighed by the tremendous benefits for our student health and performance and our collective public safety.",
+    "input_length_chars": 5710,
+    "input_tokens_estimated": 1427,
+    "output": {
+      "claims": [
+        {
+          "text": "Only about 1 in 10 American teenagers gets the recommended 8 to 10 hours of sleep per night.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.85,
+          "context": "Claim about sleep deprivation among American teenagers."
+        },
+        {
+          "text": "Major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m.",
+          "confidence": 0.95,
+          "category": "policy",
+          "importance": 0.85,
+          "context": "Recommendation from medical organizations regarding school start times."
+        },
+        {
+          "text": "Teenagers experience a delay in their biological clock around puberty, affecting sleep patterns.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Biological changes in teenagers affecting sleep."
+        },
+        {
+          "text": "Teenagers' bodies start releasing melatonin around 11 p.m., two hours later than adults.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Hormonal changes in teenagers affecting sleep timing."
+        },
+        {
+          "text": "Waking a teenager up at 6 a.m. is biologically equivalent to waking an adult at 4 a.m.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Comparison of sleep needs between teenagers and adults."
+        },
+        {
+          "text": "Teens with sleep problems are 55% more likely to have used alcohol in the past month.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Study linking sleep problems and alcohol use among teens."
+        },
+        {
+          "text": "For each hour of lost sleep, there is a 38% increase in feeling sad or hopeless among teens.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Study on the impact of sleep loss on teen mental health."
+        }
+      ],
+      "total_count": 7
+    },
+    "output_length_chars": 2248,
+    "output_tokens_estimated": 562,
+    "cost_usd": 0.00055125
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:33:59.953826",
+    "latency_seconds": 1.92,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Teenagers experience a delay in their biological clock around puberty, affecting sleep patterns.\nContext: Biological changes in teenagers affecting sleep.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 327,
+    "input_tokens_estimated": 81,
+    "output": {
+      "original_claim": "Teenagers experience a delay in their biological clock around puberty, affecting sleep patterns.",
+      "queries": [
+        {
+          "query": "Teenagers biological clock delay puberty sleep patterns",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "puberty sleep patterns teenagers biological clock changes",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 358,
+    "output_tokens_estimated": 89,
+    "cost_usd": 6.555e-05,
+    "context": {
+      "claim_index": 7,
+      "claim_text": "For each hour of lost sleep, there is a 38% increase in feeling sad or hopeless among teens."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:34:00.111727",
+    "latency_seconds": 2.08,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Only about 1 in 10 American teenagers gets the recommended 8 to 10 hours of sleep per night.\nContext: Claim about sleep deprivation among American teenagers.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 330,
+    "input_tokens_estimated": 82,
+    "output": {
+      "original_claim": "Only about 1 in 10 American teenagers gets the recommended 8 to 10 hours of sleep per night.",
+      "queries": [
+        {
+          "query": "American teenagers sleep statistics 8 to 10 hours 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "percentage of American teenagers getting recommended sleep 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 359,
+    "output_tokens_estimated": 89,
+    "cost_usd": 6.57e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "Teenagers experience a delay in their biological clock around puberty, affecting sleep patterns.",
+      "query_index": 2,
+      "query_text": "puberty sleep patterns teenagers biological clock changes"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:34:00.196969",
+    "latency_seconds": 2.16,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Teenagers' bodies start releasing melatonin around 11 p.m., two hours later than adults.\nContext: Hormonal changes in teenagers affecting sleep timing.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 324,
+    "input_tokens_estimated": 81,
+    "output": {
+      "original_claim": "Teenagers' bodies start releasing melatonin around 11 p.m., two hours later than adults.",
+      "queries": [
+        {
+          "query": "Teenagers melatonin release time compared to adults",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "melatonin release time in teenagers vs adults",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 334,
+    "output_tokens_estimated": 83,
+    "cost_usd": 6.195e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Only about 1 in 10 American teenagers gets the recommended 8 to 10 hours of sleep per night.",
+      "query_index": 2,
+      "query_text": "percentage of American teenagers getting recommended sleep 2023"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:34:00.282096",
+    "latency_seconds": 2.25,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m.\nContext: Recommendation from medical organizations regarding school start times.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 352,
+    "input_tokens_estimated": 88,
+    "output": {
+      "original_claim": "Major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m.",
+      "queries": [
+        {
+          "query": "Major medical organizations recommend school start times 8:30 a.m.",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "school start time recommendations by medical organizations 8:30 a.m.",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 382,
+    "output_tokens_estimated": 95,
+    "cost_usd": 7.02e-05,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "Teenagers' bodies start releasing melatonin around 11 p.m., two hours later than adults.",
+      "query_index": 2,
+      "query_text": "melatonin release time in teenagers vs adults"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:34:00.437828",
+    "latency_seconds": 2.4,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Waking a teenager up at 6 a.m. is biologically equivalent to waking an adult at 4 a.m.\nContext: Comparison of sleep needs between teenagers and adults.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 324,
+    "input_tokens_estimated": 81,
+    "output": {
+      "original_claim": "Waking a teenager up at 6 a.m. is biologically equivalent to waking an adult at 4 a.m.",
+      "queries": [
+        {
+          "query": "biological sleep needs teenagers vs adults 6 a.m. 4 a.m.",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "teenagers sleep requirements compared to adults",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 339,
+    "output_tokens_estimated": 84,
+    "cost_usd": 6.255e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "Major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m.",
+      "query_index": 2,
+      "query_text": "school start time recommendations by medical organizations 8:30 a.m."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:34:01.446041",
+    "latency_seconds": 3.41,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: For each hour of lost sleep, there is a 38% increase in feeling sad or hopeless among teens.\nContext: Study on the impact of sleep loss on teen mental health.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 331,
+    "input_tokens_estimated": 82,
+    "output": {
+      "original_claim": "For each hour of lost sleep, there is a 38% increase in feeling sad or hopeless among teens.",
+      "queries": [
+        {
+          "query": "38% increase in feeling sad or hopeless among teens for each hour of lost sleep",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "impact of sleep loss on teen mental health statistics",
+          "query_type": "source",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 369,
+    "output_tokens_estimated": 92,
+    "cost_usd": 6.75e-05,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "Waking a teenager up at 6 a.m. is biologically equivalent to waking an adult at 4 a.m.",
+      "query_index": 2,
+      "query_text": "teenagers sleep requirements compared to adults"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:34:51.820304",
+    "latency_seconds": 2.75,
+    "input_prompt": "Claim:\nOnly about 1 in 10 American teenagers gets the recommended 8 to 10 hours of sleep per night.\n\nArticle Title:\nCDC: Most US teens fail to get recommended 8 hours of sleep ...\n\nGoogle Search Snippet:\nA CDC report shows only 23% of U.S. teens get enough sleep, with disparities highlighting the need for targeted health interventions.\n\nFull Page Content:\nSubscribe\nContemporary PEDS Journal\nA CDC report shows only 23% of U.S. teens get enough sleep, with disparities highlighting the need for targeted health interventions.\nThe Youth Risk Behavior Survey (YRBS) Data Summary & Trends Report for Dietary, Physical Activity, and Sleep Behaviors: 2013\u20132023, developed by the CDC, provides a comprehensive overview of sleep behaviors among US high school students. The report is part of a broader examination of adolescent health, which also includes dietary and physical activity behaviors previously covered by Contemporary Pediatrics.\nThe findings regarding sleep behaviors highlight a trend of inadequate sleep among adolescents, which can have significant implications for their overall health and academic performance.\nThe report revealed that a substantial percentage of high school students are not getting the recommended amount of sleep. Specifically, the CDC recommended that adolescents aim for at least 8 hours of sleep on an average school night.\nHowever, data from the YRBS indicated that only 23% of students reported achieving this guideline in 2023. That figure reflects a stagnation in sleep duration, as it has remained relatively unchanged over the past decade, with only slight fluctuations observed in the two-year comparisons.\nDisparities in sleep behaviors are also evident in the data. In 2013, 35% of males got at least 8 hours of sleep on an average school night compared to 25% in 2023. The trend also decreased across the decade for females, as 29% reported 8 hours of sleep in 2013 compared to 22% in 2023.\nThe lack of sufficient sleep among adolescents is a growing concern, as it is linked to various negative health outcomes, including increased risk of obesity, mental health issues, and impaired cognitive function. The report emphasizes that inadequate sleep can hinder students' ability to concentrate, perform academically, and engage in physical activities, further compounding the challenges they face in maintaining a healthy lifestyle.\nRacial and ethnic disparities are also present in sleep behaviors. The report showed that students from various racial and ethnic backgrounds experience different levels of sleep adequacy. For instance, Black (19%) and Hispanic (24%) students reported lower percentages of achieving the recommended sleep duration compared to their White peers (25%) in 2023.\nThe report also examined the impact of external factors on sleep behaviors. The COVID-19 pandemic significantly altered students' daily routines, including sleep patterns. Many students experienced disruptions in their sleep schedules because of remote learning, increased screen time, and changes in social interactions. As schools returned to in-person learning, some students may have found it challenging to readjust their sleep habits, which contributed to ongoing issues with sleep adequacy.\nDespite the concerning trends in sleep behaviors, the report underscores the importance of promoting healthy sleep habits among adolescents. Schools and communities can play a vital role in fostering environments that prioritize sleep health. Initiatives such as education on the importance of sleep, encouraging consistent sleep schedules, and reducing the stigma around mental health can help students recognize the value of adequate sleep.\nIn conclusion, the YRBS Data Summary & Trends Report reveals a troubling picture of sleep behaviors among US high school students, with a significant portion of adolescents failing to meet the recommended sleep guidelines.\nClick here to view highlights from the CDC's youth risk report of dietary behavior from 2013-2023.\nClick here to view highlights from the CDC's youth risk report for physical activity behavior.\nReference:\nYouth risk behavior survey data summary & trends report for dietary, physical activity, and sleep behaviors: 2013-2023. CDC. January 14, 2025. Accessed January 16, 2025. https://www.cdc.gov/yrbs/dstr/pdf/DSTR-Dietary-PhysicalActivity-SleepBehavior2013-2023-508.pdf?ACSTrackingID=DM143930&ACSTrackingLabel=New%20CDC%20Report%20on%20Student%20Dietary%2C%20Physical%20Activity%2C%20and%20Sleep%20Behaviors%20Released!%20-%20Healthy%20Schools&deliveryName=DM143930\n9 months ago\nARTICLE\n9 months ago\nARTICLE\n9 months ago\nARTICLE\n9 months ago\nARTICLE\nAccess practical, evidence-based guidance to support better care for our youngest patients. Join our email list for the latest clinical updates.\nJanuary 23, 2026\nTina Bhutani, MD\nDiana Isaacs, PharmD, BCPS, BC-ADM, BCACP, CDCES, FADCES, FCCP; Anders Carlson, MD; Jennifer B. Green, MD\n259 Prospect Plains Rd, Bldg H Cranbury, NJ 08512\n609-716-7777\n\u00a9 2025 MJH Life Sciences\u00ae\nAll rights reserved.\n\nProvide relevant evidence.",
+    "input_length_chars": 5074,
+    "input_tokens_estimated": 1268,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that only 23% of U.S. teens meet the recommended 8 hours of sleep per night, which contradicts the claim that only about 1 in 10 teenagers achieves this guideline. Therefore, the claim is not supported by the data presented.",
+      "overall_stance": "refutes",
+      "key_quote": "the CDC recommended that adolescents aim for at least 8 hours of sleep on an average school night. However, data from the YRBS indicated that only 23% of students reported achieving this guideline in 2023."
+    },
+    "output_length_chars": 537,
+    "output_tokens_estimated": 134,
+    "cost_usd": 0.0002706
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:34:51.989161",
+    "latency_seconds": 2.92,
+    "input_prompt": "Claim:\nOnly about 1 in 10 American teenagers gets the recommended 8 to 10 hours of sleep per night.\n\nArticle Title:\nDo Popular Teens Get Less Sleep?\n\nGoogle Search Snippet:\nResearchers found that teenagers who consider themselves more popular tend to sleep less than their less-popular peers. That might not seem like ...\n\nFull Page Content:\nSubscribe\nContemporary PEDS Journal\nA CDC report shows only 23% of U.S. teens get enough sleep, with disparities highlighting the need for targeted health interventions.\nThe Youth Risk Behavior Survey (YRBS) Data Summary & Trends Report for Dietary, Physical Activity, and Sleep Behaviors: 2013\u20132023, developed by the CDC, provides a comprehensive overview of sleep behaviors among US high school students. The report is part of a broader examination of adolescent health, which also includes dietary and physical activity behaviors previously covered by Contemporary Pediatrics.\nThe findings regarding sleep behaviors highlight a trend of inadequate sleep among adolescents, which can have significant implications for their overall health and academic performance.\nThe report revealed that a substantial percentage of high school students are not getting the recommended amount of sleep. Specifically, the CDC recommended that adolescents aim for at least 8 hours of sleep on an average school night.\nHowever, data from the YRBS indicated that only 23% of students reported achieving this guideline in 2023. That figure reflects a stagnation in sleep duration, as it has remained relatively unchanged over the past decade, with only slight fluctuations observed in the two-year comparisons.\nDisparities in sleep behaviors are also evident in the data. In 2013, 35% of males got at least 8 hours of sleep on an average school night compared to 25% in 2023. The trend also decreased across the decade for females, as 29% reported 8 hours of sleep in 2013 compared to 22% in 2023.\nThe lack of sufficient sleep among adolescents is a growing concern, as it is linked to various negative health outcomes, including increased risk of obesity, mental health issues, and impaired cognitive function. The report emphasizes that inadequate sleep can hinder students' ability to concentrate, perform academically, and engage in physical activities, further compounding the challenges they face in maintaining a healthy lifestyle.\nRacial and ethnic disparities are also present in sleep behaviors. The report showed that students from various racial and ethnic backgrounds experience different levels of sleep adequacy. For instance, Black (19%) and Hispanic (24%) students reported lower percentages of achieving the recommended sleep duration compared to their White peers (25%) in 2023.\nThe report also examined the impact of external factors on sleep behaviors. The COVID-19 pandemic significantly altered students' daily routines, including sleep patterns. Many students experienced disruptions in their sleep schedules because of remote learning, increased screen time, and changes in social interactions. As schools returned to in-person learning, some students may have found it challenging to readjust their sleep habits, which contributed to ongoing issues with sleep adequacy.\nDespite the concerning trends in sleep behaviors, the report underscores the importance of promoting healthy sleep habits among adolescents. Schools and communities can play a vital role in fostering environments that prioritize sleep health. Initiatives such as education on the importance of sleep, encouraging consistent sleep schedules, and reducing the stigma around mental health can help students recognize the value of adequate sleep.\nIn conclusion, the YRBS Data Summary & Trends Report reveals a troubling picture of sleep behaviors among US high school students, with a significant portion of adolescents failing to meet the recommended sleep guidelines.\nClick here to view highlights from the CDC's youth risk report of dietary behavior from 2013-2023.\nClick here to view highlights from the CDC's youth risk report for physical activity behavior.\nReference:\nYouth risk behavior survey data summary & trends report for dietary, physical activity, and sleep behaviors: 2013-2023. CDC. January 14, 2025. Accessed January 16, 2025. https://www.cdc.gov/yrbs/dstr/pdf/DSTR-Dietary-PhysicalActivity-SleepBehavior2013-2023-508.pdf?ACSTrackingID=DM143930&ACSTrackingLabel=New%20CDC%20Report%20on%20Student%20Dietary%2C%20Physical%20Activity%2C%20and%20Sleep%20Behaviors%20Released!%20-%20Healthy%20Schools&deliveryName=DM143930\n9 months ago\nARTICLE\n9 months ago\nARTICLE\n9 months ago\nARTICLE\n9 months ago\nARTICLE\nAccess practical, evidence-based guidance to support better care for our youngest patients. Join our email list for the latest clinical updates.\nJanuary 23, 2026\nTina Bhutani, MD\nDiana Isaacs, PharmD, BCPS, BC-ADM, BCACP, CDCES, FADCES, FCCP; Anders Carlson, MD; Jennifer B. Green, MD\n259 Prospect Plains Rd, Bldg H Cranbury, NJ 08512\n609-716-7777\n\u00a9 2025 MJH Life Sciences\u00ae\nAll rights reserved.\n\nProvide relevant evidence.",
+    "input_length_chars": 5058,
+    "input_tokens_estimated": 1264,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that only 23% of U.S. teens are getting the recommended 8 hours of sleep on average school nights, which supports the claim that a significant majority of teenagers do not meet the sleep guidelines.",
+      "overall_stance": "supports",
+      "key_quote": "the CDC recommended that adolescents aim for at least 8 hours of sleep on an average school night. However, data from the YRBS indicated that only 23% of students reported achieving this guideline in 2023."
+    },
+    "output_length_chars": 512,
+    "output_tokens_estimated": 128,
+    "cost_usd": 0.0002664
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:34:51.995577",
+    "latency_seconds": 2.93,
+    "input_prompt": "Claim:\nOnly about 1 in 10 American teenagers gets the recommended 8 to 10 hours of sleep per night.\n\nArticle Title:\nFastStats: Sleep in High School Students - CDC\n\nGoogle Search Snippet:\nThe recommended amount of sleep for high school students is 8 hours each day. High school students who do not get 8 hours of sleep each day ...\n\nFull Page Content:\nSubscribe\nContemporary PEDS Journal\nA CDC report shows only 23% of U.S. teens get enough sleep, with disparities highlighting the need for targeted health interventions.\nThe Youth Risk Behavior Survey (YRBS) Data Summary & Trends Report for Dietary, Physical Activity, and Sleep Behaviors: 2013\u20132023, developed by the CDC, provides a comprehensive overview of sleep behaviors among US high school students. The report is part of a broader examination of adolescent health, which also includes dietary and physical activity behaviors previously covered by Contemporary Pediatrics.\nThe findings regarding sleep behaviors highlight a trend of inadequate sleep among adolescents, which can have significant implications for their overall health and academic performance.\nThe report revealed that a substantial percentage of high school students are not getting the recommended amount of sleep. Specifically, the CDC recommended that adolescents aim for at least 8 hours of sleep on an average school night.\nHowever, data from the YRBS indicated that only 23% of students reported achieving this guideline in 2023. That figure reflects a stagnation in sleep duration, as it has remained relatively unchanged over the past decade, with only slight fluctuations observed in the two-year comparisons.\nDisparities in sleep behaviors are also evident in the data. In 2013, 35% of males got at least 8 hours of sleep on an average school night compared to 25% in 2023. The trend also decreased across the decade for females, as 29% reported 8 hours of sleep in 2013 compared to 22% in 2023.\nThe lack of sufficient sleep among adolescents is a growing concern, as it is linked to various negative health outcomes, including increased risk of obesity, mental health issues, and impaired cognitive function. The report emphasizes that inadequate sleep can hinder students' ability to concentrate, perform academically, and engage in physical activities, further compounding the challenges they face in maintaining a healthy lifestyle.\nRacial and ethnic disparities are also present in sleep behaviors. The report showed that students from various racial and ethnic backgrounds experience different levels of sleep adequacy. For instance, Black (19%) and Hispanic (24%) students reported lower percentages of achieving the recommended sleep duration compared to their White peers (25%) in 2023.\nThe report also examined the impact of external factors on sleep behaviors. The COVID-19 pandemic significantly altered students' daily routines, including sleep patterns. Many students experienced disruptions in their sleep schedules because of remote learning, increased screen time, and changes in social interactions. As schools returned to in-person learning, some students may have found it challenging to readjust their sleep habits, which contributed to ongoing issues with sleep adequacy.\nDespite the concerning trends in sleep behaviors, the report underscores the importance of promoting healthy sleep habits among adolescents. Schools and communities can play a vital role in fostering environments that prioritize sleep health. Initiatives such as education on the importance of sleep, encouraging consistent sleep schedules, and reducing the stigma around mental health can help students recognize the value of adequate sleep.\nIn conclusion, the YRBS Data Summary & Trends Report reveals a troubling picture of sleep behaviors among US high school students, with a significant portion of adolescents failing to meet the recommended sleep guidelines.\nClick here to view highlights from the CDC's youth risk report of dietary behavior from 2013-2023.\nClick here to view highlights from the CDC's youth risk report for physical activity behavior.\nReference:\nYouth risk behavior survey data summary & trends report for dietary, physical activity, and sleep behaviors: 2013-2023. CDC. January 14, 2025. Accessed January 16, 2025. https://www.cdc.gov/yrbs/dstr/pdf/DSTR-Dietary-PhysicalActivity-SleepBehavior2013-2023-508.pdf?ACSTrackingID=DM143930&ACSTrackingLabel=New%20CDC%20Report%20on%20Student%20Dietary%2C%20Physical%20Activity%2C%20and%20Sleep%20Behaviors%20Released!%20-%20Healthy%20Schools&deliveryName=DM143930\n9 months ago\nARTICLE\n9 months ago\nARTICLE\n9 months ago\nARTICLE\n9 months ago\nARTICLE\nAccess practical, evidence-based guidance to support better care for our youngest patients. Join our email list for the latest clinical updates.\nJanuary 23, 2026\nTina Bhutani, MD\nDiana Isaacs, PharmD, BCPS, BC-ADM, BCACP, CDCES, FADCES, FCCP; Anders Carlson, MD; Jennifer B. Green, MD\n259 Prospect Plains Rd, Bldg H Cranbury, NJ 08512\n609-716-7777\n\u00a9 2025 MJH Life Sciences\u00ae\nAll rights reserved.\n\nProvide relevant evidence.",
+    "input_length_chars": 5067,
+    "input_tokens_estimated": 1266,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that only 23% of U.S. teens get the recommended 8 hours of sleep on average school nights, which supports the claim that a significant majority of teenagers do not meet the sleep recommendations.",
+      "overall_stance": "supports",
+      "key_quote": "the CDC recommended that adolescents aim for at least 8 hours of sleep on an average school night. However, data from the YRBS indicated that only 23% of students reported achieving this guideline in 2023."
+    },
+    "output_length_chars": 509,
+    "output_tokens_estimated": 127,
+    "cost_usd": 0.0002661
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:34:52.538555",
+    "latency_seconds": 3.47,
+    "input_prompt": "Claim:\nOnly about 1 in 10 American teenagers gets the recommended 8 to 10 hours of sleep per night.\n\nArticle Title:\nSchools shift as evidence mounts that later start times improve teens ...\n\nGoogle Search Snippet:\nAdolescents between the ages of 13 and 18 should sleep 8 to 10 hours per day, according to the American Academy of Sleep Medicine. Few are ...\n\nFull Page Content:\nSubscribe\nContemporary PEDS Journal\nA CDC report shows only 23% of U.S. teens get enough sleep, with disparities highlighting the need for targeted health interventions.\nThe Youth Risk Behavior Survey (YRBS) Data Summary & Trends Report for Dietary, Physical Activity, and Sleep Behaviors: 2013\u20132023, developed by the CDC, provides a comprehensive overview of sleep behaviors among US high school students. The report is part of a broader examination of adolescent health, which also includes dietary and physical activity behaviors previously covered by Contemporary Pediatrics.\nThe findings regarding sleep behaviors highlight a trend of inadequate sleep among adolescents, which can have significant implications for their overall health and academic performance.\nThe report revealed that a substantial percentage of high school students are not getting the recommended amount of sleep. Specifically, the CDC recommended that adolescents aim for at least 8 hours of sleep on an average school night.\nHowever, data from the YRBS indicated that only 23% of students reported achieving this guideline in 2023. That figure reflects a stagnation in sleep duration, as it has remained relatively unchanged over the past decade, with only slight fluctuations observed in the two-year comparisons.\nDisparities in sleep behaviors are also evident in the data. In 2013, 35% of males got at least 8 hours of sleep on an average school night compared to 25% in 2023. The trend also decreased across the decade for females, as 29% reported 8 hours of sleep in 2013 compared to 22% in 2023.\nThe lack of sufficient sleep among adolescents is a growing concern, as it is linked to various negative health outcomes, including increased risk of obesity, mental health issues, and impaired cognitive function. The report emphasizes that inadequate sleep can hinder students' ability to concentrate, perform academically, and engage in physical activities, further compounding the challenges they face in maintaining a healthy lifestyle.\nRacial and ethnic disparities are also present in sleep behaviors. The report showed that students from various racial and ethnic backgrounds experience different levels of sleep adequacy. For instance, Black (19%) and Hispanic (24%) students reported lower percentages of achieving the recommended sleep duration compared to their White peers (25%) in 2023.\nThe report also examined the impact of external factors on sleep behaviors. The COVID-19 pandemic significantly altered students' daily routines, including sleep patterns. Many students experienced disruptions in their sleep schedules because of remote learning, increased screen time, and changes in social interactions. As schools returned to in-person learning, some students may have found it challenging to readjust their sleep habits, which contributed to ongoing issues with sleep adequacy.\nDespite the concerning trends in sleep behaviors, the report underscores the importance of promoting healthy sleep habits among adolescents. Schools and communities can play a vital role in fostering environments that prioritize sleep health. Initiatives such as education on the importance of sleep, encouraging consistent sleep schedules, and reducing the stigma around mental health can help students recognize the value of adequate sleep.\nIn conclusion, the YRBS Data Summary & Trends Report reveals a troubling picture of sleep behaviors among US high school students, with a significant portion of adolescents failing to meet the recommended sleep guidelines.\nClick here to view highlights from the CDC's youth risk report of dietary behavior from 2013-2023.\nClick here to view highlights from the CDC's youth risk report for physical activity behavior.\nReference:\nYouth risk behavior survey data summary & trends report for dietary, physical activity, and sleep behaviors: 2013-2023. CDC. January 14, 2025. Accessed January 16, 2025. https://www.cdc.gov/yrbs/dstr/pdf/DSTR-Dietary-PhysicalActivity-SleepBehavior2013-2023-508.pdf?ACSTrackingID=DM143930&ACSTrackingLabel=New%20CDC%20Report%20on%20Student%20Dietary%2C%20Physical%20Activity%2C%20and%20Sleep%20Behaviors%20Released!%20-%20Healthy%20Schools&deliveryName=DM143930\n9 months ago\nARTICLE\n9 months ago\nARTICLE\n9 months ago\nARTICLE\n9 months ago\nARTICLE\nAccess practical, evidence-based guidance to support better care for our youngest patients. Join our email list for the latest clinical updates.\nJanuary 23, 2026\nTina Bhutani, MD\nDiana Isaacs, PharmD, BCPS, BC-ADM, BCACP, CDCES, FADCES, FCCP; Anders Carlson, MD; Jennifer B. Green, MD\n259 Prospect Plains Rd, Bldg H Cranbury, NJ 08512\n609-716-7777\n\u00a9 2025 MJH Life Sciences\u00ae\nAll rights reserved.\n\nProvide relevant evidence.",
+    "input_length_chars": 5093,
+    "input_tokens_estimated": 1273,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that only 23% of U.S. teens are getting the recommended 8 hours of sleep on average school nights, which supports the claim that a significant majority of teenagers are not meeting sleep recommendations.",
+      "overall_stance": "supports",
+      "key_quote": "The report revealed that a substantial percentage of high school students are not getting the recommended amount of sleep. Specifically, the CDC recommended that adolescents aim for at least 8 hours of sleep on an average school night. However, data from the YRBS indicated that only 23% of students reported achieving this guideline in 2023."
+    },
+    "output_length_chars": 654,
+    "output_tokens_estimated": 163,
+    "cost_usd": 0.00028875
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:34:52.854583",
+    "latency_seconds": 25.19,
+    "input_prompt": "Claim:\nTeenagers experience a delay in their biological clock around puberty, affecting sleep patterns.\n\nArticle Title:\nAdolescent Changes in the Homeostatic and Circadian Regulation ...\n\nGoogle Search Snippet:\nWe argue that this sleep deprivation is due in part to pubertal changes in the homeostatic and circadian regulation of sleep.\n\nFull Page Content:\nWESTCHESTER, IL \u2013 A study in the Dec.1 issue of the journal SLEEP suggests that changes in children\u2019s sleep patterns that typically occur between the ages of 11 and 12 years are evident before the physical changes associated with the onset of puberty.\nResults show that over the two-year course of the study, sleep onset was significantly delayed by an average of 50 minutes, and sleep time was significantly reduced by an average of 37 minutes. Girls had higher sleep efficiency and reported fewer night wakings than boys. Initial levels of sleep predicted an increase in pubertal development over time, whereas there was no similar prediction in the opposite direction. According to the authors, this suggests that the neurobehavioral changes associated with puberty may be seen earlier in measures of sleep organization than in bodily changes.\nLead author Avi Sadeh, D.Sc, professor of psychology at Tel Aviv University in Israel, said that biological factors have a significant influence on sleep during puberty; however, psychosocial issues such as school demands, social activities and technological distractions can lead to the development of bad sleep habits. Therefore, parents and educators can play an important role in helping children understand how to prioritize sleep as they grow and mature.\n\u201cIt is very important for parents to be aware of the importance of sleep to their developing teenager and to maintain their supervision throughout the adolescent years,\u201d said Sadeh. \u201cSchool health education should also provide children with compelling information on how insufficient sleep compromises their well-being, psychological functioning and school achievements.\u201d\nAccording to the authors, sleep-wake organization undergoes significant reorganization during the transition to adolescence. The main changes include a delayed sleep phase, which involves a tendency for later bedtimes and rise times; shorter sleep, which is associated with increased levels of daytime sleepiness; and irregular sleep patterns, which involve sleeping very little on weekdays and sleeping longer during weekends to partially compensate for this sleep loss. During maturation adolescents also develop greater tolerance to sleep deprivation or extended wakefulness.\nData from 94 children (41 boys and 53 girls) were collected from a larger study on sleep and neurobehavioral functioning during the transition to puberty. Children were recruited from regular classes of five different elementary schools in the Tel Aviv area. At first assessment the age range was about 10 years to 11 years. Each child completed a number of questionnaires, including the Sexual Maturation Scale (SMS) and the Puberty Development Scale (PDS) for pubertal development assessment. All children were healthy with no chronic medical or psychological problems.\nSleep-wake patterns were observed subjectively with a sleep diary and objectively using an actigraph, which the children wore on their wrist. The same assessment was repeated, at a similar time of year, for two successive years. Eighty-two children completed the second assessment, and 72 completed the third assessment.\nThe authors noted that Israel has a six-day school week, with Friday being the only day that is not followed by school. As expected, significant differences were found between sleep on Friday nights and sleep on school nights. On Fridays, sleep onset was delayed, sleep time was extended and sleep quality was poorer in comparison with school nights. These differences were not associated with puberty status or gender, suggesting that the tendency for weekend compensatory sleep is relatively steady over the period of early adolescence.\nAccording to the authors, a deeper understanding of the interrelationships between puberty and sleep changes may provide new insights into the emergence of vulnerabilities for behavioral and emotional health problems in early adolescence, which could improve prevention and early intervention efforts.\nSLEEP is the official journal of the Associated Professional Sleep Societies, LLC (APSS), a joint venture of the American Academy of Sleep Medicine and the Sleep Research Society. The APSS publishes original findings in areas pertaining to sleep and circadian rhythms. SLEEP, a peer-reviewed scientific and medical journal, publishes 12 regular issues and 1 issue comprising the abstracts presented at the SLEEP Meeting of the APSS.\nFor a copy of the study, \u201cSleep and the Transition to Adolescence: A Longitudinal Study,\u201d or to arrange an interview with the study\u2019s author, please contact the AASM at media@aasm.org.\nAASM is a professional membership organization dedicated to the advancement of sleep medicine and sleep-related research. As the national accrediting body for sleep disorders centers and laboratories for sleep related breathing disorders, the AASM promotes the highest standards of patient care. The organization serves its members and advances the field of sleep health care by setting the clinical standards for the field of sleep medicine, advocating for recognition, diagnosis and treatment of sleep disorders, educating professionals dedicated to providing optimal sleep health care and fostering the development and application of scientific knowledge.\n###\nDecember 11, 2025\nDecember 06, 2025\nDecember 05, 2025\nDecember 04, 2025\nDecember 02, 2025\n2510 North Frontage Road Darien, IL 60561 Phone: (630) 737-9700 Fax: (630) 737-9790\n\nProvide relevant evidence.",
+    "input_length_chars": 5832,
+    "input_tokens_estimated": 1458,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that during puberty, adolescents experience a significant delay in sleep onset and changes in sleep patterns, which aligns with the claim about a delay in their biological clock affecting sleep.",
+      "overall_stance": "supports",
+      "key_quote": "the main changes include a delayed sleep phase, which involves a tendency for later bedtimes and rise times; shorter sleep, which is associated with increased levels of daytime sleepiness; and irregular sleep patterns."
+    },
+    "output_length_chars": 521,
+    "output_tokens_estimated": 130,
+    "cost_usd": 0.0002967
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:34:53.686254",
+    "latency_seconds": 22.95,
+    "input_prompt": "Claim:\nMajor medical organizations recommend that middle and high schools start no earlier than 8:30 a.m.\n\nArticle Title:\nLater School Start Times More Popular, But What Are the Drawbacks?\n\nGoogle Search Snippet:\nMost U.S. public high schools begin around 8:00 am. The American Academy of Pediatrics recommends a starting time of 8:30 a.m. or later.\n\nFull Page Content:\nSource:\nInvestigators from multiple institutions conducted a meta-analysis to assess the association between school start time (SST) and sleep and other developmental outcomes in youths. For the study, they systematically reviewed published articles and identified studies that measured SST, sleep, or other developmental outcomes and were published in English. The following outcomes were assessed: sleep, socioemotional health, academics, cognition, and behavioral health (eg, substance use). An aggregate developmental outcome also was developed. Specific sleep indicators including duration, quality, bedtime, wake time, sleepiness, chronotype, hygiene, and naps were assessed. The initial analysis focused on the overall association of SST with these outcomes. The analyses were repeated with SSTs and grouped into different time categories (eg, before 7:30 a.m., 7:30 a.m. to 7:59 a.m.). The effects of changing SST on the outcomes were assessed. Finally, effect sizes by school characteristics (high school vs middle school, private vs public) were evaluated. Multiple meta-analysis regression techniques were used to identify statistically significant associations.\nThe meta-analysis included data on 1,774,509 participants from 28 studies. Overall, later SST was associated with significantly better outcomes, as measured by the aggregate developmental outcome (P = 0.01). Among specific outcomes, later SST was associated with longer sleep duration (P = 0.02) and lower levels of negative socioemotional well-being (P = 0.04); there was no significant relationship between academics and SST (P = 0.70). Compared with SST before 7:30 a.m., SST between 7:30 a.m. and 7:59 a.m. were associated with a better aggregate development outcome (P = 0.02). Changing SST to 8:30 a.m. to 8:59 a.m. from an 8 a.m. to 8:29 a.m. start time was associated with improvement in the aggregate developmental outcome (P = 0.02) and longer sleep duration (P = 0.02). Compared to middle school students, later SST was associated with significantly less sleepiness (P = 0.01) in high school students, and the positive effect on later wake times was significantly greater for those in private vs public schools (P = 0.04).\nThe authors conclude that later SST was associated with better overall developmental outcomes, longer sleep duration, and less negative mood.\nDr Dubik has disclosed no financial relationship relevant to this commentary. This commentary does not contain a discussion of an unapproved/investigative use of a commercial product/device.\nWith puberty, the circadian system naturally delays such that bedtime and wake time are later than before.1 This can be aggravated by modern social factors. Adolescent sleep patterns differ on school days and non-school days, with truncated sleep during the week and catch-up sleep on weekends and holidays.2 It is as if the teenager had flown east across 2 to 3 time zones and suffered from jet lag. This disconnect between social time and biological time is called \u201csocial jet...\nPurchased this content as a guest? Enter your email address to restore access.\n\nProvide relevant evidence.",
+    "input_length_chars": 3499,
+    "input_tokens_estimated": 874,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses the recommendation from the American Academy of Pediatrics for school start times to be no earlier than 8:30 a.m., highlighting the benefits of later start times on sleep and developmental outcomes for students.",
+      "overall_stance": "supports",
+      "key_quote": "The American Academy of Pediatrics recommends a starting time of 8:30 a.m. or later."
+    },
+    "output_length_chars": 403,
+    "output_tokens_estimated": 100,
+    "cost_usd": 0.0001911
+  }
+]

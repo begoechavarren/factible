@@ -1,0 +1,221 @@
+{
+  "video_id": "cWsWg9RcgzE",
+  "timestamp": "2025-12-14T11:04:46.386520",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_15",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.8666666666666667,
+    "recall": 0.37142857142857144,
+    "f1_score": 0.52,
+    "true_positives": 13,
+    "false_positives": 2,
+    "false_negatives": 22,
+    "mean_average_precision": 0.9207589419127881,
+    "recall_at_important": 0.4,
+    "importance_weighted_coverage": 0.36319612590799033,
+    "matched_claims": [
+      {
+        "gt_text": "AIDS was a guaranteed death sentence not so long ago",
+        "sys_text": "AIDS was once a guaranteed death sentence.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.85,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "The infection rate of HIV in Australia has shot up again",
+        "sys_text": "The rate of HIV infection in Australia has shot up again.",
+        "gt_importance": 0.8,
+        "sys_importance": 0.85,
+        "importance_error": 0.04999999999999993
+      },
+      {
+        "gt_text": "Alarmingly, 1,000 Australians a year are now diagnosed with HIV",
+        "sys_text": "1,000 Australians a year are now diagnosed with HIV.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.85,
+        "importance_error": 0.15000000000000002
+      },
+      {
+        "gt_text": "30 years ago, HIV was universally a death sentence",
+        "sys_text": "30 years ago, HIV was universally a death sentence.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.85,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "98% of new HIV infections among the women in the documentary were contracted through heterosexual sex",
+        "sys_text": "98% of all new infections are contracted through heterosexual sex.",
+        "gt_importance": 0.6,
+        "sys_importance": 0.7,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "People with HIV are now leading almost normal lives with improved prognosis",
+        "sys_text": "People with HIV are living far longer due to medical advances.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.7,
+        "importance_error": 0.15000000000000002
+      },
+      {
+        "gt_text": "Medical advances mean HIV can now be managed with proper treatment but it's a long hard road",
+        "sys_text": "HIV can now be managed with proper treatment.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.7,
+        "importance_error": 0.050000000000000044
+      },
+      {
+        "gt_text": "Sarah was 24 years old and diagnosed with HIV in 2008",
+        "sys_text": "Sarah was diagnosed with HIV in 2008.",
+        "gt_importance": 0.15,
+        "sys_importance": 0.6,
+        "importance_error": 0.44999999999999996
+      },
+      {
+        "gt_text": "HIV cells hide in the body and can go to sleep in some cells in small pockets - it was a needle in a haystack discovery",
+        "sys_text": "Last year, researchers found where HIV cells hide in the body.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.6,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "Deanna Bleg has lived 11 years longer than doctors predicted",
+        "sys_text": "Deanna has lived 11 years longer than doctors predicted.",
+        "gt_importance": 0.25,
+        "sys_importance": 0.6,
+        "importance_error": 0.35
+      },
+      {
+        "gt_text": "There is still enormous stigma surrounding HIV today, with people telling Sarah she should die and is disgusting",
+        "sys_text": "The stigma surrounding HIV is still enormous.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.6,
+        "importance_error": 0.15000000000000002
+      },
+      {
+        "gt_text": "Deanna Bleg contracted HIV from unprotected sex with a former boyfriend 16 years ago",
+        "sys_text": "Deanna contracted HIV from unprotected sex with a former boyfriend.",
+        "gt_importance": 0.2,
+        "sys_importance": 0.6,
+        "importance_error": 0.39999999999999997
+      },
+      {
+        "gt_text": "Neither of Deanna's children were infected with HIV",
+        "sys_text": "Deanna's children were not infected with HIV.",
+        "gt_importance": 0.25,
+        "sys_importance": 0.6,
+        "importance_error": 0.35
+      }
+    ],
+    "missed_claims": [
+      "The infection rate of HIV in Australia plummeted following shock advertising campaigns in the 1980s",
+      "Straight women are now among the most vulnerable groups for HIV infection in Australia",
+      "The infection rate of HIV in Australia is almost double what it was 10 years ago",
+      "Deanna lost about 20 kilos over a period of 6 weeks when she first had symptoms",
+      "Within months of diagnosis, Deanna's HIV had progressed to AIDS",
+      "Deanna was on almost 30 pills a day for HIV treatment in the early 1990s",
+      "People with HIV still have to take tablets every day and there are still side effects",
+      "HIV drugs are creating new health issues including heart disease, diabetes, and lipid problems",
+      "There's a widely held perception that the battle against HIV has been won, creating dangerous complacency",
+      "People have to be in regular medical care on treatment lifelong",
+      "One challenge for HIV positive women is motherhood, with a very slim chance the virus could be passed on",
+      "Professor Sharon Leuen and her teams made a breakthrough discovering where HIV cells hide in the body",
+      "HIV is a really clever virus that can change all the time, evade the immune system and drugs, and hide in small pockets of the body",
+      "About half of men with known HIV history were diagnosed through sexual health screens, but women's HIV was mostly detected through targeted screening",
+      "Sarah was taught nothing about HIV in school as a young heterosexual",
+      "Sarah faces a lifetime of powerful medication for HIV",
+      "Professor Sharon Lewin coordinates three research teams at Melbourne's Alfred Hospital, Monash University, and the Burnet Institute",
+      "Deanna thought she had just months to live but is now 41 years old",
+      "Many heterosexual women support groups now operate for HIV positive individuals",
+      "Relationships are difficult for HIV positive women due to stigma and fear of transmission",
+      "Deanna conceived naturally with her partner who was aware of the risks and was not infected",
+      "HIV exists, it's real, and it can happen to anyone"
+    ],
+    "extra_claims": [
+      "This is almost double the rate of 10 years ago.",
+      "Sarah believed she was safe in a long-term relationship."
+    ],
+    "importance_mae": 0.19230769230769232,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.3076923076923077,
+    "stance_accuracy": 0.3076923076923077,
+    "correct_verdicts": 4,
+    "total_verdicts": 13,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "AIDS was a guaranteed death sentence not so long ago",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "The infection rate of HIV in Australia has shot up again",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Alarmingly, 1,000 Australians a year are now diagnosed with HIV",
+        "gt_verdict": "REFUTES",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "30 years ago, HIV was universally a death sentence",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "98% of new HIV infections among the women in the documentary were contracted through heterosexual sex",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "People with HIV are now leading almost normal lives with improved prognosis",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Medical advances mean HIV can now be managed with proper treatment but it's a long hard road",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "HIV cells hide in the body and can go to sleep in some cells in small pockets - it was a needle in a haystack discovery",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "There is still enormous stigma surrounding HIV today, with people telling Sarah she should die and is disgusting",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.37142857142857144,
+    "verdict_accuracy": 0.3076923076923077,
+    "evidence_quality_avg": 0.6,
+    "total_cost_usd": 0.0014478,
+    "total_time_seconds": 102.6771309375763,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 0.6,
+    "avg_sources_per_query": 1.5333333333333334
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 41,
+      "medium": 5
+    },
+    "avg_evidence_per_claim": 3.066666666666667
+  },
+  "ground_truth_claims_count": 35,
+  "system_claims_count": 15
+}

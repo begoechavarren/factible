@@ -1,0 +1,79 @@
+{
+  "video_id": "BHY0FxzoKZE",
+  "timestamp": "2025-12-14T10:57:03.647115",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_1",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 1.0,
+    "recall": 0.06666666666666667,
+    "f1_score": 0.125,
+    "true_positives": 1,
+    "false_positives": 0,
+    "false_negatives": 14,
+    "mean_average_precision": 1.0,
+    "recall_at_important": 0.1111111111111111,
+    "importance_weighted_coverage": 0.0811965811965812,
+    "matched_claims": [
+      {
+        "gt_text": "With increased exercise over your lifetime, you create the strongest, biggest hippocampus and prefrontal cortex so it takes longer for neurodegenerative diseases to have an effect",
+        "sys_text": "Exercise has immediate, long-lasting, and protective benefits for the brain.",
+        "gt_importance": 0.95,
+        "sys_importance": 0.85,
+        "importance_error": 0.09999999999999998
+      }
+    ],
+    "missed_claims": [
+      "A single workout immediately increases levels of neurotransmitters like dopamine, serotonin, and noradrenaline",
+      "A single workout will increase your mood right after that workout",
+      "A single workout can improve your ability to shift and focus attention, and that focus improvement will last for at least two hours",
+      "A single workout will improve your reaction times",
+      "Exercise produces brand new brain cells, new brain cells in the hippocampus, that increase its volume",
+      "Exercise improves your long-term memory",
+      "Exercise improves attention function dependent on your prefrontal cortex",
+      "The volume of the hippocampus increases with exercise",
+      "The prefrontal cortex and hippocampus are the two areas most susceptible to neurodegenerative diseases and normal cognitive decline in aging",
+      "You want to get three to four times a week exercise, minimum 30 minutes an exercise session, and you want to get aerobic exercise",
+      "The prefrontal cortex is critical for things like decision-making, focus, attention and your personality",
+      "The hippocampus is critical for your ability to form and retain new long-term memories for facts and events",
+      "Exercise is the most transformative thing that you can do for your brain today",
+      "You have two temporal lobes in your brain, the right and the left"
+    ],
+    "extra_claims": [],
+    "importance_mae": 0.09999999999999998,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 1.0,
+    "stance_accuracy": 1.0,
+    "correct_verdicts": 1,
+    "total_verdicts": 1,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.06666666666666667,
+    "verdict_accuracy": 1.0,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.00223815,
+    "total_time_seconds": 68.83425712585449,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.5
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 5
+    },
+    "avg_evidence_per_claim": 5.0
+  },
+  "ground_truth_claims_count": 15,
+  "system_claims_count": 1
+}

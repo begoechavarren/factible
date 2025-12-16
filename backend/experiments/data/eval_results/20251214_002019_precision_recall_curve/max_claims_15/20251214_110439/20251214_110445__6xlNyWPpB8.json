@@ -1,0 +1,159 @@
+{
+  "video_id": "_6xlNyWPpB8",
+  "timestamp": "2025-12-14T11:04:45.993164",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_15",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.6666666666666666,
+    "recall": 0.5882352941176471,
+    "f1_score": 0.625,
+    "true_positives": 10,
+    "false_positives": 5,
+    "false_negatives": 7,
+    "mean_average_precision": 0.9651515151515152,
+    "recall_at_important": 0.6363636363636364,
+    "importance_weighted_coverage": 0.6148148148148148,
+    "matched_claims": [
+      {
+        "gt_text": "It can take a plastic bottle an agonizing 1,000 years to decompose in a landfill",
+        "sys_text": "It can take 1,000 years for a plastic bottle to decompose in a landfill.",
+        "gt_importance": 0.8,
+        "sys_importance": 0.85,
+        "importance_error": 0.04999999999999993
+      },
+      {
+        "gt_text": "Leachate can move into groundwater, soil and streams, poisoning ecosystems and harming wildlife",
+        "sys_text": "Leachate can contaminate groundwater, soil, and streams, harming ecosystems.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.8,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "Animals pass the toxins from the plastic up the food chain",
+        "sys_text": "Some animals mistake plastic for food, leading to starvation and toxin transfer in the food chain.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.8,
+        "importance_error": 0.04999999999999993
+      },
+      {
+        "gt_text": "Most plastics don't biodegrade, which means they're destined to break down into smaller and smaller pieces called micro plastics",
+        "sys_text": "Most plastics do not biodegrade and break down into microplastics.",
+        "gt_importance": 0.95,
+        "sys_importance": 0.75,
+        "importance_error": 0.19999999999999996
+      },
+      {
+        "gt_text": "The plastic in bottles was formed by chemically bonding oil and gas molecules together to make monomers, which were then bonded into long polymer chains",
+        "sys_text": "Plastic bottles are made by chemically bonding oil and gas molecules to create monomers.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.7,
+        "importance_error": 0.0
+      },
+      {
+        "gt_text": "Rainwater flows through landfill waste and absorbs water-soluble compounds, including highly toxic ones, creating a harmful stew called leachate",
+        "sys_text": "Rainwater absorbs toxic compounds from compressed plastics in landfills, creating leachate.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.7,
+        "importance_error": 0.15000000000000002
+      },
+      {
+        "gt_text": "Plastic bottles can float to the ocean and be drawn into a massive vortex where trash accumulates, known as the Great Pacific Garbage Patch",
+        "sys_text": "Plastic debris accumulates in the Great Pacific Garbage Patch.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.7,
+        "importance_error": 0.20000000000000007
+      },
+      {
+        "gt_text": "Recycled plastic bottles are squeezed flat and compressed into a block, then shredded into tiny pieces, washed and melted to become raw materials that can be used again",
+        "sys_text": "Recycled plastic bottles are shredded, washed, and melted to create new materials.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.7,
+        "importance_error": 0.20000000000000007
+      },
+      {
+        "gt_text": "The Great Pacific Garbage Patch is one of five plastic-filled gyres in the world's seas",
+        "sys_text": "There are five plastic-filled gyres in the world's seas.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.6,
+        "importance_error": 0.15000000000000002
+      },
+      {
+        "gt_text": "Microplastics might rotate in the sea eternally",
+        "sys_text": "Plastic can rotate in the sea as microplastics indefinitely.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.6,
+        "importance_error": 0.09999999999999998
+      }
+    ],
+    "missed_claims": [
+      "Polymers were made into millions of pellets that were melted at manufacturing plants and reformed in molds",
+      "Plastic bottles can end up in landfills where the dump expands each day as more trash comes in",
+      "Ocean plastic pollution turns the water into a cloudy plastic soup",
+      "Some animals, like seabirds, get entangled in the mess of plastic debris",
+      "Animals mistake brightly colored plastic bits for food",
+      "Plastic makes animals feel full when they're not, so they starve to death",
+      "Plastic is eaten by lanternfish, the lanternfish are eaten by squid, the squid are eaten by tuna, and the tuna are eaten by us"
+    ],
+    "extra_claims": [
+      "Monomers are bonded into long polymer chains to make plastic pellets.",
+      "Hundreds of millions of tons of plastic end up in landfills each year.",
+      "Plastic bottles are filled with liquid, shipped, bought, opened, consumed, and discarded.",
+      "Recycled plastic can be transformed into new products.",
+      "Landfills expand each day as more trash is added."
+    ],
+    "importance_mae": 0.12000000000000002,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.7,
+    "stance_accuracy": 0.7,
+    "correct_verdicts": 7,
+    "total_verdicts": 10,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "It can take a plastic bottle an agonizing 1,000 years to decompose in a landfill",
+        "gt_verdict": "REFUTES",
+        "sys_verdict": "MIXED"
+      },
+      {
+        "claim": "The Great Pacific Garbage Patch is one of five plastic-filled gyres in the world's seas",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "MIXED"
+      },
+      {
+        "claim": "Microplastics might rotate in the sea eternally",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.5882352941176471,
+    "verdict_accuracy": 0.7,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.0177504,
+    "total_time_seconds": 195.2023890018463,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.433333333333333
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 44,
+      "medium": 27,
+      "unknown": 2
+    },
+    "avg_evidence_per_claim": 4.866666666666666
+  },
+  "ground_truth_claims_count": 17,
+  "system_claims_count": 15
+}

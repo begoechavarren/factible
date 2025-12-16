@@ -1,0 +1,444 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:02:44.052727",
+    "latency_seconds": 18.53,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\naccording to this i have to say remarkable piece that you just put up late last night read it in bed at midnight that the fbi was organizing the riots of january 6th well yes it certainly suggests that possibility and i'm hearing from people that this is the most important and the darkest investigative piece they've seen in years but the american people deserve the truth about 1-6 not just for the sake of ashley babbitt not just for the sake of the hundreds of people held in prison unjustly as a violation of human rights but for the sake of the 70 plus million people who are trump supporters or just against the corrupt ruling class who have effectively been labeled de facto domestic extremists by our own government and i believe the key that unlocks the truth to 1-6 is the following question to what extent were the main militia groups imputed to the 1-6 so-called capital siege to what extent was their infiltration of those groups by undercover agents or informants and to what extent when we see the unindicted co-conspirators who occupy senior positions in those groups to what extent are those people being spared prosecution on account of a prior relationship with the federal government those two questions create a thread and when we pull that thread the ugly truth of that event and perhaps even the country we live in will be exposed i gotta ask because it it may answer one of the great mysteries is this i think there are 14 000 hours of unreleased video footage from that day the administration is hiding from us do you think this is why i think that's certainly a possibility um it's it's extremely suspicious even going back to this so-called pipe bomber video remember the pipe bomber the capital pipeliner the fbi has been extremely suspicious in withholding evidence video evidence that could help and identify this bomber which presumably they want to do but if you may i'd like to make a general point and it really after seeing all this you have to ask yourself does the national security apparatus do anything but conspire against the american people i'm led to conclude that we cannot have a democracy everything in our politics will be fake and performative until we bring the national security state including the fbi to heal it's not a left issue it's not a right issue every politician who cares about our country should demand a church committee 2.0 immediately and people of good faith on the left should join it uh immediately darren b i appreciate your coming on signing the work you do at revolver.news thank you",
+    "input_length_chars": 2613,
+    "input_tokens_estimated": 653,
+    "output": {
+      "claims": [
+        {
+          "text": "The FBI was organizing the riots of January 6th.",
+          "confidence": 0.8,
+          "category": "historical",
+          "importance": 0.85,
+          "context": "Discussion about the January 6th Capitol riots and FBI involvement."
+        },
+        {
+          "text": "The American people deserve the truth about January 6th.",
+          "confidence": 0.7,
+          "category": "policy",
+          "importance": 0.6,
+          "context": "Speaker emphasizes the need for transparency regarding January 6th."
+        },
+        {
+          "text": "Over 70 million people are Trump supporters or against the ruling class.",
+          "confidence": 0.75,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Claim about the number of Trump supporters in the context of January 6th."
+        },
+        {
+          "text": "There are 14,000 hours of unreleased video footage from January 6th.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.8,
+          "context": "Claim about the amount of unreleased footage related to the Capitol riots."
+        },
+        {
+          "text": "The FBI has withheld evidence related to the pipe bomber video.",
+          "confidence": 0.8,
+          "category": "historical",
+          "importance": 0.7,
+          "context": "Discussion about the FBI's actions regarding evidence from January 6th."
+        },
+        {
+          "text": "The national security apparatus conspires against the American people.",
+          "confidence": 0.7,
+          "category": "policy",
+          "importance": 0.6,
+          "context": "Speaker's conclusion about the national security state and its impact on democracy."
+        },
+        {
+          "text": "A Church Committee 2.0 should be demanded by politicians.",
+          "confidence": 0.65,
+          "category": "policy",
+          "importance": 0.55,
+          "context": "Call for a new investigation into national security practices."
+        }
+      ],
+      "total_count": 7
+    },
+    "output_length_chars": 2136,
+    "output_tokens_estimated": 534,
+    "cost_usd": 0.00041835
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:02:47.123229",
+    "latency_seconds": 2.22,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The American people deserve the truth about January 6th.\nContext: Speaker emphasizes the need for transparency regarding January 6th.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 306,
+    "input_tokens_estimated": 76,
+    "output": {
+      "original_claim": "The American people deserve the truth about January 6th.",
+      "queries": [
+        {
+          "query": "truth about January 6th Capitol riot",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "transparency regarding January 6th events",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 283,
+    "output_tokens_estimated": 70,
+    "cost_usd": 5.34e-05,
+    "context": {
+      "claim_index": 7,
+      "claim_text": "A Church Committee 2.0 should be demanded by politicians."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:02:47.234433",
+    "latency_seconds": 2.33,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The FBI has withheld evidence related to the pipe bomber video.\nContext: Discussion about the FBI's actions regarding evidence from January 6th.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 317,
+    "input_tokens_estimated": 79,
+    "output": {
+      "original_claim": "The FBI has withheld evidence related to the pipe bomber video.",
+      "queries": [
+        {
+          "query": "FBI withheld evidence pipe bomber video January 6",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "FBI evidence pipe bomber video January 6th",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 304,
+    "output_tokens_estimated": 76,
+    "cost_usd": 5.745e-05,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "The American people deserve the truth about January 6th.",
+      "query_index": 2,
+      "query_text": "transparency regarding January 6th events"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:02:47.319090",
+    "latency_seconds": 2.42,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The FBI was organizing the riots of January 6th.\nContext: Discussion about the January 6th Capitol riots and FBI involvement.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 298,
+    "input_tokens_estimated": 74,
+    "output": {
+      "original_claim": "The FBI was organizing the riots of January 6th.",
+      "queries": [
+        {
+          "query": "FBI involvement in organizing January 6th Capitol riots",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Did the FBI organize the January 6th riots?",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 296,
+    "output_tokens_estimated": 74,
+    "cost_usd": 5.55e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The FBI has withheld evidence related to the pipe bomber video.",
+      "query_index": 2,
+      "query_text": "FBI evidence pipe bomber video January 6th"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:02:47.319656",
+    "latency_seconds": 2.42,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The national security apparatus conspires against the American people.\nContext: Speaker's conclusion about the national security state and its impact on democracy.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 336,
+    "input_tokens_estimated": 84,
+    "output": {
+      "original_claim": "The national security apparatus conspires against the American people.",
+      "queries": [
+        {
+          "query": "national security apparatus conspiracy against American people",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "national security state undermining democracy in America",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 338,
+    "output_tokens_estimated": 84,
+    "cost_usd": 6.3e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The FBI has withheld evidence related to the pipe bomber video.",
+      "query_index": 2,
+      "query_text": "FBI evidence pipe bomber video January 6th"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:02:47.491776",
+    "latency_seconds": 2.59,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: A Church Committee 2.0 should be demanded by politicians.\nContext: Call for a new investigation into national security practices.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 302,
+    "input_tokens_estimated": 75,
+    "output": {
+      "original_claim": "A Church Committee 2.0 should be demanded by politicians.",
+      "queries": [
+        {
+          "query": "Church Committee 2.0 demand by politicians",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "new investigation into national security practices Church Committee",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 316,
+    "output_tokens_estimated": 79,
+    "cost_usd": 5.865e-05,
+    "context": {
+      "claim_index": 6,
+      "claim_text": "The national security apparatus conspires against the American people.",
+      "query_index": 2,
+      "query_text": "national security state undermining democracy in America"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:02:47.492320",
+    "latency_seconds": 2.59,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Over 70 million people are Trump supporters or against the ruling class.\nContext: Claim about the number of Trump supporters in the context of January 6th.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 328,
+    "input_tokens_estimated": 82,
+    "output": {
+      "original_claim": "Over 70 million people are Trump supporters or against the ruling class.",
+      "queries": [
+        {
+          "query": "number of Trump supporters January 6 2021",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Trump supporters statistics 2021",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 295,
+    "output_tokens_estimated": 73,
+    "cost_usd": 5.61e-05,
+    "context": {
+      "claim_index": 6,
+      "claim_text": "The national security apparatus conspires against the American people.",
+      "query_index": 2,
+      "query_text": "national security state undermining democracy in America"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:02:47.492709",
+    "latency_seconds": 2.59,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: There are 14,000 hours of unreleased video footage from January 6th.\nContext: Claim about the amount of unreleased footage related to the Capitol riots.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 325,
+    "input_tokens_estimated": 81,
+    "output": {
+      "original_claim": "There are 14,000 hours of unreleased video footage from January 6th.",
+      "queries": [
+        {
+          "query": "14,000 hours of unreleased video footage January 6 Capitol riots",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "how much unreleased video footage from January 6 Capitol riots",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 344,
+    "output_tokens_estimated": 86,
+    "cost_usd": 6.375e-05,
+    "context": {
+      "claim_index": 6,
+      "claim_text": "The national security apparatus conspires against the American people.",
+      "query_index": 2,
+      "query_text": "national security state undermining democracy in America"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:03:40.215943",
+    "latency_seconds": 33.4,
+    "input_prompt": "Claim:\nThe national security apparatus conspires against the American people.\n\nArticle Title:\nThe National Security Strategy: The Good, the Not So Great ... - CSIS\n\nFull Page Content:\nTwo elements of the strategy highlight this approach most starkly\u2014the language on economic growth and the clear end of the democracy strategy.\n\nProvide relevant evidence.",
+    "input_length_chars": 354,
+    "input_tokens_estimated": 88,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 2.64e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "There are 14,000 hours of unreleased video footage from January 6th.",
+      "query_index": 2,
+      "query_text": "how much unreleased video footage from January 6 Capitol riots"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:03:40.363499",
+    "latency_seconds": 32.06,
+    "input_prompt": "Claim:\nThe American people deserve the truth about January 6th.\n\nArticle Title:\nIssues: capitol riot - FactCheck.org\n\nGoogle Search Snippet:\nIn his final hours as president, Joe Biden issued preemptive pardons for House committee members who investigated the Jan. 6, 2021, attack on the Capitol and ...\n\nFull Page Content:\nTop of page\nOn January 6, 2021, the U.S. Capitol was attacked by a crowd attempting to stop a joint session of Congress from certifying the electoral votes of the 2020 presidential election. The January 6th Attack on the U.S. Capitol Web Archive preserves a representative sample of websites related to the attack and its aftermath. The collection includes a selection of federal and state government websites, as well as sites from the military, law enforcement, advocacy groups, think tanks, academia, corporations, and the media.\nAdditional Library of Congress web archive collections with content related to the January 6th attack include the collections General News on the Internet Web Archive, United States Congressional Web Archive, Executive Branch Federal Government Web Archive, and Public Policy Topics Web Archive.\nCollection Period: March 2021 to present (this is an ongoing archive).\nFrequency of Collection: The majority of sites in the collection were targeted for capture once, with fewer targeted for capture monthly, weekly, or quarterly.\nLanguages: Collection material in English.\nAcquisition Information: Sites have been added incrementally since the project began and will continue to be added as they are identified.\n\nProvide relevant evidence.",
+    "input_length_chars": 1592,
+    "input_tokens_estimated": 398,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 7.29e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "There are 14,000 hours of unreleased video footage from January 6th.",
+      "query_index": 2,
+      "query_text": "how much unreleased video footage from January 6 Capitol riots"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:03:41.500095",
+    "latency_seconds": 33.19,
+    "input_prompt": "Claim:\nThe American people deserve the truth about January 6th.\n\nArticle Title:\nAbout this Collection | January 6th Attack on the U.S. Capitol Web ...\n\nGoogle Search Snippet:\nOn January 6, 2021, the U.S. Capitol was attacked by a crowd attempting to stop a joint session of Congress from certifying the electoral votes of the 2020 ...\n\nFull Page Content:\nTop of page\nOn January 6, 2021, the U.S. Capitol was attacked by a crowd attempting to stop a joint session of Congress from certifying the electoral votes of the 2020 presidential election. The January 6th Attack on the U.S. Capitol Web Archive preserves a representative sample of websites related to the attack and its aftermath. The collection includes a selection of federal and state government websites, as well as sites from the military, law enforcement, advocacy groups, think tanks, academia, corporations, and the media.\nAdditional Library of Congress web archive collections with content related to the January 6th attack include the collections General News on the Internet Web Archive, United States Congressional Web Archive, Executive Branch Federal Government Web Archive, and Public Policy Topics Web Archive.\nCollection Period: March 2021 to present (this is an ongoing archive).\nFrequency of Collection: The majority of sites in the collection were targeted for capture once, with fewer targeted for capture monthly, weekly, or quarterly.\nLanguages: Collection material in English.\nAcquisition Information: Sites have been added incrementally since the project began and will continue to be added as they are identified.\n\nProvide relevant evidence.",
+    "input_length_chars": 1624,
+    "input_tokens_estimated": 406,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence discusses the January 6th attack on the U.S. Capitol and the ongoing efforts to archive related information, suggesting a commitment to transparency and providing the American people with access to the truth about the events surrounding that day.",
+      "overall_stance": "supports",
+      "key_quote": "The January 6th Attack on the U.S. Capitol Web Archive preserves a representative sample of websites related to the attack and its aftermath."
+    },
+    "output_length_chars": 486,
+    "output_tokens_estimated": 121,
+    "cost_usd": 0.0001335,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "There are 14,000 hours of unreleased video footage from January 6th.",
+      "query_index": 2,
+      "query_text": "how much unreleased video footage from January 6 Capitol riots"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:03:42.026961",
+    "latency_seconds": 33.72,
+    "input_prompt": "Claim:\nThe American people deserve the truth about January 6th.\n\nArticle Title:\nHouse Republicans approve new panel to 'uncover all the facts' of ...\n\nGoogle Search Snippet:\nDemocrats decry creation of subcommittee as attempt to rewrite narrative and shift blame from Donald Trump.\n\nFull Page Content:\nTop of page\nOn January 6, 2021, the U.S. Capitol was attacked by a crowd attempting to stop a joint session of Congress from certifying the electoral votes of the 2020 presidential election. The January 6th Attack on the U.S. Capitol Web Archive preserves a representative sample of websites related to the attack and its aftermath. The collection includes a selection of federal and state government websites, as well as sites from the military, law enforcement, advocacy groups, think tanks, academia, corporations, and the media.\nAdditional Library of Congress web archive collections with content related to the January 6th attack include the collections General News on the Internet Web Archive, United States Congressional Web Archive, Executive Branch Federal Government Web Archive, and Public Policy Topics Web Archive.\nCollection Period: March 2021 to present (this is an ongoing archive).\nFrequency of Collection: The majority of sites in the collection were targeted for capture once, with fewer targeted for capture monthly, weekly, or quarterly.\nLanguages: Collection material in English.\nAcquisition Information: Sites have been added incrementally since the project began and will continue to be added as they are identified.\n\nProvide relevant evidence.",
+    "input_length_chars": 1571,
+    "input_tokens_estimated": 392,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses the creation of a new panel by House Republicans aimed at uncovering facts about the January 6th attack, which suggests a desire for transparency and truth regarding the events of that day.",
+      "overall_stance": "supports",
+      "key_quote": "House Republicans approve new panel to 'uncover all the facts' of ..."
+    },
+    "output_length_chars": 366,
+    "output_tokens_estimated": 91,
+    "cost_usd": 0.0001134,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "There are 14,000 hours of unreleased video footage from January 6th.",
+      "query_index": 2,
+      "query_text": "how much unreleased video footage from January 6 Capitol riots"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:03:42.132269",
+    "latency_seconds": 20.7,
+    "input_prompt": "Claim:\nThe American people deserve the truth about January 6th.\n\nArticle Title:\nNEW: DoD IG Transcripts Contradict Pentagon January 6 Report ...\n\nGoogle Search Snippet:\nThese transcripts indicate that senior Pentagon officials unnecessarily delayed the DC National Guard response to the Capitol on January 6 due to \u201coptics\u201d ...\n\nFull Page Content:\n\"The American people deserve transparency about the events at the U.S. Capitol on January 6th, 2020. The DoD IG Report will be but one of many efforts to provide that transparency and the Department will do everything it can to ensure that review is fulsome, thorough, and holds parties to account. We are proud of the efforts of DoD personnel to secure the Capitol on January 6th when called upon on and throughout the Presidential Inaugural events next week.\"\nChoose which War.gov products you want delivered to your inbox.\nThe Department of War provides the military forces needed to deter war and ensure our nation's security.\n\nProvide relevant evidence.",
+    "input_length_chars": 1006,
+    "input_tokens_estimated": 251,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence emphasizes the need for transparency regarding the events of January 6th, asserting that the American people deserve the truth about what occurred during that day.",
+      "overall_stance": "supports",
+      "key_quote": "The American people deserve transparency about the events at the U.S. Capitol on January 6th, 2020."
+    },
+    "output_length_chars": 361,
+    "output_tokens_estimated": 90,
+    "cost_usd": 9.165e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "There are 14,000 hours of unreleased video footage from January 6th.",
+      "query_index": 2,
+      "query_text": "how much unreleased video footage from January 6 Capitol riots"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:03:44.682138",
+    "latency_seconds": 25.74,
+    "input_prompt": "Claim:\nThe FBI was organizing the riots of January 6th.\n\nArticle Title:\nExamining the January 6 Attack on the U.S. Capitol - FBI\n\nGoogle Search Snippet:\nOver the last year, we observed activity that led us to assess there was potential for increased violent extremist activity at lawful protests ...\n\nFull Page Content:\nAn official website of the United States government\nREPORT FRAUD, WASTE & ABUSE\nDepartment of Justice (DOJ) Inspector General Michael E. Horowitz announced today the release of a review examining the Federal Bureau of Investigation\u2019s (FBI) handling of its confidential human sources (CHS) and intelligence collection efforts in the lead up to the events at the U.S. Capitol on January 6, 2021.\nConsistent with OIG practice, in spring 2022 the OIG paused aspects of our review to ensure that the OIG\u2019s investigative work did not conflict with or compromise any ongoing DOJ criminal investigations or prosecutions. Having been informed by federal prosecutors last year that our review would no longer potentially interfere with pending criminal prosecutions, we resumed our work on this matter. In doing so, we were cognizant of the amount of time that had passed, as well as the number of non-DOJ OIG oversight reports that had been publicly released regarding the events of January 6. We determined that an area that had not yet been thoroughly reviewed by other entities was the FBI\u2019s direction and handling of its CHSs in the lead-up to and on January 6, and whether the FBI exploited its CHSs and other available information to determine the nature of threats in advance of the electoral vote certification on January 6. Accordingly, we focused our review on that topic.\nThe findings in today\u2019s report include:\nToday\u2019s report also details our findings regarding FBI CHSs who were in Washington, D.C., on January 6. Our review determined that none of these FBI CHSs was authorized by the FBI to enter the Capitol or a restricted area or to otherwise break the law on January 6, nor was any CHS directed by the FBI to encourage others to commit illegal acts on January 6. Our findings also include:\nThe DOJ OIG made one recommendation to the FBI to assess the policies and procedures it uses to prepare for events that it determines present potential domestic security issues. The FBI agreed with this recommendation.\nDepartment of Justice\nIn memory of OIG Special Agent William \"Buddy\" Sentner Privacy Policy | EEO Policy | Legal Policies & Disclaimers | No Fear Act | Vulnerability Disclosure | Sitemap\n\nProvide relevant evidence.",
+    "input_length_chars": 2553,
+    "input_tokens_estimated": 638,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that the FBI did not authorize its confidential human sources to enter the Capitol or engage in illegal activities during the January 6 events, which contradicts the claim that the FBI was organizing the riots.",
+      "overall_stance": "refutes",
+      "key_quote": "none of these FBI CHSs was authorized by the FBI to enter the Capitol or a restricted area or to otherwise break the law on January 6, nor was any CHS directed by the FBI to encourage others to commit illegal acts on January 6."
+    },
+    "output_length_chars": 545,
+    "output_tokens_estimated": 136,
+    "cost_usd": 0.0001773,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "There are 14,000 hours of unreleased video footage from January 6th.",
+      "query_index": 2,
+      "query_text": "how much unreleased video footage from January 6 Capitol riots"
+    }
+  }
+]

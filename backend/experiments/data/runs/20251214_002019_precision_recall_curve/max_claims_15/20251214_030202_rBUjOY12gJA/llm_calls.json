@@ -1,0 +1,616 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:02:27.749207",
+    "latency_seconds": 24.02,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nif you're thinking about leading a more active lifestyle you're not alone in recent years an increasing number of Americans have started participating in more sports fitness and recreation whether you're trying to get fit build muscle or you're just tired of the couch here are some changes you can expect along the way during that first workout you might feel more alert and energized because ramping up your heart rate means a boost in overall blood flow and oxygen to the brain but prepare yourself for the day after when you'll almost certainly get a case of Dom's short for delayed onset muscle soreness the soreness will persist for about 72 hours but the good news is you're less likely to get it again as long as you continue to regularly exercise those same muscles over the next few weeks you'll slowly start to ramp up production of mitochondria via a process called mitochondrial biogenesis mitochondria are the parts of your cells that convert carbs fat and protein and to feel that your muscles use to do their job like flexing contract after six to eight weeks studies have shown that people can increase their mitochondria by up to 50% with more mitochondria in your cells you'll start to feel more fit and your endurance will increase so running three miles will no longer feel as difficult as it did during the first week once your six months in all of that hard work should finally start to show if your workouts focus on strength training you'll notice your muscles begin to take shape you're also less likely to fall off the workout wagon at this point exercise programs often see a 50% dropout rate within the first six months but after that more people stick with it now if you're more focused on cardio than by nine months of regular exercise you should see about a 25% increase in your vo2 max vo2 max is often used as a measure of fitness and refers to the rate your body can transport oxygen to your muscles for fuel basically higher vo2 max means you can run faster for longer so a 25% increase means you can run about 20% further in the same amount of time after one year of regular exercise your bones will be denser which reduces your of osteoporosis in fact researchers have found that regular resistance training when combined with aerobic exercise can actually reverse the effects of osteoporosis after 12 months now if you maintain your exercise program long term your body might not be the only thing to benefit your bank account may also be one study revealed that older people who exercise 5 days a week for at least 30 minutes saved on average $2,500 a year in medical costs for heart related health problems alone you'll also be at a lower risk of developing arthritis type-2 diabetes dementia and certain types of cancer like breast and colon in all probability you are going to live longer than you otherwise would and that longer life it will likely feel more fulfilling because exercise lowers the risk of anxiety and depression by reducing levels of stress hormones like cortisol and adrenaline of course all of these benefits depend on the type and intensity of your workout and how long you exercise for each week a balanced diet is also paramount to a healthy lifestyle for the average adult ages 18 to 64 the US Department of Health and Human Services recommends either a minimum of two and a half hours per week of moderately intense exercise like brisk walking or biking or at least one hour and 15 minutes each week that combines moderate and high intensity workouts like running and swimming sprints on top of that make sure and take two days each week to strengthen your muscles with some weights or resistance training this will help your overall speed and endurance as you begin it's important to pace yourself and not push too hard too fast or you risk serious injury you'll discover that the fitter you become the easier it will be to exert a little more energy the next week the week after and so forth exercise smart and often and you'll be running marathons in no time you",
+    "input_length_chars": 4091,
+    "input_tokens_estimated": 1022,
+    "output": {
+      "claims": [
+        {
+          "text": "An increasing number of Americans have started participating in more sports, fitness, and recreation.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Context unknown."
+        },
+        {
+          "text": "During the first workout, you might feel more alert and energized due to increased blood flow and oxygen to the brain.",
+          "confidence": 0.8,
+          "category": "scientific",
+          "importance": 0.3,
+          "context": "Context unknown."
+        },
+        {
+          "text": "Delayed onset muscle soreness (DOMS) will persist for about 72 hours after a workout.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Context unknown."
+        },
+        {
+          "text": "Regular exercise can ramp up production of mitochondria through mitochondrial biogenesis.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Context unknown."
+        },
+        {
+          "text": "Studies have shown that people can increase their mitochondria by up to 50% after six to eight weeks of exercise.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Context unknown."
+        },
+        {
+          "text": "After six months of exercise, people are less likely to drop out of their workout programs.",
+          "confidence": 0.8,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Context unknown."
+        },
+        {
+          "text": "By nine months of regular exercise, you should see about a 25% increase in your VO2 max.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Context unknown."
+        },
+        {
+          "text": "A 25% increase in VO2 max means you can run about 20% further in the same amount of time.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Context unknown."
+        },
+        {
+          "text": "After one year of regular exercise, your bones will be denser, reducing the risk of osteoporosis.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Context unknown."
+        },
+        {
+          "text": "Regular resistance training combined with aerobic exercise can reverse the effects of osteoporosis after 12 months.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Context unknown."
+        },
+        {
+          "text": "Older people who exercise 5 days a week for at least 30 minutes save on average $2,500 a year in medical costs for heart-related health problems.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Context unknown."
+        },
+        {
+          "text": "Regular exercise lowers the risk of anxiety and depression by reducing levels of stress hormones like cortisol and adrenaline.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Context unknown."
+        },
+        {
+          "text": "The US Department of Health and Human Services recommends a minimum of 2.5 hours of moderately intense exercise per week for adults aged 18 to 64.",
+          "confidence": 0.9,
+          "category": "policy",
+          "importance": 0.6,
+          "context": "Context unknown."
+        },
+        {
+          "text": "Adults should also take two days each week to strengthen their muscles with weights or resistance training.",
+          "confidence": 0.85,
+          "category": "policy",
+          "importance": 0.5,
+          "context": "Context unknown."
+        },
+        {
+          "text": "It's important to pace yourself during workouts to avoid serious injury.",
+          "confidence": 0.8,
+          "category": "scientific",
+          "importance": 0.3,
+          "context": "Context unknown."
+        }
+      ],
+      "total_count": 15
+    },
+    "output_length_chars": 4386,
+    "output_tokens_estimated": 1096,
+    "cost_usd": 0.0008109
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:02:37.226031",
+    "latency_seconds": 2.72,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Regular exercise can ramp up production of mitochondria through mitochondrial biogenesis.\nContext: Context unknown.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 288,
+    "input_tokens_estimated": 72,
+    "output": {
+      "original_claim": "Regular exercise can ramp up production of mitochondria through mitochondrial biogenesis.",
+      "queries": [
+        {
+          "query": "Regular exercise increases mitochondrial biogenesis",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "How does exercise affect mitochondrial production and biogenesis?",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 355,
+    "output_tokens_estimated": 88,
+    "cost_usd": 6.36e-05,
+    "context": {
+      "claim_index": 15,
+      "claim_text": "It's important to pace yourself during workouts to avoid serious injury."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:02:37.370874",
+    "latency_seconds": 2.87,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Adults should also take two days each week to strengthen their muscles with weights or resistance training.\nContext: Context unknown.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 306,
+    "input_tokens_estimated": 76,
+    "output": {
+      "original_claim": "Adults should also take two days each week to strengthen their muscles with weights or resistance training.",
+      "queries": [
+        {
+          "query": "Adults should take two days each week for muscle strengthening with weights or resistance training",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Recommended muscle strengthening exercises for adults",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 408,
+    "output_tokens_estimated": 102,
+    "cost_usd": 7.26e-05,
+    "context": {
+      "claim_index": 7,
+      "claim_text": "Regular exercise can ramp up production of mitochondria through mitochondrial biogenesis.",
+      "query_index": 2,
+      "query_text": "How does exercise affect mitochondrial production and biogenesis?"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:02:37.455289",
+    "latency_seconds": 2.96,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Regular resistance training combined with aerobic exercise can reverse the effects of osteoporosis after 12 months.\nContext: Context unknown.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 314,
+    "input_tokens_estimated": 78,
+    "output": {
+      "original_claim": "Regular resistance training combined with aerobic exercise can reverse the effects of osteoporosis after 12 months.",
+      "queries": [
+        {
+          "query": "Can resistance training and aerobic exercise reverse osteoporosis after 12 months?",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Effects of resistance training and aerobic exercise on osteoporosis reversal",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 423,
+    "output_tokens_estimated": 105,
+    "cost_usd": 7.47e-05,
+    "context": {
+      "claim_index": 13,
+      "claim_text": "Adults should also take two days each week to strengthen their muscles with weights or resistance training.",
+      "query_index": 2,
+      "query_text": "Recommended muscle strengthening exercises for adults"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:02:37.455673",
+    "latency_seconds": 2.95,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: During the first workout, you might feel more alert and energized due to increased blood flow and oxygen to the brain.\nContext: Context unknown.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 317,
+    "input_tokens_estimated": 79,
+    "output": {
+      "original_claim": "During the first workout, you might feel more alert and energized due to increased blood flow and oxygen to the brain.",
+      "queries": [
+        {
+          "query": "increased blood flow oxygen brain first workout alert energized",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "how exercise increases blood flow and oxygen to the brain",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 388,
+    "output_tokens_estimated": 97,
+    "cost_usd": 7.005e-05,
+    "context": {
+      "claim_index": 13,
+      "claim_text": "Adults should also take two days each week to strengthen their muscles with weights or resistance training.",
+      "query_index": 2,
+      "query_text": "Recommended muscle strengthening exercises for adults"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:02:37.456026",
+    "latency_seconds": 2.96,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: By nine months of regular exercise, you should see about a 25% increase in your VO2 max.\nContext: Context unknown.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 287,
+    "input_tokens_estimated": 71,
+    "output": {
+      "original_claim": "By nine months of regular exercise, you should see about a 25% increase in your VO2 max.",
+      "queries": [
+        {
+          "query": "25% increase in VO2 max after nine months of exercise",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "how much can VO2 max increase with nine months of regular exercise",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 357,
+    "output_tokens_estimated": 89,
+    "cost_usd": 6.405e-05,
+    "context": {
+      "claim_index": 13,
+      "claim_text": "Adults should also take two days each week to strengthen their muscles with weights or resistance training.",
+      "query_index": 2,
+      "query_text": "Recommended muscle strengthening exercises for adults"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:02:37.456384",
+    "latency_seconds": 2.96,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Delayed onset muscle soreness (DOMS) will persist for about 72 hours after a workout.\nContext: Context unknown.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 284,
+    "input_tokens_estimated": 71,
+    "output": {
+      "original_claim": "Delayed onset muscle soreness (DOMS) will persist for about 72 hours after a workout.",
+      "queries": [
+        {
+          "query": "Delayed onset muscle soreness duration 72 hours",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "How long does delayed onset muscle soreness last after exercise",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 345,
+    "output_tokens_estimated": 86,
+    "cost_usd": 6.225e-05,
+    "context": {
+      "claim_index": 13,
+      "claim_text": "Adults should also take two days each week to strengthen their muscles with weights or resistance training.",
+      "query_index": 2,
+      "query_text": "Recommended muscle strengthening exercises for adults"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:02:37.790463",
+    "latency_seconds": 3.29,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: After six months of exercise, people are less likely to drop out of their workout programs.\nContext: Context unknown.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 290,
+    "input_tokens_estimated": 72,
+    "output": {
+      "original_claim": "After six months of exercise, people are less likely to drop out of their workout programs.",
+      "queries": [
+        {
+          "query": "impact of six months of exercise on workout program dropout rates",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "do people drop out of workout programs after six months of exercise",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 373,
+    "output_tokens_estimated": 93,
+    "cost_usd": 6.66e-05,
+    "context": {
+      "claim_index": 6,
+      "claim_text": "Delayed onset muscle soreness (DOMS) will persist for about 72 hours after a workout.",
+      "query_index": 2,
+      "query_text": "How long does delayed onset muscle soreness last after exercise"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:02:37.791007",
+    "latency_seconds": 3.29,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: A 25% increase in VO2 max means you can run about 20% further in the same amount of time.\nContext: Context unknown.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 288,
+    "input_tokens_estimated": 72,
+    "output": {
+      "original_claim": "A 25% increase in VO2 max means you can run about 20% further in the same amount of time.",
+      "queries": [
+        {
+          "query": "25% increase in VO2 max running distance",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "VO2 max increase running further distance correlation",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 332,
+    "output_tokens_estimated": 83,
+    "cost_usd": 6.06e-05,
+    "context": {
+      "claim_index": 6,
+      "claim_text": "Delayed onset muscle soreness (DOMS) will persist for about 72 hours after a workout.",
+      "query_index": 2,
+      "query_text": "How long does delayed onset muscle soreness last after exercise"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:02:37.791472",
+    "latency_seconds": 3.29,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: After one year of regular exercise, your bones will be denser, reducing the risk of osteoporosis.\nContext: Context unknown.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 296,
+    "input_tokens_estimated": 74,
+    "output": {
+      "original_claim": "After one year of regular exercise, your bones will be denser, reducing the risk of osteoporosis.",
+      "queries": [
+        {
+          "query": "Does regular exercise for one year increase bone density and reduce osteoporosis risk?",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Impact of one year of exercise on bone density and osteoporosis prevention",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 407,
+    "output_tokens_estimated": 101,
+    "cost_usd": 7.17e-05,
+    "context": {
+      "claim_index": 6,
+      "claim_text": "Delayed onset muscle soreness (DOMS) will persist for about 72 hours after a workout.",
+      "query_index": 2,
+      "query_text": "How long does delayed onset muscle soreness last after exercise"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:02:37.792054",
+    "latency_seconds": 3.29,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Studies have shown that people can increase their mitochondria by up to 50% after six to eight weeks of exercise.\nContext: Context unknown.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 312,
+    "input_tokens_estimated": 78,
+    "output": {
+      "original_claim": "Studies have shown that people can increase their mitochondria by up to 50% after six to eight weeks of exercise.",
+      "queries": [
+        {
+          "query": "increase mitochondria by 50% after six to eight weeks of exercise",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "mitochondrial biogenesis exercise six to eight weeks",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 380,
+    "output_tokens_estimated": 95,
+    "cost_usd": 6.87e-05,
+    "context": {
+      "claim_index": 6,
+      "claim_text": "Delayed onset muscle soreness (DOMS) will persist for about 72 hours after a workout.",
+      "query_index": 2,
+      "query_text": "How long does delayed onset muscle soreness last after exercise"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:02:37.792607",
+    "latency_seconds": 3.29,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Regular exercise lowers the risk of anxiety and depression by reducing levels of stress hormones like cortisol and adrenaline.\nContext: Context unknown.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 325,
+    "input_tokens_estimated": 81,
+    "output": {
+      "original_claim": "Regular exercise lowers the risk of anxiety and depression by reducing levels of stress hormones like cortisol and adrenaline.",
+      "queries": [
+        {
+          "query": "Regular exercise reduces anxiety and depression by lowering cortisol and adrenaline levels",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "How does exercise impact stress hormones and mental health?",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 425,
+    "output_tokens_estimated": 106,
+    "cost_usd": 7.575e-05,
+    "context": {
+      "claim_index": 6,
+      "claim_text": "Delayed onset muscle soreness (DOMS) will persist for about 72 hours after a workout.",
+      "query_index": 2,
+      "query_text": "How long does delayed onset muscle soreness last after exercise"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:02:38.212509",
+    "latency_seconds": 3.71,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Older people who exercise 5 days a week for at least 30 minutes save on average $2,500 a year in medical costs for heart-related health problems.\nContext: Context unknown.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 344,
+    "input_tokens_estimated": 86,
+    "output": {
+      "original_claim": "Older people who exercise 5 days a week for at least 30 minutes save on average $2,500 a year in medical costs for heart-related health problems.",
+      "queries": [
+        {
+          "query": "Older adults exercise 5 days a week save $2500 medical costs heart health",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "savings in medical costs for older people exercising regularly",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 430,
+    "output_tokens_estimated": 107,
+    "cost_usd": 7.71e-05,
+    "context": {
+      "claim_index": 11,
+      "claim_text": "Regular exercise lowers the risk of anxiety and depression by reducing levels of stress hormones like cortisol and adrenaline.",
+      "query_index": 2,
+      "query_text": "How does exercise impact stress hormones and mental health?"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:02:38.213158",
+    "latency_seconds": 3.71,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The US Department of Health and Human Services recommends a minimum of 2.5 hours of moderately intense exercise per week for adults aged 18 to 64.\nContext: Context unknown.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 345,
+    "input_tokens_estimated": 86,
+    "output": {
+      "original_claim": "The US Department of Health and Human Services recommends a minimum of 2.5 hours of moderately intense exercise per week for adults aged 18 to 64.",
+      "queries": [
+        {
+          "query": "US Department of Health and Human Services 2.5 hours exercise recommendation adults 18 to 64",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "HHS guidelines exercise adults 18 to 64 2.5 hours",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 437,
+    "output_tokens_estimated": 109,
+    "cost_usd": 7.83e-05,
+    "context": {
+      "claim_index": 11,
+      "claim_text": "Regular exercise lowers the risk of anxiety and depression by reducing levels of stress hormones like cortisol and adrenaline.",
+      "query_index": 2,
+      "query_text": "How does exercise impact stress hormones and mental health?"
+    }
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:04:52.382175",
+    "latency_seconds": 20.54,
+    "input_prompt": "\nClaim: By nine months of regular exercise, you should see about a 25% increase in your VO2 max.\nCategory: scientific\nExtraction confidence: 0.90\n\nEvidence:\nUNCLEAR (3 sources):\n  1. VO 2 Max Improvement of 96% in a Non-Elite Recreational Athlete ... | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC6476626/\n     Summary: This case report demonstrates a 96% improvement over time secondary to selective intense training.\n  2. Here's How Long It Takes to Improve VO2 Max, According to Science | reliability=medium (0.60)\n     URL: https://www.runnersworld.com/training/a65910520/how-long-to-improve-vo2-max/\n     Summary: \u201cA highly trained individual could train for an entire year and may only see a slight improvement, like maybe a 1 percent improvement in VO2 max ...\n  3. How long does it take to improve Vo2 max by 1 ml/kg/min - Reddit | reliability=medium (0.60)\n     URL: https://www.reddit.com/r/running/comments/c56y7a/how_long_does_it_take_to_improve_vo2_max_by_1/\n     Summary: It depends on your running age. With the proper training, beginners can improve their VO\u2082 max very quickly. For more advanced runners, improving ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1199,
+    "input_tokens_estimated": 299,
+    "output": {
+      "overall_stance": "unclear",
+      "confidence": "low",
+      "summary": "The evidence is mixed regarding the claim of a 25% increase in VO2 max after nine months of exercise. A case report indicates a 96% improvement with intense training, but other sources suggest that highly trained individuals may see only slight improvements, and results can vary significantly based on the individual's training background."
+    },
+    "output_length_chars": 400,
+    "output_tokens_estimated": 100,
+    "cost_usd": 0.00010485
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:04:53.710409",
+    "latency_seconds": 21.15,
+    "input_prompt": "Claim:\nAdults should also take two days each week to strengthen their muscles with weights or resistance training.\n\nArticle Title:\n5 at-home strength exercises to help build muscle as you age\n\nGoogle Search Snippet:\nConsider these five strength exercises that you can do from the comfort of your home ... 1. Calf raises ... 2. Plank ... 3. Squat into chair ... 4.\n\nFull Page Content:\nAs we age, we can\u2019t help but notice certain things, like getting up from a chair and picking up heavier objects aren\u2019t as easy as they used to be. If you\u2019ve been noticing these changes, you\u2019re not alone. Muscle loss is a natural part of aging, and unfortunately less muscle may mean more weakness and less mobility, which may put you at risk of injuries or falls. Luckily, it\u2019s almost never too late to rebuild or maintain your muscles.\nConsider these five strength exercises that you can do from the comfort of your home:\nAfter you\u2019ve finished your workout, remember that nutrition is also an essential component to repairing and building muscle. Protein-rich foods are key, but a well-rounded diet filled with vegetables, fruits and whole grains is also important to make sure your body gets the vitamins and nutrients it needs.\nTalk with your doctor about healthy ways to incorporate fitness into your routine. For individuals recovering from an injury, consider seeking advice from a physical therapist who may identify areas requiring special focus.\nWhat\u2019s more, if you are a UnitedHealthcare Medicare member with Renew Active\u00ae\u2013 the gold standard in Medicare fitness programs for body and mind \u2013 you also have resources available to you that can help keep you on track with your health. These include:\nPlans are insured or covered by a Medicare Advantage organization with a Medicare contract and/or a Medicare-approved Part D sponsor. Enrollment in the plan depends on the plan\u2019s contract renewal with Medicare.\nBenefits and features, and/or devices vary by plan/area. Limitations and exclusions apply.\nThis information is for educational purposes only and is not a substitute for the advice of a medical provider. Consult your provider prior to beginning an exercise program or making changes to your lifestyle or health care routine.\nThe Renew Active\u00ae Program varies by plan/area and may not be available on all plans. Participation in the Renew Active program is voluntary. Consult your doctor prior to beginning an exercise program or making changes to your lifestyle or health care routine. Renew Active includes standard fitness membership and other offerings. Fitness membership equipment, classes, personalized fitness plans, caregiver access and events may vary by location. Certain services, discounts, classes, events, and online fitness offerings are provided by affiliates of UnitedHealthcare Insurance Company or other third parties not affiliated with UnitedHealthcare. Participation in these third-party services are subject to your acceptance of their respective terms and policies. UnitedHealthcare is not responsible for the services or information provided by third parties. The information provided through these services is for informational purposes only and is not a substitute for the advice of a doctor. Gym network may vary in local market and plan. Gym network size is based on comparison of competitor\u2019s website data as of May 2023.\nFollow us\n\nProvide relevant evidence.",
+    "input_length_chars": 3389,
+    "input_tokens_estimated": 847,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article emphasizes the importance of strength training for older adults to combat muscle loss and maintain mobility, suggesting that incorporating such exercises into their routine is beneficial.",
+      "overall_stance": "supports",
+      "key_quote": "Muscle loss is a natural part of aging, and unfortunately less muscle may mean more weakness and less mobility, which may put you at risk of injuries or falls. Luckily, it\u2019s almost never too late to rebuild or maintain your muscles."
+    },
+    "output_length_chars": 517,
+    "output_tokens_estimated": 129,
+    "cost_usd": 0.00020445
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:05:14.586394",
+    "latency_seconds": 20.75,
+    "input_prompt": "\nClaim: Adults should also take two days each week to strengthen their muscles with weights or resistance training.\nCategory: policy\nExtraction confidence: 0.85\n\nEvidence:\nUNCLEAR (4 sources):\n  1. Comparison of once\u2010weekly and twice\u2010weekly strength training in ... | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC2465144/\n     Summary: One set of exercises performed once weekly to muscle fatigue improved strength as well as twice a week in the older adult.\n  2. If You Can Only Work Out on the Weekends, Here's How Long You ... | reliability=high (1.00)\n     URL: https://www.pbrc.edu/news/media/2024/weekendwarrior.aspx\n     Summary: It also says adults should get in at least two days a week of muscle-strengthening activities that target the major muscle groups: legs, hips, ...\n  3. Strength training: Get stronger, leaner, healthier - Mayo Clinic | reliability=high (0.85)\n     URL: https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/strength-training/art-20046670\n     Summary: Do strength training exercises for all major muscle groups at least two times a week. Aim to do a single set of each exercise, using a weight or resistance ...\n  4. An expert says this is the one muscle you need to strengthen to age ... | reliability=medium (0.60)\n     URL: https://www.fitandwell.com/exercise/bodyweight-exercises/an-expert-says-this-is-the-one-muscle-you-need-to-strengthen-to-age-well\n     Summary: If you ask a personal trainer about the best move for longevity, they almost always recommend squats. While these are great for ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1611,
+    "input_tokens_estimated": 402,
+    "output": {
+      "overall_stance": "mixed",
+      "confidence": "medium",
+      "summary": "The evidence presents a mixed stance on the claim. While the Mayo Clinic and a high-reliability study indicate that adults should engage in muscle-strengthening activities at least twice a week, another high-reliability source suggests that once-weekly training can also be effective for strength improvement in older adults. This indicates that while two days of training is recommended, there are scenarios where less frequent training may still yield benefits."
+    },
+    "output_length_chars": 524,
+    "output_tokens_estimated": 131,
+    "cost_usd": 0.0001389
+  }
+]

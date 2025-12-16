@@ -1,0 +1,455 @@
+{
+  "extracted_claims": {
+    "claims": [
+      {
+        "text": "Over five days, four million Texans lost power during the coldest winter storm in fifty years.",
+        "confidence": 0.95,
+        "category": "statistical",
+        "importance": 0.85,
+        "context": "February 2021 winter storm.",
+        "transcript_char_start": 291,
+        "transcript_char_end": 390,
+        "transcript_match_score": 0.806282722513089
+      }
+    ],
+    "total_count": 1
+  },
+  "final_output": {
+    "extracted_claims": {
+      "claims": [
+        {
+          "text": "Over five days, four million Texans lost power during the coldest winter storm in fifty years.",
+          "confidence": 0.95,
+          "category": "statistical",
+          "importance": 0.85,
+          "context": "February 2021 winter storm.",
+          "transcript_char_start": 291,
+          "transcript_char_end": 390,
+          "transcript_match_score": 0.806282722513089
+        }
+      ],
+      "total_count": 1
+    },
+    "claim_reports": [
+      {
+        "claim_text": "Over five days, four million Texans lost power during the coldest winter storm in fifty years.",
+        "claim_confidence": 0.95,
+        "claim_category": "statistical",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence strongly supports the claim that over four million Texans lost power during the February 2021 winter storm, described as the coldest in fifty years, with multiple high-reliability sources confirming that over 4.5 million homes experienced outages.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "ERCOT Blackout 2021 - UT Energy Institute",
+              "url": "https://energy.utexas.edu/research/ercot-blackout-2021",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (40.3 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that over 4.5 million Texans lost power during the February 2021 winter storm, which was described as the coldest in fifty years, and that some individuals were without power for as long as four days.",
+              "snippet": "In February 2021, an extreme winter storm event caused a massive electricity generation failure in the state of Texas, which resulted in a loss of power for ..."
+            },
+            {
+              "title": "The Great Texas Freeze: February 11-20, 2021 | News",
+              "url": "https://www.ncei.noaa.gov/news/great-texas-freeze-february-2021",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that during the February 2021 winter storm, over 4.5 million Texans lost power, with some experiencing outages for as long as four days, which aligns with the claim about the impact of the coldest winter storm in fifty years.",
+              "snippet": "It was the coldest winter storm for Texas since December 1989. Map ... Though power outages occurred throughout the South, they were ..."
+            },
+            {
+              "title": "2021 Texas Power Grid Failure \u2013 a preventable disaster - DEITABASE",
+              "url": "https://limos.engin.umich.edu/deitabase/2024/12/27/2021-texas-power-grid-failure/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that in February 2021, an extreme winter storm caused a significant electricity generation failure in Texas, resulting in over 4.5 million homes losing power, which aligns with the claim about four million Texans losing power during the storm.",
+              "snippet": "In 2021, Winter Storm Uri brought record-breaking low temperatures to the people of Texas, overwhelming the under-designed Texas power grid."
+            },
+            {
+              "title": "Final Report on February 2021 Freeze Underscores Winterization ...",
+              "url": "https://www.ferc.gov/news-events/news/final-report-february-2021-freeze-underscores-winterization-recommendations",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that over 4.5 million homes in Texas lost power during the February 2021 winter storm, which aligns with the claim about the number of Texans affected by the power outage.",
+              "snippet": "More than 4.5 million people in Texas lost power \u2013 some for as long as four days. Tragically, the loss of electricity caused the deaths of ..."
+            },
+            {
+              "title": "Winter Storm Uri 2021 - Texas Comptroller",
+              "url": "https://comptroller.texas.gov/economy/fiscal-notes/archive/2021/oct/winter-storm-impact.php",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that during the winter storm in February 2021, over 4.5 million homes in Texas lost power, which aligns with the claim about four million Texans losing power during the storm.",
+              "snippet": "The UT-Austin report found that Uri, although not the most severe Texas winter storm on record, caused the most loss of electricity."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 18.56,
+        "timestamp_confidence": 0.806282722513089
+      }
+    ],
+    "transcript_data": {
+      "text": "The week of Valentine's Day 2021, the temperature dropped below zero. Nobody could remember it being this cold for this long. This was Texas, not Siberia. But Texas is the energy state. There was nothing to fear. Just go home, turn on the heat, and hunker down. That's how it should have gone. Instead, over five days, four million Texans lost power during what turned out to be the coldest winter storm in a half a century. Hundreds died, including an 11-year-old boy who froze to death in his sleep. The state's electric grid operator, the Electric Reliability Council of Texas, ERCOT, later reported the state was just four minutes away from total grid collapse. The media was quick to blame the state government for not being fully prepared and not acting fast enough. This may be true, but ERCOT's mistakes were symptoms, not the cause, of the problem. The real cause is decades of misguided policies that have left the Lone Star state with an unreliable energy infrastructure. It's a cautionary tale that the rest of the country needs to learn from. From 2010 to 2020, the population of Texas increased by 4 million people, and the state's economy grew by 35%. But while all this growth was happening, the state's reliable energy capacity was actually shrinking. Meanwhile, its unreliable energy capacity was surging. In fact, it almost tripled. Let's break this down. Reliable energy is fossil fuels\u2014coal and natural gas\u2014and nuclear. These fuels produce a near-constant flow of electricity. Unreliable, or variable energy, is renewable energy\u2014wind and solar. They're unreliable because they depend on the whims of Mother Nature. In 2020, Texans got 25% of their energy from renewables. During the February storm, however, that fell to 8%, at one point reaching a deadly low of just 1.5%. The reason? Renewable energy only works when the weather cooperates, but it's useless when it doesn't\u2014like when it conjures up a giant snowstorm. Solar panels don't capture sunlight and wind turbines don't spin when covered in snow and ice. Given renewables' unreliability, how is it that Texas, of all places, became so dependent on them? That story begins in 1999, when Texas politicians on the left and the right fell in love with the idea that they could turn the state into a green energy powerhouse. It sounded like a great idea at the time: Instead of passing any new mandates, they would do it by offering massive subsidies, marketed as \"incentives,\" to produce wind and solar power. This ended up working out great for the wind and solar companies, but not so great for reliable energy providers. To illustrate this, imagine that you own a restaurant. One day you learn that your competitor down the street is getting government support. He gets so much help that, instead of charging his customers, he can pay them to eat his food. Not surprisingly, your customers abandon your restaurant for his. Your competitor prospers off the taxpayers' backs while your business withers. Let's apply this analogy to the real world of renewable energy. Wind and solar get so much in subsidies they're guaranteed a profit. And unlike fossil fuel producers, they're not even required to provide reliable power. It's no wonder fossil fuel plants are closing, and nuclear plants are not being built. The wind and solar companies are protected from the laws of supply and demand. They can't lose, and the fossil fuel plants can't compete. That's how out of whack the Texas electricity market has become. Since 2006, the state has subsidized renewable energy to the tune of $19 billion. All of this came right out of Texans' wallets, courtesy of ever-increasing electric bills and rising property taxes. And what does Texas have to show for it? An electric grid that failed when Texans needed it most. Unfortunately, this scenario is playing out across America. Over the past decade, the federal government has spent over $230 billion on energy subsidies, and that doesn't even include subsidies the states give away. It's true that Uncle Sam also grants favors to fossil fuel companies. Renewable energy advocates love to point this out, but here's what they neglect to mention: compared to fossil fuel companies, for every unit of electricity generated, Washington subsidizes wind 17 times and solar 75 times more. Yet, despite all this aid, renewables provide just 4 percent of the country's total energy supply. The verdict is in: renewable energy is expensive and unreliable. And if it can render America's leading power producer powerless, it can do the same to your state. Government meddling got us into this mess. It's time for politicians to step aside and let the free market get us out of it. I'm Jason Isaac from the Texas Public Policy Foundation, for Prager University.",
+      "segments": [
+        {
+          "text": "The week of Valentine's Day 2021,\u00a0\nthe temperature dropped below zero.",
+          "start": 2.08,
+          "duration": 4.56
+        },
+        {
+          "text": "Nobody could remember it\u00a0\nbeing this cold for this long.",
+          "start": 6.64,
+          "duration": 3.12
+        },
+        {
+          "text": "This was Texas, not Siberia.",
+          "start": 9.76,
+          "duration": 2.503
+        },
+        {
+          "text": "But Texas is the energy state. There\u00a0\nwas nothing to fear. Just go home,\u00a0\u00a0",
+          "start": 12.48,
+          "duration": 3.92
+        },
+        {
+          "text": "turn on the heat, and hunker down.",
+          "start": 16.4,
+          "duration": 2.017
+        },
+        {
+          "text": "That's how it should have gone.",
+          "start": 18.56,
+          "duration": 1.76
+        },
+        {
+          "text": "Instead, over five days, four million\u00a0\nTexans lost power during what turned\u00a0\u00a0",
+          "start": 20.32,
+          "duration": 5.2
+        },
+        {
+          "text": "out to be the coldest winter storm\u00a0\nin a half a century. Hundreds died,\u00a0\u00a0",
+          "start": 25.52,
+          "duration": 4.64
+        },
+        {
+          "text": "including an 11-year-old boy\u00a0\nwho froze to death in his sleep.",
+          "start": 30.16,
+          "duration": 3.679
+        },
+        {
+          "text": "The state's electric grid operator, the\u00a0\nElectric Reliability Council of Texas,\u00a0\u00a0",
+          "start": 33.92,
+          "duration": 3.92
+        },
+        {
+          "text": "ERCOT, later reported the state was just\u00a0\nfour minutes away from total grid collapse.",
+          "start": 37.84,
+          "duration": 5.76
+        },
+        {
+          "text": "The media was quick to blame the state government\u00a0\u00a0",
+          "start": 43.6,
+          "duration": 2.08
+        },
+        {
+          "text": "for not being fully prepared\u00a0\nand not acting fast enough.",
+          "start": 45.68,
+          "duration": 3.478
+        },
+        {
+          "text": "This may be true, but ERCOT's mistakes were\u00a0\nsymptoms, not the cause, of the problem.",
+          "start": 49.28,
+          "duration": 5.525
+        },
+        {
+          "text": "The real cause is decades of\u00a0\nmisguided policies that have\u00a0\u00a0",
+          "start": 54.88,
+          "duration": 3.04
+        },
+        {
+          "text": "left the Lone Star state with an\u00a0\nunreliable energy infrastructure.",
+          "start": 57.92,
+          "duration": 3.837
+        },
+        {
+          "text": "It's a cautionary tale that the rest\u00a0\nof the country needs to learn from.",
+          "start": 61.84,
+          "duration": 4.536
+        },
+        {
+          "text": "From 2010 to 2020, the population of\u00a0\nTexas increased by 4 million people,\u00a0\u00a0",
+          "start": 66.48,
+          "duration": 4.88
+        },
+        {
+          "text": "and the state's economy grew by 35%. But\u00a0\nwhile all this growth was happening,\u00a0\u00a0",
+          "start": 71.36,
+          "duration": 4.96
+        },
+        {
+          "text": "the state's reliable energy\u00a0\ncapacity was actually shrinking.\u00a0\u00a0",
+          "start": 76.32,
+          "duration": 3.813
+        },
+        {
+          "text": "Meanwhile, its unreliable energy capacity\u00a0\nwas surging. In fact, it almost tripled.",
+          "start": 80.24,
+          "duration": 5.68
+        },
+        {
+          "text": "Let's break this down.",
+          "start": 85.92,
+          "duration": 1.36
+        },
+        {
+          "text": "Reliable energy is fossil fuels\u2014coal and\u00a0\nnatural gas\u2014and nuclear. These fuels produce\u00a0\u00a0",
+          "start": 87.28,
+          "duration": 5.6
+        },
+        {
+          "text": "a near-constant flow of electricity. Unreliable,\u00a0\nor variable energy, is renewable energy\u2014wind and\u00a0\u00a0",
+          "start": 92.88,
+          "duration": 6.16
+        },
+        {
+          "text": "solar. They're unreliable because they\u00a0\ndepend on the whims of Mother Nature.",
+          "start": 99.04,
+          "duration": 4.16
+        },
+        {
+          "text": "In 2020, Texans got 25% of their energy\u00a0\nfrom renewables. During the February storm,\u00a0\u00a0",
+          "start": 103.2,
+          "duration": 5.44
+        },
+        {
+          "text": "however, that fell to 8%, at one point\u00a0\nreaching a deadly low of just 1.5%.",
+          "start": 108.64,
+          "duration": 6.695
+        },
+        {
+          "text": "The reason? Renewable energy only\u00a0\nworks when the weather cooperates,\u00a0\u00a0",
+          "start": 115.44,
+          "duration": 4.0
+        },
+        {
+          "text": "but it's useless when it doesn't\u2014like\u00a0\nwhen it conjures up a giant snowstorm.\u00a0\u00a0",
+          "start": 119.44,
+          "duration": 4.8
+        },
+        {
+          "text": "Solar panels don't capture sunlight and wind\u00a0\nturbines don't spin when covered in snow and ice.",
+          "start": 124.24,
+          "duration": 5.596
+        },
+        {
+          "text": "Given renewables' unreliability, how is it that\u00a0\nTexas, of all places, became so dependent on them?",
+          "start": 130.0,
+          "duration": 6.192
+        },
+        {
+          "text": "That story begins in 1999, when Texas politicians\u00a0\non the left and the right fell in love with the\u00a0\u00a0",
+          "start": 136.24,
+          "duration": 6.0
+        },
+        {
+          "text": "idea that they could turn the state into a green\u00a0\nenergy powerhouse. It sounded like a great idea\u00a0\u00a0",
+          "start": 142.24,
+          "duration": 4.8
+        },
+        {
+          "text": "at the time: Instead of passing any new mandates,\u00a0\nthey would do it by offering massive subsidies,\u00a0\u00a0",
+          "start": 147.04,
+          "duration": 5.68
+        },
+        {
+          "text": "marketed as \"incentives,\" to produce wind\u00a0\nand solar power. This ended up working\u00a0\u00a0",
+          "start": 152.72,
+          "duration": 5.12
+        },
+        {
+          "text": "out great for the wind and solar companies, but\u00a0\nnot so great for reliable energy providers.",
+          "start": 157.84,
+          "duration": 5.069
+        },
+        {
+          "text": "To illustrate this, imagine that you own a\u00a0\nrestaurant. One day you learn that your competitor\u00a0\u00a0",
+          "start": 162.96,
+          "duration": 4.88
+        },
+        {
+          "text": "down the street is getting government support.\u00a0\nHe gets so much help that, instead of charging\u00a0\u00a0",
+          "start": 167.84,
+          "duration": 4.88
+        },
+        {
+          "text": "his customers, he can pay them to eat his food.\u00a0\nNot surprisingly, your customers abandon your\u00a0\u00a0",
+          "start": 172.72,
+          "duration": 6.24
+        },
+        {
+          "text": "restaurant for his. Your competitor prospers off\u00a0\nthe taxpayers' backs while your business withers.",
+          "start": 178.96,
+          "duration": 6.0
+        },
+        {
+          "text": "Let's apply this analogy to the\u00a0\nreal world of renewable energy.\u00a0\u00a0",
+          "start": 184.96,
+          "duration": 3.52
+        },
+        {
+          "text": "Wind and solar get so much in\u00a0\nsubsidies they're guaranteed a profit.\u00a0\u00a0",
+          "start": 188.48,
+          "duration": 3.869
+        },
+        {
+          "text": "And unlike fossil fuel producers, they're\u00a0\nnot even required to provide reliable power.\u00a0\u00a0",
+          "start": 192.4,
+          "duration": 5.04
+        },
+        {
+          "text": "It's no wonder fossil fuel plants are closing,\u00a0\nand nuclear plants are not being built.",
+          "start": 197.44,
+          "duration": 5.268
+        },
+        {
+          "text": "The wind and solar companies are protected\u00a0\nfrom the laws of supply and demand.\u00a0\u00a0",
+          "start": 202.708,
+          "duration": 4.092
+        },
+        {
+          "text": "They can't lose, and the fossil fuel plants\u00a0\u00a0",
+          "start": 206.8,
+          "duration": 3.2
+        },
+        {
+          "text": "can't compete. That's how out of whack\u00a0\nthe Texas electricity market has become.",
+          "start": 210.0,
+          "duration": 5.564
+        },
+        {
+          "text": "Since 2006, the state has subsidized\u00a0\nrenewable energy to the tune of $19 billion.\u00a0\u00a0",
+          "start": 215.564,
+          "duration": 6.385
+        },
+        {
+          "text": "All of this came right out of Texans' wallets,\u00a0\ncourtesy of ever-increasing electric bills\u00a0\u00a0",
+          "start": 222.16,
+          "duration": 4.64
+        },
+        {
+          "text": "and rising property taxes. And what\u00a0\ndoes Texas have to show for it?\u00a0\u00a0",
+          "start": 226.8,
+          "duration": 4.8
+        },
+        {
+          "text": "An electric grid that failed\u00a0\nwhen Texans needed it most.",
+          "start": 231.6,
+          "duration": 3.472
+        },
+        {
+          "text": "Unfortunately, this scenario\u00a0\nis playing out across America.",
+          "start": 235.12,
+          "duration": 3.2
+        },
+        {
+          "text": "Over the past decade, the federal government\u00a0\nhas spent over $230 billion on energy subsidies,\u00a0\u00a0",
+          "start": 238.32,
+          "duration": 5.908
+        },
+        {
+          "text": "and that doesn't even include\u00a0\nsubsidies the states give away.",
+          "start": 244.228,
+          "duration": 3.131
+        },
+        {
+          "text": "It's true that Uncle Sam also grants\u00a0\nfavors to fossil fuel companies.\u00a0\u00a0",
+          "start": 247.44,
+          "duration": 3.84
+        },
+        {
+          "text": "Renewable energy advocates love to point this\u00a0\nout, but here's what they neglect to mention:\u00a0\u00a0",
+          "start": 251.28,
+          "duration": 4.8
+        },
+        {
+          "text": "compared to fossil fuel companies, for\u00a0\nevery unit of electricity generated,\u00a0\u00a0",
+          "start": 256.08,
+          "duration": 4.48
+        },
+        {
+          "text": "Washington subsidizes wind 17\u00a0\ntimes and solar 75 times more.",
+          "start": 260.56,
+          "duration": 7.36
+        },
+        {
+          "text": "Yet, despite all this aid, renewables provide just\u00a0\n4 percent of the country's total energy supply.",
+          "start": 267.92,
+          "duration": 7.44
+        },
+        {
+          "text": "The verdict is in: renewable energy\u00a0\nis expensive and unreliable. And if\u00a0\u00a0",
+          "start": 275.36,
+          "duration": 4.4
+        },
+        {
+          "text": "it can render America's leading power producer\u00a0\npowerless, it can do the same to your state.",
+          "start": 279.76,
+          "duration": 5.92
+        },
+        {
+          "text": "Government meddling got us into this mess.\u00a0\nIt's time for politicians to step aside\u00a0\u00a0",
+          "start": 285.68,
+          "duration": 4.8
+        },
+        {
+          "text": "and let the free market get us out of it.",
+          "start": 290.48,
+          "duration": 2.48
+        },
+        {
+          "text": "I'm Jason Isaac from the Texas Public\u00a0\nPolicy Foundation, for Prager University.",
+          "start": 292.96,
+          "duration": 4.29
+        }
+      ],
+      "video_id": "KdMqCUa7XJk"
+    }
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "video_id": "BADDj82oces",
+  "timestamp": "2025-12-14T11:03:58.520996",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_7",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.8571428571428571,
+    "recall": 0.3,
+    "f1_score": 0.4444444444444444,
+    "true_positives": 6,
+    "false_positives": 1,
+    "false_negatives": 14,
+    "mean_average_precision": 0.9761904761904762,
+    "recall_at_important": 0.4,
+    "importance_weighted_coverage": 0.3423728813559322,
+    "matched_claims": [
+      {
+        "gt_text": "HIV infects one of the immune cells that is central to the body's response to pathogens - the helper T-cell",
+        "sys_text": "HIV infects helper T-cells, central to the immune response.",
+        "gt_importance": 0.95,
+        "sys_importance": 0.85,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "As a result their numbers plummet - ultimately the body becomes immunodeficient and this condition is known as AIDS",
+        "sys_text": "The body becomes immunodeficient due to HIV, leading to AIDS.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.85,
+        "importance_error": 0.050000000000000044
+      },
+      {
+        "gt_text": "One of these enzymes, reverse transcriptase, converts the viral RNA into a length of DNA",
+        "sys_text": "HIV uses reverse transcriptase to convert viral RNA into DNA.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.8,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "The greatest assault comes from killer T cells and natural killer cells which seek and destroy infected cells directly",
+        "sys_text": "Killer T cells and natural killer cells destroy infected cells.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.8,
+        "importance_error": 0.10000000000000009
+      },
+      {
+        "gt_text": "We still have no way of eliminating HIV from the body completely - there is no cure",
+        "sys_text": "There is no cure for HIV, and treatment can only manage it.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.75,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "White blood cells called phagocytes produce neutralizing antibodies which bind to surface spikes on HIV particles and stop them entering healthy helper T-cells",
+        "sys_text": "The immune system produces neutralizing antibodies against HIV.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.6,
+        "importance_error": 0.15000000000000002
+      }
+    ],
+    "missed_claims": [
+      "White blood cells immediately respond to viruses by releasing anti-viral proteins, attacking infected cells, and recruiting backup",
+      "Once inside, the virus moves towards the nucleus along with its enzymes and genetic material",
+      "The viral DNA inserts into the cell's genome, forcing the cell to spew out HIV proteins and genetic material to make new copies of the virus",
+      "Inside infected cells, anti-viral proteins called restriction factors work to shut down virus production",
+      "Some restriction factors stop the virus from escaping the cell",
+      "They release a protein called perforin which punches holes in infected cells, allowing enzymes to be injected triggering auto-destruction",
+      "HIV disables the cell's antiviral proteins allowing new virus particles to leave the cell",
+      "HIV constantly mutates inside the cell to evade protection",
+      "The immune system can't fight what it can't see",
+      "Eventually the immune system wears itself out - killer T cells activated for too long become exhausted and no longer respond to infection",
+      "The body loses the ability to make new helper T-cells to replace those killed in the fight",
+      "Without treatment, exposure to otherwise harmless microbes can be fatal",
+      "Hidden reservoirs of HIV will rebound if treatment stops",
+      "Treatment with antiretroviral drugs can swing the balance, allowing the immune system to recover"
+    ],
+    "extra_claims": [
+      "HIV levels rise rapidly in the body after infection."
+    ],
+    "importance_mae": 0.10000000000000002,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.6666666666666666,
+    "stance_accuracy": 0.6666666666666666,
+    "correct_verdicts": 4,
+    "total_verdicts": 6,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "We still have no way of eliminating HIV from the body completely - there is no cure",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "MIXED"
+      },
+      {
+        "claim": "White blood cells called phagocytes produce neutralizing antibodies which bind to surface spikes on HIV particles and stop them entering healthy helper T-cells",
+        "gt_verdict": "REFUTES",
+        "sys_verdict": "SUPPORTS"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.3,
+    "verdict_accuracy": 0.6666666666666666,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.0202146,
+    "total_time_seconds": 74.63674283027649,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.4285714285714284
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 34
+    },
+    "avg_evidence_per_claim": 4.857142857142857
+  },
+  "ground_truth_claims_count": 20,
+  "system_claims_count": 7
+}

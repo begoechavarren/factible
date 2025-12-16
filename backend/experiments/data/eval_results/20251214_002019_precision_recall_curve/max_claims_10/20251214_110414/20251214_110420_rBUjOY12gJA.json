@@ -1,0 +1,181 @@
+{
+  "video_id": "rBUjOY12gJA",
+  "timestamp": "2025-12-14T11:04:20.719790",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_10",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.9,
+    "recall": 0.47368421052631576,
+    "f1_score": 0.6206896551724138,
+    "true_positives": 9,
+    "false_positives": 1,
+    "false_negatives": 10,
+    "mean_average_precision": 0.9888888888888889,
+    "recall_at_important": 0.6,
+    "importance_weighted_coverage": 0.4878892733564014,
+    "matched_claims": [
+      {
+        "gt_text": "After six to eight weeks studies have shown people can increase their mitochondria by up to 50%",
+        "sys_text": "Studies have shown that people can increase their mitochondria by up to 50% after six to eight weeks of exercise.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.7,
+        "importance_error": 0.20000000000000007
+      },
+      {
+        "gt_text": "By nine months of regular cardio exercise you should see about a 25% increase in your VO2 max",
+        "sys_text": "By nine months of regular exercise, you should see about a 25% increase in your VO2 max.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.7,
+        "importance_error": 0.15000000000000002
+      },
+      {
+        "gt_text": "Delayed onset muscle soreness (DOMS) will persist for about 72 hours",
+        "sys_text": "Delayed onset muscle soreness (DOMS) will persist for about 72 hours after a workout.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.6,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "Over the next few weeks you'll slowly start to ramp up production of mitochondria via mitochondrial biogenesis",
+        "sys_text": "Regular exercise can ramp up production of mitochondria via mitochondrial biogenesis.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.6,
+        "importance_error": 0.25
+      },
+      {
+        "gt_text": "Exercise programs often see a 50% dropout rate within the first six months",
+        "sys_text": "After six months of exercise, people are less likely to drop out of their workout programs, which often see a 50% dropout rate in the first six months.",
+        "gt_importance": 0.55,
+        "sys_importance": 0.6,
+        "importance_error": 0.04999999999999993
+      },
+      {
+        "gt_text": "After one year of regular exercise your bones will be denser which reduces your risk of osteoporosis",
+        "sys_text": "After one year of regular exercise, your bones will be denser, reducing the risk of osteoporosis.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.6,
+        "importance_error": 0.25
+      },
+      {
+        "gt_text": "Regular resistance training when combined with aerobic exercise can actually reverse the effects of osteoporosis after 12 months",
+        "sys_text": "Regular resistance training combined with aerobic exercise can reverse the effects of osteoporosis after 12 months.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.6,
+        "importance_error": 0.30000000000000004
+      },
+      {
+        "gt_text": "Older people who exercise 5 days a week for at least 30 minutes saved on average $2,500 a year in medical costs for heart related health problems",
+        "sys_text": "Older people who exercise 5 days a week for at least 30 minutes save on average $2,500 a year in medical costs for heart-related health problems.",
+        "gt_importance": 0.8,
+        "sys_importance": 0.6,
+        "importance_error": 0.20000000000000007
+      },
+      {
+        "gt_text": "During your first workout, you might feel more alert and energized because ramping up your heart rate means a boost in overall blood flow and oxygen to the brain",
+        "sys_text": "During the first workout, you might feel more alert and energized due to increased blood flow and oxygen to the brain.",
+        "gt_importance": 0.65,
+        "sys_importance": 0.25,
+        "importance_error": 0.4
+      }
+    ],
+    "missed_claims": [
+      "You're less likely to get DOMS again as long as you continue to regularly exercise those same muscles",
+      "With more mitochondria in your cells you'll start to feel more fit and your endurance will increase",
+      "After six months people are more likely to stick with exercise programs",
+      "VO2 max is a measure of fitness and refers to the rate your body can transport oxygen to your muscles for fuel",
+      "A higher VO2 max means you can run faster for longer, so a 25% increase means you can run about 20% further in the same amount of time",
+      "Exercise lowers the risk of developing arthritis, type-2 diabetes, dementia, and certain types of cancer like breast and colon",
+      "Exercise lowers the risk of anxiety and depression by reducing levels of stress hormones like cortisol and adrenaline",
+      "US Department of Health recommends a minimum of 2.5 hours per week of moderately intense exercise like brisk walking or biking",
+      "US Department of Health recommends at least 1 hour and 15 minutes each week of high intensity workouts like running and swimming sprints",
+      "On top of aerobic exercise recommendations, take two days each week to strengthen your muscles with weights or resistance training"
+    ],
+    "extra_claims": [
+      "An increasing number of Americans have started participating in more sports, fitness, and recreation."
+    ],
+    "importance_mae": 0.2111111111111111,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.0,
+    "stance_accuracy": 0.0,
+    "correct_verdicts": 0,
+    "total_verdicts": 9,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "After six to eight weeks studies have shown people can increase their mitochondria by up to 50%",
+        "gt_verdict": "REFUTES",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "By nine months of regular cardio exercise you should see about a 25% increase in your VO2 max",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Delayed onset muscle soreness (DOMS) will persist for about 72 hours",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Over the next few weeks you'll slowly start to ramp up production of mitochondria via mitochondrial biogenesis",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "MIXED"
+      },
+      {
+        "claim": "Exercise programs often see a 50% dropout rate within the first six months",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "After one year of regular exercise your bones will be denser which reduces your risk of osteoporosis",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Regular resistance training when combined with aerobic exercise can actually reverse the effects of osteoporosis after 12 months",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Older people who exercise 5 days a week for at least 30 minutes saved on average $2,500 a year in medical costs for heart related health problems",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "During your first workout, you might feel more alert and energized because ramping up your heart rate means a boost in overall blood flow and oxygen to the brain",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.47368421052631576,
+    "verdict_accuracy": 0.0,
+    "evidence_quality_avg": 0.6,
+    "total_cost_usd": 0.0022605,
+    "total_time_seconds": 135.15706968307495,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 0.6,
+    "avg_sources_per_query": 1.5
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "unknown": 1,
+      "high": 22,
+      "medium": 7
+    },
+    "avg_evidence_per_claim": 3.0
+  },
+  "ground_truth_claims_count": 19,
+  "system_claims_count": 10
+}

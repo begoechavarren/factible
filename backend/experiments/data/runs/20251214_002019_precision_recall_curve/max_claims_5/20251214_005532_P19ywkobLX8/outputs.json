@@ -1,0 +1,982 @@
+{
+  "extracted_claims": {
+    "claims": [
+      {
+        "text": "The planet is warming catastrophically because of certain human behaviors.",
+        "confidence": 0.8,
+        "category": "scientific",
+        "importance": 0.85,
+        "context": "Claim about human impact on climate change, central to thesis.",
+        "transcript_char_start": 193,
+        "transcript_char_end": 266,
+        "transcript_match_score": 1.0
+      },
+      {
+        "text": "Heat waves in the US are no more common than they were in 1900.",
+        "confidence": 0.9,
+        "category": "statistical",
+        "importance": 0.85,
+        "context": "Contradicts common belief about climate change effects.",
+        "transcript_char_start": 941,
+        "transcript_char_end": 1007,
+        "transcript_match_score": 0.96875
+      },
+      {
+        "text": "Hurricane activity is no different than it was a century ago.",
+        "confidence": 0.9,
+        "category": "statistical",
+        "importance": 0.85,
+        "context": "Challenges the narrative of increasing hurricane activity.",
+        "transcript_char_start": 1008,
+        "transcript_char_end": 1068,
+        "transcript_match_score": 1.0
+      },
+      {
+        "text": "Floods have not increased across the globe over more than seventy years.",
+        "confidence": 0.9,
+        "category": "statistical",
+        "importance": 0.85,
+        "context": "Contradicts claims of worsening flood conditions.",
+        "transcript_char_start": 1069,
+        "transcript_char_end": 1140,
+        "transcript_match_score": 1.0
+      },
+      {
+        "text": "Greenland\u2019s ice sheet isn\u2019t shrinking any more rapidly today than it was 80 years ago.",
+        "confidence": 0.9,
+        "category": "scientific",
+        "importance": 0.85,
+        "context": "Challenges perceptions of ice sheet melting.",
+        "transcript_char_start": 1141,
+        "transcript_char_end": 1226,
+        "transcript_match_score": 1.0
+      }
+    ],
+    "total_count": 5
+  },
+  "final_output": {
+    "extracted_claims": {
+      "claims": [
+        {
+          "text": "The planet is warming catastrophically because of certain human behaviors.",
+          "confidence": 0.8,
+          "category": "scientific",
+          "importance": 0.85,
+          "context": "Claim about human impact on climate change, central to thesis.",
+          "transcript_char_start": 193,
+          "transcript_char_end": 266,
+          "transcript_match_score": 1.0
+        },
+        {
+          "text": "Heat waves in the US are no more common than they were in 1900.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.85,
+          "context": "Contradicts common belief about climate change effects.",
+          "transcript_char_start": 941,
+          "transcript_char_end": 1007,
+          "transcript_match_score": 0.96875
+        },
+        {
+          "text": "Hurricane activity is no different than it was a century ago.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.85,
+          "context": "Challenges the narrative of increasing hurricane activity.",
+          "transcript_char_start": 1008,
+          "transcript_char_end": 1068,
+          "transcript_match_score": 1.0
+        },
+        {
+          "text": "Floods have not increased across the globe over more than seventy years.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.85,
+          "context": "Contradicts claims of worsening flood conditions.",
+          "transcript_char_start": 1069,
+          "transcript_char_end": 1140,
+          "transcript_match_score": 1.0
+        },
+        {
+          "text": "Greenland\u2019s ice sheet isn\u2019t shrinking any more rapidly today than it was 80 years ago.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.85,
+          "context": "Challenges perceptions of ice sheet melting.",
+          "transcript_char_start": 1141,
+          "transcript_char_end": 1226,
+          "transcript_match_score": 1.0
+        }
+      ],
+      "total_count": 5
+    },
+    "claim_reports": [
+      {
+        "claim_text": "The planet is warming catastrophically because of certain human behaviors.",
+        "claim_confidence": 0.8,
+        "claim_category": "scientific",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence overwhelmingly supports the claim that human behaviors are causing catastrophic warming of the planet, with multiple high-reliability sources confirming that activities such as burning fossil fuels and deforestation significantly contribute to greenhouse gas emissions and global temperature increases.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Are humans causing or contributing to global warming? - Climate",
+              "url": "https://www.climate.gov/news-features/climate-qa/are-humans-causing-or-contributing-global-warming",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (26.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that human activities, particularly the emission of greenhouse gases, are significantly contributing to global warming, which has resulted in a measurable increase in global average temperatures.",
+              "snippet": "Yes, by increasing the abundance of greenhouse gases in the atmosphere, human activities are amplifying Earth's natural greenhouse effect."
+            },
+            {
+              "title": "The Causes of Climate Change - NASA Science",
+              "url": "https://science.nasa.gov/climate-change/causes/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The article provides substantial evidence that human activities, particularly the burning of fossil fuels and deforestation, are significant contributors to the increase in greenhouse gas concentrations, which in turn leads to catastrophic warming of the planet.",
+              "snippet": "Human Activity Is the Cause of Increased Greenhouse Gas Concentrations. Over the last century, burning of fossil fuels like coal and oil has ..."
+            },
+            {
+              "title": "More than 99.9% of studies agree: Humans caused climate change",
+              "url": "https://news.cornell.edu/stories/2021/10/more-999-studies-agree-humans-caused-climate-change",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The article presents strong evidence that over 99.9% of peer-reviewed studies agree that human activities are the primary cause of climate change, indicating a consensus on the catastrophic warming of the planet due to human behaviors.",
+              "snippet": "More than 99.9% of peer-reviewed scientific papers agree that climate change is mainly caused by humans, according to a new survey of 88,125 ..."
+            },
+            {
+              "title": "Climate change and human behaviour - Nature",
+              "url": "https://www.nature.com/articles/s41562-022-01490-9",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence overwhelmingly supports the claim that human behaviors are the main driver of climate change, with over 99% of peer-reviewed studies agreeing on this point.",
+              "snippet": "There is overwhelming scientific evidence that human behaviour is the main driver of climatic changes and global warming."
+            },
+            {
+              "title": "Human Impacts on the Environment: A Focus on Climate Change",
+              "url": "https://populationconnection.org/resources/human-activities-and-climate-change/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence clearly supports the claim that human behaviors, particularly the burning of fossil fuels and other activities, are driving catastrophic warming of the planet through the release of greenhouse gases. It details how these gases trap heat in the atmosphere, leading to climate change.",
+              "snippet": "Human activities are driving large scale changes in terrestrial and aquatic environments through pollution, water withdrawals, the hunting and harvesting of ..."
+            },
+            {
+              "title": "What Causes Climate Change? Human and Natural Causes - NRDC",
+              "url": "https://www.nrdc.org/stories/what-are-causes-climate-change",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Left"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that human activities, particularly the burning of fossil fuels and deforestation, are the primary drivers of climate change, leading to catastrophic warming of the planet.",
+              "snippet": "Human-driven causes of climate change\u200b\u200b Scientists agree that human activity is the primary driver of what we're seeing now worldwide."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 12.8,
+        "timestamp_confidence": 1.0
+      },
+      {
+        "claim_text": "Hurricane activity is no different than it was a century ago.",
+        "claim_confidence": 0.9,
+        "claim_category": "statistical",
+        "overall_stance": "mixed",
+        "verdict_confidence": "medium",
+        "verdict_summary": "The evidence presents a mixed view on hurricane activity over the past century. While high-reliability sources from MIT and NSF refute the claim by indicating that hurricane frequency and intensity have not significantly increased, a high-reliability source from the NOAA supports the idea that hurricane activity is comparable to historical levels. Additionally, several high-reliability sources provide unclear signals, suggesting that more nuanced data may exist regarding changes in hurricane frequency and damage.",
+        "evidence_by_stance": {
+          "refutes": [
+            {
+              "title": "Climate modeling confirms historical records showing ... - MIT PAOC",
+              "url": "http://paocweb.mit.edu/about/paoc-spotlights/climate-modeling-confirms-historical-records-showing-rise-in-hurricane-activity",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (40.6 years)"
+                ],
+                "bias": null
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence suggests that the frequency and intensity of hurricanes have not significantly increased over the past century, contradicting the claim that hurricane activity is no different than it was a century ago.",
+              "snippet": "The study finds that North Atlantic hurricanes have indeed increased in frequency over the last 150 years, similar to what historical records ..."
+            },
+            {
+              "title": "Climate modeling confirms historical records showing rise in ... - NSF",
+              "url": "https://www.nsf.gov/news/climate-modeling-confirms-historical-records",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence suggests that the frequency and intensity of hurricanes have not significantly increased over the past century, contradicting the claim that hurricane activity is no different than it was a century ago.",
+              "snippet": "Judging from historical records dating back to the 1850s, hurricanes in the North Atlantic have become more frequent over the last 150 years."
+            }
+          ],
+          "supports": [
+            {
+              "title": "US Hurricane Strikes by Decade",
+              "url": "https://www.nhc.noaa.gov/pastdec.shtml",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence suggests that the frequency and intensity of hurricanes have not significantly increased over the past century, indicating that hurricane activity is comparable to historical levels.",
+              "snippet": "U.S. Hurricane Strikes by Decade. This is taken from NOAA Technical Memorandum NWS TPC-4: THE DEADLIEST, COSTLIEST, AND MOST INTENSE"
+            }
+          ],
+          "unclear": [
+            {
+              "title": "[PDF] Changes in Atlantic major hurricane frequency since the late-19th ...",
+              "url": "https://www.aoml.noaa.gov/hrd/Landsea/Vecchi_et_al-2021-Nature_Communications.pdf",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Historically, MHs have accounted for ~80% of hurricane-related damage in the United. States of America (USA) despite only representing 34% of USA. TC ...",
+              "snippet": "Historically, MHs have accounted for ~80% of hurricane-related damage in the United. States of America (USA) despite only representing 34% of USA. TC ..."
+            },
+            {
+              "title": "North Atlantic Ocean Historical Tropical Cyclone Statistics",
+              "url": "https://tropical.atmos.colostate.edu/Realtime/index.php?arch&loc=northatlantic",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (38.5 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Statistics calculated from National Hurricane Center best tracks as archived in the International Best Track Archive for Climate Stewardship. Available ...",
+              "snippet": "Statistics calculated from National Hurricane Center best tracks as archived in the International Best Track Archive for Climate Stewardship. Available ..."
+            },
+            {
+              "title": "Trends in US Atlantic Tropical-Cyclone Damage, 1900-2022",
+              "url": "https://journals.ametsoc.org/view/journals/apme/aop/JAMC-D-24-0047.1/JAMC-D-24-0047.1.pdf",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (30.7 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Two of the eight attained maximum intensity west of 80oW, and only one (the Galveston Hurricane of 1900) reached maximum intensity in the Gulf ...",
+              "snippet": "Two of the eight attained maximum intensity west of 80oW, and only one (the Galveston Hurricane of 1900) reached maximum intensity in the Gulf ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 62.88,
+        "timestamp_confidence": 1.0
+      },
+      {
+        "claim_text": "Floods have not increased across the globe over more than seventy years.",
+        "claim_confidence": 0.9,
+        "claim_category": "statistical",
+        "overall_stance": "refutes",
+        "verdict_confidence": "high",
+        "verdict_summary": "Multiple high-reliability sources indicate that flooding events are becoming more frequent and severe globally, contradicting the claim. The Billion-Dollar Weather and Climate Disasters report and NRDC both highlight increasing flood occurrences due to climate change, while a study on European floods also supports this trend. Although some sources present mixed evidence regarding specific regions, the overall trend points towards an increase in flooding.",
+        "evidence_by_stance": {
+          "refutes": [
+            {
+              "title": "Billion-Dollar Weather and Climate Disasters | Time Series",
+              "url": "https://www.ncei.noaa.gov/access/billions/time-series",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that flooding events are becoming more frequent and severe due to climate change, contradicting the claim that floods have not increased globally over the past seventy years.",
+              "snippet": "However, there have been steady increases in coastal population density across CONUS despite historical flood loss events (Poudel et al, 2024). Areas where ..."
+            },
+            {
+              "title": "Flooding and Climate Change: Everything You Need to Know - NRDC",
+              "url": "https://www.nrdc.org/stories/flooding-and-climate-change-everything-you-need-know",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Left"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that flooding events are becoming more frequent and severe due to climate change, contradicting the claim that floods have not increased globally over the past seventy years.",
+              "snippet": "According to the Fourth National Climate Assessment, our oceans are approximately seven to eight inches higher than they were in 1900."
+            },
+            {
+              "title": "An increase in the spatial extent of European floods over the last 70 ...",
+              "url": "https://hess.copernicus.org/articles/28/3755/2024/",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (28.6 years)"
+                ],
+                "bias": null
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that while there are complex patterns of flood change across the United States, some regions are experiencing increasing flood frequency, which contradicts the claim that floods have not increased globally over the past seventy years.",
+              "snippet": "We find that flood extents increase by 11.3 % on average across Europe. This increase occurs over most of Europe, except for parts of eastern ..."
+            }
+          ],
+          "mixed": [
+            {
+              "title": "Fragmented patterns of flood change across the United States - PMC",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5129637/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "mixed",
+              "evidence_summary": "The evidence indicates that while there are changes in flood frequency and magnitude across the United States, the trends are not statistically significant and show a fragmented pattern, suggesting that generalizations about global flood increases over the past seventy years are not supported.",
+              "snippet": "This study examines changes in flood frequency, magnitude, duration, and volume of flood events across the various physiographic and climate regions of the ..."
+            },
+            {
+              "title": "Weather-related disasters increase over past 50 years, causing ...",
+              "url": "https://wmo.int/media/news/weather-related-disasters-increase-over-past-50-years-causing-more-damage-fewer-deaths",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "mixed",
+              "evidence_summary": "The evidence indicates that while there are changes in flood frequency and magnitude across the United States, these changes are complex and not uniformly increasing, with many areas showing no statistically significant trends. This suggests that the claim that floods have not increased globally over more than seventy years is not definitively supported or refuted, as the evidence presents a mixed picture.",
+              "snippet": "Although floods (38%) and storms (32%) were the most prevalent cause in the recorded disasters, extreme temperatures accounted for the highest ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 70.24,
+        "timestamp_confidence": 1.0
+      },
+      {
+        "claim_text": "Greenland\u2019s ice sheet isn\u2019t shrinking any more rapidly today than it was 80 years ago.",
+        "claim_confidence": 0.9,
+        "claim_category": "scientific",
+        "overall_stance": "refutes",
+        "verdict_confidence": "high",
+        "verdict_summary": "Multiple high-reliability sources indicate that Greenland's ice sheet is losing mass significantly more rapidly in recent decades compared to historical rates, directly contradicting the claim that it isn't shrinking more rapidly today than it was 80 years ago.",
+        "evidence_by_stance": {
+          "refutes": [
+            {
+              "title": "Climate change: mountain glaciers",
+              "url": "https://www.climate.gov/news-features/understanding-climate/climate-change-mountain-glaciers",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (26.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that Greenland's ice sheet has lost significantly more mass in recent decades compared to historical rates, contradicting the claim that it isn't shrinking more rapidly today than it was 80 years ago.",
+              "snippet": "During 2023 alone, the glacier mass loss was about 80 Gt [80 billion metric tons] higher than any other year on record, corresponding to 6 % of ..."
+            },
+            {
+              "title": "NASA Study: More Greenland Ice Lost Than Previously Estimated",
+              "url": "https://www.jpl.nasa.gov/news/nasa-study-more-greenland-ice-lost-than-previously-estimated/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that Greenland's ice sheet has lost significantly more mass in recent decades compared to historical estimates, contradicting the claim that its rate of shrinkage is not more rapid today than it was 80 years ago.",
+              "snippet": "The Greenland Ice Sheet has shed about one-fifth more ice mass in the past four decades than previously estimated, researchers at NASA's Jet ..."
+            },
+            {
+              "title": "Greenland Ice Sheet Melt 'Off the Charts' Compared With Past Four ...",
+              "url": "https://www.whoi.edu/press-room/news-release/greenland-ice-sheet-melt-off-the-charts-compared-with-past-four-centuries/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that there has been a significant increase in ice sheet meltwater runoff, suggesting that Greenland's ice sheet is indeed shrinking more rapidly today compared to the past, contradicting the claim.",
+              "snippet": "\u201cWe found a fifty percent increase in total ice sheet meltwater runoff versus the start of the industrial era, and a thirty percent increase ..."
+            },
+            {
+              "title": "Greenland's rapid melt will mean more flooding",
+              "url": "https://sealevel.nasa.gov/news/178/greenlands-rapid-melt-will-mean-more-flooding",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that Greenland's ice sheet is rapidly melting, having lost a significant amount of ice in recent decades, which contradicts the claim that it isn't shrinking more rapidly today than it was 80 years ago.",
+              "snippet": "The Greenland Ice Sheet is rapidly melting, having lost 3.8 trillion tons of ice between 1992 and 2018, a new study from NASA and the European Space Agency ( ..."
+            },
+            {
+              "title": "Scientists reveal how Greenland Ice Sheet has shrunk over past four ...",
+              "url": "https://www.reuters.com/business/environment/scientists-reveal-how-greenland-ice-sheet-has-shrunk-over-past-four-decades-2024-01-17/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that the Greenland Ice Sheet has lost a significant area over the past decades, suggesting that it is indeed shrinking more rapidly than it did 80 years ago.",
+              "snippet": "The Greenland Ice Sheet lost 5091 sq km (1930 sq miles) of area between 1985 and 2022, according to a study in the journal Nature published ..."
+            },
+            {
+              "title": "Variations in Greenland surface melt and extreme events from 1958 ...",
+              "url": "https://www.sciencedirect.com/science/article/pii/S1674927825001170",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that annual surface melt in Greenland is rapidly increasing, particularly post-1990, which contradicts the claim that the ice sheet isn't shrinking more rapidly today than it was 80 years ago.",
+              "snippet": "We analyzed the variations in Greenland surface melt in 1958\u20132023. Both models (RACMO/MAR) show that annual surface melt is rapidly increasing post-1990."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 73.76,
+        "timestamp_confidence": 1.0
+      },
+      {
+        "claim_text": "Heat waves in the US are no more common than they were in 1900.",
+        "claim_confidence": 0.9,
+        "claim_category": "statistical",
+        "overall_stance": "refutes",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence from the Extreme Weather Toolkit by Climate Central and the Statista report both indicate that heat waves in the U.S. are becoming longer, more intense, and more frequent compared to previous decades, directly contradicting the claim that they are no more common than in 1900.",
+        "evidence_by_stance": {
+          "refutes": [
+            {
+              "title": "Extreme Weather Toolkit: Extreme Heat | Climate Central",
+              "url": "https://www.climatecentral.org/toolkit-heat",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that heat waves in the U.S. are becoming longer, more intense, and more frequent compared to previous decades, contradicting the claim that they are no more common than in 1900.",
+              "snippet": "In major U.S. cities, multi-day heat waves are longer, more intense, more frequent, and happening over a longer period of the year than they did in the 1960s."
+            },
+            {
+              "title": "U.S.: annual heat wave index 1895-2020 - Statista",
+              "url": "https://www.statista.com/statistics/1293872/us-heat-wave-index/?srsltid=AfmBOoq9gunLv9ErahWCkMjp3YvFFo9ESvZAqMGUrzNWxqhwhckC13gd",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence discusses the increasing risks and impacts of extreme heat in urban areas, indicating that heat waves are becoming more significant due to climate change, which contradicts the claim that they are no more common than in 1900.",
+              "snippet": "In the United States, approximately 64 percent of the people lived in counties that experienced multiday heat waves in 2021."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "America in 2090: The Impact of Extreme Heat, in Maps - ny times",
+              "url": "https://www.nytimes.com/2021/07/21/opinion/climate-change-heat-waves.html",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Summers that seemed exceedingly hot 50 years ago are becoming much more commonplace. The extreme heat of that era \u2014 which had a chance of ...",
+              "snippet": "Summers that seemed exceedingly hot 50 years ago are becoming much more commonplace. The extreme heat of that era \u2014 which had a chance of ..."
+            },
+            {
+              "title": "How are extreme weather events and the climate evolving in the ...",
+              "url": "https://ourworldindata.org/us-weather-climate",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The US EPA notes that the frequency of heatwaves and length of the season has increased since the 1960s.",
+              "snippet": "The US EPA notes that the frequency of heatwaves and length of the season has increased since the 1960s."
+            },
+            {
+              "title": "Extreme Heat | US EPA",
+              "url": "https://www.epa.gov/climatechange-science/extreme-heat",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "MBFC credibility: medium",
+                  "Factual reporting: Mixed"
+                ],
+                "bias": "Right"
+              },
+              "stance": "unclear",
+              "evidence_summary": "In recent decades, heat waves have already become hotter, occur more often, and are larger and longer-lasting.",
+              "snippet": "In recent decades, heat waves have already become hotter, occur more often, and are larger and longer-lasting."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 0.9,
+        "timestamp_hint": 57.76,
+        "timestamp_confidence": 0.96875
+      }
+    ],
+    "transcript_data": {
+      "text": "Hubris is a Greek word that means dangerously overconfident. Based on my research, hubris fairly describes our current response to the issue of climate change. Here\u2019s what many people believe: One: The planet is warming catastrophically because of certain human behaviors. Two: Thanks to powerful computers we can project what the climate will be like 20, 40, or even 100 years from now. Three: That if we eliminate just one behavior, the burning of fossil fuels, we can prevent the climate from changing for as long we like. Each of these presumptions\u2014together, the basis of our hubris regarding the changing climate\u2014is either untrue or so far off the mark as to be useless. Yes, it\u2019s true that the globe is warming, and that humans are exerting a warming influence upon it. But beyond that, to paraphrase a line from the classic movie The Princess Bride, \u201cI do not think \u2018The Science\u2019 says what you think it says.\u201d For example, government reports state clearly that heat waves in the US are now no more common than they were in 1900. Hurricane activity is no different than it was a century ago. Floods have not increased across the globe over more than seventy years. Greenland\u2019s ice sheet isn\u2019t shrinking any more rapidly today than it was 80 years ago. Why aren\u2019t these reassuring facts better known? Because the public gets its climate information almost exclusively from the media. And from a media perspective, fear sells. \u201cThings aren\u2019t that bad\u201d doesn\u2019t sell. Very few people, and that includes journalists who report on climate news, read the actual science. I have. And what the data\u2014the hard science\u2014from the US government and UN Climate reports say is that\u2026 \u201cthings aren\u2019t that bad.\u201d Nor does the public understand the questionable basis of all catastrophic climate change projections: computer modeling. Projecting future climate is excruciatingly difficult. Yes, there are human influences, but the climate is complex. Anyone who says that climate models are \u201cjust physics\u201d either doesn\u2019t understand them or is being deliberately misleading. I should know: I wrote one of the first textbooks on computer modeling. While modelers base their assumptions upon both fundamental physical laws and observations of the climate, there is still considerable judgment involved. And since different modelers will make different assumptions, results vary widely among different models. Let\u2019s just take one simple, but significant assumption modelers must make: the impact of clouds on the climate. Natural fluctuations in the height and coverage of clouds have at least as much of an impact on the flows of sunlight and heat as do human influences. But how can we possibly know global cloud coverage say 10, let alone 50 years from now? Obviously, we can\u2019t. But to create a climate model, we have to make assumptions. That\u2019s a pretty shaky foundation on which to transform the world\u2019s economy. By the way, creating more accurate models isn\u2019t getting any easier. In fact, the more we learn about the climate system, the more we realize how complex it is. Rather than admit this complexity, the media, the politicians, and a good portion of the climate science community attribute every terrible storm, every flood, every major fire to \u201cclimate change.\u201d Yes, we\u2019ve always had these weather events in the past, the narrative goes, but somehow \u201cclimate change\u201d is making everything \u201cworse.\u201d Even if that were true, isn\u2019t the relevant question, how much worse? Not to mention that \u201cworse\u201d is not exactly a scientific term. And how would we make it better? For the alarmists, that\u2019s easy: we get rid of fossil fuels. Not only is this impractical\u2014we get over 80% of the world\u2019s energy from fossil fuels\u2014it\u2019s not scientifically possible. That\u2019s because CO2 doesn\u2019t disappear from the atmosphere in a few days like, say, smog. It hangs around for a really long time. About 60 percent of any CO2 that we emit today will remain in the atmosphere 20 years from now, between 30 and 55 percent will still be there after a century, and between 15 and 30 percent will remain after one thousand years. In other words, it takes centuries for the excess carbon dioxide to vanish from the atmosphere. So, any partial reductions in CO2 emissions would only slow the increase in human influences\u2014not prevent it, let alone reverse it. CO2 is not a knob that we can just turn down to fix everything. We don\u2019t have that ability. To think that we do is\u2026 hubris. Hubris leads to bad decisions. A little humility and a little knowledge would lead to better ones. I\u2019m Steve Koonin, former Undersecretary for Science in the Obama Administration, and author of Unsettled: What Climate Science Tells Us, What It Doesn't, and Why It Matters, for Prager University.",
+      "segments": [
+        {
+          "text": "Hubris is a Greek word that\u00a0\nmeans dangerously overconfident.\u00a0\u00a0",
+          "start": 1.84,
+          "duration": 3.84
+        },
+        {
+          "text": "Based on my research, hubris fairly describes our\u00a0\ncurrent response to the issue of climate change.",
+          "start": 6.32,
+          "duration": 6.48
+        },
+        {
+          "text": "Here\u2019s what many people believe:",
+          "start": 12.8,
+          "duration": 1.36
+        },
+        {
+          "text": "One: The planet is warming catastrophically\u00a0\nbecause of certain human behaviors.\u00a0",
+          "start": 14.72,
+          "duration": 4.8
+        },
+        {
+          "text": "Two: Thanks to powerful computers we can\u00a0\nproject what the climate will be like\u00a0\u00a0",
+          "start": 20.08,
+          "duration": 4.88
+        },
+        {
+          "text": "20, 40, or even 100 years from now.",
+          "start": 24.96,
+          "duration": 3.52
+        },
+        {
+          "text": "Three: That if we eliminate just one behavior,\u00a0\u00a0",
+          "start": 29.36,
+          "duration": 3.04
+        },
+        {
+          "text": "the burning of fossil fuels, we can prevent\u00a0\nthe climate from changing for as long we like.",
+          "start": 32.4,
+          "duration": 5.6
+        },
+        {
+          "text": "Each of these presumptions\u2014together, the basis\u00a0\nof our hubris regarding the changing climate\u2014is\u00a0\u00a0",
+          "start": 38.0,
+          "duration": 5.552
+        },
+        {
+          "text": "either untrue or so far off\u00a0\nthe mark as to be useless.\u00a0",
+          "start": 43.837,
+          "duration": 3.843
+        },
+        {
+          "text": "Yes, it\u2019s true that the globe is warming, and that\u00a0\nhumans are exerting a warming influence upon it.\u00a0\u00a0",
+          "start": 48.48,
+          "duration": 5.44
+        },
+        {
+          "text": "But beyond that, to paraphrase\u00a0\na line from the classic movie\u00a0\u00a0",
+          "start": 53.92,
+          "duration": 3.84
+        },
+        {
+          "text": "The Princess Bride, \u201cI do not think \u2018The\u00a0\nScience\u2019 says what you think it says.\u201d\u00a0",
+          "start": 57.76,
+          "duration": 4.927
+        },
+        {
+          "text": "For example, government reports state\u00a0\nclearly that heat waves in the US\u00a0\u00a0",
+          "start": 62.88,
+          "duration": 4.08
+        },
+        {
+          "text": "are now no more common than they were in 1900.",
+          "start": 66.96,
+          "duration": 3.28
+        },
+        {
+          "text": "Hurricane activity is no different\u00a0\nthan it was a century ago.",
+          "start": 70.24,
+          "duration": 3.52
+        },
+        {
+          "text": "Floods have not increased across the\u00a0\nglobe over more than seventy years.",
+          "start": 73.76,
+          "duration": 4.0
+        },
+        {
+          "text": "Greenland\u2019s ice sheet isn\u2019t shrinking any\u00a0\nmore rapidly today than it was 80 years ago.\u00a0",
+          "start": 77.76,
+          "duration": 4.64
+        },
+        {
+          "text": "Why aren\u2019t these reassuring facts better known?",
+          "start": 83.04,
+          "duration": 2.56
+        },
+        {
+          "text": "Because the public gets its climate\u00a0\ninformation almost exclusively from the media.\u00a0",
+          "start": 85.6,
+          "duration": 4.72
+        },
+        {
+          "text": "And from a media perspective, fear sells.\u00a0",
+          "start": 90.32,
+          "duration": 2.913
+        },
+        {
+          "text": "\u201cThings aren\u2019t that bad\u201d doesn\u2019t sell.",
+          "start": 93.76,
+          "duration": 2.432
+        },
+        {
+          "text": "Very few people, and that includes\u00a0\njournalists who report on climate news,\u00a0\u00a0",
+          "start": 96.96,
+          "duration": 4.16
+        },
+        {
+          "text": "read the actual science. I have. And\u00a0\nwhat the data\u2014the hard science\u2014from\u00a0\u00a0",
+          "start": 101.12,
+          "duration": 5.84
+        },
+        {
+          "text": "the US government and UN Climate reports\u00a0\nsay is that\u2026 \u201cthings aren\u2019t that bad.\u201d",
+          "start": 106.96,
+          "duration": 4.96
+        },
+        {
+          "text": "Nor does the public understand the\u00a0\nquestionable basis of all catastrophic\u00a0\u00a0",
+          "start": 112.56,
+          "duration": 4.24
+        },
+        {
+          "text": "climate change projections: computer modeling.\u00a0",
+          "start": 116.8,
+          "duration": 3.113
+        },
+        {
+          "text": "Projecting future climate is excruciatingly\u00a0\ndifficult. Yes, there are human influences,\u00a0\u00a0",
+          "start": 120.64,
+          "duration": 5.92
+        },
+        {
+          "text": "but the climate is complex.\u00a0Anyone who\u00a0\nsays that climate models are \u201cjust physics\u201d\u00a0\u00a0",
+          "start": 126.56,
+          "duration": 5.68
+        },
+        {
+          "text": "either doesn\u2019t understand them or\u00a0\nis being deliberately misleading.\u00a0\u00a0",
+          "start": 132.24,
+          "duration": 3.78
+        },
+        {
+          "text": "I should know: I wrote one of the first\u00a0\ntextbooks on computer modeling.\u00a0\u00a0\u00a0",
+          "start": 136.48,
+          "duration": 4.72
+        },
+        {
+          "text": "While modelers base their assumptions upon both\u00a0\nfundamental physical laws and observations of\u00a0\u00a0",
+          "start": 141.2,
+          "duration": 5.36
+        },
+        {
+          "text": "the climate, there is still considerable\u00a0\njudgment involved. And since different\u00a0\u00a0",
+          "start": 146.56,
+          "duration": 4.64
+        },
+        {
+          "text": "modelers will make different assumptions,\u00a0\nresults vary widely among different models.\u00a0",
+          "start": 151.2,
+          "duration": 5.44
+        },
+        {
+          "text": "Let\u2019s just take one simple,\u00a0\nbut significant assumption\u00a0\u00a0",
+          "start": 156.64,
+          "duration": 3.2
+        },
+        {
+          "text": "modelers must make: the impact\u00a0\nof clouds on the climate.\u00a0",
+          "start": 159.84,
+          "duration": 4.0
+        },
+        {
+          "text": "Natural fluctuations in the height and coverage of\u00a0\nclouds have at least as much of an impact on the\u00a0\u00a0",
+          "start": 163.84,
+          "duration": 6.4
+        },
+        {
+          "text": "flows of sunlight and heat as do human influences.\u00a0\nBut how can we possibly know global cloud coverage\u00a0\u00a0",
+          "start": 170.24,
+          "duration": 7.28
+        },
+        {
+          "text": "say 10, let alone 50 years from now? Obviously, we\u00a0\ncan\u2019t. But to create a climate model, we have to\u00a0\u00a0",
+          "start": 177.52,
+          "duration": 7.28
+        },
+        {
+          "text": "make assumptions. That\u2019s a pretty shaky foundation\u00a0\non which to transform the world\u2019s economy.",
+          "start": 184.8,
+          "duration": 6.224
+        },
+        {
+          "text": "By the way, creating more accurate\u00a0\nmodels isn\u2019t getting any easier.\u00a0\u00a0",
+          "start": 191.36,
+          "duration": 4.097
+        },
+        {
+          "text": "In fact, the more we learn about the climate\u00a0\nsystem, the more we realize how complex it is.",
+          "start": 196.0,
+          "duration": 5.3
+        },
+        {
+          "text": "Rather than admit this complexity, the media,\u00a0\nthe politicians, and a good portion of the climate\u00a0\u00a0",
+          "start": 201.52,
+          "duration": 5.28
+        },
+        {
+          "text": "science community attribute every terrible storm,\u00a0\nevery flood, every major fire to \u201cclimate change.\u201d\u00a0\u00a0",
+          "start": 206.8,
+          "duration": 7.717
+        },
+        {
+          "text": "Yes, we\u2019ve always had these weather\u00a0\nevents in the past, the narrative goes,\u00a0\u00a0",
+          "start": 214.88,
+          "duration": 4.16
+        },
+        {
+          "text": "but somehow \u201cclimate change\u201d\u00a0\nis making everything \u201cworse.\u201d\u00a0",
+          "start": 219.04,
+          "duration": 4.009
+        },
+        {
+          "text": "Even if that were true,\u00a0\nisn\u2019t the relevant question,\u00a0\u00a0",
+          "start": 223.44,
+          "duration": 2.64
+        },
+        {
+          "text": "how much worse? Not to mention that\u00a0\n\u201cworse\u201d is not exactly a scientific term.\u00a0",
+          "start": 226.08,
+          "duration": 5.593
+        },
+        {
+          "text": "And how would we make it better?",
+          "start": 231.92,
+          "duration": 1.6
+        },
+        {
+          "text": "For the alarmists, that\u2019s easy:\u00a0\nwe get rid of fossil fuels.",
+          "start": 233.52,
+          "duration": 3.218
+        },
+        {
+          "text": "Not only is this impractical\u2014we get over 80%\u00a0\nof the world\u2019s energy from fossil fuels\u2014it\u2019s\u00a0\u00a0",
+          "start": 237.12,
+          "duration": 5.84
+        },
+        {
+          "text": "not scientifically possible. That\u2019s because\u00a0\nCO2 doesn\u2019t disappear from the atmosphere\u00a0\u00a0",
+          "start": 242.96,
+          "duration": 5.36
+        },
+        {
+          "text": "in a few days like, say, smog. It\u00a0\nhangs around for a really long time.\u00a0",
+          "start": 248.32,
+          "duration": 4.32
+        },
+        {
+          "text": "About 60 percent of any CO2 that we emit\u00a0\ntoday will remain in the atmosphere 20\u00a0\u00a0",
+          "start": 253.2,
+          "duration": 5.2
+        },
+        {
+          "text": "years from now, between 30 and 55 percent\u00a0\nwill still be there after a century,\u00a0\u00a0",
+          "start": 258.4,
+          "duration": 5.28
+        },
+        {
+          "text": "and between 15 and 30 percent will\u00a0\nremain after one thousand years.",
+          "start": 263.68,
+          "duration": 4.554
+        },
+        {
+          "text": "In other words, it takes centuries for the excess\u00a0\ncarbon dioxide to vanish from the atmosphere.\u00a0\u00a0",
+          "start": 268.64,
+          "duration": 5.12
+        },
+        {
+          "text": "So, any partial reductions in CO2 emissions would\u00a0\nonly slow the increase in human influences\u2014not\u00a0\u00a0",
+          "start": 274.32,
+          "duration": 7.2
+        },
+        {
+          "text": "prevent it, let alone reverse it.\u00a0",
+          "start": 281.52,
+          "duration": 2.24
+        },
+        {
+          "text": "CO2 is not a knob that we can just turn down\u00a0\nto fix everything. We don\u2019t have that ability.\u00a0\u00a0",
+          "start": 284.32,
+          "duration": 5.28
+        },
+        {
+          "text": "To think that we do is\u2026 hubris.\u00a0",
+          "start": 290.48,
+          "duration": 2.88
+        },
+        {
+          "text": "Hubris leads to bad decisions.\u00a0",
+          "start": 294.88,
+          "duration": 2.032
+        },
+        {
+          "text": "A little humility and a little\u00a0\nknowledge would lead to better ones.\u00a0",
+          "start": 297.68,
+          "duration": 4.113
+        },
+        {
+          "text": "I\u2019m Steve Koonin, former Undersecretary\u00a0\nfor Science in the Obama Administration,\u00a0\u00a0",
+          "start": 302.72,
+          "duration": 4.64
+        },
+        {
+          "text": "and author of Unsettled: What\u00a0\nClimate Science Tells Us,\u00a0\u00a0",
+          "start": 308.0,
+          "duration": 4.08
+        },
+        {
+          "text": "What It Doesn't, and Why It\u00a0\nMatters, for Prager University.",
+          "start": 312.08,
+          "duration": 4.0
+        }
+      ],
+      "video_id": "P19ywkobLX8"
+    }
+  }
+}

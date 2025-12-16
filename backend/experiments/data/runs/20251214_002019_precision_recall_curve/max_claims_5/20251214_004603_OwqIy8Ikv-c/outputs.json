@@ -1,0 +1,836 @@
+{
+  "extracted_claims": {
+    "claims": [
+      {
+        "text": "The climate has changed remarkably little over the past 30 years.",
+        "confidence": 0.8,
+        "category": "scientific",
+        "importance": 0.7,
+        "context": "Speaker: Richard Lindzen",
+        "transcript_char_start": 123,
+        "transcript_char_end": 176,
+        "transcript_match_score": 0.8205128205128205
+      },
+      {
+        "text": "The IPCC acknowledged in its 2007 report that long-term prediction of future climate states is not possible.",
+        "confidence": 0.9,
+        "category": "scientific",
+        "importance": 0.7,
+        "context": "IPCC 2007 report",
+        "transcript_char_start": 2222,
+        "transcript_char_end": 2337,
+        "transcript_match_score": 0.963963963963964
+      },
+      {
+        "text": "Atmospheric levels of CO2 have been increasing since the end of the Little Ice Age in the 19th century.",
+        "confidence": 0.85,
+        "category": "scientific",
+        "importance": 0.6,
+        "context": "Agreement between climate scientists",
+        "transcript_char_start": 1746,
+        "transcript_char_end": 1848,
+        "transcript_match_score": 1.0
+      },
+      {
+        "text": "The global mean temperature has increased slightly and erratically by about 1.8 degrees Fahrenheit or one degree Celsius over the past two centuries.",
+        "confidence": 0.85,
+        "category": "scientific",
+        "importance": 0.6,
+        "context": "Agreement between climate scientists",
+        "transcript_char_start": 1891,
+        "transcript_char_end": 2026,
+        "transcript_match_score": 0.8975265017667845
+      },
+      {
+        "text": "The scenario that the burning of fossil fuels leads to catastrophe isn\u2019t part of what either group asserts.",
+        "confidence": 0.8,
+        "category": "scientific",
+        "importance": 0.6,
+        "context": "Speaker: Richard Lindzen",
+        "transcript_char_start": 2355,
+        "transcript_char_end": 2461,
+        "transcript_match_score": 1.0
+      }
+    ],
+    "total_count": 5
+  },
+  "final_output": {
+    "extracted_claims": {
+      "claims": [
+        {
+          "text": "The climate has changed remarkably little over the past 30 years.",
+          "confidence": 0.8,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Speaker: Richard Lindzen",
+          "transcript_char_start": 123,
+          "transcript_char_end": 176,
+          "transcript_match_score": 0.8205128205128205
+        },
+        {
+          "text": "The IPCC acknowledged in its 2007 report that long-term prediction of future climate states is not possible.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "IPCC 2007 report",
+          "transcript_char_start": 2222,
+          "transcript_char_end": 2337,
+          "transcript_match_score": 0.963963963963964
+        },
+        {
+          "text": "Atmospheric levels of CO2 have been increasing since the end of the Little Ice Age in the 19th century.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Agreement between climate scientists",
+          "transcript_char_start": 1746,
+          "transcript_char_end": 1848,
+          "transcript_match_score": 1.0
+        },
+        {
+          "text": "The global mean temperature has increased slightly and erratically by about 1.8 degrees Fahrenheit or one degree Celsius over the past two centuries.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Agreement between climate scientists",
+          "transcript_char_start": 1891,
+          "transcript_char_end": 2026,
+          "transcript_match_score": 0.8975265017667845
+        },
+        {
+          "text": "The scenario that the burning of fossil fuels leads to catastrophe isn\u2019t part of what either group asserts.",
+          "confidence": 0.8,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Speaker: Richard Lindzen",
+          "transcript_char_start": 2355,
+          "transcript_char_end": 2461,
+          "transcript_match_score": 1.0
+        }
+      ],
+      "total_count": 5
+    },
+    "claim_reports": [
+      {
+        "claim_text": "The climate has changed remarkably little over the past 30 years.",
+        "claim_confidence": 0.8,
+        "claim_category": "scientific",
+        "overall_stance": "refutes",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence from multiple high-reliability sources, including the Climate.gov and NASA, clearly indicates that global temperatures have risen significantly over the past 30 years, contradicting the claim that climate has changed remarkably little during this period. While some sources discuss complexities and uncertainties in climate change, they do not provide substantial evidence to support the claim.",
+        "evidence_by_stance": {
+          "refutes": [
+            {
+              "title": "Climate change: global temperature",
+              "url": "https://www.climate.gov/news-features/understanding-climate/climate-change-global-temperature",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (26.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that global temperatures have risen significantly over the past 30 years, with an increase of roughly 0.15 to 0.20\u00b0C per decade since 1975, contradicting the claim that climate has changed remarkably little during this period.",
+              "snippet": "Earth's temperature has risen by an average of 0.11\u00b0 Fahrenheit (0.06\u00b0 Celsius) per decade since 1850, or about 2\u00b0 F in total."
+            },
+            {
+              "title": "World of Change: Global Temperatures - NASA Science",
+              "url": "https://earthobservatory.nasa.gov/world-of-change/global-temperatures",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that global temperatures have increased significantly over the past 30 years, with the majority of warming occurring since 1975, contradicting the claim that the climate has changed remarkably little during this period.",
+              "snippet": "The average global temperature has increased by a little more than 1 degree Celsius since 1880. Two-thirds of the warming has occurred since 1975."
+            },
+            {
+              "title": "CO\u2082 and Greenhouse Gas Emissions - Our World in Data",
+              "url": "https://ourworldindata.org/co2-and-greenhouse-gas-emissions",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that global temperatures have been rising significantly, particularly over the past few decades, contradicting the claim that the climate has changed remarkably little over the past 30 years.",
+              "snippet": "Human greenhouse gas emissions have increased global average temperatures \u00b7 Global emissions have increased rapidly over the last 50 years and have not yet ..."
+            }
+          ],
+          "mixed": [
+            {
+              "title": "Presentation Slides Misrepresenting the Causes of Climate Change ...",
+              "url": "https://climate.law.columbia.edu/content/presentation-slides-misrepresenting-causes-climate-change-published-epa",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (40.4 years)"
+                ],
+                "bias": null
+              },
+              "stance": "mixed",
+              "evidence_summary": "The evidence discusses the complexities of climate change and suggests that while there is a discernible human influence, the climate's variability and the uncertainties in models indicate that significant changes over the past 30 years are not well established.",
+              "snippet": "The presentation posits several thoroughly debunked theories which cast doubt on the causes of climate change."
+            },
+            {
+              "title": "Professors Debate Climate Change Science, Policy - UVA Law",
+              "url": "https://www.law.virginia.edu/static/uvalawyer/html/alumni/uvalawyer/f10/climate.htm",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (39.7 years)"
+                ],
+                "bias": null
+              },
+              "stance": "mixed",
+              "evidence_summary": "The article discusses the complexities of climate change and suggests that while there is a discernible human influence on climate, the ability to quantify this influence is limited due to natural variability and uncertainties in models. It implies that the climate may not have changed significantly over the past 30 years, as the observed changes could be within the range of natural variability.",
+              "snippet": "The models used by scientists are \u201cexaggerating [global] warming,\u201d according to Lindzen. \u201cThe claim of incontrovertibility is far more suspicious than the claim ..."
+            },
+            {
+              "title": "Statement of Richard S. Lindzen, Climate Change, July 10, 1997",
+              "url": "https://www.epw.senate.gov/105th/lind0710.htm",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "mixed",
+              "evidence_summary": "The evidence discusses the complexities of climate change and acknowledges that while there is a discernible human influence on climate, it emphasizes the significant natural variability that exists, suggesting that changes over the past 30 years may not be as remarkable as claimed.",
+              "snippet": "Most scientists working on climate dynamics would agree that increasing levels of carbon dioxide should have some impact on climate."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 8.559,
+        "timestamp_confidence": 0.8205128205128205
+      },
+      {
+        "claim_text": "The IPCC acknowledged in its 2007 report that long-term prediction of future climate states is not possible.",
+        "claim_confidence": 0.9,
+        "claim_category": "scientific",
+        "overall_stance": "refutes",
+        "verdict_confidence": "high",
+        "verdict_summary": "The IPCC's 2007 report acknowledges limitations in predicting specific climate states due to the chaotic nature of the climate system, but it does not state that long-term climate predictions are impossible. Instead, it clarifies that climate models can project broader climate trends, as indicated in the high-reliability sources from the IPCC.",
+        "evidence_by_stance": {
+          "refutes": [
+            {
+              "title": "[PDF] Long-term Climate Change: Projections, Commitments and ...",
+              "url": "https://www.ipcc.ch/site/assets/uploads/2018/02/WG1AR5_Chapter12_FINAL.pdf",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that while the IPCC acknowledged limitations in predicting specific 'climate states' due to the chaotic nature of the climate system, it does not imply that long-term climate predictions are impossible. Instead, it clarifies that climate models can project broader climate trends over time despite the inability to predict exact weather events far in advance.",
+              "snippet": "IPCC, 2007: Climate Change 2007: The Physical Science Basis. Contribution of. Working Group I to the Fourth Assessment Report of the Intergovernmental. Panel ..."
+            }
+          ],
+          "mixed": [
+            {
+              "title": "[PDF] Climate Change 2007: Synthesis Report",
+              "url": "https://www.ipcc.ch/site/assets/uploads/2018/02/ar4_syr_full_report.pdf",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "mixed",
+              "evidence_summary": "The evidence indicates that while the IPCC stated in 2001 that 'long-term prediction of future climate states is not possible' due to the chaotic nature of the climate system, this does not imply that climate models are unreliable for predicting broader climate trends. The statement is often misinterpreted, as it specifically refers to the inability to predict specific weather events rather than the overall reliability of climate models.",
+              "snippet": "Long-term thermal expansion is projected to result in 0.2 to 0.6m per degree Celsius of global average warming above pre-industrial. (AOGCM refers to ..."
+            },
+            {
+              "title": "[PDF] Climate Change 2007: Synthesis Report",
+              "url": "https://www.ipcc.ch/site/assets/uploads/2018/02/ar4_syr.pdf",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "mixed",
+              "evidence_summary": "The evidence indicates that while the IPCC stated in 2001 that 'long-term prediction of future climate states is not possible' due to the chaotic nature of the climate system, this does not imply that climate models are unreliable for predicting broader climate trends. The statement is often misinterpreted, as it specifically refers to the inability to predict specific weather events rather than the overall reliability of climate models.",
+              "snippet": "Climate change in IPCC usage refers to a change in the state of the climate that can be identified (e.g. using statistical tests) by changes in the mean and/or ..."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "[PDF] Climate Change 2007: Impacts, Adaptation and Vulnerability - IPCC",
+              "url": "https://www.ipcc.ch/pdf/assessment-report/ar4/wg2/ar4_wg2_full_report.pdf",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The report: \u2022 evaluates evidence that recent observed changes in climate have already affected a variety of physical and biological systems and concludes that ...",
+              "snippet": "The report: \u2022 evaluates evidence that recent observed changes in climate have already affected a variety of physical and biological systems and concludes that ..."
+            },
+            {
+              "title": "[PDF] Climate Change 2007: Synthesis Report - Summary for Policymakers",
+              "url": "https://www.ipcc.ch/pdf/assessment-report/ar4/syr/ar4_syr_spm.pdf",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "It provides an integrated view of climate change as the final part of the IPCC's Fourth. Assessment Report (AR4). A complete elaboration of the Topics covered ...",
+              "snippet": "It provides an integrated view of climate change as the final part of the IPCC's Fourth. Assessment Report (AR4). A complete elaboration of the Topics covered ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 168.7,
+        "timestamp_confidence": 0.963963963963964
+      },
+      {
+        "claim_text": "Atmospheric levels of CO2 have been increasing since the end of the Little Ice Age in the 19th century.",
+        "claim_confidence": 0.85,
+        "claim_category": "scientific",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "Multiple high-reliability sources, including NASA and climate research articles, confirm that atmospheric CO2 levels have been rising significantly since the 19th century, particularly since the Industrial Revolution, aligning with the claim. The mixed source does not contradict this but lacks explicit confirmation of the timing.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Evidence - NASA Science",
+              "url": "https://science.nasa.gov/climate-change/evidence/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that atmospheric levels of carbon dioxide have been rising, particularly noted by C.D. Keeling's measurements in the early 1960s, which showed a significant increase in CO2 levels since the 19th century.",
+              "snippet": "Carbon dioxide from human activities is increasing about 250 times faster than it did from natural sources after the last Ice Age."
+            },
+            {
+              "title": "Graphic: The relentless rise of carbon dioxide - NASA Science",
+              "url": "https://science.nasa.gov/resource/graphic-the-relentless-rise-of-carbon-dioxide/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The article discusses the historical variations of carbon dioxide levels in relation to glacial and interglacial periods, indicating that CO2 levels were higher during warmer interglacial periods, which aligns with the claim that CO2 levels have been increasing since the end of the Little Ice Age in the 19th century.",
+              "snippet": "During ice ages, CO2 levels were around 200 parts per million (ppm), and during the warmer interglacial periods, they hovered around 280 ppm ( ..."
+            },
+            {
+              "title": "Climate change: atmospheric carbon dioxide",
+              "url": "https://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that atmospheric carbon dioxide levels have been rising significantly since the start of the Industrial Revolution in 1750, with a notable acceleration in the last 60 years, which aligns with the claim about the increase since the end of the Little Ice Age.",
+              "snippet": "In the past 60 years, carbon dioxide in the atmosphere has increased 100-200 times faster than it did during the end of the last ice age."
+            },
+            {
+              "title": "A New 66 Million-Year History of Carbon Dioxide Offers Little ...",
+              "url": "https://news.climate.columbia.edu/2023/12/07/a-new-66-million-year-history-of-carbon-dioxide-offers-little-comfort-for-today/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "supports",
+              "evidence_summary": "The article notes that atmospheric CO2 levels have increased from about 280 ppm in the late 1700s to approximately 420 ppm now, indicating a significant rise since the end of the Little Ice Age.",
+              "snippet": "In the late 1700s, the air contained about 280 parts per million (ppm) of CO2. We are now up to 420 ppm, an increase of about 50%; by the end of ..."
+            }
+          ],
+          "mixed": [
+            {
+              "title": "The Effects of the Little Ice Age (c. 1300-1850) - Climate in Arts and ...",
+              "url": "https://www.science.smith.edu/climatelit/the-effects-of-the-little-ice-age/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (38.3 years)"
+                ],
+                "bias": null
+              },
+              "stance": "mixed",
+              "evidence_summary": "The article discusses the historical context of carbon dioxide levels, noting that by the early 1960s, measurements indicated that atmospheric CO2 was rising. However, it does not explicitly confirm that this increase began at the end of the Little Ice Age in the 19th century.",
+              "snippet": "This increase in plant biomass relative to when the land had been cultivated created a dip in atmospheric carbon dioxide and lead to additional cooling."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 128.53,
+        "timestamp_confidence": 1.0
+      },
+      {
+        "claim_text": "The global mean temperature has increased slightly and erratically by about 1.8 degrees Fahrenheit or one degree Celsius over the past two centuries.",
+        "claim_confidence": 0.85,
+        "claim_category": "scientific",
+        "overall_stance": "mixed",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence presents a mixed view on the claim regarding global mean temperature increase. While several high-reliability sources, including the NASA Science report and the Wisconsin DNR, support the claim of an increase of about 1 degree Celsius (1.8 degrees Fahrenheit) over the past two centuries, a high-reliability source from Climate.gov refutes the claim by indicating a total increase of about 2\u00b0F since 1850, suggesting a more significant rise than stated in the claim.",
+        "evidence_by_stance": {
+          "refutes": [
+            {
+              "title": "Climate change: global temperature",
+              "url": "https://www.climate.gov/news-features/understanding-climate/climate-change-global-temperature",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (26.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that Earth's temperature has risen by an average of 0.11\u00b0 Fahrenheit per decade since 1850, which totals about 2\u00b0 F, suggesting a more significant increase than the claim of 1.8\u00b0 F over the past two centuries.",
+              "snippet": "Earth's temperature has risen by an average of 0.11\u00b0 Fahrenheit (0.06\u00b0 Celsius) per decade since 1850, or about 2\u00b0 F in total."
+            }
+          ],
+          "supports": [
+            {
+              "title": "Monthly Climate Reports | Global Climate Report | Annual 2022",
+              "url": "https://www.ncei.noaa.gov/access/monitoring/monthly-report/global/202213",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that global air temperatures have risen about 1.1 \u00b0C over the last 120-170 years, which aligns with the claim of a slight increase in global mean temperature, though it notes that this increase has been irregular rather than steady.",
+              "snippet": "The year 2022 was the sixth warmest year since global records began in 1880 at 0.86\u00b0C (1.55\u00b0F) above the 20th century average of 13.9\u00b0C (57.0\u00b0F)."
+            },
+            {
+              "title": "The Science of Climate Change | The world is warming",
+              "url": "https://dnr.wisconsin.gov/climatechange/science",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (25.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that average global temperatures have increased by approximately 1 degree Celsius (1.7 degrees Fahrenheit) since 1880, which aligns with the claim about the increase over the past two centuries.",
+              "snippet": "Since 1880, average global temperatures have increased by about 1 degrees Celsius (1.7\u00b0 degrees Fahrenheit). Global temperature is projected to warm by about ..."
+            },
+            {
+              "title": "World of Change: Global Temperatures - NASA Science",
+              "url": "https://earthobservatory.nasa.gov/world-of-change/global-temperatures",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that global air temperatures have risen about 1.1 \u00b0C over the last 120-170 years, which aligns with the claim of a slight increase in global mean temperature over the past two centuries, although it notes that this increase has been irregular rather than steady.",
+              "snippet": "The average global temperature has increased by a little more than 1 degree Celsius since 1880. Two-thirds of the warming has occurred since 1975."
+            },
+            {
+              "title": "Analysis: Is it actually hotter now than any time in the last ... - PBS",
+              "url": "https://www.pbs.org/newshour/science/analysis-is-it-actually-hotter-now-than-any-time-in-the-last-100000-years",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that the global mean temperature has increased by more than 1 degree Celsius (1.8 degrees Fahrenheit) compared to preindustrial times, aligning with the claim about temperature increase over the past two centuries.",
+              "snippet": "Earth was already more than 1 degree Celsius (1.8 Fahrenheit) warmer than preindustrial times, and the levels of greenhouse gases in the ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 134.79,
+        "timestamp_confidence": 0.8975265017667845
+      },
+      {
+        "claim_text": "The scenario that the burning of fossil fuels leads to catastrophe isn\u2019t part of what either group asserts.",
+        "claim_confidence": 0.8,
+        "claim_category": "scientific",
+        "overall_stance": "mixed",
+        "verdict_confidence": "medium",
+        "verdict_summary": "The evidence presents a mixed view on the claim. On one hand, Richard Lindzen's perspective, as noted in the 'Inconvenient Expert' article and his own PDF, suggests that he downplays the catastrophic consequences of climate change from fossil fuel burning, aligning with the claim. However, other sources, including the 'Debunking Joe Rogan' article, indicate that there are significant concerns about the implications of fossil fuel use, creating uncertainty about the overall stance.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "An Inconvenient Expert",
+              "url": "https://www.outsideonline.com/outdoor-adventure/inconvenient-expert/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "supports",
+              "evidence_summary": "The article presents Richard Lindzen's perspective, which downplays the catastrophic consequences of climate change attributed to fossil fuel burning, asserting that much of the warming is due to natural fluctuations rather than human activity. Lindzen argues that the current warming will not result in catastrophe, which aligns with the claim that such scenarios are not part of what he asserts.",
+              "snippet": "MIT climatologist Richard Lindzen is pushing a controversial idea: that mankind isn't to blame for global warming and that Al Gore's apocalypic ..."
+            },
+            {
+              "title": "[PDF] Richard Lindzen Professor of Earth, Atmospheric, and Planetary ...",
+              "url": "https://depausa.org/wp-content/uploads/2024/05/GW-Climate-Sci-HKL-4-24_.pdf",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (16.8 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that the IPCC does not provide a scientific basis for the claim that fossil fuels and CO2 lead to catastrophic global warming and extreme weather, aligning with the assertion in the claim.",
+              "snippet": "Accordingly, the IPCC provides no scientific basis for the theory that fossil fuels and CO2 cause catastrophic global warming and extreme weather. Specifically, ..."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "Debunking Joe Rogan, Dick Lindzen, and Will Happer",
+              "url": "https://skepticalscience.com/debunk-rogan-lindzen-happer.html",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "\" Lindzen: \"Okay. Well, by making it expensive, by eliminating fossil fuels, fossil fuels are cheaper. Uh, at least the experience in the UK ...",
+              "snippet": "\" Lindzen: \"Okay. Well, by making it expensive, by eliminating fossil fuels, fossil fuels are cheaper. Uh, at least the experience in the UK ..."
+            },
+            {
+              "title": "[PDF] GLOBAL WARMING NARRATIVE - Richard Lindzen",
+              "url": "https://www.thegwpf.org/content/uploads/2022/09/Lindzen-global-warming-narrative.pdf",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (16.3 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "The policies invoked on behalf of this movement have led to the US hobbling its energy system (a process that has played a prominent role in causing current ...",
+              "snippet": "The policies invoked on behalf of this movement have led to the US hobbling its energy system (a process that has played a prominent role in causing current ..."
+            }
+          ]
+        },
+        "total_sources": 4,
+        "evidence_quality_score": 0.9,
+        "timestamp_hint": 176.65,
+        "timestamp_confidence": 1.0
+      }
+    ],
+    "transcript_data": {
+      "text": "I\u2019m an atmospheric physicist. I\u2019ve published more than 200 scientific papers. For 30 years I taught at MIT, during which time the climate has changed remarkably little. But the cry of \u201cglobal warming\u201d has grown ever more shrill. In fact, it seems that the less the climate changes, the louder the voices of the climate alarmists get. So, let\u2019s clear the air and create a more accurate picture of where we really stand on the issue of global warming or, as it is now called -- climate change. There are basically three groups of people dealing with this issue. Groups one and two are scientists. Group three consists mostly, at its core, of politicians, environmentalists and media. Group one is associated with the scientific part of the United Nation\u2019s International Panel on Climate Change or IPCC (Working Group 1). These are scientists who mostly believe that recent climate change is primarily due to man\u2019s burning of fossil fuels -- oil, coal and natural gas. This releases C02, carbon dioxide, into the atmosphere and, they believe, this might eventually dangerously heat the planet. Group two is made up of scientists who don\u2019t see this as an especially serious problem. This is the group I belong to. We\u2019re usually referred to as skeptics. We note that there are many reasons why the climate changes -- the sun, clouds, oceans, the orbital variations of the earth, as well as a myriad of other inputs. None of these is fully understood, and there is no evidence that CO2 emissions are the dominant factor. But actually there is much agreement between both groups of scientists. The following are such points of agreement: 1) The climate is always changing. 2) CO2 is a greenhouse gas without which life on earth is not possible, but adding it to the atmosphere should lead to some warming. 3) Atmospheric levels of CO2 have been increasing since the end of the Little Ice Age in the 19th century. 4) Over this period (the past two centuries), the global mean temperature has increased slightly and erratically by about 1.8 degrees Fahrenheit or one degree Celsius; but only since the 1960\u2019s have man\u2019s greenhouse emissions been sufficient to play a role. 5) Given the complexity of climate, no confident prediction about future global mean temperature or its impact can be made. The IPCC, acknowledged in its own 2007 report that \u201cThe long-term prediction of future climate states is not possible.\u201d Most importantly, the scenario that the burning of fossil fuels leads to catastrophe isn\u2019t part of what either group asserts. So why are so many people worried, indeed, panic stricken about this issue. Here\u2019s where Group Three comes in -- the politicians, environmentalists, and media. Global Warming Alarmism provides them, more than any other issue, with the things they most want: For politicians it\u2019s money and power. For environmentalists it\u2019s money for their organizations and confirmation of their near religious devotion to the idea that man is a destructive force acting upon nature. And for the media it\u2019s ideology, money, and headlines -- doomsday scenarios sell. Meanwhile, over the last decade, scientists outside of climate physics have jumped on the bandwagon, publishing papers blaming global warming for everything from acne to the Syrian civil war. And, crony capitalists have eagerly grabbed for the subsidies that governments have so lavishly provided. Unfortunately, group three is winning the argument because they have drowned out the serious debate that should be going on. But while politicians, environmentalists and media types can waste a lot of money and scare a lot of people, they won\u2019t be able to bury the truth. The climate will have the final word on that. I\u2019m Richard Lindzen, emeritus professor of Atmospheric Sciences at MIT, for PragerUniversity.",
+      "segments": [
+        {
+          "text": "I\u2019m an atmospheric physicist. I\u2019ve published\nmore than 200 scientific papers. For 30 years",
+          "start": 2.42,
+          "duration": 6.139
+        },
+        {
+          "text": "I taught at MIT, during which time the climate\nhas changed remarkably little. But the cry",
+          "start": 8.559,
+          "duration": 6.71
+        },
+        {
+          "text": "of \u201cglobal warming\u201d has grown ever more\nshrill. In fact, it seems that the less the",
+          "start": 15.269,
+          "duration": 4.911
+        },
+        {
+          "text": "climate changes, the louder the voices of\nthe climate alarmists get. So, let\u2019s clear",
+          "start": 20.18,
+          "duration": 6.13
+        },
+        {
+          "text": "the air and create a more accurate picture\nof where we really stand on the issue of global",
+          "start": 26.31,
+          "duration": 6.17
+        },
+        {
+          "text": "warming or, as it is now called -- climate\nchange.",
+          "start": 32.48,
+          "duration": 4.78
+        },
+        {
+          "text": "There are basically three groups of people\ndealing with this issue. Groups one and two",
+          "start": 37.26,
+          "duration": 5.559
+        },
+        {
+          "text": "are scientists. Group three consists mostly,\nat its core, of politicians, environmentalists",
+          "start": 42.819,
+          "duration": 6.851
+        },
+        {
+          "text": "and media.\nGroup one is associated with the scientific",
+          "start": 49.67,
+          "duration": 4.219
+        },
+        {
+          "text": "part of the United Nation\u2019s International\nPanel on Climate Change or IPCC (Working Group 1).",
+          "start": 53.889,
+          "duration": 8.251
+        },
+        {
+          "text": "These are scientists who mostly believe\nthat recent climate change is primarily due",
+          "start": 62.14,
+          "duration": 7.06
+        },
+        {
+          "text": "to man\u2019s burning of fossil fuels -- oil,\ncoal and natural gas. This releases C02, carbon dioxide,",
+          "start": 69.2,
+          "duration": 8.7
+        },
+        {
+          "text": "into the atmosphere and, they believe,\nthis might eventually dangerously heat the planet.",
+          "start": 77.9,
+          "duration": 6.2
+        },
+        {
+          "text": "Group two is made up of scientists who don\u2019t see this as an especially serious problem.",
+          "start": 84.1,
+          "duration": 5.68
+        },
+        {
+          "text": "This is the group I belong to. We\u2019re usually referred to as skeptics. We note that there are many reasons why the",
+          "start": 89.78,
+          "duration": 6.5
+        },
+        {
+          "text": "climate changes -- the sun, clouds, oceans,\nthe orbital variations of the earth,",
+          "start": 96.28,
+          "duration": 5.4
+        },
+        {
+          "text": "as well as a myriad of other inputs. None of these\nis fully understood, and there is no evidence",
+          "start": 101.68,
+          "duration": 7.2
+        },
+        {
+          "text": "that CO2 emissions are the dominant factor.\nBut actually there is much agreement between",
+          "start": 108.89,
+          "duration": 6.35
+        },
+        {
+          "text": "both groups of scientists. The following are\nsuch points of agreement:",
+          "start": 115.24,
+          "duration": 5.84
+        },
+        {
+          "text": "1) The climate is always changing.\n2) CO2 is a greenhouse gas without which life",
+          "start": 121.08,
+          "duration": 7.44
+        },
+        {
+          "text": "on earth is not possible, but adding it to\nthe atmosphere should lead to some warming.",
+          "start": 128.53,
+          "duration": 6.26
+        },
+        {
+          "text": "3) Atmospheric levels of CO2 have been increasing\nsince the end of the Little Ice Age in the 19th century.",
+          "start": 134.79,
+          "duration": 8.25
+        },
+        {
+          "text": "4) Over this period (the past two centuries),",
+          "start": 143.04,
+          "duration": 4.419
+        },
+        {
+          "text": "the global mean temperature has increased\nslightly and erratically by about 1.8 degrees",
+          "start": 147.459,
+          "duration": 5.87
+        },
+        {
+          "text": "Fahrenheit or one degree Celsius; but only\nsince the 1960\u2019s have man\u2019s greenhouse",
+          "start": 153.329,
+          "duration": 7.44
+        },
+        {
+          "text": "emissions been sufficient to play a role.\n5) Given the complexity of climate, no confident",
+          "start": 160.769,
+          "duration": 7.931
+        },
+        {
+          "text": "prediction about future global mean temperature\nor its impact can be made. The IPCC, acknowledged",
+          "start": 168.7,
+          "duration": 7.95
+        },
+        {
+          "text": "in its own 2007 report that \u201cThe long-term\nprediction of future climate states is not possible.\u201d",
+          "start": 176.65,
+          "duration": 10.35
+        },
+        {
+          "text": "Most importantly, the scenario that the burning of fossil fuels",
+          "start": 187.0,
+          "duration": 5.36
+        },
+        {
+          "text": "leads to catastrophe isn\u2019t part of what either group asserts.",
+          "start": 192.36,
+          "duration": 5.54
+        },
+        {
+          "text": "So why are so many people worried, indeed, panic\nstricken about this issue.",
+          "start": 197.9,
+          "duration": 5.94
+        },
+        {
+          "text": "Here\u2019s where Group Three comes in -- the politicians, environmentalists, and media.",
+          "start": 203.84,
+          "duration": 6.3
+        },
+        {
+          "text": "Global Warming Alarmism provides them, more\nthan any other issue, with the things they",
+          "start": 210.14,
+          "duration": 6.04
+        },
+        {
+          "text": "most want: For politicians it\u2019s money and\npower. For environmentalists it\u2019s money",
+          "start": 216.18,
+          "duration": 6.0
+        },
+        {
+          "text": "for their organizations and confirmation of\ntheir near religious devotion to the idea",
+          "start": 222.18,
+          "duration": 6.11
+        },
+        {
+          "text": "that man is a destructive force acting upon\nnature. And for the media it\u2019s ideology,",
+          "start": 228.29,
+          "duration": 7.129
+        },
+        {
+          "text": "money, and headlines -- doomsday scenarios\nsell.",
+          "start": 235.419,
+          "duration": 4.921
+        },
+        {
+          "text": "Meanwhile, over the last decade, scientists\noutside of climate physics have jumped on",
+          "start": 240.34,
+          "duration": 5.939
+        },
+        {
+          "text": "the bandwagon, publishing papers blaming global\nwarming for everything from acne to the Syrian",
+          "start": 246.279,
+          "duration": 7.091
+        },
+        {
+          "text": "civil war. And, crony capitalists have eagerly\ngrabbed for the subsidies that governments",
+          "start": 253.37,
+          "duration": 6.51
+        },
+        {
+          "text": "have so lavishly provided.\nUnfortunately, group three is winning the",
+          "start": 259.88,
+          "duration": 5.25
+        },
+        {
+          "text": "argument because they have drowned out the\nserious debate that should be going on.",
+          "start": 265.13,
+          "duration": 5.4
+        },
+        {
+          "text": "But while politicians, environmentalists and\nmedia types can waste a lot of money and scare",
+          "start": 270.53,
+          "duration": 6.69
+        },
+        {
+          "text": "a lot of people, they won\u2019t be able to bury\nthe truth. The climate will have the final word on that.",
+          "start": 277.22,
+          "duration": 8.96
+        },
+        {
+          "text": "I\u2019m Richard Lindzen, emeritus professor of Atmospheric Sciences at MIT, for PragerUniversity.",
+          "start": 286.18,
+          "duration": 8.42
+        }
+      ],
+      "video_id": "OwqIy8Ikv-c"
+    }
+  }
+}

@@ -1,0 +1,326 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:23:50.036267",
+    "latency_seconds": 14.71,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\ntoday's medical Centric topic is is 100% fruit juice good for you 100% fruit juice is often viewed as a healthy alternative to sugary drinks but its benefits and potential drawbacks need to be considered while it contains vitamins and nutrients drinking too much juice may have negative effects on your health one nutritional benefits of 100% fruit juice rich in vitamins vitamins and antioxidants 100% fruit juice is a good source of essential vitamins especially vitamin C which supports the immune system and potassium which helps regulate blood pressure juice also contains antioxidants which protect cells from damage nutrient absorption the vitamins and minerals and Juice can be absorbed quickly by the body making it a convenient way to get a nutritional boost hydration fluid intake since fruit juice is mostly water it helps with hydration for people who struggle to drink plain water juice can be a more palatable option two potential drawbacks of 100% fruit juice high in natural sugars fructose content even though 100% fruit juice doesn't have added sugars it still contains high amounts of naturally occurring sugar sugars like fructose these sugars can Spike blood sugar levels which may lead to insulin resistance over time calories juice is calorie dense compared to whole fruits and consuming large amounts can contribute to weight gain if not balanced with physical activity LAX fiber removed during processing one of the biggest differences between fruit juice and whole fruit is the fiber content when fruit is Juiced the fiber is removed which helps regulate blood sugar and AIDS digestion without fiber juice may cause rapid sugar absorption and hunger soon after consumption three how much is too much portion control recommended intake nutrition experts often suggest limiting fruit juice intake to one small glass per day around 4 to 6 ounces drinking juice in moderation can provide health benefits balancing diet it's essential to balance juice intake with other sources of hydration and nutrition such as water and whole fruits four alternatives to fruit juice whole fruits better nutritional value eating whole fruits provides all the vitamins and minerals found in juice along with fiber which is essential for digestion and blood sugar control whole fruits also keep you Fuller for longer diluting juice reducing sugar for those who enjoy juice dilating it with water can reduce sugar intake while still offering a refreshing taste and some nutritional benefits five long-term health effects weight gain and dental health caloric impact regularly drinking large amounts of juice can lead to excess calorie consumption contributing to weight gain over time tooth decay the sugar and Juice can contribute to cavities especially when consumed frequently throughout the day drinking juice with meals and using a straw may help reduce this risk thank you for watching our video please do not forget to like and share the video also please subscribe to the channel to stay updated on our latest videos",
+    "input_length_chars": 3086,
+    "input_tokens_estimated": 771,
+    "output": {
+      "claims": [
+        {
+          "text": "100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.",
+          "confidence": 0.9,
+          "category": "nutritional",
+          "importance": 0.7,
+          "context": "discussing nutritional benefits of 100% fruit juice"
+        },
+        {
+          "text": "Juice contains antioxidants which protect cells from damage.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "mentioning health benefits of antioxidants in juice"
+        },
+        {
+          "text": "The vitamins and minerals in juice can be absorbed quickly by the body.",
+          "confidence": 0.8,
+          "category": "scientific",
+          "importance": 0.55,
+          "context": "explaining nutrient absorption from juice"
+        },
+        {
+          "text": "100% fruit juice contains high amounts of naturally occurring sugars like fructose.",
+          "confidence": 0.9,
+          "category": "nutritional",
+          "importance": 0.7,
+          "context": "discussing potential drawbacks of fruit juice"
+        },
+        {
+          "text": "Drinking too much juice may lead to insulin resistance over time due to sugar spikes.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.75,
+          "context": "highlighting health risks associated with excessive juice consumption"
+        },
+        {
+          "text": "Nutrition experts suggest limiting fruit juice intake to one small glass per day (4 to 6 ounces).",
+          "confidence": 0.9,
+          "category": "policy",
+          "importance": 0.65,
+          "context": "providing recommendations on juice consumption"
+        },
+        {
+          "text": "Regularly drinking large amounts of juice can lead to excess calorie consumption and weight gain.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.8,
+          "context": "discussing long-term health effects of juice consumption"
+        }
+      ],
+      "total_count": 7
+    },
+    "output_length_chars": 2158,
+    "output_tokens_estimated": 539,
+    "cost_usd": 0.00043905
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:23:53.285557",
+    "latency_seconds": 1.88,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Juice contains antioxidants which protect cells from damage.\nContext: mentioning health benefits of antioxidants in juice\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 294,
+    "input_tokens_estimated": 73,
+    "output": {
+      "original_claim": "Juice contains antioxidants which protect cells from damage.",
+      "queries": [
+        {
+          "query": "Juice antioxidants protect cells from damage",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "health benefits of antioxidants in juice",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 294,
+    "output_tokens_estimated": 73,
+    "cost_usd": 5.475e-05,
+    "context": {
+      "claim_index": 7,
+      "claim_text": "The vitamins and minerals in juice can be absorbed quickly by the body."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:23:53.582046",
+    "latency_seconds": 2.18,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Regularly drinking large amounts of juice can lead to excess calorie consumption and weight gain.\nContext: discussing long-term health effects of juice consumption\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 336,
+    "input_tokens_estimated": 84,
+    "output": {
+      "original_claim": "Regularly drinking large amounts of juice can lead to excess calorie consumption and weight gain.",
+      "queries": [
+        {
+          "query": "effects of drinking large amounts of juice on calorie consumption and weight gain",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "long-term health effects of excessive juice consumption and weight gain",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 399,
+    "output_tokens_estimated": 99,
+    "cost_usd": 7.2e-05,
+    "context": {
+      "claim_index": 6,
+      "claim_text": "Juice contains antioxidants which protect cells from damage.",
+      "query_index": 2,
+      "query_text": "health benefits of antioxidants in juice"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:23:53.694083",
+    "latency_seconds": 2.29,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Nutrition experts suggest limiting fruit juice intake to one small glass per day (4 to 6 ounces).\nContext: providing recommendations on juice consumption\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 326,
+    "input_tokens_estimated": 81,
+    "output": {
+      "original_claim": "Nutrition experts suggest limiting fruit juice intake to one small glass per day (4 to 6 ounces).",
+      "queries": [
+        {
+          "query": "Nutrition experts limit fruit juice intake to one small glass per day",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "recommended daily limit for fruit juice consumption",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 367,
+    "output_tokens_estimated": 91,
+    "cost_usd": 6.675e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Regularly drinking large amounts of juice can lead to excess calorie consumption and weight gain.",
+      "query_index": 2,
+      "query_text": "long-term health effects of excessive juice consumption and weight gain"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:23:53.806729",
+    "latency_seconds": 2.4,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The vitamins and minerals in juice can be absorbed quickly by the body.\nContext: explaining nutrient absorption from juice\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 295,
+    "input_tokens_estimated": 73,
+    "output": {
+      "original_claim": "The vitamins and minerals in juice can be absorbed quickly by the body.",
+      "queries": [
+        {
+          "query": "absorption of vitamins and minerals from juice",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "how quickly does the body absorb nutrients from juice",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 320,
+    "output_tokens_estimated": 80,
+    "cost_usd": 5.895e-05,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "Nutrition experts suggest limiting fruit juice intake to one small glass per day (4 to 6 ounces).",
+      "query_index": 2,
+      "query_text": "recommended daily limit for fruit juice consumption"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:24:27.191714",
+    "latency_seconds": 1.84,
+    "input_prompt": "Claim:\nJuice contains antioxidants which protect cells from damage.\n\nArticle Title:\nBest Antioxidant Drinks \u2014 Recipes for Juices, Smoothies, and Shots\n\nGoogle Search Snippet:\nWhile their main job is preventing cell damage, that work translates into many health benefits: Lower the risk of disease: Antioxidants can ...\n\nFull Page Content:\nHoliday Sale Up to $120 Off Juicers Save Now\nMarch 18, 2025\nOxidative stress, caused by free radicals, speeds up diseases and aging. Antioxidant drinks offer a practical way to combat them. They deliver essential compounds derived from fruits, vegetables, and herbs.\nWhile juices, smoothies, and concentrated shots contribute to antioxidant intake, their efficacy depends on ingredient selection and preparation. You can take a targeted approach with your antioxidant intake to improve health and fight medical conditions.\nAt Hurom, we're dedicated to empowering everyone to maximize their nutritional intake. We\u2019ll share some easy and delicious recipes for antioxidant-rich drinks, so keep reading below!\nAntioxidants are substances (specifically molecules) that fight free radicals in the body and prevent cellular damage.\nFree radicals are unstable molecules in your body, which are produced naturally or as a result of environmental factors like smoke or radiation. These free radicals stabilize themselves by reacting with healthy cells in your body and damaging them. This is called oxidation. That\u2019s why they\u2019re associated with illnesses like diabetes, cancer, and heart disease.\nHowever, antioxidants prevent free radicals from doing what they do, i.e., oxidation\u2014hence the name. Vegetables, fruits, and whole grains are naturally antioxidant-rich foods. Even some vitamins like C and E have antioxidant properties.\nThere are many types of antioxidants, and they work in different ways on the body. Some may have specific benefits like protecting particular systems and organs.\nThat brings us to the next point:\nA well-balanced diet with fruits and vegetables can give you enough antioxidants daily. While their main job is preventing cell damage, that work translates into many health benefits:\nLower the risk of disease: Antioxidants can lower the risk of certain life-threatening diseases caused by oxidative stress. Some people are more prone to such illnesses than others, due to genetics or lifestyle choices. As such, making better lifestyle choices can help.\nAnti-aging effect: Cellular damage from oxidative stress is often responsible for cognitive and physical aging in humans\u2014poor memory, loose skin, hair loss, etc. Antioxidants slow down the effects of aging by balancing the free radicals.\nImprove eye health: Certain compounds, like lutein and zeaxanthin, are crucial for maintaining healthy vision and may help prevent age-related macular degeneration and cataracts.\nSlows cognitive decline: These chemicals can protect brain cells from oxidative damage, potentially reducing the risk of cognitive decline and neurodegenerative diseases like Alzheimer's.\nJuices can preserve the antioxidants in the ingredients, depending on the process of juicing and storage temperature.\nJuicing provides a quick and easy way to get beneficial antioxidants. If you mix different fruits and veggies with a high antioxidant power, you can benefit from more different compounds. However, the content and activity of the substances may decrease due to the juicing process and environmental factors.\nThere\u2019s strong evidence that heat impacts the antioxidants found in fruits, vegetables, and herbs. Traditional juicers that use the centrifugal method tend to produce heat, which can destroy some nutrients, particularly flavonoids and polyphenols.\nSlow or masticating juicers, on the other hand, don\u2019t involve any heating, so they\u2019re able to preserve the antioxidants in each glass of juice.\nStorage also affects the activity and quality of the antioxidants. If you don\u2019t consume the juice when it\u2019s made, refrigerate it to ensure the nutrients aren\u2019t damaged. Cold-pressed juice can last up to three days in the fridge. After this time, the antioxidant activity may start to reduce and the juice will begin to go bad. Basically, you should not consume the juice after 72 hours if it hasn't been pasteurized.\nHurom\u2019s slow juicers help preserve all the nutrients in fruits and vegetables, so you get all the antioxidants they contain. The slow-moving auger in our juicers doesn\u2019t produce any heat, which helps preserve the temperature-sensitive antioxidants like vitamins and polyphenols.\nAs such, you can notice the effects faster.\nBut what are the best antioxidant drinks? That leads us to the following section.\nThe good news is that there are many antioxidant drinks to choose from, mainly juices, that can provide you with various health benefits. Here are all the antioxidant-rich juices, smoothies, teas, and other drinks you should try to incorporate in your diet.\nJuices are your best option if you want to get a fast influx of antioxidants because they\u2019re easy to digest. Of course, you\u2019ll need a high-quality juicer to keep all the nutrients intact.\n1. Super Antioxidant Juice (Booster for Health)\nThis juice uses beetroot, orange, carrots, and apples, with ginger (which has been used for medical and health benefits for centuries).\nBeetroot contains betalains, powerful antioxidants that help detoxify the liver and reduce inflammation. Oranges are rich in vitamin C, which boosts the immune function. Apples provide quercetin, a flavonoid that supports cardiovascular health and reduces inflammation. Carrots are loaded with beta-carotene, which promotes eye health and protects against cellular damage.\nPut simply, this juice is an antioxidant booster everyone needs in their life!\nHere\u2019s how you make it using your Hurom juicer:\nIngredients:\n1 beetroot, trimmed and cut\n1 orange, peeled\n2 carrots, peeled\n2 green apples, cored\nSmall piece of ginger, peeled\n\u00bd cup cold water (optional, if you like your juice more watery)\nInstructions:\nClean and prepare all the ingredients.\nAdd them to the Hurom juicer hopper.\nPress the button and extract the juice.\nGreen juices may be popular for detox and weight loss, but are also chock full of antioxidants. This green juice uses kale, which is rich in beta carotene, and broccoli, which contains sulforaphane (anti-inflammatory and anti-can\n\nProvide relevant evidence.",
+    "input_length_chars": 6367,
+    "input_tokens_estimated": 1591,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article confirms that juices contain antioxidants, which are substances that prevent cellular damage caused by free radicals. It explains that antioxidants are derived from fruits and vegetables, and that juices can effectively deliver these beneficial compounds to the body.",
+      "overall_stance": "supports",
+      "key_quote": "Antioxidants are substances (specifically molecules) that fight free radicals in the body and prevent cellular damage."
+    },
+    "output_length_chars": 483,
+    "output_tokens_estimated": 120,
+    "cost_usd": 0.00031065
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:24:27.268927",
+    "latency_seconds": 1.92,
+    "input_prompt": "Claim:\nJuice contains antioxidants which protect cells from damage.\n\nArticle Title:\nTop 4 Health Benefits of Antioxidants - Suja Organic\n\nGoogle Search Snippet:\n3. Can Support Eye Health \u00b7 Beta-carotene: Mainly found in bright fruits and vegetables. \u00b7 Lycopene: Known for its robust antioxidant properties ...\n\nFull Page Content:\nHoliday Sale Up to $120 Off Juicers Save Now\nMarch 18, 2025\nOxidative stress, caused by free radicals, speeds up diseases and aging. Antioxidant drinks offer a practical way to combat them. They deliver essential compounds derived from fruits, vegetables, and herbs.\nWhile juices, smoothies, and concentrated shots contribute to antioxidant intake, their efficacy depends on ingredient selection and preparation. You can take a targeted approach with your antioxidant intake to improve health and fight medical conditions.\nAt Hurom, we're dedicated to empowering everyone to maximize their nutritional intake. We\u2019ll share some easy and delicious recipes for antioxidant-rich drinks, so keep reading below!\nAntioxidants are substances (specifically molecules) that fight free radicals in the body and prevent cellular damage.\nFree radicals are unstable molecules in your body, which are produced naturally or as a result of environmental factors like smoke or radiation. These free radicals stabilize themselves by reacting with healthy cells in your body and damaging them. This is called oxidation. That\u2019s why they\u2019re associated with illnesses like diabetes, cancer, and heart disease.\nHowever, antioxidants prevent free radicals from doing what they do, i.e., oxidation\u2014hence the name. Vegetables, fruits, and whole grains are naturally antioxidant-rich foods. Even some vitamins like C and E have antioxidant properties.\nThere are many types of antioxidants, and they work in different ways on the body. Some may have specific benefits like protecting particular systems and organs.\nThat brings us to the next point:\nA well-balanced diet with fruits and vegetables can give you enough antioxidants daily. While their main job is preventing cell damage, that work translates into many health benefits:\nLower the risk of disease: Antioxidants can lower the risk of certain life-threatening diseases caused by oxidative stress. Some people are more prone to such illnesses than others, due to genetics or lifestyle choices. As such, making better lifestyle choices can help.\nAnti-aging effect: Cellular damage from oxidative stress is often responsible for cognitive and physical aging in humans\u2014poor memory, loose skin, hair loss, etc. Antioxidants slow down the effects of aging by balancing the free radicals.\nImprove eye health: Certain compounds, like lutein and zeaxanthin, are crucial for maintaining healthy vision and may help prevent age-related macular degeneration and cataracts.\nSlows cognitive decline: These chemicals can protect brain cells from oxidative damage, potentially reducing the risk of cognitive decline and neurodegenerative diseases like Alzheimer's.\nJuices can preserve the antioxidants in the ingredients, depending on the process of juicing and storage temperature.\nJuicing provides a quick and easy way to get beneficial antioxidants. If you mix different fruits and veggies with a high antioxidant power, you can benefit from more different compounds. However, the content and activity of the substances may decrease due to the juicing process and environmental factors.\nThere\u2019s strong evidence that heat impacts the antioxidants found in fruits, vegetables, and herbs. Traditional juicers that use the centrifugal method tend to produce heat, which can destroy some nutrients, particularly flavonoids and polyphenols.\nSlow or masticating juicers, on the other hand, don\u2019t involve any heating, so they\u2019re able to preserve the antioxidants in each glass of juice.\nStorage also affects the activity and quality of the antioxidants. If you don\u2019t consume the juice when it\u2019s made, refrigerate it to ensure the nutrients aren\u2019t damaged. Cold-pressed juice can last up to three days in the fridge. After this time, the antioxidant activity may start to reduce and the juice will begin to go bad. Basically, you should not consume the juice after 72 hours if it hasn't been pasteurized.\nHurom\u2019s slow juicers help preserve all the nutrients in fruits and vegetables, so you get all the antioxidants they contain. The slow-moving auger in our juicers doesn\u2019t produce any heat, which helps preserve the temperature-sensitive antioxidants like vitamins and polyphenols.\nAs such, you can notice the effects faster.\nBut what are the best antioxidant drinks? That leads us to the following section.\nThe good news is that there are many antioxidant drinks to choose from, mainly juices, that can provide you with various health benefits. Here are all the antioxidant-rich juices, smoothies, teas, and other drinks you should try to incorporate in your diet.\nJuices are your best option if you want to get a fast influx of antioxidants because they\u2019re easy to digest. Of course, you\u2019ll need a high-quality juicer to keep all the nutrients intact.\n1. Super Antioxidant Juice (Booster for Health)\nThis juice uses beetroot, orange, carrots, and apples, with ginger (which has been used for medical and health benefits for centuries).\nBeetroot contains betalains, powerful antioxidants that help detoxify the liver and reduce inflammation. Oranges are rich in vitamin C, which boosts the immune function. Apples provide quercetin, a flavonoid that supports cardiovascular health and reduces inflammation. Carrots are loaded with beta-carotene, which promotes eye health and protects against cellular damage.\nPut simply, this juice is an antioxidant booster everyone needs in their life!\nHere\u2019s how you make it using your Hurom juicer:\nIngredients:\n1 beetroot, trimmed and cut\n1 orange, peeled\n2 carrots, peeled\n2 green apples, cored\nSmall piece of ginger, peeled\n\u00bd cup cold water (optional, if you like your juice more watery)\nInstructions:\nClean and prepare all the ingredients.\nAdd them to the Hurom juicer hopper.\nPress the button and extract the juice.\nGreen juices may be popular for detox and weight loss, but are also chock full of antioxidants. This green juice uses kale, which is rich in beta carotene, and broccoli, which contains sulforaphane (anti-inflammatory and anti-can\n\nProvide relevant evidence.",
+    "input_length_chars": 6358,
+    "input_tokens_estimated": 1589,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses how juices contain antioxidants that help prevent cellular damage caused by free radicals, supporting the claim that juice provides protective benefits to cells.",
+      "overall_stance": "supports",
+      "key_quote": "Antioxidants are substances (specifically molecules) that fight free radicals in the body and prevent cellular damage."
+    },
+    "output_length_chars": 387,
+    "output_tokens_estimated": 96,
+    "cost_usd": 0.00029595
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:24:45.025537",
+    "latency_seconds": 20.44,
+    "input_prompt": "Claim:\nRegularly drinking large amounts of juice can lead to excess calorie consumption and weight gain.\n\nArticle Title:\nWeight gain in children and adults linked to 100% fruit juice, study ...\n\nFull Page Content:\nOver time, too much sugar in the blood can lead to insulin resistance, metabolic syndrome, diabetes, heart disease, obesity and other chronic ...\n\nProvide relevant evidence.",
+    "input_length_chars": 387,
+    "input_tokens_estimated": 96,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that excessive sugar intake from sources like fruit juice can contribute to health issues such as obesity, which supports the claim about weight gain from drinking large amounts of juice.",
+      "overall_stance": "supports",
+      "key_quote": "too much sugar in the blood can lead to insulin resistance, metabolic syndrome, diabetes, heart disease, obesity and other chronic ..."
+    },
+    "output_length_chars": 430,
+    "output_tokens_estimated": 107,
+    "cost_usd": 7.86e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:24:46.247757",
+    "latency_seconds": 12.7,
+    "input_prompt": "Claim:\nThe vitamins and minerals in juice can be absorbed quickly by the body.\n\nArticle Title:\nIf I juice fruits and veggies ahead of time, how long until they start to ...\n\nGoogle Search Snippet:\nJuicing let your body a fast way to absorb all the nutrients that every vegetables and fruits contain because juicing breaks down the cell ...\n\nFull Page Content:\nNutrient loss after juicing depends on the nutrient, fruit/vegetable type, storage conditions, and processing. Below is a practical, evidence-based timeline and storage guidance to preserve maximum nutrition.\nKey principles\nKnow your juicer, different types produce juices with varying amounts of nutrient loss from the juicing process itself. Juicers start the degradation of nutrients through heat and oxidation from foam.\nHigh-speed Masticating Juicers produce too much heat so you must drink the juice immediately before the nutrients totally degrade\nCentrifugal Juicers create oxidation that degrades nutrients, so you should also drink the juice immediately before the nutrients totally degrade.\nSlow-speed Masticating Juicers produce less heat and oxidation so you can refrigerate juices for up to one day..\nHydraulic Pre\nWhat is a good IQ score, and how do you know where you stand?\nIQ, or Intelligence Quotient, is often misunderstood. Many people think it\u2019s just a number\u2014but it\u2019s actually a snapshot of how your brain processes information, solves problems, reasons logically, and recognizes patterns. Understanding your IQ can give you valuable insight into your cognitive strengths\u2014and help you figure out where you stand compared to others.\n\ud83d\udc49 Take the official IQ test here: Start IQ Test | eFAQ\nWhat Does an IQ Score Actually Mean?\nIQ scores are standardized so that the average score is 100. Most people score betwee\nMacro nutrients are harder to degrade or at least it take a much longer time. However, the same cannot be said for micro nutrients i.e vitamins. The moment, vegetables or fruits are being cut and expose to air the vitamins will be degraded very quickly due to oxidation. Freezing or heating fruits or vegetables will further accelerate the rate of degration. So it is best to consume fresh juice immediately upon making them.\nOxidation is immediate\u2026.. the real question prehs is how and under what conditions can one best preserve fresh organic juices?\n\nProvide relevant evidence.",
+    "input_length_chars": 2373,
+    "input_tokens_estimated": 593,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses how juicing allows for quick absorption of nutrients by breaking down the cell walls of fruits and vegetables, but it also emphasizes the importance of consuming juice immediately to prevent nutrient degradation due to oxidation.",
+      "overall_stance": "supports",
+      "key_quote": "Juicing let your body a fast way to absorb all the nutrients that every vegetables and fruits contain because juicing breaks down the cell."
+    },
+    "output_length_chars": 476,
+    "output_tokens_estimated": 119,
+    "cost_usd": 0.00016035
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:25:06.277484",
+    "latency_seconds": 19.79,
+    "input_prompt": "Claim:\nNutrition experts suggest limiting fruit juice intake to one small glass per day (4 to 6 ounces).\n\nArticle Title:\nConsumption of 100% Fruit Juice and Body Weight in Children and ...\n\nFull Page Content:\nStudy findings support guidance to limit consumption of fruit juice to prevent the intake of excess calories and weight gain.\n\nProvide relevant evidence.",
+    "input_length_chars": 362,
+    "input_tokens_estimated": 90,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence supports the claim by indicating that nutrition experts recommend limiting fruit juice consumption to prevent excess calorie intake and weight gain, aligning with the suggestion of one small glass per day.",
+      "overall_stance": "supports",
+      "key_quote": "Study findings support guidance to limit consumption of fruit juice to prevent the intake of excess calories and weight gain."
+    },
+    "output_length_chars": 429,
+    "output_tokens_estimated": 107,
+    "cost_usd": 7.77e-05
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:25:07.364164",
+    "latency_seconds": 21.01,
+    "input_prompt": "\nClaim: The vitamins and minerals in juice can be absorbed quickly by the body.\nCategory: scientific\nExtraction confidence: 0.80\n\nEvidence:\nSUPPORTS (1 sources):\n  1. If I juice fruits and veggies ahead of time, how long until they start to ... | reliability=medium (0.60)\n     URL: https://www.quora.com/If-I-juice-fruits-and-veggies-ahead-of-time-how-long-until-they-start-to-lose-nutritional-value\n     Summary: The article discusses how juicing allows for quick absorption of nutrients by breaking down the cell walls of fruits and vegetables, but it also emphasizes the importance of consuming juice immediately to prevent nutrient degradation due to oxidation.\nUNCLEAR (4 sources):\n  1. Comparison of the Effects of Blending and Juicing on the ... - NIH | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC4103735/\n     Summary: Results revealed that juices that had been prepared by blending whole fruits had stronger antioxidant activities and contained larger amounts of phenolic ...\n  2. Is Juicing Worth the Squeeze? - Kendall Reagan Nutrition Center | reliability=high (1.00)\n     URL: https://www.chhs.colostate.edu/krnc/monthly-blog/is-juicing-worth-the-squeeze/\n     Summary: Science does not support the notion that juicing and elemental nutrition is necessary for detoxification. While vitamins and minerals found in juice may ...\n  3. 'No Data' For Claims That Juice Drinks Help Body Absorb Nutrients ... | reliability=high (0.85)\n     URL: https://www.cbsnews.com/sanfrancisco/news/juice-drinks-health-benefits-questioned/\n     Summary: He says there's no good scientific evidence you absorb nutrients more quickly and, he warned, there's a much bigger problem.\n  4. Juicing: What are the health benefits? - Mayo Clinic | reliability=high (0.85)\n     URL: https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/expert-answers/juicing/faq-20058020\n     Summary: Some people think that the body can absorb nutrients better from juices than it can from whole fruits and vegetables. But that usually isn't so.\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2102,
+    "input_tokens_estimated": 525,
+    "output": {
+      "overall_stance": "mixed",
+      "confidence": "medium",
+      "summary": "The evidence presents a mixed view on the claim. A Quora article suggests that juicing allows for quick nutrient absorption by breaking down cell walls, but emphasizes the need for immediate consumption to prevent nutrient loss. However, multiple high-reliability sources, including a Mayo Clinic article and a CBS News report, indicate that there is no strong scientific evidence supporting the idea that juice leads to faster nutrient absorption compared to whole fruits and vegetables."
+    },
+    "output_length_chars": 549,
+    "output_tokens_estimated": 137,
+    "cost_usd": 0.00016095
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:25:19.918531",
+    "latency_seconds": 11.47,
+    "input_prompt": "\nClaim: Nutrition experts suggest limiting fruit juice intake to one small glass per day (4 to 6 ounces).\nCategory: policy\nExtraction confidence: 0.90\n\nEvidence:\nSUPPORTS (1 sources):\n  1. Consumption of 100% Fruit Juice and Body Weight in Children and ... | reliability=high (0.85)\n     URL: https://jamanetwork.com/journals/jamapediatrics/fullarticle/2813987\n     Summary: The evidence supports the claim by indicating that nutrition experts recommend limiting fruit juice consumption to prevent excess calorie intake and weight gain, aligning with the suggestion of one small glass per day.\nUNCLEAR (5 sources):\n  1. [PDF] What are the implications for nutrient intakes when modifying the ... | reliability=high (1.00)\n     URL: https://www.dietaryguidelines.gov/sites/default/files/2024-02/2025_DGAC_FPM_Q2_Protocol_Fruit_508c.pdf\n     Summary: If 100% fruit juice is provided, up to. 4 ounces per day can fit in a healthy dietary pattern. Before the age of 12 months, 100% fruit (or vegetable) juice ...\n  2. Consumption of 100% Fruit Juice and Body Weight in Children ... - NIH | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC10792499/\n     Summary: Study findings support guidance to limit consumption of fruit juice to prevent the intake of excess calories and weight gain. Abstract.\n  3. Intake of 100% Fruit Juice Is Associated with Improved Diet Quality ... | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC6836193/\n     Summary: Although 100% fruit juice contains naturally occurring sugars, it has no added sugar. DGA also recommended limiting added sugar to 10% total daily energy intake ...\n  4. MyPlate.gov | Fruit Group \u2013 One of the Five Food Groups | reliability=high (0.90)\n     URL: https://www.myplate.gov/eat-healthy/fruits\n     Summary: 1 cup of fresh, frozen, or canned fruit; \u00bd cup of dried fruit; 1 cup of 100% fruit juice. The table below shows amounts that count as 1 cup from the Fruit Group ...\n  5. Most Americans drink less juice than guidelines allow, study finds | reliability=high (0.85)\n     URL: https://www.news-medical.net/news/20250824/Most-Americans-drink-less-juice-than-guidelines-allow-study-finds.aspx\n     Summary: The DGA recommendations for 2020\u20132025 advise limiting 100% fruit juice. Excessive intake may add unnecessary calories.\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2370,
+    "input_tokens_estimated": 592,
+    "output": {
+      "overall_stance": "mixed",
+      "confidence": "medium",
+      "summary": "The evidence presents a mixed stance on the claim. A high-reliability source from JAMA Pediatrics supports the recommendation to limit fruit juice intake to one small glass per day to prevent excess calorie intake. However, several other high-reliability sources, including the Dietary Guidelines Advisory Committee and MyPlate, suggest that up to 4 ounces of 100% fruit juice can fit into a healthy dietary pattern, indicating some flexibility in the recommendation."
+    },
+    "output_length_chars": 528,
+    "output_tokens_estimated": 132,
+    "cost_usd": 0.000168
+  }
+]

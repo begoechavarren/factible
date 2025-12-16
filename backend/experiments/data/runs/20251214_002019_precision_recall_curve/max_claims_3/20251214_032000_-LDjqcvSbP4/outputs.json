@@ -1,0 +1,820 @@
+{
+  "extracted_claims": {
+    "claims": [
+      {
+        "text": "100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.",
+        "confidence": 0.9,
+        "category": "nutritional",
+        "importance": 0.7,
+        "context": "discussing the benefits of 100% fruit juice",
+        "transcript_char_start": 395,
+        "transcript_char_end": 470,
+        "transcript_match_score": 0.9146341463414634
+      },
+      {
+        "text": "Nutrition experts often suggest limiting fruit juice intake to one small glass per day, around 4 to 6 ounces.",
+        "confidence": 0.8,
+        "category": "policy",
+        "importance": 0.65,
+        "context": "advice on portion control for fruit juice consumption",
+        "transcript_char_start": 1756,
+        "transcript_char_end": 1863,
+        "transcript_match_score": 1.0
+      },
+      {
+        "text": "Juice contains antioxidants which protect cells from damage.",
+        "confidence": 0.85,
+        "category": "scientific",
+        "importance": 0.6,
+        "context": "mentioning the health benefits of antioxidants in juice",
+        "transcript_char_start": 554,
+        "transcript_char_end": 618,
+        "transcript_match_score": 0.959349593495935
+      }
+    ],
+    "total_count": 3
+  },
+  "final_output": {
+    "extracted_claims": {
+      "claims": [
+        {
+          "text": "100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.",
+          "confidence": 0.9,
+          "category": "nutritional",
+          "importance": 0.7,
+          "context": "discussing the benefits of 100% fruit juice",
+          "transcript_char_start": 395,
+          "transcript_char_end": 470,
+          "transcript_match_score": 0.9146341463414634
+        },
+        {
+          "text": "Nutrition experts often suggest limiting fruit juice intake to one small glass per day, around 4 to 6 ounces.",
+          "confidence": 0.8,
+          "category": "policy",
+          "importance": 0.65,
+          "context": "advice on portion control for fruit juice consumption",
+          "transcript_char_start": 1756,
+          "transcript_char_end": 1863,
+          "transcript_match_score": 1.0
+        },
+        {
+          "text": "Juice contains antioxidants which protect cells from damage.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "mentioning the health benefits of antioxidants in juice",
+          "transcript_char_start": 554,
+          "transcript_char_end": 618,
+          "transcript_match_score": 0.959349593495935
+        }
+      ],
+      "total_count": 3
+    },
+    "claim_reports": [
+      {
+        "claim_text": "Juice contains antioxidants which protect cells from damage.",
+        "claim_confidence": 0.85,
+        "claim_category": "scientific",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "Multiple high-reliability sources confirm that juice contains antioxidants, which protect cells from damage caused by free radicals and reduce the risk of chronic diseases. The Mayo Clinic specifically highlights the role of vitamin C in citrus juices as an antioxidant that reduces inflammation and oxidative stress.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Impact of Natural Juice Consumption on Plasma Antioxidant Status",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6331866/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The article discusses the role of antioxidants in protecting cells from damage caused by free radicals, confirming that antioxidants can help reduce the risk of chronic diseases and cancers.",
+              "snippet": "The antioxidants delay or inhibit cellular damage mainly through their free radical scavenging property and can safely interact with free radicals and terminate ..."
+            },
+            {
+              "title": "Add antioxidants to your diet - Mayo Clinic",
+              "url": "https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/add-antioxidants-to-your-diet/art-20546814",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The article discusses how antioxidants, particularly vitamin C found in citrus juices, help protect cells by reducing inflammation and oxidative stress, which aligns with the claim about juice containing antioxidants that protect cells from damage.",
+              "snippet": "Add antioxidants to your diet. Antioxidants are certain nutrients, such as vitamins C or E, or carotenoids, which may help protect cells against daily damage."
+            },
+            {
+              "title": "Antioxidant Drinks: Separating Fact From Fiction",
+              "url": "https://signaturehealthcare.org/antioxidant-drinks/",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (23.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The article discusses the role of antioxidants in protecting cells from damage caused by free radicals, confirming that antioxidants can help reduce the risk of chronic diseases and cancers.",
+              "snippet": "The main benefit of antioxidants is their defensive value against unstable molecules known as free radicals. Free radicals are floating byproducts of normal ..."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "Effects of Citrus Fruit Juices and Their Bioactive Components on ...",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8264544/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Citrus fruit juices are a particularly good source of vitamin C and folate, which both have roles in sustaining the integrity of immunological barriers.",
+              "snippet": "Citrus fruit juices are a particularly good source of vitamin C and folate, which both have roles in sustaining the integrity of immunological barriers."
+            },
+            {
+              "title": "The 9 Healthiest Types of Juice - Healthline",
+              "url": "https://www.healthline.com/nutrition/healthiest-juice",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Tomato juice is particularly high in vitamin C, a potent antioxidant that supports iron absorption and promotes skin and immune health ( 6 ...",
+              "snippet": "Tomato juice is particularly high in vitamin C, a potent antioxidant that supports iron absorption and promotes skin and immune health ( 6 ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 41.52,
+        "timestamp_confidence": 0.959349593495935
+      },
+      {
+        "claim_text": "Nutrition experts often suggest limiting fruit juice intake to one small glass per day, around 4 to 6 ounces.",
+        "claim_confidence": 0.8,
+        "claim_category": "policy",
+        "overall_stance": "mixed",
+        "verdict_confidence": "medium",
+        "verdict_summary": "The evidence presents mixed signals regarding the claim. While some sources, like the Children's Hospital of Philadelphia and NIH, recommend limiting fruit juice intake for children to 4 to 6 ounces per day, other sources, such as the article on improved diet quality, do not explicitly endorse this limit and suggest that one cup of 100% fruit juice can be equivalent to whole fruits. This inconsistency indicates that while there are guidelines for children, the broader recommendation for adults remains less clear.",
+        "evidence_by_stance": {
+          "mixed": [
+            {
+              "title": "Intake of 100% Fruit Juice Is Associated with Improved Diet Quality ...",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6836193/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "mixed",
+              "evidence_summary": "The article discusses the consumption of 100% fruit juice and its association with improved diet quality, suggesting that it can be part of a healthy eating pattern. However, it does not explicitly endorse limiting fruit juice intake to one small glass per day, as it recognizes one cup of 100% fruit juice as a serving equivalent to whole fruits.",
+              "snippet": "Although there are no specific recommendations for adults for 100% fruit juice consumption, DGA recognized one cup of 100% fruit juice as one cup serving of ..."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "Putting the Squeeze on Juice | Children's Hospital of Philadelphia",
+              "url": "https://www.chop.edu/news/putting-squeeze-juice",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (31.5 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "If parents choose to give children fruit juice, limit intake to four ounces a day for children between ages 1 and 3, six ounces a day for ...",
+              "snippet": "If parents choose to give children fruit juice, limit intake to four ounces a day for children between ages 1 and 3, six ounces a day for ..."
+            },
+            {
+              "title": "Reducing Childhood Obesity by Eliminating 100% Fruit Juice - NIH",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3482038/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "The Institute of Medicine (IOM) and professional societies have recently recommended limiting children's consumption of fruit juice to begin to address the ...",
+              "snippet": "The Institute of Medicine (IOM) and professional societies have recently recommended limiting children's consumption of fruit juice to begin to address the ..."
+            },
+            {
+              "title": "Researchers recommend national dietary guidelines reflect the true ...",
+              "url": "https://publichealth.uci.edu/2025/05/19/researchers-recommend-national-dietary-guidelines-reflect-the-true-benefits-of-whole-fruit-versus-fruit-juice/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (40.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Current guidelines recommend that at least half of the daily recommended fruit intake of two cups a day should come from whole fruits, ...",
+              "snippet": "Current guidelines recommend that at least half of the daily recommended fruit intake of two cups a day should come from whole fruits, ..."
+            },
+            {
+              "title": "MyPlate.gov | Fruit Group \u2013 One of the Five Food Groups",
+              "url": "https://www.myplate.gov/eat-healthy/fruits",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "1 cup of fresh, frozen, or canned fruit; \u00bd cup of dried fruit; 1 cup of 100% fruit juice. The table below shows amounts that count as 1 cup from the Fruit Group ...",
+              "snippet": "1 cup of fresh, frozen, or canned fruit; \u00bd cup of dried fruit; 1 cup of 100% fruit juice. The table below shows amounts that count as 1 cup from the Fruit Group ..."
+            },
+            {
+              "title": "Experts Recommend Kids Drinks Less Fruit Juice",
+              "url": "https://www.stanfordchildrens.org/en/topic/default?id=experts-recommend-kids-drinks-less-fruit-juice-197-29411",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (12.7 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Children ages 4 through 6 should consume no more than 6 ounces of fruit juice per day. Children ages 7 through 18 should consume no more than 8 ounces of fruit ...",
+              "snippet": "Children ages 4 through 6 should consume no more than 6 ounces of fruit juice per day. Children ages 7 through 18 should consume no more than 8 ounces of fruit ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 0.8,
+        "timestamp_hint": 136.959,
+        "timestamp_confidence": 1.0
+      },
+      {
+        "claim_text": "100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.",
+        "claim_confidence": 0.9,
+        "claim_category": "nutritional",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "Health effects of drinking 100% juice: an umbrella review of ...",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11723140/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "The findings collate evidence showing some potential health benefits associated with 100% juice consumption, with fewer potential risks.",
+              "snippet": "The findings collate evidence showing some potential health benefits associated with 100% juice consumption, with fewer potential risks."
+            },
+            {
+              "title": "Is your fruit juice really 100 percent fruit juice? - MSU Extension",
+              "url": "https://www.canr.msu.edu/news/is_your_fruit_juice_really_100_percent_fruit_juice",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (38.6 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Read the product label carefully, as a product may contain 100 percent of your daily vitamin C, but that does not mean the product is 100 ...",
+              "snippet": "Read the product label carefully, as a product may contain 100 percent of your daily vitamin C, but that does not mean the product is 100 ..."
+            },
+            {
+              "title": "MyPlate.gov | Fruit Group \u2013 One of the Five Food Groups",
+              "url": "https://www.myplate.gov/eat-healthy/fruits",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Vitamin C is important for the growth and repair of all body tissues. It helps heal cuts and wounds and keeps teeth and gums health. Vitamin C helps your body ...",
+              "snippet": "Vitamin C is important for the growth and repair of all body tissues. It helps heal cuts and wounds and keeps teeth and gums health. Vitamin C helps your body ..."
+            },
+            {
+              "title": "Squeezing Fact from Fiction about 100% Fruit Juice - ScienceDirect",
+              "url": "https://www.sciencedirect.com/science/article/pii/S2161831322006494",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The combination of fruit and 100% juice was associated with significantly higher intakes of potassium, calcium, and vitamin C, but not fiber. On the other hand, ...",
+              "snippet": "The combination of fruit and 100% juice was associated with significantly higher intakes of potassium, calcium, and vitamin C, but not fiber. On the other hand, ..."
+            }
+          ]
+        },
+        "total_sources": 4,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 32.04,
+        "timestamp_confidence": 0.9146341463414634
+      }
+    ],
+    "transcript_data": {
+      "text": "today's medical Centric topic is is 100% fruit juice good for you 100% fruit juice is often viewed as a healthy alternative to sugary drinks but its benefits and potential drawbacks need to be considered while it contains vitamins and nutrients drinking too much juice may have negative effects on your health one nutritional benefits of 100% fruit juice rich in vitamins vitamins and antioxidants 100% fruit juice is a good source of essential vitamins especially vitamin C which supports the immune system and potassium which helps regulate blood pressure juice also contains antioxidants which protect cells from damage nutrient absorption the vitamins and minerals and Juice can be absorbed quickly by the body making it a convenient way to get a nutritional boost hydration fluid intake since fruit juice is mostly water it helps with hydration for people who struggle to drink plain water juice can be a more palatable option two potential drawbacks of 100% fruit juice high in natural sugars fructose content even though 100% fruit juice doesn't have added sugars it still contains high amounts of naturally occurring sugar sugars like fructose these sugars can Spike blood sugar levels which may lead to insulin resistance over time calories juice is calorie dense compared to whole fruits and consuming large amounts can contribute to weight gain if not balanced with physical activity LAX fiber removed during processing one of the biggest differences between fruit juice and whole fruit is the fiber content when fruit is Juiced the fiber is removed which helps regulate blood sugar and AIDS digestion without fiber juice may cause rapid sugar absorption and hunger soon after consumption three how much is too much portion control recommended intake nutrition experts often suggest limiting fruit juice intake to one small glass per day around 4 to 6 ounces drinking juice in moderation can provide health benefits balancing diet it's essential to balance juice intake with other sources of hydration and nutrition such as water and whole fruits four alternatives to fruit juice whole fruits better nutritional value eating whole fruits provides all the vitamins and minerals found in juice along with fiber which is essential for digestion and blood sugar control whole fruits also keep you Fuller for longer diluting juice reducing sugar for those who enjoy juice dilating it with water can reduce sugar intake while still offering a refreshing taste and some nutritional benefits five long-term health effects weight gain and dental health caloric impact regularly drinking large amounts of juice can lead to excess calorie consumption contributing to weight gain over time tooth decay the sugar and Juice can contribute to cavities especially when consumed frequently throughout the day drinking juice with meals and using a straw may help reduce this risk thank you for watching our video please do not forget to like and share the video also please subscribe to the channel to stay updated on our latest videos",
+      "segments": [
+        {
+          "text": "today's medical Centric topic is is 100%",
+          "start": 0.04,
+          "duration": 6.719
+        },
+        {
+          "text": "fruit juice good for",
+          "start": 4.08,
+          "duration": 5.76
+        },
+        {
+          "text": "you 100% fruit juice is often viewed as",
+          "start": 6.759,
+          "duration": 5.521
+        },
+        {
+          "text": "a healthy alternative to sugary drinks",
+          "start": 9.84,
+          "duration": 4.6
+        },
+        {
+          "text": "but its benefits and potential drawbacks",
+          "start": 12.28,
+          "duration": 5.079
+        },
+        {
+          "text": "need to be considered while it contains",
+          "start": 14.44,
+          "duration": 5.28
+        },
+        {
+          "text": "vitamins and nutrients drinking too much",
+          "start": 17.359,
+          "duration": 5.041
+        },
+        {
+          "text": "juice may have negative effects on your",
+          "start": 19.72,
+          "duration": 7.12
+        },
+        {
+          "text": "health one nutritional benefits of 100%",
+          "start": 22.4,
+          "duration": 6.56
+        },
+        {
+          "text": "fruit juice rich in",
+          "start": 26.84,
+          "duration": 5.2
+        },
+        {
+          "text": "vitamins vitamins and",
+          "start": 28.96,
+          "duration": 5.759
+        },
+        {
+          "text": "antioxidants 100% fruit juice is a good",
+          "start": 32.04,
+          "duration": 4.92
+        },
+        {
+          "text": "source of essential vitamins especially",
+          "start": 34.719,
+          "duration": 4.52
+        },
+        {
+          "text": "vitamin C which supports the immune",
+          "start": 36.96,
+          "duration": 4.56
+        },
+        {
+          "text": "system and potassium which helps",
+          "start": 39.239,
+          "duration": 5.241
+        },
+        {
+          "text": "regulate blood pressure juice also",
+          "start": 41.52,
+          "duration": 5.0
+        },
+        {
+          "text": "contains antioxidants which protect",
+          "start": 44.48,
+          "duration": 3.96
+        },
+        {
+          "text": "cells from",
+          "start": 46.52,
+          "duration": 4.359
+        },
+        {
+          "text": "damage nutrient",
+          "start": 48.44,
+          "duration": 4.72
+        },
+        {
+          "text": "absorption the vitamins and minerals and",
+          "start": 50.879,
+          "duration": 4.041
+        },
+        {
+          "text": "Juice can be absorbed quickly by the",
+          "start": 53.16,
+          "duration": 3.879
+        },
+        {
+          "text": "body making it a convenient way to get a",
+          "start": 54.92,
+          "duration": 5.68
+        },
+        {
+          "text": "nutritional boost",
+          "start": 57.039,
+          "duration": 7.44
+        },
+        {
+          "text": "hydration fluid intake since fruit juice",
+          "start": 60.6,
+          "duration": 6.92
+        },
+        {
+          "text": "is mostly water it helps with hydration",
+          "start": 64.479,
+          "duration": 4.921
+        },
+        {
+          "text": "for people who struggle to drink plain",
+          "start": 67.52,
+          "duration": 6.04
+        },
+        {
+          "text": "water juice can be a more palatable",
+          "start": 69.4,
+          "duration": 8.0
+        },
+        {
+          "text": "option two potential drawbacks of 100%",
+          "start": 73.56,
+          "duration": 4.8
+        },
+        {
+          "text": "fruit",
+          "start": 77.4,
+          "duration": 5.32
+        },
+        {
+          "text": "juice high in natural sugars fructose",
+          "start": 78.36,
+          "duration": 7.24
+        },
+        {
+          "text": "content even though 100% fruit juice",
+          "start": 82.72,
+          "duration": 4.88
+        },
+        {
+          "text": "doesn't have added sugars it still",
+          "start": 85.6,
+          "duration": 3.76
+        },
+        {
+          "text": "contains high amounts of naturally",
+          "start": 87.6,
+          "duration": 4.4
+        },
+        {
+          "text": "occurring sugar sugars like fructose",
+          "start": 89.36,
+          "duration": 4.36
+        },
+        {
+          "text": "these sugars can Spike blood sugar",
+          "start": 92.0,
+          "duration": 3.52
+        },
+        {
+          "text": "levels which may lead to insulin",
+          "start": 93.72,
+          "duration": 3.719
+        },
+        {
+          "text": "resistance over",
+          "start": 95.52,
+          "duration": 5.84
+        },
+        {
+          "text": "time calories juice is calorie dense",
+          "start": 97.439,
+          "duration": 5.801
+        },
+        {
+          "text": "compared to whole fruits and consuming",
+          "start": 101.36,
+          "duration": 3.719
+        },
+        {
+          "text": "large amounts can contribute to weight",
+          "start": 103.24,
+          "duration": 5.12
+        },
+        {
+          "text": "gain if not balanced with physical",
+          "start": 105.079,
+          "duration": 5.561
+        },
+        {
+          "text": "activity LAX",
+          "start": 108.36,
+          "duration": 5.0
+        },
+        {
+          "text": "fiber removed during",
+          "start": 110.64,
+          "duration": 4.519
+        },
+        {
+          "text": "processing one of the biggest",
+          "start": 113.36,
+          "duration": 3.719
+        },
+        {
+          "text": "differences between fruit juice and",
+          "start": 115.159,
+          "duration": 4.92
+        },
+        {
+          "text": "whole fruit is the fiber content when",
+          "start": 117.079,
+          "duration": 5.441
+        },
+        {
+          "text": "fruit is Juiced the fiber is removed",
+          "start": 120.079,
+          "duration": 4.241
+        },
+        {
+          "text": "which helps regulate blood sugar and",
+          "start": 122.52,
+          "duration": 5.36
+        },
+        {
+          "text": "AIDS digestion without fiber juice may",
+          "start": 124.32,
+          "duration": 5.799
+        },
+        {
+          "text": "cause rapid sugar absorption and hunger",
+          "start": 127.88,
+          "duration": 4.88
+        },
+        {
+          "text": "soon after",
+          "start": 130.119,
+          "duration": 6.84
+        },
+        {
+          "text": "consumption three how much is too much",
+          "start": 132.76,
+          "duration": 8.0
+        },
+        {
+          "text": "portion control recommended intake",
+          "start": 136.959,
+          "duration": 6.0
+        },
+        {
+          "text": "nutrition experts often suggest limiting",
+          "start": 140.76,
+          "duration": 4.32
+        },
+        {
+          "text": "fruit juice intake to one small glass",
+          "start": 142.959,
+          "duration": 5.521
+        },
+        {
+          "text": "per day around 4 to 6 ounces drinking",
+          "start": 145.08,
+          "duration": 5.519
+        },
+        {
+          "text": "juice in moderation can provide health",
+          "start": 148.48,
+          "duration": 4.0
+        },
+        {
+          "text": "benefits balancing",
+          "start": 150.599,
+          "duration": 4.561
+        },
+        {
+          "text": "diet it's essential to balance juice",
+          "start": 152.48,
+          "duration": 4.6
+        },
+        {
+          "text": "intake with other sources of hydration",
+          "start": 155.16,
+          "duration": 4.12
+        },
+        {
+          "text": "and nutrition such as water and whole",
+          "start": 157.08,
+          "duration": 6.519
+        },
+        {
+          "text": "fruits four alternatives to fruit juice",
+          "start": 159.28,
+          "duration": 5.16
+        },
+        {
+          "text": "whole",
+          "start": 163.599,
+          "duration": 4.72
+        },
+        {
+          "text": "fruits better nutritional value eating",
+          "start": 164.44,
+          "duration": 5.96
+        },
+        {
+          "text": "whole fruits provides all the vitamins",
+          "start": 168.319,
+          "duration": 4.321
+        },
+        {
+          "text": "and minerals found in juice along with",
+          "start": 170.4,
+          "duration": 4.36
+        },
+        {
+          "text": "fiber which is essential for digestion",
+          "start": 172.64,
+          "duration": 5.04
+        },
+        {
+          "text": "and blood sugar control whole fruits",
+          "start": 174.76,
+          "duration": 6.92
+        },
+        {
+          "text": "also keep you Fuller for longer",
+          "start": 177.68,
+          "duration": 8.16
+        },
+        {
+          "text": "diluting juice reducing sugar for those",
+          "start": 181.68,
+          "duration": 6.6
+        },
+        {
+          "text": "who enjoy juice dilating it with water",
+          "start": 185.84,
+          "duration": 4.399
+        },
+        {
+          "text": "can reduce sugar intake while still",
+          "start": 188.28,
+          "duration": 3.72
+        },
+        {
+          "text": "offering a refreshing taste and some",
+          "start": 190.239,
+          "duration": 4.041
+        },
+        {
+          "text": "nutritional",
+          "start": 192.0,
+          "duration": 6.64
+        },
+        {
+          "text": "benefits five long-term health effects",
+          "start": 194.28,
+          "duration": 8.039
+        },
+        {
+          "text": "weight gain and dental health caloric",
+          "start": 198.64,
+          "duration": 6.319
+        },
+        {
+          "text": "impact regularly drinking large amounts",
+          "start": 202.319,
+          "duration": 4.48
+        },
+        {
+          "text": "of juice can lead to excess calorie",
+          "start": 204.959,
+          "duration": 3.92
+        },
+        {
+          "text": "consumption contributing to weight gain",
+          "start": 206.799,
+          "duration": 4.44
+        },
+        {
+          "text": "over time",
+          "start": 208.879,
+          "duration": 5.321
+        },
+        {
+          "text": "tooth decay the sugar and Juice can",
+          "start": 211.239,
+          "duration": 4.961
+        },
+        {
+          "text": "contribute to cavities especially when",
+          "start": 214.2,
+          "duration": 4.64
+        },
+        {
+          "text": "consumed frequently throughout the day",
+          "start": 216.2,
+          "duration": 4.64
+        },
+        {
+          "text": "drinking juice with meals and using a",
+          "start": 218.84,
+          "duration": 4.679
+        },
+        {
+          "text": "straw may help reduce this",
+          "start": 220.84,
+          "duration": 5.319
+        },
+        {
+          "text": "risk thank you for watching our video",
+          "start": 223.519,
+          "duration": 4.561
+        },
+        {
+          "text": "please do not forget to like and share",
+          "start": 226.159,
+          "duration": 4.201
+        },
+        {
+          "text": "the video also please subscribe to the",
+          "start": 228.08,
+          "duration": 4.28
+        },
+        {
+          "text": "channel to stay updated on our latest",
+          "start": 230.36,
+          "duration": 5.0
+        },
+        {
+          "text": "videos",
+          "start": 232.36,
+          "duration": 3.0
+        }
+      ],
+      "video_id": "-LDjqcvSbP4"
+    }
+  }
+}

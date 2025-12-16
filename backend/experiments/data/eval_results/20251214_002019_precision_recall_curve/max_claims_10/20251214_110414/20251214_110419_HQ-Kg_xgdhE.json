@@ -1,0 +1,161 @@
+{
+  "video_id": "HQ-Kg_xgdhE",
+  "timestamp": "2025-12-14T11:04:19.350871",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_10",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.7,
+    "recall": 0.35,
+    "f1_score": 0.4666666666666667,
+    "true_positives": 7,
+    "false_positives": 3,
+    "false_negatives": 13,
+    "mean_average_precision": 0.7113945578231293,
+    "recall_at_important": 0.42857142857142855,
+    "importance_weighted_coverage": 0.3543859649122807,
+    "matched_claims": [
+      {
+        "gt_text": "In 2008 prices in Zimbabwe doubled every 24 hours",
+        "sys_text": "In 2008, prices in Zimbabwe doubled every 24 hours due to inflation.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.8,
+        "importance_error": 0.04999999999999993
+      },
+      {
+        "gt_text": "When McDonald's launched the Big Mac in 1967 it cost just 45 cents",
+        "sys_text": "The Big Mac cost 45 cents in 1967 and now costs $3.99.",
+        "gt_importance": 0.35,
+        "sys_importance": 0.7,
+        "importance_error": 0.35
+      },
+      {
+        "gt_text": "If your income isn't keeping up with prices you're getting poorer",
+        "sys_text": "If income doesn't keep up with inflation, individuals become poorer.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.7,
+        "importance_error": 0.050000000000000044
+      },
+      {
+        "gt_text": "Just as inflation eats into debt it also eats into savings",
+        "sys_text": "Inflation reduces the purchasing power of savings over time.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.6,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "In a stable economy prices usually go up steadily over time by 1 or 2 percent a year",
+        "sys_text": "In a stable economy, prices usually rise by 1 or 2% a year.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.55,
+        "importance_error": 0.19999999999999996
+      },
+      {
+        "gt_text": "A small amount of inflation is usually seen as a good thing",
+        "sys_text": "A small amount of inflation is usually seen as beneficial for economic growth.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.5,
+        "importance_error": 0.35
+      },
+      {
+        "gt_text": "Inflation is just the average rate that prices are rising",
+        "sys_text": "Inflation is the average rate at which prices are rising.",
+        "gt_importance": 0.8,
+        "sys_importance": 0.4,
+        "importance_error": 0.4
+      }
+    ],
+    "missed_claims": [
+      "The same Big Mac now costs $3.99",
+      "The government printed more and more money",
+      "Before long everyone was a trillionaire",
+      "Things got so bad that the country ran out of paper to print all the bank notes",
+      "Once an inflationary spiral like this begins it's almost impossible to get out of",
+      "Governments must either devalue their currency or ditch it all together",
+      "This is what happened in Germany in the 1920s",
+      "It helps keep an economy growing",
+      "It also staves off the threat of deflation",
+      "A bit of inflation is good news if you're in debt",
+      "Just ask anyone who took out a mortgage on a low interest rate before a property boom",
+      "It's bad news for savers",
+      "Money stashed in your piggy bank will buy you less in 5 years time than it will today"
+    ],
+    "extra_claims": [
+      "The government printed more money in Zimbabwe, leading to hyperinflation.",
+      "Inflation is monitored by statistical bureaus that track price changes.",
+      "Germany experienced hyperinflation in the 1920s."
+    ],
+    "importance_mae": 0.21428571428571427,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.0,
+    "stance_accuracy": 0.0,
+    "correct_verdicts": 0,
+    "total_verdicts": 7,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "In 2008 prices in Zimbabwe doubled every 24 hours",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "When McDonald's launched the Big Mac in 1967 it cost just 45 cents",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "If your income isn't keeping up with prices you're getting poorer",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Just as inflation eats into debt it also eats into savings",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "In a stable economy prices usually go up steadily over time by 1 or 2 percent a year",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "A small amount of inflation is usually seen as a good thing",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Inflation is just the average rate that prices are rising",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.35,
+    "verdict_accuracy": 0.0,
+    "evidence_quality_avg": 0.4,
+    "total_cost_usd": 0.0018969,
+    "total_time_seconds": 95.11241912841797,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 0.4,
+    "avg_sources_per_query": 0.95
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 14,
+      "medium": 5
+    },
+    "avg_evidence_per_claim": 1.9
+  },
+  "ground_truth_claims_count": 20,
+  "system_claims_count": 10
+}

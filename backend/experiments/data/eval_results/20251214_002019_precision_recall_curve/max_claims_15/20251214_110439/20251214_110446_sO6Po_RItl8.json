@@ -1,0 +1,142 @@
+{
+  "video_id": "sO6Po_RItl8",
+  "timestamp": "2025-12-14T11:04:46.531545",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_15",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.6,
+    "recall": 0.5,
+    "f1_score": 0.5454545454545454,
+    "true_positives": 6,
+    "false_positives": 4,
+    "false_negatives": 6,
+    "mean_average_precision": 0.83015873015873,
+    "recall_at_important": 0.5714285714285714,
+    "importance_weighted_coverage": 0.5314285714285715,
+    "matched_claims": [
+      {
+        "gt_text": "Scientists at UCT have uncovered garlic's cancer fighting properties",
+        "sys_text": "Scientists at UCT uncovered garlic's cancer-fighting properties.",
+        "gt_importance": 0.95,
+        "sys_importance": 0.85,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "To get the cancer fighting compound ajoene, you need to crush the garlic clove and then heat the preparation",
+        "sys_text": "A compound found in crushed garlic cloves can kill cancer cells.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.85,
+        "importance_error": 0.0
+      },
+      {
+        "gt_text": "Allicin changes over time when heated during food preparation into a cancer fighting compound called ajoene",
+        "sys_text": "Heating crushed garlic transforms allicin into a cancer-fighting compound called auine.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.85,
+        "importance_error": 0.050000000000000044
+      },
+      {
+        "gt_text": "Epidemiological evidence shows populations who consume high quantities of garlic have lower incidence of gastrointestinal cancer, specifically stomach and colon",
+        "sys_text": "Garlic consumption is linked to lower incidence of gastrointestinal cancers.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.8,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "When garlic cloves are first crushed, a compound called allicin is released which has antibacterial properties",
+        "sys_text": "The compound allicin is released when garlic cloves are crushed.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.6,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "Garlic has been used throughout the centuries for culinary and medical benefits",
+        "sys_text": "Garlic is a natural compound that has antibacterial properties.",
+        "gt_importance": 0.35,
+        "sys_importance": 0.5,
+        "importance_error": 0.15000000000000002
+      }
+    ],
+    "missed_claims": [
+      "Dr. Catherine Kaschula is a lecturer in the department of Chemistry at UCT",
+      "Ajoene contains disulfide bonds which give it the potent garlic smell",
+      "Ajoene is able to enter into cancer cells and disrupt the intracellular machinery, bringing about a toxic effect that kills the cancer cell",
+      "Ajoene has been shown to be cytotoxic to a range of different types of cancers",
+      "Oral exposure through eating cooked garlic would probably have the greatest effect on gastrointestinal cancers",
+      "A chemical transformation takes place when crushed garlic is heated, converting compounds in the crushed clove into ajoene"
+    ],
+    "extra_claims": [
+      "Auine can enter cancer cells and disrupt their machinery, killing them.",
+      "Crushed garlic needs to be heated to achieve the cancer-fighting transformation.",
+      "Auine has been shown to be cytotoxic to a range of different types of cancers.",
+      "The highest concentration of auine is obtained through cooking garlic."
+    ],
+    "importance_mae": 0.08333333333333333,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.0,
+    "stance_accuracy": 0.0,
+    "correct_verdicts": 0,
+    "total_verdicts": 6,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "Scientists at UCT have uncovered garlic's cancer fighting properties",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "To get the cancer fighting compound ajoene, you need to crush the garlic clove and then heat the preparation",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Allicin changes over time when heated during food preparation into a cancer fighting compound called ajoene",
+        "gt_verdict": "REFUTES",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Epidemiological evidence shows populations who consume high quantities of garlic have lower incidence of gastrointestinal cancer, specifically stomach and colon",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "When garlic cloves are first crushed, a compound called allicin is released which has antibacterial properties",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Garlic has been used throughout the centuries for culinary and medical benefits",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.5,
+    "verdict_accuracy": 0.0,
+    "evidence_quality_avg": 0.6,
+    "total_cost_usd": 0.00161445,
+    "total_time_seconds": 96.78416776657104,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 0.6,
+    "avg_sources_per_query": 1.55
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 31
+    },
+    "avg_evidence_per_claim": 3.1
+  },
+  "ground_truth_claims_count": 12,
+  "system_claims_count": 10
+}

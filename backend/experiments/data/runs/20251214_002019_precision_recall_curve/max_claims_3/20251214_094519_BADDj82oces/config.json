@@ -1,0 +1,23 @@
+{
+  "run_id": "20251214_094519_BADDj82oces",
+  "experiment_name": "precision_recall_curve_fix_missing_runs_claims3_immunology_battle_hiv",
+  "component": "end_to_end",
+  "timestamp": "2025-12-14T09:46:14.559873",
+  "video_url": "https://www.youtube.com/watch?v=BADDj82oces",
+  "max_claims": 3,
+  "max_queries_per_claim": 2,
+  "max_results_per_query": 3,
+  "headless_search": true,
+  "model_config": {
+    "claim_extractor": "OPENAI_GPT4O_MINI",
+    "query_generator": "OPENAI_GPT4O_MINI",
+    "evidence_extractor": "OPENAI_GPT4O_MINI",
+    "output_generator": "OPENAI_GPT4O_MINI"
+  },
+  "model_summary": "CE:gpt-4o-mini | QG:gpt-4o-mini | EE:gpt-4o-mini | OG:gpt-4o-mini",
+  "parallelization": "async",
+  "video_title": "Immunology wars: The battle with HIV",
+  "transcript_length": 2479,
+  "transcript_tokens": 410,
+  "video_duration_seconds": 178.23999999999998
+}

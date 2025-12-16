@@ -1,0 +1,310 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:42:38.992550",
+    "latency_seconds": 15.15,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\n[Music] when McDonald's launched the Big Mac in 1967 it cost just 45 but the same Big Mac now cost $3.99 why the answer is inflation to see how fast prices are rising everything from the price of a leg wax to the cost of a bottle of whiskey are closely monitored by statistical bureaus these changes in prices are entered into a calculator and out comes one single percentage number the rate of inflation and this number helps government set welfare payments and helps you decide how much to ask your boss for a pay rise in a stable economy prices usually go up steadily over time by 1 or 2% a year but sometimes things get out of hand in 2008 prices in Zimbabwe doubled every 24 hours the government printed more and more money before long everyone was a trillionaire things got so bad that the country ran out of paper to print all the bank notes once an inflationary spiral like this begins it's almost impossible to get out of and governments must either devalue their currency or ditch it all together this is what happened in Germany in the 1920s so is inflation bad not so fast a small amount of inflation is usually seen as a good thing it helps keep an economy growing and it also staves off the threat of deflation and a bit of inflation is good news if you're in debt just ask anyone who took out a mortgage on a low interest rate before a property boom but it's bad news for Savers just as inflation eats into debt it also eats into savings 00 stashed in your piggy bank will buy you less in 5 years time than it will today if your income isn't keeping up with prices you're getting poorer for one of the most important Concepts in economics it's also one of the simplest inflation is just the average rate that prices are rising",
+    "input_length_chars": 1799,
+    "input_tokens_estimated": 449,
+    "output": {
+      "claims": [
+        {
+          "text": "The Big Mac cost 45 cents in 1967 and now costs $3.99.",
+          "confidence": 0.9,
+          "category": "economic",
+          "importance": 0.85,
+          "context": "Comparison of Big Mac prices over time, illustrating inflation."
+        },
+        {
+          "text": "Inflation is monitored by statistical bureaus that track price changes.",
+          "confidence": 0.8,
+          "category": "economic",
+          "importance": 0.6,
+          "context": "Describes how inflation is calculated and its significance."
+        },
+        {
+          "text": "In a stable economy, prices usually rise by 1 or 2% a year.",
+          "confidence": 0.85,
+          "category": "economic",
+          "importance": 0.6,
+          "context": "General statement about price stability and inflation."
+        },
+        {
+          "text": "In 2008, prices in Zimbabwe doubled every 24 hours due to inflation.",
+          "confidence": 0.9,
+          "category": "historical",
+          "importance": 0.85,
+          "context": "Historical example of extreme inflation in Zimbabwe."
+        },
+        {
+          "text": "The government of Zimbabwe printed more money, leading to hyperinflation.",
+          "confidence": 0.9,
+          "category": "historical",
+          "importance": 0.8,
+          "context": "Describes the cause of hyperinflation in Zimbabwe."
+        },
+        {
+          "text": "Germany experienced hyperinflation in the 1920s, leading to currency devaluation.",
+          "confidence": 0.85,
+          "category": "historical",
+          "importance": 0.8,
+          "context": "Historical reference to Germany's inflation crisis."
+        },
+        {
+          "text": "Inflation reduces the purchasing power of savings over time.",
+          "confidence": 0.85,
+          "category": "economic",
+          "importance": 0.7,
+          "context": "Explains the impact of inflation on savings."
+        }
+      ],
+      "total_count": 7
+    },
+    "output_length_chars": 2047,
+    "output_tokens_estimated": 511,
+    "cost_usd": 0.00037395
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:42:41.452591",
+    "latency_seconds": 1.86,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Inflation reduces the purchasing power of savings over time.\nContext: Explains the impact of inflation on savings.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 287,
+    "input_tokens_estimated": 71,
+    "output": {
+      "original_claim": "Inflation reduces the purchasing power of savings over time.",
+      "queries": [
+        {
+          "query": "impact of inflation on purchasing power of savings",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "how inflation affects savings purchasing power",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 306,
+    "output_tokens_estimated": 76,
+    "cost_usd": 5.625e-05,
+    "context": {
+      "claim_index": 7,
+      "claim_text": "In a stable economy, prices usually rise by 1 or 2% a year."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:42:41.578077",
+    "latency_seconds": 1.99,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The government of Zimbabwe printed more money, leading to hyperinflation.\nContext: Describes the cause of hyperinflation in Zimbabwe.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 306,
+    "input_tokens_estimated": 76,
+    "output": {
+      "original_claim": "The government of Zimbabwe printed more money, leading to hyperinflation.",
+      "queries": [
+        {
+          "query": "Zimbabwe government printed money hyperinflation",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "causes of hyperinflation in Zimbabwe money supply",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 320,
+    "output_tokens_estimated": 80,
+    "cost_usd": 5.94e-05,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "Inflation reduces the purchasing power of savings over time.",
+      "query_index": 2,
+      "query_text": "how inflation affects savings purchasing power"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:42:41.578490",
+    "latency_seconds": 1.99,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The Big Mac cost 45 cents in 1967 and now costs $3.99.\nContext: Comparison of Big Mac prices over time, illustrating inflation.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 300,
+    "input_tokens_estimated": 75,
+    "output": {
+      "original_claim": "The Big Mac cost 45 cents in 1967 and now costs $3.99.",
+      "queries": [
+        {
+          "query": "Big Mac price 1967 45 cents",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "current Big Mac price 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 257,
+    "output_tokens_estimated": 64,
+    "cost_usd": 4.965e-05,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "Inflation reduces the purchasing power of savings over time.",
+      "query_index": 2,
+      "query_text": "how inflation affects savings purchasing power"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:42:41.747041",
+    "latency_seconds": 2.15,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: In 2008, prices in Zimbabwe doubled every 24 hours due to inflation.\nContext: Historical example of extreme inflation in Zimbabwe.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 303,
+    "input_tokens_estimated": 75,
+    "output": {
+      "original_claim": "In 2008, prices in Zimbabwe doubled every 24 hours due to inflation.",
+      "queries": [
+        {
+          "query": "Zimbabwe inflation 2008 prices doubled every 24 hours",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Zimbabwe hyperinflation 2008 price increase daily",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 320,
+    "output_tokens_estimated": 80,
+    "cost_usd": 5.925e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The Big Mac cost 45 cents in 1967 and now costs $3.99.",
+      "query_index": 2,
+      "query_text": "current Big Mac price 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:43:14.781253",
+    "latency_seconds": 23.83,
+    "input_prompt": "Claim:\nIn 2008, prices in Zimbabwe doubled every 24 hours due to inflation.\n\nArticle Title:\nHow Zimbabwe's hyperinflation led to an economic spiral - Upstox\n\nFull Page Content:\nPrices were doubling every 24 hours, and the Reserve Bank of Zimbabwe continued to print money in increasingly higher denominations ...\n\nProvide relevant evidence.",
+    "input_length_chars": 340,
+    "input_tokens_estimated": 85,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that prices in Zimbabwe were indeed doubling every 24 hours during the hyperinflation period, as stated in the claim.",
+      "overall_stance": "supports",
+      "key_quote": "Prices were doubling every 24 hours."
+    },
+    "output_length_chars": 261,
+    "output_tokens_estimated": 65,
+    "cost_usd": 5.175e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:43:15.765528",
+    "latency_seconds": 27.58,
+    "input_prompt": "Claim:\nInflation reduces the purchasing power of savings over time.\n\nArticle Title:\nHow Inflation Impacts Savings - Investopedia\n\nGoogle Search Snippet:\nInflation causes prices to rise over time, reducing the value of an investor's savings and purchasing power.\n\nFull Page Content:\nInvestors can take steps to lessen the effects\nJLGutierrez / Getty Images\nStore and/or access information on a device. Use limited data to select advertising. Create profiles for personalised advertising. Use profiles to select personalised advertising. Create profiles to personalise content. Use profiles to select personalised content. Measure advertising performance. Measure content performance. Understand audiences through statistics or combinations of data from different sources. Develop and improve services. Use limited data to select content. List of Partners (vendors)\n\nProvide relevant evidence.",
+    "input_length_chars": 891,
+    "input_tokens_estimated": 222,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that inflation leads to rising prices, which in turn diminishes the value of savings and reduces purchasing power over time.",
+      "overall_stance": "supports",
+      "key_quote": "Inflation causes prices to rise over time, reducing the value of an investor's savings and purchasing power."
+    },
+    "output_length_chars": 340,
+    "output_tokens_estimated": 85,
+    "cost_usd": 8.43e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:43:16.599182",
+    "latency_seconds": 23.26,
+    "input_prompt": "Claim:\nThe government of Zimbabwe printed more money, leading to hyperinflation.\n\nArticle Title:\n[PDF] ANALYSIS OF THE ZIMBABWEAN HYPERINFLATION CRISIS\n\nGoogle Search Snippet:\nThe most common explanation of the causality is based on fiscal deficits causing some degree of inflation, which in turn causes the government to print money in ...\n\nFull Page Content:\nHyperinflation in Zimbabwe is an ongoing period of currency instability in Zimbabwe which, using Cagan's definition of hyperinflation, began in February 2007. During the height of inflation from 2008 to 2009, it was difficult to measure Zimbabwe's hyperinflation because the government of Zimbabwe stopped filing official inflation statistics. However, Zimbabwe's peak month of inflation is estimated at 79.6 billion percent month-on-month, 89.7 sextillion ( ) percent year-on-year in mid-November 2008.[1] At that time, a $100 trillion banknote could not pay for a simple bus fare.[2]\nIn April 2009, Zimbabwe stopped printing its currency, and currencies from other countries were used.[3] In mid-2015, Zimbabwe announced plans to have completely switched to the United States dollar by the end of that year.[4]\nIn June 2019, the Zimbabwean government announced the reintroduction of the Real Time Gross Settlement dollar (RTGS), to be known simply as the \"Zimbabwe dollar\", and that all foreign currency was no longer legal tender.[5] By mid-July 2019, inflation had increased to 175%, sparking concerns that the country was entering another period of hyperinflation.[6][7] In March 2020, with inflation above 500% annually, a new task force was created to assess the currency problems.[8][9] By July 2020, annual inflation was estimated to be 737%.[10]\nOn 18 April 1980, the Republic of Zimbabwe was born from the former Republic of Rhodesia. The Rhodesian dollar was replaced by the Zimbabwean dollar at par value. When Zimbabwe gained its independence from the United Kingdom, the newly introduced Zimbabwean dollar was initially more valuable than the United States dollar at the official exchange rate. However, that did not reflect reality because, in terms of purchasing power on the open and black markets, it was less valuable, due primarily to the higher inflation in Zimbabwe.[11][12] In its early years, Zimbabwe experienced strong growth and development. Wheat production for non-drought years was proportionally higher than previously, and the tobacco industry was thriving. Economic indicators for the country were strong.\nFrom 1991 to 1996, the Zimbabwean ZANU\u2013PF President Robert Mugabe embarked on an Economic Structural Adjustment Programme (ESAP) that had serious negative effects on Zimbabwe's economy. In the late 1990s, the government instituted land reforms in the name of anti-colonialism intended to evict white landowners and place their holdings in the hands of black farmers. However, many of the new farmers had no experience or training in agriculture.[13] Many farms simply fell into disrepair or were given to Mugabe loyalists. From 1999 to 2009, the country experienced a sharp drop in food production and in all other sectors. The banking sector also collapsed, with farmers unable to obtain loans for capital development. Food output fell 45%, and manufacturing output fell by 29% in 2005, 26% in 2006 and 28% in 2007. Unemployment rose to 80%.[14] Life expectancy dropped.[15] Much of the nation's middle class fled the country en masse taking much of the nation's capital. The Reserve Bank of Zimbabwe blamed the hyperinflation on economic sanctions imposed by the United States of America, the IMF, and the European Union.[16][17] These sanctions affected the government of Zimbabwe,[18] asset freezes and visa denials targeted at 200 specific Zimbabweans closely tied to the Mugabe regime.[19] There were also restrictions placed on trade with Zimbabwe, by both individual businesses and the US Treasury Department's Office of Foreign Assets Control.[20]\nA monetarist view[21] is that a general increase in the prices of things is less a commentary on the worth of those things than on the worth of the money. This has objective and subjective components:\nCrucial to both components is discipline over the creation of additional money. However, the Mugabe government was printing money to finance military involvement in the Democratic Republic of the Congo and, in 2000, in the Second Congo War, including higher salaries for army and government officials. Zimbabwe was under-reporting its war spending to the International Monetary Fund by $22 million a month.[22]\nAnother motive for excessive money creation has been self-dealing. Transparency International ranks Zimbabwe's government 157th of 177[23] in terms of institutionalised corruption.[24] The resulting lack of confidence in government undermines confidence in the future and faith in the currency.\nEconomic missteps by government can create shortages and occupy people with workarounds rather than productivity. Though this harms the economy, it does not necessarily undermine the value of the currency, but may harm confidence in the future. Widespread poverty and violence, including government violence to stifle political opposition, also undermines confidence in the future.[25] Land reform lowered agricultural output, especially in tobacco, which accounted for one-third of Zimbabwe's foreign-exchange earnings. Manufacturing and mining also declined. An objective reason was, again, that farms were put in the hands of inexperienced people; and subjectively, that the move undermined the security of property.\nGovernment instability and civic unrest were evident in other areas.[26] Zimbabwean troops, trained by North Korean soldiers, conducted a massacre in the 1980s in the southern provinces of Matabeleland and Midlands, though Mugabe's government cites guerrilla attacks on civilian and state targets. Conflicts between the Ndebele people and Mugabe's government have led to many clashes.[27] There was also unrest between black people and white people, in which the land reform was a factor. One aspect of this reform sought to discriminate against white people specifically and many were forced by the regime to sign over their businesses to the black majority.[28]\nThe Reserve Bank of Zimbabwe responded to the dwindling value of the dollar by repeatedly arranging the printing\n\nProvide relevant evidence.",
+    "input_length_chars": 6389,
+    "input_tokens_estimated": 1597,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that the Zimbabwean government printed money to finance military involvement and other expenditures, which contributed to hyperinflation. This aligns with the claim that the government's actions led to hyperinflation.",
+      "overall_stance": "supports",
+      "key_quote": "the Mugabe government was printing money to finance military involvement in the Democratic Republic of the Congo..."
+    },
+    "output_length_chars": 441,
+    "output_tokens_estimated": 110,
+    "cost_usd": 0.00030555
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:43:17.235511",
+    "latency_seconds": 24.22,
+    "input_prompt": "Claim:\nIn 2008, prices in Zimbabwe doubled every 24 hours due to inflation.\n\nArticle Title:\nHyper Inflation in Zimbabwe - Economics Help\n\nGoogle Search Snippet:\nThat is effectively a daily inflation rate of 98.0. Roughly every day, prices would double. It was also a time of real hardship and poverty, ...\n\nFull Page Content:\nHyperinflation in Zimbabwe is an ongoing period of currency instability in Zimbabwe which, using Cagan's definition of hyperinflation, began in February 2007. During the height of inflation from 2008 to 2009, it was difficult to measure Zimbabwe's hyperinflation because the government of Zimbabwe stopped filing official inflation statistics. However, Zimbabwe's peak month of inflation is estimated at 79.6 billion percent month-on-month, 89.7 sextillion ( ) percent year-on-year in mid-November 2008.[1] At that time, a $100 trillion banknote could not pay for a simple bus fare.[2]\nIn April 2009, Zimbabwe stopped printing its currency, and currencies from other countries were used.[3] In mid-2015, Zimbabwe announced plans to have completely switched to the United States dollar by the end of that year.[4]\nIn June 2019, the Zimbabwean government announced the reintroduction of the Real Time Gross Settlement dollar (RTGS), to be known simply as the \"Zimbabwe dollar\", and that all foreign currency was no longer legal tender.[5] By mid-July 2019, inflation had increased to 175%, sparking concerns that the country was entering another period of hyperinflation.[6][7] In March 2020, with inflation above 500% annually, a new task force was created to assess the currency problems.[8][9] By July 2020, annual inflation was estimated to be 737%.[10]\nOn 18 April 1980, the Republic of Zimbabwe was born from the former Republic of Rhodesia. The Rhodesian dollar was replaced by the Zimbabwean dollar at par value. When Zimbabwe gained its independence from the United Kingdom, the newly introduced Zimbabwean dollar was initially more valuable than the United States dollar at the official exchange rate. However, that did not reflect reality because, in terms of purchasing power on the open and black markets, it was less valuable, due primarily to the higher inflation in Zimbabwe.[11][12] In its early years, Zimbabwe experienced strong growth and development. Wheat production for non-drought years was proportionally higher than previously, and the tobacco industry was thriving. Economic indicators for the country were strong.\nFrom 1991 to 1996, the Zimbabwean ZANU\u2013PF President Robert Mugabe embarked on an Economic Structural Adjustment Programme (ESAP) that had serious negative effects on Zimbabwe's economy. In the late 1990s, the government instituted land reforms in the name of anti-colonialism intended to evict white landowners and place their holdings in the hands of black farmers. However, many of the new farmers had no experience or training in agriculture.[13] Many farms simply fell into disrepair or were given to Mugabe loyalists. From 1999 to 2009, the country experienced a sharp drop in food production and in all other sectors. The banking sector also collapsed, with farmers unable to obtain loans for capital development. Food output fell 45%, and manufacturing output fell by 29% in 2005, 26% in 2006 and 28% in 2007. Unemployment rose to 80%.[14] Life expectancy dropped.[15] Much of the nation's middle class fled the country en masse taking much of the nation's capital. The Reserve Bank of Zimbabwe blamed the hyperinflation on economic sanctions imposed by the United States of America, the IMF, and the European Union.[16][17] These sanctions affected the government of Zimbabwe,[18] asset freezes and visa denials targeted at 200 specific Zimbabweans closely tied to the Mugabe regime.[19] There were also restrictions placed on trade with Zimbabwe, by both individual businesses and the US Treasury Department's Office of Foreign Assets Control.[20]\nA monetarist view[21] is that a general increase in the prices of things is less a commentary on the worth of those things than on the worth of the money. This has objective and subjective components:\nCrucial to both components is discipline over the creation of additional money. However, the Mugabe government was printing money to finance military involvement in the Democratic Republic of the Congo and, in 2000, in the Second Congo War, including higher salaries for army and government officials. Zimbabwe was under-reporting its war spending to the International Monetary Fund by $22 million a month.[22]\nAnother motive for excessive money creation has been self-dealing. Transparency International ranks Zimbabwe's government 157th of 177[23] in terms of institutionalised corruption.[24] The resulting lack of confidence in government undermines confidence in the future and faith in the currency.\nEconomic missteps by government can create shortages and occupy people with workarounds rather than productivity. Though this harms the economy, it does not necessarily undermine the value of the currency, but may harm confidence in the future. Widespread poverty and violence, including government violence to stifle political opposition, also undermines confidence in the future.[25] Land reform lowered agricultural output, especially in tobacco, which accounted for one-third of Zimbabwe's foreign-exchange earnings. Manufacturing and mining also declined. An objective reason was, again, that farms were put in the hands of inexperienced people; and subjectively, that the move undermined the security of property.\nGovernment instability and civic unrest were evident in other areas.[26] Zimbabwean troops, trained by North Korean soldiers, conducted a massacre in the 1980s in the southern provinces of Matabeleland and Midlands, though Mugabe's government cites guerrilla attacks on civilian and state targets. Conflicts between the Ndebele people and Mugabe's government have led to many clashes.[27] There was also unrest between black people and white people, in which the land reform was a factor. One aspect of this reform sought to discriminate against white people specifically and many were forced by the regime to sign over their businesses to the black majority.[28]\nThe Reserve Bank of Zimbabwe responded to the dwindling value of the dollar by repeatedly arranging the printing\n\nProvide relevant evidence.",
+    "input_length_chars": 6354,
+    "input_tokens_estimated": 1588,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that during the height of hyperinflation in Zimbabwe from 2008 to 2009, prices were effectively doubling every day, which aligns with the claim about prices doubling every 24 hours due to inflation.",
+      "overall_stance": "supports",
+      "key_quote": "That is effectively a daily inflation rate of 98.0. Roughly every day, prices would double."
+    },
+    "output_length_chars": 398,
+    "output_tokens_estimated": 99,
+    "cost_usd": 0.0002976
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:43:17.283232",
+    "latency_seconds": 24.25,
+    "input_prompt": "Claim:\nIn 2008, prices in Zimbabwe doubled every 24 hours due to inflation.\n\nArticle Title:\n[PDF] ANALYSIS OF THE ZIMBABWEAN HYPERINFLATION CRISIS\n\nGoogle Search Snippet:\nCagan defines hyperinflations as \u201cbeginning in the month the rise in prices exceeds 50 per cent and ending in the month before the monthly rise in prices drops.\n\nFull Page Content:\nHyperinflation in Zimbabwe is an ongoing period of currency instability in Zimbabwe which, using Cagan's definition of hyperinflation, began in February 2007. During the height of inflation from 2008 to 2009, it was difficult to measure Zimbabwe's hyperinflation because the government of Zimbabwe stopped filing official inflation statistics. However, Zimbabwe's peak month of inflation is estimated at 79.6 billion percent month-on-month, 89.7 sextillion ( ) percent year-on-year in mid-November 2008.[1] At that time, a $100 trillion banknote could not pay for a simple bus fare.[2]\nIn April 2009, Zimbabwe stopped printing its currency, and currencies from other countries were used.[3] In mid-2015, Zimbabwe announced plans to have completely switched to the United States dollar by the end of that year.[4]\nIn June 2019, the Zimbabwean government announced the reintroduction of the Real Time Gross Settlement dollar (RTGS), to be known simply as the \"Zimbabwe dollar\", and that all foreign currency was no longer legal tender.[5] By mid-July 2019, inflation had increased to 175%, sparking concerns that the country was entering another period of hyperinflation.[6][7] In March 2020, with inflation above 500% annually, a new task force was created to assess the currency problems.[8][9] By July 2020, annual inflation was estimated to be 737%.[10]\nOn 18 April 1980, the Republic of Zimbabwe was born from the former Republic of Rhodesia. The Rhodesian dollar was replaced by the Zimbabwean dollar at par value. When Zimbabwe gained its independence from the United Kingdom, the newly introduced Zimbabwean dollar was initially more valuable than the United States dollar at the official exchange rate. However, that did not reflect reality because, in terms of purchasing power on the open and black markets, it was less valuable, due primarily to the higher inflation in Zimbabwe.[11][12] In its early years, Zimbabwe experienced strong growth and development. Wheat production for non-drought years was proportionally higher than previously, and the tobacco industry was thriving. Economic indicators for the country were strong.\nFrom 1991 to 1996, the Zimbabwean ZANU\u2013PF President Robert Mugabe embarked on an Economic Structural Adjustment Programme (ESAP) that had serious negative effects on Zimbabwe's economy. In the late 1990s, the government instituted land reforms in the name of anti-colonialism intended to evict white landowners and place their holdings in the hands of black farmers. However, many of the new farmers had no experience or training in agriculture.[13] Many farms simply fell into disrepair or were given to Mugabe loyalists. From 1999 to 2009, the country experienced a sharp drop in food production and in all other sectors. The banking sector also collapsed, with farmers unable to obtain loans for capital development. Food output fell 45%, and manufacturing output fell by 29% in 2005, 26% in 2006 and 28% in 2007. Unemployment rose to 80%.[14] Life expectancy dropped.[15] Much of the nation's middle class fled the country en masse taking much of the nation's capital. The Reserve Bank of Zimbabwe blamed the hyperinflation on economic sanctions imposed by the United States of America, the IMF, and the European Union.[16][17] These sanctions affected the government of Zimbabwe,[18] asset freezes and visa denials targeted at 200 specific Zimbabweans closely tied to the Mugabe regime.[19] There were also restrictions placed on trade with Zimbabwe, by both individual businesses and the US Treasury Department's Office of Foreign Assets Control.[20]\nA monetarist view[21] is that a general increase in the prices of things is less a commentary on the worth of those things than on the worth of the money. This has objective and subjective components:\nCrucial to both components is discipline over the creation of additional money. However, the Mugabe government was printing money to finance military involvement in the Democratic Republic of the Congo and, in 2000, in the Second Congo War, including higher salaries for army and government officials. Zimbabwe was under-reporting its war spending to the International Monetary Fund by $22 million a month.[22]\nAnother motive for excessive money creation has been self-dealing. Transparency International ranks Zimbabwe's government 157th of 177[23] in terms of institutionalised corruption.[24] The resulting lack of confidence in government undermines confidence in the future and faith in the currency.\nEconomic missteps by government can create shortages and occupy people with workarounds rather than productivity. Though this harms the economy, it does not necessarily undermine the value of the currency, but may harm confidence in the future. Widespread poverty and violence, including government violence to stifle political opposition, also undermines confidence in the future.[25] Land reform lowered agricultural output, especially in tobacco, which accounted for one-third of Zimbabwe's foreign-exchange earnings. Manufacturing and mining also declined. An objective reason was, again, that farms were put in the hands of inexperienced people; and subjectively, that the move undermined the security of property.\nGovernment instability and civic unrest were evident in other areas.[26] Zimbabwean troops, trained by North Korean soldiers, conducted a massacre in the 1980s in the southern provinces of Matabeleland and Midlands, though Mugabe's government cites guerrilla attacks on civilian and state targets. Conflicts between the Ndebele people and Mugabe's government have led to many clashes.[27] There was also unrest between black people and white people, in which the land reform was a factor. One aspect of this reform sought to discriminate against white people specifically and many were forced by the regime to sign over their businesses to the black majority.[28]\nThe Reserve Bank of Zimbabwe responded to the dwindling value of the dollar by repeatedly arranging the printing\n\nProvide relevant evidence.",
+    "input_length_chars": 6380,
+    "input_tokens_estimated": 1595,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that during the height of hyperinflation in Zimbabwe from 2008 to 2009, prices were rising at an extraordinary rate, with estimates of inflation reaching 79.6 billion percent month-on-month in November 2008, suggesting that prices could indeed have doubled every 24 hours.",
+      "overall_stance": "supports",
+      "key_quote": "Zimbabwe's peak month of inflation is estimated at 79.6 billion percent month-on-month, 89.7 sextillion percent year-on-year in mid-November 2008."
+    },
+    "output_length_chars": 527,
+    "output_tokens_estimated": 131,
+    "cost_usd": 0.00031785
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:43:18.387775",
+    "latency_seconds": 25.37,
+    "input_prompt": "Claim:\nIn 2008, prices in Zimbabwe doubled every 24 hours due to inflation.\n\nArticle Title:\nZimbabwe's inflation rate surges to 231000000% - The Guardian\n\nGoogle Search Snippet:\nZimbabwe's official inflation rate has surged to 231,000,000% as the opposition appealed to South Africa's former president, Thabo Mbeki, ...\n\nFull Page Content:\nHyperinflation in Zimbabwe is an ongoing period of currency instability in Zimbabwe which, using Cagan's definition of hyperinflation, began in February 2007. During the height of inflation from 2008 to 2009, it was difficult to measure Zimbabwe's hyperinflation because the government of Zimbabwe stopped filing official inflation statistics. However, Zimbabwe's peak month of inflation is estimated at 79.6 billion percent month-on-month, 89.7 sextillion ( ) percent year-on-year in mid-November 2008.[1] At that time, a $100 trillion banknote could not pay for a simple bus fare.[2]\nIn April 2009, Zimbabwe stopped printing its currency, and currencies from other countries were used.[3] In mid-2015, Zimbabwe announced plans to have completely switched to the United States dollar by the end of that year.[4]\nIn June 2019, the Zimbabwean government announced the reintroduction of the Real Time Gross Settlement dollar (RTGS), to be known simply as the \"Zimbabwe dollar\", and that all foreign currency was no longer legal tender.[5] By mid-July 2019, inflation had increased to 175%, sparking concerns that the country was entering another period of hyperinflation.[6][7] In March 2020, with inflation above 500% annually, a new task force was created to assess the currency problems.[8][9] By July 2020, annual inflation was estimated to be 737%.[10]\nOn 18 April 1980, the Republic of Zimbabwe was born from the former Republic of Rhodesia. The Rhodesian dollar was replaced by the Zimbabwean dollar at par value. When Zimbabwe gained its independence from the United Kingdom, the newly introduced Zimbabwean dollar was initially more valuable than the United States dollar at the official exchange rate. However, that did not reflect reality because, in terms of purchasing power on the open and black markets, it was less valuable, due primarily to the higher inflation in Zimbabwe.[11][12] In its early years, Zimbabwe experienced strong growth and development. Wheat production for non-drought years was proportionally higher than previously, and the tobacco industry was thriving. Economic indicators for the country were strong.\nFrom 1991 to 1996, the Zimbabwean ZANU\u2013PF President Robert Mugabe embarked on an Economic Structural Adjustment Programme (ESAP) that had serious negative effects on Zimbabwe's economy. In the late 1990s, the government instituted land reforms in the name of anti-colonialism intended to evict white landowners and place their holdings in the hands of black farmers. However, many of the new farmers had no experience or training in agriculture.[13] Many farms simply fell into disrepair or were given to Mugabe loyalists. From 1999 to 2009, the country experienced a sharp drop in food production and in all other sectors. The banking sector also collapsed, with farmers unable to obtain loans for capital development. Food output fell 45%, and manufacturing output fell by 29% in 2005, 26% in 2006 and 28% in 2007. Unemployment rose to 80%.[14] Life expectancy dropped.[15] Much of the nation's middle class fled the country en masse taking much of the nation's capital. The Reserve Bank of Zimbabwe blamed the hyperinflation on economic sanctions imposed by the United States of America, the IMF, and the European Union.[16][17] These sanctions affected the government of Zimbabwe,[18] asset freezes and visa denials targeted at 200 specific Zimbabweans closely tied to the Mugabe regime.[19] There were also restrictions placed on trade with Zimbabwe, by both individual businesses and the US Treasury Department's Office of Foreign Assets Control.[20]\nA monetarist view[21] is that a general increase in the prices of things is less a commentary on the worth of those things than on the worth of the money. This has objective and subjective components:\nCrucial to both components is discipline over the creation of additional money. However, the Mugabe government was printing money to finance military involvement in the Democratic Republic of the Congo and, in 2000, in the Second Congo War, including higher salaries for army and government officials. Zimbabwe was under-reporting its war spending to the International Monetary Fund by $22 million a month.[22]\nAnother motive for excessive money creation has been self-dealing. Transparency International ranks Zimbabwe's government 157th of 177[23] in terms of institutionalised corruption.[24] The resulting lack of confidence in government undermines confidence in the future and faith in the currency.\nEconomic missteps by government can create shortages and occupy people with workarounds rather than productivity. Though this harms the economy, it does not necessarily undermine the value of the currency, but may harm confidence in the future. Widespread poverty and violence, including government violence to stifle political opposition, also undermines confidence in the future.[25] Land reform lowered agricultural output, especially in tobacco, which accounted for one-third of Zimbabwe's foreign-exchange earnings. Manufacturing and mining also declined. An objective reason was, again, that farms were put in the hands of inexperienced people; and subjectively, that the move undermined the security of property.\nGovernment instability and civic unrest were evident in other areas.[26] Zimbabwean troops, trained by North Korean soldiers, conducted a massacre in the 1980s in the southern provinces of Matabeleland and Midlands, though Mugabe's government cites guerrilla attacks on civilian and state targets. Conflicts between the Ndebele people and Mugabe's government have led to many clashes.[27] There was also unrest between black people and white people, in which the land reform was a factor. One aspect of this reform sought to discriminate against white people specifically and many were forced by the regime to sign over their businesses to the black majority.[28]\nThe Reserve Bank of Zimbabwe responded to the dwindling value of the dollar by repeatedly arranging the printing\n\nProvide relevant evidence.",
+    "input_length_chars": 6368,
+    "input_tokens_estimated": 1592,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that during the height of hyperinflation in Zimbabwe from 2008 to 2009, inflation rates were extraordinarily high, with estimates suggesting a peak month of inflation at 79.6 billion percent month-on-month, which implies that prices were indeed rising rapidly, potentially doubling every 24 hours.",
+      "overall_stance": "supports",
+      "key_quote": "Zimbabwe's peak month of inflation is estimated at 79.6 billion percent month-on-month."
+    },
+    "output_length_chars": 493,
+    "output_tokens_estimated": 123,
+    "cost_usd": 0.0003126
+  }
+]

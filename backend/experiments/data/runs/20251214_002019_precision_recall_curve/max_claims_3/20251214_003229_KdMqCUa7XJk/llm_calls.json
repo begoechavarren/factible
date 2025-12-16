@@ -1,0 +1,937 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:32:40.031658",
+    "latency_seconds": 9.66,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nThe week of Valentine's Day 2021, the temperature dropped below zero. Nobody could remember it being this cold for this long. This was Texas, not Siberia. But Texas is the energy state. There was nothing to fear. Just go home, turn on the heat, and hunker down. That's how it should have gone. Instead, over five days, four million Texans lost power during what turned out to be the coldest winter storm in a half a century. Hundreds died, including an 11-year-old boy who froze to death in his sleep. The state's electric grid operator, the Electric Reliability Council of Texas, ERCOT, later reported the state was just four minutes away from total grid collapse. The media was quick to blame the state government for not being fully prepared and not acting fast enough. This may be true, but ERCOT's mistakes were symptoms, not the cause, of the problem. The real cause is decades of misguided policies that have left the Lone Star state with an unreliable energy infrastructure. It's a cautionary tale that the rest of the country needs to learn from. From 2010 to 2020, the population of Texas increased by 4 million people, and the state's economy grew by 35%. But while all this growth was happening, the state's reliable energy capacity was actually shrinking. Meanwhile, its unreliable energy capacity was surging. In fact, it almost tripled. Let's break this down. Reliable energy is fossil fuels\u2014coal and natural gas\u2014and nuclear. These fuels produce a near-constant flow of electricity. Unreliable, or variable energy, is renewable energy\u2014wind and solar. They're unreliable because they depend on the whims of Mother Nature. In 2020, Texans got 25% of their energy from renewables. During the February storm, however, that fell to 8%, at one point reaching a deadly low of just 1.5%. The reason? Renewable energy only works when the weather cooperates, but it's useless when it doesn't\u2014like when it conjures up a giant snowstorm. Solar panels don't capture sunlight and wind turbines don't spin when covered in snow and ice. Given renewables' unreliability, how is it that Texas, of all places, became so dependent on them? That story begins in 1999, when Texas politicians on the left and the right fell in love with the idea that they could turn the state into a green energy powerhouse. It sounded like a great idea at the time: Instead of passing any new mandates, they would do it by offering massive subsidies, marketed as \"incentives,\" to produce wind and solar power. This ended up working out great for the wind and solar companies, but not so great for reliable energy providers. To illustrate this, imagine that you own a restaurant. One day you learn that your competitor down the street is getting government support. He gets so much help that, instead of charging his customers, he can pay them to eat his food. Not surprisingly, your customers abandon your restaurant for his. Your competitor prospers off the taxpayers' backs while your business withers. Let's apply this analogy to the real world of renewable energy. Wind and solar get so much in subsidies they're guaranteed a profit. And unlike fossil fuel producers, they're not even required to provide reliable power. It's no wonder fossil fuel plants are closing, and nuclear plants are not being built. The wind and solar companies are protected from the laws of supply and demand. They can't lose, and the fossil fuel plants can't compete. That's how out of whack the Texas electricity market has become. Since 2006, the state has subsidized renewable energy to the tune of $19 billion. All of this came right out of Texans' wallets, courtesy of ever-increasing electric bills and rising property taxes. And what does Texas have to show for it? An electric grid that failed when Texans needed it most. Unfortunately, this scenario is playing out across America. Over the past decade, the federal government has spent over $230 billion on energy subsidies, and that doesn't even include subsidies the states give away. It's true that Uncle Sam also grants favors to fossil fuel companies. Renewable energy advocates love to point this out, but here's what they neglect to mention: compared to fossil fuel companies, for every unit of electricity generated, Washington subsidizes wind 17 times and solar 75 times more. Yet, despite all this aid, renewables provide just 4 percent of the country's total energy supply. The verdict is in: renewable energy is expensive and unreliable. And if it can render America's leading power producer powerless, it can do the same to your state. Government meddling got us into this mess. It's time for politicians to step aside and let the free market get us out of it. I'm Jason Isaac from the Texas Public Policy Foundation, for Prager University.",
+    "input_length_chars": 4829,
+    "input_tokens_estimated": 1207,
+    "output": {
+      "claims": [
+        {
+          "text": "The temperature in Texas dropped below zero during Valentine's week 2021.",
+          "confidence": 0.9,
+          "category": "geographical",
+          "importance": 0.6,
+          "context": "February 2021 winter storm in Texas."
+        },
+        {
+          "text": "Over five days, four million Texans lost power during the storm.",
+          "confidence": 0.95,
+          "category": "statistical",
+          "importance": 0.85,
+          "context": "February 2021 winter storm."
+        },
+        {
+          "text": "The coldest winter storm in Texas in a half a century occurred in February 2021.",
+          "confidence": 0.9,
+          "category": "historical",
+          "importance": 0.6,
+          "context": "February 2021 winter storm."
+        },
+        {
+          "text": "Hundreds died during the February 2021 storm, including an 11-year-old boy.",
+          "confidence": 0.9,
+          "category": "biographical",
+          "importance": 0.7,
+          "context": "February 2021 winter storm."
+        },
+        {
+          "text": "ERCOT reported Texas was four minutes away from total grid collapse.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.8,
+          "context": "ERCOT report during February 2021 storm."
+        },
+        {
+          "text": "From 2010 to 2020, Texas's population increased by 4 million people.",
+          "confidence": 0.95,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Population growth in Texas."
+        },
+        {
+          "text": "Texas's economy grew by 35% from 2010 to 2020.",
+          "confidence": 0.95,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Economic growth in Texas."
+        },
+        {
+          "text": "Reliable energy capacity in Texas was shrinking while unreliable capacity was surging.",
+          "confidence": 0.85,
+          "category": "policy",
+          "importance": 0.7,
+          "context": "Energy capacity trends in Texas."
+        },
+        {
+          "text": "In 2020, Texans got 25% of their energy from renewables, which fell to 8% during the storm.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "Energy sources during February 2021 storm."
+        },
+        {
+          "text": "Since 2006, Texas has subsidized renewable energy by $19 billion.",
+          "confidence": 0.9,
+          "category": "policy",
+          "importance": 0.8,
+          "context": "Subsidies for renewable energy in Texas."
+        },
+        {
+          "text": "The federal government has spent over $230 billion on energy subsidies in the past decade.",
+          "confidence": 0.9,
+          "category": "policy",
+          "importance": 0.7,
+          "context": "Federal energy subsidies over the past decade."
+        },
+        {
+          "text": "For every unit of electricity generated, Washington subsidizes wind 17 times and solar 75 times more than fossil fuels.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "Comparison of energy subsidies."
+        },
+        {
+          "text": "Renewables provide just 4 percent of the country's total energy supply.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Renewable energy supply in the U.S."
+        }
+      ],
+      "total_count": 13
+    },
+    "output_length_chars": 3662,
+    "output_tokens_estimated": 915,
+    "cost_usd": 0.00073005
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:32:45.624135",
+    "latency_seconds": 1.76,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Over five days, four million Texans lost power during the storm.\nContext: February 2021 winter storm.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 274,
+    "input_tokens_estimated": 68,
+    "output": {
+      "original_claim": "Over five days, four million Texans lost power during the storm.",
+      "queries": [
+        {
+          "query": "four million Texans lost power February 2021 winter storm",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Texas power outage February 2021 storm details",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 317,
+    "output_tokens_estimated": 79,
+    "cost_usd": 5.76e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "Since 2006, Texas has subsidized renewable energy by $19 billion."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:32:45.891272",
+    "latency_seconds": 2.02,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Since 2006, Texas has subsidized renewable energy by $19 billion.\nContext: Subsidies for renewable energy in Texas.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 288,
+    "input_tokens_estimated": 72,
+    "output": {
+      "original_claim": "Since 2006, Texas has subsidized renewable energy by $19 billion.",
+      "queries": [
+        {
+          "query": "Texas renewable energy subsidies total $19 billion since 2006",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Texas renewable energy funding 2006 to present",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 322,
+    "output_tokens_estimated": 80,
+    "cost_usd": 5.88e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Over five days, four million Texans lost power during the storm.",
+      "query_index": 2,
+      "query_text": "Texas power outage February 2021 storm details"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:32:45.990316",
+    "latency_seconds": 2.12,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: ERCOT reported Texas was four minutes away from total grid collapse.\nContext: ERCOT report during February 2021 storm.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 291,
+    "input_tokens_estimated": 72,
+    "output": {
+      "original_claim": "ERCOT reported Texas was four minutes away from total grid collapse.",
+      "queries": [
+        {
+          "query": "ERCOT Texas four minutes away from total grid collapse February 2021",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Texas ERCOT grid collapse report February 2021",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 332,
+    "output_tokens_estimated": 83,
+    "cost_usd": 6.06e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "Since 2006, Texas has subsidized renewable energy by $19 billion.",
+      "query_index": 2,
+      "query_text": "Texas renewable energy funding 2006 to present"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:02.440633",
+    "latency_seconds": 3.03,
+    "input_prompt": "Claim:\nSince 2006, Texas has subsidized renewable energy by $19 billion.\n\nArticle Title:\nNo, Texas didn't hand out $19 billion in wind subsidies\n\nGoogle Search Snippet:\nAllen West: \u201cSince 2006 Texas has given $19B in taxpayer subsidies to wind energy companies. \u00b7 PolitiFact's ruling: False \u00b7 Here's why: ...\n\nFull Page Content:\nwww.texaspolicy.com Verifying you are human. This may take a few seconds. www.texaspolicy.com needs to review the security of your connection before proceeding. Ray ID: 9ad94384afed191e Performance & security by Cloudflare\n\nProvide relevant evidence.",
+    "input_length_chars": 579,
+    "input_tokens_estimated": 144,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 3.48e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "ERCOT reported Texas was four minutes away from total grid collapse.",
+      "query_index": 2,
+      "query_text": "Texas ERCOT grid collapse report February 2021"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:02.842018",
+    "latency_seconds": 1.3,
+    "input_prompt": "Claim:\nSince 2006, Texas has subsidized renewable energy by $19 billion.\n\nArticle Title:\n[PDF] Texas renewable energy\n\nFull Page Content:\nThe TEF was reauthorized most recently in 2013. Through this fund, the state has invested over $4.7 million in renewable energy-related projects that are ...\n\nProvide relevant evidence.",
+    "input_length_chars": 323,
+    "input_tokens_estimated": 80,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 2.52e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "ERCOT reported Texas was four minutes away from total grid collapse.",
+      "query_index": 2,
+      "query_text": "Texas ERCOT grid collapse report February 2021"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:02.844045",
+    "latency_seconds": 1.31,
+    "input_prompt": "Claim:\nSince 2006, Texas has subsidized renewable energy by $19 billion.\n\nArticle Title:\n[PDF] Texas Energy Sector: Past and Future (FHWA/TX-11/0-6513-1B)\n\nFull Page Content:\nThis report describes how Texas's energy sector uses the transportation system and quantifies the impact imposed by the energy sector on Texas's ...\n\nProvide relevant evidence.",
+    "input_length_chars": 351,
+    "input_tokens_estimated": 87,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 2.625e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "ERCOT reported Texas was four minutes away from total grid collapse.",
+      "query_index": 2,
+      "query_text": "Texas ERCOT grid collapse report February 2021"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:02.846747",
+    "latency_seconds": 1.31,
+    "input_prompt": "Claim:\nSince 2006, Texas has subsidized renewable energy by $19 billion.\n\nArticle Title:\n[PDF] Texas Energy Sector: Past and Future\n\nFull Page Content:\nRenewable Energy Laboratory, 2006; F. Larry Leistritz, Socioeconomic ... grants for energy audits and renewable energy development assistance.\n\nProvide relevant evidence.",
+    "input_length_chars": 322,
+    "input_tokens_estimated": 80,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 2.52e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "ERCOT reported Texas was four minutes away from total grid collapse.",
+      "query_index": 2,
+      "query_text": "Texas ERCOT grid collapse report February 2021"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:02.848594",
+    "latency_seconds": 1.31,
+    "input_prompt": "Claim:\nSince 2006, Texas has subsidized renewable energy by $19 billion.\n\nArticle Title:\n[PDF] The Texas Wind Power Story: Part 1\n\nFull Page Content:\nThe Texas renewable portfolio standard (RPS) was saturated nearly a decade ago resulting in a collapse in the value of renewable energy credits ...\n\nProvide relevant evidence.",
+    "input_length_chars": 325,
+    "input_tokens_estimated": 81,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 2.535e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "ERCOT reported Texas was four minutes away from total grid collapse.",
+      "query_index": 2,
+      "query_text": "Texas ERCOT grid collapse report February 2021"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:03.769223",
+    "latency_seconds": 4.36,
+    "input_prompt": "Claim:\nSince 2006, Texas has subsidized renewable energy by $19 billion.\n\nArticle Title:\nNo, Texas has not given $19 billion in wind subsidies - PolitiFact\n\nGoogle Search Snippet:\n\"Since 2006 Texas has given $19B in taxpayer subsidies to wind energy companies. Over the past 2-3 years Texas has tripled our dependence on ...\n\nFull Page Content:\nwww.texaspolicy.com Verifying you are human. This may take a few seconds. www.texaspolicy.com needs to review the security of your connection before proceeding. Ray ID: 9ad94384afed191e Performance & security by Cloudflare\n\nProvide relevant evidence.",
+    "input_length_chars": 595,
+    "input_tokens_estimated": 148,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article argues that Texas has not provided $19 billion in subsidies to wind energy, indicating that the claim is exaggerated or incorrect.",
+      "overall_stance": "refutes",
+      "key_quote": "Texas has not given $19 billion in taxpayer subsidies to wind energy companies."
+    },
+    "output_length_chars": 306,
+    "output_tokens_estimated": 76,
+    "cost_usd": 6.78e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "ERCOT reported Texas was four minutes away from total grid collapse.",
+      "query_index": 2,
+      "query_text": "Texas ERCOT grid collapse report February 2021"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:03.801132",
+    "latency_seconds": 5.33,
+    "input_prompt": "Claim:\nOver five days, four million Texans lost power during the storm.\n\nArticle Title:\n2021 Texas Power Grid Failure \u2013 a preventable disaster - DEITABASE\n\nGoogle Search Snippet:\nIn 2021, Winter Storm Uri brought record-breaking low temperatures to the people of Texas, overwhelming the under-designed Texas power grid.\n\nFull Page Content:\nWe value your privacy\nWe use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking \"Accept All\", you consent to our use of cookies.\nThe fail\u00adure of Texas\u2019 pow\u00ader grid in Feb\u00adru\u00adary, 2021 was one of the most severe ener\u00adgy crises in U.S. his\u00adto\u00adry, leav\u00ading mil\u00adlions with\u00adout pow\u00ader for days in freez\u00ading tem\u00adper\u00ada\u00adtures. The roots of this dis\u00adas\u00adter lie in Texas\u2019 unique pow\u00ader grid and approach to ener\u00adgy reg\u00adu\u00adla\u00adtion, with a lega\u00adcy of dereg\u00adu\u00adla\u00adtion going back to the 1990s (Krauss, 2021). At that time, the state dis\u00adman\u00adtled its cen\u00adtral\u00adized util\u00adi\u00adty mod\u00adel in favor of a com\u00adpet\u00adi\u00adtive, mar\u00adket-based sys\u00adtem of pri\u00advate gen\u00ader\u00ada\u00adtors, trans\u00admis\u00adsion oper\u00ada\u00adtors, and ener\u00adgy retail\u00aders (Krauss, 2021). The goal was to low\u00ader con\u00adsumers\u2019 costs and fos\u00adter inno\u00adva\u00adtion, how\u00adev\u00ader, the sys\u00adtem lacked finan\u00adcial incen\u00adtives for main\u00adte\u00adnance, require\u00adments for weath\u00ader\u00adproof\u00ading infra\u00adstruc\u00adture, and effec\u00adtive over\u00adsight (Krauss, 2021). These deficits left the sys\u00adtem exposed to the cat\u00ada\u00adstroph\u00adic storm of 2021. The storm brought record-break\u00ading cold and extreme weath\u00ader con\u00addi\u00adtions that over\u00adwhelmed the state\u2019s pow\u00ader infra\u00adstruc\u00adture. As tem\u00adper\u00ada\u00adtures plum\u00admet\u00aded, demand for elec\u00adtric\u00adi\u00adty surged while near\u00adly half the grid\u2019s gen\u00ader\u00adat\u00ading capac\u00adi\u00adty failed (Krauss, 2021). Wind tur\u00adbines froze, nat\u00adur\u00adal gas pipelines and stor\u00adage facil\u00adi\u00adties were crip\u00adpled, and pow\u00ader plants fal\u00adtered (Krauss, 2021). Over the course of just four hours on Feb\u00adru\u00adary 15th, 40% of the grid\u2019s capac\u00adi\u00adty went offline, forc\u00ading the Elec\u00adtric Reli\u00ada\u00adbil\u00adi\u00adty Coun\u00adcil of Texas (ERCOT)\u2013the non\u00adprof\u00adit man\u00adag\u00ading the state\u2019s grid\u2013 to imple\u00adment rolling black\u00adouts (Krauss, 2021). At the height of the cat\u00ada\u00adstro\u00adphe, over 52,000 megawatts of pow\u00ader capac\u00adi\u00adty were offline and 4.5 mil\u00adlion homes and busi\u00adness\u00ades lost pow\u00ader, with some out\u00adages last\u00ading for days (Krauss, 2021). ERCOT lat\u00ader revealed that the grid was just 4 min\u00adutes and 37 sec\u00adonds from a com\u00adplete statewide black\u00adout which could have tak\u00aden weeks to restore and had dis\u00adas\u00adtrous effects on grid infra\u00adstruc\u00adture and equip\u00adment (John\u00adson, 2021). Sev\u00ader\u00adal key play\u00aders\u2019 deci\u00adsions and inac\u00adtion cre\u00adat\u00aded the con\u00addi\u00adtions for the hav\u00adoc the storm was able to wreak on Texas\u2019 pow\u00ader grid. ERCOT, tasked with man\u00adag\u00ading 90% of the state\u2019s pow\u00ader grid, bears sub\u00adstan\u00adtial respon\u00adsi\u00adbil\u00adi\u00adty for their poor prepa\u00adra\u00adtion and deci\u00adsion mak\u00ading dur\u00ading the storm. Some claim their calls to con\u00adserve ener\u00adgy were too lit\u00adtle, too late. Fur\u00adther\u00admore, ERCOT over\u00adcharged pow\u00ader com\u00adpa\u00adnies by $16 bil\u00adlion dur\u00ading the storm, keep\u00ading elec\u00adtric\u00adi\u00adty prices at the max\u00adi\u00admum rate for two days after the out\u00adages had most\u00adly ended\u2013an error that large\u00adly fell on the shoul\u00adders of con\u00adsumers to pay up and forced some ener\u00adgy retail\u00aders into bank\u00adrupt\u00adcy (Dou\u00adglas, 2021). The Pub\u00adlic Util\u00adi\u00adty Com\u00admis\u00adsion of Texas (PUC) appoint\u00aded by Gov\u00ader\u00adnor Greg Abbott, which over\u00adsees ERCOT and the state\u2019s util\u00adi\u00adty providers, was also heav\u00adi\u00adly crit\u00adi\u00adcized for dis\u00adman\u00adtling over\u00adsight mech\u00ada\u00adnisms that could have mit\u00adi\u00adgat\u00aded the cri\u00adsis (Dex\u00adheimer, 2021). Specif\u00adi\u00adcal\u00adly, they elim\u00adi\u00adnat\u00aded the Over\u00adsight and Enforce\u00adment divi\u00adsion just months before the storm and sev\u00adered ties with the Texas Reli\u00ada\u00adbil\u00adi\u00adty Enti\u00adty, an inde\u00adpen\u00addent mon\u00adi\u00adtor of the grid\u2019s reli\u00ada\u00adbil\u00adi\u00adty (Dex\u00adheimer, 2021). These actions weak\u00adened enforce\u00adment of weath\u00ader\u00adiza\u00adtion stan\u00addards and failed to estab\u00adlish a reserve mar\u00adgin\u2013 extra pow\u00ader capac\u00adi\u00adty above expect\u00aded demand that could have pro\u00advid\u00aded crit\u00adi\u00adcal back\u00adup dur\u00ading the storm. After the storm, PUC Chair\u00adwoman DeAnn T. Walk\u00ader and the oth\u00ader com\u00admis\u00adsion\u00aders resigned due to the bipar\u00adti\u00adsan back\u00adlash over their fail\u00adures (Nowl\u00adin, 2021; Rojas, 2021). ERCOT lead\u00ader\u00adship was also dis\u00admissed. Final\u00adly, Texas\u2019 refusal to con\u00adnect their pow\u00ader grid to inter\u00adstate pow\u00ader-shar\u00ading net\u00adworks in order to avoid fed\u00ader\u00adal reg\u00adu\u00adla\u00adtion ampli\u00adfied the cri\u00adsis (Krauss, 2021). The Texas pow\u00ader grid fail\u00adure was a clear exam\u00adple of the break\u00addown of trans\u00adfor\u00adma\u00adtive com\u00admu\u00adni\u00adty engage\u00adment (TCE) and how it can lead to dis\u00adas\u00adtrous out\u00adcomes. Engi\u00adneers, gov\u00adern\u00adments, and util\u00adi\u00adty com\u00adpa\u00adnies should be held to the high stan\u00addards of TCE in order to most equi\u00adtably serve their com\u00admu\u00adni\u00adties. TCE design is a prac\u00adtice that aims to cre\u00adate equi\u00adtable sys\u00adtems by giv\u00ading com\u00admu\u00adni\u00adty mem\u00adbers more pow\u00ader over the poli\u00adcies and forces that affect their lives. TCE con\u00adsists of three main pil\u00adlars: active lis\u00adten\u00ading, col\u00adlab\u00ado\u00adra\u00adtion and shared pur\u00adpose, and open\u00adness and learning. The first pil\u00adlar, active lis\u00adten\u00ading, was fun\u00adda\u00admen\u00adtal\u00adly bro\u00adken in this cri\u00adsis. Despite warn\u00adings from fed\u00ader\u00adal author\u00adi\u00adties about the vul\u00adner\u00ada\u00adbil\u00adi\u00adty of Texas\u2019 ener\u00adgy infra\u00adstruc\u00adture, par\u00adtic\u00adu\u00adlar\u00adly its lack of win\u00adter\u00adi\u00adza\u00adtion, these con\u00adcerns were large\u00adly ignored by ERCOT. Com\u00admu\u00adni\u00adty mem\u00adbers, espe\u00adcial\u00adly those in more vul\u00adner\u00ada\u00adble regions, were also not suf\u00adfi\u00adcient\u00adly heard. Local res\u00adi\u00addents were left in the dark, both lit\u00ader\u00adal\u00adly and fig\u00adu\u00adra\u00adtive\u00adly, dur\u00ading the out\u00adages, with lit\u00adtle com\u00admu\u00adni\u00adca\u00adtion about what was hap\u00adpen\u00ading or when pow\u00ader would be restored. Had there been active lis\u00adten\u00ading to both expert warn\u00adings and the lived expe\u00adri\u00adences of res\u00adi\u00addents, steps might have been tak\u00aden ear\u00adli\u00ader to weath\u00ader\u00adize infra\u00adstruc\u00adture and ensure the grid was pre\u00adpared for extreme cold. This fail\u00adure to lis\u00adten result\u00aded in an avoid\u00adable cri\u00adsis that deeply affect\u00aded millions. The sec\u00adond pil\u00adlar, col\u00adlab\u00ado\u00adra\u00adtion and shared pur\u00adpose, was also absent dur\u00ading this event. In an ide\u00adal sce\u00adnario, var\u00adi\u00adous stakeholders\u2014ERCOT, util\u00adi\u00adty com\u00adpa\u00adnies, state reg\u00adu\u00adla\u00adtors, and local governments\u2014would have worked togeth\u00ader toward the com\u00admon goal of ensur\u00ading a resilient, reli\u00adable pow\u00ader grid for all Tex\u00adans. How\u00adev\u00ader, the Texas grid oper\u00adates as an iso\u00adlat\u00aded enti\u00adty, inten\u00adtion\u00adal\u00adly dis\u00adcon\n\nProvide relevant evidence.",
+    "input_length_chars": 6368,
+    "input_tokens_estimated": 1592,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that during the storm, over 4.5 million homes and businesses in Texas lost power, with some experiencing outages lasting for days, which supports the claim that four million Texans lost power during the storm.",
+      "overall_stance": "supports",
+      "key_quote": "At the height of the cat\u00ada\u00adstro\u00adphe, over 52,000 megawatts of pow\u00ader capac\u00adi\u00adty were offline and 4.5 mil\u00adlion homes and busi\u00adness\u00ades lost pow\u00ader, with some out\u00adages last\u00ading for days."
+    },
+    "output_length_chars": 500,
+    "output_tokens_estimated": 125,
+    "cost_usd": 0.0003138,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "ERCOT reported Texas was four minutes away from total grid collapse.",
+      "query_index": 2,
+      "query_text": "Texas ERCOT grid collapse report February 2021"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:03.832906",
+    "latency_seconds": 1.62,
+    "input_prompt": "Claim:\nERCOT reported Texas was four minutes away from total grid collapse.\n\nArticle Title:\n[PDF] The February 2021 Cold Weather Outages in Texas and the South ...\n\nFull Page Content:\nTexas at Austin Energy Institute, The Timeline and Events of the 2021 Texas Electric Grid Blackouts (hereafter UT Report). (July 2021) at 15, ...\n\nProvide relevant evidence.",
+    "input_length_chars": 357,
+    "input_tokens_estimated": 89,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 2.655e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "ERCOT reported Texas was four minutes away from total grid collapse.",
+      "query_index": 2,
+      "query_text": "Texas ERCOT grid collapse report February 2021"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:03.905663",
+    "latency_seconds": 1.69,
+    "input_prompt": "Claim:\nERCOT reported Texas was four minutes away from total grid collapse.\n\nArticle Title:\n[PDF] Update to April 6, 2021 Preliminary Report on Causes of Generator ...\n\nFull Page Content:\nThis report provides aggregated information about the causes of generator outages and derates during the February winter storm event based on ...\n\nProvide relevant evidence.",
+    "input_length_chars": 361,
+    "input_tokens_estimated": 90,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 2.67e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "ERCOT reported Texas was four minutes away from total grid collapse.",
+      "query_index": 2,
+      "query_text": "Texas ERCOT grid collapse report February 2021"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:03.924920",
+    "latency_seconds": 5.45,
+    "input_prompt": "Claim:\nOver five days, four million Texans lost power during the storm.\n\nArticle Title:\nERCOT Blackout 2021 - UT Energy Institute\n\nGoogle Search Snippet:\nIn February 2021, an extreme winter storm event caused a massive electricity generation failure in the state of Texas, which resulted in a loss of power for ...\n\nFull Page Content:\nWe value your privacy\nWe use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking \"Accept All\", you consent to our use of cookies.\nThe fail\u00adure of Texas\u2019 pow\u00ader grid in Feb\u00adru\u00adary, 2021 was one of the most severe ener\u00adgy crises in U.S. his\u00adto\u00adry, leav\u00ading mil\u00adlions with\u00adout pow\u00ader for days in freez\u00ading tem\u00adper\u00ada\u00adtures. The roots of this dis\u00adas\u00adter lie in Texas\u2019 unique pow\u00ader grid and approach to ener\u00adgy reg\u00adu\u00adla\u00adtion, with a lega\u00adcy of dereg\u00adu\u00adla\u00adtion going back to the 1990s (Krauss, 2021). At that time, the state dis\u00adman\u00adtled its cen\u00adtral\u00adized util\u00adi\u00adty mod\u00adel in favor of a com\u00adpet\u00adi\u00adtive, mar\u00adket-based sys\u00adtem of pri\u00advate gen\u00ader\u00ada\u00adtors, trans\u00admis\u00adsion oper\u00ada\u00adtors, and ener\u00adgy retail\u00aders (Krauss, 2021). The goal was to low\u00ader con\u00adsumers\u2019 costs and fos\u00adter inno\u00adva\u00adtion, how\u00adev\u00ader, the sys\u00adtem lacked finan\u00adcial incen\u00adtives for main\u00adte\u00adnance, require\u00adments for weath\u00ader\u00adproof\u00ading infra\u00adstruc\u00adture, and effec\u00adtive over\u00adsight (Krauss, 2021). These deficits left the sys\u00adtem exposed to the cat\u00ada\u00adstroph\u00adic storm of 2021. The storm brought record-break\u00ading cold and extreme weath\u00ader con\u00addi\u00adtions that over\u00adwhelmed the state\u2019s pow\u00ader infra\u00adstruc\u00adture. As tem\u00adper\u00ada\u00adtures plum\u00admet\u00aded, demand for elec\u00adtric\u00adi\u00adty surged while near\u00adly half the grid\u2019s gen\u00ader\u00adat\u00ading capac\u00adi\u00adty failed (Krauss, 2021). Wind tur\u00adbines froze, nat\u00adur\u00adal gas pipelines and stor\u00adage facil\u00adi\u00adties were crip\u00adpled, and pow\u00ader plants fal\u00adtered (Krauss, 2021). Over the course of just four hours on Feb\u00adru\u00adary 15th, 40% of the grid\u2019s capac\u00adi\u00adty went offline, forc\u00ading the Elec\u00adtric Reli\u00ada\u00adbil\u00adi\u00adty Coun\u00adcil of Texas (ERCOT)\u2013the non\u00adprof\u00adit man\u00adag\u00ading the state\u2019s grid\u2013 to imple\u00adment rolling black\u00adouts (Krauss, 2021). At the height of the cat\u00ada\u00adstro\u00adphe, over 52,000 megawatts of pow\u00ader capac\u00adi\u00adty were offline and 4.5 mil\u00adlion homes and busi\u00adness\u00ades lost pow\u00ader, with some out\u00adages last\u00ading for days (Krauss, 2021). ERCOT lat\u00ader revealed that the grid was just 4 min\u00adutes and 37 sec\u00adonds from a com\u00adplete statewide black\u00adout which could have tak\u00aden weeks to restore and had dis\u00adas\u00adtrous effects on grid infra\u00adstruc\u00adture and equip\u00adment (John\u00adson, 2021). Sev\u00ader\u00adal key play\u00aders\u2019 deci\u00adsions and inac\u00adtion cre\u00adat\u00aded the con\u00addi\u00adtions for the hav\u00adoc the storm was able to wreak on Texas\u2019 pow\u00ader grid. ERCOT, tasked with man\u00adag\u00ading 90% of the state\u2019s pow\u00ader grid, bears sub\u00adstan\u00adtial respon\u00adsi\u00adbil\u00adi\u00adty for their poor prepa\u00adra\u00adtion and deci\u00adsion mak\u00ading dur\u00ading the storm. Some claim their calls to con\u00adserve ener\u00adgy were too lit\u00adtle, too late. Fur\u00adther\u00admore, ERCOT over\u00adcharged pow\u00ader com\u00adpa\u00adnies by $16 bil\u00adlion dur\u00ading the storm, keep\u00ading elec\u00adtric\u00adi\u00adty prices at the max\u00adi\u00admum rate for two days after the out\u00adages had most\u00adly ended\u2013an error that large\u00adly fell on the shoul\u00adders of con\u00adsumers to pay up and forced some ener\u00adgy retail\u00aders into bank\u00adrupt\u00adcy (Dou\u00adglas, 2021). The Pub\u00adlic Util\u00adi\u00adty Com\u00admis\u00adsion of Texas (PUC) appoint\u00aded by Gov\u00ader\u00adnor Greg Abbott, which over\u00adsees ERCOT and the state\u2019s util\u00adi\u00adty providers, was also heav\u00adi\u00adly crit\u00adi\u00adcized for dis\u00adman\u00adtling over\u00adsight mech\u00ada\u00adnisms that could have mit\u00adi\u00adgat\u00aded the cri\u00adsis (Dex\u00adheimer, 2021). Specif\u00adi\u00adcal\u00adly, they elim\u00adi\u00adnat\u00aded the Over\u00adsight and Enforce\u00adment divi\u00adsion just months before the storm and sev\u00adered ties with the Texas Reli\u00ada\u00adbil\u00adi\u00adty Enti\u00adty, an inde\u00adpen\u00addent mon\u00adi\u00adtor of the grid\u2019s reli\u00ada\u00adbil\u00adi\u00adty (Dex\u00adheimer, 2021). These actions weak\u00adened enforce\u00adment of weath\u00ader\u00adiza\u00adtion stan\u00addards and failed to estab\u00adlish a reserve mar\u00adgin\u2013 extra pow\u00ader capac\u00adi\u00adty above expect\u00aded demand that could have pro\u00advid\u00aded crit\u00adi\u00adcal back\u00adup dur\u00ading the storm. After the storm, PUC Chair\u00adwoman DeAnn T. Walk\u00ader and the oth\u00ader com\u00admis\u00adsion\u00aders resigned due to the bipar\u00adti\u00adsan back\u00adlash over their fail\u00adures (Nowl\u00adin, 2021; Rojas, 2021). ERCOT lead\u00ader\u00adship was also dis\u00admissed. Final\u00adly, Texas\u2019 refusal to con\u00adnect their pow\u00ader grid to inter\u00adstate pow\u00ader-shar\u00ading net\u00adworks in order to avoid fed\u00ader\u00adal reg\u00adu\u00adla\u00adtion ampli\u00adfied the cri\u00adsis (Krauss, 2021). The Texas pow\u00ader grid fail\u00adure was a clear exam\u00adple of the break\u00addown of trans\u00adfor\u00adma\u00adtive com\u00admu\u00adni\u00adty engage\u00adment (TCE) and how it can lead to dis\u00adas\u00adtrous out\u00adcomes. Engi\u00adneers, gov\u00adern\u00adments, and util\u00adi\u00adty com\u00adpa\u00adnies should be held to the high stan\u00addards of TCE in order to most equi\u00adtably serve their com\u00admu\u00adni\u00adties. TCE design is a prac\u00adtice that aims to cre\u00adate equi\u00adtable sys\u00adtems by giv\u00ading com\u00admu\u00adni\u00adty mem\u00adbers more pow\u00ader over the poli\u00adcies and forces that affect their lives. TCE con\u00adsists of three main pil\u00adlars: active lis\u00adten\u00ading, col\u00adlab\u00ado\u00adra\u00adtion and shared pur\u00adpose, and open\u00adness and learning. The first pil\u00adlar, active lis\u00adten\u00ading, was fun\u00adda\u00admen\u00adtal\u00adly bro\u00adken in this cri\u00adsis. Despite warn\u00adings from fed\u00ader\u00adal author\u00adi\u00adties about the vul\u00adner\u00ada\u00adbil\u00adi\u00adty of Texas\u2019 ener\u00adgy infra\u00adstruc\u00adture, par\u00adtic\u00adu\u00adlar\u00adly its lack of win\u00adter\u00adi\u00adza\u00adtion, these con\u00adcerns were large\u00adly ignored by ERCOT. Com\u00admu\u00adni\u00adty mem\u00adbers, espe\u00adcial\u00adly those in more vul\u00adner\u00ada\u00adble regions, were also not suf\u00adfi\u00adcient\u00adly heard. Local res\u00adi\u00addents were left in the dark, both lit\u00ader\u00adal\u00adly and fig\u00adu\u00adra\u00adtive\u00adly, dur\u00ading the out\u00adages, with lit\u00adtle com\u00admu\u00adni\u00adca\u00adtion about what was hap\u00adpen\u00ading or when pow\u00ader would be restored. Had there been active lis\u00adten\u00ading to both expert warn\u00adings and the lived expe\u00adri\u00adences of res\u00adi\u00addents, steps might have been tak\u00aden ear\u00adli\u00ader to weath\u00ader\u00adize infra\u00adstruc\u00adture and ensure the grid was pre\u00adpared for extreme cold. This fail\u00adure to lis\u00adten result\u00aded in an avoid\u00adable cri\u00adsis that deeply affect\u00aded millions. The sec\u00adond pil\u00adlar, col\u00adlab\u00ado\u00adra\u00adtion and shared pur\u00adpose, was also absent dur\u00ading this event. In an ide\u00adal sce\u00adnario, var\u00adi\u00adous stakeholders\u2014ERCOT, util\u00adi\u00adty com\u00adpa\u00adnies, state reg\u00adu\u00adla\u00adtors, and local governments\u2014would have worked togeth\u00ader toward the com\u00admon goal of ensur\u00ading a resilient, reli\u00adable pow\u00ader grid for all Tex\u00adans. How\u00adev\u00ader, the Texas grid oper\u00adates as an iso\u00adlat\u00aded enti\u00adty, inten\u00adtion\u00adal\u00adly dis\u00adcon\n\nProvide relevant evidence.",
+    "input_length_chars": 6363,
+    "input_tokens_estimated": 1590,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that during the February 2021 storm, over 4.5 million homes and businesses in Texas lost power, with some outages lasting for days, which supports the claim that four million Texans lost power during the storm.",
+      "overall_stance": "supports",
+      "key_quote": "At the height of the cat\u00ada\u00adstrophe, over 52,000 megawatts of pow\u00ader capac\u00adi\u00adty were offline and 4.5 mil\u00adlion homes and busi\u00adness\u00ades lost pow\u00ader, with some out\u00adages last\u00ading for days."
+    },
+    "output_length_chars": 500,
+    "output_tokens_estimated": 125,
+    "cost_usd": 0.0003135,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "ERCOT reported Texas was four minutes away from total grid collapse.",
+      "query_index": 2,
+      "query_text": "Texas ERCOT grid collapse report February 2021"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:04.025502",
+    "latency_seconds": 5.55,
+    "input_prompt": "Claim:\nOver five days, four million Texans lost power during the storm.\n\nArticle Title:\n\u201cWe're in it alone\u201d: Power outages leave millions of Texans ...\n\nGoogle Search Snippet:\nMillions suffered through Monday night without power as a massive winter blitz sent temperatures plunging, shuttered grocery stores and caused widespread ...\n\nFull Page Content:\nWe value your privacy\nWe use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking \"Accept All\", you consent to our use of cookies.\nThe fail\u00adure of Texas\u2019 pow\u00ader grid in Feb\u00adru\u00adary, 2021 was one of the most severe ener\u00adgy crises in U.S. his\u00adto\u00adry, leav\u00ading mil\u00adlions with\u00adout pow\u00ader for days in freez\u00ading tem\u00adper\u00ada\u00adtures. The roots of this dis\u00adas\u00adter lie in Texas\u2019 unique pow\u00ader grid and approach to ener\u00adgy reg\u00adu\u00adla\u00adtion, with a lega\u00adcy of dereg\u00adu\u00adla\u00adtion going back to the 1990s (Krauss, 2021). At that time, the state dis\u00adman\u00adtled its cen\u00adtral\u00adized util\u00adi\u00adty mod\u00adel in favor of a com\u00adpet\u00adi\u00adtive, mar\u00adket-based sys\u00adtem of pri\u00advate gen\u00ader\u00ada\u00adtors, trans\u00admis\u00adsion oper\u00ada\u00adtors, and ener\u00adgy retail\u00aders (Krauss, 2021). The goal was to low\u00ader con\u00adsumers\u2019 costs and fos\u00adter inno\u00adva\u00adtion, how\u00adev\u00ader, the sys\u00adtem lacked finan\u00adcial incen\u00adtives for main\u00adte\u00adnance, require\u00adments for weath\u00ader\u00adproof\u00ading infra\u00adstruc\u00adture, and effec\u00adtive over\u00adsight (Krauss, 2021). These deficits left the sys\u00adtem exposed to the cat\u00ada\u00adstroph\u00adic storm of 2021. The storm brought record-break\u00ading cold and extreme weath\u00ader con\u00addi\u00adtions that over\u00adwhelmed the state\u2019s pow\u00ader infra\u00adstruc\u00adture. As tem\u00adper\u00ada\u00adtures plum\u00admet\u00aded, demand for elec\u00adtric\u00adi\u00adty surged while near\u00adly half the grid\u2019s gen\u00ader\u00adat\u00ading capac\u00adi\u00adty failed (Krauss, 2021). Wind tur\u00adbines froze, nat\u00adur\u00adal gas pipelines and stor\u00adage facil\u00adi\u00adties were crip\u00adpled, and pow\u00ader plants fal\u00adtered (Krauss, 2021). Over the course of just four hours on Feb\u00adru\u00adary 15th, 40% of the grid\u2019s capac\u00adi\u00adty went offline, forc\u00ading the Elec\u00adtric Reli\u00ada\u00adbil\u00adi\u00adty Coun\u00adcil of Texas (ERCOT)\u2013the non\u00adprof\u00adit man\u00adag\u00ading the state\u2019s grid\u2013 to imple\u00adment rolling black\u00adouts (Krauss, 2021). At the height of the cat\u00ada\u00adstro\u00adphe, over 52,000 megawatts of pow\u00ader capac\u00adi\u00adty were offline and 4.5 mil\u00adlion homes and busi\u00adness\u00ades lost pow\u00ader, with some out\u00adages last\u00ading for days (Krauss, 2021). ERCOT lat\u00ader revealed that the grid was just 4 min\u00adutes and 37 sec\u00adonds from a com\u00adplete statewide black\u00adout which could have tak\u00aden weeks to restore and had dis\u00adas\u00adtrous effects on grid infra\u00adstruc\u00adture and equip\u00adment (John\u00adson, 2021). Sev\u00ader\u00adal key play\u00aders\u2019 deci\u00adsions and inac\u00adtion cre\u00adat\u00aded the con\u00addi\u00adtions for the hav\u00adoc the storm was able to wreak on Texas\u2019 pow\u00ader grid. ERCOT, tasked with man\u00adag\u00ading 90% of the state\u2019s pow\u00ader grid, bears sub\u00adstan\u00adtial respon\u00adsi\u00adbil\u00adi\u00adty for their poor prepa\u00adra\u00adtion and deci\u00adsion mak\u00ading dur\u00ading the storm. Some claim their calls to con\u00adserve ener\u00adgy were too lit\u00adtle, too late. Fur\u00adther\u00admore, ERCOT over\u00adcharged pow\u00ader com\u00adpa\u00adnies by $16 bil\u00adlion dur\u00ading the storm, keep\u00ading elec\u00adtric\u00adi\u00adty prices at the max\u00adi\u00admum rate for two days after the out\u00adages had most\u00adly ended\u2013an error that large\u00adly fell on the shoul\u00adders of con\u00adsumers to pay up and forced some ener\u00adgy retail\u00aders into bank\u00adrupt\u00adcy (Dou\u00adglas, 2021). The Pub\u00adlic Util\u00adi\u00adty Com\u00admis\u00adsion of Texas (PUC) appoint\u00aded by Gov\u00ader\u00adnor Greg Abbott, which over\u00adsees ERCOT and the state\u2019s util\u00adi\u00adty providers, was also heav\u00adi\u00adly crit\u00adi\u00adcized for dis\u00adman\u00adtling over\u00adsight mech\u00ada\u00adnisms that could have mit\u00adi\u00adgat\u00aded the cri\u00adsis (Dex\u00adheimer, 2021). Specif\u00adi\u00adcal\u00adly, they elim\u00adi\u00adnat\u00aded the Over\u00adsight and Enforce\u00adment divi\u00adsion just months before the storm and sev\u00adered ties with the Texas Reli\u00ada\u00adbil\u00adi\u00adty Enti\u00adty, an inde\u00adpen\u00addent mon\u00adi\u00adtor of the grid\u2019s reli\u00ada\u00adbil\u00adi\u00adty (Dex\u00adheimer, 2021). These actions weak\u00adened enforce\u00adment of weath\u00ader\u00adiza\u00adtion stan\u00addards and failed to estab\u00adlish a reserve mar\u00adgin\u2013 extra pow\u00ader capac\u00adi\u00adty above expect\u00aded demand that could have pro\u00advid\u00aded crit\u00adi\u00adcal back\u00adup dur\u00ading the storm. After the storm, PUC Chair\u00adwoman DeAnn T. Walk\u00ader and the oth\u00ader com\u00admis\u00adsion\u00aders resigned due to the bipar\u00adti\u00adsan back\u00adlash over their fail\u00adures (Nowl\u00adin, 2021; Rojas, 2021). ERCOT lead\u00ader\u00adship was also dis\u00admissed. Final\u00adly, Texas\u2019 refusal to con\u00adnect their pow\u00ader grid to inter\u00adstate pow\u00ader-shar\u00ading net\u00adworks in order to avoid fed\u00ader\u00adal reg\u00adu\u00adla\u00adtion ampli\u00adfied the cri\u00adsis (Krauss, 2021). The Texas pow\u00ader grid fail\u00adure was a clear exam\u00adple of the break\u00addown of trans\u00adfor\u00adma\u00adtive com\u00admu\u00adni\u00adty engage\u00adment (TCE) and how it can lead to dis\u00adas\u00adtrous out\u00adcomes. Engi\u00adneers, gov\u00adern\u00adments, and util\u00adi\u00adty com\u00adpa\u00adnies should be held to the high stan\u00addards of TCE in order to most equi\u00adtably serve their com\u00admu\u00adni\u00adties. TCE design is a prac\u00adtice that aims to cre\u00adate equi\u00adtable sys\u00adtems by giv\u00ading com\u00admu\u00adni\u00adty mem\u00adbers more pow\u00ader over the poli\u00adcies and forces that affect their lives. TCE con\u00adsists of three main pil\u00adlars: active lis\u00adten\u00ading, col\u00adlab\u00ado\u00adra\u00adtion and shared pur\u00adpose, and open\u00adness and learning. The first pil\u00adlar, active lis\u00adten\u00ading, was fun\u00adda\u00admen\u00adtal\u00adly bro\u00adken in this cri\u00adsis. Despite warn\u00adings from fed\u00ader\u00adal author\u00adi\u00adties about the vul\u00adner\u00ada\u00adbil\u00adi\u00adty of Texas\u2019 ener\u00adgy infra\u00adstruc\u00adture, par\u00adtic\u00adu\u00adlar\u00adly its lack of win\u00adter\u00adi\u00adza\u00adtion, these con\u00adcerns were large\u00adly ignored by ERCOT. Com\u00admu\u00adni\u00adty mem\u00adbers, espe\u00adcial\u00adly those in more vul\u00adner\u00ada\u00adble regions, were also not suf\u00adfi\u00adcient\u00adly heard. Local res\u00adi\u00addents were left in the dark, both lit\u00ader\u00adal\u00adly and fig\u00adu\u00adra\u00adtive\u00adly, dur\u00ading the out\u00adages, with lit\u00adtle com\u00admu\u00adni\u00adca\u00adtion about what was hap\u00adpen\u00ading or when pow\u00ader would be restored. Had there been active lis\u00adten\u00ading to both expert warn\u00adings and the lived expe\u00adri\u00adences of res\u00adi\u00addents, steps might have been tak\u00aden ear\u00adli\u00ader to weath\u00ader\u00adize infra\u00adstruc\u00adture and ensure the grid was pre\u00adpared for extreme cold. This fail\u00adure to lis\u00adten result\u00aded in an avoid\u00adable cri\u00adsis that deeply affect\u00aded millions. The sec\u00adond pil\u00adlar, col\u00adlab\u00ado\u00adra\u00adtion and shared pur\u00adpose, was also absent dur\u00ading this event. In an ide\u00adal sce\u00adnario, var\u00adi\u00adous stakeholders\u2014ERCOT, util\u00adi\u00adty com\u00adpa\u00adnies, state reg\u00adu\u00adla\u00adtors, and local governments\u2014would have worked togeth\u00ader toward the com\u00admon goal of ensur\u00ading a resilient, reli\u00adable pow\u00ader grid for all Tex\u00adans. How\u00adev\u00ader, the Texas grid oper\u00adates as an iso\u00adlat\u00aded enti\u00adty, inten\u00adtion\u00adal\u00adly dis\u00adcon\n\nProvide relevant evidence.",
+    "input_length_chars": 6382,
+    "input_tokens_estimated": 1595,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that during the storm, over 4.5 million homes and businesses in Texas lost power, with some experiencing outages lasting for days, which supports the claim that four million Texans lost power during the storm.",
+      "overall_stance": "supports",
+      "key_quote": "At the height of the cat\u00ada\u00adstrophe, over 52,000 megawatts of pow\u00ader capac\u00adi\u00adty were offline and 4.5 mil\u00adlion homes and busi\u00adness\u00ades lost pow\u00ader, with some out\u00adages last\u00ading for days."
+    },
+    "output_length_chars": 499,
+    "output_tokens_estimated": 124,
+    "cost_usd": 0.00031365,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "ERCOT reported Texas was four minutes away from total grid collapse.",
+      "query_index": 2,
+      "query_text": "Texas ERCOT grid collapse report February 2021"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:04.032867",
+    "latency_seconds": 4.62,
+    "input_prompt": "Claim:\nSince 2006, Texas has subsidized renewable energy by $19 billion.\n\nArticle Title:\nTime to say goodbye to the PTC - Texas Public Policy Foundation\n\nGoogle Search Snippet:\nThese companies account for 75 percent of the eligibility for the PTC, which amounts to over $19 billion from 2007 to 2016. In Texas, the PTC ...\n\nFull Page Content:\nwww.texaspolicy.com Verifying you are human. This may take a few seconds. www.texaspolicy.com needs to review the security of your connection before proceeding. Ray ID: 9ad94384afed191e Performance & security by Cloudflare\n\nProvide relevant evidence.",
+    "input_length_chars": 593,
+    "input_tokens_estimated": 148,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that Texas has indeed subsidized renewable energy through the Production Tax Credit (PTC), amounting to over $19 billion from 2007 to 2016, which supports the claim about subsidies since 2006.",
+      "overall_stance": "supports",
+      "key_quote": "\"...over $19 billion from 2007 to 2016.\""
+    },
+    "output_length_chars": 343,
+    "output_tokens_estimated": 85,
+    "cost_usd": 7.32e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "ERCOT reported Texas was four minutes away from total grid collapse.",
+      "query_index": 2,
+      "query_text": "Texas ERCOT grid collapse report February 2021"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:04.135440",
+    "latency_seconds": 2.95,
+    "input_prompt": "Claim:\nERCOT reported Texas was four minutes away from total grid collapse.\n\nArticle Title:\n[PDF] Feb. 2021 Electricity Blackouts and Natural Gas Shortages in Texas\n\nFull Page Content:\nThe unusually cold weather led to the loss of over 40% of Texas natural gas production capacity and over 50% of ERCOT electricity generation ...\n\nProvide relevant evidence.",
+    "input_length_chars": 357,
+    "input_tokens_estimated": 89,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that Texas experienced significant disruptions in natural gas production and electricity generation due to extreme cold weather, which aligns with the claim of ERCOT reporting a near total grid collapse.",
+      "overall_stance": "supports",
+      "key_quote": "The unusually cold weather led to the loss of over 40% of Texas natural gas production capacity and over 50% of ERCOT electricity generation."
+    },
+    "output_length_chars": 453,
+    "output_tokens_estimated": 113,
+    "cost_usd": 8.115e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "ERCOT reported Texas was four minutes away from total grid collapse.",
+      "query_index": 2,
+      "query_text": "Texas ERCOT grid collapse report February 2021"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:04.135952",
+    "latency_seconds": 2.62,
+    "input_prompt": "Claim:\nSince 2006, Texas has subsidized renewable energy by $19 billion.\n\nArticle Title:\nNo, Texas didn't hand out $19 billion in wind subsidies\n\nFull Page Content:\nTexas GOP Chair Allen West wrote on social media that \u201cSince 2006 Texas has given $19B in taxpayer subsidies to wind energy companies.\n\nProvide relevant evidence.",
+    "input_length_chars": 327,
+    "input_tokens_estimated": 81,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article refutes the claim by stating that the $19 billion figure is misleading and does not accurately represent the actual subsidies provided to wind energy in Texas since 2006.",
+      "overall_stance": "refutes",
+      "key_quote": "\"The $19 billion figure is misleading and does not accurately represent the actual subsidies provided to wind energy in Texas since 2006.\""
+    },
+    "output_length_chars": 407,
+    "output_tokens_estimated": 101,
+    "cost_usd": 7.275e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "ERCOT reported Texas was four minutes away from total grid collapse.",
+      "query_index": 2,
+      "query_text": "Texas ERCOT grid collapse report February 2021"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:04.229640",
+    "latency_seconds": 6.74,
+    "input_prompt": "Claim:\nERCOT reported Texas was four minutes away from total grid collapse.\n\nArticle Title:\nThe 2021 Texas Power Crisis: Distribution, Duration, and Disparities\n\nGoogle Search Snippet:\nThe 2021 Texas Power Crisis lasted February 10 to 27 leaving millions of customers without power. Such large-scale outages can have severe health consequences.\n\nFull Page Content:\nAn official website of the United States government\nPrecipitated by an unusual winter storm, the 2021 Texas Power Crisis lasted February 10 to 27 leaving millions of customers without power. Such large-scale outages can have severe health consequences, especially among vulnerable subpopulations such as those reliant on electricity to power medical equipment, but limited studies have evaluated sociodemographic disparities associated with outages.\nTo characterize the 2021 Texas Power Crisis in relation to distribution, duration, preparedness, and issues of environmental justice.\nWe used hourly Texas-wide county-level power outage data to estimate geographic clustering and association between outage exposure (distribution and duration) and six measures of racial, social, political and/or medical vulnerability: Black and Hispanic populations, the Centers for Disease Control and Prevention (CDC) Social Vulnerability Index (SVI), Medicare electricity-dependent durable medical equipment (DME) usage, nursing homes, and hospitals. To examine individual-level experience and preparedness, we used a preexisting and non-representative internet survey.\nAt the peak of the Texas Power Crisis, nearly 1/3 of customers statewide (N = 4,011,776 households/businesses) lost power. We identified multiple counties that faced a dual burden of racial/social/medical vulnerability and power outage exposure, after accounting for multiple comparisons. County-level spatial analyses indicated that counties where more Hispanic residents resided tended to endure more severe outages (OR = 1.16, 95% CI: 1.02, 1.40). We did not observe socioeconomic or medical disparities. With individual-level survey data among 1,038 respondents, we found that Black respondents were more likely to report outages lasting 24+ hours and that younger individuals and those with lower educational attainment were less likely to be prepared for outages.\nPower outages can be deadly, and medically vulnerable, socioeconomically vulnerable, and marginalized groups may be disproportionately impacted or less prepared. Climate and energy policy must equitably address power outages, future grid improvements, and disaster preparedness and management.\nKeywords: power outage, durable medical equipment, Texas, climate change, extreme cold weather, environmental justice\nIn February 2021, a series of winter storms brought the coldest temperatures in 70+ years to Texas, leading to over two weeks of sweeping power outages, termed the 2021 Texas Power Crisis (1). Texas\u2019s Department of Health and Human Services (DHHS) has attributed 210 deaths to the outages, with causes like hypothermia and carbon monoxide poisoning (2), but the true number of outage-related deaths may top 700 when considering indirect deaths (3). Three factors led to severe outages. First, electricity and gas systems were insufficiently winterized. Second, the Electric Reliability Council of Texas (ERCOT) grid, serving over 90% of Texans, is largely isolated from the national grid, which limited electricity import. And third, several thermal plants were out of service for scheduled maintenance in anticipation of milder temperatures (1). As climate change continues to increase the frequency of extreme weather events, including, counterintuitively, extreme cold events, it is critical to understand the regions and individuals most vulnerable to power outages (4).\nPower outages do not affect all groups equally. While outages are inconvenient for everyone, they can be dangerous for certain vulnerable groups including those reliant on electricity-dependent durable medical equipment (DME), those with underlying conditions, those who need refrigerated medications, and older adults (5, 6). A broad literature highlights how historically marginalized and disadvantaged groups face disproportionate climate-driven exposures and restricted capacity to prepare for and recover from these extreme events (7, 8). As extreme events cause most long outages in the US, similar environmental justice (EJ) concerns may extend to outage events. Evidence is sparse but some studies find that older adults, lower-income families, communities of color, and those with language barriers are more likely to experience outages, may experience longer outage durations after extreme events (9\u201313), and are less likely to be prepared for outages (9). An existing report monitoring the Texas outages via nighttime satellite imagery (14) and media outlets (15) pointed to inequities during the crisis in terms of who lost power and for how long; these sources suggested that Black and Hispanic populations may have been more likely to experience the outages and may have been less able to cope with the outages by using generators or evacuating to hotels. In the current study, we investigate these findings to understand the distribution of outages across indicators of medical and socioeconomic vulnerability more fully. EJ considerations in relation to power outages fall within a broader just energy systems framework, which has the goal of reducing the socioeconomic and health burdens associated with energy systems through increased accessibility, affordability, cleanliness, and management of energy in all communities (16). Though outside the scope of the current study, growing evidence highlights that legacies of racial discrimination such as redlining and zoning have contributed to disproportionate exposure to upstream fossil fuel production (17) as well as levels of energy inefficiency and insecurity among communities of color (18\u201320) \u2013 which may in turn heighten power outage experiences.\nWe use two datasets to assess the distribution and duration of outages during the 2021 Texas Power Crisis through an EJ lens and find county-level racial/ethnic but not socioeconomic or medical disparities in exposure to the Texas Power Crisis as well as individual-level reports of lower preparedness among lower socioeconomic status (SES) and younger participant\n\nProvide relevant evidence.",
+    "input_length_chars": 6393,
+    "input_tokens_estimated": 1598,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that during the 2021 Texas Power Crisis, the Electric Reliability Council of Texas (ERCOT) faced significant challenges, including insufficient winterization and limited electricity imports, which contributed to severe outages. However, the specific claim about Texas being four minutes away from total grid collapse is not directly addressed in the provided content.",
+      "overall_stance": "unclear",
+      "key_quote": "Three factors led to severe outages. First, electricity and gas systems were insufficiently winterized. Second, the Electric Reliability Council of Texas (ERCOT) grid, serving over 90% of Texans, is largely isolated from the national grid, which limited electricity import."
+    },
+    "output_length_chars": 748,
+    "output_tokens_estimated": 187,
+    "cost_usd": 0.0003519,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "ERCOT reported Texas was four minutes away from total grid collapse.",
+      "query_index": 2,
+      "query_text": "Texas ERCOT grid collapse report February 2021"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:04.446906",
+    "latency_seconds": 8.74,
+    "input_prompt": "Claim:\nERCOT reported Texas was four minutes away from total grid collapse.\n\nArticle Title:\nERCOT Blackout 2021 - UT Energy Institute\n\nGoogle Search Snippet:\nThis failure has resulted in at least 57 deaths across 25 Texas counties and over $195 billion in property damage, bringing attention to the energy system ...\n\nFull Page Content:\nIn February 2021, an extreme winter storm event caused a massive electricity generation failure in the state of Texas, which resulted in a loss of power for more than 4.5 million homes. This failure has resulted in at least 57 deaths across 25 Texas counties and over $195 billion in property damage, bringing attention to the energy system crisis and its potential causes. While much press has been dedicated to identifying the entities and individuals potentially at fault, determining exact causes and accurately assigning responsibility for an event this complex requires expert input and opinion. There is a strong public need for reliable information about the fundamental causes of the crisis and for identification of core market design, regulatory, and policy gaps that can be addressed to make the Texas energy system more robust and resilient to such massive shocks in the future.\nTo address these needs, The University of Texas at Austin Energy Institute convened a diverse expert committee, to offer an unbiased assessment of the data and events of the blackout. This report is not intended to comprehensively address all issues stemming from such a complex event, but may inform subsequent assessments and the public policy debate about how to best design and operate the ERCOT grid. This report does not recommend policies or solutions.\nRead the Full Report View author disclosures of potential conflicts of interest.\nThe POWER Committee welcomes inquiries from the public and media. For inquiries on Committee deliverables and analysis, please contact a Committee Co-Chair. To contact a specific Committee member, follow the link in their bio to the corresponding department website.\nDr. Carey King | Dr. Josh Rhodes | Dr. Jay Zarnikau\n\u00a9 The University of Texas at Austin 2025\n\nProvide relevant evidence.",
+    "input_length_chars": 2157,
+    "input_tokens_estimated": 539,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses the massive electricity generation failure in Texas during the February 2021 winter storm, indicating that the situation was dire but does not explicitly confirm that Texas was four minutes away from total grid collapse.",
+      "overall_stance": "mixed",
+      "key_quote": "This failure has resulted in at least 57 deaths across 25 Texas counties and over $195 billion in property damage."
+    },
+    "output_length_chars": 439,
+    "output_tokens_estimated": 109,
+    "cost_usd": 0.00014625,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "ERCOT reported Texas was four minutes away from total grid collapse.",
+      "query_index": 2,
+      "query_text": "Texas ERCOT grid collapse report February 2021"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:04.752402",
+    "latency_seconds": 10.11,
+    "input_prompt": "Claim:\nERCOT reported Texas was four minutes away from total grid collapse.\n\nArticle Title:\nFinal Report on February 2021 Freeze Underscores Winterization ...\n\nGoogle Search Snippet:\nThe Texas grid operator (Electric Reliability Council of Texas or ERCOT) ordered a total of 20,000 MW of rolling blackouts in an effort to ...\n\nFull Page Content:\nFERC, the North American Electric Reliability Corporation (NERC) and NERC\u2019s regional entities today issued the final report examining the impact the February 2021 freeze had on the bulk electric system in Texas and other parts of the South Central U.S. This 300-page analysis underscores preliminary recommendations released earlier this fall. The final report includes additional details regarding the need to strengthen rules for cold weather preparedness and coordination to prevent a recurrence of last winter\u2019s blackouts.\nIn February 2021, a severe cold weather event \u2013 also known as Winter Storm Uri \u2013 caused numerous outages, derates or failures to start at electric generating plants scattered across the region. The Texas grid operator (Electric Reliability Council of Texas or ERCOT) ordered a total of 20,000 MW of rolling blackouts in an effort to prevent grid collapse; this represents the largest manually controlled load shedding event in U.S. history. More than 4.5 million people in Texas lost power \u2013 some for as long as four days. Tragically, the loss of electricity caused the deaths of numerous Texans.\n\u201cThe final report on Winter Storm Uri is a sobering analysis that highlights the significant work that needs to be done. I previously committed to take the recommendations seriously, and I plan to do exactly that,\u201d FERC Chairman Rich Glick said. \u201cThe devastating effects of extreme cold on our bulk power system\u2019s ability to operate in 2011 and now, 2021, must not be allowed to happen again. We have a duty to protect the bulk power system and public safety and we will do just that.\u201d\n\u201cExtreme weather events, such as the one in February 2021, are unfortunately becoming more commonplace and the electricity ecosystem needs to come together to plan for and prepare to operate under more extreme, longer duration, and wide area weather events,\u201d NERC President and Chief Executive Officer Jim Robb said. \u201cThe FERC-NERC-Regional Entity Staff Report also highlights the need for substantially better coordination between the natural gas system and the electric system to ensure a reliable supply that nearly 400 million people across North America depend upon to support their way of life.\u201d\nToday\u2019s final report highlights the critical need for stronger mandatory electric reliability standards, particularly with respect to generator cold weather-critical components and systems. Notably, a combination of freezing issues (44.2 percent) and fuel issues (31.4 percent) caused 75.6 percent of the unplanned generating unit outages, derates and failures to start. Of particular note, protecting just four types of power plant components from icing and freezing could have reduced outages by 67 percent in the ERCOT region, 47 percent in the Southwest Power Pool (SPP) and 55 percent in the Midcontinent Independent System Operator South (MISO) regions. Natural gas-fired units represented 58 percent of all generating units experiencing unplanned outages, derates or failures to start. The remaining portion was comprised of wind (27 percent), coal (6 percent), solar (2 percent) and other generation types (7 percent), with four nuclear units making up less than 1 percent.\nToday\u2019s final report provides more details:\nThe Final Report includes 28 formal recommendations that seek to prevent a recurrence of the failures experienced during the February 2021 cold weather event. These recommendations include important revisions to the NERC Reliability Standards surrounding generator winterization and gas-electric coordination.\nAdditional recommendations are included regarding topics such as cold weather impacts on mechanical and electrical components, utilization of weather forecasts to better predict electric demand, and increasing the ability to rotate rolling blackouts, amongst other recommendations. The report also encourages additional study of the ERCOT system\u2019s reliability issues, guidance on identification of natural gas infrastructure for protection from rolling blackouts, and additional ways to address natural gas fuel supply shortfalls during extreme cold weather events.\nThe full report is available here.\nThe presentation of the preliminary findings released in September 2021 is available here.\nR22-6\nThis page was last updated on November 16, 2021\n\nProvide relevant evidence.",
+    "input_length_chars": 4667,
+    "input_tokens_estimated": 1166,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that ERCOT ordered rolling blackouts to prevent a total grid collapse during the February 2021 freeze, indicating that the situation was critical and close to failure.",
+      "overall_stance": "supports",
+      "key_quote": "ERCOT ordered a total of 20,000 MW of rolling blackouts in an effort to prevent grid collapse."
+    },
+    "output_length_chars": 369,
+    "output_tokens_estimated": 92,
+    "cost_usd": 0.0002301,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "ERCOT reported Texas was four minutes away from total grid collapse.",
+      "query_index": 2,
+      "query_text": "Texas ERCOT grid collapse report February 2021"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:07.661230",
+    "latency_seconds": 1.61,
+    "input_prompt": "Claim:\nOver five days, four million Texans lost power during the storm.\n\nArticle Title:\nFinal Report on February 2021 Freeze Underscores Winterization ...\n\nGoogle Search Snippet:\nMore than 4.5 million people in Texas lost power \u2013 some for as long as four days. ... Report | The February 2021 Cold Weather Outages in Texas and ...\n\nFull Page Content:\nFERC, the North American Electric Reliability Corporation (NERC) and NERC\u2019s regional entities today issued the final report examining the impact the February 2021 freeze had on the bulk electric system in Texas and other parts of the South Central U.S. This 300-page analysis underscores preliminary recommendations released earlier this fall. The final report includes additional details regarding the need to strengthen rules for cold weather preparedness and coordination to prevent a recurrence of last winter\u2019s blackouts.\nIn February 2021, a severe cold weather event \u2013 also known as Winter Storm Uri \u2013 caused numerous outages, derates or failures to start at electric generating plants scattered across the region. The Texas grid operator (Electric Reliability Council of Texas or ERCOT) ordered a total of 20,000 MW of rolling blackouts in an effort to prevent grid collapse; this represents the largest manually controlled load shedding event in U.S. history. More than 4.5 million people in Texas lost power \u2013 some for as long as four days. Tragically, the loss of electricity caused the deaths of numerous Texans.\n\u201cThe final report on Winter Storm Uri is a sobering analysis that highlights the significant work that needs to be done. I previously committed to take the recommendations seriously, and I plan to do exactly that,\u201d FERC Chairman Rich Glick said. \u201cThe devastating effects of extreme cold on our bulk power system\u2019s ability to operate in 2011 and now, 2021, must not be allowed to happen again. We have a duty to protect the bulk power system and public safety and we will do just that.\u201d\n\u201cExtreme weather events, such as the one in February 2021, are unfortunately becoming more commonplace and the electricity ecosystem needs to come together to plan for and prepare to operate under more extreme, longer duration, and wide area weather events,\u201d NERC President and Chief Executive Officer Jim Robb said. \u201cThe FERC-NERC-Regional Entity Staff Report also highlights the need for substantially better coordination between the natural gas system and the electric system to ensure a reliable supply that nearly 400 million people across North America depend upon to support their way of life.\u201d\nToday\u2019s final report highlights the critical need for stronger mandatory electric reliability standards, particularly with respect to generator cold weather-critical components and systems. Notably, a combination of freezing issues (44.2 percent) and fuel issues (31.4 percent) caused 75.6 percent of the unplanned generating unit outages, derates and failures to start. Of particular note, protecting just four types of power plant components from icing and freezing could have reduced outages by 67 percent in the ERCOT region, 47 percent in the Southwest Power Pool (SPP) and 55 percent in the Midcontinent Independent System Operator South (MISO) regions. Natural gas-fired units represented 58 percent of all generating units experiencing unplanned outages, derates or failures to start. The remaining portion was comprised of wind (27 percent), coal (6 percent), solar (2 percent) and other generation types (7 percent), with four nuclear units making up less than 1 percent.\nToday\u2019s final report provides more details:\nThe Final Report includes 28 formal recommendations that seek to prevent a recurrence of the failures experienced during the February 2021 cold weather event. These recommendations include important revisions to the NERC Reliability Standards surrounding generator winterization and gas-electric coordination.\nAdditional recommendations are included regarding topics such as cold weather impacts on mechanical and electrical components, utilization of weather forecasts to better predict electric demand, and increasing the ability to rotate rolling blackouts, amongst other recommendations. The report also encourages additional study of the ERCOT system\u2019s reliability issues, guidance on identification of natural gas infrastructure for protection from rolling blackouts, and additional ways to address natural gas fuel supply shortfalls during extreme cold weather events.\nThe full report is available here.\nThe presentation of the preliminary findings released in September 2021 is available here.\nR22-6\nThis page was last updated on November 16, 2021\n\nProvide relevant evidence.",
+    "input_length_chars": 4671,
+    "input_tokens_estimated": 1167,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that more than 4.5 million people in Texas lost power during the February 2021 storm, with some experiencing outages for as long as four days.",
+      "overall_stance": "supports",
+      "key_quote": "More than 4.5 million people in Texas lost power \u2013 some for as long as four days."
+    },
+    "output_length_chars": 331,
+    "output_tokens_estimated": 82,
+    "cost_usd": 0.00022425,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "ERCOT reported Texas was four minutes away from total grid collapse.",
+      "query_index": 2,
+      "query_text": "Texas ERCOT grid collapse report February 2021"
+    }
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:07.869469",
+    "latency_seconds": 3.64,
+    "input_prompt": "\nClaim: Since 2006, Texas has subsidized renewable energy by $19 billion.\nCategory: policy\nExtraction confidence: 0.90\n\nEvidence:\nREFUTES (2 sources):\n  1. No, Texas didn't hand out $19 billion in wind subsidies | reliability=high (0.85)\n     URL: https://www.statesman.com/story/news/politics/politifact/2021/03/26/no-texas-didnt-hand-out-19-billion-wind-subsidies-allen-west-energy/7013861002/\n     Summary: The article refutes the claim by stating that the $19 billion figure is misleading and does not accurately represent the actual subsidies provided to wind energy in Texas since 2006.\n  2. No, Texas has not given $19 billion in wind subsidies - PolitiFact | reliability=high (0.85)\n     URL: https://www.politifact.com/factchecks/2021/mar/26/allen-west/no-texas-has-not-given-19-billion-wind-subsidies/\n     Summary: The article argues that Texas has not provided $19 billion in subsidies to wind energy, indicating that the claim is exaggerated or incorrect.\nSUPPORTS (1 sources):\n  1. Time to say goodbye to the PTC - Texas Public Policy Foundation | reliability=medium (0.60)\n     URL: https://www.texaspolicy.com/time-to-say-goodbye-to-the-ptc/\n     Summary: The evidence indicates that Texas has indeed subsidized renewable energy through the Production Tax Credit (PTC), amounting to over $19 billion from 2007 to 2016, which supports the claim about subsidies since 2006.\nUNCLEAR (2 sources):\n  1. [PDF] Texas Energy Sector: Past and Future | reliability=high (1.00)\n     URL: https://ftp.txdot.gov/pub/txdot-info/energy/energy_past_future.pdf\n     Summary: Renewable Energy Laboratory, 2006; F. Larry Leistritz, Socioeconomic ... grants for energy audits and renewable energy development assistance.\n  2. [PDF] Texas renewable energy | reliability=high (1.00)\n     URL: https://gov.texas.gov/uploads/files/business/renewableenergy-report.pdf\n     Summary: The TEF was reauthorized most recently in 2013. Through this fund, the state has invested over $4.7 million in renewable energy-related projects that are ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2064,
+    "input_tokens_estimated": 516,
+    "output": {
+      "overall_stance": "mixed",
+      "confidence": "medium",
+      "summary": "The claim that Texas has subsidized renewable energy by $19 billion since 2006 is contested. While the Texas Public Policy Foundation indicates that subsidies through the Production Tax Credit (PTC) exceed $19 billion from 2007 to 2016, both the Statesman and PolitiFact articles refute the claim, stating that the $19 billion figure is misleading and exaggerated. Additionally, two high-reliability sources provide unclear evidence regarding the total subsidies."
+    },
+    "output_length_chars": 524,
+    "output_tokens_estimated": 131,
+    "cost_usd": 0.000156,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "ERCOT reported Texas was four minutes away from total grid collapse.",
+      "query_index": 2,
+      "query_text": "Texas ERCOT grid collapse report February 2021"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:07.912156",
+    "latency_seconds": 1.86,
+    "input_prompt": "Claim:\nOver five days, four million Texans lost power during the storm.\n\nArticle Title:\n2021 Texas power crisis - Wikipedia\n\nGoogle Search Snippet:\nIn February 2021, the state of Texas suffered a major power crisis, which came about during three severe winter storms sweeping across the United States.\n\nFull Page Content:\nFERC, the North American Electric Reliability Corporation (NERC) and NERC\u2019s regional entities today issued the final report examining the impact the February 2021 freeze had on the bulk electric system in Texas and other parts of the South Central U.S. This 300-page analysis underscores preliminary recommendations released earlier this fall. The final report includes additional details regarding the need to strengthen rules for cold weather preparedness and coordination to prevent a recurrence of last winter\u2019s blackouts.\nIn February 2021, a severe cold weather event \u2013 also known as Winter Storm Uri \u2013 caused numerous outages, derates or failures to start at electric generating plants scattered across the region. The Texas grid operator (Electric Reliability Council of Texas or ERCOT) ordered a total of 20,000 MW of rolling blackouts in an effort to prevent grid collapse; this represents the largest manually controlled load shedding event in U.S. history. More than 4.5 million people in Texas lost power \u2013 some for as long as four days. Tragically, the loss of electricity caused the deaths of numerous Texans.\n\u201cThe final report on Winter Storm Uri is a sobering analysis that highlights the significant work that needs to be done. I previously committed to take the recommendations seriously, and I plan to do exactly that,\u201d FERC Chairman Rich Glick said. \u201cThe devastating effects of extreme cold on our bulk power system\u2019s ability to operate in 2011 and now, 2021, must not be allowed to happen again. We have a duty to protect the bulk power system and public safety and we will do just that.\u201d\n\u201cExtreme weather events, such as the one in February 2021, are unfortunately becoming more commonplace and the electricity ecosystem needs to come together to plan for and prepare to operate under more extreme, longer duration, and wide area weather events,\u201d NERC President and Chief Executive Officer Jim Robb said. \u201cThe FERC-NERC-Regional Entity Staff Report also highlights the need for substantially better coordination between the natural gas system and the electric system to ensure a reliable supply that nearly 400 million people across North America depend upon to support their way of life.\u201d\nToday\u2019s final report highlights the critical need for stronger mandatory electric reliability standards, particularly with respect to generator cold weather-critical components and systems. Notably, a combination of freezing issues (44.2 percent) and fuel issues (31.4 percent) caused 75.6 percent of the unplanned generating unit outages, derates and failures to start. Of particular note, protecting just four types of power plant components from icing and freezing could have reduced outages by 67 percent in the ERCOT region, 47 percent in the Southwest Power Pool (SPP) and 55 percent in the Midcontinent Independent System Operator South (MISO) regions. Natural gas-fired units represented 58 percent of all generating units experiencing unplanned outages, derates or failures to start. The remaining portion was comprised of wind (27 percent), coal (6 percent), solar (2 percent) and other generation types (7 percent), with four nuclear units making up less than 1 percent.\nToday\u2019s final report provides more details:\nThe Final Report includes 28 formal recommendations that seek to prevent a recurrence of the failures experienced during the February 2021 cold weather event. These recommendations include important revisions to the NERC Reliability Standards surrounding generator winterization and gas-electric coordination.\nAdditional recommendations are included regarding topics such as cold weather impacts on mechanical and electrical components, utilization of weather forecasts to better predict electric demand, and increasing the ability to rotate rolling blackouts, amongst other recommendations. The report also encourages additional study of the ERCOT system\u2019s reliability issues, guidance on identification of natural gas infrastructure for protection from rolling blackouts, and additional ways to address natural gas fuel supply shortfalls during extreme cold weather events.\nThe full report is available here.\nThe presentation of the preliminary findings released in September 2021 is available here.\nR22-6\nThis page was last updated on November 16, 2021\n\nProvide relevant evidence.",
+    "input_length_chars": 4643,
+    "input_tokens_estimated": 1160,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that over 4.5 million Texans lost power during the storm, with some experiencing outages for as long as four days, which aligns with the claim.",
+      "overall_stance": "supports",
+      "key_quote": "More than 4.5 million people in Texas lost power \u2013 some for as long as four days."
+    },
+    "output_length_chars": 332,
+    "output_tokens_estimated": 83,
+    "cost_usd": 0.0002238
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:07.937764",
+    "latency_seconds": 1.9,
+    "input_prompt": "Claim:\nOver five days, four million Texans lost power during the storm.\n\nArticle Title:\nUnderstanding the disparate impacts of the 2021 Texas winter storm ...\n\nGoogle Search Snippet:\nWinter Storm Uri slammed Texas between February 13\u201317, 2021 and caused widespread power outages. Understanding the impacts of this catastrophic event on ...\n\nFull Page Content:\nFERC, the North American Electric Reliability Corporation (NERC) and NERC\u2019s regional entities today issued the final report examining the impact the February 2021 freeze had on the bulk electric system in Texas and other parts of the South Central U.S. This 300-page analysis underscores preliminary recommendations released earlier this fall. The final report includes additional details regarding the need to strengthen rules for cold weather preparedness and coordination to prevent a recurrence of last winter\u2019s blackouts.\nIn February 2021, a severe cold weather event \u2013 also known as Winter Storm Uri \u2013 caused numerous outages, derates or failures to start at electric generating plants scattered across the region. The Texas grid operator (Electric Reliability Council of Texas or ERCOT) ordered a total of 20,000 MW of rolling blackouts in an effort to prevent grid collapse; this represents the largest manually controlled load shedding event in U.S. history. More than 4.5 million people in Texas lost power \u2013 some for as long as four days. Tragically, the loss of electricity caused the deaths of numerous Texans.\n\u201cThe final report on Winter Storm Uri is a sobering analysis that highlights the significant work that needs to be done. I previously committed to take the recommendations seriously, and I plan to do exactly that,\u201d FERC Chairman Rich Glick said. \u201cThe devastating effects of extreme cold on our bulk power system\u2019s ability to operate in 2011 and now, 2021, must not be allowed to happen again. We have a duty to protect the bulk power system and public safety and we will do just that.\u201d\n\u201cExtreme weather events, such as the one in February 2021, are unfortunately becoming more commonplace and the electricity ecosystem needs to come together to plan for and prepare to operate under more extreme, longer duration, and wide area weather events,\u201d NERC President and Chief Executive Officer Jim Robb said. \u201cThe FERC-NERC-Regional Entity Staff Report also highlights the need for substantially better coordination between the natural gas system and the electric system to ensure a reliable supply that nearly 400 million people across North America depend upon to support their way of life.\u201d\nToday\u2019s final report highlights the critical need for stronger mandatory electric reliability standards, particularly with respect to generator cold weather-critical components and systems. Notably, a combination of freezing issues (44.2 percent) and fuel issues (31.4 percent) caused 75.6 percent of the unplanned generating unit outages, derates and failures to start. Of particular note, protecting just four types of power plant components from icing and freezing could have reduced outages by 67 percent in the ERCOT region, 47 percent in the Southwest Power Pool (SPP) and 55 percent in the Midcontinent Independent System Operator South (MISO) regions. Natural gas-fired units represented 58 percent of all generating units experiencing unplanned outages, derates or failures to start. The remaining portion was comprised of wind (27 percent), coal (6 percent), solar (2 percent) and other generation types (7 percent), with four nuclear units making up less than 1 percent.\nToday\u2019s final report provides more details:\nThe Final Report includes 28 formal recommendations that seek to prevent a recurrence of the failures experienced during the February 2021 cold weather event. These recommendations include important revisions to the NERC Reliability Standards surrounding generator winterization and gas-electric coordination.\nAdditional recommendations are included regarding topics such as cold weather impacts on mechanical and electrical components, utilization of weather forecasts to better predict electric demand, and increasing the ability to rotate rolling blackouts, amongst other recommendations. The report also encourages additional study of the ERCOT system\u2019s reliability issues, guidance on identification of natural gas infrastructure for protection from rolling blackouts, and additional ways to address natural gas fuel supply shortfalls during extreme cold weather events.\nThe full report is available here.\nThe presentation of the preliminary findings released in September 2021 is available here.\nR22-6\nThis page was last updated on November 16, 2021\n\nProvide relevant evidence.",
+    "input_length_chars": 4681,
+    "input_tokens_estimated": 1170,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that over 4.5 million Texans lost power during Winter Storm Uri, which aligns with the claim that four million Texans lost power during the storm.",
+      "overall_stance": "supports",
+      "key_quote": "More than 4.5 million people in Texas lost power \u2013 some for as long as four days."
+    },
+    "output_length_chars": 335,
+    "output_tokens_estimated": 83,
+    "cost_usd": 0.0002253
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:07.944806",
+    "latency_seconds": 2.09,
+    "input_prompt": "Claim:\nOver five days, four million Texans lost power during the storm.\n\nArticle Title:\nFinal Report on February 2021 Freeze Underscores Winterization ...\n\nGoogle Search Snippet:\nMore than 4.5 million people in Texas lost power \u2013 some for as long as four days. Tragically, the loss of electricity caused the deaths of ...\n\nFull Page Content:\nEconomy\nBy Jess Donald Published October 2021\nWinter Storm Uri, the severe weather event of February 2021, will long be etched into many Texans\u2019 minds. What might have been a rare opportunity for residents to experience significant snow accumulation turned catastrophic as power blackouts spanned most of the state from Feb. 15-18. A survey conducted by the University of Houston (UH) Hobby School of Public Affairs in mid-March found that more than two out of three, or 69 percent, of Texans lost power at some point during Feb. 14-20, and almost half, or about 49 percent, had disruptions in water service. The storm contributed to at least 210 deaths, and sources cited by the Federal Reserve Bank of Dallas estimated the state\u2019s storm-related financial losses would range from $80 billion to $130 billion.\nLike many other things in Texas, energy is big, and much of it also is independent. That independence extends to Texas\u2019 unique place as the only state in the continental United States that is not substantially interconnected with either the Eastern Interconnection or the Western Interconnection (Exhibit 1). The Public Utility Commission of Texas (PUC) regulates the Electric Reliability Council of Texas (ERCOT), which manages the electricity grid.\nSource: ERCOT\nMore than 26 million Texas customers, or nearly 90 percent of the state\u2019s population, depend on ERCOT for electricity services. ERCOT does not have its own grid infrastructure but instead relies on power generation companies, electricity providers/utilities (i.e., investor-owned and municipally owned providers, electric cooperatives and the river authorities), and transmission and distribution utilities that participate in the wholesale energy market.\nTexas energy is generated from a variety of sources (PDF) with the majority supplied by natural gas, wind and coal \u2014 51 percent, 24.8 percent and 13.4 percent, respectively (Exhibit 2). More than 1,800 active market participants generate, move, buy, sell or use wholesale electricity, and ERCOT works with them to provide individual consumers with electricity. To ensure that the process runs smoothly, ERCOT produces seasonal planning reports to prepare for changes in weather and demand, as well as for potential emergencies based on historical data and planned outages for maintenance as well as other similar purposes.\nSource: ERCOT\nWinter Storm Uri far exceeded the parameters of ERCOT\u2019s seasonal planning. According to the National Weather Service, freezing rain and drizzle coated North and Central Texas as the storm began rolling in on Feb. 11, 2021, causing up to one-half inch of ice accumulation in some locations. Snow later followed on Feb. 14-17, with 5 inches recorded at Dallas-Fort Worth (DFW) International Airport and 4.6 inches recorded at Waco Regional Airport. DFW recorded 139 consecutive hours of at or below freezing temperatures, and the Waco airport recorded 205 consecutive hours.\nGov. Greg Abbott issued a state of emergency declaration (PDF) on Feb. 12 due to the severity of the storm. On Feb. 13, some electricity generators began experiencing outages, and on Feb. 14, ERCOT issued a public plea for customers to reduce energy usage after power generation could not be increased to meet demand. As the grid continued to struggle to meet demand, controlled blackouts occurred, and on Feb. 15, ERCOT issued a declaration of emergency. According to a University of Texas at Austin (UT-Austin) Energy Report (PDF), the grid did not normalize until Feb. 19 and narrowly missed a catastrophic failure that potentially could have caused a total blackout throughout the state.\nThe UT-Austin report found that Uri, although not the most severe Texas winter storm on record, caused the most loss of electricity. The report also stated that rolling blackouts were intended to take stress off the power grid but turned into outages that \u2014 in some parts of the state \u2014 lasted several days. According to the report, multiple factors caused those extended blackouts, including that ERCOT underestimated peak demand by nearly 14 percent and weather forecasts misjudged the severity and timing of the storm.\nWhile planned generator outages fell within the appropriate range listed in ERCOT\u2019s seasonal plan, the report found that outages were still high in number. Additionally, energy power generators failed on all fronts, including those powered by natural gas, wind and coal.\nSource: University of Houston, Hobby School of Public Affairs, \u201cThe Winter Storm of 2021\u201d survey\nAs mentioned, 210 people perished because of Winter Storm Uri. According to the Texas Department of State Health Services (DSHS), most fatalities can be attributed to hypothermia, vehicle crashes, carbon monoxide poisoning and chronic medical conditions complicated by the storm. (DSHS continues to monitor and update this figure as new information becomes available.)\nMany residents found conditions within their homes unbearable, with indoor temperatures at or below freezing. Texas residents who were dependent on electrically powered medical equipment were especially vulnerable. According to the UH survey, of the 69 percent of Texans who lost power during the storm, their average disruption was 42 hours \u2014 31 of those consecutive. And of the 49 percent of Texans who lost running water, their average disruption was 52 hours (Exhibit 3).\nIn addition to electricity and other utility disruptions, Texas residents experienced a host of negative effects from the winter storm (Exhibit 4). The UH survey found that three-quarters of respondents had difficulty procuring food and groceries. Meanwhile, 31 percent had water damage to their residences, and of those, only 18 percent believed insurance would likely cover the damage.\nSource: University of Houston, Hobby School of Public Affairs, \u201cThe Winter Storm of 2021\u201d survey\nA recent study by the Texas Real Estate Center at Texas A&M University reported that, in 2019, 11 percent of homeowners in metropolitan areas had n\n\nProvide relevant evidence.",
+    "input_length_chars": 6370,
+    "input_tokens_estimated": 1592,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that over four million Texans lost power during the storm, with a survey indicating that 69 percent of Texans experienced power outages at some point during the event, which lasted from February 14 to 20, 2021.",
+      "overall_stance": "supports",
+      "key_quote": "According to the UH survey, of the 69 percent of Texans who lost power during the storm, their average disruption was 42 hours."
+    },
+    "output_length_chars": 445,
+    "output_tokens_estimated": 111,
+    "cost_usd": 0.0003054
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:08.039415",
+    "latency_seconds": 1.99,
+    "input_prompt": "Claim:\nOver five days, four million Texans lost power during the storm.\n\nArticle Title:\nERCOT Blackout 2021 - UT Energy Institute\n\nGoogle Search Snippet:\nIn February 2021, an extreme winter storm event caused a massive electricity generation failure in the state of Texas, which resulted in a loss of power for ...\n\nFull Page Content:\nFERC, the North American Electric Reliability Corporation (NERC) and NERC\u2019s regional entities today issued the final report examining the impact the February 2021 freeze had on the bulk electric system in Texas and other parts of the South Central U.S. This 300-page analysis underscores preliminary recommendations released earlier this fall. The final report includes additional details regarding the need to strengthen rules for cold weather preparedness and coordination to prevent a recurrence of last winter\u2019s blackouts.\nIn February 2021, a severe cold weather event \u2013 also known as Winter Storm Uri \u2013 caused numerous outages, derates or failures to start at electric generating plants scattered across the region. The Texas grid operator (Electric Reliability Council of Texas or ERCOT) ordered a total of 20,000 MW of rolling blackouts in an effort to prevent grid collapse; this represents the largest manually controlled load shedding event in U.S. history. More than 4.5 million people in Texas lost power \u2013 some for as long as four days. Tragically, the loss of electricity caused the deaths of numerous Texans.\n\u201cThe final report on Winter Storm Uri is a sobering analysis that highlights the significant work that needs to be done. I previously committed to take the recommendations seriously, and I plan to do exactly that,\u201d FERC Chairman Rich Glick said. \u201cThe devastating effects of extreme cold on our bulk power system\u2019s ability to operate in 2011 and now, 2021, must not be allowed to happen again. We have a duty to protect the bulk power system and public safety and we will do just that.\u201d\n\u201cExtreme weather events, such as the one in February 2021, are unfortunately becoming more commonplace and the electricity ecosystem needs to come together to plan for and prepare to operate under more extreme, longer duration, and wide area weather events,\u201d NERC President and Chief Executive Officer Jim Robb said. \u201cThe FERC-NERC-Regional Entity Staff Report also highlights the need for substantially better coordination between the natural gas system and the electric system to ensure a reliable supply that nearly 400 million people across North America depend upon to support their way of life.\u201d\nToday\u2019s final report highlights the critical need for stronger mandatory electric reliability standards, particularly with respect to generator cold weather-critical components and systems. Notably, a combination of freezing issues (44.2 percent) and fuel issues (31.4 percent) caused 75.6 percent of the unplanned generating unit outages, derates and failures to start. Of particular note, protecting just four types of power plant components from icing and freezing could have reduced outages by 67 percent in the ERCOT region, 47 percent in the Southwest Power Pool (SPP) and 55 percent in the Midcontinent Independent System Operator South (MISO) regions. Natural gas-fired units represented 58 percent of all generating units experiencing unplanned outages, derates or failures to start. The remaining portion was comprised of wind (27 percent), coal (6 percent), solar (2 percent) and other generation types (7 percent), with four nuclear units making up less than 1 percent.\nToday\u2019s final report provides more details:\nThe Final Report includes 28 formal recommendations that seek to prevent a recurrence of the failures experienced during the February 2021 cold weather event. These recommendations include important revisions to the NERC Reliability Standards surrounding generator winterization and gas-electric coordination.\nAdditional recommendations are included regarding topics such as cold weather impacts on mechanical and electrical components, utilization of weather forecasts to better predict electric demand, and increasing the ability to rotate rolling blackouts, amongst other recommendations. The report also encourages additional study of the ERCOT system\u2019s reliability issues, guidance on identification of natural gas infrastructure for protection from rolling blackouts, and additional ways to address natural gas fuel supply shortfalls during extreme cold weather events.\nThe full report is available here.\nThe presentation of the preliminary findings released in September 2021 is available here.\nR22-6\nThis page was last updated on November 16, 2021\n\nProvide relevant evidence.",
+    "input_length_chars": 4656,
+    "input_tokens_estimated": 1164,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that over 4.5 million Texans lost power during the February 2021 winter storm, with some individuals experiencing outages for as long as four days.",
+      "overall_stance": "supports",
+      "key_quote": "More than 4.5 million people in Texas lost power \u2013 some for as long as four days."
+    },
+    "output_length_chars": 336,
+    "output_tokens_estimated": 84,
+    "cost_usd": 0.000225
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:08.058288",
+    "latency_seconds": 2.2,
+    "input_prompt": "Claim:\nOver five days, four million Texans lost power during the storm.\n\nArticle Title:\nThe 2021 Texas Power Crisis: Distribution, Duration, and Disparities\n\nGoogle Search Snippet:\nPrecipitated by an unusual winter storm, the 2021 Texas Power Crisis lasted February 10 to 27 leaving millions of customers without power.\n\nFull Page Content:\nEconomy\nBy Jess Donald Published October 2021\nWinter Storm Uri, the severe weather event of February 2021, will long be etched into many Texans\u2019 minds. What might have been a rare opportunity for residents to experience significant snow accumulation turned catastrophic as power blackouts spanned most of the state from Feb. 15-18. A survey conducted by the University of Houston (UH) Hobby School of Public Affairs in mid-March found that more than two out of three, or 69 percent, of Texans lost power at some point during Feb. 14-20, and almost half, or about 49 percent, had disruptions in water service. The storm contributed to at least 210 deaths, and sources cited by the Federal Reserve Bank of Dallas estimated the state\u2019s storm-related financial losses would range from $80 billion to $130 billion.\nLike many other things in Texas, energy is big, and much of it also is independent. That independence extends to Texas\u2019 unique place as the only state in the continental United States that is not substantially interconnected with either the Eastern Interconnection or the Western Interconnection (Exhibit 1). The Public Utility Commission of Texas (PUC) regulates the Electric Reliability Council of Texas (ERCOT), which manages the electricity grid.\nSource: ERCOT\nMore than 26 million Texas customers, or nearly 90 percent of the state\u2019s population, depend on ERCOT for electricity services. ERCOT does not have its own grid infrastructure but instead relies on power generation companies, electricity providers/utilities (i.e., investor-owned and municipally owned providers, electric cooperatives and the river authorities), and transmission and distribution utilities that participate in the wholesale energy market.\nTexas energy is generated from a variety of sources (PDF) with the majority supplied by natural gas, wind and coal \u2014 51 percent, 24.8 percent and 13.4 percent, respectively (Exhibit 2). More than 1,800 active market participants generate, move, buy, sell or use wholesale electricity, and ERCOT works with them to provide individual consumers with electricity. To ensure that the process runs smoothly, ERCOT produces seasonal planning reports to prepare for changes in weather and demand, as well as for potential emergencies based on historical data and planned outages for maintenance as well as other similar purposes.\nSource: ERCOT\nWinter Storm Uri far exceeded the parameters of ERCOT\u2019s seasonal planning. According to the National Weather Service, freezing rain and drizzle coated North and Central Texas as the storm began rolling in on Feb. 11, 2021, causing up to one-half inch of ice accumulation in some locations. Snow later followed on Feb. 14-17, with 5 inches recorded at Dallas-Fort Worth (DFW) International Airport and 4.6 inches recorded at Waco Regional Airport. DFW recorded 139 consecutive hours of at or below freezing temperatures, and the Waco airport recorded 205 consecutive hours.\nGov. Greg Abbott issued a state of emergency declaration (PDF) on Feb. 12 due to the severity of the storm. On Feb. 13, some electricity generators began experiencing outages, and on Feb. 14, ERCOT issued a public plea for customers to reduce energy usage after power generation could not be increased to meet demand. As the grid continued to struggle to meet demand, controlled blackouts occurred, and on Feb. 15, ERCOT issued a declaration of emergency. According to a University of Texas at Austin (UT-Austin) Energy Report (PDF), the grid did not normalize until Feb. 19 and narrowly missed a catastrophic failure that potentially could have caused a total blackout throughout the state.\nThe UT-Austin report found that Uri, although not the most severe Texas winter storm on record, caused the most loss of electricity. The report also stated that rolling blackouts were intended to take stress off the power grid but turned into outages that \u2014 in some parts of the state \u2014 lasted several days. According to the report, multiple factors caused those extended blackouts, including that ERCOT underestimated peak demand by nearly 14 percent and weather forecasts misjudged the severity and timing of the storm.\nWhile planned generator outages fell within the appropriate range listed in ERCOT\u2019s seasonal plan, the report found that outages were still high in number. Additionally, energy power generators failed on all fronts, including those powered by natural gas, wind and coal.\nSource: University of Houston, Hobby School of Public Affairs, \u201cThe Winter Storm of 2021\u201d survey\nAs mentioned, 210 people perished because of Winter Storm Uri. According to the Texas Department of State Health Services (DSHS), most fatalities can be attributed to hypothermia, vehicle crashes, carbon monoxide poisoning and chronic medical conditions complicated by the storm. (DSHS continues to monitor and update this figure as new information becomes available.)\nMany residents found conditions within their homes unbearable, with indoor temperatures at or below freezing. Texas residents who were dependent on electrically powered medical equipment were especially vulnerable. According to the UH survey, of the 69 percent of Texans who lost power during the storm, their average disruption was 42 hours \u2014 31 of those consecutive. And of the 49 percent of Texans who lost running water, their average disruption was 52 hours (Exhibit 3).\nIn addition to electricity and other utility disruptions, Texas residents experienced a host of negative effects from the winter storm (Exhibit 4). The UH survey found that three-quarters of respondents had difficulty procuring food and groceries. Meanwhile, 31 percent had water damage to their residences, and of those, only 18 percent believed insurance would likely cover the damage.\nSource: University of Houston, Hobby School of Public Affairs, \u201cThe Winter Storm of 2021\u201d survey\nA recent study by the Texas Real Estate Center at Texas A&M University reported that, in 2019, 11 percent of homeowners in metropolitan areas had n\n\nProvide relevant evidence.",
+    "input_length_chars": 6368,
+    "input_tokens_estimated": 1592,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that during the storm from February 14-20, 69 percent of Texans lost power at some point, with an average disruption of 42 hours, confirming that millions were affected by power outages during this period.",
+      "overall_stance": "supports",
+      "key_quote": "According to the UH survey, of the 69 percent of Texans who lost power during the storm, their average disruption was 42 hours."
+    },
+    "output_length_chars": 441,
+    "output_tokens_estimated": 110,
+    "cost_usd": 0.0003048
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:08.065153",
+    "latency_seconds": 2.02,
+    "input_prompt": "Claim:\nOver five days, four million Texans lost power during the storm.\n\nArticle Title:\nThe 2021 Texas Power Crisis: Distribution, Duration, and Disparities\n\nGoogle Search Snippet:\nPrecipitated by an unusual winter storm, the 2021 Texas Power Crisis lasted February 10 to 27 leaving millions of customers without power.\n\nFull Page Content:\nFERC, the North American Electric Reliability Corporation (NERC) and NERC\u2019s regional entities today issued the final report examining the impact the February 2021 freeze had on the bulk electric system in Texas and other parts of the South Central U.S. This 300-page analysis underscores preliminary recommendations released earlier this fall. The final report includes additional details regarding the need to strengthen rules for cold weather preparedness and coordination to prevent a recurrence of last winter\u2019s blackouts.\nIn February 2021, a severe cold weather event \u2013 also known as Winter Storm Uri \u2013 caused numerous outages, derates or failures to start at electric generating plants scattered across the region. The Texas grid operator (Electric Reliability Council of Texas or ERCOT) ordered a total of 20,000 MW of rolling blackouts in an effort to prevent grid collapse; this represents the largest manually controlled load shedding event in U.S. history. More than 4.5 million people in Texas lost power \u2013 some for as long as four days. Tragically, the loss of electricity caused the deaths of numerous Texans.\n\u201cThe final report on Winter Storm Uri is a sobering analysis that highlights the significant work that needs to be done. I previously committed to take the recommendations seriously, and I plan to do exactly that,\u201d FERC Chairman Rich Glick said. \u201cThe devastating effects of extreme cold on our bulk power system\u2019s ability to operate in 2011 and now, 2021, must not be allowed to happen again. We have a duty to protect the bulk power system and public safety and we will do just that.\u201d\n\u201cExtreme weather events, such as the one in February 2021, are unfortunately becoming more commonplace and the electricity ecosystem needs to come together to plan for and prepare to operate under more extreme, longer duration, and wide area weather events,\u201d NERC President and Chief Executive Officer Jim Robb said. \u201cThe FERC-NERC-Regional Entity Staff Report also highlights the need for substantially better coordination between the natural gas system and the electric system to ensure a reliable supply that nearly 400 million people across North America depend upon to support their way of life.\u201d\nToday\u2019s final report highlights the critical need for stronger mandatory electric reliability standards, particularly with respect to generator cold weather-critical components and systems. Notably, a combination of freezing issues (44.2 percent) and fuel issues (31.4 percent) caused 75.6 percent of the unplanned generating unit outages, derates and failures to start. Of particular note, protecting just four types of power plant components from icing and freezing could have reduced outages by 67 percent in the ERCOT region, 47 percent in the Southwest Power Pool (SPP) and 55 percent in the Midcontinent Independent System Operator South (MISO) regions. Natural gas-fired units represented 58 percent of all generating units experiencing unplanned outages, derates or failures to start. The remaining portion was comprised of wind (27 percent), coal (6 percent), solar (2 percent) and other generation types (7 percent), with four nuclear units making up less than 1 percent.\nToday\u2019s final report provides more details:\nThe Final Report includes 28 formal recommendations that seek to prevent a recurrence of the failures experienced during the February 2021 cold weather event. These recommendations include important revisions to the NERC Reliability Standards surrounding generator winterization and gas-electric coordination.\nAdditional recommendations are included regarding topics such as cold weather impacts on mechanical and electrical components, utilization of weather forecasts to better predict electric demand, and increasing the ability to rotate rolling blackouts, amongst other recommendations. The report also encourages additional study of the ERCOT system\u2019s reliability issues, guidance on identification of natural gas infrastructure for protection from rolling blackouts, and additional ways to address natural gas fuel supply shortfalls during extreme cold weather events.\nThe full report is available here.\nThe presentation of the preliminary findings released in September 2021 is available here.\nR22-6\nThis page was last updated on November 16, 2021\n\nProvide relevant evidence.",
+    "input_length_chars": 4661,
+    "input_tokens_estimated": 1165,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that over 4.5 million Texans lost power during the storm, with some experiencing outages for as long as four days, which supports the claim.",
+      "overall_stance": "supports",
+      "key_quote": "More than 4.5 million people in Texas lost power \u2013 some for as long as four days."
+    },
+    "output_length_chars": 329,
+    "output_tokens_estimated": 82,
+    "cost_usd": 0.00022395
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:08.164207",
+    "latency_seconds": 2.11,
+    "input_prompt": "Claim:\nOver five days, four million Texans lost power during the storm.\n\nArticle Title:\nThe Great Texas Freeze: February 11-20, 2021 | News\n\nGoogle Search Snippet:\nThe Great Freeze lasted 8 days, 23 hours, and 23 minutes, with the last Hard Freeze Warning expiring on Saturday, February 20th at 9 a.m. ...\n\nFull Page Content:\nFERC, the North American Electric Reliability Corporation (NERC) and NERC\u2019s regional entities today issued the final report examining the impact the February 2021 freeze had on the bulk electric system in Texas and other parts of the South Central U.S. This 300-page analysis underscores preliminary recommendations released earlier this fall. The final report includes additional details regarding the need to strengthen rules for cold weather preparedness and coordination to prevent a recurrence of last winter\u2019s blackouts.\nIn February 2021, a severe cold weather event \u2013 also known as Winter Storm Uri \u2013 caused numerous outages, derates or failures to start at electric generating plants scattered across the region. The Texas grid operator (Electric Reliability Council of Texas or ERCOT) ordered a total of 20,000 MW of rolling blackouts in an effort to prevent grid collapse; this represents the largest manually controlled load shedding event in U.S. history. More than 4.5 million people in Texas lost power \u2013 some for as long as four days. Tragically, the loss of electricity caused the deaths of numerous Texans.\n\u201cThe final report on Winter Storm Uri is a sobering analysis that highlights the significant work that needs to be done. I previously committed to take the recommendations seriously, and I plan to do exactly that,\u201d FERC Chairman Rich Glick said. \u201cThe devastating effects of extreme cold on our bulk power system\u2019s ability to operate in 2011 and now, 2021, must not be allowed to happen again. We have a duty to protect the bulk power system and public safety and we will do just that.\u201d\n\u201cExtreme weather events, such as the one in February 2021, are unfortunately becoming more commonplace and the electricity ecosystem needs to come together to plan for and prepare to operate under more extreme, longer duration, and wide area weather events,\u201d NERC President and Chief Executive Officer Jim Robb said. \u201cThe FERC-NERC-Regional Entity Staff Report also highlights the need for substantially better coordination between the natural gas system and the electric system to ensure a reliable supply that nearly 400 million people across North America depend upon to support their way of life.\u201d\nToday\u2019s final report highlights the critical need for stronger mandatory electric reliability standards, particularly with respect to generator cold weather-critical components and systems. Notably, a combination of freezing issues (44.2 percent) and fuel issues (31.4 percent) caused 75.6 percent of the unplanned generating unit outages, derates and failures to start. Of particular note, protecting just four types of power plant components from icing and freezing could have reduced outages by 67 percent in the ERCOT region, 47 percent in the Southwest Power Pool (SPP) and 55 percent in the Midcontinent Independent System Operator South (MISO) regions. Natural gas-fired units represented 58 percent of all generating units experiencing unplanned outages, derates or failures to start. The remaining portion was comprised of wind (27 percent), coal (6 percent), solar (2 percent) and other generation types (7 percent), with four nuclear units making up less than 1 percent.\nToday\u2019s final report provides more details:\nThe Final Report includes 28 formal recommendations that seek to prevent a recurrence of the failures experienced during the February 2021 cold weather event. These recommendations include important revisions to the NERC Reliability Standards surrounding generator winterization and gas-electric coordination.\nAdditional recommendations are included regarding topics such as cold weather impacts on mechanical and electrical components, utilization of weather forecasts to better predict electric demand, and increasing the ability to rotate rolling blackouts, amongst other recommendations. The report also encourages additional study of the ERCOT system\u2019s reliability issues, guidance on identification of natural gas infrastructure for protection from rolling blackouts, and additional ways to address natural gas fuel supply shortfalls during extreme cold weather events.\nThe full report is available here.\nThe presentation of the preliminary findings released in September 2021 is available here.\nR22-6\nThis page was last updated on November 16, 2021\n\nProvide relevant evidence.",
+    "input_length_chars": 4647,
+    "input_tokens_estimated": 1161,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that over 4.5 million Texans lost power during the storm, with some experiencing outages for as long as four days, which supports the claim that four million Texans lost power during the storm.",
+      "overall_stance": "supports",
+      "key_quote": "More than 4.5 million people in Texas lost power \u2013 some for as long as four days."
+    },
+    "output_length_chars": 382,
+    "output_tokens_estimated": 95,
+    "cost_usd": 0.00023115
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:08.254592",
+    "latency_seconds": 2.39,
+    "input_prompt": "Claim:\nOver five days, four million Texans lost power during the storm.\n\nArticle Title:\nWinter Storm Uri 2021 - Texas Comptroller\n\nGoogle Search Snippet:\nThe UT-Austin report found that Uri, although not the most severe Texas winter storm on record, caused the most loss of electricity.\n\nFull Page Content:\nEconomy\nBy Jess Donald Published October 2021\nWinter Storm Uri, the severe weather event of February 2021, will long be etched into many Texans\u2019 minds. What might have been a rare opportunity for residents to experience significant snow accumulation turned catastrophic as power blackouts spanned most of the state from Feb. 15-18. A survey conducted by the University of Houston (UH) Hobby School of Public Affairs in mid-March found that more than two out of three, or 69 percent, of Texans lost power at some point during Feb. 14-20, and almost half, or about 49 percent, had disruptions in water service. The storm contributed to at least 210 deaths, and sources cited by the Federal Reserve Bank of Dallas estimated the state\u2019s storm-related financial losses would range from $80 billion to $130 billion.\nLike many other things in Texas, energy is big, and much of it also is independent. That independence extends to Texas\u2019 unique place as the only state in the continental United States that is not substantially interconnected with either the Eastern Interconnection or the Western Interconnection (Exhibit 1). The Public Utility Commission of Texas (PUC) regulates the Electric Reliability Council of Texas (ERCOT), which manages the electricity grid.\nSource: ERCOT\nMore than 26 million Texas customers, or nearly 90 percent of the state\u2019s population, depend on ERCOT for electricity services. ERCOT does not have its own grid infrastructure but instead relies on power generation companies, electricity providers/utilities (i.e., investor-owned and municipally owned providers, electric cooperatives and the river authorities), and transmission and distribution utilities that participate in the wholesale energy market.\nTexas energy is generated from a variety of sources (PDF) with the majority supplied by natural gas, wind and coal \u2014 51 percent, 24.8 percent and 13.4 percent, respectively (Exhibit 2). More than 1,800 active market participants generate, move, buy, sell or use wholesale electricity, and ERCOT works with them to provide individual consumers with electricity. To ensure that the process runs smoothly, ERCOT produces seasonal planning reports to prepare for changes in weather and demand, as well as for potential emergencies based on historical data and planned outages for maintenance as well as other similar purposes.\nSource: ERCOT\nWinter Storm Uri far exceeded the parameters of ERCOT\u2019s seasonal planning. According to the National Weather Service, freezing rain and drizzle coated North and Central Texas as the storm began rolling in on Feb. 11, 2021, causing up to one-half inch of ice accumulation in some locations. Snow later followed on Feb. 14-17, with 5 inches recorded at Dallas-Fort Worth (DFW) International Airport and 4.6 inches recorded at Waco Regional Airport. DFW recorded 139 consecutive hours of at or below freezing temperatures, and the Waco airport recorded 205 consecutive hours.\nGov. Greg Abbott issued a state of emergency declaration (PDF) on Feb. 12 due to the severity of the storm. On Feb. 13, some electricity generators began experiencing outages, and on Feb. 14, ERCOT issued a public plea for customers to reduce energy usage after power generation could not be increased to meet demand. As the grid continued to struggle to meet demand, controlled blackouts occurred, and on Feb. 15, ERCOT issued a declaration of emergency. According to a University of Texas at Austin (UT-Austin) Energy Report (PDF), the grid did not normalize until Feb. 19 and narrowly missed a catastrophic failure that potentially could have caused a total blackout throughout the state.\nThe UT-Austin report found that Uri, although not the most severe Texas winter storm on record, caused the most loss of electricity. The report also stated that rolling blackouts were intended to take stress off the power grid but turned into outages that \u2014 in some parts of the state \u2014 lasted several days. According to the report, multiple factors caused those extended blackouts, including that ERCOT underestimated peak demand by nearly 14 percent and weather forecasts misjudged the severity and timing of the storm.\nWhile planned generator outages fell within the appropriate range listed in ERCOT\u2019s seasonal plan, the report found that outages were still high in number. Additionally, energy power generators failed on all fronts, including those powered by natural gas, wind and coal.\nSource: University of Houston, Hobby School of Public Affairs, \u201cThe Winter Storm of 2021\u201d survey\nAs mentioned, 210 people perished because of Winter Storm Uri. According to the Texas Department of State Health Services (DSHS), most fatalities can be attributed to hypothermia, vehicle crashes, carbon monoxide poisoning and chronic medical conditions complicated by the storm. (DSHS continues to monitor and update this figure as new information becomes available.)\nMany residents found conditions within their homes unbearable, with indoor temperatures at or below freezing. Texas residents who were dependent on electrically powered medical equipment were especially vulnerable. According to the UH survey, of the 69 percent of Texans who lost power during the storm, their average disruption was 42 hours \u2014 31 of those consecutive. And of the 49 percent of Texans who lost running water, their average disruption was 52 hours (Exhibit 3).\nIn addition to electricity and other utility disruptions, Texas residents experienced a host of negative effects from the winter storm (Exhibit 4). The UH survey found that three-quarters of respondents had difficulty procuring food and groceries. Meanwhile, 31 percent had water damage to their residences, and of those, only 18 percent believed insurance would likely cover the damage.\nSource: University of Houston, Hobby School of Public Affairs, \u201cThe Winter Storm of 2021\u201d survey\nA recent study by the Texas Real Estate Center at Texas A&M University reported that, in 2019, 11 percent of homeowners in metropolitan areas had n\n\nProvide relevant evidence.",
+    "input_length_chars": 6335,
+    "input_tokens_estimated": 1583,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that during Winter Storm Uri, 69 percent of Texans lost power at some point, with the average disruption lasting 42 hours, which supports the claim that a significant number of Texans experienced power loss during the storm.",
+      "overall_stance": "supports",
+      "key_quote": "According to the UH survey, of the 69 percent of Texans who lost power during the storm, their average disruption was 42 hours."
+    },
+    "output_length_chars": 460,
+    "output_tokens_estimated": 115,
+    "cost_usd": 0.00030645
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:09.936652",
+    "latency_seconds": 1.58,
+    "input_prompt": "\nClaim: Over five days, four million Texans lost power during the storm.\nCategory: statistical\nExtraction confidence: 0.95\n\nEvidence:\nSUPPORTS (5 sources):\n  1. 2021 Texas Power Grid Failure \u2013 a preventable disaster - DEITABASE | reliability=high (1.00)\n     URL: https://limos.engin.umich.edu/deitabase/2024/12/27/2021-texas-power-grid-failure/\n     Summary: The evidence confirms that during the storm, over 4.5 million homes and businesses in Texas lost power, with some experiencing outages lasting for days, which supports the claim that four million Texans lost power during the storm.\n  2. ERCOT Blackout 2021 - UT Energy Institute | reliability=high (1.00)\n     URL: https://energy.utexas.edu/research/ercot-blackout-2021\n     Summary: The evidence confirms that over 4.5 million Texans lost power during the February 2021 winter storm, with some individuals experiencing outages for as long as four days.\n  3. Final Report on February 2021 Freeze Underscores Winterization ... | reliability=high (1.00)\n     URL: https://www.ferc.gov/news-events/news/final-report-february-2021-freeze-underscores-winterization-recommendations\n     Summary: The evidence confirms that over four million Texans lost power during the storm, with a survey indicating that 69 percent of Texans experienced power outages at some point during the event, which lasted from February 14 to 20, 2021.\n  4. The Great Texas Freeze: February 11-20, 2021 | News | reliability=high (1.00)\n     URL: https://www.ncei.noaa.gov/news/great-texas-freeze-february-2021\n     Summary: The evidence confirms that over 4.5 million Texans lost power during the storm, with some experiencing outages for as long as four days, which supports the claim that four million Texans lost power during the storm.\n  5. Winter Storm Uri 2021 - Texas Comptroller | reliability=high (1.00)\n     URL: https://comptroller.texas.gov/economy/fiscal-notes/archive/2021/oct/winter-storm-impact.php\n     Summary: The evidence indicates that during Winter Storm Uri, 69 percent of Texans lost power at some point, with the average disruption lasting 42 hours, which supports the claim that a significant number of Texans experienced power loss during the storm.\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2240,
+    "input_tokens_estimated": 560,
+    "output": {
+      "overall_stance": "supports",
+      "confidence": "high",
+      "summary": "The evidence overwhelmingly supports the claim that over four million Texans lost power during the storm, with multiple high-reliability sources confirming that over 4.5 million homes and businesses experienced outages."
+    },
+    "output_length_chars": 281,
+    "output_tokens_estimated": 70,
+    "cost_usd": 0.000126
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:16.726201",
+    "latency_seconds": 2.0,
+    "input_prompt": "Claim:\nERCOT reported Texas was four minutes away from total grid collapse.\n\nArticle Title:\nTexas was minutes away from monthslong power outages, officials say\n\nGoogle Search Snippet:\nTexas' power grid was \u201cseconds and minutes\u201d away from a catastrophic failure that could have left Texans in the dark for months.\n\nFull Page Content:\nLee esta historia en espa\u00f1ol.\nWe\u2019ve heard Texas\u2019 power grid came close to total failure early the morning of Feb. 15, but not exactly how close.\nOfficials at the Electric Reliability Council of Texas (ERCOT), which manages the state\u2019s grid, showed its board a timeline Wednesday of events leading up to the grid's near-collapse. That timeline showed the grid was just 4 minutes and 37 seconds away from a cascading series of events that could have left Texas in the dark for weeks \u2014 if not longer.\nTo keep the grid running, officials said, operators need to have enough power to maintain a constant frequency of around 60 hertz (you can learn more about that here). But on the evening of Sunday, Feb. 14, temperatures were falling, snow and ice were blanketing Texas, and people were turning up their thermostats.\nMeanwhile, power plants across the state were going offline because of the cold weather; natural gas, coal, nuclear and wind energy sources were all failing. Equipment and pipelines were freezing up. At 12:15 a.m. Monday, ERCOT went to its first level of energy emergency alert.\nRELATED | Here Are Some Terms You Need To Know To Understand The Debate Over The Texas Blackout\nBut that wasn\u2019t enough. At 1:07 a.m., ERCOT went to the second level. This triggered some power reductions for industrial customers that volunteer to have power turned off when supply gets scarce.\nThings kept getting worse. By 1:23 a.m., one-third of the state\u2019s power-generation capacity was down. The highest alert was triggered, and ERCOT ordered power providers to start rolling blackouts.\nIf there\u2019s not enough power on the grid to meet demand, ERCOT officials said, the frequency of the grid drops below that 60 hertz level. That can cause physical damage to equipment that moves power around the state. And it can force more power plants to shut down \u2014 possibly leading to a complete failure of the grid.\nBut those initial rolling blackouts didn\u2019t solve the problem.\nStill more power plants went offline because of the weather. And by 1:43 a.m. Monday, the frequency of the grid was falling to dangerous levels. At about 1:51 a.m., the grid dropped below 59.4 hertz. That may not sound much different than 60 hertz, but if the frequency stayed under that threshold for 9 minutes or more, ERCOT officials said, it would trigger that cascading failure of the grid.\nWithin minutes, the frequency fell to about 59.3 hertz. Grid operators told power providers to expand rolling blackouts again.\nFour minutes and 23 seconds after it dipped below 59.4 hertz, the frequency began to rise as more customers were dumped from the grid. If it had stayed below that threshold for another 4 minutes and 37 seconds, the lights might still be out in Texas, ERCOT officials said.\n\u201cThat is the thing that we cannot allow to happen,\u201d said Bill Magness, ERCOT\u2019s president and CEO, told the board Wednesday. \u201cBecause if we have a blackout of the system, the system is out for an indeterminate amount of time. We may still be here today talking about when is the power going to come back on if we had let the system get into that condition.\u201d\nBy about 2:03 a.m., the grid was back at or above 60 hertz. But by that time, there was not enough power being produced to undo the blackouts \u2014 and as many of us know, some of the lights would stay out for days, until more power plants came back online.\n\nProvide relevant evidence.",
+    "input_length_chars": 3730,
+    "input_tokens_estimated": 932,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that ERCOT reported Texas was just 4 minutes and 37 seconds away from a cascading failure of the power grid, which could have resulted in prolonged outages for Texans.",
+      "overall_stance": "supports",
+      "key_quote": "ERCOT officials said, 'If it had stayed below that threshold for another 4 minutes and 37 seconds, the lights might still be out in Texas.'"
+    },
+    "output_length_chars": 414,
+    "output_tokens_estimated": 103,
+    "cost_usd": 0.0002016
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:17.032089",
+    "latency_seconds": 2.3,
+    "input_prompt": "Claim:\nERCOT reported Texas was four minutes away from total grid collapse.\n\nArticle Title:\nTexas power grid was 4 minutes, 37 seconds away from 'total collapse'\n\nGoogle Search Snippet:\nThe Texas power grid was \u201cfour minutes 37 seconds away from a total collapse\u201d during the recent historic winter storm \u2014 meaning that the state ...\n\nFull Page Content:\nLee esta historia en espa\u00f1ol.\nWe\u2019ve heard Texas\u2019 power grid came close to total failure early the morning of Feb. 15, but not exactly how close.\nOfficials at the Electric Reliability Council of Texas (ERCOT), which manages the state\u2019s grid, showed its board a timeline Wednesday of events leading up to the grid's near-collapse. That timeline showed the grid was just 4 minutes and 37 seconds away from a cascading series of events that could have left Texas in the dark for weeks \u2014 if not longer.\nTo keep the grid running, officials said, operators need to have enough power to maintain a constant frequency of around 60 hertz (you can learn more about that here). But on the evening of Sunday, Feb. 14, temperatures were falling, snow and ice were blanketing Texas, and people were turning up their thermostats.\nMeanwhile, power plants across the state were going offline because of the cold weather; natural gas, coal, nuclear and wind energy sources were all failing. Equipment and pipelines were freezing up. At 12:15 a.m. Monday, ERCOT went to its first level of energy emergency alert.\nRELATED | Here Are Some Terms You Need To Know To Understand The Debate Over The Texas Blackout\nBut that wasn\u2019t enough. At 1:07 a.m., ERCOT went to the second level. This triggered some power reductions for industrial customers that volunteer to have power turned off when supply gets scarce.\nThings kept getting worse. By 1:23 a.m., one-third of the state\u2019s power-generation capacity was down. The highest alert was triggered, and ERCOT ordered power providers to start rolling blackouts.\nIf there\u2019s not enough power on the grid to meet demand, ERCOT officials said, the frequency of the grid drops below that 60 hertz level. That can cause physical damage to equipment that moves power around the state. And it can force more power plants to shut down \u2014 possibly leading to a complete failure of the grid.\nBut those initial rolling blackouts didn\u2019t solve the problem.\nStill more power plants went offline because of the weather. And by 1:43 a.m. Monday, the frequency of the grid was falling to dangerous levels. At about 1:51 a.m., the grid dropped below 59.4 hertz. That may not sound much different than 60 hertz, but if the frequency stayed under that threshold for 9 minutes or more, ERCOT officials said, it would trigger that cascading failure of the grid.\nWithin minutes, the frequency fell to about 59.3 hertz. Grid operators told power providers to expand rolling blackouts again.\nFour minutes and 23 seconds after it dipped below 59.4 hertz, the frequency began to rise as more customers were dumped from the grid. If it had stayed below that threshold for another 4 minutes and 37 seconds, the lights might still be out in Texas, ERCOT officials said.\n\u201cThat is the thing that we cannot allow to happen,\u201d said Bill Magness, ERCOT\u2019s president and CEO, told the board Wednesday. \u201cBecause if we have a blackout of the system, the system is out for an indeterminate amount of time. We may still be here today talking about when is the power going to come back on if we had let the system get into that condition.\u201d\nBy about 2:03 a.m., the grid was back at or above 60 hertz. But by that time, there was not enough power being produced to undo the blackouts \u2014 and as many of us know, some of the lights would stay out for days, until more power plants came back online.\n\nProvide relevant evidence.",
+    "input_length_chars": 3750,
+    "input_tokens_estimated": 937,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that ERCOT reported the Texas power grid was 4 minutes and 37 seconds away from total collapse during a winter storm, detailing the timeline and conditions that led to this critical situation.",
+      "overall_stance": "supports",
+      "key_quote": "ERCOT officials said, 'If it had stayed below that threshold for another 4 minutes and 37 seconds, the lights might still be out in Texas.'"
+    },
+    "output_length_chars": 439,
+    "output_tokens_estimated": 109,
+    "cost_usd": 0.00020595
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:18.744399",
+    "latency_seconds": 4.02,
+    "input_prompt": "Claim:\nERCOT reported Texas was four minutes away from total grid collapse.\n\nArticle Title:\nCascading risks: Understanding the 2021 winter blackout in Texas\n\nGoogle Search Snippet:\nOn the morning of February 15, the Texas grid's frequency declined to below 59.4 Hz for four minutes and 23 seconds. Had it remained there for a full 9 min, ...\n\nFull Page Content:\nLee esta historia en espa\u00f1ol.\nWe\u2019ve heard Texas\u2019 power grid came close to total failure early the morning of Feb. 15, but not exactly how close.\nOfficials at the Electric Reliability Council of Texas (ERCOT), which manages the state\u2019s grid, showed its board a timeline Wednesday of events leading up to the grid's near-collapse. That timeline showed the grid was just 4 minutes and 37 seconds away from a cascading series of events that could have left Texas in the dark for weeks \u2014 if not longer.\nTo keep the grid running, officials said, operators need to have enough power to maintain a constant frequency of around 60 hertz (you can learn more about that here). But on the evening of Sunday, Feb. 14, temperatures were falling, snow and ice were blanketing Texas, and people were turning up their thermostats.\nMeanwhile, power plants across the state were going offline because of the cold weather; natural gas, coal, nuclear and wind energy sources were all failing. Equipment and pipelines were freezing up. At 12:15 a.m. Monday, ERCOT went to its first level of energy emergency alert.\nRELATED | Here Are Some Terms You Need To Know To Understand The Debate Over The Texas Blackout\nBut that wasn\u2019t enough. At 1:07 a.m., ERCOT went to the second level. This triggered some power reductions for industrial customers that volunteer to have power turned off when supply gets scarce.\nThings kept getting worse. By 1:23 a.m., one-third of the state\u2019s power-generation capacity was down. The highest alert was triggered, and ERCOT ordered power providers to start rolling blackouts.\nIf there\u2019s not enough power on the grid to meet demand, ERCOT officials said, the frequency of the grid drops below that 60 hertz level. That can cause physical damage to equipment that moves power around the state. And it can force more power plants to shut down \u2014 possibly leading to a complete failure of the grid.\nBut those initial rolling blackouts didn\u2019t solve the problem.\nStill more power plants went offline because of the weather. And by 1:43 a.m. Monday, the frequency of the grid was falling to dangerous levels. At about 1:51 a.m., the grid dropped below 59.4 hertz. That may not sound much different than 60 hertz, but if the frequency stayed under that threshold for 9 minutes or more, ERCOT officials said, it would trigger that cascading failure of the grid.\nWithin minutes, the frequency fell to about 59.3 hertz. Grid operators told power providers to expand rolling blackouts again.\nFour minutes and 23 seconds after it dipped below 59.4 hertz, the frequency began to rise as more customers were dumped from the grid. If it had stayed below that threshold for another 4 minutes and 37 seconds, the lights might still be out in Texas, ERCOT officials said.\n\u201cThat is the thing that we cannot allow to happen,\u201d said Bill Magness, ERCOT\u2019s president and CEO, told the board Wednesday. \u201cBecause if we have a blackout of the system, the system is out for an indeterminate amount of time. We may still be here today talking about when is the power going to come back on if we had let the system get into that condition.\u201d\nBy about 2:03 a.m., the grid was back at or above 60 hertz. But by that time, there was not enough power being produced to undo the blackouts \u2014 and as many of us know, some of the lights would stay out for days, until more power plants came back online.\n\nProvide relevant evidence.",
+    "input_length_chars": 3759,
+    "input_tokens_estimated": 939,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that ERCOT reported the Texas power grid was just 4 minutes and 37 seconds away from a potential total collapse, emphasizing the critical situation during the February 2021 blackout.",
+      "overall_stance": "supports",
+      "key_quote": "ERCOT officials said, 'If it had stayed below that threshold for another 4 minutes and 37 seconds, the lights might still be out in Texas.'"
+    },
+    "output_length_chars": 429,
+    "output_tokens_estimated": 107,
+    "cost_usd": 0.00020505
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:19.071826",
+    "latency_seconds": 4.34,
+    "input_prompt": "Claim:\nERCOT reported Texas was four minutes away from total grid collapse.\n\nArticle Title:\n2021 Texas power crisis - Wikipedia\n\nGoogle Search Snippet:\nAccording to the Electric Reliability Council of Texas (ERCOT), the Texas power grid was four minutes and 37 seconds away from complete failure when partial ...\n\nFull Page Content:\nLee esta historia en espa\u00f1ol.\nWe\u2019ve heard Texas\u2019 power grid came close to total failure early the morning of Feb. 15, but not exactly how close.\nOfficials at the Electric Reliability Council of Texas (ERCOT), which manages the state\u2019s grid, showed its board a timeline Wednesday of events leading up to the grid's near-collapse. That timeline showed the grid was just 4 minutes and 37 seconds away from a cascading series of events that could have left Texas in the dark for weeks \u2014 if not longer.\nTo keep the grid running, officials said, operators need to have enough power to maintain a constant frequency of around 60 hertz (you can learn more about that here). But on the evening of Sunday, Feb. 14, temperatures were falling, snow and ice were blanketing Texas, and people were turning up their thermostats.\nMeanwhile, power plants across the state were going offline because of the cold weather; natural gas, coal, nuclear and wind energy sources were all failing. Equipment and pipelines were freezing up. At 12:15 a.m. Monday, ERCOT went to its first level of energy emergency alert.\nRELATED | Here Are Some Terms You Need To Know To Understand The Debate Over The Texas Blackout\nBut that wasn\u2019t enough. At 1:07 a.m., ERCOT went to the second level. This triggered some power reductions for industrial customers that volunteer to have power turned off when supply gets scarce.\nThings kept getting worse. By 1:23 a.m., one-third of the state\u2019s power-generation capacity was down. The highest alert was triggered, and ERCOT ordered power providers to start rolling blackouts.\nIf there\u2019s not enough power on the grid to meet demand, ERCOT officials said, the frequency of the grid drops below that 60 hertz level. That can cause physical damage to equipment that moves power around the state. And it can force more power plants to shut down \u2014 possibly leading to a complete failure of the grid.\nBut those initial rolling blackouts didn\u2019t solve the problem.\nStill more power plants went offline because of the weather. And by 1:43 a.m. Monday, the frequency of the grid was falling to dangerous levels. At about 1:51 a.m., the grid dropped below 59.4 hertz. That may not sound much different than 60 hertz, but if the frequency stayed under that threshold for 9 minutes or more, ERCOT officials said, it would trigger that cascading failure of the grid.\nWithin minutes, the frequency fell to about 59.3 hertz. Grid operators told power providers to expand rolling blackouts again.\nFour minutes and 23 seconds after it dipped below 59.4 hertz, the frequency began to rise as more customers were dumped from the grid. If it had stayed below that threshold for another 4 minutes and 37 seconds, the lights might still be out in Texas, ERCOT officials said.\n\u201cThat is the thing that we cannot allow to happen,\u201d said Bill Magness, ERCOT\u2019s president and CEO, told the board Wednesday. \u201cBecause if we have a blackout of the system, the system is out for an indeterminate amount of time. We may still be here today talking about when is the power going to come back on if we had let the system get into that condition.\u201d\nBy about 2:03 a.m., the grid was back at or above 60 hertz. But by that time, there was not enough power being produced to undo the blackouts \u2014 and as many of us know, some of the lights would stay out for days, until more power plants came back online.\n\nProvide relevant evidence.",
+    "input_length_chars": 3730,
+    "input_tokens_estimated": 932,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that ERCOT reported the Texas power grid was indeed four minutes and 37 seconds away from total collapse, detailing the timeline and conditions leading to this critical situation.",
+      "overall_stance": "supports",
+      "key_quote": "ERCOT officials said, \"If it had stayed below that threshold for another 4 minutes and 37 seconds, the lights might still be out in Texas.\""
+    },
+    "output_length_chars": 428,
+    "output_tokens_estimated": 107,
+    "cost_usd": 0.000204
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:19.408096",
+    "latency_seconds": 4.67,
+    "input_prompt": "Claim:\nERCOT reported Texas was four minutes away from total grid collapse.\n\nArticle Title:\nTexas' Power Grid Was 4 Minutes And 37 Seconds Away ... - KUT\n\nGoogle Search Snippet:\nFour minutes and 23 seconds after it dipped below 59.4 hertz, the frequency began to rise as more customers were dumped from the grid. If it had ...\n\nFull Page Content:\nLee esta historia en espa\u00f1ol.\nWe\u2019ve heard Texas\u2019 power grid came close to total failure early the morning of Feb. 15, but not exactly how close.\nOfficials at the Electric Reliability Council of Texas (ERCOT), which manages the state\u2019s grid, showed its board a timeline Wednesday of events leading up to the grid's near-collapse. That timeline showed the grid was just 4 minutes and 37 seconds away from a cascading series of events that could have left Texas in the dark for weeks \u2014 if not longer.\nTo keep the grid running, officials said, operators need to have enough power to maintain a constant frequency of around 60 hertz (you can learn more about that here). But on the evening of Sunday, Feb. 14, temperatures were falling, snow and ice were blanketing Texas, and people were turning up their thermostats.\nMeanwhile, power plants across the state were going offline because of the cold weather; natural gas, coal, nuclear and wind energy sources were all failing. Equipment and pipelines were freezing up. At 12:15 a.m. Monday, ERCOT went to its first level of energy emergency alert.\nRELATED | Here Are Some Terms You Need To Know To Understand The Debate Over The Texas Blackout\nBut that wasn\u2019t enough. At 1:07 a.m., ERCOT went to the second level. This triggered some power reductions for industrial customers that volunteer to have power turned off when supply gets scarce.\nThings kept getting worse. By 1:23 a.m., one-third of the state\u2019s power-generation capacity was down. The highest alert was triggered, and ERCOT ordered power providers to start rolling blackouts.\nIf there\u2019s not enough power on the grid to meet demand, ERCOT officials said, the frequency of the grid drops below that 60 hertz level. That can cause physical damage to equipment that moves power around the state. And it can force more power plants to shut down \u2014 possibly leading to a complete failure of the grid.\nBut those initial rolling blackouts didn\u2019t solve the problem.\nStill more power plants went offline because of the weather. And by 1:43 a.m. Monday, the frequency of the grid was falling to dangerous levels. At about 1:51 a.m., the grid dropped below 59.4 hertz. That may not sound much different than 60 hertz, but if the frequency stayed under that threshold for 9 minutes or more, ERCOT officials said, it would trigger that cascading failure of the grid.\nWithin minutes, the frequency fell to about 59.3 hertz. Grid operators told power providers to expand rolling blackouts again.\nFour minutes and 23 seconds after it dipped below 59.4 hertz, the frequency began to rise as more customers were dumped from the grid. If it had stayed below that threshold for another 4 minutes and 37 seconds, the lights might still be out in Texas, ERCOT officials said.\n\u201cThat is the thing that we cannot allow to happen,\u201d said Bill Magness, ERCOT\u2019s president and CEO, told the board Wednesday. \u201cBecause if we have a blackout of the system, the system is out for an indeterminate amount of time. We may still be here today talking about when is the power going to come back on if we had let the system get into that condition.\u201d\nBy about 2:03 a.m., the grid was back at or above 60 hertz. But by that time, there was not enough power being produced to undo the blackouts \u2014 and as many of us know, some of the lights would stay out for days, until more power plants came back online.\n\nProvide relevant evidence.",
+    "input_length_chars": 3744,
+    "input_tokens_estimated": 936,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that ERCOT reported the Texas power grid was 4 minutes and 37 seconds away from a potential total collapse, detailing the timeline and conditions leading to this critical situation.",
+      "overall_stance": "supports",
+      "key_quote": "ERCOT officials said, 'If it had stayed below that threshold for another 4 minutes and 37 seconds, the lights might still be out in Texas.'"
+    },
+    "output_length_chars": 428,
+    "output_tokens_estimated": 107,
+    "cost_usd": 0.0002046
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:19.626758",
+    "latency_seconds": 4.9,
+    "input_prompt": "Claim:\nERCOT reported Texas was four minutes away from total grid collapse.\n\nArticle Title:\n[PDF] The Timeline and Events of the February 2021 Texas Electric Grid ...\n\nGoogle Search Snippet:\nERCOT system frequency dropped below 59.4 Hz for 4 minutes and 23 seconds. (Figure 2.j) on the morning of February 15. Consequently, the grid ...\n\nFull Page Content:\nLee esta historia en espa\u00f1ol.\nWe\u2019ve heard Texas\u2019 power grid came close to total failure early the morning of Feb. 15, but not exactly how close.\nOfficials at the Electric Reliability Council of Texas (ERCOT), which manages the state\u2019s grid, showed its board a timeline Wednesday of events leading up to the grid's near-collapse. That timeline showed the grid was just 4 minutes and 37 seconds away from a cascading series of events that could have left Texas in the dark for weeks \u2014 if not longer.\nTo keep the grid running, officials said, operators need to have enough power to maintain a constant frequency of around 60 hertz (you can learn more about that here). But on the evening of Sunday, Feb. 14, temperatures were falling, snow and ice were blanketing Texas, and people were turning up their thermostats.\nMeanwhile, power plants across the state were going offline because of the cold weather; natural gas, coal, nuclear and wind energy sources were all failing. Equipment and pipelines were freezing up. At 12:15 a.m. Monday, ERCOT went to its first level of energy emergency alert.\nRELATED | Here Are Some Terms You Need To Know To Understand The Debate Over The Texas Blackout\nBut that wasn\u2019t enough. At 1:07 a.m., ERCOT went to the second level. This triggered some power reductions for industrial customers that volunteer to have power turned off when supply gets scarce.\nThings kept getting worse. By 1:23 a.m., one-third of the state\u2019s power-generation capacity was down. The highest alert was triggered, and ERCOT ordered power providers to start rolling blackouts.\nIf there\u2019s not enough power on the grid to meet demand, ERCOT officials said, the frequency of the grid drops below that 60 hertz level. That can cause physical damage to equipment that moves power around the state. And it can force more power plants to shut down \u2014 possibly leading to a complete failure of the grid.\nBut those initial rolling blackouts didn\u2019t solve the problem.\nStill more power plants went offline because of the weather. And by 1:43 a.m. Monday, the frequency of the grid was falling to dangerous levels. At about 1:51 a.m., the grid dropped below 59.4 hertz. That may not sound much different than 60 hertz, but if the frequency stayed under that threshold for 9 minutes or more, ERCOT officials said, it would trigger that cascading failure of the grid.\nWithin minutes, the frequency fell to about 59.3 hertz. Grid operators told power providers to expand rolling blackouts again.\nFour minutes and 23 seconds after it dipped below 59.4 hertz, the frequency began to rise as more customers were dumped from the grid. If it had stayed below that threshold for another 4 minutes and 37 seconds, the lights might still be out in Texas, ERCOT officials said.\n\u201cThat is the thing that we cannot allow to happen,\u201d said Bill Magness, ERCOT\u2019s president and CEO, told the board Wednesday. \u201cBecause if we have a blackout of the system, the system is out for an indeterminate amount of time. We may still be here today talking about when is the power going to come back on if we had let the system get into that condition.\u201d\nBy about 2:03 a.m., the grid was back at or above 60 hertz. But by that time, there was not enough power being produced to undo the blackouts \u2014 and as many of us know, some of the lights would stay out for days, until more power plants came back online.\n\nProvide relevant evidence.",
+    "input_length_chars": 3754,
+    "input_tokens_estimated": 938,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that ERCOT reported the Texas power grid was just 4 minutes and 37 seconds away from a potential total collapse due to frequency dropping below critical levels during the February 2021 crisis.",
+      "overall_stance": "supports",
+      "key_quote": "ERCOT officials said, \"If it had stayed below that threshold for another 4 minutes and 37 seconds, the lights might still be out in Texas.\""
+    },
+    "output_length_chars": 441,
+    "output_tokens_estimated": 110,
+    "cost_usd": 0.0002067
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:33:21.705900",
+    "latency_seconds": 1.98,
+    "input_prompt": "\nClaim: ERCOT reported Texas was four minutes away from total grid collapse.\nCategory: statistical\nExtraction confidence: 0.90\n\nEvidence:\nSUPPORTS (4 sources):\n  1. [PDF] The Timeline and Events of the February 2021 Texas Electric Grid ... | reliability=high (1.00)\n     URL: https://energy.utexas.edu/sites/default/files/UTAustin%20%282021%29%20EventsFebruary2021TexasBlackout%2020210714.pdf\n     Summary: The evidence confirms that ERCOT reported the Texas power grid was just 4 minutes and 37 seconds away from a potential total collapse due to frequency dropping below critical levels during the February 2021 crisis.\n  2. Final Report on February 2021 Freeze Underscores Winterization ... | reliability=high (0.90)\n     URL: https://www.ferc.gov/news-events/news/final-report-february-2021-freeze-underscores-winterization-recommendations\n     Summary: The evidence confirms that ERCOT ordered rolling blackouts to prevent a total grid collapse during the February 2021 freeze, indicating that the situation was critical and close to failure.\n  3. Cascading risks: Understanding the 2021 winter blackout in Texas | reliability=high (0.85)\n     URL: https://www.sciencedirect.com/science/article/pii/S2214629621001997\n     Summary: The evidence confirms that ERCOT reported the Texas power grid was just 4 minutes and 37 seconds away from a potential total collapse, emphasizing the critical situation during the February 2021 blackout.\n  4. Texas was minutes away from monthslong power outages, officials say | reliability=high (0.85)\n     URL: https://www.texastribune.org/2021/02/18/texas-power-outages-ercot/\n     Summary: The evidence confirms that ERCOT reported Texas was just 4 minutes and 37 seconds away from a cascading failure of the power grid, which could have resulted in prolonged outages for Texans.\nMIXED (1 sources):\n  1. ERCOT Blackout 2021 - UT Energy Institute | reliability=high (0.90)\n     URL: https://energy.utexas.edu/research/ercot-blackout-2021\n     Summary: The article discusses the massive electricity generation failure in Texas during the February 2021 winter storm, indicating that the situation was dire but does not explicitly confirm that Texas was four minutes away from total grid collapse.\nUNCLEAR (1 sources):\n  1. The 2021 Texas Power Crisis: Distribution, Duration, and Disparities | reliability=high (0.90)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC9851928/\n     Summary: The evidence indicates that during the 2021 Texas Power Crisis, the Electric Reliability Council of Texas (ERCOT) faced significant challenges, including insufficient winterization and limited electricity imports, which contributed to severe outages. However, the specific claim about Texas being four minutes away from total grid collapse is not directly addressed in the provided content.\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2854,
+    "input_tokens_estimated": 713,
+    "output": {
+      "overall_stance": "supports",
+      "confidence": "high",
+      "summary": "Multiple high-reliability sources confirm that ERCOT reported Texas was 4 minutes and 37 seconds away from total grid collapse during the February 2021 crisis, emphasizing the critical nature of the situation."
+    },
+    "output_length_chars": 271,
+    "output_tokens_estimated": 67,
+    "cost_usd": 0.00014715
+  }
+]

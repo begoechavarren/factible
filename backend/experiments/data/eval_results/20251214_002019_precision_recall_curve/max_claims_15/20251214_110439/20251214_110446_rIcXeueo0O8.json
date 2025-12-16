@@ -1,0 +1,133 @@
+{
+  "video_id": "rIcXeueo0O8",
+  "timestamp": "2025-12-14T11:04:46.536429",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_15",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.4666666666666667,
+    "recall": 0.5833333333333334,
+    "f1_score": 0.5185185185185186,
+    "true_positives": 7,
+    "false_positives": 8,
+    "false_negatives": 5,
+    "mean_average_precision": 0.39728327228327226,
+    "recall_at_important": 0.5714285714285714,
+    "importance_weighted_coverage": 0.5837837837837838,
+    "matched_claims": [
+      {
+        "gt_text": "Greenhouse gases trap heat and energy from the Sun",
+        "sys_text": "Greenhouse gases trap heat and energy from the Sun.",
+        "gt_importance": 0.95,
+        "sys_importance": 0.6,
+        "importance_error": 0.35
+      },
+      {
+        "gt_text": "Scientists put instruments on airplanes and fly around to different regions to collect air samples and measure them",
+        "sys_text": "Eric's team collects air samples using special tools, including on airplanes.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.6,
+        "importance_error": 0.25
+      },
+      {
+        "gt_text": "Fertilizer is used to grow crops, and a lot of nutrients from fertilizer go to growing crops, but not all nutrients make their way into crops and some are lost to the atmosphere",
+        "sys_text": "Fertilizers used in farming can release nutrients into the atmosphere.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.6,
+        "importance_error": 0.30000000000000004
+      },
+      {
+        "gt_text": "Scientists fly downwind of cities to understand emissions from cars, vehicles, landfills, and power plants",
+        "sys_text": "Eric's team also studies emissions from cars, landfills, and power plants in cities.",
+        "gt_importance": 0.8,
+        "sys_importance": 0.6,
+        "importance_error": 0.20000000000000007
+      },
+      {
+        "gt_text": "Instruments are designed to measure the molecules and components of the air",
+        "sys_text": "Instruments are designed to measure the contents of the atmosphere.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.3,
+        "importance_error": 0.45
+      },
+      {
+        "gt_text": "Individual actions like being aware of leaving lights on or TV on when not using them can reduce atmospheric impact",
+        "sys_text": "Small actions, like turning off lights and TVs, can reduce individual impact on the atmosphere.",
+        "gt_importance": 0.55,
+        "sys_importance": 0.3,
+        "importance_error": 0.25000000000000006
+      },
+      {
+        "gt_text": "Collective action that comes from awareness of the problem can help reduce greenhouse gas emissions",
+        "sys_text": "Collective action can help address atmospheric issues.",
+        "gt_importance": 0.6,
+        "sys_importance": 0.3,
+        "importance_error": 0.3
+      }
+    ],
+    "missed_claims": [
+      "Many of the human produced gases are called greenhouse gases",
+      "Atmospheric scientists study climate and greenhouse gases by measuring the contents of the atmosphere, much like weather stations measure wind, rainfall, or snowfall",
+      "Scientists fly over farms to understand the impacts of how we grow crops on the atmosphere",
+      "Landfills emit carbon dioxide and methane as garbage decays",
+      "Garbage in incinerators emits carbon dioxide as a product of combustion"
+    ],
+    "extra_claims": [
+      "Research helps inform farmers on optimal practices for crop yields and minimizing atmospheric losses.",
+      "Understanding what is making the atmosphere change is crucial for addressing climate issues.",
+      "Human-produced gases can have bad effects on the planet, including changing the climate and weather.",
+      "Eric's team measures the levels of gases in the atmosphere, including greenhouse gases.",
+      "Collecting air above the ground helps identify emission sources that may not be measurable on the ground.",
+      "Instruments can take snapshots of different gases in the atmosphere at a given time.",
+      "The atmosphere is a mix of gases that surrounds the planet.",
+      "Eric is an atmospheric scientist studying climate and greenhouse gases."
+    ],
+    "importance_mae": 0.3,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.7142857142857143,
+    "stance_accuracy": 0.7142857142857143,
+    "correct_verdicts": 5,
+    "total_verdicts": 7,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "Fertilizer is used to grow crops, and a lot of nutrients from fertilizer go to growing crops, but not all nutrients make their way into crops and some are lost to the atmosphere",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "MIXED"
+      },
+      {
+        "claim": "Scientists fly downwind of cities to understand emissions from cars, vehicles, landfills, and power plants",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "MIXED"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.5833333333333334,
+    "verdict_accuracy": 0.7142857142857143,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.0188541,
+    "total_time_seconds": 133.0028898715973,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.7333333333333334
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 70,
+      "medium": 12
+    },
+    "avg_evidence_per_claim": 5.466666666666667
+  },
+  "ground_truth_claims_count": 12,
+  "system_claims_count": 15
+}

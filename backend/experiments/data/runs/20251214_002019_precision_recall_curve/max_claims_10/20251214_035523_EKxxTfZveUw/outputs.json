@@ -1,0 +1,3081 @@
+{
+  "extracted_claims": {
+    "claims": [
+      {
+        "text": "Donald Trump posted a 32-page document about fraud in the 2020 election.",
+        "confidence": 0.9,
+        "category": "political",
+        "importance": 0.6,
+        "context": "Trump's post on Truth Social, current month.",
+        "transcript_char_start": 203,
+        "transcript_char_end": 258,
+        "transcript_match_score": 0.6349206349206349
+      },
+      {
+        "text": "Fanny Willis has been sleeping with Nathan Wade, the special prosecutor.",
+        "confidence": 0.8,
+        "category": "political",
+        "importance": 0.6,
+        "context": "Revelation in a court filing this week.",
+        "transcript_char_start": 1509,
+        "transcript_char_end": 1567,
+        "transcript_match_score": 0.90625
+      },
+      {
+        "text": "Fanny Willis has paid Nathan Wade more than $650,000.",
+        "confidence": 0.9,
+        "category": "financial",
+        "importance": 0.6,
+        "context": "Context of Trump's legal case.",
+        "transcript_char_start": 1690,
+        "transcript_char_end": 1741,
+        "transcript_match_score": 1.0
+      },
+      {
+        "text": "Ruby Freeman was awarded a $150 million verdict against Rudy Giuliani.",
+        "confidence": 0.9,
+        "category": "legal",
+        "importance": 0.6,
+        "context": "Verdict from a defamation trial.",
+        "transcript_char_start": 4161,
+        "transcript_char_end": 4220,
+        "transcript_match_score": 0.8818897637795275
+      },
+      {
+        "text": "In Georgia, Trump lost by 11,779 votes.",
+        "confidence": 0.9,
+        "category": "statistical",
+        "importance": 0.6,
+        "context": "Vote difference in the 2020 election.",
+        "transcript_char_start": 6307,
+        "transcript_char_end": 6339,
+        "transcript_match_score": 0.782608695652174
+      },
+      {
+        "text": "In Wisconsin, 220,044 votes were cast without showing ID.",
+        "confidence": 0.9,
+        "category": "statistical",
+        "importance": 0.6,
+        "context": "Vote counting issues in Wisconsin.",
+        "transcript_char_start": 7711,
+        "transcript_char_end": 7761,
+        "transcript_match_score": 0.7047619047619048
+      },
+      {
+        "text": "In Pennsylvania, there were 121,240 more votes than voters.",
+        "confidence": 0.9,
+        "category": "statistical",
+        "importance": 0.6,
+        "context": "Vote counting discrepancies in Pennsylvania.",
+        "transcript_char_start": 8891,
+        "transcript_char_end": 8936,
+        "transcript_match_score": 0.8627450980392157
+      },
+      {
+        "text": "In Arizona, Maricopa County accepted 20,500 mail-in ballots after Election Day.",
+        "confidence": 0.9,
+        "category": "statistical",
+        "importance": 0.6,
+        "context": "Vote counting issues in Arizona.",
+        "transcript_char_start": 9536,
+        "transcript_char_end": 9608,
+        "transcript_match_score": 0.912751677852349
+      },
+      {
+        "text": "Michigan had 271,000 ballots delivered after the 8:00 p.m. deadline.",
+        "confidence": 0.9,
+        "category": "statistical",
+        "importance": 0.6,
+        "context": "Vote counting issues in Michigan.",
+        "transcript_char_start": 11317,
+        "transcript_char_end": 11373,
+        "transcript_match_score": 0.6557377049180327
+      },
+      {
+        "text": "Fanny Willis is the district attorney bringing the case against Donald Trump.",
+        "confidence": 0.9,
+        "category": "biographical",
+        "importance": 0.3,
+        "context": "Context of Trump's legal issues.",
+        "transcript_char_start": 1383,
+        "transcript_char_end": 1446,
+        "transcript_match_score": 0.8633093525179856
+      }
+    ],
+    "total_count": 10
+  },
+  "final_output": {
+    "extracted_claims": {
+      "claims": [
+        {
+          "text": "Donald Trump posted a 32-page document about fraud in the 2020 election.",
+          "confidence": 0.9,
+          "category": "political",
+          "importance": 0.6,
+          "context": "Trump's post on Truth Social, current month.",
+          "transcript_char_start": 203,
+          "transcript_char_end": 258,
+          "transcript_match_score": 0.6349206349206349
+        },
+        {
+          "text": "Fanny Willis has been sleeping with Nathan Wade, the special prosecutor.",
+          "confidence": 0.8,
+          "category": "political",
+          "importance": 0.6,
+          "context": "Revelation in a court filing this week.",
+          "transcript_char_start": 1509,
+          "transcript_char_end": 1567,
+          "transcript_match_score": 0.90625
+        },
+        {
+          "text": "Fanny Willis has paid Nathan Wade more than $650,000.",
+          "confidence": 0.9,
+          "category": "financial",
+          "importance": 0.6,
+          "context": "Context of Trump's legal case.",
+          "transcript_char_start": 1690,
+          "transcript_char_end": 1741,
+          "transcript_match_score": 1.0
+        },
+        {
+          "text": "Ruby Freeman was awarded a $150 million verdict against Rudy Giuliani.",
+          "confidence": 0.9,
+          "category": "legal",
+          "importance": 0.6,
+          "context": "Verdict from a defamation trial.",
+          "transcript_char_start": 4161,
+          "transcript_char_end": 4220,
+          "transcript_match_score": 0.8818897637795275
+        },
+        {
+          "text": "In Georgia, Trump lost by 11,779 votes.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Vote difference in the 2020 election.",
+          "transcript_char_start": 6307,
+          "transcript_char_end": 6339,
+          "transcript_match_score": 0.782608695652174
+        },
+        {
+          "text": "In Wisconsin, 220,044 votes were cast without showing ID.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Vote counting issues in Wisconsin.",
+          "transcript_char_start": 7711,
+          "transcript_char_end": 7761,
+          "transcript_match_score": 0.7047619047619048
+        },
+        {
+          "text": "In Pennsylvania, there were 121,240 more votes than voters.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Vote counting discrepancies in Pennsylvania.",
+          "transcript_char_start": 8891,
+          "transcript_char_end": 8936,
+          "transcript_match_score": 0.8627450980392157
+        },
+        {
+          "text": "In Arizona, Maricopa County accepted 20,500 mail-in ballots after Election Day.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Vote counting issues in Arizona.",
+          "transcript_char_start": 9536,
+          "transcript_char_end": 9608,
+          "transcript_match_score": 0.912751677852349
+        },
+        {
+          "text": "Michigan had 271,000 ballots delivered after the 8:00 p.m. deadline.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Vote counting issues in Michigan.",
+          "transcript_char_start": 11317,
+          "transcript_char_end": 11373,
+          "transcript_match_score": 0.6557377049180327
+        },
+        {
+          "text": "Fanny Willis is the district attorney bringing the case against Donald Trump.",
+          "confidence": 0.9,
+          "category": "biographical",
+          "importance": 0.3,
+          "context": "Context of Trump's legal issues.",
+          "transcript_char_start": 1383,
+          "transcript_char_end": 1446,
+          "transcript_match_score": 0.8633093525179856
+        }
+      ],
+      "total_count": 10
+    },
+    "claim_reports": [
+      {
+        "claim_text": "Fanny Willis is the district attorney bringing the case against Donald Trump.",
+        "claim_confidence": 0.9,
+        "claim_category": "biographical",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Georgia prosecutor drops election interference case against Trump ...",
+              "url": "https://abcnews.go.com/US/georgia-prosecutor-drops-election-interference-case-trump/story?id=127898245",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that Fani Willis is the district attorney who initiated the prosecution against Donald Trump in the election interference case, as she launched the investigation in February 2021 and oversaw the grand jury that indicted Trump and others.",
+              "snippet": "The Fulton County election interference case against President Trump and others has been dismissed after the prosecutor who took over the ..."
+            },
+            {
+              "title": "Read the full Georgia indictment against Trump and 18 allies - PBS",
+              "url": "https://www.pbs.org/newshour/politics/read-the-full-georgia-indictment-against-trump-and-18-allies",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that Fani Willis is indeed the district attorney who brought the case against Donald Trump, as she initiated the investigation that led to the indictments.",
+              "snippet": "Former President Donald Trump was indicted Monday on racketeering, conspiracy and other charges by a grand jury in Fulton County, Georgia."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "Fani Willis to face Georgia Senate questions about Trump ...",
+              "url": "https://abcnews.go.com/Politics/wireStory/fani-willis-face-georgia-senate-questions-trump-prosecution-128251180",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Fulton County District Attorney Fani Willis is set to testify on Dec. 17 before a special Georgia Senate committee.",
+              "snippet": "Fulton County District Attorney Fani Willis is set to testify on Dec. 17 before a special Georgia Senate committee."
+            },
+            {
+              "title": "Fani Willis took on Trump. But at what cost? - Georgia Recorder",
+              "url": "https://georgiarecorder.com/2025/12/02/fani-willis-took-on-trump-but-at-what-cost/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left"
+              },
+              "stance": "unclear",
+              "evidence_summary": "December 2, 2025 5:00 am. Fulton County District Attorney Fani Willis discusses the indictments against then-former President Donald Trump and 18 others on ...",
+              "snippet": "December 2, 2025 5:00 am. Fulton County District Attorney Fani Willis discusses the indictments against then-former President Donald Trump and 18 others on ..."
+            },
+            {
+              "title": "Trump's criminal case in Georgia gets a new prosecutor after no one ...",
+              "url": "https://www.politico.com/news/2025/11/14/trumps-criminal-case-georgia-00651907",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The election conspiracy case has been languishing for months after an appeals court disqualified Fani Willis from prosecuting Trump.",
+              "snippet": "The election conspiracy case has been languishing for months after an appeals court disqualified Fani Willis from prosecuting Trump."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 0.9,
+        "timestamp_hint": 98.36,
+        "timestamp_confidence": 0.8633093525179856
+      },
+      {
+        "claim_text": "Donald Trump posted a 32-page document about fraud in the 2020 election.",
+        "claim_confidence": 0.9,
+        "claim_category": "political",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "Trump, Twitter, and truth judgments: The effects of \u201cdisputed\u201d tags ...",
+              "url": "https://misinforeview.hks.harvard.edu/article/trump-twitter-and-truth-judgments-the-effects-of-disputed-tags-and-political-knowledge-on-the-judged-truthfulness-of-election-misinformation/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (40.5 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Trump voters that were initially skeptical of election fraud in the 2020 election were more likely to judge election misinformation as truthful ...",
+              "snippet": "Trump voters that were initially skeptical of election fraud in the 2020 election were more likely to judge election misinformation as truthful ..."
+            },
+            {
+              "title": "[PDF] Fact-checking 32 of his false claims to Time - Congress.gov",
+              "url": "https://www.congress.gov/118/meeting/house/117301/documents/HHRG-118-FD00-20240515-SD001.pdf",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Trump had been frustrated with. Barr over Barr's public rejection of his lies about mass election fraud and had been seriously considering ...",
+              "snippet": "Trump had been frustrated with. Barr over Barr's public rejection of his lies about mass election fraud and had been seriously considering ..."
+            },
+            {
+              "title": "Trump's new 'evidence' that Biden lost in 2020 is ridiculously wrong ...",
+              "url": "https://www.politifact.com/factchecks/2024/jan/05/donald-trump/trumps-new-evidence-that-biden-lost-in-2020-is-rid/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "\"I have yet to see anyone offer up 'evidence' of voter fraud from the 2020 election that provides these three things.\" We fact-checked a sample ...",
+              "snippet": "\"I have yet to see anyone offer up 'evidence' of voter fraud from the 2020 election that provides these three things.\" We fact-checked a sample ..."
+            },
+            {
+              "title": "2024-07-24 Motion for Interlocutory Injunction & TRO",
+              "url": "https://links.truthsocial.com/link/112956553026682684",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (14.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Page 7. 7 indictment in Fulton County4\u2014while his allies spread false rumors of election irregularities and voter fraud in Georgia and elsewhere.",
+              "snippet": "Page 7. 7 indictment in Fulton County4\u2014while his allies spread false rumors of election irregularities and voter fraud in Georgia and elsewhere."
+            },
+            {
+              "title": "Donald Trump Interview | Lex Fridman Podcast #442",
+              "url": "https://links.truthsocial.com/link/113074922593115556",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (14.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Donald Trump is the 45th President of the United States and the Republican candidate in the 2024 US Presidential Election.",
+              "snippet": "Donald Trump is the 45th President of the United States and the Republican candidate in the 2024 US Presidential Election."
+            },
+            {
+              "title": "Durham Report Brings Sunlight on Detail Never Released ...",
+              "url": "https://links.truthsocial.com/link/110491503400116235",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (14.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Obviously, with the background and context of the entirely fraudulent Carter Page ... Wasn't President Trump's case of election fraud in ...",
+              "snippet": "Obviously, with the background and context of the entirely fraudulent Carter Page ... Wasn't President Trump's case of election fraud in ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 12.28,
+        "timestamp_confidence": 0.6349206349206349
+      },
+      {
+        "claim_text": "Fanny Willis has been sleeping with Nathan Wade, the special prosecutor.",
+        "claim_confidence": 0.8,
+        "claim_category": "political",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (APITimeoutError: Request timed out.); manual review required.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "Fani Willis Nathan Wade relationship response court filing",
+              "url": "https://www.11alive.com/article/news/special-reports/ga-trump-investigation/fani-willis-nathan-wade-admit-to-personal-relationship-say-shouldnt-be-dismissed-from-trump-case/85-43e25054-3f8f-4df7-a7e6-98f68b07d83b",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Fulton County DA Fani Willis says she shouldn't be disqualified from prosecuting Trump over allegations that she had an affair with ...",
+              "snippet": "Fulton County DA Fani Willis says she shouldn't be disqualified from prosecuting Trump over allegations that she had an affair with ..."
+            },
+            {
+              "title": "Fani Willis: How Georgia prosecutor's affair affects a Trump trial - BBC",
+              "url": "https://www.bbc.com/news/world-us-canada-68038189",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The central question is whether a romantic relationship between Fulton County District Attorney Fani Willis and the special prosecutor she hired ...",
+              "snippet": "The central question is whether a romantic relationship between Fulton County District Attorney Fani Willis and the special prosecutor she hired ..."
+            },
+            {
+              "title": "Read the Filing From Fani Willis - The New York Times",
+              "url": "https://www.nytimes.com/interactive/2024/02/02/us/fani-willis-response.html",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Fani T. Willis, the Fulton County, Ga., district attorney said in a court filing that her relationship with a subordinate should not disqualify her from the ...",
+              "snippet": "Fani T. Willis, the Fulton County, Ga., district attorney said in a court filing that her relationship with a subordinate should not disqualify her from the ..."
+            },
+            {
+              "title": "Timeline: Fulton County DA Fani Willis, Nathan Wade controversy",
+              "url": "https://www.fox5atlanta.com/news/timeline-fulton-county-da-fani-willis-nathan-wade-controversy",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Timeline of what has happened in connection to the Georgia election interference case and controversy surrounding Fulton County District ...",
+              "snippet": "Timeline of what has happened in connection to the Georgia election interference case and controversy surrounding Fulton County District ..."
+            },
+            {
+              "title": "What We Know About the Relationship Between Fani Willis and ...",
+              "url": "https://www.nytimes.com/2024/03/15/us/elections/fani-willis-nathan-wade-trump-prosecutors.html",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Defense lawyers accused Fani Willis of \u201cself-dealing\u201d by hiring Nathan Wade to manage the Trump prosecution, then going on vacations with ...",
+              "snippet": "Defense lawyers accused Fani Willis of \u201cself-dealing\u201d by hiring Nathan Wade to manage the Trump prosecution, then going on vacations with ..."
+            },
+            {
+              "title": "Witness says DA Fani Willis and Nathan Wade started a relationship ...",
+              "url": "https://www.pbs.org/newshour/politics/witness-says-da-fani-willis-and-nathan-wade-started-a-relationship-years-earlier-than-claimed",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "A former friend and co-worker of Fulton County District Attorney Fani Willis testified Thursday that Willis' personal relationship with a special prosecutor ...",
+              "snippet": "A former friend and co-worker of Fulton County District Attorney Fani Willis testified Thursday that Willis' personal relationship with a special prosecutor ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 106.119,
+        "timestamp_confidence": 0.90625
+      },
+      {
+        "claim_text": "Fanny Willis has paid Nathan Wade more than $650,000.",
+        "claim_confidence": 0.9,
+        "claim_category": "financial",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "The evidence regarding Fani Willis paying Nathan Wade more than $650,000 is unclear. While multiple high-reliability sources mention that Willis paid Wade significant amounts for his work, the specifics of the total amount and the context of these payments are not definitively established. The sources indicate a personal relationship and financial transactions, but do not provide a clear consensus on the exact figure.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "Fani Willis acknowledges a 'personal relationship' with prosecutor",
+              "url": "https://apnews.com/article/fani-willis-nathan-wade-trump-indictment-493165c4614761d4b965923696134c09",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "It said Willis personally profited from the case, saying she had paid Wade more than $650,000 for his work and then benefited when Wade used his ...",
+              "snippet": "It said Willis personally profited from the case, saying she had paid Wade more than $650,000 for his work and then benefited when Wade used his ..."
+            },
+            {
+              "title": "Fani Willis Allowed Nathan Wade Salary Perks, Attorney Says",
+              "url": "https://www.newsweek.com/fani-willis-allowed-nathan-wade-salary-perks-attorney-says-1876584",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Right-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Claims emerged about the relationship between Willis, the Fulton County DA prosecuting Donald Trump, and the special prosecutor.",
+              "snippet": "Claims emerged about the relationship between Willis, the Fulton County DA prosecuting Donald Trump, and the special prosecutor."
+            },
+            {
+              "title": "Fani Willis Loses Bid to Continue Prosecuting Georgia Trump Case",
+              "url": "https://www.nytimes.com/2025/09/16/us/fani-willis-georgia-trump.html",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Wade after hiring him, while using public funds to pay him more than $650,000 for his work on the case. Advertisement. SKIP ADVERTISEMENT.",
+              "snippet": "Wade after hiring him, while using public funds to pay him more than $650,000 for his work on the case. Advertisement. SKIP ADVERTISEMENT."
+            },
+            {
+              "title": "Fani Willis' court filing confirms romantic relationship with lawyer on ...",
+              "url": "https://www.cbsnews.com/news/fani-willis-filing-confirms-romantic-relationship-denies-conflict/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Willis paid for some of the trips with Wade, according to affidavit. The DA's office also asserts that Willis and Wade alternated paying for ...",
+              "snippet": "Willis paid for some of the trips with Wade, according to affidavit. The DA's office also asserts that Willis and Wade alternated paying for ..."
+            },
+            {
+              "title": "Fulton County DA Fani Willis ordered to pay $54K to attorney in ...",
+              "url": "https://www.fox5atlanta.com/news/fulton-county-da-fani-willis-ordered-pay-54k-attorney-trump-case",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Fulton County District Attorney Fani Willis reportedly has just one month to pay over $54000 in attorney's fees, according to court ...",
+              "snippet": "Fulton County District Attorney Fani Willis reportedly has just one month to pay over $54000 in attorney's fees, according to court ..."
+            },
+            {
+              "title": "Judge orders Fulton DA to pay $54000 for violating Georgia Open ...",
+              "url": "https://georgiarecorder.com/briefs/judge-orders-fulton-da-to-pay-54000-for-violating-georgia-open-records-act/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Georgia judge rules Fulton District Attorney Fani Willis violates open records law in the 2020 Trump presidential election interference ...",
+              "snippet": "Georgia judge rules Fulton District Attorney Fani Willis violates open records law in the 2020 Trump presidential election interference ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 116.24,
+        "timestamp_confidence": 1.0
+      },
+      {
+        "claim_text": "Ruby Freeman was awarded a $150 million verdict against Rudy Giuliani.",
+        "claim_confidence": 0.9,
+        "claim_category": "legal",
+        "overall_stance": "mixed",
+        "verdict_confidence": "medium",
+        "verdict_summary": "The evidence indicates that Rudy Giuliani was ordered to pay damages to Ruby Freeman and Shaye Moss in a defamation case, with amounts reported around $148 million. However, the claim specifically states a $150 million verdict, which is not consistently supported across the sources, leading to mixed signals regarding the exact amount.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "Giuliani defamation trial: Jury awards election workers nearly $150 ...",
+              "url": "https://abcnews.go.com/US/live-updates/giuliani-defamation-trial?id=105479446&entryId=105655676&userab=abc_web_player-460*variant_a_abc_control-1900%2Cotv_web_player-461*variant_b_otv_dmp-1903%2Cotv_web_content_rec-445*variant_a_control-1849%2Chp_banner-426*variant_e__tall_white-1781&userab=abc_web_player-460*variant_a_abc_control-1900%2Cotv_web_player-461*variant_b_otv_dmp-1903%2Cotv_web_content_rec-445*variant_a_control-1849%2Chp_banner-426*variant_a_control-1777",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Giuliani ordered to pay damages in Georgia election defamation caseA jury ordered Rudy Giuliani to pay former Georgia election workers Ruby Freeman and ...",
+              "snippet": "Giuliani ordered to pay damages in Georgia election defamation caseA jury ordered Rudy Giuliani to pay former Georgia election workers Ruby Freeman and ..."
+            },
+            {
+              "title": "Jury in federal court awards Ruby Freeman and Shaye Moss ...",
+              "url": "https://protectdemocracy.org/work/freeman-moss-giuliani-verdict/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Moss on all of their claims. At the close of trial, the eight members of the jury awarded $75M in punitive damages, $33,169,000 in defamation ...",
+              "snippet": "Moss on all of their claims. At the close of trial, the eight members of the jury awarded $75M in punitive damages, $33,169,000 in defamation ..."
+            },
+            {
+              "title": "Rudy Giuliani 'fully satisfied' judgement in defamation case - BBC",
+              "url": "https://www.bbc.com/news/articles/c5y0ddyqv51o",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Two election workers sued Trump's former lawyer for defamation after he claimed they committed fraud during the 2020 election.",
+              "snippet": "Two election workers sued Trump's former lawyer for defamation after he claimed they committed fraud during the 2020 election."
+            },
+            {
+              "title": "Rudy Giuliani satisfies Fulton County election workers' $148 million ...",
+              "url": "https://abcnews.go.com/US/rudy-giuliani-pays-148-million-fulton-county-election/story?id=119151328",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Former New York City mayor Rudy Giuliani was found liable for defamation in 2023 and ordered to pay two election workers $148 million -- which has now been ...",
+              "snippet": "Former New York City mayor Rudy Giuliani was found liable for defamation in 2023 and ordered to pay two election workers $148 million -- which has now been ..."
+            },
+            {
+              "title": "Rudy Giuliani satisfies judgment in defamation case brought by ...",
+              "url": "https://www.nbcnews.com/politics/politics-news/rudy-giuliani-judgment-defamation-case-former-georgia-election-workers-rcna193581",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "A judge previously ruled the former Trump attorney had defamed Ruby Freeman and her daughter, Wandrea \u201cShaye\u201d Moss by falsely claiming they ...",
+              "snippet": "A judge previously ruled the former Trump attorney had defamed Ruby Freeman and her daughter, Wandrea \u201cShaye\u201d Moss by falsely claiming they ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 295.84,
+        "timestamp_confidence": 0.8818897637795275
+      },
+      {
+        "claim_text": "In Georgia, Trump lost by 11,779 votes.",
+        "claim_confidence": 0.9,
+        "claim_category": "statistical",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "2020 Electoral College Results | National Archives",
+              "url": "https://www.archives.gov/electoral-college/2020",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (24.9 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "President Joseph R. Biden Jr. [D] Main Opponent Donald J. Trump [R] Electoral Vote Winner: 306 Main Opponent: 232 Total/Majority: 538/270 Vice President ...",
+              "snippet": "President Joseph R. Biden Jr. [D] Main Opponent Donald J. Trump [R] Electoral Vote Winner: 306 Main Opponent: 232 Total/Majority: 538/270 Vice President ..."
+            },
+            {
+              "title": "After bitter defeat in 2020, Trump comes back to win Georgia in 2024",
+              "url": "https://georgiarecorder.com/2024/11/06/after-bitter-defeat-in-2020-trump-comes-back-to-win-georgia-in-2024/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Former President Donald Trump has won Georgia's 16 electoral votes, according to the Associated Press. \u00b7 \u200b\u200bAt a Republican election night party ...",
+              "snippet": "Former President Donald Trump has won Georgia's 16 electoral votes, according to the Associated Press. \u00b7 \u200b\u200bAt a Republican election night party ..."
+            },
+            {
+              "title": "AP FACT CHECK: Trump's made-up claims of fake Georgia votes",
+              "url": "https://apnews.com/article/ap-fact-check-donald-trump-georgia-elections-atlanta-c23d10e5299e14daee6109885f7dafa9",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "President Donald Trump put forth a dizzying array of fuzzy accounting and outright false claims in an extraordinary phone call to Georgia's ...",
+              "snippet": "President Donald Trump put forth a dizzying array of fuzzy accounting and outright false claims in an extraordinary phone call to Georgia's ..."
+            },
+            {
+              "title": "Fact Check: Trump's Georgia Call to Raffensperger",
+              "url": "https://www.brennancenter.org/our-work/research-reports/fact-check-trumps-georgia-call-raffensperger",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The former president made a slew of false claims in asking the Georgia secretary of state to overturn the 2020 election results.",
+              "snippet": "The former president made a slew of false claims in asking the Georgia secretary of state to overturn the 2020 election results."
+            },
+            {
+              "title": "Georgia Election Results 2020 | Live Map Updates - Politico",
+              "url": "https://www.politico.com/2020-election/results/georgia/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Joseph Biden, Jr. 2020 election candidate Joe Biden won in Georgia, flipping a state Donald Trump won in 2016.",
+              "snippet": "Joseph Biden, Jr. 2020 election candidate Joe Biden won in Georgia, flipping a state Donald Trump won in 2016."
+            },
+            {
+              "title": "Georgia officials defend voting system against barrage of conspiracies",
+              "url": "https://www.cbsnews.com/news/georgia-election-officials-defend-system-after-trump-fraud-claims-60-minutes/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "In Georgia, where millions of people have already voted, officials are focused on ensuring the vote counting process is accurate \u2014 and that ...",
+              "snippet": "In Georgia, where millions of people have already voted, officials are focused on ensuring the vote counting process is accurate \u2014 and that ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 463.919,
+        "timestamp_confidence": 0.782608695652174
+      },
+      {
+        "claim_text": "In Wisconsin, 220,044 votes were cast without showing ID.",
+        "claim_confidence": 0.9,
+        "claim_category": "statistical",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "[PDF] 2023 Enrolled Joint Resolution 9 - Wisconsin Legislative Documents",
+              "url": "https://docs.legis.wisconsin.gov/misc/lrb/lrb_reports/2023_enrolled_joint_resolution_9_8_3.pdf",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (25.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "The amendment would also allow individuals who are unable to present photo ID when they vote to cast a provisional ballot. Provisional ballots are counted only ...",
+              "snippet": "The amendment would also allow individuals who are unable to present photo ID when they vote to cast a provisional ballot. Provisional ballots are counted only ..."
+            },
+            {
+              "title": "[PDF] ACCEPTABLE PHOTO IDS - MyVote WI",
+              "url": "https://myvote.wi.gov/Portals/0/Documents/AcceptablePhotoIDs.pdf",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (25.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Anyone with a valid Wisconsin driver license or Wisconsin state ID card, or any of the documents listed below, already has the photo ID they need for voting ...",
+              "snippet": "Anyone with a valid Wisconsin driver license or Wisconsin state ID card, or any of the documents listed below, already has the photo ID they need for voting ..."
+            },
+            {
+              "title": "Explainer: The Proposed Voter ID Constitutional Amendment on ...",
+              "url": "https://statedemocracy.law.wisc.edu/featured/2025/explainer-the-proposed-voter-id-constitutional-amendment-on-wisconsins-april-ballot/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (40.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Bryna Godar, Staff Attorney PDF Available Here Published: February 24, 2025 On Wisconsin's April 1, 2025, spring election ballot, ...",
+              "snippet": "Bryna Godar, Staff Attorney PDF Available Here Published: February 24, 2025 On Wisconsin's April 1, 2025, spring election ballot, ..."
+            },
+            {
+              "title": "Who Lacks a Photo ID in Wisconsin? - Marquette Law School",
+              "url": "https://law.marquette.edu/facultyblog/2025/03/who-lacks-a-photo-id-in-wisconsin/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "During federal litigation following the bill's passage an expert witness estimated that 300,000 then-registered voters lacked an appropriate ...",
+              "snippet": "During federal litigation following the bill's passage an expert witness estimated that 300,000 then-registered voters lacked an appropriate ..."
+            },
+            {
+              "title": "Wisconsin Question 1, Require Voter Photo ID Amendment (April ...",
+              "url": "https://ballotpedia.org/Wisconsin_Question_1,_Require_Voter_Photo_ID_Amendment_(April_2025)",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Kreibich said, \"For clarification, photo ID is already required by Wisconsin State Statute. But a 'yes' vote would amend the Wisconsin Constitution to include ...",
+              "snippet": "Kreibich said, \"For clarification, photo ID is already required by Wisconsin State Statute. But a 'yes' vote would amend the Wisconsin Constitution to include ..."
+            },
+            {
+              "title": "Wisconsin Voters Approve Amendment Requiring Photo ID to Vote",
+              "url": "https://www.nytimes.com/2025/04/01/us/wisconsin-voters-approve-amendment-requiring-photo-id-to-vote.html",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The state has required voters to use photograph identification for nearly a decade, but an amendment to the Wisconsin Constitution was seen ...",
+              "snippet": "The state has required voters to use photograph identification for nearly a decade, but an amendment to the Wisconsin Constitution was seen ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 588.2,
+        "timestamp_confidence": 0.7047619047619048
+      },
+      {
+        "claim_text": "In Pennsylvania, there were 121,240 more votes than voters.",
+        "claim_confidence": 0.9,
+        "claim_category": "statistical",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "Fact-Checking PA-related Election Claims",
+              "url": "https://www.pa.gov/agencies/vote/elections/fact-checking-pa-related-election-claims",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (24.4 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Voters who request a mail ballot and do not complete it will be required to vote provisionally if they report to their polling place on Election Day unless they ...",
+              "snippet": "Voters who request a mail ballot and do not complete it will be required to vote provisionally if they report to their polling place on Election Day unless they ..."
+            },
+            {
+              "title": "How Many Naked Ballots Were Cast in Pennsylvania's 2020 ...",
+              "url": "https://electionlab.mit.edu/articles/how-many-naked-ballots-were-cast-pennsylvanias-2020-general-election",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (40.6 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Pennsylvania experienced an unprecedented surge of mail balloting in the 2020 presidential election. Because of the passage of Act 77 in 2019, ...",
+              "snippet": "Pennsylvania experienced an unprecedented surge of mail balloting in the 2020 presidential election. Because of the passage of Act 77 in 2019, ..."
+            },
+            {
+              "title": "Report shows how PA ballots fueled 2020 election disinfo",
+              "url": "https://www.spotlightpa.org/news/2024/07/luzerne-2020-discarded-trump-ballots-doj-report-freed-barr-disinformation-pennsylvania/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "A new report says DOJ officials mishandled a 2020 election investigation into Pennsylvania ballots. The incident became fodder for fraud ...",
+              "snippet": "A new report says DOJ officials mishandled a 2020 election investigation into Pennsylvania ballots. The incident became fodder for fraud ..."
+            },
+            {
+              "title": "There were not more votes than voters in Pennsylvania | AP News",
+              "url": "https://apnews.com/article/fact-checking-9887147615",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The numbers certified by Pennsylvania counties in November show that more than 6.9 million voters cast ballots in the 2020 election, electing ...",
+              "snippet": "The numbers certified by Pennsylvania counties in November show that more than 6.9 million voters cast ballots in the 2020 election, electing ..."
+            },
+            {
+              "title": "Claims that there were \u201cmore votes than voters\" in Pennsylvania in ...",
+              "url": "https://x.com/PAStateDept/status/1818662137323008077",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (32.7 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "PA Department of State (@PAStateDept). 23 likes 20 replies. Claims that there were \u201cmore votes than voters\" in Pennsylvania in the 2020 ...",
+              "snippet": "PA Department of State (@PAStateDept). 23 likes 20 replies. Claims that there were \u201cmore votes than voters\" in Pennsylvania in the 2020 ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 685.44,
+        "timestamp_confidence": 0.8627450980392157
+      },
+      {
+        "claim_text": "In Arizona, Maricopa County accepted 20,500 mail-in ballots after Election Day.",
+        "claim_confidence": 0.9,
+        "claim_category": "statistical",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "Ballot by Mail - Arizona Clean Elections Commission",
+              "url": "https://www.azcleanelections.gov/voting-methods/ballot-by-mail",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (21.4 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "AEVL allows a voter to sign up for a mail ballot to automatically be mailed to them for every election they are eligible to vote in. Voters may also make a one ...",
+              "snippet": "AEVL allows a voter to sign up for a mail ballot to automatically be mailed to them for every election they are eligible to vote in. Voters may also make a one ..."
+            },
+            {
+              "title": "Fast Facts - Maricopa County Elections",
+              "url": "https://elections.maricopa.gov/voting/just-the-facts/fast-facts.html",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "In fact, dropping off a ballot on Election Day or the day before is the second most popular method of voting for Maricopa County Voters. Now here's the really ...",
+              "snippet": "In fact, dropping off a ballot on Election Day or the day before is the second most popular method of voting for Maricopa County Voters. Now here's the really ..."
+            },
+            {
+              "title": "Maricopa County Posts Updated Results for November ...",
+              "url": "https://elections.maricopa.gov/news-and-information/elections-news/november-jurisdictional-election-updated-results-1172025.html",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Vote. Results reported by Maricopa County Elections now represent 702,568 ballots ballots, which is 26.49% of total eligible voters. There were ...",
+              "snippet": "Vote. Results reported by Maricopa County Elections now represent 702,568 ballots ballots, which is 26.49% of total eligible voters. There were ..."
+            },
+            {
+              "title": "Request a Mail Ballot - Maricopa County Elections",
+              "url": "https://elections.maricopa.gov/voting/request-mail-ballot.html",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "The upcoming elections will be All-Ballot-by-Mail, meaning every eligible voter will automatically receive a ballot by mail. Ballots begin mailing on ...",
+              "snippet": "The upcoming elections will be All-Ballot-by-Mail, meaning every eligible voter will automatically receive a ballot by mail. Ballots begin mailing on ..."
+            },
+            {
+              "title": "Arizona county didn't accept 18K ballots after 2020 election day",
+              "url": "https://apnews.com/article/fact-check-maricopa-county-18000-ballots-614764765077",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "False. A form used by Maricopa County election officials is being misrepresented as proof that the ballots were accepted after election day.",
+              "snippet": "False. A form used by Maricopa County election officials is being misrepresented as proof that the ballots were accepted after election day."
+            },
+            {
+              "title": "No evidence Maricopa County accepted 18000 ballots after 2020 ...",
+              "url": "https://www.reuters.com/article/fact-check/no-evidence-maricopa-county-accepted-18000-ballots-after-2020-election-day-idUSL1N2XV2AI/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The image does not show receipt of late ballots accepted by the Maricopa County Elections Department and instead shows a document recording the ...",
+              "snippet": "The image does not show receipt of late ballots accepted by the Maricopa County Elections Department and instead shows a document recording the ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 735.92,
+        "timestamp_confidence": 0.912751677852349
+      },
+      {
+        "claim_text": "Michigan had 271,000 ballots delivered after the 8:00 p.m. deadline.",
+        "claim_confidence": 0.9,
+        "claim_category": "statistical",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "Absentee voting - State of Michigan",
+              "url": "https://www.michigan.gov/sos/elections/voting/absentee-voting",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (24.7 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Voters can also request an absentee ballot directly from their local clerk's office. Absentee ballots are available beginning 40 days prior to every election.",
+              "snippet": "Voters can also request an absentee ballot directly from their local clerk's office. Absentee ballots are available beginning 40 days prior to every election."
+            },
+            {
+              "title": "Rejected ballot data from Nov. 3 election demonstrates integrity of ...",
+              "url": "https://www.michigan.gov/sos/resources/news/2020/12/02/rejected-ballot-data-from-nov--3-election-demonstrates-integrity-of-election",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (24.7 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "In total, 15,300 of 3.3 million absentee ballots were rejected for a variety of reasons recorded by election clerks, compared to 10,600 in the ...",
+              "snippet": "In total, 15,300 of 3.3 million absentee ballots were rejected for a variety of reasons recorded by election clerks, compared to 10,600 in the ..."
+            },
+            {
+              "title": "Court Says Michigan Cannot Count Ballots Received After Election ...",
+              "url": "https://www.npr.org/2020/10/17/924930037/court-says-michigan-cannot-count-ballots-received-after-election-day",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "A lower court had previously ruled that ballots postmarked by Nov. 2 and received within 14 days of Election Day, the deadline for ...",
+              "snippet": "A lower court had previously ruled that ballots postmarked by Nov. 2 and received within 14 days of Election Day, the deadline for ..."
+            },
+            {
+              "title": "How Vote Counting Rules Have Changed in Key States Since 2020",
+              "url": "https://www.brennancenter.org/our-work/analysis-opinion/how-vote-counting-rules-have-changed-key-states-2020",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Most notably, Michigan now allows election workers to begin processing and tabulating mail ballots before Election Day. Processing typically ...",
+              "snippet": "Most notably, Michigan now allows election workers to begin processing and tabulating mail ballots before Election Day. Processing typically ..."
+            },
+            {
+              "title": "Tuesday is the last day to safely return your absentee ballot by mail",
+              "url": "https://www.freep.com/story/news/politics/elections/2024/10/22/mailing-michigan-absentee-ballots/75776443007/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "To be counted, absentee ballots sent from within the United States must be received by local clerks no later than 8 p.m. on Election Day, ...",
+              "snippet": "To be counted, absentee ballots sent from within the United States must be received by local clerks no later than 8 p.m. on Election Day, ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 873.24,
+        "timestamp_confidence": 0.6557377049180327
+      }
+    ],
+    "transcript_data": {
+      "text": "something happened this month that I want to make sure that people do not miss Donald Trump posted on Truth social this document it is a 32-page document containing all the latest information about what has been exposed about fraud in the 2020 election we're going to walk through this document this week on wolves and [Music] finance I need to start this video with a disclaimer YouTube policy does not allow you to say in videos that the certified results of elections were wrong so in keeping with this policy I will not be saying in this video whether Donald Trump did or did not win the 2020 election instead I'm going to be laying out all the facts and I'll let you decide for yourselves what I want you to do is watch this video all the way to the end and then leave a comment down below letting me know what you think do you think the 2020 election was stolen let me know in the comments below it's important to understand the context of President Trump's post he is currently facing a criminal Rico trial in Fulton County Georgia because he questioned the results of the 2020 election the case is based on a bizarre legal theory that Donald Trump knew that he lost the election but lied about it and committed fraud by trying to convince everyone that he actually won so the key question in the case was whether Donald Trump was lying when he claimed he won the 2020 election the district attorney bringing the case against Donald Trump is Fanny Willis it was revealed in a court filing this week that Fanny Willis has been sleeping with the special prosecutor she hired to handle the case against Trump the special prosecutor is named Nathan Wade and he has never filed a RICO case Fanny Willis has paid Nathan Wade more than $650,000 while they were sleeping together Fanny Willis has other attorneys working in her office with experience in Rico cases why in the world would she pay someone $650,000 who has no experience it turns out they would then use the money to pay for trips to places like the Caribbean this looks like obvious corruption and there is currently a motion filed to dismiss let's go back to when the case was first filed when President Trump was first arrested by Fanny Willis in August he announced that he was going to release a 100-page report containing evidence of fraud in the 2020 election that would prove the election was stolen he claimed it was a conclusive report and that all charges should be dropped against me and others now at the time he never released that report saying that his legal counsel wanted him to wait until trial I believe this new report that was just released this month is part of the president's conclusive report so what is in this new report it goes through all the swing states in the 2020 election for each state it gives a list of bullet points with evidence of fraud in the election each one of the bullet points comes with citations to sources backing up these claims this is important to understand these are not just random statements of fact the bullet points are backed up by detailed investigations which you can then read to get even more information now I'm not going to go through all the information in this report because there is a lot I'm going to review some of the more shocking highlights here is a list of all the swing states with the vote differences each of these states was called for Joe Biden some by very narrow margins Donald Trump only needed to win three of these states and he would have won the election the report argues that Donald Trump actually won all of these five states Georgia Wisconsin Pennsylvania Arizona and Michigan let's start with Georgia in my opinion this is the most obvious case of fraud it was reported that Trump lost Georgia by 11,779 votes in fton County we have video evidence of a poll worker named Ruby Freeman running the same stack of ballots through the counting machines multiple times ironically Ruby Freeman was later given the presidential citizens medal by Joe Biden for her work during the 2020 election Ruby Freeman has sued Rudy Giuliani for defamation in a Washington DC court and last month a mostly Democrat jury awarded Ruby Freeman a 100 $50 million verdict against Rudy Giuliani in the complaint Ruby Freeman explains that she did not like that Rudy Giuliani talked about the video of her and that Rudy Giuliani falsely accused her of counting the same ballots multiple times among other things she claims that since the election results were certified as correct that any statement made by Rudy Giuliani is false Rudy Giuliani was not allowed during the trial to submit one piece of evidence to the court now can someone please explain this to me how can there be a fair trial if the judge does not allow the defense to present any evidence that doesn't seem very fair to me there are some other unusual things about this case how is this case being tried in Washington DC Ruby Freeman is in Fulton County Georgia Rudy giuliani's comments were that she engaged Ed in election fraud in fton County Georgia why is this in Washington DC in the complaint Ruby Freeman explains that Rudy giuliani's comments were broadcast over the oan news channel which has an office in Washington DC Rudy Giuliani also worked in Washington DC as Donald Trump's lawyer so for that reason the case went to trial in Washington DC in front of a mostly Democrat jury Rudy Giuliani has already said that he plans to appeal the verdict it should be noted that Ruby Freeman's complaint states that this video does not show her committing illegal ballot counting but we can see with our own eyes that she counts the same stack of ballots multiple times what should we choose to believe her own statement or the video that we can see with our own eyes what do you think the problem with Ruby Freeman's statements is that the evidence provides a lot of doubt in the report from president trump it states fton county certified 59,4 in-person votes on Election Day despite the fact that only 14,522 evidence suggests the in-person vote total on Election Day was inflated by approximately 30 7,000 votes somehow a whole lot of votes came out of nowhere from people who did not exist could this have come from poll workers counting the same ballots multiple times remember that the vote difference in Georgia was only 11,779 votes and we are talking about a potential 37,000 fake ballots another issue in Georgia was the mail in ballots it's much easier to cheat with mail and ballots because anyone can drop it off in the mail you are relying on the people counting the votes like Ruby Freeman to do the honest thing and verify that the ballot is accurate before they count it well it turns out that in Georgia likely 67,2 184 votes were cast from voters with invalid residency these were people who did not actually live in Georgia but had their vote counted anyway remember remember the vote difference in Georgia was only 11,779 votes and just this issue alone would be 67,2 184 illegal votes there are many more bullet points about issues in the Georgia elections but I think you get the point there is a lot of evidence of election fraud in Georgia specifically in fton County so it is odd that fton county is the place that is criminally prosecuting Donald Trump for asking questions about the election it also seems like Fanny Willis is attempting to cover something up the next state is Wisconsin the vote difference was 20,625 an exception that you could vote by mail without having to show your ID this resulted in 220,00 44 votes cast from individuals who were Exempted from showing voter ID that would be incredibly easy to cheat if you never had to show an ID we are talking about a vote difference of 20,625 votes were cast without an ID this this problem really shows itself when we look at nursing homes nursing homes in Milwaukee Dayne and Racine counties had 100% turnout so you're telling me that 100% of people in nursing homes voted some people in nursing homes are nearing death so even people who were literally on their deathbeds got up and voted something just doesn't sound right to me about that in one example Merill Barrett who was 104 years old and did not recognize her own children had a ballot cast in her name in the 2020 presidential election okay now how obvious do we have to get that some funny business is going on again there are many more bullet points about issues in Wisconsin but I think you get the point the next state is Pennsylvania the vote difference in Pennsylvania was 8,555 votes now now that sounds like a lot until you find out that there were 121,50 more votes than voters Pennsylvania uses a voting system called sure the Statewide uniform registry of electors they were never able to reconcile the number of votes that were counted with the number of people who were registered to vote so the vote difference was 8,555 votes and there were 121 , 240 more votes than voters this is another example where there are many more bullet points in the report but this one fact alone raises a lot of questions for me the next state is Arizona this is the closest vote margin with only 10,457 votes Arizona did some of the most blatantly illegal things I don't know if you remember this but Arizona took a really long time to count their ballots the election took place on November 3rd well they didn't finish counting the ballots until November 30th well it turns out they were accepting and Counting ballots after the election day these were illegal votes here's a quote from the report Maricopa County accepted 20,500 mailin ballots after election day by law ballots must be received no later than 700 p.m. on Election Day which was November 3rd so the election was over the deadline was passed and they were still receiving and Counting ballots days after the election was over these are illegal votes the vote margin was 10,457 votes this one example accounts for 20,500 ballots what makes matters worse is that the meropa County elections Department withheld this information from public records requests for for 7 months after the elections no one knew this was going on until it was too late to protest the election this looks a lot like cheating also just like in the other states it looks like some of the votes were completely made up two precincts in Puma County had over 100% turnout for mailin ballots can someone in the comments please explain to me how this can happen because I'm really having a hard time understanding this how is it possible to have more than 100% of people vote how is that possible what is even more suspicious is the Arizona Secretary of State during the 2020 election was someone named Katie Hobbs she is the person responsible for running the election it turns out 2 years later she somehow became the governor of Arizona in 2022 she ran against car Lake Katie Hobbs miraculously won against all polling predictions and Katie Hobbs certified her own election count naming herself the winner ktie hobb's election is still being contested in the courts with Arizona there are many more bullet points in president Trump's report but I think you get the point the next state is Michigan the vote difference is votes now this is the largest vote difference out of the Swing States and it sounds like a lot until you find out that Michigan has 271,000 delivered in a van at 3:30 a.m. past the 8:00 p.m. deadline this was 50 boxes of ballots each containing thousands of ballots how can they count ballots that were received after the deadline when we look at the ballot counts we can see the spike that came from the suspicious ballots Michigan was also the state where we now know there was a police investigation of a company called GB bi strategies the police raided a gbi strategies office to find thousands of fraudulent voter registrations the forms were in the same handwriting and used fake addresses gbi strategies was funded by a super pack called black pack which paid the firm 11,254 n19 to register voters for Joe Biden in 2020 these people were not only only under investigation for cheating during the election they were making an awful lot of money doing it again there are many more bullet points in the report but I think you get the point so that was the report that was posted by President Trump going through the five swing states in the 2020 election again I'm not going to say whether the election was or was not stolen I want you to decide what do you think was the 2020 election stolen let me know in the comments down below and if you like this video don't forget to hit that subscribe button for some reason YouTube does not want my videos getting out there so if you're not subscribed you're probably not going to see them in your feed so make sure you hit that subscribe button also if you want to support the channel the best way is to sign up for a monthly membership on my website wolves andf finance.com my videos get demonetized a lot so the only way I survive is with support from viewers like you if you're interested a membership for $6 a month helps me to continue to put out these videos I'm Zach from wolves and finance thank you for [Music] watching",
+      "segments": [
+        {
+          "text": "something happened this month that I",
+          "start": 0.199,
+          "duration": 3.56
+        },
+        {
+          "text": "want to make sure that people do not",
+          "start": 1.8,
+          "duration": 5.479
+        },
+        {
+          "text": "miss Donald Trump posted on Truth social",
+          "start": 3.759,
+          "duration": 6.401
+        },
+        {
+          "text": "this document it is a 32-page document",
+          "start": 7.279,
+          "duration": 5.001
+        },
+        {
+          "text": "containing all the latest information",
+          "start": 10.16,
+          "duration": 4.8
+        },
+        {
+          "text": "about what has been exposed about fraud",
+          "start": 12.28,
+          "duration": 5.159
+        },
+        {
+          "text": "in the 2020 election we're going to walk",
+          "start": 14.96,
+          "duration": 4.8
+        },
+        {
+          "text": "through this document this week on",
+          "start": 17.439,
+          "duration": 3.941
+        },
+        {
+          "text": "wolves and",
+          "start": 19.76,
+          "duration": 8.72
+        },
+        {
+          "text": "[Music]",
+          "start": 21.38,
+          "duration": 9.5
+        },
+        {
+          "text": "finance I need to start this video with",
+          "start": 28.48,
+          "duration": 5.16
+        },
+        {
+          "text": "a disclaimer YouTube policy does not",
+          "start": 30.88,
+          "duration": 4.6
+        },
+        {
+          "text": "allow you to say in videos that the",
+          "start": 33.64,
+          "duration": 4.12
+        },
+        {
+          "text": "certified results of elections were",
+          "start": 35.48,
+          "duration": 5.399
+        },
+        {
+          "text": "wrong so in keeping with this policy I",
+          "start": 37.76,
+          "duration": 5.639
+        },
+        {
+          "text": "will not be saying in this video whether",
+          "start": 40.879,
+          "duration": 6.081
+        },
+        {
+          "text": "Donald Trump did or did not win the 2020",
+          "start": 43.399,
+          "duration": 6.64
+        },
+        {
+          "text": "election instead I'm going to be laying",
+          "start": 46.96,
+          "duration": 5.919
+        },
+        {
+          "text": "out all the facts and I'll let you",
+          "start": 50.039,
+          "duration": 5.401
+        },
+        {
+          "text": "decide for yourselves what I want you to",
+          "start": 52.879,
+          "duration": 4.721
+        },
+        {
+          "text": "do is watch this video all the way to",
+          "start": 55.44,
+          "duration": 4.16
+        },
+        {
+          "text": "the end and then leave a comment down",
+          "start": 57.6,
+          "duration": 5.32
+        },
+        {
+          "text": "below letting me know what you think do",
+          "start": 59.6,
+          "duration": 6.08
+        },
+        {
+          "text": "you think the 2020 election was stolen",
+          "start": 62.92,
+          "duration": 5.48
+        },
+        {
+          "text": "let me know in the comments below it's",
+          "start": 65.68,
+          "duration": 5.24
+        },
+        {
+          "text": "important to understand the context of",
+          "start": 68.4,
+          "duration": 5.039
+        },
+        {
+          "text": "President Trump's post he is currently",
+          "start": 70.92,
+          "duration": 5.28
+        },
+        {
+          "text": "facing a criminal Rico trial in Fulton",
+          "start": 73.439,
+          "duration": 5.0
+        },
+        {
+          "text": "County Georgia because he questioned the",
+          "start": 76.2,
+          "duration": 5.4
+        },
+        {
+          "text": "results of the 2020 election the case is",
+          "start": 78.439,
+          "duration": 5.521
+        },
+        {
+          "text": "based on a bizarre legal theory that",
+          "start": 81.6,
+          "duration": 4.36
+        },
+        {
+          "text": "Donald Trump knew that he lost the",
+          "start": 83.96,
+          "duration": 4.6
+        },
+        {
+          "text": "election but lied about it and committed",
+          "start": 85.96,
+          "duration": 5.04
+        },
+        {
+          "text": "fraud by trying to convince everyone",
+          "start": 88.56,
+          "duration": 4.8
+        },
+        {
+          "text": "that he actually won so the key question",
+          "start": 91.0,
+          "duration": 4.479
+        },
+        {
+          "text": "in the case was whether Donald Trump was",
+          "start": 93.36,
+          "duration": 5.0
+        },
+        {
+          "text": "lying when he claimed he won the 2020",
+          "start": 95.479,
+          "duration": 5.121
+        },
+        {
+          "text": "election the district attorney bringing",
+          "start": 98.36,
+          "duration": 4.88
+        },
+        {
+          "text": "the case against Donald Trump is Fanny",
+          "start": 100.6,
+          "duration": 5.519
+        },
+        {
+          "text": "Willis it was revealed in a court filing",
+          "start": 103.24,
+          "duration": 5.28
+        },
+        {
+          "text": "this week that Fanny Willis has been",
+          "start": 106.119,
+          "duration": 5.0
+        },
+        {
+          "text": "sleeping with the special prosecutor she",
+          "start": 108.52,
+          "duration": 5.52
+        },
+        {
+          "text": "hired to handle the case against Trump",
+          "start": 111.119,
+          "duration": 5.121
+        },
+        {
+          "text": "the special prosecutor is named Nathan",
+          "start": 114.04,
+          "duration": 5.84
+        },
+        {
+          "text": "Wade and he has never filed a RICO case",
+          "start": 116.24,
+          "duration": 6.199
+        },
+        {
+          "text": "Fanny Willis has paid Nathan Wade more",
+          "start": 119.88,
+          "duration": 4.159
+        },
+        {
+          "text": "than",
+          "start": 122.439,
+          "duration": 3.64
+        },
+        {
+          "text": "$650,000 while they were sleeping",
+          "start": 124.039,
+          "duration": 4.241
+        },
+        {
+          "text": "together Fanny Willis has other",
+          "start": 126.079,
+          "duration": 4.361
+        },
+        {
+          "text": "attorneys working in her office with",
+          "start": 128.28,
+          "duration": 5.56
+        },
+        {
+          "text": "experience in Rico cases why in the",
+          "start": 130.44,
+          "duration": 6.519
+        },
+        {
+          "text": "world would she pay someone",
+          "start": 133.84,
+          "duration": 6.6
+        },
+        {
+          "text": "$650,000 who has no experience it turns",
+          "start": 136.959,
+          "duration": 5.56
+        },
+        {
+          "text": "out they would then use the money to pay",
+          "start": 140.44,
+          "duration": 5.32
+        },
+        {
+          "text": "for trips to places like the Caribbean",
+          "start": 142.519,
+          "duration": 5.961
+        },
+        {
+          "text": "this looks like obvious corruption and",
+          "start": 145.76,
+          "duration": 5.04
+        },
+        {
+          "text": "there is currently a motion filed to",
+          "start": 148.48,
+          "duration": 4.839
+        },
+        {
+          "text": "dismiss let's go back to when the case",
+          "start": 150.8,
+          "duration": 5.439
+        },
+        {
+          "text": "was first filed when President Trump was",
+          "start": 153.319,
+          "duration": 5.801
+        },
+        {
+          "text": "first arrested by Fanny Willis in August",
+          "start": 156.239,
+          "duration": 4.561
+        },
+        {
+          "text": "he announced that he was going to",
+          "start": 159.12,
+          "duration": 4.8
+        },
+        {
+          "text": "release a 100-page report containing",
+          "start": 160.8,
+          "duration": 5.64
+        },
+        {
+          "text": "evidence of fraud in the 2020 election",
+          "start": 163.92,
+          "duration": 5.52
+        },
+        {
+          "text": "that would prove the election was stolen",
+          "start": 166.44,
+          "duration": 5.799
+        },
+        {
+          "text": "he claimed it was a conclusive report",
+          "start": 169.44,
+          "duration": 5.079
+        },
+        {
+          "text": "and that all charges should be dropped",
+          "start": 172.239,
+          "duration": 5.521
+        },
+        {
+          "text": "against me and others now at the time he",
+          "start": 174.519,
+          "duration": 5.321
+        },
+        {
+          "text": "never released that report saying that",
+          "start": 177.76,
+          "duration": 4.28
+        },
+        {
+          "text": "his legal counsel wanted him to wait",
+          "start": 179.84,
+          "duration": 5.479
+        },
+        {
+          "text": "until trial I believe this new report",
+          "start": 182.04,
+          "duration": 5.8
+        },
+        {
+          "text": "that was just released this month is",
+          "start": 185.319,
+          "duration": 4.401
+        },
+        {
+          "text": "part of the president's conclusive",
+          "start": 187.84,
+          "duration": 5.479
+        },
+        {
+          "text": "report so what is in this new report it",
+          "start": 189.72,
+          "duration": 5.92
+        },
+        {
+          "text": "goes through all the swing states in the",
+          "start": 193.319,
+          "duration": 5.401
+        },
+        {
+          "text": "2020 election for each state it gives a",
+          "start": 195.64,
+          "duration": 5.159
+        },
+        {
+          "text": "list of bullet points with evidence of",
+          "start": 198.72,
+          "duration": 5.2
+        },
+        {
+          "text": "fraud in the election each one of the",
+          "start": 200.799,
+          "duration": 5.52
+        },
+        {
+          "text": "bullet points comes with citations to",
+          "start": 203.92,
+          "duration": 5.48
+        },
+        {
+          "text": "sources backing up these claims this is",
+          "start": 206.319,
+          "duration": 5.361
+        },
+        {
+          "text": "important to understand these are not",
+          "start": 209.4,
+          "duration": 4.839
+        },
+        {
+          "text": "just random statements of fact the",
+          "start": 211.68,
+          "duration": 5.72
+        },
+        {
+          "text": "bullet points are backed up by detailed",
+          "start": 214.239,
+          "duration": 5.441
+        },
+        {
+          "text": "investigations which you can then read",
+          "start": 217.4,
+          "duration": 5.0
+        },
+        {
+          "text": "to get even more information now I'm not",
+          "start": 219.68,
+          "duration": 4.36
+        },
+        {
+          "text": "going to go through all the information",
+          "start": 222.4,
+          "duration": 4.199
+        },
+        {
+          "text": "in this report because there is a lot",
+          "start": 224.04,
+          "duration": 4.08
+        },
+        {
+          "text": "I'm going to review some of the more",
+          "start": 226.599,
+          "duration": 4.601
+        },
+        {
+          "text": "shocking highlights here is a list of",
+          "start": 228.12,
+          "duration": 5.199
+        },
+        {
+          "text": "all the swing states with the vote",
+          "start": 231.2,
+          "duration": 4.44
+        },
+        {
+          "text": "differences each of these states was",
+          "start": 233.319,
+          "duration": 5.401
+        },
+        {
+          "text": "called for Joe Biden some by very narrow",
+          "start": 235.64,
+          "duration": 6.879
+        },
+        {
+          "text": "margins Donald Trump only needed to win",
+          "start": 238.72,
+          "duration": 6.28
+        },
+        {
+          "text": "three of these states and he would have",
+          "start": 242.519,
+          "duration": 5.44
+        },
+        {
+          "text": "won the election the report argues that",
+          "start": 245.0,
+          "duration": 6.12
+        },
+        {
+          "text": "Donald Trump actually won all of these",
+          "start": 247.959,
+          "duration": 6.401
+        },
+        {
+          "text": "five states Georgia Wisconsin",
+          "start": 251.12,
+          "duration": 6.72
+        },
+        {
+          "text": "Pennsylvania Arizona and Michigan let's",
+          "start": 254.36,
+          "duration": 6.52
+        },
+        {
+          "text": "start with Georgia in my opinion this is",
+          "start": 257.84,
+          "duration": 5.28
+        },
+        {
+          "text": "the most obvious case of fraud it was",
+          "start": 260.88,
+          "duration": 6.08
+        },
+        {
+          "text": "reported that Trump lost Georgia by",
+          "start": 263.12,
+          "duration": 7.519
+        },
+        {
+          "text": "11,779 votes in fton County we have",
+          "start": 266.96,
+          "duration": 5.88
+        },
+        {
+          "text": "video evidence of a poll worker named",
+          "start": 270.639,
+          "duration": 4.721
+        },
+        {
+          "text": "Ruby Freeman running the same stack of",
+          "start": 272.84,
+          "duration": 4.76
+        },
+        {
+          "text": "ballots through the counting machines",
+          "start": 275.36,
+          "duration": 5.839
+        },
+        {
+          "text": "multiple times ironically Ruby Freeman",
+          "start": 277.6,
+          "duration": 5.24
+        },
+        {
+          "text": "was later given the presidential",
+          "start": 281.199,
+          "duration": 4.881
+        },
+        {
+          "text": "citizens medal by Joe Biden for her work",
+          "start": 282.84,
+          "duration": 6.6
+        },
+        {
+          "text": "during the 2020 election Ruby Freeman",
+          "start": 286.08,
+          "duration": 6.76
+        },
+        {
+          "text": "has sued Rudy Giuliani for defamation in",
+          "start": 289.44,
+          "duration": 6.4
+        },
+        {
+          "text": "a Washington DC court and last month a",
+          "start": 292.84,
+          "duration": 5.4
+        },
+        {
+          "text": "mostly Democrat jury awarded Ruby",
+          "start": 295.84,
+          "duration": 6.04
+        },
+        {
+          "text": "Freeman a 100 $50 million verdict",
+          "start": 298.24,
+          "duration": 6.6
+        },
+        {
+          "text": "against Rudy Giuliani in the complaint",
+          "start": 301.88,
+          "duration": 5.72
+        },
+        {
+          "text": "Ruby Freeman explains that she did not",
+          "start": 304.84,
+          "duration": 5.4
+        },
+        {
+          "text": "like that Rudy Giuliani talked about the",
+          "start": 307.6,
+          "duration": 5.08
+        },
+        {
+          "text": "video of her and that Rudy Giuliani",
+          "start": 310.24,
+          "duration": 5.0
+        },
+        {
+          "text": "falsely accused her of counting the same",
+          "start": 312.68,
+          "duration": 4.92
+        },
+        {
+          "text": "ballots multiple times among other",
+          "start": 315.24,
+          "duration": 4.92
+        },
+        {
+          "text": "things she claims that since the",
+          "start": 317.6,
+          "duration": 4.56
+        },
+        {
+          "text": "election results were certified as",
+          "start": 320.16,
+          "duration": 4.92
+        },
+        {
+          "text": "correct that any statement made by Rudy",
+          "start": 322.16,
+          "duration": 6.68
+        },
+        {
+          "text": "Giuliani is false Rudy Giuliani was not",
+          "start": 325.08,
+          "duration": 6.679
+        },
+        {
+          "text": "allowed during the trial to submit one",
+          "start": 328.84,
+          "duration": 5.84
+        },
+        {
+          "text": "piece of evidence to the court now can",
+          "start": 331.759,
+          "duration": 5.401
+        },
+        {
+          "text": "someone please explain this to me how",
+          "start": 334.68,
+          "duration": 5.04
+        },
+        {
+          "text": "can there be a fair trial if the judge",
+          "start": 337.16,
+          "duration": 5.28
+        },
+        {
+          "text": "does not allow the defense to present",
+          "start": 339.72,
+          "duration": 5.28
+        },
+        {
+          "text": "any evidence that doesn't seem very fair",
+          "start": 342.44,
+          "duration": 5.44
+        },
+        {
+          "text": "to me there are some other unusual",
+          "start": 345.0,
+          "duration": 5.84
+        },
+        {
+          "text": "things about this case how is this case",
+          "start": 347.88,
+          "duration": 6.2
+        },
+        {
+          "text": "being tried in Washington DC Ruby",
+          "start": 350.84,
+          "duration": 6.359
+        },
+        {
+          "text": "Freeman is in Fulton County Georgia Rudy",
+          "start": 354.08,
+          "duration": 4.959
+        },
+        {
+          "text": "giuliani's comments were that she",
+          "start": 357.199,
+          "duration": 4.641
+        },
+        {
+          "text": "engaged Ed in election fraud in fton",
+          "start": 359.039,
+          "duration": 7.401
+        },
+        {
+          "text": "County Georgia why is this in Washington",
+          "start": 361.84,
+          "duration": 7.359
+        },
+        {
+          "text": "DC in the complaint Ruby Freeman",
+          "start": 366.44,
+          "duration": 4.96
+        },
+        {
+          "text": "explains that Rudy giuliani's comments",
+          "start": 369.199,
+          "duration": 5.481
+        },
+        {
+          "text": "were broadcast over the oan news channel",
+          "start": 371.4,
+          "duration": 6.44
+        },
+        {
+          "text": "which has an office in Washington DC",
+          "start": 374.68,
+          "duration": 5.84
+        },
+        {
+          "text": "Rudy Giuliani also worked in Washington",
+          "start": 377.84,
+          "duration": 6.079
+        },
+        {
+          "text": "DC as Donald Trump's lawyer so for that",
+          "start": 380.52,
+          "duration": 5.679
+        },
+        {
+          "text": "reason the case went to trial in",
+          "start": 383.919,
+          "duration": 4.68
+        },
+        {
+          "text": "Washington DC in front of a mostly",
+          "start": 386.199,
+          "duration": 4.12
+        },
+        {
+          "text": "Democrat jury",
+          "start": 388.599,
+          "duration": 4.401
+        },
+        {
+          "text": "Rudy Giuliani has already said that he",
+          "start": 390.319,
+          "duration": 5.561
+        },
+        {
+          "text": "plans to appeal the verdict it should be",
+          "start": 393.0,
+          "duration": 5.479
+        },
+        {
+          "text": "noted that Ruby Freeman's complaint",
+          "start": 395.88,
+          "duration": 5.84
+        },
+        {
+          "text": "states that this video does not show her",
+          "start": 398.479,
+          "duration": 5.921
+        },
+        {
+          "text": "committing illegal ballot counting but",
+          "start": 401.72,
+          "duration": 4.919
+        },
+        {
+          "text": "we can see with our own eyes that she",
+          "start": 404.4,
+          "duration": 4.4
+        },
+        {
+          "text": "counts the same stack of ballots",
+          "start": 406.639,
+          "duration": 4.921
+        },
+        {
+          "text": "multiple times what should we choose to",
+          "start": 408.8,
+          "duration": 6.119
+        },
+        {
+          "text": "believe her own statement or the video",
+          "start": 411.56,
+          "duration": 6.359
+        },
+        {
+          "text": "that we can see with our own eyes what",
+          "start": 414.919,
+          "duration": 5.28
+        },
+        {
+          "text": "do you think the problem with Ruby",
+          "start": 417.919,
+          "duration": 3.84
+        },
+        {
+          "text": "Freeman's statements is that the",
+          "start": 420.199,
+          "duration": 4.44
+        },
+        {
+          "text": "evidence provides a lot of doubt in the",
+          "start": 421.759,
+          "duration": 5.28
+        },
+        {
+          "text": "report from president trump it states",
+          "start": 424.639,
+          "duration": 5.801
+        },
+        {
+          "text": "fton county certified",
+          "start": 427.039,
+          "duration": 6.84
+        },
+        {
+          "text": "59,4 in-person votes on Election Day",
+          "start": 430.44,
+          "duration": 7.0
+        },
+        {
+          "text": "despite the fact that only",
+          "start": 433.879,
+          "duration": 3.561
+        },
+        {
+          "text": "14,522 evidence suggests the in-person",
+          "start": 441.759,
+          "duration": 5.761
+        },
+        {
+          "text": "vote total on Election Day was inflated",
+          "start": 444.639,
+          "duration": 7.96
+        },
+        {
+          "text": "by approximately 30 7,000 votes somehow",
+          "start": 447.52,
+          "duration": 7.28
+        },
+        {
+          "text": "a whole lot of votes came out of nowhere",
+          "start": 452.599,
+          "duration": 5.241
+        },
+        {
+          "text": "from people who did not exist could this",
+          "start": 454.8,
+          "duration": 5.64
+        },
+        {
+          "text": "have come from poll workers counting the",
+          "start": 457.84,
+          "duration": 6.079
+        },
+        {
+          "text": "same ballots multiple times remember",
+          "start": 460.44,
+          "duration": 5.199
+        },
+        {
+          "text": "that the vote difference in Georgia was",
+          "start": 463.919,
+          "duration": 3.24
+        },
+        {
+          "text": "only",
+          "start": 465.639,
+          "duration": 4.56
+        },
+        {
+          "text": "11,779 votes and we are talking about a",
+          "start": 467.159,
+          "duration": 4.801
+        },
+        {
+          "text": "potential",
+          "start": 470.199,
+          "duration": 5.161
+        },
+        {
+          "text": "37,000 fake ballots another issue in",
+          "start": 471.96,
+          "duration": 6.16
+        },
+        {
+          "text": "Georgia was the mail in ballots it's",
+          "start": 475.36,
+          "duration": 4.839
+        },
+        {
+          "text": "much easier to cheat with mail and",
+          "start": 478.12,
+          "duration": 3.96
+        },
+        {
+          "text": "ballots because anyone can drop it off",
+          "start": 480.199,
+          "duration": 4.241
+        },
+        {
+          "text": "in the mail you are relying on the",
+          "start": 482.08,
+          "duration": 4.679
+        },
+        {
+          "text": "people counting the votes like Ruby",
+          "start": 484.44,
+          "duration": 4.759
+        },
+        {
+          "text": "Freeman to do the honest thing and",
+          "start": 486.759,
+          "duration": 4.961
+        },
+        {
+          "text": "verify that the ballot is accurate",
+          "start": 489.199,
+          "duration": 5.081
+        },
+        {
+          "text": "before they count it well it turns out",
+          "start": 491.72,
+          "duration": 5.12
+        },
+        {
+          "text": "that in Georgia likely",
+          "start": 494.28,
+          "duration": 6.84
+        },
+        {
+          "text": "67,2 184 votes were cast from voters",
+          "start": 496.84,
+          "duration": 7.44
+        },
+        {
+          "text": "with invalid residency these were people",
+          "start": 501.12,
+          "duration": 5.6
+        },
+        {
+          "text": "who did not actually live in Georgia but",
+          "start": 504.28,
+          "duration": 5.0
+        },
+        {
+          "text": "had their vote counted anyway remember",
+          "start": 506.72,
+          "duration": 4.56
+        },
+        {
+          "text": "remember the vote difference in Georgia",
+          "start": 509.28,
+          "duration": 3.84
+        },
+        {
+          "text": "was only",
+          "start": 511.28,
+          "duration": 5.52
+        },
+        {
+          "text": "11,779 votes and just this issue alone",
+          "start": 513.12,
+          "duration": 5.08
+        },
+        {
+          "text": "would be",
+          "start": 516.8,
+          "duration": 6.039
+        },
+        {
+          "text": "67,2 184 illegal votes there are many",
+          "start": 518.2,
+          "duration": 6.68
+        },
+        {
+          "text": "more bullet points about issues in the",
+          "start": 522.839,
+          "duration": 4.161
+        },
+        {
+          "text": "Georgia elections but I think you get",
+          "start": 524.88,
+          "duration": 4.44
+        },
+        {
+          "text": "the point there is a lot of evidence of",
+          "start": 527.0,
+          "duration": 5.16
+        },
+        {
+          "text": "election fraud in Georgia specifically",
+          "start": 529.32,
+          "duration": 6.519
+        },
+        {
+          "text": "in fton County so it is odd that fton",
+          "start": 532.16,
+          "duration": 6.359
+        },
+        {
+          "text": "county is the place that is criminally",
+          "start": 535.839,
+          "duration": 5.24
+        },
+        {
+          "text": "prosecuting Donald Trump for asking",
+          "start": 538.519,
+          "duration": 5.361
+        },
+        {
+          "text": "questions about the election it also",
+          "start": 541.079,
+          "duration": 5.281
+        },
+        {
+          "text": "seems like Fanny Willis is attempting to",
+          "start": 543.88,
+          "duration": 5.16
+        },
+        {
+          "text": "cover something up the next state is",
+          "start": 546.36,
+          "duration": 6.76
+        },
+        {
+          "text": "Wisconsin the vote difference was",
+          "start": 549.04,
+          "duration": 4.08
+        },
+        {
+          "text": "20,625 an exception that you could vote",
+          "start": 568.12,
+          "duration": 6.0
+        },
+        {
+          "text": "by mail without having to show your ID",
+          "start": 570.88,
+          "duration": 4.959
+        },
+        {
+          "text": "this resulted in",
+          "start": 574.12,
+          "duration": 5.88
+        },
+        {
+          "text": "220,00 44 votes cast from individuals",
+          "start": 575.839,
+          "duration": 7.401
+        },
+        {
+          "text": "who were Exempted from showing voter ID",
+          "start": 580.0,
+          "duration": 5.8
+        },
+        {
+          "text": "that would be incredibly easy to cheat",
+          "start": 583.24,
+          "duration": 4.96
+        },
+        {
+          "text": "if you never had to show an ID we are",
+          "start": 585.8,
+          "duration": 6.159
+        },
+        {
+          "text": "talking about a vote difference of",
+          "start": 588.2,
+          "duration": 3.759
+        },
+        {
+          "text": "20,625 votes were cast without an ID",
+          "start": 594.0,
+          "duration": 7.16
+        },
+        {
+          "text": "this this problem really shows itself",
+          "start": 598.959,
+          "duration": 4.681
+        },
+        {
+          "text": "when we look at nursing homes nursing",
+          "start": 601.16,
+          "duration": 5.16
+        },
+        {
+          "text": "homes in Milwaukee Dayne and Racine",
+          "start": 603.64,
+          "duration": 7.0
+        },
+        {
+          "text": "counties had 100% turnout so you're",
+          "start": 606.32,
+          "duration": 7.6
+        },
+        {
+          "text": "telling me that 100% of people in",
+          "start": 610.64,
+          "duration": 6.56
+        },
+        {
+          "text": "nursing homes voted some people in",
+          "start": 613.92,
+          "duration": 6.919
+        },
+        {
+          "text": "nursing homes are nearing death so even",
+          "start": 617.2,
+          "duration": 5.319
+        },
+        {
+          "text": "people who were literally on their",
+          "start": 620.839,
+          "duration": 5.0
+        },
+        {
+          "text": "deathbeds got up and voted something",
+          "start": 622.519,
+          "duration": 4.961
+        },
+        {
+          "text": "just doesn't sound right to me about",
+          "start": 625.839,
+          "duration": 4.761
+        },
+        {
+          "text": "that in one example Merill Barrett who",
+          "start": 627.48,
+          "duration": 6.039
+        },
+        {
+          "text": "was 104 years old and did not recognize",
+          "start": 630.6,
+          "duration": 5.52
+        },
+        {
+          "text": "her own children had a ballot cast in",
+          "start": 633.519,
+          "duration": 5.721
+        },
+        {
+          "text": "her name in the 2020 presidential",
+          "start": 636.12,
+          "duration": 6.24
+        },
+        {
+          "text": "election okay now how obvious do we have",
+          "start": 639.24,
+          "duration": 5.56
+        },
+        {
+          "text": "to get that some funny business is going",
+          "start": 642.36,
+          "duration": 4.88
+        },
+        {
+          "text": "on again there are many more bullet",
+          "start": 644.8,
+          "duration": 4.92
+        },
+        {
+          "text": "points about issues in Wisconsin but I",
+          "start": 647.24,
+          "duration": 5.08
+        },
+        {
+          "text": "think you get the point the next state",
+          "start": 649.72,
+          "duration": 4.96
+        },
+        {
+          "text": "is Pennsylvania the vote difference in",
+          "start": 652.32,
+          "duration": 4.759
+        },
+        {
+          "text": "Pennsylvania was",
+          "start": 654.68,
+          "duration": 5.599
+        },
+        {
+          "text": "8,555 votes now now that sounds like a",
+          "start": 657.079,
+          "duration": 8.281
+        },
+        {
+          "text": "lot until you find out that there were",
+          "start": 660.279,
+          "duration": 8.761
+        },
+        {
+          "text": "121,50 more votes than voters",
+          "start": 665.36,
+          "duration": 6.12
+        },
+        {
+          "text": "Pennsylvania uses a voting system called",
+          "start": 669.04,
+          "duration": 5.479
+        },
+        {
+          "text": "sure the Statewide uniform registry of",
+          "start": 671.48,
+          "duration": 5.32
+        },
+        {
+          "text": "electors they were never able to",
+          "start": 674.519,
+          "duration": 4.401
+        },
+        {
+          "text": "reconcile the number of votes that were",
+          "start": 676.8,
+          "duration": 4.24
+        },
+        {
+          "text": "counted with the number of people who",
+          "start": 678.92,
+          "duration": 4.64
+        },
+        {
+          "text": "were registered to vote so the vote",
+          "start": 681.04,
+          "duration": 4.4
+        },
+        {
+          "text": "difference was",
+          "start": 683.56,
+          "duration": 6.8
+        },
+        {
+          "text": "8,555 votes and there were 121 , 240",
+          "start": 685.44,
+          "duration": 7.839
+        },
+        {
+          "text": "more votes than voters this is another",
+          "start": 690.36,
+          "duration": 4.84
+        },
+        {
+          "text": "example where there are many more bullet",
+          "start": 693.279,
+          "duration": 4.881
+        },
+        {
+          "text": "points in the report but this one fact",
+          "start": 695.2,
+          "duration": 5.92
+        },
+        {
+          "text": "alone raises a lot of questions for me",
+          "start": 698.16,
+          "duration": 5.479
+        },
+        {
+          "text": "the next state is Arizona this is the",
+          "start": 701.12,
+          "duration": 5.48
+        },
+        {
+          "text": "closest vote margin with only",
+          "start": 703.639,
+          "duration": 6.601
+        },
+        {
+          "text": "10,457 votes Arizona did some of the",
+          "start": 706.6,
+          "duration": 6.6
+        },
+        {
+          "text": "most blatantly illegal things I don't",
+          "start": 710.24,
+          "duration": 5.08
+        },
+        {
+          "text": "know if you remember this but Arizona",
+          "start": 713.2,
+          "duration": 4.759
+        },
+        {
+          "text": "took a really long time to count their",
+          "start": 715.32,
+          "duration": 5.0
+        },
+        {
+          "text": "ballots the election took place on",
+          "start": 717.959,
+          "duration": 5.041
+        },
+        {
+          "text": "November 3rd well they didn't finish",
+          "start": 720.32,
+          "duration": 6.24
+        },
+        {
+          "text": "counting the ballots until November 30th",
+          "start": 723.0,
+          "duration": 6.12
+        },
+        {
+          "text": "well it turns out they were accepting",
+          "start": 726.56,
+          "duration": 5.399
+        },
+        {
+          "text": "and Counting ballots after the election",
+          "start": 729.12,
+          "duration": 6.8
+        },
+        {
+          "text": "day these were illegal votes here's a",
+          "start": 731.959,
+          "duration": 6.88
+        },
+        {
+          "text": "quote from the report Maricopa County",
+          "start": 735.92,
+          "duration": 6.52
+        },
+        {
+          "text": "accepted 20,500 mailin ballots after",
+          "start": 738.839,
+          "duration": 7.041
+        },
+        {
+          "text": "election day by law ballots must be",
+          "start": 742.44,
+          "duration": 5.6
+        },
+        {
+          "text": "received no later than 700 p.m. on",
+          "start": 745.88,
+          "duration": 4.959
+        },
+        {
+          "text": "Election Day which was November 3rd so",
+          "start": 748.04,
+          "duration": 5.12
+        },
+        {
+          "text": "the election was over the deadline was",
+          "start": 750.839,
+          "duration": 4.721
+        },
+        {
+          "text": "passed and they were still receiving and",
+          "start": 753.16,
+          "duration": 4.919
+        },
+        {
+          "text": "Counting ballots days after the election",
+          "start": 755.56,
+          "duration": 6.079
+        },
+        {
+          "text": "was over these are illegal votes the",
+          "start": 758.079,
+          "duration": 5.481
+        },
+        {
+          "text": "vote margin was",
+          "start": 761.639,
+          "duration": 5.56
+        },
+        {
+          "text": "10,457 votes this one example accounts",
+          "start": 763.56,
+          "duration": 4.839
+        },
+        {
+          "text": "for",
+          "start": 767.199,
+          "duration": 5.0
+        },
+        {
+          "text": "20,500 ballots what makes matters worse",
+          "start": 768.399,
+          "duration": 6.0
+        },
+        {
+          "text": "is that the meropa County elections",
+          "start": 772.199,
+          "duration": 4.561
+        },
+        {
+          "text": "Department withheld this information",
+          "start": 774.399,
+          "duration": 5.401
+        },
+        {
+          "text": "from public records requests for for 7",
+          "start": 776.76,
+          "duration": 6.0
+        },
+        {
+          "text": "months after the elections no one knew",
+          "start": 779.8,
+          "duration": 5.44
+        },
+        {
+          "text": "this was going on until it was too late",
+          "start": 782.76,
+          "duration": 5.759
+        },
+        {
+          "text": "to protest the election this looks a lot",
+          "start": 785.24,
+          "duration": 6.24
+        },
+        {
+          "text": "like cheating also just like in the",
+          "start": 788.519,
+          "duration": 5.481
+        },
+        {
+          "text": "other states it looks like some of the",
+          "start": 791.48,
+          "duration": 6.0
+        },
+        {
+          "text": "votes were completely made up two",
+          "start": 794.0,
+          "duration": 6.959
+        },
+        {
+          "text": "precincts in Puma County had over 100%",
+          "start": 797.48,
+          "duration": 6.64
+        },
+        {
+          "text": "turnout for mailin ballots can someone",
+          "start": 800.959,
+          "duration": 5.761
+        },
+        {
+          "text": "in the comments please explain to me how",
+          "start": 804.12,
+          "duration": 4.719
+        },
+        {
+          "text": "this can happen because I'm really",
+          "start": 806.72,
+          "duration": 4.32
+        },
+        {
+          "text": "having a hard time understanding this",
+          "start": 808.839,
+          "duration": 4.841
+        },
+        {
+          "text": "how is it possible to have more than",
+          "start": 811.04,
+          "duration": 7.159
+        },
+        {
+          "text": "100% of people vote how is that possible",
+          "start": 813.68,
+          "duration": 6.599
+        },
+        {
+          "text": "what is even more suspicious is the",
+          "start": 818.199,
+          "duration": 3.921
+        },
+        {
+          "text": "Arizona Secretary of State during the",
+          "start": 820.279,
+          "duration": 5.041
+        },
+        {
+          "text": "2020 election was someone named Katie",
+          "start": 822.12,
+          "duration": 6.24
+        },
+        {
+          "text": "Hobbs she is the person responsible for",
+          "start": 825.32,
+          "duration": 6.519
+        },
+        {
+          "text": "running the election it turns out 2",
+          "start": 828.36,
+          "duration": 6.12
+        },
+        {
+          "text": "years later she somehow became the",
+          "start": 831.839,
+          "duration": 6.281
+        },
+        {
+          "text": "governor of Arizona in 2022 she ran",
+          "start": 834.48,
+          "duration": 6.599
+        },
+        {
+          "text": "against car Lake Katie Hobbs",
+          "start": 838.12,
+          "duration": 5.959
+        },
+        {
+          "text": "miraculously won against all polling",
+          "start": 841.079,
+          "duration": 6.0
+        },
+        {
+          "text": "predictions and Katie Hobbs certified",
+          "start": 844.079,
+          "duration": 6.281
+        },
+        {
+          "text": "her own election count naming herself",
+          "start": 847.079,
+          "duration": 6.521
+        },
+        {
+          "text": "the winner ktie hobb's election is still",
+          "start": 850.36,
+          "duration": 6.0
+        },
+        {
+          "text": "being contested in the courts with",
+          "start": 853.6,
+          "duration": 4.599
+        },
+        {
+          "text": "Arizona there are many more bullet",
+          "start": 856.36,
+          "duration": 4.32
+        },
+        {
+          "text": "points in president Trump's report but I",
+          "start": 858.199,
+          "duration": 5.281
+        },
+        {
+          "text": "think you get the point the next state",
+          "start": 860.68,
+          "duration": 7.36
+        },
+        {
+          "text": "is Michigan the vote difference is",
+          "start": 863.48,
+          "duration": 4.56
+        },
+        {
+          "text": "votes now this is the largest vote",
+          "start": 868.92,
+          "duration": 4.32
+        },
+        {
+          "text": "difference out of the Swing States and",
+          "start": 871.519,
+          "duration": 4.921
+        },
+        {
+          "text": "it sounds like a lot until you find out",
+          "start": 873.24,
+          "duration": 6.32
+        },
+        {
+          "text": "that Michigan has",
+          "start": 876.44,
+          "duration": 3.12
+        },
+        {
+          "text": "271,000 delivered in a van at 3:30 a.m.",
+          "start": 897.68,
+          "duration": 7.599
+        },
+        {
+          "text": "past the 8:00 p.m. deadline this was 50",
+          "start": 902.079,
+          "duration": 5.961
+        },
+        {
+          "text": "boxes of ballots each containing",
+          "start": 905.279,
+          "duration": 4.081
+        },
+        {
+          "text": "thousands of",
+          "start": 908.04,
+          "duration": 4.08
+        },
+        {
+          "text": "ballots how can they count ballots that",
+          "start": 909.36,
+          "duration": 6.52
+        },
+        {
+          "text": "were received after the deadline when we",
+          "start": 912.12,
+          "duration": 6.36
+        },
+        {
+          "text": "look at the ballot counts we can see the",
+          "start": 915.88,
+          "duration": 5.16
+        },
+        {
+          "text": "spike that came from the suspicious",
+          "start": 918.48,
+          "duration": 5.52
+        },
+        {
+          "text": "ballots Michigan was also the state",
+          "start": 921.04,
+          "duration": 5.08
+        },
+        {
+          "text": "where we now know there was a police",
+          "start": 924.0,
+          "duration": 5.44
+        },
+        {
+          "text": "investigation of a company called GB bi",
+          "start": 926.12,
+          "duration": 5.959
+        },
+        {
+          "text": "strategies the police raided a gbi",
+          "start": 929.44,
+          "duration": 5.6
+        },
+        {
+          "text": "strategies office to find thousands of",
+          "start": 932.079,
+          "duration": 6.161
+        },
+        {
+          "text": "fraudulent voter registrations the forms",
+          "start": 935.04,
+          "duration": 5.32
+        },
+        {
+          "text": "were in the same handwriting and used",
+          "start": 938.24,
+          "duration": 5.64
+        },
+        {
+          "text": "fake addresses gbi strategies was funded",
+          "start": 940.36,
+          "duration": 6.56
+        },
+        {
+          "text": "by a super pack called black pack which",
+          "start": 943.88,
+          "duration": 6.04
+        },
+        {
+          "text": "paid the firm",
+          "start": 946.92,
+          "duration": 5.039
+        },
+        {
+          "text": "11,254",
+          "start": 949.92,
+          "duration": 6.32
+        },
+        {
+          "text": "n19 to register voters for Joe Biden in",
+          "start": 951.959,
+          "duration": 6.921
+        },
+        {
+          "text": "2020 these people were not only only",
+          "start": 956.24,
+          "duration": 4.48
+        },
+        {
+          "text": "under investigation for cheating during",
+          "start": 958.88,
+          "duration": 4.04
+        },
+        {
+          "text": "the election they were making an awful",
+          "start": 960.72,
+          "duration": 4.88
+        },
+        {
+          "text": "lot of money doing it again there are",
+          "start": 962.92,
+          "duration": 4.96
+        },
+        {
+          "text": "many more bullet points in the report",
+          "start": 965.6,
+          "duration": 4.599
+        },
+        {
+          "text": "but I think you get the point so that",
+          "start": 967.88,
+          "duration": 4.24
+        },
+        {
+          "text": "was the report that was posted by",
+          "start": 970.199,
+          "duration": 3.88
+        },
+        {
+          "text": "President Trump going through the five",
+          "start": 972.12,
+          "duration": 5.76
+        },
+        {
+          "text": "swing states in the 2020 election again",
+          "start": 974.079,
+          "duration": 5.161
+        },
+        {
+          "text": "I'm not going to say whether the",
+          "start": 977.88,
+          "duration": 4.879
+        },
+        {
+          "text": "election was or was not stolen I want",
+          "start": 979.24,
+          "duration": 6.36
+        },
+        {
+          "text": "you to decide what do you think was the",
+          "start": 982.759,
+          "duration": 5.841
+        },
+        {
+          "text": "2020 election stolen let me know in the",
+          "start": 985.6,
+          "duration": 5.12
+        },
+        {
+          "text": "comments down below and if you like this",
+          "start": 988.6,
+          "duration": 5.039
+        },
+        {
+          "text": "video don't forget to hit that subscribe",
+          "start": 990.72,
+          "duration": 5.96
+        },
+        {
+          "text": "button for some reason YouTube does not",
+          "start": 993.639,
+          "duration": 5.281
+        },
+        {
+          "text": "want my videos getting out there so if",
+          "start": 996.68,
+          "duration": 4.279
+        },
+        {
+          "text": "you're not subscribed you're probably",
+          "start": 998.92,
+          "duration": 3.88
+        },
+        {
+          "text": "not going to see them in your feed so",
+          "start": 1000.959,
+          "duration": 4.841
+        },
+        {
+          "text": "make sure you hit that subscribe button",
+          "start": 1002.8,
+          "duration": 5.24
+        },
+        {
+          "text": "also if you want to support the channel",
+          "start": 1005.8,
+          "duration": 4.76
+        },
+        {
+          "text": "the best way is to sign up for a monthly",
+          "start": 1008.04,
+          "duration": 4.96
+        },
+        {
+          "text": "membership on my website wolves andf",
+          "start": 1010.56,
+          "duration": 6.04
+        },
+        {
+          "text": "finance.com my videos get demonetized a",
+          "start": 1013.0,
+          "duration": 6.48
+        },
+        {
+          "text": "lot so the only way I survive is with",
+          "start": 1016.6,
+          "duration": 5.4
+        },
+        {
+          "text": "support from viewers like you if you're",
+          "start": 1019.48,
+          "duration": 4.92
+        },
+        {
+          "text": "interested a membership for $6 a month",
+          "start": 1022.0,
+          "duration": 4.76
+        },
+        {
+          "text": "helps me to continue to put out these",
+          "start": 1024.4,
+          "duration": 5.84
+        },
+        {
+          "text": "videos I'm Zach from wolves and finance",
+          "start": 1026.76,
+          "duration": 6.039
+        },
+        {
+          "text": "thank you for",
+          "start": 1030.24,
+          "duration": 2.559
+        },
+        {
+          "text": "[Music]",
+          "start": 1033.41,
+          "duration": 12.49
+        },
+        {
+          "text": "watching",
+          "start": 1047.199,
+          "duration": 3.0
+        }
+      ],
+      "video_id": "EKxxTfZveUw"
+    }
+  }
+}

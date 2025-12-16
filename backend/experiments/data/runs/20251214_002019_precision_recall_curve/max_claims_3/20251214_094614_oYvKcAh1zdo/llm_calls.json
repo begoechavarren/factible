@@ -1,0 +1,888 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:46:29.706638",
+    "latency_seconds": 13.6,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\n\u201cGive me your tired, your poor, your huddled masses yearning to breathe free\u2026\u201d These poetic lines, engraved on a bronze plaque beneath the Statue of Liberty, speak to who we are: a nation of immigrants. Until now . . . As Senate Democrat Chuck Schumer lamented, \u201cTears are running down the cheeks of the Statue of Liberty.\u201d We\u2019ve turned our backs on those huddled masses. Closed our borders. Separated families. Hardened our hearts. Or so you would think if you only read the headlines or watch TV news. Just one problem: It\u2019s not true. The United States still maintains the most generous immigration policies in the world. Generous to a fault...because the overwhelming numbers have stymied our ability to assimilate the huddled masses. 50 million residents of America are foreign-born. In fact, today the United States has more immigrants as a percentage of its total population than at any time since 1890. That\u2019s why, to give one illustration, 176 different languages are spoken among students in the New York City school system. How did we get here? For starters, America grants permanent residence to a million people every single year. And that\u2019s just the tip of the iceberg because of something you\u2019ve probably heard referred to as \u201cchain migration.\u201d Chain migration allows immigrants to sponsor not only their immediate family\u2014parents, spouses and children under age 21, but much of their extended family once they gain citizenship: unmarried adult children and any children they might have, married adult children and their children, and brothers and sisters and their children. Princeton University researchers, using the most recently available data, found that immigrants sponsored an average of 3.45 additional relatives each. So, the one million immigrants granted permanent residence each year potentially adds, over time, another three and a half million. In addition, an estimated 100,000 refugees and asylum-seekers\u2014people who claim to be fleeing political or personal strife abroad\u2014enter the country annually. From 2008 to 2017, the U.S. gave green cards to well over a million people for humanitarian reasons, allowing them to live and work here permanently. After five years, they can apply for full citizenship. We\u2019re not done yet. In that same time frame, nearly half a million more people came to America through the diversity visa lottery\u2014a program designed to admit more people from \u201cunderrepresented\u201d countries into the U.S. Diversity visa applicants don't need a high school education, job skills \u2014or pretty much anything. And, thanks again to chain migration, spouses and unmarried children under 21 of visa lottery winners also get to come to America. This non-stop flow of new legal immigrants\u2014based on family ties instead of skills, abilities, and allegiance to American values\u2014has, of course, been supplemented by millions who enter the country illegally and stay illegally. Dominant media outlets use the euphemism \u201cundocumented,\u201d but the official U.S. government term used in federal statutes is \u201cillegal alien\u201d: an unlawful entrant who came without permission and stays in open defiance of our laws. The number of illegal aliens in the country is usually given as 11 million, but have you noticed that number never seems to change? Common sense suggests it\u2019s higher\u2014much higher. And though illegal aliens themselves don\u2019t qualify for welfare, they receive free health care in our clinics and hospitals, and through their American-born children they can expect to receive all manner of benefits\u2014cash aid, food stamps, and housing vouchers. Their children are entitled to a free education in public schools. Building a high-tech border barrier would certainly help stem this flow. Ending chain migration is another obvious remedy. E-Verify, the national database that allows employers to check workers\u2019 immigration status, is also essential. So is a fully-functioning entry-exit system to track visa overstayers. But all solutions will ultimately fail unless we get control of the numbers and enforce our laws consistently. It\u2019s Sovereignty 101: This is our home and we have not only the right, but the responsibility, to determine who comes in, how many come in, and what qualities and qualifications they bring. The truth is, we let in millions. And, of course, millions more want to come. Who can blame them? But it\u2019s simply not possible or desirable to let in everyone. And it\u2019s not hateful to say so. It\u2019s not hateful to protect our borders. It\u2019s not hateful to protect our citizens. It\u2019s not hateful to protect our values. Lady Liberty may be shedding tears\u2014not because we\u2019ve stopped welcoming immigrants, but because our ill-conceived immigration policies are threatening the American Dream. I\u2019m Michelle Malkin, CRTV host and author of Invasion and Sold Out, for Prager University.",
+    "input_length_chars": 4882,
+    "input_tokens_estimated": 1220,
+    "output": {
+      "claims": [
+        {
+          "text": "The United States maintains the most generous immigration policies in the world.",
+          "confidence": 0.9,
+          "category": "policy",
+          "importance": 0.85,
+          "context": "Speaker: Michelle Malkin, discussing immigration policies."
+        },
+        {
+          "text": "50 million residents of America are foreign-born.",
+          "confidence": 0.95,
+          "category": "statistical",
+          "importance": 0.85,
+          "context": "Speaker: Michelle Malkin, providing immigration statistics."
+        },
+        {
+          "text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.8,
+          "context": "Speaker: Michelle Malkin, discussing historical immigration data."
+        },
+        {
+          "text": "America grants permanent residence to a million people every single year.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "Speaker: Michelle Malkin, discussing immigration statistics."
+        },
+        {
+          "text": "Princeton University researchers found that immigrants sponsored an average of 3.45 additional relatives each.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Speaker: Michelle Malkin, citing research on chain migration."
+        },
+        {
+          "text": "An estimated 100,000 refugees and asylum-seekers enter the country annually.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Speaker: Michelle Malkin, discussing refugee statistics."
+        },
+        {
+          "text": "From 2008 to 2017, the U.S. gave green cards to well over a million people for humanitarian reasons.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Speaker: Michelle Malkin, discussing green card statistics."
+        },
+        {
+          "text": "Nearly half a million more people came to America through the diversity visa lottery from 2008 to 2017.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.55,
+          "context": "Speaker: Michelle Malkin, discussing diversity visa statistics."
+        },
+        {
+          "text": "The number of illegal aliens in the country is usually given as 11 million.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.55,
+          "context": "Speaker: Michelle Malkin, discussing illegal immigration statistics."
+        },
+        {
+          "text": "Illegal aliens receive free health care in clinics and hospitals.",
+          "confidence": 0.85,
+          "category": "policy",
+          "importance": 0.55,
+          "context": "Speaker: Michelle Malkin, discussing benefits for illegal immigrants."
+        }
+      ],
+      "total_count": 10
+    },
+    "output_length_chars": 3184,
+    "output_tokens_estimated": 796,
+    "cost_usd": 0.0006606
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:46:35.746495",
+    "latency_seconds": 2.55,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The United States maintains the most generous immigration policies in the world.\nContext: Speaker: Michelle Malkin, discussing immigration policies.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 321,
+    "input_tokens_estimated": 80,
+    "output": {
+      "original_claim": "The United States maintains the most generous immigration policies in the world.",
+      "queries": [
+        {
+          "query": "United States immigration policies comparison 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "most generous immigration policies in the world 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 332,
+    "output_tokens_estimated": 83,
+    "cost_usd": 6.18e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:46:35.853550",
+    "latency_seconds": 2.65,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: 50 million residents of America are foreign-born.\nContext: Speaker: Michelle Malkin, providing immigration statistics.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 291,
+    "input_tokens_estimated": 72,
+    "output": {
+      "original_claim": "50 million residents of America are foreign-born.",
+      "queries": [
+        {
+          "query": "50 million foreign-born residents in America 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "current statistics on foreign-born population in the United States",
+          "query_type": "SOURCE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 309,
+    "output_tokens_estimated": 77,
+    "cost_usd": 5.7e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The United States maintains the most generous immigration policies in the world.",
+      "query_index": 2,
+      "query_text": "most generous immigration policies in the world 2023"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:46:36.273120",
+    "latency_seconds": 3.07,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The United States has more immigrants as a percentage of its total population than at any time since 1890.\nContext: Speaker: Michelle Malkin, discussing historical immigration data.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 354,
+    "input_tokens_estimated": 88,
+    "output": {
+      "original_claim": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "queries": [
+        {
+          "query": "United States immigrant population percentage historical data 1890",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "current immigrant percentage in the US compared to 1890",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 377,
+    "output_tokens_estimated": 94,
+    "cost_usd": 6.96e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "50 million residents of America are foreign-born.",
+      "query_index": 2,
+      "query_text": "current statistics on foreign-born population in the United States"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:46:58.499510",
+    "latency_seconds": 1.44,
+    "input_prompt": "Claim:\nThe United States has more immigrants as a percentage of its total population than at any time since 1890.\n\nArticle Title:\nU.S. Immigrant Population and Share over Time, 1850-Present\n\nGoogle Search Snippet:\nThis chart displays both the number of immigrants residing in the United States and their share of the total U.S. population over time.\n\nFull Page Content:\nAn official website of the United States government Skip to main content end of header NOTICE: Due to the lapse of federal funding, portions of this website will not be updated. Any inquiries submitted will not be answered until appropriations are enacted. You will be redirected in 10 seconds... CONNECT WITH US\n\nProvide relevant evidence.",
+    "input_length_chars": 710,
+    "input_tokens_estimated": 177,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 3.975e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:46:58.613315",
+    "latency_seconds": 1.54,
+    "input_prompt": "Claim:\nThe United States has more immigrants as a percentage of its total population than at any time since 1890.\n\nArticle Title:\nChart: The Foreign-Born Share of the U.S. Population (1850-2024)\n\nGoogle Search Snippet:\nThe last time immigration reached comparable levels was in 1890, when 14.8% of the population consisted of immigrants. During this great ...\n\nFull Page Content:\nAn official website of the United States government Skip to main content end of header NOTICE: Due to the lapse of federal funding, portions of this website will not be updated. Any inquiries submitted will not be answered until appropriations are enacted. You will be redirected in 10 seconds... CONNECT WITH US\n\nProvide relevant evidence.",
+    "input_length_chars": 720,
+    "input_tokens_estimated": 180,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 4.02e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:46:58.779865",
+    "latency_seconds": 1.32,
+    "input_prompt": "Claim:\nThe United States maintains the most generous immigration policies in the world.\n\nArticle Title:\nStates Continue to Lead on Inclusive Immigration Policies: A 2023 ...\n\nGoogle Search Snippet:\nWe tracked over 1000 immigration-related bills during the 2023 state legislative session. Most successful bills aimed to make states more ...\n\nFull Page Content:\nYahoo forma parte de la familia de marcas de Yahoo .\nSi no quieres que nosotros ni nuestros socios utilicemos cookies y datos personales para estos prop\u00f3sitos adicionales, haz clic en \u00abRechazar todo\u00bb.\nSi quieres personalizar tus opciones, haz clic en \u00abGestionar configuraci\u00f3n de privacidad\u00bb.\nPuedes revocar tu consentimiento o cambiar tus opciones en cualquier momento haciendo clic en el enlace \u00abConfiguraci\u00f3n de privacidad y cookies\u00bb o \u00abPanel de privacidad\u00bb de nuestros sitios y aplicaciones. Para obtener m\u00e1s informaci\u00f3n sobre c\u00f3mo utilizamos tus datos personales, consulta nuestra Pol\u00edtica de privacidad y la Pol\u00edtica de cookies.\n\nProvide relevant evidence.",
+    "input_length_chars": 1021,
+    "input_tokens_estimated": 255,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 5.145e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:46:58.835551",
+    "latency_seconds": 1.75,
+    "input_prompt": "Claim:\nThe United States has more immigrants as a percentage of its total population than at any time since 1890.\n\nArticle Title:\nThe Largest Immigration Surge in U.S. History - The New York Times\n\nGoogle Search Snippet:\nThe previous high of 14.8 percent occurred in 1890, and the share remained high for decades afterward. It began to decline after the passage ...\n\nFull Page Content:\nAn official website of the United States government Skip to main content end of header NOTICE: Due to the lapse of federal funding, portions of this website will not be updated. Any inquiries submitted will not be answered until appropriations are enacted. You will be redirected in 10 seconds... CONNECT WITH US\n\nProvide relevant evidence.",
+    "input_length_chars": 726,
+    "input_tokens_estimated": 181,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 4.035e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:46:58.859508",
+    "latency_seconds": 1.77,
+    "input_prompt": "Claim:\nThe United States has more immigrants as a percentage of its total population than at any time since 1890.\n\nArticle Title:\n[PDF] The Foreign-Born Population in the United States: 2022 - Census.gov\n\nGoogle Search Snippet:\nThis report provides an overview of the foreign-born population residing in the United States, highlighting select demographic and socioeconomic characteris-.\n\nFull Page Content:\nAn official website of the United States government Skip to main content end of header NOTICE: Due to the lapse of federal funding, portions of this website will not be updated. Any inquiries submitted will not be answered until appropriations are enacted. You will be redirected in 10 seconds... CONNECT WITH US\n\nProvide relevant evidence.",
+    "input_length_chars": 747,
+    "input_tokens_estimated": 186,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 4.11e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:46:58.860658",
+    "latency_seconds": 1.77,
+    "input_prompt": "Claim:\nThe United States has more immigrants as a percentage of its total population than at any time since 1890.\n\nArticle Title:\nKey findings about U.S. immigrants - Pew Research Center\n\nGoogle Search Snippet:\nFrom 1840 to 1889, about 90% of U.S. immigrants came from Europe, including about 70% from Germany, Ireland and the United Kingdom. Almost 90% ...\n\nFull Page Content:\nAn official website of the United States government Skip to main content end of header NOTICE: Due to the lapse of federal funding, portions of this website will not be updated. Any inquiries submitted will not be answered until appropriations are enacted. You will be redirected in 10 seconds... CONNECT WITH US\n\nProvide relevant evidence.",
+    "input_length_chars": 718,
+    "input_tokens_estimated": 179,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 4.005e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:46:58.966207",
+    "latency_seconds": 1.51,
+    "input_prompt": "Claim:\nThe United States maintains the most generous immigration policies in the world.\n\nArticle Title:\nImmigration Systems in Labor-Needy Japan and South Korea Have ...\n\nGoogle Search Snippet:\nWhile immigrants with long-term residence are eligible for generous rights, their access to citizenship varies depending on visa status. And the ...\n\nFull Page Content:\nYahoo forma parte de la familia de marcas de Yahoo .\nSi no quieres que nosotros ni nuestros socios utilicemos cookies y datos personales para estos prop\u00f3sitos adicionales, haz clic en \u00abRechazar todo\u00bb.\nSi quieres personalizar tus opciones, haz clic en \u00abGestionar configuraci\u00f3n de privacidad\u00bb.\nPuedes revocar tu consentimiento o cambiar tus opciones en cualquier momento haciendo clic en el enlace \u00abConfiguraci\u00f3n de privacidad y cookies\u00bb o \u00abPanel de privacidad\u00bb de nuestros sitios y aplicaciones. Para obtener m\u00e1s informaci\u00f3n sobre c\u00f3mo utilizamos tus datos personales, consulta nuestra Pol\u00edtica de privacidad y la Pol\u00edtica de cookies.\n\nProvide relevant evidence.",
+    "input_length_chars": 1024,
+    "input_tokens_estimated": 256,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 5.16e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:46:58.966629",
+    "latency_seconds": 1.5,
+    "input_prompt": "Claim:\nThe United States maintains the most generous immigration policies in the world.\n\nArticle Title:\nFrom campaign to implementation: an overview of Biden's ...\n\nGoogle Search Snippet:\nWhile Biden has made many noteworthy reforms to reshape US immigration policy, he has faced historic irregular immigration flows at the US-Mexico border, and ...\n\nFull Page Content:\nYahoo forma parte de la familia de marcas de Yahoo .\nSi no quieres que nosotros ni nuestros socios utilicemos cookies y datos personales para estos prop\u00f3sitos adicionales, haz clic en \u00abRechazar todo\u00bb.\nSi quieres personalizar tus opciones, haz clic en \u00abGestionar configuraci\u00f3n de privacidad\u00bb.\nPuedes revocar tu consentimiento o cambiar tus opciones en cualquier momento haciendo clic en el enlace \u00abConfiguraci\u00f3n de privacidad y cookies\u00bb o \u00abPanel de privacidad\u00bb de nuestros sitios y aplicaciones. Para obtener m\u00e1s informaci\u00f3n sobre c\u00f3mo utilizamos tus datos personales, consulta nuestra Pol\u00edtica de privacidad y la Pol\u00edtica de cookies.\n\nProvide relevant evidence.",
+    "input_length_chars": 1031,
+    "input_tokens_estimated": 257,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 5.175e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:46:59.051809",
+    "latency_seconds": 1.58,
+    "input_prompt": "Claim:\nThe United States maintains the most generous immigration policies in the world.\n\nArticle Title:\nWhat Is Canada's Immigration Policy? - Council on Foreign Relations\n\nGoogle Search Snippet:\nWith its comparatively open and well-regulated immigration system, Canada remains a top destination for immigrants and refugees.\n\nFull Page Content:\nYahoo forma parte de la familia de marcas de Yahoo .\nSi no quieres que nosotros ni nuestros socios utilicemos cookies y datos personales para estos prop\u00f3sitos adicionales, haz clic en \u00abRechazar todo\u00bb.\nSi quieres personalizar tus opciones, haz clic en \u00abGestionar configuraci\u00f3n de privacidad\u00bb.\nPuedes revocar tu consentimiento o cambiar tus opciones en cualquier momento haciendo clic en el enlace \u00abConfiguraci\u00f3n de privacidad y cookies\u00bb o \u00abPanel de privacidad\u00bb de nuestros sitios y aplicaciones. Para obtener m\u00e1s informaci\u00f3n sobre c\u00f3mo utilizamos tus datos personales, consulta nuestra Pol\u00edtica de privacidad y la Pol\u00edtica de cookies.\n\nProvide relevant evidence.",
+    "input_length_chars": 1006,
+    "input_tokens_estimated": 251,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 5.085e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:46:59.056425",
+    "latency_seconds": 1.58,
+    "input_prompt": "Claim:\nThe United States maintains the most generous immigration policies in the world.\n\nArticle Title:\n20 Most Immigrant Friendly Countries In The World - Yahoo Finance\n\nGoogle Search Snippet:\nAn equally, if not more, important aspect of an immigrant-friendly country is the attitude of the native population towards immigrants. These ...\n\nFull Page Content:\nYahoo forma parte de la familia de marcas de Yahoo .\nSi no quieres que nosotros ni nuestros socios utilicemos cookies y datos personales para estos prop\u00f3sitos adicionales, haz clic en \u00abRechazar todo\u00bb.\nSi quieres personalizar tus opciones, haz clic en \u00abGestionar configuraci\u00f3n de privacidad\u00bb.\nPuedes revocar tu consentimiento o cambiar tus opciones en cualquier momento haciendo clic en el enlace \u00abConfiguraci\u00f3n de privacidad y cookies\u00bb o \u00abPanel de privacidad\u00bb de nuestros sitios y aplicaciones. Para obtener m\u00e1s informaci\u00f3n sobre c\u00f3mo utilizamos tus datos personales, consulta nuestra Pol\u00edtica de privacidad y la Pol\u00edtica de cookies.\n\nProvide relevant evidence.",
+    "input_length_chars": 1021,
+    "input_tokens_estimated": 255,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 5.145e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:46:59.074338",
+    "latency_seconds": 1.61,
+    "input_prompt": "Claim:\nThe United States maintains the most generous immigration policies in the world.\n\nArticle Title:\nThe U.S. benefits from immigration but policy reforms needed to ...\n\nGoogle Search Snippet:\nYet, it is also clear that when workers are denied full and equal labor and employment rights, as some immigrants are when their immigration status is used ...\n\nFull Page Content:\nYahoo forma parte de la familia de marcas de Yahoo .\nSi no quieres que nosotros ni nuestros socios utilicemos cookies y datos personales para estos prop\u00f3sitos adicionales, haz clic en \u00abRechazar todo\u00bb.\nSi quieres personalizar tus opciones, haz clic en \u00abGestionar configuraci\u00f3n de privacidad\u00bb.\nPuedes revocar tu consentimiento o cambiar tus opciones en cualquier momento haciendo clic en el enlace \u00abConfiguraci\u00f3n de privacidad y cookies\u00bb o \u00abPanel de privacidad\u00bb de nuestros sitios y aplicaciones. Para obtener m\u00e1s informaci\u00f3n sobre c\u00f3mo utilizamos tus datos personales, consulta nuestra Pol\u00edtica de privacidad y la Pol\u00edtica de cookies.\n\nProvide relevant evidence.",
+    "input_length_chars": 1037,
+    "input_tokens_estimated": 259,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 5.205e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:47:00.277966",
+    "latency_seconds": 8.08,
+    "input_prompt": "Claim:\nThe United States maintains the most generous immigration policies in the world.\n\nArticle Title:\n100 days of immigration under the second Trump administration\n\nGoogle Search Snippet:\nThe Congressional Budget Office estimated overall net migration of 3.3 million in 2023, including migration of \u201cother foreign nationals\u201d far higher than ...\n\nFull Page Content:\nPresident Joe Biden at the White House. (Photo: Oliver Contreras/White House)\nHowever history judges the Biden presidency, immigration will be a critical factor. Joe Biden entered office promising not only to undo what he described as the harsh immigration policies of his predecessor, now President-elect Donald Trump, but also to create new opportunities for millions of long-resident unauthorized immigrants to secure legal status. As Congress continued its three-decade old pattern of inactivity on immigration reform, Biden was unable to deliver on legalization for even small portions of the estimated 11.3 million unauthorized immigrants in the United States. And the administration\u2019s approach at the U.S.-Mexico border, which experienced record irregular arrivals of asylum seekers and other migrants, was sharply decried by liberals and conservatives alike. Immigrant-rights advocates claimed that Biden\u2019s border policies doubled down on the Trump approach. And conservatives charged the administration\u2019s strategy invited chaos by permitting several million people arriving without authorization to enter the United States.\nIn This Article\nTrends at the border changed profoundly, complicating administration efforts to restore order\nRipple effects from the border in the U.S. interior proved difficult to manage\nLegal immigration recovered from COVID-19-era lows and reached new highs\nStates have taken an expanded role in immigration, both to increase restrictions and reception\nContinued lack of support from Congress hamstrung the administration's efforts\nTo be sure, the Biden administration demonstrated a record level of activity on immigration, advancing 605 immigration-related executive actions as of December 6, according to Migration Policy Institute (MPI) calculations\u2014far more than the 472 in Trump\u2019s first term, which was seen as uniquely active on the issue. Through these executive actions, the Biden administration restored legal immigration levels that had fallen due to the COVID-19 pandemic and earlier Trump initiatives, as well as rebuilt refugee resettlement to numbers not seen since the 1990s. The Biden administration was also estimated to have naturalized nearly 3.5 million people, the most in any presidential term; more than doubled the length of work authorizations; and recrafted interior enforcement priorities to target national security and public safety threats, and recent border crossers. Additionally, the administration extended Temporary Protected Status (TPS) to 1.7 million potential new beneficiaries (although far fewer received the status), offering them work authorization and protection from deportation. To decrease the pressure of irregular arrivals at the U.S.-Mexico border, the administration established new humanitarian pathways and orderly processes for migrants to enter the United States, and built a new network of cooperation with governments across the Americas.\nDespite these developments, the country\u2019s attention throughout Biden\u2019s tenure was focused on the Southwest border, where authorities carried out 8.6 million migrant encounters from January 2021 through October 2024 (many were of repeat crossers). Biden was hounded by a strong public perception that the border was uncontrolled. Even when the administration further narrowed access to asylum at the border in June, the measure was seen as too little, too late.\nAlthough a combination of carrot-and-stick processes and Mexico\u2019s stepped-up enforcement quelled some border pressures, MPI estimates that as of July more than 5.8 million migrants had been paroled in or otherwise allowed entry to pursue asylum applications and other immigration cases. At times of high arrivals, overwhelmed authorities often had to release migrants into the country due to a lack of asylum screening and other processing resources. In recent months, as encounters have decreased, so too have releases.\nTable 1. Asylum Seekers and Humanitarian Parolees Allowed into the United States, 2021-24\nNotes: There are no public data for processing dispositions at the U.S.-Canada border, so the Migration Policy Institute (MPI) extrapolated by using the estimated proportion of those released based on processing dispositions at the U.S.-Mexico border. The estimate for the U.S.-Mexico border includes U.S. Border Patrol releases, Office of Field Operation parolees (including CBP One entrants), transfers to the U.S. Department of Health and Human Services (HHS) Office of Refugee Resettlement, and U.S. Immigration and Customs Enforcement (ICE) releases originating from U.S. Customs and Border Protection (CBP). Data on the U.S.-Mexico border cover the period from January 2021 to July 2024; data on U.S.-Canada border encounters are from January 2021 through September 2024; data on the Cuban, Haitian, Nicaraguan, and Venezuelan (CHNV) parole program are from October 2023 through October 2024; data on the Uniting for Ukraine program are as of July 1, 2024; data on Operation Allies Welcome are as of March 1, 2023. Sources: Data for the U.S.-Mexico border are from U.S. Department of Homeland Security (DHS), Office of Homeland Security Statistics (OHSS), \u201cImmigration Enforcement and Legal Processes Monthly Tables-July 2024,\u201d updated November 8, 2024, available online; data on CHNV parolees are from CBP, \u201cCBP Releases October 2024 Monthly Update\u201d (press release, November 19, 2024), available online; data for U.S.-Canada border encounters are from CBP, \u201cNationwide Encounters,\u201d updated November 19, 2024, available online; data for Uniting for Ukraine are from Declaration of Royce Bernstein Murray, Las Americas Immigration Advocacy Center et al. v. U.S. Department of Homeland Security et al., filed August 16, 2024, available online; data for Operation Allies Welcome are from Office of the Citizenship and Immigration Services Ombudsman (CIS Ombudsman), Annual Report 2023 (Washington DC: CIS Ombudsman, 2024), available online.\nThe trend of states taking action to combat or und\n\nProvide relevant evidence.",
+    "input_length_chars": 6395,
+    "input_tokens_estimated": 1598,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses the Biden administration's immigration policies, highlighting a record level of activity and efforts to restore legal immigration and refugee resettlement. However, it also notes that despite these efforts, the perception of the U.S. border being uncontrolled persists, and the administration faced criticism from both sides of the political spectrum, suggesting that the claim of the U.S. having the most generous immigration policies is contested.",
+      "overall_stance": "mixed",
+      "key_quote": "\"Despite these developments, the country\u2019s attention throughout Biden\u2019s tenure was focused on the Southwest border, where authorities carried out 8.6 million migrant encounters... Biden was hounded by a strong public perception that the border was uncontrolled.\""
+    },
+    "output_length_chars": 818,
+    "output_tokens_estimated": 204,
+    "cost_usd": 0.0003621,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:47:01.046788",
+    "latency_seconds": 8.84,
+    "input_prompt": "Claim:\nThe United States maintains the most generous immigration policies in the world.\n\nArticle Title:\nTrump vs. Biden on immigration: A side-by-side policy comparison\n\nGoogle Search Snippet:\nThis page provides a useful resource to track major US immigration policy changes between 2016 and June 2024 and compare the actions of former President Donald ...\n\nFull Page Content:\nPresident Joe Biden at the White House. (Photo: Oliver Contreras/White House)\nHowever history judges the Biden presidency, immigration will be a critical factor. Joe Biden entered office promising not only to undo what he described as the harsh immigration policies of his predecessor, now President-elect Donald Trump, but also to create new opportunities for millions of long-resident unauthorized immigrants to secure legal status. As Congress continued its three-decade old pattern of inactivity on immigration reform, Biden was unable to deliver on legalization for even small portions of the estimated 11.3 million unauthorized immigrants in the United States. And the administration\u2019s approach at the U.S.-Mexico border, which experienced record irregular arrivals of asylum seekers and other migrants, was sharply decried by liberals and conservatives alike. Immigrant-rights advocates claimed that Biden\u2019s border policies doubled down on the Trump approach. And conservatives charged the administration\u2019s strategy invited chaos by permitting several million people arriving without authorization to enter the United States.\nIn This Article\nTrends at the border changed profoundly, complicating administration efforts to restore order\nRipple effects from the border in the U.S. interior proved difficult to manage\nLegal immigration recovered from COVID-19-era lows and reached new highs\nStates have taken an expanded role in immigration, both to increase restrictions and reception\nContinued lack of support from Congress hamstrung the administration's efforts\nTo be sure, the Biden administration demonstrated a record level of activity on immigration, advancing 605 immigration-related executive actions as of December 6, according to Migration Policy Institute (MPI) calculations\u2014far more than the 472 in Trump\u2019s first term, which was seen as uniquely active on the issue. Through these executive actions, the Biden administration restored legal immigration levels that had fallen due to the COVID-19 pandemic and earlier Trump initiatives, as well as rebuilt refugee resettlement to numbers not seen since the 1990s. The Biden administration was also estimated to have naturalized nearly 3.5 million people, the most in any presidential term; more than doubled the length of work authorizations; and recrafted interior enforcement priorities to target national security and public safety threats, and recent border crossers. Additionally, the administration extended Temporary Protected Status (TPS) to 1.7 million potential new beneficiaries (although far fewer received the status), offering them work authorization and protection from deportation. To decrease the pressure of irregular arrivals at the U.S.-Mexico border, the administration established new humanitarian pathways and orderly processes for migrants to enter the United States, and built a new network of cooperation with governments across the Americas.\nDespite these developments, the country\u2019s attention throughout Biden\u2019s tenure was focused on the Southwest border, where authorities carried out 8.6 million migrant encounters from January 2021 through October 2024 (many were of repeat crossers). Biden was hounded by a strong public perception that the border was uncontrolled. Even when the administration further narrowed access to asylum at the border in June, the measure was seen as too little, too late.\nAlthough a combination of carrot-and-stick processes and Mexico\u2019s stepped-up enforcement quelled some border pressures, MPI estimates that as of July more than 5.8 million migrants had been paroled in or otherwise allowed entry to pursue asylum applications and other immigration cases. At times of high arrivals, overwhelmed authorities often had to release migrants into the country due to a lack of asylum screening and other processing resources. In recent months, as encounters have decreased, so too have releases.\nTable 1. Asylum Seekers and Humanitarian Parolees Allowed into the United States, 2021-24\nNotes: There are no public data for processing dispositions at the U.S.-Canada border, so the Migration Policy Institute (MPI) extrapolated by using the estimated proportion of those released based on processing dispositions at the U.S.-Mexico border. The estimate for the U.S.-Mexico border includes U.S. Border Patrol releases, Office of Field Operation parolees (including CBP One entrants), transfers to the U.S. Department of Health and Human Services (HHS) Office of Refugee Resettlement, and U.S. Immigration and Customs Enforcement (ICE) releases originating from U.S. Customs and Border Protection (CBP). Data on the U.S.-Mexico border cover the period from January 2021 to July 2024; data on U.S.-Canada border encounters are from January 2021 through September 2024; data on the Cuban, Haitian, Nicaraguan, and Venezuelan (CHNV) parole program are from October 2023 through October 2024; data on the Uniting for Ukraine program are as of July 1, 2024; data on Operation Allies Welcome are as of March 1, 2023. Sources: Data for the U.S.-Mexico border are from U.S. Department of Homeland Security (DHS), Office of Homeland Security Statistics (OHSS), \u201cImmigration Enforcement and Legal Processes Monthly Tables-July 2024,\u201d updated November 8, 2024, available online; data on CHNV parolees are from CBP, \u201cCBP Releases October 2024 Monthly Update\u201d (press release, November 19, 2024), available online; data for U.S.-Canada border encounters are from CBP, \u201cNationwide Encounters,\u201d updated November 19, 2024, available online; data for Uniting for Ukraine are from Declaration of Royce Bernstein Murray, Las Americas Immigration Advocacy Center et al. v. U.S. Department of Homeland Security et al., filed August 16, 2024, available online; data for Operation Allies Welcome are from Office of the Citizenship and Immigration Services Ombudsman (CIS Ombudsman), Annual Report 2023 (Washington DC: CIS Ombudsman, 2024), available online.\nThe trend of states taking action to combat or und\n\nProvide relevant evidence.",
+    "input_length_chars": 6405,
+    "input_tokens_estimated": 1601,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses the Biden administration's immigration policies, highlighting significant actions taken to restore legal immigration levels and provide opportunities for unauthorized immigrants. However, it also notes that the perception of the U.S. border being uncontrolled and the challenges faced in managing irregular arrivals complicate the claim of the U.S. having the most generous immigration policies.",
+      "overall_stance": "mixed",
+      "key_quote": "The Biden administration demonstrated a record level of activity on immigration, advancing 605 immigration-related executive actions... and rebuilt refugee resettlement to numbers not seen since the 1990s."
+    },
+    "output_length_chars": 705,
+    "output_tokens_estimated": 176,
+    "cost_usd": 0.00034575,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:47:01.056242",
+    "latency_seconds": 4.98,
+    "input_prompt": "Claim:\nThe United States has more immigrants as a percentage of its total population than at any time since 1890.\n\nArticle Title:\nHow the origins of America's immigrants have changed since 1850\n\nGoogle Search Snippet:\nThe next wave of immigration to the U.S. lasted from 1890 to 1919, when more than 18 million immigrants arrived. By then, over 60% came from ...\n\nFull Page Content:\nNUMBERS, FACTS AND TRENDS SHAPING YOUR WORLD\nRead our research on:\n|\nThe United States is the top destination in the world for people moving from one country to another. Over 70 million immigrants have arrived in the U.S. since 1965, according to a Pew Research Center analysis of Census Bureau data. About 18 million have come from Mexico, making up the largest wave of immigration from a single country to the U.S.\nIn 2022, the number of immigrants living in the U.S. reached a high of 46.1 million, accounting for 13.8% of the population. (This includes both legal and unauthorized immigrants.)\nThese immigrants trace their roots to virtually all countries around the world. The largest numbers hail from Mexico (10.6 million) and India (2.8 million). That\u2019s different from a century ago: In 1920, the largest immigrant populations were from Germany and Italy.\nThe share of immigrants varies widely among states, from 2% in West Virginia to 27% in California. In 2022, Mexican immigrants were the largest group in 29 states, while Indian immigrants were the largest group in six states.\nMirroring the national trend, the origins of immigrants living in each state have changed dramatically in the past century. In 1920, the largest immigrant groups in 29 states were born in Germany, Italy or Canada. And only six states had the same largest origin group in 2022 that they did in 1920: Arizona, New Mexico and Texas (all from Mexico) and Maine, Montana and Vermont (from Canada).\nReasons behind the changes in the U.S. immigrant population since 1965 include:\n1840-1889\nThe first large wave of immigration to the U.S. began in the 1840s and lasted until 1889. During this time, more than 14 million immigrants came to the country. Most arrived from Northern or Western Europe; Germany, Ireland and the United Kingdom alone accounted for 70% of the new arrivals.\nHow America\u2019s source of immigrants has changed over time\nTop country of birth among U.S. immigrants, by state\n1850\nTop five foreign-born populations by country of origin (in millions)\nTotal U.S. population 23.2 million Total foreign born 2.2 million Percentage foreign born 9.7%\nNote: Populations rounded to nearest 10,000. Shares and ranks based on unrounded numbers. Germany includes East and West Germany (1980-1990), German states coded by IPUMS (1850-1940). Alsace and Lorraine are part of Germany for 1870-1910 and France in other years. United Kingdom (UK) includes England, Scotland, Wales and Channel Islands in all years and Northern Ireland in 1930 and later. China includes Mongolia and Taiwan for 1850-1940; Hong Kong and Macau for 2000 and later. Poland includes areas designated as Poland by IPUMS (1850-1940) including \u201cAustrian,\u201d \u201cGerman,\u201d \u201cPrussian\u201d and \u201cRussian\u201d Poland. The term \u201cRussia\u201d is used for 1850-1920, \u201cUSSR\u201d for 1930-1990 and \u201cUSSR (former)\u201d for 2000 and later. These areas encompass all former republics of the USSR including Baltic states in all years. The only exception is Armenia which is coded separately in 1930-1940. Various other areas have been grouped together but do not appear in the top five countries for the U.S. Source: U.S. Census Bureau, \u201cHistorical Census Statistics on the Foreign-Born Population of the United States: 1850-2000\u201d; Pew Research Center tabulations of complete count census data for 1850-1940; census samples for 1950 (1%), 1960, 1980-2000 (5%) and 1970 (1% form 1); 2010 and 2022 American Community Survey (1%). Alaska and Hawaii from samples for 1900-1920 (1%) and 1930 (5%). All data from IPUMS.\nFrom 1850 to 1880, Germany and Ireland were the largest immigrant origin countries in most states and territories. In 1860, Ireland was the largest origin country in 22 of the nation\u2019s 39 states and territories.\nBy 1880, Germany was the largest origin country in 16 states and territories. Chinese immigrants were the largest group in California, Nevada, Oregon, and the Idaho and Washington territories. Mexicans were the largest group in Texas and the New Mexico and Arizona territories.\n1890-1919\nThe next wave of immigration to the U.S. lasted from 1890 to 1919, when more than 18 million immigrants arrived. By then, over 60% came from Eastern and Southern Europe, with large numbers arriving from Italy, Austria-Hungary, Russia and Poland.\n1920-1964\nThe number of new immigrants fell dramatically in the years between World War I and World War II (1919 to 1939). As a result, the largest immigrant groups in each state did not change much for the next few decades.\nIn 1920, German immigrants were the largest group in 11 states, down from 18 in 1910. Immigrants from Italy and Russia became the largest groups in a growing number of states. At their peaks, Italians were the largest group in 10 states in 1940 and 1960, and Russians were the biggest in seven states in 1920 and 1950.\nBy 1960, the largest number of immigrants in most states came from Germany (17 states), Italy (10) and Canada (10).\n1965-2007\nAnother wave of immigration began in 1965. Most immigrants in this wave came from Latin America (49%) or Asia (27%). Mexico alone accounted for about 25% of these new immigrants. Large numbers also came from China, India, the Philippines, Central America and the Caribbean.\nAfter 1990, the number of unauthorized immigrants in the U.S. started to grow quickly, from 3.5 million to 12.2 million in 2007. Most unauthorized immigrants in the U.S. at this time came from Mexico, which was also the largest source of legal immigrants.\nThese new legal and unauthorized arrivals led to major changes in states\u2019 immigrant populations. Mexican immigrants became the largest group in an increasing number of states.\nIn 1980, Mexican immigrants were the largest group in 10 states, trailing German immigrants (19 states) and Canadian immigrants (11 states).\nBy 2000, Mexican immigrants were the largest group in 31 states, and Germans were no longer the largest immigrant group in any state. Immigrants from Cuba, El Salvador, the Dominican Republic, Vietnam, the Ph\n\nProvide relevant evidence.",
+    "input_length_chars": 6411,
+    "input_tokens_estimated": 1602,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article states that in 2022, immigrants accounted for 13.8% of the U.S. population, which is the highest percentage since 1890, thus supporting the claim.",
+      "overall_stance": "supports",
+      "key_quote": "In 2022, the number of immigrants living in the U.S. reached a high of 46.1 million, accounting for 13.8% of the population."
+    },
+    "output_length_chars": 368,
+    "output_tokens_estimated": 92,
+    "cost_usd": 0.0002955,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:47:01.079664",
+    "latency_seconds": 8.87,
+    "input_prompt": "Claim:\nThe United States maintains the most generous immigration policies in the world.\n\nArticle Title:\nKey findings about U.S. immigrants - Pew Research Center\n\nGoogle Search Snippet:\nThis year, policy and enforcement changes likely contributed to a decline in the unauthorized immigrant population between January and June.\n\nFull Page Content:\nPresident Joe Biden at the White House. (Photo: Oliver Contreras/White House)\nHowever history judges the Biden presidency, immigration will be a critical factor. Joe Biden entered office promising not only to undo what he described as the harsh immigration policies of his predecessor, now President-elect Donald Trump, but also to create new opportunities for millions of long-resident unauthorized immigrants to secure legal status. As Congress continued its three-decade old pattern of inactivity on immigration reform, Biden was unable to deliver on legalization for even small portions of the estimated 11.3 million unauthorized immigrants in the United States. And the administration\u2019s approach at the U.S.-Mexico border, which experienced record irregular arrivals of asylum seekers and other migrants, was sharply decried by liberals and conservatives alike. Immigrant-rights advocates claimed that Biden\u2019s border policies doubled down on the Trump approach. And conservatives charged the administration\u2019s strategy invited chaos by permitting several million people arriving without authorization to enter the United States.\nIn This Article\nTrends at the border changed profoundly, complicating administration efforts to restore order\nRipple effects from the border in the U.S. interior proved difficult to manage\nLegal immigration recovered from COVID-19-era lows and reached new highs\nStates have taken an expanded role in immigration, both to increase restrictions and reception\nContinued lack of support from Congress hamstrung the administration's efforts\nTo be sure, the Biden administration demonstrated a record level of activity on immigration, advancing 605 immigration-related executive actions as of December 6, according to Migration Policy Institute (MPI) calculations\u2014far more than the 472 in Trump\u2019s first term, which was seen as uniquely active on the issue. Through these executive actions, the Biden administration restored legal immigration levels that had fallen due to the COVID-19 pandemic and earlier Trump initiatives, as well as rebuilt refugee resettlement to numbers not seen since the 1990s. The Biden administration was also estimated to have naturalized nearly 3.5 million people, the most in any presidential term; more than doubled the length of work authorizations; and recrafted interior enforcement priorities to target national security and public safety threats, and recent border crossers. Additionally, the administration extended Temporary Protected Status (TPS) to 1.7 million potential new beneficiaries (although far fewer received the status), offering them work authorization and protection from deportation. To decrease the pressure of irregular arrivals at the U.S.-Mexico border, the administration established new humanitarian pathways and orderly processes for migrants to enter the United States, and built a new network of cooperation with governments across the Americas.\nDespite these developments, the country\u2019s attention throughout Biden\u2019s tenure was focused on the Southwest border, where authorities carried out 8.6 million migrant encounters from January 2021 through October 2024 (many were of repeat crossers). Biden was hounded by a strong public perception that the border was uncontrolled. Even when the administration further narrowed access to asylum at the border in June, the measure was seen as too little, too late.\nAlthough a combination of carrot-and-stick processes and Mexico\u2019s stepped-up enforcement quelled some border pressures, MPI estimates that as of July more than 5.8 million migrants had been paroled in or otherwise allowed entry to pursue asylum applications and other immigration cases. At times of high arrivals, overwhelmed authorities often had to release migrants into the country due to a lack of asylum screening and other processing resources. In recent months, as encounters have decreased, so too have releases.\nTable 1. Asylum Seekers and Humanitarian Parolees Allowed into the United States, 2021-24\nNotes: There are no public data for processing dispositions at the U.S.-Canada border, so the Migration Policy Institute (MPI) extrapolated by using the estimated proportion of those released based on processing dispositions at the U.S.-Mexico border. The estimate for the U.S.-Mexico border includes U.S. Border Patrol releases, Office of Field Operation parolees (including CBP One entrants), transfers to the U.S. Department of Health and Human Services (HHS) Office of Refugee Resettlement, and U.S. Immigration and Customs Enforcement (ICE) releases originating from U.S. Customs and Border Protection (CBP). Data on the U.S.-Mexico border cover the period from January 2021 to July 2024; data on U.S.-Canada border encounters are from January 2021 through September 2024; data on the Cuban, Haitian, Nicaraguan, and Venezuelan (CHNV) parole program are from October 2023 through October 2024; data on the Uniting for Ukraine program are as of July 1, 2024; data on Operation Allies Welcome are as of March 1, 2023. Sources: Data for the U.S.-Mexico border are from U.S. Department of Homeland Security (DHS), Office of Homeland Security Statistics (OHSS), \u201cImmigration Enforcement and Legal Processes Monthly Tables-July 2024,\u201d updated November 8, 2024, available online; data on CHNV parolees are from CBP, \u201cCBP Releases October 2024 Monthly Update\u201d (press release, November 19, 2024), available online; data for U.S.-Canada border encounters are from CBP, \u201cNationwide Encounters,\u201d updated November 19, 2024, available online; data for Uniting for Ukraine are from Declaration of Royce Bernstein Murray, Las Americas Immigration Advocacy Center et al. v. U.S. Department of Homeland Security et al., filed August 16, 2024, available online; data for Operation Allies Welcome are from Office of the Citizenship and Immigration Services Ombudsman (CIS Ombudsman), Annual Report 2023 (Washington DC: CIS Ombudsman, 2024), available online.\nThe trend of states taking action to combat or und\n\nProvide relevant evidence.",
+    "input_length_chars": 6374,
+    "input_tokens_estimated": 1593,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that while the Biden administration has taken significant steps to restore and expand legal immigration, including record levels of naturalization and humanitarian pathways, the overall perception and management of immigration, particularly at the U.S.-Mexico border, has faced criticism and challenges. This suggests that the U.S. immigration policies may not be the most generous in the world, as they are still marked by significant enforcement and restrictions.",
+      "overall_stance": "mixed",
+      "key_quote": "Despite these developments, the country\u2019s attention throughout Biden\u2019s tenure was focused on the Southwest border, where authorities carried out 8.6 million migrant encounters... Biden was hounded by a strong public perception that the border was uncontrolled."
+    },
+    "output_length_chars": 831,
+    "output_tokens_estimated": 207,
+    "cost_usd": 0.00036315,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:47:01.150685",
+    "latency_seconds": 5.08,
+    "input_prompt": "Claim:\nThe United States has more immigrants as a percentage of its total population than at any time since 1890.\n\nArticle Title:\nU.S. Immigrant Population and Share over Time, 1850-Present\n\nGoogle Search Snippet:\nThis chart displays both the number of immigrants residing in the United States and their share of the total U.S. population over time.\n\nFull Page Content:\nNUMBERS, FACTS AND TRENDS SHAPING YOUR WORLD\nRead our research on:\n|\nThe United States is the top destination in the world for people moving from one country to another. Over 70 million immigrants have arrived in the U.S. since 1965, according to a Pew Research Center analysis of Census Bureau data. About 18 million have come from Mexico, making up the largest wave of immigration from a single country to the U.S.\nIn 2022, the number of immigrants living in the U.S. reached a high of 46.1 million, accounting for 13.8% of the population. (This includes both legal and unauthorized immigrants.)\nThese immigrants trace their roots to virtually all countries around the world. The largest numbers hail from Mexico (10.6 million) and India (2.8 million). That\u2019s different from a century ago: In 1920, the largest immigrant populations were from Germany and Italy.\nThe share of immigrants varies widely among states, from 2% in West Virginia to 27% in California. In 2022, Mexican immigrants were the largest group in 29 states, while Indian immigrants were the largest group in six states.\nMirroring the national trend, the origins of immigrants living in each state have changed dramatically in the past century. In 1920, the largest immigrant groups in 29 states were born in Germany, Italy or Canada. And only six states had the same largest origin group in 2022 that they did in 1920: Arizona, New Mexico and Texas (all from Mexico) and Maine, Montana and Vermont (from Canada).\nReasons behind the changes in the U.S. immigrant population since 1965 include:\n1840-1889\nThe first large wave of immigration to the U.S. began in the 1840s and lasted until 1889. During this time, more than 14 million immigrants came to the country. Most arrived from Northern or Western Europe; Germany, Ireland and the United Kingdom alone accounted for 70% of the new arrivals.\nHow America\u2019s source of immigrants has changed over time\nTop country of birth among U.S. immigrants, by state\n1850\nTop five foreign-born populations by country of origin (in millions)\nTotal U.S. population 23.2 million Total foreign born 2.2 million Percentage foreign born 9.7%\nNote: Populations rounded to nearest 10,000. Shares and ranks based on unrounded numbers. Germany includes East and West Germany (1980-1990), German states coded by IPUMS (1850-1940). Alsace and Lorraine are part of Germany for 1870-1910 and France in other years. United Kingdom (UK) includes England, Scotland, Wales and Channel Islands in all years and Northern Ireland in 1930 and later. China includes Mongolia and Taiwan for 1850-1940; Hong Kong and Macau for 2000 and later. Poland includes areas designated as Poland by IPUMS (1850-1940) including \u201cAustrian,\u201d \u201cGerman,\u201d \u201cPrussian\u201d and \u201cRussian\u201d Poland. The term \u201cRussia\u201d is used for 1850-1920, \u201cUSSR\u201d for 1930-1990 and \u201cUSSR (former)\u201d for 2000 and later. These areas encompass all former republics of the USSR including Baltic states in all years. The only exception is Armenia which is coded separately in 1930-1940. Various other areas have been grouped together but do not appear in the top five countries for the U.S. Source: U.S. Census Bureau, \u201cHistorical Census Statistics on the Foreign-Born Population of the United States: 1850-2000\u201d; Pew Research Center tabulations of complete count census data for 1850-1940; census samples for 1950 (1%), 1960, 1980-2000 (5%) and 1970 (1% form 1); 2010 and 2022 American Community Survey (1%). Alaska and Hawaii from samples for 1900-1920 (1%) and 1930 (5%). All data from IPUMS.\nFrom 1850 to 1880, Germany and Ireland were the largest immigrant origin countries in most states and territories. In 1860, Ireland was the largest origin country in 22 of the nation\u2019s 39 states and territories.\nBy 1880, Germany was the largest origin country in 16 states and territories. Chinese immigrants were the largest group in California, Nevada, Oregon, and the Idaho and Washington territories. Mexicans were the largest group in Texas and the New Mexico and Arizona territories.\n1890-1919\nThe next wave of immigration to the U.S. lasted from 1890 to 1919, when more than 18 million immigrants arrived. By then, over 60% came from Eastern and Southern Europe, with large numbers arriving from Italy, Austria-Hungary, Russia and Poland.\n1920-1964\nThe number of new immigrants fell dramatically in the years between World War I and World War II (1919 to 1939). As a result, the largest immigrant groups in each state did not change much for the next few decades.\nIn 1920, German immigrants were the largest group in 11 states, down from 18 in 1910. Immigrants from Italy and Russia became the largest groups in a growing number of states. At their peaks, Italians were the largest group in 10 states in 1940 and 1960, and Russians were the biggest in seven states in 1920 and 1950.\nBy 1960, the largest number of immigrants in most states came from Germany (17 states), Italy (10) and Canada (10).\n1965-2007\nAnother wave of immigration began in 1965. Most immigrants in this wave came from Latin America (49%) or Asia (27%). Mexico alone accounted for about 25% of these new immigrants. Large numbers also came from China, India, the Philippines, Central America and the Caribbean.\nAfter 1990, the number of unauthorized immigrants in the U.S. started to grow quickly, from 3.5 million to 12.2 million in 2007. Most unauthorized immigrants in the U.S. at this time came from Mexico, which was also the largest source of legal immigrants.\nThese new legal and unauthorized arrivals led to major changes in states\u2019 immigrant populations. Mexican immigrants became the largest group in an increasing number of states.\nIn 1980, Mexican immigrants were the largest group in 10 states, trailing German immigrants (19 states) and Canadian immigrants (11 states).\nBy 2000, Mexican immigrants were the largest group in 31 states, and Germans were no longer the largest immigrant group in any state. Immigrants from Cuba, El Salvador, the Dominican Republic, Vietnam, the Ph\n\nProvide relevant evidence.",
+    "input_length_chars": 6398,
+    "input_tokens_estimated": 1599,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that in 2022, immigrants accounted for 13.8% of the U.S. population, which is the highest percentage since 1890, thus supporting the claim.",
+      "overall_stance": "supports",
+      "key_quote": "In 2022, the number of immigrants living in the U.S. reached a high of 46.1 million, accounting for 13.8% of the population."
+    },
+    "output_length_chars": 372,
+    "output_tokens_estimated": 93,
+    "cost_usd": 0.00029565,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:47:01.206469",
+    "latency_seconds": 9.01,
+    "input_prompt": "Claim:\nThe United States maintains the most generous immigration policies in the world.\n\nArticle Title:\n2023 Update on Key Federal Immigration Policies and Implications ...\n\nGoogle Search Snippet:\nThis issue brief provides the latest update on some key evolving immigration policies, including Title 42 as it applies to border ...\n\nFull Page Content:\nPresident Joe Biden at the White House. (Photo: Oliver Contreras/White House)\nHowever history judges the Biden presidency, immigration will be a critical factor. Joe Biden entered office promising not only to undo what he described as the harsh immigration policies of his predecessor, now President-elect Donald Trump, but also to create new opportunities for millions of long-resident unauthorized immigrants to secure legal status. As Congress continued its three-decade old pattern of inactivity on immigration reform, Biden was unable to deliver on legalization for even small portions of the estimated 11.3 million unauthorized immigrants in the United States. And the administration\u2019s approach at the U.S.-Mexico border, which experienced record irregular arrivals of asylum seekers and other migrants, was sharply decried by liberals and conservatives alike. Immigrant-rights advocates claimed that Biden\u2019s border policies doubled down on the Trump approach. And conservatives charged the administration\u2019s strategy invited chaos by permitting several million people arriving without authorization to enter the United States.\nIn This Article\nTrends at the border changed profoundly, complicating administration efforts to restore order\nRipple effects from the border in the U.S. interior proved difficult to manage\nLegal immigration recovered from COVID-19-era lows and reached new highs\nStates have taken an expanded role in immigration, both to increase restrictions and reception\nContinued lack of support from Congress hamstrung the administration's efforts\nTo be sure, the Biden administration demonstrated a record level of activity on immigration, advancing 605 immigration-related executive actions as of December 6, according to Migration Policy Institute (MPI) calculations\u2014far more than the 472 in Trump\u2019s first term, which was seen as uniquely active on the issue. Through these executive actions, the Biden administration restored legal immigration levels that had fallen due to the COVID-19 pandemic and earlier Trump initiatives, as well as rebuilt refugee resettlement to numbers not seen since the 1990s. The Biden administration was also estimated to have naturalized nearly 3.5 million people, the most in any presidential term; more than doubled the length of work authorizations; and recrafted interior enforcement priorities to target national security and public safety threats, and recent border crossers. Additionally, the administration extended Temporary Protected Status (TPS) to 1.7 million potential new beneficiaries (although far fewer received the status), offering them work authorization and protection from deportation. To decrease the pressure of irregular arrivals at the U.S.-Mexico border, the administration established new humanitarian pathways and orderly processes for migrants to enter the United States, and built a new network of cooperation with governments across the Americas.\nDespite these developments, the country\u2019s attention throughout Biden\u2019s tenure was focused on the Southwest border, where authorities carried out 8.6 million migrant encounters from January 2021 through October 2024 (many were of repeat crossers). Biden was hounded by a strong public perception that the border was uncontrolled. Even when the administration further narrowed access to asylum at the border in June, the measure was seen as too little, too late.\nAlthough a combination of carrot-and-stick processes and Mexico\u2019s stepped-up enforcement quelled some border pressures, MPI estimates that as of July more than 5.8 million migrants had been paroled in or otherwise allowed entry to pursue asylum applications and other immigration cases. At times of high arrivals, overwhelmed authorities often had to release migrants into the country due to a lack of asylum screening and other processing resources. In recent months, as encounters have decreased, so too have releases.\nTable 1. Asylum Seekers and Humanitarian Parolees Allowed into the United States, 2021-24\nNotes: There are no public data for processing dispositions at the U.S.-Canada border, so the Migration Policy Institute (MPI) extrapolated by using the estimated proportion of those released based on processing dispositions at the U.S.-Mexico border. The estimate for the U.S.-Mexico border includes U.S. Border Patrol releases, Office of Field Operation parolees (including CBP One entrants), transfers to the U.S. Department of Health and Human Services (HHS) Office of Refugee Resettlement, and U.S. Immigration and Customs Enforcement (ICE) releases originating from U.S. Customs and Border Protection (CBP). Data on the U.S.-Mexico border cover the period from January 2021 to July 2024; data on U.S.-Canada border encounters are from January 2021 through September 2024; data on the Cuban, Haitian, Nicaraguan, and Venezuelan (CHNV) parole program are from October 2023 through October 2024; data on the Uniting for Ukraine program are as of July 1, 2024; data on Operation Allies Welcome are as of March 1, 2023. Sources: Data for the U.S.-Mexico border are from U.S. Department of Homeland Security (DHS), Office of Homeland Security Statistics (OHSS), \u201cImmigration Enforcement and Legal Processes Monthly Tables-July 2024,\u201d updated November 8, 2024, available online; data on CHNV parolees are from CBP, \u201cCBP Releases October 2024 Monthly Update\u201d (press release, November 19, 2024), available online; data for U.S.-Canada border encounters are from CBP, \u201cNationwide Encounters,\u201d updated November 19, 2024, available online; data for Uniting for Ukraine are from Declaration of Royce Bernstein Murray, Las Americas Immigration Advocacy Center et al. v. U.S. Department of Homeland Security et al., filed August 16, 2024, available online; data for Operation Allies Welcome are from Office of the Citizenship and Immigration Services Ombudsman (CIS Ombudsman), Annual Report 2023 (Washington DC: CIS Ombudsman, 2024), available online.\nThe trend of states taking action to combat or und\n\nProvide relevant evidence.",
+    "input_length_chars": 6379,
+    "input_tokens_estimated": 1594,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that while the Biden administration has taken significant actions to restore and expand legal immigration, including record levels of naturalizations and humanitarian pathways, there is a contrasting perception of the U.S. immigration system as being chaotic and uncontrolled, particularly at the border. This suggests that the U.S. may not maintain the most generous immigration policies in the world, as the administration's efforts have faced criticism from both sides of the political spectrum.",
+      "overall_stance": "mixed",
+      "key_quote": "Despite these developments, the country\u2019s attention throughout Biden\u2019s tenure was focused on the Southwest border, where authorities carried out 8.6 million migrant encounters... Biden was hounded by a strong public perception that the border was uncontrolled."
+    },
+    "output_length_chars": 864,
+    "output_tokens_estimated": 216,
+    "cost_usd": 0.0003687,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:47:01.308505",
+    "latency_seconds": 9.1,
+    "input_prompt": "Claim:\nThe United States maintains the most generous immigration policies in the world.\n\nArticle Title:\nArticle: Biden's Mixed Immigration Legacy - Migration Policy Institute\n\nGoogle Search Snippet:\nThe Biden administration demonstrated a record level of activity on immigration, advancing 605 immigration-related executive actions as of December 6.\n\nFull Page Content:\nPresident Joe Biden at the White House. (Photo: Oliver Contreras/White House)\nHowever history judges the Biden presidency, immigration will be a critical factor. Joe Biden entered office promising not only to undo what he described as the harsh immigration policies of his predecessor, now President-elect Donald Trump, but also to create new opportunities for millions of long-resident unauthorized immigrants to secure legal status. As Congress continued its three-decade old pattern of inactivity on immigration reform, Biden was unable to deliver on legalization for even small portions of the estimated 11.3 million unauthorized immigrants in the United States. And the administration\u2019s approach at the U.S.-Mexico border, which experienced record irregular arrivals of asylum seekers and other migrants, was sharply decried by liberals and conservatives alike. Immigrant-rights advocates claimed that Biden\u2019s border policies doubled down on the Trump approach. And conservatives charged the administration\u2019s strategy invited chaos by permitting several million people arriving without authorization to enter the United States.\nIn This Article\nTrends at the border changed profoundly, complicating administration efforts to restore order\nRipple effects from the border in the U.S. interior proved difficult to manage\nLegal immigration recovered from COVID-19-era lows and reached new highs\nStates have taken an expanded role in immigration, both to increase restrictions and reception\nContinued lack of support from Congress hamstrung the administration's efforts\nTo be sure, the Biden administration demonstrated a record level of activity on immigration, advancing 605 immigration-related executive actions as of December 6, according to Migration Policy Institute (MPI) calculations\u2014far more than the 472 in Trump\u2019s first term, which was seen as uniquely active on the issue. Through these executive actions, the Biden administration restored legal immigration levels that had fallen due to the COVID-19 pandemic and earlier Trump initiatives, as well as rebuilt refugee resettlement to numbers not seen since the 1990s. The Biden administration was also estimated to have naturalized nearly 3.5 million people, the most in any presidential term; more than doubled the length of work authorizations; and recrafted interior enforcement priorities to target national security and public safety threats, and recent border crossers. Additionally, the administration extended Temporary Protected Status (TPS) to 1.7 million potential new beneficiaries (although far fewer received the status), offering them work authorization and protection from deportation. To decrease the pressure of irregular arrivals at the U.S.-Mexico border, the administration established new humanitarian pathways and orderly processes for migrants to enter the United States, and built a new network of cooperation with governments across the Americas.\nDespite these developments, the country\u2019s attention throughout Biden\u2019s tenure was focused on the Southwest border, where authorities carried out 8.6 million migrant encounters from January 2021 through October 2024 (many were of repeat crossers). Biden was hounded by a strong public perception that the border was uncontrolled. Even when the administration further narrowed access to asylum at the border in June, the measure was seen as too little, too late.\nAlthough a combination of carrot-and-stick processes and Mexico\u2019s stepped-up enforcement quelled some border pressures, MPI estimates that as of July more than 5.8 million migrants had been paroled in or otherwise allowed entry to pursue asylum applications and other immigration cases. At times of high arrivals, overwhelmed authorities often had to release migrants into the country due to a lack of asylum screening and other processing resources. In recent months, as encounters have decreased, so too have releases.\nTable 1. Asylum Seekers and Humanitarian Parolees Allowed into the United States, 2021-24\nNotes: There are no public data for processing dispositions at the U.S.-Canada border, so the Migration Policy Institute (MPI) extrapolated by using the estimated proportion of those released based on processing dispositions at the U.S.-Mexico border. The estimate for the U.S.-Mexico border includes U.S. Border Patrol releases, Office of Field Operation parolees (including CBP One entrants), transfers to the U.S. Department of Health and Human Services (HHS) Office of Refugee Resettlement, and U.S. Immigration and Customs Enforcement (ICE) releases originating from U.S. Customs and Border Protection (CBP). Data on the U.S.-Mexico border cover the period from January 2021 to July 2024; data on U.S.-Canada border encounters are from January 2021 through September 2024; data on the Cuban, Haitian, Nicaraguan, and Venezuelan (CHNV) parole program are from October 2023 through October 2024; data on the Uniting for Ukraine program are as of July 1, 2024; data on Operation Allies Welcome are as of March 1, 2023. Sources: Data for the U.S.-Mexico border are from U.S. Department of Homeland Security (DHS), Office of Homeland Security Statistics (OHSS), \u201cImmigration Enforcement and Legal Processes Monthly Tables-July 2024,\u201d updated November 8, 2024, available online; data on CHNV parolees are from CBP, \u201cCBP Releases October 2024 Monthly Update\u201d (press release, November 19, 2024), available online; data for U.S.-Canada border encounters are from CBP, \u201cNationwide Encounters,\u201d updated November 19, 2024, available online; data for Uniting for Ukraine are from Declaration of Royce Bernstein Murray, Las Americas Immigration Advocacy Center et al. v. U.S. Department of Homeland Security et al., filed August 16, 2024, available online; data for Operation Allies Welcome are from Office of the Citizenship and Immigration Services Ombudsman (CIS Ombudsman), Annual Report 2023 (Washington DC: CIS Ombudsman, 2024), available online.\nThe trend of states taking action to combat or und\n\nProvide relevant evidence.",
+    "input_length_chars": 6398,
+    "input_tokens_estimated": 1599,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses the Biden administration's immigration policies, highlighting a record level of executive actions and efforts to restore legal immigration and refugee resettlement. However, it also notes that despite these actions, the perception of the U.S. immigration system remains troubled, with criticisms from both sides of the political spectrum, suggesting that the U.S. may not have the most generous immigration policies in the world.",
+      "overall_stance": "mixed",
+      "key_quote": "The Biden administration demonstrated a record level of activity on immigration, advancing 605 immigration-related executive actions... However, immigrant-rights advocates claimed that Biden\u2019s border policies doubled down on the Trump approach."
+    },
+    "output_length_chars": 778,
+    "output_tokens_estimated": 194,
+    "cost_usd": 0.00035625,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:47:02.573229",
+    "latency_seconds": 10.37,
+    "input_prompt": "Claim:\nThe United States maintains the most generous immigration policies in the world.\n\nArticle Title:\nPrimer on U.S. Immigration Policy | Congress.gov\n\nGoogle Search Snippet:\nPreference immigrants are numerically limited to 226,000 per year and, unlike immediate relatives, are also bounded by the 7% per-country limit.\n\nFull Page Content:\nPresident Joe Biden at the White House. (Photo: Oliver Contreras/White House)\nHowever history judges the Biden presidency, immigration will be a critical factor. Joe Biden entered office promising not only to undo what he described as the harsh immigration policies of his predecessor, now President-elect Donald Trump, but also to create new opportunities for millions of long-resident unauthorized immigrants to secure legal status. As Congress continued its three-decade old pattern of inactivity on immigration reform, Biden was unable to deliver on legalization for even small portions of the estimated 11.3 million unauthorized immigrants in the United States. And the administration\u2019s approach at the U.S.-Mexico border, which experienced record irregular arrivals of asylum seekers and other migrants, was sharply decried by liberals and conservatives alike. Immigrant-rights advocates claimed that Biden\u2019s border policies doubled down on the Trump approach. And conservatives charged the administration\u2019s strategy invited chaos by permitting several million people arriving without authorization to enter the United States.\nIn This Article\nTrends at the border changed profoundly, complicating administration efforts to restore order\nRipple effects from the border in the U.S. interior proved difficult to manage\nLegal immigration recovered from COVID-19-era lows and reached new highs\nStates have taken an expanded role in immigration, both to increase restrictions and reception\nContinued lack of support from Congress hamstrung the administration's efforts\nTo be sure, the Biden administration demonstrated a record level of activity on immigration, advancing 605 immigration-related executive actions as of December 6, according to Migration Policy Institute (MPI) calculations\u2014far more than the 472 in Trump\u2019s first term, which was seen as uniquely active on the issue. Through these executive actions, the Biden administration restored legal immigration levels that had fallen due to the COVID-19 pandemic and earlier Trump initiatives, as well as rebuilt refugee resettlement to numbers not seen since the 1990s. The Biden administration was also estimated to have naturalized nearly 3.5 million people, the most in any presidential term; more than doubled the length of work authorizations; and recrafted interior enforcement priorities to target national security and public safety threats, and recent border crossers. Additionally, the administration extended Temporary Protected Status (TPS) to 1.7 million potential new beneficiaries (although far fewer received the status), offering them work authorization and protection from deportation. To decrease the pressure of irregular arrivals at the U.S.-Mexico border, the administration established new humanitarian pathways and orderly processes for migrants to enter the United States, and built a new network of cooperation with governments across the Americas.\nDespite these developments, the country\u2019s attention throughout Biden\u2019s tenure was focused on the Southwest border, where authorities carried out 8.6 million migrant encounters from January 2021 through October 2024 (many were of repeat crossers). Biden was hounded by a strong public perception that the border was uncontrolled. Even when the administration further narrowed access to asylum at the border in June, the measure was seen as too little, too late.\nAlthough a combination of carrot-and-stick processes and Mexico\u2019s stepped-up enforcement quelled some border pressures, MPI estimates that as of July more than 5.8 million migrants had been paroled in or otherwise allowed entry to pursue asylum applications and other immigration cases. At times of high arrivals, overwhelmed authorities often had to release migrants into the country due to a lack of asylum screening and other processing resources. In recent months, as encounters have decreased, so too have releases.\nTable 1. Asylum Seekers and Humanitarian Parolees Allowed into the United States, 2021-24\nNotes: There are no public data for processing dispositions at the U.S.-Canada border, so the Migration Policy Institute (MPI) extrapolated by using the estimated proportion of those released based on processing dispositions at the U.S.-Mexico border. The estimate for the U.S.-Mexico border includes U.S. Border Patrol releases, Office of Field Operation parolees (including CBP One entrants), transfers to the U.S. Department of Health and Human Services (HHS) Office of Refugee Resettlement, and U.S. Immigration and Customs Enforcement (ICE) releases originating from U.S. Customs and Border Protection (CBP). Data on the U.S.-Mexico border cover the period from January 2021 to July 2024; data on U.S.-Canada border encounters are from January 2021 through September 2024; data on the Cuban, Haitian, Nicaraguan, and Venezuelan (CHNV) parole program are from October 2023 through October 2024; data on the Uniting for Ukraine program are as of July 1, 2024; data on Operation Allies Welcome are as of March 1, 2023. Sources: Data for the U.S.-Mexico border are from U.S. Department of Homeland Security (DHS), Office of Homeland Security Statistics (OHSS), \u201cImmigration Enforcement and Legal Processes Monthly Tables-July 2024,\u201d updated November 8, 2024, available online; data on CHNV parolees are from CBP, \u201cCBP Releases October 2024 Monthly Update\u201d (press release, November 19, 2024), available online; data for U.S.-Canada border encounters are from CBP, \u201cNationwide Encounters,\u201d updated November 19, 2024, available online; data for Uniting for Ukraine are from Declaration of Royce Bernstein Murray, Las Americas Immigration Advocacy Center et al. v. U.S. Department of Homeland Security et al., filed August 16, 2024, available online; data for Operation Allies Welcome are from Office of the Citizenship and Immigration Services Ombudsman (CIS Ombudsman), Annual Report 2023 (Washington DC: CIS Ombudsman, 2024), available online.\nThe trend of states taking action to combat or und\n\nProvide relevant evidence.",
+    "input_length_chars": 6370,
+    "input_tokens_estimated": 1592,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses the Biden administration's immigration policies, highlighting a record level of activity and efforts to restore legal immigration levels, but it does not explicitly support the claim that the U.S. has the most generous immigration policies in the world. Instead, it presents a mixed picture of increased legal immigration alongside significant challenges and criticisms regarding border control and asylum processes.",
+      "overall_stance": "mixed",
+      "key_quote": "Despite these developments, the country\u2019s attention throughout Biden\u2019s tenure was focused on the Southwest border, where authorities carried out 8.6 million migrant encounters..."
+    },
+    "output_length_chars": 699,
+    "output_tokens_estimated": 174,
+    "cost_usd": 0.0003432,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:47:06.034987",
+    "latency_seconds": 1.33,
+    "input_prompt": "Claim:\n50 million residents of America are foreign-born.\n\nArticle Title:\nKey findings about U.S. immigrants - Pew Research Center\n\nGoogle Search Snippet:\n51.9 million immigrants lived in the U.S. \u00b7 15.4% of all U.S. residents were immigrants, down from a recent historic high of 15.8%. \u00b7 19% of the ...\n\nFull Page Content:\nmap.americanimmigrationcouncil.org Verifying you are human. This may take a few seconds. map.americanimmigrationcouncil.org needs to review the security of your connection before proceeding. Ray ID: 9adc6f290a4b036a Performance & security by Cloudflare\n\nProvide relevant evidence.",
+    "input_length_chars": 603,
+    "input_tokens_estimated": 150,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 3.57e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:47:06.069095",
+    "latency_seconds": 1.34,
+    "input_prompt": "Claim:\n50 million residents of America are foreign-born.\n\nArticle Title:\nCitizenship and Immigration Statuses of the U.S. Foreign-Born ...\n\nGoogle Search Snippet:\nAn estimated 47.8 million foreign-born people resided in the United States, representing 14.3% of the total US population.\n\nFull Page Content:\nmap.americanimmigrationcouncil.org Verifying you are human. This may take a few seconds. map.americanimmigrationcouncil.org needs to review the security of your connection before proceeding. Ray ID: 9adc6f290a4b036a Performance & security by Cloudflare\n\nProvide relevant evidence.",
+    "input_length_chars": 586,
+    "input_tokens_estimated": 146,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 3.51e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:47:06.075220",
+    "latency_seconds": 1.35,
+    "input_prompt": "Claim:\n50 million residents of America are foreign-born.\n\nArticle Title:\nThe Foreign-Born Population in the United States: 2022\n\nGoogle Search Snippet:\nBy 2022, it was estimated to be 46.2 million (13.9 percent) of the total U.S. population. This report provides an overview of the foreign-born ...\n\nFull Page Content:\nmap.americanimmigrationcouncil.org Verifying you are human. This may take a few seconds. map.americanimmigrationcouncil.org needs to review the security of your connection before proceeding. Ray ID: 9adc6f290a4b036a Performance & security by Cloudflare\n\nProvide relevant evidence.",
+    "input_length_chars": 599,
+    "input_tokens_estimated": 149,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 3.555e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:47:06.080375",
+    "latency_seconds": 3.4,
+    "input_prompt": "\nClaim: The United States maintains the most generous immigration policies in the world.\nCategory: policy\nExtraction confidence: 0.90\n\nEvidence:\nMIXED (3 sources):\n  1. 100 days of immigration under the second Trump administration | reliability=high (0.85)\n     URL: https://www.brookings.edu/articles/100-days-of-immigration-under-the-second-trump-administration/\n     Summary: The article discusses the Biden administration's immigration policies, highlighting a record level of activity and efforts to restore legal immigration and refugee resettlement. However, it also notes that despite these efforts, the perception of the U.S. border being uncontrolled persists, and the administration faced criticism from both sides of the political spectrum, suggesting that the claim of the U.S. having the most generous immigration policies is contested.\n  2. 2023 Update on Key Federal Immigration Policies and Implications ... | reliability=high (0.85)\n     URL: https://www.kff.org/racial-equity-and-health-policy/2023-update-on-key-federal-immigration-policies-and-implications-for-health/\n     Summary: The evidence indicates that while the Biden administration has taken significant actions to restore and expand legal immigration, including record levels of naturalizations and humanitarian pathways, there is a contrasting perception of the U.S. immigration system as being chaotic and uncontrolled, particularly at the border. This suggests that the U.S. may not maintain the most generous immigration policies in the world, as the administration's efforts have faced criticism from both sides of the political spectrum.\n  3. Primer on U.S. Immigration Policy | Congress.gov | reliability=high (0.85)\n     URL: https://www.congress.gov/crs-product/R45020\n     Summary: The article discusses the Biden administration's immigration policies, highlighting a record level of activity and efforts to restore legal immigration levels, but it does not explicitly support the claim that the U.S. has the most generous immigration policies in the world. Instead, it presents a mixed picture of increased legal immigration alongside significant challenges and criticisms regarding border control and asylum processes.\nUNCLEAR (3 sources):\n  1. Immigration Systems in Labor-Needy Japan and South Korea Have ... | reliability=high (0.85)\n     URL: https://www.migrationpolicy.org/article/japan-korea-immigration-evolve\n     Summary: While immigrants with long-term residence are eligible for generous rights, their access to citizenship varies depending on visa status. And the ...\n  2. States Continue to Lead on Inclusive Immigration Policies: A 2023 ... | reliability=high (0.85)\n     URL: http://www.americanimmigrationcouncil.org/blog/2023-review-immigration-state-legislation/\n     Summary: We tracked over 1000 immigration-related bills during the 2023 state legislative session. Most successful bills aimed to make states more ...\n  3. The U.S. benefits from immigration but policy reforms needed to ... | reliability=high (0.85)\n     URL: https://www.epi.org/publication/u-s-benefits-from-immigration/\n     Summary: Yet, it is also clear that when workers are denied full and equal labor and employment rights, as some immigrants are when their immigration status is used ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 3311,
+    "input_tokens_estimated": 827,
+    "output": {
+      "overall_stance": "mixed",
+      "confidence": "medium",
+      "summary": "The evidence presents a mixed view on the claim that the U.S. has the most generous immigration policies. While the Biden administration has made efforts to restore and expand legal immigration, criticisms regarding border control and perceptions of chaos suggest that the claim is contested. Sources like the Brookings article and the KFF report highlight these complexities."
+    },
+    "output_length_chars": 437,
+    "output_tokens_estimated": 109,
+    "cost_usd": 0.00018945,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The United States has more immigrants as a percentage of its total population than at any time since 1890.",
+      "query_index": 2,
+      "query_text": "current immigrant percentage in the US compared to 1890"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:47:06.179236",
+    "latency_seconds": 1.46,
+    "input_prompt": "Claim:\n50 million residents of America are foreign-born.\n\nArticle Title:\nU.S. Immigration Statistics\n\nGoogle Search Snippet:\nToday, 14.3 percent of the nation's residents are foreign-born, almost half of whom are naturalized citizens.\n\nFull Page Content:\nmap.americanimmigrationcouncil.org Verifying you are human. This may take a few seconds. map.americanimmigrationcouncil.org needs to review the security of your connection before proceeding. Ray ID: 9adc6f290a4b036a Performance & security by Cloudflare\n\nProvide relevant evidence.",
+    "input_length_chars": 535,
+    "input_tokens_estimated": 133,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 3.315e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:47:07.577784",
+    "latency_seconds": 2.87,
+    "input_prompt": "Claim:\n50 million residents of America are foreign-born.\n\nArticle Title:\n[PDF] The Foreign-Born Population in the United States: 2022 - Census.gov\n\nGoogle Search Snippet:\nBy 2022, it was estimated to be 46.2 million. (13.9 percent) of the total U.S. population. This report provides an overview of the foreign-born population ...\n\nFull Page Content:\nmap.americanimmigrationcouncil.org Verifying you are human. This may take a few seconds. map.americanimmigrationcouncil.org needs to review the security of your connection before proceeding. Ray ID: 9adc6f290a4b036a Performance & security by Cloudflare\n\nProvide relevant evidence.",
+    "input_length_chars": 630,
+    "input_tokens_estimated": 157,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that the foreign-born population in the United States was estimated to be 46.2 million in 2022, which is less than the 50 million claimed.",
+      "overall_stance": "refutes",
+      "key_quote": "By 2022, it was estimated to be 46.2 million."
+    },
+    "output_length_chars": 291,
+    "output_tokens_estimated": 72,
+    "cost_usd": 6.675e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:47:13.446475",
+    "latency_seconds": 2.37,
+    "input_prompt": "Claim:\n50 million residents of America are foreign-born.\n\nArticle Title:\nImmigration to the United States - Wikipedia\n\nGoogle Search Snippet:\nThe United States has the largest immigrant population in the world in absolute terms, with 53.3 million foreign-born residents, representing 15.8% of the ...\n\nFull Page Content:\nParticipate in the 2025 international science photo competition!\nImmigration has been a major source of population growth and cultural change in the United States throughout much of its history. As of January 2025, the United States has the largest immigrant population in the world in absolute terms, with 53.3 million foreign-born residents, representing 15.8% of the total U.S. population\u2014both record highs.[1] While the United States represented about 4% of the total global population in 2024, 17% of all international migrants resided in the United States.[2] In March 2025, the Federation for American Immigration Reform (FAIR) estimated that approximately 18.6 million illegal immigrants resided in the United States.[3] In 2024, immigrants and their U.S.-born children number more than 93 million people, or 28% of the total U.S. population.[2] According to the 2016 Yearbook of Immigration Statistics, the United States admitted a total of 1.18 million legal immigrants (618k new arrivals, 565k status adjustments) in 2016.[4] Of these, 48% were the immediate relatives of United States citizens, 20% were family-sponsored, 13% were refugees or asylum seekers, 12% were employment-based preferences, 4.2% were part of the Diversity Immigrant Visa program, 1.4% were victims of a crime (U1) or their family members were (U2 to U5),[5] and 1.0% who were granted the Special Immigrant Visa (SIV) for Iraqis and Afghans employed by the United States Government.[4] The remaining 0.4% included small numbers from several other categories, including 0.2% who were granted suspension of deportation as an immediate relative of a citizen (Z13);[6] persons admitted under the Nicaraguan and Central American Relief Act; children born after the issuance of a parent's visa; and certain parolees from the former Soviet Union, Cambodia, Laos, and Vietnam who were denied refugee status.[4]\nBetween 1921 and 1965 policies such as the National Origins Formula limited immigration and naturalization opportunities for people from areas outside Northwestern Europe. Exclusion laws enacted as early as the 1880s generally prohibited or severely restricted immigration from Asia, and quota laws enacted in the 1920s curtailed Southern and Eastern European immigration. The civil rights movement led to the replacement[7] of these ethnic quotas with per-country limits for family-sponsored and employment-based preference visas.[8] Between 1970 and 2007, the number of first-generation immigrants living in the United States quadrupled from 9.6 million to 38.1 million residents.[9][10] Census estimates show 45.3 million foreign born residents in the United States as of March 2018 and 45.4 million in September 2021, the lowest three-year increase in decades.[11]\nIn 2017, out of the U.S. foreign-born population, some 45% (20.7 million) were naturalized citizens, 27% (12.3 million) were lawful permanent residents, 6% (2.2 million) were temporary lawful residents, and 23% (10.5 million) were unauthorized immigrants.[12] The United States led the world in refugee resettlement for decades, admitting more refugees than the rest of the world combined.[13]\nCauses of migration include poverty, crime[14][15] and environmental degradation.[16]\nSome research suggests that immigration is beneficial to the United States economy. With few exceptions, the evidence suggests that on average, immigration has positive economic effects on the native population, but it is mixed as to whether low-skilled immigration adversely affects low-skilled natives. Studies also show that immigrants have lower crime rates than natives in the United States.[17][18][19] The economic, social, and political aspects of immigration have caused controversy regarding such issues as maintaining ethnic homogeneity, workers for employers versus jobs for non-immigrants, settlement patterns, impact on upward social mobility, crime, and voting behavior.\nDue to its history the United States can be described as an immigration country. American immigration history can be viewed in four epochs: the colonial period, the mid-19th century, the start of the 20th century, and post-1965. Each period brought distinct national groups, races, and ethnicities to the United States.\nDuring the 17th century, approximately 400,000 English people migrated to America under European colonization.[20] They comprised 83.5% of the white population at the time of the first census in 1790.[21] From 1700 to 1775, between 350,000 and 500,000 Europeans immigrated: estimates vary in sources. Regarding English settlers of the 18th century, one source says 52,000 English migrated during the period of 1701 to 1775, although this figure is likely too low.[22][23] 400,000\u2013450,000 of the 18th-century migrants were Scots, Scots-Irish from Ulster, Germans, Swiss, and French Huguenots.[24] Over half of all European immigrants to Colonial America during the 17th and 18th centuries arrived as indentured servants.[25] They numbered 350,000.[26] From 1770 to 1775 (the latter year being when the American Revolutionary War began), 7,000 English, 15,000 Scots, 13,200 Scots-Irish, 5,200 Germans, and 3,900 Irish Catholics migrated to the Thirteen Colonies.[27] According to Butler (2000), up to half of English migrants in the 18th century may have been young, single men who were well-skilled, trained artisans, like the Huguenots.[28] Based on scholarly analysis, English was the largest single ancestry in all U.S. states at the time of the first census in 1790, ranging from a high of 82% in Massachusetts to a low of 35.3% in Pennsylvania, where Germans accounted for 33.3%.\nThe Census Bureau published preliminary estimates of the origins of the colonial American population by scholarly classification of the names of all White heads of families recorded in the 1790 census in a 1909 report entitled A Century of Population Growth.[29] These initial estimates were scrutinized and rejected following passage of the Immigration Act of 1924, when t\n\nProvide relevant evidence.",
+    "input_length_chars": 6349,
+    "input_tokens_estimated": 1587,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that as of January 2025, there are 53.3 million foreign-born residents in the United States, which supports the claim that a significant number of residents are foreign-born, exceeding the 50 million figure stated in the claim.",
+      "overall_stance": "supports",
+      "key_quote": "the United States has the largest immigrant population in the world in absolute terms, with 53.3 million foreign-born residents."
+    },
+    "output_length_chars": 464,
+    "output_tokens_estimated": 116,
+    "cost_usd": 0.00030765
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:47:14.408487",
+    "latency_seconds": 3.34,
+    "input_prompt": "Claim:\n50 million residents of America are foreign-born.\n\nArticle Title:\nKey findings about U.S. immigrants - Pew Research Center\n\nGoogle Search Snippet:\nIn 2023, most of the nation's 51.8 million immigrants lived in just four states. California was home to 11.3 million immigrants, or 28.4% of ...\n\nFull Page Content:\nParticipate in the 2025 international science photo competition!\nImmigration has been a major source of population growth and cultural change in the United States throughout much of its history. As of January 2025, the United States has the largest immigrant population in the world in absolute terms, with 53.3 million foreign-born residents, representing 15.8% of the total U.S. population\u2014both record highs.[1] While the United States represented about 4% of the total global population in 2024, 17% of all international migrants resided in the United States.[2] In March 2025, the Federation for American Immigration Reform (FAIR) estimated that approximately 18.6 million illegal immigrants resided in the United States.[3] In 2024, immigrants and their U.S.-born children number more than 93 million people, or 28% of the total U.S. population.[2] According to the 2016 Yearbook of Immigration Statistics, the United States admitted a total of 1.18 million legal immigrants (618k new arrivals, 565k status adjustments) in 2016.[4] Of these, 48% were the immediate relatives of United States citizens, 20% were family-sponsored, 13% were refugees or asylum seekers, 12% were employment-based preferences, 4.2% were part of the Diversity Immigrant Visa program, 1.4% were victims of a crime (U1) or their family members were (U2 to U5),[5] and 1.0% who were granted the Special Immigrant Visa (SIV) for Iraqis and Afghans employed by the United States Government.[4] The remaining 0.4% included small numbers from several other categories, including 0.2% who were granted suspension of deportation as an immediate relative of a citizen (Z13);[6] persons admitted under the Nicaraguan and Central American Relief Act; children born after the issuance of a parent's visa; and certain parolees from the former Soviet Union, Cambodia, Laos, and Vietnam who were denied refugee status.[4]\nBetween 1921 and 1965 policies such as the National Origins Formula limited immigration and naturalization opportunities for people from areas outside Northwestern Europe. Exclusion laws enacted as early as the 1880s generally prohibited or severely restricted immigration from Asia, and quota laws enacted in the 1920s curtailed Southern and Eastern European immigration. The civil rights movement led to the replacement[7] of these ethnic quotas with per-country limits for family-sponsored and employment-based preference visas.[8] Between 1970 and 2007, the number of first-generation immigrants living in the United States quadrupled from 9.6 million to 38.1 million residents.[9][10] Census estimates show 45.3 million foreign born residents in the United States as of March 2018 and 45.4 million in September 2021, the lowest three-year increase in decades.[11]\nIn 2017, out of the U.S. foreign-born population, some 45% (20.7 million) were naturalized citizens, 27% (12.3 million) were lawful permanent residents, 6% (2.2 million) were temporary lawful residents, and 23% (10.5 million) were unauthorized immigrants.[12] The United States led the world in refugee resettlement for decades, admitting more refugees than the rest of the world combined.[13]\nCauses of migration include poverty, crime[14][15] and environmental degradation.[16]\nSome research suggests that immigration is beneficial to the United States economy. With few exceptions, the evidence suggests that on average, immigration has positive economic effects on the native population, but it is mixed as to whether low-skilled immigration adversely affects low-skilled natives. Studies also show that immigrants have lower crime rates than natives in the United States.[17][18][19] The economic, social, and political aspects of immigration have caused controversy regarding such issues as maintaining ethnic homogeneity, workers for employers versus jobs for non-immigrants, settlement patterns, impact on upward social mobility, crime, and voting behavior.\nDue to its history the United States can be described as an immigration country. American immigration history can be viewed in four epochs: the colonial period, the mid-19th century, the start of the 20th century, and post-1965. Each period brought distinct national groups, races, and ethnicities to the United States.\nDuring the 17th century, approximately 400,000 English people migrated to America under European colonization.[20] They comprised 83.5% of the white population at the time of the first census in 1790.[21] From 1700 to 1775, between 350,000 and 500,000 Europeans immigrated: estimates vary in sources. Regarding English settlers of the 18th century, one source says 52,000 English migrated during the period of 1701 to 1775, although this figure is likely too low.[22][23] 400,000\u2013450,000 of the 18th-century migrants were Scots, Scots-Irish from Ulster, Germans, Swiss, and French Huguenots.[24] Over half of all European immigrants to Colonial America during the 17th and 18th centuries arrived as indentured servants.[25] They numbered 350,000.[26] From 1770 to 1775 (the latter year being when the American Revolutionary War began), 7,000 English, 15,000 Scots, 13,200 Scots-Irish, 5,200 Germans, and 3,900 Irish Catholics migrated to the Thirteen Colonies.[27] According to Butler (2000), up to half of English migrants in the 18th century may have been young, single men who were well-skilled, trained artisans, like the Huguenots.[28] Based on scholarly analysis, English was the largest single ancestry in all U.S. states at the time of the first census in 1790, ranging from a high of 82% in Massachusetts to a low of 35.3% in Pennsylvania, where Germans accounted for 33.3%.\nThe Census Bureau published preliminary estimates of the origins of the colonial American population by scholarly classification of the names of all White heads of families recorded in the 1790 census in a 1909 report entitled A Century of Population Growth.[29] These initial estimates were scrutinized and rejected following passage of the Immigration Act of 1924, when t\n\nProvide relevant evidence.",
+    "input_length_chars": 6347,
+    "input_tokens_estimated": 1586,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that as of January 2025, the United States has approximately 53.3 million foreign-born residents, which supports the claim that a significant number of residents are foreign-born, although it exceeds the 50 million figure stated in the claim.",
+      "overall_stance": "supports",
+      "key_quote": "As of January 2025, the United States has the largest immigrant population in the world in absolute terms, with 53.3 million foreign-born residents."
+    },
+    "output_length_chars": 499,
+    "output_tokens_estimated": 124,
+    "cost_usd": 0.0003123
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:47:16.355863",
+    "latency_seconds": 5.28,
+    "input_prompt": "Claim:\n50 million residents of America are foreign-born.\n\nArticle Title:\nAnalysis: Who are the immigrants who come to the U.S.? Here's the ...\n\nGoogle Search Snippet:\nOf the 51.3 million people living in the US in 2023 who were born in another country, 49% were US citizens. Another 19% were lawful permanent residents.\n\nFull Page Content:\nParticipate in the 2025 international science photo competition!\nImmigration has been a major source of population growth and cultural change in the United States throughout much of its history. As of January 2025, the United States has the largest immigrant population in the world in absolute terms, with 53.3 million foreign-born residents, representing 15.8% of the total U.S. population\u2014both record highs.[1] While the United States represented about 4% of the total global population in 2024, 17% of all international migrants resided in the United States.[2] In March 2025, the Federation for American Immigration Reform (FAIR) estimated that approximately 18.6 million illegal immigrants resided in the United States.[3] In 2024, immigrants and their U.S.-born children number more than 93 million people, or 28% of the total U.S. population.[2] According to the 2016 Yearbook of Immigration Statistics, the United States admitted a total of 1.18 million legal immigrants (618k new arrivals, 565k status adjustments) in 2016.[4] Of these, 48% were the immediate relatives of United States citizens, 20% were family-sponsored, 13% were refugees or asylum seekers, 12% were employment-based preferences, 4.2% were part of the Diversity Immigrant Visa program, 1.4% were victims of a crime (U1) or their family members were (U2 to U5),[5] and 1.0% who were granted the Special Immigrant Visa (SIV) for Iraqis and Afghans employed by the United States Government.[4] The remaining 0.4% included small numbers from several other categories, including 0.2% who were granted suspension of deportation as an immediate relative of a citizen (Z13);[6] persons admitted under the Nicaraguan and Central American Relief Act; children born after the issuance of a parent's visa; and certain parolees from the former Soviet Union, Cambodia, Laos, and Vietnam who were denied refugee status.[4]\nBetween 1921 and 1965 policies such as the National Origins Formula limited immigration and naturalization opportunities for people from areas outside Northwestern Europe. Exclusion laws enacted as early as the 1880s generally prohibited or severely restricted immigration from Asia, and quota laws enacted in the 1920s curtailed Southern and Eastern European immigration. The civil rights movement led to the replacement[7] of these ethnic quotas with per-country limits for family-sponsored and employment-based preference visas.[8] Between 1970 and 2007, the number of first-generation immigrants living in the United States quadrupled from 9.6 million to 38.1 million residents.[9][10] Census estimates show 45.3 million foreign born residents in the United States as of March 2018 and 45.4 million in September 2021, the lowest three-year increase in decades.[11]\nIn 2017, out of the U.S. foreign-born population, some 45% (20.7 million) were naturalized citizens, 27% (12.3 million) were lawful permanent residents, 6% (2.2 million) were temporary lawful residents, and 23% (10.5 million) were unauthorized immigrants.[12] The United States led the world in refugee resettlement for decades, admitting more refugees than the rest of the world combined.[13]\nCauses of migration include poverty, crime[14][15] and environmental degradation.[16]\nSome research suggests that immigration is beneficial to the United States economy. With few exceptions, the evidence suggests that on average, immigration has positive economic effects on the native population, but it is mixed as to whether low-skilled immigration adversely affects low-skilled natives. Studies also show that immigrants have lower crime rates than natives in the United States.[17][18][19] The economic, social, and political aspects of immigration have caused controversy regarding such issues as maintaining ethnic homogeneity, workers for employers versus jobs for non-immigrants, settlement patterns, impact on upward social mobility, crime, and voting behavior.\nDue to its history the United States can be described as an immigration country. American immigration history can be viewed in four epochs: the colonial period, the mid-19th century, the start of the 20th century, and post-1965. Each period brought distinct national groups, races, and ethnicities to the United States.\nDuring the 17th century, approximately 400,000 English people migrated to America under European colonization.[20] They comprised 83.5% of the white population at the time of the first census in 1790.[21] From 1700 to 1775, between 350,000 and 500,000 Europeans immigrated: estimates vary in sources. Regarding English settlers of the 18th century, one source says 52,000 English migrated during the period of 1701 to 1775, although this figure is likely too low.[22][23] 400,000\u2013450,000 of the 18th-century migrants were Scots, Scots-Irish from Ulster, Germans, Swiss, and French Huguenots.[24] Over half of all European immigrants to Colonial America during the 17th and 18th centuries arrived as indentured servants.[25] They numbered 350,000.[26] From 1770 to 1775 (the latter year being when the American Revolutionary War began), 7,000 English, 15,000 Scots, 13,200 Scots-Irish, 5,200 Germans, and 3,900 Irish Catholics migrated to the Thirteen Colonies.[27] According to Butler (2000), up to half of English migrants in the 18th century may have been young, single men who were well-skilled, trained artisans, like the Huguenots.[28] Based on scholarly analysis, English was the largest single ancestry in all U.S. states at the time of the first census in 1790, ranging from a high of 82% in Massachusetts to a low of 35.3% in Pennsylvania, where Germans accounted for 33.3%.\nThe Census Bureau published preliminary estimates of the origins of the colonial American population by scholarly classification of the names of all White heads of families recorded in the 1790 census in a 1909 report entitled A Century of Population Growth.[29] These initial estimates were scrutinized and rejected following passage of the Immigration Act of 1924, when t\n\nProvide relevant evidence.",
+    "input_length_chars": 6368,
+    "input_tokens_estimated": 1592,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that as of 2023, there are 51.3 million foreign-born residents in the U.S., which supports the claim that a significant number of residents are foreign-born, though it slightly exceeds the claim of 50 million.",
+      "overall_stance": "supports",
+      "key_quote": "As of January 2025, the United States has the largest immigrant population in the world in absolute terms, with 53.3 million foreign-born residents."
+    },
+    "output_length_chars": 466,
+    "output_tokens_estimated": 116,
+    "cost_usd": 0.0003084
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:47:16.529446",
+    "latency_seconds": 3.18,
+    "input_prompt": "Claim:\nThe United States has more immigrants as a percentage of its total population than at any time since 1890.\n\nArticle Title:\nChapter: 2 Immigration to the United States: Current Trends in ...\n\nGoogle Search Snippet:\nCongress passed a law in 1921 that restricted immigration to 3 percent of each nationality already in the U.S. population, based on the 1910 census.\n\nFull Page Content:\nMore than 40 million persons living in the United States were born in other countries, and almost an equal number\u2014the second generation\u2014have at least one parent who was born abroad. Together, the first generation (foreign-born) and second generation (U.S.-born children of the first generation) comprise almost one in four Americans (Pew Research Center, 2015a, p. 120). Political leaders and social commentators sometimes cite these large numbers as evidence that the United States is facing an unprecedented crisis that threatens the economy and the cultural fabric of U.S. society. However, current levels of immigration, though at record highs in absolute numbers, are not out of line with those experienced for most of American history when considered relative to the total U.S. population. The United States has witnessed successive waves of mass immigration that were initially seen as crises but are now celebrated as major contributions to a \u201cnation of immigrants\u201d (Kennedy, 2008; Martin, 2010). In the coming years, immigration will be the primary source of labor force growth in an increasingly aging population.\nPlacing current and future immigrant trends and patterns into historical perspective is the objective of this chapter. In addition to setting the stage for the subsequent chapters of this report, a look backward also provides context for understanding the contentious debates over immigration. Each generation of Americans, from the founding of the republic to the present day, has wrestled with questions of who should be allowed to enter the country and to become a citizen. Americans, especially natives and long-\nsettled immigrants, have always been suspicious of the qualities of newcomers: their character, their skills, their loyalty, and their potential to assimilate to American values and institutions (Zolberg, 2006). At many times during U.S. history, laws and policies were enacted to restrict the entry and freedoms of different groups of newcomers. But the door was never completely closed, and peoples from almost every part of the world have continued to seek refuge and opportunity on American soil that they could not find in their home countries (Daniels, 1991; King, 2000; Reimers, 1992).\nThe growth of the U.S. population from less than 4 million in 1790 to about 320 million in 2015 is due in no small measure to immigration. Most Americans today are the descendants of immigrants who arrived after the founding of the nation in the late 18th century (Edmonston and Passel, 1994, p. 61; Gibson, 1992). Their immigrant ancestors may not have been welcomed because their language, religion, culture, or appearance was not considered sufficiently \u201cAmerican.\u201d Yet, with the passage of generations, the children, grandchildren, and great-grandchildren of the successive waves of immigrants have become part of the American tapestry. This multigenerational process, which involves integration of different peoples, religions, and cultures, has diversified and broadened what it means to be \u201can American\u201d (Gleason, 1980).\nImmigrants and their descendants have also been accepted, even if not fully embraced, because of their determination and enterprise. Many immigrants are willing to undertake less desirable jobs than, and to settle in locations that are shunned by, native-born workers. The children of immigrants are often distinguished by their ambition and creativity (Hirschman, 2013), helping to invigorate American society and sustain this nation\u2019s world leadership in science and culture. In his 1958 book, A Nation of Immigrants, then-Senator John F. Kennedy claimed that the distinctive American culture of optimism and enterprise arises from our immigrant heritage.\nIn this brief survey, the panel addresses four major contemporary issues that have historical roots:\nTo understand the significance of these issues, the chapter begins with an overview of historical trends and patterns of immigration to the United\nStates. Three themes are emphasized (1) the volume of immigrant inflows and their changing origins; (2) the context of reception, often hostile but later accommodating; and (3) the successful integration of immigrants and their children.\nThe United States began collecting data on the numbers and origins of arrivals by ship in 1820. This statistical series, published in the annual Yearbook of Immigration of Statistics by the U.S. Department of Homeland Security (DHS), is widely considered to be the standard account of immigration to the United States, even though the series provides an incomplete record of immigration for much of American history. For example, overland entries from Canada and Mexico were not counted until the early 20th century. In recent decades, the DHS figures are not the number of new arrivals but of persons receiving lawful permanent resident (LPR) status, commonly called receiving a \u201cgreen card.\u201d More than 1 million persons receive LPR status each year, but the majority of these have already been in the United States, some for many years. In addition, many other new arrivals enter the United States on temporary visas to work, study, or accompany a family member who comes to work or study. In fact, LPRs and temporary students or workers are not entirely separate populations, since over half of new LPR visas each year are \u201cstatus adjustments\u201d received by persons who were already in the United States on another visa (or even without a visa). Despite these limitations, the DHS series is the most widely used source of data for measuring long-term flows of (legal) immigrants to the United States. Figure 2-1 shows the absolute number (in thousands) of arrivals/LPRs based on the DHS data series with labels for the major immigration eras identified by Philip Martin (2013) in his Population Reference Bureau publication. We note that the spike in the numbers of new immigrants from 1989 to 1991 does not represent a surge of new arrivals but rather the change in legal status for the 3 mil\n\nProvide relevant evidence.",
+    "input_length_chars": 6418,
+    "input_tokens_estimated": 1604,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that while the absolute number of immigrants in the U.S. is at record highs, the percentage of immigrants relative to the total U.S. population is not unprecedented when viewed in the context of American history. It suggests that current levels of immigration are not out of line with historical trends, implying that the claim may not hold true.",
+      "overall_stance": "refutes",
+      "key_quote": "current levels of immigration, though at record highs in absolute numbers, are not out of line with those experienced for most of American history when considered relative to the total U.S. population."
+    },
+    "output_length_chars": 655,
+    "output_tokens_estimated": 163,
+    "cost_usd": 0.0003384
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:47:18.640044",
+    "latency_seconds": 5.29,
+    "input_prompt": "Claim:\nThe United States has more immigrants as a percentage of its total population than at any time since 1890.\n\nArticle Title:\nUS Immigration since 1850: A Statistical and Visual Timeline\n\nGoogle Search Snippet:\nOf the total population of 23.2 million, 2.2 million, or 9.7 percent, had been born in other countries, led by Ireland, Germany, Britain, Canada, France, ...\n\nFull Page Content:\nMore than 40 million persons living in the United States were born in other countries, and almost an equal number\u2014the second generation\u2014have at least one parent who was born abroad. Together, the first generation (foreign-born) and second generation (U.S.-born children of the first generation) comprise almost one in four Americans (Pew Research Center, 2015a, p. 120). Political leaders and social commentators sometimes cite these large numbers as evidence that the United States is facing an unprecedented crisis that threatens the economy and the cultural fabric of U.S. society. However, current levels of immigration, though at record highs in absolute numbers, are not out of line with those experienced for most of American history when considered relative to the total U.S. population. The United States has witnessed successive waves of mass immigration that were initially seen as crises but are now celebrated as major contributions to a \u201cnation of immigrants\u201d (Kennedy, 2008; Martin, 2010). In the coming years, immigration will be the primary source of labor force growth in an increasingly aging population.\nPlacing current and future immigrant trends and patterns into historical perspective is the objective of this chapter. In addition to setting the stage for the subsequent chapters of this report, a look backward also provides context for understanding the contentious debates over immigration. Each generation of Americans, from the founding of the republic to the present day, has wrestled with questions of who should be allowed to enter the country and to become a citizen. Americans, especially natives and long-\nsettled immigrants, have always been suspicious of the qualities of newcomers: their character, their skills, their loyalty, and their potential to assimilate to American values and institutions (Zolberg, 2006). At many times during U.S. history, laws and policies were enacted to restrict the entry and freedoms of different groups of newcomers. But the door was never completely closed, and peoples from almost every part of the world have continued to seek refuge and opportunity on American soil that they could not find in their home countries (Daniels, 1991; King, 2000; Reimers, 1992).\nThe growth of the U.S. population from less than 4 million in 1790 to about 320 million in 2015 is due in no small measure to immigration. Most Americans today are the descendants of immigrants who arrived after the founding of the nation in the late 18th century (Edmonston and Passel, 1994, p. 61; Gibson, 1992). Their immigrant ancestors may not have been welcomed because their language, religion, culture, or appearance was not considered sufficiently \u201cAmerican.\u201d Yet, with the passage of generations, the children, grandchildren, and great-grandchildren of the successive waves of immigrants have become part of the American tapestry. This multigenerational process, which involves integration of different peoples, religions, and cultures, has diversified and broadened what it means to be \u201can American\u201d (Gleason, 1980).\nImmigrants and their descendants have also been accepted, even if not fully embraced, because of their determination and enterprise. Many immigrants are willing to undertake less desirable jobs than, and to settle in locations that are shunned by, native-born workers. The children of immigrants are often distinguished by their ambition and creativity (Hirschman, 2013), helping to invigorate American society and sustain this nation\u2019s world leadership in science and culture. In his 1958 book, A Nation of Immigrants, then-Senator John F. Kennedy claimed that the distinctive American culture of optimism and enterprise arises from our immigrant heritage.\nIn this brief survey, the panel addresses four major contemporary issues that have historical roots:\nTo understand the significance of these issues, the chapter begins with an overview of historical trends and patterns of immigration to the United\nStates. Three themes are emphasized (1) the volume of immigrant inflows and their changing origins; (2) the context of reception, often hostile but later accommodating; and (3) the successful integration of immigrants and their children.\nThe United States began collecting data on the numbers and origins of arrivals by ship in 1820. This statistical series, published in the annual Yearbook of Immigration of Statistics by the U.S. Department of Homeland Security (DHS), is widely considered to be the standard account of immigration to the United States, even though the series provides an incomplete record of immigration for much of American history. For example, overland entries from Canada and Mexico were not counted until the early 20th century. In recent decades, the DHS figures are not the number of new arrivals but of persons receiving lawful permanent resident (LPR) status, commonly called receiving a \u201cgreen card.\u201d More than 1 million persons receive LPR status each year, but the majority of these have already been in the United States, some for many years. In addition, many other new arrivals enter the United States on temporary visas to work, study, or accompany a family member who comes to work or study. In fact, LPRs and temporary students or workers are not entirely separate populations, since over half of new LPR visas each year are \u201cstatus adjustments\u201d received by persons who were already in the United States on another visa (or even without a visa). Despite these limitations, the DHS series is the most widely used source of data for measuring long-term flows of (legal) immigrants to the United States. Figure 2-1 shows the absolute number (in thousands) of arrivals/LPRs based on the DHS data series with labels for the major immigration eras identified by Philip Martin (2013) in his Population Reference Bureau publication. We note that the spike in the numbers of new immigrants from 1989 to 1991 does not represent a surge of new arrivals but rather the change in legal status for the 3 mil\n\nProvide relevant evidence.",
+    "input_length_chars": 6421,
+    "input_tokens_estimated": 1605,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses the historical context of immigration in the U.S. and states that while current immigration levels are high in absolute numbers, they are not unprecedented when considered relative to the total population. This suggests that the claim about the current percentage of immigrants being the highest since 1890 is not supported.",
+      "overall_stance": "refutes",
+      "key_quote": "current levels of immigration, though at record highs in absolute numbers, are not out of line with those experienced for most of American history when considered relative to the total U.S. population."
+    },
+    "output_length_chars": 632,
+    "output_tokens_estimated": 158,
+    "cost_usd": 0.00033555
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:47:18.688638",
+    "latency_seconds": 5.34,
+    "input_prompt": "Claim:\nThe United States has more immigrants as a percentage of its total population than at any time since 1890.\n\nArticle Title:\nImmigration to the United States - Wikipedia\n\nGoogle Search Snippet:\nThe United States has the largest immigrant population in the world in absolute terms, with 53.3 million foreign-born residents, representing 15.8% of the ...\n\nFull Page Content:\nMore than 40 million persons living in the United States were born in other countries, and almost an equal number\u2014the second generation\u2014have at least one parent who was born abroad. Together, the first generation (foreign-born) and second generation (U.S.-born children of the first generation) comprise almost one in four Americans (Pew Research Center, 2015a, p. 120). Political leaders and social commentators sometimes cite these large numbers as evidence that the United States is facing an unprecedented crisis that threatens the economy and the cultural fabric of U.S. society. However, current levels of immigration, though at record highs in absolute numbers, are not out of line with those experienced for most of American history when considered relative to the total U.S. population. The United States has witnessed successive waves of mass immigration that were initially seen as crises but are now celebrated as major contributions to a \u201cnation of immigrants\u201d (Kennedy, 2008; Martin, 2010). In the coming years, immigration will be the primary source of labor force growth in an increasingly aging population.\nPlacing current and future immigrant trends and patterns into historical perspective is the objective of this chapter. In addition to setting the stage for the subsequent chapters of this report, a look backward also provides context for understanding the contentious debates over immigration. Each generation of Americans, from the founding of the republic to the present day, has wrestled with questions of who should be allowed to enter the country and to become a citizen. Americans, especially natives and long-\nsettled immigrants, have always been suspicious of the qualities of newcomers: their character, their skills, their loyalty, and their potential to assimilate to American values and institutions (Zolberg, 2006). At many times during U.S. history, laws and policies were enacted to restrict the entry and freedoms of different groups of newcomers. But the door was never completely closed, and peoples from almost every part of the world have continued to seek refuge and opportunity on American soil that they could not find in their home countries (Daniels, 1991; King, 2000; Reimers, 1992).\nThe growth of the U.S. population from less than 4 million in 1790 to about 320 million in 2015 is due in no small measure to immigration. Most Americans today are the descendants of immigrants who arrived after the founding of the nation in the late 18th century (Edmonston and Passel, 1994, p. 61; Gibson, 1992). Their immigrant ancestors may not have been welcomed because their language, religion, culture, or appearance was not considered sufficiently \u201cAmerican.\u201d Yet, with the passage of generations, the children, grandchildren, and great-grandchildren of the successive waves of immigrants have become part of the American tapestry. This multigenerational process, which involves integration of different peoples, religions, and cultures, has diversified and broadened what it means to be \u201can American\u201d (Gleason, 1980).\nImmigrants and their descendants have also been accepted, even if not fully embraced, because of their determination and enterprise. Many immigrants are willing to undertake less desirable jobs than, and to settle in locations that are shunned by, native-born workers. The children of immigrants are often distinguished by their ambition and creativity (Hirschman, 2013), helping to invigorate American society and sustain this nation\u2019s world leadership in science and culture. In his 1958 book, A Nation of Immigrants, then-Senator John F. Kennedy claimed that the distinctive American culture of optimism and enterprise arises from our immigrant heritage.\nIn this brief survey, the panel addresses four major contemporary issues that have historical roots:\nTo understand the significance of these issues, the chapter begins with an overview of historical trends and patterns of immigration to the United\nStates. Three themes are emphasized (1) the volume of immigrant inflows and their changing origins; (2) the context of reception, often hostile but later accommodating; and (3) the successful integration of immigrants and their children.\nThe United States began collecting data on the numbers and origins of arrivals by ship in 1820. This statistical series, published in the annual Yearbook of Immigration of Statistics by the U.S. Department of Homeland Security (DHS), is widely considered to be the standard account of immigration to the United States, even though the series provides an incomplete record of immigration for much of American history. For example, overland entries from Canada and Mexico were not counted until the early 20th century. In recent decades, the DHS figures are not the number of new arrivals but of persons receiving lawful permanent resident (LPR) status, commonly called receiving a \u201cgreen card.\u201d More than 1 million persons receive LPR status each year, but the majority of these have already been in the United States, some for many years. In addition, many other new arrivals enter the United States on temporary visas to work, study, or accompany a family member who comes to work or study. In fact, LPRs and temporary students or workers are not entirely separate populations, since over half of new LPR visas each year are \u201cstatus adjustments\u201d received by persons who were already in the United States on another visa (or even without a visa). Despite these limitations, the DHS series is the most widely used source of data for measuring long-term flows of (legal) immigrants to the United States. Figure 2-1 shows the absolute number (in thousands) of arrivals/LPRs based on the DHS data series with labels for the major immigration eras identified by Philip Martin (2013) in his Population Reference Bureau publication. We note that the spike in the numbers of new immigrants from 1989 to 1991 does not represent a surge of new arrivals but rather the change in legal status for the 3 mil\n\nProvide relevant evidence.",
+    "input_length_chars": 6406,
+    "input_tokens_estimated": 1601,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article states that while the U.S. has a record number of immigrants in absolute terms, the current levels of immigration relative to the total population are not unprecedented when viewed in historical context. This suggests that the claim about the percentage of immigrants being the highest since 1890 is not supported.",
+      "overall_stance": "refutes",
+      "key_quote": "current levels of immigration, though at record highs in absolute numbers, are not out of line with those experienced for most of American history when considered relative to the total U.S. population."
+    },
+    "output_length_chars": 612,
+    "output_tokens_estimated": 153,
+    "cost_usd": 0.00033195
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:47:20.299049",
+    "latency_seconds": 3.84,
+    "input_prompt": "\nClaim: 50 million residents of America are foreign-born.\nCategory: statistical\nExtraction confidence: 0.95\n\nEvidence:\nREFUTES (1 sources):\n  1. [PDF] The Foreign-Born Population in the United States: 2022 - Census.gov | reliability=high (1.00)\n     URL: https://www2.census.gov/library/publications/2024/demo/acsbr-019.pdf\n     Summary: The evidence indicates that the foreign-born population in the United States was estimated to be 46.2 million in 2022, which is less than the 50 million claimed.\nSUPPORTS (3 sources):\n  1. Analysis: Who are the immigrants who come to the U.S.? Here's the ... | reliability=high (0.85)\n     URL: https://www.pbs.org/newshour/nation/analysis-who-are-the-immigrants-who-come-to-the-u-s-heres-the-data\n     Summary: The evidence indicates that as of 2023, there are 51.3 million foreign-born residents in the U.S., which supports the claim that a significant number of residents are foreign-born, though it slightly exceeds the claim of 50 million.\n  2. Key findings about U.S. immigrants - Pew Research Center | reliability=high (0.85)\n     URL: https://www.pewresearch.org/short-reads/2025/08/21/key-findings-about-us-immigrants/\n     Summary: The evidence indicates that as of January 2025, the United States has approximately 53.3 million foreign-born residents, which supports the claim that a significant number of residents are foreign-born, although it exceeds the 50 million figure stated in the claim.\n  3. Immigration to the United States - Wikipedia | reliability=medium (0.60)\n     URL: https://en.wikipedia.org/wiki/Immigration_to_the_United_States\n     Summary: The evidence indicates that as of January 2025, there are 53.3 million foreign-born residents in the United States, which supports the claim that a significant number of residents are foreign-born, exceeding the 50 million figure stated in the claim.\nUNCLEAR (1 sources):\n  1. The Foreign-Born Population in the United States: 2022 | reliability=high (1.00)\n     URL: https://www.census.gov/library/publications/2024/acs/acsbr-019.html\n     Summary: By 2022, it was estimated to be 46.2 million (13.9 percent) of the total U.S. population. This report provides an overview of the foreign-born ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2241,
+    "input_tokens_estimated": 560,
+    "output": {
+      "overall_stance": "mixed",
+      "confidence": "medium",
+      "summary": "The evidence presents a mixed picture regarding the claim of 50 million foreign-born residents in America. While a Census report indicates 46.2 million foreign-born residents in 2022, several other sources, including a PBS analysis and Pew Research Center findings, suggest numbers exceeding 50 million, with estimates of 51.3 million and 53.3 million respectively. This discrepancy indicates uncertainty about the exact figure."
+    },
+    "output_length_chars": 489,
+    "output_tokens_estimated": 122,
+    "cost_usd": 0.0001572
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:47:23.061690",
+    "latency_seconds": 4.26,
+    "input_prompt": "\nClaim: The United States has more immigrants as a percentage of its total population than at any time since 1890.\nCategory: statistical\nExtraction confidence: 0.90\n\nEvidence:\nREFUTES (1 sources):\n  1. Immigration to the United States - Wikipedia | reliability=medium (0.60)\n     URL: https://en.wikipedia.org/wiki/Immigration_to_the_United_States\n     Summary: The article states that while the U.S. has a record number of immigrants in absolute terms, the current levels of immigration relative to the total population are not unprecedented when viewed in historical context. This suggests that the claim about the percentage of immigrants being the highest since 1890 is not supported.\nSUPPORTS (2 sources):\n  1. How the origins of America's immigrants have changed since 1850 | reliability=high (0.85)\n     URL: https://www.pewresearch.org/short-reads/2024/07/22/how-the-origins-of-americas-immigrants-have-changed-since-1850/\n     Summary: The article states that in 2022, immigrants accounted for 13.8% of the U.S. population, which is the highest percentage since 1890, thus supporting the claim.\n  2. U.S. Immigrant Population and Share over Time, 1850-Present | reliability=high (0.85)\n     URL: https://www.migrationpolicy.org/programs/data-hub/charts/immigrant-population-over-time\n     Summary: The evidence indicates that in 2022, immigrants accounted for 13.8% of the U.S. population, which is the highest percentage since 1890, thus supporting the claim.\nUNCLEAR (2 sources):\n  1. Chart: The Foreign-Born Share of the U.S. Population (1850-2024) | reliability=high (0.85)\n     URL: https://www.visualcapitalist.com/the-foreign-born-share-of-the-u-s-population-1850-2024/\n     Summary: The last time immigration reached comparable levels was in 1890, when 14.8% of the population consisted of immigrants. During this great ...\n  2. Key findings about U.S. immigrants - Pew Research Center | reliability=high (0.85)\n     URL: https://www.pewresearch.org/short-reads/2025/08/21/key-findings-about-us-immigrants/\n     Summary: From 1840 to 1889, about 90% of U.S. immigrants came from Europe, including about 70% from Germany, Ireland and the United Kingdom. Almost 90% ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2218,
+    "input_tokens_estimated": 554,
+    "output": {
+      "overall_stance": "mixed",
+      "confidence": "medium",
+      "summary": "The evidence presents a mixed view on the claim. While two high-reliability sources confirm that immigrants accounted for 13.8% of the U.S. population in 2022, the Wikipedia article refutes the claim by stating that this percentage is not unprecedented in historical context. Additionally, two other high-reliability sources provide unclear signals regarding the historical comparison, noting that the last comparable level was in 1890 at 14.8%. Thus, the claim is not definitively supported or refuted."
+    },
+    "output_length_chars": 564,
+    "output_tokens_estimated": 141,
+    "cost_usd": 0.0001677
+  }
+]

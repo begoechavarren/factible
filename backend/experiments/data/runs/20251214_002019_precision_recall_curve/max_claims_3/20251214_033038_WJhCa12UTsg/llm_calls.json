@@ -1,0 +1,371 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:30:47.549878",
+    "latency_seconds": 8.16,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nIt's 6:00 in the morning, pitch black outside. My 14-year-old son is fast asleep in his bed. I flip on the light and physically shake the poor boy awake. because I know that, like ripping off a Band-Aid, it's better to get it over with quickly. Sound brutal, but perhaps familiar? Every morning I ask myself, how can I, knowing what I know, be doing this to my own son? You see, I\u2019m a sleep researcher. So I know that I\u2019m depriving my son of sleep he desperately needs as a rapidly growing teenager. I also know that by waking him up hours before his natural biological clock tells him he\u2019s ready, I\u2019m literally robbing him of the type of sleep most associated with learning, memory consolidation, and emotional processing. But it's not just my kid that's being deprived of sleep. Sleep deprivation among American teenagers is an epidemic. Only about 1 in 10 gets the 8 to 10 hours of sleep per night recommended by sleep scientists and pediatricians. The major factor preventing teens from getting the sleep they need is a matter of public policy. Across the country, many schools are starting around 7:30 a.m. or earlier, despite the fact that major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m. These early start policies have a direct effect on how little sleep American teenagers are getting. They\u2019re also pitting teenagers in a fundamentally unwinnable fight against their own bodies. Around the time of puberty, teenagers experience a delay in their biological clock, which determines when we feel most awake and when we feel most sleepy. This is driven in part by a shift in the release of the hormone melatonin. Teenagers\u2019 bodies wait to start releasing melatonin until around 11 p.m., which is two hours later than what we see in adults or younger children. This means that waking a teenager up at 6 a.m. is the biological equivalent of waking an adult up at 4 a.m. Now, on the unfortunate days when I have to wake up at 4 a.m., I\u2019m a zombie. Functionally useless. I can't think straight. I\u2019m irritable, and I probably shouldn\u2019t be driving a car. But this is how many American teenagers feel every single school day. Many of the, shall we say, unpleasant characteristics that we chalk up to being a teenager\u2014 moodiness, irritability, laziness, depression\u2014 could be a product of chronic sleep deprivation. For many teens battling chronic sleep loss, their go-to strategy to compensate is consuming large quantities of caffeine in the form of venti Frappuccinos, or energy drinks and shots. So essentially, we've got an entire population of tired but wired youth. Advocates of sleep-friendly start times know that adolescence is a period of dramatic brain development, particularly in the parts of the brain that are responsible for those higher order thinking processes, including reasoning, problem solving, and good judgment. In other words, the very type of brain activity that\u2019s responsible for reining in those impulsive and often risky behaviors that are so characteristic of adolescence. They know that, like the rest of us, when teenagers don\u2019t get the sleep they need, their brains, their bodies, and behavior suffer. They can't concentrate. Their attention plummets, and many will even show behavioral signs that mimic ADHD. But the consequences of teen sleep loss go well beyond the classroom, sadly contributing to many of the mental health problems that skyrocket during adolescence. In our work with teens from LA Unified School District, we found that teens with sleep problems were 55% more likely to have used alcohol in the past month. In another study with over 30,000 high school students, they found that for each hour of lost sleep, there was a 38% increase in feeling sad or hopeless, and a 58% increase in teen suicide attempts. And if that's not enough, teens who skimp out on sleep are at increased risk for a host of physical health problems that plague our country, including obesity, heart disease, and diabetes. Then there\u2019s the risk of putting a sleep-deprived teen behind the wheel. Studies have shown that getting five hours or less of sleep per night is the equivalent of driving with a blood alcohol content above the legal limit. Researchers in this area have produced tremendous science showing the benefits of later start times. The findings are unequivocal. Teens from districts with later start times get more sleep. They're more likely to show up for school. School absences dropped by 25% in one district, and they're less likely to drop out. Not surprisingly, they do better academically. Standardized test scores in math and reading go up by 2 to 3 percentage points. That's as powerful as reducing class sizes by one third fewer students. Their mental and physical health improves, and their families are happier. Even their communities are safer because car crash rates go down\u2014 a 70% reduction in one district. Now, given these tremendous benefits, you might think, well, this is a no brainer, right? So why have we as a society failed to heed this call? Delaying start times presents many logistical challenges. Updating bus routes, increased transportation costs, impact on sports. Care before or after school. But these are problems we have to work through. They are not valid excuses for failing to do the right thing for our children, which is to start middle and high schools no earlier than 8:30 a.m. Districts around the country, big and small, who have made this change, they\u2019ve found that these fears are often unfounded and far outweighed by the tremendous benefits for our student health and performance and our collective public safety.",
+    "input_length_chars": 5710,
+    "input_tokens_estimated": 1427,
+    "output": {
+      "claims": [
+        {
+          "text": "Only about 1 in 10 American teenagers gets the recommended 8 to 10 hours of sleep per night.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.85,
+          "context": "Claim about sleep deprivation among American teenagers."
+        },
+        {
+          "text": "Major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m.",
+          "confidence": 0.95,
+          "category": "policy",
+          "importance": 0.85,
+          "context": "Recommendation from medical organizations regarding school start times."
+        },
+        {
+          "text": "Teenagers\u2019 bodies start releasing melatonin around 11 p.m., two hours later than adults or younger children.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Biological clock changes during puberty affecting sleep."
+        },
+        {
+          "text": "Teens with sleep problems were 55% more likely to have used alcohol in the past month.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Study from LA Unified School District on sleep and alcohol use."
+        },
+        {
+          "text": "For each hour of lost sleep, there was a 38% increase in feeling sad or hopeless.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Study linking sleep loss to mental health issues."
+        },
+        {
+          "text": "Teens who skimp out on sleep are at increased risk for obesity, heart disease, and diabetes.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Health risks associated with sleep deprivation."
+        },
+        {
+          "text": "Getting five hours or less of sleep per night is equivalent to driving with a blood alcohol content above the legal limit.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Claim about the dangers of sleep deprivation and driving."
+        },
+        {
+          "text": "School absences dropped by 25% in one district after changing to later start times.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Impact of later school start times on attendance."
+        },
+        {
+          "text": "Standardized test scores in math and reading go up by 2 to 3 percentage points with later start times.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Academic performance improvement linked to later start times."
+        },
+        {
+          "text": "Car crash rates decreased by 70% in one district after implementing later start times.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Safety improvements associated with later school start times."
+        }
+      ],
+      "total_count": 10
+    },
+    "output_length_chars": 3248,
+    "output_tokens_estimated": 812,
+    "cost_usd": 0.00070125
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:30:56.391801",
+    "latency_seconds": 3.45,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Teenagers\u2019 bodies start releasing melatonin around 11 p.m., two hours later than adults or younger children.\nContext: Biological clock changes during puberty affecting sleep.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 347,
+    "input_tokens_estimated": 86,
+    "output": {
+      "original_claim": "Teenagers\u2019 bodies start releasing melatonin around 11 p.m., two hours later than adults or younger children.",
+      "queries": [
+        {
+          "query": "Teenagers melatonin release time 11 p.m. compared to adults children",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "melatonin release time puberty teenagers adults children",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 382,
+    "output_tokens_estimated": 95,
+    "cost_usd": 6.99e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "Teenagers\u2019 bodies start releasing melatonin around 11 p.m., two hours later than adults or younger children."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:31:04.745811",
+    "latency_seconds": 11.83,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m.\nContext: Recommendation from medical organizations regarding school start times.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 352,
+    "input_tokens_estimated": 88,
+    "output": {
+      "original_claim": "Major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m.",
+      "queries": [
+        {
+          "query": "Major medical organizations recommend school start times 8:30 a.m.",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "school start time recommendations by medical organizations 8:30 a.m.",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 382,
+    "output_tokens_estimated": 95,
+    "cost_usd": 7.02e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "Teenagers\u2019 bodies start releasing melatonin around 11 p.m., two hours later than adults or younger children.",
+      "query_index": 2,
+      "query_text": "melatonin release time puberty teenagers adults children"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:31:05.166494",
+    "latency_seconds": 12.25,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Only about 1 in 10 American teenagers gets the recommended 8 to 10 hours of sleep per night.\nContext: Claim about sleep deprivation among American teenagers.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 330,
+    "input_tokens_estimated": 82,
+    "output": {
+      "original_claim": "Only about 1 in 10 American teenagers gets the recommended 8 to 10 hours of sleep per night.",
+      "queries": [
+        {
+          "query": "American teenagers sleep statistics 8 to 10 hours 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "percentage of American teenagers getting recommended sleep 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 359,
+    "output_tokens_estimated": 89,
+    "cost_usd": 6.57e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "Major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m.",
+      "query_index": 2,
+      "query_text": "school start time recommendations by medical organizations 8:30 a.m."
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:31:27.272833",
+    "latency_seconds": 3.89,
+    "input_prompt": "Claim:\nTeenagers\u2019 bodies start releasing melatonin around 11 p.m., two hours later than adults or younger children.\n\nArticle Title:\nSchool Start Times for Adolescents | American Academy of Pediatrics\n\nFull Page Content:\nOn a practical level, this research indicates that the average teenager in today's society has difficulty falling asleep before 11:00 pm and is best suited to ...\n\nProvide relevant evidence.",
+    "input_length_chars": 410,
+    "input_tokens_estimated": 102,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence suggests that teenagers typically have difficulty falling asleep before 11:00 pm, which aligns with the claim that their bodies start releasing melatonin around that time, indicating a later onset of sleepiness compared to adults and younger children.",
+      "overall_stance": "supports",
+      "key_quote": "the average teenager in today's society has difficulty falling asleep before 11:00 pm"
+    },
+    "output_length_chars": 435,
+    "output_tokens_estimated": 108,
+    "cost_usd": 8.01e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Only about 1 in 10 American teenagers gets the recommended 8 to 10 hours of sleep per night.",
+      "query_index": 2,
+      "query_text": "percentage of American teenagers getting recommended sleep 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:31:27.961481",
+    "latency_seconds": 18.56,
+    "input_prompt": "Claim:\nTeenagers\u2019 bodies start releasing melatonin around 11 p.m., two hours later than adults or younger children.\n\nArticle Title:\nAdolescent Changes in the Homeostatic and Circadian Regulation ...\n\nGoogle Search Snippet:\nWe argue that this sleep deprivation is due in part to pubertal changes in the homeostatic and circadian regulation of sleep.\n\nFull Page Content:\nAn official website of the United States government\nSleep deprivation among adolescents is epidemic. We argue that this sleep deprivation is due in part to pubertal changes in the homeostatic and circadian regulation of sleep. These changes promote a delayed sleep phase that is exacerbated by evening light exposure and incompatible with aspects of modern society, notably early school start times. In this review of human and animal literature, we demonstrate that delayed sleep phase during puberty is likely a common phenomenon in mammals, not specific to human adolescents, and we provide insight into the mechanisms underlying this phenomenon.\nKey Words: Puberty, Chronotype, Entrainment, Sleep deprivation\nA recent poll by the National Sleep Foundation found that over 45% of adolescents in the United States obtain inadequate sleep [1]. At the root of this chronic sleep deprivation is the adolescent tendency to stay up late. Teenagers maintain later bedtimes than younger adolescents, even when wake up times are constrained by school or work [2,3,4,5,6]. This delayed timing of sleep is popularly attributed to many external influences, ranging from evening work to social opportunities [7]. Current evidence demonstrates, however, that social factors cannot completely account for the adolescent delayed sleep onset typical of an evening chronotype.\nThe developmental timing of the adolescent transition into a more evening chronotype suggests physiological underpinnings. Girls begin to show a delay in the timing of sleep 1 year earlier than boys, paralleling their younger pubertal onset. Maximum delay also occurs earlier in girls (19.5 vs. 20.9 years), and the magnitude of the peak delay is sexually differentiated [5]. In other cultures, similar developmental timing is observed, although the peak delay may occur as early as 15\u201316 years of age [1,2,3,4,5,6]. Importantly, a delay in the timing of sleep during the second decade of life has been observed in over 16 countries on 6 continents, in cultures ranging from pre-industrial to modern (as reviewed in [8]). Although most studies have been cross-sectional, retrospective longitudinal measures confirm that the timing of sleep is delayed during adolescence [5].\nAdolescents continue to show a delayed circadian (or internal clock) phase as indicated by daily endocrine rhythms even after several weeks of regulated schedules that allow for sufficient sleep. This delay is maintained under controlled laboratory conditions in which there is limited possibility for social influence [7, 9]. Moreover, both home-based and laboratory studies of adolescents show that delayed circadian phase correlates with secondary-sex development [7, 10, 11]. This correlation holds true for subjective ratings of chronotype and puberty even when grade level in school is held constant [11]. If we assume that teenagers attending the same grade in school are exposed to a similar social environment, this evidence suggests that a biological component drives adolescent changes in sleep patterns.\nIf physiologic processes drive adolescent sleep patterns, then we would expect that other mammalian species might show similar changes in the timing of sleep and activity around the development of sexual maturation. To test this hypothesis, we reviewed data from nine studies that examined the daily rhythms of mammals during pubertal development [12,13,14,15,16,17,18,19,20]. We inferred the timing of puberty by referencing universal markers (the initiation of spermatogenesis and ovulation) discussed in previously published reproductive studies for each species [21,22,23,24,25]. We defined puberty as the age interval between the first indication of secondary-sex development and the achievement of reproductive competency.\nThis review found evidence for delayed circadian phase during puberty in all five species studied: Macaca mulatta (rhesus macaque [12]), Octodon degus (degu [13,14,15,16]), Rattus norvegicus (laboratory rat [16, 17]), Mus musculus (laboratory mouse [18, 19]), and Psammomys obesus (fat sand rat [20]). Overall, this evidence indicated that the delayed timing of sleep during human adolescence is likely to represent a developmental change common across mammalian species (table 1).\nA delay in circadian phase has been observed around the time of puberty in six mammalian species\nSeveral themes emerged while comparing different species. The first concerned the magnitude of the phase delay: with the exception of fat sand rats maintained under short, winter-like photoperiods [20], all other species and all experimental conditions provided evidence for a 1- to 4-hour delay in circadian rhythms during puberty. This phenomenon was replicable and observed independently by six different laboratories (table 1). The daily rhythms measured were diverse and included behavioral rhythms, such as sleep and activity, and physiological rhythms, such as endocrine and metabolic rhythms.\nThe magnitude of the delay in humans was sexually differentiated as seen for example in a large epidemiological study performed in Germany and Switzerland, where men showed greater changes in chronotype across adolescence and young adulthood than women [5]. Similarly, male degus and rats showed pronounced changes in the timing of peak activity across puberty, whereas females produced smaller changes in the timing of activity onset or offset [16]. These sex differences may be due to a sexual differentiation of the phenomenon itself or to a masking of the phenomenon by the estrogenic phase advance of rhythms around the time of ovulation [26].\nThe delay in several species was accompanied by an increase in crepuscularity, or activity around the transition times of dawn and dusk. In well-rested human subjects, adolescents showed a decreased propensity to fall asleep in the evening hours [27], as well as an increase in midday sleepiness as measured by the multiple-sleep latency test [28]. In the degu and rat, similar trends were\n\nProvide relevant evidence.",
+    "input_length_chars": 6397,
+    "input_tokens_estimated": 1599,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that adolescents experience a delayed circadian phase, which is characterized by a tendency to fall asleep later than both adults and younger children, aligning with the claim that melatonin release occurs around 11 p.m. for teenagers.",
+      "overall_stance": "supports",
+      "key_quote": "\"Adolescents continue to show a delayed circadian (or internal clock) phase as indicated by daily endocrine rhythms...\""
+    },
+    "output_length_chars": 465,
+    "output_tokens_estimated": 116,
+    "cost_usd": 0.00030945,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Only about 1 in 10 American teenagers gets the recommended 8 to 10 hours of sleep per night.",
+      "query_index": 2,
+      "query_text": "percentage of American teenagers getting recommended sleep 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:31:28.037185",
+    "latency_seconds": 18.64,
+    "input_prompt": "Claim:\nTeenagers\u2019 bodies start releasing melatonin around 11 p.m., two hours later than adults or younger children.\n\nArticle Title:\nB. Circadian Timing & Light/Technology Exposure\n\nGoogle Search Snippet:\nFor most adolescents, melatonin continues in peak production until about 7 a.m., then stops at about 8 a.m. (,) In adults, levels peak at about 4 a.m. ...\n\nFull Page Content:\nAn official website of the United States government\nSleep deprivation among adolescents is epidemic. We argue that this sleep deprivation is due in part to pubertal changes in the homeostatic and circadian regulation of sleep. These changes promote a delayed sleep phase that is exacerbated by evening light exposure and incompatible with aspects of modern society, notably early school start times. In this review of human and animal literature, we demonstrate that delayed sleep phase during puberty is likely a common phenomenon in mammals, not specific to human adolescents, and we provide insight into the mechanisms underlying this phenomenon.\nKey Words: Puberty, Chronotype, Entrainment, Sleep deprivation\nA recent poll by the National Sleep Foundation found that over 45% of adolescents in the United States obtain inadequate sleep [1]. At the root of this chronic sleep deprivation is the adolescent tendency to stay up late. Teenagers maintain later bedtimes than younger adolescents, even when wake up times are constrained by school or work [2,3,4,5,6]. This delayed timing of sleep is popularly attributed to many external influences, ranging from evening work to social opportunities [7]. Current evidence demonstrates, however, that social factors cannot completely account for the adolescent delayed sleep onset typical of an evening chronotype.\nThe developmental timing of the adolescent transition into a more evening chronotype suggests physiological underpinnings. Girls begin to show a delay in the timing of sleep 1 year earlier than boys, paralleling their younger pubertal onset. Maximum delay also occurs earlier in girls (19.5 vs. 20.9 years), and the magnitude of the peak delay is sexually differentiated [5]. In other cultures, similar developmental timing is observed, although the peak delay may occur as early as 15\u201316 years of age [1,2,3,4,5,6]. Importantly, a delay in the timing of sleep during the second decade of life has been observed in over 16 countries on 6 continents, in cultures ranging from pre-industrial to modern (as reviewed in [8]). Although most studies have been cross-sectional, retrospective longitudinal measures confirm that the timing of sleep is delayed during adolescence [5].\nAdolescents continue to show a delayed circadian (or internal clock) phase as indicated by daily endocrine rhythms even after several weeks of regulated schedules that allow for sufficient sleep. This delay is maintained under controlled laboratory conditions in which there is limited possibility for social influence [7, 9]. Moreover, both home-based and laboratory studies of adolescents show that delayed circadian phase correlates with secondary-sex development [7, 10, 11]. This correlation holds true for subjective ratings of chronotype and puberty even when grade level in school is held constant [11]. If we assume that teenagers attending the same grade in school are exposed to a similar social environment, this evidence suggests that a biological component drives adolescent changes in sleep patterns.\nIf physiologic processes drive adolescent sleep patterns, then we would expect that other mammalian species might show similar changes in the timing of sleep and activity around the development of sexual maturation. To test this hypothesis, we reviewed data from nine studies that examined the daily rhythms of mammals during pubertal development [12,13,14,15,16,17,18,19,20]. We inferred the timing of puberty by referencing universal markers (the initiation of spermatogenesis and ovulation) discussed in previously published reproductive studies for each species [21,22,23,24,25]. We defined puberty as the age interval between the first indication of secondary-sex development and the achievement of reproductive competency.\nThis review found evidence for delayed circadian phase during puberty in all five species studied: Macaca mulatta (rhesus macaque [12]), Octodon degus (degu [13,14,15,16]), Rattus norvegicus (laboratory rat [16, 17]), Mus musculus (laboratory mouse [18, 19]), and Psammomys obesus (fat sand rat [20]). Overall, this evidence indicated that the delayed timing of sleep during human adolescence is likely to represent a developmental change common across mammalian species (table 1).\nA delay in circadian phase has been observed around the time of puberty in six mammalian species\nSeveral themes emerged while comparing different species. The first concerned the magnitude of the phase delay: with the exception of fat sand rats maintained under short, winter-like photoperiods [20], all other species and all experimental conditions provided evidence for a 1- to 4-hour delay in circadian rhythms during puberty. This phenomenon was replicable and observed independently by six different laboratories (table 1). The daily rhythms measured were diverse and included behavioral rhythms, such as sleep and activity, and physiological rhythms, such as endocrine and metabolic rhythms.\nThe magnitude of the delay in humans was sexually differentiated as seen for example in a large epidemiological study performed in Germany and Switzerland, where men showed greater changes in chronotype across adolescence and young adulthood than women [5]. Similarly, male degus and rats showed pronounced changes in the timing of peak activity across puberty, whereas females produced smaller changes in the timing of activity onset or offset [16]. These sex differences may be due to a sexual differentiation of the phenomenon itself or to a masking of the phenomenon by the estrogenic phase advance of rhythms around the time of ovulation [26].\nThe delay in several species was accompanied by an increase in crepuscularity, or activity around the transition times of dawn and dusk. In well-rested human subjects, adolescents showed a decreased propensity to fall asleep in the evening hours [27], as well as an increase in midday sleepiness as measured by the multiple-sleep latency test [28]. In the degu and rat, similar trends were\n\nProvide relevant evidence.",
+    "input_length_chars": 6407,
+    "input_tokens_estimated": 1601,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that adolescents experience a delayed circadian phase, with melatonin production starting later than in adults, typically around 11 p.m., which aligns with the claim.",
+      "overall_stance": "supports",
+      "key_quote": "Adolescents continue to show a delayed circadian (or internal clock) phase..."
+    },
+    "output_length_chars": 352,
+    "output_tokens_estimated": 88,
+    "cost_usd": 0.00029295,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Only about 1 in 10 American teenagers gets the recommended 8 to 10 hours of sleep per night.",
+      "query_index": 2,
+      "query_text": "percentage of American teenagers getting recommended sleep 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:31:39.533519",
+    "latency_seconds": 2.34,
+    "input_prompt": "Claim:\nOnly about 1 in 10 American teenagers gets the recommended 8 to 10 hours of sleep per night.\n\nArticle Title:\nCDC: Most US teens fail to get recommended 8 hours of sleep ...\n\nGoogle Search Snippet:\nHowever, data from the YRBS indicated that only 23% of students reported achieving this guideline in 2023. That figure reflects a stagnation in ...\n\nFull Page Content:\nSubscribe\nContemporary PEDS Journal\nA CDC report shows only 23% of U.S. teens get enough sleep, with disparities highlighting the need for targeted health interventions.\nCDC: Most US teens fail to get recommended 8 hours of sleep, report finds | mage Credit: \u00a9 stokkete - \u00a9 stokkete - stock.adobe.com.\nThe Youth Risk Behavior Survey (YRBS) Data Summary & Trends Report for Dietary, Physical Activity, and Sleep Behaviors: 2013\u20132023, developed by the CDC, provides a comprehensive overview of sleep behaviors among US high school students. The report is part of a broader examination of adolescent health, which also includes dietary and physical activity behaviors previously covered by Contemporary Pediatrics.\nThe findings regarding sleep behaviors highlight a trend of inadequate sleep among adolescents, which can have significant implications for their overall health and academic performance.\nThe report revealed that a substantial percentage of high school students are not getting the recommended amount of sleep. Specifically, the CDC recommended that adolescents aim for at least 8 hours of sleep on an average school night.\nHowever, data from the YRBS indicated that only 23% of students reported achieving this guideline in 2023. That figure reflects a stagnation in sleep duration, as it has remained relatively unchanged over the past decade, with only slight fluctuations observed in the two-year comparisons.\nDisparities in sleep behaviors are also evident in the data. In 2013, 35% of males got at least 8 hours of sleep on an average school night compared to 25% in 2023. The trend also decreased across the decade for females, as 29% reported 8 hours of sleep in 2013 compared to 22% in 2023.\nThe lack of sufficient sleep among adolescents is a growing concern, as it is linked to various negative health outcomes, including increased risk of obesity, mental health issues, and impaired cognitive function. The report emphasizes that inadequate sleep can hinder students' ability to concentrate, perform academically, and engage in physical activities, further compounding the challenges they face in maintaining a healthy lifestyle.\nRacial and ethnic disparities are also present in sleep behaviors. The report showed that students from various racial and ethnic backgrounds experience different levels of sleep adequacy. For instance, Black (19%) and Hispanic (24%) students reported lower percentages of achieving the recommended sleep duration compared to their White peers (25%) in 2023.\nThe report also examined the impact of external factors on sleep behaviors. The COVID-19 pandemic significantly altered students' daily routines, including sleep patterns. Many students experienced disruptions in their sleep schedules because of remote learning, increased screen time, and changes in social interactions. As schools returned to in-person learning, some students may have found it challenging to readjust their sleep habits, which contributed to ongoing issues with sleep adequacy.\nDespite the concerning trends in sleep behaviors, the report underscores the importance of promoting healthy sleep habits among adolescents. Schools and communities can play a vital role in fostering environments that prioritize sleep health. Initiatives such as education on the importance of sleep, encouraging consistent sleep schedules, and reducing the stigma around mental health can help students recognize the value of adequate sleep.\nIn conclusion, the YRBS Data Summary & Trends Report reveals a troubling picture of sleep behaviors among US high school students, with a significant portion of adolescents failing to meet the recommended sleep guidelines.\nClick here to view highlights from the CDC's youth risk report of dietary behavior from 2013-2023.\nClick here to view highlights from the CDC's youth risk report for physical activity behavior.\nReference:\nYouth risk behavior survey data summary & trends report for dietary, physical activity, and sleep behaviors: 2013-2023. CDC. January 14, 2025. Accessed January 16, 2025. https://www.cdc.gov/yrbs/dstr/pdf/DSTR-Dietary-PhysicalActivity-SleepBehavior2013-2023-508.pdf?ACSTrackingID=DM143930&ACSTrackingLabel=New%20CDC%20Report%20on%20Student%20Dietary%2C%20Physical%20Activity%2C%20and%20Sleep%20Behaviors%20Released!%20-%20Healthy%20Schools&deliveryName=DM143930\n9 months ago\nARTICLE\n9 months ago\nARTICLE\n9 months ago\nARTICLE\n9 months ago\nARTICLE\nAccess practical, evidence-based guidance to support better care for our youngest patients. Join our email list for the latest clinical updates.\nJanuary 23, 2026\nTina Bhutani, MD\nDiana Isaacs, PharmD, BCPS, BC-ADM, BCACP, CDCES, FADCES, FCCP; Anders Carlson, MD; Jennifer B. Green, MD\n259 Prospect Plains Rd, Bldg H Cranbury, NJ 08512\n609-716-7777\n\u00a9 2025 MJH Life Sciences\u00ae\nAll rights reserved.\nUse precise geolocation data. Actively scan device characteristics for identification. Store and/or access information on a device. Personalised advertising and content, advertising and content measurement, audience research and services development. List of Partners (vendors)\n\nProvide relevant evidence.",
+    "input_length_chars": 5498,
+    "input_tokens_estimated": 1374,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that only 23% of U.S. teens achieve the recommended 8 hours of sleep per night, which is significantly lower than the claim of 1 in 10, suggesting that the claim is not accurate.",
+      "overall_stance": "refutes",
+      "key_quote": "the CDC reported that only 23% of students reported achieving this guideline in 2023."
+    },
+    "output_length_chars": 371,
+    "output_tokens_estimated": 92,
+    "cost_usd": 0.0002613,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Only about 1 in 10 American teenagers gets the recommended 8 to 10 hours of sleep per night.",
+      "query_index": 2,
+      "query_text": "percentage of American teenagers getting recommended sleep 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:31:47.748170",
+    "latency_seconds": 11.12,
+    "input_prompt": "Claim:\nOnly about 1 in 10 American teenagers gets the recommended 8 to 10 hours of sleep per night.\n\nArticle Title:\nCDC: Most US teens fail to get recommended 8 hours of sleep ...\n\nGoogle Search Snippet:\nIn 2013, 35% of males got at least 8 hours of sleep on an average school night compared to 25% in 2023. The trend also decreased across the ...\n\nFull Page Content:\nSubscribe\nContemporary PEDS Journal\nA CDC report shows only 23% of U.S. teens get enough sleep, with disparities highlighting the need for targeted health interventions.\nThe Youth Risk Behavior Survey (YRBS) Data Summary & Trends Report for Dietary, Physical Activity, and Sleep Behaviors: 2013\u20132023, developed by the CDC, provides a comprehensive overview of sleep behaviors among US high school students. The report is part of a broader examination of adolescent health, which also includes dietary and physical activity behaviors previously covered by Contemporary Pediatrics.\nThe findings regarding sleep behaviors highlight a trend of inadequate sleep among adolescents, which can have significant implications for their overall health and academic performance.\nThe report revealed that a substantial percentage of high school students are not getting the recommended amount of sleep. Specifically, the CDC recommended that adolescents aim for at least 8 hours of sleep on an average school night.\nHowever, data from the YRBS indicated that only 23% of students reported achieving this guideline in 2023. That figure reflects a stagnation in sleep duration, as it has remained relatively unchanged over the past decade, with only slight fluctuations observed in the two-year comparisons.\nDisparities in sleep behaviors are also evident in the data. In 2013, 35% of males got at least 8 hours of sleep on an average school night compared to 25% in 2023. The trend also decreased across the decade for females, as 29% reported 8 hours of sleep in 2013 compared to 22% in 2023.\nThe lack of sufficient sleep among adolescents is a growing concern, as it is linked to various negative health outcomes, including increased risk of obesity, mental health issues, and impaired cognitive function. The report emphasizes that inadequate sleep can hinder students' ability to concentrate, perform academically, and engage in physical activities, further compounding the challenges they face in maintaining a healthy lifestyle.\nRacial and ethnic disparities are also present in sleep behaviors. The report showed that students from various racial and ethnic backgrounds experience different levels of sleep adequacy. For instance, Black (19%) and Hispanic (24%) students reported lower percentages of achieving the recommended sleep duration compared to their White peers (25%) in 2023.\nThe report also examined the impact of external factors on sleep behaviors. The COVID-19 pandemic significantly altered students' daily routines, including sleep patterns. Many students experienced disruptions in their sleep schedules because of remote learning, increased screen time, and changes in social interactions. As schools returned to in-person learning, some students may have found it challenging to readjust their sleep habits, which contributed to ongoing issues with sleep adequacy.\nDespite the concerning trends in sleep behaviors, the report underscores the importance of promoting healthy sleep habits among adolescents. Schools and communities can play a vital role in fostering environments that prioritize sleep health. Initiatives such as education on the importance of sleep, encouraging consistent sleep schedules, and reducing the stigma around mental health can help students recognize the value of adequate sleep.\nIn conclusion, the YRBS Data Summary & Trends Report reveals a troubling picture of sleep behaviors among US high school students, with a significant portion of adolescents failing to meet the recommended sleep guidelines.\nClick here to view highlights from the CDC's youth risk report of dietary behavior from 2013-2023.\nClick here to view highlights from the CDC's youth risk report for physical activity behavior.\nReference:\nYouth risk behavior survey data summary & trends report for dietary, physical activity, and sleep behaviors: 2013-2023. CDC. January 14, 2025. Accessed January 16, 2025. https://www.cdc.gov/yrbs/dstr/pdf/DSTR-Dietary-PhysicalActivity-SleepBehavior2013-2023-508.pdf?ACSTrackingID=DM143930&ACSTrackingLabel=New%20CDC%20Report%20on%20Student%20Dietary%2C%20Physical%20Activity%2C%20and%20Sleep%20Behaviors%20Released!%20-%20Healthy%20Schools&deliveryName=DM143930\n9 months ago\nARTICLE\n9 months ago\nARTICLE\n9 months ago\nARTICLE\n9 months ago\nARTICLE\nAccess practical, evidence-based guidance to support better care for our youngest patients. Join our email list for the latest clinical updates.\nJanuary 23, 2026\nTina Bhutani, MD\nDiana Isaacs, PharmD, BCPS, BC-ADM, BCACP, CDCES, FADCES, FCCP; Anders Carlson, MD; Jennifer B. Green, MD\n259 Prospect Plains Rd, Bldg H Cranbury, NJ 08512\n609-716-7777\n\u00a9 2025 MJH Life Sciences\u00ae\nAll rights reserved.\n\nProvide relevant evidence.",
+    "input_length_chars": 5084,
+    "input_tokens_estimated": 1271,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that only 23% of U.S. teens get the recommended 8 hours of sleep on average school nights, which supports the claim that a significant majority of teenagers do not meet the sleep guidelines.",
+      "overall_stance": "supports",
+      "key_quote": "the CDC recommended that adolescents aim for at least 8 hours of sleep on an average school night. However, data from the YRBS indicated that only 23% of students reported achieving this guideline in 2023."
+    },
+    "output_length_chars": 504,
+    "output_tokens_estimated": 126,
+    "cost_usd": 0.00026625,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Only about 1 in 10 American teenagers gets the recommended 8 to 10 hours of sleep per night.",
+      "query_index": 2,
+      "query_text": "percentage of American teenagers getting recommended sleep 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:31:57.411460",
+    "latency_seconds": 18.74,
+    "input_prompt": "Claim:\nMajor medical organizations recommend that middle and high schools start no earlier than 8:30 a.m.\n\nArticle Title:\nSchool Start Times: Later Is Better | AAP Grand Rounds\n\nFull Page Content:\nCompared with SST before 7:30 a.m., SST between 7:30 a.m. and 7:59 a.m. were associated with a better aggregate development outcome (P = 0.02).\n\nProvide relevant evidence.",
+    "input_length_chars": 368,
+    "input_tokens_estimated": 92,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 2.7e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Only about 1 in 10 American teenagers gets the recommended 8 to 10 hours of sleep per night.",
+      "query_index": 2,
+      "query_text": "percentage of American teenagers getting recommended sleep 2023"
+    }
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:32:11.622178",
+    "latency_seconds": 20.46,
+    "input_prompt": "\nClaim: Teenagers\u2019 bodies start releasing melatonin around 11 p.m., two hours later than adults or younger children.\nCategory: scientific\nExtraction confidence: 0.90\n\nEvidence:\nSUPPORTS (1 sources):\n  1. Adolescent Changes in the Homeostatic and Circadian Regulation ... | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC2820578/\n     Summary: The evidence indicates that adolescents experience a delayed circadian phase, which is characterized by a tendency to fall asleep later than both adults and younger children, aligning with the claim that melatonin release occurs around 11 p.m. for teenagers.\nUNCLEAR (5 sources):\n  1. ADOLESCENT SLEEP PATTERNS AND DAYTIME SLEEPINESS | reliability=high (0.90)\n     URL: https://www.ncbi.nlm.nih.gov/books/NBK222804/\n     Summary: A quarter of these students reported sleeping 6.5 hours or less. For two-thirds of the students, bedtime was after 11 p.m. on school nights; 91 percent rose at ...\n  2. Melatonin secretion across puberty: A systematic review and meta ... | reliability=high (0.85)\n     URL: https://www.sciencedirect.com/science/article/abs/pii/S0306453025000046\n     Summary: Melatonin levels decrease with aging and substantially during puberty. Studies have presented distinct melatonin levels in patients with disorders related ...\n  3. The adolescent circadian clock entrains to social time rather than ... | reliability=high (0.85)\n     URL: https://www.sciencedirect.com/science/article/pii/S0960982225003756\n     Summary: Here, we provide evidence that adolescents' circadian clock entrains to their behavioral light-dark cycle determined by social demands.\n  4. B. Circadian Timing & Light/Technology Exposure | reliability=medium (0.60)\n     URL: https://schoolstarttime.org/adolescent-sleep-biology-basics/circadian-timing/\n     Summary: The preferred sleep onset time for most adolescents is 11 p.m. or later. ... In adults, by contrast, the ideal sleep onset time may range from 8 p.m. to midnight.\n  5. How Does Melatonin Work? - Cleveland Clinic | reliability=medium (0.60)\n     URL: https://my.clevelandclinic.org/health/articles/23411-melatonin\n     Summary: After puberty, there's a steady decrease in melatonin levels until it evens out in your late teens. The level is stable until around age 40, followed by a ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2352,
+    "input_tokens_estimated": 588,
+    "output": {
+      "overall_stance": "mixed",
+      "confidence": "medium",
+      "summary": "The evidence supports the claim that teenagers experience a delayed melatonin release around 11 p.m., as indicated by the high-reliability source on adolescent circadian regulation. However, several other high-reliability sources present mixed signals regarding the exact timing and variability of melatonin secretion during puberty, suggesting that while the claim holds some truth, it may not be universally applicable to all adolescents."
+    },
+    "output_length_chars": 501,
+    "output_tokens_estimated": 125,
+    "cost_usd": 0.0001632,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Only about 1 in 10 American teenagers gets the recommended 8 to 10 hours of sleep per night.",
+      "query_index": 2,
+      "query_text": "percentage of American teenagers getting recommended sleep 2023"
+    }
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:32:22.095894",
+    "latency_seconds": 19.9,
+    "input_prompt": "\nClaim: Major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m.\nCategory: policy\nExtraction confidence: 0.95\n\nEvidence:\nUNCLEAR (4 sources):\n  1. An American Academy of Sleep Medicine Position Statement - PMC | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC5359340/\n     Summary: The AASM asserts that middle school and high school start times should be 8:30 AM or later to support: An adequate opportunity for adolescents to obtain ...\n  2. AMA supports delayed school start times to improve adolescent ... | reliability=high (0.85)\n     URL: https://www.ama-assn.org/press-center/ama-press-releases/ama-supports-delayed-school-start-times-improve-adolescent-wellness\n     Summary: New AMA policy encourages middle schools and high schools to start no earlier than 8:30 a.m..\n  3. School Start Times for Middle School and High School Students - CDC | reliability=high (0.85)\n     URL: https://www.cdc.gov/mmwr/preview/mmwrhtml/mm6430a1.htm\n     Summary: AAP recommended that \"middle and high schools should aim for a starting time of no earlier than 8:30 a.m.\" (5). To assess state-specific ...\n  4. Schools shift as evidence mounts that later start times improve teens ... | reliability=high (0.85)\n     URL: https://www.apa.org/topics/children/school-start-times\n     Summary: Later school starts correlate with improved mood, better attendance and grades, and fewer car crashes among youth.\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1500,
+    "input_tokens_estimated": 375,
+    "output": {
+      "overall_stance": "supports",
+      "confidence": "high",
+      "summary": "Major medical organizations, including the American Academy of Sleep Medicine, AMA, and AAP, consistently recommend that middle and high schools start no earlier than 8:30 a.m. to promote adolescent health and well-being."
+    },
+    "output_length_chars": 283,
+    "output_tokens_estimated": 70,
+    "cost_usd": 9.825e-05
+  }
+]

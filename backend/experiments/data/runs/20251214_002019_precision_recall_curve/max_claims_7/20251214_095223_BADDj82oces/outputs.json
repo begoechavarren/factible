@@ -1,0 +1,1169 @@
+{
+  "extracted_claims": {
+    "claims": [
+      {
+        "text": "HIV infects helper T-cells, central to the immune response.",
+        "confidence": 0.95,
+        "category": "biological",
+        "importance": 0.85,
+        "context": "HIV's impact on the immune system's function.",
+        "transcript_char_start": 337,
+        "transcript_char_end": 392,
+        "transcript_match_score": 0.6428571428571429
+      },
+      {
+        "text": "The body becomes immunodeficient due to HIV, leading to AIDS.",
+        "confidence": 0.95,
+        "category": "biological",
+        "importance": 0.85,
+        "context": "Consequences of untreated HIV infection.",
+        "transcript_char_start": 2047,
+        "transcript_char_end": 2101,
+        "transcript_match_score": 0.7964601769911505
+      },
+      {
+        "text": "HIV uses reverse transcriptase to convert viral RNA into DNA.",
+        "confidence": 0.9,
+        "category": "biological",
+        "importance": 0.8,
+        "context": "Mechanism of HIV replication.",
+        "transcript_char_start": 573,
+        "transcript_char_end": 624,
+        "transcript_match_score": 0.8288288288288288
+      },
+      {
+        "text": "Killer T cells and natural killer cells destroy infected cells.",
+        "confidence": 0.95,
+        "category": "biological",
+        "importance": 0.8,
+        "context": "Immune defense against HIV.",
+        "transcript_char_start": 1268,
+        "transcript_char_end": 1339,
+        "transcript_match_score": 0.8421052631578947
+      },
+      {
+        "text": "There is no cure for HIV, and treatment can only manage it.",
+        "confidence": 0.9,
+        "category": "policy",
+        "importance": 0.75,
+        "context": "Current state of HIV treatment.",
+        "transcript_char_start": 2252,
+        "transcript_char_end": 2329,
+        "transcript_match_score": 0.5522388059701493
+      },
+      {
+        "text": "HIV levels rise rapidly in the body after infection.",
+        "confidence": 0.85,
+        "category": "biological",
+        "importance": 0.7,
+        "context": "Progression of HIV infection.",
+        "transcript_char_start": 822,
+        "transcript_char_end": 872,
+        "transcript_match_score": 0.8316831683168316
+      },
+      {
+        "text": "The immune system produces neutralizing antibodies against HIV.",
+        "confidence": 0.9,
+        "category": "biological",
+        "importance": 0.6,
+        "context": "Immune response to HIV.",
+        "transcript_char_start": 1095,
+        "transcript_char_end": 1149,
+        "transcript_match_score": 0.6896551724137931
+      }
+    ],
+    "total_count": 7
+  },
+  "final_output": {
+    "extracted_claims": {
+      "claims": [
+        {
+          "text": "HIV infects helper T-cells, central to the immune response.",
+          "confidence": 0.95,
+          "category": "biological",
+          "importance": 0.85,
+          "context": "HIV's impact on the immune system's function.",
+          "transcript_char_start": 337,
+          "transcript_char_end": 392,
+          "transcript_match_score": 0.6428571428571429
+        },
+        {
+          "text": "The body becomes immunodeficient due to HIV, leading to AIDS.",
+          "confidence": 0.95,
+          "category": "biological",
+          "importance": 0.85,
+          "context": "Consequences of untreated HIV infection.",
+          "transcript_char_start": 2047,
+          "transcript_char_end": 2101,
+          "transcript_match_score": 0.7964601769911505
+        },
+        {
+          "text": "HIV uses reverse transcriptase to convert viral RNA into DNA.",
+          "confidence": 0.9,
+          "category": "biological",
+          "importance": 0.8,
+          "context": "Mechanism of HIV replication.",
+          "transcript_char_start": 573,
+          "transcript_char_end": 624,
+          "transcript_match_score": 0.8288288288288288
+        },
+        {
+          "text": "Killer T cells and natural killer cells destroy infected cells.",
+          "confidence": 0.95,
+          "category": "biological",
+          "importance": 0.8,
+          "context": "Immune defense against HIV.",
+          "transcript_char_start": 1268,
+          "transcript_char_end": 1339,
+          "transcript_match_score": 0.8421052631578947
+        },
+        {
+          "text": "There is no cure for HIV, and treatment can only manage it.",
+          "confidence": 0.9,
+          "category": "policy",
+          "importance": 0.75,
+          "context": "Current state of HIV treatment.",
+          "transcript_char_start": 2252,
+          "transcript_char_end": 2329,
+          "transcript_match_score": 0.5522388059701493
+        },
+        {
+          "text": "HIV levels rise rapidly in the body after infection.",
+          "confidence": 0.85,
+          "category": "biological",
+          "importance": 0.7,
+          "context": "Progression of HIV infection.",
+          "transcript_char_start": 822,
+          "transcript_char_end": 872,
+          "transcript_match_score": 0.8316831683168316
+        },
+        {
+          "text": "The immune system produces neutralizing antibodies against HIV.",
+          "confidence": 0.9,
+          "category": "biological",
+          "importance": 0.6,
+          "context": "Immune response to HIV.",
+          "transcript_char_start": 1095,
+          "transcript_char_end": 1149,
+          "transcript_match_score": 0.6896551724137931
+        }
+      ],
+      "total_count": 7
+    },
+    "claim_reports": [
+      {
+        "claim_text": "HIV infects helper T-cells, central to the immune response.",
+        "claim_confidence": 0.95,
+        "claim_category": "biological",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence strongly supports the claim that HIV infects helper T-cells, as multiple high-reliability sources confirm that HIV specifically targets and destroys CD4 T cells, which are essential for the immune response.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Pathophysiology of CD4+ T-Cell Depletion in HIV-1 and HIV-2 ...",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5440548/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that HIV infects and destroys CD4 T cells, also known as T helper cells, which are crucial for the immune response. This infection leads to a gradual decrease in these immune cells, ultimately resulting in AIDS.",
+              "snippet": "The hall mark of human immunodeficiency virus (HIV) infection is a gradual loss of CD4+ T-cells and imbalance in CD4+ T-cell homeostasis, with progressive ..."
+            },
+            {
+              "title": "The T-Cell Response to HIV - PMC - PubMed Central - NIH",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3543107/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that HIV infects and destroys CD4 T cells, which are essential for coordinating the immune response, thereby supporting the claim that HIV infects helper T-cells central to the immune response.",
+              "snippet": "HIV infects and deletes CD4 + T cells that normally coordinate the adaptive T- and B-cell response to defend against intracellular pathogens."
+            },
+            {
+              "title": "Editorial: CD4+ T cells in HIV: A Friend or a Foe? - Frontiers",
+              "url": "https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2023.1203531/full",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that HIV infects and destroys CD4 T cells, which are crucial for the immune response, leading to a weakened immune system and the progression to AIDS.",
+              "snippet": "CD4+ T cell depletion: HIV infects and destroys CD4+ T cells during the replication process. If left untreated, HIV is the virus kills infected cells directly ..."
+            }
+          ]
+        },
+        "total_sources": 3,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 27.539,
+        "timestamp_confidence": 0.6428571428571429
+      },
+      {
+        "claim_text": "The body becomes immunodeficient due to HIV, leading to AIDS.",
+        "claim_confidence": 0.95,
+        "claim_category": "biological",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence consistently confirms that HIV infection leads to a significant loss of CD4+ T-lymphocyte helper cells, resulting in severe immune suppression and ultimately progressing to AIDS, where the immune system fails to prevent infections. This is supported by multiple high-reliability sources including the CDC, Mayo Clinic, and NIH.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Acquired Immunodeficiency Syndrome (AIDS)",
+              "url": "https://www.genome.gov/genetics-glossary/Acquired-Immunodeficiency-Syndrome-AIDS",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (23.6 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that HIV infection leads to a significant loss of CD4+ T-lymphocyte helper cells, resulting in extreme immune suppression and ultimately progressing to AIDS, where the immune system fails to prevent infections.",
+              "snippet": "AIDS is a collection of symptoms known as acquired immunodeficiency syndrome. It is caused by infection with the human immunodeficiency virus (HIV)."
+            },
+            {
+              "title": "HIV and AIDS - StatPearls - NCBI Bookshelf - NIH",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK534860/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that HIV targets CD4+ T-lymphocyte helper cells, leading to severe immune suppression and ultimately progressing to AIDS, where the immune system fails to prevent infections.",
+              "snippet": "This suppression weakens the immune system and causes many clinical manifestations. Untreated HIV eventually progresses to AIDS."
+            },
+            {
+              "title": "About HIV - CDC",
+              "url": "https://www.cdc.gov/hiv/about/index.html",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence clearly states that HIV infects and destroys immune cells, specifically CD4 T cells, leading to a significant weakening of the immune system, which is defined as AIDS. This supports the claim that the body becomes immunodeficient due to HIV, leading to AIDS.",
+              "snippet": "HIV (human immunodeficiency virus) is a virus that attacks the body's immune system. Without treatment, it can lead to AIDS (acquired immunodeficiency syndrome ..."
+            },
+            {
+              "title": "HIV/AIDS - Symptoms and causes - Mayo Clinic",
+              "url": "https://www.mayoclinic.org/diseases-conditions/hiv-aids/symptoms-causes/syc-20373524",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that HIV targets CD4+ T-lymphocyte helper cells, leading to severe immune suppression and ultimately progressing to AIDS, where the immune system fails to prevent infections.",
+              "snippet": "Acquired immunodeficiency syndrome (AIDS), is an ongoing, also called chronic, condition. It's caused by the human immunodeficiency virus, also called HIV."
+            },
+            {
+              "title": "Human immunodeficiency virus and acquired ... - PubMed",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/2644642/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence clearly states that HIV infects and destroys CD4 T cells, leading to a decrease in immune cells and ultimately resulting in AIDS, which is characterized by a significantly weakened immune system.",
+              "snippet": "(v) HIV supposedly causes AIDS by killing T cells, although retroviruses can only replicate in viable cells. In fact, infected T cells grown in culture continue ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 144.44,
+        "timestamp_confidence": 0.7964601769911505
+      },
+      {
+        "claim_text": "HIV uses reverse transcriptase to convert viral RNA into DNA.",
+        "claim_confidence": 0.9,
+        "claim_category": "biological",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence consistently confirms that HIV uses reverse transcriptase to convert its RNA genome into DNA, which is a fundamental process in retroviral replication, as detailed in multiple high-reliability sources including PubMed Central and Clinical Info.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "HIV-1 Reverse Transcription - PMC - PubMed Central",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3475395/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The article confirms that HIV uses reverse transcriptase to convert its RNA genome into DNA, which is a fundamental process in retroviral replication.",
+              "snippet": "In HIV-1, the pbs is approximately 180 nucleotides from the 5\u2032 end of genomic RNA. DNA synthesis creates an RNA\u2013DNA duplex, which is a substrate for RNase H."
+            },
+            {
+              "title": "Reverse Transcription - Clinical Info .HIV.gov",
+              "url": "https://clinicalinfo.hiv.gov/en/glossary/reverse-transcription",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (11.3 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that HIV uses reverse transcriptase to convert its RNA into DNA, which is a crucial step in the HIV life cycle.",
+              "snippet": "Once inside a CD4 cell, HIV releases and uses reverse transcriptase (an HIV enzyme) to convert its genetic material\u2014HIV RNA\u2014into HIV DNA. The conversion of HIV ..."
+            },
+            {
+              "title": "Efficient HIV-1 in vitro reverse transcription: optimal capsid stability is ...",
+              "url": "https://www.nature.com/articles/s41392-020-00458-3",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that HIV-1 uses reverse transcriptase to convert its RNA genome into DNA, which is a critical step in its replication process.",
+              "snippet": "HIV-1 reverse transcriptase (RT) copies the viral genomic RNA into a double-stranded DNA, and HIV-1 integrase (IN) inserts the viral DNA into ..."
+            },
+            {
+              "title": "Structure of HIV-1 reverse transcriptase cleaving RNA in an ... - PNAS",
+              "url": "https://www.pnas.org/doi/10.1073/pnas.1719746115",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that HIV uses reverse transcriptase (RT) to convert its RNA genome into DNA, highlighting that reverse transcription is a crucial step in retroviral replication.",
+              "snippet": "HIV-1 reverse transcriptase (RT) contains both DNA polymerase and RNase H activities to convert the viral genomic RNA to dsDNA in infected host ..."
+            }
+          ]
+        },
+        "total_sources": 4,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 42.329,
+        "timestamp_confidence": 0.8288288288288288
+      },
+      {
+        "claim_text": "Killer T cells and natural killer cells destroy infected cells.",
+        "claim_confidence": 0.95,
+        "claim_category": "biological",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence strongly supports the claim that killer T cells and natural killer cells destroy infected cells. Multiple high-reliability sources, including NIH articles, confirm the cytolytic activity of both natural killer (NK) cells and cytotoxic T (CD8+) cells in targeting and eliminating infected cells, particularly in the context of HIV.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Harnessing innate immunity: natural killer cells and innate ... - NIH",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12517733/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The article discusses the role of natural killer (NK) cells in targeting and destroying infected cells, particularly in the context of HIV, highlighting their potential to kill reactivated reservoir cells.",
+              "snippet": "Current HIV cure approaches aim to enhance natural killer (NK) cell function by reversing inhibition, cytokine-mediated activation and targeting ..."
+            },
+            {
+              "title": "Natural Killer Cells and Cytotoxic T Cells - PubMed Central - NIH",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10818828/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that natural killer (NK) cells and cytotoxic T (CD8+) cells play crucial roles in destroying infected cells through their cytolytic activity and response to inflammatory signals.",
+              "snippet": "Natural killer (NK) cells and cytotoxic T (CD8+) cells are two of the most important types of immune cells in our body, protecting it from deadly invaders."
+            },
+            {
+              "title": "NK Cells and Their Ability to Modulate T Cells during Virus Infections",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4266186/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that natural killer (NK) cells play a crucial role in destroying infected cells through their cytolytic activity and ability to recognize and eliminate cells with reduced MHC expression or elevated stress ligands.",
+              "snippet": "... natural killer cell cytotoxic responses on infected primary T-cell blasts. ... natural killer (NK) and NK T cells poised for rapid effector function. J Exp ..."
+            },
+            {
+              "title": "Comprehensive snapshots of natural killer cells functions, signaling ...",
+              "url": "https://www.nature.com/articles/s41392-024-02005-w",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that natural killer (NK) cells play a crucial role in destroying infected cells through their cytolytic activity and ability to recognize and eliminate cells with reduced MHC expression or elevated stress ligands. Additionally, the article discusses how NK cells can also mediate destruction indirectly through antibody-dependent cellular cytotoxicity (ADCC).",
+              "snippet": "Natural killer (NK) cells, initially identified for their rapid virus-infected and leukemia cell killing and tumor destruction, ..."
+            },
+            {
+              "title": "NK Cells in HIV-1 Infection: From Basic Science to Vaccine Strategies",
+              "url": "https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2018.02290/full",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that natural killer (NK) cells can destroy infected cells, particularly in the context of HIV infection, where they contribute to immune responses by targeting and killing reactivated reservoir cells.",
+              "snippet": "These cells can destroy infected cells and contribute to adequate and strong adaptive immune responses, by acting on dendritic, T, B, and even epithelial cells."
+            },
+            {
+              "title": "Scientists develop new natural killer cell strategy to target HIV",
+              "url": "https://medicalxpress.com/news/2025-02-scientists-natural-killer-cell-strategy.html",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The article discusses the role of natural killer (NK) cells in targeting and destroying HIV-infected cells, highlighting their potential in HIV cure strategies through mechanisms like antibody-dependent cellular cytotoxicity (ADCC).",
+              "snippet": "To improve antibody binding, the researchers generated CD64-positive NK cells that could reliably bind anti-HIV antibodies to target HIV- ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 92.34,
+        "timestamp_confidence": 0.8421052631578947
+      },
+      {
+        "claim_text": "There is no cure for HIV, and treatment can only manage it.",
+        "claim_confidence": 0.9,
+        "claim_category": "policy",
+        "overall_stance": "mixed",
+        "verdict_confidence": "medium",
+        "verdict_summary": "The evidence presents a mixed stance on the claim. While multiple high-reliability sources confirm that there is currently no cure for HIV and that treatment can only manage the disease, a high-reliability source also reports a case of HIV cure, indicating ongoing developments in the field. This suggests that while management is the current standard, the potential for a cure exists.",
+        "evidence_by_stance": {
+          "refutes": [
+            {
+              "title": "A seventh case of HIV cure reported at AIDS 2024",
+              "url": "https://www.who.int/news/item/25-07-2024-a-seventh-case-of-hiv-remission-reported-at-aids-2024",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The article acknowledges that, as of 2023, there is still no cure for HIV, but it highlights the development of lenacapavir, a drug that significantly reduces the risk of new infections, indicating that while treatment can manage the virus, a definitive cure remains elusive.",
+              "snippet": "One additional case reported in 2023 has been treated with a non-HIV resistant stem cell transplant (taken from a donor who does not carry this ..."
+            }
+          ],
+          "supports": [
+            {
+              "title": "The Latest Trends and Evolution of HIV Medication Management - NIH",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12510758/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that while there is no cure for HIV, advancements in treatment have made it increasingly manageable, allowing individuals to live normal lives with effective antiretroviral therapy.",
+              "snippet": "Currently, PrEP and other new drug formulations have continued to improve HIV prevention, management, and treatment, marking significant ..."
+            },
+            {
+              "title": "Current developments in HIV treatment and prevention - ScienceDirect",
+              "url": "https://www.sciencedirect.com/science/article/abs/pii/S0223523425009559",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that while there is no cure for HIV, advancements in treatment have made it increasingly manageable, allowing individuals to live normal lives with effective antiretroviral therapy.",
+              "snippet": "Emerging strategies include immunotherapy, stem cell transplant, and latency reversal. \u2022. Prevention is advancing through PrEP, TasP, and vaccine research."
+            },
+            {
+              "title": "Fact sheet: HIV drug resistance - World Health Organization (WHO)",
+              "url": "https://www.who.int/news-room/fact-sheets/detail/hiv-drug-resistance",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that while there is no cure for HIV, advancements in treatment have made it increasingly manageable, allowing individuals to live normal lives with effective antiretroviral therapy (ART).",
+              "snippet": "Current WHO-recommended first-line regimens, which are dolutegravir-based, are highly effective: programmatic evidence from low- and middle- ..."
+            },
+            {
+              "title": "The Road to Lenacapavir, a Breakthrough HIV Treatment - AAAS",
+              "url": "https://www.aaas.org/news/road-lenacapavir-breakthrough-hiv-treatment",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The article confirms that there is currently no cure for HIV, stating that treatment can only manage the disease, as evidenced by the ongoing need for antiretroviral therapy despite advancements like lenacapavir.",
+              "snippet": "Even after decades of research, there is no cure for the disease HIV causes, AIDS. But lenacapavir, born out of research on HIV's cone-shaped ..."
+            },
+            {
+              "title": "Whatever happened to ... the race to cure HIV? There's ... - NPR",
+              "url": "https://www.npr.org/sections/goats-and-soda/2025/08/25/g-s1-84393/whatever-happened-to-the-race-to-cure-hiv-theres-promising-news",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "supports",
+              "evidence_summary": "The article confirms that, as of 2023, there is no cure for HIV, stating that despite advancements in treatment, such as the drug lenacapavir, the disease remains manageable rather than curable.",
+              "snippet": "According to a July 2025 article in the medical journal The Lancet, 10 people worldwide are considered cured of HIV after receiving stem cell ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 157.41,
+        "timestamp_confidence": 0.5522388059701493
+      },
+      {
+        "claim_text": "HIV levels rise rapidly in the body after infection.",
+        "claim_confidence": 0.85,
+        "claim_category": "biological",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence strongly supports the claim that HIV levels rise rapidly after infection, particularly during the acute stage where viral loads are significantly higher. Sources such as HIV.gov and NIH confirm that the virus multiplies rapidly, with median viral loads reaching over 1 million copies/mL within the first week of infection, as detailed in the PMC article.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Acute and Chronic HIV | HIV.gov",
+              "url": "https://www.hiv.gov/hiv-basics/overview/about-hiv-and-aids/acute-and-chronic-hiv",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (11.3 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that during the acute stage of HIV infection, the virus multiplies rapidly in the body, leading to a high level of HIV in the blood, which supports the claim that HIV levels rise rapidly after infection.",
+              "snippet": "HIV typically progresses through three stages: acute HIV infection, chronic HIV infection, and AIDS. This progression can happen over months or years."
+            },
+            {
+              "title": "The Stages of HIV Infection | NIH - HIVinfo",
+              "url": "https://hivinfo.nih.gov/understanding-hiv/fact-sheets/stages-hiv-infection",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that during the acute stage of HIV infection, viral loads are significantly higher than in later stages, confirming that HIV levels rise rapidly in the body after infection.",
+              "snippet": "In the acute stage of infection, HIV multiplies rapidly and spreads throughout the body, attacking and destroying the infection-fighting CD4 ..."
+            },
+            {
+              "title": "Viral Loads Within 6 Weeks After Diagnosis of HIV Infection in Early ...",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6246969/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that HIV levels rise rapidly after infection, particularly during the early stages, with median viral loads in acute infections significantly higher than in later stages. Specifically, the median earliest viral load in stage 0 (acute infection) was 1,344,590 copies/mL in the first week, demonstrating a rapid increase shortly after infection.",
+              "snippet": "Early (including acute) HIV infection is associated with viral loads higher than those in later stages. This study aimed to examine the ..."
+            },
+            {
+              "title": "HIV DNA Set Point is Rapidly Established in Acute HIV Infection and ...",
+              "url": "https://www.sciencedirect.com/science/article/pii/S2352396416303309",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that HIV levels are indeed high during the early stages of infection, particularly in the first week, where viral loads are significantly higher than in later stages. This supports the claim that HIV levels rise rapidly after infection.",
+              "snippet": "We show that HIV DNA in peripheral blood cells, a marker of the HIV reservoir size, establishes a set-point level during the first 6 weeks of infection."
+            }
+          ],
+          "mixed": [
+            {
+              "title": "About HIV - CDC",
+              "url": "https://www.cdc.gov/hiv/about/index.html",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "mixed",
+              "evidence_summary": "The evidence indicates that after HIV infection, individuals may experience flu-like symptoms within 2 to 4 weeks, suggesting a rapid increase in HIV levels in the body during this period. However, the article does not explicitly quantify the rise in HIV levels, leaving some ambiguity.",
+              "snippet": "Most people have flu-like symptoms within 2 to 4 weeks after infection. Symptoms may last for a few days or several weeks. Having these symptoms ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 59.879,
+        "timestamp_confidence": 0.8316831683168316
+      },
+      {
+        "claim_text": "The immune system produces neutralizing antibodies against HIV.",
+        "claim_confidence": 0.9,
+        "claim_category": "biological",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence strongly supports the claim that the immune system produces neutralizing antibodies against HIV, particularly through the role of broadly neutralizing antibodies (bNAbs) as discussed in multiple high-reliability sources. These sources indicate that bNAbs can effectively neutralize HIV and enhance the immune response.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Broadly neutralizing antibodies for HIV-1: efficacies, challenges and ...",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7040474/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The article discusses the role of broadly neutralizing antibodies (bNAbs) in neutralizing HIV and enhancing the immune response, indicating that the immune system can produce these antibodies to combat HIV.",
+              "snippet": "Broadly neutralizing antibodies (bNAbs) provide a new approach to HIV-1 prevention and treatment, and these promising candidates advancing into clinical trials ..."
+            },
+            {
+              "title": "Two HIV vaccine trials show proof of concept for pathway to broadly ...",
+              "url": "https://www.scripps.edu/news-and-events/press-room/2025/20250515-schief-hiv-vaccine-trials.html",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (37.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The article discusses the role of broadly neutralizing antibodies (bNAbs) in the immune response against HIV, indicating that these antibodies can neutralize a wide range of HIV variants and trigger an immune response to destroy the virus.",
+              "snippet": "Broadly neutralizing antibodies, or bnAbs, are a rare type of immune defense that can recognize and block a wide range of HIV variants. Unlike ..."
+            },
+            {
+              "title": "Mechanism for evolution of diverse autologous antibodies upon ...",
+              "url": "https://www.sciencedirect.com/science/article/pii/S2211124725013166",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The article discusses the role of broadly neutralizing antibodies (bNAbs) in neutralizing HIV and enhancing the immune response, indicating that the immune system can produce antibodies that target HIV effectively.",
+              "snippet": "Recent clinical trials have shown that administration of broadly neutralizing antibodies (bnAbs) in the presence of some viremia can lead to ART-free viral ..."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "New Immune Treatment May Suppress HIV\u2014No Daily Pills Required",
+              "url": "https://singularityhub.com/2025/12/12/new-immune-treatment-may-suppress-hiv-no-daily-pills-required/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Compared to normal antibodies, bNAbs are extremely rare and powerful. They can neutralize a wide range of HIV strains. Clinical trials using ...",
+              "snippet": "Compared to normal antibodies, bNAbs are extremely rare and powerful. They can neutralize a wide range of HIV strains. Clinical trials using ..."
+            },
+            {
+              "title": "Novel vaccine concept generates immune responses that could ...",
+              "url": "https://www.nih.gov/news-events/news-releases/novel-vaccine-concept-generates-immune-responses-could-produce-multiple-types-hiv-broadly-neutralizing-antibodies",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Researchers have successfully stimulated animals' immune systems to induce rare precursor B cells of a class of HIV broadly neutralizing antibodies (bNAbs).",
+              "snippet": "Researchers have successfully stimulated animals' immune systems to induce rare precursor B cells of a class of HIV broadly neutralizing antibodies (bNAbs)."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 80.009,
+        "timestamp_confidence": 0.6896551724137931
+      }
+    ],
+    "transcript_data": {
+      "text": "when a virus winds up inside the body it's usually met with a furious onslaught from the immune system white blood cells immediately respond by releasing anti viral proteins attacking infected cells and recruiting backup usually this is enough but there's one virus that pushes the immune system beyond its limits HIV HIV infects one of the immune cells that is central to the body's response to pathogens the helper t-cell first the virus attaches and enters once inside the virus moves towards the nucleus along with its enzymes and genetic material one of these enzymes reverse transcriptase converts the viral RNA into a length of DNA which inserts into the cell's genome forcing the cell to spew out HIV proteins and genetic material to make new copies of the virus these new viruses escape the cell to infect others HIV levels rise rapidly in the body but the immune system doesn't move down without a fight inside infected cells anti viral proteins called restriction factors work to shut down virus production while others stop the virus from escaping the cell outside white blood cells called fiy cells produce neutralizing antibodies which bind to surface spikes on HIV particles and stop them entering healthy helper t-cells the greatest assault comes from killer T cells and natural killer cells which seek and destroy infected cells directly they release a protein called perforin which punches the infected cells allowing enzymes to be injected triggering Auto destruction for a while the defense holds and virus levels drop but HIV begins its counter-attack it disables the cell's antiviral proteins allowing new virus particles to leave the cell it also constantly mutates inside the cell to evade protection the immune system can't fight what it can't see eventually the immune system wears itself out killer T cells activated for too long exhausted and no longer respond to infection also the body loses the ability to make new helper t-cells to replace those killed in the fight and as a result their numbers plummet ultimately the body becomes immunodeficient and this condition is known as AIDS without treatment exposure to otherwise harmless microbes can be fatal we still have no way of eliminating HIV from the body completely there is no cure and hidden reservoirs of HIV will rebound if treatment stops but treatment with antiretroviral drugs can swing the balance allowing the immune system to recover from battle and live to fight another day [Music]",
+      "segments": [
+        {
+          "text": "when a virus winds up inside the body",
+          "start": 3.23,
+          "duration": 5.02
+        },
+        {
+          "text": "it's usually met with a furious",
+          "start": 6.12,
+          "duration": 4.68
+        },
+        {
+          "text": "onslaught from the immune system white",
+          "start": 8.25,
+          "duration": 4.44
+        },
+        {
+          "text": "blood cells immediately respond by",
+          "start": 10.8,
+          "duration": 4.469
+        },
+        {
+          "text": "releasing anti viral proteins attacking",
+          "start": 12.69,
+          "duration": 4.88
+        },
+        {
+          "text": "infected cells and recruiting backup",
+          "start": 15.269,
+          "duration": 4.581
+        },
+        {
+          "text": "usually this is enough",
+          "start": 17.57,
+          "duration": 4.959
+        },
+        {
+          "text": "but there's one virus that pushes the",
+          "start": 19.85,
+          "duration": 7.689
+        },
+        {
+          "text": "immune system beyond its limits HIV HIV",
+          "start": 22.529,
+          "duration": 6.9
+        },
+        {
+          "text": "infects one of the immune cells that is",
+          "start": 27.539,
+          "duration": 3.691
+        },
+        {
+          "text": "central to the body's response to",
+          "start": 29.429,
+          "duration": 5.611
+        },
+        {
+          "text": "pathogens the helper t-cell first the",
+          "start": 31.23,
+          "duration": 7.11
+        },
+        {
+          "text": "virus attaches and enters once inside",
+          "start": 35.04,
+          "duration": 5.19
+        },
+        {
+          "text": "the virus moves towards the nucleus",
+          "start": 38.34,
+          "duration": 3.989
+        },
+        {
+          "text": "along with its enzymes and genetic",
+          "start": 40.23,
+          "duration": 4.95
+        },
+        {
+          "text": "material one of these enzymes reverse",
+          "start": 42.329,
+          "duration": 5.221
+        },
+        {
+          "text": "transcriptase converts the viral RNA",
+          "start": 45.18,
+          "duration": 5.129
+        },
+        {
+          "text": "into a length of DNA which inserts into",
+          "start": 47.55,
+          "duration": 5.099
+        },
+        {
+          "text": "the cell's genome forcing the cell to",
+          "start": 50.309,
+          "duration": 4.59
+        },
+        {
+          "text": "spew out HIV proteins and genetic",
+          "start": 52.649,
+          "duration": 4.311
+        },
+        {
+          "text": "material to make new copies of the virus",
+          "start": 54.899,
+          "duration": 4.98
+        },
+        {
+          "text": "these new viruses escape the cell to",
+          "start": 56.96,
+          "duration": 6.7
+        },
+        {
+          "text": "infect others HIV levels rise rapidly in",
+          "start": 59.879,
+          "duration": 6.301
+        },
+        {
+          "text": "the body but the immune system doesn't",
+          "start": 63.66,
+          "duration": 5.94
+        },
+        {
+          "text": "move down without a fight inside",
+          "start": 66.18,
+          "duration": 5.97
+        },
+        {
+          "text": "infected cells anti viral proteins",
+          "start": 69.6,
+          "duration": 5.04
+        },
+        {
+          "text": "called restriction factors work to shut",
+          "start": 72.15,
+          "duration": 5.07
+        },
+        {
+          "text": "down virus production while others stop",
+          "start": 74.64,
+          "duration": 5.369
+        },
+        {
+          "text": "the virus from escaping the cell outside",
+          "start": 77.22,
+          "duration": 5.219
+        },
+        {
+          "text": "white blood cells called fiy cells",
+          "start": 80.009,
+          "duration": 4.591
+        },
+        {
+          "text": "produce neutralizing antibodies which",
+          "start": 82.439,
+          "duration": 4.68
+        },
+        {
+          "text": "bind to surface spikes on HIV particles",
+          "start": 84.6,
+          "duration": 4.74
+        },
+        {
+          "text": "and stop them entering healthy helper",
+          "start": 87.119,
+          "duration": 5.221
+        },
+        {
+          "text": "t-cells the greatest assault comes from",
+          "start": 89.34,
+          "duration": 5.19
+        },
+        {
+          "text": "killer T cells and natural killer cells",
+          "start": 92.34,
+          "duration": 4.41
+        },
+        {
+          "text": "which seek and destroy infected cells",
+          "start": 94.53,
+          "duration": 5.46
+        },
+        {
+          "text": "directly they release a protein called",
+          "start": 96.75,
+          "duration": 5.28
+        },
+        {
+          "text": "perforin which punches the infected",
+          "start": 99.99,
+          "duration": 4.29
+        },
+        {
+          "text": "cells allowing enzymes to be injected",
+          "start": 102.03,
+          "duration": 5.61
+        },
+        {
+          "text": "triggering Auto destruction for a while",
+          "start": 104.28,
+          "duration": 6.15
+        },
+        {
+          "text": "the defense holds and virus levels drop",
+          "start": 107.64,
+          "duration": 6.65
+        },
+        {
+          "text": "but HIV begins its counter-attack it",
+          "start": 110.43,
+          "duration": 6.119
+        },
+        {
+          "text": "disables the cell's antiviral proteins",
+          "start": 114.29,
+          "duration": 4.63
+        },
+        {
+          "text": "allowing new virus particles to leave",
+          "start": 116.549,
+          "duration": 5.25
+        },
+        {
+          "text": "the cell it also constantly mutates",
+          "start": 118.92,
+          "duration": 5.549
+        },
+        {
+          "text": "inside the cell to evade protection the",
+          "start": 121.799,
+          "duration": 4.741
+        },
+        {
+          "text": "immune system can't fight what it can't",
+          "start": 124.469,
+          "duration": 5.13
+        },
+        {
+          "text": "see eventually the immune system wears",
+          "start": 126.54,
+          "duration": 6.12
+        },
+        {
+          "text": "itself out killer T cells activated for",
+          "start": 129.599,
+          "duration": 3.841
+        },
+        {
+          "text": "too long",
+          "start": 132.66,
+          "duration": 2.76
+        },
+        {
+          "text": "exhausted and no longer respond to",
+          "start": 133.44,
+          "duration": 4.65
+        },
+        {
+          "text": "infection also the body loses the",
+          "start": 135.42,
+          "duration": 4.8
+        },
+        {
+          "text": "ability to make new helper t-cells to",
+          "start": 138.09,
+          "duration": 4.32
+        },
+        {
+          "text": "replace those killed in the fight and as",
+          "start": 140.22,
+          "duration": 4.22
+        },
+        {
+          "text": "a result their numbers plummet",
+          "start": 142.41,
+          "duration": 3.96
+        },
+        {
+          "text": "ultimately the body becomes",
+          "start": 144.44,
+          "duration": 4.06
+        },
+        {
+          "text": "immunodeficient and this condition is",
+          "start": 146.37,
+          "duration": 5.37
+        },
+        {
+          "text": "known as AIDS without treatment exposure",
+          "start": 148.5,
+          "duration": 5.22
+        },
+        {
+          "text": "to otherwise harmless microbes can be",
+          "start": 151.74,
+          "duration": 2.61
+        },
+        {
+          "text": "fatal",
+          "start": 153.72,
+          "duration": 3.69
+        },
+        {
+          "text": "we still have no way of eliminating HIV",
+          "start": 154.35,
+          "duration": 4.83
+        },
+        {
+          "text": "from the body completely there is no",
+          "start": 157.41,
+          "duration": 4.47
+        },
+        {
+          "text": "cure and hidden reservoirs of HIV will",
+          "start": 159.18,
+          "duration": 5.85
+        },
+        {
+          "text": "rebound if treatment stops but treatment",
+          "start": 161.88,
+          "duration": 5.43
+        },
+        {
+          "text": "with antiretroviral drugs can swing the",
+          "start": 165.03,
+          "duration": 4.35
+        },
+        {
+          "text": "balance allowing the immune system to",
+          "start": 167.31,
+          "duration": 4.62
+        },
+        {
+          "text": "recover from battle and live to fight",
+          "start": 169.38,
+          "duration": 5.33
+        },
+        {
+          "text": "another day",
+          "start": 171.93,
+          "duration": 2.78
+        },
+        {
+          "text": "[Music]",
+          "start": 175.07,
+          "duration": 3.17
+        }
+      ],
+      "video_id": "BADDj82oces"
+    }
+  }
+}

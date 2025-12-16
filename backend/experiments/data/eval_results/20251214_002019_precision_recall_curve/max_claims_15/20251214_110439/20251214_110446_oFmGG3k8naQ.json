@@ -1,0 +1,153 @@
+{
+  "video_id": "oFmGG3k8naQ",
+  "timestamp": "2025-12-14T11:04:46.211932",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_15",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.8,
+    "recall": 0.6666666666666666,
+    "f1_score": 0.7272727272727272,
+    "true_positives": 8,
+    "false_positives": 2,
+    "false_negatives": 4,
+    "mean_average_precision": 0.9472222222222222,
+    "recall_at_important": 1.0,
+    "importance_weighted_coverage": 0.7485380116959064,
+    "matched_claims": [
+      {
+        "gt_text": "Harvard University published a study in the federal government's journal on July 27, 2012 that confirms fluoride lowers IQs",
+        "sys_text": "Fluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.",
+        "gt_importance": 0.95,
+        "sys_importance": 0.85,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "A Harvard University study published on July 26 in the National Institute of Health journal finds that fluoride lowers children's IQ",
+        "sys_text": "Another Harvard study published on July 26, 2012, finds fluoride lowers children's IQ.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.85,
+        "importance_error": 0.0
+      },
+      {
+        "gt_text": "Fluoridation of water supply causes retardation in children, making children's IQs lower",
+        "sys_text": "Fluoridation of water causes children's IQs to lower, leading to health problems.",
+        "gt_importance": 0.95,
+        "sys_importance": 0.8,
+        "importance_error": 0.1499999999999999
+      },
+      {
+        "gt_text": "Harvard University studies published in April 2006 show a link between fluorinated water and bone cancer in boys",
+        "sys_text": "A Harvard study published on April 5, 2006, shows a link between fluorinated water and bone cancer in boys.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.7,
+        "importance_error": 0.20000000000000007
+      },
+      {
+        "gt_text": "America's children have the lowest IQs in the world due to fluoride consumption",
+        "sys_text": "The speaker claims that children in America have lower IQs due to fluoride in the water.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.6,
+        "importance_error": 0.25
+      },
+      {
+        "gt_text": "White spots on teeth indicate fluorosis caused by too much fluoride",
+        "sys_text": "The nurse from Austin, Texas, claims that residents have white spots on their teeth due to natural fluoridation.",
+        "gt_importance": 0.65,
+        "sys_importance": 0.55,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "Fluoride is absorbed through the teeth topically, not through the body by drinking it",
+        "sys_text": "Fluoride is not absorbed through the body by drinking it, but is a topical treatment.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.3,
+        "importance_error": 0.45
+      },
+      {
+        "gt_text": "An OBGYN doctor recommended that babies be fed special water with extra fluoride for their feedings to help their teeth",
+        "sys_text": "The speaker suggests that fluoridated water should not be given to babies.",
+        "gt_importance": 0.5,
+        "sys_importance": 0.25,
+        "importance_error": 0.25
+      }
+    ],
+    "missed_claims": [
+      "Infant formula mixed with fluoridated water delivers 100-200 times more fluoride than breastmilk",
+      "People in Austin, Texas live in an area with naturally over-fluorinated water and have white spots on their teeth and act like dumbasses with low IQ",
+      "People who are angry or afraid have lower IQs and fluoride consumption contributes to this",
+      "Baby teeth fall out and get replaced, so it doesn't make sense to give fluoride to babies for teeth that will be lost"
+    ],
+    "extra_claims": [
+      "The speaker claims that people who are angry or afraid lose IQ points.",
+      "The speaker believes that children in America are not normal and have declined in intelligence."
+    ],
+    "importance_mae": 0.18749999999999997,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.25,
+    "stance_accuracy": 0.25,
+    "correct_verdicts": 2,
+    "total_verdicts": 8,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "A Harvard University study published on July 26 in the National Institute of Health journal finds that fluoride lowers children's IQ",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "REFUTES"
+      },
+      {
+        "claim": "Fluoridation of water supply causes retardation in children, making children's IQs lower",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "REFUTES"
+      },
+      {
+        "claim": "Harvard University studies published in April 2006 show a link between fluorinated water and bone cancer in boys",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "REFUTES"
+      },
+      {
+        "claim": "America's children have the lowest IQs in the world due to fluoride consumption",
+        "gt_verdict": "REFUTES",
+        "sys_verdict": "MIXED"
+      },
+      {
+        "claim": "White spots on teeth indicate fluorosis caused by too much fluoride",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "REFUTES"
+      },
+      {
+        "claim": "An OBGYN doctor recommended that babies be fed special water with extra fluoride for their feedings to help their teeth",
+        "gt_verdict": "REFUTES",
+        "sys_verdict": "MIXED"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.6666666666666666,
+    "verdict_accuracy": 0.25,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.0191589,
+    "total_time_seconds": 132.1358871459961,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.3
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 37,
+      "medium": 9
+    },
+    "avg_evidence_per_claim": 4.6
+  },
+  "ground_truth_claims_count": 12,
+  "system_claims_count": 10
+}

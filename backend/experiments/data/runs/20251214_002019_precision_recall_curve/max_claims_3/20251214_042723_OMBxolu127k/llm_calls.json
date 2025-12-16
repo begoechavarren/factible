@@ -1,0 +1,250 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:27:37.935855",
+    "latency_seconds": 13.0,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nThe nation's historical preservation group, is now suing the Trump administration over its plans to build a giant ballroom over at the white House. Back in October, the Trump administration quickly demolished the white House East Wing to make room for the ballroom for this project. Want to bring in CNN's Brian Todd? Brian, why is the National Trust taking this dramatic step? And this is a lengthy lawsuit. It's a lengthy lawsuit, Wolf, 47 pages. It was filed just moments ago. We have a copy of this lawsuit now to answer your question, Wolf. They are suing because they want this project halted, first and foremost. And they're suing because they said that the white House and its allies and in certain agencies like the National Park Service, did not get the necessary approvals or conduct the necessary reviews. We have a copy of this lawsuit. You see the pictures here. This has been what many people have been complaining about, the demolition of the East wing of the white House that began in October for the construction of a 90,000 square foot ballroom. And just moments ago, as Wolf mentioned, we've obtained a copy of this lawsuit from the National Trust for Historic Preservation. They are suing the National Park Service. They are suing President Trump himself, plus the National Park Service, plus the Department of the Interior and Interior Secretary Douglas Burgum, and others over the construction of the ballroom where the east wing and the colonnade used to be. And here is just one quote from one of the initial pages of the lawsuit. No president is legally allowed to tear down portions of the white House without any review whatsoever. Not President Trump, not President Biden, and not anyone else. And no president is legally allowed to construct a ballroom on public property without giving the public the opportunity to weigh in. President Trump's efforts to do so should be immediately halted, and work on the ballroom project should be paused until the defendants complete the required reviews. Reviews that should have taken place before the defendants demolish the East Wing and before they began construction of the ballroom and secured the necessary approvals. What they are also saying is that there are two entities, from which the white House needed to seek approval and at least a review of this project. The National Capital Planning Commission and the Commission of Fine Arts. And according to this lawsuit from the National Trust for Historic Preservation, the white House did not seek any review from those agencies and did not seek any, public, input on this project. Now, I can I can tell you also, Wolf, we are reaching out to the white House for comment. Our colleague Kevin Liptak is handling that right now. We should be able to get that from Kevin in just a moment. But what I will say is that the president has had this in his, in his sights to to renovate this area, to do a ballroom for years, not just months, years, including before he came into office. He said he offered the Obama administration, you know, that he said he would pay for it. The Obama administration, he said, never got back to him. President Trump has said many times that he believes this is necessary, that people who come to the white House, for certain events, they have to go to a tent that's kind of separate from the main, main body of the white House. And in bad weather, a lot of people who are here for balls and things like that, they just get kind of, disheveled, having to walk through the rain and get into a tent. That's been his perspective. He's been eyeing this for a long time. His idea is to make this very much like the Donald Trump Ballroom at Mar-A-Lago. It's going to look a lot like that. And there are plenty of other ballrooms that I've been to, many of them. Right near the white House, huge ballrooms that they could go to, not just a. I've been to the tent on the backyard of the white House on this, on this on the North Lawn of the white House, and the South Lawn of the white House as well. And that east wing was beautiful. And too bad it's been destroyed. Ari. Brian, thank you very, very much. Kevin Liptak is over at the white House right now. This has been a huge priority for the president. And as Brian just said, you're working to get some reaction. Are you learning anything? Yeah. The white House hasn't responded to this lawsuit specifically, but I'll tell you that white House officials have sort of downplayed criticism from this particular group, the National Trust for Historic Preservation, which you'll remember back in October as this project was getting underway, actually wrote a letter to the white House asking them to pause work to, go through some of these various boards for review. And the white House said at the time that this, trust, the National Trust for Historic Preservation, was comprised of, quote, loser Democrats and liberal donors. And so you see them kind of shrugging off the criticism, we should say that this body is chartered by Congress, tasked with, preserving some of the nation's historic buildings. It actually does have a relationship with President Trump dating back to the 1990s. It worked with him on some projects at Mar-A-Lago. So he does have sort of an existing relationship with this, body, going back several decades. We should say that, the boards that this, group is now requesting and demanding that the court, require that the administration go through the National Capital Planning Commission is now stacked with President Trump's appointees. It's led by Will Scharf, who's the staff secretary at the white House. He has said previously that this project will eventually go before that body, but that it's purview and that its remit does not cover demolition. And that is why they say this project didn't go before that board, before they began tearing down the East wing, but that once sort of vertical construction begins, that it will go before that body. And so, whether this lawsuit sort of spurs that action and prompts them to go more quickly remains to be seen. But you're right. This is an absolute priority of the president. He still mentions that, on almost a weekly basis, you know, when, the crown Prince Mohammed bin Salman was here, for example, the president said, that the dinner he held in his honor on the white House state floor would have been a much grander occasion if they had had, that ballroom constructed in his honor. We should also say that there has been some, discord among the planning team. You know, the president has assigned a new architect, the previous architect still on board, but he had reportedly raised some questions about the sheer scale of this project. You know, the president is envisioning a 90,000 square foot ballroom. The white House itself is only about 55,000ft\u00b2. And one of the concerns that the National Trust for Historic Preservation has raised is that they would essentially dwarf the original building once it's completed. And so all of these concerns are now due to be, heard in court, Wolf, the president keeps pointing out that, this ballroom will be paid for by private donations, not taxpayers. Is that a factor here? It could be. And I think, you know, the president and the white House have said that they will be transparent and they have released, some of the names of the donors who will contribute to this project. One of the questions is how potentially they'll be honored as part of it, whether their names will be, written on the wall or whether they'll have sort of plaques, in the final, ballroom to designate who who donated and, what sort of contribution they were able to make to this project. But it has raised a certainly questions about what kind of influence those donors, might have with the white House and whether or not these individuals are essentially using these donations to curry favor with the president, recognizing that this is a major priority of his. All right. Kevin Liptak at the white House for us, Kevin, thank you very, very much.",
+    "input_length_chars": 8108,
+    "input_tokens_estimated": 2027,
+    "output": {
+      "claims": [
+        {
+          "text": "The National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.",
+          "confidence": 0.9,
+          "category": "legal",
+          "importance": 0.85,
+          "context": "Current lawsuit against Trump administration regarding White House construction."
+        },
+        {
+          "text": "The Trump administration demolished the White House East Wing in October to make room for the ballroom.",
+          "confidence": 0.9,
+          "category": "historical",
+          "importance": 0.85,
+          "context": "Demolition of East Wing occurred in October as part of ballroom project."
+        },
+        {
+          "text": "The lawsuit claims the White House did not seek necessary approvals from the National Capital Planning Commission and the Commission of Fine Arts.",
+          "confidence": 0.85,
+          "category": "legal",
+          "importance": 0.7,
+          "context": "Claims made in the lawsuit regarding approval processes."
+        }
+      ],
+      "total_count": 3
+    },
+    "output_length_chars": 1114,
+    "output_tokens_estimated": 278,
+    "cost_usd": 0.00047085
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:27:44.388517",
+    "latency_seconds": 3.05,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The Trump administration demolished the White House East Wing in October to make room for the ballroom.\nContext: Demolition of East Wing occurred in October as part of ballroom project.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 358,
+    "input_tokens_estimated": 89,
+    "output": {
+      "original_claim": "The Trump administration demolished the White House East Wing in October to make room for the ballroom.",
+      "queries": [
+        {
+          "query": "Trump administration White House East Wing demolition October ballroom",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "White House East Wing demolition October 2023 ballroom project",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 385,
+    "output_tokens_estimated": 96,
+    "cost_usd": 7.095e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The lawsuit claims the White House did not seek necessary approvals from the National Capital Planning Commission and the Commission of Fine Arts."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:27:44.547596",
+    "latency_seconds": 3.21,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.\nContext: Current lawsuit against Trump administration regarding White House construction.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 392,
+    "input_tokens_estimated": 98,
+    "output": {
+      "original_claim": "The National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.",
+      "queries": [
+        {
+          "query": "National Trust for Historic Preservation lawsuit Trump administration White House ballroom",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Trump administration National Trust lawsuit White House construction ballroom",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 446,
+    "output_tokens_estimated": 111,
+    "cost_usd": 8.13e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "The Trump administration demolished the White House East Wing in October to make room for the ballroom.",
+      "query_index": 2,
+      "query_text": "White House East Wing demolition October 2023 ballroom project"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:28:05.170203",
+    "latency_seconds": 4.45,
+    "input_prompt": "Claim:\nThe National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.\n\nArticle Title:\nHistoric preservation group sues Trump over White House ballroom ...\n\nFull Page Content:\nThe National Trust for Historic Preservation has filed a lawsuit to stop President Trump's White House ballroom construction.\n\nProvide relevant evidence.",
+    "input_length_chars": 395,
+    "input_tokens_estimated": 98,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The National Trust for Historic Preservation has indeed filed a lawsuit against the Trump administration to halt the construction of a ballroom at the White House, confirming the claim.",
+      "overall_stance": "supports",
+      "key_quote": "The National Trust for Historic Preservation has filed a lawsuit to stop President Trump's White House ballroom construction."
+    },
+    "output_length_chars": 396,
+    "output_tokens_estimated": 99,
+    "cost_usd": 7.41e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:28:05.672441",
+    "latency_seconds": 4.97,
+    "input_prompt": "Claim:\nThe National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.\n\nArticle Title:\nNational Trust for Historic Preservation sues to try to stop White ...\n\nFull Page Content:\n\"President Trump's efforts to do so should be immediately halted, and work on the Ballroom Project should be paused until the Defendants ...\n\nProvide relevant evidence.",
+    "input_length_chars": 412,
+    "input_tokens_estimated": 103,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The National Trust for Historic Preservation is indeed suing the Trump administration to halt the construction of a ballroom at the White House, as indicated in the article.",
+      "overall_stance": "supports",
+      "key_quote": "\"President Trump's efforts to do so should be immediately halted, and work on the Ballroom Project should be paused...\""
+    },
+    "output_length_chars": 380,
+    "output_tokens_estimated": 95,
+    "cost_usd": 7.245e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:28:05.771320",
+    "latency_seconds": 5.1,
+    "input_prompt": "Claim:\nThe National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.\n\nArticle Title:\nHistoric preservation group sues Trump over White House ballroom ...\n\nFull Page Content:\n\"No president is legally allowed to tear down portions of the White House without any review whatsoever,\" said the National Trust for ...\n\nProvide relevant evidence.",
+    "input_length_chars": 407,
+    "input_tokens_estimated": 101,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The National Trust for Historic Preservation is indeed suing the Trump administration regarding the construction of a ballroom at the White House, emphasizing the legal protections against altering the historic structure without review.",
+      "overall_stance": "supports",
+      "key_quote": "\"No president is legally allowed to tear down portions of the White House without any review whatsoever,\" said the National Trust for ..."
+    },
+    "output_length_chars": 461,
+    "output_tokens_estimated": 115,
+    "cost_usd": 8.415e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:28:05.812455",
+    "latency_seconds": 3.01,
+    "input_prompt": "Claim:\nThe National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.\n\nArticle Title:\nPreservationists sue Trump for ballroom project reviews and ... - PBS\n\nFull Page Content:\nPresident Donald Trump was sued on Friday by preservationists asking a federal court to halt his White House ballroom project until it goes ...\n\nProvide relevant evidence.",
+    "input_length_chars": 414,
+    "input_tokens_estimated": 103,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article confirms that preservationists, including the National Trust for Historic Preservation, have filed a lawsuit against President Trump regarding the White House ballroom project, seeking to halt it until further reviews are conducted.",
+      "overall_stance": "supports",
+      "key_quote": "President Donald Trump was sued on Friday by preservationists asking a federal court to halt his White House ballroom project."
+    },
+    "output_length_chars": 456,
+    "output_tokens_estimated": 114,
+    "cost_usd": 8.385e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:28:05.813517",
+    "latency_seconds": 3.02,
+    "input_prompt": "Claim:\nThe National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.\n\nArticle Title:\nNational Trust for Historic Preservation sues to try to stop White ...\n\nFull Page Content:\nAmericans largely oppose Trump tearing down White House East Wing to make way for his ballroom: Poll. In its complaint, the Trust argues that ...\n\nProvide relevant evidence.",
+    "input_length_chars": 417,
+    "input_tokens_estimated": 104,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The National Trust for Historic Preservation is indeed suing the Trump administration in an effort to halt the construction of a ballroom at the White House, as indicated in their complaint.",
+      "overall_stance": "supports",
+      "key_quote": "the Trust argues that ..."
+    },
+    "output_length_chars": 301,
+    "output_tokens_estimated": 75,
+    "cost_usd": 6.06e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:28:05.882487",
+    "latency_seconds": 5.2,
+    "input_prompt": "Claim:\nThe National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.\n\nArticle Title:\nNational preservation group sues to halt East Wing ballroom ...\n\nFull Page Content:\nA preservationist group is suing President Donald Trump for his construction of the East Wing ballroom, arguing in a lawsuit filed Friday ...\n\nProvide relevant evidence.",
+    "input_length_chars": 406,
+    "input_tokens_estimated": 101,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The National Trust for Historic Preservation is indeed suing the Trump administration over the construction of a ballroom at the White House, specifically in the East Wing.",
+      "overall_stance": "supports",
+      "key_quote": "A preservationist group is suing President Donald Trump for his construction of the East Wing ballroom."
+    },
+    "output_length_chars": 361,
+    "output_tokens_estimated": 90,
+    "cost_usd": 6.915e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:28:06.019776",
+    "latency_seconds": 3.18,
+    "input_prompt": "Claim:\nThe National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.\n\nArticle Title:\nHistoric preservation group sues Trump over White House ballroom ...\n\nFull Page Content:\nThe National Trust for Historic Preservation has filed a lawsuit to stop President Trump's White House ballroom construction.\n\nProvide relevant evidence.",
+    "input_length_chars": 395,
+    "input_tokens_estimated": 98,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The National Trust for Historic Preservation has indeed filed a lawsuit against the Trump administration to halt the construction of a ballroom at the White House, confirming the claim.",
+      "overall_stance": "supports",
+      "key_quote": "The National Trust for Historic Preservation has filed a lawsuit to stop President Trump's White House ballroom construction."
+    },
+    "output_length_chars": 396,
+    "output_tokens_estimated": 99,
+    "cost_usd": 7.41e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:28:06.304493",
+    "latency_seconds": 3.49,
+    "input_prompt": "Claim:\nThe National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.\n\nArticle Title:\nWhite House sued by historic preservation group over ballroom plans\n\nFull Page Content:\nIn the lawsuit, the group argues that the White House broke the law by beginning construction without filing plans with the National Capital ...\n\nProvide relevant evidence.",
+    "input_length_chars": 413,
+    "input_tokens_estimated": 103,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The National Trust for Historic Preservation is indeed suing the Trump administration, claiming that the White House began construction of a ballroom without proper legal filings, which supports the claim.",
+      "overall_stance": "supports",
+      "key_quote": "the group argues that the White House broke the law by beginning construction without filing plans with the National Capital ..."
+    },
+    "output_length_chars": 419,
+    "output_tokens_estimated": 104,
+    "cost_usd": 7.785e-05
+  }
+]

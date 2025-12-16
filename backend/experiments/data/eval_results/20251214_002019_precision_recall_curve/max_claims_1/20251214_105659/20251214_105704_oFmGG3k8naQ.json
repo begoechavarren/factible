@@ -1,0 +1,76 @@
+{
+  "video_id": "oFmGG3k8naQ",
+  "timestamp": "2025-12-14T10:57:04.901182",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_1",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 1.0,
+    "recall": 0.08333333333333333,
+    "f1_score": 0.15384615384615385,
+    "true_positives": 1,
+    "false_positives": 0,
+    "false_negatives": 11,
+    "mean_average_precision": 1.0,
+    "recall_at_important": 0.2,
+    "importance_weighted_coverage": 0.11111111111111109,
+    "matched_claims": [
+      {
+        "gt_text": "Harvard University published a study in the federal government's journal on July 27, 2012 that confirms fluoride lowers IQs",
+        "sys_text": "Fluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.",
+        "gt_importance": 0.95,
+        "sys_importance": 0.85,
+        "importance_error": 0.09999999999999998
+      }
+    ],
+    "missed_claims": [
+      "A Harvard University study published on July 26 in the National Institute of Health journal finds that fluoride lowers children's IQ",
+      "Fluoridation of water supply causes retardation in children, making children's IQs lower",
+      "Harvard University studies published in April 2006 show a link between fluorinated water and bone cancer in boys",
+      "An OBGYN doctor recommended that babies be fed special water with extra fluoride for their feedings to help their teeth",
+      "Infant formula mixed with fluoridated water delivers 100-200 times more fluoride than breastmilk",
+      "People in Austin, Texas live in an area with naturally over-fluorinated water and have white spots on their teeth and act like dumbasses with low IQ",
+      "White spots on teeth indicate fluorosis caused by too much fluoride",
+      "People who are angry or afraid have lower IQs and fluoride consumption contributes to this",
+      "America's children have the lowest IQs in the world due to fluoride consumption",
+      "Fluoride is absorbed through the teeth topically, not through the body by drinking it",
+      "Baby teeth fall out and get replaced, so it doesn't make sense to give fluoride to babies for teeth that will be lost"
+    ],
+    "extra_claims": [],
+    "importance_mae": 0.09999999999999998,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 1.0,
+    "stance_accuracy": 1.0,
+    "correct_verdicts": 1,
+    "total_verdicts": 1,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.08333333333333333,
+    "verdict_accuracy": 1.0,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.00316065,
+    "total_time_seconds": 37.42651414871216,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.0
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 4
+    },
+    "avg_evidence_per_claim": 4.0
+  },
+  "ground_truth_claims_count": 12,
+  "system_claims_count": 1
+}

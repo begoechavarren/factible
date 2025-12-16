@@ -1,0 +1,361 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:13:51.589601",
+    "latency_seconds": 10.76,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nIf, for the same work, women make only 77 cents for every dollar a man makes, why don\u2019t businesses hire only women? Wages are the biggest expense for most businesses. So, hiring only women would reduce costs by nearly a quarter \u2013 and that would go right to the bottom line. Don\u2019t businesses want to be profitable? Or, are they just really bad at math? Well, actually, it\u2019s the feminists, celebrities and politicians spreading this wage gap myth who have the math problem. Here\u2019s why: The 77-cents-on-the-dollar statistic is calculated by dividing the median earnings of all women working full-time by the median earnings of all men working full-time. In other words, if the average income of all men is, say, 40,000 dollars a year, and the average annual income of all women is, say, 30,800 dollars, that would mean that women earn 77 cents for every dollar a man earns. 30,800 divided by 40,000 equals .77. But these calculations don\u2019t reveal a gender wage injustice because it doesn\u2019t take into account occupation, position, education or hours worked per week. Even a study by the American Association of University Women, a feminist organization, shows that the actual wage gap shrinks to only 6.6 cents when you factor in different choices men and women make. And the key word here is \u201cchoice.\u201d The small wage gap that does exist has nothing to do with paying women less, let alone with sexism; it has to do with differences in individual career choices that men and women make. In 2009, the U.S. Department of Labor released a paper that examined more than 50 peer-reviewed studies and concluded that the oft-cited 23 percent wage gap \u201cmay be almost entirely the result of individual choices being made by both male and female workers.\u201d Well, let\u2019s look at some of those choices. Georgetown University compiled a list of the five best-paying college majors, and the percentage of men or women majoring in those fields: Number 1 best-paying major: Petroleum Engineering: 87% male Number 2: Pharmaceutical Sciences: 48% male 3: Mathematics and Computer Science: 67% male 4: Aerospace Engineering: 88% male 5: Chemical Engineering: 72% male Notice that women out-represent men in only one of the five top-paying majors \u2013 by only a few percentage points. Now consider the same study\u2019s list of the five worst paying college majors: Number 1: Counseling and Psychology: 74% female Number 2: Early Childhood Education: 97% female 3: Theology and Religious Vocations: 66% male 4: Human Services and Community Organization: 81% female 5: Social Work: 88% female Here, it\u2019s the women who lead in all but one category. Even within the same profession, men and women make different career choices that impact how much money they make. Take nursing, where male nurses on the whole earn 18% more than female nurses. The reason? Male nurses gravitate to the best-paying nursing specialties, they work longer hours, and disproportionately find jobs in cities with the highest compensation. Now, here\u2019s how one expert on nursing compensation, Professor Linda Aiken of the University of Pennsylvania, sums up the data: \u201cCareer choices and educational differences explain most, if not all, the gender gap in nursing.\u201d The Department of Labor paper concluded that once these differences are accounted for across all professions, the unexplained wage gap is somewhere between 4.8 and 7 percent \u2013 almost identical to the 6.6 percentage gap found by the AAUW. But why is there any gap at all? No one knows for sure, as both the AAUW and the Labor Department concede. There are so many variables that drive wages that no single study can cover them all. Few wage gap studies control for variables such as dangerous work environment; men are vastly overrepresented, for example, on oil rigs. And here\u2019s another variable: men are more willing and able to work long hours without advance notice. According to Harvard economist Claudia Goldin, even if two lawyers have the same education, same specialty, and work the same number of hours \u2014 firms pay more to someone who is willing to always be \u201con call\u201d and ready to be in the office when the firm needs them, as opposed to wanting a more regular schedule. This isn\u2019t sexism, it\u2019s just common sense. With more realistic categories and definitions, whatever wage gap remains would certainly narrow to point of vanishing. So it seems that business leaders aren\u2019t bad at math simply because they don\u2019t only hire women. Those who claim that for the same work women earn 77 cents on the dollar compared to men, on the other hand, are not merely bad at math --but at telling the truth. I\u2019m Christina Hoff Sommers of the American Enterprise Institute for Prager University.",
+    "input_length_chars": 4752,
+    "input_tokens_estimated": 1188,
+    "output": {
+      "claims": [
+        {
+          "text": "Women make only 77 cents for every dollar a man makes.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.85,
+          "context": "Claim about gender wage gap, speaker: Christina Hoff Sommers"
+        },
+        {
+          "text": "The 77-cents-on-the-dollar statistic is calculated by dividing the median earnings of all women working full-time by the median earnings of all men working full-time.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "Explanation of wage gap calculation, speaker: Christina Hoff Sommers"
+        },
+        {
+          "text": "The actual wage gap shrinks to only 6.6 cents when you factor in different choices men and women make.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Claim about wage gap after accounting for choices, speaker: Christina Hoff Sommers"
+        },
+        {
+          "text": "In 2009, the U.S. Department of Labor released a paper that examined more than 50 peer-reviewed studies and concluded that the 23 percent wage gap may be almost entirely the result of individual choices.",
+          "confidence": 0.9,
+          "category": "policy",
+          "importance": 0.75,
+          "context": "Reference to Department of Labor paper, speaker: Christina Hoff Sommers"
+        },
+        {
+          "text": "Georgetown University compiled a list of the five best-paying college majors, showing 87% male in Petroleum Engineering.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.55,
+          "context": "Data on college majors, speaker: Christina Hoff Sommers"
+        },
+        {
+          "text": "Male nurses earn 18% more than female nurses due to career choices and specialties.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Comparison of earnings in nursing, speaker: Christina Hoff Sommers"
+        },
+        {
+          "text": "The unexplained wage gap is somewhere between 4.8 and 7 percent after accounting for differences.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.65,
+          "context": "Claim about remaining wage gap, speaker: Christina Hoff Sommers"
+        },
+        {
+          "text": "Men are vastly overrepresented on oil rigs, which are dangerous work environments.",
+          "confidence": 0.8,
+          "category": "statistical",
+          "importance": 0.4,
+          "context": "Discussion of work environments affecting wages, speaker: Christina Hoff Sommers"
+        }
+      ],
+      "total_count": 8
+    },
+    "output_length_chars": 2843,
+    "output_tokens_estimated": 710,
+    "cost_usd": 0.0006042
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:13:58.845610",
+    "latency_seconds": 2.86,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Women make only 77 cents for every dollar a man makes.\nContext: Claim about gender wage gap, speaker: Christina Hoff Sommers\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 297,
+    "input_tokens_estimated": 74,
+    "output": {
+      "original_claim": "Women make only 77 cents for every dollar a man makes.",
+      "queries": [
+        {
+          "query": "Women earn 77 cents for every dollar men earn gender wage gap",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "gender wage gap women 77 cents men dollar",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 306,
+    "output_tokens_estimated": 76,
+    "cost_usd": 5.67e-05,
+    "context": {
+      "claim_index": 8,
+      "claim_text": "Men are vastly overrepresented on oil rigs, which are dangerous work environments."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:13:58.985418",
+    "latency_seconds": 2.99,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Men are vastly overrepresented on oil rigs, which are dangerous work environments.\nContext: Discussion of work environments affecting wages, speaker: Christina Hoff Sommers\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 345,
+    "input_tokens_estimated": 86,
+    "output": {
+      "original_claim": "Men are vastly overrepresented on oil rigs, which are dangerous work environments.",
+      "queries": [
+        {
+          "query": "Men overrepresented on oil rigs dangerous work environments",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "gender representation oil rigs safety risks",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 334,
+    "output_tokens_estimated": 83,
+    "cost_usd": 6.27e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Women make only 77 cents for every dollar a man makes.",
+      "query_index": 2,
+      "query_text": "gender wage gap women 77 cents men dollar"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:13:58.985941",
+    "latency_seconds": 2.99,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The 77-cents-on-the-dollar statistic is calculated by dividing the median earnings of all women working full-time by the median earnings of all men working full-time.\nContext: Explanation of wage gap calculation, speaker: Christina Hoff Sommers\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 417,
+    "input_tokens_estimated": 104,
+    "output": {
+      "original_claim": "The 77-cents-on-the-dollar statistic is calculated by dividing the median earnings of all women working full-time by the median earnings of all men working full-time.",
+      "queries": [
+        {
+          "query": "77 cents on the dollar wage gap calculation methodology",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "how is the gender wage gap calculated median earnings women men",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 434,
+    "output_tokens_estimated": 108,
+    "cost_usd": 8.04e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Women make only 77 cents for every dollar a man makes.",
+      "query_index": 2,
+      "query_text": "gender wage gap women 77 cents men dollar"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:13:59.253588",
+    "latency_seconds": 3.26,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The actual wage gap shrinks to only 6.6 cents when you factor in different choices men and women make.\nContext: Claim about wage gap after accounting for choices, speaker: Christina Hoff Sommers\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 367,
+    "input_tokens_estimated": 91,
+    "output": {
+      "original_claim": "The actual wage gap shrinks to only 6.6 cents when you factor in different choices men and women make.",
+      "queries": [
+        {
+          "query": "wage gap shrinks to 6.6 cents when factoring choices men women make",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "wage gap differences choices men women 6.6 cents",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 367,
+    "output_tokens_estimated": 91,
+    "cost_usd": 6.825e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The 77-cents-on-the-dollar statistic is calculated by dividing the median earnings of all women working full-time by the median earnings of all men working full-time.",
+      "query_index": 2,
+      "query_text": "how is the gender wage gap calculated median earnings women men"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:13:59.564610",
+    "latency_seconds": 3.57,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: In 2009, the U.S. Department of Labor released a paper that examined more than 50 peer-reviewed studies and concluded that the 23 percent wage gap may be almost entirely the result of individual choices.\nContext: Reference to Department of Labor paper, speaker: Christina Hoff Sommers\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 457,
+    "input_tokens_estimated": 114,
+    "output": {
+      "original_claim": "In 2009, the U.S. Department of Labor released a paper that examined more than 50 peer-reviewed studies and concluded that the 23 percent wage gap may be almost entirely the result of individual choices.",
+      "queries": [
+        {
+          "query": "2009 U.S. Department of Labor paper 50 peer-reviewed studies wage gap individual choices",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Department of Labor 2009 wage gap study individual choices",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 499,
+    "output_tokens_estimated": 124,
+    "cost_usd": 9.15e-05,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "The actual wage gap shrinks to only 6.6 cents when you factor in different choices men and women make.",
+      "query_index": 2,
+      "query_text": "wage gap differences choices men women 6.6 cents"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:14:32.830856",
+    "latency_seconds": 25.44,
+    "input_prompt": "Claim:\nIn 2009, the U.S. Department of Labor released a paper that examined more than 50 peer-reviewed studies and concluded that the 23 percent wage gap may be almost entirely the result of individual choices.\n\nArticle Title:\n[PDF] GAO-12-10 Gender Pay Differences: Progress Made, but Women ...\n\nFull Page Content:\nGAO defined less- educated workers as those having a high school degree or less and low- wage workers as those earning an hourly wage rate in ...\n\nProvide relevant evidence.",
+    "input_length_chars": 489,
+    "input_tokens_estimated": 122,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 3.15e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:14:33.086048",
+    "latency_seconds": 18.63,
+    "input_prompt": "Claim:\nMen are vastly overrepresented on oil rigs, which are dangerous work environments.\n\nArticle Title:\nOccupational Safety and Health of Women in Mining - PMC\n\nFull Page Content:\nFurthermore, recent research indicates that women in mining are at a higher risk of developing a work-related MSD than men (73% vs. 54.3%).\n\nProvide relevant evidence.",
+    "input_length_chars": 349,
+    "input_tokens_estimated": 87,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 2.625e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:14:36.030337",
+    "latency_seconds": 19.25,
+    "input_prompt": "Claim:\nMen are vastly overrepresented on oil rigs, which are dangerous work environments.\n\nArticle Title:\nManly Men, Oil Platforms, and Breaking Stereotypes - Baker Library\n\nFull Page Content:\nMen who work in dangerous places often act invulnerable to prove their merit as workers and as men\u2014objectives that can lead to decreased ...\n\nProvide relevant evidence.",
+    "input_length_chars": 361,
+    "input_tokens_estimated": 90,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses how men dominate dangerous work environments, such as oil rigs, and how this can lead to behaviors that may increase risk, supporting the claim of their overrepresentation in such settings.",
+      "overall_stance": "supports",
+      "key_quote": "Men who work in dangerous places often act invulnerable to prove their merit as workers and as men."
+    },
+    "output_length_chars": 396,
+    "output_tokens_estimated": 99,
+    "cost_usd": 7.29e-05
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:15:01.702974",
+    "latency_seconds": 19.14,
+    "input_prompt": "\nClaim: Men are vastly overrepresented on oil rigs, which are dangerous work environments.\nCategory: statistical\nExtraction confidence: 0.80\n\nEvidence:\nSUPPORTS (1 sources):\n  1. Manly Men, Oil Platforms, and Breaking Stereotypes - Baker Library | reliability=high (1.00)\n     URL: https://www.library.hbs.edu/working-knowledge/manly-men-oil-platforms-and-breaking-stereotypes\n     Summary: The article discusses how men dominate dangerous work environments, such as oil rigs, and how this can lead to behaviors that may increase risk, supporting the claim of their overrepresentation in such settings.\nUNCLEAR (4 sources):\n  1. Danger zone: Men, masculinity and occupational health and safety ... | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC4880472/\n     Summary: In general, men have demonstrated that they are more likely than women to engage in risky activities, such as smoking, alcohol overuse and unsafe sexual ...\n  2. Occupational Safety and Health of Women in Mining - PMC | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC11152354/\n     Summary: Furthermore, recent research indicates that women in mining are at a higher risk of developing a work-related MSD than men (73% vs. 54.3%).\n  3. Women's experiences working in the oil and gas industry in Canada | reliability=high (0.85)\n     URL: https://www.sciencedirect.com/science/article/abs/pii/S2214790X21000277\n     Summary: Women remain vastly underrepresented in the oil and gas workforce. As such, they are subject to gender-based discrimination and harassment, perpetuated by a ...\n  4. How male oil rig staff learned to lose their machismo | BPS | reliability=medium (0.60)\n     URL: https://www.bps.org.uk/research-digest/how-male-oil-rig-staff-learned-lose-their-machismo\n     Summary: \"Dangerous workplaces provide a window on how processes associated with masculinity unfold in organisations.\"\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1961,
+    "input_tokens_estimated": 490,
+    "output": {
+      "overall_stance": "supports",
+      "confidence": "high",
+      "summary": "The evidence strongly supports the claim that men are overrepresented on oil rigs, with a high-reliability source indicating that men dominate these dangerous work environments, which can lead to increased risk behaviors."
+    },
+    "output_length_chars": 283,
+    "output_tokens_estimated": 70,
+    "cost_usd": 0.0001155
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:15:02.858291",
+    "latency_seconds": 11.33,
+    "input_prompt": "\nClaim: Women make only 77 cents for every dollar a man makes.\nCategory: statistical\nExtraction confidence: 0.90\n\nEvidence:\nUNCLEAR (4 sources):\n  1. Did You Know That Women Are Still Paid Less Than Men? | reliability=high (1.00)\n     URL: https://obamawhitehouse.archives.gov/equal-pay/myth\n     Summary: On average, full-time working women earn just 78 cents for every dollar a man earns. This significant gap is more than a statistic -- it has real life ...\n  2. Gender pay gap in U.S. has narrowed slightly over 2 decades | reliability=high (0.85)\n     URL: https://www.pewresearch.org/short-reads/2025/03/04/gender-pay-gap-in-us-has-narrowed-slightly-over-2-decades/\n     Summary: The gender gap in pay has slightly narrowed in the United States over the past 20 years or so. In 2024, women earned an average of 85% of what men earned.\n  3. Equal pay for work of equal value | UN Women \u2013 Headquarters | reliability=medium (0.60)\n     URL: https://www.unwomen.org/en/news/in-focus/csw61/equal-pay\n     Summary: Worldwide, women only make 77 cents for every dollar earned by men. As a result, there's a lifetime of income inequality between men and women.\n  4. Explaining the Gender Wage Gap - Center for American Progress | reliability=medium (0.60)\n     URL: https://www.americanprogress.org/article/explaining-the-gender-wage-gap/\n     Summary: The most commonly cited statistic for the gender wage gap asserts that women earn only 77 cents for every dollar earned by men.\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1512,
+    "input_tokens_estimated": 378,
+    "output": {
+      "overall_stance": "mixed",
+      "confidence": "medium",
+      "summary": "The claim that women make only 77 cents for every dollar a man makes is supported by some sources, such as the UN Women report and the Center for American Progress, which cite this statistic. However, other sources indicate that the figure is higher, with women earning 78 cents or 85 cents per dollar in different contexts. This discrepancy suggests a mixed understanding of the gender pay gap."
+    },
+    "output_length_chars": 456,
+    "output_tokens_estimated": 114,
+    "cost_usd": 0.0001251
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:15:03.008263",
+    "latency_seconds": 20.55,
+    "input_prompt": "\nClaim: In 2009, the U.S. Department of Labor released a paper that examined more than 50 peer-reviewed studies and concluded that the 23 percent wage gap may be almost entirely the result of individual choices.\nCategory: policy\nExtraction confidence: 0.90\n\nEvidence:\nUNCLEAR (6 sources):\n  1. [PDF] The Gender Wage Gap: Extent, Trends, and Explanations | reliability=high (1.00)\n     URL: https://www.dol.gov/sites/dolgov/files/OALJ/PUBLIC/FOIA/Frequently_Requested_Records/Oracle_2017_OFC_00006/Oracle_2017OFC00006_DOC_588.pdf\n     Summary: Using PSID microdata over the 1980-2010, we provide new empirical evidence on the extent of and trends in the gender wage gap, which declined considerably ...\n  2. The Gender Wage Gap, Between-Firm Inequality, and Devaluation | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC10704960/\n     Summary: Abstract. Unequal sorting of men and women into higher and lower wage firms contributes significantly to the gender wage gap according to recent analysis of ...\n  3. The Impact of Age on the Gender Pay Gap in the Federal Sector | reliability=high (1.00)\n     URL: https://www.eeoc.gov/federal-sector/reports/impact-age-gender-pay-gap-federal-sector\n     Summary: The U.S. Equal Employment Opportunity Commission (EEOC) enforces laws that prohibit gender discrimination and discrimination against workers age 40 and over.\n  4. [PDF] GAO-12-10 Gender Pay Differences: Progress Made, but Women ... | reliability=high (0.85)\n     URL: https://www.gao.gov/assets/files.gao.gov/assets/gao-12-10.pdf\n     Summary: GAO defined less- educated workers as those having a high school degree or less and low- wage workers as those earning an hourly wage rate in ...\n  5. Details in BLS Report Suggest That the 'gender Earnings Gap' Can ... | reliability=medium (0.60)\n     URL: https://www.aei.org/carpe-diem/details-in-bls-report-suggest-that-the-gender-earnings-gap-can-be-explained-by-age-marital-status-children-hours-worked-etc/\n     Summary: The differences in raw wages may be almost entirely the result of the individual choices being made by both male and female workers. Final ...\n  6. Wage Gap Myth Exposed \u2014 by Feminists | reliability=medium (0.60)\n     URL: https://www.aei.org/articles/wage-gap-myth-exposed-by-feminists/\n     Summary: It examined more than 50 peer-reviewed papers and concluded that the 23-cent wage gap \u201cmay be almost entirely the result of individual choices being made by ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2501,
+    "input_tokens_estimated": 625,
+    "output": {
+      "overall_stance": "mixed",
+      "confidence": "medium",
+      "summary": "The evidence presents a mixed view on the claim. While some sources, like the AEI report, suggest that individual choices may largely explain the wage gap, other high-reliability sources indicate that factors such as firm inequality and discrimination also play significant roles. This indicates that the claim may not fully capture the complexity of the wage gap."
+    },
+    "output_length_chars": 425,
+    "output_tokens_estimated": 106,
+    "cost_usd": 0.00015735
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:15:03.475153",
+    "latency_seconds": 21.1,
+    "input_prompt": "\nClaim: The 77-cents-on-the-dollar statistic is calculated by dividing the median earnings of all women working full-time by the median earnings of all men working full-time.\nCategory: statistical\nExtraction confidence: 0.90\n\nEvidence:\nUNCLEAR (6 sources):\n  1. [PDF] Estimating the Gender Wage Gap | reliability=high (0.90)\n     URL: https://digitalcommons.macalester.edu/cgi/viewcontent.cgi?article=1098&context=mathcs_honors\n     Summary: This objectifies to the. \"77 cents on the dollar\" saying. However, the wage gap caused by gender discrimination still exists. At this stage, we are not able to ...\n  2. [PDF] A Window Into the Wage Gap: What's Behind It and How to Close It | reliability=high (0.85)\n     URL: https://nwlc.org/wp-content/uploads/2023/01/2022-Wage-Gap-Factsheet-1.10.23.pdf\n     Summary: typically paid just 77 cents for every dollar paid to men. The 77-cent gender wage gap calculation for workers, regardless of how many hours ...\n  3. A Dollar Short: What's Holding Women Back from Equal Pay? | reliability=high (0.85)\n     URL: https://www.thirdway.org/report/a-dollar-short-whats-holding-women-back-from-equal-pay\n     Summary: In 2015, the pay gap clocked in at 77 cents for 45- to 54-year-olds and 74 cents for 55- to 64-year-olds. Here's how to think about what's ...\n  4. Gender pay gap in U.S. has narrowed slightly over 2 decades | reliability=high (0.85)\n     URL: https://www.pewresearch.org/short-reads/2025/03/04/gender-pay-gap-in-us-has-narrowed-slightly-over-2-decades/\n     Summary: The gender pay gap measures the difference in median hourly earnings between men and women who work full or part time in the United States.\n  5. What is the gender pay gap and is it real? - Economic Policy Institute | reliability=high (0.85)\n     URL: https://www.epi.org/publication/what-is-the-gender-pay-gap-and-is-it-real/\n     Summary: The gender wage gap is a measure of what women are paid relative to men. It is commonly calculated by dividing women's wages by men's wages, and ...\n  6. [PDF] THE NOT SO SIMPLE TRUTH - AAUW | reliability=medium (0.60)\n     URL: https://www.aauw.org/app/uploads/2025/03/The_Simple_Truth_Gender_Pay_Gap_2025.pdf\n     Summary: The pay gap is the difference in men's and women's median earnings, usually reported as the earnings ratio between men and women. The median ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2369,
+    "input_tokens_estimated": 592,
+    "output": {
+      "overall_stance": "mixed",
+      "confidence": "medium",
+      "summary": "The evidence presents a mixed view on the calculation of the 77-cents-on-the-dollar statistic. While several sources confirm that it is calculated by dividing women's median earnings by men's median earnings (e.g., Economic Policy Institute), others highlight that the statistic may not fully capture the complexities of the gender wage gap, which can be influenced by various factors beyond simple earnings comparisons."
+    },
+    "output_length_chars": 481,
+    "output_tokens_estimated": 120,
+    "cost_usd": 0.0001608
+  }
+]

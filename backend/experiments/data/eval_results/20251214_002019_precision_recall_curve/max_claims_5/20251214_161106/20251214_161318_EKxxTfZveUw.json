@@ -1,0 +1,116 @@
+{
+  "video_id": "EKxxTfZveUw",
+  "timestamp": "2025-12-14T16:13:18.616179",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.8,
+    "recall": 0.25,
+    "f1_score": 0.38095238095238093,
+    "true_positives": 4,
+    "false_positives": 1,
+    "false_negatives": 12,
+    "mean_average_precision": 0.6791666666666667,
+    "recall_at_important": 0.5,
+    "importance_weighted_coverage": 0.2987012987012987,
+    "matched_claims": [
+      {
+        "gt_text": "In Wisconsin, 220,244 votes were cast from individuals who were exempted from showing voter ID under the indefinitely confined status",
+        "sys_text": "In Wisconsin, 220,044 votes were cast without showing ID, while the vote difference was 20,625.",
+        "gt_importance": 0.8,
+        "sys_importance": 0.7,
+        "importance_error": 0.10000000000000009
+      },
+      {
+        "gt_text": "Pennsylvania had 121,240 more votes than voters according to the SURE system",
+        "sys_text": "In Pennsylvania, there were 121,240 more votes than registered voters, with a vote difference of 8,555.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.7,
+        "importance_error": 0.20000000000000007
+      },
+      {
+        "gt_text": "Maricopa County accepted 20,500 mail-in ballots after election day, which were illegal votes",
+        "sys_text": "In Arizona, Maricopa County accepted 20,500 mail-in ballots after Election Day, with a vote margin of 10,457.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.7,
+        "importance_error": 0.20000000000000007
+      },
+      {
+        "gt_text": "Michigan had 271,000 ballots delivered in a van at 3:30 a.m. past the 8:00 p.m. deadline",
+        "sys_text": "Michigan had 271,000 ballots delivered after the 8:00 p.m. deadline on Election Day.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.7,
+        "importance_error": 0.15000000000000002
+      }
+    ],
+    "missed_claims": [
+      "Ruby Freeman ran the same stack of ballots through the counting machines multiple times",
+      "Ruby Freeman was given the presidential citizens medal by Joe Biden for her work during the 2020 election",
+      "Rudy Giuliani was not allowed during the trial to submit one piece of evidence to the court in the defamation case",
+      "Fulton County certified 59,400 in-person votes on Election Day despite the fact that only 14,522 voted in person, inflating the vote total by approximately 37,000 votes",
+      "In Georgia, likely 67,184 votes were cast from voters with invalid residency who did not actually live in Georgia",
+      "Nursing homes in Milwaukee, Dane and Racine counties had 100% turnout",
+      "Merill Barrett who was 104 years old and did not recognize her own children had a ballot cast in her name in the 2020 presidential election",
+      "The Maricopa County elections Department withheld information about late ballots from public records requests for 7 months after the elections",
+      "Two precincts in Puma County had over 100% turnout for mail-in ballots",
+      "Katie Hobbs was the Arizona Secretary of State during the 2020 election and she certified her own election count naming herself the winner in 2022",
+      "GBI Strategies was raided by police in Michigan and thousands of fraudulent voter registrations were found",
+      "GBI Strategies was funded by a super PAC called Black PAC which paid the firm 11,254,919 dollars to register voters for Joe Biden in 2020"
+    ],
+    "extra_claims": [
+      "In Georgia, Trump lost by 11,779 votes, but evidence suggests 37,000 fake ballots were counted."
+    ],
+    "importance_mae": 0.16250000000000006,
+    "claim_quality_avg": 0.85
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.25,
+    "stance_accuracy": 0.25,
+    "correct_verdicts": 1,
+    "total_verdicts": 4,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "In Wisconsin, 220,244 votes were cast from individuals who were exempted from showing voter ID under the indefinitely confined status",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Pennsylvania had 121,240 more votes than voters according to the SURE system",
+        "gt_verdict": "REFUTES",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Maricopa County accepted 20,500 mail-in ballots after election day, which were illegal votes",
+        "gt_verdict": "UNCLEAR",
+        "sys_verdict": "REFUTES"
+      }
+    ],
+    "explanation_quality_avg": 0.62
+  },
+  "end_to_end": {
+    "claim_coverage": 0.25,
+    "verdict_accuracy": 0.25,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.00735705,
+    "total_time_seconds": 137.14666891098022,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.96,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.7
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.5599999999999999,
+    "source_reliability_distribution": {
+      "high": 27
+    },
+    "avg_evidence_per_claim": 5.4
+  },
+  "ground_truth_claims_count": 16,
+  "system_claims_count": 5
+}

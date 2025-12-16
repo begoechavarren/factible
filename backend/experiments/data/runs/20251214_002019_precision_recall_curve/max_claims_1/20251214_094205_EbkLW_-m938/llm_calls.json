@@ -1,0 +1,346 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:42:15.244154",
+    "latency_seconds": 8.15,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nwhat is democracy have you ever wondered how the people in a country get to decide who their leaders are and what rules they should follow this is all about democracy democracy is a system where the citizens of a country have the power to choose their leaders and influence the decisions made by the government the word democracy comes from ancient Greek meaning citizens power let's go back in time to see where this idea started in ient Athens citizens would Gather in an assembly to discuss and decide on laws and other important matters however it wasn't perfect only men who were citizens could vote while women and slaves were excluded fast forward to the 18th century the French Revolution marked a significant Turning Point French citizens overthrew the absolute monarchy and for the first time the idea of universal suffrage emerged this meant that any citizen regardless of wealth could vote however women still couldn't vote at this time over time Democratic ideas spread to many other countries today democracy is based on the principle that everyone has equal rights and duties it's about respecting each other and ensuring that everyone has a say in how the country is run in a democratic system citizens vote to elect their leaders and participate in the decision- making process this is done through elections where people choose their representatives the government is accountable to the people and the rule of law ensures that everyone is treated fairly civic education plays a crucial role in sustaining democracy it teaches citizens about their rights responsibilities and how to participate in the Democratic process this education helps people understand the complexities of political life and how to make informed decisions in summary democracy is about giving power to the people ensuring everyone's voice is heard and maintaining a fair and just Society it's a system that has evolved over centuries and continues to be refined to ensure equality and justice for all",
+    "input_length_chars": 2049,
+    "input_tokens_estimated": 512,
+    "output": {
+      "claims": [
+        {
+          "text": "Democracy is a system where citizens have the power to choose their leaders and influence government decisions.",
+          "confidence": 0.9,
+          "category": "political",
+          "importance": 0.6,
+          "context": "Definition of democracy, general overview."
+        },
+        {
+          "text": "The word democracy comes from ancient Greek meaning citizens power.",
+          "confidence": 0.8,
+          "category": "etymological",
+          "importance": 0.25,
+          "context": "Etymology of the term 'democracy'."
+        },
+        {
+          "text": "In ancient Athens, only men who were citizens could vote, while women and slaves were excluded.",
+          "confidence": 0.9,
+          "category": "historical",
+          "importance": 0.7,
+          "context": "Historical voting rights in ancient Athens."
+        },
+        {
+          "text": "The French Revolution marked a significant turning point for democracy in the 18th century.",
+          "confidence": 0.85,
+          "category": "historical",
+          "importance": 0.6,
+          "context": "Impact of the French Revolution on democratic ideas."
+        },
+        {
+          "text": "The idea of universal suffrage emerged during the French Revolution, allowing any citizen to vote regardless of wealth.",
+          "confidence": 0.9,
+          "category": "historical",
+          "importance": 0.7,
+          "context": "Universal suffrage concept from the French Revolution."
+        },
+        {
+          "text": "Women still couldn't vote during the time of the French Revolution.",
+          "confidence": 0.85,
+          "category": "historical",
+          "importance": 0.6,
+          "context": "Voting rights for women during the French Revolution."
+        },
+        {
+          "text": "Today, democracy is based on the principle that everyone has equal rights and duties.",
+          "confidence": 0.9,
+          "category": "political",
+          "importance": 0.6,
+          "context": "Modern principles of democracy."
+        },
+        {
+          "text": "Civic education plays a crucial role in sustaining democracy by teaching citizens about their rights and responsibilities.",
+          "confidence": 0.85,
+          "category": "educational",
+          "importance": 0.55,
+          "context": "Role of civic education in democracy."
+        }
+      ],
+      "total_count": 8
+    },
+    "output_length_chars": 2489,
+    "output_tokens_estimated": 622,
+    "cost_usd": 0.00045
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:42:19.254663",
+    "latency_seconds": 2.77,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: In ancient Athens, only men who were citizens could vote, while women and slaves were excluded.\nContext: Historical voting rights in ancient Athens.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 321,
+    "input_tokens_estimated": 80,
+    "output": {
+      "original_claim": "In ancient Athens, only men who were citizens could vote, while women and slaves were excluded.",
+      "queries": [
+        {
+          "query": "voting rights in ancient Athens men citizens women slaves",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "who could vote in ancient Athens citizenship women slaves",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 359,
+    "output_tokens_estimated": 89,
+    "cost_usd": 6.54e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "In ancient Athens, only men who were citizens could vote, while women and slaves were excluded."
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:42:41.304523",
+    "latency_seconds": 2.39,
+    "input_prompt": "Claim:\nIn ancient Athens, only men who were citizens could vote, while women and slaves were excluded.\n\nArticle Title:\nDemocracy (Ancient Greece) - National Geographic Education\n\nGoogle Search Snippet:\n... slaves were not considered citizens and therefore could not vote. Each year 500 names were chosen from all the citizens of ancient Athens.\n\nFull Page Content:\nDemocracy in ancient Greece served as one of the first forms of self-rule government in the ancient world. The system and ideas employed by the ancient Greeks had profound influences on how democracy developed, and its impact on the formation of the U.S. government.\n5 - 8\nSocial Studies, Ancient Civilizations\nThe ancient Greeks were the first to create a democracy. The word \u201cdemocracy\u201d comes from two Greek words that mean people (demos) and rule (kratos). Democracy is the idea that the citizens of a country should take an active role in the government of their country and manage it directly or through elected representatives. In addition, it supports the idea that the people can replace their government through peaceful transfers of power rather than violent uprising or revolution. Thus, a key part of democracy is that the people have a voice.\nThe first known democracy in the world was in Athens. Athenian democracy developed around the fifth century B.C.E. The Greek idea of democracy was different from present-day democracy because, in Athens, all adult citizens were required to take an active part in the government. If they did not fulfill their duty they would be fined and sometimes marked with red paint. The Athenian definition of \u201ccitizens\u201d was also different from modern-day citizens: only free men were considered citizens in Athens. Women, children, and slaves were not considered citizens and therefore could not vote.\nEach year 500 names were chosen from all the citizens of ancient Athens. Those 500 citizens had to actively serve in the government for one year. During that year, they were responsible for making new laws and controlled all parts of the political process. When a new law was proposed, all the citizens of Athens had the opportunity to vote on it. To vote, citizens had to attend the assembly on the day the vote took place. This form of government is called direct democracy.\nThe United States has a representative democracy. Representative democracy is a government in which citizens vote for representatives who create and change laws that govern the people rather than getting to vote directly on the laws themselves.\nCitizenship is the status of being a citizen, belonging to a nation, and having the associated rights and responsibilities.\nAncient Greek politics, philosophy, art and scientific achievements greatly influenced Western civilizations today. One example of their legacy is the Olympic Games.\nNational Geographic Headquarters 1145 17th Street NW Washington, DC 20036\nNational Geographic Society is a 501 (c)(3) organization. \u00a9 1996 - 2025 National Geographic Society. All rights reserved.\n\nProvide relevant evidence.",
+    "input_length_chars": 3047,
+    "input_tokens_estimated": 761,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that in ancient Athens, only free men were considered citizens and had the right to vote, while women, children, and slaves were excluded from citizenship and voting rights.",
+      "overall_stance": "supports",
+      "key_quote": "Women, children, and slaves were not considered citizens and therefore could not vote."
+    },
+    "output_length_chars": 367,
+    "output_tokens_estimated": 91,
+    "cost_usd": 0.00016875,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "In ancient Athens, only men who were citizens could vote, while women and slaves were excluded.",
+      "query_index": 2,
+      "query_text": "who could vote in ancient Athens citizenship women slaves"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:42:41.757943",
+    "latency_seconds": 2.43,
+    "input_prompt": "Claim:\nIn ancient Athens, only men who were citizens could vote, while women and slaves were excluded.\n\nArticle Title:\nDemocracy (Ancient Greece) - National Geographic Education\n\nGoogle Search Snippet:\n... slaves were not considered citizens and therefore could not vote. Each year 500 names were chosen from all the citizens of ancient Athens.\n\nFull Page Content:\nDemocracy in ancient Greece served as one of the first forms of self-rule government in the ancient world. The system and ideas employed by the ancient Greeks had profound influences on how democracy developed, and its impact on the formation of the U.S. government.\n5 - 8\nSocial Studies, Ancient Civilizations\nThe ancient Greeks were the first to create a democracy. The word \u201cdemocracy\u201d comes from two Greek words that mean people (demos) and rule (kratos). Democracy is the idea that the citizens of a country should take an active role in the government of their country and manage it directly or through elected representatives. In addition, it supports the idea that the people can replace their government through peaceful transfers of power rather than violent uprising or revolution. Thus, a key part of democracy is that the people have a voice.\nThe first known democracy in the world was in Athens. Athenian democracy developed around the fifth century B.C.E. The Greek idea of democracy was different from present-day democracy because, in Athens, all adult citizens were required to take an active part in the government. If they did not fulfill their duty they would be fined and sometimes marked with red paint. The Athenian definition of \u201ccitizens\u201d was also different from modern-day citizens: only free men were considered citizens in Athens. Women, children, and slaves were not considered citizens and therefore could not vote.\nEach year 500 names were chosen from all the citizens of ancient Athens. Those 500 citizens had to actively serve in the government for one year. During that year, they were responsible for making new laws and controlled all parts of the political process. When a new law was proposed, all the citizens of Athens had the opportunity to vote on it. To vote, citizens had to attend the assembly on the day the vote took place. This form of government is called direct democracy.\nThe United States has a representative democracy. Representative democracy is a government in which citizens vote for representatives who create and change laws that govern the people rather than getting to vote directly on the laws themselves.\nCitizenship is the status of being a citizen, belonging to a nation, and having the associated rights and responsibilities.\nAncient Greek politics, philosophy, art and scientific achievements greatly influenced Western civilizations today. One example of their legacy is the Olympic Games.\nNational Geographic Headquarters 1145 17th Street NW Washington, DC 20036\nNational Geographic Society is a 501 (c)(3) organization. \u00a9 1996 - 2025 National Geographic Society. All rights reserved.\n\nProvide relevant evidence.",
+    "input_length_chars": 3047,
+    "input_tokens_estimated": 761,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that in ancient Athens, only free men were considered citizens and had the right to vote, while women, children, and slaves were excluded from citizenship and voting rights.",
+      "overall_stance": "supports",
+      "key_quote": "Women, children, and slaves were not considered citizens and therefore could not vote."
+    },
+    "output_length_chars": 367,
+    "output_tokens_estimated": 91,
+    "cost_usd": 0.00016875,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "In ancient Athens, only men who were citizens could vote, while women and slaves were excluded.",
+      "query_index": 2,
+      "query_text": "who could vote in ancient Athens citizenship women slaves"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:42:41.891715",
+    "latency_seconds": 2.57,
+    "input_prompt": "Claim:\nIn ancient Athens, only men who were citizens could vote, while women and slaves were excluded.\n\nArticle Title:\nIf Athens Had Included Women: How a Broader Democracy Could ...\n\nGoogle Search Snippet:\nThe greatest silence of all was slavery. Enslaved people formed the backbone of Athens' economy, working in homes, mines, workshops, and ...\n\nFull Page Content:\nDemocracy in ancient Greece served as one of the first forms of self-rule government in the ancient world. The system and ideas employed by the ancient Greeks had profound influences on how democracy developed, and its impact on the formation of the U.S. government.\n5 - 8\nSocial Studies, Ancient Civilizations\nThe ancient Greeks were the first to create a democracy. The word \u201cdemocracy\u201d comes from two Greek words that mean people (demos) and rule (kratos). Democracy is the idea that the citizens of a country should take an active role in the government of their country and manage it directly or through elected representatives. In addition, it supports the idea that the people can replace their government through peaceful transfers of power rather than violent uprising or revolution. Thus, a key part of democracy is that the people have a voice.\nThe first known democracy in the world was in Athens. Athenian democracy developed around the fifth century B.C.E. The Greek idea of democracy was different from present-day democracy because, in Athens, all adult citizens were required to take an active part in the government. If they did not fulfill their duty they would be fined and sometimes marked with red paint. The Athenian definition of \u201ccitizens\u201d was also different from modern-day citizens: only free men were considered citizens in Athens. Women, children, and slaves were not considered citizens and therefore could not vote.\nEach year 500 names were chosen from all the citizens of ancient Athens. Those 500 citizens had to actively serve in the government for one year. During that year, they were responsible for making new laws and controlled all parts of the political process. When a new law was proposed, all the citizens of Athens had the opportunity to vote on it. To vote, citizens had to attend the assembly on the day the vote took place. This form of government is called direct democracy.\nThe United States has a representative democracy. Representative democracy is a government in which citizens vote for representatives who create and change laws that govern the people rather than getting to vote directly on the laws themselves.\nCitizenship is the status of being a citizen, belonging to a nation, and having the associated rights and responsibilities.\nAncient Greek politics, philosophy, art and scientific achievements greatly influenced Western civilizations today. One example of their legacy is the Olympic Games.\nNational Geographic Headquarters 1145 17th Street NW Washington, DC 20036\nNational Geographic Society is a 501 (c)(3) organization. \u00a9 1996 - 2025 National Geographic Society. All rights reserved.\n\nProvide relevant evidence.",
+    "input_length_chars": 3050,
+    "input_tokens_estimated": 762,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that in ancient Athens, only free men were considered citizens and thus had the right to vote, while women, children, and slaves were excluded from citizenship and voting rights.",
+      "overall_stance": "supports",
+      "key_quote": "The Athenian definition of 'citizens' was also different from modern-day citizens: only free men were considered citizens in Athens. Women, children, and slaves were not considered citizens and therefore could not vote."
+    },
+    "output_length_chars": 505,
+    "output_tokens_estimated": 126,
+    "cost_usd": 0.0001899,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "In ancient Athens, only men who were citizens could vote, while women and slaves were excluded.",
+      "query_index": 2,
+      "query_text": "who could vote in ancient Athens citizenship women slaves"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:42:42.060365",
+    "latency_seconds": 3.15,
+    "input_prompt": "Claim:\nIn ancient Athens, only men who were citizens could vote, while women and slaves were excluded.\n\nArticle Title:\nAncient Greeks Voted to Kick Politicians Out of Athens if Enough ...\n\nGoogle Search Snippet:\n... women, enslaved workers and foreign-born residents. Though the ... Athens to vote a particular citizen to be ostracised from the polis.\n\nFull Page Content:\nDemocracy in ancient Greece served as one of the first forms of self-rule government in the ancient world. The system and ideas employed by the ancient Greeks had profound influences on how democracy developed, and its impact on the formation of the U.S. government.\n5 - 8\nSocial Studies, Ancient Civilizations\nThe ancient Greeks were the first to create a democracy. The word \u201cdemocracy\u201d comes from two Greek words that mean people (demos) and rule (kratos). Democracy is the idea that the citizens of a country should take an active role in the government of their country and manage it directly or through elected representatives. In addition, it supports the idea that the people can replace their government through peaceful transfers of power rather than violent uprising or revolution. Thus, a key part of democracy is that the people have a voice.\nThe first known democracy in the world was in Athens. Athenian democracy developed around the fifth century B.C.E. The Greek idea of democracy was different from present-day democracy because, in Athens, all adult citizens were required to take an active part in the government. If they did not fulfill their duty they would be fined and sometimes marked with red paint. The Athenian definition of \u201ccitizens\u201d was also different from modern-day citizens: only free men were considered citizens in Athens. Women, children, and slaves were not considered citizens and therefore could not vote.\nEach year 500 names were chosen from all the citizens of ancient Athens. Those 500 citizens had to actively serve in the government for one year. During that year, they were responsible for making new laws and controlled all parts of the political process. When a new law was proposed, all the citizens of Athens had the opportunity to vote on it. To vote, citizens had to attend the assembly on the day the vote took place. This form of government is called direct democracy.\nThe United States has a representative democracy. Representative democracy is a government in which citizens vote for representatives who create and change laws that govern the people rather than getting to vote directly on the laws themselves.\nCitizenship is the status of being a citizen, belonging to a nation, and having the associated rights and responsibilities.\nAncient Greek politics, philosophy, art and scientific achievements greatly influenced Western civilizations today. One example of their legacy is the Olympic Games.\nNational Geographic Headquarters 1145 17th Street NW Washington, DC 20036\nNational Geographic Society is a 501 (c)(3) organization. \u00a9 1996 - 2025 National Geographic Society. All rights reserved.\n\nProvide relevant evidence.",
+    "input_length_chars": 3054,
+    "input_tokens_estimated": 763,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that in ancient Athens, only free men were considered citizens and thus had the right to vote, while women, children, and slaves were excluded from citizenship and voting rights.",
+      "overall_stance": "supports",
+      "key_quote": "\"The Athenian definition of 'citizens' was also different from modern-day citizens: only free men were considered citizens in Athens. Women, children, and slaves were not considered citizens and therefore could not vote.\""
+    },
+    "output_length_chars": 509,
+    "output_tokens_estimated": 127,
+    "cost_usd": 0.00019065,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "In ancient Athens, only men who were citizens could vote, while women and slaves were excluded.",
+      "query_index": 2,
+      "query_text": "who could vote in ancient Athens citizenship women slaves"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:42:42.340904",
+    "latency_seconds": 3.42,
+    "input_prompt": "Claim:\nIn ancient Athens, only men who were citizens could vote, while women and slaves were excluded.\n\nArticle Title:\n[PDF] Women in Ancient Greece - Cedarbank School\n\nGoogle Search Snippet:\neven for female Athenian citizens \u2013 female slaves basically had no rights at all, but even ... Slave men d. Slave women e. Soldiers. Page 5. 6. In what Greek ...\n\nFull Page Content:\nDemocracy in ancient Greece served as one of the first forms of self-rule government in the ancient world. The system and ideas employed by the ancient Greeks had profound influences on how democracy developed, and its impact on the formation of the U.S. government.\n5 - 8\nSocial Studies, Ancient Civilizations\nThe ancient Greeks were the first to create a democracy. The word \u201cdemocracy\u201d comes from two Greek words that mean people (demos) and rule (kratos). Democracy is the idea that the citizens of a country should take an active role in the government of their country and manage it directly or through elected representatives. In addition, it supports the idea that the people can replace their government through peaceful transfers of power rather than violent uprising or revolution. Thus, a key part of democracy is that the people have a voice.\nThe first known democracy in the world was in Athens. Athenian democracy developed around the fifth century B.C.E. The Greek idea of democracy was different from present-day democracy because, in Athens, all adult citizens were required to take an active part in the government. If they did not fulfill their duty they would be fined and sometimes marked with red paint. The Athenian definition of \u201ccitizens\u201d was also different from modern-day citizens: only free men were considered citizens in Athens. Women, children, and slaves were not considered citizens and therefore could not vote.\nEach year 500 names were chosen from all the citizens of ancient Athens. Those 500 citizens had to actively serve in the government for one year. During that year, they were responsible for making new laws and controlled all parts of the political process. When a new law was proposed, all the citizens of Athens had the opportunity to vote on it. To vote, citizens had to attend the assembly on the day the vote took place. This form of government is called direct democracy.\nThe United States has a representative democracy. Representative democracy is a government in which citizens vote for representatives who create and change laws that govern the people rather than getting to vote directly on the laws themselves.\nCitizenship is the status of being a citizen, belonging to a nation, and having the associated rights and responsibilities.\nAncient Greek politics, philosophy, art and scientific achievements greatly influenced Western civilizations today. One example of their legacy is the Olympic Games.\nNational Geographic Headquarters 1145 17th Street NW Washington, DC 20036\nNational Geographic Society is a 501 (c)(3) organization. \u00a9 1996 - 2025 National Geographic Society. All rights reserved.\n\nProvide relevant evidence.",
+    "input_length_chars": 3056,
+    "input_tokens_estimated": 764,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that in ancient Athens, only free men were considered citizens and had the right to vote, while women, children, and slaves were excluded from citizenship and voting rights.",
+      "overall_stance": "supports",
+      "key_quote": "\"The Athenian definition of 'citizens' was also different from modern-day citizens: only free men were considered citizens in Athens. Women, children, and slaves were not considered citizens and therefore could not vote.\""
+    },
+    "output_length_chars": 504,
+    "output_tokens_estimated": 126,
+    "cost_usd": 0.0001902,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "In ancient Athens, only men who were citizens could vote, while women and slaves were excluded.",
+      "query_index": 2,
+      "query_text": "who could vote in ancient Athens citizenship women slaves"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:42:43.387139",
+    "latency_seconds": 4.06,
+    "input_prompt": "Claim:\nIn ancient Athens, only men who were citizens could vote, while women and slaves were excluded.\n\nArticle Title:\nAthenian democracy | Research Starters - EBSCO\n\nGoogle Search Snippet:\nNotably, the political rights were confined to adult male citizens, excluding women, enslaved individuals, and non-residents from the democratic process. This ...\n\nFull Page Content:\nDemocracy in ancient Greece served as one of the first forms of self-rule government in the ancient world. The system and ideas employed by the ancient Greeks had profound influences on how democracy developed, and its impact on the formation of the U.S. government.\n5 - 8\nSocial Studies, Ancient Civilizations\nThe ancient Greeks were the first to create a democracy. The word \u201cdemocracy\u201d comes from two Greek words that mean people (demos) and rule (kratos). Democracy is the idea that the citizens of a country should take an active role in the government of their country and manage it directly or through elected representatives. In addition, it supports the idea that the people can replace their government through peaceful transfers of power rather than violent uprising or revolution. Thus, a key part of democracy is that the people have a voice.\nThe first known democracy in the world was in Athens. Athenian democracy developed around the fifth century B.C.E. The Greek idea of democracy was different from present-day democracy because, in Athens, all adult citizens were required to take an active part in the government. If they did not fulfill their duty they would be fined and sometimes marked with red paint. The Athenian definition of \u201ccitizens\u201d was also different from modern-day citizens: only free men were considered citizens in Athens. Women, children, and slaves were not considered citizens and therefore could not vote.\nEach year 500 names were chosen from all the citizens of ancient Athens. Those 500 citizens had to actively serve in the government for one year. During that year, they were responsible for making new laws and controlled all parts of the political process. When a new law was proposed, all the citizens of Athens had the opportunity to vote on it. To vote, citizens had to attend the assembly on the day the vote took place. This form of government is called direct democracy.\nThe United States has a representative democracy. Representative democracy is a government in which citizens vote for representatives who create and change laws that govern the people rather than getting to vote directly on the laws themselves.\nCitizenship is the status of being a citizen, belonging to a nation, and having the associated rights and responsibilities.\nAncient Greek politics, philosophy, art and scientific achievements greatly influenced Western civilizations today. One example of their legacy is the Olympic Games.\nNational Geographic Headquarters 1145 17th Street NW Washington, DC 20036\nNational Geographic Society is a 501 (c)(3) organization. \u00a9 1996 - 2025 National Geographic Society. All rights reserved.\n\nProvide relevant evidence.",
+    "input_length_chars": 3055,
+    "input_tokens_estimated": 763,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that in ancient Athens, only adult male citizens had the right to vote, explicitly excluding women, children, and slaves from the democratic process.",
+      "overall_stance": "supports",
+      "key_quote": "Notably, the political rights were confined to adult male citizens, excluding women, enslaved individuals, and non-residents from the democratic process."
+    },
+    "output_length_chars": 410,
+    "output_tokens_estimated": 102,
+    "cost_usd": 0.00017565,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "In ancient Athens, only men who were citizens could vote, while women and slaves were excluded.",
+      "query_index": 2,
+      "query_text": "who could vote in ancient Athens citizenship women slaves"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:42:43.407161",
+    "latency_seconds": 4.08,
+    "input_prompt": "Claim:\nIn ancient Athens, only men who were citizens could vote, while women and slaves were excluded.\n\nArticle Title:\n[PDF] Women in Ancient Greece - Cedarbank School\n\nGoogle Search Snippet:\nAthens Women in Ancient Athens were second class citizens to men. ... even for female Athenian citizens \u2013 female slaves basically had no rights at all, but even.\n\nFull Page Content:\nDemocracy in ancient Greece served as one of the first forms of self-rule government in the ancient world. The system and ideas employed by the ancient Greeks had profound influences on how democracy developed, and its impact on the formation of the U.S. government.\n5 - 8\nSocial Studies, Ancient Civilizations\nThe ancient Greeks were the first to create a democracy. The word \u201cdemocracy\u201d comes from two Greek words that mean people (demos) and rule (kratos). Democracy is the idea that the citizens of a country should take an active role in the government of their country and manage it directly or through elected representatives. In addition, it supports the idea that the people can replace their government through peaceful transfers of power rather than violent uprising or revolution. Thus, a key part of democracy is that the people have a voice.\nThe first known democracy in the world was in Athens. Athenian democracy developed around the fifth century B.C.E. The Greek idea of democracy was different from present-day democracy because, in Athens, all adult citizens were required to take an active part in the government. If they did not fulfill their duty they would be fined and sometimes marked with red paint. The Athenian definition of \u201ccitizens\u201d was also different from modern-day citizens: only free men were considered citizens in Athens. Women, children, and slaves were not considered citizens and therefore could not vote.\nEach year 500 names were chosen from all the citizens of ancient Athens. Those 500 citizens had to actively serve in the government for one year. During that year, they were responsible for making new laws and controlled all parts of the political process. When a new law was proposed, all the citizens of Athens had the opportunity to vote on it. To vote, citizens had to attend the assembly on the day the vote took place. This form of government is called direct democracy.\nThe United States has a representative democracy. Representative democracy is a government in which citizens vote for representatives who create and change laws that govern the people rather than getting to vote directly on the laws themselves.\nCitizenship is the status of being a citizen, belonging to a nation, and having the associated rights and responsibilities.\nAncient Greek politics, philosophy, art and scientific achievements greatly influenced Western civilizations today. One example of their legacy is the Olympic Games.\nNational Geographic Headquarters 1145 17th Street NW Washington, DC 20036\nNational Geographic Society is a 501 (c)(3) organization. \u00a9 1996 - 2025 National Geographic Society. All rights reserved.\n\nProvide relevant evidence.",
+    "input_length_chars": 3056,
+    "input_tokens_estimated": 764,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that in ancient Athens, only free men were considered citizens and had the right to vote, while women, children, and slaves were excluded from citizenship and voting rights.",
+      "overall_stance": "supports",
+      "key_quote": "The Athenian definition of 'citizens' was also different from modern-day citizens: only free men were considered citizens in Athens. Women, children, and slaves were not considered citizens and therefore could not vote."
+    },
+    "output_length_chars": 500,
+    "output_tokens_estimated": 125,
+    "cost_usd": 0.0001896,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "In ancient Athens, only men who were citizens could vote, while women and slaves were excluded.",
+      "query_index": 2,
+      "query_text": "who could vote in ancient Athens citizenship women slaves"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:43:06.949837",
+    "latency_seconds": 2.11,
+    "input_prompt": "Claim:\nIn ancient Athens, only men who were citizens could vote, while women and slaves were excluded.\n\nArticle Title:\nHow People Voted in Ancient Elections - History.com\n\nFull Page Content:\nWomen and enslaved people did not have a vote. Advertisement ... There were very few elections in Athens, because the ancient Athenians ...\n\nProvide relevant evidence.",
+    "input_length_chars": 358,
+    "input_tokens_estimated": 89,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that women and enslaved people were excluded from voting in ancient Athens, supporting the claim that only male citizens could vote.",
+      "overall_stance": "supports",
+      "key_quote": "Women and enslaved people did not have a vote."
+    },
+    "output_length_chars": 286,
+    "output_tokens_estimated": 71,
+    "cost_usd": 5.595e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "In ancient Athens, only men who were citizens could vote, while women and slaves were excluded.",
+      "query_index": 2,
+      "query_text": "who could vote in ancient Athens citizenship women slaves"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:43:07.826039",
+    "latency_seconds": 3.36,
+    "input_prompt": "Claim:\nIn ancient Athens, only men who were citizens could vote, while women and slaves were excluded.\n\nArticle Title:\nHow People Voted in Ancient Elections - History.com\n\nFull Page Content:\nWomen and enslaved people did not have a vote. Advertisement ... Ostraka were shards of pottery used as voting ballots in Athens. Vita ...\n\nProvide relevant evidence.",
+    "input_length_chars": 357,
+    "input_tokens_estimated": 89,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that women and enslaved people were excluded from voting in ancient Athens, supporting the claim that only male citizens could vote.",
+      "overall_stance": "supports",
+      "key_quote": "Women and enslaved people did not have a vote."
+    },
+    "output_length_chars": 286,
+    "output_tokens_estimated": 71,
+    "cost_usd": 5.595e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "In ancient Athens, only men who were citizens could vote, while women and slaves were excluded.",
+      "query_index": 2,
+      "query_text": "who could vote in ancient Athens citizenship women slaves"
+    }
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:43:09.616485",
+    "latency_seconds": 1.68,
+    "input_prompt": "\nClaim: In ancient Athens, only men who were citizens could vote, while women and slaves were excluded.\nCategory: historical\nExtraction confidence: 0.90\n\nEvidence:\nSUPPORTS (4 sources):\n  1. Ancient Greeks Voted to Kick Politicians Out of Athens if Enough ... | reliability=high (0.85)\n     URL: https://www.smithsonianmag.com/history/ancient-athenians-voted-kick-politicians-out-if-enough-people-didnt-them-180976138/\n     Summary: The evidence confirms that in ancient Athens, only free men were considered citizens and thus had the right to vote, while women, children, and slaves were excluded from citizenship and voting rights.\n  2. Democracy (Ancient Greece) - National Geographic Education | reliability=medium (0.60)\n     URL: https://education.nationalgeographic.org/resource/democracy-ancient-greece/\n     Summary: The evidence confirms that in ancient Athens, only free men were considered citizens and had the right to vote, while women, children, and slaves were excluded from citizenship and voting rights.\n  3. How People Voted in Ancient Elections - History.com | reliability=medium (0.60)\n     URL: https://www.history.com/articles/ancient-elections-voting\n     Summary: The evidence confirms that women and enslaved people were excluded from voting in ancient Athens, supporting the claim that only male citizens could vote.\n  4. [PDF] Women in Ancient Greece - Cedarbank School | reliability=unknown (0.50)\n     URL: https://cedarbankschool.westlothian.org.uk/media/48105/Senior-Classics-1-Mar-21/pdf/Senior_Classics_1_Mar_21.pdf?m=1614765820177\n     Summary: The evidence confirms that in ancient Athens, only free men were considered citizens and had the right to vote, while women, children, and slaves were excluded from citizenship and voting rights.\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1809,
+    "input_tokens_estimated": 452,
+    "output": {
+      "overall_stance": "supports",
+      "confidence": "high",
+      "summary": "The evidence consistently confirms that in ancient Athens, only free men were considered citizens with the right to vote, while women, children, and slaves were excluded from citizenship and voting rights, as supported by multiple reliable sources."
+    },
+    "output_length_chars": 310,
+    "output_tokens_estimated": 77,
+    "cost_usd": 0.000114,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "In ancient Athens, only men who were citizens could vote, while women and slaves were excluded.",
+      "query_index": 2,
+      "query_text": "who could vote in ancient Athens citizenship women slaves"
+    }
+  }
+]

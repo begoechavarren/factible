@@ -1,0 +1,321 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:18:45.906071",
+    "latency_seconds": 17.4,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\ntoday's medical Centric topic is is 100% fruit juice good for you 100% fruit juice is often viewed as a healthy alternative to sugary drinks but its benefits and potential drawbacks need to be considered while it contains vitamins and nutrients drinking too much juice may have negative effects on your health one nutritional benefits of 100% fruit juice rich in vitamins vitamins and antioxidants 100% fruit juice is a good source of essential vitamins especially vitamin C which supports the immune system and potassium which helps regulate blood pressure juice also contains antioxidants which protect cells from damage nutrient absorption the vitamins and minerals and Juice can be absorbed quickly by the body making it a convenient way to get a nutritional boost hydration fluid intake since fruit juice is mostly water it helps with hydration for people who struggle to drink plain water juice can be a more palatable option two potential drawbacks of 100% fruit juice high in natural sugars fructose content even though 100% fruit juice doesn't have added sugars it still contains high amounts of naturally occurring sugar sugars like fructose these sugars can Spike blood sugar levels which may lead to insulin resistance over time calories juice is calorie dense compared to whole fruits and consuming large amounts can contribute to weight gain if not balanced with physical activity LAX fiber removed during processing one of the biggest differences between fruit juice and whole fruit is the fiber content when fruit is Juiced the fiber is removed which helps regulate blood sugar and AIDS digestion without fiber juice may cause rapid sugar absorption and hunger soon after consumption three how much is too much portion control recommended intake nutrition experts often suggest limiting fruit juice intake to one small glass per day around 4 to 6 ounces drinking juice in moderation can provide health benefits balancing diet it's essential to balance juice intake with other sources of hydration and nutrition such as water and whole fruits four alternatives to fruit juice whole fruits better nutritional value eating whole fruits provides all the vitamins and minerals found in juice along with fiber which is essential for digestion and blood sugar control whole fruits also keep you Fuller for longer diluting juice reducing sugar for those who enjoy juice dilating it with water can reduce sugar intake while still offering a refreshing taste and some nutritional benefits five long-term health effects weight gain and dental health caloric impact regularly drinking large amounts of juice can lead to excess calorie consumption contributing to weight gain over time tooth decay the sugar and Juice can contribute to cavities especially when consumed frequently throughout the day drinking juice with meals and using a straw may help reduce this risk thank you for watching our video please do not forget to like and share the video also please subscribe to the channel to stay updated on our latest videos",
+    "input_length_chars": 3086,
+    "input_tokens_estimated": 771,
+    "output": {
+      "claims": [
+        {
+          "text": "100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.",
+          "confidence": 0.9,
+          "category": "nutritional",
+          "importance": 0.7,
+          "context": "Discussing the nutritional benefits of 100% fruit juice."
+        },
+        {
+          "text": "Juice contains antioxidants which protect cells from damage.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Mentioning the health benefits of antioxidants in juice."
+        },
+        {
+          "text": "100% fruit juice contains high amounts of naturally occurring sugars like fructose.",
+          "confidence": 0.9,
+          "category": "nutritional",
+          "importance": 0.7,
+          "context": "Discussing the sugar content in 100% fruit juice."
+        },
+        {
+          "text": "Drinking too much juice may lead to insulin resistance over time.",
+          "confidence": 0.8,
+          "category": "scientific",
+          "importance": 0.65,
+          "context": "Explaining potential health risks of excessive juice consumption."
+        },
+        {
+          "text": "Juice is calorie dense compared to whole fruits and can contribute to weight gain.",
+          "confidence": 0.85,
+          "category": "nutritional",
+          "importance": 0.7,
+          "context": "Discussing the caloric impact of juice versus whole fruits."
+        },
+        {
+          "text": "Nutrition experts often suggest limiting fruit juice intake to one small glass per day, around 4 to 6 ounces.",
+          "confidence": 0.9,
+          "category": "policy",
+          "importance": 0.6,
+          "context": "Recommendations on portion control for fruit juice consumption."
+        },
+        {
+          "text": "The fiber is removed during processing of fruit juice, which helps regulate blood sugar and aids digestion.",
+          "confidence": 0.9,
+          "category": "nutritional",
+          "importance": 0.7,
+          "context": "Highlighting the difference in fiber content between juice and whole fruit."
+        },
+        {
+          "text": "Regularly drinking large amounts of juice can lead to excess calorie consumption contributing to weight gain.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.65,
+          "context": "Discussing long-term health effects of juice consumption."
+        }
+      ],
+      "total_count": 8
+    },
+    "output_length_chars": 2572,
+    "output_tokens_estimated": 643,
+    "cost_usd": 0.00050145
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:18:50.204137",
+    "latency_seconds": 2.62,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: 100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.\nContext: Discussing the nutritional benefits of 100% fruit juice.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 331,
+    "input_tokens_estimated": 82,
+    "output": {
+      "original_claim": "100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.",
+      "queries": [
+        {
+          "query": "nutritional benefits of 100% fruit juice vitamin C potassium",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "is 100% fruit juice a good source of vitamins and potassium",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 361,
+    "output_tokens_estimated": 90,
+    "cost_usd": 6.63e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium."
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:19:20.017061",
+    "latency_seconds": 3.16,
+    "input_prompt": "Claim:\n100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.\n\nArticle Title:\nContribution of 100% Fruit Juice to Micronutrient Intakes ... - PubMed\n\nGoogle Search Snippet:\nIn all three countries studied, 100% FJ contributed to more than 5% of the RDAs for vitamin C and folate. In the U.S. and Brazil, 100% FJ ...\n\nFull Page Content:\nAn official website of the United States government\nBack to What Is MyPlate\nThe Fruit Group includes all fruits and 100% fruit juice. Fruits may be fresh, frozen, canned, or dried/dehydrated. Fruits can be eaten whole, cut up, pur\u00e9ed (mashed), or cooked. At least half of the recommended amount of fruit eaten should come from whole fruit, rather than 100% fruit juice.\nYour fruit needs depend on your age, sex, height, weight, and physical activity. This amount can also depend on whether you are pregnant or breastfeeding.\nFind the right amount for you by getting your MyPlate Plan. For general guidance by age, see the table below.\nIn general, the following counts as 1 cup from the Fruit Group:\nThe table below shows amounts that count as 1 cup from the Fruit Group.\nThe table below shows amounts that count as 1 cup from the Fruit Group.\nNote: Click on the top row to expand the table. If you are on a mobile device, you may need to turn it to see the full table.\nEating fruit has many health benefits. People who eat fruits and vegetables as part of an overall diet may lower their risk for certain diseases. Fruits provide nutrients needed to maintain your health and body.\nMost fruits are low in fat, sodium, and calories. Fruits do not have cholesterol.\nAll food and beverage choices matter. Focus on variety, amount, and nutrition.\nDo you want to know more about the foods in the Fruit Group? What does a cup or half a cup of fruit look like? Check out the Food Group Gallery! This is a great resource if you want to eat more fruits. It will also help if you want to try something new.\nBlackberries, star fruits, kumquats... they\u2019re all waiting for you in the Food Group Gallery.\nFind savings in your area and discover new ways to prepare budget-friendly foods.\nLearn more\nGet MyPlate nutrition tips on Amazon Alexa devices or the free Alexa app.\nLearn more\nBuild healthy eating habits one goal at a time! Download the Start Simple with MyPlate app today.\nLearn more\nMyPlate.gov is based on the Dietary Guidelines for Americans, 2020-2025\nLearn more\nSign up\n\nProvide relevant evidence.",
+    "input_length_chars": 2468,
+    "input_tokens_estimated": 617,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that 100% fruit juice contributes to more than 5% of the Recommended Dietary Allowances (RDAs) for vitamin C and folate, supporting the claim that it is a good source of essential vitamins.",
+      "overall_stance": "supports",
+      "key_quote": "100% FJ contributed to more than 5% of the RDAs for vitamin C and folate."
+    },
+    "output_length_chars": 371,
+    "output_tokens_estimated": 92,
+    "cost_usd": 0.00014775,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.",
+      "query_index": 2,
+      "query_text": "is 100% fruit juice a good source of vitamins and potassium"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:19:20.148311",
+    "latency_seconds": 3.3,
+    "input_prompt": "Claim:\n100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.\n\nArticle Title:\n5 Surprising Health Benefits of Orange Juice - Healthline\n\nGoogle Search Snippet:\nOrange juice is naturally high in nutrients like vitamin C and potassium. Commercial varieties are often also enriched with calcium and vitamin ...\n\nFull Page Content:\nAn official website of the United States government\nBack to What Is MyPlate\nThe Fruit Group includes all fruits and 100% fruit juice. Fruits may be fresh, frozen, canned, or dried/dehydrated. Fruits can be eaten whole, cut up, pur\u00e9ed (mashed), or cooked. At least half of the recommended amount of fruit eaten should come from whole fruit, rather than 100% fruit juice.\nYour fruit needs depend on your age, sex, height, weight, and physical activity. This amount can also depend on whether you are pregnant or breastfeeding.\nFind the right amount for you by getting your MyPlate Plan. For general guidance by age, see the table below.\nIn general, the following counts as 1 cup from the Fruit Group:\nThe table below shows amounts that count as 1 cup from the Fruit Group.\nThe table below shows amounts that count as 1 cup from the Fruit Group.\nNote: Click on the top row to expand the table. If you are on a mobile device, you may need to turn it to see the full table.\nEating fruit has many health benefits. People who eat fruits and vegetables as part of an overall diet may lower their risk for certain diseases. Fruits provide nutrients needed to maintain your health and body.\nMost fruits are low in fat, sodium, and calories. Fruits do not have cholesterol.\nAll food and beverage choices matter. Focus on variety, amount, and nutrition.\nDo you want to know more about the foods in the Fruit Group? What does a cup or half a cup of fruit look like? Check out the Food Group Gallery! This is a great resource if you want to eat more fruits. It will also help if you want to try something new.\nBlackberries, star fruits, kumquats... they\u2019re all waiting for you in the Food Group Gallery.\nFind savings in your area and discover new ways to prepare budget-friendly foods.\nLearn more\nGet MyPlate nutrition tips on Amazon Alexa devices or the free Alexa app.\nLearn more\nBuild healthy eating habits one goal at a time! Download the Start Simple with MyPlate app today.\nLearn more\nMyPlate.gov is based on the Dietary Guidelines for Americans, 2020-2025\nLearn more\nSign up\n\nProvide relevant evidence.",
+    "input_length_chars": 2461,
+    "input_tokens_estimated": 615,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article states that orange juice is naturally high in nutrients like vitamin C and potassium, supporting the claim that 100% fruit juice is a good source of these essential vitamins.",
+      "overall_stance": "supports",
+      "key_quote": "Orange juice is naturally high in nutrients like vitamin C and potassium."
+    },
+    "output_length_chars": 345,
+    "output_tokens_estimated": 86,
+    "cost_usd": 0.00014385,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.",
+      "query_index": 2,
+      "query_text": "is 100% fruit juice a good source of vitamins and potassium"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:19:20.222492",
+    "latency_seconds": 3.37,
+    "input_prompt": "Claim:\n100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.\n\nArticle Title:\nIs your fruit juice really 100 percent fruit juice? - MSU Extension\n\nGoogle Search Snippet:\nOne serving of 100 percent orange juice supplies 100 percent of the vitamin C that your body needs. ... nutrients like calcium and potassium ...\n\nFull Page Content:\nAn official website of the United States government\nBack to What Is MyPlate\nThe Fruit Group includes all fruits and 100% fruit juice. Fruits may be fresh, frozen, canned, or dried/dehydrated. Fruits can be eaten whole, cut up, pur\u00e9ed (mashed), or cooked. At least half of the recommended amount of fruit eaten should come from whole fruit, rather than 100% fruit juice.\nYour fruit needs depend on your age, sex, height, weight, and physical activity. This amount can also depend on whether you are pregnant or breastfeeding.\nFind the right amount for you by getting your MyPlate Plan. For general guidance by age, see the table below.\nIn general, the following counts as 1 cup from the Fruit Group:\nThe table below shows amounts that count as 1 cup from the Fruit Group.\nThe table below shows amounts that count as 1 cup from the Fruit Group.\nNote: Click on the top row to expand the table. If you are on a mobile device, you may need to turn it to see the full table.\nEating fruit has many health benefits. People who eat fruits and vegetables as part of an overall diet may lower their risk for certain diseases. Fruits provide nutrients needed to maintain your health and body.\nMost fruits are low in fat, sodium, and calories. Fruits do not have cholesterol.\nAll food and beverage choices matter. Focus on variety, amount, and nutrition.\nDo you want to know more about the foods in the Fruit Group? What does a cup or half a cup of fruit look like? Check out the Food Group Gallery! This is a great resource if you want to eat more fruits. It will also help if you want to try something new.\nBlackberries, star fruits, kumquats... they\u2019re all waiting for you in the Food Group Gallery.\nFind savings in your area and discover new ways to prepare budget-friendly foods.\nLearn more\nGet MyPlate nutrition tips on Amazon Alexa devices or the free Alexa app.\nLearn more\nBuild healthy eating habits one goal at a time! Download the Start Simple with MyPlate app today.\nLearn more\nMyPlate.gov is based on the Dietary Guidelines for Americans, 2020-2025\nLearn more\nSign up\n\nProvide relevant evidence.",
+    "input_length_chars": 2468,
+    "input_tokens_estimated": 617,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The source confirms that 100% orange juice provides 100% of the daily recommended vitamin C intake and also mentions nutrients like potassium, supporting the claim that 100% fruit juice is a good source of essential vitamins.",
+      "overall_stance": "supports",
+      "key_quote": "One serving of 100 percent orange juice supplies 100 percent of the vitamin C that your body needs."
+    },
+    "output_length_chars": 410,
+    "output_tokens_estimated": 102,
+    "cost_usd": 0.00015375,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.",
+      "query_index": 2,
+      "query_text": "is 100% fruit juice a good source of vitamins and potassium"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:19:20.239075",
+    "latency_seconds": 3.39,
+    "input_prompt": "Claim:\n100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.\n\nArticle Title:\nSqueezing Fact from Fiction about 100% Fruit Juice - ScienceDirect\n\nGoogle Search Snippet:\nThe combination of fruit and 100% juice was associated with significantly higher intakes of potassium, calcium, and vitamin C, but not fiber. On the other hand, ...\n\nFull Page Content:\nAn official website of the United States government\nBack to What Is MyPlate\nThe Fruit Group includes all fruits and 100% fruit juice. Fruits may be fresh, frozen, canned, or dried/dehydrated. Fruits can be eaten whole, cut up, pur\u00e9ed (mashed), or cooked. At least half of the recommended amount of fruit eaten should come from whole fruit, rather than 100% fruit juice.\nYour fruit needs depend on your age, sex, height, weight, and physical activity. This amount can also depend on whether you are pregnant or breastfeeding.\nFind the right amount for you by getting your MyPlate Plan. For general guidance by age, see the table below.\nIn general, the following counts as 1 cup from the Fruit Group:\nThe table below shows amounts that count as 1 cup from the Fruit Group.\nThe table below shows amounts that count as 1 cup from the Fruit Group.\nNote: Click on the top row to expand the table. If you are on a mobile device, you may need to turn it to see the full table.\nEating fruit has many health benefits. People who eat fruits and vegetables as part of an overall diet may lower their risk for certain diseases. Fruits provide nutrients needed to maintain your health and body.\nMost fruits are low in fat, sodium, and calories. Fruits do not have cholesterol.\nAll food and beverage choices matter. Focus on variety, amount, and nutrition.\nDo you want to know more about the foods in the Fruit Group? What does a cup or half a cup of fruit look like? Check out the Food Group Gallery! This is a great resource if you want to eat more fruits. It will also help if you want to try something new.\nBlackberries, star fruits, kumquats... they\u2019re all waiting for you in the Food Group Gallery.\nFind savings in your area and discover new ways to prepare budget-friendly foods.\nLearn more\nGet MyPlate nutrition tips on Amazon Alexa devices or the free Alexa app.\nLearn more\nBuild healthy eating habits one goal at a time! Download the Start Simple with MyPlate app today.\nLearn more\nMyPlate.gov is based on the Dietary Guidelines for Americans, 2020-2025\nLearn more\nSign up\n\nProvide relevant evidence.",
+    "input_length_chars": 2487,
+    "input_tokens_estimated": 621,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that 100% fruit juice is associated with significantly higher intakes of potassium and vitamin C, supporting the claim that it is a good source of these essential vitamins.",
+      "overall_stance": "supports",
+      "key_quote": "The combination of fruit and 100% juice was associated with significantly higher intakes of potassium, calcium, and vitamin C."
+    },
+    "output_length_chars": 407,
+    "output_tokens_estimated": 101,
+    "cost_usd": 0.00015375,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.",
+      "query_index": 2,
+      "query_text": "is 100% fruit juice a good source of vitamins and potassium"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:19:20.282235",
+    "latency_seconds": 3.43,
+    "input_prompt": "Claim:\n100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.\n\nArticle Title:\nMyPlate.gov | Fruit Group \u2013 One of the Five Food Groups\n\nGoogle Search Snippet:\nVitamin C is important for the growth and repair of all body tissues. It helps heal cuts and wounds and keeps teeth and gums health. Vitamin C helps your body ...\n\nFull Page Content:\nAn official website of the United States government\nBack to What Is MyPlate\nThe Fruit Group includes all fruits and 100% fruit juice. Fruits may be fresh, frozen, canned, or dried/dehydrated. Fruits can be eaten whole, cut up, pur\u00e9ed (mashed), or cooked. At least half of the recommended amount of fruit eaten should come from whole fruit, rather than 100% fruit juice.\nYour fruit needs depend on your age, sex, height, weight, and physical activity. This amount can also depend on whether you are pregnant or breastfeeding.\nFind the right amount for you by getting your MyPlate Plan. For general guidance by age, see the table below.\nIn general, the following counts as 1 cup from the Fruit Group:\nThe table below shows amounts that count as 1 cup from the Fruit Group.\nThe table below shows amounts that count as 1 cup from the Fruit Group.\nNote: Click on the top row to expand the table. If you are on a mobile device, you may need to turn it to see the full table.\nEating fruit has many health benefits. People who eat fruits and vegetables as part of an overall diet may lower their risk for certain diseases. Fruits provide nutrients needed to maintain your health and body.\nMost fruits are low in fat, sodium, and calories. Fruits do not have cholesterol.\nAll food and beverage choices matter. Focus on variety, amount, and nutrition.\nDo you want to know more about the foods in the Fruit Group? What does a cup or half a cup of fruit look like? Check out the Food Group Gallery! This is a great resource if you want to eat more fruits. It will also help if you want to try something new.\nBlackberries, star fruits, kumquats... they\u2019re all waiting for you in the Food Group Gallery.\nFind savings in your area and discover new ways to prepare budget-friendly foods.\nLearn more\nGet MyPlate nutrition tips on Amazon Alexa devices or the free Alexa app.\nLearn more\nBuild healthy eating habits one goal at a time! Download the Start Simple with MyPlate app today.\nLearn more\nMyPlate.gov is based on the Dietary Guidelines for Americans, 2020-2025\nLearn more\nSign up\n\nProvide relevant evidence.",
+    "input_length_chars": 2474,
+    "input_tokens_estimated": 618,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The source indicates that 100% fruit juice is included in the Fruit Group and provides essential nutrients, including vitamin C, which is important for body tissue growth and repair.",
+      "overall_stance": "supports",
+      "key_quote": "Vitamin C is important for the growth and repair of all body tissues."
+    },
+    "output_length_chars": 337,
+    "output_tokens_estimated": 84,
+    "cost_usd": 0.0001431,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.",
+      "query_index": 2,
+      "query_text": "is 100% fruit juice a good source of vitamins and potassium"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:19:33.523632",
+    "latency_seconds": 9.85,
+    "input_prompt": "Claim:\n100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.\n\nArticle Title:\nFood Sources of Potassium - Dietary Guidelines for Americans\n\nGoogle Search Snippet:\nFood Sources of Potassium ; Prune juice, 100%, 1 cup, 182 ; Guava, 1 cup, 112 ; Passion-fruit juice, 100%, 1 cup, 126 ; Soursop, 1 cup, 148 ...\n\nFull Page Content:\nMany people ask questions about 100% juice. Here are some answers we hope you will find useful.\nPierre Turner Vice-President Quality, R&D, Sustainability\n100% juice is the liquid extracted from a fruit or vegetable.\n\nProvide relevant evidence.",
+    "input_length_chars": 608,
+    "input_tokens_estimated": 152,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 3.6e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.",
+      "query_index": 2,
+      "query_text": "is 100% fruit juice a good source of vitamins and potassium"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:19:35.367176",
+    "latency_seconds": 11.69,
+    "input_prompt": "Claim:\n100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.\n\nArticle Title:\nMyPlate.gov | Fruit Group \u2013 One of the Five Food Groups\n\nGoogle Search Snippet:\nDiets rich in potassium may help maintain healthy blood pressure. Fruit sources of potassium include bananas, prunes and prune juice, dried peaches and ...\n\nFull Page Content:\nMany people ask questions about 100% juice. Here are some answers we hope you will find useful.\nPierre Turner Vice-President Quality, R&D, Sustainability\n100% juice is the liquid extracted from a fruit or vegetable.\n\nProvide relevant evidence.",
+    "input_length_chars": 615,
+    "input_tokens_estimated": 153,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses the benefits of fruit juice, including its role as a source of potassium, which is essential for maintaining healthy blood pressure. However, it does not explicitly mention vitamin C or confirm the overall health benefits of 100% fruit juice as a good source of essential vitamins.",
+      "overall_stance": "mixed",
+      "key_quote": "Fruit sources of potassium include bananas, prunes and prune juice, dried peaches and ..."
+    },
+    "output_length_chars": 475,
+    "output_tokens_estimated": 118,
+    "cost_usd": 9.375e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.",
+      "query_index": 2,
+      "query_text": "is 100% fruit juice a good source of vitamins and potassium"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:19:35.372671",
+    "latency_seconds": 11.7,
+    "input_prompt": "Claim:\n100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.\n\nArticle Title:\nJuice: healthy or harmful? - PCC Community Markets\n\nGoogle Search Snippet:\nAll juices are excellent sources of potassium, which helps manage blood pressure and rehydrate the body after exercise. Most Americans fall short of potassium, ...\n\nFull Page Content:\nMany people ask questions about 100% juice. Here are some answers we hope you will find useful.\nPierre Turner Vice-President Quality, R&D, Sustainability\n100% juice is the liquid extracted from a fruit or vegetable.\n\nProvide relevant evidence.",
+    "input_length_chars": 618,
+    "input_tokens_estimated": 154,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article states that all juices, including 100% fruit juice, are excellent sources of potassium, which supports the claim about essential vitamins and minerals.",
+      "overall_stance": "supports",
+      "key_quote": "All juices are excellent sources of potassium, which helps manage blood pressure and rehydrate the body after exercise."
+    },
+    "output_length_chars": 368,
+    "output_tokens_estimated": 92,
+    "cost_usd": 7.83e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.",
+      "query_index": 2,
+      "query_text": "is 100% fruit juice a good source of vitamins and potassium"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:19:35.781944",
+    "latency_seconds": 12.12,
+    "input_prompt": "Claim:\n100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.\n\nArticle Title:\nIs 100% Fruit Juice Good for You? - Health Cleveland Clinic\n\nGoogle Search Snippet:\nBenefits of 100% fruit juice. Fruit juice contains many of the vitamins and nutrients that make fruit a recommended part of a healthy diet.\n\nFull Page Content:\nMany people ask questions about 100% juice. Here are some answers we hope you will find useful.\nPierre Turner Vice-President Quality, R&D, Sustainability\n100% juice is the liquid extracted from a fruit or vegetable.\n\nProvide relevant evidence.",
+    "input_length_chars": 603,
+    "input_tokens_estimated": 150,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses that 100% fruit juice contains many vitamins and nutrients, including vitamin C and potassium, which supports the claim that it is a good source of these essential vitamins.",
+      "overall_stance": "supports",
+      "key_quote": "Fruit juice contains many of the vitamins and nutrients that make fruit a recommended part of a healthy diet."
+    },
+    "output_length_chars": 390,
+    "output_tokens_estimated": 97,
+    "cost_usd": 8.07e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "100% fruit juice is a good source of essential vitamins, especially vitamin C and potassium.",
+      "query_index": 2,
+      "query_text": "is 100% fruit juice a good source of vitamins and potassium"
+    }
+  }
+]

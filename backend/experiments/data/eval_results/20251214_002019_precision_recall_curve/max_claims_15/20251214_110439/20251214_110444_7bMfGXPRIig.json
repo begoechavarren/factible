@@ -1,0 +1,187 @@
+{
+  "video_id": "7bMfGXPRIig",
+  "timestamp": "2025-12-14T11:04:44.285611",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_15",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.7333333333333333,
+    "recall": 0.7333333333333333,
+    "f1_score": 0.7333333333333333,
+    "true_positives": 11,
+    "false_positives": 4,
+    "false_negatives": 4,
+    "mean_average_precision": 0.7764498128134492,
+    "recall_at_important": 1.0,
+    "importance_weighted_coverage": 0.761904761904762,
+    "matched_claims": [
+      {
+        "gt_text": "A three-day juice cleanse can jump start health, help get off medications, bolster the immune system, and burn fat quickly",
+        "sys_text": "A three-day juice cleanse can bolster the immune system and aid fat loss.",
+        "gt_importance": 0.95,
+        "sys_importance": 0.85,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "Doing a juice cleanse right will trigger autophagy",
+        "sys_text": "Autophagy occurs during a juice cleanse, recycling old cells and materials.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.8,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "A juice cleanse will lower your insulin if you make it right",
+        "sys_text": "Green juice can lower insulin levels when made correctly.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.6,
+        "importance_error": 0.25
+      },
+      {
+        "gt_text": "A juice cleanse is going to help increase your human growth hormone",
+        "sys_text": "A juice cleanse can increase human growth hormone levels.",
+        "gt_importance": 0.8,
+        "sys_importance": 0.6,
+        "importance_error": 0.20000000000000007
+      },
+      {
+        "gt_text": "The gut microbiome makes up 70 plus percent of your immune system",
+        "sys_text": "70% of the immune system is made up of the gut microbiome.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.6,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "Green apples (Granny Smith) have lower sugar content than red apples, which helps keep insulin down",
+        "sys_text": "Green apples are preferred for juice because they have lower sugar content than red apples.",
+        "gt_importance": 0.55,
+        "sys_importance": 0.6,
+        "importance_error": 0.04999999999999993
+      },
+      {
+        "gt_text": "Parsley has more iron than spinach and is really good for anemia",
+        "sys_text": "Parsley juice has more iron than spinach and helps with anemia.",
+        "gt_importance": 0.5,
+        "sys_importance": 0.6,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "Your digestive system uses more energy than anything else you could possibly do on this planet, not a marathon, not anything",
+        "sys_text": "The digestive system expends more energy than any other activity, including marathons.",
+        "gt_importance": 0.65,
+        "sys_importance": 0.55,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "Celery is amazing for your digestive tract especially your stomach and for supporting your liver and detoxing",
+        "sys_text": "Celery is beneficial for the digestive tract and liver detoxification.",
+        "gt_importance": 0.55,
+        "sys_importance": 0.55,
+        "importance_error": 0.0
+      },
+      {
+        "gt_text": "You should aim for 64 to 128 ounces of juice during the cleanse",
+        "sys_text": "Drinking 64 to 128 ounces of juice is recommended during a juice cleanse.",
+        "gt_importance": 0.35,
+        "sys_importance": 0.55,
+        "importance_error": 0.20000000000000007
+      },
+      {
+        "gt_text": "Dandelion has a very good detox of iron effect",
+        "sys_text": "Dandelion has a detox effect and is good for iron levels.",
+        "gt_importance": 0.4,
+        "sys_importance": 0.5,
+        "importance_error": 0.09999999999999998
+      }
+    ],
+    "missed_claims": [
+      "When you start burning fat, the fat contains toxins which are released into the system and if not eliminated quickly, they take back up into tissue and are restored as fat (the rebounding effect)",
+      "Kale is always at the top of the scoring system for most nutritious food",
+      "Broccoli is very anti-cancer",
+      "Broth or collagen are very insulin friendly and won't spike insulin levels"
+    ],
+    "extra_claims": [
+      "Research out of California supports the effectiveness of a juice cleanse for fat loss and immune support.",
+      "Detoxing during a juice cleanse helps eliminate toxins released from fat.",
+      "The speaker encourages doing a juice cleanse once a month.",
+      "Broth and collagen are insulin-friendly additions to a juice cleanse."
+    ],
+    "importance_mae": 0.11818181818181817,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.2727272727272727,
+    "stance_accuracy": 0.2727272727272727,
+    "correct_verdicts": 3,
+    "total_verdicts": 11,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "A three-day juice cleanse can jump start health, help get off medications, bolster the immune system, and burn fat quickly",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Doing a juice cleanse right will trigger autophagy",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "A juice cleanse will lower your insulin if you make it right",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "A juice cleanse is going to help increase your human growth hormone",
+        "gt_verdict": "REFUTES",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "The gut microbiome makes up 70 plus percent of your immune system",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Green apples (Granny Smith) have lower sugar content than red apples, which helps keep insulin down",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Parsley has more iron than spinach and is really good for anemia",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Your digestive system uses more energy than anything else you could possibly do on this planet, not a marathon, not anything",
+        "gt_verdict": "REFUTES",
+        "sys_verdict": "UNCLEAR"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.7333333333333333,
+    "verdict_accuracy": 0.2727272727272727,
+    "evidence_quality_avg": 0.9333333333333333,
+    "total_cost_usd": 0.00235695,
+    "total_time_seconds": 174.86523985862732,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 0.9333333333333333,
+    "avg_sources_per_query": 2.3666666666666667
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 41,
+      "medium": 26,
+      "unknown": 4
+    },
+    "avg_evidence_per_claim": 4.733333333333333
+  },
+  "ground_truth_claims_count": 15,
+  "system_claims_count": 15
+}

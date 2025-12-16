@@ -1,0 +1,90 @@
+{
+  "video_id": "RegC520C6ec",
+  "timestamp": "2025-12-14T16:16:11.143605",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251213_145741_baseline",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.4,
+    "recall": 0.13333333333333333,
+    "f1_score": 0.2,
+    "true_positives": 2,
+    "false_positives": 3,
+    "false_negatives": 13,
+    "mean_average_precision": 0.8333333333333333,
+    "recall_at_important": 0.2857142857142857,
+    "importance_weighted_coverage": 0.18686868686868688,
+    "matched_claims": [
+      {
+        "gt_text": "Decades of global geoengineering development is directly and deliberately responsible for all of the super storms, hurricanes, tornadoes, and floods",
+        "sys_text": "Decades of global geoengineering development is responsible for extreme weather events.",
+        "gt_importance": 1.0,
+        "sys_importance": 0.85,
+        "importance_error": 0.15000000000000002
+      },
+      {
+        "gt_text": "Artificial precipitation generation occurs in coordinated bursts visible on infrared satellite as superheated water vapor from no natural source",
+        "sys_text": "Artificial precipitation generation is visible on infrared satellite images.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.6,
+        "importance_error": 0.25
+      }
+    ],
+    "missed_claims": [
+      "7.1 billion people on this planet are completely in the dark about continuous and escalating extreme weather events",
+      "Water vapor is artificially introduced into the air in place of the natural evaporation stage and is artificially cooled and condensed to produce rain on a global scale",
+      "The same primary source of CO2 emissions on this planet is the same source of artificial precipitation",
+      "Hexagonal center of vortex with flat sides proves geoengineering manufacture",
+      "Contrails are actually chemtrails composed of heavy metal nanoparticles and ice nucleation used to control storm systems",
+      "Man-made global artificial precipitation cycle is the singular reason for massive and continuous flooding worldwide",
+      "Mother nature and monsoons are not responsible for worldwide flooding",
+      "Cloud seeding and weather modification technology exists and is being used",
+      "The U.S. military used weather modification during Operation Popeye in the Vietnam War",
+      "Industrial facilities and power plants deliberately generate coordinated artificial precipitation on a nightly cycle",
+      "Evaporation is a natural process where water changes from liquid to water vapor and enters the atmosphere",
+      "Condensation occurs when water vapor in warm air meets cold air or cold surfaces and forms water droplets",
+      "Flooding events in 2024-2025 including North Carolina, Mississippi, New Mexico, and Arizona were shown in news reports"
+    ],
+    "extra_claims": [
+      "At least nine states have flash flood watches due to flooding.",
+      "Water evaporates from ponds, lakes, rivers, and oceans every hour.",
+      "7.1 billion people are on this planet."
+    ],
+    "importance_mae": 0.2,
+    "claim_quality_avg": 0.77
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 1.0,
+    "stance_accuracy": 1.0,
+    "correct_verdicts": 2,
+    "total_verdicts": 2,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [],
+    "explanation_quality_avg": 0.6799999999999999
+  },
+  "end_to_end": {
+    "claim_coverage": 0.13333333333333333,
+    "verdict_accuracy": 1.0,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.0,
+    "total_time_seconds": 100.68832087516785,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.9200000000000002,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.8
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.71,
+    "source_reliability_distribution": {
+      "high": 27,
+      "medium": 1
+    },
+    "avg_evidence_per_claim": 5.6
+  },
+  "ground_truth_claims_count": 15,
+  "system_claims_count": 5
+}

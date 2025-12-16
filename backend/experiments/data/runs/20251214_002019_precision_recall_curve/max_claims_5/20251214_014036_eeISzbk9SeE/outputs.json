@@ -1,0 +1,1328 @@
+{
+  "extracted_claims": {
+    "claims": [
+      {
+        "text": "Human-induced global warming is a major underlying factor for changing weather patterns.",
+        "confidence": 0.95,
+        "category": "scientific",
+        "importance": 0.8,
+        "context": "Connection between human activities and climate change.",
+        "transcript_char_start": 467,
+        "transcript_char_end": 540,
+        "transcript_match_score": 0.7875
+      },
+      {
+        "text": "Earth's weather cycles have become increasingly erratic, severe, and prolonged.",
+        "confidence": 0.9,
+        "category": "scientific",
+        "importance": 0.7,
+        "context": "General statement about climate change effects on weather patterns.",
+        "transcript_char_start": 297,
+        "transcript_char_end": 387,
+        "transcript_match_score": 0.8072289156626506
+      },
+      {
+        "text": "Increased human consumption of fossil fuels since the industrial revolution has led to more greenhouse gases being released.",
+        "confidence": 0.9,
+        "category": "scientific",
+        "importance": 0.7,
+        "context": "Historical context of fossil fuel consumption and greenhouse gas emissions.",
+        "transcript_char_start": 525,
+        "transcript_char_end": 648,
+        "transcript_match_score": 1.0
+      },
+      {
+        "text": "Heat waves have more than doubled in duration in the past 50 years.",
+        "confidence": 0.85,
+        "category": "statistical",
+        "importance": 0.6,
+        "context": "Statistical evidence of increasing heat wave duration.",
+        "transcript_char_start": 1549,
+        "transcript_char_end": 1615,
+        "transcript_match_score": 0.9242424242424242
+      },
+      {
+        "text": "It's estimated that heat waves are 10 times more likely now according to the UK's Met Office.",
+        "confidence": 0.85,
+        "category": "statistical",
+        "importance": 0.6,
+        "context": "UK's Met Office data on the likelihood of heat waves.",
+        "transcript_char_start": 1620,
+        "transcript_char_end": 1712,
+        "transcript_match_score": 1.0
+      }
+    ],
+    "total_count": 5
+  },
+  "final_output": {
+    "extracted_claims": {
+      "claims": [
+        {
+          "text": "Human-induced global warming is a major underlying factor for changing weather patterns.",
+          "confidence": 0.95,
+          "category": "scientific",
+          "importance": 0.8,
+          "context": "Connection between human activities and climate change.",
+          "transcript_char_start": 467,
+          "transcript_char_end": 540,
+          "transcript_match_score": 0.7875
+        },
+        {
+          "text": "Earth's weather cycles have become increasingly erratic, severe, and prolonged.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "General statement about climate change effects on weather patterns.",
+          "transcript_char_start": 297,
+          "transcript_char_end": 387,
+          "transcript_match_score": 0.8072289156626506
+        },
+        {
+          "text": "Increased human consumption of fossil fuels since the industrial revolution has led to more greenhouse gases being released.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Historical context of fossil fuel consumption and greenhouse gas emissions.",
+          "transcript_char_start": 525,
+          "transcript_char_end": 648,
+          "transcript_match_score": 1.0
+        },
+        {
+          "text": "Heat waves have more than doubled in duration in the past 50 years.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Statistical evidence of increasing heat wave duration.",
+          "transcript_char_start": 1549,
+          "transcript_char_end": 1615,
+          "transcript_match_score": 0.9242424242424242
+        },
+        {
+          "text": "It's estimated that heat waves are 10 times more likely now according to the UK's Met Office.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "UK's Met Office data on the likelihood of heat waves.",
+          "transcript_char_start": 1620,
+          "transcript_char_end": 1712,
+          "transcript_match_score": 1.0
+        }
+      ],
+      "total_count": 5
+    },
+    "claim_reports": [
+      {
+        "claim_text": "Human-induced global warming is a major underlying factor for changing weather patterns.",
+        "claim_confidence": 0.95,
+        "claim_category": "scientific",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence from multiple high-reliability sources, including NASA and NOAA, consistently indicates that human-induced greenhouse gases are causing an increase in Earth's average surface temperature, which significantly affects weather patterns. This strongly supports the claim that human-induced global warming is a major underlying factor for changing weather patterns.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Evidence - NASA Science",
+              "url": "https://science.nasa.gov/climate-change/evidence/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that human-produced greenhouse gases are causing Earth to absorb more energy than it radiates back to space, leading to an increase in global average surface temperature, which in turn affects weather patterns.",
+              "snippet": "There is unequivocal evidence that Earth is warming at an unprecedented rate. Human activity is the principal cause."
+            },
+            {
+              "title": "Climate change impacts - NOAA",
+              "url": "https://www.noaa.gov/education/resource-collections/climate/climate-change-impacts",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that human-produced greenhouse gases are causing an increase in Earth's average surface temperature, which in turn affects various environmental processes, including weather patterns. This supports the claim that human-induced global warming is a major factor in changing weather patterns.",
+              "snippet": "Climate change affects the environment in many different ways, including rising temperatures, sea level rise, drought, flooding, and more. These events affect ..."
+            },
+            {
+              "title": "How Climate Change Is Fueling Extreme Weather - Earthjustice",
+              "url": "https://earthjustice.org/feature/how-climate-change-is-fueling-extreme-weather",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that human-produced greenhouse gases are causing an increase in Earth's average surface temperature, which in turn affects various environmental processes, including weather patterns. This supports the claim that human-induced global warming is a major factor in changing weather patterns.",
+              "snippet": "Human activity is causing rapid changes to our global climate that are contributing to extreme weather conditions."
+            },
+            {
+              "title": "Human Impacts on the Environment: A Focus on Climate Change",
+              "url": "https://populationconnection.org/resources/human-activities-and-climate-change/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence clearly states that human activities, particularly the burning of fossil fuels, are the main drivers of climate change, which in turn leads to significant changes in weather patterns and environmental conditions.",
+              "snippet": "Human activities are driving large scale changes in terrestrial and aquatic environments through pollution, water withdrawals, the hunting and harvesting of ..."
+            }
+          ]
+        },
+        "total_sources": 4,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 28.08,
+        "timestamp_confidence": 0.7875
+      },
+      {
+        "claim_text": "Earth's weather cycles have become increasingly erratic, severe, and prolonged.",
+        "claim_confidence": 0.9,
+        "claim_category": "scientific",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "Multiple high-reliability sources, including NASA and the IPCC, consistently indicate that climate change is leading to an increase in the frequency and intensity of extreme weather events, supporting the claim that Earth's weather cycles have become increasingly erratic, severe, and prolonged.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Climate change: global temperature",
+              "url": "https://www.climate.gov/news-features/understanding-climate/climate-change-global-temperature",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (26.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that climate change is increasing the frequency and intensity of extreme weather events, which supports the claim that Earth's weather cycles have become more erratic and severe. It highlights that long-term changes in Earth's energy balance are leading to more extreme events, including heat waves, floods, and droughts.",
+              "snippet": "Earth's temperature has risen by an average of 0.11\u00b0 Fahrenheit (0.06\u00b0 Celsius) per decade since 1850, or about 2\u00b0 F in total."
+            },
+            {
+              "title": "Extreme Weather and Climate Change - NASA Science",
+              "url": "https://science.nasa.gov/climate-change/extreme-weather/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that climate change is increasing the frequency and intensity of extreme weather events, which supports the claim that Earth's weather cycles have become more erratic and severe. It highlights that long-term changes in Earth's energy balance are leading to more extreme events and that trends are projected to accelerate under certain greenhouse gas emissions scenarios.",
+              "snippet": "This warming affects the water cycle, shifts weather patterns, and melts land ice \u2014 all impacts that can make extreme weather worse. According ..."
+            },
+            {
+              "title": "Chapter 11: Weather and Climate Extreme Events in a Changing ...",
+              "url": "https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-11/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that extreme weather and climate events are becoming more frequent and intense due to climate change, with observed increases in heat waves, floods, and droughts. This supports the claim that Earth's weather cycles have become increasingly erratic, severe, and prolonged.",
+              "snippet": "This chapter assesses changes in weather and climate extremes on regional and global scales, including observed changes and their attribution, as well as ..."
+            },
+            {
+              "title": "How Climate Change Is Fueling Extreme Weather - Earthjustice",
+              "url": "https://earthjustice.org/feature/how-climate-change-is-fueling-extreme-weather",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that climate change is increasing the frequency and intensity of extreme weather events, which supports the claim that Earth's weather cycles have become more erratic and severe.",
+              "snippet": "Human activity is causing rapid changes to our global climate that are contributing to extreme weather conditions."
+            },
+            {
+              "title": "How climate change worsens heatwaves, droughts, fires and floods",
+              "url": "https://www.bbc.com/news/articles/cy4dgp1p3p1o",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that climate change is increasing the frequency and intensity of extreme weather events, which supports the claim that Earth's weather cycles are becoming more erratic and severe.",
+              "snippet": "Rising global temperatures mean extreme weather events are becoming more common and more intense."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 19.92,
+        "timestamp_confidence": 0.8072289156626506
+      },
+      {
+        "claim_text": "Increased human consumption of fossil fuels since the industrial revolution has led to more greenhouse gases being released.",
+        "claim_confidence": 0.9,
+        "claim_category": "scientific",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence strongly supports the claim that increased human consumption of fossil fuels since the Industrial Revolution has led to more greenhouse gases being released. Multiple high-reliability sources confirm that this consumption has significantly raised atmospheric carbon dioxide levels, primarily due to the burning of fossil fuels, which has intensified greenhouse gas emissions and contributed to climate change.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Climate change: atmospheric carbon dioxide",
+              "url": "https://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (26.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that increased human consumption of fossil fuels since the Industrial Revolution has led to a significant rise in atmospheric carbon dioxide levels, which is primarily due to the burning of these fossil fuels.",
+              "snippet": "Since the middle of the 20th century, annual emissions of carbon dioxide from burning fossil fuels have increased every decade, from close to 11 billion tons ..."
+            },
+            {
+              "title": "Greenhouse Gases Factsheet | Center for Sustainable Systems",
+              "url": "https://css.umich.edu/publications/factsheets/climate-change/greenhouse-gases-factsheet",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (40.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that human activities, particularly the burning of fossil fuels, have intensified greenhouse gas emissions, thereby altering the Earth's energy balance and contributing to climate change. This supports the claim that increased fossil fuel consumption since the industrial revolution has led to more greenhouse gases being released.",
+              "snippet": "In 2022, CO\u2082 emissions were 1.5% lower than in 1990 and 18% lower than in 2005. GHG emissions were 3% below 1990 levels; an average annual decline of 0.1%.5 ..."
+            },
+            {
+              "title": "Basics of the Carbon Cycle and the Greenhouse Effect - NOAA",
+              "url": "https://www.noaa.gov/basics-of-carbon-cycle-and-greenhouse-effect",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The article states that human activities, particularly the burning of fossil fuels since the Industrial Revolution, have intensified greenhouse gas emissions, thereby altering the Earth's energy balance and contributing to climate change.",
+              "snippet": "However, since the beginning of the Industrial Revolution in the 1800s, humans have been burning these fossil fuels, releasing the carbon from them back into ..."
+            },
+            {
+              "title": "Fossil fuels - Our World in Data",
+              "url": "https://ourworldindata.org/fossil-fuels",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that increased human consumption of fossil fuels since the Industrial Revolution has led to a significant rise in atmospheric carbon dioxide levels, which is primarily due to the burning of these fossil fuels for energy. This process has returned carbon to the atmosphere at a much faster rate than it was removed by natural processes, thereby amplifying the greenhouse effect and contributing to global warming.",
+              "snippet": "The burning of fossil fuels for energy began around the Industrial Revolution. But fossil fuel consumption has changed significantly over the past few ..."
+            },
+            {
+              "title": "The History of Carbon Dioxide Emissions | World Resources Institute",
+              "url": "https://www.wri.org/insights/history-carbon-dioxide-emissions",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that increased human consumption of fossil fuels since the Industrial Revolution has led to a significant rise in atmospheric carbon dioxide levels, which are primarily responsible for the greenhouse effect and global warming.",
+              "snippet": "Recent data reveals that global CO2 emissions were 182 times higher in 2022 than they were in 1850, around the time the Industrial Revolution was underway."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 33.3,
+        "timestamp_confidence": 1.0
+      },
+      {
+        "claim_text": "Heat waves have more than doubled in duration in the past 50 years.",
+        "claim_confidence": 0.85,
+        "claim_category": "statistical",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence strongly supports the claim that heat waves have more than doubled in duration over the past 50 years. Multiple high-reliability sources indicate significant increases in both the frequency and duration of heat waves, with global data showing a doubling of heat wave duration from 1971 to 2020, and urban areas experiencing even more pronounced increases.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Heat waves becoming more prominent in urban areas, research ...",
+              "url": "https://newsroom.ucla.edu/releases/heat-waves-becoming-more-prominent-in-urban-areas-research-reveals",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (40.6 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that prolonged periods of extreme heat have significantly increased, with the average number of heat waves per year rising by over 50% from 1973 to 2012, suggesting a substantial increase in duration and frequency of heat waves.",
+              "snippet": "Prolonged periods of extreme heat increased significantly between 1973 and 2012 in almost half of the urban areas the researchers analyzed."
+            },
+            {
+              "title": "heat-waves-United-States-cities-increase-EPA-indcators.png - Climate",
+              "url": "https://www.climate.gov/media/16371",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (26.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that the duration of heat waves has increased, with data showing changes in the number of heat waves and the length of the season over the past decades, suggesting a significant rise in heat wave duration.",
+              "snippet": "The graphs show averages across all 50 metropolitan areas by decade. The size/color of each circle in the maps indicates the rate of change per ..."
+            },
+            {
+              "title": "Changes in global heat waves and its socioeconomic exposure in a ...",
+              "url": "https://www.sciencedirect.com/science/article/pii/S2212096322000663",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that global mean heat wave frequency and duration have indeed doubled from 1971 to 2020, with a notable increase in the average number of heat waves per year by over 50% during the studied period.",
+              "snippet": "Generally, global mean heat wave frequency and duration have doubled from 1971 to 2020, with a growth rate of 0.4 times and 2 days per decade. HWF have ..."
+            },
+            {
+              "title": "Heat Waves in the Age of Climate Change: Longer, More Frequent ...",
+              "url": "https://www.nytimes.com/2019/07/18/climate/heat-waves-in-the-age-of-climate-change-longer-more-frequent-and-more-dangerous.html",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that the average number of heat waves has increased significantly, from two per year in the 1960s to nearly six per year currently, suggesting a substantial increase in both frequency and duration of heat waves over the past 50 years.",
+              "snippet": "The average number of heat waves had risen from an average of two per year in the 1960s to the current average of nearly six per year."
+            },
+            {
+              "title": "Once-in-50-year heat waves now happening every decade - Reuters",
+              "url": "https://www.reuters.com/business/environment/once-in-50-year-heat-waves-now-happening-every-decade-un-climate-report-2021-08-09/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that the frequency and duration of heat waves have significantly increased over the past 40 years, with urban areas experiencing a 56% faster growth in heat wave frequency compared to non-urban areas. This suggests that heat waves have indeed more than doubled in duration and frequency in recent decades.",
+              "snippet": "Extreme heat waves that previously only struck once every 50 years are now expected to happen once per decade because of global warming, ..."
+            },
+            {
+              "title": "U.S.: annual heat wave index 1895-2020 - Statista",
+              "url": "https://www.statista.com/statistics/1293872/us-heat-wave-index/?srsltid=AfmBOoppfUSm1aFsEbl6D80Ym7ZAJeckbM4wGxf_DXhfkyED1V5c06Lg",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that the duration of heat waves has increased over the past decades, with data showing changes in the number of heat waves and the length of the heat wave season from 1961 to 2021.",
+              "snippet": "In the United States, approximately 64 percent of the people lived in counties that experienced multiday heat waves in 2021."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 94.56,
+        "timestamp_confidence": 0.9242424242424242
+      },
+      {
+        "claim_text": "It's estimated that heat waves are 10 times more likely now according to the UK's Met Office.",
+        "claim_confidence": 0.85,
+        "claim_category": "statistical",
+        "overall_stance": "mixed",
+        "verdict_confidence": "medium",
+        "verdict_summary": "The evidence presents a mixed picture regarding the claim that heat waves are 10 times more likely now according to the UK's Met Office. While some sources, including the Met Office itself, indicate that heatwave days over 40\u00b0C are indeed ten times more likely due to climate change, other sources emphasize a significant increase in the likelihood of extreme heat events without directly confirming the 10 times figure. The strongest support comes from the Met Office report and related studies, but the exact statistic remains somewhat unclear.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Heatwave in England to bring temperatures above 32\u00b0C (89.6\u00b0F)",
+              "url": "https://science.feedback.org/heatwave-england-bring-temperatures-above-32c-89-6f-study-finds-climate-change-made-this-100-times-more-likely/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that the likelihood of extreme heat events, such as temperatures exceeding 40\u00b0C in the UK, has significantly increased due to climate change, with estimates suggesting a 50% chance of such events occurring within the next 12 years, which supports the claim of increased frequency of heat waves.",
+              "snippet": "Temperatures above 32\u00b0C (89.6\u00b0F) in southeast England 100x more likely due to human-driven climate change, according to WWA study."
+            },
+            {
+              "title": "UK Braces for Record Temperatures as Third Heat Wave Spreads",
+              "url": "https://www.nytimes.com/2025/07/10/weather/uk-heat-wave.html",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that the likelihood of experiencing extreme heat events, such as exceeding 40\u00b0C, has significantly increased, with estimates suggesting a 50% chance of such an event occurring within the next 12 years, which implies a substantial rise in frequency compared to previous decades.",
+              "snippet": "A third official heat wave is expected to descend this weekend, with record-breaking temperatures possible in Scotland."
+            },
+            {
+              "title": "Met Office report details rising likelihood of UK hot days",
+              "url": "https://www.metoffice.gov.uk/about-us/news-and-media/media-centre/weather-and-climate-news/2025/met-office-report-details-rising-likelihood-of-uk-hot-days",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (29.4 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that the likelihood of experiencing extreme heat events, such as exceeding 40\u00b0C, has significantly increased, with estimates suggesting a 50% chance of such an event occurring within the next 12 years, which supports the claim of increased frequency of heat waves.",
+              "snippet": "New study highlights how UK heatwaves could become longer and hotter due to escalating climate trends."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "Britain's heatwave even be possible without climate change?",
+              "url": "https://www.weforum.org/stories/2022/07/britain-heatwave-likely-climate-change/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The UK Met Office suggests that heatwave days over 40\u00b0C are ten times more likely to happen in the UK as a result of climate change.",
+              "snippet": "The UK Met Office suggests that heatwave days over 40\u00b0C are ten times more likely to happen in the UK as a result of climate change."
+            },
+            {
+              "title": "Climate breakdown made UK heatwave 10 times more likely, study ...",
+              "url": "https://www.theguardian.com/world/2022/jul/28/climate-breakdown-made-uk-heatwave-10-times-more-likely-study-finds",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "MBFC credibility: medium",
+                  "Factual reporting: Mixed"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Climate breakdown made the recent record UK heatwave 10 times more likely, researchers have found. ... Met Office found the chance of seeing 40C ...",
+              "snippet": "Climate breakdown made the recent record UK heatwave 10 times more likely, researchers have found. ... Met Office found the chance of seeing 40C ..."
+            },
+            {
+              "title": "Heat in cities \u2013 the health impacts of a changing climate - Met Office",
+              "url": "https://www.metoffice.gov.uk/blog/2023/heat-in-cities-the-health-impacts-of-a-changing-climate",
+              "reliability": {
+                "rating": "unknown",
+                "score": 0.5,
+                "reasons": [
+                  "No credibility data available"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Both studies found that human induced climate change has made the chance of 40\u00b0C in the UK about 10 times more likely when compared with pre- ...",
+              "snippet": "Both studies found that human induced climate change has made the chance of 40\u00b0C in the UK about 10 times more likely when compared with pre- ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 96.299,
+        "timestamp_confidence": 1.0
+      }
+    ],
+    "transcript_data": {
+      "text": "from flooding to heat waves wildfires to droughts our planet has been experiencing more frequent and intense weather events in recent years so how is this connected to climate change and how can we lessen its impact this is decomplicated how is extreme weather connected to climate change Earth's weather Cycles have shown signs of becoming increasingly more erratic severe and prolonged and though there is no blanket explanation for this change of weather patterns human-induced global warming is a major underlying Factor increased human consumption of fossil fuels since the industrial revolution has led to more greenhouse gases being released such as carbon dioxide and methane into Earth's atmosphere this has contributed to climate change in the form of increased global temperatures which can then affect How likely and how intense an extreme weather event can be the causality between global climate change and individual extreme weather event varies from event to event based on the type of weather the location time of year and how intense widespread and long it is however not all events are becoming more likely and severe some may be decreased in Chance by climate change or may not be changed much and changes are irregular across the world foreign what are some examples of extreme weather there are four main examples of extreme weather heat waves wildfires droughts and increased rainfall heat waves in many parts of the world are getting hotter more frequent and lasting longer and this is a result of human cause climate change hot spells have more than doubled in duration in the past 50 years and it's estimated that heat waves are 10 times more likely now according to the UK's Met Office increased heat has contributed to more regular and extensive Wildfire seasons in some areas of all continents this is because more moisture is drawn out of the earth and vegetation by more frequent and intense heat waves this then provides ideal kindling conditions for wildfires human activities such as Forest management and ignition sources are also important causal factors for these events droughts are becoming more common and more severe in some areas due to climate change there are two main ways this happens firstly through evaporation as the atmosphere warms more evaporation from the land occurs secondly through rainfall individual rainfall events are becoming heavier across the world falling in shorter and more intense bursts this heavier rain is more likely to saturate the ground and run directly into rivers rather than sustaining soil moisture and groundwater Reserve during more moderate rainfall overall the combination of more evaporation more sporadic heavier rainfall and less average downpours make dry spells more common in drought prone regions and seasons droughts put added pressure on Water Supplies as demand increases from people in agriculture which can lead to shortages human Water Management can also impact the likelihood of droughts increased rainfall has affected most of the world due to human-course climate change typically hot weather creates moisture and water vapor in the air which turns into droplets to create rain the warmer it becomes the more Vapor there is in the atmosphere this results in more droplets and heavier rainfall sometimes in a shorter space of time and over a small area this increased rainfall worsens flooding which can damage infrastructure and contaminate groundwater making it unsafe to drink however flooding can also be caused by human factors such as water management and defenses how can we lessen this impact scientists and experts have warned that if we want to reduce the worst consequences of climate breakdown we need to limit global warming to 1.5 degrees Celsius this target was written into the 2015 Paris agreement a legally binding treaty that 196 parties agreed to uphold the goal is to limit global warming to well below 2 degrees Celsius preferably to 1.5 degrees celsius compared to pre-industrial levels this Baseline was partly chosen because it's the earliest period with near Global observations in order to keep temperatures under 1.5 degrees Celsius dramatic changes need to be made namely Global CO2 emissions must be at half of their 2010 Levels by 2030 and at Net Zero or as close to no total carbon emissions as possible by 2050. the 1.5 degrees Celsius Target is increasingly Moving Out Of Reach an extreme weather is continuing to become more frequent and prevalent globally these multiple climate impacts will likely worsen a host of issues people around the world are currently facing like food insecurity damaged infrastructure induced migration and constrained resources however there is still hope that we can minimize the destructive cycles of extreme weather but in order to do so we must focus on limiting any further human impact on our Global Climate immediately [Music]",
+      "segments": [
+        {
+          "text": "from flooding to heat waves wildfires to",
+          "start": 0.12,
+          "duration": 4.08
+        },
+        {
+          "text": "droughts our planet has been",
+          "start": 2.7,
+          "duration": 3.18
+        },
+        {
+          "text": "experiencing more frequent and intense",
+          "start": 4.2,
+          "duration": 4.2
+        },
+        {
+          "text": "weather events in recent years so how is",
+          "start": 5.88,
+          "duration": 4.44
+        },
+        {
+          "text": "this connected to climate change and how",
+          "start": 8.4,
+          "duration": 4.5
+        },
+        {
+          "text": "can we lessen its impact this is",
+          "start": 10.32,
+          "duration": 5.3
+        },
+        {
+          "text": "decomplicated",
+          "start": 12.9,
+          "duration": 2.72
+        },
+        {
+          "text": "how is extreme weather connected to",
+          "start": 16.859,
+          "duration": 3.061
+        },
+        {
+          "text": "climate change",
+          "start": 18.48,
+          "duration": 3.48
+        },
+        {
+          "text": "Earth's weather Cycles have shown signs",
+          "start": 19.92,
+          "duration": 4.019
+        },
+        {
+          "text": "of becoming increasingly more erratic",
+          "start": 21.96,
+          "duration": 4.5
+        },
+        {
+          "text": "severe and prolonged and though there is",
+          "start": 23.939,
+          "duration": 4.141
+        },
+        {
+          "text": "no blanket explanation for this change",
+          "start": 26.46,
+          "duration": 3.84
+        },
+        {
+          "text": "of weather patterns human-induced global",
+          "start": 28.08,
+          "duration": 5.22
+        },
+        {
+          "text": "warming is a major underlying Factor",
+          "start": 30.3,
+          "duration": 5.16
+        },
+        {
+          "text": "increased human consumption of fossil",
+          "start": 33.3,
+          "duration": 3.66
+        },
+        {
+          "text": "fuels since the industrial revolution",
+          "start": 35.46,
+          "duration": 3.54
+        },
+        {
+          "text": "has led to more greenhouse gases being",
+          "start": 36.96,
+          "duration": 4.02
+        },
+        {
+          "text": "released such as carbon dioxide and",
+          "start": 39.0,
+          "duration": 4.62
+        },
+        {
+          "text": "methane into Earth's atmosphere this has",
+          "start": 40.98,
+          "duration": 4.14
+        },
+        {
+          "text": "contributed to climate change in the",
+          "start": 43.62,
+          "duration": 2.939
+        },
+        {
+          "text": "form of increased global temperatures",
+          "start": 45.12,
+          "duration": 3.48
+        },
+        {
+          "text": "which can then affect How likely and how",
+          "start": 46.559,
+          "duration": 4.041
+        },
+        {
+          "text": "intense an extreme weather event can be",
+          "start": 48.6,
+          "duration": 4.68
+        },
+        {
+          "text": "the causality between global climate",
+          "start": 50.6,
+          "duration": 4.18
+        },
+        {
+          "text": "change and individual extreme weather",
+          "start": 53.28,
+          "duration": 3.84
+        },
+        {
+          "text": "event varies from event to event based",
+          "start": 54.78,
+          "duration": 4.68
+        },
+        {
+          "text": "on the type of weather the location time",
+          "start": 57.12,
+          "duration": 4.68
+        },
+        {
+          "text": "of year and how intense widespread and",
+          "start": 59.46,
+          "duration": 4.5
+        },
+        {
+          "text": "long it is",
+          "start": 61.8,
+          "duration": 4.44
+        },
+        {
+          "text": "however not all events are becoming more",
+          "start": 63.96,
+          "duration": 4.32
+        },
+        {
+          "text": "likely and severe some may be decreased",
+          "start": 66.24,
+          "duration": 3.9
+        },
+        {
+          "text": "in Chance by climate change or may not",
+          "start": 68.28,
+          "duration": 3.659
+        },
+        {
+          "text": "be changed much and changes are",
+          "start": 70.14,
+          "duration": 4.68
+        },
+        {
+          "text": "irregular across the world",
+          "start": 71.939,
+          "duration": 4.5
+        },
+        {
+          "text": "foreign",
+          "start": 74.82,
+          "duration": 3.299
+        },
+        {
+          "text": "what are some examples of extreme",
+          "start": 76.439,
+          "duration": 3.841
+        },
+        {
+          "text": "weather",
+          "start": 78.119,
+          "duration": 4.021
+        },
+        {
+          "text": "there are four main examples of extreme",
+          "start": 80.28,
+          "duration": 4.62
+        },
+        {
+          "text": "weather heat waves wildfires droughts",
+          "start": 82.14,
+          "duration": 4.619
+        },
+        {
+          "text": "and increased rainfall",
+          "start": 84.9,
+          "duration": 3.6
+        },
+        {
+          "text": "heat waves in many parts of the world",
+          "start": 86.759,
+          "duration": 3.54
+        },
+        {
+          "text": "are getting hotter more frequent and",
+          "start": 88.5,
+          "duration": 3.84
+        },
+        {
+          "text": "lasting longer and this is a result of",
+          "start": 90.299,
+          "duration": 4.261
+        },
+        {
+          "text": "human cause climate change",
+          "start": 92.34,
+          "duration": 3.959
+        },
+        {
+          "text": "hot spells have more than doubled in",
+          "start": 94.56,
+          "duration": 3.9
+        },
+        {
+          "text": "duration in the past 50 years and it's",
+          "start": 96.299,
+          "duration": 3.78
+        },
+        {
+          "text": "estimated that heat waves are 10 times",
+          "start": 98.46,
+          "duration": 3.72
+        },
+        {
+          "text": "more likely now according to the UK's",
+          "start": 100.079,
+          "duration": 3.961
+        },
+        {
+          "text": "Met Office",
+          "start": 102.18,
+          "duration": 4.02
+        },
+        {
+          "text": "increased heat has contributed to more",
+          "start": 104.04,
+          "duration": 4.02
+        },
+        {
+          "text": "regular and extensive Wildfire seasons",
+          "start": 106.2,
+          "duration": 4.14
+        },
+        {
+          "text": "in some areas of all continents",
+          "start": 108.06,
+          "duration": 4.5
+        },
+        {
+          "text": "this is because more moisture is drawn",
+          "start": 110.34,
+          "duration": 4.08
+        },
+        {
+          "text": "out of the earth and vegetation by more",
+          "start": 112.56,
+          "duration": 4.08
+        },
+        {
+          "text": "frequent and intense heat waves this",
+          "start": 114.42,
+          "duration": 3.96
+        },
+        {
+          "text": "then provides ideal kindling conditions",
+          "start": 116.64,
+          "duration": 3.18
+        },
+        {
+          "text": "for wildfires",
+          "start": 118.38,
+          "duration": 3.419
+        },
+        {
+          "text": "human activities such as Forest",
+          "start": 119.82,
+          "duration": 4.079
+        },
+        {
+          "text": "management and ignition sources are also",
+          "start": 121.799,
+          "duration": 3.661
+        },
+        {
+          "text": "important causal factors for these",
+          "start": 123.899,
+          "duration": 3.36
+        },
+        {
+          "text": "events",
+          "start": 125.46,
+          "duration": 3.659
+        },
+        {
+          "text": "droughts are becoming more common and",
+          "start": 127.259,
+          "duration": 3.84
+        },
+        {
+          "text": "more severe in some areas due to climate",
+          "start": 129.119,
+          "duration": 2.941
+        },
+        {
+          "text": "change",
+          "start": 131.099,
+          "duration": 2.461
+        },
+        {
+          "text": "there are two main ways this happens",
+          "start": 132.06,
+          "duration": 4.02
+        },
+        {
+          "text": "firstly through evaporation as the",
+          "start": 133.56,
+          "duration": 4.319
+        },
+        {
+          "text": "atmosphere warms more evaporation from",
+          "start": 136.08,
+          "duration": 3.96
+        },
+        {
+          "text": "the land occurs secondly through",
+          "start": 137.879,
+          "duration": 4.381
+        },
+        {
+          "text": "rainfall individual rainfall events are",
+          "start": 140.04,
+          "duration": 3.48
+        },
+        {
+          "text": "becoming heavier across the world",
+          "start": 142.26,
+          "duration": 3.3
+        },
+        {
+          "text": "falling in shorter and more intense",
+          "start": 143.52,
+          "duration": 4.439
+        },
+        {
+          "text": "bursts this heavier rain is more likely",
+          "start": 145.56,
+          "duration": 4.2
+        },
+        {
+          "text": "to saturate the ground and run directly",
+          "start": 147.959,
+          "duration": 3.961
+        },
+        {
+          "text": "into rivers rather than sustaining soil",
+          "start": 149.76,
+          "duration": 4.199
+        },
+        {
+          "text": "moisture and groundwater Reserve during",
+          "start": 151.92,
+          "duration": 4.86
+        },
+        {
+          "text": "more moderate rainfall overall the",
+          "start": 153.959,
+          "duration": 5.161
+        },
+        {
+          "text": "combination of more evaporation more",
+          "start": 156.78,
+          "duration": 4.5
+        },
+        {
+          "text": "sporadic heavier rainfall and less",
+          "start": 159.12,
+          "duration": 4.44
+        },
+        {
+          "text": "average downpours make dry spells more",
+          "start": 161.28,
+          "duration": 4.38
+        },
+        {
+          "text": "common in drought prone regions and",
+          "start": 163.56,
+          "duration": 3.3
+        },
+        {
+          "text": "seasons",
+          "start": 165.66,
+          "duration": 3.06
+        },
+        {
+          "text": "droughts put added pressure on Water",
+          "start": 166.86,
+          "duration": 3.72
+        },
+        {
+          "text": "Supplies as demand increases from people",
+          "start": 168.72,
+          "duration": 3.48
+        },
+        {
+          "text": "in agriculture which can lead to",
+          "start": 170.58,
+          "duration": 2.64
+        },
+        {
+          "text": "shortages",
+          "start": 172.2,
+          "duration": 2.94
+        },
+        {
+          "text": "human Water Management can also impact",
+          "start": 173.22,
+          "duration": 4.56
+        },
+        {
+          "text": "the likelihood of droughts",
+          "start": 175.14,
+          "duration": 4.739
+        },
+        {
+          "text": "increased rainfall has affected most of",
+          "start": 177.78,
+          "duration": 3.66
+        },
+        {
+          "text": "the world due to human-course climate",
+          "start": 179.879,
+          "duration": 2.521
+        },
+        {
+          "text": "change",
+          "start": 181.44,
+          "duration": 2.879
+        },
+        {
+          "text": "typically hot weather creates moisture",
+          "start": 182.4,
+          "duration": 3.72
+        },
+        {
+          "text": "and water vapor in the air which turns",
+          "start": 184.319,
+          "duration": 4.2
+        },
+        {
+          "text": "into droplets to create rain the warmer",
+          "start": 186.12,
+          "duration": 4.14
+        },
+        {
+          "text": "it becomes the more Vapor there is in",
+          "start": 188.519,
+          "duration": 3.541
+        },
+        {
+          "text": "the atmosphere this results in more",
+          "start": 190.26,
+          "duration": 4.02
+        },
+        {
+          "text": "droplets and heavier rainfall sometimes",
+          "start": 192.06,
+          "duration": 4.5
+        },
+        {
+          "text": "in a shorter space of time and over a",
+          "start": 194.28,
+          "duration": 3.539
+        },
+        {
+          "text": "small area",
+          "start": 196.56,
+          "duration": 3.539
+        },
+        {
+          "text": "this increased rainfall worsens flooding",
+          "start": 197.819,
+          "duration": 4.081
+        },
+        {
+          "text": "which can damage infrastructure and",
+          "start": 200.099,
+          "duration": 3.78
+        },
+        {
+          "text": "contaminate groundwater making it unsafe",
+          "start": 201.9,
+          "duration": 4.74
+        },
+        {
+          "text": "to drink however flooding can also be",
+          "start": 203.879,
+          "duration": 4.561
+        },
+        {
+          "text": "caused by human factors such as water",
+          "start": 206.64,
+          "duration": 5.06
+        },
+        {
+          "text": "management and defenses",
+          "start": 208.44,
+          "duration": 3.26
+        },
+        {
+          "text": "how can we lessen this impact",
+          "start": 212.04,
+          "duration": 4.32
+        },
+        {
+          "text": "scientists and experts have warned that",
+          "start": 214.62,
+          "duration": 3.06
+        },
+        {
+          "text": "if we want to reduce the worst",
+          "start": 216.36,
+          "duration": 3.12
+        },
+        {
+          "text": "consequences of climate breakdown we",
+          "start": 217.68,
+          "duration": 3.36
+        },
+        {
+          "text": "need to limit global warming to 1.5",
+          "start": 219.48,
+          "duration": 3.24
+        },
+        {
+          "text": "degrees Celsius",
+          "start": 221.04,
+          "duration": 4.02
+        },
+        {
+          "text": "this target was written into the 2015",
+          "start": 222.72,
+          "duration": 4.98
+        },
+        {
+          "text": "Paris agreement a legally binding treaty",
+          "start": 225.06,
+          "duration": 6.36
+        },
+        {
+          "text": "that 196 parties agreed to uphold the",
+          "start": 227.7,
+          "duration": 5.88
+        },
+        {
+          "text": "goal is to limit global warming to well",
+          "start": 231.42,
+          "duration": 4.86
+        },
+        {
+          "text": "below 2 degrees Celsius preferably to",
+          "start": 233.58,
+          "duration": 5.1
+        },
+        {
+          "text": "1.5 degrees celsius compared to",
+          "start": 236.28,
+          "duration": 5.16
+        },
+        {
+          "text": "pre-industrial levels this Baseline was",
+          "start": 238.68,
+          "duration": 4.5
+        },
+        {
+          "text": "partly chosen because it's the earliest",
+          "start": 241.44,
+          "duration": 4.5
+        },
+        {
+          "text": "period with near Global observations",
+          "start": 243.18,
+          "duration": 4.619
+        },
+        {
+          "text": "in order to keep temperatures under 1.5",
+          "start": 245.94,
+          "duration": 4.019
+        },
+        {
+          "text": "degrees Celsius dramatic changes need to",
+          "start": 247.799,
+          "duration": 4.921
+        },
+        {
+          "text": "be made namely Global CO2 emissions must",
+          "start": 249.959,
+          "duration": 5.041
+        },
+        {
+          "text": "be at half of their 2010 Levels by 2030",
+          "start": 252.72,
+          "duration": 5.34
+        },
+        {
+          "text": "and at Net Zero or as close to no total",
+          "start": 255.0,
+          "duration": 7.88
+        },
+        {
+          "text": "carbon emissions as possible by 2050.",
+          "start": 258.06,
+          "duration": 4.82
+        },
+        {
+          "text": "the 1.5 degrees Celsius Target is",
+          "start": 263.84,
+          "duration": 4.66
+        },
+        {
+          "text": "increasingly Moving Out Of Reach an",
+          "start": 266.699,
+          "duration": 3.601
+        },
+        {
+          "text": "extreme weather is continuing to become",
+          "start": 268.5,
+          "duration": 3.74
+        },
+        {
+          "text": "more frequent and prevalent globally",
+          "start": 270.3,
+          "duration": 4.14
+        },
+        {
+          "text": "these multiple climate impacts will",
+          "start": 272.24,
+          "duration": 3.88
+        },
+        {
+          "text": "likely worsen a host of issues people",
+          "start": 274.44,
+          "duration": 3.24
+        },
+        {
+          "text": "around the world are currently facing",
+          "start": 276.12,
+          "duration": 3.48
+        },
+        {
+          "text": "like food insecurity damaged",
+          "start": 277.68,
+          "duration": 4.38
+        },
+        {
+          "text": "infrastructure induced migration and",
+          "start": 279.6,
+          "duration": 4.26
+        },
+        {
+          "text": "constrained resources",
+          "start": 282.06,
+          "duration": 4.02
+        },
+        {
+          "text": "however there is still hope that we can",
+          "start": 283.86,
+          "duration": 3.899
+        },
+        {
+          "text": "minimize the destructive cycles of",
+          "start": 286.08,
+          "duration": 4.5
+        },
+        {
+          "text": "extreme weather but in order to do so we",
+          "start": 287.759,
+          "duration": 4.741
+        },
+        {
+          "text": "must focus on limiting any further human",
+          "start": 290.58,
+          "duration": 5.96
+        },
+        {
+          "text": "impact on our Global Climate immediately",
+          "start": 292.5,
+          "duration": 4.04
+        },
+        {
+          "text": "[Music]",
+          "start": 298.39,
+          "duration": 10.569
+        }
+      ],
+      "video_id": "eeISzbk9SeE"
+    }
+  }
+}

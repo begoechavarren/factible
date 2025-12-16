@@ -1,0 +1,23 @@
+{
+  "run_id": "20251214_020859_oFmGG3k8naQ",
+  "experiment_name": "precision_recall_curve_claims7_fluoridated_water_iq",
+  "component": "end_to_end",
+  "timestamp": "2025-12-14T02:10:26.561896",
+  "video_url": "https://youtu.be/oFmGG3k8naQ",
+  "max_claims": 7,
+  "max_queries_per_claim": 2,
+  "max_results_per_query": 3,
+  "headless_search": true,
+  "model_config": {
+    "claim_extractor": "OPENAI_GPT4O_MINI",
+    "query_generator": "OPENAI_GPT4O_MINI",
+    "evidence_extractor": "OPENAI_GPT4O_MINI",
+    "output_generator": "OPENAI_GPT4O_MINI"
+  },
+  "model_summary": "CE:gpt-4o-mini | QG:gpt-4o-mini | EE:gpt-4o-mini | OG:gpt-4o-mini",
+  "parallelization": "async",
+  "video_title": "Harvard Study Proves Fluoridated water Lowers your IQ",
+  "transcript_length": 7129,
+  "transcript_tokens": 1324,
+  "video_duration_seconds": 507.35999999999996
+}

@@ -1,0 +1,157 @@
+{
+  "video_id": "WJhCa12UTsg",
+  "timestamp": "2025-12-14T11:04:20.029549",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_10",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.9,
+    "recall": 0.5625,
+    "f1_score": 0.6923076923076923,
+    "true_positives": 9,
+    "false_positives": 1,
+    "false_negatives": 7,
+    "mean_average_precision": 0.7856701940035273,
+    "recall_at_important": 0.75,
+    "importance_weighted_coverage": 0.5910931174089069,
+    "matched_claims": [
+      {
+        "gt_text": "Only about 1 in 10 teenagers gets the 8 to 10 hours of sleep per night recommended by sleep scientists and pediatricians",
+        "sys_text": "Only about 1 in 10 teenagers gets the 8 to 10 hours of sleep recommended by sleep scientists and pediatricians.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.85,
+        "importance_error": 0.0
+      },
+      {
+        "gt_text": "Major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m.",
+        "sys_text": "Major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.85,
+        "importance_error": 0.050000000000000044
+      },
+      {
+        "gt_text": "For each hour of lost sleep, there was a 38% increase in feeling sad or hopeless, and a 58% increase in teen suicide attempts",
+        "sys_text": "For each hour of lost sleep, there was a 38% increase in feeling sad or hopeless, and a 58% increase in teen suicide attempts.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.8,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "Getting five hours or less of sleep per night is the equivalent of driving with a blood alcohol content above the legal limit",
+        "sys_text": "Getting five hours or less of sleep per night is equivalent to driving with a blood alcohol content above the legal limit.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.75,
+        "importance_error": 0.0
+      },
+      {
+        "gt_text": "Around the time of puberty, teenagers experience a delay in their biological clock",
+        "sys_text": "Teenagers experience a delay in their biological clock around puberty, affecting sleep patterns.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.7,
+        "importance_error": 0.15000000000000002
+      },
+      {
+        "gt_text": "Teenagers' bodies wait to start releasing melatonin until around 11 p.m., which is two hours later than what we see in adults or younger children",
+        "sys_text": "Teenagers' bodies start releasing melatonin around 11 p.m., two hours later than adults or younger children.",
+        "gt_importance": 0.8,
+        "sys_importance": 0.7,
+        "importance_error": 0.10000000000000009
+      },
+      {
+        "gt_text": "Teens with sleep problems were 55% more likely to have used alcohol in the past month",
+        "sys_text": "Teens with sleep problems were 55% more likely to have used alcohol in the past month.",
+        "gt_importance": 0.8,
+        "sys_importance": 0.7,
+        "importance_error": 0.10000000000000009
+      },
+      {
+        "gt_text": "Standardized test scores in math and reading go up by 2 to 3 percentage points with later start times",
+        "sys_text": "Standardized test scores in math and reading go up by 2 to 3 percentage points with later start times.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.7,
+        "importance_error": 0.050000000000000044
+      },
+      {
+        "gt_text": "Waking a teenager up at 6 a.m. is the biological equivalent of waking an adult up at 4 a.m.",
+        "sys_text": "Waking a teenager up at 6 a.m. is the biological equivalent of waking an adult up at 4 a.m.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.6,
+        "importance_error": 0.09999999999999998
+      }
+    ],
+    "missed_claims": [
+      "Many of the unpleasant characteristics we chalk up to being a teenager\u2014moodiness, irritability, laziness, depression\u2014could be a product of chronic sleep deprivation",
+      "Adolescence is a period of dramatic brain development, particularly in the parts of the brain responsible for higher order thinking processes, including reasoning, problem solving, and good judgment",
+      "Teens from districts with later start times get more sleep",
+      "School absences dropped by 25% in one district after implementing later start times",
+      "Later start times produce benefits as powerful as reducing class sizes by one third fewer students",
+      "Car crash rates for teen drivers went down by 70% in one district that changed school start times",
+      "Only about 17.7% of public middle and high schools in the United States started school at 8:30 a.m. or later before 2014"
+    ],
+    "extra_claims": [
+      "Sleep deprivation among American teenagers is an epidemic."
+    ],
+    "importance_mae": 0.07222222222222224,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.4444444444444444,
+    "stance_accuracy": 0.4444444444444444,
+    "correct_verdicts": 4,
+    "total_verdicts": 9,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "Major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m.",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Getting five hours or less of sleep per night is the equivalent of driving with a blood alcohol content above the legal limit",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Around the time of puberty, teenagers experience a delay in their biological clock",
+        "gt_verdict": "UNCLEAR",
+        "sys_verdict": "SUPPORTS"
+      },
+      {
+        "claim": "Teenagers' bodies wait to start releasing melatonin until around 11 p.m., which is two hours later than what we see in adults or younger children",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Standardized test scores in math and reading go up by 2 to 3 percentage points with later start times",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.5625,
+    "verdict_accuracy": 0.4444444444444444,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.0018222,
+    "total_time_seconds": 139.67284202575684,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.5
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 45,
+      "medium": 5
+    },
+    "avg_evidence_per_claim": 5.0
+  },
+  "ground_truth_claims_count": 16,
+  "system_claims_count": 10
+}

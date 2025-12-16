@@ -1,0 +1,153 @@
+{
+  "video_id": "QcDrE5YvqTs",
+  "timestamp": "2025-12-14T11:04:19.750765",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_10",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 1.0,
+    "recall": 0.5333333333333333,
+    "f1_score": 0.6956521739130436,
+    "true_positives": 8,
+    "false_positives": 0,
+    "false_negatives": 7,
+    "mean_average_precision": 1.0,
+    "recall_at_important": 0.4444444444444444,
+    "importance_weighted_coverage": 0.5186721991701244,
+    "matched_claims": [
+      {
+        "gt_text": "Women make only 77 cents for every dollar a man makes",
+        "sys_text": "Women make only 77 cents for every dollar a man makes.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.85,
+        "importance_error": 0.050000000000000044
+      },
+      {
+        "gt_text": "In 2009, the U.S. Department of Labor released a paper that examined more than 50 peer-reviewed studies and concluded that the oft-cited 23 percent wage gap may be almost entirely the result of individual choices being made by both male and female workers",
+        "sys_text": "In 2009, the U.S. Department of Labor released a paper that examined more than 50 peer-reviewed studies and concluded that the 23 percent wage gap may be almost entirely the result of individual choices.",
+        "gt_importance": 0.95,
+        "sys_importance": 0.75,
+        "importance_error": 0.19999999999999996
+      },
+      {
+        "gt_text": "The 77-cents-on-the-dollar statistic is calculated by dividing the median earnings of all women working full-time by the median earnings of all men working full-time",
+        "sys_text": "The 77-cents-on-the-dollar statistic is calculated by dividing the median earnings of all women working full-time by the median earnings of all men working full-time.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.7,
+        "importance_error": 0.050000000000000044
+      },
+      {
+        "gt_text": "Once differences are accounted for across all professions, the unexplained wage gap is somewhere between 4.8 and 7 percent",
+        "sys_text": "The unexplained wage gap is somewhere between 4.8 and 7 percent after accounting for differences.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.65,
+        "importance_error": 0.19999999999999996
+      },
+      {
+        "gt_text": "An AAUW study shows that the actual wage gap shrinks to only 6.6 cents when you factor in different choices men and women make",
+        "sys_text": "The actual wage gap shrinks to only 6.6 cents when you factor in different choices men and women make.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.6,
+        "importance_error": 0.30000000000000004
+      },
+      {
+        "gt_text": "Male nurses earn 18% more than female nurses on the whole",
+        "sys_text": "Male nurses earn 18% more than female nurses due to career choices and specialties.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.6,
+        "importance_error": 0.15000000000000002
+      },
+      {
+        "gt_text": "Georgetown University compiled a list of the five best-paying college majors: #1 Petroleum Engineering (87% male), #2 Pharmaceutical Sciences (48% male), #3 Mathematics and Computer Science (67% male), #4 Aerospace Engineering (88% male), #5 Chemical Engineering (72% male)",
+        "sys_text": "Georgetown University compiled a list of the five best-paying college majors, showing 87% male in Petroleum Engineering.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.55,
+        "importance_error": 0.1499999999999999
+      },
+      {
+        "gt_text": "Men are vastly overrepresented on oil rigs as an example of dangerous work environments",
+        "sys_text": "Men are vastly overrepresented on oil rigs, which are dangerous work environments.",
+        "gt_importance": 0.45,
+        "sys_importance": 0.4,
+        "importance_error": 0.04999999999999999
+      }
+    ],
+    "missed_claims": [
+      "The 77-cent calculation doesn't take into account occupation, position, education or hours worked per week",
+      "The five worst paying college majors include: #1 Counseling and Psychology (74% female), #2 Early Childhood Education (97% female), #4 Human Services and Community Organization (81% female), #5 Social Work (88% female)",
+      "Male nurses gravitate to the best-paying nursing specialties, they work longer hours, and disproportionately find jobs in cities with the highest compensation",
+      "Career choices and educational differences explain most, if not all, the gender gap in nursing, according to Professor Linda Aiken of the University of Pennsylvania",
+      "According to Harvard economist Claudia Goldin, even if two lawyers have the same education, same specialty, and work the same number of hours, firms pay more to someone who is willing to always be on call and ready to be in the office when the firm needs them",
+      "This isn't sexism, it's just common sense",
+      "Those who claim that for the same work women earn 77 cents on the dollar compared to men are not merely bad at math but at telling the truth"
+    ],
+    "extra_claims": [],
+    "importance_mae": 0.14375,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.25,
+    "stance_accuracy": 0.25,
+    "correct_verdicts": 2,
+    "total_verdicts": 8,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "In 2009, the U.S. Department of Labor released a paper that examined more than 50 peer-reviewed studies and concluded that the oft-cited 23 percent wage gap may be almost entirely the result of individual choices being made by both male and female workers",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "MIXED"
+      },
+      {
+        "claim": "The 77-cents-on-the-dollar statistic is calculated by dividing the median earnings of all women working full-time by the median earnings of all men working full-time",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "MIXED"
+      },
+      {
+        "claim": "Once differences are accounted for across all professions, the unexplained wage gap is somewhere between 4.8 and 7 percent",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "An AAUW study shows that the actual wage gap shrinks to only 6.6 cents when you factor in different choices men and women make",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Male nurses earn 18% more than female nurses on the whole",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Georgetown University compiled a list of the five best-paying college majors: #1 Petroleum Engineering (87% male), #2 Pharmaceutical Sciences (48% male), #3 Mathematics and Computer Science (67% male), #4 Aerospace Engineering (88% male), #5 Chemical Engineering (72% male)",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.5333333333333333,
+    "verdict_accuracy": 0.25,
+    "evidence_quality_avg": 0.625,
+    "total_cost_usd": 0.00165315,
+    "total_time_seconds": 86.41145086288452,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 0.625,
+    "avg_sources_per_query": 1.625
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 18,
+      "medium": 8
+    },
+    "avg_evidence_per_claim": 3.25
+  },
+  "ground_truth_claims_count": 15,
+  "system_claims_count": 8
+}

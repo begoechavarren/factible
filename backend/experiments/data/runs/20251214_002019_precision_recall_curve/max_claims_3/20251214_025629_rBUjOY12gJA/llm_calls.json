@@ -1,0 +1,265 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:56:37.211202",
+    "latency_seconds": 6.84,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nif you're thinking about leading a more active lifestyle you're not alone in recent years an increasing number of Americans have started participating in more sports fitness and recreation whether you're trying to get fit build muscle or you're just tired of the couch here are some changes you can expect along the way during that first workout you might feel more alert and energized because ramping up your heart rate means a boost in overall blood flow and oxygen to the brain but prepare yourself for the day after when you'll almost certainly get a case of Dom's short for delayed onset muscle soreness the soreness will persist for about 72 hours but the good news is you're less likely to get it again as long as you continue to regularly exercise those same muscles over the next few weeks you'll slowly start to ramp up production of mitochondria via a process called mitochondrial biogenesis mitochondria are the parts of your cells that convert carbs fat and protein and to feel that your muscles use to do their job like flexing contract after six to eight weeks studies have shown that people can increase their mitochondria by up to 50% with more mitochondria in your cells you'll start to feel more fit and your endurance will increase so running three miles will no longer feel as difficult as it did during the first week once your six months in all of that hard work should finally start to show if your workouts focus on strength training you'll notice your muscles begin to take shape you're also less likely to fall off the workout wagon at this point exercise programs often see a 50% dropout rate within the first six months but after that more people stick with it now if you're more focused on cardio than by nine months of regular exercise you should see about a 25% increase in your vo2 max vo2 max is often used as a measure of fitness and refers to the rate your body can transport oxygen to your muscles for fuel basically higher vo2 max means you can run faster for longer so a 25% increase means you can run about 20% further in the same amount of time after one year of regular exercise your bones will be denser which reduces your of osteoporosis in fact researchers have found that regular resistance training when combined with aerobic exercise can actually reverse the effects of osteoporosis after 12 months now if you maintain your exercise program long term your body might not be the only thing to benefit your bank account may also be one study revealed that older people who exercise 5 days a week for at least 30 minutes saved on average $2,500 a year in medical costs for heart related health problems alone you'll also be at a lower risk of developing arthritis type-2 diabetes dementia and certain types of cancer like breast and colon in all probability you are going to live longer than you otherwise would and that longer life it will likely feel more fulfilling because exercise lowers the risk of anxiety and depression by reducing levels of stress hormones like cortisol and adrenaline of course all of these benefits depend on the type and intensity of your workout and how long you exercise for each week a balanced diet is also paramount to a healthy lifestyle for the average adult ages 18 to 64 the US Department of Health and Human Services recommends either a minimum of two and a half hours per week of moderately intense exercise like brisk walking or biking or at least one hour and 15 minutes each week that combines moderate and high intensity workouts like running and swimming sprints on top of that make sure and take two days each week to strengthen your muscles with some weights or resistance training this will help your overall speed and endurance as you begin it's important to pace yourself and not push too hard too fast or you risk serious injury you'll discover that the fitter you become the easier it will be to exert a little more energy the next week the week after and so forth exercise smart and often and you'll be running marathons in no time you",
+    "input_length_chars": 4091,
+    "input_tokens_estimated": 1022,
+    "output": {
+      "claims": [
+        {
+          "text": "An increasing number of Americans have started participating in more sports, fitness, and recreation.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Context unknown."
+        },
+        {
+          "text": "During the first workout, you might feel more alert and energized due to increased blood flow and oxygen to the brain.",
+          "confidence": 0.8,
+          "category": "scientific",
+          "importance": 0.3,
+          "context": "Context unknown."
+        },
+        {
+          "text": "Delayed onset muscle soreness (DOMS) will persist for about 72 hours after a workout.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Context unknown."
+        },
+        {
+          "text": "Studies have shown that people can increase their mitochondria by up to 50% after six to eight weeks of exercise.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Context unknown."
+        },
+        {
+          "text": "After six months of regular exercise, people are less likely to drop out of their workout programs.",
+          "confidence": 0.8,
+          "category": "statistical",
+          "importance": 0.5,
+          "context": "Context unknown."
+        },
+        {
+          "text": "By nine months of regular exercise, you should see about a 25% increase in your VO2 max.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Context unknown."
+        },
+        {
+          "text": "After one year of regular exercise, your bones will be denser, reducing your risk of osteoporosis.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Context unknown."
+        },
+        {
+          "text": "Older people who exercise 5 days a week for at least 30 minutes save on average $2,500 a year in medical costs for heart-related health problems.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Context unknown."
+        }
+      ],
+      "total_count": 8
+    },
+    "output_length_chars": 2360,
+    "output_tokens_estimated": 590,
+    "cost_usd": 0.0005073
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:56:43.017552",
+    "latency_seconds": 2.13,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: An increasing number of Americans have started participating in more sports, fitness, and recreation.\nContext: Context unknown.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 300,
+    "input_tokens_estimated": 75,
+    "output": {
+      "original_claim": "An increasing number of Americans have started participating in more sports, fitness, and recreation.",
+      "queries": [
+        {
+          "query": "increase in American participation in sports fitness recreation 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "more Americans participating in sports and fitness activities",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 380,
+    "output_tokens_estimated": 95,
+    "cost_usd": 6.825e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "An increasing number of Americans have started participating in more sports, fitness, and recreation."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:56:43.272401",
+    "latency_seconds": 2.38,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Studies have shown that people can increase their mitochondria by up to 50% after six to eight weeks of exercise.\nContext: Context unknown.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 312,
+    "input_tokens_estimated": 78,
+    "output": {
+      "original_claim": "Studies have shown that people can increase their mitochondria by up to 50% after six to eight weeks of exercise.",
+      "queries": [
+        {
+          "query": "increase mitochondria by 50% after six to eight weeks of exercise",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "mitochondrial biogenesis exercise six to eight weeks",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 380,
+    "output_tokens_estimated": 95,
+    "cost_usd": 6.87e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "An increasing number of Americans have started participating in more sports, fitness, and recreation.",
+      "query_index": 2,
+      "query_text": "more Americans participating in sports and fitness activities"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:57:01.803427",
+    "latency_seconds": 2.47,
+    "input_prompt": "Claim:\nAn increasing number of Americans have started participating in more sports, fitness, and recreation.\n\nArticle Title:\n[PDF] SFIA Report 2023 - USTA\n\nGoogle Search Snippet:\nNamely, the number and percentage of Americans who engaged in some type of sport or fitness activity grew in 2022 for the fifth consecutive year ...\n\nFull Page Content:\nFeatured, NSGA News \u2022 May 7, 2024\nCONTACT:\nMarty Maciaszek, Director of Communications mmaciaszek@nsga.org (847) 296-6742, ext. 1260\nDOWNERS GROVE, ILLINOIS (May 7, 2024) \u2013 The interest of people participating in sports and activities continued to grow in 2023 and is exhibited in the 2024 edition of the National Sporting Goods Association\u2019s (NSGA) Sports Participation in the U.S. report. The industry\u2019s longest-standing and most comprehensive participation study saw increases in 35 of the 56 sports/activities (62.5 percent) tracked by NSGA in 2023 vs. the prior year.\n\u201cOverall it is great to see participation levels up across the majority of sports and recreational activities we track,\u201d said Nick Rigitano, NSGA Director of Insights & Analysis. \u201cIt tells us the opportunities are there for retailers, team dealers and manufacturers in the sporting goods industry to grow their business.\u201d\nSome of the key takeaways from NSGA\u2019s 2024 participation report:\nClick here to see which sports are in which segments\nClick here for an explanation of the Total Participation Points (TPPs) calculation.\nThe 2024 Sports Participation in the U.S. report is available on NSGA\u2019s website at research@nsga.org. The report tracks 56 sports and recreational activities and includes easy-to-understand, quick-view snapshots for each, allowing users to easily see a 10-year participation trend (when available), as well as demographic details regarding age, income and U.S. region. NSGA\u2019s participation research also includes Cross Participation, Lifecycle Demographics and Single-Sport reports. The Total Participation Points (TPP) take into account the reach and depth of participation within a segment.\nAbout the National Sporting Goods Association\nSince 1929, the National Sporting Goods Association (NSGA) has been the leading voice and go-to resource for the sporting goods industry. NSGA helps the industry grow its businesses through research, advocacy and networking. For more information about membership or NSGA\u2019s products and services, please visit www.nsga.org.\nTOPICS\nSHARE THIS ARTICLE\nPH (847) 296-NSGA (6742)\n\u00a9 2025 National Sporting Goods Association\n\nProvide relevant evidence.",
+    "input_length_chars": 2528,
+    "input_tokens_estimated": 632,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that participation in sports and recreational activities has been increasing, with 35 out of 56 tracked activities showing growth in 2023 compared to the previous year, supporting the claim that more Americans are engaging in sports and fitness.",
+      "overall_stance": "supports",
+      "key_quote": "\"The interest of people participating in sports and activities continued to grow in 2023... increases in 35 of the 56 sports/activities (62.5 percent) tracked by NSGA in 2023 vs. the prior year.\""
+    },
+    "output_length_chars": 551,
+    "output_tokens_estimated": 137,
+    "cost_usd": 0.000177
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:57:01.805213",
+    "latency_seconds": 2.47,
+    "input_prompt": "Claim:\nAn increasing number of Americans have started participating in more sports, fitness, and recreation.\n\nArticle Title:\n2023 SFIA Topline Participation Report Now Availabile\n\nGoogle Search Snippet:\nThe 2023 SFIA Topline Report tracks participation rates of Americans aged six and older, across 124 different sports, fitness, and outdoor activities.\n\nFull Page Content:\nFeatured, NSGA News \u2022 May 7, 2024\nCONTACT:\nMarty Maciaszek, Director of Communications mmaciaszek@nsga.org (847) 296-6742, ext. 1260\nDOWNERS GROVE, ILLINOIS (May 7, 2024) \u2013 The interest of people participating in sports and activities continued to grow in 2023 and is exhibited in the 2024 edition of the National Sporting Goods Association\u2019s (NSGA) Sports Participation in the U.S. report. The industry\u2019s longest-standing and most comprehensive participation study saw increases in 35 of the 56 sports/activities (62.5 percent) tracked by NSGA in 2023 vs. the prior year.\n\u201cOverall it is great to see participation levels up across the majority of sports and recreational activities we track,\u201d said Nick Rigitano, NSGA Director of Insights & Analysis. \u201cIt tells us the opportunities are there for retailers, team dealers and manufacturers in the sporting goods industry to grow their business.\u201d\nSome of the key takeaways from NSGA\u2019s 2024 participation report:\nClick here to see which sports are in which segments\nClick here for an explanation of the Total Participation Points (TPPs) calculation.\nThe 2024 Sports Participation in the U.S. report is available on NSGA\u2019s website at research@nsga.org. The report tracks 56 sports and recreational activities and includes easy-to-understand, quick-view snapshots for each, allowing users to easily see a 10-year participation trend (when available), as well as demographic details regarding age, income and U.S. region. NSGA\u2019s participation research also includes Cross Participation, Lifecycle Demographics and Single-Sport reports. The Total Participation Points (TPP) take into account the reach and depth of participation within a segment.\nAbout the National Sporting Goods Association\nSince 1929, the National Sporting Goods Association (NSGA) has been the leading voice and go-to resource for the sporting goods industry. NSGA helps the industry grow its businesses through research, advocacy and networking. For more information about membership or NSGA\u2019s products and services, please visit www.nsga.org.\nTOPICS\nSHARE THIS ARTICLE\nPH (847) 296-NSGA (6742)\n\u00a9 2025 National Sporting Goods Association\n\nProvide relevant evidence.",
+    "input_length_chars": 2554,
+    "input_tokens_estimated": 638,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The 2023 SFIA Topline Report indicates that participation in sports and recreational activities among Americans has increased, with 35 out of 56 tracked activities showing growth compared to the previous year.",
+      "overall_stance": "supports",
+      "key_quote": "The interest of people participating in sports and activities continued to grow in 2023... increases in 35 of the 56 sports/activities (62.5 percent) tracked by NSGA in 2023 vs. the prior year."
+    },
+    "output_length_chars": 488,
+    "output_tokens_estimated": 122,
+    "cost_usd": 0.0001689
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:57:01.823363",
+    "latency_seconds": 2.49,
+    "input_prompt": "Claim:\nAn increasing number of Americans have started participating in more sports, fitness, and recreation.\n\nArticle Title:\nAmericans engaged in leisure/sports US 2023 - Statista\n\nGoogle Search Snippet:\nApproximately 95.5 percent of men were engaged in sport and leisure activities that year, and that figure was 92.7 percent for women.\n\nFull Page Content:\nFeatured, NSGA News \u2022 May 7, 2024\nCONTACT:\nMarty Maciaszek, Director of Communications mmaciaszek@nsga.org (847) 296-6742, ext. 1260\nDOWNERS GROVE, ILLINOIS (May 7, 2024) \u2013 The interest of people participating in sports and activities continued to grow in 2023 and is exhibited in the 2024 edition of the National Sporting Goods Association\u2019s (NSGA) Sports Participation in the U.S. report. The industry\u2019s longest-standing and most comprehensive participation study saw increases in 35 of the 56 sports/activities (62.5 percent) tracked by NSGA in 2023 vs. the prior year.\n\u201cOverall it is great to see participation levels up across the majority of sports and recreational activities we track,\u201d said Nick Rigitano, NSGA Director of Insights & Analysis. \u201cIt tells us the opportunities are there for retailers, team dealers and manufacturers in the sporting goods industry to grow their business.\u201d\nSome of the key takeaways from NSGA\u2019s 2024 participation report:\nClick here to see which sports are in which segments\nClick here for an explanation of the Total Participation Points (TPPs) calculation.\nThe 2024 Sports Participation in the U.S. report is available on NSGA\u2019s website at research@nsga.org. The report tracks 56 sports and recreational activities and includes easy-to-understand, quick-view snapshots for each, allowing users to easily see a 10-year participation trend (when available), as well as demographic details regarding age, income and U.S. region. NSGA\u2019s participation research also includes Cross Participation, Lifecycle Demographics and Single-Sport reports. The Total Participation Points (TPP) take into account the reach and depth of participation within a segment.\nAbout the National Sporting Goods Association\nSince 1929, the National Sporting Goods Association (NSGA) has been the leading voice and go-to resource for the sporting goods industry. NSGA helps the industry grow its businesses through research, advocacy and networking. For more information about membership or NSGA\u2019s products and services, please visit www.nsga.org.\nTOPICS\nSHARE THIS ARTICLE\nPH (847) 296-NSGA (6742)\n\u00a9 2025 National Sporting Goods Association\n\nProvide relevant evidence.",
+    "input_length_chars": 2538,
+    "input_tokens_estimated": 634,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that participation in sports and recreational activities has increased in 2023, with 35 out of 56 tracked sports showing growth compared to the previous year, supporting the claim that more Americans are engaging in these activities.",
+      "overall_stance": "supports",
+      "key_quote": "The interest of people participating in sports and activities continued to grow in 2023 and is exhibited in the 2024 edition of the National Sporting Goods Association\u2019s (NSGA) Sports Participation in the U.S. report."
+    },
+    "output_length_chars": 559,
+    "output_tokens_estimated": 139,
+    "cost_usd": 0.0001785
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:57:01.877950",
+    "latency_seconds": 2.54,
+    "input_prompt": "Claim:\nAn increasing number of Americans have started participating in more sports, fitness, and recreation.\n\nArticle Title:\nNSGA Annual Sports Participation Report Shows Increases for Most ...\n\nGoogle Search Snippet:\nThe industry's longest-standing and most comprehensive participation study saw increases in 35 of the 56 sports/activities (62.5 percent) tracked by NSGA in ...\n\nFull Page Content:\nFeatured, NSGA News \u2022 May 7, 2024\nCONTACT:\nMarty Maciaszek, Director of Communications mmaciaszek@nsga.org (847) 296-6742, ext. 1260\nDOWNERS GROVE, ILLINOIS (May 7, 2024) \u2013 The interest of people participating in sports and activities continued to grow in 2023 and is exhibited in the 2024 edition of the National Sporting Goods Association\u2019s (NSGA) Sports Participation in the U.S. report. The industry\u2019s longest-standing and most comprehensive participation study saw increases in 35 of the 56 sports/activities (62.5 percent) tracked by NSGA in 2023 vs. the prior year.\n\u201cOverall it is great to see participation levels up across the majority of sports and recreational activities we track,\u201d said Nick Rigitano, NSGA Director of Insights & Analysis. \u201cIt tells us the opportunities are there for retailers, team dealers and manufacturers in the sporting goods industry to grow their business.\u201d\nSome of the key takeaways from NSGA\u2019s 2024 participation report:\nClick here to see which sports are in which segments\nClick here for an explanation of the Total Participation Points (TPPs) calculation.\nThe 2024 Sports Participation in the U.S. report is available on NSGA\u2019s website at research@nsga.org. The report tracks 56 sports and recreational activities and includes easy-to-understand, quick-view snapshots for each, allowing users to easily see a 10-year participation trend (when available), as well as demographic details regarding age, income and U.S. region. NSGA\u2019s participation research also includes Cross Participation, Lifecycle Demographics and Single-Sport reports. The Total Participation Points (TPP) take into account the reach and depth of participation within a segment.\nAbout the National Sporting Goods Association\nSince 1929, the National Sporting Goods Association (NSGA) has been the leading voice and go-to resource for the sporting goods industry. NSGA helps the industry grow its businesses through research, advocacy and networking. For more information about membership or NSGA\u2019s products and services, please visit www.nsga.org.\nTOPICS\nSHARE THIS ARTICLE\nPH (847) 296-NSGA (6742)\n\u00a9 2025 National Sporting Goods Association\n\nProvide relevant evidence.",
+    "input_length_chars": 2579,
+    "input_tokens_estimated": 644,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The NSGA's 2024 Sports Participation report indicates that participation in sports and recreational activities has increased, with 35 out of 56 tracked sports showing growth in 2023 compared to the previous year, supporting the claim that more Americans are engaging in sports and fitness.",
+      "overall_stance": "supports",
+      "key_quote": "The interest of people participating in sports and activities continued to grow in 2023 and is exhibited in the 2024 edition of the National Sporting Goods Association\u2019s (NSGA) Sports Participation in the U.S. report."
+    },
+    "output_length_chars": 592,
+    "output_tokens_estimated": 148,
+    "cost_usd": 0.0001854
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:57:03.893537",
+    "latency_seconds": 4.56,
+    "input_prompt": "Claim:\nAn increasing number of Americans have started participating in more sports, fitness, and recreation.\n\nArticle Title:\nSFIA Study: Record growth continues in 2023 for U.S. sports and ...\n\nGoogle Search Snippet:\nIn 2023, the total number of active sports and fitness participants in the U.S. hit its highest level ever at 242 million, up 12.1% from 215.8 ...\n\nFull Page Content:\nFeatured, NSGA News \u2022 May 7, 2024\nCONTACT:\nMarty Maciaszek, Director of Communications mmaciaszek@nsga.org (847) 296-6742, ext. 1260\nDOWNERS GROVE, ILLINOIS (May 7, 2024) \u2013 The interest of people participating in sports and activities continued to grow in 2023 and is exhibited in the 2024 edition of the National Sporting Goods Association\u2019s (NSGA) Sports Participation in the U.S. report. The industry\u2019s longest-standing and most comprehensive participation study saw increases in 35 of the 56 sports/activities (62.5 percent) tracked by NSGA in 2023 vs. the prior year.\n\u201cOverall it is great to see participation levels up across the majority of sports and recreational activities we track,\u201d said Nick Rigitano, NSGA Director of Insights & Analysis. \u201cIt tells us the opportunities are there for retailers, team dealers and manufacturers in the sporting goods industry to grow their business.\u201d\nSome of the key takeaways from NSGA\u2019s 2024 participation report:\nClick here to see which sports are in which segments\nClick here for an explanation of the Total Participation Points (TPPs) calculation.\nThe 2024 Sports Participation in the U.S. report is available on NSGA\u2019s website at research@nsga.org. The report tracks 56 sports and recreational activities and includes easy-to-understand, quick-view snapshots for each, allowing users to easily see a 10-year participation trend (when available), as well as demographic details regarding age, income and U.S. region. NSGA\u2019s participation research also includes Cross Participation, Lifecycle Demographics and Single-Sport reports. The Total Participation Points (TPP) take into account the reach and depth of participation within a segment.\nAbout the National Sporting Goods Association\nSince 1929, the National Sporting Goods Association (NSGA) has been the leading voice and go-to resource for the sporting goods industry. NSGA helps the industry grow its businesses through research, advocacy and networking. For more information about membership or NSGA\u2019s products and services, please visit www.nsga.org.\nTOPICS\nSHARE THIS ARTICLE\nPH (847) 296-NSGA (6742)\n\u00a9 2025 National Sporting Goods Association\n\nProvide relevant evidence.",
+    "input_length_chars": 2564,
+    "input_tokens_estimated": 641,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that in 2023, the number of active sports and fitness participants in the U.S. reached a record high of 242 million, reflecting a significant increase of 12.1% from the previous year, which supports the claim of growing participation in sports and fitness activities.",
+      "overall_stance": "supports",
+      "key_quote": "In 2023, the total number of active sports and fitness participants in the U.S. hit its highest level ever at 242 million, up 12.1% from 215.8."
+    },
+    "output_length_chars": 519,
+    "output_tokens_estimated": 129,
+    "cost_usd": 0.00017355
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:57:41.747628",
+    "latency_seconds": 11.9,
+    "input_prompt": "\nClaim: An increasing number of Americans have started participating in more sports, fitness, and recreation.\nCategory: statistical\nExtraction confidence: 0.90\n\nEvidence:\nSUPPORTS (3 sources):\n  1. Americans engaged in leisure/sports US 2023 - Statista | reliability=high (0.85)\n     URL: https://www.statista.com/statistics/189548/daily-engagement-of-the-us-population-in-leisure-and-sports/?srsltid=AfmBOorqtl7RDhl0b40UkdYhc0MXDPx9AHKn1Nek5E7JOv6fGdp8WZ47\n     Summary: The evidence indicates that participation in sports and recreational activities has increased in 2023, with 35 out of 56 tracked sports showing growth compared to the previous year, supporting the claim that more Americans are engaging in these activities.\n  2. SFIA Study: Record growth continues in 2023 for U.S. sports and ... | reliability=high (0.85)\n     URL: https://www.sportsbusinessjournal.com/Articles/2024/05/30/sports-fitness-industry-association-survey/\n     Summary: The evidence indicates that in 2023, the number of active sports and fitness participants in the U.S. reached a record high of 242 million, reflecting a significant increase of 12.1% from the previous year, which supports the claim of growing participation in sports and fitness activities.\n  3. [PDF] SFIA Report 2023 - USTA | reliability=medium (0.60)\n     URL: https://www.usta.com/es/content/dam/usta/sections/intermountain/districts/colorado/pdfs/sfia-reports/2023-sfia-topline.pdf\n     Summary: The evidence indicates that participation in sports and recreational activities has been increasing, with 35 out of 56 tracked activities showing growth in 2023 compared to the previous year, supporting the claim that more Americans are engaging in sports and fitness.\nUNCLEAR (3 sources):\n  1. SFIA: Sports/fitness participation on the rise, with pickleball ... | reliability=high (0.85)\n     URL: https://www.sportsbusinessjournal.com/Articles/2025/02/26/sfia-sportsfitness-participation-on-the-rise-with-pickleball-continuing-to-soar/\n     Summary: Participation rates across physical activities reached 80%, rising from 242 million in 2023 to 247.1 million Americans who said they participated in at least ...\n  2. A Record Number of Americans Participated in Sports, Fitness ... | reliability=medium (0.60)\n     URL: https://www.sportsdestinations.com/sports/all-sports/record-number-americans-participated-sports-33929\n     Summary: What's more, the number of Americans who participated in an activity has increased every single year for 10 years, growing by 5 million in 2023.\n  3. SFIA's Topline Report Shows 247.1 Million Americans Were Active ... | reliability=medium (0.60)\n     URL: https://sfia.org/resources/sfias-topline-participation-report-shows-247-1-million-americans-were-active-in-2024/\n     Summary: The participation rate for active Americans reached 80%, according to the newly released data from the 2025 Topline Participation Report.\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2948,
+    "input_tokens_estimated": 737,
+    "output": {
+      "overall_stance": "supports",
+      "confidence": "high",
+      "summary": "Multiple high-reliability sources indicate a significant increase in sports and fitness participation among Americans in 2023, with 242 million active participants reported, reflecting a 12.1% rise from the previous year. Additionally, 35 out of 56 tracked sports showed growth, further supporting the claim."
+    },
+    "output_length_chars": 370,
+    "output_tokens_estimated": 92,
+    "cost_usd": 0.00016575
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:57:52.805423",
+    "latency_seconds": 19.6,
+    "input_prompt": "\nClaim: Studies have shown that people can increase their mitochondria by up to 50% after six to eight weeks of exercise.\nCategory: scientific\nExtraction confidence: 0.90\n\nEvidence:\nUNCLEAR (6 sources):\n  1. Exercise Increases Mitochondrial Complex I Activity and DRP1 ... | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC5346470/\n     Summary: One recent study indirectly suggested that six weeks of exercise training could increase mitochondrial biogenesis in the hippocampus, as evidenced by increased ...\n  2. Resistance Exercise Training Alters Mitochondrial Function in ... - NIH | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC4478283/\n     Summary: Endurance exercise has long been known to increase mitochondrial function in skeletal muscle. Comparatively little is known regarding the impact of resistance ...\n  3. Stay Fit, Stay Young: Mitochondria in Movement - PubMed Central | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC6607712/\n     Summary: In addition, exercise training can improve mitochondrial metabolism by increasing the ATP supply per O2 molecule (P/O). In fact, oxidative ...\n  4. Aerobic exercise for eight weeks provides protective effects towards ... | reliability=high (0.85)\n     URL: https://www.sciencedirect.com/science/article/pii/S0026049522000567\n     Summary: Recent studies have demonstrated that exercise training not only increases mitochondrial biogenesis and function, but also browns white fat [6], [23], [24], [25] ...\n  5. Excessive exercise training causes mitochondrial functional ... | reliability=high (0.85)\n     URL: https://www.sciencedirect.com/science/article/pii/S1550413121001029\n     Summary: Exercise training positively affects metabolic health through increased mitochondrial oxidative capacity and improved glucose regulation.\n  6. The effects of different exercise training protocols on mitochondrial ... | reliability=high (0.85)\n     URL: https://link.springer.com/article/10.1186/s13018-025-05809-w\n     Summary: In all three tissues, a significant increase in some mitochondrial fusion markers was observed after 8 weeks of training (p = < 0.0001\u20130.0452).\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2243,
+    "input_tokens_estimated": 560,
+    "output": {
+      "overall_stance": "unclear",
+      "confidence": "low",
+      "summary": "The evidence indicates that exercise can increase mitochondrial function and biogenesis, but it does not clearly support the specific claim of a 50% increase in mitochondria after six to eight weeks. While several studies show positive effects of exercise on mitochondrial activity, they do not quantify the increase to the claimed extent."
+    },
+    "output_length_chars": 399,
+    "output_tokens_estimated": 99,
+    "cost_usd": 0.0001434
+  }
+]

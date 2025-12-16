@@ -1,0 +1,483 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:47:40.009090",
+    "latency_seconds": 11.78,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nTrump's egg price warning comes true. Reality hits home. For months, President Donald Trump has falsely claimed that egg prices are tumbling. It wasn't true then, but it's true now. Egg prices fell 12.7% last month, the biggest monthly decline since 1984. The Bureau of Labor Statistics reported Tuesday, and they could continue to fall this month, too. The USDA reported last week that a dozen large white shell eggs now cost $330 on average, down a whopping 69 from a week before. It's a remarkable reversal after egg prices surged in each of the past 5 months and 17 of the past 19 months because of a deadly aven flu epidemic that necessitated the mass culling of egg laying hens. Maybe the worst of egg gate has passed. Tyler Shipper, associate professor in economics and data analysis at the University of St. Thomas in St. Paul, Minnesota, told CNN. Nevertheless, egg prices remain significantly higher now than before the latest bird flu outbreak, and they cost 49.3% more last month than they did a year earlier. Eggs are still more expensive than when Trump took office, according to the BLS. Egg prices this past Easter, which typically rise in the run-up to the holiday, were the highest for any Easter on record, the USDA reported. Well, before last month's decline, Trump had been touting falling egg prices as a sign that his administration's plan to lower prices for consumers has been working. In February, the USDA announced an initiative to lower egg prices, including increased biocurity on egg laying farms, aid to farmers who have lost flocks and temporary lifting of restrictions on egg imports. Despite agriculture secretary Brooke Rollins far more conservative estimate that egg prices would normalize in the summer, Trump last month said, \"As you know, the cost of eggs has come down like 93 94% since we took office. Those percentage declines, Trump stated, are not close to accurate. But we now know that consumer egg prices were indeed falling sharply when Trump made those remarks. The consumer price index data wasn't out yet to confirm or deny Trump's claims. It appears as though Trump may have been talking about wholesale prices, which had been tumbling throughout March before normalizing in recent weeks. Nevertheless, wholesale prices fell by half, not close to the 90% plus figures Trump was citing. Wholesale prices are the costs distributors pay to farmers or middlemen. Consumer prices are what customers pay at grocery stores. Those costs typically make their way through the supply chain at a slower pace because grocery stores may decide to keep prices at a certain price even when wholesale prices change to try to recoup loss profits from prior weeks according to Kevin Bergquist, sector manager at Wells Fargo Agri Food Institute. from prior weeks. According to Kevin Bergquist, sector manager at Wells Fargo Agri Food Institute, the USDA says consumer prices finally fell as demand for eggs decreased and aven flu cases have fallen. Many groceries, including large chains like Costco, had limited customers purchases because of egg shortages. So, Trump's claim that consumer egg prices are down is finally true, even if the timing of his claim and the wild percentages he threw around were grossly inaccurate. Don't forget to like and subscribe. Thanks.",
+    "input_length_chars": 3360,
+    "input_tokens_estimated": 840,
+    "output": {
+      "claims": [
+        {
+          "text": "Egg prices fell 12.7% last month, the biggest monthly decline since 1984.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.8,
+          "context": "Bureau of Labor Statistics report, recent egg price trends."
+        },
+        {
+          "text": "A dozen large white shell eggs now cost $3.30 on average, down $0.69 from a week before.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.8,
+          "context": "USDA report on current egg prices."
+        },
+        {
+          "text": "Egg prices surged in each of the past 5 months and 17 of the past 19 months due to a deadly avian flu epidemic.",
+          "confidence": 0.85,
+          "category": "historical",
+          "importance": 0.7,
+          "context": "Context of egg price increases before recent decline."
+        },
+        {
+          "text": "Egg prices remain significantly higher now than before the latest bird flu outbreak.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Comparison of current prices to pre-outbreak levels."
+        },
+        {
+          "text": "Egg prices cost 49.3% more last month than they did a year earlier.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "Year-over-year price comparison."
+        },
+        {
+          "text": "Egg prices this past Easter were the highest for any Easter on record.",
+          "confidence": 0.9,
+          "category": "historical",
+          "importance": 0.6,
+          "context": "USDA report on Easter egg prices."
+        },
+        {
+          "text": "Trump claimed that the cost of eggs has come down like 93-94% since he took office.",
+          "confidence": 0.8,
+          "category": "biographical",
+          "importance": 0.6,
+          "context": "Trump's statement regarding egg prices."
+        },
+        {
+          "text": "Wholesale prices fell by half, not close to the 90% plus figures Trump was citing.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "Comparison of wholesale prices to Trump's claims."
+        },
+        {
+          "text": "Consumer prices are what customers pay at grocery stores, which change slower than wholesale prices.",
+          "confidence": 0.85,
+          "category": "economic",
+          "importance": 0.5,
+          "context": "Explanation of price dynamics in the supply chain."
+        },
+        {
+          "text": "USDA announced an initiative to lower egg prices, including increased biosecurity on egg laying farms.",
+          "confidence": 0.8,
+          "category": "policy",
+          "importance": 0.6,
+          "context": "USDA's response to rising egg prices."
+        }
+      ],
+      "total_count": 10
+    },
+    "output_length_chars": 3022,
+    "output_tokens_estimated": 755,
+    "cost_usd": 0.000579
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:47:44.618952",
+    "latency_seconds": 2.02,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Egg prices this past Easter were the highest for any Easter on record.\nContext: USDA report on Easter egg prices.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 286,
+    "input_tokens_estimated": 71,
+    "output": {
+      "original_claim": "Egg prices this past Easter were the highest for any Easter on record.",
+      "queries": [
+        {
+          "query": "highest Easter egg prices record 2023 USDA report",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Easter egg prices history USDA report",
+          "query_type": "SOURCE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 301,
+    "output_tokens_estimated": 75,
+    "cost_usd": 5.565e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "Consumer prices are what customers pay at grocery stores, which change slower than wholesale prices."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:47:44.817923",
+    "latency_seconds": 2.22,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Consumer prices are what customers pay at grocery stores, which change slower than wholesale prices.\nContext: Explanation of price dynamics in the supply chain.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 333,
+    "input_tokens_estimated": 83,
+    "output": {
+      "original_claim": "Consumer prices are what customers pay at grocery stores, which change slower than wholesale prices.",
+      "queries": [
+        {
+          "query": "Consumer prices vs wholesale prices change dynamics",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Do grocery store prices change slower than wholesale prices?",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 361,
+    "output_tokens_estimated": 90,
+    "cost_usd": 6.645e-05,
+    "context": {
+      "claim_index": 7,
+      "claim_text": "Egg prices this past Easter were the highest for any Easter on record.",
+      "query_index": 2,
+      "query_text": "Easter egg prices history USDA report"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:47:44.906912",
+    "latency_seconds": 2.31,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Egg prices fell 12.7% last month, the biggest monthly decline since 1984.\nContext: Bureau of Labor Statistics report, recent egg price trends.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 315,
+    "input_tokens_estimated": 78,
+    "output": {
+      "original_claim": "Egg prices fell 12.7% last month, the biggest monthly decline since 1984.",
+      "queries": [
+        {
+          "query": "Egg prices fell 12.7% last month Bureau of Labor Statistics report",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "biggest monthly decline in egg prices since 1984",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 337,
+    "output_tokens_estimated": 84,
+    "cost_usd": 6.21e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "Consumer prices are what customers pay at grocery stores, which change slower than wholesale prices.",
+      "query_index": 2,
+      "query_text": "Do grocery store prices change slower than wholesale prices?"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:47:44.991709",
+    "latency_seconds": 2.4,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Trump claimed that the cost of eggs has come down like 93-94% since he took office.\nContext: Trump's statement regarding egg prices.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 305,
+    "input_tokens_estimated": 76,
+    "output": {
+      "original_claim": "Trump claimed that the cost of eggs has come down like 93-94% since he took office.",
+      "queries": [
+        {
+          "query": "Trump egg prices decrease 93-94% since taking office",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "egg prices drop significantly since Trump presidency",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 337,
+    "output_tokens_estimated": 84,
+    "cost_usd": 6.18e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Egg prices fell 12.7% last month, the biggest monthly decline since 1984.",
+      "query_index": 2,
+      "query_text": "biggest monthly decline in egg prices since 1984"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:47:44.992132",
+    "latency_seconds": 2.4,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Egg prices cost 49.3% more last month than they did a year earlier.\nContext: Year-over-year price comparison.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 282,
+    "input_tokens_estimated": 70,
+    "output": {
+      "original_claim": "Egg prices cost 49.3% more last month than they did a year earlier.",
+      "queries": [
+        {
+          "query": "Egg prices increase 49.3% year-over-year October 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Egg price comparison October 2022 to October 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 319,
+    "output_tokens_estimated": 79,
+    "cost_usd": 5.79e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Egg prices fell 12.7% last month, the biggest monthly decline since 1984.",
+      "query_index": 2,
+      "query_text": "biggest monthly decline in egg prices since 1984"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:47:45.161069",
+    "latency_seconds": 2.56,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: USDA announced an initiative to lower egg prices, including increased biosecurity on egg laying farms.\nContext: USDA's response to rising egg prices.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 322,
+    "input_tokens_estimated": 80,
+    "output": {
+      "original_claim": "USDA announced an initiative to lower egg prices, including increased biosecurity on egg laying farms.",
+      "queries": [
+        {
+          "query": "USDA initiative to lower egg prices biosecurity 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "USDA response to rising egg prices biosecurity measures",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 359,
+    "output_tokens_estimated": 89,
+    "cost_usd": 6.54e-05,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "Egg prices cost 49.3% more last month than they did a year earlier.",
+      "query_index": 2,
+      "query_text": "Egg price comparison October 2022 to October 2023"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:47:45.161538",
+    "latency_seconds": 2.57,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: A dozen large white shell eggs now cost $3.30 on average, down $0.69 from a week before.\nContext: USDA report on current egg prices.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 305,
+    "input_tokens_estimated": 76,
+    "output": {
+      "original_claim": "A dozen large white shell eggs now cost $3.30 on average, down $0.69 from a week before.",
+      "queries": [
+        {
+          "query": "current average price of a dozen large white shell eggs USDA report October 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "USDA egg prices report October 2023",
+          "query_type": "SOURCE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 348,
+    "output_tokens_estimated": 87,
+    "cost_usd": 6.36e-05,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "Egg prices cost 49.3% more last month than they did a year earlier.",
+      "query_index": 2,
+      "query_text": "Egg price comparison October 2022 to October 2023"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:47:45.330600",
+    "latency_seconds": 2.74,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Egg prices surged in each of the past 5 months and 17 of the past 19 months due to a deadly avian flu epidemic.\nContext: Context of egg price increases before recent decline.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 347,
+    "input_tokens_estimated": 86,
+    "output": {
+      "original_claim": "Egg prices surged in each of the past 5 months and 17 of the past 19 months due to a deadly avian flu epidemic.",
+      "queries": [
+        {
+          "query": "Egg prices increase past 5 months 17 of 19 months avian flu epidemic",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Reasons for egg price surge avian flu last 19 months",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 381,
+    "output_tokens_estimated": 95,
+    "cost_usd": 6.99e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "A dozen large white shell eggs now cost $3.30 on average, down $0.69 from a week before.",
+      "query_index": 2,
+      "query_text": "USDA egg prices report October 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:48:46.948610",
+    "latency_seconds": 40.2,
+    "input_prompt": "Claim:\nTrump claimed that the cost of eggs has come down like 93-94% since he took office.\n\nArticle Title:\nGraphic: Track grocery price trends\n\nFull Page Content:\nLearn where grocery prices stand during the Trump administration. See how inflation is affecting the cost of eggs, bread, chicken, ...\n\nProvide relevant evidence.",
+    "input_length_chars": 325,
+    "input_tokens_estimated": 81,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 2.535e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:48:49.313266",
+    "latency_seconds": 44.17,
+    "input_prompt": "Claim:\nEgg prices surged in each of the past 5 months and 17 of the past 19 months due to a deadly avian flu epidemic.\n\nArticle Title:\nEgg prices are skyrocketing amid inflation and avian influenza\n\nGoogle Search Snippet:\nThe primary factor behind the jump in egg prices is an avian flu epidemic, which has led to the deaths of more than 21 million chickens, ...\n\nFull Page Content:\nES Sign in Save Up to 80% on Heating Costs honeywarm.com Visit site Sponsored honeywarm.com 0:00 / 2:33 Egg prices hit record high as US struggles with bird flu outbreak ABC 7 Chicago 1.18M subscribers Subscribe 35 Share Save 3.2K views 9 months ago Streaming now at https://abc7chicago.com/watch/live/11.... The CDC confirmed another human case of bird flu, the ongoing outbreak wreaking havoc on the nation's egg supply, sending prices to record levels across the U.S. https://abc7chicago.com/post/c \u2026 ...more Save Up to 80% on Heating Costs Sponsored honeywarm.com Instant 5-Minute Heating Watch how fast this tiny heater warms any room Exclusive Online Discount Only available on our site grab your offer Only a Few Units Left High winter demand order now before we're sold out Winter Is Getting Colder Stay warm now don\u2019t wait until it\u2019s freezing Visit site 8:06 Saved Beaver Thinks Her Caretaker Is Mom Cuddle Buddies Shorts 952K views \u2022 3 weeks ago 20:04 Why Americans Eat What Europe Bans Type Ashton 1.8M views \u2022 3 months ago 4:40 How the English language would sound if silent letters weren\u2019t silent - BBC BBC 6.4M views \u2022 11 months ago 13:39 How to Spot Autism in High-Masking Adults Auticate with Chris & Debby 1.3M views \u2022 10 months ago 13:43 McDonald's Secret Ingredients You Never Knew About Paul Saladino MD 4.7M views \u2022 1 year ago 9:29 Arab Girls SEDUCE the Stage with Dance.. This Was Breathtaking! Top Talent 627K views \u2022 10 days ago 12:46 Why beef prices are out of control in the U.S. CNBC 607K views \u2022 6 days ago New 26:56 Why Groceries Are SO Expensive Now Johnny Harris 2.2M views \u2022 5 months ago 19:56 Surviving a -36\u00b0 Night - No Tent & No Sleeping Bag Kusk Bushcraft 21M views \u2022 2 years ago 8:49 Why Are African Cities so Ugly? BantuCityDiaries 322K views \u2022 7 days ago 6:21 How a bird flu pandemic could emerge CBS News 12K views \u2022 9 months ago 11:47 Urologist:7 Masturbation Mistakes After 60 That Are Silently Harming Older Men |Advice For Elderly DR. NERITA 419K views \u2022 1 month ago 4:02 What is causing the price of eggs to rise? | Morning in America NewsNation 36K views \u2022 10 months ago 11:27 The Loophole that Drowned America in Self Storage The Hustle 21K views \u2022 2 days ago New 20:47 America Copied Germany\u2019s Jerry Can \u2014 But Missed The One Genius Detail that Made All the Difference Echoes of War 476K views \u2022 2 weeks ago 18:14 What The Soviets Found On Venus The Space Race 451K views \u2022 7 days ago 6:02 UPS Delivery Driver - SNL Saturday Night Live 4.3M views \u2022 6 days ago New 3:39 Egg prices expected to go even higher due to shortage from bird flu CBS News 10K views \u2022 10 months ago 18:57 Crazy Summer Fails 2025 \ud83c\udf0a| Brutal Try Not to Laugh FailArmy 8.3M views \u2022 1 year ago 13:37 15 Everyday French Habits That Blow Americans Away Les Frenchies 336K views \u2022 7 days ago A Google company en Sign in Before you continue to YouTube We use cookies and data to Deliver and maintain Google services Track outages and protect against spam, fraud, and abuse Measure audience engagement and site statistics to understand how our services are used and enhance the quality of those services If you choose to \u201cAccept all,\u201d we will also use cookies and data to Develop and improve new services Deliver and measure the effectiveness of ads Show personalized content, depending on your settings Show personalized ads, depending on your settings If you choose to \u201cReject all,\u201d we will not use cookies for these additional purposes. Non-personalized content and ads are influenced by things like the content you\u2019re currently viewing and your location (ad serving is based on general location). Personalized content and ads can also include things like video recommendations, a customized YouTube homepage, and tailored ads based on past activity, like the videos you watch and the things you search for on YouTube. We also use cookies and data to tailor the experience to be age-appropriate, if relevant. Select \u201cMore options\u201d to see additional information, including details about managing your privacy settings. You can also visit g.co/privacytools at any time. Reject all Accept all More options Privacy Policy \u2022 Terms of Service\n\nProvide relevant evidence.",
+    "input_length_chars": 4560,
+    "input_tokens_estimated": 1140,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that the avian flu epidemic has significantly impacted egg prices, leading to record highs due to the deaths of millions of chickens.",
+      "overall_stance": "supports",
+      "key_quote": "The primary factor behind the jump in egg prices is an avian flu epidemic, which has led to the deaths of more than 21 million chickens."
+    },
+    "output_length_chars": 378,
+    "output_tokens_estimated": 94,
+    "cost_usd": 0.0002274
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:48:49.573690",
+    "latency_seconds": 25.26,
+    "input_prompt": "Claim:\nEgg prices this past Easter were the highest for any Easter on record.\n\nArticle Title:\nUS egg prices increase to record high, dashing hopes of cheap ...\n\nFull Page Content:\nEgg prices hit $5.90 in February, one month after setting a record at $4.95 per dozen, according to the U.S. Bureau of Labor Statistics. The ...\n\nProvide relevant evidence.",
+    "input_length_chars": 352,
+    "input_tokens_estimated": 88,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that egg prices reached a record high of $5.90 in February, which suggests that prices were significantly elevated around Easter, supporting the claim that egg prices were the highest for any Easter on record.",
+      "overall_stance": "supports",
+      "key_quote": "Egg prices hit $5.90 in February, one month after setting a record at $4.95 per dozen."
+    },
+    "output_length_chars": 404,
+    "output_tokens_estimated": 101,
+    "cost_usd": 7.38e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:48:49.791681",
+    "latency_seconds": 19.91,
+    "input_prompt": "Claim:\nA dozen large white shell eggs now cost $3.30 on average, down $0.69 from a week before.\n\nArticle Title:\nUS Egg Prices Drop to Nearly 2-Year Lows - Trading Economics\n\nGoogle Search Snippet:\nUS egg prices rose to $2.2 per dozen, rebounding from May 2023 lows of $1.06 seen in October and approaching August highs as supply tightened ...\n\nFull Page Content:\nAn official website of the United States government\nDownload chart image\nIn April 2025, the average retail egg price declined to $5.12 a dozen, down more than a dollar from its March peak. Wholesale egg prices tend to vary more than retail egg prices, frequently fluctuating in response to factors such as seasonal demand and supply chain disruptions. Retail egg prices are influenced by wholesale egg prices, but additional factors such as pricing strategies and contracts can mute the impact of short-term fluctuations. As a result, retail price movements tend to lag directional changes made by wholesale prices. When wholesale prices spike, retailers occasionally and temporarily have sold eggs at a loss. As wholesale prices retreat, retail prices are slower to decline and often remain elevated for a longer period. The wave of Highly Pathogenic Avian Influenza (HPAI) that spanned from mid-October 2024 through early March 2025 resulted in the depopulation of 50.7 million egg-laying hens. The losses in egg layers coincided with the approach of the winter holidays, when egg demand is traditionally strong. Strong egg demand coupled with tight supplies contributed to both wholesale and retail egg prices surging to all-time highs by February 2025. In March 2025, daily wholesale prices fell early in the month because of a decline in egg demand combined with a pause in new HPAI confirmations. By April, as seasonal egg demand declined and despite low inventories, the monthly average wholesale price had fallen to $3.74 per dozen, down from $8.20 in February. This chart was drawn from USDA, Economic Research Service\u2019s April 2025 Livestock, Dairy, and Poultry Outlook and has been updated with recent data.\nGet Charts of Note delivered!\nSubscribe\nSee our Privacy Policy.\nWould you be willing to answer a few quick questions about your experience?\nYes, I\u2019ll give feedback\nEconomic Research Service\n\nProvide relevant evidence.",
+    "input_length_chars": 2298,
+    "input_tokens_estimated": 574,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses fluctuations in egg prices, noting that wholesale prices fell to $3.74 per dozen in April 2025, which indicates a decrease but does not confirm the specific claim about retail prices dropping to $3.30 or the $0.69 decrease from the previous week.",
+      "overall_stance": "mixed",
+      "key_quote": "By April, as seasonal egg demand declined and despite low inventories, the monthly average wholesale price had fallen to $3.74 per dozen, down from $8.20 in February."
+    },
+    "output_length_chars": 517,
+    "output_tokens_estimated": 129,
+    "cost_usd": 0.0001635
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:48:49.913147",
+    "latency_seconds": 20.02,
+    "input_prompt": "Claim:\nA dozen large white shell eggs now cost $3.30 on average, down $0.69 from a week before.\n\nArticle Title:\nRetail egg prices fall, following declining wholesale prices\n\nGoogle Search Snippet:\nIn April 2025, the average retail egg price declined to $5.12 a dozen, down more than a dollar from its March peak.\n\nFull Page Content:\nAn official website of the United States government\nDownload chart image\nIn April 2025, the average retail egg price declined to $5.12 a dozen, down more than a dollar from its March peak. Wholesale egg prices tend to vary more than retail egg prices, frequently fluctuating in response to factors such as seasonal demand and supply chain disruptions. Retail egg prices are influenced by wholesale egg prices, but additional factors such as pricing strategies and contracts can mute the impact of short-term fluctuations. As a result, retail price movements tend to lag directional changes made by wholesale prices. When wholesale prices spike, retailers occasionally and temporarily have sold eggs at a loss. As wholesale prices retreat, retail prices are slower to decline and often remain elevated for a longer period. The wave of Highly Pathogenic Avian Influenza (HPAI) that spanned from mid-October 2024 through early March 2025 resulted in the depopulation of 50.7 million egg-laying hens. The losses in egg layers coincided with the approach of the winter holidays, when egg demand is traditionally strong. Strong egg demand coupled with tight supplies contributed to both wholesale and retail egg prices surging to all-time highs by February 2025. In March 2025, daily wholesale prices fell early in the month because of a decline in egg demand combined with a pause in new HPAI confirmations. By April, as seasonal egg demand declined and despite low inventories, the monthly average wholesale price had fallen to $3.74 per dozen, down from $8.20 in February. This chart was drawn from USDA, Economic Research Service\u2019s April 2025 Livestock, Dairy, and Poultry Outlook and has been updated with recent data.\nGet Charts of Note delivered!\nSubscribe\nSee our Privacy Policy.\nWould you be willing to answer a few quick questions about your experience?\nYes, I\u2019ll give feedback\nEconomic Research Service\n\nProvide relevant evidence.",
+    "input_length_chars": 2268,
+    "input_tokens_estimated": 567,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence discusses the decline in wholesale egg prices and mentions that retail prices tend to lag behind these changes. However, it does not confirm the specific claim about the current average price of large white shell eggs being $3.30, nor does it mention a decrease of $0.69 from the previous week.",
+      "overall_stance": "mixed",
+      "key_quote": "Retail price movements tend to lag directional changes made by wholesale prices."
+    },
+    "output_length_chars": 470,
+    "output_tokens_estimated": 117,
+    "cost_usd": 0.00015525
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:48:50.093665",
+    "latency_seconds": 44.83,
+    "input_prompt": "Claim:\nEgg prices surged in each of the past 5 months and 17 of the past 19 months due to a deadly avian flu epidemic.\n\nArticle Title:\nEgg Prices Fell in September - NerdWallet\n\nGoogle Search Snippet:\nThe retail price of eggs remained unchanged in August after falling for three straight months. Prices remain 10.9% higher than a year ago.\n\nFull Page Content:\nES Sign in Save Up to 80% on Heating Costs honeywarm.com Visit site Sponsored honeywarm.com 0:00 / 2:33 Egg prices hit record high as US struggles with bird flu outbreak ABC 7 Chicago 1.18M subscribers Subscribe 35 Share Save 3.2K views 9 months ago Streaming now at https://abc7chicago.com/watch/live/11.... The CDC confirmed another human case of bird flu, the ongoing outbreak wreaking havoc on the nation's egg supply, sending prices to record levels across the U.S. https://abc7chicago.com/post/c \u2026 ...more Save Up to 80% on Heating Costs Sponsored honeywarm.com Instant 5-Minute Heating Watch how fast this tiny heater warms any room Exclusive Online Discount Only available on our site grab your offer Only a Few Units Left High winter demand order now before we're sold out Winter Is Getting Colder Stay warm now don\u2019t wait until it\u2019s freezing Visit site 8:06 Saved Beaver Thinks Her Caretaker Is Mom Cuddle Buddies Shorts 952K views \u2022 3 weeks ago 20:04 Why Americans Eat What Europe Bans Type Ashton 1.8M views \u2022 3 months ago 4:40 How the English language would sound if silent letters weren\u2019t silent - BBC BBC 6.4M views \u2022 11 months ago 13:39 How to Spot Autism in High-Masking Adults Auticate with Chris & Debby 1.3M views \u2022 10 months ago 13:43 McDonald's Secret Ingredients You Never Knew About Paul Saladino MD 4.7M views \u2022 1 year ago 9:29 Arab Girls SEDUCE the Stage with Dance.. This Was Breathtaking! Top Talent 627K views \u2022 10 days ago 12:46 Why beef prices are out of control in the U.S. CNBC 607K views \u2022 6 days ago New 26:56 Why Groceries Are SO Expensive Now Johnny Harris 2.2M views \u2022 5 months ago 19:56 Surviving a -36\u00b0 Night - No Tent & No Sleeping Bag Kusk Bushcraft 21M views \u2022 2 years ago 8:49 Why Are African Cities so Ugly? BantuCityDiaries 322K views \u2022 7 days ago 6:21 How a bird flu pandemic could emerge CBS News 12K views \u2022 9 months ago 11:47 Urologist:7 Masturbation Mistakes After 60 That Are Silently Harming Older Men |Advice For Elderly DR. NERITA 419K views \u2022 1 month ago 4:02 What is causing the price of eggs to rise? | Morning in America NewsNation 36K views \u2022 10 months ago 11:27 The Loophole that Drowned America in Self Storage The Hustle 21K views \u2022 2 days ago New 20:47 America Copied Germany\u2019s Jerry Can \u2014 But Missed The One Genius Detail that Made All the Difference Echoes of War 476K views \u2022 2 weeks ago 18:14 What The Soviets Found On Venus The Space Race 451K views \u2022 7 days ago 6:02 UPS Delivery Driver - SNL Saturday Night Live 4.3M views \u2022 6 days ago New 3:39 Egg prices expected to go even higher due to shortage from bird flu CBS News 10K views \u2022 10 months ago 18:57 Crazy Summer Fails 2025 \ud83c\udf0a| Brutal Try Not to Laugh FailArmy 8.3M views \u2022 1 year ago 13:37 15 Everyday French Habits That Blow Americans Away Les Frenchies 336K views \u2022 7 days ago A Google company en Sign in Before you continue to YouTube We use cookies and data to Deliver and maintain Google services Track outages and protect against spam, fraud, and abuse Measure audience engagement and site statistics to understand how our services are used and enhance the quality of those services If you choose to \u201cAccept all,\u201d we will also use cookies and data to Develop and improve new services Deliver and measure the effectiveness of ads Show personalized content, depending on your settings Show personalized ads, depending on your settings If you choose to \u201cReject all,\u201d we will not use cookies for these additional purposes. Non-personalized content and ads are influenced by things like the content you\u2019re currently viewing and your location (ad serving is based on general location). Personalized content and ads can also include things like video recommendations, a customized YouTube homepage, and tailored ads based on past activity, like the videos you watch and the things you search for on YouTube. We also use cookies and data to tailor the experience to be age-appropriate, if relevant. Select \u201cMore options\u201d to see additional information, including details about managing your privacy settings. You can also visit g.co/privacytools at any time. Reject all Accept all More options Privacy Policy \u2022 Terms of Service\n\nProvide relevant evidence.",
+    "input_length_chars": 4537,
+    "input_tokens_estimated": 1134,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that egg prices have been significantly affected by a bird flu outbreak, which has led to record high prices in the U.S. However, it also mentions that prices remained unchanged in August after falling for three months, suggesting some fluctuation in the trend.",
+      "overall_stance": "mixed",
+      "key_quote": "the ongoing outbreak wreaking havoc on the nation's egg supply, sending prices to record levels across the U.S."
+    },
+    "output_length_chars": 478,
+    "output_tokens_estimated": 119,
+    "cost_usd": 0.0002415
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:48:50.603872",
+    "latency_seconds": 42.93,
+    "input_prompt": "Claim:\nEgg prices cost 49.3% more last month than they did a year earlier.\n\nArticle Title:\nEgg Prices Fell in September - NerdWallet\n\nGoogle Search Snippet:\nThe retail price of eggs remained unchanged in August after falling for three straight months. Prices remain 10.9% higher than a year ago.\n\nFull Page Content:\nMENU\nEconomist\nEaster and Passover are both just over a month away, and you may be in for a shock when it comes to egg prices as you prepare for these egg-centric holidays \u2013 whether it be for an Easter egg hunt or a Seder plate. Egg prices are setting new records in 2025. The combination of inflation and highly pathogenic avian influenza (HPAI) has caused egg prices to rise more than 350% per dozen compared to this time last year. In fact, some restaurants are having to raise menu prices just to keep up with the cost of eggs. But what is responsible for this rise in price? This Market Intel will evaluate the two biggest causes of record high-egg prices and how these prices are ultimately driven by big challenges in farm country.\nEgg Prices and Highly Pathogenic Avian Influenza\nEggs are considered an inelastic good. This means that even when egg prices change, consumers still buy about the same amount of eggs. Unlike other products, in many applications such as baking, eggs don\u2019t have good substitutes. They are also a healthy \u2013 and typically the most affordable \u2013 source of protein, which makes them desirable even if prices go up. This relatively unchanging demand for eggs means that supply factors can have a big impact on egg prices.\nThe loss of egg-laying chickens from HPAI is the biggest factor driving up egg prices. Since 2022, HPAI has affected over 166 million birds including 127 million egg layers. That\u2019s an average loss of 42.3 million egg layers per year, or about 11% of the 5-year average annual layer inventory of 383 million hens since the outbreak began. These losses have resulted in reduced egg supplies and record egg prices. According to USDA\u2019s Economic Research Service (ERS), the monthly national average price for large Grade A eggs in January was a record-high $4.95 per dozen. Some 12 million birds, mostly layers, were lost in February, bringing the total number of birds affected so far in 2025 to over 35 million and driving egg prices even higher. The daily national average price for a dozen large eggs was $8.15 per dozen on March 4, 2025.\nThis outbreak has been different than the 2014-2015 outbreak. In 2015, the virus came on strong and basically disappeared after a year affecting over 50 million birds. In past outbreaks of Avian Influenza, we\u2019ve seen hot weather kill off the virus. Instead of disappearing when the seasons change, the virus has continued to circulate in wild birds as well as our nation\u2019s poultry flock. Another difference between the current outbreak and the one that occurred in 2015 is there are a lot more backyard flocks in the U.S. compared to 2015. This means more birds that are vulnerable to getting the virus, and more opportunities for the virus to spread along the flyways where migratory birds travel.\nRemarkable Resilience\nAccording to USDA National Agricultural Statistics Service\u2019s (NASS) annual Chickens and Eggs Summary, the average inventory of U.S. egg-laying hens was 375 million, down 14 million, or 3.5% from 389 million hens prior to the 2022 outbreak of HPAI. In 2024, table egg production was about 93.1 billion eggs, down 2.5 billion eggs or 2.6% from 2021. The industry at all levels has shown remarkable resilience in keeping eggs on grocery store shelves and providing an essential protein source to American consumers. Since 2022, egg farmers have lost on average 11% of the laying flock every year due to HPAI, yet they astonishingly managed to keep the annual average layer flock size just 3.5% below pre-outbreak levels.\nEgg Prices and the Farmer\nHigher prices for eggs do not mean farmers are getting rich. On the contrary, these prices are a result of the farmer\u2019s loss of millions of birds to disease. USDA Animal and Plant Health Inspection Service (APHIS) does have an indemnity program that provides compensation to the grower or owner for infected or exposed poultry and eggs that are destroyed to control HPAI. However, it can take up to a year for a farm to complete cleaning and raise new chicks to egg-laying age. This indemnity does not cover costs during the time the farm goes without income. On top of the economic loss, the death of an entire flock, sometimes millions of birds, from avian influenza is a traumatic experience for farm families.\nThe United States\u2019 primary control and eradication strategy for HPAI in domestic poultry, as defined by the World Organization for Animal Health (OIE), is de-population. When HPAI is detected, the entire flock is de-populated, for several reasons. When HPAI is present in even one bird in a poultry house or barn, it typically spreads through the whole facility. Another reason is to prevent spillover into other houses on the premises or wild birds that could spread the virus which also leads to a greater risk for mutation. Research has shown that de-population is the most humane and effective method of control. HPAI affects multiple organs in birds with a mortality rate near 100%. This is a higher mortality rate than the Ebola virus in humans.\nInflation and Cost of Production\nInflation is another, if less dramatic, factor driving up egg prices. While inflation has slowed over the last couple of years, it\u2019s important to remember inflation is a measure of growth. Slowing inflation doesn\u2019t mean prices are going down, it means they are getting expensive more slowly. According to Bureau of Labor and Statistics (BLS), the unadjusted Consumer Price Index (CPI) for all items for urban consumers rose 0.5% in January bringing CPI inflation for the year to 3%. The unadjusted 12-month CPI for eggs contributed to this, rising 53% from Jan. 2024 to Jan. 2025. Shorter term, the CPI for eggs was up 13.8% in just two months, from Dec. 2024 to Jan. 2025.\nInflation does more than drive up the price of eggs in the grocery store, it also raises the cost of everything it takes to produce eggs on the farm and get them on grocery store shelves. According to USDA\u2019s latest farm income forecast estimates, total farm production ex\n\nProvide relevant evidence.",
+    "input_length_chars": 6344,
+    "input_tokens_estimated": 1586,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that egg prices are currently 10.9% higher than a year ago, which contradicts the claim that they cost 49.3% more last month compared to the previous year.",
+      "overall_stance": "refutes",
+      "key_quote": "Prices remain 10.9% higher than a year ago."
+    },
+    "output_length_chars": 306,
+    "output_tokens_estimated": 76,
+    "cost_usd": 0.0002835
+  }
+]

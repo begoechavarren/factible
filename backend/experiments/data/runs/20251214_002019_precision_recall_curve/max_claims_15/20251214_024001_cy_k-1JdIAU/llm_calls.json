@@ -1,0 +1,649 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:40:33.188982",
+    "latency_seconds": 30.76,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nToday, we're making three super nourishing, super food packed, detox juices. To help you lose weight and get you that glow! [Music] Hey, beautiful people. It's Melissa from Choosing My Health, where I teach you how to easily transition to a whole food, plant-based lifestyle and thrive. And today we're making three of my favorite veggie juices. I love them because they're an easy way to reboot your metabolism, lose weight and cleanse your body to literally make you glow. I've been juicing for a minute and hands down, it is the easiest way to repair your body in a short span of time. But real talk, your juice gotta taste good. Cause ain't nobody want to be out here on these streets, drinking juice that tastes like dirt. I'm just going to keep it 100. Now, whether you're drinking these for a New Year's push or for three-day juice cleanse you'll find that they don't just taste good, they deliver a whole lot of life-giving nutrients to energize and revitalize your body. When I drink these literally feel like I can fly. Like that's how light I feel. And as always, if you're looking for the full recipe breakdown, I share those on my blog at choosingmyhealth.com, including modifications. I'm going to leave this link and others for you in the description box below. All right, let's get to it. [Music] I call this juice green power. It is loaded with phytonutrients and cleansing power to rid your body of excess weight and make you glow. To begin, we're gonna peel a washed lemon. I love lemons because they flush toxins from your system and purify the blood. Keep the lemon peel because it tastes great in tea and in hot porridge. Next core your washed apples. Apples are great for weight loss because they're high in pectin. Pectin binds with water and limits how much fat your cells can absorb. Isn't that cool?. They also taste great in this next cut all your ingredients into the appropriate size for your juicer. And now we're going to add all our ingredients to the juicer, kale, apple, celery. Cucumber, lime, and ginger. Each of these ingredients is especially formulated to help nourish your body. The celery, cucumber, and apples are vitamin-rich and super hydrating. Our superfood kale is rich in minerals and antioxidants to feed your cells, and lime and ginger increase your blood circulation, all while staying low in calories. You got to love this juice. [Music] Now the Beet Buzzer is my go-to juice to help me reset my body, especially when I'm feeling sluggish and need an energy boost. It's tangy, it's full-bodied and it has a lot of kick. First, peel your washed grapefruit. Grapefruits have one of the highest water contents of any food y'all, about 92% water, and they deliver a whole lot of nutrition with very little calories. We're also going to peel the lemon and cut the rest of our ingredients to an appropriate size for the juicer. Carrots- a juicing staple. Love that it's full of antioxidants including beta carotene, and lutein that are great for the eyes and beets. Beets are chocked full of nutrients and deliver maximum nutrition for your body. We're talking about potassium, magnesium, zinc, selenium. And beets also help you lower your blood pressure if you need help with that, and they give you extra stamina throughout the day. And did you know that beets even improve athletic performance? Professor: Yes, yes, and a yes-i-dy yes. If you'd allow me to just interject here for just a little bit. Beet juice, one to three hours before an athletic event can provide a one to three percent performance boost and give you a serious competitive edge. That's because beats raise nitric oxide levels increase blood flow, improve lung function and strengthen muscle contraction. Now, you know, Then lastly we add jalape\u00f1o. Jalape\u00f1os aren't a typical juice addition for me, but listen, if you can handle a little heat, jalape\u00f1o can boost your metabolism, increase fat burn and reduce your appetite. I will warn you though. It is not for you if you're sensitive to heat. And if you do like heat, very little goes a long way, my friend. So start with like one-fourth of an inch, no seeds please, then taste the juice and add more if you wish. Remember when you use this, you're juicing it. So you're getting the full undiluted effect. Alternatively, if you still want some spice without too much kick, ginger can also achieve the same purpose. [Music] Our last juice is Orange Blast. I call this my sweet treat because it's really flavorful and refreshing and super high in vitamin C, which is going to help the body absorb minerals. It's going to protect the body from chemical toxins and has anti-aging properties. Who doesn't want that? To begin let's peel a pineapple. Pineapple is perfect for detoxing because it contains bromelain, which is a digestive enzyme that will cleanse your colon and it aids digestion. And it's super juicy. Next, we'll cut a red bell pepper in half. Y'all, did you know that a cup of red bell pepper contains nearly three times more vitamin C than an orange? Professor: Oh yeah. I knew. And we're also going to add some ginger and turmeric. Ginger is awesome for circulation and digestion and turmeric, as you probably already know, is incredible for inflammation. And to maximize the benefits of turmeric, you can sprinkle a little black pepper into your drink because it can enhance the curcumin absorption in turmeric by up to 2,000 percent. That's a whole lot! This juice is extraordinarily enjoyable and will boost your immune system all while helping you flush and reset. I love these satisfying, and nutritionally-rich juices. They are perfect for a juice cleanse or for any day you need a boost. And, now if you're looking for more recipes, encouragement, plant-based education. I got you, honey. I have plenty of videos and resources on this channel and blog. I'm going to leave a link to them in the description box below. If you make any of these juices, please comment and let me know. I'd so appreciate that. And let me know if you have a favorite juice that you could share with us. Also, if you're interested in a plant-based lifestyle and you want to join the CMH crew, please subscribe to my channel to learn more. How to easily transition to a plant-based lifestyle and thrive. I would so love to have you here. Don't forget to hit the notification bell for my latest videos. And if you found this video helpful, please give it a thumbs up. You can also follow me on Instagram at choosingmyhealth. Now if you're new to this whole food plant-based thing, welcome. Check out my free gift for you packed with nearly 20 years of my life-tested strategies to boost your game for the win. Links are all in the description box below. Thanks so much for hanging out with me today. You could've been doing something else, but you chose to watch this video and I'm thankful for that. I hope you have an amazing day. I love you, and I will see you in the next one? [Music] [Bloopers] Oh, yes. I knew. Oh, pick me, pick me. Oh, I knew. I knew. I knew. I knew. Yes. Yes. And a yes-i-dy yes. Yes. If you'd let me just to inter.... (Laughs) Now you know. (Laughs) Must look like I was about to choke. (Lauhgs) [Music]",
+    "input_length_chars": 7254,
+    "input_tokens_estimated": 1813,
+    "output": {
+      "claims": [
+        {
+          "text": "Juicing is the easiest way to repair your body in a short span of time.",
+          "confidence": 0.8,
+          "category": "health",
+          "importance": 0.6,
+          "context": "Speaker: Melissa, discussing benefits of juicing."
+        },
+        {
+          "text": "Lemons flush toxins from your system and purify the blood.",
+          "confidence": 0.7,
+          "category": "health",
+          "importance": 0.6,
+          "context": "Ingredient benefits in green power juice."
+        },
+        {
+          "text": "Apples are high in pectin, which binds with water and limits fat absorption.",
+          "confidence": 0.8,
+          "category": "health",
+          "importance": 0.6,
+          "context": "Ingredient benefits in green power juice."
+        },
+        {
+          "text": "Celery, cucumber, and apples are vitamin-rich and super hydrating.",
+          "confidence": 0.7,
+          "category": "health",
+          "importance": 0.5,
+          "context": "Ingredient benefits in green power juice."
+        },
+        {
+          "text": "Kale is rich in minerals and antioxidants.",
+          "confidence": 0.8,
+          "category": "health",
+          "importance": 0.5,
+          "context": "Ingredient benefits in green power juice."
+        },
+        {
+          "text": "Grapefruits have about 92% water content and deliver nutrition with few calories.",
+          "confidence": 0.9,
+          "category": "health",
+          "importance": 0.6,
+          "context": "Ingredient benefits in Beet Buzzer juice."
+        },
+        {
+          "text": "Carrots are full of antioxidants including beta carotene and lutein.",
+          "confidence": 0.8,
+          "category": "health",
+          "importance": 0.5,
+          "context": "Ingredient benefits in Beet Buzzer juice."
+        },
+        {
+          "text": "Beets help lower blood pressure and improve athletic performance.",
+          "confidence": 0.9,
+          "category": "health",
+          "importance": 0.7,
+          "context": "Ingredient benefits in Beet Buzzer juice."
+        },
+        {
+          "text": "Beet juice can provide a 1-3% performance boost before athletic events.",
+          "confidence": 0.8,
+          "category": "health",
+          "importance": 0.7,
+          "context": "Professor discussing beet juice benefits."
+        },
+        {
+          "text": "A cup of red bell pepper contains nearly three times more vitamin C than an orange.",
+          "confidence": 0.9,
+          "category": "health",
+          "importance": 0.6,
+          "context": "Ingredient benefits in Orange Blast juice."
+        },
+        {
+          "text": "Pineapple contains bromelain, a digestive enzyme that aids digestion.",
+          "confidence": 0.8,
+          "category": "health",
+          "importance": 0.6,
+          "context": "Ingredient benefits in Orange Blast juice."
+        },
+        {
+          "text": "Turmeric enhances inflammation and curcumin absorption can be increased by black pepper.",
+          "confidence": 0.8,
+          "category": "health",
+          "importance": 0.6,
+          "context": "Ingredient benefits in Orange Blast juice."
+        },
+        {
+          "text": "These juices are perfect for a juice cleanse or for a boost.",
+          "confidence": 0.7,
+          "category": "health",
+          "importance": 0.4,
+          "context": "Speaker: Melissa, summarizing juice benefits."
+        },
+        {
+          "text": "Juicing delivers a lot of life-giving nutrients to energize and revitalize your body.",
+          "confidence": 0.7,
+          "category": "health",
+          "importance": 0.5,
+          "context": "Speaker: Melissa, discussing benefits of juicing."
+        },
+        {
+          "text": "Ginger is good for circulation and digestion.",
+          "confidence": 0.8,
+          "category": "health",
+          "importance": 0.5,
+          "context": "Ingredient benefits in Orange Blast juice."
+        }
+      ],
+      "total_count": 15
+    },
+    "output_length_chars": 4171,
+    "output_tokens_estimated": 1042,
+    "cost_usd": 0.00089715
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:40:40.562973",
+    "latency_seconds": 1.66,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Turmeric enhances inflammation and curcumin absorption can be increased by black pepper.\nContext: Ingredient benefits in Orange Blast juice.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 313,
+    "input_tokens_estimated": 78,
+    "output": {
+      "original_claim": "Turmeric enhances inflammation and curcumin absorption can be increased by black pepper.",
+      "queries": [
+        {
+          "query": "Turmeric inflammation benefits",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "curcumin absorption black pepper",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 300,
+    "output_tokens_estimated": 75,
+    "cost_usd": 5.67e-05,
+    "context": {
+      "claim_index": 15,
+      "claim_text": "These juices are perfect for a juice cleanse or for a boost."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:40:40.686121",
+    "latency_seconds": 1.78,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Kale is rich in minerals and antioxidants.\nContext: Ingredient benefits in green power juice.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 266,
+    "input_tokens_estimated": 66,
+    "output": {
+      "original_claim": "Kale is rich in minerals and antioxidants.",
+      "queries": [
+        {
+          "query": "Kale nutritional benefits minerals antioxidants",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Nutritional value of kale minerals and antioxidants",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 290,
+    "output_tokens_estimated": 72,
+    "cost_usd": 5.31e-05,
+    "context": {
+      "claim_index": 9,
+      "claim_text": "Turmeric enhances inflammation and curcumin absorption can be increased by black pepper.",
+      "query_index": 2,
+      "query_text": "curcumin absorption black pepper"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:40:40.768774",
+    "latency_seconds": 1.87,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: These juices are perfect for a juice cleanse or for a boost.\nContext: Speaker: Melissa, summarizing juice benefits.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 288,
+    "input_tokens_estimated": 72,
+    "output": {
+      "original_claim": "These juices are perfect for a juice cleanse or for a boost.",
+      "queries": [
+        {
+          "query": "benefits of juices for juice cleanse",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "are juices effective for detox and energy boost",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 293,
+    "output_tokens_estimated": 73,
+    "cost_usd": 5.46e-05,
+    "context": {
+      "claim_index": 11,
+      "claim_text": "Kale is rich in minerals and antioxidants.",
+      "query_index": 2,
+      "query_text": "Nutritional value of kale minerals and antioxidants"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:40:40.852991",
+    "latency_seconds": 1.95,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Ginger is good for circulation and digestion.\nContext: Ingredient benefits in Orange Blast juice.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 270,
+    "input_tokens_estimated": 67,
+    "output": {
+      "original_claim": "Ginger is good for circulation and digestion.",
+      "queries": [
+        {
+          "query": "Ginger benefits for circulation and digestion",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Does ginger improve blood circulation and digestion?",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 292,
+    "output_tokens_estimated": 73,
+    "cost_usd": 5.385e-05,
+    "context": {
+      "claim_index": 15,
+      "claim_text": "These juices are perfect for a juice cleanse or for a boost.",
+      "query_index": 2,
+      "query_text": "are juices effective for detox and energy boost"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:40:40.853427",
+    "latency_seconds": 1.95,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Pineapple contains bromelain, a digestive enzyme that aids digestion.\nContext: Ingredient benefits in Orange Blast juice.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 294,
+    "input_tokens_estimated": 73,
+    "output": {
+      "original_claim": "Pineapple contains bromelain, a digestive enzyme that aids digestion.",
+      "queries": [
+        {
+          "query": "Pineapple bromelain digestive enzyme benefits",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Does bromelain in pineapple help with digestion?",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 312,
+    "output_tokens_estimated": 78,
+    "cost_usd": 5.775e-05,
+    "context": {
+      "claim_index": 15,
+      "claim_text": "These juices are perfect for a juice cleanse or for a boost.",
+      "query_index": 2,
+      "query_text": "are juices effective for detox and energy boost"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:40:40.853989",
+    "latency_seconds": 1.96,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Juicing is the easiest way to repair your body in a short span of time.\nContext: Speaker: Melissa, discussing benefits of juicing.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 303,
+    "input_tokens_estimated": 75,
+    "output": {
+      "original_claim": "Juicing is the easiest way to repair your body in a short span of time.",
+      "queries": [
+        {
+          "query": "Is juicing the easiest way to repair your body quickly?",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Benefits of juicing for body repair in a short time",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 327,
+    "output_tokens_estimated": 81,
+    "cost_usd": 5.985e-05,
+    "context": {
+      "claim_index": 15,
+      "claim_text": "These juices are perfect for a juice cleanse or for a boost.",
+      "query_index": 2,
+      "query_text": "are juices effective for detox and energy boost"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:40:40.854474",
+    "latency_seconds": 1.95,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Carrots are full of antioxidants including beta carotene and lutein.\nContext: Ingredient benefits in Beet Buzzer juice.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 292,
+    "input_tokens_estimated": 73,
+    "output": {
+      "original_claim": "Carrots are full of antioxidants including beta carotene and lutein.",
+      "queries": [
+        {
+          "query": "Carrots antioxidants beta carotene lutein benefits",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "nutritional benefits of carrots antioxidants",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 312,
+    "output_tokens_estimated": 78,
+    "cost_usd": 5.775e-05,
+    "context": {
+      "claim_index": 15,
+      "claim_text": "These juices are perfect for a juice cleanse or for a boost.",
+      "query_index": 2,
+      "query_text": "are juices effective for detox and energy boost"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:40:41.187581",
+    "latency_seconds": 2.29,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Beets help lower blood pressure and improve athletic performance.\nContext: Ingredient benefits in Beet Buzzer juice.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 289,
+    "input_tokens_estimated": 72,
+    "output": {
+      "original_claim": "Beets help lower blood pressure and improve athletic performance.",
+      "queries": [
+        {
+          "query": "Beets lower blood pressure and improve athletic performance",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "benefits of beets for blood pressure and athletic performance",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 335,
+    "output_tokens_estimated": 83,
+    "cost_usd": 6.06e-05,
+    "context": {
+      "claim_index": 12,
+      "claim_text": "Carrots are full of antioxidants including beta carotene and lutein.",
+      "query_index": 2,
+      "query_text": "nutritional benefits of carrots antioxidants"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:40:41.188049",
+    "latency_seconds": 2.29,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: A cup of red bell pepper contains nearly three times more vitamin C than an orange.\nContext: Ingredient benefits in Orange Blast juice.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 308,
+    "input_tokens_estimated": 77,
+    "output": {
+      "original_claim": "A cup of red bell pepper contains nearly three times more vitamin C than an orange.",
+      "queries": [
+        {
+          "query": "red bell pepper vitamin C content compared to orange",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "vitamin C in red bell pepper vs orange",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 323,
+    "output_tokens_estimated": 80,
+    "cost_usd": 5.955e-05,
+    "context": {
+      "claim_index": 12,
+      "claim_text": "Carrots are full of antioxidants including beta carotene and lutein.",
+      "query_index": 2,
+      "query_text": "nutritional benefits of carrots antioxidants"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:40:41.383462",
+    "latency_seconds": 2.49,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Grapefruits have about 92% water content and deliver nutrition with few calories.\nContext: Ingredient benefits in Beet Buzzer juice.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 305,
+    "input_tokens_estimated": 76,
+    "output": {
+      "original_claim": "Grapefruits have about 92% water content and deliver nutrition with few calories.",
+      "queries": [
+        {
+          "query": "Grapefruit water content nutrition calories",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Grapefruit nutritional value low calories water percentage",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 332,
+    "output_tokens_estimated": 83,
+    "cost_usd": 6.12e-05,
+    "context": {
+      "claim_index": 7,
+      "claim_text": "A cup of red bell pepper contains nearly three times more vitamin C than an orange.",
+      "query_index": 2,
+      "query_text": "vitamin C in red bell pepper vs orange"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:40:41.383965",
+    "latency_seconds": 2.49,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Beet juice can provide a 1-3% performance boost before athletic events.\nContext: Professor discussing beet juice benefits.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 295,
+    "input_tokens_estimated": 73,
+    "output": {
+      "original_claim": "Beet juice can provide a 1-3% performance boost before athletic events.",
+      "queries": [
+        {
+          "query": "Beet juice performance boost athletic events 1-3%",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Does beet juice enhance athletic performance by 1-3%?",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 323,
+    "output_tokens_estimated": 80,
+    "cost_usd": 5.895e-05,
+    "context": {
+      "claim_index": 7,
+      "claim_text": "A cup of red bell pepper contains nearly three times more vitamin C than an orange.",
+      "query_index": 2,
+      "query_text": "vitamin C in red bell pepper vs orange"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:40:41.555368",
+    "latency_seconds": 2.65,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Juicing delivers a lot of life-giving nutrients to energize and revitalize your body.\nContext: Speaker: Melissa, discussing benefits of juicing.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 317,
+    "input_tokens_estimated": 79,
+    "output": {
+      "original_claim": "Juicing delivers a lot of life-giving nutrients to energize and revitalize your body.",
+      "queries": [
+        {
+          "query": "benefits of juicing nutrients energize body",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "does juicing provide essential nutrients for energy",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 329,
+    "output_tokens_estimated": 82,
+    "cost_usd": 6.105e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "Beet juice can provide a 1-3% performance boost before athletic events.",
+      "query_index": 2,
+      "query_text": "Does beet juice enhance athletic performance by 1-3%?"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:40:41.556082",
+    "latency_seconds": 2.66,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Celery, cucumber, and apples are vitamin-rich and super hydrating.\nContext: Ingredient benefits in green power juice.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 290,
+    "input_tokens_estimated": 72,
+    "output": {
+      "original_claim": "Celery, cucumber, and apples are vitamin-rich and super hydrating.",
+      "queries": [
+        {
+          "query": "nutritional benefits of celery cucumber and apples",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "are celery cucumber and apples hydrating and rich in vitamins",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 327,
+    "output_tokens_estimated": 81,
+    "cost_usd": 5.94e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "Beet juice can provide a 1-3% performance boost before athletic events.",
+      "query_index": 2,
+      "query_text": "Does beet juice enhance athletic performance by 1-3%?"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:40:41.556652",
+    "latency_seconds": 2.66,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Apples are high in pectin, which binds with water and limits fat absorption.\nContext: Ingredient benefits in green power juice.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 300,
+    "input_tokens_estimated": 75,
+    "output": {
+      "original_claim": "Apples are high in pectin, which binds with water and limits fat absorption.",
+      "queries": [
+        {
+          "query": "Apples pectin water fat absorption benefits",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "health benefits of pectin in apples",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 304,
+    "output_tokens_estimated": 76,
+    "cost_usd": 5.685e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "Beet juice can provide a 1-3% performance boost before athletic events.",
+      "query_index": 2,
+      "query_text": "Does beet juice enhance athletic performance by 1-3%?"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:40:41.557154",
+    "latency_seconds": 2.66,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Lemons flush toxins from your system and purify the blood.\nContext: Ingredient benefits in green power juice.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 282,
+    "input_tokens_estimated": 70,
+    "output": {
+      "original_claim": "Lemons flush toxins from your system and purify the blood.",
+      "queries": [
+        {
+          "query": "Do lemons flush toxins from the body and purify the blood?",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Health benefits of lemons detoxifying the body and purifying blood",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 332,
+    "output_tokens_estimated": 83,
+    "cost_usd": 6.03e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "Beet juice can provide a 1-3% performance boost before athletic events.",
+      "query_index": 2,
+      "query_text": "Does beet juice enhance athletic performance by 1-3%?"
+    }
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:42:29.924849",
+    "latency_seconds": 11.74,
+    "input_prompt": "\nClaim: Pineapple contains bromelain, a digestive enzyme that aids digestion.\nCategory: health\nExtraction confidence: 0.80\n\nEvidence:\nUNCLEAR (5 sources):\n  1. Exploring the Therapeutic Potential of Bromelain - PubMed Central | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC11243481/\n     Summary: Whether consumed as part of fresh pineapple or in supplement form, bromelain may support various aspects of digestion, including protein digestion, nutrient ...\n  2. Bromelain - Uses, Side Effects, and More - WebMD | reliability=high (0.85)\n     URL: https://www.webmd.com/vitamins/ai/ingredientmono-895/bromelain\n     Summary: People use bromelain for muscle soreness, pain, burns, kidney stones, and many other conditions, but there is no good scientific evidence to support these uses.\n  3. Bromelain: Benefits, risks, sources, and side effects | reliability=high (0.85)\n     URL: https://www.medicalnewstoday.com/articles/323783\n     Summary: Bromelain is an enzyme mixture found in pineapples. It has various potential health benefits, including reducing inflammation and improving digestion.\n  4. Bromelain: Uses, sources, benefits & side-effects - WebMD | reliability=high (0.85)\n     URL: https://www.webmd.com/diet/supplement-guide-bromelain-bromelin\n     Summary: Pineapple flesh or juice does not contain enough bromelain to have any medicinal effects. ... Bromelain is often touted as a way to help digestion ...\n  5. Bromelain: The Pineapple Enzyme with Powerful Benefits - Health | reliability=medium (0.60)\n     URL: https://www.health.com/bromelain-benefits-7501168\n     Summary: Bromelain is a pineapple enzyme that may relieve pain and reduce inflammation. It may also help relieve sinusitis and aid in digestion, but more ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1805,
+    "input_tokens_estimated": 451,
+    "output": {
+      "overall_stance": "mixed",
+      "confidence": "medium",
+      "summary": "Bromelain, found in pineapple, is recognized as a digestive enzyme that may aid digestion, according to sources like the PubMed Central article. However, other sources, such as the WebMD articles, indicate that the amount of bromelain in fresh pineapple is insufficient for significant medicinal effects, leading to mixed conclusions about its efficacy in aiding digestion."
+    },
+    "output_length_chars": 434,
+    "output_tokens_estimated": 108,
+    "cost_usd": 0.00013245
+  }
+]

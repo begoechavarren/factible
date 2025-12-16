@@ -1,0 +1,678 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:53:10.588060",
+    "latency_seconds": 21.49,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nthe Labour party has won this general election and that's it 14 years of conservative rule has this morning come to a rather brutal end after a relatively short but terribly bruising campaign the conservatives have been reduced to their lowest seat share ever with them dropping below the 156 seats that they won in the 1906 general election on the other side of things though laor have achieved almost the highest seat share in their history getting very close to the huge 400 18 seats that they won in the 1997 general election it's not only labor who've had a good night though the liberal Democrats have also had a very good night with their seat share ticking up to a huge 71 seats the highest seat share ever and up from only 11 in 2019 this is in fact even higher than their seat share in 2010 when they agreed to a formal Coalition with the conservative party similarly it seems that reform UK have had a pretty good night too they've gone from no seats to a pretty respectable four seats even more impressively it seems they've achieved an even more respectable 14.3% of the vote the greens didn't have a terrible night either with them not only holding on to Brighton Pavilion but also gaining Bristol Central waveny Valley and North herfordshire the only other party that had a pretty bad night was the SNP who were damaged by their ongoing scandals and their very recent change of leader despite their electoral dominance in Scotland over the last decade or so last night they received their lowest seat share since 2010 winning only nine seats this is a significant decline since 2019 when they won 48 out of the 56 available in Scotland obviously this will raise a couple of key questions the first is whether this is the beginning of the end of S&P dominance in Scotland and secondly is what such a terrible result will mean for the cause of Scottish independence so anyway these are the headline results from the election but let's dive a little deeper and have a look at what [Music] happened before we start if you haven't already please consider subscribing and ringing the bell to stay in the loop and be notified when we release new videos now the key event from last night occurred at 10 p.m. when we got our first indication of what was to come in the release of the exit Pole now the most shocking thing to note in the exit poll here was the number of expected reform seats the exit pole predicted that reform would get 13 seats significantly higher than most of the MRP polls in the run up to the election however there were some wobbles through the night with some polls suggesting that the exit pole had overestimated the number of seats the more observant of you will notice that it turns out that the exit pole had indeed overestimated and in the end reform achieved only four seats the other shocking find from the exit pole was the number of predicted Tory seats prior to election day many of the MRP polls were predicting below 100 Tory seats while the exit poll predicted icted that the Tories were going to win 131 seats What followed was deeply chaotic and something that made writing this video through the night even more difficult as the results started coming in it appeared that the exit pole was slightly wrong although the BBC and ITV couldn't quite agree in what direction in the we hours of Friday morning the BBC updated their prediction with them suggesting that the conservatives were going to win more seats while ITV updated theirs and predicted that they would in fact win fewer as things stand it appears that the Tories have won slightly fewer than originally predicted but not significantly anyway overall results aside the night was also particularly interesting when it came to individuals there were two properly shocking and unexpected results the first was Jonathan Ashworth unexpectedly losing his seat to an independent candidate Ashworth has previously been the shadow Health secretary and up until today was the shadow pay Master General it appears that the loss of his seat has been a result of labor stance on Gaza something that could cause problems from the incoming labor government more generally the second unexpected result was Jeremy Corbin's election in Islington North having been deselected as a labor MP Corbin opted to stand in his constituency as an independent he did however make the decision to stand rather late in the election cycle something that led to a decent proportion of journalists and pundits to believe that he was going to lose the constituency to the new labor candidate this wasn't the case though and Corbin secured himself a pretty decent majority so now that we've gone through exactly what happened through the night it's worth going through what this all means for the main parties now the most interesting party to discuss right now are the conservatives who as we've just discussed lost some pretty major figures through the night at the time of writing sunak has not yet announced his resignation as conservative leader although he is expected to either this morning or in the coming days and weeks this will naturally Kickstart a leadership election the question now is who would take over while it's a little too soon to tell there are some candidates that were in a particularly strong position right now KY Bok is in the strongest position she's got a rather strong following among right-wing Tories both in Parliament and among the membership what really bolsters this position is the fact that one of her key Rivals for the leadership Penny Morant lost her seat last night is worth mentioning though that there has been an issue in bok's constituency with postal votes and if this is challenging the courts it could cause problems for her candidacy in the Tory leadership election anyway someone else that there's some chatter about in terms of taking over the Tory leadership is Nigel farage and his potential defection from reform UK in order to lead the Tories after all he now has a seat in the House of Commons and there are some relatively senior members of the conservative party who have gone on the record as saying that they would like farage to join their party only the next few weeks will show exactly what happens here but if you do want to stay informed on this make sure you subscribe to the channel anyway what happens next for labor is quite simple the new prime minister K sta will meet the king and agree to form a government in his name he'll take office at Downing Street assemble his first cabinet and could even represent his party in a pmq session before the imminent summer recess they will soon begin implementing their policy platform as outlined in their Manifesto whether they're successful at implementing this is not yet known though and something we'll need to keep an eye on through the next few years of lab government regardless this is clearly a Monumental election for labor and the UK and when these kinds of Elections happen people tend to like to save newspapers and magazines with the headlines for posterity the best way you could possibly do that is by picking up a copy of two long our 60-page highquality magazine full of tood R's very best journalism this issue is focused on the UK election diving deep into the campaign the results and how the winners plan to fix Britain it's more than just though with stories including the European parliamentary elections the countries likely to join the EU next the latest from Gaza the rise of M and of course the US election now we've decided to make the magazine for two reasons firstly it allows our journalists to write in more detail diving deeper and ignoring algorithmic restrictions to produce the best work we can and secondly it's a good way for you to support todr and will help us to produce free YouTube videos as long as we can if you're interested then you you can pick up a copy from our website where we're selling two editions of the magazine firstly there's the standard edition and then there's the Premium Edition which gets your name printed in the thank you section of the magazine and exclusive access to our behind the scenes podcast oh and by the way we're going to be making an issue of too long every 4 months so if you want to ensure that you never miss an issue then you can subscribe which gets you a 25% discount if you have more questions there's a full Q&A Linked In the description but you'll also find a link to our store and while you're there make sure you use the code election week to get an additional 22 off any purchase thanks so much for hearing me out and if you are interested please do pick up a copy as it's a great way to support our journalism and help us to continue making free YouTube videos as long as we can",
+    "input_length_chars": 8817,
+    "input_tokens_estimated": 2204,
+    "output": {
+      "claims": [
+        {
+          "text": "The Labour party has won this general election, ending 14 years of Conservative rule.",
+          "confidence": 0.95,
+          "category": "political",
+          "importance": 0.85,
+          "context": "Election results announcement, significant political change."
+        },
+        {
+          "text": "The Conservatives have been reduced to their lowest seat share ever, dropping below 156 seats.",
+          "confidence": 0.9,
+          "category": "political",
+          "importance": 0.85,
+          "context": "Post-election analysis, significant decline for Conservatives."
+        },
+        {
+          "text": "Labour achieved almost the highest seat share in their history, close to 418 seats from 1997.",
+          "confidence": 0.9,
+          "category": "political",
+          "importance": 0.8,
+          "context": "Comparison to historical performance, significant for Labour."
+        },
+        {
+          "text": "The Liberal Democrats increased their seat share to 71, the highest ever, up from 11 in 2019.",
+          "confidence": 0.9,
+          "category": "political",
+          "importance": 0.8,
+          "context": "Election results, significant gain for Liberal Democrats."
+        },
+        {
+          "text": "Reform UK went from no seats to four seats, achieving 14.3% of the vote.",
+          "confidence": 0.85,
+          "category": "political",
+          "importance": 0.6,
+          "context": "Election results, notable gain for Reform UK."
+        },
+        {
+          "text": "The SNP received their lowest seat share since 2010, winning only nine seats.",
+          "confidence": 0.9,
+          "category": "political",
+          "importance": 0.7,
+          "context": "Post-election analysis, significant decline for SNP."
+        },
+        {
+          "text": "The SNP won 48 out of 56 available seats in Scotland in 2019.",
+          "confidence": 0.85,
+          "category": "political",
+          "importance": 0.6,
+          "context": "Historical comparison, context for SNP's decline."
+        },
+        {
+          "text": "The exit poll predicted Reform UK would get 13 seats, but they achieved only four.",
+          "confidence": 0.9,
+          "category": "political",
+          "importance": 0.7,
+          "context": "Exit poll analysis, discrepancy in predictions."
+        },
+        {
+          "text": "The exit poll predicted the Conservatives would win 131 seats, but they won fewer.",
+          "confidence": 0.85,
+          "category": "political",
+          "importance": 0.6,
+          "context": "Exit poll analysis, significant for Conservative expectations."
+        },
+        {
+          "text": "Jonathan Ashworth lost his seat to an independent candidate, attributed to Labour's stance on Gaza.",
+          "confidence": 0.85,
+          "category": "political",
+          "importance": 0.6,
+          "context": "Election results, unexpected loss for Labour."
+        },
+        {
+          "text": "Jeremy Corbyn was elected in Islington North as an independent after being deselected by Labour.",
+          "confidence": 0.9,
+          "category": "political",
+          "importance": 0.6,
+          "context": "Election results, notable for Corbyn's political career."
+        },
+        {
+          "text": "Rishi Sunak has not yet announced his resignation as Conservative leader but is expected to soon.",
+          "confidence": 0.8,
+          "category": "political",
+          "importance": 0.55,
+          "context": "Post-election leadership speculation, significant for Conservative future."
+        },
+        {
+          "text": "Kirstarmer will meet the king to agree to form a government in his name.",
+          "confidence": 0.85,
+          "category": "political",
+          "importance": 0.6,
+          "context": "Post-election transition, significant for Labour's governance."
+        },
+        {
+          "text": "The new Labour government will begin implementing their policy platform as outlined in their manifesto.",
+          "confidence": 0.85,
+          "category": "political",
+          "importance": 0.6,
+          "context": "Future governance plans, significant for Labour's agenda."
+        },
+        {
+          "text": "The magazine issue focuses on the UK election, including campaign results and future plans.",
+          "confidence": 0.8,
+          "category": "media",
+          "importance": 0.3,
+          "context": "Promotion of a magazine related to the election."
+        }
+      ],
+      "total_count": 15
+    },
+    "output_length_chars": 4689,
+    "output_tokens_estimated": 1172,
+    "cost_usd": 0.0010338
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:53:23.491363",
+    "latency_seconds": 2.27,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The SNP won 48 out of 56 available seats in Scotland in 2019.\nContext: Historical comparison, context for SNP's decline.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 293,
+    "input_tokens_estimated": 73,
+    "output": {
+      "original_claim": "The SNP won 48 out of 56 available seats in Scotland in 2019.",
+      "queries": [
+        {
+          "query": "SNP 48 out of 56 seats Scotland 2019 election results",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Scottish National Party 2019 election seats won",
+          "query_type": "SOURCE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 306,
+    "output_tokens_estimated": 76,
+    "cost_usd": 5.655e-05,
+    "context": {
+      "claim_index": 15,
+      "claim_text": "The magazine issue focuses on the UK election, including campaign results and future plans."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:53:23.619009",
+    "latency_seconds": 2.4,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Kirstarmer will meet the king to agree to form a government in his name.\nContext: Post-election transition, significant for Labour's governance.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 317,
+    "input_tokens_estimated": 79,
+    "output": {
+      "original_claim": "Kirstarmer will meet the king to agree to form a government in his name.",
+      "queries": [
+        {
+          "query": "Kirstarmer meeting king to form government",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Kirstarmer government formation agreement with king",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 315,
+    "output_tokens_estimated": 78,
+    "cost_usd": 5.865e-05,
+    "context": {
+      "claim_index": 8,
+      "claim_text": "The SNP won 48 out of 56 available seats in Scotland in 2019.",
+      "query_index": 2,
+      "query_text": "Scottish National Party 2019 election seats won"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:53:23.619526",
+    "latency_seconds": 2.41,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The Labour party has won this general election, ending 14 years of Conservative rule.\nContext: Election results announcement, significant political change.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 328,
+    "input_tokens_estimated": 82,
+    "output": {
+      "original_claim": "The Labour party has won this general election, ending 14 years of Conservative rule.",
+      "queries": [
+        {
+          "query": "Labour party wins general election 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Labour party election victory ends Conservative rule 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 331,
+    "output_tokens_estimated": 82,
+    "cost_usd": 6.15e-05,
+    "context": {
+      "claim_index": 8,
+      "claim_text": "The SNP won 48 out of 56 available seats in Scotland in 2019.",
+      "query_index": 2,
+      "query_text": "Scottish National Party 2019 election seats won"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:53:23.619915",
+    "latency_seconds": 2.4,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The magazine issue focuses on the UK election, including campaign results and future plans.\nContext: Promotion of a magazine related to the election.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 322,
+    "input_tokens_estimated": 80,
+    "output": {
+      "original_claim": "The magazine issue focuses on the UK election, including campaign results and future plans.",
+      "queries": [
+        {
+          "query": "UK election campaign results future plans magazine issue",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "UK election magazine issue analysis campaign results",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 349,
+    "output_tokens_estimated": 87,
+    "cost_usd": 6.42e-05,
+    "context": {
+      "claim_index": 8,
+      "claim_text": "The SNP won 48 out of 56 available seats in Scotland in 2019.",
+      "query_index": 2,
+      "query_text": "Scottish National Party 2019 election seats won"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:53:23.869348",
+    "latency_seconds": 2.65,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Rishi Sunak has not yet announced his resignation as Conservative leader but is expected to soon.\nContext: Post-election leadership speculation, significant for Conservative future.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 354,
+    "input_tokens_estimated": 88,
+    "output": {
+      "original_claim": "Rishi Sunak has not yet announced his resignation as Conservative leader but is expected to soon.",
+      "queries": [
+        {
+          "query": "Rishi Sunak resignation announcement Conservative leader October 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Rishi Sunak expected to resign Conservative leader news October 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 384,
+    "output_tokens_estimated": 96,
+    "cost_usd": 7.08e-05,
+    "context": {
+      "claim_index": 15,
+      "claim_text": "The magazine issue focuses on the UK election, including campaign results and future plans.",
+      "query_index": 2,
+      "query_text": "UK election magazine issue analysis campaign results"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:53:23.869777",
+    "latency_seconds": 2.65,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Jonathan Ashworth lost his seat to an independent candidate, attributed to Labour's stance on Gaza.\nContext: Election results, unexpected loss for Labour.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 327,
+    "input_tokens_estimated": 81,
+    "output": {
+      "original_claim": "Jonathan Ashworth lost his seat to an independent candidate, attributed to Labour's stance on Gaza.",
+      "queries": [
+        {
+          "query": "Jonathan Ashworth lost seat independent candidate Labour Gaza",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Labour Gaza stance impact on Jonathan Ashworth election loss",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 370,
+    "output_tokens_estimated": 92,
+    "cost_usd": 6.735e-05,
+    "context": {
+      "claim_index": 15,
+      "claim_text": "The magazine issue focuses on the UK election, including campaign results and future plans.",
+      "query_index": 2,
+      "query_text": "UK election magazine issue analysis campaign results"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:53:24.064327",
+    "latency_seconds": 2.85,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The exit poll predicted Reform UK would get 13 seats, but they achieved only four.\nContext: Exit poll analysis, discrepancy in predictions.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 312,
+    "input_tokens_estimated": 78,
+    "output": {
+      "original_claim": "The exit poll predicted Reform UK would get 13 seats, but they achieved only four.",
+      "queries": [
+        {
+          "query": "Reform UK exit poll predicted 13 seats achieved 4",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Reform UK election results 2023 exit poll discrepancy",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 334,
+    "output_tokens_estimated": 83,
+    "cost_usd": 6.15e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "Jonathan Ashworth lost his seat to an independent candidate, attributed to Labour's stance on Gaza.",
+      "query_index": 2,
+      "query_text": "Labour Gaza stance impact on Jonathan Ashworth election loss"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:53:24.064821",
+    "latency_seconds": 2.85,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Labour achieved almost the highest seat share in their history, close to 418 seats from 1997.\nContext: Comparison to historical performance, significant for Labour.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 337,
+    "input_tokens_estimated": 84,
+    "output": {
+      "original_claim": "Labour achieved almost the highest seat share in their history, close to 418 seats from 1997.",
+      "queries": [
+        {
+          "query": "Labour Party seat share history 418 seats 1997",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Labour Party historical seat share comparison 1997",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 339,
+    "output_tokens_estimated": 84,
+    "cost_usd": 6.3e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "Jonathan Ashworth lost his seat to an independent candidate, attributed to Labour's stance on Gaza.",
+      "query_index": 2,
+      "query_text": "Labour Gaza stance impact on Jonathan Ashworth election loss"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:53:24.065240",
+    "latency_seconds": 2.85,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Jeremy Corbyn was elected in Islington North as an independent after being deselected by Labour.\nContext: Election results, notable for Corbyn's political career.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 335,
+    "input_tokens_estimated": 83,
+    "output": {
+      "original_claim": "Jeremy Corbyn was elected in Islington North as an independent after being deselected by Labour.",
+      "queries": [
+        {
+          "query": "Jeremy Corbyn Islington North independent election deselected by Labour",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Jeremy Corbyn elected Islington North independent after Labour deselection",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 391,
+    "output_tokens_estimated": 97,
+    "cost_usd": 7.065e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "Jonathan Ashworth lost his seat to an independent candidate, attributed to Labour's stance on Gaza.",
+      "query_index": 2,
+      "query_text": "Labour Gaza stance impact on Jonathan Ashworth election loss"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:53:24.065627",
+    "latency_seconds": 2.85,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The SNP received their lowest seat share since 2010, winning only nine seats.\nContext: Post-election analysis, significant decline for SNP.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 312,
+    "input_tokens_estimated": 78,
+    "output": {
+      "original_claim": "The SNP received their lowest seat share since 2010, winning only nine seats.",
+      "queries": [
+        {
+          "query": "SNP lowest seat share since 2010 winning nine seats 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "SNP election results 2023 number of seats won",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 328,
+    "output_tokens_estimated": 82,
+    "cost_usd": 6.09e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "Jonathan Ashworth lost his seat to an independent candidate, attributed to Labour's stance on Gaza.",
+      "query_index": 2,
+      "query_text": "Labour Gaza stance impact on Jonathan Ashworth election loss"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:53:24.066018",
+    "latency_seconds": 2.84,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The new Labour government will begin implementing their policy platform as outlined in their manifesto.\nContext: Future governance plans, significant for Labour's agenda.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 343,
+    "input_tokens_estimated": 85,
+    "output": {
+      "original_claim": "The new Labour government will begin implementing their policy platform as outlined in their manifesto.",
+      "queries": [
+        {
+          "query": "Labour government policy platform implementation 2023 manifesto",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Labour government plans to implement manifesto policies",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 371,
+    "output_tokens_estimated": 92,
+    "cost_usd": 6.795e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "Jonathan Ashworth lost his seat to an independent candidate, attributed to Labour's stance on Gaza.",
+      "query_index": 2,
+      "query_text": "Labour Gaza stance impact on Jonathan Ashworth election loss"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:53:24.066425",
+    "latency_seconds": 2.85,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The Liberal Democrats increased their seat share to 71, the highest ever, up from 11 in 2019.\nContext: Election results, significant gain for Liberal Democrats.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 333,
+    "input_tokens_estimated": 83,
+    "output": {
+      "original_claim": "The Liberal Democrats increased their seat share to 71, the highest ever, up from 11 in 2019.",
+      "queries": [
+        {
+          "query": "Liberal Democrats seat share 71 highest ever 2019 election results",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Liberal Democrats increase seats from 11 to 71 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 360,
+    "output_tokens_estimated": 90,
+    "cost_usd": 6.645e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "Jonathan Ashworth lost his seat to an independent candidate, attributed to Labour's stance on Gaza.",
+      "query_index": 2,
+      "query_text": "Labour Gaza stance impact on Jonathan Ashworth election loss"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:53:24.066862",
+    "latency_seconds": 2.85,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Reform UK went from no seats to four seats, achieving 14.3% of the vote.\nContext: Election results, notable gain for Reform UK.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 300,
+    "input_tokens_estimated": 75,
+    "output": {
+      "original_claim": "Reform UK went from no seats to four seats, achieving 14.3% of the vote.",
+      "queries": [
+        {
+          "query": "Reform UK election results 2023 seats gained percentage of vote",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Reform UK 2023 election results four seats 14.3% vote",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 338,
+    "output_tokens_estimated": 84,
+    "cost_usd": 6.165e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "Jonathan Ashworth lost his seat to an independent candidate, attributed to Labour's stance on Gaza.",
+      "query_index": 2,
+      "query_text": "Labour Gaza stance impact on Jonathan Ashworth election loss"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:53:24.067313",
+    "latency_seconds": 2.85,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The exit poll predicted the Conservatives would win 131 seats, but they won fewer.\nContext: Exit poll analysis, significant for Conservative expectations.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 327,
+    "input_tokens_estimated": 81,
+    "output": {
+      "original_claim": "The exit poll predicted the Conservatives would win 131 seats, but they won fewer.",
+      "queries": [
+        {
+          "query": "exit poll predicted Conservatives 131 seats 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Conservatives actual seats won 2023 compared to exit poll",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 337,
+    "output_tokens_estimated": 84,
+    "cost_usd": 6.255e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "Jonathan Ashworth lost his seat to an independent candidate, attributed to Labour's stance on Gaza.",
+      "query_index": 2,
+      "query_text": "Labour Gaza stance impact on Jonathan Ashworth election loss"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:54:51.833638",
+    "latency_seconds": 1.04,
+    "input_prompt": "Claim:\nThe magazine issue focuses on the UK election, including campaign results and future plans.\n\nArticle Title:\n(PDF) UK Election Analysis 2024: Media, Voters and the Campaign\n\nFull Page Content:\nPDF | Featuring more than 100 contributions from leading UK academics, this publication captures the immediate thoughts, reflections and early research.\n\nProvide relevant evidence.",
+    "input_length_chars": 379,
+    "input_tokens_estimated": 94,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 2.73e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:54:51.861342",
+    "latency_seconds": 1.04,
+    "input_prompt": "Claim:\nThe magazine issue focuses on the UK election, including campaign results and future plans.\n\nArticle Title:\n[PDF] UK Election Analysis 2024: Media, Voters and the Campaign\n\nFull Page Content:\nIf you consider content in White Rose Research Online to be in breach of UK law, please notify us by emailing eprints@whiterose.ac.uk including ...\n\nProvide relevant evidence.",
+    "input_length_chars": 374,
+    "input_tokens_estimated": 93,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 2.715e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:54:51.887119",
+    "latency_seconds": 1.07,
+    "input_prompt": "Claim:\nThe magazine issue focuses on the UK election, including campaign results and future plans.\n\nArticle Title:\n[PDF] UK Election Analysis 2024: Media, Voters and the Campaign\n\nFull Page Content:\nIf you consider content in White Rose Research Online to be in breach of UK law, please notify us by emailing eprints@whiterose.ac.uk including ...\n\nProvide relevant evidence.",
+    "input_length_chars": 374,
+    "input_tokens_estimated": 93,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 2.715e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:54:52.080338",
+    "latency_seconds": 1.27,
+    "input_prompt": "Claim:\nThe magazine issue focuses on the UK election, including campaign results and future plans.\n\nArticle Title:\nLocal campaign messaging at the 2024 General Election\n\nFull Page Content:\nDr Siim Trumm Associate Professor at the University of Nottingham. His research focuses on electoral politics, political communication, and questions of ...\n\nProvide relevant evidence.",
+    "input_length_chars": 373,
+    "input_tokens_estimated": 93,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 2.715e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:54:52.099189",
+    "latency_seconds": 0.89,
+    "input_prompt": "Claim:\nReform UK went from no seats to four seats, achieving 14.3% of the vote.\n\nArticle Title:\nReform UK election results - Wikipedia\n\nGoogle Search Snippet:\nThis article lists the election results of the Reform UK in UK parliamentary elections, elections to devolved parliaments, and local elections.\n\nFull Page Content:\nThis article lists the election results of the Reform UK in UK parliamentary elections, elections to devolved parliaments, and local elections.\nReform UK endorsed Laurence Fox in the 2021 London mayoral election.[23]\nReform UK stood candidates in 12 police and crime commissioner elections and one subsequent re-run election in Wiltshire.[26]\nIn the 2024 United Kingdom general election\n\nProvide relevant evidence.",
+    "input_length_chars": 737,
+    "input_tokens_estimated": 184,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 4.08e-05
+  }
+]

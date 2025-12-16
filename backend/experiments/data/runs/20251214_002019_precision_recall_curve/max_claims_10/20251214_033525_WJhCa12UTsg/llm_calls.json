@@ -1,0 +1,496 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:35:55.307361",
+    "latency_seconds": 28.28,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nIt's 6:00 in the morning, pitch black outside. My 14-year-old son is fast asleep in his bed. I flip on the light and physically shake the poor boy awake. because I know that, like ripping off a Band-Aid, it's better to get it over with quickly. Sound brutal, but perhaps familiar? Every morning I ask myself, how can I, knowing what I know, be doing this to my own son? You see, I\u2019m a sleep researcher. So I know that I\u2019m depriving my son of sleep he desperately needs as a rapidly growing teenager. I also know that by waking him up hours before his natural biological clock tells him he\u2019s ready, I\u2019m literally robbing him of the type of sleep most associated with learning, memory consolidation, and emotional processing. But it's not just my kid that's being deprived of sleep. Sleep deprivation among American teenagers is an epidemic. Only about 1 in 10 gets the 8 to 10 hours of sleep per night recommended by sleep scientists and pediatricians. The major factor preventing teens from getting the sleep they need is a matter of public policy. Across the country, many schools are starting around 7:30 a.m. or earlier, despite the fact that major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m. These early start policies have a direct effect on how little sleep American teenagers are getting. They\u2019re also pitting teenagers in a fundamentally unwinnable fight against their own bodies. Around the time of puberty, teenagers experience a delay in their biological clock, which determines when we feel most awake and when we feel most sleepy. This is driven in part by a shift in the release of the hormone melatonin. Teenagers\u2019 bodies wait to start releasing melatonin until around 11 p.m., which is two hours later than what we see in adults or younger children. This means that waking a teenager up at 6 a.m. is the biological equivalent of waking an adult up at 4 a.m. Now, on the unfortunate days when I have to wake up at 4 a.m., I\u2019m a zombie. Functionally useless. I can't think straight. I\u2019m irritable, and I probably shouldn\u2019t be driving a car. But this is how many American teenagers feel every single school day. Many of the, shall we say, unpleasant characteristics that we chalk up to being a teenager\u2014 moodiness, irritability, laziness, depression\u2014 could be a product of chronic sleep deprivation. For many teens battling chronic sleep loss, their go-to strategy to compensate is consuming large quantities of caffeine in the form of venti Frappuccinos, or energy drinks and shots. So essentially, we've got an entire population of tired but wired youth. Advocates of sleep-friendly start times know that adolescence is a period of dramatic brain development, particularly in the parts of the brain that are responsible for those higher order thinking processes, including reasoning, problem solving, and good judgment. In other words, the very type of brain activity that\u2019s responsible for reining in those impulsive and often risky behaviors that are so characteristic of adolescence. They know that, like the rest of us, when teenagers don\u2019t get the sleep they need, their brains, their bodies, and behavior suffer. They can't concentrate. Their attention plummets, and many will even show behavioral signs that mimic ADHD. But the consequences of teen sleep loss go well beyond the classroom, sadly contributing to many of the mental health problems that skyrocket during adolescence. In our work with teens from LA Unified School District, we found that teens with sleep problems were 55% more likely to have used alcohol in the past month. In another study with over 30,000 high school students, they found that for each hour of lost sleep, there was a 38% increase in feeling sad or hopeless, and a 58% increase in teen suicide attempts. And if that's not enough, teens who skimp out on sleep are at increased risk for a host of physical health problems that plague our country, including obesity, heart disease, and diabetes. Then there\u2019s the risk of putting a sleep-deprived teen behind the wheel. Studies have shown that getting five hours or less of sleep per night is the equivalent of driving with a blood alcohol content above the legal limit. Researchers in this area have produced tremendous science showing the benefits of later start times. The findings are unequivocal. Teens from districts with later start times get more sleep. They're more likely to show up for school. School absences dropped by 25% in one district, and they're less likely to drop out. Not surprisingly, they do better academically. Standardized test scores in math and reading go up by 2 to 3 percentage points. That's as powerful as reducing class sizes by one third fewer students. Their mental and physical health improves, and their families are happier. Even their communities are safer because car crash rates go down\u2014 a 70% reduction in one district. Now, given these tremendous benefits, you might think, well, this is a no brainer, right? So why have we as a society failed to heed this call? Delaying start times presents many logistical challenges. Updating bus routes, increased transportation costs, impact on sports. Care before or after school. But these are problems we have to work through. They are not valid excuses for failing to do the right thing for our children, which is to start middle and high schools no earlier than 8:30 a.m. Districts around the country, big and small, who have made this change, they\u2019ve found that these fears are often unfounded and far outweighed by the tremendous benefits for our student health and performance and our collective public safety.",
+    "input_length_chars": 5710,
+    "input_tokens_estimated": 1427,
+    "output": {
+      "claims": [
+        {
+          "text": "Sleep deprivation among American teenagers is an epidemic.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.85,
+          "context": "General statement about teen sleep deprivation, supporting the thesis."
+        },
+        {
+          "text": "Only about 1 in 10 teenagers gets the 8 to 10 hours of sleep recommended by sleep scientists and pediatricians.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.85,
+          "context": "Statistics on teen sleep, highlighting the severity of the issue."
+        },
+        {
+          "text": "Major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m.",
+          "confidence": 0.9,
+          "category": "policy",
+          "importance": 0.85,
+          "context": "Policy recommendation from medical organizations, relevant to school start times."
+        },
+        {
+          "text": "Teenagers experience a delay in their biological clock around puberty, affecting sleep patterns.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Biological changes in teenagers, explaining sleep deprivation."
+        },
+        {
+          "text": "Teenagers' bodies start releasing melatonin around 11 p.m., two hours later than adults or younger children.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Scientific explanation of melatonin release timing in teens."
+        },
+        {
+          "text": "Waking a teenager up at 6 a.m. is the biological equivalent of waking an adult up at 4 a.m.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Comparison of sleep timing between teens and adults."
+        },
+        {
+          "text": "Teens with sleep problems were 55% more likely to have used alcohol in the past month.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "Study findings linking sleep problems to alcohol use."
+        },
+        {
+          "text": "For each hour of lost sleep, there was a 38% increase in feeling sad or hopeless, and a 58% increase in teen suicide attempts.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.8,
+          "context": "Statistics on mental health issues related to sleep loss."
+        },
+        {
+          "text": "Getting five hours or less of sleep per night is equivalent to driving with a blood alcohol content above the legal limit.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.75,
+          "context": "Comparison of sleep deprivation effects to impaired driving."
+        },
+        {
+          "text": "Standardized test scores in math and reading go up by 2 to 3 percentage points with later start times.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "Evidence of academic improvement linked to later school start times."
+        }
+      ],
+      "total_count": 10
+    },
+    "output_length_chars": 3351,
+    "output_tokens_estimated": 837,
+    "cost_usd": 0.00071625
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:36:03.601530",
+    "latency_seconds": 2.22,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Sleep deprivation among American teenagers is an epidemic.\nContext: General statement about teen sleep deprivation, supporting the thesis.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 311,
+    "input_tokens_estimated": 77,
+    "output": {
+      "original_claim": "Sleep deprivation among American teenagers is an epidemic.",
+      "queries": [
+        {
+          "query": "Sleep deprivation epidemic among American teenagers 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "American teenagers sleep deprivation statistics 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 316,
+    "output_tokens_estimated": 79,
+    "cost_usd": 5.895e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "Waking a teenager up at 6 a.m. is the biological equivalent of waking an adult up at 4 a.m."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:36:03.722718",
+    "latency_seconds": 2.34,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Teenagers experience a delay in their biological clock around puberty, affecting sleep patterns.\nContext: Biological changes in teenagers, explaining sleep deprivation.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 341,
+    "input_tokens_estimated": 85,
+    "output": {
+      "original_claim": "Teenagers experience a delay in their biological clock around puberty, affecting sleep patterns.",
+      "queries": [
+        {
+          "query": "Teenagers biological clock delay puberty sleep patterns",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "puberty sleep patterns delay biological clock teenagers",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 356,
+    "output_tokens_estimated": 89,
+    "cost_usd": 6.615e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Sleep deprivation among American teenagers is an epidemic.",
+      "query_index": 2,
+      "query_text": "American teenagers sleep deprivation statistics 2023"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:36:03.806378",
+    "latency_seconds": 2.42,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Teens with sleep problems were 55% more likely to have used alcohol in the past month.\nContext: Study findings linking sleep problems to alcohol use.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 322,
+    "input_tokens_estimated": 80,
+    "output": {
+      "original_claim": "Teens with sleep problems were 55% more likely to have used alcohol in the past month.",
+      "queries": [
+        {
+          "query": "Teens sleep problems alcohol use 55% more likely",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "relationship between sleep issues and alcohol consumption in teenagers",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 354,
+    "output_tokens_estimated": 88,
+    "cost_usd": 6.48e-05,
+    "context": {
+      "claim_index": 6,
+      "claim_text": "Teenagers experience a delay in their biological clock around puberty, affecting sleep patterns.",
+      "query_index": 2,
+      "query_text": "puberty sleep patterns delay biological clock teenagers"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:36:03.890143",
+    "latency_seconds": 2.51,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Getting five hours or less of sleep per night is equivalent to driving with a blood alcohol content above the legal limit.\nContext: Comparison of sleep deprivation effects to impaired driving.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 365,
+    "input_tokens_estimated": 91,
+    "output": {
+      "original_claim": "Getting five hours or less of sleep per night is equivalent to driving with a blood alcohol content above the legal limit.",
+      "queries": [
+        {
+          "query": "sleep deprivation effects equivalent to blood alcohol content",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "five hours sleep equals impaired driving",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 373,
+    "output_tokens_estimated": 93,
+    "cost_usd": 6.945e-05,
+    "context": {
+      "claim_index": 8,
+      "claim_text": "Teens with sleep problems were 55% more likely to have used alcohol in the past month.",
+      "query_index": 2,
+      "query_text": "relationship between sleep issues and alcohol consumption in teenagers"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:36:03.890736",
+    "latency_seconds": 2.51,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Teenagers' bodies start releasing melatonin around 11 p.m., two hours later than adults or younger children.\nContext: Scientific explanation of melatonin release timing in teens.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 351,
+    "input_tokens_estimated": 87,
+    "output": {
+      "original_claim": "Teenagers' bodies start releasing melatonin around 11 p.m., two hours later than adults or younger children.",
+      "queries": [
+        {
+          "query": "melatonin release timing in teenagers",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "teenagers melatonin release time compared to adults",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 346,
+    "output_tokens_estimated": 86,
+    "cost_usd": 6.465e-05,
+    "context": {
+      "claim_index": 8,
+      "claim_text": "Teens with sleep problems were 55% more likely to have used alcohol in the past month.",
+      "query_index": 2,
+      "query_text": "relationship between sleep issues and alcohol consumption in teenagers"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:36:04.058867",
+    "latency_seconds": 2.68,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m.\nContext: Policy recommendation from medical organizations, relevant to school start times.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 362,
+    "input_tokens_estimated": 90,
+    "output": {
+      "original_claim": "Major medical organizations recommend that middle and high schools start no earlier than 8:30 a.m.",
+      "queries": [
+        {
+          "query": "Major medical organizations school start times recommendation 8:30 a.m.",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "medical organizations recommend school start times after 8:30 a.m.",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 385,
+    "output_tokens_estimated": 96,
+    "cost_usd": 7.11e-05,
+    "context": {
+      "claim_index": 7,
+      "claim_text": "Teenagers' bodies start releasing melatonin around 11 p.m., two hours later than adults or younger children.",
+      "query_index": 2,
+      "query_text": "teenagers melatonin release time compared to adults"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:36:04.059291",
+    "latency_seconds": 2.68,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Only about 1 in 10 teenagers gets the 8 to 10 hours of sleep recommended by sleep scientists and pediatricians.\nContext: Statistics on teen sleep, highlighting the severity of the issue.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 359,
+    "input_tokens_estimated": 89,
+    "output": {
+      "original_claim": "Only about 1 in 10 teenagers gets the 8 to 10 hours of sleep recommended by sleep scientists and pediatricians.",
+      "queries": [
+        {
+          "query": "teenagers sleep statistics 8 to 10 hours 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "percentage of teenagers getting recommended sleep hours 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 366,
+    "output_tokens_estimated": 91,
+    "cost_usd": 6.795e-05,
+    "context": {
+      "claim_index": 7,
+      "claim_text": "Teenagers' bodies start releasing melatonin around 11 p.m., two hours later than adults or younger children.",
+      "query_index": 2,
+      "query_text": "teenagers melatonin release time compared to adults"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:36:04.228139",
+    "latency_seconds": 2.85,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Standardized test scores in math and reading go up by 2 to 3 percentage points with later start times.\nContext: Evidence of academic improvement linked to later school start times.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 353,
+    "input_tokens_estimated": 88,
+    "output": {
+      "original_claim": "Standardized test scores in math and reading go up by 2 to 3 percentage points with later start times.",
+      "queries": [
+        {
+          "query": "Standardized test scores math reading increase 2 to 3 percentage points later start times",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "impact of later school start times on standardized test scores",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 403,
+    "output_tokens_estimated": 100,
+    "cost_usd": 7.32e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "Only about 1 in 10 teenagers gets the 8 to 10 hours of sleep recommended by sleep scientists and pediatricians.",
+      "query_index": 2,
+      "query_text": "percentage of teenagers getting recommended sleep hours 2023"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:36:04.228549",
+    "latency_seconds": 2.85,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: For each hour of lost sleep, there was a 38% increase in feeling sad or hopeless, and a 58% increase in teen suicide attempts.\nContext: Statistics on mental health issues related to sleep loss.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 366,
+    "input_tokens_estimated": 91,
+    "output": {
+      "original_claim": "For each hour of lost sleep, there was a 38% increase in feeling sad or hopeless, and a 58% increase in teen suicide attempts.",
+      "queries": [
+        {
+          "query": "38% increase in feeling sad or hopeless for each hour of lost sleep",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "impact of sleep loss on teen suicide attempts statistics",
+          "query_type": "source",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 394,
+    "output_tokens_estimated": 98,
+    "cost_usd": 7.245e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "Only about 1 in 10 teenagers gets the 8 to 10 hours of sleep recommended by sleep scientists and pediatricians.",
+      "query_index": 2,
+      "query_text": "percentage of teenagers getting recommended sleep hours 2023"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:36:04.228982",
+    "latency_seconds": 2.85,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Waking a teenager up at 6 a.m. is the biological equivalent of waking an adult up at 4 a.m.\nContext: Comparison of sleep timing between teens and adults.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 326,
+    "input_tokens_estimated": 81,
+    "output": {
+      "original_claim": "Waking a teenager up at 6 a.m. is the biological equivalent of waking an adult up at 4 a.m.",
+      "queries": [
+        {
+          "query": "biological equivalent of waking a teenager at 6 a.m. vs adult at 4 a.m.",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "sleep patterns teenagers adults comparison 6 a.m. 4 a.m.",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 368,
+    "output_tokens_estimated": 92,
+    "cost_usd": 6.735e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "Only about 1 in 10 teenagers gets the 8 to 10 hours of sleep recommended by sleep scientists and pediatricians.",
+      "query_index": 2,
+      "query_text": "percentage of teenagers getting recommended sleep hours 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:37:16.092887",
+    "latency_seconds": 10.63,
+    "input_prompt": "Claim:\nTeenagers experience a delay in their biological clock around puberty, affecting sleep patterns.\n\nArticle Title:\nThe Jet Lag of Adolescence | AAP Journal Blogs\n\nFull Page Content:\nPuberty delays intrinsic melatonin release by 1-3 hours, resulting in a significant shift in circadian rhythms during adolescence.\n\nProvide relevant evidence.",
+    "input_length_chars": 345,
+    "input_tokens_estimated": 86,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that puberty causes a delay in melatonin release, which in turn affects circadian rhythms and sleep patterns in teenagers.",
+      "overall_stance": "supports",
+      "key_quote": "Puberty delays intrinsic melatonin release by 1-3 hours, resulting in a significant shift in circadian rhythms during adolescence."
+    },
+    "output_length_chars": 360,
+    "output_tokens_estimated": 90,
+    "cost_usd": 6.69e-05
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:37:16.426019",
+    "latency_seconds": 11.37,
+    "input_prompt": "\nClaim: Teenagers' bodies start releasing melatonin around 11 p.m., two hours later than adults or younger children.\nCategory: scientific\nExtraction confidence: 0.90\n\nEvidence:\nUNCLEAR (4 sources):\n  1. Adolescent Changes in the Homeostatic and Circadian Regulation ... | reliability=high (0.90)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC2820578/\n     Summary: Although most studies have been cross-sectional, retrospective longitudinal measures confirm that the timing of sleep is delayed during adolescence [5].\n  2. Teens and sleep - MSU Extension | reliability=high (0.90)\n     URL: https://www.canr.msu.edu/news/teens_and_sleep\n     Summary: Current research indicates adolescents have \u201cinternal clocks\u201d that differ from adults and younger children.\n  3. The adolescent circadian clock entrains to social time rather than ... | reliability=high (0.85)\n     URL: https://www.sciencedirect.com/science/article/pii/S0960982225003756\n     Summary: Instead of going to bed more in phase with their melatonin rhythm on Friday night (i.e., earlier), adolescents may go to bed at an even later ...\n  4. B. Circadian Timing & Light/Technology Exposure | reliability=medium (0.60)\n     URL: https://schoolstarttime.org/adolescent-sleep-biology-basics/circadian-timing/\n     Summary: For most adolescents, melatonin continues in peak production until about 7 a.m., then stops at about 8 a.m. (24, 252) In adults, levels peak at about 4 a.m. ( ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1483,
+    "input_tokens_estimated": 370,
+    "output": {
+      "overall_stance": "unclear",
+      "confidence": "low",
+      "summary": "The evidence indicates that adolescents have different circadian rhythms compared to adults and younger children, but it does not clearly specify the exact timing of melatonin release. While some sources suggest a delay in sleep timing during adolescence, the specific claim about melatonin release starting around 11 p.m. lacks direct confirmation."
+    },
+    "output_length_chars": 409,
+    "output_tokens_estimated": 102,
+    "cost_usd": 0.0001167
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:37:17.021397",
+    "latency_seconds": 12.25,
+    "input_prompt": "\nClaim: Teens with sleep problems were 55% more likely to have used alcohol in the past month.\nCategory: statistical\nExtraction confidence: 0.90\n\nEvidence:\nUNCLEAR (5 sources):\n  1. Childhood sleep is prospectively associated with adolescent alcohol ... | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC11387129/\n     Summary: Protecting sleep health throughout childhood may reduce the likelihood of substance use during early adolescence.\n  2. Less sleep and later bedtime in childhood linked to future substance ... | reliability=high (1.00)\n     URL: https://prevention.psu.edu/news/less-sleep-and-later-bedtime-in-childhood-linked-to-future-substance-use/\n     Summary: They found that teens with a later bedtime had a 39% greater chance of drinking alcohol and a 34% greater chance of trying marijuana. Sleeping ...\n  3. Sleep-Related Predictors of Risk for Alcohol Use and Related ... - NIH | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC10948113/\n     Summary: Composite index of sleep problems predicted higher likelihood of drinking at ages 12\u201314. Weaker associations were found for individual sleep ...\n  4. [PDF] Association of alcohol consumption with sleep disturbance among ... | reliability=high (0.85)\n     URL: https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2025.1564292/pdf\n     Summary: Conclusion: Alcohol consumption is associated with poor sleep quality in adolescents in China accounting for socioeconomic contexts and.\n  5. Adolescent Sleep Quality and Alcohol Use: An Initial Examination of ... | reliability=high (0.85)\n     URL: https://www.tandfonline.com/doi/abs/10.1080/10826084.2024.2352107\n     Summary: Adolescent sleep quality was found to be associated with higher levels of both alcohol use problems and alcohol use frequency.\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1882,
+    "input_tokens_estimated": 470,
+    "output": {
+      "overall_stance": "unclear",
+      "confidence": "low",
+      "summary": "The evidence presents a mixed picture regarding the claim that teens with sleep problems are 55% more likely to have used alcohol in the past month. While several high-reliability sources indicate a positive association between sleep issues and increased likelihood of alcohol use, none specifically quantify the increase as 55%. Therefore, the claim remains unsupported by the available evidence."
+    },
+    "output_length_chars": 457,
+    "output_tokens_estimated": 114,
+    "cost_usd": 0.0001389
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:37:45.284260",
+    "latency_seconds": 19.82,
+    "input_prompt": "\nClaim: Teenagers experience a delay in their biological clock around puberty, affecting sleep patterns.\nCategory: scientific\nExtraction confidence: 0.90\n\nEvidence:\nUNCLEAR (4 sources):\n  1. Adolescent Changes in the Homeostatic and Circadian Regulation ... | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC2820578/\n     Summary: Adolescents continue to show a delayed circadian (or internal clock) phase as indicated by daily endocrine rhythms even after several weeks of regulated ...\n  2. Developmental changes in sleep biology and potential effects on ... | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC4658519/\n     Summary: Circadian rhythm changes and changes to the sleep-pressure system (sleep homeostasis) during adolescence both favor later timing of sleep.\n  3. What the Science Tells Us About Adolescent Sleep | reliability=high (1.00)\n     URL: https://developingadolescent.semel.ucla.edu/topics/item/science-of-adolescent-sleep\n     Summary: Biological changes. Changes in the adolescent brain associated with puberty and maturation push adolescents' circadian rhythm toward a \u201cnight owl\u201d preference of ...\n  4. Schools shift as evidence mounts that later start times improve teens ... | reliability=high (0.85)\n     URL: https://www.apa.org/topics/children/school-start-times\n     Summary: During puberty, youth undergo a shift in their circadian clocks. That shift makes it hard for teens to fall asleep until later in the night.\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1538,
+    "input_tokens_estimated": 384,
+    "output": {
+      "overall_stance": "supports",
+      "confidence": "high",
+      "summary": "Multiple high-reliability sources indicate that during puberty, adolescents experience a delay in their circadian rhythms, leading to a preference for later sleep times. This is supported by findings from studies on sleep biology and hormonal changes during adolescence."
+    },
+    "output_length_chars": 332,
+    "output_tokens_estimated": 83,
+    "cost_usd": 0.0001074
+  }
+]

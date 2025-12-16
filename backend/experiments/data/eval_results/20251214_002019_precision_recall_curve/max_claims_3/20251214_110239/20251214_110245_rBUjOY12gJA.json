@@ -1,0 +1,103 @@
+{
+  "video_id": "rBUjOY12gJA",
+  "timestamp": "2025-12-14T11:02:45.048256",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_3",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.6666666666666666,
+    "recall": 0.10526315789473684,
+    "f1_score": 0.18181818181818182,
+    "true_positives": 2,
+    "false_positives": 1,
+    "false_negatives": 17,
+    "mean_average_precision": 1.0,
+    "recall_at_important": 0.2,
+    "importance_weighted_coverage": 0.12110726643598617,
+    "matched_claims": [
+      {
+        "gt_text": "After six to eight weeks studies have shown people can increase their mitochondria by up to 50%",
+        "sys_text": "Studies have shown that people can increase their mitochondria by up to 50% after six to eight weeks of exercise.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.7,
+        "importance_error": 0.20000000000000007
+      },
+      {
+        "gt_text": "After one year of regular exercise your bones will be denser which reduces your risk of osteoporosis",
+        "sys_text": "After one year of regular exercise, your bones will be denser, reducing your risk of osteoporosis.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.7,
+        "importance_error": 0.15000000000000002
+      }
+    ],
+    "missed_claims": [
+      "During your first workout, you might feel more alert and energized because ramping up your heart rate means a boost in overall blood flow and oxygen to the brain",
+      "Delayed onset muscle soreness (DOMS) will persist for about 72 hours",
+      "You're less likely to get DOMS again as long as you continue to regularly exercise those same muscles",
+      "Over the next few weeks you'll slowly start to ramp up production of mitochondria via mitochondrial biogenesis",
+      "With more mitochondria in your cells you'll start to feel more fit and your endurance will increase",
+      "Exercise programs often see a 50% dropout rate within the first six months",
+      "After six months people are more likely to stick with exercise programs",
+      "By nine months of regular cardio exercise you should see about a 25% increase in your VO2 max",
+      "VO2 max is a measure of fitness and refers to the rate your body can transport oxygen to your muscles for fuel",
+      "A higher VO2 max means you can run faster for longer, so a 25% increase means you can run about 20% further in the same amount of time",
+      "Regular resistance training when combined with aerobic exercise can actually reverse the effects of osteoporosis after 12 months",
+      "Older people who exercise 5 days a week for at least 30 minutes saved on average $2,500 a year in medical costs for heart related health problems",
+      "Exercise lowers the risk of developing arthritis, type-2 diabetes, dementia, and certain types of cancer like breast and colon",
+      "Exercise lowers the risk of anxiety and depression by reducing levels of stress hormones like cortisol and adrenaline",
+      "US Department of Health recommends a minimum of 2.5 hours per week of moderately intense exercise like brisk walking or biking",
+      "US Department of Health recommends at least 1 hour and 15 minutes each week of high intensity workouts like running and swimming sprints",
+      "On top of aerobic exercise recommendations, take two days each week to strengthen your muscles with weights or resistance training"
+    ],
+    "extra_claims": [
+      "An increasing number of Americans have started participating in more sports, fitness, and recreation."
+    ],
+    "importance_mae": 0.17500000000000004,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.0,
+    "stance_accuracy": 0.0,
+    "correct_verdicts": 0,
+    "total_verdicts": 2,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "After six to eight weeks studies have shown people can increase their mitochondria by up to 50%",
+        "gt_verdict": "REFUTES",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "After one year of regular exercise your bones will be denser which reduces your risk of osteoporosis",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.10526315789473684,
+    "verdict_accuracy": 0.0,
+    "evidence_quality_avg": 0.6666666666666666,
+    "total_cost_usd": 0.00183675,
+    "total_time_seconds": 83.53472590446472,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 0.6666666666666666,
+    "avg_sources_per_query": 2.0
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 9,
+      "medium": 3
+    },
+    "avg_evidence_per_claim": 4.0
+  },
+  "ground_truth_claims_count": 19,
+  "system_claims_count": 3
+}

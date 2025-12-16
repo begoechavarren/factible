@@ -1,0 +1,522 @@
+{
+  "extracted_claims": {
+    "claims": [
+      {
+        "text": "The last years have been the warmest since modern record-keeping began.",
+        "confidence": 0.85,
+        "category": "scientific",
+        "importance": 0.7,
+        "context": "Refers to recent temperature records.",
+        "transcript_char_start": 203,
+        "transcript_char_end": 273,
+        "transcript_match_score": 1.0
+      },
+      {
+        "text": "The planet's climate is changing.",
+        "confidence": 0.9,
+        "category": "scientific",
+        "importance": 0.6,
+        "context": "Speaker discusses climate change as a current reality.",
+        "transcript_char_start": 170,
+        "transcript_char_end": 202,
+        "transcript_match_score": 1.0
+      },
+      {
+        "text": "Sea levels are rising.",
+        "confidence": 0.9,
+        "category": "scientific",
+        "importance": 0.6,
+        "context": "Speaker mentions rising sea levels as a climate change effect.",
+        "transcript_char_start": 387,
+        "transcript_char_end": 408,
+        "transcript_match_score": 1.0
+      }
+    ],
+    "total_count": 3
+  },
+  "final_output": {
+    "extracted_claims": {
+      "claims": [
+        {
+          "text": "The last years have been the warmest since modern record-keeping began.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Refers to recent temperature records.",
+          "transcript_char_start": 203,
+          "transcript_char_end": 273,
+          "transcript_match_score": 1.0
+        },
+        {
+          "text": "The planet's climate is changing.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Speaker discusses climate change as a current reality.",
+          "transcript_char_start": 170,
+          "transcript_char_end": 202,
+          "transcript_match_score": 1.0
+        },
+        {
+          "text": "Sea levels are rising.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Speaker mentions rising sea levels as a climate change effect.",
+          "transcript_char_start": 387,
+          "transcript_char_end": 408,
+          "transcript_match_score": 1.0
+        }
+      ],
+      "total_count": 3
+    },
+    "claim_reports": [
+      {
+        "claim_text": "The last years have been the warmest since modern record-keeping began.",
+        "claim_confidence": 0.85,
+        "claim_category": "scientific",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "Multiple high-reliability sources confirm that 2024 is the warmest year on record since modern record-keeping began in 1850, with the last decade (2015-2024) comprising the ten warmest years overall.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "2024 was warmest year in the modern record for the globe - Climate",
+              "url": "https://www.climate.gov/news-features/featured-images/2024-was-warmest-year-modern-record-globe",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (26.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that 2024 was the warmest year on record since modern record-keeping began in 1850, with the last decade seeing the 10 warmest years overall.",
+              "snippet": "In 2024, global surface temperature was 2.32 \u00b0F (1.29\u00b0C) above the 20th-century average. This ranks as the highest global temperature in the period of 1850\u2013 ..."
+            },
+            {
+              "title": "Climate change: global temperature",
+              "url": "https://www.climate.gov/news-features/understanding-climate/climate-change-global-temperature",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (26.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that the last decade (2015-2024) has seen the ten warmest years on record, with 2024 being the warmest year since records began in 1850.",
+              "snippet": "The ten warmest years in the 175-year record have all occurred during the last decade (2015\u20132024)."
+            },
+            {
+              "title": "World of Change: Global Temperatures - NASA Science",
+              "url": "https://earthobservatory.nasa.gov/world-of-change/global-temperatures",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that the past nine years have been the warmest years since modern recordkeeping began in 1880, supporting the claim about recent temperature trends.",
+              "snippet": "The past nine years have been the warmest years since modern recordkeeping began in 1880. As the maps show, global warming does not mean temperatures rise ..."
+            },
+            {
+              "title": "WMO confirms 2024 as warmest year on record at about 1.55\u00b0C ...",
+              "url": "https://wmo.int/news/media-centre/wmo-confirms-2024-warmest-year-record-about-155degc-above-pre-industrial-level",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that the last decade, specifically from 2015 to 2024, has been the warmest years on record since modern record-keeping began in 1880, with a significant increase in global temperatures attributed to human activities.",
+              "snippet": "WMO confirms 2024 as warmest year on record at about 1.55\u00b0C above pre-industrial level \u00b7 The past ten years 2015-2024 are the ten warmest years ..."
+            },
+            {
+              "title": "Temperatures Rising: NASA Confirms 2024 Warmest Year on Record",
+              "url": "https://www.nasa.gov/news-release/temperatures-rising-nasa-confirms-2024-warmest-year-on-record/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that 2024 is the warmest year on record since modern record-keeping began in 1880, and that the last 10 years have also been the warmest on record.",
+              "snippet": "2024 was Earth's warmest year since modern record-keeping began around 1880, and the past 10 consecutive years have been the warmest 10 on ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 13.179,
+        "timestamp_confidence": 1.0
+      },
+      {
+        "claim_text": "The planet's climate is changing.",
+        "claim_confidence": 0.9,
+        "claim_category": "scientific",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence strongly supports the claim that the planet's climate is changing, with multiple high-reliability sources indicating significant increases in global temperatures and human influence on these changes. Notably, the WMO reported record high global average surface temperatures in 2023, and other studies corroborate the unprecedented rate of warming attributed to human activities.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Climate change: global temperature",
+              "url": "https://www.climate.gov/news-features/understanding-climate/climate-change-global-temperature",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (26.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that the planet's climate is indeed changing, as global temperatures have risen significantly due to human-induced warming, with an unprecedented rate of increase observed in recent years.",
+              "snippet": "Earth's temperature has risen by an average of 0.11\u00b0 Fahrenheit (0.06\u00b0 Celsius) per decade since 1850, or about 2\u00b0 F in total."
+            },
+            {
+              "title": "Global warming is happening, but not statistically 'surging,' new ...",
+              "url": "https://news.clemson.edu/global-warming-is-happening-but-not-statistically-surging-new-study-finds/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (38.8 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that the planet's climate is indeed changing, with observed warming attributed to human activities reaching unprecedented rates. The data shows a significant increase in global temperatures and highlights the human influence on these changes.",
+              "snippet": "Recent years have seen record-breaking temperatures and heat waves globally. Data show 2023 was the warmest year since global records began ..."
+            },
+            {
+              "title": "Climate change indicators reached record levels in 2023: WMO",
+              "url": "https://wmo.int/news/media-centre/climate-change-indicators-reached-record-levels-2023-wmo",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that the planet's climate is changing, as demonstrated by record high global average surface temperatures and a significant increase in heat energy since the pre-industrial era, primarily due to human-produced greenhouse gases.",
+              "snippet": "The WMO report confirmed that 2023 was the warmest year on record, with the global average near-surface temperature at 1.45 \u00b0Celsius."
+            },
+            {
+              "title": "Why record 2023 warming matters even if you don't cover climate",
+              "url": "https://journalistsresource.org/environment/warming-2023/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that the planet's climate is indeed changing, as shown by the record warming of 1.43 \u00b0C in 2023, with a significant portion attributed to human activities. The data highlights an unprecedented rate of human-induced warming, reinforcing the claim that the climate is changing.",
+              "snippet": "The research says on why 2023 was a record warm year and how climate predictions affect a range of news beats, from agriculture to aviation."
+            }
+          ]
+        },
+        "total_sources": 4,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 13.179,
+        "timestamp_confidence": 1.0
+      },
+      {
+        "claim_text": "Sea levels are rising.",
+        "claim_confidence": 0.9,
+        "claim_category": "scientific",
+        "overall_stance": "supports",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence overwhelmingly supports the claim that sea levels are rising, with multiple high-reliability sources confirming an increase of about 8-9 inches since 1880 and a significant acceleration in the rate of rise, particularly noted in NASA's analysis and the WMO report.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Climate Change: Global Sea Level",
+              "url": "https://www.climate.gov/news-features/understanding-climate/climate-change-global-sea-level",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (26.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that global sea levels have risen by about 8-9 inches since 1880, primarily due to glacier and ice sheet melt and thermal expansion of seawater, indicating that sea levels are indeed rising.",
+              "snippet": "Global average sea level has risen 8-9 inches since 1880, and the rate is accelerating thanks to glacier and ice sheet melt."
+            },
+            {
+              "title": "NASA Analysis Sees Spike in 2023 Global Sea Level Due to El Ni\u00f1o",
+              "url": "https://sealevel.nasa.gov/news/270/nasa-analysis-sees-spike-in-2023-global-sea-level-due-to-el-nino/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that global sea levels are rising, with a reported increase of about 0.3 inches from 2022 to 2023, attributed to climate change and El Ni\u00f1o effects. Additionally, the long-term trend shows a total rise of approximately 4 inches since 1993, indicating an accelerating rate of sea level increase.",
+              "snippet": "Global average sea level rose by about 0.3 inches (0.76 centimeters) from 2022 to 2023, a relatively large jump due mostly to a warming climate ..."
+            },
+            {
+              "title": "Future Sea-level Rise Is Certain, but the Amount and Speed Are ...",
+              "url": "https://wmo.int/media/magazine-article/future-sea-level-rise-certain-amount-and-speed-are-uncertain",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that sea levels are rising, with data showing a total increase of about 4 inches since 1993 and an acceleration in the rate of rise, indicating a clear trend of rising sea levels due to climate change.",
+              "snippet": "Global sea-level rise is accelerating: 2024 recorded an increase of 5.9 mm, relative to a mean annual average rate of 3.4 mm/year between 1993\u2013 ..."
+            },
+            {
+              "title": "Explainer: How climate change is accelerating sea level rise",
+              "url": "https://www.carbonbrief.org/explainer-how-climate-change-is-accelerating-sea-level-rise/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that as the ocean warms, it expands and contributes to rising sea levels, which supports the claim that sea levels are rising.",
+              "snippet": "As the ocean warms, seawater becomes less dense and expands, raising sea levels. The rapid increase in ocean heat content has led to around 19mm ..."
+            },
+            {
+              "title": "Sea Level Rise 101: The Causes, Effects, and Responses - NRDC",
+              "url": "https://www.nrdc.org/stories/sea-level-rise-101",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Left"
+              },
+              "stance": "supports",
+              "evidence_summary": "The article discusses how climate change contributes to local sea level rise through mechanisms such as changing ocean dynamics and thermal expansion, which supports the claim that sea levels are rising.",
+              "snippet": "Climate change. Global climate change can contribute to local sea level rise due to changing ocean dynamics, as well as thermal expansion and ..."
+            },
+            {
+              "title": "The rate of global sea level rise doubled during the past three decades",
+              "url": "https://www.nature.com/articles/s43247-024-01761-5",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that global sea levels are indeed rising, with the rate of increase having more than doubled over the past three decades, from approximately 2.1 mm/year in 1993 to about 4.5 mm/year in 2023.",
+              "snippet": "The rate of global mean sea level rise over those three decades has increased from ~2.1 mm/year in 1993 to ~4.5 mm/year in 2023."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 25.492,
+        "timestamp_confidence": 1.0
+      }
+    ],
+    "transcript_data": {
+      "text": "Why does climate change matter? NASA We Asked a NASA Scientist. Well, it's happening. We look at the Earth from space and we measure it on the ground. And what we see is that the planet's climate is changing. The last years have been the warmest since modern record-keeping began. It's serious. Even a little change in temperature can have big effects. And we're seeing some of those effects now. Sea levels are rising. We're seeing more extreme events like heatwaves and heavy rainfall and wildfire. And we know that a lot of those effects are going to increase with more warming. These changes are impacting decisions that some people make every day, like a farmer thinking about what crops to grow or a homeowner thinking about flood risk. But there's hope. There are scientists at NASA and around the world that are researching this. We know more about our planet than we have ever before, and we learn more every day. So we know why climate is changing. We know that it's due to increasing greenhouse gases from human activity. We also have tools that can help us better understand and better prepare for future climate change. So we develop computer models that help us understand how much it might change in the future. And we're also developing technologies here at NASA and around the world that can help us limit future warming or respond to the warming that we're experiencing. So why does climate change matter? It's real. It's serious, and it's here. We Asked a NASA Scientist. NASA. A NASA 360 Production.",
+      "segments": [
+        {
+          "text": "Why does climate change matter?",
+          "start": 0.645,
+          "duration": 2.89
+        },
+        {
+          "text": "NASA",
+          "start": 5.049,
+          "duration": 1.457
+        },
+        {
+          "text": "We Asked a NASA Scientist.",
+          "start": 6.506,
+          "duration": 2.035
+        },
+        {
+          "text": "Well, it's happening.",
+          "start": 8.541,
+          "duration": 1.368
+        },
+        {
+          "text": "We look at the Earth from space\nand we measure it on the ground.",
+          "start": 9.909,
+          "duration": 3.27
+        },
+        {
+          "text": "And what we see is that the planet's\nclimate is changing.",
+          "start": 13.179,
+          "duration": 2.87
+        },
+        {
+          "text": "The last years have been the warmest\nsince modern record-keeping began.",
+          "start": 16.449,
+          "duration": 3.971
+        },
+        {
+          "text": "It's serious.",
+          "start": 21.421,
+          "duration": 1.201
+        },
+        {
+          "text": "Even a little change\nin temperature can have big effects.",
+          "start": 22.622,
+          "duration": 2.87
+        },
+        {
+          "text": "And we're seeing\nsome of those effects now.",
+          "start": 25.492,
+          "duration": 2.002
+        },
+        {
+          "text": "Sea levels are rising.",
+          "start": 27.761,
+          "duration": 1.568
+        },
+        {
+          "text": "We're seeing more extreme events like\nheatwaves and heavy rainfall and wildfire.",
+          "start": 29.329,
+          "duration": 5.205
+        },
+        {
+          "text": "And we know that a lot of those effects\nare going to increase with more warming.",
+          "start": 34.801,
+          "duration": 3.47
+        },
+        {
+          "text": "These changes are impacting decisions\nthat some people make every day,",
+          "start": 38.371,
+          "duration": 3.57
+        },
+        {
+          "text": "like a farmer thinking about what crops to grow\nor a homeowner thinking about flood risk.",
+          "start": 41.941,
+          "duration": 4.705
+        },
+        {
+          "text": "But there's hope.",
+          "start": 47.28,
+          "duration": 1.268
+        },
+        {
+          "text": "There are scientists at NASA and around\nthe world that are researching this.",
+          "start": 48.548,
+          "duration": 3.27
+        },
+        {
+          "text": "We know more about our planet\nthan we have ever before,",
+          "start": 51.851,
+          "duration": 2.903
+        },
+        {
+          "text": "and we learn more every day.",
+          "start": 54.888,
+          "duration": 1.768
+        },
+        {
+          "text": "So we know why climate is changing.",
+          "start": 56.656,
+          "duration": 2.136
+        },
+        {
+          "text": "We know that it's due to increasing\ngreenhouse gases from human activity.",
+          "start": 58.892,
+          "duration": 3.87
+        },
+        {
+          "text": "We also have tools that can help us better understand",
+          "start": 62.896,
+          "duration": 2.836
+        },
+        {
+          "text": "and better prepare for future climate change.",
+          "start": 65.732,
+          "duration": 2.269
+        },
+        {
+          "text": "So we develop computer models that help us understand how much it might change in the future.",
+          "start": 68.414,
+          "duration": 4.659
+        },
+        {
+          "text": "And we're also developing technologies\nhere at NASA and around the world",
+          "start": 73.173,
+          "duration": 3.637
+        },
+        {
+          "text": "that can help us limit future warming or respond\nto the warming that we're experiencing.",
+          "start": 76.81,
+          "duration": 4.571
+        },
+        {
+          "text": "So why does climate change matter?",
+          "start": 82.015,
+          "duration": 1.968
+        },
+        {
+          "text": "It's real.",
+          "start": 83.983,
+          "duration": 1.102
+        },
+        {
+          "text": "It's serious, and it's here.",
+          "start": 85.085,
+          "duration": 2.736
+        },
+        {
+          "text": "We Asked a NASA Scientist.",
+          "start": 87.821,
+          "duration": 1.835
+        },
+        {
+          "text": "NASA. A NASA 360 Production.",
+          "start": 89.656,
+          "duration": 4.571
+        }
+      ],
+      "video_id": "YfWCUYX2_U0"
+    }
+  }
+}

@@ -1,0 +1,400 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:37:15.660648",
+    "latency_seconds": 15.88,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nToday, we're making three super nourishing, super food packed, detox juices. To help you lose weight and get you that glow! [Music] Hey, beautiful people. It's Melissa from Choosing My Health, where I teach you how to easily transition to a whole food, plant-based lifestyle and thrive. And today we're making three of my favorite veggie juices. I love them because they're an easy way to reboot your metabolism, lose weight and cleanse your body to literally make you glow. I've been juicing for a minute and hands down, it is the easiest way to repair your body in a short span of time. But real talk, your juice gotta taste good. Cause ain't nobody want to be out here on these streets, drinking juice that tastes like dirt. I'm just going to keep it 100. Now, whether you're drinking these for a New Year's push or for three-day juice cleanse you'll find that they don't just taste good, they deliver a whole lot of life-giving nutrients to energize and revitalize your body. When I drink these literally feel like I can fly. Like that's how light I feel. And as always, if you're looking for the full recipe breakdown, I share those on my blog at choosingmyhealth.com, including modifications. I'm going to leave this link and others for you in the description box below. All right, let's get to it. [Music] I call this juice green power. It is loaded with phytonutrients and cleansing power to rid your body of excess weight and make you glow. To begin, we're gonna peel a washed lemon. I love lemons because they flush toxins from your system and purify the blood. Keep the lemon peel because it tastes great in tea and in hot porridge. Next core your washed apples. Apples are great for weight loss because they're high in pectin. Pectin binds with water and limits how much fat your cells can absorb. Isn't that cool?. They also taste great in this next cut all your ingredients into the appropriate size for your juicer. And now we're going to add all our ingredients to the juicer, kale, apple, celery. Cucumber, lime, and ginger. Each of these ingredients is especially formulated to help nourish your body. The celery, cucumber, and apples are vitamin-rich and super hydrating. Our superfood kale is rich in minerals and antioxidants to feed your cells, and lime and ginger increase your blood circulation, all while staying low in calories. You got to love this juice. [Music] Now the Beet Buzzer is my go-to juice to help me reset my body, especially when I'm feeling sluggish and need an energy boost. It's tangy, it's full-bodied and it has a lot of kick. First, peel your washed grapefruit. Grapefruits have one of the highest water contents of any food y'all, about 92% water, and they deliver a whole lot of nutrition with very little calories. We're also going to peel the lemon and cut the rest of our ingredients to an appropriate size for the juicer. Carrots- a juicing staple. Love that it's full of antioxidants including beta carotene, and lutein that are great for the eyes and beets. Beets are chocked full of nutrients and deliver maximum nutrition for your body. We're talking about potassium, magnesium, zinc, selenium. And beets also help you lower your blood pressure if you need help with that, and they give you extra stamina throughout the day. And did you know that beets even improve athletic performance? Professor: Yes, yes, and a yes-i-dy yes. If you'd allow me to just interject here for just a little bit. Beet juice, one to three hours before an athletic event can provide a one to three percent performance boost and give you a serious competitive edge. That's because beats raise nitric oxide levels increase blood flow, improve lung function and strengthen muscle contraction. Now, you know, Then lastly we add jalape\u00f1o. Jalape\u00f1os aren't a typical juice addition for me, but listen, if you can handle a little heat, jalape\u00f1o can boost your metabolism, increase fat burn and reduce your appetite. I will warn you though. It is not for you if you're sensitive to heat. And if you do like heat, very little goes a long way, my friend. So start with like one-fourth of an inch, no seeds please, then taste the juice and add more if you wish. Remember when you use this, you're juicing it. So you're getting the full undiluted effect. Alternatively, if you still want some spice without too much kick, ginger can also achieve the same purpose. [Music] Our last juice is Orange Blast. I call this my sweet treat because it's really flavorful and refreshing and super high in vitamin C, which is going to help the body absorb minerals. It's going to protect the body from chemical toxins and has anti-aging properties. Who doesn't want that? To begin let's peel a pineapple. Pineapple is perfect for detoxing because it contains bromelain, which is a digestive enzyme that will cleanse your colon and it aids digestion. And it's super juicy. Next, we'll cut a red bell pepper in half. Y'all, did you know that a cup of red bell pepper contains nearly three times more vitamin C than an orange? Professor: Oh yeah. I knew. And we're also going to add some ginger and turmeric. Ginger is awesome for circulation and digestion and turmeric, as you probably already know, is incredible for inflammation. And to maximize the benefits of turmeric, you can sprinkle a little black pepper into your drink because it can enhance the curcumin absorption in turmeric by up to 2,000 percent. That's a whole lot! This juice is extraordinarily enjoyable and will boost your immune system all while helping you flush and reset. I love these satisfying, and nutritionally-rich juices. They are perfect for a juice cleanse or for any day you need a boost. And, now if you're looking for more recipes, encouragement, plant-based education. I got you, honey. I have plenty of videos and resources on this channel and blog. I'm going to leave a link to them in the description box below. If you make any of these juices, please comment and let me know. I'd so appreciate that. And let me know if you have a favorite juice that you could share with us. Also, if you're interested in a plant-based lifestyle and you want to join the CMH crew, please subscribe to my channel to learn more. How to easily transition to a plant-based lifestyle and thrive. I would so love to have you here. Don't forget to hit the notification bell for my latest videos. And if you found this video helpful, please give it a thumbs up. You can also follow me on Instagram at choosingmyhealth. Now if you're new to this whole food plant-based thing, welcome. Check out my free gift for you packed with nearly 20 years of my life-tested strategies to boost your game for the win. Links are all in the description box below. Thanks so much for hanging out with me today. You could've been doing something else, but you chose to watch this video and I'm thankful for that. I hope you have an amazing day. I love you, and I will see you in the next one? [Music] [Bloopers] Oh, yes. I knew. Oh, pick me, pick me. Oh, I knew. I knew. I knew. I knew. Yes. Yes. And a yes-i-dy yes. Yes. If you'd let me just to inter.... (Laughs) Now you know. (Laughs) Must look like I was about to choke. (Lauhgs) [Music]",
+    "input_length_chars": 7254,
+    "input_tokens_estimated": 1813,
+    "output": {
+      "claims": [
+        {
+          "text": "Juicing is the easiest way to repair your body in a short span of time.",
+          "confidence": 0.8,
+          "category": "health",
+          "importance": 0.6,
+          "context": "Speaker: Melissa, discussing benefits of juicing."
+        },
+        {
+          "text": "Lemons flush toxins from your system and purify the blood.",
+          "confidence": 0.7,
+          "category": "health",
+          "importance": 0.6,
+          "context": "Green Power juice recipe."
+        },
+        {
+          "text": "Apples are high in pectin, which binds with water and limits fat absorption.",
+          "confidence": 0.9,
+          "category": "health",
+          "importance": 0.7,
+          "context": "Green Power juice recipe."
+        },
+        {
+          "text": "Grapefruits have about 92% water content and deliver nutrition with few calories.",
+          "confidence": 0.85,
+          "category": "health",
+          "importance": 0.7,
+          "context": "Beet Buzzer juice recipe."
+        },
+        {
+          "text": "Beets help lower blood pressure and improve athletic performance.",
+          "confidence": 0.9,
+          "category": "health",
+          "importance": 0.8,
+          "context": "Beet Buzzer juice recipe."
+        },
+        {
+          "text": "A cup of red bell pepper contains nearly three times more vitamin C than an orange.",
+          "confidence": 0.85,
+          "category": "health",
+          "importance": 0.7,
+          "context": "Orange Blast juice recipe."
+        },
+        {
+          "text": "Turmeric's curcumin absorption can be enhanced by black pepper by up to 2,000 percent.",
+          "confidence": 0.8,
+          "category": "health",
+          "importance": 0.6,
+          "context": "Orange Blast juice recipe."
+        }
+      ],
+      "total_count": 7
+    },
+    "output_length_chars": 1906,
+    "output_tokens_estimated": 476,
+    "cost_usd": 0.00055755
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:37:20.377769",
+    "latency_seconds": 1.56,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Grapefruits have about 92% water content and deliver nutrition with few calories.\nContext: Beet Buzzer juice recipe.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 289,
+    "input_tokens_estimated": 72,
+    "output": {
+      "original_claim": "Grapefruits have about 92% water content and deliver nutrition with few calories.",
+      "queries": [
+        {
+          "query": "Grapefruit water content percentage",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Nutritional value of grapefruit calories",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 306,
+    "output_tokens_estimated": 76,
+    "cost_usd": 5.64e-05,
+    "context": {
+      "claim_index": 7,
+      "claim_text": "Turmeric's curcumin absorption can be enhanced by black pepper by up to 2,000 percent."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:37:20.500144",
+    "latency_seconds": 1.68,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Beets help lower blood pressure and improve athletic performance.\nContext: Beet Buzzer juice recipe.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 273,
+    "input_tokens_estimated": 68,
+    "output": {
+      "original_claim": "Beets help lower blood pressure and improve athletic performance.",
+      "queries": [
+        {
+          "query": "Beets lower blood pressure and improve athletic performance",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Do beets help with blood pressure and athletic performance?",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 333,
+    "output_tokens_estimated": 83,
+    "cost_usd": 6e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "Grapefruits have about 92% water content and deliver nutrition with few calories.",
+      "query_index": 2,
+      "query_text": "Nutritional value of grapefruit calories"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:37:20.500761",
+    "latency_seconds": 1.68,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: A cup of red bell pepper contains nearly three times more vitamin C than an orange.\nContext: Orange Blast juice recipe.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 292,
+    "input_tokens_estimated": 73,
+    "output": {
+      "original_claim": "A cup of red bell pepper contains nearly three times more vitamin C than an orange.",
+      "queries": [
+        {
+          "query": "red bell pepper vitamin C content compared to orange",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "vitamin C in red bell pepper vs orange",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 323,
+    "output_tokens_estimated": 80,
+    "cost_usd": 5.895e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "Grapefruits have about 92% water content and deliver nutrition with few calories.",
+      "query_index": 2,
+      "query_text": "Nutritional value of grapefruit calories"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:37:20.668387",
+    "latency_seconds": 1.84,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Turmeric's curcumin absorption can be enhanced by black pepper by up to 2,000 percent.\nContext: Orange Blast juice recipe.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 295,
+    "input_tokens_estimated": 73,
+    "output": {
+      "original_claim": "Turmeric's curcumin absorption can be enhanced by black pepper by up to 2,000 percent.",
+      "queries": [
+        {
+          "query": "Turmeric curcumin absorption enhanced by black pepper 2000 percent",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "how black pepper increases turmeric curcumin absorption",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 357,
+    "output_tokens_estimated": 89,
+    "cost_usd": 6.435e-05,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "A cup of red bell pepper contains nearly three times more vitamin C than an orange.",
+      "query_index": 2,
+      "query_text": "vitamin C in red bell pepper vs orange"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:37:20.782308",
+    "latency_seconds": 1.96,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Apples are high in pectin, which binds with water and limits fat absorption.\nContext: Green Power juice recipe.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 284,
+    "input_tokens_estimated": 71,
+    "output": {
+      "original_claim": "Apples are high in pectin, which binds with water and limits fat absorption.",
+      "queries": [
+        {
+          "query": "Apples pectin water fat absorption",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Does pectin in apples limit fat absorption?",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 303,
+    "output_tokens_estimated": 75,
+    "cost_usd": 5.565e-05,
+    "context": {
+      "claim_index": 7,
+      "claim_text": "Turmeric's curcumin absorption can be enhanced by black pepper by up to 2,000 percent.",
+      "query_index": 2,
+      "query_text": "how black pepper increases turmeric curcumin absorption"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:37:20.869575",
+    "latency_seconds": 2.05,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Lemons flush toxins from your system and purify the blood.\nContext: Green Power juice recipe.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 266,
+    "input_tokens_estimated": 66,
+    "output": {
+      "original_claim": "Lemons flush toxins from your system and purify the blood.",
+      "queries": [
+        {
+          "query": "Do lemons flush toxins from the body and purify the blood?",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Health benefits of lemons detoxifying the body and purifying blood",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 332,
+    "output_tokens_estimated": 83,
+    "cost_usd": 5.97e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "Apples are high in pectin, which binds with water and limits fat absorption.",
+      "query_index": 2,
+      "query_text": "Does pectin in apples limit fat absorption?"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:37:20.956056",
+    "latency_seconds": 2.13,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Juicing is the easiest way to repair your body in a short span of time.\nContext: Speaker: Melissa, discussing benefits of juicing.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 303,
+    "input_tokens_estimated": 75,
+    "output": {
+      "original_claim": "Juicing is the easiest way to repair your body in a short span of time.",
+      "queries": [
+        {
+          "query": "Is juicing the easiest way to repair your body quickly?",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Benefits of juicing for body repair in a short time",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 327,
+    "output_tokens_estimated": 81,
+    "cost_usd": 5.985e-05,
+    "context": {
+      "claim_index": 6,
+      "claim_text": "Lemons flush toxins from your system and purify the blood.",
+      "query_index": 2,
+      "query_text": "Health benefits of lemons detoxifying the body and purifying blood"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:38:05.980248",
+    "latency_seconds": 2.32,
+    "input_prompt": "Claim:\nBeets help lower blood pressure and improve athletic performance.\n\nArticle Title:\nThe Shocking Vegetable That Can Improve Athletic Endurance\n\nGoogle Search Snippet:\n\u201cSome short-term studies show that eating vegetables high in nitrates (especially beets) may lower blood pressure In addition,\u201d Harvard Health ...\n\nFull Page Content:\nAll products featured on Vogue are independently selected by our editors. However, we may receive compensation from retailers and/or from purchases of products through these links.\nWhen looking to increase your endurance, it\u2019s easy to get swept up in an endless sea of trendy nutritional supplements. From protein powder to amino acids to creatine, there is no shortage of options that promise to enhance your workouts and your athletic performance. But there may be a simpler, more natural option: beets.\nYes, the humble beet. While the deep red tuber is often dismissed as just another boring root vegetable, it actually has a ton of health benefits\u2014especially when it comes to athletic endurance and sports performance.\nSure, beets have recently experienced somewhat of a glow-up and are now more celebrated as a superfood. But that doesn\u2019t mean they are widely eaten. After all, when was the last time you bought beets at the farmer\u2019s market or grocery store? If you have not had beets in a while, perhaps it\u2019s time to consider adding them to your regular routine. Their nutrients are impressive: beets contain many vitamins and minerals, including potassium, magnesium, vitamin C, vitamin B6, and folate.\nHowever, it\u2019s the nitrates contained in beets that make them particularly valuable to those who do sports. Nitrates are compounds of oxygen and nitrogen that are naturally present in some foods. And, lately, they have sparked scientific interest. This is because once inside the body, they are converted into nitric oxide, which dilates blood vessels and improves blood circulation.\nIt\u2019s easy to understand how this helps athletic performance. When the muscles are better supplied with oxygen, the body can function more efficiently during intense exercise. The result: more endurance, longer performance, and faster recovery.\nThere are numerous studies that confirm the positive effect of beets on endurance. One overview from 2017 analyzed 23 studies that looked at the influence of beets on athletic performance. The results showed that even a single intake of beetroot juice can reduce oxygen consumption and increase energy efficiency. This means that athletes can train longer before becoming exhausted.\nBut this effect doesn\u2019t just benefit pro athletes; amateur athletes can also benefit from beet. And it doesn\u2019t take much: Drinking 16 ounces of beetroot juice 90 minutes before training is enough to have an effect.\nSo far, the scientific evidence mostly shows that beet juice is especially beneficial for exercises that require consistent energy over a longer period of time, such as long-distance running or cycling; it is not yet clear whether beet juice is just as effective in high-intensity, short-term exercise such as sprinting or weight lifting. The question is also open as to whether long-term consumption of beetroot juice leads to habituation in which the effects wear off over time.\nThat said, the benefits of beets are not just limited to endurance. In an overview from 2022 that examined how beetroot affects recovery after intense exercise, it was shown that the tuber\u2019s antioxidant and anti-inflammatory properties can help reduce sore muscles and help the body recover more quickly after exercise. \u201cThe evidence indicates that short-term beetroot supplementation has the potential to accelerate recovery of functional measures and muscle soreness,\u201d the study notes.\nOverall, it seems beets offer significant benefits for health. The conversion of nitrates to nitric oxide also lowers blood pressure and may protect the heart; nitrates are often used as a treatment for angina. \u201cSome short-term studies show that eating vegetables high in nitrates (especially beets) may lower blood pressure In addition,\u201d Harvard Health notes, but adds that while regular consumption may reduce the risk of cardiovascular disease and certain types of cancer, further research is necessary.\nNitrates may even help balance hormones. \u201cBeetroot is packed with nitrates, which builds nitric oxide that\u2019s incredibly important for female sexual health\u2014it helps the blood flow to our pelvic organs and improves cardiovascular and skin health,\u201d nutritionist, integrative medicine fellow, and author of Hungry Woman: Eating For Good Health, Happiness And Hormones Pauline Cox recently told Vogue.\nWith their very earthy, slightly sweet flavor, beets can be controversial. Either you love \u2018em or hate \u2018em. However, beets are actually more versatile than most people think: they can be consumed raw, roasted, or steamed. They can be eaten in salads or as a side dish and go particularly well with goat cheese, walnuts, and balsamic vinegar. They also make a tasty puree or soup.\nBeetroot juice is another obvious option\u2014especially for those who workout and want a quick and easy method. You can prepare it yourself or get it from your favorite cold-press juice spot; it\u2019s also available pre-juiced at some grocery stores. As mentioned, drinking a large glass (around 16 oz of beet juice) an hour and a half before training can provide a boost in terms of endurance. If you don\u2019t like the earthy taste of the fresh tuber, beetroot powder and capsules are available, too.\nMORE FROM VOGUE\nSEE MORE STORIES\n\u00a9 2025 Cond\u00e9 Nast. All rights reserved. Vogue may earn a portion of sales from products that are purchased through our site as part of our Affiliate Partnerships with retailers. The material on this site may not be reproduced, distributed, transmitted, cached or otherwise used, except with the prior written permission of Cond\u00e9 Nast. Ad Choices\nCN Fashion & Beauty\n\nProvide relevant evidence.",
+    "input_length_chars": 5944,
+    "input_tokens_estimated": 1486,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that beets, particularly due to their nitrate content, can lower blood pressure and enhance athletic performance by improving blood circulation and endurance during exercise.",
+      "overall_stance": "supports",
+      "key_quote": "\"The conversion of nitrates to nitric oxide also lowers blood pressure and may protect the heart... some short-term studies show that eating vegetables high in nitrates (especially beets) may lower blood pressure.\""
+    },
+    "output_length_chars": 499,
+    "output_tokens_estimated": 124,
+    "cost_usd": 0.0002973,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "Juicing is the easiest way to repair your body in a short span of time.",
+      "query_index": 2,
+      "query_text": "Benefits of juicing for body repair in a short time"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:38:07.885949",
+    "latency_seconds": 21.8,
+    "input_prompt": "Claim:\nBeets help lower blood pressure and improve athletic performance.\n\nArticle Title:\nMayo Clinic Minute: It's hard to beat the health benefits of beets\n\nGoogle Search Snippet:\nIn addition to being low-calorie, they're also loaded with nutrients that benefit the heart, digestion and athletic performance. ... blood ...\n\nFull Page Content:\nJason Howland\nBeets are bright red root vegetables, and they are gaining popularity in the health field. In addition to being low-calorie, they're also loaded with nutrients that benefit the heart, digestion and athletic performance.\nWatch: The Mayo Clinic Minute\nJournalists: Broadcast-quality video pkg (0:58) is in the downloads at the end of the post. Please 'Courtesy: Mayo Clinic News Network.' Read the script.\n\"Beets are low in calories, and they provide many benefits, including their nutrition profile,\" says Anya Guy, a Mayo Clinic dietitian and nutrition expert. \"They are rich in antioxidants and vitamins.\"\nBeets are high in fiber, which is great for digestive health. They also can help your heart.\n\"Many people might not think that beets are a heart-healthy food, but, actually, beets contain a high level of nitrates, which have a blood pressure-lowering effect,\" says Guy.\nAnd the health benefits of beets can be gained whether it's fresh beets added in your own recipes, pickled in a jar, sliced and roasted, or eaten as beet chips.\n\"To get the healthful benefits of beets, a serving would be a quarter to a half of a cup,\" says Guy. \"You can add beets to salads, soups, smoothies, even pizza.\"\nSo the next time you're looking to add some color and nutrition to your meal, it's hard to beat the heart-healthy beet.\n\nProvide relevant evidence.",
+    "input_length_chars": 1704,
+    "input_tokens_estimated": 426,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that beets contain a high level of nitrates, which have a blood pressure-lowering effect, and they are also noted for their benefits to athletic performance.",
+      "overall_stance": "supports",
+      "key_quote": "\"beets contain a high level of nitrates, which have a blood pressure-lowering effect\""
+    },
+    "output_length_chars": 353,
+    "output_tokens_estimated": 88,
+    "cost_usd": 0.0001167,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "Juicing is the easiest way to repair your body in a short span of time.",
+      "query_index": 2,
+      "query_text": "Benefits of juicing for body repair in a short time"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:38:07.892302",
+    "latency_seconds": 21.82,
+    "input_prompt": "Claim:\nBeets help lower blood pressure and improve athletic performance.\n\nArticle Title:\n9 Impressive Health Benefits of Beets - Healthline\n\nGoogle Search Snippet:\nSome benefits of eating beets may include lower blood pressure and better athletic performance, among others. Eating beets raw or juicing and roasting them may ...\n\nFull Page Content:\nJason Howland\nBeets are bright red root vegetables, and they are gaining popularity in the health field. In addition to being low-calorie, they're also loaded with nutrients that benefit the heart, digestion and athletic performance.\nWatch: The Mayo Clinic Minute\nJournalists: Broadcast-quality video pkg (0:58) is in the downloads at the end of the post. Please 'Courtesy: Mayo Clinic News Network.' Read the script.\n\"Beets are low in calories, and they provide many benefits, including their nutrition profile,\" says Anya Guy, a Mayo Clinic dietitian and nutrition expert. \"They are rich in antioxidants and vitamins.\"\nBeets are high in fiber, which is great for digestive health. They also can help your heart.\n\"Many people might not think that beets are a heart-healthy food, but, actually, beets contain a high level of nitrates, which have a blood pressure-lowering effect,\" says Guy.\nAnd the health benefits of beets can be gained whether it's fresh beets added in your own recipes, pickled in a jar, sliced and roasted, or eaten as beet chips.\n\"To get the healthful benefits of beets, a serving would be a quarter to a half of a cup,\" says Guy. \"You can add beets to salads, soups, smoothies, even pizza.\"\nSo the next time you're looking to add some color and nutrition to your meal, it's hard to beat the heart-healthy beet.\n\nProvide relevant evidence.",
+    "input_length_chars": 1709,
+    "input_tokens_estimated": 427,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article states that beets contain a high level of nitrates, which have a blood pressure-lowering effect, and also mentions their benefits for athletic performance.",
+      "overall_stance": "supports",
+      "key_quote": "\"beets contain a high level of nitrates, which have a blood pressure-lowering effect\""
+    },
+    "output_length_chars": 340,
+    "output_tokens_estimated": 85,
+    "cost_usd": 0.00011505,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "Juicing is the easiest way to repair your body in a short span of time.",
+      "query_index": 2,
+      "query_text": "Benefits of juicing for body repair in a short time"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:38:08.809687",
+    "latency_seconds": 22.73,
+    "input_prompt": "Claim:\nBeets help lower blood pressure and improve athletic performance.\n\nArticle Title:\nBeetroot as a functional food with huge health benefits: Antioxidant ...\n\nGoogle Search Snippet:\nA single dose of beetroot gel rich in nitrate does not improve performance but lowers blood glucose in physically active individuals. Journal of Nutrition ...\n\nFull Page Content:\nJason Howland\nBeets are bright red root vegetables, and they are gaining popularity in the health field. In addition to being low-calorie, they're also loaded with nutrients that benefit the heart, digestion and athletic performance.\nWatch: The Mayo Clinic Minute\nJournalists: Broadcast-quality video pkg (0:58) is in the downloads at the end of the post. Please 'Courtesy: Mayo Clinic News Network.' Read the script.\n\"Beets are low in calories, and they provide many benefits, including their nutrition profile,\" says Anya Guy, a Mayo Clinic dietitian and nutrition expert. \"They are rich in antioxidants and vitamins.\"\nBeets are high in fiber, which is great for digestive health. They also can help your heart.\n\"Many people might not think that beets are a heart-healthy food, but, actually, beets contain a high level of nitrates, which have a blood pressure-lowering effect,\" says Guy.\nAnd the health benefits of beets can be gained whether it's fresh beets added in your own recipes, pickled in a jar, sliced and roasted, or eaten as beet chips.\n\"To get the healthful benefits of beets, a serving would be a quarter to a half of a cup,\" says Guy. \"You can add beets to salads, soups, smoothies, even pizza.\"\nSo the next time you're looking to add some color and nutrition to your meal, it's hard to beat the heart-healthy beet.\n\nProvide relevant evidence.",
+    "input_length_chars": 1726,
+    "input_tokens_estimated": 431,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence supports the claim that beets help lower blood pressure due to their high nitrate content, which has a blood pressure-lowering effect. However, it does not provide strong support for the claim regarding athletic performance, as it mentions that a single dose of beetroot gel rich in nitrate does not improve performance.",
+      "overall_stance": "mixed",
+      "key_quote": "\"beets contain a high level of nitrates, which have a blood pressure-lowering effect\""
+    },
+    "output_length_chars": 503,
+    "output_tokens_estimated": 125,
+    "cost_usd": 0.00013965,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "Juicing is the easiest way to repair your body in a short span of time.",
+      "query_index": 2,
+      "query_text": "Benefits of juicing for body repair in a short time"
+    }
+  }
+]

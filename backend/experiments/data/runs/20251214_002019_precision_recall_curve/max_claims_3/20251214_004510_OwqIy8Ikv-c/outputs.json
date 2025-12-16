@@ -1,0 +1,631 @@
+{
+  "extracted_claims": {
+    "claims": [
+      {
+        "text": "The climate has changed remarkably little over the past 30 years.",
+        "confidence": 0.85,
+        "category": "scientific",
+        "importance": 0.8,
+        "context": "Speaker: Richard Lindzen",
+        "transcript_char_start": 123,
+        "transcript_char_end": 176,
+        "transcript_match_score": 0.8205128205128205
+      },
+      {
+        "text": "The IPCC acknowledged in its own 2007 report that long-term prediction of future climate states is not possible.",
+        "confidence": 0.9,
+        "category": "scientific",
+        "importance": 0.8,
+        "context": "Speaker: Richard Lindzen",
+        "transcript_char_start": 2222,
+        "transcript_char_end": 2337,
+        "transcript_match_score": 0.9823008849557522
+      },
+      {
+        "text": "Group one believes that recent climate change is primarily due to man\u2019s burning of fossil fuels.",
+        "confidence": 0.85,
+        "category": "scientific",
+        "importance": 0.6,
+        "context": "Speaker: Richard Lindzen",
+        "transcript_char_start": 826,
+        "transcript_char_end": 910,
+        "transcript_match_score": 0.9385474860335196
+      }
+    ],
+    "total_count": 3
+  },
+  "final_output": {
+    "extracted_claims": {
+      "claims": [
+        {
+          "text": "The climate has changed remarkably little over the past 30 years.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.8,
+          "context": "Speaker: Richard Lindzen",
+          "transcript_char_start": 123,
+          "transcript_char_end": 176,
+          "transcript_match_score": 0.8205128205128205
+        },
+        {
+          "text": "The IPCC acknowledged in its own 2007 report that long-term prediction of future climate states is not possible.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.8,
+          "context": "Speaker: Richard Lindzen",
+          "transcript_char_start": 2222,
+          "transcript_char_end": 2337,
+          "transcript_match_score": 0.9823008849557522
+        },
+        {
+          "text": "Group one believes that recent climate change is primarily due to man\u2019s burning of fossil fuels.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Speaker: Richard Lindzen",
+          "transcript_char_start": 826,
+          "transcript_char_end": 910,
+          "transcript_match_score": 0.9385474860335196
+        }
+      ],
+      "total_count": 3
+    },
+    "claim_reports": [
+      {
+        "claim_text": "The climate has changed remarkably little over the past 30 years.",
+        "claim_confidence": 0.85,
+        "claim_category": "scientific",
+        "overall_stance": "refutes",
+        "verdict_confidence": "high",
+        "verdict_summary": "The evidence from multiple high-reliability sources, including NASA and climate data reports, consistently shows that global temperatures have risen significantly over the past 30 years, directly contradicting the claim that the climate has changed remarkably little during this period.",
+        "evidence_by_stance": {
+          "refutes": [
+            {
+              "title": "Climate change: global temperature",
+              "url": "https://www.climate.gov/news-features/understanding-climate/climate-change-global-temperature",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (26.1 years)"
+                ],
+                "bias": null
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that global temperatures have risen significantly over the past 30 years, contradicting the claim that climate has changed remarkably little during this period.",
+              "snippet": "Earth's temperature has risen by an average of 0.11\u00b0 Fahrenheit (0.06\u00b0 Celsius) per decade since 1850, or about 2\u00b0 F in total."
+            },
+            {
+              "title": "Evidence - NASA Science",
+              "url": "https://science.nasa.gov/climate-change/evidence/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence clearly indicates that the climate has changed significantly over the past 30 years, with the period from 1983 to 2012 being the warmest 30-year period in the last 800 years. This contradicts the claim that the climate has changed remarkably little during this time.",
+              "snippet": "Earth's climate has changed throughout history. Just in the last 800000 years, there have been eight cycles of ice ages and warmer periods, ..."
+            },
+            {
+              "title": "World of Change: Global Temperatures - NASA Science",
+              "url": "https://earthobservatory.nasa.gov/world-of-change/global-temperatures",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that global temperatures have increased significantly over the past 30 years, with the majority of warming occurring since 1975, contradicting the claim that climate has changed remarkably little during this period.",
+              "snippet": "The average global temperature has increased by a little more than 1 degree Celsius since 1880. Two-thirds of the warming has occurred since 1975."
+            },
+            {
+              "title": "Updated 30-year reference period reflects changing climate",
+              "url": "https://wmo.int/media/news/updated-30-year-reference-period-reflects-changing-climate",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that the climate has changed significantly over the past 30 years, with the period from 1983 to 2012 being the warmest 30-year period in the last 800 to 1400 years. This contradicts the claim that the climate has changed remarkably little during this time.",
+              "snippet": "The South and Southwest are considerably warmer. Normals were also generally warmer across the West and along the East Coast. Precipitation-wise, the Southwest ..."
+            },
+            {
+              "title": "CO\u2082 and Greenhouse Gas Emissions - Our World in Data",
+              "url": "https://ourworldindata.org/co2-and-greenhouse-gas-emissions",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that global temperatures have been rising significantly, with an increase of at least 1.1\u00b0 Celsius since 1880, and the majority of this warming has occurred since 1975, contradicting the claim that the climate has changed remarkably little over the past 30 years.",
+              "snippet": "Human greenhouse gas emissions have increased global average temperatures \u00b7 Global emissions have increased rapidly over the last 50 years and have not yet ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 8.559,
+        "timestamp_confidence": 0.8205128205128205
+      },
+      {
+        "claim_text": "The IPCC acknowledged in its own 2007 report that long-term prediction of future climate states is not possible.",
+        "claim_confidence": 0.9,
+        "claim_category": "scientific",
+        "overall_stance": "mixed",
+        "verdict_confidence": "medium",
+        "verdict_summary": "The evidence presents a mixed view on the claim. While some sources indicate that the IPCC acknowledges limitations in long-term climate predictions, they do not explicitly state that such predictions are impossible. The USA Today fact check and Climate Central article support the idea of uncertainty in long-term forecasts, while the IPCC's own documents highlight limitations without declaring impossibility.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Fact check: Climate models reliable, IPCC statement misrepresented",
+              "url": "https://www.usatoday.com/story/news/factcheck/2022/05/23/fact-check-climate-models-reliable-ipcc-statement-misrepresented/9618298002/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that the IPCC acknowledges limitations in predicting specific climate events and states, particularly regarding long-term forecasts of phenomena like El Ni\u00f1o, which aligns with the claim that long-term predictions are not possible.",
+              "snippet": "The IPCC statement accurately asserts that \"climate states\" such as weather events or the occurrence of an El Ni\u00f1o cannot be predicted very far in advance."
+            },
+            {
+              "title": "IPCC Predictions: Then Versus Now - Climate Central",
+              "url": "https://www.climatecentral.org/news/ipcc-predictions-then-versus-now-15340",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The article discusses the limitations of IPCC models and acknowledges that they have consistently underestimated real-world observations, indicating that long-term predictions of future climate states are fraught with uncertainty.",
+              "snippet": "Projection: The IPCC's 2007 assessment projected a worst-case temperature rise of 4.3\u00b0 to 11.5\u00b0F, with a high probability of 7.2\u00b0F. IPCC ..."
+            }
+          ],
+          "mixed": [
+            {
+              "title": "[PDF] Long-term Climate Change: Projections, Commitments and ...",
+              "url": "https://www.ipcc.ch/site/assets/uploads/2018/02/WG1AR5_Chapter12_FINAL.pdf",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "mixed",
+              "evidence_summary": "The evidence indicates that while the IPCC acknowledges uncertainties in climate modeling, it does not explicitly state that long-term predictions of future climate states are impossible. Instead, it highlights that projections have consistently underestimated real-world observations due to unforeseen factors, suggesting limitations rather than outright impossibility in making long-term predictions.",
+              "snippet": "IPCC, 2007: Climate Change 2007: The Physical Science Basis. Contribution of. Working Group I to the Fourth Assessment Report of the Intergovernmental. Panel ..."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "[PDF] Climate Change 2007: Impacts, Adaptation and Vulnerability - IPCC",
+              "url": "https://www.ipcc.ch/pdf/assessment-report/ar4/wg2/ar4_wg2_full_report.pdf",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The report: \u2022 evaluates evidence that recent observed changes in climate have already affected a variety of physical and biological systems and concludes that ...",
+              "snippet": "The report: \u2022 evaluates evidence that recent observed changes in climate have already affected a variety of physical and biological systems and concludes that ..."
+            },
+            {
+              "title": "[PDF] Climate Change 2007: Synthesis Report",
+              "url": "https://www.ipcc.ch/site/assets/uploads/2018/02/ar4_syr_full_report.pdf",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "This Synthesis Report with its Summary for Policymakers is the fourth and final part of the Fourth Assessment Report. (AR4) of the Intergovernmental Panel on ...",
+              "snippet": "This Synthesis Report with its Summary for Policymakers is the fourth and final part of the Fourth Assessment Report. (AR4) of the Intergovernmental Panel on ..."
+            },
+            {
+              "title": "[PDF] Climate Change 2007: Synthesis Report - Summary for Policymakers",
+              "url": "https://www.ipcc.ch/pdf/assessment-report/ar4/syr/ar4_syr_spm.pdf",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "unclear",
+              "evidence_summary": "It provides an integrated view of climate change as the final part of the IPCC's Fourth. Assessment Report (AR4). A complete elaboration of the Topics covered ...",
+              "snippet": "It provides an integrated view of climate change as the final part of the IPCC's Fourth. Assessment Report (AR4). A complete elaboration of the Topics covered ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 168.7,
+        "timestamp_confidence": 0.9823008849557522
+      },
+      {
+        "claim_text": "Group one believes that recent climate change is primarily due to man\u2019s burning of fossil fuels.",
+        "claim_confidence": 0.85,
+        "claim_category": "scientific",
+        "overall_stance": "mixed",
+        "verdict_confidence": "medium",
+        "verdict_summary": "The evidence presents a mixed view on the claim that recent climate change is primarily due to man\u2019s burning of fossil fuels. While several high-reliability sources, including NASA and Berkeley, support the claim by stating that fossil fuel combustion is a primary driver of climate change, there are also high-reliability reports indicating that the EPA has removed references to fossil fuels from its website, which raises concerns about the acknowledgment of this link. This contradiction suggests a lack of consensus.",
+        "evidence_by_stance": {
+          "refutes": [
+            {
+              "title": "EPA eliminates mention of fossil fuels in website on warming's ...",
+              "url": "https://www.wral.com/story/epa-eliminates-mention-of-fossil-fuels-in-website-on-warmings-causes-scientists-call-it-misleading/22279748/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that the EPA has removed references to fossil fuels as a primary driver of climate change from its website, which contradicts the claim that recent climate change is primarily due to man\u2019s burning of fossil fuels. The article highlights concerns from climate scientists about the misleading nature of these changes and the implications for public understanding of climate science.",
+              "snippet": "WASHINGTON (AP) \u2014 The Environmental Protection Agency has removed any mention of fossil fuels \u2014 the main driver of global warming \u2014 from its ..."
+            },
+            {
+              "title": "EPA erases references to human-caused climate change from ...",
+              "url": "https://www.eenews.net/articles/epa-erases-references-to-human-caused-climate-change-from-websites/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Left-Center"
+              },
+              "stance": "refutes",
+              "evidence_summary": "The evidence indicates that the EPA has removed references to human-caused climate change, particularly the role of fossil fuels, from its website, which suggests a denial of the established link between human activities and climate change.",
+              "snippet": "\u201cGreenhouse gases come from a variety of human activities, including burning fossil fuels for heat and energy, clearing forests, fertilizing ..."
+            }
+          ],
+          "supports": [
+            {
+              "title": "Burning of fossil fuels - Understanding Global Change",
+              "url": "https://ugc.berkeley.edu/background-content/burning-of-fossil-fuels/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (40.6 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence clearly states that the burning of fossil fuels is the primary cause of current climate change, as it emits greenhouse gases that trap heat in the atmosphere.",
+              "snippet": "The burning of fossil fuels is the primary cause of current climate change, altering the Earth's ecosystems and causing human and environmental health problems."
+            },
+            {
+              "title": "The Causes of Climate Change - NASA Science",
+              "url": "https://science.nasa.gov/climate-change/causes/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that burning fossil fuels emits greenhouse gases like carbon dioxide, which trap heat in the atmosphere and contribute to climate change, supporting the claim that recent climate change is primarily due to human activities involving fossil fuels.",
+              "snippet": "This increase happens because the coal or oil burning process combines carbon with oxygen in the air to make CO2."
+            },
+            {
+              "title": "EPA climate page omits human role, draws criticism - The Hill",
+              "url": "https://thehill.com/policy/energy-environment/5643353-epa-climate-change-global-warming/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence indicates that there is a scientific consensus that climate change is primarily driven by human activities, particularly the burning of fossil fuels, despite recent changes to the EPA's website that downplay this connection. Critics of the EPA's alterations emphasize that these changes misrepresent the overwhelming scientific evidence linking human activity to climate change.",
+              "snippet": "There is a scientific consensus that climate change is primarily driven by human activity, including the burning of fossil fuels. However, ..."
+            },
+            {
+              "title": "Fossil fuels and climate change: the facts - ClientEarth",
+              "url": "https://www.clientearth.org/latest/news/fossil-fuels-and-climate-change-the-facts/",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (19.3 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The article states that burning fossil fuels emits greenhouse gases like carbon dioxide, which trap heat in the atmosphere and contribute to climate change, supporting the claim that recent climate change is primarily due to fossil fuel combustion.",
+              "snippet": "When fossil fuels are burned, they release large amounts of carbon dioxide, a greenhouse gas, into the air. Greenhouse gases trap heat in our atmosphere, ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 62.14,
+        "timestamp_confidence": 0.9385474860335196
+      }
+    ],
+    "transcript_data": {
+      "text": "I\u2019m an atmospheric physicist. I\u2019ve published more than 200 scientific papers. For 30 years I taught at MIT, during which time the climate has changed remarkably little. But the cry of \u201cglobal warming\u201d has grown ever more shrill. In fact, it seems that the less the climate changes, the louder the voices of the climate alarmists get. So, let\u2019s clear the air and create a more accurate picture of where we really stand on the issue of global warming or, as it is now called -- climate change. There are basically three groups of people dealing with this issue. Groups one and two are scientists. Group three consists mostly, at its core, of politicians, environmentalists and media. Group one is associated with the scientific part of the United Nation\u2019s International Panel on Climate Change or IPCC (Working Group 1). These are scientists who mostly believe that recent climate change is primarily due to man\u2019s burning of fossil fuels -- oil, coal and natural gas. This releases C02, carbon dioxide, into the atmosphere and, they believe, this might eventually dangerously heat the planet. Group two is made up of scientists who don\u2019t see this as an especially serious problem. This is the group I belong to. We\u2019re usually referred to as skeptics. We note that there are many reasons why the climate changes -- the sun, clouds, oceans, the orbital variations of the earth, as well as a myriad of other inputs. None of these is fully understood, and there is no evidence that CO2 emissions are the dominant factor. But actually there is much agreement between both groups of scientists. The following are such points of agreement: 1) The climate is always changing. 2) CO2 is a greenhouse gas without which life on earth is not possible, but adding it to the atmosphere should lead to some warming. 3) Atmospheric levels of CO2 have been increasing since the end of the Little Ice Age in the 19th century. 4) Over this period (the past two centuries), the global mean temperature has increased slightly and erratically by about 1.8 degrees Fahrenheit or one degree Celsius; but only since the 1960\u2019s have man\u2019s greenhouse emissions been sufficient to play a role. 5) Given the complexity of climate, no confident prediction about future global mean temperature or its impact can be made. The IPCC, acknowledged in its own 2007 report that \u201cThe long-term prediction of future climate states is not possible.\u201d Most importantly, the scenario that the burning of fossil fuels leads to catastrophe isn\u2019t part of what either group asserts. So why are so many people worried, indeed, panic stricken about this issue. Here\u2019s where Group Three comes in -- the politicians, environmentalists, and media. Global Warming Alarmism provides them, more than any other issue, with the things they most want: For politicians it\u2019s money and power. For environmentalists it\u2019s money for their organizations and confirmation of their near religious devotion to the idea that man is a destructive force acting upon nature. And for the media it\u2019s ideology, money, and headlines -- doomsday scenarios sell. Meanwhile, over the last decade, scientists outside of climate physics have jumped on the bandwagon, publishing papers blaming global warming for everything from acne to the Syrian civil war. And, crony capitalists have eagerly grabbed for the subsidies that governments have so lavishly provided. Unfortunately, group three is winning the argument because they have drowned out the serious debate that should be going on. But while politicians, environmentalists and media types can waste a lot of money and scare a lot of people, they won\u2019t be able to bury the truth. The climate will have the final word on that. I\u2019m Richard Lindzen, emeritus professor of Atmospheric Sciences at MIT, for PragerUniversity.",
+      "segments": [
+        {
+          "text": "I\u2019m an atmospheric physicist. I\u2019ve published\nmore than 200 scientific papers. For 30 years",
+          "start": 2.42,
+          "duration": 6.139
+        },
+        {
+          "text": "I taught at MIT, during which time the climate\nhas changed remarkably little. But the cry",
+          "start": 8.559,
+          "duration": 6.71
+        },
+        {
+          "text": "of \u201cglobal warming\u201d has grown ever more\nshrill. In fact, it seems that the less the",
+          "start": 15.269,
+          "duration": 4.911
+        },
+        {
+          "text": "climate changes, the louder the voices of\nthe climate alarmists get. So, let\u2019s clear",
+          "start": 20.18,
+          "duration": 6.13
+        },
+        {
+          "text": "the air and create a more accurate picture\nof where we really stand on the issue of global",
+          "start": 26.31,
+          "duration": 6.17
+        },
+        {
+          "text": "warming or, as it is now called -- climate\nchange.",
+          "start": 32.48,
+          "duration": 4.78
+        },
+        {
+          "text": "There are basically three groups of people\ndealing with this issue. Groups one and two",
+          "start": 37.26,
+          "duration": 5.559
+        },
+        {
+          "text": "are scientists. Group three consists mostly,\nat its core, of politicians, environmentalists",
+          "start": 42.819,
+          "duration": 6.851
+        },
+        {
+          "text": "and media.\nGroup one is associated with the scientific",
+          "start": 49.67,
+          "duration": 4.219
+        },
+        {
+          "text": "part of the United Nation\u2019s International\nPanel on Climate Change or IPCC (Working Group 1).",
+          "start": 53.889,
+          "duration": 8.251
+        },
+        {
+          "text": "These are scientists who mostly believe\nthat recent climate change is primarily due",
+          "start": 62.14,
+          "duration": 7.06
+        },
+        {
+          "text": "to man\u2019s burning of fossil fuels -- oil,\ncoal and natural gas. This releases C02, carbon dioxide,",
+          "start": 69.2,
+          "duration": 8.7
+        },
+        {
+          "text": "into the atmosphere and, they believe,\nthis might eventually dangerously heat the planet.",
+          "start": 77.9,
+          "duration": 6.2
+        },
+        {
+          "text": "Group two is made up of scientists who don\u2019t see this as an especially serious problem.",
+          "start": 84.1,
+          "duration": 5.68
+        },
+        {
+          "text": "This is the group I belong to. We\u2019re usually referred to as skeptics. We note that there are many reasons why the",
+          "start": 89.78,
+          "duration": 6.5
+        },
+        {
+          "text": "climate changes -- the sun, clouds, oceans,\nthe orbital variations of the earth,",
+          "start": 96.28,
+          "duration": 5.4
+        },
+        {
+          "text": "as well as a myriad of other inputs. None of these\nis fully understood, and there is no evidence",
+          "start": 101.68,
+          "duration": 7.2
+        },
+        {
+          "text": "that CO2 emissions are the dominant factor.\nBut actually there is much agreement between",
+          "start": 108.89,
+          "duration": 6.35
+        },
+        {
+          "text": "both groups of scientists. The following are\nsuch points of agreement:",
+          "start": 115.24,
+          "duration": 5.84
+        },
+        {
+          "text": "1) The climate is always changing.\n2) CO2 is a greenhouse gas without which life",
+          "start": 121.08,
+          "duration": 7.44
+        },
+        {
+          "text": "on earth is not possible, but adding it to\nthe atmosphere should lead to some warming.",
+          "start": 128.53,
+          "duration": 6.26
+        },
+        {
+          "text": "3) Atmospheric levels of CO2 have been increasing\nsince the end of the Little Ice Age in the 19th century.",
+          "start": 134.79,
+          "duration": 8.25
+        },
+        {
+          "text": "4) Over this period (the past two centuries),",
+          "start": 143.04,
+          "duration": 4.419
+        },
+        {
+          "text": "the global mean temperature has increased\nslightly and erratically by about 1.8 degrees",
+          "start": 147.459,
+          "duration": 5.87
+        },
+        {
+          "text": "Fahrenheit or one degree Celsius; but only\nsince the 1960\u2019s have man\u2019s greenhouse",
+          "start": 153.329,
+          "duration": 7.44
+        },
+        {
+          "text": "emissions been sufficient to play a role.\n5) Given the complexity of climate, no confident",
+          "start": 160.769,
+          "duration": 7.931
+        },
+        {
+          "text": "prediction about future global mean temperature\nor its impact can be made. The IPCC, acknowledged",
+          "start": 168.7,
+          "duration": 7.95
+        },
+        {
+          "text": "in its own 2007 report that \u201cThe long-term\nprediction of future climate states is not possible.\u201d",
+          "start": 176.65,
+          "duration": 10.35
+        },
+        {
+          "text": "Most importantly, the scenario that the burning of fossil fuels",
+          "start": 187.0,
+          "duration": 5.36
+        },
+        {
+          "text": "leads to catastrophe isn\u2019t part of what either group asserts.",
+          "start": 192.36,
+          "duration": 5.54
+        },
+        {
+          "text": "So why are so many people worried, indeed, panic\nstricken about this issue.",
+          "start": 197.9,
+          "duration": 5.94
+        },
+        {
+          "text": "Here\u2019s where Group Three comes in -- the politicians, environmentalists, and media.",
+          "start": 203.84,
+          "duration": 6.3
+        },
+        {
+          "text": "Global Warming Alarmism provides them, more\nthan any other issue, with the things they",
+          "start": 210.14,
+          "duration": 6.04
+        },
+        {
+          "text": "most want: For politicians it\u2019s money and\npower. For environmentalists it\u2019s money",
+          "start": 216.18,
+          "duration": 6.0
+        },
+        {
+          "text": "for their organizations and confirmation of\ntheir near religious devotion to the idea",
+          "start": 222.18,
+          "duration": 6.11
+        },
+        {
+          "text": "that man is a destructive force acting upon\nnature. And for the media it\u2019s ideology,",
+          "start": 228.29,
+          "duration": 7.129
+        },
+        {
+          "text": "money, and headlines -- doomsday scenarios\nsell.",
+          "start": 235.419,
+          "duration": 4.921
+        },
+        {
+          "text": "Meanwhile, over the last decade, scientists\noutside of climate physics have jumped on",
+          "start": 240.34,
+          "duration": 5.939
+        },
+        {
+          "text": "the bandwagon, publishing papers blaming global\nwarming for everything from acne to the Syrian",
+          "start": 246.279,
+          "duration": 7.091
+        },
+        {
+          "text": "civil war. And, crony capitalists have eagerly\ngrabbed for the subsidies that governments",
+          "start": 253.37,
+          "duration": 6.51
+        },
+        {
+          "text": "have so lavishly provided.\nUnfortunately, group three is winning the",
+          "start": 259.88,
+          "duration": 5.25
+        },
+        {
+          "text": "argument because they have drowned out the\nserious debate that should be going on.",
+          "start": 265.13,
+          "duration": 5.4
+        },
+        {
+          "text": "But while politicians, environmentalists and\nmedia types can waste a lot of money and scare",
+          "start": 270.53,
+          "duration": 6.69
+        },
+        {
+          "text": "a lot of people, they won\u2019t be able to bury\nthe truth. The climate will have the final word on that.",
+          "start": 277.22,
+          "duration": 8.96
+        },
+        {
+          "text": "I\u2019m Richard Lindzen, emeritus professor of Atmospheric Sciences at MIT, for PragerUniversity.",
+          "start": 286.18,
+          "duration": 8.42
+        }
+      ],
+      "video_id": "OwqIy8Ikv-c"
+    }
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "video_id": "OMBxolu127k",
+  "timestamp": "2025-12-14T11:04:45.255199",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_15",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.6,
+    "recall": 0.391304347826087,
+    "f1_score": 0.47368421052631576,
+    "true_positives": 9,
+    "false_positives": 6,
+    "false_negatives": 14,
+    "mean_average_precision": 0.7991181657848324,
+    "recall_at_important": 0.5,
+    "importance_weighted_coverage": 0.42666666666666664,
+    "matched_claims": [
+      {
+        "gt_text": "The National Trust for Historic Preservation is now suing the Trump administration over its plans to build a giant ballroom at the White House",
+        "sys_text": "The National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.",
+        "gt_importance": 0.95,
+        "sys_importance": 0.85,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "In October, the Trump administration quickly demolished the White House East Wing to make room for the ballroom",
+        "sys_text": "The Trump administration demolished the White House East Wing in October to make room for the ballroom.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.85,
+        "importance_error": 0.0
+      },
+      {
+        "gt_text": "No president is legally allowed to tear down portions of the White House without any review whatsoever",
+        "sys_text": "No president is legally allowed to tear down portions of the White House without review.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.85,
+        "importance_error": 0.0
+      },
+      {
+        "gt_text": "The president is envisioning a 90,000 square foot ballroom. The White House itself is only about 55,000 square feet",
+        "sys_text": "The ballroom project is envisioned to be 90,000 square feet.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.6,
+        "importance_error": 0.15000000000000002
+      },
+      {
+        "gt_text": "President Trump says the ballroom will be paid for by private donations, not taxpayers",
+        "sys_text": "The ballroom will be funded by private donations, not taxpayer money.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.6,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "The lawsuit is 47 pages",
+        "sys_text": "The lawsuit is 47 pages long and was filed recently.",
+        "gt_importance": 0.15,
+        "sys_importance": 0.3,
+        "importance_error": 0.15
+      },
+      {
+        "gt_text": "The National Trust for Historic Preservation is chartered by Congress and tasked with preserving some of the nation's historic buildings",
+        "sys_text": "The National Trust for Historic Preservation is chartered by Congress to preserve historic buildings.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.3,
+        "importance_error": 0.39999999999999997
+      },
+      {
+        "gt_text": "The National Capital Planning Commission is now stacked with President Trump's appointees and led by Will Scharf, who's the staff secretary at the White House",
+        "sys_text": "The National Capital Planning Commission is currently led by President Trump's appointees.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.3,
+        "importance_error": 0.45
+      },
+      {
+        "gt_text": "Trump's idea is to make this very much like the Donald Trump Ballroom at Mar-a-Lago. It's going to look a lot like that.",
+        "sys_text": "The president's vision for the ballroom is similar to the Donald Trump Ballroom at Mar-A-Lago.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.25,
+        "importance_error": 0.44999999999999996
+      }
+    ],
+    "missed_claims": [
+      "The National Trust is suing because they want this project halted and because the White House and its allies did not get the necessary approvals or conduct the necessary reviews",
+      "The National Trust is suing the National Park Service, President Trump himself, the Department of the Interior, Interior Secretary Douglas Burgum, and others over the construction of the ballroom",
+      "The White House needed to seek approval from the National Capital Planning Commission and the Commission of Fine Arts",
+      "The White House did not seek any review from those agencies and did not seek any public input on this project",
+      "President Trump has had this project in his sights for years, including before he came into office, and he said he offered the Obama administration to pay for it but they never got back to him",
+      "President Trump has said many times that he believes this is necessary because people who come to the White House for certain events have to go to a tent that's separate from the main body of the White House, and in bad weather a lot of people get disheveled having to walk through the rain",
+      "Mark Walter is still the chairman of the Dodgers",
+      "The White House officials have downplayed criticism from the National Trust for Historic Preservation, calling them 'loser Democrats and liberal donors'",
+      "The National Trust has a relationship with President Trump dating back to the 1990s and worked with him on some projects at Mar-a-Lago",
+      "Will Scharf has said previously that this project will eventually go before that body, but that its purview and remit does not cover demolition",
+      "When the Crown Prince Mohammed bin Salman was visiting, the president said that the dinner he held in his honor on the White House state floor would have been a much grander occasion if they had had that ballroom constructed",
+      "There has been some discord among the planning team. The president has assigned a new architect, the previous architect still on board, but he had reportedly raised some questions about the sheer scale of this project",
+      "The National Trust for Historic Preservation has raised concerns that the ballroom would essentially dwarf the original building once it's completed",
+      "There are questions about what kind of influence those donors might have with the White House and whether these individuals are essentially using these donations to curry favor with the president"
+    ],
+    "extra_claims": [
+      "The National Trust claims the White House did not obtain necessary approvals from the National Capital Planning Commission and the Commission of Fine Arts.",
+      "The White House itself is about 55,000 square feet.",
+      "The president has been planning the ballroom for years, including before he took office.",
+      "Concerns have been raised that the ballroom will dwarf the original White House building.",
+      "The White House has not responded to the lawsuit specifically.",
+      "The National Trust previously wrote a letter to the White House asking to pause work on the project."
+    ],
+    "importance_mae": 0.19999999999999998,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.1111111111111111,
+    "stance_accuracy": 0.1111111111111111,
+    "correct_verdicts": 1,
+    "total_verdicts": 9,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "The National Trust for Historic Preservation is now suing the Trump administration over its plans to build a giant ballroom at the White House",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "In October, the Trump administration quickly demolished the White House East Wing to make room for the ballroom",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "No president is legally allowed to tear down portions of the White House without any review whatsoever",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "The president is envisioning a 90,000 square foot ballroom. The White House itself is only about 55,000 square feet",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "President Trump says the ballroom will be paid for by private donations, not taxpayers",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "The National Trust for Historic Preservation is chartered by Congress and tasked with preserving some of the nation's historic buildings",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "The National Capital Planning Commission is now stacked with President Trump's appointees and led by Will Scharf, who's the staff secretary at the White House",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Trump's idea is to make this very much like the Donald Trump Ballroom at Mar-a-Lago. It's going to look a lot like that.",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.391304347826087,
+    "verdict_accuracy": 0.1111111111111111,
+    "evidence_quality_avg": 0.8666666666666667,
+    "total_cost_usd": 0.0053538,
+    "total_time_seconds": 204.35102725028992,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 0.8666666666666667,
+    "avg_sources_per_query": 2.066666666666667
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 50,
+      "medium": 12
+    },
+    "avg_evidence_per_claim": 4.133333333333334
+  },
+  "ground_truth_claims_count": 23,
+  "system_claims_count": 15
+}

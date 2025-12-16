@@ -1,0 +1,108 @@
+{
+  "video_id": "QcDrE5YvqTs",
+  "timestamp": "2025-12-14T11:02:44.310920",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_3",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 1.0,
+    "recall": 0.2,
+    "f1_score": 0.33333333333333337,
+    "true_positives": 3,
+    "false_positives": 0,
+    "false_negatives": 12,
+    "mean_average_precision": 1.0,
+    "recall_at_important": 0.3333333333333333,
+    "importance_weighted_coverage": 0.21991701244813275,
+    "matched_claims": [
+      {
+        "gt_text": "Women make only 77 cents for every dollar a man makes",
+        "sys_text": "Women make only 77 cents for every dollar a man makes.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.85,
+        "importance_error": 0.050000000000000044
+      },
+      {
+        "gt_text": "An AAUW study shows that the actual wage gap shrinks to only 6.6 cents when you factor in different choices men and women make",
+        "sys_text": "The actual wage gap shrinks to only 6.6 cents when factoring in choices.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.7,
+        "importance_error": 0.20000000000000007
+      },
+      {
+        "gt_text": "Once differences are accounted for across all professions, the unexplained wage gap is somewhere between 4.8 and 7 percent",
+        "sys_text": "The unexplained wage gap is between 4.8 and 7 percent after accounting for differences.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.65,
+        "importance_error": 0.19999999999999996
+      }
+    ],
+    "missed_claims": [
+      "The 77-cents-on-the-dollar statistic is calculated by dividing the median earnings of all women working full-time by the median earnings of all men working full-time",
+      "The 77-cent calculation doesn't take into account occupation, position, education or hours worked per week",
+      "In 2009, the U.S. Department of Labor released a paper that examined more than 50 peer-reviewed studies and concluded that the oft-cited 23 percent wage gap may be almost entirely the result of individual choices being made by both male and female workers",
+      "Georgetown University compiled a list of the five best-paying college majors: #1 Petroleum Engineering (87% male), #2 Pharmaceutical Sciences (48% male), #3 Mathematics and Computer Science (67% male), #4 Aerospace Engineering (88% male), #5 Chemical Engineering (72% male)",
+      "The five worst paying college majors include: #1 Counseling and Psychology (74% female), #2 Early Childhood Education (97% female), #4 Human Services and Community Organization (81% female), #5 Social Work (88% female)",
+      "Male nurses earn 18% more than female nurses on the whole",
+      "Male nurses gravitate to the best-paying nursing specialties, they work longer hours, and disproportionately find jobs in cities with the highest compensation",
+      "Career choices and educational differences explain most, if not all, the gender gap in nursing, according to Professor Linda Aiken of the University of Pennsylvania",
+      "Men are vastly overrepresented on oil rigs as an example of dangerous work environments",
+      "According to Harvard economist Claudia Goldin, even if two lawyers have the same education, same specialty, and work the same number of hours, firms pay more to someone who is willing to always be on call and ready to be in the office when the firm needs them",
+      "This isn't sexism, it's just common sense",
+      "Those who claim that for the same work women earn 77 cents on the dollar compared to men are not merely bad at math but at telling the truth"
+    ],
+    "extra_claims": [],
+    "importance_mae": 0.15000000000000002,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.0,
+    "stance_accuracy": 0.0,
+    "correct_verdicts": 0,
+    "total_verdicts": 3,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "Women make only 77 cents for every dollar a man makes",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "An AAUW study shows that the actual wage gap shrinks to only 6.6 cents when you factor in different choices men and women make",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Once differences are accounted for across all professions, the unexplained wage gap is somewhere between 4.8 and 7 percent",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.2,
+    "verdict_accuracy": 0.0,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.0022254,
+    "total_time_seconds": 103.95479702949524,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.5
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 8,
+      "medium": 7
+    },
+    "avg_evidence_per_claim": 5.0
+  },
+  "ground_truth_claims_count": 15,
+  "system_claims_count": 3
+}

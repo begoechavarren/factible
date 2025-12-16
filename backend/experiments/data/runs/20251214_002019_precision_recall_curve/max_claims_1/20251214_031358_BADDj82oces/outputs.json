@@ -1,0 +1,482 @@
+{
+  "extracted_claims": {
+    "claims": [
+      {
+        "text": "HIV infects helper T-cells, central to the immune response.",
+        "confidence": 0.95,
+        "category": "biological",
+        "importance": 0.85,
+        "context": "HIV's impact on immune response, speaker unknown.",
+        "transcript_char_start": 337,
+        "transcript_char_end": 392,
+        "transcript_match_score": 0.6428571428571429
+      }
+    ],
+    "total_count": 1
+  },
+  "final_output": {
+    "extracted_claims": {
+      "claims": [
+        {
+          "text": "HIV infects helper T-cells, central to the immune response.",
+          "confidence": 0.95,
+          "category": "biological",
+          "importance": 0.85,
+          "context": "HIV's impact on immune response, speaker unknown.",
+          "transcript_char_start": 337,
+          "transcript_char_end": 392,
+          "transcript_match_score": 0.6428571428571429
+        }
+      ],
+      "total_count": 1
+    },
+    "claim_reports": [
+      {
+        "claim_text": "HIV infects helper T-cells, central to the immune response.",
+        "claim_confidence": 0.95,
+        "claim_category": "biological",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Pathophysiology of CD4+ T-Cell Depletion in HIV-1 and HIV-2 ...",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5440548/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that HIV infects and depletes CD4+ T cells, which are crucial for coordinating the immune response, thereby supporting the claim.",
+              "snippet": "The hall mark of human immunodeficiency virus (HIV) infection is a gradual loss of CD4+ T-cells and imbalance in CD4+ T-cell homeostasis, with progressive ..."
+            },
+            {
+              "title": "The T-Cell Response to HIV - PMC - PubMed Central - NIH",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3543107/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that HIV infects and destroys CD4 T cells, which are essential for coordinating the immune response, thereby supporting the claim that HIV infects helper T-cells central to the immune response.",
+              "snippet": "HIV infects and deletes CD4 + T cells that normally coordinate the adaptive T- and B-cell response to defend against intracellular pathogens."
+            },
+            {
+              "title": "Editorial: CD4+ T cells in HIV: A Friend or a Foe? - Frontiers",
+              "url": "https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2023.1203531/full",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Mostly Factual"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that HIV infects and depletes CD4+ T cells, which are crucial for coordinating the immune response, thereby supporting the claim that HIV infects helper T-cells central to the immune response.",
+              "snippet": "CD4+ T cell depletion: HIV infects and destroys CD4+ T cells during the replication process. If left untreated, HIV is the virus kills infected cells directly ..."
+            },
+            {
+              "title": "What is the connection between AIDS and T cell count?",
+              "url": "https://www.medicalnewstoday.com/articles/aids-t-cell-count",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Pro-Science"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that HIV infects and destroys CD4 T cells, which are also known as helper T cells, and highlights their crucial role in the immune response.",
+              "snippet": "HIV destroys CD4 T lymphocytes (helper T cells). If CD4 levels are low, this may indicate that HIV has progressed into AIDS."
+            },
+            {
+              "title": "HIV And AIDS - Immunology Explained",
+              "url": "https://immunologyexplained.aai.org/topics/immunity-to-infection/hiv-and-aids/",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (31.3 years)"
+                ],
+                "bias": null
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence confirms that HIV infects and destroys CD4+ T cells, which are essential for coordinating the immune response, thereby supporting the claim that HIV infects helper T-cells central to the immune response.",
+              "snippet": "The T helper cells that HIV infects and destroys are crucial for activating other immune cells to coordinate an immune response. As the number of T helper cells ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 1.0,
+        "timestamp_hint": 27.539,
+        "timestamp_confidence": 0.6428571428571429
+      }
+    ],
+    "transcript_data": {
+      "text": "when a virus winds up inside the body it's usually met with a furious onslaught from the immune system white blood cells immediately respond by releasing anti viral proteins attacking infected cells and recruiting backup usually this is enough but there's one virus that pushes the immune system beyond its limits HIV HIV infects one of the immune cells that is central to the body's response to pathogens the helper t-cell first the virus attaches and enters once inside the virus moves towards the nucleus along with its enzymes and genetic material one of these enzymes reverse transcriptase converts the viral RNA into a length of DNA which inserts into the cell's genome forcing the cell to spew out HIV proteins and genetic material to make new copies of the virus these new viruses escape the cell to infect others HIV levels rise rapidly in the body but the immune system doesn't move down without a fight inside infected cells anti viral proteins called restriction factors work to shut down virus production while others stop the virus from escaping the cell outside white blood cells called fiy cells produce neutralizing antibodies which bind to surface spikes on HIV particles and stop them entering healthy helper t-cells the greatest assault comes from killer T cells and natural killer cells which seek and destroy infected cells directly they release a protein called perforin which punches the infected cells allowing enzymes to be injected triggering Auto destruction for a while the defense holds and virus levels drop but HIV begins its counter-attack it disables the cell's antiviral proteins allowing new virus particles to leave the cell it also constantly mutates inside the cell to evade protection the immune system can't fight what it can't see eventually the immune system wears itself out killer T cells activated for too long exhausted and no longer respond to infection also the body loses the ability to make new helper t-cells to replace those killed in the fight and as a result their numbers plummet ultimately the body becomes immunodeficient and this condition is known as AIDS without treatment exposure to otherwise harmless microbes can be fatal we still have no way of eliminating HIV from the body completely there is no cure and hidden reservoirs of HIV will rebound if treatment stops but treatment with antiretroviral drugs can swing the balance allowing the immune system to recover from battle and live to fight another day [Music]",
+      "segments": [
+        {
+          "text": "when a virus winds up inside the body",
+          "start": 3.23,
+          "duration": 5.02
+        },
+        {
+          "text": "it's usually met with a furious",
+          "start": 6.12,
+          "duration": 4.68
+        },
+        {
+          "text": "onslaught from the immune system white",
+          "start": 8.25,
+          "duration": 4.44
+        },
+        {
+          "text": "blood cells immediately respond by",
+          "start": 10.8,
+          "duration": 4.469
+        },
+        {
+          "text": "releasing anti viral proteins attacking",
+          "start": 12.69,
+          "duration": 4.88
+        },
+        {
+          "text": "infected cells and recruiting backup",
+          "start": 15.269,
+          "duration": 4.581
+        },
+        {
+          "text": "usually this is enough",
+          "start": 17.57,
+          "duration": 4.959
+        },
+        {
+          "text": "but there's one virus that pushes the",
+          "start": 19.85,
+          "duration": 7.689
+        },
+        {
+          "text": "immune system beyond its limits HIV HIV",
+          "start": 22.529,
+          "duration": 6.9
+        },
+        {
+          "text": "infects one of the immune cells that is",
+          "start": 27.539,
+          "duration": 3.691
+        },
+        {
+          "text": "central to the body's response to",
+          "start": 29.429,
+          "duration": 5.611
+        },
+        {
+          "text": "pathogens the helper t-cell first the",
+          "start": 31.23,
+          "duration": 7.11
+        },
+        {
+          "text": "virus attaches and enters once inside",
+          "start": 35.04,
+          "duration": 5.19
+        },
+        {
+          "text": "the virus moves towards the nucleus",
+          "start": 38.34,
+          "duration": 3.989
+        },
+        {
+          "text": "along with its enzymes and genetic",
+          "start": 40.23,
+          "duration": 4.95
+        },
+        {
+          "text": "material one of these enzymes reverse",
+          "start": 42.329,
+          "duration": 5.221
+        },
+        {
+          "text": "transcriptase converts the viral RNA",
+          "start": 45.18,
+          "duration": 5.129
+        },
+        {
+          "text": "into a length of DNA which inserts into",
+          "start": 47.55,
+          "duration": 5.099
+        },
+        {
+          "text": "the cell's genome forcing the cell to",
+          "start": 50.309,
+          "duration": 4.59
+        },
+        {
+          "text": "spew out HIV proteins and genetic",
+          "start": 52.649,
+          "duration": 4.311
+        },
+        {
+          "text": "material to make new copies of the virus",
+          "start": 54.899,
+          "duration": 4.98
+        },
+        {
+          "text": "these new viruses escape the cell to",
+          "start": 56.96,
+          "duration": 6.7
+        },
+        {
+          "text": "infect others HIV levels rise rapidly in",
+          "start": 59.879,
+          "duration": 6.301
+        },
+        {
+          "text": "the body but the immune system doesn't",
+          "start": 63.66,
+          "duration": 5.94
+        },
+        {
+          "text": "move down without a fight inside",
+          "start": 66.18,
+          "duration": 5.97
+        },
+        {
+          "text": "infected cells anti viral proteins",
+          "start": 69.6,
+          "duration": 5.04
+        },
+        {
+          "text": "called restriction factors work to shut",
+          "start": 72.15,
+          "duration": 5.07
+        },
+        {
+          "text": "down virus production while others stop",
+          "start": 74.64,
+          "duration": 5.369
+        },
+        {
+          "text": "the virus from escaping the cell outside",
+          "start": 77.22,
+          "duration": 5.219
+        },
+        {
+          "text": "white blood cells called fiy cells",
+          "start": 80.009,
+          "duration": 4.591
+        },
+        {
+          "text": "produce neutralizing antibodies which",
+          "start": 82.439,
+          "duration": 4.68
+        },
+        {
+          "text": "bind to surface spikes on HIV particles",
+          "start": 84.6,
+          "duration": 4.74
+        },
+        {
+          "text": "and stop them entering healthy helper",
+          "start": 87.119,
+          "duration": 5.221
+        },
+        {
+          "text": "t-cells the greatest assault comes from",
+          "start": 89.34,
+          "duration": 5.19
+        },
+        {
+          "text": "killer T cells and natural killer cells",
+          "start": 92.34,
+          "duration": 4.41
+        },
+        {
+          "text": "which seek and destroy infected cells",
+          "start": 94.53,
+          "duration": 5.46
+        },
+        {
+          "text": "directly they release a protein called",
+          "start": 96.75,
+          "duration": 5.28
+        },
+        {
+          "text": "perforin which punches the infected",
+          "start": 99.99,
+          "duration": 4.29
+        },
+        {
+          "text": "cells allowing enzymes to be injected",
+          "start": 102.03,
+          "duration": 5.61
+        },
+        {
+          "text": "triggering Auto destruction for a while",
+          "start": 104.28,
+          "duration": 6.15
+        },
+        {
+          "text": "the defense holds and virus levels drop",
+          "start": 107.64,
+          "duration": 6.65
+        },
+        {
+          "text": "but HIV begins its counter-attack it",
+          "start": 110.43,
+          "duration": 6.119
+        },
+        {
+          "text": "disables the cell's antiviral proteins",
+          "start": 114.29,
+          "duration": 4.63
+        },
+        {
+          "text": "allowing new virus particles to leave",
+          "start": 116.549,
+          "duration": 5.25
+        },
+        {
+          "text": "the cell it also constantly mutates",
+          "start": 118.92,
+          "duration": 5.549
+        },
+        {
+          "text": "inside the cell to evade protection the",
+          "start": 121.799,
+          "duration": 4.741
+        },
+        {
+          "text": "immune system can't fight what it can't",
+          "start": 124.469,
+          "duration": 5.13
+        },
+        {
+          "text": "see eventually the immune system wears",
+          "start": 126.54,
+          "duration": 6.12
+        },
+        {
+          "text": "itself out killer T cells activated for",
+          "start": 129.599,
+          "duration": 3.841
+        },
+        {
+          "text": "too long",
+          "start": 132.66,
+          "duration": 2.76
+        },
+        {
+          "text": "exhausted and no longer respond to",
+          "start": 133.44,
+          "duration": 4.65
+        },
+        {
+          "text": "infection also the body loses the",
+          "start": 135.42,
+          "duration": 4.8
+        },
+        {
+          "text": "ability to make new helper t-cells to",
+          "start": 138.09,
+          "duration": 4.32
+        },
+        {
+          "text": "replace those killed in the fight and as",
+          "start": 140.22,
+          "duration": 4.22
+        },
+        {
+          "text": "a result their numbers plummet",
+          "start": 142.41,
+          "duration": 3.96
+        },
+        {
+          "text": "ultimately the body becomes",
+          "start": 144.44,
+          "duration": 4.06
+        },
+        {
+          "text": "immunodeficient and this condition is",
+          "start": 146.37,
+          "duration": 5.37
+        },
+        {
+          "text": "known as AIDS without treatment exposure",
+          "start": 148.5,
+          "duration": 5.22
+        },
+        {
+          "text": "to otherwise harmless microbes can be",
+          "start": 151.74,
+          "duration": 2.61
+        },
+        {
+          "text": "fatal",
+          "start": 153.72,
+          "duration": 3.69
+        },
+        {
+          "text": "we still have no way of eliminating HIV",
+          "start": 154.35,
+          "duration": 4.83
+        },
+        {
+          "text": "from the body completely there is no",
+          "start": 157.41,
+          "duration": 4.47
+        },
+        {
+          "text": "cure and hidden reservoirs of HIV will",
+          "start": 159.18,
+          "duration": 5.85
+        },
+        {
+          "text": "rebound if treatment stops but treatment",
+          "start": 161.88,
+          "duration": 5.43
+        },
+        {
+          "text": "with antiretroviral drugs can swing the",
+          "start": 165.03,
+          "duration": 4.35
+        },
+        {
+          "text": "balance allowing the immune system to",
+          "start": 167.31,
+          "duration": 4.62
+        },
+        {
+          "text": "recover from battle and live to fight",
+          "start": 169.38,
+          "duration": 5.33
+        },
+        {
+          "text": "another day",
+          "start": 171.93,
+          "duration": 2.78
+        },
+        {
+          "text": "[Music]",
+          "start": 175.07,
+          "duration": 3.17
+        }
+      ],
+      "video_id": "BADDj82oces"
+    }
+  }
+}

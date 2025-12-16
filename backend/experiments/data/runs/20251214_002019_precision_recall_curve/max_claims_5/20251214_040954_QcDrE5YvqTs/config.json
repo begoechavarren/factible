@@ -1,0 +1,23 @@
+{
+  "run_id": "20251214_040954_QcDrE5YvqTs",
+  "experiment_name": "precision_recall_curve_claims5_gender_wage_gap",
+  "component": "end_to_end",
+  "timestamp": "2025-12-14T04:11:59.471326",
+  "video_url": "https://www.youtube.com/watch?v=QcDrE5YvqTs",
+  "max_claims": 5,
+  "max_queries_per_claim": 2,
+  "max_results_per_query": 3,
+  "headless_search": true,
+  "model_config": {
+    "claim_extractor": "OPENAI_GPT4O_MINI",
+    "query_generator": "OPENAI_GPT4O_MINI",
+    "evidence_extractor": "OPENAI_GPT4O_MINI",
+    "output_generator": "OPENAI_GPT4O_MINI"
+  },
+  "model_summary": "CE:gpt-4o-mini | QG:gpt-4o-mini | EE:gpt-4o-mini | OG:gpt-4o-mini",
+  "parallelization": "async",
+  "video_title": "There Is No Gender Wage Gap | 5 Minute Video",
+  "transcript_length": 4694,
+  "transcript_tokens": 787,
+  "video_duration_seconds": 319.28
+}

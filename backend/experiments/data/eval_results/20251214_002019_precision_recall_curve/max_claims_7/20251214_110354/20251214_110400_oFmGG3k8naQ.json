@@ -1,0 +1,125 @@
+{
+  "video_id": "oFmGG3k8naQ",
+  "timestamp": "2025-12-14T11:04:00.024606",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_7",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.8571428571428571,
+    "recall": 0.5,
+    "f1_score": 0.631578947368421,
+    "true_positives": 6,
+    "false_positives": 1,
+    "false_negatives": 6,
+    "mean_average_precision": 1.0,
+    "recall_at_important": 1.0,
+    "importance_weighted_coverage": 0.6023391812865497,
+    "matched_claims": [
+      {
+        "gt_text": "Harvard University published a study in the federal government's journal on July 27, 2012 that confirms fluoride lowers IQs",
+        "sys_text": "Fluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.",
+        "gt_importance": 0.95,
+        "sys_importance": 0.85,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "A Harvard University study published on July 26 in the National Institute of Health journal finds that fluoride lowers children's IQ",
+        "sys_text": "Another Harvard study published on July 26, 2012, finds fluoride lowers children's IQ.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.85,
+        "importance_error": 0.0
+      },
+      {
+        "gt_text": "Fluoridation of water supply causes retardation in children, making children's IQs lower",
+        "sys_text": "Fluoridation of city water causes children's IQs to lower, leading to health problems.",
+        "gt_importance": 0.95,
+        "sys_importance": 0.8,
+        "importance_error": 0.1499999999999999
+      },
+      {
+        "gt_text": "America's children have the lowest IQs in the world due to fluoride consumption",
+        "sys_text": "The speaker claims that children in America have lower IQs due to fluoride in the water.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.7,
+        "importance_error": 0.15000000000000002
+      },
+      {
+        "gt_text": "Harvard University studies published in April 2006 show a link between fluorinated water and bone cancer in boys",
+        "sys_text": "A Harvard study published on April 5, 2006, shows a link between fluorinated water and bone cancer in boys.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.6,
+        "importance_error": 0.30000000000000004
+      },
+      {
+        "gt_text": "White spots on teeth indicate fluorosis caused by too much fluoride",
+        "sys_text": "The nurse from Austin, Texas, claims that residents have white spots on their teeth due to over-fluoridation.",
+        "gt_importance": 0.65,
+        "sys_importance": 0.55,
+        "importance_error": 0.09999999999999998
+      }
+    ],
+    "missed_claims": [
+      "An OBGYN doctor recommended that babies be fed special water with extra fluoride for their feedings to help their teeth",
+      "Infant formula mixed with fluoridated water delivers 100-200 times more fluoride than breastmilk",
+      "People in Austin, Texas live in an area with naturally over-fluorinated water and have white spots on their teeth and act like dumbasses with low IQ",
+      "People who are angry or afraid have lower IQs and fluoride consumption contributes to this",
+      "Fluoride is absorbed through the teeth topically, not through the body by drinking it",
+      "Baby teeth fall out and get replaced, so it doesn't make sense to give fluoride to babies for teeth that will be lost"
+    ],
+    "extra_claims": [
+      "The speaker believes that fear and anger can lower IQ by a couple of points."
+    ],
+    "importance_mae": 0.13333333333333333,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.5,
+    "stance_accuracy": 0.5,
+    "correct_verdicts": 3,
+    "total_verdicts": 6,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "Fluoridation of water supply causes retardation in children, making children's IQs lower",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "REFUTES"
+      },
+      {
+        "claim": "America's children have the lowest IQs in the world due to fluoride consumption",
+        "gt_verdict": "REFUTES",
+        "sys_verdict": "MIXED"
+      },
+      {
+        "claim": "White spots on teeth indicate fluorosis caused by too much fluoride",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "MIXED"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.5,
+    "verdict_accuracy": 0.5,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.01585335,
+    "total_time_seconds": 87.5219030380249,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.0
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 24,
+      "medium": 4
+    },
+    "avg_evidence_per_claim": 4.0
+  },
+  "ground_truth_claims_count": 12,
+  "system_claims_count": 7
+}

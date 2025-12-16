@@ -1,0 +1,150 @@
+{
+  "video_id": "KdMqCUa7XJk",
+  "timestamp": "2025-12-14T11:04:19.342673",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_10",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.8,
+    "recall": 0.5714285714285714,
+    "f1_score": 0.6666666666666666,
+    "true_positives": 8,
+    "false_positives": 2,
+    "false_negatives": 6,
+    "mean_average_precision": 0.852281746031746,
+    "recall_at_important": 0.5714285714285714,
+    "importance_weighted_coverage": 0.5570776255707762,
+    "matched_claims": [
+      {
+        "gt_text": "Over five days, four million Texans lost power during what turned out to be the coldest winter storm in a half a century",
+        "sys_text": "Over five days, four million Texans lost power during the storm.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.8,
+        "importance_error": 0.050000000000000044
+      },
+      {
+        "gt_text": "Hundreds died, including an 11-year-old boy who froze to death in his sleep",
+        "sys_text": "Hundreds died during the storm, including an 11-year-old boy who froze to death.",
+        "gt_importance": 0.8,
+        "sys_importance": 0.75,
+        "importance_error": 0.050000000000000044
+      },
+      {
+        "gt_text": "ERCOT later reported the state was just four minutes away from total grid collapse",
+        "sys_text": "ERCOT reported Texas was four minutes away from total grid collapse.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.7,
+        "importance_error": 0.15000000000000002
+      },
+      {
+        "gt_text": "In 2020, Texans got 25% of their energy from renewables",
+        "sys_text": "In 2020, Texans got 25% of their energy from renewables, which fell to 8% during the storm.",
+        "gt_importance": 0.75,
+        "sys_importance": 0.7,
+        "importance_error": 0.050000000000000044
+      },
+      {
+        "gt_text": "While all this growth was happening, the state's reliable energy capacity was actually shrinking. Meanwhile, its unreliable energy capacity was surging. In fact, it almost tripled.",
+        "sys_text": "Reliable energy capacity in Texas was shrinking while unreliable capacity was surging.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.65,
+        "importance_error": 0.25
+      },
+      {
+        "gt_text": "Since 2006, the state has subsidized renewable energy to the tune of $19 billion",
+        "sys_text": "Since 2006, Texas has subsidized renewable energy by $19 billion.",
+        "gt_importance": 0.8,
+        "sys_importance": 0.65,
+        "importance_error": 0.15000000000000002
+      },
+      {
+        "gt_text": "From 2010 to 2020, the population of Texas increased by 4 million people",
+        "sys_text": "From 2010 to 2020, Texas's population increased by 4 million people.",
+        "gt_importance": 0.65,
+        "sys_importance": 0.6,
+        "importance_error": 0.050000000000000044
+      },
+      {
+        "gt_text": "The state's economy grew by 35%",
+        "sys_text": "Texas's economy grew by 35% from 2010 to 2020.",
+        "gt_importance": 0.6,
+        "sys_importance": 0.6,
+        "importance_error": 0.0
+      }
+    ],
+    "missed_claims": [
+      "During the February storm, that fell to 8%, at one point reaching a deadly low of just 1.5%",
+      "That story begins in 1999, when Texas politicians on the left and the right fell in love with the idea that they could turn the state into a green energy powerhouse",
+      "Over the past decade, the federal government has spent over $230 billion on energy subsidies, and that doesn't even include subsidies the states give away",
+      "Compared to fossil fuel companies, for every unit of electricity generated, Washington subsidizes wind 17 times and solar 75 times more",
+      "Despite all this aid, renewables provide just 4 percent of the country's total energy supply",
+      "The verdict is in: renewable energy is expensive and unreliable"
+    ],
+    "extra_claims": [
+      "The February 2021 storm was the coldest winter storm in fifty years.",
+      "The temperature in Texas dropped below zero during Valentine's week 2021."
+    ],
+    "importance_mae": 0.09375000000000003,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.375,
+    "stance_accuracy": 0.375,
+    "correct_verdicts": 3,
+    "total_verdicts": 8,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "Over five days, four million Texans lost power during what turned out to be the coldest winter storm in a half a century",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "MIXED"
+      },
+      {
+        "claim": "ERCOT later reported the state was just four minutes away from total grid collapse",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "In 2020, Texans got 25% of their energy from renewables",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "MIXED"
+      },
+      {
+        "claim": "Since 2006, the state has subsidized renewable energy to the tune of $19 billion",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "REFUTES"
+      },
+      {
+        "claim": "The state's economy grew by 35%",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "REFUTES"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.5714285714285714,
+    "verdict_accuracy": 0.375,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.0113397,
+    "total_time_seconds": 200.06157112121582,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.85
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 49,
+      "medium": 8
+    },
+    "avg_evidence_per_claim": 5.7
+  },
+  "ground_truth_claims_count": 14,
+  "system_claims_count": 10
+}

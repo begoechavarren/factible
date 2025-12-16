@@ -1,0 +1,282 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:54:08.813262",
+    "latency_seconds": 7.32,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nHubris is a Greek word that means dangerously overconfident. Based on my research, hubris fairly describes our current response to the issue of climate change. Here\u2019s what many people believe: One: The planet is warming catastrophically because of certain human behaviors. Two: Thanks to powerful computers we can project what the climate will be like 20, 40, or even 100 years from now. Three: That if we eliminate just one behavior, the burning of fossil fuels, we can prevent the climate from changing for as long we like. Each of these presumptions\u2014together, the basis of our hubris regarding the changing climate\u2014is either untrue or so far off the mark as to be useless. Yes, it\u2019s true that the globe is warming, and that humans are exerting a warming influence upon it. But beyond that, to paraphrase a line from the classic movie The Princess Bride, \u201cI do not think \u2018The Science\u2019 says what you think it says.\u201d For example, government reports state clearly that heat waves in the US are now no more common than they were in 1900. Hurricane activity is no different than it was a century ago. Floods have not increased across the globe over more than seventy years. Greenland\u2019s ice sheet isn\u2019t shrinking any more rapidly today than it was 80 years ago. Why aren\u2019t these reassuring facts better known? Because the public gets its climate information almost exclusively from the media. And from a media perspective, fear sells. \u201cThings aren\u2019t that bad\u201d doesn\u2019t sell. Very few people, and that includes journalists who report on climate news, read the actual science. I have. And what the data\u2014the hard science\u2014from the US government and UN Climate reports say is that\u2026 \u201cthings aren\u2019t that bad.\u201d Nor does the public understand the questionable basis of all catastrophic climate change projections: computer modeling. Projecting future climate is excruciatingly difficult. Yes, there are human influences, but the climate is complex. Anyone who says that climate models are \u201cjust physics\u201d either doesn\u2019t understand them or is being deliberately misleading. I should know: I wrote one of the first textbooks on computer modeling. While modelers base their assumptions upon both fundamental physical laws and observations of the climate, there is still considerable judgment involved. And since different modelers will make different assumptions, results vary widely among different models. Let\u2019s just take one simple, but significant assumption modelers must make: the impact of clouds on the climate. Natural fluctuations in the height and coverage of clouds have at least as much of an impact on the flows of sunlight and heat as do human influences. But how can we possibly know global cloud coverage say 10, let alone 50 years from now? Obviously, we can\u2019t. But to create a climate model, we have to make assumptions. That\u2019s a pretty shaky foundation on which to transform the world\u2019s economy. By the way, creating more accurate models isn\u2019t getting any easier. In fact, the more we learn about the climate system, the more we realize how complex it is. Rather than admit this complexity, the media, the politicians, and a good portion of the climate science community attribute every terrible storm, every flood, every major fire to \u201cclimate change.\u201d Yes, we\u2019ve always had these weather events in the past, the narrative goes, but somehow \u201cclimate change\u201d is making everything \u201cworse.\u201d Even if that were true, isn\u2019t the relevant question, how much worse? Not to mention that \u201cworse\u201d is not exactly a scientific term. And how would we make it better? For the alarmists, that\u2019s easy: we get rid of fossil fuels. Not only is this impractical\u2014we get over 80% of the world\u2019s energy from fossil fuels\u2014it\u2019s not scientifically possible. That\u2019s because CO2 doesn\u2019t disappear from the atmosphere in a few days like, say, smog. It hangs around for a really long time. About 60 percent of any CO2 that we emit today will remain in the atmosphere 20 years from now, between 30 and 55 percent will still be there after a century, and between 15 and 30 percent will remain after one thousand years. In other words, it takes centuries for the excess carbon dioxide to vanish from the atmosphere. So, any partial reductions in CO2 emissions would only slow the increase in human influences\u2014not prevent it, let alone reverse it. CO2 is not a knob that we can just turn down to fix everything. We don\u2019t have that ability. To think that we do is\u2026 hubris. Hubris leads to bad decisions. A little humility and a little knowledge would lead to better ones. I\u2019m Steve Koonin, former Undersecretary for Science in the Obama Administration, and author of Unsettled: What Climate Science Tells Us, What It Doesn't, and Why It Matters, for Prager University.",
+    "input_length_chars": 4793,
+    "input_tokens_estimated": 1198,
+    "output": {
+      "claims": [
+        {
+          "text": "The planet is warming catastrophically because of certain human behaviors.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Claim about human impact on climate change, speaker: Steve Koonin"
+        },
+        {
+          "text": "Heat waves in the US are no more common than they were in 1900.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "Claim about historical heat waves, speaker: Steve Koonin"
+        },
+        {
+          "text": "Hurricane activity is no different than it was a century ago.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "Claim about hurricane activity over time, speaker: Steve Koonin"
+        },
+        {
+          "text": "Floods have not increased across the globe over more than seventy years.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "Claim about global flood trends, speaker: Steve Koonin"
+        },
+        {
+          "text": "Greenland\u2019s ice sheet isn\u2019t shrinking any more rapidly today than it was 80 years ago.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Claim about Greenland's ice sheet, speaker: Steve Koonin"
+        },
+        {
+          "text": "We get over 80% of the world\u2019s energy from fossil fuels.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Claim about global energy sources, speaker: Steve Koonin"
+        },
+        {
+          "text": "About 60 percent of any CO2 that we emit today will remain in the atmosphere 20 years from now.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Claim about CO2 persistence in the atmosphere, speaker: Steve Koonin"
+        }
+      ],
+      "total_count": 7
+    },
+    "output_length_chars": 2144,
+    "output_tokens_estimated": 536,
+    "cost_usd": 0.0005013
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:54:13.213511",
+    "latency_seconds": 2.27,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Heat waves in the US are no more common than they were in 1900.\nContext: Claim about historical heat waves, speaker: Steve Koonin\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 302,
+    "input_tokens_estimated": 75,
+    "output": {
+      "original_claim": "Heat waves in the US are no more common than they were in 1900.",
+      "queries": [
+        {
+          "query": "historical heat waves frequency in the US since 1900",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "are heat waves in the US more common now than in 1900",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 318,
+    "output_tokens_estimated": 79,
+    "cost_usd": 5.865e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Heat waves in the US are no more common than they were in 1900."
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:54:22.804369",
+    "latency_seconds": 0.9,
+    "input_prompt": "Claim:\nHeat waves in the US are no more common than they were in 1900.\n\nArticle Title:\nAmerica in 2090: The Impact of Extreme Heat, in Maps - ny times\n\nGoogle Search Snippet:\nSummers that seemed exceedingly hot 50 years ago are becoming much more commonplace. The extreme heat of that era \u2014 which had a chance of ...\n\nFull Page Content:\nProve your humanity We\u2019re committed to safety and security. But not for bots. Complete the challenge below and let us know you\u2019re a real person. Reddit, Inc. \u00a9 \"2025\". All rights reserved. User Agreement Privacy Policy Content Policy Help\n\nProvide relevant evidence.",
+    "input_length_chars": 603,
+    "input_tokens_estimated": 150,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 3.57e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Heat waves in the US are no more common than they were in 1900.",
+      "query_index": 2,
+      "query_text": "are heat waves in the US more common now than in 1900"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:54:22.812622",
+    "latency_seconds": 0.9,
+    "input_prompt": "Claim:\nHeat waves in the US are no more common than they were in 1900.\n\nArticle Title:\nWhy were the 1930s so hot in North America? Climate deniers ...\n\nGoogle Search Snippet:\nhurricanes/heat waves/wildfires are more common in areas where they used to be rare and rare in places they were previously unheard of .\n\nFull Page Content:\nProve your humanity We\u2019re committed to safety and security. But not for bots. Complete the challenge below and let us know you\u2019re a real person. Reddit, Inc. \u00a9 \"2025\". All rights reserved. User Agreement Privacy Policy Content Policy Help\n\nProvide relevant evidence.",
+    "input_length_chars": 598,
+    "input_tokens_estimated": 149,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 3.555e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Heat waves in the US are no more common than they were in 1900.",
+      "query_index": 2,
+      "query_text": "are heat waves in the US more common now than in 1900"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:54:22.941119",
+    "latency_seconds": 1.03,
+    "input_prompt": "Claim:\nHeat waves in the US are no more common than they were in 1900.\n\nArticle Title:\nExtreme Heat | US EPA\n\nGoogle Search Snippet:\nIn recent decades, heat waves have already become hotter, occur more often, and are larger and longer-lasting.\n\nFull Page Content:\nProve your humanity We\u2019re committed to safety and security. But not for bots. Complete the challenge below and let us know you\u2019re a real person. Reddit, Inc. \u00a9 \"2025\". All rights reserved. User Agreement Privacy Policy Content Policy Help\n\nProvide relevant evidence.",
+    "input_length_chars": 530,
+    "input_tokens_estimated": 132,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 3.3e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Heat waves in the US are no more common than they were in 1900.",
+      "query_index": 2,
+      "query_text": "are heat waves in the US more common now than in 1900"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:54:30.270578",
+    "latency_seconds": 0.86,
+    "input_prompt": "Claim:\nHeat waves in the US are no more common than they were in 1900.\n\nArticle Title:\nA Global Assessment of Heatwaves Since 1850 in Different ...\n\nFull Page Content:\nIn this study we use an atmospheric model to look at historical heatwaves during the past 160 years. In several regions of the Northern Hemisphere and in ...\n\nProvide relevant evidence.",
+    "input_length_chars": 353,
+    "input_tokens_estimated": 88,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 2.64e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Heat waves in the US are no more common than they were in 1900.",
+      "query_index": 2,
+      "query_text": "are heat waves in the US more common now than in 1900"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:54:31.642290",
+    "latency_seconds": 2.22,
+    "input_prompt": "Claim:\nHeat waves in the US are no more common than they were in 1900.\n\nArticle Title:\n[PDF] Temperature Changes in the United States\n\nFull Page Content:\nfrequency of cold waves has decreased since the early 1900s, and the frequency of heat waves has in- creased since the mid-1960s. The Dust Bowl era of the ...\n\nProvide relevant evidence.",
+    "input_length_chars": 340,
+    "input_tokens_estimated": 85,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that the frequency of heat waves in the US has increased since the mid-1960s, contradicting the claim that they are no more common than they were in 1900.",
+      "overall_stance": "refutes",
+      "key_quote": "the frequency of heat waves has increased since the mid-1960s."
+    },
+    "output_length_chars": 324,
+    "output_tokens_estimated": 81,
+    "cost_usd": 6.135e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Heat waves in the US are no more common than they were in 1900.",
+      "query_index": 2,
+      "query_text": "are heat waves in the US more common now than in 1900"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:54:32.206478",
+    "latency_seconds": 2.79,
+    "input_prompt": "Claim:\nHeat waves in the US are no more common than they were in 1900.\n\nArticle Title:\nU.S.: annual heat wave index 1895-2020 - Statista\n\nFull Page Content:\nHeat Wave Index in U.S. 1895-2020\u200b\u200b Based on the United States historical record, extended periods of very high temperatures were more frequent in the 1930s. In ...\n\nProvide relevant evidence.",
+    "input_length_chars": 349,
+    "input_tokens_estimated": 87,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that extended periods of very high temperatures were more frequent in the 1930s compared to the present, suggesting that heat waves are indeed more common now than they were in 1900.",
+      "overall_stance": "refutes",
+      "key_quote": "extended periods of very high temperatures were more frequent in the 1930s."
+    },
+    "output_length_chars": 365,
+    "output_tokens_estimated": 91,
+    "cost_usd": 6.765e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Heat waves in the US are no more common than they were in 1900.",
+      "query_index": 2,
+      "query_text": "are heat waves in the US more common now than in 1900"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:54:32.671519",
+    "latency_seconds": 3.25,
+    "input_prompt": "Claim:\nHeat waves in the US are no more common than they were in 1900.\n\nArticle Title:\nClimate Change Indicators: High and Low Temperatures | US EPA\n\nFull Page Content:\nThis figure shows the annual values of the U.S. Heat Wave Index from 1895 to 2015. These data cover the contiguous 48 states.\n\nProvide relevant evidence.",
+    "input_length_chars": 322,
+    "input_tokens_estimated": 80,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that the U.S. Heat Wave Index has been tracked from 1895 to 2015, suggesting that heat waves have been monitored over a long period, but it does not provide a direct comparison of the frequency of heat waves from 1900 to the present.",
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 343,
+    "output_tokens_estimated": 85,
+    "cost_usd": 6.3e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Heat waves in the US are no more common than they were in 1900.",
+      "query_index": 2,
+      "query_text": "are heat waves in the US more common now than in 1900"
+    }
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:54:35.561440",
+    "latency_seconds": 2.79,
+    "input_prompt": "\nClaim: Heat waves in the US are no more common than they were in 1900.\nCategory: statistical\nExtraction confidence: 0.85\n\nEvidence:\nREFUTES (2 sources):\n  1. [PDF] Temperature Changes in the United States | reliability=high (1.00)\n     URL: https://ntrs.nasa.gov/api/citations/20180001314/downloads/20180001314.pdf\n     Summary: The evidence indicates that the frequency of heat waves in the US has increased since the mid-1960s, contradicting the claim that they are no more common than they were in 1900.\n  2. U.S.: annual heat wave index 1895-2020 - Statista | reliability=high (0.85)\n     URL: https://www.statista.com/statistics/1293872/us-heat-wave-index/?srsltid=AfmBOorcljnwxVU2xoCk2jxDdM2UHuReRwhnEfYC8JHPF4RYmG1hlnQt\n     Summary: The evidence indicates that extended periods of very high temperatures were more frequent in the 1930s compared to the present, suggesting that heat waves are indeed more common now than they were in 1900.\nUNCLEAR (4 sources):\n  1. Climate Change Indicators: High and Low Temperatures | US EPA | reliability=high (1.00)\n     URL: https://19january2021snapshot.epa.gov/climate-indicators/climate-change-indicators-high-and-low-temperatures_.html\n     Summary: The evidence indicates that the U.S. Heat Wave Index has been tracked from 1895 to 2015, suggesting that heat waves have been monitored over a long period, but it does not provide a direct comparison of the frequency of heat waves from 1900 to the present.\n  2. America in 2090: The Impact of Extreme Heat, in Maps - ny times | reliability=high (0.85)\n     URL: https://www.nytimes.com/2021/07/21/opinion/climate-change-heat-waves.html\n     Summary: Summers that seemed exceedingly hot 50 years ago are becoming much more commonplace. The extreme heat of that era \u2014 which had a chance of ...\n  3. Extreme Heat | US EPA | reliability=medium (0.60)\n     URL: https://www.epa.gov/climatechange-science/extreme-heat\n     Summary: In recent decades, heat waves have already become hotter, occur more often, and are larger and longer-lasting.\n  4. Why were the 1930s so hot in North America? Climate deniers ... | reliability=medium (0.60)\n     URL: https://www.reddit.com/r/climate/comments/1e3wvch/why_were_the_1930s_so_hot_in_north_america/\n     Summary: hurricanes/heat waves/wildfires are more common in areas where they used to be rare and rare in places they were previously unheard of .\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2423,
+    "input_tokens_estimated": 605,
+    "output": {
+      "overall_stance": "refutes",
+      "confidence": "high",
+      "summary": "The evidence from a NASA report indicates that the frequency of heat waves in the US has increased since the mid-1960s, directly contradicting the claim that they are no more common than they were in 1900. Additionally, a Statista report suggests that extended periods of very high temperatures were more frequent in the 1930s compared to the present, further supporting the refutation of the claim."
+    },
+    "output_length_chars": 460,
+    "output_tokens_estimated": 115,
+    "cost_usd": 0.00015975,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Heat waves in the US are no more common than they were in 1900.",
+      "query_index": 2,
+      "query_text": "are heat waves in the US more common now than in 1900"
+    }
+  }
+]

@@ -1,0 +1,466 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:50:46.820006",
+    "latency_seconds": 7.97,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nthe Labour party has won this general election and that's it 14 years of conservative rule has this morning come to a rather brutal end after a relatively short but terribly bruising campaign the conservatives have been reduced to their lowest seat share ever with them dropping below the 156 seats that they won in the 1906 general election on the other side of things though laor have achieved almost the highest seat share in their history getting very close to the huge 400 18 seats that they won in the 1997 general election it's not only labor who've had a good night though the liberal Democrats have also had a very good night with their seat share ticking up to a huge 71 seats the highest seat share ever and up from only 11 in 2019 this is in fact even higher than their seat share in 2010 when they agreed to a formal Coalition with the conservative party similarly it seems that reform UK have had a pretty good night too they've gone from no seats to a pretty respectable four seats even more impressively it seems they've achieved an even more respectable 14.3% of the vote the greens didn't have a terrible night either with them not only holding on to Brighton Pavilion but also gaining Bristol Central waveny Valley and North herfordshire the only other party that had a pretty bad night was the SNP who were damaged by their ongoing scandals and their very recent change of leader despite their electoral dominance in Scotland over the last decade or so last night they received their lowest seat share since 2010 winning only nine seats this is a significant decline since 2019 when they won 48 out of the 56 available in Scotland obviously this will raise a couple of key questions the first is whether this is the beginning of the end of S&P dominance in Scotland and secondly is what such a terrible result will mean for the cause of Scottish independence so anyway these are the headline results from the election but let's dive a little deeper and have a look at what [Music] happened before we start if you haven't already please consider subscribing and ringing the bell to stay in the loop and be notified when we release new videos now the key event from last night occurred at 10 p.m. when we got our first indication of what was to come in the release of the exit Pole now the most shocking thing to note in the exit poll here was the number of expected reform seats the exit pole predicted that reform would get 13 seats significantly higher than most of the MRP polls in the run up to the election however there were some wobbles through the night with some polls suggesting that the exit pole had overestimated the number of seats the more observant of you will notice that it turns out that the exit pole had indeed overestimated and in the end reform achieved only four seats the other shocking find from the exit pole was the number of predicted Tory seats prior to election day many of the MRP polls were predicting below 100 Tory seats while the exit poll predicted icted that the Tories were going to win 131 seats What followed was deeply chaotic and something that made writing this video through the night even more difficult as the results started coming in it appeared that the exit pole was slightly wrong although the BBC and ITV couldn't quite agree in what direction in the we hours of Friday morning the BBC updated their prediction with them suggesting that the conservatives were going to win more seats while ITV updated theirs and predicted that they would in fact win fewer as things stand it appears that the Tories have won slightly fewer than originally predicted but not significantly anyway overall results aside the night was also particularly interesting when it came to individuals there were two properly shocking and unexpected results the first was Jonathan Ashworth unexpectedly losing his seat to an independent candidate Ashworth has previously been the shadow Health secretary and up until today was the shadow pay Master General it appears that the loss of his seat has been a result of labor stance on Gaza something that could cause problems from the incoming labor government more generally the second unexpected result was Jeremy Corbin's election in Islington North having been deselected as a labor MP Corbin opted to stand in his constituency as an independent he did however make the decision to stand rather late in the election cycle something that led to a decent proportion of journalists and pundits to believe that he was going to lose the constituency to the new labor candidate this wasn't the case though and Corbin secured himself a pretty decent majority so now that we've gone through exactly what happened through the night it's worth going through what this all means for the main parties now the most interesting party to discuss right now are the conservatives who as we've just discussed lost some pretty major figures through the night at the time of writing sunak has not yet announced his resignation as conservative leader although he is expected to either this morning or in the coming days and weeks this will naturally Kickstart a leadership election the question now is who would take over while it's a little too soon to tell there are some candidates that were in a particularly strong position right now KY Bok is in the strongest position she's got a rather strong following among right-wing Tories both in Parliament and among the membership what really bolsters this position is the fact that one of her key Rivals for the leadership Penny Morant lost her seat last night is worth mentioning though that there has been an issue in bok's constituency with postal votes and if this is challenging the courts it could cause problems for her candidacy in the Tory leadership election anyway someone else that there's some chatter about in terms of taking over the Tory leadership is Nigel farage and his potential defection from reform UK in order to lead the Tories after all he now has a seat in the House of Commons and there are some relatively senior members of the conservative party who have gone on the record as saying that they would like farage to join their party only the next few weeks will show exactly what happens here but if you do want to stay informed on this make sure you subscribe to the channel anyway what happens next for labor is quite simple the new prime minister K sta will meet the king and agree to form a government in his name he'll take office at Downing Street assemble his first cabinet and could even represent his party in a pmq session before the imminent summer recess they will soon begin implementing their policy platform as outlined in their Manifesto whether they're successful at implementing this is not yet known though and something we'll need to keep an eye on through the next few years of lab government regardless this is clearly a Monumental election for labor and the UK and when these kinds of Elections happen people tend to like to save newspapers and magazines with the headlines for posterity the best way you could possibly do that is by picking up a copy of two long our 60-page highquality magazine full of tood R's very best journalism this issue is focused on the UK election diving deep into the campaign the results and how the winners plan to fix Britain it's more than just though with stories including the European parliamentary elections the countries likely to join the EU next the latest from Gaza the rise of M and of course the US election now we've decided to make the magazine for two reasons firstly it allows our journalists to write in more detail diving deeper and ignoring algorithmic restrictions to produce the best work we can and secondly it's a good way for you to support todr and will help us to produce free YouTube videos as long as we can if you're interested then you you can pick up a copy from our website where we're selling two editions of the magazine firstly there's the standard edition and then there's the Premium Edition which gets your name printed in the thank you section of the magazine and exclusive access to our behind the scenes podcast oh and by the way we're going to be making an issue of too long every 4 months so if you want to ensure that you never miss an issue then you can subscribe which gets you a 25% discount if you have more questions there's a full Q&A Linked In the description but you'll also find a link to our store and while you're there make sure you use the code election week to get an additional 22 off any purchase thanks so much for hearing me out and if you are interested please do pick up a copy as it's a great way to support our journalism and help us to continue making free YouTube videos as long as we can",
+    "input_length_chars": 8817,
+    "input_tokens_estimated": 2204,
+    "output": {
+      "claims": [
+        {
+          "text": "The Labour party has won this general election, ending 14 years of Conservative rule.",
+          "confidence": 0.95,
+          "category": "political",
+          "importance": 0.85,
+          "context": "Election results announcement, significant political shift."
+        },
+        {
+          "text": "The Conservatives have been reduced to their lowest seat share ever, dropping below 156 seats.",
+          "confidence": 0.9,
+          "category": "political",
+          "importance": 0.85,
+          "context": "Post-election analysis, significant decline in Conservative seats."
+        },
+        {
+          "text": "Labour achieved almost the highest seat share in their history, close to 418 seats from 1997.",
+          "confidence": 0.9,
+          "category": "political",
+          "importance": 0.8,
+          "context": "Comparison of Labour's current performance to historical data."
+        },
+        {
+          "text": "The Liberal Democrats increased their seat share to 71, the highest ever, up from 11 in 2019.",
+          "confidence": 0.9,
+          "category": "political",
+          "importance": 0.8,
+          "context": "Liberal Democrats' performance compared to previous elections."
+        },
+        {
+          "text": "Reform UK went from no seats to four seats, achieving 14.3% of the vote.",
+          "confidence": 0.85,
+          "category": "political",
+          "importance": 0.6,
+          "context": "Election results for Reform UK, notable increase."
+        },
+        {
+          "text": "The SNP won only nine seats, their lowest seat share since 2010, down from 48 in 2019.",
+          "confidence": 0.9,
+          "category": "political",
+          "importance": 0.8,
+          "context": "SNP's significant decline in seats, impacting Scottish politics."
+        },
+        {
+          "text": "Jonathan Ashworth lost his seat to an independent candidate, attributed to Labour's stance on Gaza.",
+          "confidence": 0.85,
+          "category": "political",
+          "importance": 0.6,
+          "context": "Unexpected election result affecting Labour's leadership."
+        }
+      ],
+      "total_count": 7
+    },
+    "output_length_chars": 2250,
+    "output_tokens_estimated": 562,
+    "cost_usd": 0.0006678
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:50:54.194096",
+    "latency_seconds": 2.01,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Jonathan Ashworth lost his seat to an independent candidate, attributed to Labour's stance on Gaza.\nContext: Unexpected election result affecting Labour's leadership.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 339,
+    "input_tokens_estimated": 84,
+    "output": {
+      "original_claim": "Jonathan Ashworth lost his seat to an independent candidate, attributed to Labour's stance on Gaza.",
+      "queries": [
+        {
+          "query": "Jonathan Ashworth lost seat independent candidate Labour Gaza",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Labour Gaza stance impact on Jonathan Ashworth election result",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 372,
+    "output_tokens_estimated": 93,
+    "cost_usd": 6.84e-05,
+    "context": {
+      "claim_index": 7,
+      "claim_text": "Jonathan Ashworth lost his seat to an independent candidate, attributed to Labour's stance on Gaza."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:50:54.318878",
+    "latency_seconds": 2.14,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Reform UK went from no seats to four seats, achieving 14.3% of the vote.\nContext: Election results for Reform UK, notable increase.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 304,
+    "input_tokens_estimated": 76,
+    "output": {
+      "original_claim": "Reform UK went from no seats to four seats, achieving 14.3% of the vote.",
+      "queries": [
+        {
+          "query": "Reform UK election results 2023 seats and vote percentage",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Reform UK 2023 election seats increase from zero to four",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 335,
+    "output_tokens_estimated": 83,
+    "cost_usd": 6.12e-05,
+    "context": {
+      "claim_index": 7,
+      "claim_text": "Jonathan Ashworth lost his seat to an independent candidate, attributed to Labour's stance on Gaza.",
+      "query_index": 2,
+      "query_text": "Labour Gaza stance impact on Jonathan Ashworth election result"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:50:54.319295",
+    "latency_seconds": 2.14,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The Conservatives have been reduced to their lowest seat share ever, dropping below 156 seats.\nContext: Post-election analysis, significant decline in Conservative seats.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 343,
+    "input_tokens_estimated": 85,
+    "output": {
+      "original_claim": "The Conservatives have been reduced to their lowest seat share ever, dropping below 156 seats.",
+      "queries": [
+        {
+          "query": "Conservative Party lowest seat share ever 156 seats",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Conservative Party seat count decline 2023 election",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 346,
+    "output_tokens_estimated": 86,
+    "cost_usd": 6.435e-05,
+    "context": {
+      "claim_index": 7,
+      "claim_text": "Jonathan Ashworth lost his seat to an independent candidate, attributed to Labour's stance on Gaza.",
+      "query_index": 2,
+      "query_text": "Labour Gaza stance impact on Jonathan Ashworth election result"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:50:54.319621",
+    "latency_seconds": 2.14,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The Labour party has won this general election, ending 14 years of Conservative rule.\nContext: Election results announcement, significant political shift.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 327,
+    "input_tokens_estimated": 81,
+    "output": {
+      "original_claim": "The Labour party has won this general election, ending 14 years of Conservative rule.",
+      "queries": [
+        {
+          "query": "Labour party wins general election 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Labour party election victory ends Conservative rule 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 331,
+    "output_tokens_estimated": 82,
+    "cost_usd": 6.135e-05,
+    "context": {
+      "claim_index": 7,
+      "claim_text": "Jonathan Ashworth lost his seat to an independent candidate, attributed to Labour's stance on Gaza.",
+      "query_index": 2,
+      "query_text": "Labour Gaza stance impact on Jonathan Ashworth election result"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:50:54.319949",
+    "latency_seconds": 2.14,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Labour achieved almost the highest seat share in their history, close to 418 seats from 1997.\nContext: Comparison of Labour's current performance to historical data.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 338,
+    "input_tokens_estimated": 84,
+    "output": {
+      "original_claim": "Labour achieved almost the highest seat share in their history, close to 418 seats from 1997.",
+      "queries": [
+        {
+          "query": "Labour Party seat share history 418 seats 1997",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Labour Party historical seat share comparison 1997",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 339,
+    "output_tokens_estimated": 84,
+    "cost_usd": 6.3e-05,
+    "context": {
+      "claim_index": 7,
+      "claim_text": "Jonathan Ashworth lost his seat to an independent candidate, attributed to Labour's stance on Gaza.",
+      "query_index": 2,
+      "query_text": "Labour Gaza stance impact on Jonathan Ashworth election result"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:50:54.652559",
+    "latency_seconds": 2.47,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The Liberal Democrats increased their seat share to 71, the highest ever, up from 11 in 2019.\nContext: Liberal Democrats' performance compared to previous elections.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 338,
+    "input_tokens_estimated": 84,
+    "output": {
+      "original_claim": "The Liberal Democrats increased their seat share to 71, the highest ever, up from 11 in 2019.",
+      "queries": [
+        {
+          "query": "Liberal Democrats seat share 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Liberal Democrats increase seats from 11 to 71 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 327,
+    "output_tokens_estimated": 81,
+    "cost_usd": 6.12e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "Labour achieved almost the highest seat share in their history, close to 418 seats from 1997.",
+      "query_index": 2,
+      "query_text": "Labour Party historical seat share comparison 1997"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:50:54.737578",
+    "latency_seconds": 2.56,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The SNP won only nine seats, their lowest seat share since 2010, down from 48 in 2019.\nContext: SNP's significant decline in seats, impacting Scottish politics.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 333,
+    "input_tokens_estimated": 83,
+    "output": {
+      "original_claim": "The SNP won only nine seats, their lowest seat share since 2010, down from 48 in 2019.",
+      "queries": [
+        {
+          "query": "SNP 2023 election results nine seats lowest since 2010",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "SNP seat share decline from 48 in 2019 to 9 in 2023",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 341,
+    "output_tokens_estimated": 85,
+    "cost_usd": 6.345e-05,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "The Liberal Democrats increased their seat share to 71, the highest ever, up from 11 in 2019.",
+      "query_index": 2,
+      "query_text": "Liberal Democrats increase seats from 11 to 71 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:51:45.536071",
+    "latency_seconds": 19.02,
+    "input_prompt": "Claim:\nReform UK went from no seats to four seats, achieving 14.3% of the vote.\n\nArticle Title:\n2023 United Kingdom local elections - Wikipedia\n\nGoogle Search Snippet:\nDistrict councils in Northern Ireland; No election. The largest party in each council. The elections in England saw ...\n\nFull Page Content:\nThe 2023 United Kingdom local elections were held on Thursday, 4 May 2023 in England and on Thursday 18 May 2023 in Northern Ireland.[7] These included district councils, unitary authorities, and directly elected mayors in England, and included all local councils in Northern Ireland.[8][9] Notably, these elections were the first to be held under the Elections Act 2022, a new voter identification law that required voters to show photo ID when attending a polling station,[10] and was a cause for controversy.[11]\nThe elections in England saw significant losses for the governing Conservative Party, which lost over 1,000 council seats. The Labour Party, the Liberal Democrats and the Green Party of England and Wales all made gains, with Labour becoming the party with most members elected to local government for the first time since 2002. The Greens won majority control of Mid Suffolk District Council, the party's first ever council majority.[12]\nIn Northern Ireland, Sinn F\u00e9in emerged as the largest party in local government for the first time. These elections were also the first since the creation of Northern Ireland in which nationalist candidates received more votes than unionists.\nThese elections were to be the first under the new voter identification laws. This meant voters would be required to show photo identification when attending a polling station. These new laws were controversial[11] and led to accusations of voter suppression.[13][14] There were concerns that turnout would be extremely low at the elections due to a combination of lack of ID held by some voters, and many members of the public remaining unaware of the new requirements.[15][16] The police had been alerted to the possibility of anger and confrontation over these new rules, and polling station staff had been trained to de-escalate situations.[17]\nSince late 2021, the cost of living crisis had been growing, leading to government support for help with bills. Changes to waste collection and recycling had been delayed by the Government until after the elections.[18]\nA majority of the seats up for election were last elected in 2019. At those elections, the Conservative Party lost over a thousand seats and control of several councils while the Liberal Democrats managed to make the most gains at their expense. The Labour Party also lost seats and control of some councils at the 2019 local elections.[19] In terms of seat numbers, this day of local elections was the biggest since 2019.[20] Many wards had new boundaries.[21]\nThe year up to the 2023 elections included the political crisis leading to Boris Johnson's resignation, the market turbulence caused by the \"mini-budget\", and the subsequent credibility crisis leading to Liz Truss' resignation and Rishi Sunak's appointment.\nThe cost of living crisis and a surge in inflation were significant contributing factors to several strikes in the public sector, with high-profile strikes in the transport sector and the health service. There were also extensive strikes in the postal services, education sector and amongst the civil service. In mid-February 2023, Conservative member of the House of Lords, Lord Hayward, said that the strikes had popular support and were therefore damaging the government and party's chances in the local elections. He argued the strikes needed to stop in order to improve their chances.[22]\nThe Liberal Democrats had been utilising comments from senior Conservative MPs as part of their advertising in the so-called \"blue wall\" to draw attention to their undesirable and \"toxic\" opinions, such as support for the death penalty.[23]\nThe Labour Party had stated to the press that they want to use these local elections to prepare for the 2024 general election.[19][needs update]\nThe Green Party stood 3,331 candidates, 41% of all seats that were up for election, the most they had ever contested.[24] Over half of the party's 536 total local council seats were to be defended at these elections.[25] The Greens launched their national local elections campaign in Stowmarket, Mid Suffolk, where they were aiming to win majority control, which would be the first time the Greens had won a majority on any council.[26] The Greens were said to have been aiming to win at least 100 new seats, with their appeal spreading to both left and right-wing voters due to dissatisfaction with the main two parties.[27]\nThe Conservatives had been performing poorly in national polls leading up to these elections. They had been more than 20 points behind the Labour party in national opinion polling, though the gap had been narrowing.[28] Conservative Party chair Greg Hands MP publicly recognised that this election would be difficult for the party and referred to analysis that suggested they would lose more than 1,000 seats.[29][30] This estimate was based on comments by British academics Colin Rallings and Michael Thrasher, who said current polling would put conservative seat losses at around 1,000, while Labour would gain around 700 seats.[31][32] President of the British Polling Council Sir John Curtice had described the electorate as \"increasingly sophisticated\" in using tactical voting to defeat the Conservative party candidates.[32] For this reason Sir John Curtice said the Conservative Party could actually end up losing well over 1,000 seats if the tactical voting is a big factor, which director of polling company Savanta, Chris Hopkins, agreed with.[32] A website was created to inform voters how to vote to have the best chance to unseat the Conservatives in their local area, and it received publicity thanks to endorsements from several public figures.[33]\nLabour NEC member Luke Akehurst stated that he expected the party to make its best gains in seat numbers since 2012, when it gained 847 seats (next best being a net gain of 288 seats), but expected varied results in terms of council control.[34]\nSky News reported that YouGov predictions were pointing towards Labour gains in the North and the\n\nProvide relevant evidence.",
+    "input_length_chars": 6336,
+    "input_tokens_estimated": 1584,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 0.0002508,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "The SNP won only nine seats, their lowest seat share since 2010, down from 48 in 2019.",
+      "query_index": 2,
+      "query_text": "SNP seat share decline from 48 in 2019 to 9 in 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:51:45.753789",
+    "latency_seconds": 22.84,
+    "input_prompt": "Claim:\nReform UK went from no seats to four seats, achieving 14.3% of the vote.\n\nArticle Title:\nReform wins seats in district council by-election - BBC\n\nGoogle Search Snippet:\nCouncillors Kyle Abel and Richard Litchfield have been elected in South Kesteven.\n\nFull Page Content:\nGeneral elections By-elections Registrations\n\u00a9 House of Commons 2025. Re-use our content freely and flexibly with only a few conditions under the Open Parliament Licence.\nCoverage - Roadmap - Contact - Datasette endpoint - Database schema\nAccessibility statement - Cookies - Privacy notice\n\nProvide relevant evidence.",
+    "input_length_chars": 595,
+    "input_tokens_estimated": 148,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 3.54e-05,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "The SNP won only nine seats, their lowest seat share since 2010, down from 48 in 2019.",
+      "query_index": 2,
+      "query_text": "SNP seat share decline from 48 in 2019 to 9 in 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:51:46.033804",
+    "latency_seconds": 28.13,
+    "input_prompt": "Claim:\nThe Liberal Democrats increased their seat share to 71, the highest ever, up from 11 in 2019.\n\nArticle Title:\nLib Dems are Stolidly Standing Pat - Electoral Calculus\n\nGoogle Search Snippet:\nAt a time when the Labour and Conservative parties are worried about the big fall in their support, the Liberal Democrats are enjoying the ...\n\nFull Page Content:\nWe use essential cookies to make our site work.\nWe'd like to use additional cookies to understand how you use the site and improve our services.\nYou can find details of these and all other cookies on our cookie policy.\nNearly all MPs are members of a political party. The list view shows how many MPs from each party there are in the House of Commons. There are 650 MPs in total.\nIf an MP is not a member of a political party in Parliament, they are shown as an \u2018Independent\u2019. This includes MPs elected as Independent candidates. It also includes MPs who no longer \u2018have the party whip\u2019. This means these MPs have been removed from their political party in Parliament.\n\nProvide relevant evidence.",
+    "input_length_chars": 1056,
+    "input_tokens_estimated": 264,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 5.28e-05,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "The SNP won only nine seats, their lowest seat share since 2010, down from 48 in 2019.",
+      "query_index": 2,
+      "query_text": "SNP seat share decline from 48 in 2019 to 9 in 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:51:48.568426",
+    "latency_seconds": 13.7,
+    "input_prompt": "Claim:\nThe Labour party has won this general election, ending 14 years of Conservative rule.\n\nArticle Title:\nU.K. Labour Party wins landslide in British election - NPR\n\nGoogle Search Snippet:\nAfter 14 years of Conservative rule, Britons elected a new prime minister, Keir Starmer, and Parliament dominated by the Labour Party, ...\n\nFull Page Content:\nSir Keir Starmer will soon officially be the UK's prime minister\nThe Labour Party have won the 2024 general election, and Sir Keir Starmer will now be the next prime minister of the United Kingdom.\nLabour have won 412 seats, meaning the Conservative Party has lost power for the first time in 14 years and have suffered one of the biggest defeats in its history.\nIt means Keir Starmer won't need the support of any other parties to form a government.\nMr Starmer said doing so well \"feels good\", and added he's \"ready to serve our country, ready to restore Britain to the service of working people\".\nKeir Starmer: Five things about the new prime minister\nJoy, tears and Elmo - the story of the election in pictures\nWhat happens when there\u2019s a change of government?\nWhat do all the election words mean?\nKeir Starmer will be the new Prime Minister\nThe Labour Party have won 412 seats and the Conservatives 121 with two seats still to declare\n9.5 million people voted for Labour\nWorst ever result in Conservative Party history\nRishi Sunak will step down as Conservative Party leader, but not yet\nThe Liberal Democrats have gained lots of seats, whereas the Scottish National Party (SNP) have lost most of theirs\nFormer prime minister Liz Truss has lost her seat of South West Norfolk\nRecord high number of gay, women and ethnic minority MPs expected to be elected\nSunderland was once again the first constituency to declare its result, getting it in at 23:13 on Thursday night\nLarry the Cat will remain in post as Chief Mouser\nGeneral Election 2024: The story of the night\nKeir Starmer found out he had held his seat of Holborn and St Pancras not long before the news of their majority was announced, and in his victory speech, he said: \"The country has spoken and they're ready for change.\n\"The change begins right here. Because this is your democracy, your community and your future. You have voted. It is now time for us to deliver.\"\nIt was a difficult night for the Conservatives, who have lost 250 seats so far.\nThis makes it the worst ever defeat for the party in Parliamentary history.\nRishi Sunak said he took \"full responsibility\" for his party's loss\nThe now outgoing prime minister Rishi Sunk has defended his seat, Richmond in Yorkshire.\nSunak said he knew Labour had won and had already called Keir Starmer to congratulate him.\nHe then travelled from Yorkshire to London where he made a speech from Number 10 Downing Street.\nOutside Downing Street, he said \"I am sorry\", adding: \"I have heard your anger, your disappointment, and I take responsibility\".\nHe also announced he will step down as Conservative Party leader, although not straight away.\nWhat does the Prime Minister do?\nMany prominent Conservative figures, including a record number of those serving in Rishi Sunak's top team, have also lost their seats.\nFormer prime minister Liz Truss has lost her seat of South West Norfolk to Labour.\nShe had a majority of 26,000 majority at the 2019 election, but this reduced to 11,217 on Friday morning.\nThe Leader of the House of Commons, Penny Mordaunt, was one of the names expected to be in the running to replace Rishi Sunk as party leader should he step down.\nShe has however lost her seat of Portsmouth North to now Labour MP, Amanda Martin.\nChris Mason, the top dog of the BBC's political team, has said Labour has achieved a \"spectacular victory\".\nTheir result after the last election was their worst since 1935 he explained, and they faced a mountain of a task to win even by a small margin.\nBut they've done it, and \"Sir Keir Starmer will be prime minister by lunchtime, taking to Downing Street a colossal majority\", he says.\nThe big picture is this: within hours, we will soon have our fourth prime minister in under two years.\nThe whirlwind of British politics continues.\nWe live in a world of unprecedented voter volatility - more people in more places are more willing to change their minds more often and more quickly about politics than ever before.\nAnd it has happened again.\nElection 2024: The story of the night in 100 seconds\nHowever, despite their huge increase in seats, Chris Mason says Labour haven't got as many votes across the country as they were expecting.\nAnd he says Labour still have a huge challenge on their hands.\n\"Remember that Prime Minister Starmer, Chancellor Rachel Reeves - as they soon will be - and the new government will confront all of the old problems that caused its predecessor so much trouble: the cost of living, the government\u2019s finances, the tax burden, a dangerous world - and no majority, however big, can erase them.\"\nWhat is First Past the Post?\nSir Ed Davey and the Liberal Democrats have been celebrating already\nThe Liberal Democrats have on the other hand had a very good night so far.\nLeader Sir Ed Davey said he'd hoped for the \"best result for a century\", and have achieved that by winning 71 seats.\nThis means they are once again be the third largest party in the House of Commons.\nThis was until recently the Scottish National Party (SNP).\nNigel Farage has tried to become an MP before but this will be his first time sitting in the House of Commons\nNigel Farage, leader of the Reform party, has won in Clacton. He has run to be an MP before, but this is the first time he has been successful.\nHe was a prominent figure during the Brexit campaign, and was previously leader of the UK Independence Party (UKIP).\nHis party won five seats.\nThe Green Party have increased their seats from one to four, the most seats the party has ever had.\nIt includes Brighton, their only seat for a number of years, held by former leader Sian Berry.\nDemocracy: Newsround on the General Election\nElsewhere in the UK, the SNP, which until now had 43 seats, now have nine.\nThe SNP leader John Swinney has said it's been a \"very, very difficult and damaging\" night for his party.\nScottish Labour have already made gains, and its leader, Anas Sadat, has said he's \"confident we will have a majority\" in Scotland, which would be their first since\n\nProvide relevant evidence.",
+    "input_length_chars": 6379,
+    "input_tokens_estimated": 1594,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that the Labour Party has won the 2024 general election, ending 14 years of Conservative rule, as they secured 412 seats and will have Sir Keir Starmer as the new prime minister.",
+      "overall_stance": "supports",
+      "key_quote": "The Labour Party have won the 2024 general election, and Sir Keir Starmer will now be the next prime minister of the United Kingdom."
+    },
+    "output_length_chars": 418,
+    "output_tokens_estimated": 104,
+    "cost_usd": 0.0003015,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "The SNP won only nine seats, their lowest seat share since 2010, down from 48 in 2019.",
+      "query_index": 2,
+      "query_text": "SNP seat share decline from 48 in 2019 to 9 in 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:51:49.798213",
+    "latency_seconds": 19.04,
+    "input_prompt": "Claim:\nThe Conservatives have been reduced to their lowest seat share ever, dropping below 156 seats.\n\nArticle Title:\nBritain ousts Conservative Party after 14 years in major win for ...\n\nGoogle Search Snippet:\nBritain's Labour Party has handed a brutal defeat to the ruling Conservatives. Keir Starmer, the party leader, will be prime minister, ...\n\nFull Page Content:\nThe Conservative and Unionist Party, commonly the Conservative Party and colloquially the Tories,[17] is one of the two main political parties in the United Kingdom, along with the Labour Party. It sits on the centre-right[24] to right-wing[31] of the left\u2013right political spectrum. Following its defeat by Labour at the 2024 general election it is currently the second-largest party by the number of votes cast and number of seats in the House of Commons; as such it has the formal parliamentary role of His Majesty's Most Loyal Opposition. It encompasses various ideological factions including one-nation conservatives, Thatcherites and traditionalist conservatives. There have been 20 Conservative prime ministers.\nThe Conservative Party was founded in 1834 from the Tory Party and was one of two dominant political parties in the 19th century, along with the Liberal Party. Under Benjamin Disraeli it played a preeminent role in politics at the height of the British Empire. In 1912 the Liberal Unionist Party merged with the party to form the Conservative and Unionist Party. Its rivalry with the Labour Party has shaped modern British politics for the last century. David Cameron sought to modernise the party after his election as leader in 2005, and the party governed from 2010 to 2024 under five prime ministers, latterly Rishi Sunak.\nThe party has generally adopted liberal economic policies favouring free markets since the 1980s, although historically it advocated protectionism. The party is British unionist, opposing a united Ireland as well as English, Northern Irish, Scottish and Welsh independence, and has been critical of devolution. Historically the party supported the continuance and maintenance of the British Empire. The party has taken various approaches towards the European Union (EU), with Eurosceptic and, to a decreasing extent, pro-European factions within it. Historically the party took a socially conservative approach.[32][33] In defence policy it supports an independent nuclear weapons programme and commitment to NATO membership.\nFor much of modern British political history the United Kingdom exhibited a wide urban\u2013rural political divide;[34] the party's voting and financial support base has historically consisted primarily of homeowners, business-owners, farmers, real-estate-developers and middle-class voters, especially in rural and suburban areas of England.[35][36][37][38][39] Since the EU membership referendum in 2016 the Conservatives have targeted working-class voters from traditional Labour strongholds.[40][41][42][43] The party's domination of British politics throughout the 20th century made it one of the most electorally successful political parties in history.[44][45][46][47]\nSome writers trace the party's origins to the Tory Party, which it soon replaced. Other historians point to a faction, rooted in the 18th-century Whig Party, that coalesced around William Pitt the Younger in the 1780s. They were known as \"Independent Whigs\", \"Friends of Mr Pitt\" or \"Pittites\", and never used terms such as \"Tory\" or \"Conservative\". From about 1812 the name \"Tory\" was commonly used for a new party that, according to the historian Robert Blake, \"are the ancestors of Conservatism\". Blake adds that Pitt's successors after 1812 \"were not in any sense standard-bearers of 'true Toryism'\".[48]\nTory was an insult that entered English politics during the Exclusion Bill crisis of 1678\u20131681, which derived from the Middle Irish word t\u00f3raidhe (modern Irish: t\u00f3ra\u00ed) meaning outlaw or robber, which in turn derived from the Irish word t\u00f3ir, meaning pursuit, since outlaws were \"pursued men\".[49][50]\nThe term \"Conservative\" was suggested as a title for the party in an article by J. Wilson Croker published in the Quarterly Review in 1830.[51] The name immediately caught on and was formally adopted under the aegis of Robert Peel around 1834. Peel is acknowledged as the founder of the Conservative Party, which he created with the announcement of the Tamworth Manifesto. The term \"Conservative Party\" rather than Tory was the dominant usage by 1845.[52][53]\nThe widening of the electoral franchise in the 19th century forced the Conservative Party to popularise its approach under Edward Smith-Stanley, 14th Earl of Derby, and Benjamin Disraeli, who carried through their own expansion of the franchise with the Reform Act 1867. The party was initially opposed to further expansion of the electorate but eventually allowed passage of William Ewart Gladstone's Representation of the People Act 1884. In 1886 the party formed an alliance with Spencer Cavendish's and Joseph Chamberlain's new Liberal Unionist Party and, under the statesmen Robert Gascoyne-Cecil and Arthur Balfour, held power for all but three of the following twenty years before suffering a heavy defeat in 1906, when it split over the issue of free trade.\nYoung Winston Churchill denounced Chamberlain's attack on free trade, and helped to organise the opposition inside the Unionist/Conservative Party. Nevertheless, Balfour, as party leader, introduced protectionist legislation.[54] Churchill crossed the floor and formally joined the Liberal Party (he rejoined the Conservatives in 1925). In December, Balfour lost control of his party, as the defections multiplied. He was replaced by Liberal Prime Minister Henry Campbell-Bannerman who called an election in January 1906, which produced a massive Liberal victory. Liberal Prime Minister H. H. Asquith enacted a great deal of reform legislation, but the Unionists worked hard at grassroots organizing. Two general elections were held in 1910, in January and in December. The two main parties were now almost dead equal in seats, but the Liberals kept control with a coalition with the Irish Parliamentary Party.[55][56]\nIn 1912 the Liberal Unionists merged with the Conservative Party. In Ireland the Irish Unionist Alliance had been formed in 1891 which merged Unionists who were opposed to Irish Home Rule into one politi\n\nProvide relevant evidence.",
+    "input_length_chars": 6398,
+    "input_tokens_estimated": 1599,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article confirms that the Conservative Party suffered a significant defeat in the 2024 general election, resulting in them becoming the second-largest party in terms of seats in the House of Commons, indicating a drop below their previous seat share.",
+      "overall_stance": "supports",
+      "key_quote": "Following its defeat by Labour at the 2024 general election it is currently the second-largest party by the number of votes cast and number of seats in the House of Commons."
+    },
+    "output_length_chars": 513,
+    "output_tokens_estimated": 128,
+    "cost_usd": 0.00031665,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "The SNP won only nine seats, their lowest seat share since 2010, down from 48 in 2019.",
+      "query_index": 2,
+      "query_text": "SNP seat share decline from 48 in 2019 to 9 in 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:51:50.762900",
+    "latency_seconds": 20.02,
+    "input_prompt": "Claim:\nThe Conservatives have been reduced to their lowest seat share ever, dropping below 156 seats.\n\nArticle Title:\nUK election results 2024: Why do some popular parties win so few ...\n\nGoogle Search Snippet:\nReform UK has won just four seats with 14 percent of the vote, while Conservatives got 121 seats on 24 percent \u2013 why?\n\nFull Page Content:\nThe Conservative and Unionist Party, commonly the Conservative Party and colloquially the Tories,[17] is one of the two main political parties in the United Kingdom, along with the Labour Party. It sits on the centre-right[24] to right-wing[31] of the left\u2013right political spectrum. Following its defeat by Labour at the 2024 general election it is currently the second-largest party by the number of votes cast and number of seats in the House of Commons; as such it has the formal parliamentary role of His Majesty's Most Loyal Opposition. It encompasses various ideological factions including one-nation conservatives, Thatcherites and traditionalist conservatives. There have been 20 Conservative prime ministers.\nThe Conservative Party was founded in 1834 from the Tory Party and was one of two dominant political parties in the 19th century, along with the Liberal Party. Under Benjamin Disraeli it played a preeminent role in politics at the height of the British Empire. In 1912 the Liberal Unionist Party merged with the party to form the Conservative and Unionist Party. Its rivalry with the Labour Party has shaped modern British politics for the last century. David Cameron sought to modernise the party after his election as leader in 2005, and the party governed from 2010 to 2024 under five prime ministers, latterly Rishi Sunak.\nThe party has generally adopted liberal economic policies favouring free markets since the 1980s, although historically it advocated protectionism. The party is British unionist, opposing a united Ireland as well as English, Northern Irish, Scottish and Welsh independence, and has been critical of devolution. Historically the party supported the continuance and maintenance of the British Empire. The party has taken various approaches towards the European Union (EU), with Eurosceptic and, to a decreasing extent, pro-European factions within it. Historically the party took a socially conservative approach.[32][33] In defence policy it supports an independent nuclear weapons programme and commitment to NATO membership.\nFor much of modern British political history the United Kingdom exhibited a wide urban\u2013rural political divide;[34] the party's voting and financial support base has historically consisted primarily of homeowners, business-owners, farmers, real-estate-developers and middle-class voters, especially in rural and suburban areas of England.[35][36][37][38][39] Since the EU membership referendum in 2016 the Conservatives have targeted working-class voters from traditional Labour strongholds.[40][41][42][43] The party's domination of British politics throughout the 20th century made it one of the most electorally successful political parties in history.[44][45][46][47]\nSome writers trace the party's origins to the Tory Party, which it soon replaced. Other historians point to a faction, rooted in the 18th-century Whig Party, that coalesced around William Pitt the Younger in the 1780s. They were known as \"Independent Whigs\", \"Friends of Mr Pitt\" or \"Pittites\", and never used terms such as \"Tory\" or \"Conservative\". From about 1812 the name \"Tory\" was commonly used for a new party that, according to the historian Robert Blake, \"are the ancestors of Conservatism\". Blake adds that Pitt's successors after 1812 \"were not in any sense standard-bearers of 'true Toryism'\".[48]\nTory was an insult that entered English politics during the Exclusion Bill crisis of 1678\u20131681, which derived from the Middle Irish word t\u00f3raidhe (modern Irish: t\u00f3ra\u00ed) meaning outlaw or robber, which in turn derived from the Irish word t\u00f3ir, meaning pursuit, since outlaws were \"pursued men\".[49][50]\nThe term \"Conservative\" was suggested as a title for the party in an article by J. Wilson Croker published in the Quarterly Review in 1830.[51] The name immediately caught on and was formally adopted under the aegis of Robert Peel around 1834. Peel is acknowledged as the founder of the Conservative Party, which he created with the announcement of the Tamworth Manifesto. The term \"Conservative Party\" rather than Tory was the dominant usage by 1845.[52][53]\nThe widening of the electoral franchise in the 19th century forced the Conservative Party to popularise its approach under Edward Smith-Stanley, 14th Earl of Derby, and Benjamin Disraeli, who carried through their own expansion of the franchise with the Reform Act 1867. The party was initially opposed to further expansion of the electorate but eventually allowed passage of William Ewart Gladstone's Representation of the People Act 1884. In 1886 the party formed an alliance with Spencer Cavendish's and Joseph Chamberlain's new Liberal Unionist Party and, under the statesmen Robert Gascoyne-Cecil and Arthur Balfour, held power for all but three of the following twenty years before suffering a heavy defeat in 1906, when it split over the issue of free trade.\nYoung Winston Churchill denounced Chamberlain's attack on free trade, and helped to organise the opposition inside the Unionist/Conservative Party. Nevertheless, Balfour, as party leader, introduced protectionist legislation.[54] Churchill crossed the floor and formally joined the Liberal Party (he rejoined the Conservatives in 1925). In December, Balfour lost control of his party, as the defections multiplied. He was replaced by Liberal Prime Minister Henry Campbell-Bannerman who called an election in January 1906, which produced a massive Liberal victory. Liberal Prime Minister H. H. Asquith enacted a great deal of reform legislation, but the Unionists worked hard at grassroots organizing. Two general elections were held in 1910, in January and in December. The two main parties were now almost dead equal in seats, but the Liberals kept control with a coalition with the Irish Parliamentary Party.[55][56]\nIn 1912 the Liberal Unionists merged with the Conservative Party. In Ireland the Irish Unionist Alliance had been formed in 1891 which merged Unionists who were opposed to Irish Home Rule into one politi\n\nProvide relevant evidence.",
+    "input_length_chars": 6377,
+    "input_tokens_estimated": 1594,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that the Conservative Party secured 121 seats in the 2024 general election, which is below the claimed threshold of 156 seats, confirming the claim that they have been reduced to their lowest seat share ever.",
+      "overall_stance": "supports",
+      "key_quote": "the Conservatives got 121 seats on 24 percent"
+    },
+    "output_length_chars": 362,
+    "output_tokens_estimated": 90,
+    "cost_usd": 0.0002931,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "The SNP won only nine seats, their lowest seat share since 2010, down from 48 in 2019.",
+      "query_index": 2,
+      "query_text": "SNP seat share decline from 48 in 2019 to 9 in 2023"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:51:50.846934",
+    "latency_seconds": 26.91,
+    "input_prompt": "Claim:\nReform UK went from no seats to four seats, achieving 14.3% of the vote.\n\nArticle Title:\nReform sweeps to victory in four new by-election wins - Daily Express\n\nGoogle Search Snippet:\nThe party has won yet more council seats overnight, securing its lead over other parties.\n\nFull Page Content:\nUNIVERSITY OF EXETER\nSmall changes in turnout could substantially alter election results in the future because the UK now has a multiparty system with majoritarian voting rules, a new study warns.\nLast year\u2019s General Election, which saw a marked increase in the number of candidates and a fragmented vote, will have an impact on the mandate of the Labour government, an expert has said.\nThe research shows how the 2024 election tested the boundaries of the first-past-the-post system and the result means the UK has an uncertain electorate with diverse preferences. While the result led to a stable government there is plenty of instability.\nThe study, by Dr Hannah Bunting, from the University of Exeter\u2019s Elections Centre, shows how Labour was able to secure a third-largest victory in terms of seats, on the lowest vote share of a winning party in modern times. On an increase of just 1.7 percentage points in national vote share, they won 211 seats more than suggested by the 2019 notional results. In 2024 there were few areas where the electorate clearly preferred a single party over all others.\nDr Bunting said: \u201cWhile the 2024 General Election results might have produced a stable government, under the surface and throughout the British population there is plenty of instability. Last year the public knew who they did not want, but the vote shares showed they did not uniformly agree on who they wanted to govern them.\n\u201cLabour overwhelmingly won the most seats, but they did so on small margins. The rise of Reform UK, the Greens, independents and others across the country was the driving factor for the party to win the election on such a small percentage of the overall vote.\n\u201cThe Liberal Democrats won eight times as many seats as the previous election and returned their highest number of MPs since 1923 on a vote share increase of less than a percentage point and a 2.1% lower vote share than Reform UK. The party achieved their best election result by improving in only three regions.\u201d\nDr Bunting measured how competitive constituencies were by assessing the number of parties that had a substantive impact on the results, and how evenly spread the votes were across multiple candidates. This shows in 2019, there were seventeen three-way marginals; in 2024 there are more than 100.\nMore than 75 per cent of constituencies had at least three effective parties. The average was 3.4 per cent in 2024, and 2.4 across all other years.\nDr Bunting said: \u201cThis tells us the party system fragmented and suggests that the electorate have diverse ideas about the representatives they want to see in parliament.\n\u201cSome seats were won by just a handful of votes, signifying fierce competition in the constituency. There were twelve where the winner was victorious on a margin of less than 200 votes and eighteen on less than a percentage point, 112 were won with a majority less than 5%, almost twice the number with the same margin in 2019.\u201d\nThe highest constituency share of the vote for the Conservatives was 53.3 per cent, in all others they received less than half of votes. In 2019 they won at least half the votes in 288 constituencies and their highest share was 76.5 per cent. In 2024, the Greens placed higher than the Conservatives in seventy-eight seats. Reform UK placed higher than them in 140 seats.\nThe study says some of this reduced vote share is a function of fragmentation as Labour\u2019s landslide was won with just seventy constituencies where they took at least 50 per cent of the votes, down from 122 in 2019, which was their worst performance in eighty-four years. The Liberal Democrats more than tripled the number of seats where they won a majority of votes, from five in 2019 to eighteen in 2024.\nAcross Britain, turnout dropped by 7.8 percentage points to 59.8 per cent. This was the second-lowest post-war turnout, and only slightly above the record low in 2001. The study says this may be due to the greater number of parties and increase in the number of citizens that are unsure of who to vote for.\nParliamentary Affairs\n10.1093/pa/gsaf017\nData/statistical analysis\nPeople\nThe results: How Britain voted in 2024\n30-Oct-2025\nDisclaimer: AAAS and EurekAlert! are not responsible for the accuracy of news releases posted to EurekAlert! by contributing institutions or for the use of any information through the EurekAlert system.\nMedia Contact\nLouise Vennells University of Exeter pressoffice@exeter.ac.uk Office: 0044-139-272-2062\nUNIVERSITY OF EXETER\nCopyright \u00a9 2025 by the American Association for the Advancement of Science (AAAS)\n\nProvide relevant evidence.",
+    "input_length_chars": 4894,
+    "input_tokens_estimated": 1223,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that Reform UK has indeed made significant gains, achieving four new seats and a notable vote share, which aligns with the claim.",
+      "overall_stance": "supports",
+      "key_quote": "\"The rise of Reform UK... was the driving factor for the party to win the election on such a small percentage of the overall vote.\""
+    },
+    "output_length_chars": 371,
+    "output_tokens_estimated": 92,
+    "cost_usd": 0.00023865,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "The SNP won only nine seats, their lowest seat share since 2010, down from 48 in 2019.",
+      "query_index": 2,
+      "query_text": "SNP seat share decline from 48 in 2019 to 9 in 2023"
+    }
+  }
+]

@@ -1,0 +1,404 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:06:42.305308",
+    "latency_seconds": 8.34,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nhi everyone this is monty i've been doing some investigation into the floor nation of our uh water here in lebanon oregon and i got a letter from the harvard university they posted in the federal government's journal confirms that fluoride lowers iqs and that was on july 27 2012. you can you can most likely find it in uh just by typing in but you can see it's a major harvard university study that confirms that the fluorination of our city water lowers our children's iq now you would think that that would cause writing in the streets demanding that we would have fluoride removed from our water but ironically it doesn't another study this one done by harvard university on july 26th that says it was published in the national institute of health journal finds that fluoride lowers children's iq that's the florida nation of your city water and this is the article right here again it's a harvard university study now both of those were done in this year and you would think that as soon as the american people found out for sure through harvard university after they've done extensive studies that the fluoridation of our water supply causes our children redox retardation making our children's iqs lower causing problems and and families and health you think that people would uh be freaking out and getting the flu right out you think we wouldn't even have to ask our governments and our townships to remove the fluoride fluoride from our water they don't do it you have to fight tooth and now and chances are they're sterile aren't going to do it but if you're not worried about lowering iqs you know everybody says oh my kid's stupid you know we're used to hearing it but here's another release published in april 5th 2006 another one from harvard university studies shows a link between fluorinated water and bone cancer in boys so you know it just goes on and on it's just link after link all of these studies from harvard university uh not to mention the 3600 000 other studies that have been done by numerous people that just plagues this whole fluoridation of water and that people aren't doing anything about it they're not stopping it why is this being put in our water when it is causing the iqs of our children to be lowered causing uh all kinds of problems now here's a great thing me and my girl went to see her obgyn the other day and she had some work done on her while i was in the office i was talking to this specialist with women and children this lady is a doctor who specializes in child rearing and and women issues and stuff and i asked her what she knew about fluoride and she said that she strongly recommends that babies be fed special water that has been specially more foreign more fluorination put in the baby's water for the use of their uh for for their feedings and i asked her if she looked into it she said she felt some concerns about the recent stories of uh you know how fluoride is linked in in brain damage and she she said she hadn't really looked into it too much and i said well i just got you know i told her the story i just got this information on july 26 27th that uh from harvard saying that they definitely have confirmed it does lower uh children's iq and she said for years she'd been telling mothers of newborn babies to buy fluorinated water to feed their babies to put in their babies bottles so that their baby's teeth would be better and stronger well here's an interesting note the nurse that was helping this doctor says hey wait a minute uh i come from austin texas and they have natural fluorination of the water there where the water is over fluorinated and everybody in the town all the town of 300 000 people have white pitted stuff on their teeth and uh she said and everybody in the town acts literally like a bunch of dumbasses those are her words not mine she said that it's just a bunch of hooligans and everybody's kind of hillbilly mentality real low iq individuals and of course their waters naturally overflowed fluorinated it's called uh fluorination opmosis or something like that when you have too much fluorine in your body you get uh white spots on your teeth now here's just a thought if you know anybody with white spots on their teeth ask them a couple of simple questions and see if they're a dumbass because from what i hear from this nurse the people over in austin texas or somewhere around that uh all live in a town where the water has too much fluorine in it naturally and they're all a bunch of dumbasses uh hicks you know she this is her words not mine i i don't know i live in lebanon oregon and uh at any rate get sidetracked here there's all these studies out there saying that uh people who generally are angry and have gang-related problems and are fighting and are criminals usually have lower iqs people who are afraid when you become afraid your iq automatically goes down you lose a couple of points when you get really scared also when you get really angry you lose a couple of points you know it's briefly that's why people who get angry do stupid things what happens when you feed a baby from birth fluorinated water and they drink it their whole life haven't you noticed lately that our kids in america or just slightly not normal i have and i'm only 46 years old and i've noticed a huge decline in intelligence in our kids and i believe the world steady on children's iqs america's kids come in way under the mark like a hundred in the world our children that are being fed by by our country fluoride have the lowest iqs in in the world i mean there's a few countries that are lower in ours but i'm not even really sure there's anybody living there anyway these are just my views and they're backed with you know facts and i did talk to an ogbyn who said that she was recommending that babies drink specially high fluorinated water babies teeth fall out and they get new ones wouldn't it make more sense to wait until they were older to drink fluorinated water however fluoride isn't something that's brought in through the body system through digestion it's a topical thing if you go to a dentist the dentist puts it in a cup and sticks it on your teeth it's because it's absorbed through the teeth it's not absorbed through the body by drinking it and what what parts of it is is absorbed through it would require large amounts for it to do anything your teeth uh hence austin texas and then getting the white spots on their teeth look this stuff up it's on the internet i would like everybody to go and stop the fluorination of water and i think that we need to investigate how this stuff got put in and what is behind it now some people say well monty you're just a conspiracy theorist well that may very well be true but at least if i'm a conspiracy theorist then these people over in the harvard university need to be tarred and feathered because they're saying the same thing i am fluoride makes our children a bunch of retards anyways if you have any thoughts about this feel free to uh drop me a message also you know share this information and hit like on there and also uh subscribe thank you have a good day",
+    "input_length_chars": 7187,
+    "input_tokens_estimated": 1796,
+    "output": {
+      "claims": [
+        {
+          "text": "Fluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.85,
+          "context": "Harvard study on fluoride's effects on IQ, 2012."
+        },
+        {
+          "text": "Another Harvard study published on July 26, 2012, finds fluoride lowers children's IQ.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.85,
+          "context": "Harvard study on fluoride's effects on IQ, 2012."
+        },
+        {
+          "text": "A Harvard study published on April 5, 2006, shows a link between fluorinated water and bone cancer in boys.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.85,
+          "context": "Harvard study linking fluoride to bone cancer, 2006."
+        },
+        {
+          "text": "Fluoridation of water is causing problems and lowering children's IQs.",
+          "confidence": 0.8,
+          "category": "policy",
+          "importance": 0.7,
+          "context": "Claim about the effects of water fluoridation on children's IQ."
+        },
+        {
+          "text": "The town of Austin, Texas, has natural fluoridation of water, leading to dental issues and low IQs.",
+          "confidence": 0.8,
+          "category": "geographical",
+          "importance": 0.6,
+          "context": "Discussion about Austin, Texas, and its water fluoridation."
+        },
+        {
+          "text": "Children in America have lower IQs compared to other countries due to fluoride consumption.",
+          "confidence": 0.7,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Claim about American children's IQs in relation to fluoride."
+        }
+      ],
+      "total_count": 6
+    },
+    "output_length_chars": 1904,
+    "output_tokens_estimated": 476,
+    "cost_usd": 0.000555
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:06:48.634692",
+    "latency_seconds": 2.81,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Fluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.\nContext: Harvard study on fluoride's effects on IQ, 2012.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 308,
+    "input_tokens_estimated": 77,
+    "output": {
+      "original_claim": "Fluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.",
+      "queries": [
+        {
+          "query": "Fluoride lowers IQs Harvard study July 27 2012",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Harvard study fluoride IQ effects 2012",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 311,
+    "output_tokens_estimated": 77,
+    "cost_usd": 5.775e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Fluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012."
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:07:04.255756",
+    "latency_seconds": 2.54,
+    "input_prompt": "Claim:\nFluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.\n\nArticle Title:\n[PDF] When considering the risks and benefits of fluoride exposure, the ...\n\nFull Page Content:\nOn average, children with higher fluoride exposure showed poorer performance on IQ tests.\n\nProvide relevant evidence.",
+    "input_length_chars": 314,
+    "input_tokens_estimated": 78,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that children with higher fluoride exposure tend to perform worse on IQ tests, which supports the claim that fluoride lowers IQs.",
+      "overall_stance": "supports",
+      "key_quote": "On average, children with higher fluoride exposure showed poorer performance on IQ tests."
+    },
+    "output_length_chars": 327,
+    "output_tokens_estimated": 81,
+    "cost_usd": 6.03e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Fluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.",
+      "query_index": 2,
+      "query_text": "Harvard study fluoride IQ effects 2012"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:07:04.832745",
+    "latency_seconds": 3.12,
+    "input_prompt": "Claim:\nFluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.\n\nArticle Title:\nDebunking Unreliable Claims: The \u201cHarvard study\u201d - I Like My Teeth\n\nFull Page Content:\nThese studies, nearly all of them from China, explored whether there were associations between fluoride and children's IQ scores.\n\nProvide relevant evidence.",
+    "input_length_chars": 345,
+    "input_tokens_estimated": 86,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses studies that explored the association between fluoride and children's IQ scores, but it does not confirm that fluoride lowers IQs, nor does it specifically validate the claim about the Harvard study.",
+      "overall_stance": "mixed",
+      "key_quote": "These studies, nearly all of them from China, explored whether there were associations between fluoride and children's IQ scores."
+    },
+    "output_length_chars": 433,
+    "output_tokens_estimated": 108,
+    "cost_usd": 7.77e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Fluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.",
+      "query_index": 2,
+      "query_text": "Harvard study fluoride IQ effects 2012"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:07:04.896243",
+    "latency_seconds": 3.19,
+    "input_prompt": "Claim:\nFluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.\n\nArticle Title:\n[PDF] Fluoride and IQ - American Dental Association\n\nFull Page Content:\nThe inverse association between fluoride exposure and IQ was particularly strong in the studies at high risk of bias, while no adverse effect ...\n\nProvide relevant evidence.",
+    "input_length_chars": 346,
+    "input_tokens_estimated": 86,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that there is an inverse association between fluoride exposure and IQ, particularly in studies with a high risk of bias, suggesting a potential negative impact of fluoride on IQ.",
+      "overall_stance": "supports",
+      "key_quote": "The inverse association between fluoride exposure and IQ was particularly strong in the studies at high risk of bias."
+    },
+    "output_length_chars": 404,
+    "output_tokens_estimated": 101,
+    "cost_usd": 7.35e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Fluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.",
+      "query_index": 2,
+      "query_text": "Harvard study fluoride IQ effects 2012"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:07:05.223694",
+    "latency_seconds": 3.51,
+    "input_prompt": "Claim:\nFluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.\n\nArticle Title:\nImpact of fluoride on neurological development in children\n\nFull Page Content:\nThus, children in high-fluoride areas had significantly lower IQ scores than those who lived in low-fluoride areas. ... Follow-up Fluoride Study ...\n\nProvide relevant evidence.",
+    "input_length_chars": 356,
+    "input_tokens_estimated": 89,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that children in high-fluoride areas had significantly lower IQ scores compared to those in low-fluoride areas, supporting the claim that fluoride can lower IQs.",
+      "overall_stance": "supports",
+      "key_quote": "children in high-fluoride areas had significantly lower IQ scores than those who lived in low-fluoride areas."
+    },
+    "output_length_chars": 379,
+    "output_tokens_estimated": 94,
+    "cost_usd": 6.975e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Fluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.",
+      "query_index": 2,
+      "query_text": "Harvard study fluoride IQ effects 2012"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:07:05.466842",
+    "latency_seconds": 3.76,
+    "input_prompt": "Claim:\nFluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.\n\nArticle Title:\nDevelopmental fluoride neurotoxicity: a systematic review and meta ...\n\nFull Page Content:\nThus, children in high-fluoride areas had significantly lower IQ scores than those who lived in low-fluoride areas.\n\nProvide relevant evidence.",
+    "input_length_chars": 335,
+    "input_tokens_estimated": 83,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that children in high-fluoride areas had significantly lower IQ scores compared to those in low-fluoride areas, supporting the claim that fluoride can lower IQs.",
+      "overall_stance": "supports",
+      "key_quote": "children in high-fluoride areas had significantly lower IQ scores than those who lived in low-fluoride areas."
+    },
+    "output_length_chars": 379,
+    "output_tokens_estimated": 94,
+    "cost_usd": 6.885e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Fluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.",
+      "query_index": 2,
+      "query_text": "Harvard study fluoride IQ effects 2012"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:07:05.478978",
+    "latency_seconds": 3.76,
+    "input_prompt": "Claim:\nFluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.\n\nArticle Title:\nEffects of High-Water Fluoride Exposure on IQ Levels in School-Age ...\n\nFull Page Content:\nThe HF group exhibited lower average IQ scores than the CONTROL group, with a statistically significant difference among the groups (P < 0.001). The proportion ...\n\nProvide relevant evidence.",
+    "input_length_chars": 383,
+    "input_tokens_estimated": 95,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that children exposed to high levels of fluoride had lower average IQ scores compared to a control group, supporting the claim that fluoride exposure is linked to reduced IQ levels.",
+      "overall_stance": "supports",
+      "key_quote": "The HF group exhibited lower average IQ scores than the CONTROL group, with a statistically significant difference among the groups (P < 0.001)."
+    },
+    "output_length_chars": 434,
+    "output_tokens_estimated": 108,
+    "cost_usd": 7.905e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Fluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.",
+      "query_index": 2,
+      "query_text": "Harvard study fluoride IQ effects 2012"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:07:07.845633",
+    "latency_seconds": 3.55,
+    "input_prompt": "Claim:\nFluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.\n\nArticle Title:\nImpact of fluoride on neurological development in children\n\nGoogle Search Snippet:\nThus, children in high-fluoride areas had significantly lower IQ scores than those who lived in low-fluoride areas. The children studied were up ...\n\nFull Page Content:\nOn September 19, Environmental Health Perspectives, a highly-respected journal, published a study linking higher fluoride levels in pregnant women to lower IQ\u2019s in their children.\nThe decrease was significant. Each 0.5 part per million (ppm) increase in a pregnant woman\u2019s urine fluoride levels reduced her child\u2019s IQ by 2.5 - 3 points. A child of a mother drinking 1 ppm of fluoridated water, close to the U.S standard of 0.7 ppm, would be expected to have a drop of 5 to 6 IQ points compared to a child of a mother drinking water with close to no fluoride in it.\nThis prospective study was funded by the U.S. National Institutes of Health and led by researchers at the University of Toronto School of Public Health.\nIt was very strong, following pregnant women in Mexico and their children for 12 years, and measuring individual urine levels, a more precise method to determine fluoride exposure than drinking water concentrations. The results were undiminished even after adjusting for a wide array of confounding factors, including lead, smoking, alcohol, socio-economic status and birth weight.\nThe pro-fluoridation lobby, led by the American Dental Association, quickly denied the significance of the study, arguing \u201cthe findings are not applicable to the U.S.\u201d\nMexico, like most nations, doesn\u2019t fluoridate its water. The ADA\u2019s stance stems from the fact that the women were mainly getting their fluoride from consuming fluoridated salt or varying natural levels of fluoride in the water. (The ADA ignores the fact that fluoride\u2019s effects are the same once it\u2019s inside the body, no matter the source.)\nMost others felt differently. Lead author Dr. Howard Hu asserted \u201cThis is a very rigorous epidemiology study. You just can\u2019t deny it. It\u2019s directly related to whether fluoride is a risk for the neurodevelopment of children. So, to say it has no relevance to the folks in the U.S. seems disingenuous.\u201d\nDr. Leonardo Trasande, a pediatrician unaffiliated with the study at New York University, agreed, saying that \u201cThis is a very well-conducted study, and it raises serious concerns about fluoride supplementation in water.\u201d\nAnd according to CNN, Dr. Linda Birnbaum, director of the National Institute of Environmental Health Sciences, \u201cpointed out that it raised significant questions.\u201d\nAlthough this study is new, it has long been recognized that fluoride causes brain damage. The extent of harm is based on the dose, when and how often the exposure occurs, and which individuals are at greater risk.\nIn 2006, the National Academy of Science\u2019s National Research Committee (NRC) published Fluoride in Drinking Water, a review of over 1,000 studies. It\u2019s considered the most well-balanced, comprehensive, authoritative study ever done on fluoride\u2019s toxicity. The 12-member scientific committee leading the effort, including three who favored fluoridation, stated unequivocally that \u201cIt is apparent that fluorides have the ability to interfere with the functions of the brain and the body by direct and indirect means.\u201d (p. 222)\nIn 2012, a Harvard-funded meta-analysis found that children in China exposed to higher levels of fluoride tested lower for IQ in 26 out of 27 studies. The average difference was significant - 7 IQ points lower. The quality of the studies varied and dealt with higher exposures of fluoride than in the U.S. However, several were methodologically strong, controlling for potential confounders such as lead and arsenic, and had doses close to those typically found here.\nIn 2014, in the British medical journal The Lancet, two world-renowned scientists, Philippe Grandjean, MD and Philip Landrigan, MD, added fluoride to the list of 11 chemicals identified as developmental neurotoxins \u2013 harming the brains of children. Grandjean, a co-author of the 2012 Harvard study, commented at the time that \u201cFluoride seems to fit in with lead, mercury and other poisons . . .\u201d\nLast year, the Fluoride Action Network, American Academy of Environmental Medicine, International Academy of Oral Medicine and Toxicology, Food and Water Watch, Organic Consumers Association and several others, including individual mothers, petitioned the EPA to ban fluoridation chemicals based on their neurotoxicity.\nThe petition cited 196 peer-reviewed studies \u2013 human, animal, cellular and reviews - published over the last ten years. Virtually all the studies - 189 - found harm, such as lowering IQ or increasing behavioral problems, several at levels consumed by Americans, and more at minimally higher levels.\nThe studies with slightly higher levels are quite relevant to common exposures in the U.S. Genetics, environmental and socio-economic factors cause significant variability among humans in their resistance to disease. It\u2019s standard toxicological practice to divide the lowest level of harm detected by at least 10. Many studies show there is typically at least a 10-fold variation in sensitivity to any toxin among humans.\nThe NRC 2006 review determined that water fluoride levels of 4.0 ppm are definitely harmful to human health, so dividing by 10 wouldn\u2019t allow more than 0.4 ppm. Yet the CDC recommends 0.7 ppm, nearly double the level, ignoring this established scientific practice.\nIn February, the EPA denied the petition, saying there wasn\u2019t conclusive data that fluoride was neurotoxic, in spite of the massive evidence to the contrary. The organizations have sued the agency and the case is now in federal court.\nHu and his fellow authors don\u2019t say, nor do I, that this one study provides conclusive proof that fluoridating water lowers IQ\u2019s in children. But there\u2019s no denying 30 years of hundreds of studies pointing squarely in that direction and the U. of Toronto results add even more credibility.\nMoreover, there are very few studies finding that fluoride doesn\u2019t lower IQ. The New Zealand study most often cited used an unsuitable study group with little contrast in total fluoride exposure. Many kids with unfluoridated water were ingesting fluoride tablets, making \n\nProvide relevant evidence.",
+    "input_length_chars": 6381,
+    "input_tokens_estimated": 1595,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that fluoride exposure is linked to lower IQs in children, supported by a Harvard-funded meta-analysis and a recent study showing significant IQ drops associated with higher fluoride levels in pregnant women. This aligns with the claim that fluoride lowers IQs, as confirmed by studies including the one published in 2012.",
+      "overall_stance": "supports",
+      "key_quote": "In 2012, a Harvard-funded meta-analysis found that children in China exposed to higher levels of fluoride tested lower for IQ in 26 out of 27 studies."
+    },
+    "output_length_chars": 581,
+    "output_tokens_estimated": 145,
+    "cost_usd": 0.00032625,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Fluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.",
+      "query_index": 2,
+      "query_text": "Harvard study fluoride IQ effects 2012"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:07:07.911838",
+    "latency_seconds": 3.62,
+    "input_prompt": "Claim:\nFluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.\n\nArticle Title:\nDevelopmental fluoride neurotoxicity: a systematic review and meta ...\n\nGoogle Search Snippet:\nThus, children in high-fluoride areas had significantly lower IQ scores than those who lived in low-fluoride areas. Subgroup and sensitivity analyses also ...\n\nFull Page Content:\nOn September 19, Environmental Health Perspectives, a highly-respected journal, published a study linking higher fluoride levels in pregnant women to lower IQ\u2019s in their children.\nThe decrease was significant. Each 0.5 part per million (ppm) increase in a pregnant woman\u2019s urine fluoride levels reduced her child\u2019s IQ by 2.5 - 3 points. A child of a mother drinking 1 ppm of fluoridated water, close to the U.S standard of 0.7 ppm, would be expected to have a drop of 5 to 6 IQ points compared to a child of a mother drinking water with close to no fluoride in it.\nThis prospective study was funded by the U.S. National Institutes of Health and led by researchers at the University of Toronto School of Public Health.\nIt was very strong, following pregnant women in Mexico and their children for 12 years, and measuring individual urine levels, a more precise method to determine fluoride exposure than drinking water concentrations. The results were undiminished even after adjusting for a wide array of confounding factors, including lead, smoking, alcohol, socio-economic status and birth weight.\nThe pro-fluoridation lobby, led by the American Dental Association, quickly denied the significance of the study, arguing \u201cthe findings are not applicable to the U.S.\u201d\nMexico, like most nations, doesn\u2019t fluoridate its water. The ADA\u2019s stance stems from the fact that the women were mainly getting their fluoride from consuming fluoridated salt or varying natural levels of fluoride in the water. (The ADA ignores the fact that fluoride\u2019s effects are the same once it\u2019s inside the body, no matter the source.)\nMost others felt differently. Lead author Dr. Howard Hu asserted \u201cThis is a very rigorous epidemiology study. You just can\u2019t deny it. It\u2019s directly related to whether fluoride is a risk for the neurodevelopment of children. So, to say it has no relevance to the folks in the U.S. seems disingenuous.\u201d\nDr. Leonardo Trasande, a pediatrician unaffiliated with the study at New York University, agreed, saying that \u201cThis is a very well-conducted study, and it raises serious concerns about fluoride supplementation in water.\u201d\nAnd according to CNN, Dr. Linda Birnbaum, director of the National Institute of Environmental Health Sciences, \u201cpointed out that it raised significant questions.\u201d\nAlthough this study is new, it has long been recognized that fluoride causes brain damage. The extent of harm is based on the dose, when and how often the exposure occurs, and which individuals are at greater risk.\nIn 2006, the National Academy of Science\u2019s National Research Committee (NRC) published Fluoride in Drinking Water, a review of over 1,000 studies. It\u2019s considered the most well-balanced, comprehensive, authoritative study ever done on fluoride\u2019s toxicity. The 12-member scientific committee leading the effort, including three who favored fluoridation, stated unequivocally that \u201cIt is apparent that fluorides have the ability to interfere with the functions of the brain and the body by direct and indirect means.\u201d (p. 222)\nIn 2012, a Harvard-funded meta-analysis found that children in China exposed to higher levels of fluoride tested lower for IQ in 26 out of 27 studies. The average difference was significant - 7 IQ points lower. The quality of the studies varied and dealt with higher exposures of fluoride than in the U.S. However, several were methodologically strong, controlling for potential confounders such as lead and arsenic, and had doses close to those typically found here.\nIn 2014, in the British medical journal The Lancet, two world-renowned scientists, Philippe Grandjean, MD and Philip Landrigan, MD, added fluoride to the list of 11 chemicals identified as developmental neurotoxins \u2013 harming the brains of children. Grandjean, a co-author of the 2012 Harvard study, commented at the time that \u201cFluoride seems to fit in with lead, mercury and other poisons . . .\u201d\nLast year, the Fluoride Action Network, American Academy of Environmental Medicine, International Academy of Oral Medicine and Toxicology, Food and Water Watch, Organic Consumers Association and several others, including individual mothers, petitioned the EPA to ban fluoridation chemicals based on their neurotoxicity.\nThe petition cited 196 peer-reviewed studies \u2013 human, animal, cellular and reviews - published over the last ten years. Virtually all the studies - 189 - found harm, such as lowering IQ or increasing behavioral problems, several at levels consumed by Americans, and more at minimally higher levels.\nThe studies with slightly higher levels are quite relevant to common exposures in the U.S. Genetics, environmental and socio-economic factors cause significant variability among humans in their resistance to disease. It\u2019s standard toxicological practice to divide the lowest level of harm detected by at least 10. Many studies show there is typically at least a 10-fold variation in sensitivity to any toxin among humans.\nThe NRC 2006 review determined that water fluoride levels of 4.0 ppm are definitely harmful to human health, so dividing by 10 wouldn\u2019t allow more than 0.4 ppm. Yet the CDC recommends 0.7 ppm, nearly double the level, ignoring this established scientific practice.\nIn February, the EPA denied the petition, saying there wasn\u2019t conclusive data that fluoride was neurotoxic, in spite of the massive evidence to the contrary. The organizations have sued the agency and the case is now in federal court.\nHu and his fellow authors don\u2019t say, nor do I, that this one study provides conclusive proof that fluoridating water lowers IQ\u2019s in children. But there\u2019s no denying 30 years of hundreds of studies pointing squarely in that direction and the U. of Toronto results add even more credibility.\nMoreover, there are very few studies finding that fluoride doesn\u2019t lower IQ. The New Zealand study most often cited used an unsuitable study group with little contrast in total fluoride exposure. Many kids with unfluoridated water were ingesting fluoride tablets, making \n\nProvide relevant evidence.",
+    "input_length_chars": 6403,
+    "input_tokens_estimated": 1600,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence presented in the article supports the claim that fluoride lowers IQs, citing a Harvard-funded meta-analysis that found children in China exposed to higher levels of fluoride had significantly lower IQ scores. Additionally, a recent study linked higher fluoride levels in pregnant women to lower IQs in their children, reinforcing the association between fluoride exposure and cognitive impairment.",
+      "overall_stance": "supports",
+      "key_quote": "In 2012, a Harvard-funded meta-analysis found that children in China exposed to higher levels of fluoride tested lower for IQ in 26 out of 27 studies. The average difference was significant - 7 IQ points lower."
+    },
+    "output_length_chars": 706,
+    "output_tokens_estimated": 176,
+    "cost_usd": 0.0003456,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Fluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.",
+      "query_index": 2,
+      "query_text": "Harvard study fluoride IQ effects 2012"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:07:07.930543",
+    "latency_seconds": 3.64,
+    "input_prompt": "Claim:\nFluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.\n\nArticle Title:\n[PDF] When considering the risks and benefits of fluoride exposure, the ...\n\nGoogle Search Snippet:\nOn average, children with higher fluoride exposure showed poorer performance on IQ tests. Fluoride released into the ground water in China in some cases greatly.\n\nFull Page Content:\nOn September 19, Environmental Health Perspectives, a highly-respected journal, published a study linking higher fluoride levels in pregnant women to lower IQ\u2019s in their children.\nThe decrease was significant. Each 0.5 part per million (ppm) increase in a pregnant woman\u2019s urine fluoride levels reduced her child\u2019s IQ by 2.5 - 3 points. A child of a mother drinking 1 ppm of fluoridated water, close to the U.S standard of 0.7 ppm, would be expected to have a drop of 5 to 6 IQ points compared to a child of a mother drinking water with close to no fluoride in it.\nThis prospective study was funded by the U.S. National Institutes of Health and led by researchers at the University of Toronto School of Public Health.\nIt was very strong, following pregnant women in Mexico and their children for 12 years, and measuring individual urine levels, a more precise method to determine fluoride exposure than drinking water concentrations. The results were undiminished even after adjusting for a wide array of confounding factors, including lead, smoking, alcohol, socio-economic status and birth weight.\nThe pro-fluoridation lobby, led by the American Dental Association, quickly denied the significance of the study, arguing \u201cthe findings are not applicable to the U.S.\u201d\nMexico, like most nations, doesn\u2019t fluoridate its water. The ADA\u2019s stance stems from the fact that the women were mainly getting their fluoride from consuming fluoridated salt or varying natural levels of fluoride in the water. (The ADA ignores the fact that fluoride\u2019s effects are the same once it\u2019s inside the body, no matter the source.)\nMost others felt differently. Lead author Dr. Howard Hu asserted \u201cThis is a very rigorous epidemiology study. You just can\u2019t deny it. It\u2019s directly related to whether fluoride is a risk for the neurodevelopment of children. So, to say it has no relevance to the folks in the U.S. seems disingenuous.\u201d\nDr. Leonardo Trasande, a pediatrician unaffiliated with the study at New York University, agreed, saying that \u201cThis is a very well-conducted study, and it raises serious concerns about fluoride supplementation in water.\u201d\nAnd according to CNN, Dr. Linda Birnbaum, director of the National Institute of Environmental Health Sciences, \u201cpointed out that it raised significant questions.\u201d\nAlthough this study is new, it has long been recognized that fluoride causes brain damage. The extent of harm is based on the dose, when and how often the exposure occurs, and which individuals are at greater risk.\nIn 2006, the National Academy of Science\u2019s National Research Committee (NRC) published Fluoride in Drinking Water, a review of over 1,000 studies. It\u2019s considered the most well-balanced, comprehensive, authoritative study ever done on fluoride\u2019s toxicity. The 12-member scientific committee leading the effort, including three who favored fluoridation, stated unequivocally that \u201cIt is apparent that fluorides have the ability to interfere with the functions of the brain and the body by direct and indirect means.\u201d (p. 222)\nIn 2012, a Harvard-funded meta-analysis found that children in China exposed to higher levels of fluoride tested lower for IQ in 26 out of 27 studies. The average difference was significant - 7 IQ points lower. The quality of the studies varied and dealt with higher exposures of fluoride than in the U.S. However, several were methodologically strong, controlling for potential confounders such as lead and arsenic, and had doses close to those typically found here.\nIn 2014, in the British medical journal The Lancet, two world-renowned scientists, Philippe Grandjean, MD and Philip Landrigan, MD, added fluoride to the list of 11 chemicals identified as developmental neurotoxins \u2013 harming the brains of children. Grandjean, a co-author of the 2012 Harvard study, commented at the time that \u201cFluoride seems to fit in with lead, mercury and other poisons . . .\u201d\nLast year, the Fluoride Action Network, American Academy of Environmental Medicine, International Academy of Oral Medicine and Toxicology, Food and Water Watch, Organic Consumers Association and several others, including individual mothers, petitioned the EPA to ban fluoridation chemicals based on their neurotoxicity.\nThe petition cited 196 peer-reviewed studies \u2013 human, animal, cellular and reviews - published over the last ten years. Virtually all the studies - 189 - found harm, such as lowering IQ or increasing behavioral problems, several at levels consumed by Americans, and more at minimally higher levels.\nThe studies with slightly higher levels are quite relevant to common exposures in the U.S. Genetics, environmental and socio-economic factors cause significant variability among humans in their resistance to disease. It\u2019s standard toxicological practice to divide the lowest level of harm detected by at least 10. Many studies show there is typically at least a 10-fold variation in sensitivity to any toxin among humans.\nThe NRC 2006 review determined that water fluoride levels of 4.0 ppm are definitely harmful to human health, so dividing by 10 wouldn\u2019t allow more than 0.4 ppm. Yet the CDC recommends 0.7 ppm, nearly double the level, ignoring this established scientific practice.\nIn February, the EPA denied the petition, saying there wasn\u2019t conclusive data that fluoride was neurotoxic, in spite of the massive evidence to the contrary. The organizations have sued the agency and the case is now in federal court.\nHu and his fellow authors don\u2019t say, nor do I, that this one study provides conclusive proof that fluoridating water lowers IQ\u2019s in children. But there\u2019s no denying 30 years of hundreds of studies pointing squarely in that direction and the U. of Toronto results add even more credibility.\nMoreover, there are very few studies finding that fluoride doesn\u2019t lower IQ. The New Zealand study most often cited used an unsuitable study group with little contrast in total fluoride exposure. Many kids with unfluoridated water were ingesting fluoride tablets, making \n\nProvide relevant evidence.",
+    "input_length_chars": 6411,
+    "input_tokens_estimated": 1602,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that higher fluoride exposure is associated with lower IQs in children, as supported by a Harvard-funded meta-analysis and a recent study linking fluoride levels in pregnant women to decreased IQs in their children. This aligns with the claim that fluoride lowers IQs, as confirmed by studies including the one published in 2012.",
+      "overall_stance": "supports",
+      "key_quote": "In 2012, a Harvard-funded meta-analysis found that children in China exposed to higher levels of fluoride tested lower for IQ in 26 out of 27 studies."
+    },
+    "output_length_chars": 588,
+    "output_tokens_estimated": 147,
+    "cost_usd": 0.0003285,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Fluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.",
+      "query_index": 2,
+      "query_text": "Harvard study fluoride IQ effects 2012"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:07:08.082942",
+    "latency_seconds": 3.79,
+    "input_prompt": "Claim:\nFluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.\n\nArticle Title:\nIntroduction to the 69 IQ Studies - Fluoride Action Network\n\nGoogle Search Snippet:\nAfter reviewing 27 of the human IQ studies, a team of Harvard scientists concluded that fluoride's effect on the young brain should now be a ...\n\nFull Page Content:\nOn September 19, Environmental Health Perspectives, a highly-respected journal, published a study linking higher fluoride levels in pregnant women to lower IQ\u2019s in their children.\nThe decrease was significant. Each 0.5 part per million (ppm) increase in a pregnant woman\u2019s urine fluoride levels reduced her child\u2019s IQ by 2.5 - 3 points. A child of a mother drinking 1 ppm of fluoridated water, close to the U.S standard of 0.7 ppm, would be expected to have a drop of 5 to 6 IQ points compared to a child of a mother drinking water with close to no fluoride in it.\nThis prospective study was funded by the U.S. National Institutes of Health and led by researchers at the University of Toronto School of Public Health.\nIt was very strong, following pregnant women in Mexico and their children for 12 years, and measuring individual urine levels, a more precise method to determine fluoride exposure than drinking water concentrations. The results were undiminished even after adjusting for a wide array of confounding factors, including lead, smoking, alcohol, socio-economic status and birth weight.\nThe pro-fluoridation lobby, led by the American Dental Association, quickly denied the significance of the study, arguing \u201cthe findings are not applicable to the U.S.\u201d\nMexico, like most nations, doesn\u2019t fluoridate its water. The ADA\u2019s stance stems from the fact that the women were mainly getting their fluoride from consuming fluoridated salt or varying natural levels of fluoride in the water. (The ADA ignores the fact that fluoride\u2019s effects are the same once it\u2019s inside the body, no matter the source.)\nMost others felt differently. Lead author Dr. Howard Hu asserted \u201cThis is a very rigorous epidemiology study. You just can\u2019t deny it. It\u2019s directly related to whether fluoride is a risk for the neurodevelopment of children. So, to say it has no relevance to the folks in the U.S. seems disingenuous.\u201d\nDr. Leonardo Trasande, a pediatrician unaffiliated with the study at New York University, agreed, saying that \u201cThis is a very well-conducted study, and it raises serious concerns about fluoride supplementation in water.\u201d\nAnd according to CNN, Dr. Linda Birnbaum, director of the National Institute of Environmental Health Sciences, \u201cpointed out that it raised significant questions.\u201d\nAlthough this study is new, it has long been recognized that fluoride causes brain damage. The extent of harm is based on the dose, when and how often the exposure occurs, and which individuals are at greater risk.\nIn 2006, the National Academy of Science\u2019s National Research Committee (NRC) published Fluoride in Drinking Water, a review of over 1,000 studies. It\u2019s considered the most well-balanced, comprehensive, authoritative study ever done on fluoride\u2019s toxicity. The 12-member scientific committee leading the effort, including three who favored fluoridation, stated unequivocally that \u201cIt is apparent that fluorides have the ability to interfere with the functions of the brain and the body by direct and indirect means.\u201d (p. 222)\nIn 2012, a Harvard-funded meta-analysis found that children in China exposed to higher levels of fluoride tested lower for IQ in 26 out of 27 studies. The average difference was significant - 7 IQ points lower. The quality of the studies varied and dealt with higher exposures of fluoride than in the U.S. However, several were methodologically strong, controlling for potential confounders such as lead and arsenic, and had doses close to those typically found here.\nIn 2014, in the British medical journal The Lancet, two world-renowned scientists, Philippe Grandjean, MD and Philip Landrigan, MD, added fluoride to the list of 11 chemicals identified as developmental neurotoxins \u2013 harming the brains of children. Grandjean, a co-author of the 2012 Harvard study, commented at the time that \u201cFluoride seems to fit in with lead, mercury and other poisons . . .\u201d\nLast year, the Fluoride Action Network, American Academy of Environmental Medicine, International Academy of Oral Medicine and Toxicology, Food and Water Watch, Organic Consumers Association and several others, including individual mothers, petitioned the EPA to ban fluoridation chemicals based on their neurotoxicity.\nThe petition cited 196 peer-reviewed studies \u2013 human, animal, cellular and reviews - published over the last ten years. Virtually all the studies - 189 - found harm, such as lowering IQ or increasing behavioral problems, several at levels consumed by Americans, and more at minimally higher levels.\nThe studies with slightly higher levels are quite relevant to common exposures in the U.S. Genetics, environmental and socio-economic factors cause significant variability among humans in their resistance to disease. It\u2019s standard toxicological practice to divide the lowest level of harm detected by at least 10. Many studies show there is typically at least a 10-fold variation in sensitivity to any toxin among humans.\nThe NRC 2006 review determined that water fluoride levels of 4.0 ppm are definitely harmful to human health, so dividing by 10 wouldn\u2019t allow more than 0.4 ppm. Yet the CDC recommends 0.7 ppm, nearly double the level, ignoring this established scientific practice.\nIn February, the EPA denied the petition, saying there wasn\u2019t conclusive data that fluoride was neurotoxic, in spite of the massive evidence to the contrary. The organizations have sued the agency and the case is now in federal court.\nHu and his fellow authors don\u2019t say, nor do I, that this one study provides conclusive proof that fluoridating water lowers IQ\u2019s in children. But there\u2019s no denying 30 years of hundreds of studies pointing squarely in that direction and the U. of Toronto results add even more credibility.\nMoreover, there are very few studies finding that fluoride doesn\u2019t lower IQ. The New Zealand study most often cited used an unsuitable study group with little contrast in total fluoride exposure. Many kids with unfluoridated water were ingesting fluoride tablets, making \n\nProvide relevant evidence.",
+    "input_length_chars": 6378,
+    "input_tokens_estimated": 1594,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that fluoride exposure is linked to lower IQs in children, supported by a Harvard-funded meta-analysis that found significant IQ reductions in children exposed to higher fluoride levels. This aligns with the claim that fluoride lowers IQs, as confirmed by studies including the one published in 2012.",
+      "overall_stance": "supports",
+      "key_quote": "In 2012, a Harvard-funded meta-analysis found that children in China exposed to higher levels of fluoride tested lower for IQ in 26 out of 27 studies. The average difference was significant - 7 IQ points lower."
+    },
+    "output_length_chars": 619,
+    "output_tokens_estimated": 154,
+    "cost_usd": 0.0003315,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Fluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.",
+      "query_index": 2,
+      "query_text": "Harvard study fluoride IQ effects 2012"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:07:08.185230",
+    "latency_seconds": 3.89,
+    "input_prompt": "Claim:\nFluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.\n\nArticle Title:\nHarvard Study on Fluoride & Neurotoxicity: Not What it Seems\n\nGoogle Search Snippet:\nThe study found a very small difference in IQ test scores between children in the high-fluoride and low-fluoride areas.\n\nFull Page Content:\nOn September 19, Environmental Health Perspectives, a highly-respected journal, published a study linking higher fluoride levels in pregnant women to lower IQ\u2019s in their children.\nThe decrease was significant. Each 0.5 part per million (ppm) increase in a pregnant woman\u2019s urine fluoride levels reduced her child\u2019s IQ by 2.5 - 3 points. A child of a mother drinking 1 ppm of fluoridated water, close to the U.S standard of 0.7 ppm, would be expected to have a drop of 5 to 6 IQ points compared to a child of a mother drinking water with close to no fluoride in it.\nThis prospective study was funded by the U.S. National Institutes of Health and led by researchers at the University of Toronto School of Public Health.\nIt was very strong, following pregnant women in Mexico and their children for 12 years, and measuring individual urine levels, a more precise method to determine fluoride exposure than drinking water concentrations. The results were undiminished even after adjusting for a wide array of confounding factors, including lead, smoking, alcohol, socio-economic status and birth weight.\nThe pro-fluoridation lobby, led by the American Dental Association, quickly denied the significance of the study, arguing \u201cthe findings are not applicable to the U.S.\u201d\nMexico, like most nations, doesn\u2019t fluoridate its water. The ADA\u2019s stance stems from the fact that the women were mainly getting their fluoride from consuming fluoridated salt or varying natural levels of fluoride in the water. (The ADA ignores the fact that fluoride\u2019s effects are the same once it\u2019s inside the body, no matter the source.)\nMost others felt differently. Lead author Dr. Howard Hu asserted \u201cThis is a very rigorous epidemiology study. You just can\u2019t deny it. It\u2019s directly related to whether fluoride is a risk for the neurodevelopment of children. So, to say it has no relevance to the folks in the U.S. seems disingenuous.\u201d\nDr. Leonardo Trasande, a pediatrician unaffiliated with the study at New York University, agreed, saying that \u201cThis is a very well-conducted study, and it raises serious concerns about fluoride supplementation in water.\u201d\nAnd according to CNN, Dr. Linda Birnbaum, director of the National Institute of Environmental Health Sciences, \u201cpointed out that it raised significant questions.\u201d\nAlthough this study is new, it has long been recognized that fluoride causes brain damage. The extent of harm is based on the dose, when and how often the exposure occurs, and which individuals are at greater risk.\nIn 2006, the National Academy of Science\u2019s National Research Committee (NRC) published Fluoride in Drinking Water, a review of over 1,000 studies. It\u2019s considered the most well-balanced, comprehensive, authoritative study ever done on fluoride\u2019s toxicity. The 12-member scientific committee leading the effort, including three who favored fluoridation, stated unequivocally that \u201cIt is apparent that fluorides have the ability to interfere with the functions of the brain and the body by direct and indirect means.\u201d (p. 222)\nIn 2012, a Harvard-funded meta-analysis found that children in China exposed to higher levels of fluoride tested lower for IQ in 26 out of 27 studies. The average difference was significant - 7 IQ points lower. The quality of the studies varied and dealt with higher exposures of fluoride than in the U.S. However, several were methodologically strong, controlling for potential confounders such as lead and arsenic, and had doses close to those typically found here.\nIn 2014, in the British medical journal The Lancet, two world-renowned scientists, Philippe Grandjean, MD and Philip Landrigan, MD, added fluoride to the list of 11 chemicals identified as developmental neurotoxins \u2013 harming the brains of children. Grandjean, a co-author of the 2012 Harvard study, commented at the time that \u201cFluoride seems to fit in with lead, mercury and other poisons . . .\u201d\nLast year, the Fluoride Action Network, American Academy of Environmental Medicine, International Academy of Oral Medicine and Toxicology, Food and Water Watch, Organic Consumers Association and several others, including individual mothers, petitioned the EPA to ban fluoridation chemicals based on their neurotoxicity.\nThe petition cited 196 peer-reviewed studies \u2013 human, animal, cellular and reviews - published over the last ten years. Virtually all the studies - 189 - found harm, such as lowering IQ or increasing behavioral problems, several at levels consumed by Americans, and more at minimally higher levels.\nThe studies with slightly higher levels are quite relevant to common exposures in the U.S. Genetics, environmental and socio-economic factors cause significant variability among humans in their resistance to disease. It\u2019s standard toxicological practice to divide the lowest level of harm detected by at least 10. Many studies show there is typically at least a 10-fold variation in sensitivity to any toxin among humans.\nThe NRC 2006 review determined that water fluoride levels of 4.0 ppm are definitely harmful to human health, so dividing by 10 wouldn\u2019t allow more than 0.4 ppm. Yet the CDC recommends 0.7 ppm, nearly double the level, ignoring this established scientific practice.\nIn February, the EPA denied the petition, saying there wasn\u2019t conclusive data that fluoride was neurotoxic, in spite of the massive evidence to the contrary. The organizations have sued the agency and the case is now in federal court.\nHu and his fellow authors don\u2019t say, nor do I, that this one study provides conclusive proof that fluoridating water lowers IQ\u2019s in children. But there\u2019s no denying 30 years of hundreds of studies pointing squarely in that direction and the U. of Toronto results add even more credibility.\nMoreover, there are very few studies finding that fluoride doesn\u2019t lower IQ. The New Zealand study most often cited used an unsuitable study group with little contrast in total fluoride exposure. Many kids with unfluoridated water were ingesting fluoride tablets, making \n\nProvide relevant evidence.",
+    "input_length_chars": 6354,
+    "input_tokens_estimated": 1588,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence from the article supports the claim that fluoride exposure is linked to lower IQs, citing a Harvard-funded meta-analysis that found significant IQ reductions in children exposed to higher fluoride levels. Additionally, the article discusses a recent study that found a direct correlation between fluoride levels in pregnant women and IQ drops in their children, reinforcing the claim's validity.",
+      "overall_stance": "supports",
+      "key_quote": "In 2012, a Harvard-funded meta-analysis found that children in China exposed to higher levels of fluoride tested lower for IQ in 26 out of 27 studies. The average difference was significant - 7 IQ points lower."
+    },
+    "output_length_chars": 704,
+    "output_tokens_estimated": 176,
+    "cost_usd": 0.0003438,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Fluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.",
+      "query_index": 2,
+      "query_text": "Harvard study fluoride IQ effects 2012"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:07:08.210378",
+    "latency_seconds": 3.91,
+    "input_prompt": "Claim:\nFluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.\n\nArticle Title:\nIQ Losses Continue to Haunt Fluoride | The Lund Report\n\nGoogle Search Snippet:\nIn 2012, a Harvard-funded meta-analysis found that children in China exposed to higher levels of fluoride tested lower for IQ in 26 out of 27 ...\n\nFull Page Content:\nOn September 19, Environmental Health Perspectives, a highly-respected journal, published a study linking higher fluoride levels in pregnant women to lower IQ\u2019s in their children.\nThe decrease was significant. Each 0.5 part per million (ppm) increase in a pregnant woman\u2019s urine fluoride levels reduced her child\u2019s IQ by 2.5 - 3 points. A child of a mother drinking 1 ppm of fluoridated water, close to the U.S standard of 0.7 ppm, would be expected to have a drop of 5 to 6 IQ points compared to a child of a mother drinking water with close to no fluoride in it.\nThis prospective study was funded by the U.S. National Institutes of Health and led by researchers at the University of Toronto School of Public Health.\nIt was very strong, following pregnant women in Mexico and their children for 12 years, and measuring individual urine levels, a more precise method to determine fluoride exposure than drinking water concentrations. The results were undiminished even after adjusting for a wide array of confounding factors, including lead, smoking, alcohol, socio-economic status and birth weight.\nThe pro-fluoridation lobby, led by the American Dental Association, quickly denied the significance of the study, arguing \u201cthe findings are not applicable to the U.S.\u201d\nMexico, like most nations, doesn\u2019t fluoridate its water. The ADA\u2019s stance stems from the fact that the women were mainly getting their fluoride from consuming fluoridated salt or varying natural levels of fluoride in the water. (The ADA ignores the fact that fluoride\u2019s effects are the same once it\u2019s inside the body, no matter the source.)\nMost others felt differently. Lead author Dr. Howard Hu asserted \u201cThis is a very rigorous epidemiology study. You just can\u2019t deny it. It\u2019s directly related to whether fluoride is a risk for the neurodevelopment of children. So, to say it has no relevance to the folks in the U.S. seems disingenuous.\u201d\nDr. Leonardo Trasande, a pediatrician unaffiliated with the study at New York University, agreed, saying that \u201cThis is a very well-conducted study, and it raises serious concerns about fluoride supplementation in water.\u201d\nAnd according to CNN, Dr. Linda Birnbaum, director of the National Institute of Environmental Health Sciences, \u201cpointed out that it raised significant questions.\u201d\nAlthough this study is new, it has long been recognized that fluoride causes brain damage. The extent of harm is based on the dose, when and how often the exposure occurs, and which individuals are at greater risk.\nIn 2006, the National Academy of Science\u2019s National Research Committee (NRC) published Fluoride in Drinking Water, a review of over 1,000 studies. It\u2019s considered the most well-balanced, comprehensive, authoritative study ever done on fluoride\u2019s toxicity. The 12-member scientific committee leading the effort, including three who favored fluoridation, stated unequivocally that \u201cIt is apparent that fluorides have the ability to interfere with the functions of the brain and the body by direct and indirect means.\u201d (p. 222)\nIn 2012, a Harvard-funded meta-analysis found that children in China exposed to higher levels of fluoride tested lower for IQ in 26 out of 27 studies. The average difference was significant - 7 IQ points lower. The quality of the studies varied and dealt with higher exposures of fluoride than in the U.S. However, several were methodologically strong, controlling for potential confounders such as lead and arsenic, and had doses close to those typically found here.\nIn 2014, in the British medical journal The Lancet, two world-renowned scientists, Philippe Grandjean, MD and Philip Landrigan, MD, added fluoride to the list of 11 chemicals identified as developmental neurotoxins \u2013 harming the brains of children. Grandjean, a co-author of the 2012 Harvard study, commented at the time that \u201cFluoride seems to fit in with lead, mercury and other poisons . . .\u201d\nLast year, the Fluoride Action Network, American Academy of Environmental Medicine, International Academy of Oral Medicine and Toxicology, Food and Water Watch, Organic Consumers Association and several others, including individual mothers, petitioned the EPA to ban fluoridation chemicals based on their neurotoxicity.\nThe petition cited 196 peer-reviewed studies \u2013 human, animal, cellular and reviews - published over the last ten years. Virtually all the studies - 189 - found harm, such as lowering IQ or increasing behavioral problems, several at levels consumed by Americans, and more at minimally higher levels.\nThe studies with slightly higher levels are quite relevant to common exposures in the U.S. Genetics, environmental and socio-economic factors cause significant variability among humans in their resistance to disease. It\u2019s standard toxicological practice to divide the lowest level of harm detected by at least 10. Many studies show there is typically at least a 10-fold variation in sensitivity to any toxin among humans.\nThe NRC 2006 review determined that water fluoride levels of 4.0 ppm are definitely harmful to human health, so dividing by 10 wouldn\u2019t allow more than 0.4 ppm. Yet the CDC recommends 0.7 ppm, nearly double the level, ignoring this established scientific practice.\nIn February, the EPA denied the petition, saying there wasn\u2019t conclusive data that fluoride was neurotoxic, in spite of the massive evidence to the contrary. The organizations have sued the agency and the case is now in federal court.\nHu and his fellow authors don\u2019t say, nor do I, that this one study provides conclusive proof that fluoridating water lowers IQ\u2019s in children. But there\u2019s no denying 30 years of hundreds of studies pointing squarely in that direction and the U. of Toronto results add even more credibility.\nMoreover, there are very few studies finding that fluoride doesn\u2019t lower IQ. The New Zealand study most often cited used an unsuitable study group with little contrast in total fluoride exposure. Many kids with unfluoridated water were ingesting fluoride tablets, making \n\nProvide relevant evidence.",
+    "input_length_chars": 6374,
+    "input_tokens_estimated": 1593,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses a Harvard-funded meta-analysis from 2012 that found children in China exposed to higher levels of fluoride had lower IQs in 26 out of 27 studies, supporting the claim that fluoride lowers IQs.",
+      "overall_stance": "supports",
+      "key_quote": "In 2012, a Harvard-funded meta-analysis found that children in China exposed to higher levels of fluoride tested lower for IQ in 26 out of 27 studies."
+    },
+    "output_length_chars": 450,
+    "output_tokens_estimated": 112,
+    "cost_usd": 0.00030615,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Fluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.",
+      "query_index": 2,
+      "query_text": "Harvard study fluoride IQ effects 2012"
+    }
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T02:07:10.229509",
+    "latency_seconds": 1.92,
+    "input_prompt": "\nClaim: Fluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.\nCategory: scientific\nExtraction confidence: 0.90\n\nEvidence:\nSUPPORTS (4 sources):\n  1. [PDF] When considering the risks and benefits of fluoride exposure, the ... | reliability=high (1.00)\n     URL: https://content.sph.harvard.edu/wwwhsph/sites/21/2012/07/Media-Statement_Fluoride-9-12-12-Revised2.pdf\n     Summary: The evidence indicates that higher fluoride exposure is associated with lower IQs in children, as supported by a Harvard-funded meta-analysis and a recent study linking fluoride levels in pregnant women to decreased IQs in their children. This aligns with the claim that fluoride lowers IQs, as confirmed by studies including the one published in 2012.\n  2. Impact of fluoride on neurological development in children | reliability=high (1.00)\n     URL: https://hsph.harvard.edu/news/fluoride-childrens-health-grandjean-choi/\n     Summary: The evidence indicates that fluoride exposure is linked to lower IQs in children, supported by a Harvard-funded meta-analysis and a recent study showing significant IQ drops associated with higher fluoride levels in pregnant women. This aligns with the claim that fluoride lowers IQs, as confirmed by studies including the one published in 2012.\n  3. Effects of High-Water Fluoride Exposure on IQ Levels in School-Age ... | reliability=high (0.90)\n     URL: https://ui.adsabs.harvard.edu/abs/2024ExpHe..16..885X/abstract\n     Summary: The evidence indicates that children exposed to high levels of fluoride had lower average IQ scores compared to a control group, supporting the claim that fluoride exposure is linked to reduced IQ levels.\n  4. Developmental fluoride neurotoxicity: a systematic review and meta ... | reliability=high (0.85)\n     URL: https://pubmed.ncbi.nlm.nih.gov/22820538/\n     Summary: The evidence presented in the article supports the claim that fluoride lowers IQs, citing a Harvard-funded meta-analysis that found children in China exposed to higher levels of fluoride had significantly lower IQ scores. Additionally, a recent study linked higher fluoride levels in pregnant women to lower IQs in their children, reinforcing the association between fluoride exposure and cognitive impairment.\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2293,
+    "input_tokens_estimated": 573,
+    "output": {
+      "overall_stance": "supports",
+      "confidence": "high",
+      "summary": "Multiple high-reliability sources, including a Harvard-funded meta-analysis and recent studies, consistently indicate that higher fluoride exposure is associated with lower IQs in children. This supports the claim that fluoride lowers IQs, as confirmed by the 2012 Harvard study."
+    },
+    "output_length_chars": 341,
+    "output_tokens_estimated": 85,
+    "cost_usd": 0.00013695,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Fluoride lowers IQs, confirmed by a Harvard study published on July 27, 2012.",
+      "query_index": 2,
+      "query_text": "Harvard study fluoride IQ effects 2012"
+    }
+  }
+]

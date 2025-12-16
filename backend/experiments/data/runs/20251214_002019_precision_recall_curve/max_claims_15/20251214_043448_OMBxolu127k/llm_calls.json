@@ -1,0 +1,1051 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:35:20.812608",
+    "latency_seconds": 31.04,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nThe nation's historical preservation group, is now suing the Trump administration over its plans to build a giant ballroom over at the white House. Back in October, the Trump administration quickly demolished the white House East Wing to make room for the ballroom for this project. Want to bring in CNN's Brian Todd? Brian, why is the National Trust taking this dramatic step? And this is a lengthy lawsuit. It's a lengthy lawsuit, Wolf, 47 pages. It was filed just moments ago. We have a copy of this lawsuit now to answer your question, Wolf. They are suing because they want this project halted, first and foremost. And they're suing because they said that the white House and its allies and in certain agencies like the National Park Service, did not get the necessary approvals or conduct the necessary reviews. We have a copy of this lawsuit. You see the pictures here. This has been what many people have been complaining about, the demolition of the East wing of the white House that began in October for the construction of a 90,000 square foot ballroom. And just moments ago, as Wolf mentioned, we've obtained a copy of this lawsuit from the National Trust for Historic Preservation. They are suing the National Park Service. They are suing President Trump himself, plus the National Park Service, plus the Department of the Interior and Interior Secretary Douglas Burgum, and others over the construction of the ballroom where the east wing and the colonnade used to be. And here is just one quote from one of the initial pages of the lawsuit. No president is legally allowed to tear down portions of the white House without any review whatsoever. Not President Trump, not President Biden, and not anyone else. And no president is legally allowed to construct a ballroom on public property without giving the public the opportunity to weigh in. President Trump's efforts to do so should be immediately halted, and work on the ballroom project should be paused until the defendants complete the required reviews. Reviews that should have taken place before the defendants demolish the East Wing and before they began construction of the ballroom and secured the necessary approvals. What they are also saying is that there are two entities, from which the white House needed to seek approval and at least a review of this project. The National Capital Planning Commission and the Commission of Fine Arts. And according to this lawsuit from the National Trust for Historic Preservation, the white House did not seek any review from those agencies and did not seek any, public, input on this project. Now, I can I can tell you also, Wolf, we are reaching out to the white House for comment. Our colleague Kevin Liptak is handling that right now. We should be able to get that from Kevin in just a moment. But what I will say is that the president has had this in his, in his sights to to renovate this area, to do a ballroom for years, not just months, years, including before he came into office. He said he offered the Obama administration, you know, that he said he would pay for it. The Obama administration, he said, never got back to him. President Trump has said many times that he believes this is necessary, that people who come to the white House, for certain events, they have to go to a tent that's kind of separate from the main, main body of the white House. And in bad weather, a lot of people who are here for balls and things like that, they just get kind of, disheveled, having to walk through the rain and get into a tent. That's been his perspective. He's been eyeing this for a long time. His idea is to make this very much like the Donald Trump Ballroom at Mar-A-Lago. It's going to look a lot like that. And there are plenty of other ballrooms that I've been to, many of them. Right near the white House, huge ballrooms that they could go to, not just a. I've been to the tent on the backyard of the white House on this, on this on the North Lawn of the white House, and the South Lawn of the white House as well. And that east wing was beautiful. And too bad it's been destroyed. Ari. Brian, thank you very, very much. Kevin Liptak is over at the white House right now. This has been a huge priority for the president. And as Brian just said, you're working to get some reaction. Are you learning anything? Yeah. The white House hasn't responded to this lawsuit specifically, but I'll tell you that white House officials have sort of downplayed criticism from this particular group, the National Trust for Historic Preservation, which you'll remember back in October as this project was getting underway, actually wrote a letter to the white House asking them to pause work to, go through some of these various boards for review. And the white House said at the time that this, trust, the National Trust for Historic Preservation, was comprised of, quote, loser Democrats and liberal donors. And so you see them kind of shrugging off the criticism, we should say that this body is chartered by Congress, tasked with, preserving some of the nation's historic buildings. It actually does have a relationship with President Trump dating back to the 1990s. It worked with him on some projects at Mar-A-Lago. So he does have sort of an existing relationship with this, body, going back several decades. We should say that, the boards that this, group is now requesting and demanding that the court, require that the administration go through the National Capital Planning Commission is now stacked with President Trump's appointees. It's led by Will Scharf, who's the staff secretary at the white House. He has said previously that this project will eventually go before that body, but that it's purview and that its remit does not cover demolition. And that is why they say this project didn't go before that board, before they began tearing down the East wing, but that once sort of vertical construction begins, that it will go before that body. And so, whether this lawsuit sort of spurs that action and prompts them to go more quickly remains to be seen. But you're right. This is an absolute priority of the president. He still mentions that, on almost a weekly basis, you know, when, the crown Prince Mohammed bin Salman was here, for example, the president said, that the dinner he held in his honor on the white House state floor would have been a much grander occasion if they had had, that ballroom constructed in his honor. We should also say that there has been some, discord among the planning team. You know, the president has assigned a new architect, the previous architect still on board, but he had reportedly raised some questions about the sheer scale of this project. You know, the president is envisioning a 90,000 square foot ballroom. The white House itself is only about 55,000ft\u00b2. And one of the concerns that the National Trust for Historic Preservation has raised is that they would essentially dwarf the original building once it's completed. And so all of these concerns are now due to be, heard in court, Wolf, the president keeps pointing out that, this ballroom will be paid for by private donations, not taxpayers. Is that a factor here? It could be. And I think, you know, the president and the white House have said that they will be transparent and they have released, some of the names of the donors who will contribute to this project. One of the questions is how potentially they'll be honored as part of it, whether their names will be, written on the wall or whether they'll have sort of plaques, in the final, ballroom to designate who who donated and, what sort of contribution they were able to make to this project. But it has raised a certainly questions about what kind of influence those donors, might have with the white House and whether or not these individuals are essentially using these donations to curry favor with the president, recognizing that this is a major priority of his. All right. Kevin Liptak at the white House for us, Kevin, thank you very, very much.",
+    "input_length_chars": 8108,
+    "input_tokens_estimated": 2027,
+    "output": {
+      "claims": [
+        {
+          "text": "The National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.",
+          "confidence": 0.9,
+          "category": "policy",
+          "importance": 0.85,
+          "context": "Lawsuit filed against Trump administration regarding White House construction."
+        },
+        {
+          "text": "The lawsuit is 47 pages long and was filed recently.",
+          "confidence": 0.8,
+          "category": "policy",
+          "importance": 0.3,
+          "context": "Details about the lawsuit's length and filing date."
+        },
+        {
+          "text": "The Trump administration demolished the White House East Wing in October to make room for the ballroom.",
+          "confidence": 0.9,
+          "category": "historical",
+          "importance": 0.85,
+          "context": "Demolition of East Wing occurred in October for ballroom construction."
+        },
+        {
+          "text": "The National Trust claims the White House did not obtain necessary approvals from the National Capital Planning Commission and the Commission of Fine Arts.",
+          "confidence": 0.85,
+          "category": "policy",
+          "importance": 0.85,
+          "context": "Claims about lack of approvals for the ballroom project."
+        },
+        {
+          "text": "No president is legally allowed to tear down portions of the White House without review.",
+          "confidence": 0.9,
+          "category": "policy",
+          "importance": 0.85,
+          "context": "Legal claim regarding presidential authority over White House modifications."
+        },
+        {
+          "text": "The ballroom project is envisioned to be 90,000 square feet.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Size of the proposed ballroom project."
+        },
+        {
+          "text": "The White House itself is about 55,000 square feet.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.6,
+          "context": "Comparison of the ballroom size to the White House."
+        },
+        {
+          "text": "The National Trust for Historic Preservation is chartered by Congress to preserve historic buildings.",
+          "confidence": 0.85,
+          "category": "biographical",
+          "importance": 0.3,
+          "context": "Background on the National Trust's purpose."
+        },
+        {
+          "text": "The White House has not responded to the lawsuit specifically.",
+          "confidence": 0.8,
+          "category": "policy",
+          "importance": 0.25,
+          "context": "Current status of White House's response to the lawsuit."
+        },
+        {
+          "text": "The National Trust previously wrote a letter to the White House asking to pause work on the project.",
+          "confidence": 0.8,
+          "category": "policy",
+          "importance": 0.25,
+          "context": "Previous communication from the National Trust regarding the project."
+        },
+        {
+          "text": "The National Capital Planning Commission is currently led by President Trump's appointees.",
+          "confidence": 0.85,
+          "category": "policy",
+          "importance": 0.3,
+          "context": "Composition of the National Capital Planning Commission."
+        },
+        {
+          "text": "The president has been planning the ballroom for years, including before he took office.",
+          "confidence": 0.85,
+          "category": "biographical",
+          "importance": 0.3,
+          "context": "Background on Trump's long-term plans for the ballroom."
+        },
+        {
+          "text": "The president's vision for the ballroom is similar to the Donald Trump Ballroom at Mar-A-Lago.",
+          "confidence": 0.8,
+          "category": "biographical",
+          "importance": 0.25,
+          "context": "Comparison of the proposed ballroom to Mar-A-Lago."
+        },
+        {
+          "text": "The ballroom will be funded by private donations, not taxpayer money.",
+          "confidence": 0.9,
+          "category": "policy",
+          "importance": 0.6,
+          "context": "Funding source for the ballroom project."
+        },
+        {
+          "text": "Concerns have been raised that the ballroom will dwarf the original White House building.",
+          "confidence": 0.85,
+          "category": "policy",
+          "importance": 0.3,
+          "context": "Concerns about the scale of the ballroom in relation to the White House."
+        }
+      ],
+      "total_count": 15
+    },
+    "output_length_chars": 4740,
+    "output_tokens_estimated": 1185,
+    "cost_usd": 0.00101505
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:35:33.204282",
+    "latency_seconds": 2.17,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The ballroom will be funded by private donations, not taxpayer money.\nContext: Funding source for the ballroom project.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 292,
+    "input_tokens_estimated": 73,
+    "output": {
+      "original_claim": "The ballroom will be funded by private donations, not taxpayer money.",
+      "queries": [
+        {
+          "query": "ballroom project funding private donations taxpayer money",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "ballroom project funded by private donations",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 320,
+    "output_tokens_estimated": 80,
+    "cost_usd": 5.895e-05,
+    "context": {
+      "claim_index": 15,
+      "claim_text": "The president's vision for the ballroom is similar to the Donald Trump Ballroom at Mar-A-Lago."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:35:33.330319",
+    "latency_seconds": 2.3,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The ballroom project is envisioned to be 90,000 square feet.\nContext: Size of the proposed ballroom project.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 281,
+    "input_tokens_estimated": 70,
+    "output": {
+      "original_claim": "The ballroom project is envisioned to be 90,000 square feet.",
+      "queries": [
+        {
+          "query": "ballroom project 90,000 square feet",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "size of proposed ballroom project",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 278,
+    "output_tokens_estimated": 69,
+    "cost_usd": 5.19e-05,
+    "context": {
+      "claim_index": 7,
+      "claim_text": "The ballroom will be funded by private donations, not taxpayer money.",
+      "query_index": 2,
+      "query_text": "ballroom project funded by private donations"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:35:33.414851",
+    "latency_seconds": 2.38,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The lawsuit is 47 pages long and was filed recently.\nContext: Details about the lawsuit's length and filing date.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 286,
+    "input_tokens_estimated": 71,
+    "output": {
+      "original_claim": "The lawsuit is 47 pages long and was filed recently.",
+      "queries": [
+        {
+          "query": "lawsuit 47 pages long filed recently",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "recent lawsuit length 47 pages",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 268,
+    "output_tokens_estimated": 67,
+    "cost_usd": 5.085e-05,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "The ballroom project is envisioned to be 90,000 square feet.",
+      "query_index": 2,
+      "query_text": "size of proposed ballroom project"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:35:33.415340",
+    "latency_seconds": 2.38,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The National Trust for Historic Preservation is chartered by Congress to preserve historic buildings.\nContext: Background on the National Trust's purpose.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 327,
+    "input_tokens_estimated": 81,
+    "output": {
+      "original_claim": "The National Trust for Historic Preservation is chartered by Congress to preserve historic buildings.",
+      "queries": [
+        {
+          "query": "National Trust for Historic Preservation chartered by Congress",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "National Trust for Historic Preservation purpose and congressional charter",
+          "query_type": "SOURCE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 382,
+    "output_tokens_estimated": 95,
+    "cost_usd": 6.915e-05,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "The ballroom project is envisioned to be 90,000 square feet.",
+      "query_index": 2,
+      "query_text": "size of proposed ballroom project"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:35:33.415755",
+    "latency_seconds": 2.38,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The White House itself is about 55,000 square feet.\nContext: Comparison of the ballroom size to the White House.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 285,
+    "input_tokens_estimated": 71,
+    "output": {
+      "original_claim": "The White House itself is about 55,000 square feet.",
+      "queries": [
+        {
+          "query": "White House square footage",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "size of the White House in square feet",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 265,
+    "output_tokens_estimated": 66,
+    "cost_usd": 5.025e-05,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "The ballroom project is envisioned to be 90,000 square feet.",
+      "query_index": 2,
+      "query_text": "size of proposed ballroom project"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:35:33.671891",
+    "latency_seconds": 2.64,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The National Capital Planning Commission is currently led by President Trump's appointees.\nContext: Composition of the National Capital Planning Commission.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 329,
+    "input_tokens_estimated": 82,
+    "output": {
+      "original_claim": "The National Capital Planning Commission is currently led by President Trump's appointees.",
+      "queries": [
+        {
+          "query": "National Capital Planning Commission leadership Trump appointees 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "current members National Capital Planning Commission appointed by Trump",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 380,
+    "output_tokens_estimated": 95,
+    "cost_usd": 6.93e-05,
+    "context": {
+      "claim_index": 6,
+      "claim_text": "The White House itself is about 55,000 square feet.",
+      "query_index": 2,
+      "query_text": "size of the White House in square feet"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:35:33.757444",
+    "latency_seconds": 2.72,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The National Trust previously wrote a letter to the White House asking to pause work on the project.\nContext: Previous communication from the National Trust regarding the project.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 352,
+    "input_tokens_estimated": 88,
+    "output": {
+      "original_claim": "The National Trust previously wrote a letter to the White House asking to pause work on the project.",
+      "queries": [
+        {
+          "query": "National Trust letter to White House pause project",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "National Trust requests pause on project White House",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 352,
+    "output_tokens_estimated": 88,
+    "cost_usd": 6.6e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "The National Capital Planning Commission is currently led by President Trump's appointees.",
+      "query_index": 2,
+      "query_text": "current members National Capital Planning Commission appointed by Trump"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:35:33.757940",
+    "latency_seconds": 2.72,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The White House has not responded to the lawsuit specifically.\nContext: Current status of White House's response to the lawsuit.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 301,
+    "input_tokens_estimated": 75,
+    "output": {
+      "original_claim": "The White House has not responded to the lawsuit specifically.",
+      "queries": [
+        {
+          "query": "White House response lawsuit 2023",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Has the White House responded to the lawsuit 2023?",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 295,
+    "output_tokens_estimated": 73,
+    "cost_usd": 5.505e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "The National Capital Planning Commission is currently led by President Trump's appointees.",
+      "query_index": 2,
+      "query_text": "current members National Capital Planning Commission appointed by Trump"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:35:33.758363",
+    "latency_seconds": 2.72,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Concerns have been raised that the ballroom will dwarf the original White House building.\nContext: Concerns about the scale of the ballroom in relation to the White House.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 344,
+    "input_tokens_estimated": 86,
+    "output": {
+      "original_claim": "Concerns have been raised that the ballroom will dwarf the original White House building.",
+      "queries": [
+        {
+          "query": "ballroom will dwarf original White House building concerns",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "scale of new ballroom compared to original White House",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 351,
+    "output_tokens_estimated": 87,
+    "cost_usd": 6.51e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "The National Capital Planning Commission is currently led by President Trump's appointees.",
+      "query_index": 2,
+      "query_text": "current members National Capital Planning Commission appointed by Trump"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:35:33.758788",
+    "latency_seconds": 2.73,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: No president is legally allowed to tear down portions of the White House without review.\nContext: Legal claim regarding presidential authority over White House modifications.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 347,
+    "input_tokens_estimated": 86,
+    "output": {
+      "original_claim": "No president is legally allowed to tear down portions of the White House without review.",
+      "queries": [
+        {
+          "query": "presidential authority to modify White House",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "legal restrictions on tearing down White House",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 328,
+    "output_tokens_estimated": 82,
+    "cost_usd": 6.21e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "The National Capital Planning Commission is currently led by President Trump's appointees.",
+      "query_index": 2,
+      "query_text": "current members National Capital Planning Commission appointed by Trump"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:35:34.096172",
+    "latency_seconds": 3.07,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.\nContext: Lawsuit filed against Trump administration regarding White House construction.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 390,
+    "input_tokens_estimated": 97,
+    "output": {
+      "original_claim": "The National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.",
+      "queries": [
+        {
+          "query": "National Trust for Historic Preservation lawsuit Trump administration White House ballroom",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Trump administration National Trust lawsuit White House construction ballroom",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 446,
+    "output_tokens_estimated": 111,
+    "cost_usd": 8.115e-05,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "No president is legally allowed to tear down portions of the White House without review.",
+      "query_index": 2,
+      "query_text": "legal restrictions on tearing down White House"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:35:34.182592",
+    "latency_seconds": 3.15,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The National Trust claims the White House did not obtain necessary approvals from the National Capital Planning Commission and the Commission of Fine Arts.\nContext: Claims about lack of approvals for the ballroom project.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 394,
+    "input_tokens_estimated": 98,
+    "output": {
+      "original_claim": "The National Trust claims the White House did not obtain necessary approvals from the National Capital Planning Commission and the Commission of Fine Arts.",
+      "queries": [
+        {
+          "query": "National Trust White House ballroom project approvals National Capital Planning Commission Commission of Fine Arts",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "White House ballroom project National Capital Planning Commission Commission of Fine Arts approval controversy",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 529,
+    "output_tokens_estimated": 132,
+    "cost_usd": 9.39e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.",
+      "query_index": 2,
+      "query_text": "Trump administration National Trust lawsuit White House construction ballroom"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:35:34.270369",
+    "latency_seconds": 3.24,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The president has been planning the ballroom for years, including before he took office.\nContext: Background on Trump's long-term plans for the ballroom.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 326,
+    "input_tokens_estimated": 81,
+    "output": {
+      "original_claim": "The president has been planning the ballroom for years, including before he took office.",
+      "queries": [
+        {
+          "query": "Trump ballroom planning timeline before taking office",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Trump plans for ballroom prior to presidency",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 335,
+    "output_tokens_estimated": 83,
+    "cost_usd": 6.195e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The National Trust claims the White House did not obtain necessary approvals from the National Capital Planning Commission and the Commission of Fine Arts.",
+      "query_index": 2,
+      "query_text": "White House ballroom project National Capital Planning Commission Commission of Fine Arts approval controversy"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:37:27.230966",
+    "latency_seconds": 43.69,
+    "input_prompt": "Claim:\nConcerns have been raised that the ballroom will dwarf the original White House building.\n\nArticle Title:\nTrump's Ballroom is bigger than the White House : r/PoliticalOpinions\n\nGoogle Search Snippet:\nSo Trump's ballroom is 90,000 square feet. The existing White House is 55,000 square feet encompassing six floors.\n\nFull Page Content:\nProve your humanity We\u2019re committed to safety and security. But not for bots. Complete the challenge below and let us know you\u2019re a real person. Reddit, Inc. \u00a9 \"2025\". All rights reserved. User Agreement Privacy Policy Content Policy Help\n\nProvide relevant evidence.",
+    "input_length_chars": 608,
+    "input_tokens_estimated": 152,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 3.6e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:37:27.497684",
+    "latency_seconds": 7.12,
+    "input_prompt": "Claim:\nThe lawsuit is 47 pages long and was filed recently.\n\nArticle Title:\nElias-linked plaintiffs seek to challenge new NC congressional map\n\nGoogle Search Snippet:\nPlaintiffs working with Democratic operative Marc Elias' law firm are asking a three-judge panel in two existing North Carolina redistricting ...\n\nFull Page Content:\nwww.carolinajournal.com Verifying you are human. This may take a few seconds. www.carolinajournal.com needs to review the security of your connection before proceeding. Ray ID: 9adaa9730bbb80ee Performance & security by Cloudflare\n\nProvide relevant evidence.",
+    "input_length_chars": 591,
+    "input_tokens_estimated": 147,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 3.525e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:37:27.498598",
+    "latency_seconds": 43.96,
+    "input_prompt": "Claim:\nConcerns have been raised that the ballroom will dwarf the original White House building.\n\nArticle Title:\nWhite House State Ballroom - Wikipedia\n\nGoogle Search Snippet:\nAnnounced in July 2025, the purpose of the 90,000-square-foot (8,360 m2) expansion is to add a venue with a higher seating capacity than the East Room for ...\n\nFull Page Content:\nProve your humanity We\u2019re committed to safety and security. But not for bots. Complete the challenge below and let us know you\u2019re a real person. Reddit, Inc. \u00a9 \"2025\". All rights reserved. User Agreement Privacy Policy Content Policy Help\n\nProvide relevant evidence.",
+    "input_length_chars": 621,
+    "input_tokens_estimated": 155,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 3.645e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:37:27.501575",
+    "latency_seconds": 43.97,
+    "input_prompt": "Claim:\nConcerns have been raised that the ballroom will dwarf the original White House building.\n\nArticle Title:\nScope, size of White House ballroom renovation sparking ... - YouTube\n\nGoogle Search Snippet:\nMajor White House renovation underway as East Wing demolished for Trump's $300M ballroom project. Private donors funding controversial ...\n\nFull Page Content:\nProve your humanity We\u2019re committed to safety and security. But not for bots. Complete the challenge below and let us know you\u2019re a real person. Reddit, Inc. \u00a9 \"2025\". All rights reserved. User Agreement Privacy Policy Content Policy Help\n\nProvide relevant evidence.",
+    "input_length_chars": 632,
+    "input_tokens_estimated": 158,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 3.69e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:37:27.508035",
+    "latency_seconds": 1.99,
+    "input_prompt": "Claim:\nThe National Trust for Historic Preservation is chartered by Congress to preserve historic buildings.\n\nArticle Title:\nA Brief History of the National Trust\n\nGoogle Search Snippet:\nThe founders envisioned an organization whose primary purpose would be the acquisition and administration of historic sites. True to this vision, in 1951 the ...\n\nFull Page Content:\nSkip to primary navigation Skip to content Tipline Button Translate Button ABOUT SUBCOMMITTEES COMMITTEE ACTIVITY NEWSROOM CONTACT Download File Please wait...your file download will begin shortly. If your download does not begin soon, please click here ABOUT US SUBCOMMITTEES HEARINGS MEDIA CONTACT Privacy Policy Press Kit Photo Credits Accessibility Statement Job Postings Internships Sign Up for Press Releases Majority\n\nProvide relevant evidence.",
+    "input_length_chars": 820,
+    "input_tokens_estimated": 205,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 4.395e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:37:27.586387",
+    "latency_seconds": 8.23,
+    "input_prompt": "Claim:\nThe lawsuit is 47 pages long and was filed recently.\n\nArticle Title:\n[PDF] National Parks Pass Complaint - Center for Biological Diversity\n\nGoogle Search Snippet:\nThe protection of wildlife, wildlands, ecosystems, and recreational opportunities on public lands administered by the agencies governed by FLREA ...\n\nFull Page Content:\nwww.carolinajournal.com Verifying you are human. This may take a few seconds. www.carolinajournal.com needs to review the security of your connection before proceeding. Ray ID: 9adaa9730bbb80ee Performance & security by Cloudflare\n\nProvide relevant evidence.",
+    "input_length_chars": 597,
+    "input_tokens_estimated": 149,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 3.555e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:37:27.607629",
+    "latency_seconds": 2.08,
+    "input_prompt": "Claim:\nThe National Trust for Historic Preservation is chartered by Congress to preserve historic buildings.\n\nArticle Title:\n[PDF] Statement of the National Trust for Historic Preservation\n\nGoogle Search Snippet:\n1. The intent of Congress was for the National Trust \u201cto mobilize and coordinate public interest, participation, and resources in the ...\n\nFull Page Content:\nSkip to primary navigation Skip to content Tipline Button Translate Button ABOUT SUBCOMMITTEES COMMITTEE ACTIVITY NEWSROOM CONTACT Download File Please wait...your file download will begin shortly. If your download does not begin soon, please click here ABOUT US SUBCOMMITTEES HEARINGS MEDIA CONTACT Privacy Policy Press Kit Photo Credits Accessibility Statement Job Postings Internships Sign Up for Press Releases Majority\n\nProvide relevant evidence.",
+    "input_length_chars": 822,
+    "input_tokens_estimated": 205,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 4.395e-05
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:37:28.001659",
+    "latency_seconds": 18.99,
+    "input_prompt": "\nClaim: The National Trust claims the White House did not obtain necessary approvals from the National Capital Planning Commission and the Commission of Fine Arts.\nCategory: policy\nExtraction confidence: 0.85\n\nEvidence:\nUNCLEAR (5 sources):\n  1. National Trust Sues to Block Trump's White House Ballroom ... | reliability=high (0.85)\n     URL: https://www.nytimes.com/2025/12/12/us/politics/trump-white-house-ballroom-lawsuit-national-trust.html\n     Summary: The suit argues that Mr. Trump was required to submit plans to the National Capital Planning Commission, the Commission of Fine Arts and ...\n  2. National Trust Sues to Stop Trump's White House Ballroom - Yahoo | reliability=high (0.85)\n     URL: https://www.yahoo.com/news/articles/no-president-legally-allowed-tear-184108353.html\n     Summary: The National Trust argues that the administration failed to submit plans to the National Capital Planning Commission and the Commission of Fine ...\n  3. Preservationists sue Trump for ballroom project reviews and ... - PBS | reliability=high (0.85)\n     URL: https://www.pbs.org/newshour/politics/preservationists-sue-trump-for-ballroom-project-reviews-and-congressional-approval\n     Summary: President Donald Trump was sued on Friday by preservationists asking a federal court to halt his White House ballroom project until it goes ...\n  4. Trump sued by preservation group to halt White House ballroom | reliability=high (0.85)\n     URL: https://www.reuters.com/legal/government/trump-sued-by-preservation-group-halt-white-house-ballroom-2025-12-12/\n     Summary: The group said the project was proceeding without required reviews or approvals.\n  5. White House sued by historic preservation group over ballroom plans | reliability=high (0.85)\n     URL: https://www.bbc.com/news/articles/c07555m4710o\n     Summary: In the lawsuit, the group argues that the White House broke the law by beginning construction without filing plans with the National Capital ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2002,
+    "input_tokens_estimated": 500,
+    "output": {
+      "overall_stance": "supports",
+      "confidence": "high",
+      "summary": "Multiple high-reliability sources, including the New York Times and PBS, report that the National Trust claims the White House did not obtain necessary approvals from the National Capital Planning Commission and the Commission of Fine Arts for the ballroom project, supporting the claim."
+    },
+    "output_length_chars": 349,
+    "output_tokens_estimated": 87,
+    "cost_usd": 0.0001272
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:37:28.072963",
+    "latency_seconds": 9.51,
+    "input_prompt": "Claim:\nThe White House itself is about 55,000 square feet.\n\nArticle Title:\nWhite House - Wikipedia\n\nGoogle Search Snippet:\nWhite House ; Federal government of the United States \u00b7 55,000 sq ft (5,100 m2).\n\nFull Page Content:\nMain Content\nBasic numbers and facts about the White House and its rooms.\nCompiled by the White House Historical Association. Please credit the Association by its full name when using this as background material. Specific sources consulted available upon request.\nFor all media inquiries, contact press@whha.org.\nFirst Lady Jacqueline Kennedy envisioned a restored White House that conveyed a sense of history through its decorative and fine arts. She sought to inspire Americans, especially children, to explore and engage with American history and its presidents. In 1961, the nonprofit, nonpartisan White House Historical Association was established to support her vision to preserve and share the Executive Mansion\u2019s legacy for generations to come. Supported entirely by private resources, the Association\u2019s mission is to assist in the preservation of the state and public rooms, fund acquisitions for the White House permanent collection, and educate the public on the history of the White House. Since its founding, the Association has given more than $115 million to the White House in fulfillment of its mission.\nTo learn more about the White House Historical Association, please visit WhiteHouseHistory.org.\n\nProvide relevant evidence.",
+    "input_length_chars": 1468,
+    "input_tokens_estimated": 367,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that the White House is approximately 55,000 square feet in size, aligning with the claim made.",
+      "overall_stance": "supports",
+      "key_quote": "55,000 sq ft (5,100 m2)."
+    },
+    "output_length_chars": 227,
+    "output_tokens_estimated": 56,
+    "cost_usd": 8.865e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:37:28.145966",
+    "latency_seconds": 37.11,
+    "input_prompt": "Claim:\nThe ballroom project is envisioned to be 90,000 square feet.\n\nArticle Title:\nTrump replaces architect on ballroom project after clashes - NPR\n\nFull Page Content:\nThe mansion itself is 55,000 square feet, which is pretty big. But the ballroom was to be 90,000 square feet. It would be larger than the ...\n\nProvide relevant evidence.",
+    "input_length_chars": 338,
+    "input_tokens_estimated": 84,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that the ballroom project is indeed envisioned to be 90,000 square feet, as stated in the article.",
+      "overall_stance": "supports",
+      "key_quote": "the ballroom was to be 90,000 square feet."
+    },
+    "output_length_chars": 248,
+    "output_tokens_estimated": 62,
+    "cost_usd": 4.98e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:37:28.246604",
+    "latency_seconds": 3.75,
+    "input_prompt": "Claim:\nThe White House itself is about 55,000 square feet.\n\nArticle Title:\nWhite House: 1792 - Ben's Guide To the U.S. Government\n\nGoogle Search Snippet:\nIt has 132 rooms, with 16 family and guest rooms, 3 kitchens, and 35 bathrooms. The floor area is about 55,000 square feet.\n\nFull Page Content:\nThe White House is the name given to the official residence and workplace of the President of the United States. Since it is typically associated with the President, it is also a symbol of the executive branch of the U.S. Government, and every President except George Washington has lived here. It is located at 1600 Pennsylvania Avenue in Washington, DC, and is one of the most popular tourist attractions in the country. The White House is about one mile north of the Washington Monument and about two miles northwest of the U.S. Capitol Building.\nThe White House was built between 1792 and 1800; in 1814, it was burned by the British army when they invaded the city during the War of 1812. After the war ended, the White House was rebuilt in the 1820s and has been expanded over the years, including major internal reconstruction from 1949 to 1951. It has been redecorated on the inside and today is open for public tours. The President\u2019s family also lives in the White House, and although each President may make changes to the interior, these must be approved by the Committee for the Preservation of the White House. Any changes must be in keeping with the historical character of the White House.\nThe President\u2019s office is called the Oval Office because the room is shaped like an oval. In the Oval Office, the President signs bills, meets with staff, and hosts guests and visitors. One of the most famous pieces of furniture in the room is the Resolute desk, which was made from the wood of a British ship and was given to President Hayes in 1880 by Queen Victoria.\nThe White House and its grounds have seen many changes. During World War I, President Woodrow Wilson had a flock of sheep on the south grounds that ate the grass; their wool was sold for the war effort. The South Lawn is also where the President\u2019s helicopter, Marine One, takes off and lands. It is the site of the annual Easter Egg Roll, where children can participate in a traditional Easter event. The grounds have also been used as gardens for food for the White House meals.\nWhite House facts and figures:\nTo learn more, including an interactive tour, see the White House official site.\n\nProvide relevant evidence.",
+    "input_length_chars": 2491,
+    "input_tokens_estimated": 622,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that the White House has a floor area of about 55,000 square feet, directly supporting the claim.",
+      "overall_stance": "supports",
+      "key_quote": "The floor area is about 55,000 square feet."
+    },
+    "output_length_chars": 248,
+    "output_tokens_estimated": 62,
+    "cost_usd": 0.0001305
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:37:28.598372",
+    "latency_seconds": 37.56,
+    "input_prompt": "Claim:\nThe ballroom project is envisioned to be 90,000 square feet.\n\nArticle Title:\nTrump's New Architect Is Sticking With Ballroom's Giant Size\n\nFull Page Content:\nTrump's ballroom project will still be 90,000 square feet under the new architect, according to a person familiar with the project. Flatbed ...\n\nProvide relevant evidence.",
+    "input_length_chars": 336,
+    "input_tokens_estimated": 84,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that the ballroom project is indeed envisioned to be 90,000 square feet, as stated by a source familiar with the project.",
+      "overall_stance": "supports",
+      "key_quote": "Trump's ballroom project will still be 90,000 square feet under the new architect."
+    },
+    "output_length_chars": 311,
+    "output_tokens_estimated": 77,
+    "cost_usd": 5.88e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:37:28.868552",
+    "latency_seconds": 22.89,
+    "input_prompt": "Claim:\nThe National Trust previously wrote a letter to the White House asking to pause work on the project.\n\nArticle Title:\nNational Trust Sues to Block Trump's White House Ballroom ...\n\nGoogle Search Snippet:\nThe lawsuit seeks to force Mr. Trump to submit his plans for a new 90,000-square-foot ballroom to several bodies and Congress for public review ...\n\nFull Page Content:\nThe letter below was submitted on October 21, 2025, to the National Capital Planning Commission, the National Park Service, and the Commission of Fine Arts. Download the letter here.\nCarol Quillen, President and CEO of the National Trust for Historic Preservation, also issued a statement to accompany the letter. Read the statement here.\nOctober 21, 2025\nMr. William Scharf, Chair National Capital Planning Commission 401 Ninth Street NW, Suite 500N Washington, DC 20004\nMs. Jessica Bowron Acting Director, National Park Service National Park Service 1849 C Street NW Washington, DC 20240\nMs. Billie Tsien, Chair Commission of Fine Arts 401 F Street NW, Suite 312 Washington, DC 20001-2728\nRe: Proposed Construction of White House Ballroom\nMr. Scharf, Ms. Bowron, and Ms. Tsien,\nThe National Trust for Historic Preservation in the United States (\u201cNational Trust\u201d) is a private charitable, educational, nonprofit corporation headquartered in Washington, D.C. and chartered by Congress in 1949 to further the historic preservation policy of the United States. 54 U.S.C. \u00a7 312102(a). This Congressional charter obligates the National Trust to \u201cfacilitate public participation in the preservation of sites, buildings, and objects of national significance or interest.\u201d Our mission is to protect America\u2019s significant historic sites and to advocate for historic preservation as a core public value.\nPresident Trump has proposed the construction of a 90,000-square-foot ballroom on the east side of the White House campus, adjacent to the historic Treasury Building. Site preparation is already underway, including the demolition of a portion of the existing East Wing.\nWhile the National Trust acknowledges the utility of a larger meeting space at the White House, we are deeply concerned that the massing and height of the proposed new construction will overwhelm the White House itself\u2014it is 55,000 square feet\u2014and may also permanently disrupt the carefully balanced classical design of the White House with its two smaller, and lower, East and West Wings. The federally recognized Secretary of the Interior\u2019s Standards for Rehabilitation offer clear guidance for construction projects affecting historic properties. The Standards provide that new additions should not destroy the historic fabric of the property and that the new work should be compatible with existing massing, size, scale, and architectural features.\nOwned by the American people, the White House was designed by Irish architect James Hoban, whose winning proposal was selected by President George Washington. The building respects Georgian and neoclassical principles. It is a National Historic Landmark, a National Park, and a globally recognized symbol of our nation\u2019s ideals.\nWe respectfully urge the Administration and the National Park Service to pause demolition until plans for the proposed ballroom go through the legally required public review processes, including consultation and review by the National Capital Planning Commission and the Commission of Fine Arts, and to invite comment from the public. These processes provide a crucial opportunity for transparency and broad engagement\u2014values that have guided preservation of the White House under every administration going back to the public competition in 1792 that produced the building\u2019s original design. Doing so will help ensure that the project both honors the exceptional historic significance of the White House and acknowledges the investment that the American people have in the preservation of this beloved place.\nThe National Trust stands ready to assist the White House, the National Park Service, and relevant review agencies in exploring design alternatives and modifications that would accomplish the objectives of the Administration while preserving the historic integrity and symbolism of the People\u2019s House.\nAs we approach the 250th Anniversary of our country\u2019s founding, the preservation of historic places that represent our nation\u2019s history has never been more relevant or important. We urge you to take into account the deep reverence that all Americans hold for this iconic place, and to initiate the review process that can ensure the preservation of the historic White House for future generations.\nSincerely,\nDr. Carol Quillen President and Chief Executive Officer\nCarol Quillen is the 10th President and Chief Executive Officer of the National Trust for Historic Preservation.\nRelated Stories\nNow is the time for preservation advocates to engage directly with your members of Congress and elevate the importance of historic preservation in your communities.\n600 14th Street NW Suite 500 Washington, DC 20005\ninfo@savingplaces.org\n\u00a9 2025 National Trust for Historic Preservation. All Rights Reserved. The National Trust for Historic Preservation is a private 501(c)(3) nonprofit organization. The National Trust\u2019s federal tax identification number is 53-0210807.\nThis website uses cookies and other tracking technologies to enhance user experience, to analyze performance and traffic on our website, and for other purposes described in our Privacy Policy.\n\nProvide relevant evidence.",
+    "input_length_chars": 5520,
+    "input_tokens_estimated": 1380,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The National Trust for Historic Preservation explicitly urged the Administration and the National Park Service to pause demolition of the White House ballroom project until it undergoes the required public review processes.",
+      "overall_stance": "supports",
+      "key_quote": "We respectfully urge the Administration and the National Park Service to pause demolition until plans for the proposed ballroom go through the legally required public review processes."
+    },
+    "output_length_chars": 493,
+    "output_tokens_estimated": 123,
+    "cost_usd": 0.0002808
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:37:28.939590",
+    "latency_seconds": 22.95,
+    "input_prompt": "Claim:\nThe National Trust previously wrote a letter to the White House asking to pause work on the project.\n\nArticle Title:\nNational Trust Letter Regarding Proposed Construction of the White ...\n\nGoogle Search Snippet:\nWe respectfully urge the Administration and the National Park Service to pause demolition until plans for the proposed ballroom go through the ...\n\nFull Page Content:\nThe letter below was submitted on October 21, 2025, to the National Capital Planning Commission, the National Park Service, and the Commission of Fine Arts. Download the letter here.\nCarol Quillen, President and CEO of the National Trust for Historic Preservation, also issued a statement to accompany the letter. Read the statement here.\nOctober 21, 2025\nMr. William Scharf, Chair National Capital Planning Commission 401 Ninth Street NW, Suite 500N Washington, DC 20004\nMs. Jessica Bowron Acting Director, National Park Service National Park Service 1849 C Street NW Washington, DC 20240\nMs. Billie Tsien, Chair Commission of Fine Arts 401 F Street NW, Suite 312 Washington, DC 20001-2728\nRe: Proposed Construction of White House Ballroom\nMr. Scharf, Ms. Bowron, and Ms. Tsien,\nThe National Trust for Historic Preservation in the United States (\u201cNational Trust\u201d) is a private charitable, educational, nonprofit corporation headquartered in Washington, D.C. and chartered by Congress in 1949 to further the historic preservation policy of the United States. 54 U.S.C. \u00a7 312102(a). This Congressional charter obligates the National Trust to \u201cfacilitate public participation in the preservation of sites, buildings, and objects of national significance or interest.\u201d Our mission is to protect America\u2019s significant historic sites and to advocate for historic preservation as a core public value.\nPresident Trump has proposed the construction of a 90,000-square-foot ballroom on the east side of the White House campus, adjacent to the historic Treasury Building. Site preparation is already underway, including the demolition of a portion of the existing East Wing.\nWhile the National Trust acknowledges the utility of a larger meeting space at the White House, we are deeply concerned that the massing and height of the proposed new construction will overwhelm the White House itself\u2014it is 55,000 square feet\u2014and may also permanently disrupt the carefully balanced classical design of the White House with its two smaller, and lower, East and West Wings. The federally recognized Secretary of the Interior\u2019s Standards for Rehabilitation offer clear guidance for construction projects affecting historic properties. The Standards provide that new additions should not destroy the historic fabric of the property and that the new work should be compatible with existing massing, size, scale, and architectural features.\nOwned by the American people, the White House was designed by Irish architect James Hoban, whose winning proposal was selected by President George Washington. The building respects Georgian and neoclassical principles. It is a National Historic Landmark, a National Park, and a globally recognized symbol of our nation\u2019s ideals.\nWe respectfully urge the Administration and the National Park Service to pause demolition until plans for the proposed ballroom go through the legally required public review processes, including consultation and review by the National Capital Planning Commission and the Commission of Fine Arts, and to invite comment from the public. These processes provide a crucial opportunity for transparency and broad engagement\u2014values that have guided preservation of the White House under every administration going back to the public competition in 1792 that produced the building\u2019s original design. Doing so will help ensure that the project both honors the exceptional historic significance of the White House and acknowledges the investment that the American people have in the preservation of this beloved place.\nThe National Trust stands ready to assist the White House, the National Park Service, and relevant review agencies in exploring design alternatives and modifications that would accomplish the objectives of the Administration while preserving the historic integrity and symbolism of the People\u2019s House.\nAs we approach the 250th Anniversary of our country\u2019s founding, the preservation of historic places that represent our nation\u2019s history has never been more relevant or important. We urge you to take into account the deep reverence that all Americans hold for this iconic place, and to initiate the review process that can ensure the preservation of the historic White House for future generations.\nSincerely,\nDr. Carol Quillen President and Chief Executive Officer\nCarol Quillen is the 10th President and Chief Executive Officer of the National Trust for Historic Preservation.\nRelated Stories\nNow is the time for preservation advocates to engage directly with your members of Congress and elevate the importance of historic preservation in your communities.\n600 14th Street NW Suite 500 Washington, DC 20005\ninfo@savingplaces.org\n\u00a9 2025 National Trust for Historic Preservation. All Rights Reserved. The National Trust for Historic Preservation is a private 501(c)(3) nonprofit organization. The National Trust\u2019s federal tax identification number is 53-0210807.\nThis website uses cookies and other tracking technologies to enhance user experience, to analyze performance and traffic on our website, and for other purposes described in our Privacy Policy.\n\nProvide relevant evidence.",
+    "input_length_chars": 5528,
+    "input_tokens_estimated": 1382,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The National Trust for Historic Preservation explicitly urged the Administration and the National Park Service to pause demolition related to the proposed construction of a ballroom at the White House until proper public review processes are completed.",
+      "overall_stance": "supports",
+      "key_quote": "We respectfully urge the Administration and the National Park Service to pause demolition until plans for the proposed ballroom go through the legally required public review processes."
+    },
+    "output_length_chars": 522,
+    "output_tokens_estimated": 130,
+    "cost_usd": 0.0002853
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:37:29.043911",
+    "latency_seconds": 37.92,
+    "input_prompt": "Claim:\nThe ballroom project is envisioned to be 90,000 square feet.\n\nArticle Title:\nStatement on the Proposed Ballroom Addition at the White House\n\nGoogle Search Snippet:\nOn July 31, 2025, the White House issued a statement that a 90,000 sq. ft. addition will be made to the White House to incorporate a 650-person ...\n\nFull Page Content:\nHome / News / Statement on the Proposed Ballroom Addition at the White House\nThe Society of Architectural Historians (SAH) expresses great concern over the proposed ballroom addition to the White House. On July 31, 2025, the White House issued a statement that a 90,000 sq. ft. addition will be made to the White House to incorporate a 650-person capacity ballroom.1 The project is set to begin in September 2025 and planned to be completed \u201clong before\u201d the end of the President\u2019s term in 2029.2 Funded privately by the President and other unspecified donors, the approximately $200 million dollar project involves a major expansion of the East Wing of the White House.3\nAs the leading scholarly organization for architectural historians in North America, SAH limits its advocacy to matters of national and international import. We assess such issues with rigor and deliberation, and do not speak without due consideration of a site\u2019s architectural and cultural significance. The White House is one of the most important historic buildings in the United States. As stated in the \u2018Design Guidelines for the White House and President\u2019s Park\u2019 (1997), issued by the National Park Service: \u201cThe White House and President\u2019s Park are first and foremost a public trust, an important part of our national heritage.\u201d 4\nWhile we recognize that the White House is a building with evolving needs, and that it has undergone various exterior and interior modifications since construction began in 1792, the proposed ballroom will be the first major change to its exterior appearance in the last 83 years (since the East Wing in its current form was built in 1942). Therefore, such a significant change to a historic building of this import should follow a rigorous and deliberate design and review process. Since the project announcement, the American Institute of Architects (AIA) has expressed concern and offered recommendations in five areas: establishing a qualifications-based architect selection process, enacting a rigorous historic preservation review, prioritizing transparency and public accountability, considering \u201cproportionality\u201d and \u201cdesign harmony\u201d, and leveraging collaboration and expertise across the architecture profession.5 We share the AIA\u2019s concern and support their recommendations, while offering the following additional items for consideration:\nSincerely, SAH Heritage Conservation Committee Priya Jain, AIA (Chair) Fallon Aidoo, Ph.D. Kenneth Breisch, Ph.D. Pushpita Eshika, Ph.D. Yannick Etoundi Bryan Clark Green, Ph.D. Ba\u015fak Kalfa, Ph.D. Mary Rzepczynski Mohammad Gharipour, Ph.D. (ex-officio member) Ben Thomas, Ph.D. (ex-officio member) Approved September 16, 2025.\n*This statement was revised on October 23 to remove a reference to an incorrectly attributed quote in a report by The Associated Press.\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014 1 \u201cThe White House Announces White House Ballroom Construction to Begin,\u201d The White House, July 31, 2025. https://www.whitehouse.gov/briefings-statements/2025/07/the-white-house-announces-white-house-ballroom-construction-to-begin/ 2 Ibid. 3 Ibid. 4 US Department of the Interior, National Park Service, Design Guidelines: The White House and President\u2019s Park, Washington D.C., December 1997, 7. https://www.nps.gov/parkhistory/online_books/prpa/prpa_design_guidelines.pdf 5 \u201cAIA Advocates for Preservation and Transparency in Proposed $200 million White House Expansion,\u201d American Institute of Architects, August 5, 2025. https://www.aia.org/about-aia/press/aia-advocates-preservation-and-transparency-proposed-200-million-white-house 6 Will Scharf, Chair of the National Planning Commission, as quoted in Elizabeth Crisp, \u201cWhite House Ballroom Demolition Doesn\u2019t Need Approval: Trump-Appointed Panel Chief,\u201d The Hill, September 5, 2025. https://thehill.com/homenews/5488638-trump-ballroom-demolition-no-approval/ 7 President Donald Trump as quoted in Peter Nicholas, \u201cTrump Says the New White House Ballroom Will be \u2018a Little Bigger\u2019 Than Initially Planned,\u201d NBC News, September 13, 2025. https://www.nbcnews.com/politics/donald-trump/trump-white-house-ballroom-bigger-rcna231033\nCover photo: The White House from Washington, DC, Public domain, via Wikimedia Commons\nSAH thanks the Richard H. Driehaus Foundation and the Alphawood Foundation for their operating support.\nFounded in 1940, the Society of Architectural Historians is an international nonprofit membership organization that promotes the study, interpretation and conservation of architecture, design, landscapes and urbanism worldwide.\nSubscribe to our emails for the latest SAH news, events, and opportunities.\nSociety of Architectural Historians 1365 N. Astor Street Chicago, Illinois 60610\n\nProvide relevant evidence.",
+    "input_length_chars": 5066,
+    "input_tokens_estimated": 1266,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that the proposed ballroom addition to the White House is envisioned to be 90,000 square feet, as stated in the official announcement from the White House.",
+      "overall_stance": "supports",
+      "key_quote": "On July 31, 2025, the White House issued a statement that a 90,000 sq. ft. addition will be made to the White House to incorporate a 650-person capacity ballroom."
+    },
+    "output_length_chars": 425,
+    "output_tokens_estimated": 106,
+    "cost_usd": 0.0002535
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:37:29.096444",
+    "latency_seconds": 10.53,
+    "input_prompt": "Claim:\nThe White House itself is about 55,000 square feet.\n\nArticle Title:\nWhite House Dimensions\n\nGoogle Search Snippet:\nFloor area (total of 6 floors) approximately 55,000 square feet. It takes 570 gallons of white paint to cover the exterior of just the residence portion of the ...\n\nFull Page Content:\nMain Content\nBasic numbers and facts about the White House and its rooms.\nCompiled by the White House Historical Association. Please credit the Association by its full name when using this as background material. Specific sources consulted available upon request.\nFor all media inquiries, contact press@whha.org.\nFirst Lady Jacqueline Kennedy envisioned a restored White House that conveyed a sense of history through its decorative and fine arts. She sought to inspire Americans, especially children, to explore and engage with American history and its presidents. In 1961, the nonprofit, nonpartisan White House Historical Association was established to support her vision to preserve and share the Executive Mansion\u2019s legacy for generations to come. Supported entirely by private resources, the Association\u2019s mission is to assist in the preservation of the state and public rooms, fund acquisitions for the White House permanent collection, and educate the public on the history of the White House. Since its founding, the Association has given more than $115 million to the White House in fulfillment of its mission.\nTo learn more about the White House Historical Association, please visit WhiteHouseHistory.org.\n\nProvide relevant evidence.",
+    "input_length_chars": 1550,
+    "input_tokens_estimated": 387,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that the total floor area of the White House is approximately 55,000 square feet, which directly supports the claim.",
+      "overall_stance": "supports",
+      "key_quote": "Floor area (total of 6 floors) approximately 55,000 square feet."
+    },
+    "output_length_chars": 288,
+    "output_tokens_estimated": 72,
+    "cost_usd": 0.00010125
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:37:29.194611",
+    "latency_seconds": 23.21,
+    "input_prompt": "Claim:\nThe National Trust previously wrote a letter to the White House asking to pause work on the project.\n\nArticle Title:\nHistoric preservation trust sues Trump over White House ballroom\n\nGoogle Search Snippet:\nThe National Trust for Historic Preservation sued the administration Friday in an effort to stop construction of the White House ballroom.\n\nFull Page Content:\nThe letter below was submitted on October 21, 2025, to the National Capital Planning Commission, the National Park Service, and the Commission of Fine Arts. Download the letter here.\nCarol Quillen, President and CEO of the National Trust for Historic Preservation, also issued a statement to accompany the letter. Read the statement here.\nOctober 21, 2025\nMr. William Scharf, Chair National Capital Planning Commission 401 Ninth Street NW, Suite 500N Washington, DC 20004\nMs. Jessica Bowron Acting Director, National Park Service National Park Service 1849 C Street NW Washington, DC 20240\nMs. Billie Tsien, Chair Commission of Fine Arts 401 F Street NW, Suite 312 Washington, DC 20001-2728\nRe: Proposed Construction of White House Ballroom\nMr. Scharf, Ms. Bowron, and Ms. Tsien,\nThe National Trust for Historic Preservation in the United States (\u201cNational Trust\u201d) is a private charitable, educational, nonprofit corporation headquartered in Washington, D.C. and chartered by Congress in 1949 to further the historic preservation policy of the United States. 54 U.S.C. \u00a7 312102(a). This Congressional charter obligates the National Trust to \u201cfacilitate public participation in the preservation of sites, buildings, and objects of national significance or interest.\u201d Our mission is to protect America\u2019s significant historic sites and to advocate for historic preservation as a core public value.\nPresident Trump has proposed the construction of a 90,000-square-foot ballroom on the east side of the White House campus, adjacent to the historic Treasury Building. Site preparation is already underway, including the demolition of a portion of the existing East Wing.\nWhile the National Trust acknowledges the utility of a larger meeting space at the White House, we are deeply concerned that the massing and height of the proposed new construction will overwhelm the White House itself\u2014it is 55,000 square feet\u2014and may also permanently disrupt the carefully balanced classical design of the White House with its two smaller, and lower, East and West Wings. The federally recognized Secretary of the Interior\u2019s Standards for Rehabilitation offer clear guidance for construction projects affecting historic properties. The Standards provide that new additions should not destroy the historic fabric of the property and that the new work should be compatible with existing massing, size, scale, and architectural features.\nOwned by the American people, the White House was designed by Irish architect James Hoban, whose winning proposal was selected by President George Washington. The building respects Georgian and neoclassical principles. It is a National Historic Landmark, a National Park, and a globally recognized symbol of our nation\u2019s ideals.\nWe respectfully urge the Administration and the National Park Service to pause demolition until plans for the proposed ballroom go through the legally required public review processes, including consultation and review by the National Capital Planning Commission and the Commission of Fine Arts, and to invite comment from the public. These processes provide a crucial opportunity for transparency and broad engagement\u2014values that have guided preservation of the White House under every administration going back to the public competition in 1792 that produced the building\u2019s original design. Doing so will help ensure that the project both honors the exceptional historic significance of the White House and acknowledges the investment that the American people have in the preservation of this beloved place.\nThe National Trust stands ready to assist the White House, the National Park Service, and relevant review agencies in exploring design alternatives and modifications that would accomplish the objectives of the Administration while preserving the historic integrity and symbolism of the People\u2019s House.\nAs we approach the 250th Anniversary of our country\u2019s founding, the preservation of historic places that represent our nation\u2019s history has never been more relevant or important. We urge you to take into account the deep reverence that all Americans hold for this iconic place, and to initiate the review process that can ensure the preservation of the historic White House for future generations.\nSincerely,\nDr. Carol Quillen President and Chief Executive Officer\nCarol Quillen is the 10th President and Chief Executive Officer of the National Trust for Historic Preservation.\nRelated Stories\nNow is the time for preservation advocates to engage directly with your members of Congress and elevate the importance of historic preservation in your communities.\n600 14th Street NW Suite 500 Washington, DC 20005\ninfo@savingplaces.org\n\u00a9 2025 National Trust for Historic Preservation. All Rights Reserved. The National Trust for Historic Preservation is a private 501(c)(3) nonprofit organization. The National Trust\u2019s federal tax identification number is 53-0210807.\nThis website uses cookies and other tracking technologies to enhance user experience, to analyze performance and traffic on our website, and for other purposes described in our Privacy Policy.\n\nProvide relevant evidence.",
+    "input_length_chars": 5514,
+    "input_tokens_estimated": 1378,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The National Trust for Historic Preservation explicitly urged the Administration to pause demolition of the White House ballroom project until it underwent the required public review processes, indicating they did write a letter to the White House asking for a pause on the project.",
+      "overall_stance": "supports",
+      "key_quote": "We respectfully urge the Administration and the National Park Service to pause demolition until plans for the proposed ballroom go through the legally required public review processes."
+    },
+    "output_length_chars": 552,
+    "output_tokens_estimated": 138,
+    "cost_usd": 0.0002895
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:37:29.391036",
+    "latency_seconds": 23.41,
+    "input_prompt": "Claim:\nThe National Trust previously wrote a letter to the White House asking to pause work on the project.\n\nArticle Title:\nNational Trust for Historic Preservation sues to try to stop White ...\n\nGoogle Search Snippet:\n\"President Trump's efforts to do so should be immediately halted, and work on the Ballroom Project should be paused until the Defendants ...\n\nFull Page Content:\nThe letter below was submitted on October 21, 2025, to the National Capital Planning Commission, the National Park Service, and the Commission of Fine Arts. Download the letter here.\nCarol Quillen, President and CEO of the National Trust for Historic Preservation, also issued a statement to accompany the letter. Read the statement here.\nOctober 21, 2025\nMr. William Scharf, Chair National Capital Planning Commission 401 Ninth Street NW, Suite 500N Washington, DC 20004\nMs. Jessica Bowron Acting Director, National Park Service National Park Service 1849 C Street NW Washington, DC 20240\nMs. Billie Tsien, Chair Commission of Fine Arts 401 F Street NW, Suite 312 Washington, DC 20001-2728\nRe: Proposed Construction of White House Ballroom\nMr. Scharf, Ms. Bowron, and Ms. Tsien,\nThe National Trust for Historic Preservation in the United States (\u201cNational Trust\u201d) is a private charitable, educational, nonprofit corporation headquartered in Washington, D.C. and chartered by Congress in 1949 to further the historic preservation policy of the United States. 54 U.S.C. \u00a7 312102(a). This Congressional charter obligates the National Trust to \u201cfacilitate public participation in the preservation of sites, buildings, and objects of national significance or interest.\u201d Our mission is to protect America\u2019s significant historic sites and to advocate for historic preservation as a core public value.\nPresident Trump has proposed the construction of a 90,000-square-foot ballroom on the east side of the White House campus, adjacent to the historic Treasury Building. Site preparation is already underway, including the demolition of a portion of the existing East Wing.\nWhile the National Trust acknowledges the utility of a larger meeting space at the White House, we are deeply concerned that the massing and height of the proposed new construction will overwhelm the White House itself\u2014it is 55,000 square feet\u2014and may also permanently disrupt the carefully balanced classical design of the White House with its two smaller, and lower, East and West Wings. The federally recognized Secretary of the Interior\u2019s Standards for Rehabilitation offer clear guidance for construction projects affecting historic properties. The Standards provide that new additions should not destroy the historic fabric of the property and that the new work should be compatible with existing massing, size, scale, and architectural features.\nOwned by the American people, the White House was designed by Irish architect James Hoban, whose winning proposal was selected by President George Washington. The building respects Georgian and neoclassical principles. It is a National Historic Landmark, a National Park, and a globally recognized symbol of our nation\u2019s ideals.\nWe respectfully urge the Administration and the National Park Service to pause demolition until plans for the proposed ballroom go through the legally required public review processes, including consultation and review by the National Capital Planning Commission and the Commission of Fine Arts, and to invite comment from the public. These processes provide a crucial opportunity for transparency and broad engagement\u2014values that have guided preservation of the White House under every administration going back to the public competition in 1792 that produced the building\u2019s original design. Doing so will help ensure that the project both honors the exceptional historic significance of the White House and acknowledges the investment that the American people have in the preservation of this beloved place.\nThe National Trust stands ready to assist the White House, the National Park Service, and relevant review agencies in exploring design alternatives and modifications that would accomplish the objectives of the Administration while preserving the historic integrity and symbolism of the People\u2019s House.\nAs we approach the 250th Anniversary of our country\u2019s founding, the preservation of historic places that represent our nation\u2019s history has never been more relevant or important. We urge you to take into account the deep reverence that all Americans hold for this iconic place, and to initiate the review process that can ensure the preservation of the historic White House for future generations.\nSincerely,\nDr. Carol Quillen President and Chief Executive Officer\nCarol Quillen is the 10th President and Chief Executive Officer of the National Trust for Historic Preservation.\nRelated Stories\nNow is the time for preservation advocates to engage directly with your members of Congress and elevate the importance of historic preservation in your communities.\n600 14th Street NW Suite 500 Washington, DC 20005\ninfo@savingplaces.org\n\u00a9 2025 National Trust for Historic Preservation. All Rights Reserved. The National Trust for Historic Preservation is a private 501(c)(3) nonprofit organization. The National Trust\u2019s federal tax identification number is 53-0210807.\nThis website uses cookies and other tracking technologies to enhance user experience, to analyze performance and traffic on our website, and for other purposes described in our Privacy Policy.\n\nProvide relevant evidence.",
+    "input_length_chars": 5522,
+    "input_tokens_estimated": 1380,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The National Trust for Historic Preservation explicitly urged the Administration and the National Park Service to pause demolition of the White House Ballroom project until it undergoes the required public review processes, indicating they did write a letter requesting a pause on the project.",
+      "overall_stance": "supports",
+      "key_quote": "We respectfully urge the Administration and the National Park Service to pause demolition until plans for the proposed ballroom go through the legally required public review processes."
+    },
+    "output_length_chars": 563,
+    "output_tokens_estimated": 140,
+    "cost_usd": 0.000291
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:37:29.411098",
+    "latency_seconds": 38.37,
+    "input_prompt": "Claim:\nThe ballroom project is envisioned to be 90,000 square feet.\n\nArticle Title:\nTrump sued over White House ballroom construction - CNBC\n\nFull Page Content:\nPresident Donald Trump and his administration were sued over the construction of a massive White House ballroom in place of the demolished ...\n\nProvide relevant evidence.",
+    "input_length_chars": 331,
+    "input_tokens_estimated": 82,
+    "output": {
+      "has_relevant_evidence": false,
+      "overall_stance": "unclear"
+    },
+    "output_length_chars": 90,
+    "output_tokens_estimated": 22,
+    "cost_usd": 2.55e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:37:29.611442",
+    "latency_seconds": 49.05,
+    "input_prompt": "Claim:\nConcerns have been raised that the ballroom will dwarf the original White House building.\n\nArticle Title:\nTimeline: Trump's ballroom compared to past White House ... - NPR\n\nFull Page Content:\nCrews are demolishing the East Wing of the White House to make way for the construction of President Trump's $300 million, 90,000 square-foot ...\n\nProvide relevant evidence.",
+    "input_length_chars": 372,
+    "input_tokens_estimated": 93,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses the construction of a new ballroom that is significantly larger than the original White House building, raising concerns about its size in relation to the historic structure.",
+      "overall_stance": "supports",
+      "key_quote": "President Trump's $300 million, 90,000 square-foot ballroom will dwarf the original White House building."
+    },
+    "output_length_chars": 387,
+    "output_tokens_estimated": 96,
+    "cost_usd": 7.155e-05
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:37:29.802494",
+    "latency_seconds": 11.75,
+    "input_prompt": "Claim:\nThe president has been planning the ballroom for years, including before he took office.\n\nArticle Title:\nTimeline: Trump's ballroom compared to past White House ... - NPR\n\nGoogle Search Snippet:\nTimeline: Trump's ballroom compared to past White House renovations President Trump is demolishing the East Wing to make room for a ballroom. ...\n\nFull Page Content:\nThere have been grand schemes to expand the White House going back to Jefferson, who added the original East and West terraces. There were proposals to add large wings under Hayes, Cleveland, and Harrison but nothing came of them. It wasn\u2019t until the Taft administration that the West Wing was added. The East Wing fades in and out of the complex. I think the present structure dates to FDR\u2019s time.\nRefrain from unknown callers asking to download apps and share OTP. Never share sensitive information like UPI credentials, ATM card details, PINs, OTP etc. Remember Silence is the key to patiently tackling the app and OTP scams. Stay vigilant, stay safe.\nBe cautious of unknown links in SMS, emails, or messaging apps. Spelling mistakes are commonly found in such sites/pages sent from unknown sources.\nContact your bank immediately and report the incident\nBecause they weren\u2019t greedy or selfish like trumpetina!!\nTrump did. I'm going to play both sides of the fence on this though.\nFirst, it's not a terrible idea outright. You can basically keep White House guests in one area, instead of them walking around.This simplifies things from a security standpoint.\nThe cost has also been picked up by non taxpayer funds. Wealthy individuals and corporations that want something paid for it. On a side note, there's one wealthy person glaringly absent from donating anything. You can look at a list of the donors and immediately tell who didn't pitch in \ud83d\ude02\nNow, the other side. This is mostly vanity. They destroyed histo\nNo, there really hasn\u2019t. Only one past President mentioned it and I think that was Harrison. Since that was 134 years ago, Trump convoluted that into \u201cPresidents have been wanting a ballroom for 150 years.\u201d\n\nProvide relevant evidence.",
+    "input_length_chars": 2119,
+    "input_tokens_estimated": 529,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses the history of proposals for expanding the White House, noting that only one past president, Harrison, mentioned a ballroom, and it suggests that Trump's claim of a long-standing desire for a ballroom is exaggerated.",
+      "overall_stance": "refutes",
+      "key_quote": "No, there really hasn\u2019t. Only one past President mentioned it and I think that was Harrison."
+    },
+    "output_length_chars": 415,
+    "output_tokens_estimated": 103,
+    "cost_usd": 0.00014115
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:37:30.033914",
+    "latency_seconds": 19.59,
+    "input_prompt": "Claim:\nThe White House has not responded to the lawsuit specifically.\n\nArticle Title:\nTrump administration says sign language services 'intrude' on ...\n\nGoogle Search Snippet:\nThe National Association for the Deaf sued the Trump administration in May, arguing that the cessation of American Sign Language interpretation ...\n\nFull Page Content:\nConstruction workers (bottom right) standing atop the U.S. Treasury building, watch as demolition continues on the East Wing of the White House to make room for a new ballroom in Washington on Oct. 22.Jacquelyn Martin/AP\nGREENWIRE | Preservationists have gone to court to halt further work on President Donald Trump\u2019s plans to build a massive ballroom where the White House\u2019s East Wing once stood.\nThe lawsuit filed Friday in the U.S. District Court for the District of Columbia says the government has already violated the Constitution and several federal laws by moving forward with demolition and construction without input from Congress, planning officials or the public.\n\u201cThe White House is arguably the most evocative building in our country and a globally recognized symbol of our powerful American ideals. As the organization charged with protecting places where our history happened, the National Trust was compelled to file this case,\u201d said Carol Quillen, president and CEO of the National Trust for Historic Preservation, in a statement accompanying the group\u2019s lawsuit.\n\u201cSubmitting the project to the National Capital Planning Commission for review protects the iconic historic features of the White House campus as it evolves,\u201d she continued. \u201cInviting comments from the American people signals respect and helps ensure a lasting legacy that befits a government of the people, by the people, for the people.\u201d\n...\nContinue reading this article.\nJoin the decisionmakers who trust our essential energy and environment news to stay prepared.\n\nProvide relevant evidence.",
+    "input_length_chars": 1922,
+    "input_tokens_estimated": 480,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses a lawsuit against the Trump administration but does not provide any information about the White House's response to the lawsuit, indicating that there has been no specific response.",
+      "overall_stance": "unclear",
+      "key_quote": "The National Association for the Deaf sued the Trump administration in May, arguing that the cessation of American Sign Language interpretation ..."
+    },
+    "output_length_chars": 435,
+    "output_tokens_estimated": 108,
+    "cost_usd": 0.0001368
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:37:30.255426",
+    "latency_seconds": 19.84,
+    "input_prompt": "Claim:\nThe White House has not responded to the lawsuit specifically.\n\nArticle Title:\nPreservationists sue Trump for ballroom project reviews and ... - PBS\n\nGoogle Search Snippet:\nPresident Donald Trump was sued on Friday by preservationists asking a federal court to halt his White House ballroom project until it goes ...\n\nFull Page Content:\nConstruction workers (bottom right) standing atop the U.S. Treasury building, watch as demolition continues on the East Wing of the White House to make room for a new ballroom in Washington on Oct. 22.Jacquelyn Martin/AP\nGREENWIRE | Preservationists have gone to court to halt further work on President Donald Trump\u2019s plans to build a massive ballroom where the White House\u2019s East Wing once stood.\nThe lawsuit filed Friday in the U.S. District Court for the District of Columbia says the government has already violated the Constitution and several federal laws by moving forward with demolition and construction without input from Congress, planning officials or the public.\n\u201cThe White House is arguably the most evocative building in our country and a globally recognized symbol of our powerful American ideals. As the organization charged with protecting places where our history happened, the National Trust was compelled to file this case,\u201d said Carol Quillen, president and CEO of the National Trust for Historic Preservation, in a statement accompanying the group\u2019s lawsuit.\n\u201cSubmitting the project to the National Capital Planning Commission for review protects the iconic historic features of the White House campus as it evolves,\u201d she continued. \u201cInviting comments from the American people signals respect and helps ensure a lasting legacy that befits a government of the people, by the people, for the people.\u201d\n...\nContinue reading this article.\nJoin the decisionmakers who trust our essential energy and environment news to stay prepared.\n\nProvide relevant evidence.",
+    "input_length_chars": 1922,
+    "input_tokens_estimated": 480,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses a lawsuit filed by preservationists against President Trump regarding the White House ballroom project, but it does not mention any response from the White House to the lawsuit itself.",
+      "overall_stance": "unclear",
+      "key_quote": "The lawsuit filed Friday in the U.S. District Court for the District of Columbia says the government has already violated the Constitution and several federal laws by moving forward with demolition and construction without input from Congress, planning officials or the public."
+    },
+    "output_length_chars": 568,
+    "output_tokens_estimated": 142,
+    "cost_usd": 0.0001572
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:37:30.279564",
+    "latency_seconds": 19.83,
+    "input_prompt": "Claim:\nThe White House has not responded to the lawsuit specifically.\n\nArticle Title:\nWhite House raises concerns about Trump's 'image' in lawsuit over ...\n\nGoogle Search Snippet:\nThe White House is appealing court orders to restore interpretation services at press briefings.\n\nFull Page Content:\nConstruction workers (bottom right) standing atop the U.S. Treasury building, watch as demolition continues on the East Wing of the White House to make room for a new ballroom in Washington on Oct. 22.Jacquelyn Martin/AP\nGREENWIRE | Preservationists have gone to court to halt further work on President Donald Trump\u2019s plans to build a massive ballroom where the White House\u2019s East Wing once stood.\nThe lawsuit filed Friday in the U.S. District Court for the District of Columbia says the government has already violated the Constitution and several federal laws by moving forward with demolition and construction without input from Congress, planning officials or the public.\n\u201cThe White House is arguably the most evocative building in our country and a globally recognized symbol of our powerful American ideals. As the organization charged with protecting places where our history happened, the National Trust was compelled to file this case,\u201d said Carol Quillen, president and CEO of the National Trust for Historic Preservation, in a statement accompanying the group\u2019s lawsuit.\n\u201cSubmitting the project to the National Capital Planning Commission for review protects the iconic historic features of the White House campus as it evolves,\u201d she continued. \u201cInviting comments from the American people signals respect and helps ensure a lasting legacy that befits a government of the people, by the people, for the people.\u201d\n...\nContinue reading this article.\nJoin the decisionmakers who trust our essential energy and environment news to stay prepared.\n\nProvide relevant evidence.",
+    "input_length_chars": 1875,
+    "input_tokens_estimated": 468,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses a lawsuit against the government regarding construction at the White House, but it does not provide any specific information about the White House's response to the lawsuit.",
+      "overall_stance": "unclear",
+      "key_quote": "\"The lawsuit filed Friday in the U.S. District Court for the District of Columbia says the government has already violated the Constitution and several federal laws by moving forward with demolition and construction without input from Congress, planning officials or the public.\""
+    },
+    "output_length_chars": 561,
+    "output_tokens_estimated": 140,
+    "cost_usd": 0.0001542
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:37:30.727451",
+    "latency_seconds": 12.66,
+    "input_prompt": "Claim:\nThe president has been planning the ballroom for years, including before he took office.\n\nArticle Title:\nThe decades-old exemption that lets Trump fast-track White House ...\n\nGoogle Search Snippet:\nUS President Donald Trump plans to knock down the entire \"existing structure\" of the White House East Wing to construct a new ballroom ...\n\nFull Page Content:\nThere have been grand schemes to expand the White House going back to Jefferson, who added the original East and West terraces. There were proposals to add large wings under Hayes, Cleveland, and Harrison but nothing came of them. It wasn\u2019t until the Taft administration that the West Wing was added. The East Wing fades in and out of the complex. I think the present structure dates to FDR\u2019s time.\nRefrain from unknown callers asking to download apps and share OTP. Never share sensitive information like UPI credentials, ATM card details, PINs, OTP etc. Remember Silence is the key to patiently tackling the app and OTP scams. Stay vigilant, stay safe.\nBe cautious of unknown links in SMS, emails, or messaging apps. Spelling mistakes are commonly found in such sites/pages sent from unknown sources.\nContact your bank immediately and report the incident\nBecause they weren\u2019t greedy or selfish like trumpetina!!\nTrump did. I'm going to play both sides of the fence on this though.\nFirst, it's not a terrible idea outright. You can basically keep White House guests in one area, instead of them walking around.This simplifies things from a security standpoint.\nThe cost has also been picked up by non taxpayer funds. Wealthy individuals and corporations that want something paid for it. On a side note, there's one wealthy person glaringly absent from donating anything. You can look at a list of the donors and immediately tell who didn't pitch in \ud83d\ude02\nNow, the other side. This is mostly vanity. They destroyed histo\nNo, there really hasn\u2019t. Only one past President mentioned it and I think that was Harrison. Since that was 134 years ago, Trump convoluted that into \u201cPresidents have been wanting a ballroom for 150 years.\u201d\n\nProvide relevant evidence.",
+    "input_length_chars": 2115,
+    "input_tokens_estimated": 528,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses the historical context of proposals to expand the White House, indicating that while there have been grand schemes for a ballroom, there is no evidence that Trump has been planning this specific project for years before taking office.",
+      "overall_stance": "refutes",
+      "key_quote": "No, there really hasn\u2019t. Only one past President mentioned it and I think that was Harrison."
+    },
+    "output_length_chars": 433,
+    "output_tokens_estimated": 108,
+    "cost_usd": 0.000144
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:37:31.012521",
+    "latency_seconds": 7.1,
+    "input_prompt": "Claim:\nThe National Capital Planning Commission is currently led by President Trump's appointees.\n\nArticle Title:\nTrump's War With Powell Throws a Little-Known Planning Board Into ...\n\nGoogle Search Snippet:\nThe National Capital Planning Commission has become pivotal in the administration's campaign to discredit Jerome H. Powell, the chair of the Federal Reserve.\n\nFull Page Content:\nD.C.\nThe NCPC has authority over buildings in the monumental core, like the Federal Reserve. Photo: Kevin Carter/Getty Images\nLoyalists of President Trump are using an obscure D.C. architecture commission to go after political foe Jerome Powell over the renovation of the Federal Reserve building.\nWhy it matters: The National Capital Planning Commission casts make-or-break votes on construction projects in key parts of the city and serves as tastemaker for design across the Washington region (see: the upcoming RFK Stadium redevelopment).\nDriving the news: The board's new chairman is Will Scharf, the White House staff secretary, also known as the man on TV who hands Trump executive orders to sign.\nTrump's new appointments surprised local observers who, while expecting turnover, assumed its members would have more robust r\u00e9sum\u00e9s in architecture and design.\nFriction point: Before turning to matters such as the redevelopment of Poplar Point at their Thursday meeting, Scharf claimed the Fed's renovation project has made \"serious deviations\" from plans approved by the commission in 2021.\nPowell denied to senators last month the plans were ostentatious \u2014 \"no VIP dining room ... no beehives,\" he said. Which only spawned a new attack: the Fed has violated the National Capital Planning Act by not following the approved blueprint.\nThe bottom line: Trump, the builder who continues to flirt with a takeover of D.C., now has a board directly hooked up to the White House that holds sway over anyone seeking permits to build in D.C.'s most prized real estate.\nGet a free daily digest of the most important news in your backyard with Axios Washington D.C..\nSupport local journalism by becoming a member.\nLearn more\nAxios Media Inc., 2025\n\nProvide relevant evidence.",
+    "input_length_chars": 2157,
+    "input_tokens_estimated": 539,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article indicates that the National Capital Planning Commission (NCPC) is currently led by appointees of President Trump, specifically mentioning Will Scharf as the new chairman, who is a White House staff member.",
+      "overall_stance": "supports",
+      "key_quote": "The board's new chairman is Will Scharf, the White House staff secretary."
+    },
+    "output_length_chars": 376,
+    "output_tokens_estimated": 94,
+    "cost_usd": 0.00013725
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:37:31.082279",
+    "latency_seconds": 20.62,
+    "input_prompt": "Claim:\nThe White House has not responded to the lawsuit specifically.\n\nArticle Title:\nHistoric preservation group sues to stop Trump ballroom construction\n\nGoogle Search Snippet:\nHistoric preservation group sues to stop Trump ballroom construction. The lawsuit contends the government has evaded the National Environmental ...\n\nFull Page Content:\nConstruction workers (bottom right) standing atop the U.S. Treasury building, watch as demolition continues on the East Wing of the White House to make room for a new ballroom in Washington on Oct. 22.Jacquelyn Martin/AP\nGREENWIRE | Preservationists have gone to court to halt further work on President Donald Trump\u2019s plans to build a massive ballroom where the White House\u2019s East Wing once stood.\nThe lawsuit filed Friday in the U.S. District Court for the District of Columbia says the government has already violated the Constitution and several federal laws by moving forward with demolition and construction without input from Congress, planning officials or the public.\n\u201cThe White House is arguably the most evocative building in our country and a globally recognized symbol of our powerful American ideals. As the organization charged with protecting places where our history happened, the National Trust was compelled to file this case,\u201d said Carol Quillen, president and CEO of the National Trust for Historic Preservation, in a statement accompanying the group\u2019s lawsuit.\n\u201cSubmitting the project to the National Capital Planning Commission for review protects the iconic historic features of the White House campus as it evolves,\u201d she continued. \u201cInviting comments from the American people signals respect and helps ensure a lasting legacy that befits a government of the people, by the people, for the people.\u201d\n...\nContinue reading this article.\nJoin the decisionmakers who trust our essential energy and environment news to stay prepared.\n\nProvide relevant evidence.",
+    "input_length_chars": 1925,
+    "input_tokens_estimated": 481,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses a lawsuit against the government regarding the construction of a ballroom at the White House, but it does not mention any response from the White House to the lawsuit itself.",
+      "overall_stance": "unclear",
+      "key_quote": "The lawsuit filed Friday in the U.S. District Court for the District of Columbia says the government has already violated the Constitution and several federal laws by moving forward with demolition and construction without input from Congress, planning officials or the public."
+    },
+    "output_length_chars": 558,
+    "output_tokens_estimated": 139,
+    "cost_usd": 0.00015555
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:37:31.180812",
+    "latency_seconds": 20.73,
+    "input_prompt": "Claim:\nThe White House has not responded to the lawsuit specifically.\n\nArticle Title:\nWhite House appeals judge's order requiring ASL interpreters at ...\n\nGoogle Search Snippet:\nAdministration claims transcripts and closed captioning provide sufficient access for deaf Americans.\n\nFull Page Content:\nConstruction workers (bottom right) standing atop the U.S. Treasury building, watch as demolition continues on the East Wing of the White House to make room for a new ballroom in Washington on Oct. 22.Jacquelyn Martin/AP\nGREENWIRE | Preservationists have gone to court to halt further work on President Donald Trump\u2019s plans to build a massive ballroom where the White House\u2019s East Wing once stood.\nThe lawsuit filed Friday in the U.S. District Court for the District of Columbia says the government has already violated the Constitution and several federal laws by moving forward with demolition and construction without input from Congress, planning officials or the public.\n\u201cThe White House is arguably the most evocative building in our country and a globally recognized symbol of our powerful American ideals. As the organization charged with protecting places where our history happened, the National Trust was compelled to file this case,\u201d said Carol Quillen, president and CEO of the National Trust for Historic Preservation, in a statement accompanying the group\u2019s lawsuit.\n\u201cSubmitting the project to the National Capital Planning Commission for review protects the iconic historic features of the White House campus as it evolves,\u201d she continued. \u201cInviting comments from the American people signals respect and helps ensure a lasting legacy that befits a government of the people, by the people, for the people.\u201d\n...\nContinue reading this article.\nJoin the decisionmakers who trust our essential energy and environment news to stay prepared.\n\nProvide relevant evidence.",
+    "input_length_chars": 1878,
+    "input_tokens_estimated": 469,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article discusses a lawsuit against the White House regarding construction plans, but it does not mention any response from the White House to the lawsuit itself, indicating a lack of specific response.",
+      "overall_stance": "unclear",
+      "key_quote": "The lawsuit filed Friday in the U.S. District Court for the District of Columbia says the government has already violated the Constitution and several federal laws by moving forward with demolition and construction without input from Congress, planning officials or the public."
+    },
+    "output_length_chars": 568,
+    "output_tokens_estimated": 142,
+    "cost_usd": 0.00015555
+  }
+]

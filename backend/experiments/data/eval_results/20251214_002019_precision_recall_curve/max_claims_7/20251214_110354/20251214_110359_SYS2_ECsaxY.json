@@ -1,0 +1,134 @@
+{
+  "video_id": "SYS2_ECsaxY",
+  "timestamp": "2025-12-14T11:03:59.487364",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_7",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.8571428571428571,
+    "recall": 0.5454545454545454,
+    "f1_score": 0.6666666666666665,
+    "true_positives": 6,
+    "false_positives": 1,
+    "false_negatives": 5,
+    "mean_average_precision": 0.9150793650793649,
+    "recall_at_important": 0.5,
+    "importance_weighted_coverage": 0.5862068965517241,
+    "matched_claims": [
+      {
+        "gt_text": "The FBI was organizing the riots of January 6th",
+        "sys_text": "The FBI was organizing the riots of January 6th.",
+        "gt_importance": 1.0,
+        "sys_importance": 0.85,
+        "importance_error": 0.15000000000000002
+      },
+      {
+        "gt_text": "There are 14,000 hours of unreleased video footage from that day the administration is hiding from us",
+        "sys_text": "There are 14,000 hours of unreleased video footage from January 6th.",
+        "gt_importance": 0.65,
+        "sys_importance": 0.8,
+        "importance_error": 0.15000000000000002
+      },
+      {
+        "gt_text": "The pipe bomber - the FBI has been extremely suspicious in withholding evidence video evidence that could help identify this bomber",
+        "sys_text": "The FBI has withheld evidence related to the pipe bomber video.",
+        "gt_importance": 0.6,
+        "sys_importance": 0.7,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "70 plus million people who are Trump supporters or just against the corrupt ruling class who have effectively been labeled de facto domestic extremists by our own government",
+        "sys_text": "Over 70 million people are Trump supporters or against the ruling class.",
+        "gt_importance": 0.85,
+        "sys_importance": 0.6,
+        "importance_error": 0.25
+      },
+      {
+        "gt_text": "Does the national security apparatus do anything but conspire against the American people",
+        "sys_text": "The national security apparatus conspires against the American people.",
+        "gt_importance": 0.7,
+        "sys_importance": 0.6,
+        "importance_error": 0.09999999999999998
+      },
+      {
+        "gt_text": "Every politician who cares about our country should demand a church committee 2.0 immediately",
+        "sys_text": "A Church Committee 2.0 should be demanded by politicians.",
+        "gt_importance": 0.45,
+        "sys_importance": 0.55,
+        "importance_error": 0.10000000000000003
+      }
+    ],
+    "missed_claims": [
+      "This is the most important and the darkest investigative piece they've seen in years",
+      "The American people deserve the truth about 1-6 not just for the sake of Ashley Babbitt",
+      "Hundreds of people held in prison unjustly as a violation of human rights",
+      "To what extent were the main militia groups imputed to the 1-6 so-called capital siege infiltrated by undercover agents or informants",
+      "Unindicted co-conspirators who occupy senior positions in those groups are being spared prosecution on account of a prior relationship with the federal government"
+    ],
+    "extra_claims": [
+      "The American people deserve the truth about January 6th."
+    ],
+    "importance_mae": 0.1416666666666667,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.16666666666666666,
+    "stance_accuracy": 0.16666666666666666,
+    "correct_verdicts": 1,
+    "total_verdicts": 6,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "The FBI was organizing the riots of January 6th",
+        "gt_verdict": "REFUTES",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "There are 14,000 hours of unreleased video footage from that day the administration is hiding from us",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "The pipe bomber - the FBI has been extremely suspicious in withholding evidence video evidence that could help identify this bomber",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "70 plus million people who are Trump supporters or just against the corrupt ruling class who have effectively been labeled de facto domestic extremists by our own government",
+        "gt_verdict": "REFUTES",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "Every politician who cares about our country should demand a church committee 2.0 immediately",
+        "gt_verdict": "SUPPORTS",
+        "sys_verdict": "UNCLEAR"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.5454545454545454,
+    "verdict_accuracy": 0.16666666666666666,
+    "evidence_quality_avg": 1.0,
+    "total_cost_usd": 0.00144135,
+    "total_time_seconds": 119.96820592880249,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 1.0,
+    "avg_sources_per_query": 2.5714285714285716
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 35,
+      "medium": 1
+    },
+    "avg_evidence_per_claim": 5.142857142857143
+  },
+  "ground_truth_claims_count": 11,
+  "system_claims_count": 7
+}

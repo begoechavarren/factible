@@ -1,0 +1,104 @@
+{
+  "video_id": "EKxxTfZveUw",
+  "timestamp": "2025-12-14T11:03:58.743122",
+  "evaluated_run_dir": "factible/experiments/data/runs/20251214_002019_precision_recall_curve/max_claims_7",
+  "ground_truth_dir": "factible/experiments/data/ground_truth",
+  "claim_extraction": {
+    "precision": 0.2857142857142857,
+    "recall": 0.125,
+    "f1_score": 0.17391304347826086,
+    "true_positives": 2,
+    "false_positives": 5,
+    "false_negatives": 14,
+    "mean_average_precision": 0.3333333333333333,
+    "recall_at_important": 0.25,
+    "importance_weighted_coverage": 0.1471861471861472,
+    "matched_claims": [
+      {
+        "gt_text": "Pennsylvania had 121,240 more votes than voters according to the SURE system",
+        "sys_text": "In Pennsylvania, there were 121,240 more votes than registered voters, with a vote difference of 8,555.",
+        "gt_importance": 0.9,
+        "sys_importance": 0.65,
+        "importance_error": 0.25
+      },
+      {
+        "gt_text": "In Wisconsin, 220,244 votes were cast from individuals who were exempted from showing voter ID under the indefinitely confined status",
+        "sys_text": "In Wisconsin, 220,044 votes were cast without showing ID, affecting the vote difference of 20,625.",
+        "gt_importance": 0.8,
+        "sys_importance": 0.6,
+        "importance_error": 0.20000000000000007
+      }
+    ],
+    "missed_claims": [
+      "Ruby Freeman ran the same stack of ballots through the counting machines multiple times",
+      "Ruby Freeman was given the presidential citizens medal by Joe Biden for her work during the 2020 election",
+      "Rudy Giuliani was not allowed during the trial to submit one piece of evidence to the court in the defamation case",
+      "Fulton County certified 59,400 in-person votes on Election Day despite the fact that only 14,522 voted in person, inflating the vote total by approximately 37,000 votes",
+      "In Georgia, likely 67,184 votes were cast from voters with invalid residency who did not actually live in Georgia",
+      "Nursing homes in Milwaukee, Dane and Racine counties had 100% turnout",
+      "Merill Barrett who was 104 years old and did not recognize her own children had a ballot cast in her name in the 2020 presidential election",
+      "Maricopa County accepted 20,500 mail-in ballots after election day, which were illegal votes",
+      "The Maricopa County elections Department withheld information about late ballots from public records requests for 7 months after the elections",
+      "Two precincts in Puma County had over 100% turnout for mail-in ballots",
+      "Katie Hobbs was the Arizona Secretary of State during the 2020 election and she certified her own election count naming herself the winner in 2022",
+      "Michigan had 271,000 ballots delivered in a van at 3:30 a.m. past the 8:00 p.m. deadline",
+      "GBI Strategies was raided by police in Michigan and thousands of fraudulent voter registrations were found",
+      "GBI Strategies was funded by a super PAC called Black PAC which paid the firm 11,254,919 dollars to register voters for Joe Biden in 2020"
+    ],
+    "extra_claims": [
+      "Fanny Willis has paid Nathan Wade over $650,000 while they were in a relationship.",
+      "In Georgia, Trump lost by 11,779 votes, but 37,000 votes were potentially inflated.",
+      "Donald Trump posted a 32-page document about fraud in the 2020 election.",
+      "Ruby Freeman was awarded $150 million in a defamation case against Rudy Giuliani.",
+      "Fanny Willis is the district attorney prosecuting Donald Trump in Georgia."
+    ],
+    "importance_mae": 0.22500000000000003,
+    "claim_quality_avg": 0.0
+  },
+  "verdict_accuracy": {
+    "overall_accuracy": 0.0,
+    "stance_accuracy": 0.0,
+    "correct_verdicts": 0,
+    "total_verdicts": 2,
+    "per_class_f1": {},
+    "confusion_matrix": [],
+    "verdict_errors": [
+      {
+        "claim": "Pennsylvania had 121,240 more votes than voters according to the SURE system",
+        "gt_verdict": "REFUTES",
+        "sys_verdict": "UNCLEAR"
+      },
+      {
+        "claim": "In Wisconsin, 220,244 votes were cast from individuals who were exempted from showing voter ID under the indefinitely confined status",
+        "gt_verdict": "MIXED",
+        "sys_verdict": "UNCLEAR"
+      }
+    ],
+    "explanation_quality_avg": 0.0
+  },
+  "end_to_end": {
+    "claim_coverage": 0.125,
+    "verdict_accuracy": 0.0,
+    "evidence_quality_avg": 0.8571428571428571,
+    "total_cost_usd": 0.0030525,
+    "total_time_seconds": 129.5746591091156,
+    "claim_quality_avg": null,
+    "explanation_quality_avg": null,
+    "user_satisfaction_score": null
+  },
+  "query_generation": {
+    "query_claim_relevance_avg": 0.0,
+    "evidence_retrieval_success_rate": 0.8571428571428571,
+    "avg_sources_per_query": 2.0714285714285716
+  },
+  "evidence_search": {
+    "evidence_relevance_avg": 0.0,
+    "source_reliability_distribution": {
+      "high": 26,
+      "medium": 3
+    },
+    "avg_evidence_per_claim": 4.142857142857143
+  },
+  "ground_truth_claims_count": 16,
+  "system_claims_count": 7
+}

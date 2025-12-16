@@ -1,0 +1,725 @@
+{
+  "extracted_claims": {
+    "claims": [
+      {
+        "text": "Women make only 77 cents for every dollar a man makes.",
+        "confidence": 0.9,
+        "category": "statistical",
+        "importance": 0.85,
+        "context": "Claim about gender wage gap, speaker: Christina Hoff Sommers",
+        "transcript_char_start": 21,
+        "transcript_char_end": 74,
+        "transcript_match_score": 1.0
+      },
+      {
+        "text": "The actual wage gap shrinks to only 6.6 cents when factoring in choices.",
+        "confidence": 0.85,
+        "category": "statistical",
+        "importance": 0.7,
+        "context": "Refers to study by American Association of University Women.",
+        "transcript_char_start": 1128,
+        "transcript_char_end": 1192,
+        "transcript_match_score": 0.8888888888888888
+      },
+      {
+        "text": "The unexplained wage gap is between 4.8 and 7 percent after accounting for differences.",
+        "confidence": 0.85,
+        "category": "statistical",
+        "importance": 0.65,
+        "context": "Refers to findings from the Department of Labor paper.",
+        "transcript_char_start": 3210,
+        "transcript_char_end": 3297,
+        "transcript_match_score": 0.7398843930635838
+      }
+    ],
+    "total_count": 3
+  },
+  "final_output": {
+    "extracted_claims": {
+      "claims": [
+        {
+          "text": "Women make only 77 cents for every dollar a man makes.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.85,
+          "context": "Claim about gender wage gap, speaker: Christina Hoff Sommers",
+          "transcript_char_start": 21,
+          "transcript_char_end": 74,
+          "transcript_match_score": 1.0
+        },
+        {
+          "text": "The actual wage gap shrinks to only 6.6 cents when factoring in choices.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "Refers to study by American Association of University Women.",
+          "transcript_char_start": 1128,
+          "transcript_char_end": 1192,
+          "transcript_match_score": 0.8888888888888888
+        },
+        {
+          "text": "The unexplained wage gap is between 4.8 and 7 percent after accounting for differences.",
+          "confidence": 0.85,
+          "category": "statistical",
+          "importance": 0.65,
+          "context": "Refers to findings from the Department of Labor paper.",
+          "transcript_char_start": 3210,
+          "transcript_char_end": 3297,
+          "transcript_match_score": 0.7398843930635838
+        }
+      ],
+      "total_count": 3
+    },
+    "claim_reports": [
+      {
+        "claim_text": "The unexplained wage gap is between 4.8 and 7 percent after accounting for differences.",
+        "claim_confidence": 0.85,
+        "claim_category": "statistical",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "[PDF] GAO-23-106320, WOMEN IN THE WORKFORCE",
+              "url": "https://www.gao.gov/assets/gao-23-106320.pdf",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "supports",
+              "evidence_summary": "The article discusses the gender earnings gap and notes that while the gap has narrowed over time, there are still unexplained factors contributing to it, suggesting that the unexplained wage gap may fall within the range mentioned in the claim.",
+              "snippet": "However, there may be other factors that contribute to the gender pay gap that we did not identify as part of our prior literature review."
+            }
+          ],
+          "mixed": [
+            {
+              "title": "Women in the labor force: a databook - Bureau of Labor Statistics",
+              "url": "https://www.bls.gov/opub/reports/womens-databook/2021/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "mixed",
+              "evidence_summary": "The article discusses the gender earnings gap, noting that while it has narrowed over time, there are still significant disparities. It mentions that the earnings gap is smaller among younger workers and those who are unmarried and without children, but does not provide specific figures for the unexplained wage gap of 4.8 to 7 percent after accounting for differences.",
+              "snippet": "This report presents historical and recent labor force and earnings data for women and men from the Current Population Survey (CPS)"
+            }
+          ],
+          "unclear": [
+            {
+              "title": "The Declining Earnings Gap Between Young Women and Men ... - NIH",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7661786/",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (28.2 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "The earnings gap has remained at approximately 40 percent for practically as long as statistics have been kept; that is, women who work full time, year round ...",
+              "snippet": "The earnings gap has remained at approximately 40 percent for practically as long as statistics have been kept; that is, women who work full time, year round ..."
+            },
+            {
+              "title": "US Department of Labor releases research on continued economic ...",
+              "url": "https://www.dol.gov/newsroom/releases/wb/wb20240312",
+              "reliability": {
+                "rating": "high",
+                "score": 0.9,
+                "reasons": [
+                  "Government or educational institution"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "New research released today by the US Department of Labor reveals that Black women lost $42.7 billion in wages compared to white men in 2023, and Hispanic ...",
+              "snippet": "New research released today by the US Department of Labor reveals that Black women lost $42.7 billion in wages compared to white men in 2023, and Hispanic ..."
+            },
+            {
+              "title": "[PDF] Gender and Racial Wage Gaps Worsened in 2023 and Pay Equity ...",
+              "url": "https://iwpr.org/wp-content/uploads/2024/09/IWPR-National-Wage-Gap-Fact-Sheet-2024.pdf",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "In 2023, women working full-time year-round made. 82.7 cents per dollar earned by men (a wage gap of 17.3 percent), a significant worsening of the earnings ...",
+              "snippet": "In 2023, women working full-time year-round made. 82.7 cents per dollar earned by men (a wage gap of 17.3 percent), a significant worsening of the earnings ..."
+            },
+            {
+              "title": "Women's earnings were 83.6 percent of men's in 2023",
+              "url": "https://www.bls.gov/opub/ted/2024/womens-earnings-were-83-6-percent-of-mens-in-2023.htm",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "Women who were full-time wage and salary workers had median weekly earnings of $1,005 in 2023. That was 83.6 percent of the $1,202 median for ...",
+              "snippet": "Women who were full-time wage and salary workers had median weekly earnings of $1,005 in 2023. That was 83.6 percent of the $1,202 median for ..."
+            }
+          ]
+        },
+        "total_sources": 6,
+        "evidence_quality_score": 0.9,
+        "timestamp_hint": 223.92,
+        "timestamp_confidence": 0.7398843930635838
+      },
+      {
+        "claim_text": "The actual wage gap shrinks to only 6.6 cents when factoring in choices.",
+        "claim_confidence": 0.85,
+        "claim_category": "statistical",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "supports": [
+            {
+              "title": "Wage Gap Myth Exposed \u2014 by Feminists",
+              "url": "https://www.aei.org/articles/wage-gap-myth-exposed-by-feminists/",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "MBFC credibility: medium",
+                  "Factual reporting: Mixed"
+                ],
+                "bias": "Right"
+              },
+              "stance": "supports",
+              "evidence_summary": "The evidence suggests that the 6.6-cent wage gap may be influenced by women's negotiating skills rather than solely by employer discrimination, indicating that choices play a significant role in the wage gap.",
+              "snippet": "The AAUW notes that part of the new 6.6-cent wage-gap may be owed to women's supposedly inferior negotiating skills \u2014 not unscrupulous employers. Furthermore, ..."
+            }
+          ],
+          "unclear": [
+            {
+              "title": "[PDF] The American Association of University Women believes that pay ...",
+              "url": "https://www.aauwaction.org/wp-content/uploads/2014/10/Gender-Pay-Gap-nsa.pdf",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (16.7 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "A recent AAUW report \u2013 Graduating to a Pay Gap \u2013 found an unexplainable seven percent difference in the earnings of male and female college graduates one year.",
+              "snippet": "A recent AAUW report \u2013 Graduating to a Pay Gap \u2013 found an unexplainable seven percent difference in the earnings of male and female college graduates one year."
+            },
+            {
+              "title": "[PDF] THE NOT SO SIMPLE TRUTH - AAUW",
+              "url": "https://www.aauw.org/app/uploads/2025/03/The_Simple_Truth_Gender_Pay_Gap_2025.pdf",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (30.6 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "AAUW's analysis of wages, controlling for education, found that earnings at different education levels are affected by race and ethnicity, as ...",
+              "snippet": "AAUW's analysis of wages, controlling for education, found that earnings at different education levels are affected by race and ethnicity, as ..."
+            },
+            {
+              "title": "Gender Pay Gap Data Shows Increasing Levels of Inequity - AAUW",
+              "url": "https://www.aauw.org/resources/news/media/press-releases/2024-gender-pay-gap-data/",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (30.6 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "AAUW analysis of U.S. Census Bureau and U.S. Bureau of Labor statistics reveals $11,550 average annual loss for full-time working women due ...",
+              "snippet": "AAUW analysis of U.S. Census Bureau and U.S. Bureau of Labor statistics reveals $11,550 average annual loss for full-time working women due ..."
+            },
+            {
+              "title": "The Simple Truth About the Gender Pay Gap - AAUW",
+              "url": "https://www.aauw.org/resources/research/simple-truth/",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (30.6 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "A Persistent Inequity\u200b\u200b Women working full time in the U.S. are still paid just 81 cents to every dollar earned by men \u2014 and the consequences of this gap affect ...",
+              "snippet": "A Persistent Inequity\u200b\u200b Women working full time in the U.S. are still paid just 81 cents to every dollar earned by men \u2014 and the consequences of this gap affect ..."
+            }
+          ]
+        },
+        "total_sources": 5,
+        "evidence_quality_score": 0.8,
+        "timestamp_hint": 71.9,
+        "timestamp_confidence": 0.8888888888888888
+      },
+      {
+        "claim_text": "Women make only 77 cents for every dollar a man makes.",
+        "claim_confidence": 0.9,
+        "claim_category": "statistical",
+        "overall_stance": "unclear",
+        "verdict_confidence": "low",
+        "verdict_summary": "Automatic verdict generation failed (ModelHTTPError: status_code: 429, model_name: gpt-4o-mini, body: {'message': 'Rate limit reached for gpt-4o-mini in ); manual review required.",
+        "evidence_by_stance": {
+          "unclear": [
+            {
+              "title": "Did You Know That Women Are Still Paid Less Than Men?",
+              "url": "https://obamawhitehouse.archives.gov/equal-pay/myth",
+              "reliability": {
+                "rating": "high",
+                "score": 1.0,
+                "reasons": [
+                  "Government or educational institution",
+                  "Established domain (24.9 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "On average, full-time working women earn just 78 cents for every dollar a man earns. This significant gap is more than a statistic -- it has real life ...",
+              "snippet": "On average, full-time working women earn just 78 cents for every dollar a man earns. This significant gap is more than a statistic -- it has real life ..."
+            },
+            {
+              "title": "Gender pay gap in U.S. has narrowed slightly over 2 decades",
+              "url": "https://www.pewresearch.org/short-reads/2025/03/04/gender-pay-gap-in-us-has-narrowed-slightly-over-2-decades/",
+              "reliability": {
+                "rating": "high",
+                "score": 0.85,
+                "reasons": [
+                  "MBFC credibility: high",
+                  "Factual reporting: Very High"
+                ],
+                "bias": "Least Biased"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The gender gap in pay has slightly narrowed in the United States over the past 20 years or so. In 2024, women earned an average of 85% of what men earned.",
+              "snippet": "The gender gap in pay has slightly narrowed in the United States over the past 20 years or so. In 2024, women earned an average of 85% of what men earned."
+            },
+            {
+              "title": "Equal pay for work of equal value | UN Women \u2013 Headquarters",
+              "url": "https://www.unwomen.org/en/news/in-focus/csw61/equal-pay",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "Established domain (15.5 years)"
+                ],
+                "bias": null
+              },
+              "stance": "unclear",
+              "evidence_summary": "Worldwide, women only make 77 cents for every dollar earned by men. As a result, there's a lifetime of income inequality between men and women.",
+              "snippet": "Worldwide, women only make 77 cents for every dollar earned by men. As a result, there's a lifetime of income inequality between men and women."
+            },
+            {
+              "title": "Explaining the Gender Wage Gap - Center for American Progress",
+              "url": "https://www.americanprogress.org/article/explaining-the-gender-wage-gap/",
+              "reliability": {
+                "rating": "medium",
+                "score": 0.6,
+                "reasons": [
+                  "MBFC credibility: medium",
+                  "Factual reporting: Mixed"
+                ],
+                "bias": "Left"
+              },
+              "stance": "unclear",
+              "evidence_summary": "The most commonly cited statistic for the gender wage gap asserts that women earn only 77 cents for every dollar earned by men.",
+              "snippet": "The most commonly cited statistic for the gender wage gap asserts that women earn only 77 cents for every dollar earned by men."
+            }
+          ]
+        },
+        "total_sources": 4,
+        "evidence_quality_score": 0.7,
+        "timestamp_hint": 2.52,
+        "timestamp_confidence": 1.0
+      }
+    ],
+    "transcript_data": {
+      "text": "If, for the same work, women make only 77 cents for every dollar a man makes, why don\u2019t businesses hire only women? Wages are the biggest expense for most businesses. So, hiring only women would reduce costs by nearly a quarter \u2013 and that would go right to the bottom line. Don\u2019t businesses want to be profitable? Or, are they just really bad at math? Well, actually, it\u2019s the feminists, celebrities and politicians spreading this wage gap myth who have the math problem. Here\u2019s why: The 77-cents-on-the-dollar statistic is calculated by dividing the median earnings of all women working full-time by the median earnings of all men working full-time. In other words, if the average income of all men is, say, 40,000 dollars a year, and the average annual income of all women is, say, 30,800 dollars, that would mean that women earn 77 cents for every dollar a man earns. 30,800 divided by 40,000 equals .77. But these calculations don\u2019t reveal a gender wage injustice because it doesn\u2019t take into account occupation, position, education or hours worked per week. Even a study by the American Association of University Women, a feminist organization, shows that the actual wage gap shrinks to only 6.6 cents when you factor in different choices men and women make. And the key word here is \u201cchoice.\u201d The small wage gap that does exist has nothing to do with paying women less, let alone with sexism; it has to do with differences in individual career choices that men and women make. In 2009, the U.S. Department of Labor released a paper that examined more than 50 peer-reviewed studies and concluded that the oft-cited 23 percent wage gap \u201cmay be almost entirely the result of individual choices being made by both male and female workers.\u201d Well, let\u2019s look at some of those choices. Georgetown University compiled a list of the five best-paying college majors, and the percentage of men or women majoring in those fields: Number 1 best-paying major: Petroleum Engineering: 87% male Number 2: Pharmaceutical Sciences: 48% male 3: Mathematics and Computer Science: 67% male 4: Aerospace Engineering: 88% male 5: Chemical Engineering: 72% male Notice that women out-represent men in only one of the five top-paying majors \u2013 by only a few percentage points. Now consider the same study\u2019s list of the five worst paying college majors: Number 1: Counseling and Psychology: 74% female Number 2: Early Childhood Education: 97% female 3: Theology and Religious Vocations: 66% male 4: Human Services and Community Organization: 81% female 5: Social Work: 88% female Here, it\u2019s the women who lead in all but one category. Even within the same profession, men and women make different career choices that impact how much money they make. Take nursing, where male nurses on the whole earn 18% more than female nurses. The reason? Male nurses gravitate to the best-paying nursing specialties, they work longer hours, and disproportionately find jobs in cities with the highest compensation. Now, here\u2019s how one expert on nursing compensation, Professor Linda Aiken of the University of Pennsylvania, sums up the data: \u201cCareer choices and educational differences explain most, if not all, the gender gap in nursing.\u201d The Department of Labor paper concluded that once these differences are accounted for across all professions, the unexplained wage gap is somewhere between 4.8 and 7 percent \u2013 almost identical to the 6.6 percentage gap found by the AAUW. But why is there any gap at all? No one knows for sure, as both the AAUW and the Labor Department concede. There are so many variables that drive wages that no single study can cover them all. Few wage gap studies control for variables such as dangerous work environment; men are vastly overrepresented, for example, on oil rigs. And here\u2019s another variable: men are more willing and able to work long hours without advance notice. According to Harvard economist Claudia Goldin, even if two lawyers have the same education, same specialty, and work the same number of hours \u2014 firms pay more to someone who is willing to always be \u201con call\u201d and ready to be in the office when the firm needs them, as opposed to wanting a more regular schedule. This isn\u2019t sexism, it\u2019s just common sense. With more realistic categories and definitions, whatever wage gap remains would certainly narrow to point of vanishing. So it seems that business leaders aren\u2019t bad at math simply because they don\u2019t only hire women. Those who claim that for the same work women earn 77 cents on the dollar compared to men, on the other hand, are not merely bad at math --but at telling the truth. I\u2019m Christina Hoff Sommers of the American Enterprise Institute for Prager University.",
+      "segments": [
+        {
+          "text": "If, for the same work, women make only 77\ncents for every dollar a man makes,",
+          "start": 2.52,
+          "duration": 4.48
+        },
+        {
+          "text": "why don\u2019t businesses hire only women?",
+          "start": 7.0,
+          "duration": 2.5
+        },
+        {
+          "text": "Wages are the biggest expense for most businesses.",
+          "start": 9.5,
+          "duration": 2.58
+        },
+        {
+          "text": "So, hiring only women would reduce costs by\nnearly a quarter",
+          "start": 12.1,
+          "duration": 3.52
+        },
+        {
+          "text": "\u2013 and that would go right to the bottom line.",
+          "start": 15.62,
+          "duration": 2.14
+        },
+        {
+          "text": "Don\u2019t businesses want to be profitable?",
+          "start": 17.78,
+          "duration": 2.08
+        },
+        {
+          "text": "Or, are they just really bad at math?",
+          "start": 19.88,
+          "duration": 2.92
+        },
+        {
+          "text": "Well, actually, it\u2019s the feminists, celebrities\nand politicians spreading this wage gap myth",
+          "start": 22.8,
+          "duration": 5.62
+        },
+        {
+          "text": "who have the math problem.",
+          "start": 28.42,
+          "duration": 1.72
+        },
+        {
+          "text": "Here\u2019s why:",
+          "start": 30.14,
+          "duration": 1.7
+        },
+        {
+          "text": "The 77-cents-on-the-dollar statistic is calculated\nby dividing the median earnings of all women",
+          "start": 31.84,
+          "duration": 6.3
+        },
+        {
+          "text": "working full-time by the median earnings of\nall men working full-time.",
+          "start": 38.22,
+          "duration": 4.22
+        },
+        {
+          "text": "In other words, if the average income of all\nmen is, say, 40,000 dollars a year,",
+          "start": 42.44,
+          "duration": 5.52
+        },
+        {
+          "text": "and the average annual income of all women is, say,\n30,800 dollars, that would mean that women",
+          "start": 47.96,
+          "duration": 5.1
+        },
+        {
+          "text": "earn 77 cents for every dollar a man earns.",
+          "start": 53.06,
+          "duration": 3.44
+        },
+        {
+          "text": "30,800 divided by 40,000 equals .77.",
+          "start": 56.5,
+          "duration": 4.46
+        },
+        {
+          "text": "But these calculations don\u2019t reveal a gender\nwage injustice because it doesn\u2019t take into",
+          "start": 60.97,
+          "duration": 5.47
+        },
+        {
+          "text": "account occupation, position, education or\nhours worked per week.",
+          "start": 66.44,
+          "duration": 5.46
+        },
+        {
+          "text": "Even a study by the American Association of\nUniversity Women, a feminist organization,",
+          "start": 71.9,
+          "duration": 5.64
+        },
+        {
+          "text": "shows that the actual wage gap shrinks to\nonly 6.6 cents",
+          "start": 77.54,
+          "duration": 4.42
+        },
+        {
+          "text": "when you factor in different choices men and women make.",
+          "start": 81.98,
+          "duration": 2.88
+        },
+        {
+          "text": "And the key word here is \u201cchoice.\u201d",
+          "start": 84.9,
+          "duration": 2.62
+        },
+        {
+          "text": "The small wage gap that does exist has nothing\nto do with paying women less, let alone with",
+          "start": 87.53,
+          "duration": 4.86
+        },
+        {
+          "text": "sexism; it has to do with differences in individual\ncareer choices that men and women make.",
+          "start": 92.39,
+          "duration": 7.13
+        },
+        {
+          "text": "In 2009, the U.S. Department of Labor released\na paper that examined more than 50 peer-reviewed",
+          "start": 99.52,
+          "duration": 6.32
+        },
+        {
+          "text": "studies and concluded that the oft-cited 23\npercent wage gap \u201cmay be almost entirely",
+          "start": 105.85,
+          "duration": 5.85
+        },
+        {
+          "text": "the result of individual choices being made\nby both male and female workers.\u201d",
+          "start": 111.7,
+          "duration": 5.38
+        },
+        {
+          "text": "Well, let\u2019s look at some of those choices.",
+          "start": 117.08,
+          "duration": 2.16
+        },
+        {
+          "text": "Georgetown University compiled a list of the\nfive best-paying college majors,",
+          "start": 119.24,
+          "duration": 4.78
+        },
+        {
+          "text": "and the percentage of men or women majoring in those fields:",
+          "start": 124.06,
+          "duration": 3.64
+        },
+        {
+          "text": "Number 1 best-paying major: Petroleum Engineering:\n87% male",
+          "start": 127.7,
+          "duration": 4.82
+        },
+        {
+          "text": "Number 2: Pharmaceutical Sciences: 48% male\n3: Mathematics and Computer Science: 67% male",
+          "start": 132.52,
+          "duration": 8.48
+        },
+        {
+          "text": "4: Aerospace Engineering: 88% male\n5: Chemical Engineering: 72% male",
+          "start": 141.0,
+          "duration": 7.69
+        },
+        {
+          "text": "Notice that women out-represent men in only\none of the five top-paying majors",
+          "start": 148.69,
+          "duration": 5.91
+        },
+        {
+          "text": "\u2013 by only a few percentage points.",
+          "start": 154.6,
+          "duration": 2.24
+        },
+        {
+          "text": "Now consider the same study\u2019s list of the\nfive worst paying college majors:",
+          "start": 156.84,
+          "duration": 5.06
+        },
+        {
+          "text": "Number 1: Counseling and Psychology: 74% female\nNumber 2: Early Childhood Education: 97% female",
+          "start": 161.92,
+          "duration": 8.96
+        },
+        {
+          "text": "3: Theology and Religious Vocations: 66% male\n4: Human Services and Community Organization:",
+          "start": 170.88,
+          "duration": 8.26
+        },
+        {
+          "text": "81% female\n5: Social Work: 88% female",
+          "start": 179.14,
+          "duration": 5.9
+        },
+        {
+          "text": "Here, it\u2019s the women who lead in all but\none category.",
+          "start": 185.16,
+          "duration": 4.16
+        },
+        {
+          "text": "Even within the same profession, men and women\nmake different career choices that impact",
+          "start": 189.32,
+          "duration": 4.279
+        },
+        {
+          "text": "how much money they make.",
+          "start": 193.6,
+          "duration": 1.7
+        },
+        {
+          "text": "Take nursing, where male nurses on the whole\nearn 18% more than female nurses.",
+          "start": 195.3,
+          "duration": 5.18
+        },
+        {
+          "text": "The reason?",
+          "start": 200.489,
+          "duration": 1.0
+        },
+        {
+          "text": "Male nurses gravitate to the best-paying nursing\nspecialties, they work longer hours,",
+          "start": 201.489,
+          "duration": 4.311
+        },
+        {
+          "text": "and disproportionately find jobs in cities with the highest compensation.",
+          "start": 205.9,
+          "duration": 4.7
+        },
+        {
+          "text": "Now, here\u2019s how one expert on nursing compensation,\nProfessor Linda Aiken of the University of",
+          "start": 210.6,
+          "duration": 4.42
+        },
+        {
+          "text": "Pennsylvania, sums up the data: \u201cCareer\nchoices and educational differences explain most,",
+          "start": 215.02,
+          "duration": 5.76
+        },
+        {
+          "text": "if not all, the gender gap in nursing.\u201d",
+          "start": 220.78,
+          "duration": 3.12
+        },
+        {
+          "text": "The Department of Labor paper concluded that\nonce these differences are accounted for across",
+          "start": 223.92,
+          "duration": 5.319
+        },
+        {
+          "text": "all professions, the unexplained wage gap\nis somewhere between 4.8 and 7 percent",
+          "start": 229.24,
+          "duration": 6.1
+        },
+        {
+          "text": "\u2013 almost identical to the 6.6 percentage gap found\nby the AAUW.",
+          "start": 235.34,
+          "duration": 6.22
+        },
+        {
+          "text": "But why is there any gap at all?",
+          "start": 241.569,
+          "duration": 2.071
+        },
+        {
+          "text": "No one knows for sure, as both the AAUW and\nthe Labor Department concede.",
+          "start": 243.64,
+          "duration": 5.459
+        },
+        {
+          "text": "There are so many variables that drive wages\nthat no single study can cover them all.",
+          "start": 249.1,
+          "duration": 5.02
+        },
+        {
+          "text": "Few wage gap studies control for variables\nsuch as dangerous work environment;",
+          "start": 254.12,
+          "duration": 4.7
+        },
+        {
+          "text": "men are vastly overrepresented, for example, on oil\nrigs.",
+          "start": 258.82,
+          "duration": 3.98
+        },
+        {
+          "text": "And here\u2019s another variable: men are more\nwilling and able to work long hours",
+          "start": 262.84,
+          "duration": 4.42
+        },
+        {
+          "text": "without advance notice.",
+          "start": 267.26,
+          "duration": 1.66
+        },
+        {
+          "text": "According to Harvard economist Claudia Goldin,\neven if two lawyers have the same education,",
+          "start": 268.92,
+          "duration": 5.48
+        },
+        {
+          "text": "same specialty, and work the same number\nof hours \u2014 firms pay more to someone who is",
+          "start": 274.4,
+          "duration": 5.42
+        },
+        {
+          "text": "willing to always be \u201con call\u201d and ready\nto be in the office when the firm needs them,",
+          "start": 279.82,
+          "duration": 4.88
+        },
+        {
+          "text": "as opposed to wanting a more regular schedule.",
+          "start": 284.7,
+          "duration": 2.84
+        },
+        {
+          "text": "This isn\u2019t sexism, it\u2019s just common sense.",
+          "start": 287.6,
+          "duration": 3.38
+        },
+        {
+          "text": "With more realistic categories and definitions,\nwhatever wage gap remains would certainly",
+          "start": 290.99,
+          "duration": 4.989
+        },
+        {
+          "text": "narrow to point of vanishing.",
+          "start": 295.979,
+          "duration": 2.5
+        },
+        {
+          "text": "So it seems that business leaders aren\u2019t\nbad at math simply because they don\u2019t",
+          "start": 298.48,
+          "duration": 3.3
+        },
+        {
+          "text": "only hire women.",
+          "start": 301.78,
+          "duration": 1.84
+        },
+        {
+          "text": "Those who claim that for the same work women\nearn 77 cents on the dollar compared to men,",
+          "start": 303.62,
+          "duration": 4.88
+        },
+        {
+          "text": "on the other hand, are not merely bad at math\n--but at telling the truth.",
+          "start": 308.5,
+          "duration": 5.02
+        },
+        {
+          "text": "I\u2019m Christina Hoff Sommers of the American\nEnterprise Institute for Prager University.",
+          "start": 313.52,
+          "duration": 5.76
+        }
+      ],
+      "video_id": "QcDrE5YvqTs"
+    }
+  }
+}

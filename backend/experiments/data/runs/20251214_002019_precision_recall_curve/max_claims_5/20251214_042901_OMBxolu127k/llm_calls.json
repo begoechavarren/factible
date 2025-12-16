@@ -1,0 +1,390 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:29:17.775942",
+    "latency_seconds": 15.15,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nThe nation's historical preservation group, is now suing the Trump administration over its plans to build a giant ballroom over at the white House. Back in October, the Trump administration quickly demolished the white House East Wing to make room for the ballroom for this project. Want to bring in CNN's Brian Todd? Brian, why is the National Trust taking this dramatic step? And this is a lengthy lawsuit. It's a lengthy lawsuit, Wolf, 47 pages. It was filed just moments ago. We have a copy of this lawsuit now to answer your question, Wolf. They are suing because they want this project halted, first and foremost. And they're suing because they said that the white House and its allies and in certain agencies like the National Park Service, did not get the necessary approvals or conduct the necessary reviews. We have a copy of this lawsuit. You see the pictures here. This has been what many people have been complaining about, the demolition of the East wing of the white House that began in October for the construction of a 90,000 square foot ballroom. And just moments ago, as Wolf mentioned, we've obtained a copy of this lawsuit from the National Trust for Historic Preservation. They are suing the National Park Service. They are suing President Trump himself, plus the National Park Service, plus the Department of the Interior and Interior Secretary Douglas Burgum, and others over the construction of the ballroom where the east wing and the colonnade used to be. And here is just one quote from one of the initial pages of the lawsuit. No president is legally allowed to tear down portions of the white House without any review whatsoever. Not President Trump, not President Biden, and not anyone else. And no president is legally allowed to construct a ballroom on public property without giving the public the opportunity to weigh in. President Trump's efforts to do so should be immediately halted, and work on the ballroom project should be paused until the defendants complete the required reviews. Reviews that should have taken place before the defendants demolish the East Wing and before they began construction of the ballroom and secured the necessary approvals. What they are also saying is that there are two entities, from which the white House needed to seek approval and at least a review of this project. The National Capital Planning Commission and the Commission of Fine Arts. And according to this lawsuit from the National Trust for Historic Preservation, the white House did not seek any review from those agencies and did not seek any, public, input on this project. Now, I can I can tell you also, Wolf, we are reaching out to the white House for comment. Our colleague Kevin Liptak is handling that right now. We should be able to get that from Kevin in just a moment. But what I will say is that the president has had this in his, in his sights to to renovate this area, to do a ballroom for years, not just months, years, including before he came into office. He said he offered the Obama administration, you know, that he said he would pay for it. The Obama administration, he said, never got back to him. President Trump has said many times that he believes this is necessary, that people who come to the white House, for certain events, they have to go to a tent that's kind of separate from the main, main body of the white House. And in bad weather, a lot of people who are here for balls and things like that, they just get kind of, disheveled, having to walk through the rain and get into a tent. That's been his perspective. He's been eyeing this for a long time. His idea is to make this very much like the Donald Trump Ballroom at Mar-A-Lago. It's going to look a lot like that. And there are plenty of other ballrooms that I've been to, many of them. Right near the white House, huge ballrooms that they could go to, not just a. I've been to the tent on the backyard of the white House on this, on this on the North Lawn of the white House, and the South Lawn of the white House as well. And that east wing was beautiful. And too bad it's been destroyed. Ari. Brian, thank you very, very much. Kevin Liptak is over at the white House right now. This has been a huge priority for the president. And as Brian just said, you're working to get some reaction. Are you learning anything? Yeah. The white House hasn't responded to this lawsuit specifically, but I'll tell you that white House officials have sort of downplayed criticism from this particular group, the National Trust for Historic Preservation, which you'll remember back in October as this project was getting underway, actually wrote a letter to the white House asking them to pause work to, go through some of these various boards for review. And the white House said at the time that this, trust, the National Trust for Historic Preservation, was comprised of, quote, loser Democrats and liberal donors. And so you see them kind of shrugging off the criticism, we should say that this body is chartered by Congress, tasked with, preserving some of the nation's historic buildings. It actually does have a relationship with President Trump dating back to the 1990s. It worked with him on some projects at Mar-A-Lago. So he does have sort of an existing relationship with this, body, going back several decades. We should say that, the boards that this, group is now requesting and demanding that the court, require that the administration go through the National Capital Planning Commission is now stacked with President Trump's appointees. It's led by Will Scharf, who's the staff secretary at the white House. He has said previously that this project will eventually go before that body, but that it's purview and that its remit does not cover demolition. And that is why they say this project didn't go before that board, before they began tearing down the East wing, but that once sort of vertical construction begins, that it will go before that body. And so, whether this lawsuit sort of spurs that action and prompts them to go more quickly remains to be seen. But you're right. This is an absolute priority of the president. He still mentions that, on almost a weekly basis, you know, when, the crown Prince Mohammed bin Salman was here, for example, the president said, that the dinner he held in his honor on the white House state floor would have been a much grander occasion if they had had, that ballroom constructed in his honor. We should also say that there has been some, discord among the planning team. You know, the president has assigned a new architect, the previous architect still on board, but he had reportedly raised some questions about the sheer scale of this project. You know, the president is envisioning a 90,000 square foot ballroom. The white House itself is only about 55,000ft\u00b2. And one of the concerns that the National Trust for Historic Preservation has raised is that they would essentially dwarf the original building once it's completed. And so all of these concerns are now due to be, heard in court, Wolf, the president keeps pointing out that, this ballroom will be paid for by private donations, not taxpayers. Is that a factor here? It could be. And I think, you know, the president and the white House have said that they will be transparent and they have released, some of the names of the donors who will contribute to this project. One of the questions is how potentially they'll be honored as part of it, whether their names will be, written on the wall or whether they'll have sort of plaques, in the final, ballroom to designate who who donated and, what sort of contribution they were able to make to this project. But it has raised a certainly questions about what kind of influence those donors, might have with the white House and whether or not these individuals are essentially using these donations to curry favor with the president, recognizing that this is a major priority of his. All right. Kevin Liptak at the white House for us, Kevin, thank you very, very much.",
+    "input_length_chars": 8108,
+    "input_tokens_estimated": 2027,
+    "output": {
+      "claims": [
+        {
+          "text": "The National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.",
+          "confidence": 0.95,
+          "category": "policy",
+          "importance": 0.85,
+          "context": "Lawsuit filed against Trump administration regarding White House construction plans."
+        },
+        {
+          "text": "The Trump administration demolished the White House East Wing in October to make room for the ballroom.",
+          "confidence": 0.9,
+          "category": "historical",
+          "importance": 0.8,
+          "context": "Demolition of East Wing occurred in October as part of ballroom project."
+        },
+        {
+          "text": "The lawsuit claims the White House did not obtain necessary approvals from the National Capital Planning Commission and the Commission of Fine Arts.",
+          "confidence": 0.85,
+          "category": "policy",
+          "importance": 0.75,
+          "context": "Claims regarding lack of approvals for the ballroom project."
+        },
+        {
+          "text": "The ballroom is planned to be 90,000 square feet, which is larger than the White House itself, which is about 55,000 square feet.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.7,
+          "context": "Size comparison between planned ballroom and the White House."
+        },
+        {
+          "text": "The National Trust for Historic Preservation is chartered by Congress to preserve historic buildings.",
+          "confidence": 0.95,
+          "category": "biographical",
+          "importance": 0.3,
+          "context": "Background information on the National Trust's role."
+        }
+      ],
+      "total_count": 5
+    },
+    "output_length_chars": 1812,
+    "output_tokens_estimated": 453,
+    "cost_usd": 0.00057585
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:29:25.760174",
+    "latency_seconds": 2.53,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The Trump administration demolished the White House East Wing in October to make room for the ballroom.\nContext: Demolition of East Wing occurred in October as part of ballroom project.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 358,
+    "input_tokens_estimated": 89,
+    "output": {
+      "original_claim": "The Trump administration demolished the White House East Wing in October to make room for the ballroom.",
+      "queries": [
+        {
+          "query": "Trump administration White House East Wing demolition October ballroom",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "White House East Wing demolition October 2023 ballroom project",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 385,
+    "output_tokens_estimated": 96,
+    "cost_usd": 7.095e-05,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "The National Trust for Historic Preservation is chartered by Congress to preserve historic buildings."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:29:25.883540",
+    "latency_seconds": 2.65,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.\nContext: Lawsuit filed against Trump administration regarding White House construction plans.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 396,
+    "input_tokens_estimated": 99,
+    "output": {
+      "original_claim": "The National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.",
+      "queries": [
+        {
+          "query": "National Trust for Historic Preservation lawsuit Trump administration White House ballroom",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Trump administration National Trust lawsuit White House construction plans",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 443,
+    "output_tokens_estimated": 110,
+    "cost_usd": 8.085e-05,
+    "context": {
+      "claim_index": 2,
+      "claim_text": "The Trump administration demolished the White House East Wing in October to make room for the ballroom.",
+      "query_index": 2,
+      "query_text": "White House East Wing demolition October 2023 ballroom project"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:29:26.034383",
+    "latency_seconds": 2.8,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The National Trust for Historic Preservation is chartered by Congress to preserve historic buildings.\nContext: Background information on the National Trust's role.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 336,
+    "input_tokens_estimated": 84,
+    "output": {
+      "original_claim": "The National Trust for Historic Preservation is chartered by Congress to preserve historic buildings.",
+      "queries": [
+        {
+          "query": "National Trust for Historic Preservation chartered by Congress",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Is the National Trust for Historic Preservation a congressional charter organization?",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 398,
+    "output_tokens_estimated": 99,
+    "cost_usd": 7.2e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "The National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.",
+      "query_index": 2,
+      "query_text": "Trump administration National Trust lawsuit White House construction plans"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:29:26.244897",
+    "latency_seconds": 3.01,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The lawsuit claims the White House did not obtain necessary approvals from the National Capital Planning Commission and the Commission of Fine Arts.\nContext: Claims regarding lack of approvals for the ballroom project.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 391,
+    "input_tokens_estimated": 97,
+    "output": {
+      "original_claim": "The lawsuit claims the White House did not obtain necessary approvals from the National Capital Planning Commission and the Commission of Fine Arts.",
+      "queries": [
+        {
+          "query": "White House lawsuit National Capital Planning Commission Commission of Fine Arts approvals",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "White House ballroom project approvals National Capital Planning Commission Commission of Fine Arts",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 487,
+    "output_tokens_estimated": 121,
+    "cost_usd": 8.715e-05,
+    "context": {
+      "claim_index": 5,
+      "claim_text": "The National Trust for Historic Preservation is chartered by Congress to preserve historic buildings.",
+      "query_index": 2,
+      "query_text": "Is the National Trust for Historic Preservation a congressional charter organization?"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:29:26.551333",
+    "latency_seconds": 3.32,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The ballroom is planned to be 90,000 square feet, which is larger than the White House itself, which is about 55,000 square feet.\nContext: Size comparison between planned ballroom and the White House.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 373,
+    "input_tokens_estimated": 93,
+    "output": {
+      "original_claim": "The ballroom is planned to be 90,000 square feet, which is larger than the White House itself, which is about 55,000 square feet.",
+      "queries": [
+        {
+          "query": "ballroom planned size 90000 square feet larger than White House 55000 square feet",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "size comparison ballroom 90000 square feet White House 55000 square feet",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 432,
+    "output_tokens_estimated": 108,
+    "cost_usd": 7.875e-05,
+    "context": {
+      "claim_index": 3,
+      "claim_text": "The lawsuit claims the White House did not obtain necessary approvals from the National Capital Planning Commission and the Commission of Fine Arts.",
+      "query_index": 2,
+      "query_text": "White House ballroom project approvals National Capital Planning Commission Commission of Fine Arts"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:29:59.599271",
+    "latency_seconds": 16.57,
+    "input_prompt": "Claim:\nThe National Trust for Historic Preservation is suing the Trump administration over plans to build a ballroom at the White House.\n\nArticle Title:\nWhite House sued by historic preservation group over ballroom plans\n\nGoogle Search Snippet:\nIn the lawsuit, the group argues that the White House broke the law by beginning construction without filing plans with the National Capital ...\n\nFull Page Content:\nES Sign in 0:00 / 0:15 Trump Admin. Sued Over Construction of White House Ballroom TODAY 4.93M subscribers Subscribe 540 Share Save 55,504 views 13 hours ago The National Trust for Historical Preservation is suing the Trump administration over the construction of a new ballroom to replace the demolished East Wing. The lawsuit would block him from building it until the project receives a series of federal approvals. NBC\u2019s Yamiche Alcindor reports for Saturday TODAY. \u2026 ...more 8:08 OMG: Fox host makes HUGE MISTAKE on air over Trump Brian Tyler Cohen 34K views \u2022 47 minutes ago New 6:41 Pentagon Press Conference Cold Open - SNL Saturday Night Live 5.8M views \u2022 6 days ago New 5:28 Norwegian Movie - SNL Saturday Night Live 1.3M views \u2022 3 weeks ago 18:05 Inside the NEW $300M White House Ballroom Beyond Facts 1.5M views \u2022 1 month ago 8:07 I Entered A Jiu-Jitsu Tournament To Prove It Doesn't Work Jesse Enkamp 10M views \u2022 2 years ago 7:35 National Trust sues Trump admin over ballroom plans CNN 514K views \u2022 1 day ago New 13:39 How to Spot Autism in High-Masking Adults Auticate with Chris & Debby 1.3M views \u2022 10 months ago 31:16 I Skied Down Mount Everest (world first, no oxygen) Red Bull 22M views \u2022 1 month ago 13:51 The Ugly Truth About Ozempic The Infographics Show 401K views \u2022 4 days ago New 18:14 What The Soviets Found On Venus The Space Race 454K views \u2022 7 days ago 10:24 Barron Trump's ties to accused sex trafficker Andrew Tate exposed in NYT report MS NOW 1.3M views \u2022 2 days ago New 13:54 Karoline Refuses To Take Kaitlan\u2019s Follow-Up, Then This Reporter Ambushes Her In White House | Watch Hook Global 196K views \u2022 1 day ago New 10:58 Woman with family ties to White House press secretary Karoline Leavitt released from ICE custody CNN 761K views \u2022 1 day ago New 17:14 Why Scandinavian Cabins Stayed Warm At -30\u00b0F While Modern Homes Freeze Medieval Way 650K views \u2022 2 weeks ago 17:54 Bistecca alla Fiorentina - Steakhouse in Florence Italy Aden Films 1.7M views \u2022 1 month ago 9:00 When A Gang Leader Confronted Muhammad Ali Boxing After Dark 15M views \u2022 1 year ago 24:39 We Tried Trump's Cognitive Test TLDR News Global 531K views \u2022 2 weeks ago 22:25 Ukraine\u2019s fate will be determined next week | Sir Bill Browder Times Radio 255K views \u2022 1 day ago New 14:02 Trump Selling Gold Card for U.S. Citizenship & Scrambles to Come Up with a Health Care Plan Jimmy Kimmel Live 2.4M views \u2022 1 day ago New 11:40 Trump Voters Blame Him For The High Cost Of Living | Farwell, Metaverse | Rubio vs. Calibri The Late Show with Stephen Colbert 2M views \u2022 2 days ago New A Google company en Sign in Before you continue to YouTube We use cookies and data to Deliver and maintain Google services Track outages and protect against spam, fraud, and abuse Measure audience engagement and site statistics to understand how our services are used and enhance the quality of those services If you choose to \u201cAccept all,\u201d we will also use cookies and data to Develop and improve new services Deliver and measure the effectiveness of ads Show personalized content, depending on your settings Show personalized ads, depending on your settings If you choose to \u201cReject all,\u201d we will not use cookies for these additional purposes. Non-personalized content and ads are influenced by things like the content you\u2019re currently viewing and your location (ad serving is based on general location). Personalized content and ads can also include things like video recommendations, a customized YouTube homepage, and tailored ads based on past activity, like the videos you watch and the things you search for on YouTube. We also use cookies and data to tailor the experience to be age-appropriate, if relevant. Select \u201cMore options\u201d to see additional information, including details about managing your privacy settings. You can also visit g.co/privacytools at any time. Reject all Accept all More options Privacy Policy \u2022 Terms of Service\n\nProvide relevant evidence.",
+    "input_length_chars": 4358,
+    "input_tokens_estimated": 1089,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The National Trust for Historic Preservation is indeed suing the Trump administration over the construction of a new ballroom at the White House, arguing that the administration began construction without the necessary federal approvals.",
+      "overall_stance": "supports",
+      "key_quote": "The National Trust for Historical Preservation is suing the Trump administration over the construction of a new ballroom to replace the demolished East Wing."
+    },
+    "output_length_chars": 480,
+    "output_tokens_estimated": 120,
+    "cost_usd": 0.00023535,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "The ballroom is planned to be 90,000 square feet, which is larger than the White House itself, which is about 55,000 square feet.",
+      "query_index": 2,
+      "query_text": "size comparison ballroom 90000 square feet White House 55000 square feet"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:29:59.648503",
+    "latency_seconds": 8.5,
+    "input_prompt": "Claim:\nThe ballroom is planned to be 90,000 square feet, which is larger than the White House itself, which is about 55,000 square feet.\n\nArticle Title:\nTrump replaces architect on ballroom project after clashes - NPR\n\nGoogle Search Snippet:\nThe mansion itself is 55,000 square feet, which is pretty big. But the ballroom was to be 90,000 square feet. It would be larger than the ...\n\nFull Page Content:\nBut his architect is pushing back.\nPresident Donald Trump is advocating for his lavish White House ballroom, currently in the demolition phase, to be even larger than its planned 90,000 square feet. The president is reportedly in discussions with his architect, James McCrery of McCrery Architects, to expand the gilded hall. McCrery, however, is pushing back on the idea, per The Washington Post.\nThe $300 million project, announced in July, has already grown in scale once before. Its current planned seating capacity of 900 represents a 40 percent increase from the original 650. McCrery is reportedly concerned with the idea of expanding the edifice, as it\u2019s already slated to be substantially larger than the main White House residence, which measures approximately 55,000 square feet.\nIn October, construction crews razed the East Wing of the White House, where every first lady since Eleanor Roosevelt has kept her office, to make way for the new structure. The demolition stood in contrast with the initial statement that the historic wing, which was built in 1901, would not be touched.\nThe White House acknowledged that discussions revolving around the size of the building were taking place. \u201cAs with any building, there is a conversation between the principal and the architect,\u201d an anonymous White House official told The Post. \u201cAll parties are excited to execute on the president\u2019s vision on what will be the greatest addition to the White House since the Oval Office.\u201d\nGeoffrey Montes is an associate editor at ELLE Decor with a serious love for all things real estate and design. Before that, he worked at Architectural Digest, Galerie, and Preservation magazines, covering everything from jaw-dropping listings to world-famous architects and design events like Salone del Mobile and Homo Faber.\nInside the Waldorf Astoria's Empire Suite\nWhere Style-Forward Tastemakers Stay\nCaroline Kennedy on The Winter Show\n34 Actually Classy New Year\u2019s Eve Decorations\nRare $4.4M Tiffany Lamp Sets Record at Auction\nBest New York City Holiday Window Displays\nInside Taylor Swift's Possible Wedding Venue\nWould You Pay $31 Million for a Hippo Bar?\nMiami Newcomers Have Walls to Fill\n21 Christmas Table Decoration Ideas\nFlood at the Louvre Damages Hundreds of Books\nWhere Does the Mayor of New York City Live?\nA Part of Hearst Digital Media\nWe may earn commission from links on this page, but we only recommend products we back.\n\u00a92025 Hearst Magazine Media, Inc. All Rights Reserved.\n\nProvide relevant evidence.",
+    "input_length_chars": 2917,
+    "input_tokens_estimated": 729,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article confirms that the planned ballroom is set to be 90,000 square feet, which is indeed larger than the White House's size of approximately 55,000 square feet.",
+      "overall_stance": "supports",
+      "key_quote": "its current planned seating capacity of 900 represents a 40 percent increase from the original 650... it\u2019s already slated to be substantially larger than the main White House residence, which measures approximately 55,000 square feet."
+    },
+    "output_length_chars": 487,
+    "output_tokens_estimated": 121,
+    "cost_usd": 0.00018195,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "The ballroom is planned to be 90,000 square feet, which is larger than the White House itself, which is about 55,000 square feet.",
+      "query_index": 2,
+      "query_text": "size comparison ballroom 90000 square feet White House 55000 square feet"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:30:00.316546",
+    "latency_seconds": 2.82,
+    "input_prompt": "Claim:\nThe Trump administration demolished the White House East Wing in October to make room for the ballroom.\n\nArticle Title:\nArchitects call on Shalom Baranes Associates to decline Trump's ...\n\nGoogle Search Snippet:\nThe White House East Wing is now completely demolished as of October 23, 2025. ... Trump administration on the White House East Wing ballroom ...\n\nFull Page Content:\nThis Giving Tuesday, please consider supporting Close Up\u2019s mission to empower young people nationwide! LEARN MORE >\nDiscover new resources and teaching techniques to help you discuss current issues in the classroom!\nSUBSCRIBE >\nNovember 14, 2025 by Danny Hastings\nLast month, President Donald Trump had the entire East Wing of the White House demolished to prepare for construction of a 90,000-square-foot ballroom.1 The White House made the announcement and released renderings of the ballroom three months prior, noting that the current building lacked space large enough \u201cto host major functions honoring world leaders and other countries without having to install a large and unsightly tent approximately 100 yards away from the main building entrance.\u201d2 The president later spoke to reporters from the roof of the White House while surveying the grounds.3\nPresident Trump initially said that the project \u201cwon\u2019t interfere with the current building\u201d and \u201cwill be near it but not touching it.\u201d4 However, after the demolition, he said that \u201cin order to do it properly, we had to take down the existing structure.\u201d5 The East Colonnade, which connected the East Wing to the White House, was also demolished, along with the Jacqueline Kennedy Garden and several historic magnolia trees.6 The $300-million-project will be funded by private donors, which include Amazon, Apple, Google, Meta, Microsoft, and Lockheed Martin.7\nWhat Was the East Wing?\nThe East Wing housed offices for the first lady and her staff, a movie theater, and an underground bunker called the Presidential Emergency Operations Center.8 The White House Military Office and Office of Legislative Affairs were also located there.9 The East Wing served as a ceremonial and public-facing space, where 500,000 visitors entered the White House annually and where the first lady decorated the hallways for Christmas.10\nThe East Wing was originally built as a carriage entrance in 1902 under President Theodore Roosevelt before it was renovated into its modern form by President Franklin Delano Roosevelt 40 years later.11 The White House Historical Association (WHHA) explains that the expansion \u201cto house additional staff and offices\u201d reflected \u201cthe growing complexity of the federal government during World War II.\u201d12\nConstruction of the East Wing while the country was at war was itself controversial. \u201cCongressional Republicans labeled the expenditure as wasteful, with some accusing Roosevelt of using the project to bolster his presidency\u2019s image,\u201d the WHHA explains. \u201cThe secretive nature of the construction, tied to military purposes, further fueled suspicions.\u201d13 Despite the initial criticism, the East Wing came to be seen as a necessary addition the White House.\nPresident Trump\u2019s Changes to the White House\nAs a real estate developer, Trump reached out to President Barack Obama\u2019s administration in 2010 about adding a ballroom to the White House\u2014a proposal which ultimately went nowhere.14 In his second term, President Trump has already transformed much of the White House to match his personal tastes.\nHe added gilded embellishments to the Oval Office and Cabinet Room, paved over the lawn of the Rose Garden to create a patio, installed large flag poles on the North and South Lawns, and renovated the bathroom off the Lincoln Bedroom with marble features.15 Along the West Colonnade, he created a \u201cPresidential Walk of Fame\u201d with portraits of each president (though, as a jab to his predecessor, President Joe Biden\u2019s portrait was replaced with a photo of an autopen).16 President Trump added portraits of himself throughout the White House, replacing those of President Obama and First Lady Hillary Clinton, whom he views as his greatest political rivals.17 He also unveiled plans for a large victory arch between the Lincoln Memorial and Arlington National Cemetery in honor of America\u2019s 250th birthday next year.18\nThe Rationale for Redevelopment\nThe Trump administration and other supporters of the project say a proper ballroom is long overdue. The White House does not have space to host large-scale events without erecting tents outside.19 Its largest rooms can fit only 200 people, but up to 900 people will be accommodated by the new ballroom.20 When state dinners are set up outside, the \u201conly bathroom facilities for a tent are porta-potties,\u201d says Gahl Hodges Burt, who served as President Ronald Reagan\u2019s social secretary. \u201cSetting up a kitchen out there is hugely expensive. When the tent is up, the helicopter can\u2019t land. And the grass dies.\u201d21\nSupporters also note that past presidents across the political spectrum have made their own changes to the building to fit their needs, especially as the roles and responsibilities of the office of the president have grown. White House Press Secretary Karoline Leavitt said, \u201cNearly every single president who has lived in this beautiful White House \u2026 has made modernizations and renovations of their own.\u201d22\nMajor changes made to the White House include the additions of the North Portico, the West Wing, the Oval Office, and the Truman Balcony, plus the East Wing itself.23 And under the Truman administration, the entire interior of the White House was gutted and renovated to reinforce the crumbling building after decades of neglect.24\nIconic features of the White House today were once disparaged when their construction required the demolition of something else. When the Victorian conservatories (greenhouses) attached to the White House were destroyed in 1902 to make way for the West Wing, The Washington Post declared that President Theodore Roosevelt\u2019s \u201cattempt to \u2018modernize\u2019 [the White House] has destroyed its historic value and does not seem to have made it much more desirable as a residence.\u201d25 Criticism about cost, necessity, design, and what is lost has been a constant as the White House has changed over the last two centuries.\nCriticism and Concern\nA Yahoo News/YouGov poll found that 57 percent of Americans disapprove of the East Wing\n\nProvide relevant evidence.",
+    "input_length_chars": 6413,
+    "input_tokens_estimated": 1603,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence confirms that the Trump administration demolished the East Wing of the White House in October 2025 to make way for a new ballroom, as stated in the article. The demolition was part of a larger project aimed at accommodating larger events that the existing structure could not support.",
+      "overall_stance": "supports",
+      "key_quote": "Last month, President Donald Trump had the entire East Wing of the White House demolished to prepare for construction of a 90,000-square-foot ballroom."
+    },
+    "output_length_chars": 534,
+    "output_tokens_estimated": 133,
+    "cost_usd": 0.00032025,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "The ballroom is planned to be 90,000 square feet, which is larger than the White House itself, which is about 55,000 square feet.",
+      "query_index": 2,
+      "query_text": "size comparison ballroom 90000 square feet White House 55000 square feet"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:30:02.034287",
+    "latency_seconds": 10.89,
+    "input_prompt": "Claim:\nThe ballroom is planned to be 90,000 square feet, which is larger than the White House itself, which is about 55,000 square feet.\n\nArticle Title:\nTrump's ballroom: Is it doubling in size? Has construction started?\n\nGoogle Search Snippet:\n... White House ballroom. At 90,000 square feet of new construction, Trump's project \u201cwill overwhelm the White House itself,\u201d which is 55,000 square ...\n\nFull Page Content:\nBut his architect is pushing back.\nPresident Donald Trump is advocating for his lavish White House ballroom, currently in the demolition phase, to be even larger than its planned 90,000 square feet. The president is reportedly in discussions with his architect, James McCrery of McCrery Architects, to expand the gilded hall. McCrery, however, is pushing back on the idea, per The Washington Post.\nThe $300 million project, announced in July, has already grown in scale once before. Its current planned seating capacity of 900 represents a 40 percent increase from the original 650. McCrery is reportedly concerned with the idea of expanding the edifice, as it\u2019s already slated to be substantially larger than the main White House residence, which measures approximately 55,000 square feet.\nIn October, construction crews razed the East Wing of the White House, where every first lady since Eleanor Roosevelt has kept her office, to make way for the new structure. The demolition stood in contrast with the initial statement that the historic wing, which was built in 1901, would not be touched.\nThe White House acknowledged that discussions revolving around the size of the building were taking place. \u201cAs with any building, there is a conversation between the principal and the architect,\u201d an anonymous White House official told The Post. \u201cAll parties are excited to execute on the president\u2019s vision on what will be the greatest addition to the White House since the Oval Office.\u201d\nGeoffrey Montes is an associate editor at ELLE Decor with a serious love for all things real estate and design. Before that, he worked at Architectural Digest, Galerie, and Preservation magazines, covering everything from jaw-dropping listings to world-famous architects and design events like Salone del Mobile and Homo Faber.\nInside the Waldorf Astoria's Empire Suite\nWhere Style-Forward Tastemakers Stay\nCaroline Kennedy on The Winter Show\n34 Actually Classy New Year\u2019s Eve Decorations\nRare $4.4M Tiffany Lamp Sets Record at Auction\nBest New York City Holiday Window Displays\nInside Taylor Swift's Possible Wedding Venue\nWould You Pay $31 Million for a Hippo Bar?\nMiami Newcomers Have Walls to Fill\n21 Christmas Table Decoration Ideas\nFlood at the Louvre Damages Hundreds of Books\nWhere Does the Mayor of New York City Live?\nA Part of Hearst Digital Media\nWe may earn commission from links on this page, but we only recommend products we back.\n\u00a92025 Hearst Magazine Media, Inc. All Rights Reserved.\n\nProvide relevant evidence.",
+    "input_length_chars": 2931,
+    "input_tokens_estimated": 732,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article confirms that the planned ballroom is set to be 90,000 square feet, which is indeed larger than the White House's approximately 55,000 square feet.",
+      "overall_stance": "supports",
+      "key_quote": "its current planned seating capacity of 900 represents a 40 percent increase from the original 650. McCrery is reportedly concerned with the idea of expanding the edifice, as it\u2019s already slated to be substantially larger than the main White House residence, which measures approximately 55,000 square feet."
+    },
+    "output_length_chars": 552,
+    "output_tokens_estimated": 138,
+    "cost_usd": 0.0001926,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "The ballroom is planned to be 90,000 square feet, which is larger than the White House itself, which is about 55,000 square feet.",
+      "query_index": 2,
+      "query_text": "size comparison ballroom 90000 square feet White House 55000 square feet"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:30:02.309456",
+    "latency_seconds": 6.97,
+    "input_prompt": "Claim:\nThe National Trust for Historic Preservation is chartered by Congress to preserve historic buildings.\n\nArticle Title:\nThe Federal Role in Historic Preservation: An Overview\n\nGoogle Search Snippet:\nNational Trust for Historic Preservation. Congress chartered the National Trust for Historic Preservation (or National Trust) in 1949. It ...\n\nFull Page Content:\nNational Trust for Historic Preservation former headquarters, 18th St. and Massachusetts Ave. NW, Washington, DC. Photo courtesy of preservationnation.org\nThe National Trust for Historic Preservation (NTHP), chartered by Congress as a private organization in 1949, entered a new phase of public responsibility with the passage of the 1966 National Historical Preservation Act, which directed federal funding to it. At the same time, growing awareness of the value of historic places placed new demands on the NTHP, as did the mid-century boom in urban and suburban construction. To increase its programs, the organization needed to raise private funds. In 1968, the RBF made a $500,000 grant to the NTHP, the largest received for general purposes by the Trust since its 1949 inception. The grant enabled the Trust to expand its professional staff and increase its consultative services to local preservation groups. In the 1990s, the Trust partnered with the Fund to open the Pocantico Historic Area at the Rockefeller Estate in Westchester County, New York for publicly beneficial purposes.\nEvery year, the National Trust for Historic Preservation highlights 11 Most Endangered Historic Places. In 2015, one site was New York's South Street Seaport District, seen here from the air in the 1970s. Photo courtesy of the Library of Congress.\nA pergola with a view at Kykuit, home to four generations of the Rockefeller family and a property of the National Trust for Historic Preservation. Kykuit, part of the Pocantico Historic Area, is maintained and administered by the RBF.\nEvery year, the National Trust for Historic Preservation highlights 11 Most Endangered Historic Places. In 2015, one site was New York's South Street Seaport District, seen here from the air in the 1970s. Photo courtesy of the Library of Congress.\nBrowse the major events in the Rockefeller Brothers Fund's history\n\u00a9 2025 Rockefeller Brothers Fund. All rights reserved.\n\nProvide relevant evidence.",
+    "input_length_chars": 2339,
+    "input_tokens_estimated": 584,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The National Trust for Historic Preservation was chartered by Congress in 1949, indicating its official role in preserving historic buildings, especially after the 1966 National Historical Preservation Act enhanced its responsibilities and funding.",
+      "overall_stance": "supports",
+      "key_quote": "The National Trust for Historic Preservation (NTHP), chartered by Congress as a private organization in 1949..."
+    },
+    "output_length_chars": 445,
+    "output_tokens_estimated": 111,
+    "cost_usd": 0.0001542,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "The ballroom is planned to be 90,000 square feet, which is larger than the White House itself, which is about 55,000 square feet.",
+      "query_index": 2,
+      "query_text": "size comparison ballroom 90000 square feet White House 55000 square feet"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:30:02.434749",
+    "latency_seconds": 29.11,
+    "input_prompt": "Claim:\nThe lawsuit claims the White House did not obtain necessary approvals from the National Capital Planning Commission and the Commission of Fine Arts.\n\nArticle Title:\nTrump sued by preservation group to halt White House ballroom\n\nGoogle Search Snippet:\nThe group said the project was proceeding without required reviews or approvals.\n\nFull Page Content:\nTrump has championed 90,000-square-foot addition, as critics say his has circumvented legally required approvals.\nBy Joseph Stepansky\nShare\nSave\nWashington, DC \u2013 The National Trust for Historic Preservation, a Washington, DC-based nonprofit, has filed a lawsuit seeking to halt the administration of US President Donald Trump\u2019s construction of a sprawling ballroom connected to the east wing of the White House.\nThe lawsuit filed on Friday targets one of Trump\u2019s signature initiatives: a 90,000-square-foot (27,432-square-metre) addition to the seat of the US executive branch.\nPreservationists have previously criticised the transformative project for altering the character of the iconic building and for the Trump administration\u2019s failure to follow the proper review process. However, the lawsuit on Friday is the first formal effort to halt construction.\n\u201cThe White House is arguably the most evocative building in our country and a globally recognised symbol of our powerful American ideals,\u201d Carol Quillen, the president of the organisation, said in a statement.\n\u201cAs the organisation charged with protecting places where our history happened, the National Trust was compelled to file this case,\u201d she said.\nThe filing charges that the Trump administration has violated several laws in beginning construction of the ballroom, including failing to file plans with the National Capital Planning Commission; failing to prepare an environmental assessment; and failing to obtain congressional approval for construction in a federal park.\nIt further states that the totality of the administration\u2019s actions violates the property clause of the US Constitution, which \u201creserves to Congress the right to dispose of and make all rules regarding property belonging to the United States\u201d.\nThe organisation had previously sent a letter to the National Capital Planning Commission, the National Park Service, and the Commission of Fine Arts calling for a pause in construction.\nThe Trump administration has not immediately responded to Friday\u2019s lawsuit but has maintained that planning and construction of the ballroom have been conducted in compliance with the law.\nIn October, Trump aide Steven Cheung, in a post on X, accused the organisation of being \u201crun by a bunch of loser Democrats and liberal donors who are playing political games\u201d.\nTrump, a real estate magnate known for a personal taste that tends toward the garish and gilded, has championed the construction of a new ballroom.\nThe president began demolishing a portion of the White House\u2019s east wing in October. He said the ballroom will seat nearly 1,000 people, up from the 650 seats the administration had previously announced.\nThe price has ballooned from $200m to $300m, although the administration has maintained that the funding is coming from private donors.\nWhile Trump has sought to transform the powers of the executive office and reshape the wider US government, the construction would be the most lasting physical change in Washington, DC, since he took office.\nCritics have said the ballroom would dwarf the White House\u2019s current 55,000-square-foot (16,764-square-metre) footprint and disrupt the balance of the smaller east and west wings.\nWhile presidents have made internal renovations and changes to the White House grounds, the building\u2019s exterior has remained largely unchanged since its reconstruction in the early 1800s.\nFollow Al Jazeera English:\nUse precise geolocation data. Actively scan device characteristics for identification. Store and/or access information on a device. Personalised advertising and content, advertising and content measurement, audience research and services development. List of Partners (vendors)\n\nProvide relevant evidence.",
+    "input_length_chars": 4089,
+    "input_tokens_estimated": 1022,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article confirms that the lawsuit claims the Trump administration did not obtain necessary approvals from the National Capital Planning Commission and the Commission of Fine Arts before starting construction on the ballroom.",
+      "overall_stance": "supports",
+      "key_quote": "The filing charges that the Trump administration has violated several laws in beginning construction of the ballroom, including failing to file plans with the National Capital Planning Commission; failing to prepare an environmental assessment; and failing to obtain congressional approval for construction in a federal park."
+    },
+    "output_length_chars": 639,
+    "output_tokens_estimated": 159,
+    "cost_usd": 0.0002487,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "The ballroom is planned to be 90,000 square feet, which is larger than the White House itself, which is about 55,000 square feet.",
+      "query_index": 2,
+      "query_text": "size comparison ballroom 90000 square feet White House 55000 square feet"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T04:30:02.775738",
+    "latency_seconds": 26.3,
+    "input_prompt": "Claim:\nThe lawsuit claims the White House did not obtain necessary approvals from the National Capital Planning Commission and the Commission of Fine Arts.\n\nArticle Title:\nPreservation group sues White House to stop ballroom construction\n\nGoogle Search Snippet:\nThe lawsuit argues that construction of the ballroom \u201cshould be paused until the Defendants complete the required reviews \u2014 reviews that should ...\n\nFull Page Content:\nDEVELOPING: At least two dead, 9 injured in shooting at Brown University; suspect still at large\nOPINION\nMORNING JOE\nRACHEL MADDOW\nDEADLINE: WHITE HOUSE\nTHE WEEKEND\nNEWSLETTERS\nNews\n\u201cNo president is legally allowed to tear down portions of the White House without any review whatsoever,\u201d the lawsuit filed by the National Trust says.\nA leading national historic preservation group is suing President Donald Trump and several other government officials, seeking to stop the construction of Trump\u2019s planned White House ballroom.\nThe lawsuit, filed Friday in federal district court in D.C. by the National Trust for Historic Preservation, alleges that, at Trump\u2019s direction, officials quickly bulldozed the East Wing in October without fulfilling federally mandated processes \u2014 including seeking congressional approval, conducting environmental studies and allowing for a public comment period \u2014 and that they are evading the same protocol in their construction of the ballroom. The filing alleges that federal officials are violating the Administrative Procedure Act, the National Environmental Policy Act and the separation of powers under the Constitution.\n\u201cNo president is legally allowed to tear down portions of the White House without any review whatsoever \u2014 not President Trump, not President Biden, and not anyone else,\u201d the lawsuit says. \u201cAnd no president is legally allowed to construct a ballroom on public property without giving the public the opportunity to weigh in.\u201d\nThe lawsuit argues that construction of the ballroom \u201cshould be paused until the Defendants complete the required reviews \u2014 reviews that should have taken place before the Defendants demolished the East Wing, and before they began construction of the Ballroom \u2014 and secure the necessary approvals.\u201d\nThe National Trust for Historic Preservation is a private nonprofit organization established by Congress in 1949 to oversee and promote the preservation of historic sites across the country.\nCarol Quillen, president and CEO of the Trust, first raised concerns about the destruction of the East Wing \u2014 historically home to the offices of the first lady \u2014 in October. In a letter to the leaders of the National Park Service, the National Capital Planning Commission and the Commission of Fine Arts, she questioned the planned size of the ballroom \u2014 which, at an anticipated 90,000 square feet, would be nearly double the size of the rest of the White House \u2014 and requested the demolition be paused until the proper reviews had been fulfilled. According to the lawsuit filed Friday, Quillen never received a response to the letter.\nQuillen said in a statement that the Trust \u201cwas compelled to file this case.\u201d\n\u201cThe White House is arguably the most evocative building in our country and a globally recognized symbol of our powerful American ideals,\u201d Quillen said.\nWhite House officials have said the ballroom is needed to host larger events, and Trump has pledged that \u201cit\u2019ll be the most beautiful ballroom anywhere in the world I think.\u201d\nIn addition to Trump, the lawsuit names as defendants Interior Secretary Doug Burgum, the leaders of the National Park Service and the General Services Administration, and the superintendent of the White House.\n\u201cPresident Trump has full legal authority to modernize, renovate, and beautify the White House \u2013 just like all of his predecessors did,\u201d White House spokesman Davis Ingle said in a statement to MS NOW.\nAt the National Capital Planning Commission\u2019s Dec. 4 meeting \u2014 the first since the demolition of the East Wing began \u2014 commission chairman Will Scharf said the administration plans to submit the ballroom designs later this month, saying it will then go through the NCPC\u2019s review process at a \u201cnormal and deliberative pace.\u201d A White House official told MS NOW the plans are still being worked on.\nThe White House has maintained that they are still in the demolition phase, despite a construction crane on site.\nNews of the lawsuit was first reported by the Washington Post.\nEarlier this month, the White House hired another D.C.-based architect, Shalom Baranes, in the planning of the ballroom\u2019s construction. A White House official said James McCrery \u2014 the first architect Trump hired for the project, who had been at odds with the president over the size of the ballroom \u2014 remains as a valuable consultant on the ballroom project.\nThe cost of the ballroom has increased to $300 million as of October from its initial estimate of $200 million. Donors funding its construction include several companies and individuals, such as Amazon, Google, Lockheed Martin, Microsoft and Comcast, the parent company of NBCUniversal, which is in the process of spinning off MS NOW as part of a new company. The White House has declined to share the amount Comcast has donated.\nIn late October, Trump said $350 million has already been raised. He told reporters that any funds left over from the ballroom could be used to help build a grand arch he has proposed at the southern end of the Arlington Memorial Bridge, which crosses the Potomac River between Arlington National Cemetery and the Lincoln Memorial and has been dubbed the \u201cArc de Trump.\u201d\nSeveral preservationist groups \u2014 including the American Institute of Architects and the Heritage Conservation Committee for the Society of Architectural Historians \u2014 also asked the White House in recent months to ensure construction plans for the ballroom went through the required protocol, but the Friday lawsuit is the first legal action on the matter.\nJulianne McShane\nJulianne McShane is a breaking news reporter for MS NOW.\nEmily Hung\nEmily Hung is an associate White House producer for MS NOW.\n\u00a9 2025 Versant Media, LLC\nThis site is now part of Versant. By continuing to use this service, you agree to our Terms. You also acknowledge that our updated Privacy Policy applies, including to your existing data. For details on your data rights, click here.\nWe and our partners also use tools on this site to provide the services, person\n\nProvide relevant evidence.",
+    "input_length_chars": 6458,
+    "input_tokens_estimated": 1614,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The lawsuit claims that the White House did not obtain necessary approvals from the National Capital Planning Commission and the Commission of Fine Arts before starting construction on the ballroom, arguing that these reviews are federally mandated and must be completed before proceeding.",
+      "overall_stance": "supports",
+      "key_quote": "\"The lawsuit argues that construction of the ballroom 'should be paused until the Defendants complete the required reviews \u2014 reviews that should have taken place before the Defendants demolished the East Wing, and before they began construction of the Ballroom \u2014 and secure the necessary approvals.'\""
+    },
+    "output_length_chars": 677,
+    "output_tokens_estimated": 169,
+    "cost_usd": 0.0003435,
+    "context": {
+      "claim_index": 4,
+      "claim_text": "The ballroom is planned to be 90,000 square feet, which is larger than the White House itself, which is about 55,000 square feet.",
+      "query_index": 2,
+      "query_text": "size comparison ballroom 90000 square feet White House 55000 square feet"
+    }
+  }
+]

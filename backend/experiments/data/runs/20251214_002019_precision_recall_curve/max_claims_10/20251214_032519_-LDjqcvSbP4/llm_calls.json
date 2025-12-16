@@ -1,0 +1,391 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:25:37.250358",
+    "latency_seconds": 16.08,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\ntoday's medical Centric topic is is 100% fruit juice good for you 100% fruit juice is often viewed as a healthy alternative to sugary drinks but its benefits and potential drawbacks need to be considered while it contains vitamins and nutrients drinking too much juice may have negative effects on your health one nutritional benefits of 100% fruit juice rich in vitamins vitamins and antioxidants 100% fruit juice is a good source of essential vitamins especially vitamin C which supports the immune system and potassium which helps regulate blood pressure juice also contains antioxidants which protect cells from damage nutrient absorption the vitamins and minerals and Juice can be absorbed quickly by the body making it a convenient way to get a nutritional boost hydration fluid intake since fruit juice is mostly water it helps with hydration for people who struggle to drink plain water juice can be a more palatable option two potential drawbacks of 100% fruit juice high in natural sugars fructose content even though 100% fruit juice doesn't have added sugars it still contains high amounts of naturally occurring sugar sugars like fructose these sugars can Spike blood sugar levels which may lead to insulin resistance over time calories juice is calorie dense compared to whole fruits and consuming large amounts can contribute to weight gain if not balanced with physical activity LAX fiber removed during processing one of the biggest differences between fruit juice and whole fruit is the fiber content when fruit is Juiced the fiber is removed which helps regulate blood sugar and AIDS digestion without fiber juice may cause rapid sugar absorption and hunger soon after consumption three how much is too much portion control recommended intake nutrition experts often suggest limiting fruit juice intake to one small glass per day around 4 to 6 ounces drinking juice in moderation can provide health benefits balancing diet it's essential to balance juice intake with other sources of hydration and nutrition such as water and whole fruits four alternatives to fruit juice whole fruits better nutritional value eating whole fruits provides all the vitamins and minerals found in juice along with fiber which is essential for digestion and blood sugar control whole fruits also keep you Fuller for longer diluting juice reducing sugar for those who enjoy juice dilating it with water can reduce sugar intake while still offering a refreshing taste and some nutritional benefits five long-term health effects weight gain and dental health caloric impact regularly drinking large amounts of juice can lead to excess calorie consumption contributing to weight gain over time tooth decay the sugar and Juice can contribute to cavities especially when consumed frequently throughout the day drinking juice with meals and using a straw may help reduce this risk thank you for watching our video please do not forget to like and share the video also please subscribe to the channel to stay updated on our latest videos",
+    "input_length_chars": 3086,
+    "input_tokens_estimated": 771,
+    "output": {
+      "claims": [
+        {
+          "text": "100% fruit juice is rich in vitamins and antioxidants.",
+          "confidence": 0.9,
+          "category": "nutritional",
+          "importance": 0.6,
+          "context": "general health discussion about fruit juice benefits"
+        },
+        {
+          "text": "100% fruit juice is a good source of vitamin C and potassium.",
+          "confidence": 0.85,
+          "category": "nutritional",
+          "importance": 0.7,
+          "context": "discussing nutritional benefits of fruit juice"
+        },
+        {
+          "text": "Juice can be absorbed quickly by the body, providing a nutritional boost.",
+          "confidence": 0.8,
+          "category": "nutritional",
+          "importance": 0.6,
+          "context": "benefits of juice absorption"
+        },
+        {
+          "text": "100% fruit juice contains high amounts of naturally occurring sugars like fructose.",
+          "confidence": 0.9,
+          "category": "nutritional",
+          "importance": 0.7,
+          "context": "discussing sugar content in fruit juice"
+        },
+        {
+          "text": "Drinking too much juice may lead to insulin resistance over time.",
+          "confidence": 0.75,
+          "category": "health",
+          "importance": 0.65,
+          "context": "potential health risks of excessive juice consumption"
+        },
+        {
+          "text": "Juice is calorie dense compared to whole fruits and can contribute to weight gain.",
+          "confidence": 0.85,
+          "category": "nutritional",
+          "importance": 0.7,
+          "context": "caloric impact of juice consumption"
+        },
+        {
+          "text": "Fiber is removed during the juicing process, which aids digestion and regulates blood sugar.",
+          "confidence": 0.9,
+          "category": "nutritional",
+          "importance": 0.6,
+          "context": "difference between juice and whole fruit"
+        },
+        {
+          "text": "Nutrition experts suggest limiting fruit juice intake to one small glass per day (4 to 6 ounces).",
+          "confidence": 0.8,
+          "category": "dietary",
+          "importance": 0.6,
+          "context": "guidelines for fruit juice consumption"
+        },
+        {
+          "text": "Regularly drinking large amounts of juice can lead to excess calorie consumption and weight gain.",
+          "confidence": 0.85,
+          "category": "health",
+          "importance": 0.7,
+          "context": "long-term health effects of juice consumption"
+        },
+        {
+          "text": "The sugar in juice can contribute to cavities, especially when consumed frequently.",
+          "confidence": 0.8,
+          "category": "health",
+          "importance": 0.6,
+          "context": "dental health risks associated with juice consumption"
+        }
+      ],
+      "total_count": 10
+    },
+    "output_length_chars": 2931,
+    "output_tokens_estimated": 732,
+    "cost_usd": 0.00055485
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:25:40.939236",
+    "latency_seconds": 1.91,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Drinking too much juice may lead to insulin resistance over time.\nContext: potential health risks of excessive juice consumption\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 301,
+    "input_tokens_estimated": 75,
+    "output": {
+      "original_claim": "Drinking too much juice may lead to insulin resistance over time.",
+      "queries": [
+        {
+          "query": "Drinking excessive juice insulin resistance",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "health risks of high juice consumption insulin resistance",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 315,
+    "output_tokens_estimated": 78,
+    "cost_usd": 5.805e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "The sugar in juice can contribute to cavities, especially when consumed frequently."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:25:40.942283",
+    "latency_seconds": 1.91,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: 100% fruit juice is rich in vitamins and antioxidants.\nContext: general health discussion about fruit juice benefits\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 289,
+    "input_tokens_estimated": 72,
+    "output": {
+      "original_claim": "100% fruit juice is rich in vitamins and antioxidants.",
+      "queries": [
+        {
+          "query": "Is 100% fruit juice rich in vitamins and antioxidants?",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Nutritional benefits of 100% fruit juice vitamins antioxidants",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 320,
+    "output_tokens_estimated": 80,
+    "cost_usd": 5.88e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "The sugar in juice can contribute to cavities, especially when consumed frequently."
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:25:41.144166",
+    "latency_seconds": 2.11,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The sugar in juice can contribute to cavities, especially when consumed frequently.\nContext: dental health risks associated with juice consumption\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 319,
+    "input_tokens_estimated": 79,
+    "output": {
+      "original_claim": "The sugar in juice can contribute to cavities, especially when consumed frequently.",
+      "queries": [
+        {
+          "query": "sugar in juice cavities dental health",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "juice consumption sugar cavities risk",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 307,
+    "output_tokens_estimated": 76,
+    "cost_usd": 5.745e-05,
+    "context": {
+      "claim_index": 6,
+      "claim_text": "100% fruit juice is rich in vitamins and antioxidants.",
+      "query_index": 2,
+      "query_text": "Nutritional benefits of 100% fruit juice vitamins antioxidants"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:25:41.227829",
+    "latency_seconds": 2.2,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Fiber is removed during the juicing process, which aids digestion and regulates blood sugar.\nContext: difference between juice and whole fruit\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 315,
+    "input_tokens_estimated": 78,
+    "output": {
+      "original_claim": "Fiber is removed during the juicing process, which aids digestion and regulates blood sugar.",
+      "queries": [
+        {
+          "query": "Does juicing remove fiber and affect digestion and blood sugar regulation?",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "Impact of juicing on fiber content and its effects on digestion and blood sugar levels",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 402,
+    "output_tokens_estimated": 100,
+    "cost_usd": 7.17e-05,
+    "context": {
+      "claim_index": 10,
+      "claim_text": "The sugar in juice can contribute to cavities, especially when consumed frequently.",
+      "query_index": 2,
+      "query_text": "juice consumption sugar cavities risk"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:25:41.312685",
+    "latency_seconds": 2.29,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: 100% fruit juice is a good source of vitamin C and potassium.\nContext: discussing nutritional benefits of fruit juice\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 290,
+    "input_tokens_estimated": 72,
+    "output": {
+      "original_claim": "100% fruit juice is a good source of vitamin C and potassium.",
+      "queries": [
+        {
+          "query": "nutritional benefits of 100% fruit juice vitamin C potassium",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "is 100% fruit juice high in vitamin C and potassium",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 322,
+    "output_tokens_estimated": 80,
+    "cost_usd": 5.88e-05,
+    "context": {
+      "claim_index": 8,
+      "claim_text": "Fiber is removed during the juicing process, which aids digestion and regulates blood sugar.",
+      "query_index": 2,
+      "query_text": "Impact of juicing on fiber content and its effects on digestion and blood sugar levels"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:25:41.313136",
+    "latency_seconds": 2.29,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Juice is calorie dense compared to whole fruits and can contribute to weight gain.\nContext: caloric impact of juice consumption\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 300,
+    "input_tokens_estimated": 75,
+    "output": {
+      "original_claim": "Juice is calorie dense compared to whole fruits and can contribute to weight gain.",
+      "queries": [
+        {
+          "query": "caloric density of juice vs whole fruits",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "does juice contribute to weight gain compared to whole fruits",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 333,
+    "output_tokens_estimated": 83,
+    "cost_usd": 6.105e-05,
+    "context": {
+      "claim_index": 8,
+      "claim_text": "Fiber is removed during the juicing process, which aids digestion and regulates blood sugar.",
+      "query_index": 2,
+      "query_text": "Impact of juicing on fiber content and its effects on digestion and blood sugar levels"
+    }
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:25:41.313661",
+    "latency_seconds": 2.29,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Regularly drinking large amounts of juice can lead to excess calorie consumption and weight gain.\nContext: long-term health effects of juice consumption\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 325,
+    "input_tokens_estimated": 81,
+    "output": {
+      "original_claim": "Regularly drinking large amounts of juice can lead to excess calorie consumption and weight gain.",
+      "queries": [
+        {
+          "query": "effects of drinking large amounts of juice on calorie consumption and weight gain",
+          "query_type": "direct",
+          "priority": 1
+        },
+        {
+          "query": "juice consumption and its impact on weight gain and calorie intake",
+          "query_type": "alternative",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 394,
+    "output_tokens_estimated": 98,
+    "cost_usd": 7.095e-05,
+    "context": {
+      "claim_index": 8,
+      "claim_text": "Fiber is removed during the juicing process, which aids digestion and regulates blood sugar.",
+      "query_index": 2,
+      "query_text": "Impact of juicing on fiber content and its effects on digestion and blood sugar levels"
+    }
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:26:36.845239",
+    "latency_seconds": 10.62,
+    "input_prompt": "\nClaim: 100% fruit juice is rich in vitamins and antioxidants.\nCategory: nutritional\nExtraction confidence: 0.90\n\nEvidence:\nUNCLEAR (5 sources):\n  1. 5 Surprising Health Benefits of Orange Juice - Healthline | reliability=high (0.85)\n     URL: https://www.healthline.com/nutrition/orange-juice-benefits\n     Summary: Orange juice is a favorite beverage high in antioxidants and micronutrients like vitamin C, folate, and potassium.\n  2. Health effects of 100% fruit and vegetable juices: evidence from ... | reliability=high (0.85)\n     URL: https://www.cambridge.org/core/journals/nutrition-research-reviews/article/health-effects-of-100-fruit-and-vegetable-juices-evidence-from-human-subject-intervention-studies/F2E7246B748741828885E76AA42A774B\n     Summary: Citrus fruits and their juices are rich in micronutrients such as vitamin C, folate, potassium and magnesium, as well as in bioactive (poly) ...\n  3. Squeezing Fact from Fiction about 100% Fruit Juice - ScienceDirect | reliability=high (0.85)\n     URL: https://www.sciencedirect.com/science/article/pii/S2161831322006494\n     Summary: The combination of fruit and 100% juice was associated with significantly higher intakes of potassium, calcium, and vitamin C, but not fiber. On the other hand, ...\n  4. The 9 Healthiest Types of Juice - Healthline | reliability=high (0.85)\n     URL: https://www.healthline.com/nutrition/healthiest-juice\n     Summary: Unlike other sugar-sweetened beverages, 100% fruit juice is rich in vitamins, minerals, and antioxidants. Therefore, many experts argue that it ...\n  5. Is 100% Fruit Juice Good for You? - Health Cleveland Clinic | reliability=medium (0.60)\n     URL: https://health.clevelandclinic.org/is-100-percent-fruit-juice-as-healthy-as-it-sounds\n     Summary: Benefits of 100% fruit juice. Fruit juice contains many of the vitamins and nutrients that make fruit a recommended part of a healthy diet.\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1940,
+    "input_tokens_estimated": 485,
+    "output": {
+      "overall_stance": "supports",
+      "confidence": "high",
+      "summary": "Multiple high-reliability sources indicate that 100% fruit juice is rich in vitamins and antioxidants, particularly vitamin C, folate, and potassium. For instance, the Healthline article highlights the high antioxidant content of orange juice, while the Cambridge study confirms the richness of micronutrients in citrus juices. Overall, the evidence consistently supports the claim."
+    },
+    "output_length_chars": 444,
+    "output_tokens_estimated": 111,
+    "cost_usd": 0.00013935
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:26:37.768213",
+    "latency_seconds": 11.66,
+    "input_prompt": "\nClaim: Juice is calorie dense compared to whole fruits and can contribute to weight gain.\nCategory: nutritional\nExtraction confidence: 0.85\n\nEvidence:\nUNCLEAR (5 sources):\n  1. 100% juice may contribute to weight gain | reliability=high (1.00)\n     URL: https://hsph.harvard.edu/news/fruit-juice-weight-gain/\n     Summary: Drinking large amounts of fruit juice can be unhealthy because it is metabolized differently than whole fruit, which contains fiber.\n  2. Whole Fruits Versus 100% Fruit Juice: Revisiting the Evidence ... - NIH | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC12398644/\n     Summary: We compared evidence on whole fruit and 100% fruit juice regarding its nutrient composition, impact on hunger and satiety, and association with chronic health ...\n  3. Forget the Juice and Eat the Whole Fruit Instead - Consumer Reports | reliability=high (0.85)\n     URL: https://www.consumerreports.org/healthy-eating/forget-the-juice-eat-the-whole-fruit-instead/\n     Summary: A cup of grape juice has about as much sugars as 50 grapes. A serving of fruit juice also has more calories.\n  4. Squeezing Fact from Fiction about 100% Fruit Juice - ScienceDirect | reliability=high (0.85)\n     URL: https://www.sciencedirect.com/science/article/pii/S2161831322006494\n     Summary: A dietary modeling study in which all 100% fruit juice was replaced with whole fruit showed a decrease in calories and fiber, as well as an increase in diet ...\n  5. Study Finds Even 100% Fruit Juice is Linked to Increased Weight Gain | reliability=high (0.85)\n     URL: https://www.healthline.com/health-news/why-fruit-juice-without-added-sugar-is-still-linked-to-weight-gain\n     Summary: New research finds there is a positive association between drinking 100% fruit juice and weight gain among children and adults.\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1865,
+    "input_tokens_estimated": 466,
+    "output": {
+      "overall_stance": "supports",
+      "confidence": "high",
+      "summary": "Multiple high-reliability sources indicate that 100% fruit juice is calorie dense compared to whole fruits and is associated with weight gain. For instance, the Harvard report and the Healthline study both highlight the link between fruit juice consumption and increased weight gain, while Consumer Reports notes that a serving of fruit juice contains more calories than the equivalent whole fruit."
+    },
+    "output_length_chars": 460,
+    "output_tokens_estimated": 115,
+    "cost_usd": 0.0001389
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:26:59.766254",
+    "latency_seconds": 19.89,
+    "input_prompt": "\nClaim: 100% fruit juice is a good source of vitamin C and potassium.\nCategory: nutritional\nExtraction confidence: 0.85\n\nEvidence:\nUNCLEAR (4 sources):\n  1. Is your fruit juice really 100 percent fruit juice? - MSU Extension | reliability=high (1.00)\n     URL: https://www.canr.msu.edu/news/is_your_fruit_juice_really_100_percent_fruit_juice\n     Summary: One serving of 100 percent orange juice supplies 100 percent of the vitamin C that your body needs. ... nutrients like calcium and potassium ...\n  2. Squeezing Fact from Fiction about 100% Fruit Juice - PMC - NIH | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC4352186/\n     Summary: The combination of fruit and 100% juice was associated with significantly higher intakes of potassium, calcium, and vitamin C, but not fiber.\n  3. MyPlate.gov | Fruit Group \u2013 One of the Five Food Groups | reliability=high (0.90)\n     URL: https://www.myplate.gov/eat-healthy/fruits\n     Summary: Vitamin C is important for the growth and repair of all body tissues. It helps heal cuts and wounds and keeps teeth and gums health. Vitamin C helps your body ...\n  4. Squeezing Fact from Fiction about 100% Fruit Juice - ScienceDirect | reliability=high (0.85)\n     URL: https://www.sciencedirect.com/science/article/pii/S2161831322006494\n     Summary: The combination of fruit and 100% juice was associated with significantly higher intakes of potassium, calcium, and vitamin C, but not fiber. On the other hand, ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1516,
+    "input_tokens_estimated": 379,
+    "output": {
+      "overall_stance": "supports",
+      "confidence": "high",
+      "summary": "Multiple high-reliability sources confirm that 100% fruit juice, particularly orange juice, provides 100% of the daily vitamin C requirement and is associated with higher intakes of potassium."
+    },
+    "output_length_chars": 254,
+    "output_tokens_estimated": 63,
+    "cost_usd": 9.465e-05
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T03:27:02.956463",
+    "latency_seconds": 11.44,
+    "input_prompt": "\nClaim: Fiber is removed during the juicing process, which aids digestion and regulates blood sugar.\nCategory: nutritional\nExtraction confidence: 0.90\n\nEvidence:\nUNCLEAR (4 sources):\n  1. Juicing may harm your health in just three days, new study finds | reliability=high (1.00)\n     URL: https://news.northwestern.edu/stories/2025/02/juicing-may-harm-your-health-in-just-3-days-new-study-finds\n     Summary: Without fiber, sugar-loving bacteria can multiply. The high sugar content in juice further fuels these harmful bacteria, disrupting the gut and ...\n  2. Blending vs. Juicing: The Fiber Factor - CU Anschutz newsroom | reliability=high (0.90)\n     URL: https://news.cuanschutz.edu/health-and-wellness/blending-vs.-juicing-the-fiber-factor\n     Summary: On the other hand, juicing removes the fiber from fruits and vegetables, stripping away a significant portion of their nutritional content.\n  3. Is Juicing Safe and Healthy If You Have Diabetes? - Healthline | reliability=high (0.85)\n     URL: https://www.healthline.com/nutrition/juicing-for-diabetics\n     Summary: Most juices lack fiber and protein, two nutrients that may otherwise help curb blood sugar response.\n  4. Juicing: What are the health benefits? - Mayo Clinic | reliability=high (0.85)\n     URL: https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/expert-answers/juicing/faq-20058020\n     Summary: Juicing also can give the digestive system a rest from digesting fiber. This may help some people who have certain health conditions or who ...\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1573,
+    "input_tokens_estimated": 393,
+    "output": {
+      "overall_stance": "mixed",
+      "confidence": "medium",
+      "summary": "The evidence presents a mixed view on the claim. While juicing removes fiber, which is essential for digestion and blood sugar regulation, some sources suggest that this can be beneficial for certain health conditions. The CU Anschutz newsroom and Healthline emphasize the loss of fiber and its implications for blood sugar control, while the Mayo Clinic notes that juicing can provide digestive relief for some individuals."
+    },
+    "output_length_chars": 485,
+    "output_tokens_estimated": 121,
+    "cost_usd": 0.00013155
+  }
+]

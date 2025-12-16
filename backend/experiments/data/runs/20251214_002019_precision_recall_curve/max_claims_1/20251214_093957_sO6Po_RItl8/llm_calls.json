@@ -1,0 +1,332 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:40:06.544699",
+    "latency_seconds": 7.06,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nIt's my feelgood breakfast show. A feel good breakfast show. This is Espresso. Thank you so much for joining us on our live show this morning. Now before the break, I said health properties and there might be something in it for all of us when we talk about garlic. Now aside from the fact that it tastes incredible. We all know that garlic has both culinary and medical benefits. But scientists at the UC tea uh they say that they've uncovered garlic's cancer fighting properties. So in this new research UCT lecturer Dr. Katherine Kushula and her team, they've established how a compound, a compound found in crushed garlic cloves can actually kill cancer cells. And with us in studio to talk about it is Dr. Kula herself. Dr. Welcome to the show. Hi, lovely to be here. I'm excited about this because we're saying cancer killing properties from a compound that's found in crushed garlic cloves. Now, I want to get down to this. Why it needs to be crushed? Does it need to be heated? How effective is it in killing cancer? I mean what what are we talking about here? Well, the thing is I suppose because we are scientists and we're coming from the chemistry department, we actually want to understand what the compounds are that are present in garlic that are having this effect. And in actual fact, when the clove is first crushed, there's a compound allisonin which is released which is more antibacterial properties. But this compound actually changes over time when the preparation is heated as in a food preparation into this cancer fighting compound called auine. And it's got dulfide bonds in it, which means it also has this potent garlic smell. And we've actually shown that auine is able to enter into the cancer cell and it's actually able to disrupt the intracellular machinery in the cancer cell and bring about a toxic effect and kill that cancer cell. I'm gobsmacked that we're going back to natural remedies. I mean, you guys are scientists. We expect you to work with chemicals and all kinds of crazy stuff, but here we're talking about stuff that's in our kitchen cupboards. Can this property or auine like you you mentioned can it fight any type of cancer or is it only effective in some? Well, it's been shown to be cytotoxic to a range of different types of cancers. Although I think what's more relevant to the human condition because it's a dietary compound and there's a lot of epidemiological um evidence to show that actually populations of people who consume high quantities of garlic have lower incidence of gastrointestinal cancer specifically of the stomach and colon. So um I would think that you know you would probably obtain the highest concentration of this compound through a meal which has been prepared with the akawine in it. In other words, being cooked and probably exposure to um you know, oral exposure to gastrointestinal cancers would probably have a greater effect. Although we have shown in the laboratory that it is also able um to act against other cancer cell types, but I think for the human condition, it's probably more gastrointestinal tract. It's exciting because now that means we can add more garlic to our food because you're saying that we need to do it while cooking. This is also the first time that you see this because like you said, scientists wants to see how the auin or how the garlic properties actually work. What's the best way to try and consume it? I mean, take us back there. Should it always be crushed or cooked? Yes. Well, if you want to get this cancer fighting chemical, and I say it's a chemical, it's a natural compound, but it is still a chemical, and it's present in your garlic. You actually need to take your crushed clove and actually you need to take your clove, crush it, and then in order to achieve um this transformation of what's in the crushed clove into what's what's going to be present in your food preparation, you actually need to heat the preparation and you actually get a chemical transformation which takes place between a compound which is produced in the crush clove and then it gets transformed through heating into this aching compound. So um the the preparation would involve cooking of the clove which I think is actually a process which we do do when we prepare. So possibly we knew about this in some way. I don't know in some way or another doctor it's exciting stuff and it's exciting that even scientists are coming back to our kitchen to show us how to prepare things and to make things better. So thank you so much for joining us on our show today. Well there you heard it an excuse to add more garlic to that pizza. It's really good news. So make sure you try some on your next dinner date especially if you know him for the first time. Okay, but there's loads more happening on our feelood breakfast show. In fact, even though it can leave a smile the next day, we all know that garlic is so good for us. And it looks like Andrea has more details on this.",
+    "input_length_chars": 5031,
+    "input_tokens_estimated": 1257,
+    "output": {
+      "claims": [
+        {
+          "text": "Scientists at UCT have uncovered garlic's cancer-fighting properties.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.85,
+          "context": "Research by UCT lecturer Dr. Katherine Kushula on garlic's effects."
+        },
+        {
+          "text": "A compound found in crushed garlic cloves can kill cancer cells.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.85,
+          "context": "Dr. Kushula discusses the effects of garlic compounds."
+        },
+        {
+          "text": "The compound allicin is released when garlic cloves are crushed.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Dr. Kushula explains the chemistry of garlic."
+        },
+        {
+          "text": "The compound allicin transforms into a cancer-fighting compound called auine when heated.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Discussion on the preparation of garlic for health benefits."
+        },
+        {
+          "text": "Garlic consumption is linked to lower incidence of gastrointestinal cancers.",
+          "confidence": 0.85,
+          "category": "epidemiological",
+          "importance": 0.7,
+          "context": "Epidemiological evidence mentioned by Dr. Kushula."
+        },
+        {
+          "text": "Auine is cytotoxic to a range of different types of cancers.",
+          "confidence": 0.8,
+          "category": "scientific",
+          "importance": 0.6,
+          "context": "Dr. Kushula discusses the effects of auine on cancer cells."
+        }
+      ],
+      "total_count": 6
+    },
+    "output_length_chars": 1807,
+    "output_tokens_estimated": 451,
+    "cost_usd": 0.00045915
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:40:12.180045",
+    "latency_seconds": 4.15,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Scientists at UCT have uncovered garlic's cancer-fighting properties.\nContext: Research by UCT lecturer Dr. Katherine Kushula on garlic's effects.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 319,
+    "input_tokens_estimated": 79,
+    "output": {
+      "original_claim": "Scientists at UCT have uncovered garlic's cancer-fighting properties.",
+      "queries": [
+        {
+          "query": "garlic cancer-fighting properties UCT Dr. Katherine Kushula",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Dr. Katherine Kushula garlic cancer research UCT",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 326,
+    "output_tokens_estimated": 81,
+    "cost_usd": 6.045e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Scientists at UCT have uncovered garlic's cancer-fighting properties."
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:40:28.156575",
+    "latency_seconds": 4.74,
+    "input_prompt": "Claim:\nScientists at UCT have uncovered garlic's cancer-fighting properties.\n\nArticle Title:\nCatherine H. KASCHULA - ICGEB\n\nGoogle Search Snippet:\nThe chemistry of garlic and its ability to kill cancer cells. Host: G ... Our research. Infectious Diseases \u00b7 Non-Communicable Diseases ...\n\nFull Page Content:\nICGEB\nInternational Centre for Genetic Engineering and Biotechnology\nSenior Lecturer, Department of Chemistry and Polymer Science, Stellenbosch University, Cape Town, SOUTH AFRICA\nTuesday 7 September 2021 | 12:00 noon \u2013 ICGEB Cape Town, SOUTH AFRICA\nHost: G. Sch\u00e4fer\nSouth Africa is a leading role-player in Africa when the use of biocontrol products are considered. This Cancer is a disease that affects people regardless of race, geography or socioeconomic status. With limited and often expensive treatment options, prevention is an attractive intervention strategy against the disease. It is well known that many cancers are largely preventable with diet and lifestyle playing a major role. In this context, garlic is a medicinal and dietary plant that has been used in folk medicine for centuries, and it is active against many different stages of cancer. The bioactive compounds in garlic are produced during the processing of the cloves, and one of these compounds is the vinyl disulfide organosulfur compound ajoene which we have been studying for many years. Ajoene acts by S-thiolating cysteine residues on proteins, akin to a post-translational modification, resulting in a number of downstream effects. We have developed a synthetic route to ajoene analogues which has enabled us to synthesise more potent ajoenes, as well as fluorescent and biotinylated analogues. By tracking the movement of fluorescent ajoene, we found that it localises to the endoplasmic reticulum of cancer cells where it interferes with protein folding and activates the unfolded protein response. In another study, we used a biotinylated ajoene to tag and pull down the ajoene protein targets. Many of these targets contain known reactive cysteines which are involved in the maintenance of cancer homeostasis. Our studies provide some mechanistic evidence into the anti-cancer activity of this remarkable, and accessible natural product.\nFollow us:\n\nProvide relevant evidence.",
+    "input_length_chars": 2270,
+    "input_tokens_estimated": 567,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence discusses garlic's bioactive compounds, particularly ajoene, which has been shown to interfere with cancer cell processes, suggesting its potential cancer-fighting properties.",
+      "overall_stance": "supports",
+      "key_quote": "Our studies provide some mechanistic evidence into the anti-cancer activity of this remarkable, and accessible natural product."
+    },
+    "output_length_chars": 401,
+    "output_tokens_estimated": 100,
+    "cost_usd": 0.00014505,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Scientists at UCT have uncovered garlic's cancer-fighting properties.",
+      "query_index": 2,
+      "query_text": "Dr. Katherine Kushula garlic cancer research UCT"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:40:28.328929",
+    "latency_seconds": 4.92,
+    "input_prompt": "Claim:\nScientists at UCT have uncovered garlic's cancer-fighting properties.\n\nArticle Title:\nGarlic-derived anticancer agents: structure and biological activity of ...\n\nGoogle Search Snippet:\nGarlic has been used throughout the centuries to treat infections, heart disease, and cancer ... Catherine.Kaschula@uct.ac.za. PMID: 20108330; DOI: 10.1002/biof.\n\nFull Page Content:\nICGEB\nInternational Centre for Genetic Engineering and Biotechnology\nSenior Lecturer, Department of Chemistry and Polymer Science, Stellenbosch University, Cape Town, SOUTH AFRICA\nTuesday 7 September 2021 | 12:00 noon \u2013 ICGEB Cape Town, SOUTH AFRICA\nHost: G. Sch\u00e4fer\nSouth Africa is a leading role-player in Africa when the use of biocontrol products are considered. This Cancer is a disease that affects people regardless of race, geography or socioeconomic status. With limited and often expensive treatment options, prevention is an attractive intervention strategy against the disease. It is well known that many cancers are largely preventable with diet and lifestyle playing a major role. In this context, garlic is a medicinal and dietary plant that has been used in folk medicine for centuries, and it is active against many different stages of cancer. The bioactive compounds in garlic are produced during the processing of the cloves, and one of these compounds is the vinyl disulfide organosulfur compound ajoene which we have been studying for many years. Ajoene acts by S-thiolating cysteine residues on proteins, akin to a post-translational modification, resulting in a number of downstream effects. We have developed a synthetic route to ajoene analogues which has enabled us to synthesise more potent ajoenes, as well as fluorescent and biotinylated analogues. By tracking the movement of fluorescent ajoene, we found that it localises to the endoplasmic reticulum of cancer cells where it interferes with protein folding and activates the unfolded protein response. In another study, we used a biotinylated ajoene to tag and pull down the ajoene protein targets. Many of these targets contain known reactive cysteines which are involved in the maintenance of cancer homeostasis. Our studies provide some mechanistic evidence into the anti-cancer activity of this remarkable, and accessible natural product.\nFollow us:\n\nProvide relevant evidence.",
+    "input_length_chars": 2337,
+    "input_tokens_estimated": 584,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence discusses garlic's bioactive compounds, particularly ajoene, and their mechanisms of action against cancer, indicating that garlic has cancer-fighting properties.",
+      "overall_stance": "supports",
+      "key_quote": "Our studies provide some mechanistic evidence into the anti-cancer activity of this remarkable, and accessible natural product."
+    },
+    "output_length_chars": 388,
+    "output_tokens_estimated": 97,
+    "cost_usd": 0.0001458,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Scientists at UCT have uncovered garlic's cancer-fighting properties.",
+      "query_index": 2,
+      "query_text": "Dr. Katherine Kushula garlic cancer research UCT"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:40:28.700767",
+    "latency_seconds": 5.29,
+    "input_prompt": "Claim:\nScientists at UCT have uncovered garlic's cancer-fighting properties.\n\nArticle Title:\n(PDF) The Immunomodulation and Anti-Inflammatory Effects of ...\n\nGoogle Search Snippet:\nRandomised controlled trials (RCTs) were included if they tested the effectiveness of garlic extracts or garlic compounds on cancer risk or ...\n\nFull Page Content:\nICGEB\nInternational Centre for Genetic Engineering and Biotechnology\nSenior Lecturer, Department of Chemistry and Polymer Science, Stellenbosch University, Cape Town, SOUTH AFRICA\nTuesday 7 September 2021 | 12:00 noon \u2013 ICGEB Cape Town, SOUTH AFRICA\nHost: G. Sch\u00e4fer\nSouth Africa is a leading role-player in Africa when the use of biocontrol products are considered. This Cancer is a disease that affects people regardless of race, geography or socioeconomic status. With limited and often expensive treatment options, prevention is an attractive intervention strategy against the disease. It is well known that many cancers are largely preventable with diet and lifestyle playing a major role. In this context, garlic is a medicinal and dietary plant that has been used in folk medicine for centuries, and it is active against many different stages of cancer. The bioactive compounds in garlic are produced during the processing of the cloves, and one of these compounds is the vinyl disulfide organosulfur compound ajoene which we have been studying for many years. Ajoene acts by S-thiolating cysteine residues on proteins, akin to a post-translational modification, resulting in a number of downstream effects. We have developed a synthetic route to ajoene analogues which has enabled us to synthesise more potent ajoenes, as well as fluorescent and biotinylated analogues. By tracking the movement of fluorescent ajoene, we found that it localises to the endoplasmic reticulum of cancer cells where it interferes with protein folding and activates the unfolded protein response. In another study, we used a biotinylated ajoene to tag and pull down the ajoene protein targets. Many of these targets contain known reactive cysteines which are involved in the maintenance of cancer homeostasis. Our studies provide some mechanistic evidence into the anti-cancer activity of this remarkable, and accessible natural product.\nFollow us:\n\nProvide relevant evidence.",
+    "input_length_chars": 2308,
+    "input_tokens_estimated": 577,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence discusses the anti-cancer properties of garlic, particularly focusing on the compound ajoene, which has been shown to interfere with cancer cell processes and provide mechanistic insights into its cancer-fighting effects.",
+      "overall_stance": "supports",
+      "key_quote": "Garlic is a medicinal and dietary plant that has been used in folk medicine for centuries, and it is active against many different stages of cancer."
+    },
+    "output_length_chars": 468,
+    "output_tokens_estimated": 117,
+    "cost_usd": 0.00015675,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Scientists at UCT have uncovered garlic's cancer-fighting properties.",
+      "query_index": 2,
+      "query_text": "Dr. Katherine Kushula garlic cancer research UCT"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:40:29.458616",
+    "latency_seconds": 6.04,
+    "input_prompt": "Claim:\nScientists at UCT have uncovered garlic's cancer-fighting properties.\n\nArticle Title:\n[PDF] The garlic compound ajoene covalently binds vimentin, disrupts the ...\n\nGoogle Search Snippet:\nIn this study we identify vimentin as a target that undergoes thiolysis exchange with ajoene in cancer cells. We show that the covalent modification of vimentin ...\n\nFull Page Content:\nICGEB\nInternational Centre for Genetic Engineering and Biotechnology\nSenior Lecturer, Department of Chemistry and Polymer Science, Stellenbosch University, Cape Town, SOUTH AFRICA\nTuesday 7 September 2021 | 12:00 noon \u2013 ICGEB Cape Town, SOUTH AFRICA\nHost: G. Sch\u00e4fer\nSouth Africa is a leading role-player in Africa when the use of biocontrol products are considered. This Cancer is a disease that affects people regardless of race, geography or socioeconomic status. With limited and often expensive treatment options, prevention is an attractive intervention strategy against the disease. It is well known that many cancers are largely preventable with diet and lifestyle playing a major role. In this context, garlic is a medicinal and dietary plant that has been used in folk medicine for centuries, and it is active against many different stages of cancer. The bioactive compounds in garlic are produced during the processing of the cloves, and one of these compounds is the vinyl disulfide organosulfur compound ajoene which we have been studying for many years. Ajoene acts by S-thiolating cysteine residues on proteins, akin to a post-translational modification, resulting in a number of downstream effects. We have developed a synthetic route to ajoene analogues which has enabled us to synthesise more potent ajoenes, as well as fluorescent and biotinylated analogues. By tracking the movement of fluorescent ajoene, we found that it localises to the endoplasmic reticulum of cancer cells where it interferes with protein folding and activates the unfolded protein response. In another study, we used a biotinylated ajoene to tag and pull down the ajoene protein targets. Many of these targets contain known reactive cysteines which are involved in the maintenance of cancer homeostasis. Our studies provide some mechanistic evidence into the anti-cancer activity of this remarkable, and accessible natural product.\nFollow us:\n\nProvide relevant evidence.",
+    "input_length_chars": 2342,
+    "input_tokens_estimated": 585,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence discusses the cancer-fighting properties of ajoene, a compound derived from garlic, and its mechanisms of action in cancer cells, supporting the claim that garlic has cancer-fighting properties.",
+      "overall_stance": "supports",
+      "key_quote": "Our studies provide some mechanistic evidence into the anti-cancer activity of this remarkable, and accessible natural product."
+    },
+    "output_length_chars": 420,
+    "output_tokens_estimated": 105,
+    "cost_usd": 0.00015075,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Scientists at UCT have uncovered garlic's cancer-fighting properties.",
+      "query_index": 2,
+      "query_text": "Dr. Katherine Kushula garlic cancer research UCT"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:40:32.118594",
+    "latency_seconds": 3.7,
+    "input_prompt": "Claim:\nScientists at UCT have uncovered garlic's cancer-fighting properties.\n\nArticle Title:\nC. Kaschula - The chemistry of garlic and its ability to kill cancer cells.\n\nGoogle Search Snippet:\nToday I'd like to take you on a journey into the chemistry of garlic and insights into its anti-cancer activity.\n\nFull Page Content:\nES Sign in 0:00 / 0:34 C. Kaschula - The chemistry of garlic and its ability to kill cancer cells. Int'l Centre for Genetic Eng. and Biotechnology 4.69K subscribers Subscribe Like Share Save 6.9K views 4 years ago CAPE TOWN Cancer is a disease that affects people regardless of race, geography or socioeconomic status. With limited and often expensive treatment options, prevention is an attractive intervention strategy against the disease. It is well known that many cancers are largely preventable with diet and lifestyle playing a major role. In this context, garlic is a medicinal and dietary plant that has been used in folk medicine for centuries, and it is active against many different stages of cancer. The bioactive compounds in garlic are produced during the processing of the cloves, and o \u2026 ...more Comments are turned off. Learn more 32:19 G. Papa - Role of SARS-CoV-2 Spike cleavage in virus entry and cell-cell fusion Int'l Centre for Genetic Eng. and Biotechnology 6.5K views \u2022 4 years ago 52:47 Fermented Black Garlic Study Discover Health Functional Medicine Center 20K views \u2022 5 years ago 29:16 J. Scholefield - Embedding African genetics in global R&D: enter the humble cell Int'l Centre for Genetic Eng. and Biotechnology 24 views \u2022 3 weeks ago 27:14 Transformers, the tech behind LLMs | Deep Learning Chapter 5 3Blue1Brown 8.6M views \u2022 1 year ago 4:00:37 4 Hours Chopin for Studying, Concentration & Relaxation HALIDONMUSIC 20M views \u2022 4 years ago Fundraiser 12:24 New Study Confirms that Cancer Cells Ferment Glutamine Talking Cancer With Professor Thomas Seyfried 1M views \u2022 11 months ago 1:00:34 V. Todorovic - How to publish in Nature communications Int'l Centre for Genetic Eng. and Biotechnology 16K views \u2022 8 years ago 20:10 Dr. Eric Berg Gets Fact-Checked By Medical Doctor Dr Brad Stanfield 242K views \u2022 2 years ago 1:10:52 Making Sense of a World in Crisis | Yuval Noah Harari Yuval Noah Harari 233K views \u2022 9 days ago 28:23 A. Gallo - NMR as powerful tools in biology and in medicine Int'l Centre for Genetic Eng. and Biotechnology 26 views \u2022 1 month ago 33:49 J. E. Foster - It\u2019s a Jungle Out There - Genetic characterization of orthobunyaviruses from... Int'l Centre for Genetic Eng. and Biotechnology 27 views \u2022 2 months ago 6:51 Benefits of Garlic for Fighting Cancer and the Common Cold NutritionFacts.org 743K views \u2022 5 years ago 17:43 Why You Should Be Eating Garlic EVERY DAY! Talking With Docs 372K views \u2022 1 year ago 50:30 The Gut-Brain Connection, with Emeran Mayer StarTalk 481K views \u2022 8 months ago 12:28 Broccoli - the DNA whisperer | Tom Malterre | TEDxBellingham TEDx Talks 672K views \u2022 12 years ago 47:50 Nuts and Health: The Good, the Bad, and What No One Tells You Dr. Alberto Sanagust\u00edn 1.2M views \u2022 7 months ago 37:16 A.Dube - Nanomedicine and its application in the treatment of tuberculosis Int'l Centre for Genetic Eng. and Biotechnology 20 views \u2022 2 months ago 10:15 What tumors eat -- and how to poison them | Dr. Christal Sohl | TEDxTulsaCC TEDx Talks 1.6M views \u2022 4 years ago 6:12 Resistant Starch and Colon Cancer NutritionFacts.org 189K views \u2022 9 years ago 37:26 Cancer Immunotherapy Basics: Understand the science behind this cutting-edge treatment Cancer Research Institute 39K views \u2022 3 years ago A Google company en Sign in Before you continue to YouTube We use cookies and data to Deliver and maintain Google services Track outages and protect against spam, fraud, and abuse Measure audience engagement and site statistics to understand how our services are used and enhance the quality of those services If you choose to \u201cAccept all,\u201d we will also use cookies and data to Develop and improve new services Deliver and measure the effectiveness of ads Show personalized content, depending on your settings Show personalized ads, depending on your settings If you choose to \u201cReject all,\u201d we will not use cookies for these additional purposes. Non-personalized content and ads are influenced by things like the content you\u2019re currently viewing and your location (ad serving is based on general location). Personalized content and ads can also include things like video recommendations, a customized YouTube homepage, and tailored ads based on past activity, like the videos you watch and the things you search for on YouTube. We also use cookies and data to tailor the experience to be age-appropriate, if relevant. Select \u201cMore options\u201d to see additional information, including details about managing your privacy settings. You can also visit g.co/privacytools at any time. Reject all Accept all More options Privacy Policy \u2022 Terms of Service\n\nProvide relevant evidence.",
+    "input_length_chars": 4964,
+    "input_tokens_estimated": 1241,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence discusses garlic's medicinal properties and its activity against various stages of cancer, suggesting that it has cancer-fighting properties.",
+      "overall_stance": "supports",
+      "key_quote": "\"garlic is a medicinal and dietary plant that has been used in folk medicine for centuries, and it is active against many different stages of cancer.\""
+    },
+    "output_length_chars": 392,
+    "output_tokens_estimated": 98,
+    "cost_usd": 0.00024495,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Scientists at UCT have uncovered garlic's cancer-fighting properties.",
+      "query_index": 2,
+      "query_text": "Dr. Katherine Kushula garlic cancer research UCT"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:40:32.161078",
+    "latency_seconds": 4.08,
+    "input_prompt": "Claim:\nScientists at UCT have uncovered garlic's cancer-fighting properties.\n\nArticle Title:\nGarlic-derived anticancer agents: structure and biological activity of ...\n\nGoogle Search Snippet:\nGarlic has been used throughout the centuries to treat infections, heart disease, and cancer. Ajoene is one of the main compounds formed from heating crushed ...\n\nFull Page Content:\nES Sign in 0:00 / 0:34 C. Kaschula - The chemistry of garlic and its ability to kill cancer cells. Int'l Centre for Genetic Eng. and Biotechnology 4.69K subscribers Subscribe Like Share Save 6.9K views 4 years ago CAPE TOWN Cancer is a disease that affects people regardless of race, geography or socioeconomic status. With limited and often expensive treatment options, prevention is an attractive intervention strategy against the disease. It is well known that many cancers are largely preventable with diet and lifestyle playing a major role. In this context, garlic is a medicinal and dietary plant that has been used in folk medicine for centuries, and it is active against many different stages of cancer. The bioactive compounds in garlic are produced during the processing of the cloves, and o \u2026 ...more Comments are turned off. Learn more 32:19 G. Papa - Role of SARS-CoV-2 Spike cleavage in virus entry and cell-cell fusion Int'l Centre for Genetic Eng. and Biotechnology 6.5K views \u2022 4 years ago 52:47 Fermented Black Garlic Study Discover Health Functional Medicine Center 20K views \u2022 5 years ago 29:16 J. Scholefield - Embedding African genetics in global R&D: enter the humble cell Int'l Centre for Genetic Eng. and Biotechnology 24 views \u2022 3 weeks ago 27:14 Transformers, the tech behind LLMs | Deep Learning Chapter 5 3Blue1Brown 8.6M views \u2022 1 year ago 4:00:37 4 Hours Chopin for Studying, Concentration & Relaxation HALIDONMUSIC 20M views \u2022 4 years ago Fundraiser 12:24 New Study Confirms that Cancer Cells Ferment Glutamine Talking Cancer With Professor Thomas Seyfried 1M views \u2022 11 months ago 1:00:34 V. Todorovic - How to publish in Nature communications Int'l Centre for Genetic Eng. and Biotechnology 16K views \u2022 8 years ago 20:10 Dr. Eric Berg Gets Fact-Checked By Medical Doctor Dr Brad Stanfield 242K views \u2022 2 years ago 1:10:52 Making Sense of a World in Crisis | Yuval Noah Harari Yuval Noah Harari 233K views \u2022 9 days ago 28:23 A. Gallo - NMR as powerful tools in biology and in medicine Int'l Centre for Genetic Eng. and Biotechnology 26 views \u2022 1 month ago 33:49 J. E. Foster - It\u2019s a Jungle Out There - Genetic characterization of orthobunyaviruses from... Int'l Centre for Genetic Eng. and Biotechnology 27 views \u2022 2 months ago 6:51 Benefits of Garlic for Fighting Cancer and the Common Cold NutritionFacts.org 743K views \u2022 5 years ago 17:43 Why You Should Be Eating Garlic EVERY DAY! Talking With Docs 372K views \u2022 1 year ago 50:30 The Gut-Brain Connection, with Emeran Mayer StarTalk 481K views \u2022 8 months ago 12:28 Broccoli - the DNA whisperer | Tom Malterre | TEDxBellingham TEDx Talks 672K views \u2022 12 years ago 47:50 Nuts and Health: The Good, the Bad, and What No One Tells You Dr. Alberto Sanagust\u00edn 1.2M views \u2022 7 months ago 37:16 A.Dube - Nanomedicine and its application in the treatment of tuberculosis Int'l Centre for Genetic Eng. and Biotechnology 20 views \u2022 2 months ago 10:15 What tumors eat -- and how to poison them | Dr. Christal Sohl | TEDxTulsaCC TEDx Talks 1.6M views \u2022 4 years ago 6:12 Resistant Starch and Colon Cancer NutritionFacts.org 189K views \u2022 9 years ago 37:26 Cancer Immunotherapy Basics: Understand the science behind this cutting-edge treatment Cancer Research Institute 39K views \u2022 3 years ago A Google company en Sign in Before you continue to YouTube We use cookies and data to Deliver and maintain Google services Track outages and protect against spam, fraud, and abuse Measure audience engagement and site statistics to understand how our services are used and enhance the quality of those services If you choose to \u201cAccept all,\u201d we will also use cookies and data to Develop and improve new services Deliver and measure the effectiveness of ads Show personalized content, depending on your settings Show personalized ads, depending on your settings If you choose to \u201cReject all,\u201d we will not use cookies for these additional purposes. Non-personalized content and ads are influenced by things like the content you\u2019re currently viewing and your location (ad serving is based on general location). Personalized content and ads can also include things like video recommendations, a customized YouTube homepage, and tailored ads based on past activity, like the videos you watch and the things you search for on YouTube. We also use cookies and data to tailor the experience to be age-appropriate, if relevant. Select \u201cMore options\u201d to see additional information, including details about managing your privacy settings. You can also visit g.co/privacytools at any time. Reject all Accept all More options Privacy Policy \u2022 Terms of Service\n\nProvide relevant evidence.",
+    "input_length_chars": 5012,
+    "input_tokens_estimated": 1253,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence discusses garlic's medicinal properties and its activity against various stages of cancer, suggesting that it has cancer-fighting properties.",
+      "overall_stance": "supports",
+      "key_quote": "\"garlic is a medicinal and dietary plant that has been used in folk medicine for centuries, and it is active against many different stages of cancer.\""
+    },
+    "output_length_chars": 392,
+    "output_tokens_estimated": 98,
+    "cost_usd": 0.00024675,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Scientists at UCT have uncovered garlic's cancer-fighting properties.",
+      "query_index": 2,
+      "query_text": "Dr. Katherine Kushula garlic cancer research UCT"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:40:32.674176",
+    "latency_seconds": 4.51,
+    "input_prompt": "Claim:\nScientists at UCT have uncovered garlic's cancer-fighting properties.\n\nArticle Title:\n(PDF) The Immunomodulation and Anti-Inflammatory Effects of ...\n\nGoogle Search Snippet:\nBackground Many authors have explored the intriguing possibility that the regular intake of Allium sativum (garlic) might reduce cancer risk.\n\nFull Page Content:\nES Sign in 0:00 / 0:34 C. Kaschula - The chemistry of garlic and its ability to kill cancer cells. Int'l Centre for Genetic Eng. and Biotechnology 4.69K subscribers Subscribe Like Share Save 6.9K views 4 years ago CAPE TOWN Cancer is a disease that affects people regardless of race, geography or socioeconomic status. With limited and often expensive treatment options, prevention is an attractive intervention strategy against the disease. It is well known that many cancers are largely preventable with diet and lifestyle playing a major role. In this context, garlic is a medicinal and dietary plant that has been used in folk medicine for centuries, and it is active against many different stages of cancer. The bioactive compounds in garlic are produced during the processing of the cloves, and o \u2026 ...more Comments are turned off. Learn more 32:19 G. Papa - Role of SARS-CoV-2 Spike cleavage in virus entry and cell-cell fusion Int'l Centre for Genetic Eng. and Biotechnology 6.5K views \u2022 4 years ago 52:47 Fermented Black Garlic Study Discover Health Functional Medicine Center 20K views \u2022 5 years ago 29:16 J. Scholefield - Embedding African genetics in global R&D: enter the humble cell Int'l Centre for Genetic Eng. and Biotechnology 24 views \u2022 3 weeks ago 27:14 Transformers, the tech behind LLMs | Deep Learning Chapter 5 3Blue1Brown 8.6M views \u2022 1 year ago 4:00:37 4 Hours Chopin for Studying, Concentration & Relaxation HALIDONMUSIC 20M views \u2022 4 years ago Fundraiser 12:24 New Study Confirms that Cancer Cells Ferment Glutamine Talking Cancer With Professor Thomas Seyfried 1M views \u2022 11 months ago 1:00:34 V. Todorovic - How to publish in Nature communications Int'l Centre for Genetic Eng. and Biotechnology 16K views \u2022 8 years ago 20:10 Dr. Eric Berg Gets Fact-Checked By Medical Doctor Dr Brad Stanfield 242K views \u2022 2 years ago 1:10:52 Making Sense of a World in Crisis | Yuval Noah Harari Yuval Noah Harari 233K views \u2022 9 days ago 28:23 A. Gallo - NMR as powerful tools in biology and in medicine Int'l Centre for Genetic Eng. and Biotechnology 26 views \u2022 1 month ago 33:49 J. E. Foster - It\u2019s a Jungle Out There - Genetic characterization of orthobunyaviruses from... Int'l Centre for Genetic Eng. and Biotechnology 27 views \u2022 2 months ago 6:51 Benefits of Garlic for Fighting Cancer and the Common Cold NutritionFacts.org 743K views \u2022 5 years ago 17:43 Why You Should Be Eating Garlic EVERY DAY! Talking With Docs 372K views \u2022 1 year ago 50:30 The Gut-Brain Connection, with Emeran Mayer StarTalk 481K views \u2022 8 months ago 12:28 Broccoli - the DNA whisperer | Tom Malterre | TEDxBellingham TEDx Talks 672K views \u2022 12 years ago 47:50 Nuts and Health: The Good, the Bad, and What No One Tells You Dr. Alberto Sanagust\u00edn 1.2M views \u2022 7 months ago 37:16 A.Dube - Nanomedicine and its application in the treatment of tuberculosis Int'l Centre for Genetic Eng. and Biotechnology 20 views \u2022 2 months ago 10:15 What tumors eat -- and how to poison them | Dr. Christal Sohl | TEDxTulsaCC TEDx Talks 1.6M views \u2022 4 years ago 6:12 Resistant Starch and Colon Cancer NutritionFacts.org 189K views \u2022 9 years ago 37:26 Cancer Immunotherapy Basics: Understand the science behind this cutting-edge treatment Cancer Research Institute 39K views \u2022 3 years ago A Google company en Sign in Before you continue to YouTube We use cookies and data to Deliver and maintain Google services Track outages and protect against spam, fraud, and abuse Measure audience engagement and site statistics to understand how our services are used and enhance the quality of those services If you choose to \u201cAccept all,\u201d we will also use cookies and data to Develop and improve new services Deliver and measure the effectiveness of ads Show personalized content, depending on your settings Show personalized ads, depending on your settings If you choose to \u201cReject all,\u201d we will not use cookies for these additional purposes. Non-personalized content and ads are influenced by things like the content you\u2019re currently viewing and your location (ad serving is based on general location). Personalized content and ads can also include things like video recommendations, a customized YouTube homepage, and tailored ads based on past activity, like the videos you watch and the things you search for on YouTube. We also use cookies and data to tailor the experience to be age-appropriate, if relevant. Select \u201cMore options\u201d to see additional information, including details about managing your privacy settings. You can also visit g.co/privacytools at any time. Reject all Accept all More options Privacy Policy \u2022 Terms of Service\n\nProvide relevant evidence.",
+    "input_length_chars": 4981,
+    "input_tokens_estimated": 1245,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence discusses the potential of garlic (Allium sativum) in reducing cancer risk, highlighting its medicinal properties and active compounds that may combat various stages of cancer.",
+      "overall_stance": "supports",
+      "key_quote": "\"garlic is a medicinal and dietary plant that has been used in folk medicine for centuries, and it is active against many different stages of cancer.\""
+    },
+    "output_length_chars": 427,
+    "output_tokens_estimated": 106,
+    "cost_usd": 0.00025035,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Scientists at UCT have uncovered garlic's cancer-fighting properties.",
+      "query_index": 2,
+      "query_text": "Dr. Katherine Kushula garlic cancer research UCT"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:40:32.745495",
+    "latency_seconds": 4.41,
+    "input_prompt": "Claim:\nScientists at UCT have uncovered garlic's cancer-fighting properties.\n\nArticle Title:\nCan Garlic prevent cancer? - YouTube\n\nGoogle Search Snippet:\n... UCT lecturer Dr. Catherine Kaschula and her team have established how a compound found in crushed cloves of garlic killed cancer cells ...\n\nFull Page Content:\nES Sign in 0:00 / 0:34 C. Kaschula - The chemistry of garlic and its ability to kill cancer cells. Int'l Centre for Genetic Eng. and Biotechnology 4.69K subscribers Subscribe Like Share Save 6.9K views 4 years ago CAPE TOWN Cancer is a disease that affects people regardless of race, geography or socioeconomic status. With limited and often expensive treatment options, prevention is an attractive intervention strategy against the disease. It is well known that many cancers are largely preventable with diet and lifestyle playing a major role. In this context, garlic is a medicinal and dietary plant that has been used in folk medicine for centuries, and it is active against many different stages of cancer. The bioactive compounds in garlic are produced during the processing of the cloves, and o \u2026 ...more Comments are turned off. Learn more 32:19 G. Papa - Role of SARS-CoV-2 Spike cleavage in virus entry and cell-cell fusion Int'l Centre for Genetic Eng. and Biotechnology 6.5K views \u2022 4 years ago 52:47 Fermented Black Garlic Study Discover Health Functional Medicine Center 20K views \u2022 5 years ago 29:16 J. Scholefield - Embedding African genetics in global R&D: enter the humble cell Int'l Centre for Genetic Eng. and Biotechnology 24 views \u2022 3 weeks ago 27:14 Transformers, the tech behind LLMs | Deep Learning Chapter 5 3Blue1Brown 8.6M views \u2022 1 year ago 4:00:37 4 Hours Chopin for Studying, Concentration & Relaxation HALIDONMUSIC 20M views \u2022 4 years ago Fundraiser 12:24 New Study Confirms that Cancer Cells Ferment Glutamine Talking Cancer With Professor Thomas Seyfried 1M views \u2022 11 months ago 1:00:34 V. Todorovic - How to publish in Nature communications Int'l Centre for Genetic Eng. and Biotechnology 16K views \u2022 8 years ago 20:10 Dr. Eric Berg Gets Fact-Checked By Medical Doctor Dr Brad Stanfield 242K views \u2022 2 years ago 1:10:52 Making Sense of a World in Crisis | Yuval Noah Harari Yuval Noah Harari 233K views \u2022 9 days ago 28:23 A. Gallo - NMR as powerful tools in biology and in medicine Int'l Centre for Genetic Eng. and Biotechnology 26 views \u2022 1 month ago 33:49 J. E. Foster - It\u2019s a Jungle Out There - Genetic characterization of orthobunyaviruses from... Int'l Centre for Genetic Eng. and Biotechnology 27 views \u2022 2 months ago 6:51 Benefits of Garlic for Fighting Cancer and the Common Cold NutritionFacts.org 743K views \u2022 5 years ago 17:43 Why You Should Be Eating Garlic EVERY DAY! Talking With Docs 372K views \u2022 1 year ago 50:30 The Gut-Brain Connection, with Emeran Mayer StarTalk 481K views \u2022 8 months ago 12:28 Broccoli - the DNA whisperer | Tom Malterre | TEDxBellingham TEDx Talks 672K views \u2022 12 years ago 47:50 Nuts and Health: The Good, the Bad, and What No One Tells You Dr. Alberto Sanagust\u00edn 1.2M views \u2022 7 months ago 37:16 A.Dube - Nanomedicine and its application in the treatment of tuberculosis Int'l Centre for Genetic Eng. and Biotechnology 20 views \u2022 2 months ago 10:15 What tumors eat -- and how to poison them | Dr. Christal Sohl | TEDxTulsaCC TEDx Talks 1.6M views \u2022 4 years ago 6:12 Resistant Starch and Colon Cancer NutritionFacts.org 189K views \u2022 9 years ago 37:26 Cancer Immunotherapy Basics: Understand the science behind this cutting-edge treatment Cancer Research Institute 39K views \u2022 3 years ago A Google company en Sign in Before you continue to YouTube We use cookies and data to Deliver and maintain Google services Track outages and protect against spam, fraud, and abuse Measure audience engagement and site statistics to understand how our services are used and enhance the quality of those services If you choose to \u201cAccept all,\u201d we will also use cookies and data to Develop and improve new services Deliver and measure the effectiveness of ads Show personalized content, depending on your settings Show personalized ads, depending on your settings If you choose to \u201cReject all,\u201d we will not use cookies for these additional purposes. Non-personalized content and ads are influenced by things like the content you\u2019re currently viewing and your location (ad serving is based on general location). Personalized content and ads can also include things like video recommendations, a customized YouTube homepage, and tailored ads based on past activity, like the videos you watch and the things you search for on YouTube. We also use cookies and data to tailor the experience to be age-appropriate, if relevant. Select \u201cMore options\u201d to see additional information, including details about managing your privacy settings. You can also visit g.co/privacytools at any time. Reject all Accept all More options Privacy Policy \u2022 Terms of Service\n\nProvide relevant evidence.",
+    "input_length_chars": 4955,
+    "input_tokens_estimated": 1238,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that researchers at UCT have found that a compound in garlic can kill cancer cells, supporting the claim about garlic's cancer-fighting properties.",
+      "overall_stance": "supports",
+      "key_quote": "Dr. Catherine Kaschula and her team have established how a compound found in crushed cloves of garlic killed cancer cells."
+    },
+    "output_length_chars": 378,
+    "output_tokens_estimated": 94,
+    "cost_usd": 0.0002421,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Scientists at UCT have uncovered garlic's cancer-fighting properties.",
+      "query_index": 2,
+      "query_text": "Dr. Katherine Kushula garlic cancer research UCT"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:40:33.028628",
+    "latency_seconds": 4.78,
+    "input_prompt": "Claim:\nScientists at UCT have uncovered garlic's cancer-fighting properties.\n\nArticle Title:\n[PDF] The garlic compound ajoene covalently binds vimentin, disrupts the ...\n\nGoogle Search Snippet:\nGarlic (Allium sativum) has been used since ancient times as a food additive and for its beneficial health effects that include protection against cancer [1].\n\nFull Page Content:\nES Sign in 0:00 / 0:34 C. Kaschula - The chemistry of garlic and its ability to kill cancer cells. Int'l Centre for Genetic Eng. and Biotechnology 4.69K subscribers Subscribe Like Share Save 6.9K views 4 years ago CAPE TOWN Cancer is a disease that affects people regardless of race, geography or socioeconomic status. With limited and often expensive treatment options, prevention is an attractive intervention strategy against the disease. It is well known that many cancers are largely preventable with diet and lifestyle playing a major role. In this context, garlic is a medicinal and dietary plant that has been used in folk medicine for centuries, and it is active against many different stages of cancer. The bioactive compounds in garlic are produced during the processing of the cloves, and o \u2026 ...more Comments are turned off. Learn more 32:19 G. Papa - Role of SARS-CoV-2 Spike cleavage in virus entry and cell-cell fusion Int'l Centre for Genetic Eng. and Biotechnology 6.5K views \u2022 4 years ago 52:47 Fermented Black Garlic Study Discover Health Functional Medicine Center 20K views \u2022 5 years ago 29:16 J. Scholefield - Embedding African genetics in global R&D: enter the humble cell Int'l Centre for Genetic Eng. and Biotechnology 24 views \u2022 3 weeks ago 27:14 Transformers, the tech behind LLMs | Deep Learning Chapter 5 3Blue1Brown 8.6M views \u2022 1 year ago 4:00:37 4 Hours Chopin for Studying, Concentration & Relaxation HALIDONMUSIC 20M views \u2022 4 years ago Fundraiser 12:24 New Study Confirms that Cancer Cells Ferment Glutamine Talking Cancer With Professor Thomas Seyfried 1M views \u2022 11 months ago 1:00:34 V. Todorovic - How to publish in Nature communications Int'l Centre for Genetic Eng. and Biotechnology 16K views \u2022 8 years ago 20:10 Dr. Eric Berg Gets Fact-Checked By Medical Doctor Dr Brad Stanfield 242K views \u2022 2 years ago 1:10:52 Making Sense of a World in Crisis | Yuval Noah Harari Yuval Noah Harari 233K views \u2022 9 days ago 28:23 A. Gallo - NMR as powerful tools in biology and in medicine Int'l Centre for Genetic Eng. and Biotechnology 26 views \u2022 1 month ago 33:49 J. E. Foster - It\u2019s a Jungle Out There - Genetic characterization of orthobunyaviruses from... Int'l Centre for Genetic Eng. and Biotechnology 27 views \u2022 2 months ago 6:51 Benefits of Garlic for Fighting Cancer and the Common Cold NutritionFacts.org 743K views \u2022 5 years ago 17:43 Why You Should Be Eating Garlic EVERY DAY! Talking With Docs 372K views \u2022 1 year ago 50:30 The Gut-Brain Connection, with Emeran Mayer StarTalk 481K views \u2022 8 months ago 12:28 Broccoli - the DNA whisperer | Tom Malterre | TEDxBellingham TEDx Talks 672K views \u2022 12 years ago 47:50 Nuts and Health: The Good, the Bad, and What No One Tells You Dr. Alberto Sanagust\u00edn 1.2M views \u2022 7 months ago 37:16 A.Dube - Nanomedicine and its application in the treatment of tuberculosis Int'l Centre for Genetic Eng. and Biotechnology 20 views \u2022 2 months ago 10:15 What tumors eat -- and how to poison them | Dr. Christal Sohl | TEDxTulsaCC TEDx Talks 1.6M views \u2022 4 years ago 6:12 Resistant Starch and Colon Cancer NutritionFacts.org 189K views \u2022 9 years ago 37:26 Cancer Immunotherapy Basics: Understand the science behind this cutting-edge treatment Cancer Research Institute 39K views \u2022 3 years ago A Google company en Sign in Before you continue to YouTube We use cookies and data to Deliver and maintain Google services Track outages and protect against spam, fraud, and abuse Measure audience engagement and site statistics to understand how our services are used and enhance the quality of those services If you choose to \u201cAccept all,\u201d we will also use cookies and data to Develop and improve new services Deliver and measure the effectiveness of ads Show personalized content, depending on your settings Show personalized ads, depending on your settings If you choose to \u201cReject all,\u201d we will not use cookies for these additional purposes. Non-personalized content and ads are influenced by things like the content you\u2019re currently viewing and your location (ad serving is based on general location). Personalized content and ads can also include things like video recommendations, a customized YouTube homepage, and tailored ads based on past activity, like the videos you watch and the things you search for on YouTube. We also use cookies and data to tailor the experience to be age-appropriate, if relevant. Select \u201cMore options\u201d to see additional information, including details about managing your privacy settings. You can also visit g.co/privacytools at any time. Reject all Accept all More options Privacy Policy \u2022 Terms of Service\n\nProvide relevant evidence.",
+    "input_length_chars": 5011,
+    "input_tokens_estimated": 1252,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence discusses garlic's historical use in folk medicine and its active compounds that are believed to combat various stages of cancer, suggesting a potential cancer-fighting property of garlic.",
+      "overall_stance": "supports",
+      "key_quote": "\"garlic is a medicinal and dietary plant that has been used in folk medicine for centuries, and it is active against many different stages of cancer.\""
+    },
+    "output_length_chars": 439,
+    "output_tokens_estimated": 109,
+    "cost_usd": 0.0002532,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Scientists at UCT have uncovered garlic's cancer-fighting properties.",
+      "query_index": 2,
+      "query_text": "Dr. Katherine Kushula garlic cancer research UCT"
+    }
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T09:40:38.672322",
+    "latency_seconds": 5.55,
+    "input_prompt": "\nClaim: Scientists at UCT have uncovered garlic's cancer-fighting properties.\nCategory: scientific\nExtraction confidence: 0.90\n\nEvidence:\nSUPPORTS (4 sources):\n  1. (PDF) The Immunomodulation and Anti-Inflammatory Effects of ... | reliability=high (0.85)\n     URL: https://www.researchgate.net/publication/258632806_The_Immunomodulation_and_Anti-Inflammatory_Effects_of_Garlic_Organosulfur_Compounds_in_Cancer_Chemoprevention\n     Summary: The evidence discusses the potential of garlic (Allium sativum) in reducing cancer risk, highlighting its medicinal properties and active compounds that may combat various stages of cancer.\n  2. Garlic-derived anticancer agents: structure and biological activity of ... | reliability=high (0.85)\n     URL: https://pubmed.ncbi.nlm.nih.gov/20108330/\n     Summary: The evidence discusses garlic's medicinal properties and its activity against various stages of cancer, suggesting that it has cancer-fighting properties.\n  3. [PDF] The garlic compound ajoene covalently binds vimentin, disrupts the ... | reliability=medium (0.60)\n     URL: https://cansa.org.za/files/2016/04/Dr-Catherine-Kaschula-Publication-BMC-Cancer.pdf\n     Summary: The evidence discusses the cancer-fighting properties of ajoene, a compound derived from garlic, and its mechanisms of action in cancer cells, supporting the claim that garlic has cancer-fighting properties.\n  4. Can Garlic prevent cancer? - YouTube | reliability=medium (0.60)\n     URL: https://www.youtube.com/watch?v=sO6Po_RItl8\n     Summary: The evidence indicates that researchers at UCT have found that a compound in garlic can kill cancer cells, supporting the claim about garlic's cancer-fighting properties.\n\nProvide the structured verdict.\n",
+    "input_length_chars": 1725,
+    "input_tokens_estimated": 431,
+    "output": {
+      "overall_stance": "supports",
+      "confidence": "high",
+      "summary": "Multiple high-reliability sources indicate that garlic contains compounds with potential cancer-fighting properties, including studies discussing its medicinal effects and specific compounds like ajoene that disrupt cancer cell mechanisms. Additionally, a YouTube source confirms research from UCT supporting these findings."
+    },
+    "output_length_chars": 386,
+    "output_tokens_estimated": 96,
+    "cost_usd": 0.00012225,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Scientists at UCT have uncovered garlic's cancer-fighting properties.",
+      "query_index": 2,
+      "query_text": "Dr. Katherine Kushula garlic cancer research UCT"
+    }
+  }
+]

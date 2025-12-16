@@ -1,0 +1,370 @@
+[
+  {
+    "component": "claim_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:20:33.211829",
+    "latency_seconds": 12.31,
+    "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nWhat if I told you that someone had developed an energy source that could help us solve our biggest environmental challenges, purify our water and air, make our cities and homes more sanitary, and keep us safe from potential catastrophic climate change? What if I also told you that this energy source was cheap, plentiful, and reliable? Well, there is such a source. You probably know it as fossil fuel. Oil. Natural gas. Coal. But wait? Don\u2019t fossil fuels pollute our environment and make our climate unlivable? That, of course, is what we\u2019re told\u2026and what our children are taught. But let\u2019s look at the data. Here\u2019s a graph you\u2019ve probably never seen: the correlation between use of fossil fuels and access to clean water. More fossil fuel. More clean water. Am I saying the more we that we have used fossil fuel, the cleaner our water has become? Yes, that\u2019s exactly what I\u2019m saying. In the developed world, we take clean water for granted. We turn on a tap and it\u2019s there. But getting it there takes a massive amount of energy. Think of the man-made reservoirs, the purification plants, the network of pipes. In the undeveloped world, it\u2019s a much different story. They lack the energy, so they lack clean water. More fossil fuel. More clean water. The same is true of sanitation. By the use of cheap, plentiful, and reliable energy from fossil fuels, we have made our environment cleaner. Take a look at this graph. More fossil fuel. Better sanitation. Okay, what about air quality? Here\u2019s a graph of the air pollution trends in the United States over the last half century based on data from the Environmental Protection Agency. Note the dramatic downward trend in emissions, even though we use more fossil fuel than ever. How was this achieved? Above all, by using anti-pollution technology powered by\u2026 fossil fuel: oil, natural gas and coal. But even without modern pollution control technology, fossil fuel makes our air cleaner. Indoor pollution\u2014caused by burning a fire inside your house, cabin, hut or tent to cook and keep warm\u2014was a deadly global problem until the late 19th century when cheap kerosene, a fossil fuel byproduct, became available in America and Europe. Indoor pollution is still a major issue in the developing world today. The best solution? Fossil fuel. And now we come to the biggest fossil fuel concern of all\u2014global warming. On this very sensitive topic we need to get our terms straight: There is a big difference between mild global warming and catastrophic global warming. We can all agree on that, right? The issue isn\u2019t: does burning fossil fuel have some warming impact? It does. The issue is: is the climate warming dangerously fast? In 1986 NASA climate scientist James Hansen\u2014one of the world\u2019s most prominent critics of the use of fossil fuels\u2014predicted that \u201cif current trends are unchanged,\u201d temperatures would rise 2 to 4 degrees in the first decade of the 2000s. But as you can see from this graph, since 2000 the trend line is essentially flat\u2014little or no warming in the last 15 years. That\u2019s probably why we hear much less talk about \u201cglobal warming\u201d and much more talk about \u201cclimate change.\u201d Has this \u201cclimate change\u201d made our world more dangerous? The key statistic here, one that is, unfortunately, almost never mentioned, is \u201cclimate-related deaths,\u201d that is, how many people die each year from a climate-related cause, including droughts, floods, storms, and extreme temperatures. In the last eighty years, as CO2 emissions have rapidly escalated, the annual rate of climate-related deaths worldwide has rapidly declined -- by 98%. The reason is that the energy from fossil fuel has allowed the developed world to build a durable civilization, one highly resilient to extreme heat, extreme cold, floods, storms, and so on. The developing world\u2014where natural disasters can still wreak terrible havoc\u2014 would like the chance to do the same. But to do that they will need a lot more energy. The cheapest, fastest and easiest way to get that energy is from fossil fuels. In sum, fossil fuels don\u2019t take a naturally safe environment and make it dangerous; they empower us to take a naturally dangerous environment and make it cleaner and safer. I\u2019m Alex Epstein of the Center for Industrial Progress for Prager University.",
+    "input_length_chars": 4332,
+    "input_tokens_estimated": 1083,
+    "output": {
+      "claims": [
+        {
+          "text": "Fossil fuels can help solve environmental challenges and purify water and air.",
+          "confidence": 0.9,
+          "category": "scientific",
+          "importance": 0.85,
+          "context": "Claim made by speaker Alex Epstein, promoting fossil fuels."
+        },
+        {
+          "text": "More fossil fuel usage correlates with increased access to clean water.",
+          "confidence": 0.8,
+          "category": "statistical",
+          "importance": 0.85,
+          "context": "Speaker discusses correlation between fossil fuel use and clean water access."
+        },
+        {
+          "text": "In the developed world, clean water is taken for granted due to energy use.",
+          "confidence": 0.85,
+          "category": "geographical",
+          "importance": 0.7,
+          "context": "Speaker contrasts developed and undeveloped world water access."
+        },
+        {
+          "text": "The use of fossil fuels has improved sanitation.",
+          "confidence": 0.8,
+          "category": "scientific",
+          "importance": 0.7,
+          "context": "Speaker claims fossil fuels contribute to better sanitation."
+        },
+        {
+          "text": "Air pollution in the U.S. has decreased despite increased fossil fuel use.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.85,
+          "context": "Speaker references EPA data on air pollution trends."
+        },
+        {
+          "text": "Indoor pollution was a major issue until kerosene became available in the late 19th century.",
+          "confidence": 0.8,
+          "category": "historical",
+          "importance": 0.6,
+          "context": "Speaker discusses historical context of indoor pollution."
+        },
+        {
+          "text": "Since 2000, the trend line for global temperatures is essentially flat.",
+          "confidence": 0.85,
+          "category": "scientific",
+          "importance": 0.8,
+          "context": "Speaker references temperature trends since 2000."
+        },
+        {
+          "text": "Climate-related deaths have declined by 98% in the last eighty years.",
+          "confidence": 0.9,
+          "category": "statistical",
+          "importance": 0.85,
+          "context": "Speaker discusses the decline in climate-related deaths."
+        }
+      ],
+      "total_count": 8
+    },
+    "output_length_chars": 2442,
+    "output_tokens_estimated": 610,
+    "cost_usd": 0.00052845
+  },
+  {
+    "component": "query_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:20:37.716967",
+    "latency_seconds": 2.66,
+    "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Fossil fuels can help solve environmental challenges and purify water and air.\nContext: Claim made by speaker Alex Epstein, promoting fossil fuels.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
+    "input_length_chars": 320,
+    "input_tokens_estimated": 80,
+    "output": {
+      "original_claim": "Fossil fuels can help solve environmental challenges and purify water and air.",
+      "queries": [
+        {
+          "query": "Fossil fuels environmental benefits air water purification",
+          "query_type": "DIRECT",
+          "priority": 1
+        },
+        {
+          "query": "Can fossil fuels improve environmental conditions and clean air and water?",
+          "query_type": "ALTERNATIVE",
+          "priority": 2
+        }
+      ],
+      "total_count": 2
+    },
+    "output_length_chars": 360,
+    "output_tokens_estimated": 90,
+    "cost_usd": 6.6e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Fossil fuels can help solve environmental challenges and purify water and air."
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:21:09.545814",
+    "latency_seconds": 2.59,
+    "input_prompt": "Claim:\nFossil fuels can help solve environmental challenges and purify water and air.\n\nArticle Title:\nProgress Cleaning the Air and Improving People's Health | US EPA\n\nGoogle Search Snippet:\nAmericans breathe less pollution and face lower risks of premature death and other serious health effects. \u00b7 Environmental damage from air pollution is reduced.\n\nFull Page Content:\nThis website stores cookies on your computer. These cookies are used to collect information about how you interact with our website and allow us to remember you. We use this information in order to improve and customize your browsing experience and for analytics and metrics about our visitors both on this website and other media. To find out more about the cookies we use, see our Privacy Policy and our Cookie Policy.\nIf you decline, your information won\u2019t be tracked when you visit this website. A single cookie will be used in your browser to remember your preference not to be tracked.\nImage courtesy of Climate Visuals\nTL;DR \u2014 Renewable energy is becoming an increasingly inexpensive, popular, and viable energy source. The negative impacts that non-renewable energy sources like fossil fuels have on air quality, climate change, and environmental health have become increasingly clear. By increasingly relying on renewable energy sources like wind and solar power, we can reap a wide variety of benefits including reduced air pollution, lower greenhouse gas emission levels, decreased healthcare costs, a more resilient electrical grid, and job generation.\nThe UN says that with technology available today, cheap electricity from renewable sources could provide 65 percent of the world\u2019s total electricity supply by 2030 and decarbonize 90 percent of the power sector by 2050, massively cutting carbon emissions and improving air quality. But what exactly is the relationship between energy production and air pollution? We\u2019ll take a deep dive into this topic and see that the benefits of investing in clean energy sources become even more compelling when both air quality and climate benefits are considered.\nNon-renewable energy comes from sources that cannot be replenished in our lifetime. The most common sources of non-renewable energy are carbon-containing fossil fuels, including coal, petroleum, and natural gas. According to data from the Central Intelligence Agency, more than 66% of world electric generation comes from fossil fuels today.\nIn contrast, renewable energy comes from sources that can be replenished faster than they are consumed.\nRenewable energy sources produce little to no greenhouse gas emissions that contribute to climate change, even when considering their life cycle emissions that occur through each stage of the technology\u2019s use.\nAside from relying on dwindling and expensive resources, non-renewable energy sources \u2014 specifically, fossil fuel combustion \u2014 create vast harm by releasing toxic air pollution and greenhouse gases that threaten air quality and climate health.\nEstimates from Harvard calculate that air pollution from fossil fuels may be responsible for as many as one in five deaths worldwide. Air pollution from coal-fired power plants impacts not only people in the immediate vicinity but can travel long distances depending on the prevailing wind speed and direction and put large portions of the population at risk.\nThe most common renewable energy sources include wind, solar, and geothermal with two of the safest and most common being wind and solar.\nWind energy is created using wind turbines which can be placed anywhere with high-speed winds, including hilltops to open water. Wind energy is one of the cleanest sources of energy because wind turbines do not affect air pollution emissions in any direct way and do not need water for cooling.\nSolar energy, which uses solar or photovoltaic cells to convert sunlight into electricity, is also very clean in that it doesn\u2019t produce air pollutants or contribute to greenhouse gas emissions. However, the process of manufacturing solar panels may produce some emissions.\nGeothermal energy relies on the heat produced within the Earth. Water is injected deep underground and is heated by the Earth\u2019s molten interior and returns as hot water or steam; this steam is used to power a turbine to generate electricity. Geothermal energy produces only one-sixth of the carbon dioxide of a natural gas powerplant and little to no NO2 or SO2 pollution.\nWhile biomass is sometimes listed as a source of renewable energy, the American Lung Association opposes biomass combustion as a form of energy generation because this process creates particle pollution and releases other carcinogens. However, pyrolysis \u2014 where biomass is heated in an anaerobic environment without oxygen, breaking down into oils and gases \u2014 is a potential alternative to incineration that is known to produce fewer air pollutants than burning.\nAn exciting future may exist when it comes to nuclear fusion. Nuclear fusion, a process where light elements are combined to form heavier elements and release energy in the process, made recent headlines due to a scientific breakthrough where scientists demonstrated a positive energy gain in the reaction for the first time.\nHowever, we\u2019re still far from being able to use nuclear fusion as a viable energy source. Though this process can not yet be practically applied commercially, it holds the potential for a clean, safe, carbon-free, and near-limitless source of energy in the future.\nRenewable energy use is growing across the globe but unfortunately still accounts for just a portion of overall energy generation.\nGlobally, even though fossil fuels still account for the majority of energy production, renewable energy sources now make up 29% of current electricity production.\nIn the United States, 29% of greenhouse gas emissions come from electricity production, particularly from fossil fuel combustion. However, the U.S. is increasing its use of nonfossil fuel sources of energy, with 21% of the country\u2019s energy consumption coming from renewable sources in 2020 \u2014 the highest share since the early 1900s.\nBy increasing the supply and use of renewable energy like wind and solar, we can replace carbon-intensive sources like fossil fuels and lower the amount of greenhouse gas emissions released.\nAir pollution is a severe global crisis, with the World Health Organi\n\nProvide relevant evidence.",
+    "input_length_chars": 6400,
+    "input_tokens_estimated": 1600,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence indicates that fossil fuels contribute significantly to air pollution and environmental damage, contradicting the claim that they can help solve environmental challenges. The article emphasizes the benefits of renewable energy sources over fossil fuels in improving air quality and reducing greenhouse gas emissions.",
+      "overall_stance": "refutes",
+      "key_quote": "Non-renewable energy sources \u2014 specifically, fossil fuel combustion \u2014 create vast harm by releasing toxic air pollution and greenhouse gases that threaten air quality and climate health."
+    },
+    "output_length_chars": 600,
+    "output_tokens_estimated": 150,
+    "cost_usd": 0.00033,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Fossil fuels can help solve environmental challenges and purify water and air.",
+      "query_index": 2,
+      "query_text": "Can fossil fuels improve environmental conditions and clean air and water?"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:21:09.657857",
+    "latency_seconds": 2.99,
+    "input_prompt": "Claim:\nFossil fuels can help solve environmental challenges and purify water and air.\n\nArticle Title:\nHow Fossil Fuels Cleaned Up Our Environment - Forbes\n\nFull Page Content:\nThe overall impact of fossil fuels on environmental quality is tremendously positive. And more fundamentally, its impact on human health is ...\n\nProvide relevant evidence.",
+    "input_length_chars": 346,
+    "input_tokens_estimated": 86,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The article argues that fossil fuels have a tremendously positive impact on environmental quality and human health, suggesting they can help address environmental challenges.",
+      "overall_stance": "supports",
+      "key_quote": "The overall impact of fossil fuels on environmental quality is tremendously positive."
+    },
+    "output_length_chars": 345,
+    "output_tokens_estimated": 86,
+    "cost_usd": 6.45e-05,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Fossil fuels can help solve environmental challenges and purify water and air.",
+      "query_index": 2,
+      "query_text": "Can fossil fuels improve environmental conditions and clean air and water?"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:21:09.764700",
+    "latency_seconds": 2.81,
+    "input_prompt": "Claim:\nFossil fuels can help solve environmental challenges and purify water and air.\n\nArticle Title:\nClimate, Environmental, and Health Impacts of Fossil Fuels (2021 ...\n\nGoogle Search Snippet:\nAir pollution from fossil fuels can cause acid rain, eutrophication (excessive nutrients that can harm aquatic ecosystems by lowering oxygen ...\n\nFull Page Content:\nThis website stores cookies on your computer. These cookies are used to collect information about how you interact with our website and allow us to remember you. We use this information in order to improve and customize your browsing experience and for analytics and metrics about our visitors both on this website and other media. To find out more about the cookies we use, see our Privacy Policy and our Cookie Policy.\nIf you decline, your information won\u2019t be tracked when you visit this website. A single cookie will be used in your browser to remember your preference not to be tracked.\nImage courtesy of Climate Visuals\nTL;DR \u2014 Renewable energy is becoming an increasingly inexpensive, popular, and viable energy source. The negative impacts that non-renewable energy sources like fossil fuels have on air quality, climate change, and environmental health have become increasingly clear. By increasingly relying on renewable energy sources like wind and solar power, we can reap a wide variety of benefits including reduced air pollution, lower greenhouse gas emission levels, decreased healthcare costs, a more resilient electrical grid, and job generation.\nThe UN says that with technology available today, cheap electricity from renewable sources could provide 65 percent of the world\u2019s total electricity supply by 2030 and decarbonize 90 percent of the power sector by 2050, massively cutting carbon emissions and improving air quality. But what exactly is the relationship between energy production and air pollution? We\u2019ll take a deep dive into this topic and see that the benefits of investing in clean energy sources become even more compelling when both air quality and climate benefits are considered.\nNon-renewable energy comes from sources that cannot be replenished in our lifetime. The most common sources of non-renewable energy are carbon-containing fossil fuels, including coal, petroleum, and natural gas. According to data from the Central Intelligence Agency, more than 66% of world electric generation comes from fossil fuels today.\nIn contrast, renewable energy comes from sources that can be replenished faster than they are consumed.\nRenewable energy sources produce little to no greenhouse gas emissions that contribute to climate change, even when considering their life cycle emissions that occur through each stage of the technology\u2019s use.\nAside from relying on dwindling and expensive resources, non-renewable energy sources \u2014 specifically, fossil fuel combustion \u2014 create vast harm by releasing toxic air pollution and greenhouse gases that threaten air quality and climate health.\nEstimates from Harvard calculate that air pollution from fossil fuels may be responsible for as many as one in five deaths worldwide. Air pollution from coal-fired power plants impacts not only people in the immediate vicinity but can travel long distances depending on the prevailing wind speed and direction and put large portions of the population at risk.\nThe most common renewable energy sources include wind, solar, and geothermal with two of the safest and most common being wind and solar.\nWind energy is created using wind turbines which can be placed anywhere with high-speed winds, including hilltops to open water. Wind energy is one of the cleanest sources of energy because wind turbines do not affect air pollution emissions in any direct way and do not need water for cooling.\nSolar energy, which uses solar or photovoltaic cells to convert sunlight into electricity, is also very clean in that it doesn\u2019t produce air pollutants or contribute to greenhouse gas emissions. However, the process of manufacturing solar panels may produce some emissions.\nGeothermal energy relies on the heat produced within the Earth. Water is injected deep underground and is heated by the Earth\u2019s molten interior and returns as hot water or steam; this steam is used to power a turbine to generate electricity. Geothermal energy produces only one-sixth of the carbon dioxide of a natural gas powerplant and little to no NO2 or SO2 pollution.\nWhile biomass is sometimes listed as a source of renewable energy, the American Lung Association opposes biomass combustion as a form of energy generation because this process creates particle pollution and releases other carcinogens. However, pyrolysis \u2014 where biomass is heated in an anaerobic environment without oxygen, breaking down into oils and gases \u2014 is a potential alternative to incineration that is known to produce fewer air pollutants than burning.\nAn exciting future may exist when it comes to nuclear fusion. Nuclear fusion, a process where light elements are combined to form heavier elements and release energy in the process, made recent headlines due to a scientific breakthrough where scientists demonstrated a positive energy gain in the reaction for the first time.\nHowever, we\u2019re still far from being able to use nuclear fusion as a viable energy source. Though this process can not yet be practically applied commercially, it holds the potential for a clean, safe, carbon-free, and near-limitless source of energy in the future.\nRenewable energy use is growing across the globe but unfortunately still accounts for just a portion of overall energy generation.\nGlobally, even though fossil fuels still account for the majority of energy production, renewable energy sources now make up 29% of current electricity production.\nIn the United States, 29% of greenhouse gas emissions come from electricity production, particularly from fossil fuel combustion. However, the U.S. is increasing its use of nonfossil fuel sources of energy, with 21% of the country\u2019s energy consumption coming from renewable sources in 2020 \u2014 the highest share since the early 1900s.\nBy increasing the supply and use of renewable energy like wind and solar, we can replace carbon-intensive sources like fossil fuels and lower the amount of greenhouse gas emissions released.\nAir pollution is a severe global crisis, with the World Health Organi\n\nProvide relevant evidence.",
+    "input_length_chars": 6388,
+    "input_tokens_estimated": 1597,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence strongly indicates that fossil fuels contribute significantly to air pollution and environmental degradation, contradicting the claim that they can help solve environmental challenges. The article emphasizes the negative impacts of fossil fuel combustion on air quality and public health, suggesting a shift towards renewable energy sources instead.",
+      "overall_stance": "refutes",
+      "key_quote": "Non-renewable energy sources \u2014 specifically, fossil fuel combustion \u2014 create vast harm by releasing toxic air pollution and greenhouse gases that threaten air quality and climate health."
+    },
+    "output_length_chars": 633,
+    "output_tokens_estimated": 158,
+    "cost_usd": 0.00033435,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Fossil fuels can help solve environmental challenges and purify water and air.",
+      "query_index": 2,
+      "query_text": "Can fossil fuels improve environmental conditions and clean air and water?"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:21:11.649681",
+    "latency_seconds": 4.69,
+    "input_prompt": "Claim:\nFossil fuels can help solve environmental challenges and purify water and air.\n\nArticle Title:\nRenewable Energy's Benefits for Air Quality & Climate\n\nGoogle Search Snippet:\nUsing fossil fuels for energy production releases a significant amount of carbon dioxide into the atmosphere, contributing to the greenhouse ...\n\nFull Page Content:\nThis website stores cookies on your computer. These cookies are used to collect information about how you interact with our website and allow us to remember you. We use this information in order to improve and customize your browsing experience and for analytics and metrics about our visitors both on this website and other media. To find out more about the cookies we use, see our Privacy Policy and our Cookie Policy.\nIf you decline, your information won\u2019t be tracked when you visit this website. A single cookie will be used in your browser to remember your preference not to be tracked.\nImage courtesy of Climate Visuals\nTL;DR \u2014 Renewable energy is becoming an increasingly inexpensive, popular, and viable energy source. The negative impacts that non-renewable energy sources like fossil fuels have on air quality, climate change, and environmental health have become increasingly clear. By increasingly relying on renewable energy sources like wind and solar power, we can reap a wide variety of benefits including reduced air pollution, lower greenhouse gas emission levels, decreased healthcare costs, a more resilient electrical grid, and job generation.\nThe UN says that with technology available today, cheap electricity from renewable sources could provide 65 percent of the world\u2019s total electricity supply by 2030 and decarbonize 90 percent of the power sector by 2050, massively cutting carbon emissions and improving air quality. But what exactly is the relationship between energy production and air pollution? We\u2019ll take a deep dive into this topic and see that the benefits of investing in clean energy sources become even more compelling when both air quality and climate benefits are considered.\nNon-renewable energy comes from sources that cannot be replenished in our lifetime. The most common sources of non-renewable energy are carbon-containing fossil fuels, including coal, petroleum, and natural gas. According to data from the Central Intelligence Agency, more than 66% of world electric generation comes from fossil fuels today.\nIn contrast, renewable energy comes from sources that can be replenished faster than they are consumed.\nRenewable energy sources produce little to no greenhouse gas emissions that contribute to climate change, even when considering their life cycle emissions that occur through each stage of the technology\u2019s use.\nAside from relying on dwindling and expensive resources, non-renewable energy sources \u2014 specifically, fossil fuel combustion \u2014 create vast harm by releasing toxic air pollution and greenhouse gases that threaten air quality and climate health.\nEstimates from Harvard calculate that air pollution from fossil fuels may be responsible for as many as one in five deaths worldwide. Air pollution from coal-fired power plants impacts not only people in the immediate vicinity but can travel long distances depending on the prevailing wind speed and direction and put large portions of the population at risk.\nThe most common renewable energy sources include wind, solar, and geothermal with two of the safest and most common being wind and solar.\nWind energy is created using wind turbines which can be placed anywhere with high-speed winds, including hilltops to open water. Wind energy is one of the cleanest sources of energy because wind turbines do not affect air pollution emissions in any direct way and do not need water for cooling.\nSolar energy, which uses solar or photovoltaic cells to convert sunlight into electricity, is also very clean in that it doesn\u2019t produce air pollutants or contribute to greenhouse gas emissions. However, the process of manufacturing solar panels may produce some emissions.\nGeothermal energy relies on the heat produced within the Earth. Water is injected deep underground and is heated by the Earth\u2019s molten interior and returns as hot water or steam; this steam is used to power a turbine to generate electricity. Geothermal energy produces only one-sixth of the carbon dioxide of a natural gas powerplant and little to no NO2 or SO2 pollution.\nWhile biomass is sometimes listed as a source of renewable energy, the American Lung Association opposes biomass combustion as a form of energy generation because this process creates particle pollution and releases other carcinogens. However, pyrolysis \u2014 where biomass is heated in an anaerobic environment without oxygen, breaking down into oils and gases \u2014 is a potential alternative to incineration that is known to produce fewer air pollutants than burning.\nAn exciting future may exist when it comes to nuclear fusion. Nuclear fusion, a process where light elements are combined to form heavier elements and release energy in the process, made recent headlines due to a scientific breakthrough where scientists demonstrated a positive energy gain in the reaction for the first time.\nHowever, we\u2019re still far from being able to use nuclear fusion as a viable energy source. Though this process can not yet be practically applied commercially, it holds the potential for a clean, safe, carbon-free, and near-limitless source of energy in the future.\nRenewable energy use is growing across the globe but unfortunately still accounts for just a portion of overall energy generation.\nGlobally, even though fossil fuels still account for the majority of energy production, renewable energy sources now make up 29% of current electricity production.\nIn the United States, 29% of greenhouse gas emissions come from electricity production, particularly from fossil fuel combustion. However, the U.S. is increasing its use of nonfossil fuel sources of energy, with 21% of the country\u2019s energy consumption coming from renewable sources in 2020 \u2014 the highest share since the early 1900s.\nBy increasing the supply and use of renewable energy like wind and solar, we can replace carbon-intensive sources like fossil fuels and lower the amount of greenhouse gas emissions released.\nAir pollution is a severe global crisis, with the World Health Organi\n\nProvide relevant evidence.",
+    "input_length_chars": 6373,
+    "input_tokens_estimated": 1593,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence strongly refutes the claim that fossil fuels can help solve environmental challenges, as it highlights the significant negative impacts of fossil fuel combustion on air quality and climate health, while promoting renewable energy as a cleaner alternative.",
+      "overall_stance": "refutes",
+      "key_quote": "Non-renewable energy sources \u2014 specifically, fossil fuel combustion \u2014 create vast harm by releasing toxic air pollution and greenhouse gases that threaten air quality and climate health."
+    },
+    "output_length_chars": 539,
+    "output_tokens_estimated": 134,
+    "cost_usd": 0.00031935,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Fossil fuels can help solve environmental challenges and purify water and air.",
+      "query_index": 2,
+      "query_text": "Can fossil fuels improve environmental conditions and clean air and water?"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:21:13.964037",
+    "latency_seconds": 4.64,
+    "input_prompt": "Claim:\nFossil fuels can help solve environmental challenges and purify water and air.\n\nArticle Title:\nClean Energy - American Public Health Association\n\nGoogle Search Snippet:\nFossil fuels are not renewable resources; therefore, continued use could deplete them, causing damage to the environment and increasing the expense of ...\n\nFull Page Content:\n\"Carbon pollution from power plants is our nation\u2019s biggest driver of climate change, and threatens what matters most: the health of our kids, the safety of our neighborhoods and the ability of Americans to earn a living,\u201d -- former EPA Administrator Gina McCarthy, in an EPA blog post.\nEnergy has allowed for many advances in our lives including power for homes, jobs and vehicles. But the energy used to fuel these advancements has contributed to climate change. When we burn fossil fuels, such as coal and gas, we release carbon dioxide. Carbon dioxide builds up in the atmosphere and causes Earth\u2019s temperature to rise, much like a blanket traps in heat. This extra trapped heat not only increases temperatures, but it also disrupts many of the interconnected systems in our environment. This is climate change, and its conditions have far-reaching environmental, social, agricultural and economic effects that are ultimately harmful to our health and well-being.\nFossil fuels are not renewable resources; therefore, continued use could deplete them, causing damage to the environment and increasing the expense of extraction. Yet the use of renewable resources, including wind and solar energy, has impact on both health and the environment. Clean energy includes renewable energy resources as well as energy-efficient practices. Some renewable energy examples:\nAs the frequency of extreme weather events continues to increase \u2014 including droughts and wildfires, extreme storms and power outages, and record-breaking warmth and extreme heat events \u2014 our reliance on electricity builds, resulting in added strain on the energy infrastructure. Frequent extreme weather events will also promote health disparities and inequities among vulnerable populations. For example, those living on the boundaries of coal-fired power plants bear the burden of higher air pollution. In addition, workers with no other choice in economic growth who need coal mining jobs even though these jobs may result in higher risk of black lung or unsafe working conditions. Many communities transitioning away from fossil fuel extraction, including coal mining towns, have expressed serious concerns about job loss due to the transition from coal. Thus, there are even equity concerns in the transition away from fossil fuel reliance.\nClean energy has great benefits for the environment as well as for our health. Some of the ways we can reduce our carbon footprint (the total amount of greenhouse gases produced directly and indirectly during the course of daily activities) include increased walking, biking and mass transit use, which have direct health benefits compared to driving. Other ways to reduce our collective carbon footprint are: support equitable policies that create infrastructure for safer mass transit, biking and walking options; defend federal regulations that put carbon pollution limits on climate-harming pollutants; and support the creation of more clean energy jobs. Tell your members of Congress to oppose any efforts to delay or block the Clean Power Plan, which plans to reduce carbon pollution that contributes to climate change.\nLearn more:\n(*blog posts only represent the views of the author)\nFollow the conversation using the hashtag #ClimateChangesHealth.\n800 I Street, NW\nWashington, DC 20001\nCopyright \u00a9 2025\n\nProvide relevant evidence.",
+    "input_length_chars": 3703,
+    "input_tokens_estimated": 925,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence discusses the harmful effects of fossil fuels on the environment and public health, indicating that their continued use exacerbates climate change and does not support the claim that they can solve environmental challenges or purify water and air.",
+      "overall_stance": "refutes",
+      "key_quote": "\"Carbon pollution from power plants is our nation\u2019s biggest driver of climate change, and threatens what matters most: the health of our kids, the safety of our neighborhoods...\""
+    },
+    "output_length_chars": 525,
+    "output_tokens_estimated": 131,
+    "cost_usd": 0.00021735,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Fossil fuels can help solve environmental challenges and purify water and air.",
+      "query_index": 2,
+      "query_text": "Can fossil fuels improve environmental conditions and clean air and water?"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:21:13.968013",
+    "latency_seconds": 4.64,
+    "input_prompt": "Claim:\nFossil fuels can help solve environmental challenges and purify water and air.\n\nArticle Title:\nHow Fossil Fuels Are Polluting Our Air & Water\n\nGoogle Search Snippet:\nFossil fuels are wreaking havoc on our environment. We're already upgrading to cleaner energy, but in order to protect our planet, we need to do more.\n\nFull Page Content:\n\"Carbon pollution from power plants is our nation\u2019s biggest driver of climate change, and threatens what matters most: the health of our kids, the safety of our neighborhoods and the ability of Americans to earn a living,\u201d -- former EPA Administrator Gina McCarthy, in an EPA blog post.\nEnergy has allowed for many advances in our lives including power for homes, jobs and vehicles. But the energy used to fuel these advancements has contributed to climate change. When we burn fossil fuels, such as coal and gas, we release carbon dioxide. Carbon dioxide builds up in the atmosphere and causes Earth\u2019s temperature to rise, much like a blanket traps in heat. This extra trapped heat not only increases temperatures, but it also disrupts many of the interconnected systems in our environment. This is climate change, and its conditions have far-reaching environmental, social, agricultural and economic effects that are ultimately harmful to our health and well-being.\nFossil fuels are not renewable resources; therefore, continued use could deplete them, causing damage to the environment and increasing the expense of extraction. Yet the use of renewable resources, including wind and solar energy, has impact on both health and the environment. Clean energy includes renewable energy resources as well as energy-efficient practices. Some renewable energy examples:\nAs the frequency of extreme weather events continues to increase \u2014 including droughts and wildfires, extreme storms and power outages, and record-breaking warmth and extreme heat events \u2014 our reliance on electricity builds, resulting in added strain on the energy infrastructure. Frequent extreme weather events will also promote health disparities and inequities among vulnerable populations. For example, those living on the boundaries of coal-fired power plants bear the burden of higher air pollution. In addition, workers with no other choice in economic growth who need coal mining jobs even though these jobs may result in higher risk of black lung or unsafe working conditions. Many communities transitioning away from fossil fuel extraction, including coal mining towns, have expressed serious concerns about job loss due to the transition from coal. Thus, there are even equity concerns in the transition away from fossil fuel reliance.\nClean energy has great benefits for the environment as well as for our health. Some of the ways we can reduce our carbon footprint (the total amount of greenhouse gases produced directly and indirectly during the course of daily activities) include increased walking, biking and mass transit use, which have direct health benefits compared to driving. Other ways to reduce our collective carbon footprint are: support equitable policies that create infrastructure for safer mass transit, biking and walking options; defend federal regulations that put carbon pollution limits on climate-harming pollutants; and support the creation of more clean energy jobs. Tell your members of Congress to oppose any efforts to delay or block the Clean Power Plan, which plans to reduce carbon pollution that contributes to climate change.\nLearn more:\n(*blog posts only represent the views of the author)\nFollow the conversation using the hashtag #ClimateChangesHealth.\n800 I Street, NW\nWashington, DC 20001\nCopyright \u00a9 2025\n\nProvide relevant evidence.",
+    "input_length_chars": 3696,
+    "input_tokens_estimated": 924,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence in the article highlights the negative impacts of fossil fuels on air and water quality, emphasizing that their use contributes to climate change and health issues, which contradicts the claim that fossil fuels can help solve environmental challenges.",
+      "overall_stance": "refutes",
+      "key_quote": "\"When we burn fossil fuels, such as coal and gas, we release carbon dioxide. Carbon dioxide builds up in the atmosphere and causes Earth\u2019s temperature to rise, much like a blanket traps in heat.\""
+    },
+    "output_length_chars": 546,
+    "output_tokens_estimated": 136,
+    "cost_usd": 0.0002202,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Fossil fuels can help solve environmental challenges and purify water and air.",
+      "query_index": 2,
+      "query_text": "Can fossil fuels improve environmental conditions and clean air and water?"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:21:14.099998",
+    "latency_seconds": 4.77,
+    "input_prompt": "Claim:\nFossil fuels can help solve environmental challenges and purify water and air.\n\nArticle Title:\nClimate, Environmental, and Health Impacts of Fossil Fuels (2021 ...\n\nGoogle Search Snippet:\nWhen fossil fuels are burned, they emit greenhouse gases like carbon dioxide that trap heat in the earth's atmosphere and contribute to climate ...\n\nFull Page Content:\n\"Carbon pollution from power plants is our nation\u2019s biggest driver of climate change, and threatens what matters most: the health of our kids, the safety of our neighborhoods and the ability of Americans to earn a living,\u201d -- former EPA Administrator Gina McCarthy, in an EPA blog post.\nEnergy has allowed for many advances in our lives including power for homes, jobs and vehicles. But the energy used to fuel these advancements has contributed to climate change. When we burn fossil fuels, such as coal and gas, we release carbon dioxide. Carbon dioxide builds up in the atmosphere and causes Earth\u2019s temperature to rise, much like a blanket traps in heat. This extra trapped heat not only increases temperatures, but it also disrupts many of the interconnected systems in our environment. This is climate change, and its conditions have far-reaching environmental, social, agricultural and economic effects that are ultimately harmful to our health and well-being.\nFossil fuels are not renewable resources; therefore, continued use could deplete them, causing damage to the environment and increasing the expense of extraction. Yet the use of renewable resources, including wind and solar energy, has impact on both health and the environment. Clean energy includes renewable energy resources as well as energy-efficient practices. Some renewable energy examples:\nAs the frequency of extreme weather events continues to increase \u2014 including droughts and wildfires, extreme storms and power outages, and record-breaking warmth and extreme heat events \u2014 our reliance on electricity builds, resulting in added strain on the energy infrastructure. Frequent extreme weather events will also promote health disparities and inequities among vulnerable populations. For example, those living on the boundaries of coal-fired power plants bear the burden of higher air pollution. In addition, workers with no other choice in economic growth who need coal mining jobs even though these jobs may result in higher risk of black lung or unsafe working conditions. Many communities transitioning away from fossil fuel extraction, including coal mining towns, have expressed serious concerns about job loss due to the transition from coal. Thus, there are even equity concerns in the transition away from fossil fuel reliance.\nClean energy has great benefits for the environment as well as for our health. Some of the ways we can reduce our carbon footprint (the total amount of greenhouse gases produced directly and indirectly during the course of daily activities) include increased walking, biking and mass transit use, which have direct health benefits compared to driving. Other ways to reduce our collective carbon footprint are: support equitable policies that create infrastructure for safer mass transit, biking and walking options; defend federal regulations that put carbon pollution limits on climate-harming pollutants; and support the creation of more clean energy jobs. Tell your members of Congress to oppose any efforts to delay or block the Clean Power Plan, which plans to reduce carbon pollution that contributes to climate change.\nLearn more:\n(*blog posts only represent the views of the author)\nFollow the conversation using the hashtag #ClimateChangesHealth.\n800 I Street, NW\nWashington, DC 20001\nCopyright \u00a9 2025\n\nProvide relevant evidence.",
+    "input_length_chars": 3715,
+    "input_tokens_estimated": 928,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence discusses the harmful effects of fossil fuels on climate change and health, indicating that they contribute to environmental challenges rather than solving them. It emphasizes the need for clean energy alternatives to mitigate these issues.",
+      "overall_stance": "refutes",
+      "key_quote": "\"When we burn fossil fuels, such as coal and gas, we release carbon dioxide. Carbon dioxide builds up in the atmosphere and causes Earth\u2019s temperature to rise, much like a blanket traps in heat.\""
+    },
+    "output_length_chars": 535,
+    "output_tokens_estimated": 133,
+    "cost_usd": 0.000219,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Fossil fuels can help solve environmental challenges and purify water and air.",
+      "query_index": 2,
+      "query_text": "Can fossil fuels improve environmental conditions and clean air and water?"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:21:14.435965",
+    "latency_seconds": 5.11,
+    "input_prompt": "Claim:\nFossil fuels can help solve environmental challenges and purify water and air.\n\nArticle Title:\nSources and Solutions: Fossil Fuels | US EPA\n\nGoogle Search Snippet:\nWhen fossil fuels are burned, they release nitrogen oxides into the atmosphere, which contribute to the formation of smog and acid rain.\n\nFull Page Content:\n\"Carbon pollution from power plants is our nation\u2019s biggest driver of climate change, and threatens what matters most: the health of our kids, the safety of our neighborhoods and the ability of Americans to earn a living,\u201d -- former EPA Administrator Gina McCarthy, in an EPA blog post.\nEnergy has allowed for many advances in our lives including power for homes, jobs and vehicles. But the energy used to fuel these advancements has contributed to climate change. When we burn fossil fuels, such as coal and gas, we release carbon dioxide. Carbon dioxide builds up in the atmosphere and causes Earth\u2019s temperature to rise, much like a blanket traps in heat. This extra trapped heat not only increases temperatures, but it also disrupts many of the interconnected systems in our environment. This is climate change, and its conditions have far-reaching environmental, social, agricultural and economic effects that are ultimately harmful to our health and well-being.\nFossil fuels are not renewable resources; therefore, continued use could deplete them, causing damage to the environment and increasing the expense of extraction. Yet the use of renewable resources, including wind and solar energy, has impact on both health and the environment. Clean energy includes renewable energy resources as well as energy-efficient practices. Some renewable energy examples:\nAs the frequency of extreme weather events continues to increase \u2014 including droughts and wildfires, extreme storms and power outages, and record-breaking warmth and extreme heat events \u2014 our reliance on electricity builds, resulting in added strain on the energy infrastructure. Frequent extreme weather events will also promote health disparities and inequities among vulnerable populations. For example, those living on the boundaries of coal-fired power plants bear the burden of higher air pollution. In addition, workers with no other choice in economic growth who need coal mining jobs even though these jobs may result in higher risk of black lung or unsafe working conditions. Many communities transitioning away from fossil fuel extraction, including coal mining towns, have expressed serious concerns about job loss due to the transition from coal. Thus, there are even equity concerns in the transition away from fossil fuel reliance.\nClean energy has great benefits for the environment as well as for our health. Some of the ways we can reduce our carbon footprint (the total amount of greenhouse gases produced directly and indirectly during the course of daily activities) include increased walking, biking and mass transit use, which have direct health benefits compared to driving. Other ways to reduce our collective carbon footprint are: support equitable policies that create infrastructure for safer mass transit, biking and walking options; defend federal regulations that put carbon pollution limits on climate-harming pollutants; and support the creation of more clean energy jobs. Tell your members of Congress to oppose any efforts to delay or block the Clean Power Plan, which plans to reduce carbon pollution that contributes to climate change.\nLearn more:\n(*blog posts only represent the views of the author)\nFollow the conversation using the hashtag #ClimateChangesHealth.\n800 I Street, NW\nWashington, DC 20001\nCopyright \u00a9 2025\n\nProvide relevant evidence.",
+    "input_length_chars": 3680,
+    "input_tokens_estimated": 920,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence discusses the negative impacts of fossil fuel combustion, including the release of carbon dioxide and nitrogen oxides, which contribute to climate change and air pollution, contradicting the claim that fossil fuels can help solve environmental challenges.",
+      "overall_stance": "refutes",
+      "key_quote": "When we burn fossil fuels, such as coal and gas, we release carbon dioxide. Carbon dioxide builds up in the atmosphere and causes Earth\u2019s temperature to rise, much like a blanket traps in heat."
+    },
+    "output_length_chars": 546,
+    "output_tokens_estimated": 136,
+    "cost_usd": 0.0002196,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Fossil fuels can help solve environmental challenges and purify water and air.",
+      "query_index": 2,
+      "query_text": "Can fossil fuels improve environmental conditions and clean air and water?"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:21:14.488135",
+    "latency_seconds": 5.17,
+    "input_prompt": "Claim:\nFossil fuels can help solve environmental challenges and purify water and air.\n\nArticle Title:\nFossil Fuels: The Dirty Facts - NRDC\n\nGoogle Search Snippet:\nUsing fossil fuels for energy has exacted an enormous toll on humanity and the environment\u2014from air and water pollution to increasingly intense ...\n\nFull Page Content:\n\"Carbon pollution from power plants is our nation\u2019s biggest driver of climate change, and threatens what matters most: the health of our kids, the safety of our neighborhoods and the ability of Americans to earn a living,\u201d -- former EPA Administrator Gina McCarthy, in an EPA blog post.\nEnergy has allowed for many advances in our lives including power for homes, jobs and vehicles. But the energy used to fuel these advancements has contributed to climate change. When we burn fossil fuels, such as coal and gas, we release carbon dioxide. Carbon dioxide builds up in the atmosphere and causes Earth\u2019s temperature to rise, much like a blanket traps in heat. This extra trapped heat not only increases temperatures, but it also disrupts many of the interconnected systems in our environment. This is climate change, and its conditions have far-reaching environmental, social, agricultural and economic effects that are ultimately harmful to our health and well-being.\nFossil fuels are not renewable resources; therefore, continued use could deplete them, causing damage to the environment and increasing the expense of extraction. Yet the use of renewable resources, including wind and solar energy, has impact on both health and the environment. Clean energy includes renewable energy resources as well as energy-efficient practices. Some renewable energy examples:\nAs the frequency of extreme weather events continues to increase \u2014 including droughts and wildfires, extreme storms and power outages, and record-breaking warmth and extreme heat events \u2014 our reliance on electricity builds, resulting in added strain on the energy infrastructure. Frequent extreme weather events will also promote health disparities and inequities among vulnerable populations. For example, those living on the boundaries of coal-fired power plants bear the burden of higher air pollution. In addition, workers with no other choice in economic growth who need coal mining jobs even though these jobs may result in higher risk of black lung or unsafe working conditions. Many communities transitioning away from fossil fuel extraction, including coal mining towns, have expressed serious concerns about job loss due to the transition from coal. Thus, there are even equity concerns in the transition away from fossil fuel reliance.\nClean energy has great benefits for the environment as well as for our health. Some of the ways we can reduce our carbon footprint (the total amount of greenhouse gases produced directly and indirectly during the course of daily activities) include increased walking, biking and mass transit use, which have direct health benefits compared to driving. Other ways to reduce our collective carbon footprint are: support equitable policies that create infrastructure for safer mass transit, biking and walking options; defend federal regulations that put carbon pollution limits on climate-harming pollutants; and support the creation of more clean energy jobs. Tell your members of Congress to oppose any efforts to delay or block the Clean Power Plan, which plans to reduce carbon pollution that contributes to climate change.\nLearn more:\n(*blog posts only represent the views of the author)\nFollow the conversation using the hashtag #ClimateChangesHealth.\n800 I Street, NW\nWashington, DC 20001\nCopyright \u00a9 2025\n\nProvide relevant evidence.",
+    "input_length_chars": 3683,
+    "input_tokens_estimated": 920,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence discusses the negative impacts of fossil fuels on air and water quality, emphasizing that their use contributes to climate change and environmental degradation, which contradicts the claim that fossil fuels can help solve environmental challenges.",
+      "overall_stance": "refutes",
+      "key_quote": "\"When we burn fossil fuels, such as coal and gas, we release carbon dioxide. Carbon dioxide builds up in the atmosphere and causes Earth\u2019s temperature to rise, much like a blanket traps in heat.\""
+    },
+    "output_length_chars": 542,
+    "output_tokens_estimated": 135,
+    "cost_usd": 0.000219,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Fossil fuels can help solve environmental challenges and purify water and air.",
+      "query_index": 2,
+      "query_text": "Can fossil fuels improve environmental conditions and clean air and water?"
+    }
+  },
+  {
+    "component": "evidence_extraction",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:21:14.604698",
+    "latency_seconds": 5.29,
+    "input_prompt": "Claim:\nFossil fuels can help solve environmental challenges and purify water and air.\n\nArticle Title:\nFossil Fuels - Sierra Club\n\nGoogle Search Snippet:\nWe must transition from fossil fuels to a world powered by clean, renewable energy to protect our communities from harmful air, ground, and water pollution.\n\nFull Page Content:\n\"Carbon pollution from power plants is our nation\u2019s biggest driver of climate change, and threatens what matters most: the health of our kids, the safety of our neighborhoods and the ability of Americans to earn a living,\u201d -- former EPA Administrator Gina McCarthy, in an EPA blog post.\nEnergy has allowed for many advances in our lives including power for homes, jobs and vehicles. But the energy used to fuel these advancements has contributed to climate change. When we burn fossil fuels, such as coal and gas, we release carbon dioxide. Carbon dioxide builds up in the atmosphere and causes Earth\u2019s temperature to rise, much like a blanket traps in heat. This extra trapped heat not only increases temperatures, but it also disrupts many of the interconnected systems in our environment. This is climate change, and its conditions have far-reaching environmental, social, agricultural and economic effects that are ultimately harmful to our health and well-being.\nFossil fuels are not renewable resources; therefore, continued use could deplete them, causing damage to the environment and increasing the expense of extraction. Yet the use of renewable resources, including wind and solar energy, has impact on both health and the environment. Clean energy includes renewable energy resources as well as energy-efficient practices. Some renewable energy examples:\nAs the frequency of extreme weather events continues to increase \u2014 including droughts and wildfires, extreme storms and power outages, and record-breaking warmth and extreme heat events \u2014 our reliance on electricity builds, resulting in added strain on the energy infrastructure. Frequent extreme weather events will also promote health disparities and inequities among vulnerable populations. For example, those living on the boundaries of coal-fired power plants bear the burden of higher air pollution. In addition, workers with no other choice in economic growth who need coal mining jobs even though these jobs may result in higher risk of black lung or unsafe working conditions. Many communities transitioning away from fossil fuel extraction, including coal mining towns, have expressed serious concerns about job loss due to the transition from coal. Thus, there are even equity concerns in the transition away from fossil fuel reliance.\nClean energy has great benefits for the environment as well as for our health. Some of the ways we can reduce our carbon footprint (the total amount of greenhouse gases produced directly and indirectly during the course of daily activities) include increased walking, biking and mass transit use, which have direct health benefits compared to driving. Other ways to reduce our collective carbon footprint are: support equitable policies that create infrastructure for safer mass transit, biking and walking options; defend federal regulations that put carbon pollution limits on climate-harming pollutants; and support the creation of more clean energy jobs. Tell your members of Congress to oppose any efforts to delay or block the Clean Power Plan, which plans to reduce carbon pollution that contributes to climate change.\nLearn more:\n(*blog posts only represent the views of the author)\nFollow the conversation using the hashtag #ClimateChangesHealth.\n800 I Street, NW\nWashington, DC 20001\nCopyright \u00a9 2025\n\nProvide relevant evidence.",
+    "input_length_chars": 3682,
+    "input_tokens_estimated": 920,
+    "output": {
+      "has_relevant_evidence": true,
+      "summary": "The evidence strongly argues against the claim that fossil fuels can help solve environmental challenges, emphasizing their role in climate change and pollution, while advocating for a transition to clean, renewable energy.",
+      "overall_stance": "refutes",
+      "key_quote": "\"Carbon pollution from power plants is our nation\u2019s biggest driver of climate change, and threatens what matters most: the health of our kids, the safety of our neighborhoods and the ability of Americans to earn a living.\""
+    },
+    "output_length_chars": 532,
+    "output_tokens_estimated": 133,
+    "cost_usd": 0.0002178,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Fossil fuels can help solve environmental challenges and purify water and air.",
+      "query_index": 2,
+      "query_text": "Can fossil fuels improve environmental conditions and clean air and water?"
+    }
+  },
+  {
+    "component": "verdict_generation",
+    "model": "openai:gpt-4o-mini",
+    "timestamp": "2025-12-14T00:21:17.556776",
+    "latency_seconds": 2.82,
+    "input_prompt": "\nClaim: Fossil fuels can help solve environmental challenges and purify water and air.\nCategory: scientific\nExtraction confidence: 0.90\n\nEvidence:\nREFUTES (5 sources):\n  1. Fossil Fuels - Sierra Club | reliability=high (0.85)\n     URL: https://www.sierraclub.org/issues/climate/fossil-fuels\n     Summary: The evidence strongly argues against the claim that fossil fuels can help solve environmental challenges, emphasizing their role in climate change and pollution, while advocating for a transition to clean, renewable energy.\n  2. Fossil Fuels: The Dirty Facts - NRDC | reliability=high (0.85)\n     URL: https://www.nrdc.org/stories/fossil-fuels-dirty-facts\n     Summary: The evidence discusses the negative impacts of fossil fuels on air and water quality, emphasizing that their use contributes to climate change and environmental degradation, which contradicts the claim that fossil fuels can help solve environmental challenges.\n  3. Climate, Environmental, and Health Impacts of Fossil Fuels (2021 ... | reliability=medium (0.60)\n     URL: https://www.eesi.org/papers/view/fact-sheet-climate-environmental-and-health-impacts-of-fossil-fuels-2021\n     Summary: The evidence strongly indicates that fossil fuels contribute significantly to air pollution and environmental degradation, contradicting the claim that they can help solve environmental challenges. The article emphasizes the negative impacts of fossil fuel combustion on air quality and public health, suggesting a shift towards renewable energy sources instead.\n  4. Progress Cleaning the Air and Improving People's Health | US EPA | reliability=medium (0.60)\n     URL: https://www.epa.gov/clean-air-act-overview/progress-cleaning-air-and-improving-peoples-health\n     Summary: The evidence indicates that fossil fuels contribute significantly to air pollution and environmental damage, contradicting the claim that they can help solve environmental challenges. The article emphasizes the benefits of renewable energy sources over fossil fuels in improving air quality and reducing greenhouse gas emissions.\n  5. Sources and Solutions: Fossil Fuels | US EPA | reliability=medium (0.60)\n     URL: https://www.epa.gov/nutrientpollution/sources-and-solutions-fossil-fuels\n     Summary: The evidence discusses the negative impacts of fossil fuel combustion, including the release of carbon dioxide and nitrogen oxides, which contribute to climate change and air pollution, contradicting the claim that fossil fuels can help solve environmental challenges.\nSUPPORTS (1 sources):\n  1. How Fossil Fuels Cleaned Up Our Environment - Forbes | reliability=high (0.85)\n     URL: https://www.forbes.com/sites/alexepstein/2015/01/28/how-fossil-fuels-cleaned-up-our-environment/\n     Summary: The article argues that fossil fuels have a tremendously positive impact on environmental quality and human health, suggesting they can help address environmental challenges.\n\nProvide the structured verdict.\n",
+    "input_length_chars": 2956,
+    "input_tokens_estimated": 739,
+    "output": {
+      "overall_stance": "mixed",
+      "confidence": "medium",
+      "summary": "The evidence presents a mixed view on the claim. While a majority of sources, including the Sierra Club and NRDC, strongly refute the claim by highlighting the negative impacts of fossil fuels on air and water quality, one source from Forbes argues that fossil fuels have positively impacted environmental quality. This contradiction indicates a lack of consensus."
+    },
+    "output_length_chars": 425,
+    "output_tokens_estimated": 106,
+    "cost_usd": 0.00017445,
+    "context": {
+      "claim_index": 1,
+      "claim_text": "Fossil fuels can help solve environmental challenges and purify water and air.",
+      "query_index": 2,
+      "query_text": "Can fossil fuels improve environmental conditions and clean air and water?"
+    }
+  }
+]
