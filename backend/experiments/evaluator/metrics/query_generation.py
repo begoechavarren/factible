@@ -1,14 +1,10 @@
-"""
-Query generation metrics calculator (with LLM-as-judge).
-"""
-
 from typing import Dict, List
 import logging
 import numpy as np
 import asyncio
 
-from factible.experiments.evaluator.models import QueryGenerationMetrics
-from factible.experiments.evaluator.llm_judge import QueryRelevanceJudge
+from experiments.evaluator.models import QueryGenerationMetrics
+from experiments.evaluator.llm_judge.query_relevance import QueryRelevanceJudge
 
 _logger = logging.getLogger(__name__)
 
@@ -48,7 +44,7 @@ class QueryGenerationEvaluator:
 
         for report in claim_reports:
             total_sources = report.get("total_sources", 0)
-            total_queries += 2  # Assume 2 queries per claim
+            total_queries += 2  # 2 queries per claim
             if total_sources > 0:
                 successful_queries += 2
 
@@ -111,7 +107,7 @@ class QueryGenerationEvaluator:
                 )
                 return score.relevance_score
             except Exception as e:
-                _logger.warning("    Failed to evaluate query relevance: %s", e)
+                _logger.warning(f"    Failed to evaluate query relevance: {e}")
                 return None
 
         # Collect all query evaluation tasks

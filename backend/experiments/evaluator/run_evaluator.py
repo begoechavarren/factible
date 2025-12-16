@@ -1,28 +1,3 @@
-"""
-Modular Ground Truth Evaluation System
-
-Evaluates fact-checking system performance against manually annotated ground truth data.
-
-This is the new modular version that uses separate components for:
-- Claim matching (semantic similarity)
-- Metrics calculation (claim extraction, verdict, query, evidence, end-to-end)
-- LLM-as-judge evaluation (optional)
-
-Usage:
-  # Basic evaluation
-  uv run factible-experiments evaluate \
-      --runs-dir factible/experiments/data/runs/20251213_145741_baseline
-
-  # With custom ground truth
-  uv run factible-experiments evaluate \
-      --runs-dir factible/experiments/data/runs/20251213_145741_baseline \
-      --ground-truth-dir factible/experiments/data/ground_truth
-
-  # Enable LLM-as-judge evaluation
-  uv run factible-experiments evaluate \
-      --runs-dir factible/experiments/data/runs/20251213_145741_baseline \
-      --enable-llm-judge"""
-
 from pathlib import Path
 from typing import List
 import json
@@ -31,15 +6,13 @@ import logging
 import numpy as np
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-from factible.experiments.evaluator.models import VideoEvaluationResult
-from factible.experiments.evaluator.ground_truth import GroundTruthManager
-from factible.experiments.evaluator.metrics import (
-    ClaimExtractionEvaluator,
-    VerdictEvaluator,
-    QueryGenerationEvaluator,
-    EvidenceSearchEvaluator,
-    EndToEndEvaluator,
-)
+from experiments.evaluator.models import VideoEvaluationResult
+from experiments.evaluator.ground_truth import GroundTruthManager
+from experiments.evaluator.metrics.claim_extraction import ClaimExtractionEvaluator
+from experiments.evaluator.metrics.verdict import VerdictEvaluator
+from experiments.evaluator.metrics.query_generation import QueryGenerationEvaluator
+from experiments.evaluator.metrics.evidence_search import EvidenceSearchEvaluator
+from experiments.evaluator.metrics.end_to_end import EndToEndEvaluator
 
 _logger = logging.getLogger(__name__)
 
@@ -132,17 +105,17 @@ class GroundTruthEvaluator:
         Returns:
             VideoEvaluationResult with all metrics
         """
-        _logger.info("\n%s", "=" * 60)
-        _logger.info("Evaluating: %s", video_id)
-        _logger.info("%s", "=" * 60)
+        _logger.info(f"\n{'=' * 60}")
+        _logger.info(f"Evaluating: {video_id}")
+        _logger.info(f"{'=' * 60}")
 
         # Load ground truth
         gt = self.gt_mgr.load(video_id)
-        _logger.info("Loaded ground truth: %d claims", len(gt.claims))
+        _logger.info(f"Loaded ground truth: {len(gt.claims)} claims")
 
         # Find and load run data
         run_dir = self._find_run_dir(video_id)
-        _logger.info("Loaded run from: %s", run_dir)
+        _logger.info(f"Loaded run from: {run_dir}")
 
         # Load run outputs
         with open(run_dir / "outputs.json") as f:
@@ -161,12 +134,12 @@ class GroundTruthEvaluator:
             with open(llm_calls_path) as f:
                 llm_calls_data = json.load(f)
 
-        _logger.info("System config: max_claims=%s", config_data.get("max_claims"))
+        _logger.info(f"System config: max_claims={config_data.get('max_claims')}")
 
         # Extract system claims
         extracted_claims_data = outputs_data["extracted_claims"]["claims"]
-        _logger.info("System extracted: %d claims", len(extracted_claims_data))
-        _logger.info("Evaluating against: %d ground truth claims (ALL)", len(gt.claims))
+        _logger.info(f"System extracted: {len(extracted_claims_data)} claims")
+        _logger.info(f"Evaluating against: {len(gt.claims)} ground truth claims (ALL)")
 
         # 1. Evaluate claim extraction
         claim_metrics = self.claim_extractor_eval.evaluate(
@@ -250,7 +223,7 @@ class GroundTruthEvaluator:
         with open(result_path, "w") as f:
             json.dump(result.model_dump(), f, indent=2)
 
-        _logger.info("\nSaved results to: %s", result_path)
+        _logger.info(f"\nSaved results to: {result_path}")
 
         return result
 
@@ -263,20 +236,18 @@ class GroundTruthEvaluator:
         """
         matching_videos = self.find_matching_videos()
 
-        _logger.info("\n%s", "=" * 60)
+        _logger.info(f"\n{'=' * 60}")
         _logger.info(
-            "Evaluation: %s/%s",
-            self.runs_dir.name,
-            datetime.now().strftime("%Y%m%d_%H%M%S"),
+            f"Evaluation: {self.runs_dir.name}/{datetime.now().strftime('%Y%m%d_%H%M%S')}"
         )
-        _logger.info("%s", "=" * 60)
-        _logger.info("Runs dir: %s", self.runs_dir)
-        _logger.info("Ground truth dir: %s", self.ground_truth_dir)
-        _logger.info("Output dir: %s", self.output_dir)
-        _logger.info("Parallelization: %d workers", self.max_workers)
-        _logger.info("\nFound %d matching videos:", len(matching_videos))
+        _logger.info(f"{'=' * 60}")
+        _logger.info(f"Runs dir: {self.runs_dir}")
+        _logger.info(f"Ground truth dir: {self.ground_truth_dir}")
+        _logger.info(f"Output dir: {self.output_dir}")
+        _logger.info(f"Parallelization: {self.max_workers} workers")
+        _logger.info(f"\nFound {len(matching_videos)} matching videos:")
         for vid in matching_videos:
-            _logger.info("  - %s", vid)
+            _logger.info(f"  - {vid}")
 
         # Parallel evaluation using ThreadPoolExecutor
         results = []
@@ -288,7 +259,7 @@ class GroundTruthEvaluator:
             total,
             self.max_workers,
         )
-        _logger.info("%s", "-" * 60)
+        _logger.info(f"{'-' * 60}")
 
         with ThreadPoolExecutor(max_workers=self.max_workers) as executor:
             # Submit all video evaluation tasks
@@ -304,14 +275,12 @@ class GroundTruthEvaluator:
                 try:
                     result = future.result()
                     results.append(result)
-                    _logger.info("[%d/%d] Completed: %s", completed, total, video_id)
+                    _logger.info(f"[{completed}/{total}] Completed: {video_id}")
                 except Exception as exc:
-                    _logger.error(
-                        "[%d/%d] Failed: %s - %s", completed, total, video_id, exc
-                    )
+                    _logger.error(f"[{completed}/{total}] Failed: {video_id} - {exc}")
 
-        _logger.info("\nCompleted all %d evaluations", total)
-        _logger.info("%s", "-" * 60)
+        _logger.info(f"\nCompleted all {total} evaluations")
+        _logger.info(f"{'-' * 60}")
 
         # Sort results by video_id for consistent ordering
         results.sort(key=lambda r: r.video_id)
@@ -323,9 +292,9 @@ class GroundTruthEvaluator:
 
     def generate_aggregate_report(self, results: List[VideoEvaluationResult]):
         """Generate aggregate statistics across all videos."""
-        _logger.info("\n\n%s", "=" * 60)
+        _logger.info(f"\n\n{'=' * 60}")
         _logger.info("AGGREGATE RESULTS")
-        _logger.info("%s\n", "=" * 60)
+        _logger.info(f"{'=' * 60}\n")
 
         # Extract max_claims from first run's config
         max_claims = None
@@ -474,10 +443,9 @@ class GroundTruthEvaluator:
         with open(report_path, "w") as f:
             json.dump(report_data, f, indent=2)
 
-        _logger.info("\nAggregate report saved to: %s", report_path)
+        _logger.info(f"\nAggregate report saved to: {report_path}")
 
 
-# Public API for backward compatibility
 def evaluate_runs(
     runs_dir: str,
     ground_truth_dir: str,

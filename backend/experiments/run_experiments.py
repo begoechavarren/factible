@@ -23,8 +23,7 @@ app = typer.Typer(
 )
 _logger = logging.getLogger(__name__)
 
-# Default config file location
-DEFAULT_CONFIG = Path("factible/experiments/experiments_config.yaml")
+DEFAULT_CONFIG = Path("experiments/experiments_config.yaml")
 
 
 def _youtube_video_id(url: str | None) -> str | None:
@@ -74,7 +73,7 @@ def expand_experiments(experiments: list[dict[str, Any]]) -> list[dict[str, Any]
             expanded.append(exp)
             continue
 
-        # If multiple list params, raise error (not supported for clarity)
+        # If multiple list params, raise error
         if len(list_params) > 1:
             param_names = ", ".join(list_params.keys())
             _logger.error(
@@ -102,7 +101,7 @@ def expand_experiments(experiments: list[dict[str, Any]]) -> list[dict[str, Any]
                 )
 
             expanded.append(new_exp)
-            _logger.debug(f"  Expanded: {base_name} → {new_exp['name']}")
+            _logger.debug(f"  Expanded: {base_name} -> {new_exp['name']}")
 
     return expanded
 
@@ -131,7 +130,7 @@ def load_config(config_path: Path) -> dict[str, Any]:
 
     if expanded_count > original_count:
         _logger.info(
-            f"🔄 Expanded {original_count} experiment groups → {expanded_count} individual experiments"
+            f"Expanded {original_count} experiment groups -> {expanded_count} individual experiments"
         )
 
     return config
@@ -170,12 +169,12 @@ async def run_single(
     # Check filters
     should, reason = should_run(video, experiment)
     if not should:
-        _logger.info(f"⊘ Skipping [{exp_name}] on [{video_id}]: {reason}")
+        _logger.info(f"Skipping [{exp_name}] on [{video_id}]: {reason}")
         return True
 
     # Check if this experiment already exists in the runs directory
     if runs_subdir:
-        runs_dir = Path("factible/experiments/data/runs") / runs_subdir
+        runs_dir = Path("experiments/data/runs") / runs_subdir
         if runs_dir.exists():
             for run_dir in runs_dir.iterdir():
                 config_path = run_dir / "config.json"
@@ -187,12 +186,12 @@ async def run_single(
                 except Exception:  # noqa: BLE001
                     continue
                 if cfg.get("experiment_name") == full_name:
-                    _logger.info(f"⏭️  Skipping [{full_name}] - already exists:")
+                    _logger.info(f"Skipping [{full_name}] - already exists:")
                     _logger.info(f"     {run_dir.name}")
                     return True
 
     _logger.info("=" * 80)
-    _logger.info(f"🚀 Experiment {current}/{total}: {full_name}")
+    _logger.info(f"Experiment {current}/{total}: {full_name}")
     _logger.info(f"   Video: {video.get('description', video_id)}")
     _logger.info(f"   URL: {video['url']}")
     _logger.info("=" * 80)
@@ -221,13 +220,13 @@ async def run_single(
         )
 
         _logger.info(
-            f"✅ Completed - {result.extracted_claims.total_count} claims, "
+            f"Completed - {result.extracted_claims.total_count} claims, "
             f"{len(result.claim_reports)} reports"
         )
         return True
 
     except Exception as exc:
-        _logger.error(f"❌ Failed: {exc}")
+        _logger.error(f"Failed: {exc}")
         _logger.exception("Experiment failed")
         return False
 
@@ -263,30 +262,13 @@ def run(
     Run experiments on YouTube videos for fact-checking evaluation.
 
     Examples:
-        # Run all experiments
-        factible-experiments run
-
-        # Run specific experiment
-        factible-experiments run --experiment baseline
-
-        # Run on specific video
-        factible-experiments run --video fossil_fuels_greenest_energy
-
-        # Dry run (preview)
-        factible-experiments run --dry-run
-
-        # Organize runs in custom subdirectory
-        factible-experiments run --experiment vary_claims --runs-subdir vary_claims_20251206_191228
-
-        # Resume interrupted experiment run
-        factible-experiments run --experiment vary_claims --runs-subdir vary_claims_20251206_191228
+        factible-experiments run --experiment baseline --runs-subdir baseline_20251206_191228
     """
-    # Setup logging
-    logging.basicConfig(level=log_level, format="%(message)s")
+    logging.basicConfig(level=logging.INFO, format="%(message)s")
     load_dotenv()
 
     # Show model config
-    _logger.info("📋 Current model configuration:")
+    _logger.info("Current model configuration:")
     _logger.info(f"   Claim Extractor: {CLAIM_EXTRACTOR_MODEL.name}")
     _logger.info(f"   Query Generator: {QUERY_GENERATOR_MODEL.name}")
     _logger.info(f"   Evidence Extractor: {EVIDENCE_EXTRACTOR_MODEL.name}")
@@ -298,7 +280,7 @@ def run(
     experiments = cfg["experiments"]
     settings = cfg.get("settings", {})
 
-    # Filter if requested
+    # Filter
     if video:
         videos = [v for v in videos if v["id"] == video]
         if not videos:
@@ -306,7 +288,7 @@ def run(
             raise typer.Exit(1)
 
     if experiment:
-        # Filter by exact match OR prefix match (for auto-expanded experiments)
+        # Filter by exact match or prefix match (for auto-expanded experiments)
         experiments = [
             e
             for e in experiments
@@ -327,7 +309,6 @@ def run(
             runs_subdir = f"{timestamp}_{experiments[0]['name']}"
         else:
             # Multiple experiments: check if they share a common base name
-            # (e.g., vary_claims_claims1, vary_claims_claims3 -> vary_claims)
             first_name = experiments[0]["name"]
             if "_" in first_name and all(
                 e["name"].startswith(first_name.rsplit("_", 1)[0]) for e in experiments
@@ -339,9 +320,9 @@ def run(
                 # Unrelated experiments: use batch name
                 runs_subdir = f"{timestamp}_batch"
 
-        _logger.info(f"📁 Auto-generated runs directory: runs/{runs_subdir}/\n")
+        _logger.info(f"Auto-generated runs directory: runs/{runs_subdir}/\n")
 
-    # Plan - calculate actual runs considering video_filter
+    # Plan: calculate actual runs considering video_filter
     run_plan: list[tuple[dict[str, Any], dict[str, Any]]] = []
     filtered_videos = set()
     for vid in videos:
@@ -351,18 +332,18 @@ def run(
                 run_plan.append((vid, exp))
                 filtered_videos.add(vid["id"])
             else:
-                _logger.info(f"⊘ Skipping [{exp['name']}] on [{vid['id']}]: {reason}")
+                _logger.info(f"Skipping [{exp['name']}] on [{vid['id']}]: {reason}")
 
     actual_runs = len(run_plan)
 
     total = actual_runs
-    _logger.info(f"\n📊 Planning {total} runs:")
+    _logger.info(f"\nPlanning {total} runs:")
     _logger.info(
         f"   {len(filtered_videos)} videos × {len(experiments)} experiments (after applying video_filter)\n"
     )
 
     if dry_run:
-        _logger.info("🔍 DRY RUN MODE\n")
+        _logger.info("DRY RUN MODE\n")
 
     # Execute
     async def run_all_experiments():
@@ -384,11 +365,11 @@ def run(
     failed = len(results) - successful
 
     _logger.info("\n" + "=" * 80)
-    _logger.info("📈 SUMMARY")
+    _logger.info("SUMMARY")
     _logger.info("=" * 80)
     _logger.info(f"Total: {len(results)}")
-    _logger.info(f"✅ Successful: {successful}")
-    _logger.info(f"❌ Failed: {failed}")
+    _logger.info(f"Successful: {successful}")
+    _logger.info(f"Failed: {failed}")
 
     if failed > 0:
         _logger.info("\nFailed experiments:")

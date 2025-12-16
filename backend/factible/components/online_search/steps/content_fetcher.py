@@ -29,7 +29,7 @@ class SeleniumContentFetcher:
                 "Selenium driver is not available. Install 'selenium' and ensure Chrome is present."
             )
 
-        chrome_options = Options()  # type: ignore[call-arg]
+        chrome_options = Options()
         if headless:
             chrome_options.add_argument("--headless=new")
         chrome_options.add_argument("--disable-gpu")
@@ -48,16 +48,16 @@ class SeleniumContentFetcher:
         self.wait_timeout = wait_timeout
         self.page_load_timeout = page_load_timeout
         self.max_characters = max_characters
-        self._driver: Optional[webdriver.Chrome] = None  # type: ignore[type-arg]
-        self._wait: Optional[WebDriverWait] = None  # type: ignore[assignment]
+        self._driver: Optional[webdriver.Chrome] = None
+        self._wait: Optional[WebDriverWait] = None
 
     def __enter__(self) -> "SeleniumContentFetcher":
-        self._driver = webdriver.Chrome(options=self._options)  # type: ignore[call-arg]
+        self._driver = webdriver.Chrome(options=self._options)
         self._driver.set_page_load_timeout(self.page_load_timeout)
-        self._wait = WebDriverWait(self._driver, self.wait_timeout)  # type: ignore[call-arg]
+        self._wait = WebDriverWait(self._driver, self.wait_timeout)
         return self
 
-    def __exit__(self, exc_type, exc, tb) -> None:  # noqa: ANN001 (dynamic typing)
+    def __exit__(self, exc_type, exc, tb) -> None:
         if self._driver:
             self._driver.quit()
         self._driver = None
@@ -82,24 +82,22 @@ class SeleniumContentFetcher:
             if self._wait and EC is not None:
                 self._wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))  # type: ignore[arg-type]
 
-            # Smart wait: Only delay for JS-heavy sites that need it
-            # Check if we need to wait for content to load
+            # Smart delay for JS-heavy sites that need to wait for content to lad
             paragraphs = []
             if By is not None and self._driver:
-                # First quick attempt - most sites load instantly
+                # First attempt, most sites load instantly
                 for element in self._driver.find_elements(By.TAG_NAME, "p"):
                     text = self._clean_text(element.text)
                     if text:
                         paragraphs.append(text)
 
-                # If we got very little content, it might be JS-heavy - wait and retry
+                # If little content might be JS-heavy, wait and retry
                 initial_content = "\n".join(paragraphs)
                 if len(initial_content) < 100:
                     _logger.debug(
-                        "Low initial content (%d chars), waiting for JS render...",
-                        len(initial_content),
+                        f"Low initial content ({len(initial_content)} chars), waiting for JS render..."
                     )
-                    time.sleep(1.0)  # Reduced from 1.5s
+                    time.sleep(1.0)
                     # Re-extract after wait
                     paragraphs = []
                     for element in self._driver.find_elements(By.TAG_NAME, "p"):
@@ -110,7 +108,7 @@ class SeleniumContentFetcher:
             content = "\n".join(paragraphs)
             if len(content) < min_characters and self._driver and By is not None:
                 try:
-                    body_element = self._driver.find_element(By.TAG_NAME, "body")  # type: ignore[arg-type]
+                    body_element = self._driver.find_element(By.TAG_NAME, "body")
                     body_text = self._clean_text(body_element.text)
                     content = body_text
                 except Exception:
@@ -120,15 +118,15 @@ class SeleniumContentFetcher:
                 content = content[: self.max_characters]
 
             if len(content) < min_characters:
-                _logger.debug("Content too short for %s (%d chars)", url, len(content))
+                _logger.debug(f"Content too short for {url} ({len(content)} chars)")
                 return ""
 
             return content
-        except (TimeoutException, WebDriverException) as exc:  # type: ignore[arg-type]
-            _logger.warning("Selenium failed to fetch %s: %s", url, exc)
+        except (TimeoutException, WebDriverException) as exc:
+            _logger.warning(f"Selenium failed to fetch {url}: {exc}")
             return ""
         except Exception as exc:
-            _logger.error("Unexpected Selenium error for %s: %s", url, exc)
+            _logger.error(f"Unexpected Selenium error for {url}: {exc}")
             return ""
 
     async def fetch_text_async(self, url: str, min_characters: int = 200) -> str:

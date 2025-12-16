@@ -1,23 +1,17 @@
-"""
-Claim extraction metrics calculator.
-
-Calculates precision, recall, F1, MAP, importance-based metrics for claim extraction.
-"""
-
 from typing import List, Dict
 import logging
 import numpy as np
 import asyncio
 
-from factible.experiments.evaluator.models import (
+from experiments.evaluator.models import (
     ClaimExtractionMetrics,
     GroundTruthClaim,
 )
-from factible.experiments.evaluator.claim_matching import (
+from experiments.evaluator.claim_matching import (
     semantic_similarity_match_claims,
     calculate_mean_average_precision,
 )
-from factible.experiments.evaluator.llm_judge import ClaimQualityJudge
+from experiments.evaluator.llm_judge.claim_quality import ClaimQualityJudge
 
 _logger = logging.getLogger(__name__)
 
@@ -79,7 +73,7 @@ class ClaimExtractionEvaluator:
             else 0.0
         )
 
-        # MAP (Mean Average Precision)
+        # MAP
         map_score = calculate_mean_average_precision(system_claims, gt_claims, matches)
 
         # Recall@Important
@@ -102,7 +96,7 @@ class ClaimExtractionEvaluator:
             matched_importance / total_importance if total_importance > 0 else 0.0
         )
 
-        # Importance MAE (Mean Absolute Error)
+        # Importance MAE
         importance_errors = [
             abs(gt_claim.importance - sys_claim.importance)
             for gt_claim, sys_claim, *_ in matches["true_positives"]
@@ -124,7 +118,7 @@ class ClaimExtractionEvaluator:
         missed_claims = [c.claim_text for c in matches["false_negatives"]]
         extra_claims = [c.text for c in matches["false_positives"]]
 
-        # LLM-as-judge for claim quality (optional)
+        # LLM-as-judge for claim quality
         claim_quality_avg = 0.0
         if self.enable_llm_judge and self.judge:
             _logger.info("  Running LLM-as-judge for claim quality...")
@@ -170,7 +164,7 @@ class ClaimExtractionEvaluator:
                 )
                 return score.overall_quality
             except Exception as e:
-                _logger.warning("    Failed to evaluate claim quality: %s", e)
+                _logger.warning(f"    Failed to evaluate claim quality: {e}")
                 return None
 
         # Run all evaluations in parallel

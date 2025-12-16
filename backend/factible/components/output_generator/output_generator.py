@@ -29,7 +29,6 @@ OUTPUT_GENERATOR_MODEL_SETTINGS: ModelSettings = {
     "max_tokens": 900,
 }
 
-# All possible stances in the evidence schema
 _ALL_STANCES: Sequence[EvidenceStance] = ("supports", "refutes", "mixed", "unclear")
 
 
@@ -37,7 +36,7 @@ def _build_claim_verdict_agent() -> Agent:
     """Instantiate the LLM agent responsible for producing claim verdicts."""
     return Agent(
         model=get_model(OUTPUT_GENERATOR_MODEL),
-        output_type=ClaimVerdict,  # type: ignore[arg-type]
+        output_type=ClaimVerdict,
         model_settings=OUTPUT_GENERATOR_MODEL_SETTINGS,
         system_prompt="""
         You are an expert fact-checking analyst. Your goal is to evaluate how the provided evidence
@@ -73,7 +72,7 @@ def _select_evidence_description(result: SearchResult) -> str | None:
 def _build_evidence_bundle(
     claim: Claim, search_results: Sequence[SearchResult]
 ) -> ClaimEvidenceBundle:
-    # Group evidence by stance (including unclear for transparency)
+    # Group evidence by stance
     grouped: dict[EvidenceStance, List[EvidenceSourceSummary]] = {}
     reliability_priority = {"high": 0, "medium": 1, "low": 2, "unknown": 3}
     stance_priority: Sequence[EvidenceStance] = (
@@ -89,7 +88,7 @@ def _build_evidence_bundle(
     for result in search_results:
         stance: EvidenceStance = result.evidence_overall_stance or "unclear"
 
-        # Deduplicate by URL (same source may appear from different queries)
+        # Deduplicate by URL (maybe same source from different queries)
         if result.url in seen_urls:
             duplicate_count += 1
             _logger.debug(
@@ -101,7 +100,7 @@ def _build_evidence_bundle(
         summary = _select_evidence_description(result)
         snippet = result.snippet or None
 
-        # Add to appropriate stance group (including unclear for transparency)
+        # Add to appropriate stance group
         if stance not in grouped:
             grouped[stance] = []
 
@@ -121,7 +120,7 @@ def _build_evidence_bundle(
             f"Filtered {duplicate_count} duplicate URL(s) for claim: {claim.text[:50]}"
         )
 
-    # Sort each stance group so higher reliability sources appear first.
+    # Sort each stance group for higher reliability sources to appear first
     for sources in grouped.values():
         sources.sort(
             key=lambda source: (
@@ -133,15 +132,13 @@ def _build_evidence_bundle(
             )
         )
 
-    # Drop empty stances but preserve a canonical stance ordering so refutes/supports
-    # appear before mixed/unclear across all clients.
+    # Order stances (refutes & supports to appear before mixed & unclear)
     compact_grouped: dict[EvidenceStance, List[EvidenceSourceSummary]] = {}
     for stance in stance_priority:
         items = grouped.get(stance)
         if items:
             compact_grouped[stance] = items
 
-    # Include any other stance keys that might exist in fallback order.
     for stance, items in grouped.items():
         if stance not in compact_grouped and items:
             compact_grouped[stance] = items
@@ -192,16 +189,15 @@ Provide the structured verdict.
 
     try:
         result = await agent.run(prompt)
-    except Exception as exc:  # pragma: no cover - defensive fallback
+    except Exception as exc:
         _logger.error(
             "Failed to generate verdict for claim '%s': %s",
             bundle.claim.text,
             exc,
             exc_info=True,
         )
-        # Include error type in summary for debugging
         error_type = type(exc).__name__
-        error_msg = str(exc)[:100]  # Truncate long errors
+        error_msg = str(exc)[:100]
         return ClaimVerdict(
             overall_stance="unclear",
             confidence="low",
@@ -216,19 +212,19 @@ def _calculate_evidence_quality_score(bundle: ClaimEvidenceBundle) -> float:
     if bundle.total_sources == 0:
         return 0.0
 
-    # Base score from having evidence
+    # Base score because of having evidence
     score = 0.3
 
-    # Bonus for actionable stances (supports/refutes/mixed vs unclear)
+    # Score for supports/refutes/mixed stances
     actionable_count = sum(
         len(sources)
         for stance, sources in bundle.stance_groups.items()
         if stance in ("supports", "refutes", "mixed")
     )
     if actionable_count > 0:
-        score += 0.3 * min(1.0, actionable_count / 3.0)  # Up to 3 sources
+        score += 0.3 * min(1.0, actionable_count / 3.0)
 
-    # Bonus for high reliability sources
+    # Score for high reliability sources
     high_reliability_count = sum(
         1
         for sources in bundle.stance_groups.values()
@@ -236,7 +232,7 @@ def _calculate_evidence_quality_score(bundle: ClaimEvidenceBundle) -> float:
         if source.reliability.rating in ("high", "medium")
     )
     if high_reliability_count > 0:
-        score += 0.4 * min(1.0, high_reliability_count / 3.0)  # Up to 3 high-quality
+        score += 0.4 * min(1.0, high_reliability_count / 3.0)
 
     return min(1.0, score)
 
@@ -250,7 +246,7 @@ async def generate_claim_report(
     bundle = _build_evidence_bundle(claim, search_results)
     verdict = await _generate_verdict(bundle)
 
-    # Calculate evidence quality for sorting
+    # Calculate evidence quality score for sorting
     quality_score = _calculate_evidence_quality_score(bundle)
 
     # Map claim's character position to timestamp if available
@@ -290,20 +286,19 @@ async def generate_run_output(
     async def _generate_report_with_context(
         idx: int, claim: Claim, results: Sequence[SearchResult]
     ) -> ClaimFactCheckReport:
-        # Set context for verdict generation traceability
+        # Set context for verdict generation tracking
         if tracker:
             tracker.set_context(claim_index=idx, claim_text=claim.text)
 
         report = await generate_claim_report(claim, results, transcript_data)
 
-        # Clear context after generating report
         if tracker:
             tracker.clear_context()
 
         return report
 
     # Generate all reports in parallel
-    _logger.info(f"⚡ Generating {len(claim_results)} verdicts in PARALLEL")
+    _logger.info(f"Generating {len(claim_results)} verdicts in parallel")
     report_tasks = [
         _generate_report_with_context(idx, claim, results)
         for idx, (claim, results) in enumerate(claim_results, 1)
@@ -314,7 +309,7 @@ async def generate_run_output(
     sorted_reports = sorted(
         reports, key=lambda r: r.evidence_quality_score, reverse=True
     )
-    _logger.info("✓ Sorted %d reports by evidence quality", len(sorted_reports))
+    _logger.info(f"Sorted {len(sorted_reports)} reports by evidence quality")
 
     return FactCheckRunOutput(
         extracted_claims=extracted_claims,

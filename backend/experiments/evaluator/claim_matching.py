@@ -1,15 +1,9 @@
-"""
-Claim matching utilities for evaluation.
-
-Provides fuzzy and semantic similarity matching between ground truth and system-extracted claims.
-"""
-
 from typing import Dict, List
 from difflib import SequenceMatcher
 import logging
 import numpy as np
 
-from factible.experiments.evaluator.models import GroundTruthClaim
+from experiments.evaluator.models import GroundTruthClaim
 
 _logger = logging.getLogger(__name__)
 

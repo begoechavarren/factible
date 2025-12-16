@@ -1,4 +1,5 @@
 videos:
+# Climate
 - id: fossil_fuels_greenest_energy
   url: https://www.youtube.com/watch?v=BJWq1FeGpCw
   description: 'Fossil Fuels: The Greenest Energy'
@@ -75,6 +76,7 @@ videos:
   notes: Greenhouse gases trap heat, and measuring them helps understand their impact
     on climate change.
 
+# Health
 - id: fluoridated_water_iq
   url: https://youtu.be/oFmGG3k8naQ
   description: Harvard Study Proves Fluoridated water Lowers your IQ
@@ -156,7 +158,7 @@ videos:
   notes: Delaying school start times improves teenagers' sleep, health, and academic
     performance significantly.
 
-  # POLITICS / SOCIAL
+  # Politics / social
 - id: egg_price_trump
   url: https://www.youtube.com/watch?v=oTFt4byuIuo
   description: Egg Price Warning Comes True
@@ -189,7 +191,6 @@ videos:
   notes: The gender wage gap is largely a myth, explained by individual career choices,
     not discrimination.
 
-  # TODO: Mixed?
 - id: nation_of_immigrants
   url: https://www.youtube.com/watch?v=oYvKcAh1zdo
   description: A nation of inmigrants
@@ -239,110 +240,22 @@ videos:
     in 2019.
 
 experiments:
-  # BASELINE - Standard configuration
   - name: "baseline"
-    description: "Baseline configuration for reference"
+    description: "Baseline configuration"
     model_config: "OPENAI_GPT4O_MINI"
     max_claims: 5
     max_queries_per_claim: 2
     max_results_per_query: 3
-    video_filter: ["fixing"]
+    video_filter: []  # Run on all videos
 
   - name: "precision_recall_curve"
-    description: "Data for precision-recall curve in thesis"
+    description: "Data for precision-recall curve"
     model_config: "OPENAI_GPT4O_MINI"
-    max_claims: [1, 3, 5, 7, 10, 15]  # Add 15 for higher recall
+    max_claims: [1, 3, 5, 7, 10, 15]
     max_queries_per_claim: 2
     max_results_per_query: 3
-    video_filter: []  # Run on ALL videos
+    video_filter: []
 
-  - name: "precision_recall_curve_fix"
-    description: "Data for precision-recall curve in thesis"
-    model_config: "OPENAI_GPT4O_MINI"
-    max_claims: [15]
-    max_queries_per_claim: 2
-    max_results_per_query: 3
-    video_filter: ["fix"]
-
-  - name: "precision_recall_curve_fix_missing_runs"
-    description: "Data for precision-recall curve in thesis"
-    model_config: "OPENAI_GPT4O_MINI"
-    max_claims: [15]
-    max_queries_per_claim: 2
-    max_results_per_query: 3
-    video_filter: ["max_claims_15"]
-
-  # OFAT ANALYSIS - Vary one parameter at a time
-
-  # Study impact of varying number of claims (generates vary_claims_claims1, vary_claims_claims3...)
-  - name: "vary_claims"
-    description: "OFAT: Impact of max_claims on quality/cost/time"
-    model_config: "OPENAI_GPT4O_MINI"
-    max_claims: [1, 3, 5, 7, 10]  # generates 5 experiments
-    max_queries_per_claim: 2
-    max_results_per_query: 3
-    video_filter: ["selected"]
-
-  # Study impact of varying queries per claim (generates vary_queries_queries1, vary_queries_queries2...)
-  - name: "vary_queries"
-    description: "OFAT: Impact of max_queries_per_claim on evidence quality"
-    model_config: "OPENAI_GPT4O_MINI"
-    max_claims: 5
-    max_queries_per_claim: [1, 2, 3, 4, 5]  # generates 5 experiments
-    max_results_per_query: 3
-    video_filter: ["short"]
-
-  # Study impact of varying results per query (generates vary_results_results1, vary_results_results2...)
-  - name: "vary_results"
-    description: "OFAT: Impact of max_results_per_query on evidence coverage"
-    model_config: "OPENAI_GPT4O_MINI"
-    max_claims: 5
-    max_queries_per_claim: 2
-    max_results_per_query: [1, 2, 3, 5, 7]  # generates 5 experiments
-    video_filter: ["short"]
-
-  # STRATEGIC COMBINATIONS - Specific hypotheses
-
-  # Minimal
-  - name: "minimal"
-    description: "Minimal configuration for fast/cheap fact-checking"
-    model_config: "OPENAI_GPT4O_MINI"
-    max_claims: 1
-    max_queries_per_claim: 1
-    max_results_per_query: 1
-    video_filter: ["short"]
-
-  # Deep (few claims, comprehensive evidence)
-  - name: "deep"
-    description: "Deep dive: Few claims with comprehensive evidence"
-    model_config: "OPENAI_GPT4O_MINI"
-    max_claims: 3
-    max_queries_per_claim: 4
-    max_results_per_query: 5
-    video_filter: ["short"]
-
-  # Broad (many claims, light evidence)
-  - name: "broad"
-    description: "Broad coverage: Many claims with light evidence"
-    model_config: "OPENAI_GPT4O_MINI"
-    max_claims: 10
-    max_queries_per_claim: 1
-    max_results_per_query: 2
-    video_filter: ["short"]
-
-  # MODEL COMPARISON
-
-  #  # Auto-generates 3 experiments, one per model
-  # - name: "model_comparison"
-  #   description: "Compare different LLM models"
-  #   model_config: ["OPENAI_GPT4O_MINI", "OPENAI_GPT4O", "OLLAMA_QWEN3_0_4B"]
-  #   max_claims: 5
-  #   max_queries_per_claim: 2
-  #   max_results_per_query: 3
-  #   video_filter: ["short"]
-
-# Global settings
 settings:
   headless_search: true
-  parallel_execution: false  # Set to true to run experiments in parallel (to be implemented)
-  skip_existing: false  # Set to true to skip videos that already have results
+  skip_existing: false

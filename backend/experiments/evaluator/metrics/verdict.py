@@ -1,17 +1,13 @@
-"""
-Verdict accuracy metrics calculator.
-"""
-
 from typing import List, Dict
 import logging
 import numpy as np
 import asyncio
 
-from factible.experiments.evaluator.models import (
+from experiments.evaluator.models import (
     VerdictAccuracyMetrics,
     GroundTruthClaim,
 )
-from factible.experiments.evaluator.llm_judge import ExplanationQualityJudge
+from experiments.evaluator.llm_judge.explanation_quality import ExplanationQualityJudge
 
 _logger = logging.getLogger(__name__)
 
@@ -130,7 +126,7 @@ class VerdictEvaluator:
                 )
                 return score.overall_quality
             except Exception as e:
-                _logger.warning("    Failed to evaluate explanation quality: %s", e)
+                _logger.warning(f"    Failed to evaluate explanation quality: {e}")
                 return None
 
         # Collect all explanation evaluation tasks

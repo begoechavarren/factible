@@ -1,11 +1,4 @@
 #!/usr/bin/env python3
-"""
-Create precision-recall curve from evaluation results.
-
-Usage:
-    python create_precision_recall_curve.py --run-id 20251214_002019_precision_recall_curve
-"""
-
 import json
 import typer
 import matplotlib
@@ -81,7 +74,7 @@ def main(
             typer.echo(f"Warning: No results found for max_claims={k}")
             continue
 
-        # Use the most recent one (should only be one)
+        # Use most recent
         report_path = timestamp_dirs[0] / "aggregate_report.json"
 
         if not report_path.exists():
@@ -186,12 +179,12 @@ def main(
     output_dir = BASE_DIR
     output_path = output_dir / f"precision_recall_curve_{run_id}.pdf"
     plt.savefig(output_path, dpi=300, bbox_inches="tight")
-    typer.echo(f"\n✅ Precision-Recall curve saved to: {output_path}")
+    typer.echo(f"\nPrecision-Recall curve saved to: {output_path}")
 
     # Also save as PNG
     output_png = output_path.with_suffix(".png")
     plt.savefig(output_png, dpi=300, bbox_inches="tight")
-    typer.echo(f"✅ PNG version saved to: {output_png}")
+    typer.echo(f"PNG version saved to: {output_png}")
 
     # Create a summary table
     typer.echo("\n" + "=" * 80)
@@ -202,7 +195,7 @@ def main(
     )
     typer.echo("-" * 80)
     for i, k in enumerate(data["max_claims"]):
-        marker = " ← PRIMARY" if k == 5 else ""
+        marker = " <- PRIMARY" if k == 5 else ""
         typer.echo(
             f"{k:<12} {data['precision'][i]:<12.3f} {data['recall'][i]:<12.3f} {data['f1'][i]:<12.3f} {data['map'][i]:<12.3f}{marker}"
         )
@@ -226,7 +219,7 @@ def main(
     table_path = output_dir / f"precision_recall_summary_{run_id}.json"
     with open(table_path, "w") as f:
         json.dump(table_data, f, indent=2)
-    typer.echo(f"\n✅ Summary table saved to: {table_path}")
+    typer.echo(f"\nSummary table saved to: {table_path}")
 
 
 if __name__ == "__main__":

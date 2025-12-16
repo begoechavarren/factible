@@ -7,7 +7,7 @@ from urllib.parse import urlparse
 
 from factible.components.online_search.schemas.reliability import SiteReliability
 
-import whois  # type: ignore
+import whois
 
 _logger = logging.getLogger(__name__)
 
@@ -40,14 +40,14 @@ class WebsiteReliabilityChecker:
 
         reasons: List[str] = []
 
-        # Check MBFC dataset first (most authoritative)
+        # Check more authoritative MBFC dataset first
         dataset_entry = self._dataset.get(domain)
         if dataset_entry:
             credibility = (dataset_entry.get("credibility") or "").lower()
             factual = dataset_entry.get("factual", "")
             bias = dataset_entry.get("bias", "")
 
-            # Map MBFC credibility directly to our rating system
+            # Map MBFC credibility directly to the rating system
             credibility_map = {
                 "high": ("high", 0.85),
                 "medium": ("medium", 0.60),
@@ -64,10 +64,10 @@ class WebsiteReliabilityChecker:
                     rating=rating, score=score, reasons=reasons, bias=bias or None
                 )
 
-        # Fallback heuristics if not in MBFC dataset
+        # Back to heuristics if not in MBFC dataset
         score = 0.5
 
-        # Government/education domains are highly trustworthy
+        # Government/education domains
         if any(domain.endswith(tld) for tld in self.HIGH_TRUST_TLDS):
             score = 0.90
             reasons.append("Government or educational institution")
@@ -142,12 +142,10 @@ class WebsiteReliabilityChecker:
                             }
                             mapped[domain] = normalized_entry
                     if mapped:
-                        _logger.info("Loaded media bias dataset from %s", path)
+                        _logger.info(f"Loaded media bias dataset from {path}")
                     return mapped
                 except Exception as exc:
-                    _logger.warning(
-                        "Failed to load media bias dataset %s: %s", path, exc
-                    )
+                    _logger.warning(f"Failed to load media bias dataset {path}: {exc}")
         return {}
 
     @staticmethod

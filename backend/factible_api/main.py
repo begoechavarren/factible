@@ -9,29 +9,24 @@ from fastapi.responses import JSONResponse
 from factible_api.api.v1.router import api_router
 from factible_api.core.config import get_settings
 
-# Load environment variables
 load_dotenv()
 
-# Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    force=True,  # Override any existing logging config
+    force=True,
 )
 
-# Ensure factible package logs are visible
-logging.getLogger("factible").setLevel(logging.INFO)
-
-logger = logging.getLogger(__name__)
+_logger = logging.getLogger(__name__)
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Application lifespan manager."""
     settings = get_settings()
-    logger.info("Starting %s v%s", settings.project_name, settings.version)
+    _logger.info(f"Starting {settings.project_name} v{settings.version}")
     yield
-    logger.info("Shutting down %s", settings.project_name)
+    _logger.info(f"Shutting down {settings.project_name}")
 
 
 def create_app() -> FastAPI:

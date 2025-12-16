@@ -1,14 +1,5 @@
-"""
-LLM-as-judge for claim quality evaluation.
-
-Evaluates extracted claims for:
-- Clarity and specificity
-- Checkability (verifiable vs opinion)
-- Standalone completeness
-"""
-
 from pydantic import BaseModel, Field
-from factible.experiments.evaluator.llm_judge.base import create_simple_judge
+from experiments.evaluator.llm_judge.base import create_simple_judge
 
 
 class ClaimQualityScore(BaseModel):

@@ -1,10 +1,6 @@
-"""
-End-to-end metrics calculator.
-"""
-
 from typing import Dict
 
-from factible.experiments.evaluator.models import EndToEndMetrics
+from experiments.evaluator.models import EndToEndMetrics
 
 
 class EndToEndEvaluator:

@@ -33,19 +33,17 @@ async def _process_search_result_async(
 ) -> SearchResult:
     """Process a single search result asynchronously."""
 
-    # Reliability assessment (fast, can run in thread pool)
+    # Reliability assessment
     with timer(f"{prefix}.2: Reliability assessment (result {result_idx})"):
         reliability = await asyncio.to_thread(reliability_checker.assess, item.url)
 
-    # Content fetching (blocking Selenium, run in thread pool)
+    # Content fetching
     page_text = ""
     if fetcher is not None:
         with timer(f"{prefix}.3: Content fetching (result {result_idx})"):
             page_text = await fetcher.fetch_text_async(item.url)
 
-    # Evidence extraction (LLM call, async)
-    # Always pass both scraped content AND Google snippet
-    # If scraping failed, use snippet as minimal content
+    # Evidence extraction (async)
     evidence_summary = None
     overall_stance = None
     content_for_extraction = page_text if page_text else item.snippet
@@ -57,9 +55,7 @@ async def _process_search_result_async(
                 query,
                 content_for_extraction,
                 title=item.title,
-                snippet=item.snippet
-                if page_text
-                else None,  # Don't duplicate if using snippet as content
+                snippet=item.snippet if page_text else None,
             )
             overall_stance = evidence_output.overall_stance
             if evidence_output.has_relevant_evidence:
@@ -89,7 +85,7 @@ async def search_online_async(
     min_credibility: str = "medium",
 ) -> SearchResults:
     """
-    Async version: Perform online search with credibility-based filtering.
+    Perform online search with credibility-based filtering.
 
     Automatically handles low-credibility sources by fetching additional results
     from Google until we have enough high-quality sources.
@@ -108,14 +104,12 @@ async def search_online_async(
     reliability_checker = WebsiteReliabilityChecker()
     evidence_extractor = RelevantContentExtractor()
 
-    # Build timer prefix for hierarchical tracking
     if claim_index is not None and query_index is not None:
         prefix = f"Step 3.{claim_index}.2.{query_index}"
     else:
         prefix = "Search"
 
     # Step 1: Google Search with simple adaptive fetching
-    # Strategy: Fetch 1 batch, if >50% unreliable fetch 1 more, then filter
     credibility_hierarchy = {"high": 3, "medium": 2, "low": 1, "unknown": 0}
     min_credibility_score = credibility_hierarchy.get(min_credibility, 2)
     min_guaranteed_sources = max(1, limit // 2)
@@ -144,8 +138,8 @@ async def search_online_async(
 
     if unreliable_count > len(all_assessed_results) / 2:
         _logger.info(
-            f"    ⚠ {unreliable_count}/{len(all_assessed_results)} sources are low-quality "
-            f"(>{len(all_assessed_results) / 2:.0f}) → Fetching 1 additional batch"
+            f"    {unreliable_count}/{len(all_assessed_results)} sources are low-quality "
+            f"(>{len(all_assessed_results) / 2:.0f}) - Fetching 1 additional batch"
         )
 
         # Batch 2: Additional fetch
@@ -168,12 +162,12 @@ async def search_online_async(
                 if score >= min_credibility_score
             )
             _logger.info(
-                f"    ✓ After batch 2: {reliable_count}/{len(all_assessed_results)} reliable sources"
+                f"    After batch 2: {reliable_count}/{len(all_assessed_results)} reliable sources"
             )
     else:
         _logger.info(
-            f"    ✓ Quality acceptable: {reliable_count}/{len(all_assessed_results)} reliable "
-            f"(≤50% unreliable) → Proceeding with filtering"
+            f"    Quality acceptable: {reliable_count}/{len(all_assessed_results)} reliable "
+            f"(<=50% unreliable) - Proceeding with filtering"
         )
 
     if not all_assessed_results:
@@ -181,7 +175,7 @@ async def search_online_async(
 
     # Step 1.5: Smart filtering with minimum guarantee
     _logger.info(
-        f"    🔍 Filtering {len(all_assessed_results)} results "
+        f"    Filtering {len(all_assessed_results)} results "
         f"(min quality: {min_credibility}, min guarantee: {min_guaranteed_sources})"
     )
 
@@ -194,43 +188,43 @@ async def search_online_async(
 
     # Decision logic:
     if len(reliable) >= min_guaranteed_sources:
-        # We have enough reliable sources - use only those
+        # If have enough reliable sources use only those
         filtered_results = reliable[: limit * 2]
         skipped = len(unreliable)
         _logger.info(
-            f"    ✓ Using {len(filtered_results)} reliable sources "
+            f"    Using {len(filtered_results)} reliable sources "
             f"(filtered {skipped} low-credibility)"
         )
     else:
-        # Not enough reliable sources - keep best available
-        # Use ALL reliable + fill gap with best unreliable
+        # If not enough reliable sources keep best available
+        # Use all reliable + best unreliable
         needed_unreliable = min_guaranteed_sources - len(reliable)
         filtered_results = reliable + unreliable[:needed_unreliable]
 
         _logger.warning(
-            f"    ⚠ Only {len(reliable)} reliable sources found "
+            f"    Only {len(reliable)} reliable sources found "
             f"(target: {limit}, min guarantee: {min_guaranteed_sources})"
         )
         _logger.info(
-            f"    ➜ Keeping {len(filtered_results)} total sources "
+            f"    Keeping {len(filtered_results)} total sources "
             f"({len(reliable)} reliable + {len(filtered_results) - len(reliable)} best available)"
         )
 
     # Only process filtered sources from here
     raw_results = filtered_results
 
-    # Initialize Selenium fetcher
+    # Selenium fetcher
     fetcher: Optional[SeleniumContentFetcher] = None
     try:
         fetcher = SeleniumContentFetcher(headless=headless)
         fetcher.__enter__()  # Initialize driver
     except RuntimeError as exc:
-        _logger.warning("Selenium unavailable: %s", exc)
+        _logger.warning(f"Selenium unavailable: {exc}")
 
     try:
         # Step 2: Process all search results in parallel
         _logger.info(
-            f"    ⚡ Processing {len(raw_results)} search results in PARALLEL (target: {limit} accessible)"
+            f"    Processing {len(raw_results)} search results in parallel (target: {limit} accessible)"
         )
         tasks = [
             _process_search_result_async(
@@ -267,13 +261,13 @@ async def search_online_async(
             all_results = definitive_results
             if filtered_count > 0:
                 _logger.info(
-                    f"    ✓ Filtered {filtered_count} unclear stance source(s) "
+                    f"    Filtered {filtered_count} unclear stance source(s) "
                     f"({len(definitive_results)} definitive / {len(definitive_results) + filtered_count} total)"
                 )
         else:
             _logger.info(
-                f"    ✓ Keeping all stances: {len(definitive_results)} definitive, "
-                f"{len(unclear_results)} unclear (≤50% definitive)"
+                f"    Keeping all stances: {len(definitive_results)} definitive, "
+                f"{len(unclear_results)} unclear (<=50% definitive)"
             )
 
         # Return up to limit results
@@ -284,5 +278,6 @@ async def search_online_async(
         )
     finally:
         if fetcher:
-            fetcher.__exit__(None, None, None)  # Cleanup driver
+            # Cleanup driver
+            fetcher.__exit__(None, None, None)
         await search_client.close()

@@ -19,7 +19,7 @@ class ExperimentTracker:
         component: str,
         experiment_name: str,
         config: dict[str, Any],
-        base_dir: Path = Path("factible/experiments/data/runs"),
+        base_dir: Path = Path("experiments/data/runs"),
         run_label: Optional[str] = None,
     ):
         self.component = component
@@ -47,7 +47,7 @@ class ExperimentTracker:
         # Timing
         self.start_time = time.time()
 
-        _logger.info(f"📊 Experiment started: {self.run_id}")
+        _logger.info(f"Experiment started: {self.run_id}")
 
     @staticmethod
     def _sanitize_label(value: str) -> str:
@@ -130,7 +130,7 @@ class ExperimentTracker:
         self._calculate_metrics(total_time)
         self._write_json("metrics.json", self.metrics)
 
-        _logger.info(f"💾 Experiment saved: {self.run_dir}")
+        _logger.info(f"Experiment saved: {self.run_dir}")
 
     def _calculate_metrics(self, total_time: float):
         """Calculate automatic metrics."""
@@ -166,7 +166,7 @@ class ExperimentTracker:
         """Mark experiment as failed."""
         self.metrics["success"] = False
         self.metrics["error"] = str(error)
-        _logger.error(f"❌ Experiment failed: {error}")
+        _logger.error(f"Experiment failed: {error}")
 
     def _write_json(self, filename: str, data: Any):
         """Write data to JSON file."""
@@ -195,7 +195,7 @@ def timer(label: str):
         yield
     finally:
         duration = time.time() - start
-        _logger.info(f"⏱️  {label}: {duration:.2f}s")
+        _logger.info(f"{label}: {duration:.2f}s")
 
         # Auto-track if tracker is active
         tracker = ExperimentTracker.get_current()

@@ -55,7 +55,7 @@ def _find_claim_in_transcript(
     best_match: dict[str, int | float | str] | None = None
     best_ratio = 0.0
 
-    # Try different window sizes (exact, +/-2 words) to handle slight length variations
+    # Try different window sizes (exact & +/-2 words) to handle slight length variations
     for size_offset in [0, 1, 2, -1, -2]:
         current_window_size = max(3, window_size + size_offset)
 
@@ -72,7 +72,7 @@ def _find_claim_in_transcript(
                 words_before = " ".join(transcript_words[:i])
                 char_start_approx = len(words_before) + (1 if words_before else 0)
 
-                # Find actual character position in original (case-insensitive)
+                # Find actual character position in original
                 search_pattern = re.escape(" ".join(window_words[:3]))
                 match = re.search(
                     search_pattern, transcript_normalized[char_start_approx:]
@@ -91,16 +91,12 @@ def _find_claim_in_transcript(
 
     if best_match and float(best_match["score"]) >= min_score:
         _logger.info(
-            "Found claim in transcript (score: %.2f): %s",
-            best_match["score"],
-            claim_text[:50],
+            f"Found claim in transcript (score: {best_match['score']:.2f}): {claim_text[:50]}"
         )
         return best_match
 
     _logger.warning(
-        "Could not find claim in transcript (best score: %.2f): %s",
-        best_ratio,
-        claim_text[:50],
+        f"Could not find claim in transcript (best score: {best_ratio:.2f}): {claim_text[:50]}"
     )
     return None
 
@@ -198,7 +194,7 @@ async def extract_claims(
             deps=ClaimExtractorDeps(max_claims=max_claims),
         )
     except AgentRunError as exc:
-        _logger.error("Claim extraction failed: %s", exc)
+        _logger.error(f"Claim extraction failed: {exc}")
         return ExtractedClaims(claims=[], total_count=0)
     extracted = result.output
 

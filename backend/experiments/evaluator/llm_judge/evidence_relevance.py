@@ -1,9 +1,5 @@
-"""
-LLM-as-judge for evidence relevance evaluation.
-"""
-
 from pydantic import BaseModel, Field
-from factible.experiments.evaluator.llm_judge.base import create_simple_judge
+from experiments.evaluator.llm_judge.base import create_simple_judge
 
 
 class EvidenceRelevanceScore(BaseModel):

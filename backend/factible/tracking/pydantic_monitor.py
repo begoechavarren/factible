@@ -30,7 +30,7 @@ def _ensure_agent_patched() -> None:
         return
     _agent_patch_initialized = True
 
-    async def _tracked_agent_run(self, prompt, *run_args, **run_kwargs):  # type: ignore[override]
+    async def _tracked_agent_run(self, prompt, *run_args, **run_kwargs):
         tracker = ExperimentTracker.get_current()
         component = _current_component.get()
         start_time = time.time()
@@ -68,7 +68,7 @@ def _ensure_agent_patched() -> None:
         tracker.log_pydantic_call(call_data)
         return result
 
-    def _tracked_agent_run_sync(self, prompt, *run_args, **run_kwargs):  # type: ignore[override]
+    def _tracked_agent_run_sync(self, prompt, *run_args, **run_kwargs):
         tracker = ExperimentTracker.get_current()
         component = _current_component.get()
         start_time = time.time()
@@ -214,7 +214,7 @@ def track_pydantic(component: str) -> Callable[[Callable[..., T]], Callable[...,
                 finally:
                     _current_component.reset(token)
 
-            return async_wrapper  # type: ignore[return-value]
+            return cast(Callable[..., T], async_wrapper)
         else:
 
             @wraps(func)

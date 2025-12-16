@@ -79,7 +79,7 @@ async def run_factible(
 
     from pathlib import Path
 
-    base_dir = Path("factible/experiments/data/runs")
+    base_dir = Path("experiments/data/runs")
     if runs_subdir:
         base_dir = base_dir / runs_subdir
 
@@ -118,7 +118,7 @@ async def run_factible(
             tracker.log_input("video_duration_seconds", video_duration_seconds)
 
         if not transcript_text.strip():
-            _logger.warning("No transcript retrieved for %s", video_url)
+            _logger.warning(f"No transcript retrieved for {video_url}")
             if progress_callback:
                 progress_callback(
                     "error",
@@ -231,7 +231,7 @@ async def run_factible(
                         priority_threshold=2,
                     )
             except Exception as exc:
-                _logger.error("Failed to generate queries for claim %d: %s", index, exc)
+                _logger.error(f"Failed to generate queries for claim {index}: {exc}")
                 # Generate verdict with no evidence
                 report = await generate_claim_report(
                     claim, collected_results, transcript_data
@@ -279,13 +279,13 @@ async def run_factible(
                         )
                     return search_results
                 except Exception as exc:
-                    _logger.error("  Search failed: %s", exc)
+                    _logger.error(f"  Search failed: {exc}")
                     return SearchResults(
                         query=query_obj.query, results=[], total_count=0
                     )
 
             # Execute all queries in parallel
-            _logger.info(f"  ⚡ Executing {len(queries.queries)} queries in PARALLEL")
+            _logger.info(f"  Executing {len(queries.queries)} queries in parallel")
             query_tasks = [
                 _execute_query(query_index, query_obj)
                 for query_index, query_obj in enumerate(queries.queries, 1)
@@ -351,7 +351,7 @@ async def run_factible(
             return report
 
         # Level 1: Process all claims in parallel (including verdict generation)
-        _logger.info(f"⚡ Processing {len(claims_to_process)} claims in PARALLEL")
+        _logger.info(f"Processing {len(claims_to_process)} claims in parallel")
         with timer(
             "Step 3: Query generation + search + verdicts for all claims (PARALLEL)"
         ):
@@ -360,7 +360,7 @@ async def run_factible(
                 for idx, claim in enumerate(claims_to_process, 1)
             ]
             claim_reports = await asyncio.gather(*claim_tasks)
-        _logger.info(f"✓ Completed {len(claims_to_process)} claims in parallel")
+        _logger.info(f"Completed {len(claims_to_process)} claims in parallel")
 
         if progress_callback:
             progress_callback(
@@ -375,7 +375,7 @@ async def run_factible(
             sorted_reports = sorted(
                 claim_reports, key=lambda r: r.evidence_quality_score, reverse=True
             )
-            _logger.info("✓ Sorted %d reports by evidence quality", len(sorted_reports))
+            _logger.info(f"Sorted {len(sorted_reports)} reports by evidence quality")
 
             run_output = FactCheckRunOutput(
                 extracted_claims=processed_claims,

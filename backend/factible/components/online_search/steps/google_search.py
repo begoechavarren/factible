@@ -64,13 +64,13 @@ class GoogleSearchClient:
             )
             response.raise_for_status()
         except httpx.HTTPError as exc:
-            _logger.error("Google search failed for '%s': %s", query, exc)
+            _logger.error(f"Google search failed for '{query}': {exc}")
             return []
 
         try:
             data = response.json()
         except ValueError:
-            _logger.error("Google search returned invalid JSON for '%s'", query)
+            _logger.error(f"Google search returned invalid JSON for '{query}'")
             return []
 
         raw_results = data.get("organic") or data.get("results") or []
@@ -85,6 +85,6 @@ class GoogleSearchClient:
             )
 
         if not hits:
-            _logger.info("No Google results returned for '%s'", query)
+            _logger.info(f"No Google results returned for '{query}'")
 
         return hits

@@ -81,7 +81,7 @@ def get_transcript_with_segments(
     except Exception as e:
         error_msg = str(e).lower()
 
-        # Check if it's a rate limiting error
+        # Check if it it is throwing a rate limiting error
         if (
             "blocking" in error_msg
             or "ipblocked" in error_msg
@@ -108,7 +108,6 @@ def get_transcript_with_segments(
                 _logger.error("Proxy credentials not configured, cannot fallback")
                 raise
         else:
-            # Not a rate limiting error, re-raise
             raise
 
     # Extract segments with timestamps
@@ -119,7 +118,7 @@ def get_transcript_with_segments(
         for snippet in transcript
     ]
 
-    # Join snippets and clean up newlines for plain text
+    # Join and clean for plain text
     text = " ".join(snippet.text for snippet in transcript)
     text = re.sub(r"\s+", " ", text).strip()
 
@@ -142,10 +141,10 @@ def map_char_position_to_timestamp(
     if not transcript_data.segments:
         return None
 
-    # Build character position map by iterating through segments
+    # Create character position map
     current_char = 0
     for idx, segment in enumerate(transcript_data.segments):
-        segment_text = segment.text + " "  # Account for space after each segment
+        segment_text = segment.text + " "
         segment_length = len(segment_text)
 
         if current_char <= char_position < current_char + segment_length:
@@ -157,7 +156,7 @@ def map_char_position_to_timestamp(
 
         current_char += segment_length
 
-    # If position is beyond all segments, return last segment
+    # If position is after all the segments, return the last
     if transcript_data.segments:
         last_segment = transcript_data.segments[-1]
         return {

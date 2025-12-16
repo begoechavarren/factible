@@ -1,9 +1,3 @@
-"""
-Base LLM-as-judge infrastructure for evaluation.
-
-Provides a simple, consistent interface for LLM-based evaluations.
-"""
-
 import logging
 from typing import Generic, TypeVar
 from pydantic import BaseModel

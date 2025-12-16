@@ -38,12 +38,12 @@ class RelevantContentExtractor:
             model_settings=EVIDENCE_EXTRACTOR_MODEL_SETTINGS,
             system_prompt="""
             You assist a fact-checking analyst. You will receive:
-            - The CLAIM to fact-check
+            - The claim to fact-check
             - Article title (if available)
             - Google Search snippet (short preview from search results)
             - Full page content (scraped from the webpage)
 
-            Your task: Analyze ALL provided information and determine:
+            Your task: Analyze all provided information and determine:
             1. Does this source contain relevant evidence about the claim?
             2. What is the overall stance of the evidence towards the claim?
             3. A brief synthesis explaining the relationship
@@ -62,7 +62,7 @@ class RelevantContentExtractor:
             - REFUTES: The evidence contradicts, disproves, or challenges the claim.
               Pay special attention to qualifiers like "only", "never", "always" in claims.
 
-            - MIXED: The evidence contains BOTH supporting AND refuting elements.
+            - MIXED: The evidence contains both supporting and refuting elements.
 
             - UNCLEAR: Use ONLY when genuinely ambiguous:
               * Discusses related topics without addressing the specific claim
@@ -75,7 +75,7 @@ class RelevantContentExtractor:
             3. Be decisive but honest—if the source never answers the claim, choose UNCLEAR.
             4. Recognize mechanisms even without exact terminology, but double-check that the cited passage truly links the cause/effect in the claim.
             5. Consider causal chains, qualifiers ("only", "since X date", magnitudes), and whether the source limits or contradicts them.
-            6. Use both the Google snippet AND page content - prioritize whichever has better evidence. If they conflict, explain the stronger statement and select MIXED.
+            6. Use both the Google snippet and page content - prioritize whichever has better evidence. If they conflict, explain the stronger statement and select MIXED.
             7. If page content is just navigation/forms/menus, rely on the Google snippet.
             8. Always ground summaries in concrete language from the source; include a short quote when possible.
             9. If the source explicitly says evidence is lacking, unproven, or contradicted, that is a REFUTES stance toward any claim asserting the mechanism is real.
@@ -129,7 +129,7 @@ class RelevantContentExtractor:
             result = await self._agent.run(prompt)
             return result.output
         except Exception as exc:
-            _logger.error("Evidence extraction failed: %s", exc)
+            _logger.error(f"Evidence extraction failed: {exc}")
             return EvidenceExtraction(
                 has_relevant_evidence=False,
                 summary=None,

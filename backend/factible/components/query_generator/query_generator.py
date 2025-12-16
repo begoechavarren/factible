@@ -27,7 +27,7 @@ def _get_query_generator_agent() -> Agent[QueryGeneratorDeps]:
     """Get the query generator agent instance."""
     agent = Agent(
         model=get_model(QUERY_GENERATOR_MODEL),
-        output_type=GeneratedQueries,  # type: ignore[arg-type]
+        output_type=GeneratedQueries,
         deps_type=QueryGeneratorDeps,
         model_settings=QUERY_GENERATOR_MODEL_SETTINGS,
         system_prompt="""

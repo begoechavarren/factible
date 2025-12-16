@@ -1,14 +1,8 @@
-"""
-Pydantic models for ground truth evaluation system.
-"""
-
 from typing import Dict, List, Optional
 from pydantic import BaseModel, Field
 
 
-# ============================================================================
 # Ground Truth Data Models
-# ============================================================================
 
 
 class GroundTruthClaim(BaseModel):
@@ -33,9 +27,7 @@ class VideoGroundTruth(BaseModel):
     claims: List[GroundTruthClaim]
 
 
-# ============================================================================
 # Evaluation Results Models
-# ============================================================================
 
 
 class ClaimExtractionMetrics(BaseModel):

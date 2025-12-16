@@ -1,14 +1,10 @@
-"""
-Evidence search metrics calculator (with LLM-as-judge).
-"""
-
 from typing import Dict, List
 import logging
 import numpy as np
 import asyncio
 
-from factible.experiments.evaluator.models import EvidenceSearchMetrics
-from factible.experiments.evaluator.llm_judge import EvidenceRelevanceJudge
+from experiments.evaluator.models import EvidenceSearchMetrics
+from experiments.evaluator.llm_judge.evidence_relevance import EvidenceRelevanceJudge
 
 _logger = logging.getLogger(__name__)
 
@@ -104,7 +100,7 @@ class EvidenceSearchEvaluator:
                 )
                 return score.relevance_score
             except Exception as e:
-                _logger.warning("    Failed to evaluate evidence: %s", e)
+                _logger.warning(f"    Failed to evaluate evidence: {e}")
                 return None
 
         # Collect all evidence evaluation tasks
