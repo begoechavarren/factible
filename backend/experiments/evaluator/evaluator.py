@@ -1,28 +1,25 @@
+import json
+import logging
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import datetime
 from pathlib import Path
 from typing import List
-import json
-from datetime import datetime
-import logging
-import numpy as np
-from concurrent.futures import ThreadPoolExecutor, as_completed
 
-from experiments.evaluator.models import VideoEvaluationResult
+import numpy as np
+
 from experiments.evaluator.ground_truth import GroundTruthManager
 from experiments.evaluator.metrics.claim_extraction import ClaimExtractionEvaluator
-from experiments.evaluator.metrics.verdict import VerdictEvaluator
-from experiments.evaluator.metrics.query_generation import QueryGenerationEvaluator
-from experiments.evaluator.metrics.evidence_search import EvidenceSearchEvaluator
 from experiments.evaluator.metrics.end_to_end import EndToEndEvaluator
+from experiments.evaluator.metrics.evidence_search import EvidenceSearchEvaluator
+from experiments.evaluator.metrics.query_generation import QueryGenerationEvaluator
+from experiments.evaluator.metrics.verdict import VerdictEvaluator
+from experiments.evaluator.models import VideoEvaluationResult
 
 _logger = logging.getLogger(__name__)
 
 
 class GroundTruthEvaluator:
-    """
-    Main evaluator that orchestrates all evaluation components.
-
-    This is the new modular version - clean, maintainable, and extensible.
-    """
+    """Main evaluator that orchestrates all evaluation components."""
 
     def __init__(
         self,
@@ -286,11 +283,11 @@ class GroundTruthEvaluator:
         results.sort(key=lambda r: r.video_id)
 
         # Generate aggregate report
-        self.generate_aggregate_report(results)
+        self._generate_aggregate_report(results)
 
         return results
 
-    def generate_aggregate_report(self, results: List[VideoEvaluationResult]):
+    def _generate_aggregate_report(self, results: List[VideoEvaluationResult]):
         """Generate aggregate statistics across all videos."""
         _logger.info(f"\n\n{'=' * 60}")
         _logger.info("AGGREGATE RESULTS")
@@ -444,39 +441,3 @@ class GroundTruthEvaluator:
             json.dump(report_data, f, indent=2)
 
         _logger.info(f"\nAggregate report saved to: {report_path}")
-
-
-def evaluate_runs(
-    runs_dir: str,
-    ground_truth_dir: str,
-    enable_llm_judge: bool = False,
-    max_workers: int = 4,
-) -> List[VideoEvaluationResult]:
-    """
-    Evaluate experiment runs against ground truth.
-
-    Args:
-        runs_dir: Path to runs directory
-        ground_truth_dir: Path to ground truth directory
-        enable_llm_judge: Whether to use LLM-as-judge metrics (costs API calls)
-        max_workers: Number of parallel workers (default: 4)
-
-    Returns:
-        List of evaluation results for each video
-    """
-    runs_path = Path(runs_dir)
-    gt_path = Path(ground_truth_dir)
-
-    # Create output directory based on run directory name
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_dir = runs_path.parent.parent / "eval_results" / runs_path.name / timestamp
-
-    evaluator = GroundTruthEvaluator(
-        runs_dir=runs_path,
-        ground_truth_dir=gt_path,
-        output_dir=output_dir,
-        enable_llm_judge=enable_llm_judge,
-        max_workers=max_workers,
-    )
-
-    return evaluator.evaluate_all()

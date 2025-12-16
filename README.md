@@ -1,8 +1,7 @@
 <div align="center">
   <h1>🕵️‍♂️ factible</h1>
-  <p><em>E2E project to fact check YouTube videos</em></p>
+  <p>E2E project to fact check YouTube videos</p>
 </div>
-
 <p align="center">
   <img src="assets/main.png" alt="Landing page" /><br/>
   <em>Landing page</em>
@@ -23,22 +22,47 @@
   <em>Results per claim</em>
 </p>
 
-## Quick Start
+## Getting Started
+
+### Environment
+
+```bash
+# backend/.env
+OPENAI_API_KEY=your_key
+SERPER_API_KEY=your_key
+
+# Optional (proxy for web scraping)
+WEBSHARE_PROXY_USERNAME=your_username
+WEBSHARE_PROXY_PASSWORD=your_password
+WEBSHARE_PROXY_LOCATION=es
+```
+
+### Web App
 
 ```bash
 # Backend
-cd backend
-uv run python -m factible_api.main
-
-# Frontend
-cd frontend
-npm run dev
+cd backend && uv run python -m factible_api.main
 ```
 
 ```bash
-# Run experiments
-uv run factible-experiments run --experiment vary_claims
+# Frontend (http://localhost:5173)
+cd frontend && npm install && npm run dev
+```
 
-# Analyze results
-uv run factible-experiments analyze --runs-dir factible/experiments/runs/<run_dir>
+### Experiments CLI
+
+```bash
+cd backend
+
+# Run experiments
+uv run factible-experiments run --experiment baseline
+uv run factible-experiments run --experiment precision_recall_curve
+
+# Evaluate (for multi-config experiments, evaluate each subdir)
+uv run factible-experiments evaluate \
+    --runs-dir experiments/data/runs/<run_dir>
+
+# Generate precision-recall curve (run after evaluating each max_claims subdir)
+uv run factible-experiments precision-recall \
+    --eval-dir experiments/data/eval_results/<eval_dir>
 ```

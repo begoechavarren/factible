@@ -1,13 +1,13 @@
 import asyncio
 import json
 import logging
+from datetime import datetime
 from pathlib import Path
 from typing import Annotated, Any, Optional
 from urllib.parse import parse_qs, urlparse
 
 import typer
 import yaml
-from dotenv import load_dotenv
 
 from factible.models.config import (
     CLAIM_EXTRACTOR_MODEL,
@@ -17,10 +17,6 @@ from factible.models.config import (
 )
 from factible.run import run_factible
 
-app = typer.Typer(
-    help="Run systematic experiments for Factible evaluation",
-    no_args_is_help=True,
-)
 _logger = logging.getLogger(__name__)
 
 DEFAULT_CONFIG = Path("experiments/experiments_config.yaml")
@@ -39,7 +35,7 @@ def _youtube_video_id(url: str | None) -> str | None:
     return None
 
 
-def expand_experiments(experiments: list[dict[str, Any]]) -> list[dict[str, Any]]:
+def _expand_experiments(experiments: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """
     Expand experiments with list-valued parameters into individual configs.
 
@@ -92,6 +88,12 @@ def expand_experiments(experiments: list[dict[str, Any]]) -> list[dict[str, Any]
             new_exp[param_name] = value
             new_exp["name"] = f"{base_name}_{short_name}{value}"
 
+            # Add sweep metadata for organizing runs into subdirectories
+            new_exp["_sweep_param"] = param_name
+            new_exp["_sweep_value"] = value
+            new_exp["_sweep_subdir"] = f"{param_name}_{value}"
+            new_exp["_sweep_base_name"] = base_name
+
             # Add metadata about the sweep
             if "description" not in new_exp:
                 new_exp["description"] = f"Sweep {param_name}={value}"
@@ -106,7 +108,7 @@ def expand_experiments(experiments: list[dict[str, Any]]) -> list[dict[str, Any]
     return expanded
 
 
-def load_config(config_path: Path) -> dict[str, Any]:
+def _load_config(config_path: Path) -> dict[str, Any]:
     """Load and validate experiment configuration."""
     if not config_path.exists():
         _logger.error(f"Config file not found: {config_path}")
@@ -125,7 +127,7 @@ def load_config(config_path: Path) -> dict[str, Any]:
 
     # Expand experiments with list-valued parameters
     original_count = len(config["experiments"])
-    config["experiments"] = expand_experiments(config["experiments"])
+    config["experiments"] = _expand_experiments(config["experiments"])
     expanded_count = len(config["experiments"])
 
     if expanded_count > original_count:
@@ -136,7 +138,7 @@ def load_config(config_path: Path) -> dict[str, Any]:
     return config
 
 
-def should_run(video: dict, experiment: dict) -> tuple[bool, str]:
+def _should_run(video: dict, experiment: dict) -> tuple[bool, str]:
     """Check if experiment should run on video based on filters."""
     video_filter = experiment.get("video_filter", [])
     if not video_filter:
@@ -151,7 +153,7 @@ def should_run(video: dict, experiment: dict) -> tuple[bool, str]:
     return False, "no match"
 
 
-async def run_single(
+async def _run_single(
     video: dict,
     experiment: dict,
     settings: dict,
@@ -166,15 +168,20 @@ async def run_single(
     full_name = f"{exp_name}_{video_id}"
     youtube_id = _youtube_video_id(video.get("url"))
 
+    # For multi-config experiments, append the subdir to organize by parameter value
+    effective_runs_subdir = runs_subdir
+    if runs_subdir and "_sweep_subdir" in experiment:
+        effective_runs_subdir = f"{runs_subdir}/{experiment['_sweep_subdir']}"
+
     # Check filters
-    should, reason = should_run(video, experiment)
+    should, reason = _should_run(video, experiment)
     if not should:
         _logger.info(f"Skipping [{exp_name}] on [{video_id}]: {reason}")
         return True
 
     # Check if this experiment already exists in the runs directory
-    if runs_subdir:
-        runs_dir = Path("experiments/data/runs") / runs_subdir
+    if effective_runs_subdir:
+        runs_dir = Path("experiments/data/runs") / effective_runs_subdir
         if runs_dir.exists():
             for run_dir in runs_dir.iterdir():
                 config_path = run_dir / "config.json"
@@ -215,7 +222,7 @@ async def run_single(
             max_queries_per_claim=experiment.get("max_queries_per_claim", 2),
             max_results_per_query=experiment.get("max_results_per_query", 3),
             headless_search=settings.get("headless_search", True),
-            runs_subdir=runs_subdir,
+            runs_subdir=effective_runs_subdir,
             run_label=youtube_id if youtube_id else None,
         )
 
@@ -231,8 +238,7 @@ async def run_single(
         return False
 
 
-@app.command()
-def run(
+def run_command(
     config: Annotated[
         Path,
         typer.Option(
@@ -256,17 +262,13 @@ def run(
             help="Subdirectory within runs/ to organize this experiment session"
         ),
     ] = None,
-    log_level: Annotated[str, typer.Option(help="Logging level")] = "INFO",
 ):
     """
     Run experiments on YouTube videos for fact-checking evaluation.
 
     Examples:
-        factible-experiments run --experiment baseline --runs-subdir baseline_20251206_191228
+        factible-experiments run --experiment baseline
     """
-    logging.basicConfig(level=logging.INFO, format="%(message)s")
-    load_dotenv()
-
     # Show model config
     _logger.info("Current model configuration:")
     _logger.info(f"   Claim Extractor: {CLAIM_EXTRACTOR_MODEL.name}")
@@ -275,7 +277,7 @@ def run(
     _logger.info(f"   Output Generator: {OUTPUT_GENERATOR_MODEL.name}")
 
     # Load config
-    cfg = load_config(config)
+    cfg = _load_config(config)
     videos = cfg["videos"]
     experiments = cfg["experiments"]
     settings = cfg.get("settings", {})
@@ -300,8 +302,6 @@ def run(
 
     # Auto-generate runs_subdir if not provided
     if runs_subdir is None:
-        from datetime import datetime
-
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
         if len(experiments) == 1:
@@ -327,7 +327,7 @@ def run(
     filtered_videos = set()
     for vid in videos:
         for exp in experiments:
-            should, reason = should_run(vid, exp)
+            should, reason = _should_run(vid, exp)
             if should:
                 run_plan.append((vid, exp))
                 filtered_videos.add(vid["id"])
@@ -350,7 +350,7 @@ def run(
         """Run all experiments asynchronously."""
         results = []
         for idx, (vid, exp) in enumerate(run_plan, start=1):
-            success = await run_single(
+            success = await _run_single(
                 vid, exp, settings, dry_run, idx, total, runs_subdir
             )
             results.append(
@@ -381,7 +381,3 @@ def run(
 
     if failed > 0:
         raise typer.Exit(1)
-
-
-if __name__ == "__main__":
-    app()
