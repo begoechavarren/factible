@@ -9,7 +9,6 @@
 \usepackage{color}
 \usepackage{hhline}
 \usepackage{multirow}
-% \usepackage{subfigure} % Deprecated, using subcaption instead
 \usepackage{acronym}
 \usepackage{hyperref}
 \usepackage{amsmath,amssymb}
@@ -77,7 +76,17 @@
 
 % Section numbering depth
 \setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{2}
+\setcounter{tocdepth}{1}
+
+\makeatletter
+\renewcommand{\l@section}[2]{%
+  \addpenalty{-\@highpenalty}%
+  \vskip 1.0em \@plus\p@%
+  \@dottedtocline{0}{0em}{1.5em}{#1}{#2}%
+}
+\renewcommand{\l@subsection}{\@dottedtocline{1}{1.5em}{2.3em}}
+\renewcommand{\l@subsubsection}{\@dottedtocline{2}{3.8em}{3.2em}}
+\makeatother
 
 \raggedbottom
 
@@ -128,7 +137,6 @@
 \listoftables
 
 \thispagestyle{empty}
-\pagenumbering{arabic}
 
 % Reset header/footer
 \pagestyle{fancy}
@@ -144,8 +152,9 @@
 % MAIN CONTENT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\mainmatter
 \cleardoublepage
-\markboth{}{}  % Clear the header marks
+\markboth{}{}
 
 % Chapter 1: Introduction
 \input{1_introduction.tex}

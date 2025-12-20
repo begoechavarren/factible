@@ -77,7 +77,7 @@ Figure \ref{fig:pipeline-architecture} illustrates the complete pipeline archite
 \draw[arrow] (s4) -- node[right, font=\scriptsize, orange] {Level 3: K results/query $\parallel$} (s5);
 
 \end{tikzpicture}
-\caption{High-level pipeline architecture showing the five main stages and three parallelization levels. Parallelization occurs at claims (Level 1), queries per claim (Level 2), and search results per query (Level 3). Verdict generation happens within Level 1 after each claim's evidence is collected.}
+\caption[Pipeline architecture]{High-level pipeline architecture showing the five main stages and three parallelization levels. Parallelization occurs at claims (Level 1), queries per claim (Level 2), and search results per query (Level 3). Verdict generation happens within Level 1 after each claim's evidence is collected.}
 \label{fig:pipeline-architecture}
 \end{figure}
 
@@ -332,7 +332,7 @@ Figure \ref{fig:online-search-pipeline} illustrates the four-step Online Search 
 };
 
 \end{tikzpicture}
-\caption{Online Search pipeline showing the four sequential steps executed for each search result. Steps 2--4 run in parallel across all K results per query (Level 3 parallelization).}
+\caption[Online search pipeline]{Online Search pipeline showing the four sequential steps executed for each search result. Steps 2--4 run in parallel across all K results per query (Level 3 parallelization).}
 \label{fig:online-search-pipeline}
 \end{figure}
 
@@ -576,7 +576,7 @@ A web-based frontend provides an accessible interface for end users to interact 
     \caption{Detailed claim view with verdict and sources}
     \label{fig:ui-claim}
 \end{subfigure}
-\caption{User interface: results and claim detail views. Each claim shows its verdict, confidence level, and supporting evidence with source reliability ratings.}
+\caption[User interface: results and claim details]{User interface: results and claim detail views. Each claim shows its verdict, confidence level, and supporting evidence with source reliability ratings.}
 \label{fig:ui-screenshots}
 \end{figure}
 

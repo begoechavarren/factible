@@ -79,7 +79,7 @@ Before presenting detailed results, this section analyzes the precision-recall t
 
 \begin{table}[H]
 \centering
-\caption{Precision-recall tradeoff across different \texttt{max\_claims} configurations}
+\caption[Precision-recall tradeoff]{Precision-recall tradeoff across different \texttt{max\_claims} configurations}
 \label{tab:pr-tradeoff}
 \begin{tabular}{ccccc}
 \toprule
@@ -100,7 +100,7 @@ Figure~\ref{fig:pr-curve} illustrates the precision-recall tradeoff. As \texttt{
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.75\textwidth]{figs/precision_recall_curve.png}
-\caption{Precision-recall curve for different \texttt{max\_claims} values. The selected operating point ($k=5$) achieves 81.3\% precision at 26.2\% recall, balancing claim quality with coverage.}
+\caption[Precision-recall curve for claim extraction]{Precision-recall curve for different \texttt{max\_claims} values. The selected operating point ($k=5$) achieves 81.3\% precision at 26.2\% recall, balancing claim quality with coverage.}
 \label{fig:pr-curve}
 \end{figure}
 
@@ -114,7 +114,7 @@ Table~\ref{tab:claim-extraction-results} presents the claim extraction results a
 
 \begin{table}[H]
 \centering
-\caption{Claim extraction performance (n=30 videos, \texttt{max\_claims}=5)}
+\caption[Claim extraction performance]{Claim extraction performance (n=30 videos, \texttt{max\_claims}=5)}
 \label{tab:claim-extraction-results}
 \begin{tabular}{lcc}
 \toprule
@@ -155,7 +155,7 @@ Table~\ref{tab:verdict-results} presents the verdict accuracy results.
 
 \begin{table}[H]
 \centering
-\caption{Verdict generation performance (n=30 videos)}
+\caption[Verdict generation performance]{Verdict generation performance (n=30 videos)}
 \label{tab:verdict-results}
 \begin{tabular}{lcc}
 \toprule
@@ -182,7 +182,7 @@ With an evidence retrieval success rate of 94.7\%, the system consistently finds
 
 \begin{table}[H]
 \centering
-\caption{Verdict accuracy distribution with evidence retrieval rates}
+\caption[Verdict accuracy distribution]{Verdict accuracy distribution with evidence retrieval rates}
 \label{tab:accuracy-retrieval-correlation}
 \small
 \begin{tabular}{p{4.5cm}ccc}
@@ -232,7 +232,7 @@ Table~\ref{tab:evidence-results} summarizes evidence retrieval performance.
 
 \begin{table}[H]
 \centering
-\caption{Evidence retrieval performance (n=30 videos)}
+\caption[Evidence retrieval performance]{Evidence retrieval performance (n=30 videos)}
 \label{tab:evidence-results}
 \begin{tabular}{lr}
 \toprule
@@ -253,7 +253,7 @@ A critical aspect of fact-checking is source quality. Table~\ref{tab:source-reli
 
 \begin{table}[H]
 \centering
-\caption{Source reliability distribution (n=724 total sources)}
+\caption[Source reliability distribution]{Source reliability distribution (n=724 total sources)}
 \label{tab:source-reliability}
 \begin{tabular}{lrr}
 \toprule
@@ -279,7 +279,7 @@ Table~\ref{tab:latency-results} presents processing time statistics.
 
 \begin{table}[H]
 \centering
-\caption{System latency (n=30 videos)}
+\caption[System latency]{System latency (n=30 videos)}
 \label{tab:latency-results}
 \begin{tabular}{lr}
 \toprule
@@ -362,7 +362,7 @@ Only 4 videos (13.3\%) achieved less than 25\% verdict accuracy. Detailed analys
 
 \begin{table}[H]
 \centering
-\caption{Low-accuracy video analysis ($<$25\% verdict accuracy)}
+\caption[Low-accuracy video analysis]{Low-accuracy video analysis ($<$25\% verdict accuracy)}
 \label{tab:low-accuracy-videos}
 \small
 \begin{tabular}{p{4cm}ccp{4cm}}
@@ -480,7 +480,7 @@ Table~\ref{tab:system-comparison} summarizes key characteristics across systems.
 
 \begin{table}[H]
 \centering
-\caption{Comparison of fact-checking systems across key dimensions. Performance metrics are reported as originally published and are not directly comparable due to differing task definitions and evaluation protocols.}
+\caption[Comparison of fact-checking systems]{Comparison of fact-checking systems across key dimensions. Performance metrics are reported as originally published and are not directly comparable due to differing task definitions and evaluation protocols.}
 \label{tab:system-comparison}
 \small
 \begin{tabular}{lccccc}
