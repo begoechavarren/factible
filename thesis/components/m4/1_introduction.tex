@@ -1,0 +1,237 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CHAPTER 1: INTRODUCTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+
+Misinformation on digital platforms has become a major challenge in the information age. YouTube, with over 2 billion monthly active users, has evolved into a primary information source for millions of people worldwide. However, the absence of effective verification mechanisms allows false or misleading claims to propagate at massive scale, impacting public health, democratic processes, and social cohesion \citep{wardle2017information, benkler2018network}.
+
+This thesis addresses the critical need for automated fact-checking systems capable of processing video content from platforms like YouTube. The project develops Factible, a multi-agent system that implements an end-to-end pipeline for extracting, verifying, and synthesizing factual claims from YouTube videos using large language models (LLMs) and web-based evidence retrieval.
+
+%-------------------------------------------------------
+\subsection{Context and Motivation}
+%-------------------------------------------------------
+
+\subsubsection{The Problem of Video Misinformation}
+
+The central problem this project addresses is the \textbf{lack of automated, accessible mechanisms to verify factual claims in audiovisual content from digital platforms}, specifically YouTube videos. Individual users lack tools to systematically verify claims, while manual verification requires advanced skills, considerable time, and resources that are not always available.
+
+YouTube presents unique challenges for fact-checking:
+
+\begin{itemize}
+    \item \textbf{Scale}: Over 500 hours of video are uploaded every minute, making human-only verification impossible.
+    \item \textbf{Consumption patterns}: Videos are consumed passively, with viewers less likely to critically evaluate claims than when reading text.
+    \item \textbf{Lack of annotation}: Unlike text articles, videos do not come with metadata identifying factual claims.
+    \item \textbf{Temporal context}: Claims are embedded in a narrative flow, making extraction and verification more complex than isolated text statements.
+\end{itemize}
+
+\subsubsection{Relevance and Importance}
+
+This project is relevant for multiple reasons:
+
+\begin{itemize}
+    \item \textbf{Social impact}: Misinformation erodes trust in institutions, influences political decisions, and affects public health \citep{wardle2017information, benkler2018network}. An automated verification system can contribute to mitigating these effects by enabling faster, more accessible fact-checking.
+
+    \item \textbf{Technological challenge}: The project integrates multiple areas of data science research: natural language processing, information retrieval, source credibility evaluation, and automated reasoning. It represents a technically complex problem requiring innovative solutions.
+
+    \item \textbf{Scalability necessity}: The volume of content generated daily makes purely human fact-checking infeasible. Automation is necessary to address the problem at scale, serving as a force multiplier for human fact-checkers.
+
+    \item \textbf{Media literacy}: Tools that empower citizens to critically evaluate information promote critical thinking and strengthen media literacy in society, contributing to a healthier information ecosystem.
+\end{itemize}
+
+\subsubsection{Current State of Solutions}
+
+Currently, three main approaches exist for fact-checking:
+
+\begin{enumerate}
+    \item \textbf{Manual fact-checking}: Organizations like Newtral, Maldita.es, PolitiFact, and FactCheck.org employ specialized journalists. This approach guarantees quality but is limited by human resources and is inherently slow, typically checking only a few claims per day.
+
+    \item \textbf{Academic systems}: Projects like FEVER \citep{thorne2018fever}, FEVEROUS \citep{aly2021feverous}, and recent work on scientific verification \citep{wadden2020scifact} operate primarily on structured knowledge bases (Wikipedia) or require specifically curated datasets. They are not available as products usable by end users and have limited scope.
+
+    \item \textbf{Verification APIs}: Google Fact Check Tools API aggregates fact-checks already published by professional organizations but only covers content previously verified manually. It does not provide new verification for unexamined content.
+\end{enumerate}
+
+\textbf{Identified gap}: None of these approaches provides automated end-to-end verification for continuously generated audiovisual content on platforms like YouTube. A gap exists between academic research (static datasets, limited domains) and practical, accessible tools for end users.
+
+%-------------------------------------------------------
+\subsection{Project Objectives}
+%-------------------------------------------------------
+
+\subsubsection{Main Objective}
+
+Design, implement, and evaluate a multi-agent system based on language models capable of automatically verifying factual claims in YouTube videos through retrieval and analysis of web-based evidence, generating substantiated verdicts with confidence estimates that are useful for end users.
+
+\subsubsection{Specific Objectives}
+
+\begin{enumerate}
+    \item \textbf{Multi-agent architecture design}
+    \begin{itemize}
+        \item Define a modular processing pipeline with specialized components
+        \item Establish structured data schemas for communication between agents
+        \item Design the information orchestration system
+    \end{itemize}
+
+    \item \textbf{System component implementation}
+    \begin{itemize}
+        \item Develop the module for extracting video transcripts from YouTube
+        \item Implement the claim identification agent with relevance classification
+        \item Create the optimized search query generator
+        \item Develop the web scraping system with source reliability evaluation
+        \item Implement the generator for explainable and traceable verdicts
+    \end{itemize}
+
+    \item \textbf{LLM usage optimization}
+    \begin{itemize}
+        \item Compare performance between commercial models (e.g., GPT-4o-mini) and open-source alternatives (e.g., Qwen 3, DeepSeek)
+        \item Analyze trade-offs between cost, latency, and output quality
+        \item Evaluate prompt optimization strategies and structured outputs
+    \end{itemize}
+
+    \item \textbf{System evaluation}
+    \begin{itemize}
+        \item Define technical performance metrics: response time, cost per token, throughput, and completion rate per agent
+        \item Include LLM-specific quantitative metrics such as faithfulness, factual consistency, coherence, and stance accuracy
+        \item Incorporate quantitative and qualitative evaluation with LLM-as-a-judge and manual review
+        \item Conduct case studies across different video topics and analyze system limitations
+    \end{itemize}
+
+    \item \textbf{End-to-end system implementation}
+    \begin{itemize}
+        \item Develop a REST API with real-time streaming
+        \item Create an intuitive web interface for end users
+        \item Ensure reproducibility and generate documentation
+    \end{itemize}
+
+    \item \textbf{Ethical and bias considerations}
+    \begin{itemize}
+        \item Analyze potential biases in sources and models used
+        \item Identify limitations of the automated approach, its possible impact on misinformation propagation, and define best practices to mitigate these risks during verification
+    \end{itemize}
+\end{enumerate}
+
+\subsubsection{Project Scope}
+
+\textbf{Includes:}
+\begin{itemize}
+    \item YouTube videos with available transcripts (automatic or manual subtitles)
+    \item Factual claims verifiable through public web sources
+    \item Content in English
+    \item On-demand processing of individual videos
+\end{itemize}
+
+\textbf{Does not include:}
+\begin{itemize}
+    \item Self-generation of transcripts from audio (speech-to-text)
+    \item Verification of visual content
+    \item Large-scale batch verification
+    \item Content from platforms other than YouTube
+\end{itemize}
+
+%-------------------------------------------------------
+\subsection{Ethical Considerations and Social Impact}
+%-------------------------------------------------------
+
+\subsubsection{Ethical Commitment and Global Competence}
+
+The project addresses three dimensions of ethical and global competence:
+
+\textbf{(I) Sustainability}: The use of LLMs implies significant energy consumption. This is addressed through evaluation of local open-source models versus commercial cloud services, prompt optimization to minimize processed tokens, and transparent documentation of resource consumption.
+
+\textbf{(II) Ethical behavior and social responsibility}: LLMs can perpetuate biases present in their training data. Mitigation strategies include:
+\begin{itemize}
+    \item Total transparency in consulted sources with verifiable URLs
+    \item Presentation of evidence showing different stances (supports/refutes/neutral)
+    \item Explicit evaluation of confidence level in each verdict
+    \item Clear warnings about limitations of the automated system
+\end{itemize}
+The system positions itself as a support tool that automates preliminary steps, allowing professionals to focus on complex analyses requiring human judgment.
+
+\textbf{(III) Diversity and human rights}: The system seeks to evaluate diversity of perspectives when multiple web sources with different approaches are available, documenting this limitation when not possible. It does not censor content but provides additional context through verification, respecting freedom of expression. It does not process personal data or identifiable user information.
+
+\subsubsection{Sustainable Development Goals (SDGs)}
+
+The project contributes to three SDGs from the 2030 Agenda:
+
+\textbf{SDG 4 (Quality Education)}: The system acts as a media literacy tool that promotes critical thinking and the ability to evaluate information sources. It facilitates learning about fact-checking, evidence analysis, and recognition of verifiable claims---fundamental competencies in today's digital society.
+
+\textbf{SDG 16 (Peace, Justice and Strong Institutions)}: It combats misinformation that erodes trust in democratic institutions and media. It provides transparent, traceable, and accessible verification mechanisms that allow citizens to systematically contrast factual claims, contributing to a healthier, more resilient information ecosystem.
+
+\textbf{SDG 10 (Reduced Inequalities)}: It democratizes access to fact-checking through a free, open-source tool, reducing the gap between professional organizations with specialized resources (fact-checkers, journalists) and individual citizens. It empowers users without specialized training to critically evaluate content on digital platforms.
+
+%-------------------------------------------------------
+\subsection{Methodology}
+%-------------------------------------------------------
+
+\subsubsection{Research Strategy}
+
+This project adopts a \textbf{Design and Creation} strategy \citep{oates2006}, appropriate for information systems research where a new technological artifact is developed whose construction and evaluation constitute the main contribution to knowledge. According to \citet{hevner2004}, this strategy requires: (1) creating a viable artifact, (2) addressing a relevant problem, (3) conducting rigorous evaluation, (4) making clear contributions, (5) applying rigor in construction, (6) designing as a search process, and (7) effectively communicating results.
+
+\textbf{Data collection techniques for evaluation:}
+
+\textit{Quantitative:}
+\begin{itemize}
+    \item Automated measurement of system metrics: processing time, cost (tokens $\times$ price), number of retrieved sources, stance distribution
+    \item Evaluation using LLM-as-a-judge to assess quality of extracted claims and generated verdicts
+    \item Multi-agent coordination metrics: task completion rate, latency per agent
+\end{itemize}
+
+\textit{Qualitative:}
+\begin{itemize}
+    \item Manual review of system outputs (claim relevance, verdict coherence)
+    \item Detailed case studies across different topics
+\end{itemize}
+
+\subsubsection{Development Methodology}
+
+\textbf{Chosen strategy}: Development of a new end-to-end product with a functional web interface.
+
+\textbf{Justification}: This strategy is most appropriate because it allows evaluation of the complete practical viability of the system under real usage conditions, not just as a theoretical concept. Modular development from scratch facilitates experimentation with different LLM configurations and guarantees total control over the verification pipeline. Including a web interface demonstrates applicability for end users and allows collecting feedback on real system usability.
+
+\textbf{Iterative development process:}
+\begin{enumerate}
+    \item Implementation of individual components with isolated testing
+    \item End-to-end pipeline integration (functional MVP)
+    \item Iterative refinement module by module based on results
+    \item Comparative evaluation with different LLM configurations
+\end{enumerate}
+
+%-------------------------------------------------------
+\subsection{Summary of Project Outputs}
+%-------------------------------------------------------
+
+This thesis produces the following outputs:
+
+\begin{enumerate}
+    \item \textbf{Factible}: A complete, open-source multi-agent fact-checking system for YouTube videos, available at \url{https://github.com/begoechavarren/factible}
+
+    \item \textbf{Modular pipeline architecture}: Five specialized components (Transcriptor, Claim Extractor, Query Generator, Online Search, Output Generator) with well-defined interfaces
+
+    \item \textbf{Web interface}: React-based frontend with real-time SSE streaming for interactive verification
+
+    \item \textbf{REST API}: FastAPI-based backend enabling programmatic access to fact-checking functionality
+
+    \item \textbf{Evaluation framework}: Infrastructure for systematic experimentation including tracking, metrics computation, and result analysis
+
+    \item \textbf{Annotated evaluation dataset}: 30 YouTube videos with 503 ground truth claims across health, climate, and political topics
+
+    \item \textbf{This thesis document}: Comprehensive documentation of the design, implementation, and evaluation of the system
+\end{enumerate}
+
+%-------------------------------------------------------
+\subsection{Document Structure}
+%-------------------------------------------------------
+
+The remainder of this thesis is organized as follows:
+
+\begin{itemize}
+    \item \textbf{Section 2 (State of the Art)}: Reviews existing literature on automated fact-checking, multi-agent architectures, claim detection, retrieval-augmented generation, and LLM-based verification methods. Identifies gaps that this work addresses.
+
+    \item \textbf{Section 3 (Materials and Methods)}: Presents the complete technical implementation of Factible, including system architecture, technology stack, pipeline components, latency optimization strategies, and the experimentation framework.
+
+    \item \textbf{Section 4 (Results)}: Reports experimental evaluation results across 30 annotated videos, including claim extraction performance, verdict accuracy, evidence retrieval statistics, and qualitative analysis.
+
+    \item \textbf{Section 5 (Conclusions and Future Work)}: Summarizes key findings, discusses achievement of objectives, reflects on ethical considerations, and proposes directions for future research.
+
+    \item \textbf{Glossary}: Defines key terms and acronyms used throughout the document.
+
+    \item \textbf{Appendices}: Provides supplementary material including the complete ground truth annotation dataset.
+\end{itemize}

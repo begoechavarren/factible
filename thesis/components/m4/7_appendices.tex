@@ -1,0 +1,169 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% APPENDICES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Ground Truth Annotation Dataset}
+\label{appendix:ground-truth}
+
+This appendix provides details on the ground truth annotation dataset used for system evaluation. The complete dataset comprises 30 YouTube videos with 503 annotated claims across three thematic categories.
+
+%-------------------------------------------------------
+\subsection{Video Corpus Summary}
+%-------------------------------------------------------
+
+Table~\ref{tab:video-corpus} presents the evaluation video corpus organized by category and content type.
+
+\small
+\begin{longtable}{p{6.5cm}p{2cm}p{3cm}r}
+\caption{Evaluation video corpus by category and content type} \label{tab:video-corpus} \\
+\toprule
+\textbf{Video Title} & \textbf{Category} & \textbf{Content Type} & \textbf{Claims} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Video Title} & \textbf{Category} & \textbf{Content Type} & \textbf{Claims} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{4}{r}{Continued on next page} \\
+\endfoot
+\bottomrule
+\endlastfoot
+% Climate - Misinformation
+Fossil Fuels: The Greenest Energy & Climate & Misinformation & 18 \\
+The Great Texas Freeze of 2021 & Climate & Misinformation & 15 \\
+Climate Change: What Do Scientists Say? & Climate & Misinformation & 21 \\
+Is There Really a Climate Emergency? & Climate & Misinformation & 19 \\
+Proof: Worldwide Massive Flooding is All Manmade & Climate & Misinformation & 25 \\
+% Climate - Factual
+Causes and Effects of Climate Change (NatGeo) & Climate & Factual & 12 \\
+Why Does Climate Change Matter & Climate & Factual & 9 \\
+Extreme Weather & Climate & Factual & 14 \\
+The Life Cycle of a Plastic Bottle & Climate & Factual & 11 \\
+What are Greenhouse Gases? & Climate & Factual & 13 \\
+\midrule
+% Health - Misinformation
+Fluoridated Water Lowers IQ (Harvard Study) & Health & Misinformation & 16 \\
+Living with HIV: How Women Were Infected & Health & Misinformation & 18 \\
+Garlic Cancer & Health & Misinformation & 14 \\
+3 Detox Juices & Health & Misinformation & 12 \\
+The Magical 3 Day Juice Fast & Health & Misinformation & 15 \\
+% Health - Factual
+What Happens When You Exercise Regularly & Health & Factual & 17 \\
+The Brain-Changing Benefits of Exercise & Health & Factual & 15 \\
+Immunology Wars: The Battle with HIV & Health & Factual & 11 \\
+Juice vs. Whole Fruit: Which is Healthier? & Health & Factual & 13 \\
+What Lack of Sleep Does to the Teenage Brain & Health & Factual & 14 \\
+\midrule
+% Politics - Misinformation
+Egg Price Warning Comes True & Politics & Misinformation & 19 \\
+Proof of Election Fraud in 2020 & Politics & Misinformation & 35 \\
+FBI Orchestrated Jan 6th & Politics & Misinformation & 22 \\
+There is No Gender Wage Gap & Politics & Misinformation & 17 \\
+A Nation of Immigrants & Politics & Misinformation & 16 \\
+% Politics - Factual
+National Trust Sues Trump Admin & Politics & Factual & 20 \\
+What Is Democracy (BBC) & Politics & Factual & 9 \\
+What is Inflation? & Politics & Factual & 10 \\
+UK Election Results Explained & Politics & Factual & 18 \\
+Trump's Historic National Emergency & Politics & Factual & 21 \\
+\end{longtable}
+
+\normalsize
+
+%-------------------------------------------------------
+\subsection{Annotation Schema and Guidelines}
+%-------------------------------------------------------
+
+Annotations follow ClaimBuster's check-worthiness principles \citep{hassan2017kdd} and store a compact set of structured fields:
+
+\begin{itemize}
+    \item \textbf{Claim text}: Verbatim or lightly paraphrased factual statement taken from the transcript; purely opinionated or rhetorical content is excluded.
+    \item \textbf{Importance score}: Thesis-impact hierarchy on a 0.0--1.0 scale:
+    \begin{itemize}
+        \item 0.85--1.0: Thesis-critical claims whose falsification would collapse the video's main argument
+        \item 0.60--0.80: Key evidence claims that significantly support or develop the thesis
+        \item 0.30--0.55: Contextual claims that provide background or supplementary information
+        \item $<$0.30: Peripheral claims of minimal relevance to the main argument
+    \end{itemize}
+    \item \textbf{Expected verdict}: Anticipated stance label (SUPPORTS, REFUTES, MIXED, UNCLEAR) with a short rationale grounded in established sources. MIXED applies only when credible evidence exists on both sides, while UNCLEAR denotes insufficient or conflicting evidence under the same criteria across all videos.
+\end{itemize}
+
+This schema keeps annotations consistent while capturing the key metadata needed for quantitative evaluation.
+
+%-------------------------------------------------------
+\subsection{Dataset Statistics by Category}
+%-------------------------------------------------------
+
+\begin{table}[H]
+\centering
+\caption{Ground truth statistics by category}
+\label{tab:gt-stats-category}
+\begin{tabular}{lrrrrr}
+\toprule
+\textbf{Category} & \textbf{Videos} & \textbf{Total Claims} & \textbf{Mean/Video} & \textbf{Factual} & \textbf{Misinfo} \\
+\midrule
+Climate & 10 & 157 & 15.7 & 59 & 98 \\
+Health & 10 & 130 & 13.0 & 70 & 60 \\
+Politics & 10 & 216 & 21.6 & 78 & 138 \\
+\midrule
+\textbf{Total} & \textbf{30} & \textbf{503} & \textbf{16.8} & \textbf{207} & \textbf{296} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%-------------------------------------------------------
+\subsection{Importance Score Distribution}
+%-------------------------------------------------------
+
+\begin{table}[H]
+\centering
+\caption{Distribution of importance scores across ground truth claims}
+\label{tab:importance-distribution}
+\begin{tabular}{lrr}
+\toprule
+\textbf{Importance Range} & \textbf{Count} & \textbf{Percentage} \\
+\midrule
+High (0.85--1.0) & 127 & 25.2\% \\
+Medium-High (0.60--0.84) & 198 & 39.4\% \\
+Medium (0.30--0.59) & 143 & 28.4\% \\
+Low ($<$0.30) & 35 & 7.0\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%-------------------------------------------------------
+\subsection{Expected Verdict Distribution}
+%-------------------------------------------------------
+
+\begin{table}[H]
+\centering
+\caption{Distribution of expected verdicts across ground truth claims}
+\label{tab:verdict-distribution}
+\begin{tabular}{lrr}
+\toprule
+\textbf{Expected Verdict} & \textbf{Count} & \textbf{Percentage} \\
+\midrule
+SUPPORTS & 207 & 41.2\% \\
+REFUTES & 189 & 37.6\% \\
+MIXED & 68 & 13.5\% \\
+UNCLEAR & 39 & 7.7\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%-------------------------------------------------------
+\subsection{Data Availability}
+%-------------------------------------------------------
+
+The complete annotation dataset, including all claims, importance scores, expected verdicts, and video metadata, is available in the project repository at:
+
+\url{https://github.com/begoechavarren/factible/tree/main/api/experiments/data}
+
+The dataset is provided in YAML format to facilitate both human readability and programmatic access. Each video entry includes:
+
+\begin{itemize}
+    \item Video metadata (YouTube ID, title, category, content type)
+    \item Complete list of ground truth claims with importance scores and expected verdicts
+    \item Tags for filtering and analysis
+\end{itemize}

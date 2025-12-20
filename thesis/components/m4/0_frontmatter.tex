@@ -1,0 +1,94 @@
+\pagenumbering{roman}
+\setcounter{page}{1}
+\pagestyle{plain}
+
+%%%%%%%%%%%%%%%%
+%%% COPYRIGHT %%%
+%%%%%%%%%%%%%%%%
+\chapter*{Copyright}
+
+This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+
+\vspace{1cm}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=1]{images/license.png}
+\end{figure}
+
+Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
+
+\href{https://creativecommons.org/licenses/by-nc-nd/4.0/}{https://creativecommons.org/licenses/by-nc-nd/4.0/}
+
+\vspace{1cm}
+
+\textbf{Source Code:}
+
+The complete source code for this project is publicly available at:
+
+\url{https://github.com/begoechavarren/factible}
+
+%%%%%%%%%%%%%
+%%% RECORD %%%
+%%%%%%%%%%%%%
+\chapter*{FINAL PROJECT RECORD}
+
+\begin{table}[ht]
+\centering{}
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{r | l}
+\hline
+Title of the project: & Factible: A Multi-Agent System for Automated\\
+ & Fact-Checking of YouTube Videos\\
+\hline
+Author's name: & Bego\~na Echavarren S\'anchez\\
+\hline
+Tutor's name: & Josep-Anton Mir Tutusaus\\
+\hline
+Delivery date: & 12/2025\\
+\hline
+Degree or program: & Master's Degree in Data Science\\
+\hline
+Final Project area: & Natural Language Processing\\
+\hline
+Language of the project: & English\\
+\hline
+Keywords: & fact-checking, LLM, multi-agent systems\\
+\hline
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%
+%%% ACKNOWLEDGEMENTS %%%
+%%%%%%%%%%%%%%%%%%%
+\chapter*{Acknowledgements}
+
+I would like to express my sincere gratitude to my tutor, Josep-Anton Mir Tutusaus, for his guidance, insightful feedback, and continuous support throughout this project. His expertise in data science and machine learning was invaluable in shaping this work.
+
+I am also grateful to the Universitat Oberta de Catalunya (UOC) for providing an excellent learning environment and the resources necessary to complete this Master's Degree in Data Science.
+
+Special thanks to the open-source community, particularly the developers of Pydantic AI, FastAPI, and the various tools that made this implementation possible. The availability of high-quality open-source software was essential to this project's success.
+
+Finally, I would like to thank my family and friends for their patience, encouragement, and understanding during the intensive months of this thesis work.
+
+%%%%%%%%%%%%%%%%
+%%% ABSTRACT %%%
+%%%%%%%%%%%%%%%%
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+\onehalfspacing
+
+Misinformation on video platforms represents a growing challenge in the digital age. YouTube, with over 2 billion monthly users and 500 hours of video uploaded every minute, serves as a primary information source for millions worldwide. However, the absence of effective verification mechanisms allows false or misleading claims to spread at massive scale, impacting public health, democratic processes, and social cohesion.
+
+This thesis presents Factible, a multi-agent system for automated fact-checking of YouTube videos. The system implements an end-to-end pipeline that processes video content through five specialized components: transcript extraction, claim detection using thesis-first reasoning, query generation for evidence retrieval, open-web evidence collection with source reliability assessment, and verdict synthesis with confidence levels.
+
+The implementation leverages large language models (LLMs) for reasoning tasks while employing classical algorithms for deterministic operations. Key innovations include a thesis-first approach for claim importance ranking, adaptive credibility filtering for source quality, and a three-level parallelization architecture for latency optimization.
+
+Evaluation on 30 annotated YouTube videos across health, climate, and political topics demonstrates strong performance: 81.3\% claim extraction precision, 94.7\% evidence retrieval success rate, and 73.3\% verdict accuracy. The system achieves practical efficiency with mean processing time of 129.6 seconds per video at \$0.003 average cost, enabling cost-effective deployment for individual users.
+
+The complete system, including a web-based interface with real-time streaming, is publicly available as open-source software, bridging the gap between academic research and practical fact-checking tools accessible to non-expert users.
+
+\vspace{0.5cm}
+
+\textbf{Keywords}: automated fact-checking, large language models, multi-agent systems, natural language processing, misinformation detection, YouTube, information retrieval, evidence-based verification
