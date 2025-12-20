@@ -4,7 +4,7 @@
 \section{Results}
 \label{sec:results}
 
-This section presents the experimental evaluation of Factible across 30 YouTube videos spanning diverse topics including health, science, politics, and climate. The evaluation framework follows established practices from claim detection and fact-checking research \citep{hassan2015claimbuster, thorne2018fever}, combining ground truth comparison with LLM-as-judge quality assessments. Every run limited the pipeline to five claims per video, a setting chosen after analyzing the precision-recall tradeoff across multiple configurations while balancing cost and latency constraints.
+This section presents the experimental evaluation of Factible across 30 YouTube videos spanning diverse topics including health, science, politics, and climate. The evaluation framework follows established practices from claim detection and fact-checking research \citep{hassan2015cikm, thorne2018fever}, combining ground truth comparison with LLM-as-judge quality assessments. Every run limited the pipeline to five claims per video, a setting chosen after analyzing the precision-recall tradeoff across multiple configurations while balancing cost and latency constraints.
 
 %-------------------------------------------------------
 \subsection{Experimental Setup}
@@ -33,7 +33,7 @@ System claims extracted per video & 5 \\
 
 \subsubsection{Ground Truth Annotation}
 
-Ground truth annotations were created following a structured protocol. For each video, all factual, verifiable claims from the transcript were manually annotated. Each claim was annotated with an importance score (0.0--1.0) reflecting its centrality to the video's main argument, and a verdict label indicating the expected verification outcome (SUPPORTS, REFUTES, MIXED, or UNCLEAR). The annotation process followed guidelines from ClaimBuster's check-worthiness criteria \citep{hassan2015claimbuster}, prioritizing claims that are specific, verifiable, and consequential. The complete evaluation dataset, including all 30 annotated videos with their ground truth claims, importance ratings, and expected verdicts, is provided in Appendix~\ref{appendix:ground-truth}.
+Ground truth annotations were created following a structured protocol. For each video, all factual, verifiable claims from the transcript were manually annotated. Each claim was annotated with an importance score (0.0--1.0) reflecting its centrality to the video's main argument, and a verdict label indicating the expected verification outcome (SUPPORTS, REFUTES, MIXED, or UNCLEAR). The annotation process followed guidelines from ClaimBuster's check-worthiness criteria \citep{hassan2015cikm}, prioritizing claims that are specific, verifiable, and consequential. The complete evaluation dataset, including all 30 annotated videos with their ground truth claims, importance ratings, and expected verdicts, is provided in Appendix~\ref{appendix:ground-truth}.
 
 \subsubsection{Evaluation Metrics}
 
@@ -137,7 +137,7 @@ The system achieves 81.3\% precision, meaning that approximately 4 out of 5 extr
 
 The overall recall of 26.2\% reflects the constraint of extracting only 5 claims from videos averaging 16.8 ground truth claims. However, the Recall@Important metric (39.5\%) demonstrates that the system prioritizes high-importance claims---capturing nearly 40\% of the most critical claims while only extracting approximately 30\% of the total claim set. This selective extraction behavior aligns with the design goal of thesis-first reasoning, where claims are ranked by their impact on the video's central argument.
 
-The MAP score of 0.870 indicates strong ranking quality: important claims consistently appear early in the extraction order. This metric, borrowed from ClaimBuster's evaluation framework \citep{hassan2015claimbuster}, validates that the importance scoring mechanism effectively prioritizes claims.
+The MAP score of 0.870 indicates strong ranking quality: important claims consistently appear early in the extraction order. This metric, borrowed from ClaimBuster's evaluation framework \citep{hassan2017kdd}, validates that the importance scoring mechanism effectively prioritizes claims.
 
 The importance MAE of 0.126 (on a 0--1 scale) shows that system-assigned importance scores closely approximate human judgments, with typical errors of approximately one importance tier (e.g., scoring a claim 0.7 when ground truth is 0.85).
 
