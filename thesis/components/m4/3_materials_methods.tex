@@ -20,7 +20,7 @@ The five stages are:
 \begin{enumerate}
     \item \textbf{Transcriptor}: Extracts video transcripts via YouTube Transcript API, preserving timestamped segments for claim localization. The component includes automatic fallback to proxy service when rate-limited, ensuring robust transcript retrieval across different access conditions.
 
-    \item \textbf{Claim Extractor} (LLM Agent): Employs thesis-first reasoning to infer the video's central argument before extracting factual and verifiable claims. Each claim receives an importance score based on its impact on the video's thesis. Post-processing uses fuzzy string matching to locate claims within the transcript for timestamp mapping.
+    \item \textbf{Claim Extractor} (LLM Agent): Employs thesis-first reasoning to infer the video's central argument before extracting factual and verifiable claims. Each claim receives an importance score based on its impact on the video's thesis. Post-processing uses fuzzy string matching---a technique that finds approximate text matches using similarity scores rather than exact character sequences---to locate claims within the transcript for timestamp mapping.
 
     \item \textbf{Query Generator} (LLM Agent): Generates diverse search queries across four strategic types---direct, alternative, source-seeking, and contextual. Each query receives a priority score (1--5) based on evidence likelihood, enabling filtering of low-priority queries.
 
@@ -540,36 +540,43 @@ A web-based frontend provides an accessible interface for end users to interact 
 
 \begin{figure}[H]
 \centering
-\begin{subfigure}[b]{0.48\textwidth}
+\begin{subfigure}[b]{0.95\textwidth}
     \centering
     \includegraphics[width=\textwidth]{images/main.png}
     \caption{Landing page with YouTube URL input}
     \label{fig:ui-main}
 \end{subfigure}
-\hfill
-\begin{subfigure}[b]{0.48\textwidth}
+
+\vspace{0.4cm}
+
+\begin{subfigure}[b]{0.95\textwidth}
     \centering
     \includegraphics[width=\textwidth]{images/process.png}
     \caption{Real-time processing with progress updates}
     \label{fig:ui-process}
 \end{subfigure}
+\caption{User interface: input and processing stages.}
+\label{fig:ui-screenshots-1}
+\end{figure}
 
-\vspace{0.5cm}
-
-\begin{subfigure}[b]{0.48\textwidth}
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.95\textwidth}
     \centering
     \includegraphics[width=\textwidth]{images/results.png}
     \caption{Results overview with embedded video player}
     \label{fig:ui-results}
 \end{subfigure}
-\hfill
-\begin{subfigure}[b]{0.48\textwidth}
+
+\vspace{0.4cm}
+
+\begin{subfigure}[b]{0.95\textwidth}
     \centering
     \includegraphics[width=\textwidth]{images/claim.png}
     \caption{Detailed claim view with verdict and sources}
     \label{fig:ui-claim}
 \end{subfigure}
-\caption{User interface screenshots showing the fact-checking workflow: (a) users paste a YouTube URL, (b) real-time progress is displayed during analysis, (c) results are presented alongside the embedded video, and (d) each claim shows its verdict, confidence level, and supporting evidence with source reliability ratings.}
+\caption{User interface: results and claim detail views. Each claim shows its verdict, confidence level, and supporting evidence with source reliability ratings.}
 \label{fig:ui-screenshots}
 \end{figure}
 

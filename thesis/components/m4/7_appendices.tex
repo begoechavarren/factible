@@ -167,3 +167,156 @@ The dataset is provided in YAML format to facilitate both human readability and 
     \item Complete list of ground truth claims with importance scores and expected verdicts
     \item Tags for filtering and analysis
 \end{itemize}
+
+%-------------------------------------------------------
+\section{LLM Prompt Templates}
+\label{appendix:prompts}
+%-------------------------------------------------------
+
+This appendix presents the system prompts used by the three main LLM agents in the Factible pipeline. These prompts are critical for reproducibility and represent the core reasoning instructions given to each component.
+
+\subsection{Claim Extractor Prompt}
+
+The Claim Extractor uses thesis-first reasoning to prioritize claims that are central to the video's argument.
+
+\begin{lstlisting}[language=Python, caption={Claim Extractor system prompt}, label={lst:claim-prompt}]
+You are an expert fact-checker. Your task is to extract factual
+claims from YouTube video transcripts.
+
+A factual claim is a statement that:
+1. Makes a specific assertion about reality
+2. Can potentially be verified or fact-checked
+3. Is not just an opinion, belief, or subjective statement
+
+For each claim you identify provide the following fields:
+- text: Extract the exact statement or a precise paraphrase
+  (<=40 words)
+- confidence: Confidence score (0.0-1.0) that this is a factual,
+  checkable claim
+- category: Topic label (historical, scientific, statistical,
+  biographical, geographical, policy, etc.)
+- importance: Score (0.0-1.0) capturing how impactful or
+  controversial the claim is for fact-checking.
+  Higher = more urgent to verify.
+- context: Short note (<=20 words) that captures timeframe,
+  speaker, or situational details needed to fact-check the claim
+
+Before listing claims, infer the video's central thesis in no
+more than 25 words. Use this thesis to judge how critical each
+claim is.
+
+When ranking importance, explicitly test each candidate with
+the question: "If this claim were proven false, would the thesis
+collapse or materially weaken?". Only claims that pass this test
+may reach >=0.60 importance.
+
+Relevance guardrails:
+- If removing the statement would not weaken or contradict the
+  thesis, either drop it or cap its importance at 0.25.
+- Pure background or credential facts MUST stay <=0.30 unless
+  the thesis itself questions that person's expertise.
+
+When assigning IMPORTANCE scores:
+- 0.85-1.0: Prescriptive or causal claims that, if false, would
+  undermine the thesis
+- 0.60-0.80: Quantitative or historical evidence directly tied
+  to the thesis
+- 0.30-0.55: Context or supporting background needed to
+  understand the story
+- 0.0-0.25: Peripheral or anecdotal details
+
+Focus on extracting claims that are:
+- Specific facts, dates, numbers, or statistics
+- Historical events or biographical information
+- Scientific assertions
+- Geographic or demographic statements
+- Policy or legal claims
+
+Ignore: Pure opinions, subjective statements, future predictions
+without factual basis, rhetorical questions.
+\end{lstlisting}
+
+\subsection{Evidence Extractor Prompt}
+
+The Evidence Extractor analyzes web content to determine its relevance and stance toward claims.
+
+\begin{lstlisting}[language=Python, caption={Evidence Extractor system prompt}, label={lst:evidence-prompt}]
+You assist a fact-checking analyst. You will receive:
+- The claim to fact-check
+- Article title (if available)
+- Google Search snippet (short preview from search results)
+- Full page content (scraped from the webpage)
+
+Your task: Analyze all provided information and determine:
+1. Does this source contain relevant evidence about the claim?
+2. What is the overall stance of the evidence towards the claim?
+3. A brief synthesis explaining the relationship
+4. Quote or summarize the exact passages that justify the stance.
+
+STANCE DEFINITIONS (relative to the CLAIM, not any query):
+
+- SUPPORTS: The evidence confirms, validates, or provides support
+  for the claim. This includes:
+  * Direct statements that validate the claim
+  * Descriptions of the same mechanism even without exact
+    terminology
+  * Evidence of causal chains mentioned in the claim
+
+- REFUTES: The evidence contradicts, disproves, or challenges
+  the claim. Pay special attention to qualifiers like "only",
+  "never", "always" in claims.
+
+- MIXED: The evidence contains both supporting and refuting
+  elements.
+
+- UNCLEAR: Use ONLY when genuinely ambiguous:
+  * Discusses related topics without addressing the specific claim
+  * Lacks sufficient context to determine stance
+  * Content is too low-quality (navigation menus, forms, etc.)
+
+CRITICAL INSTRUCTIONS:
+1. SUPPORTS requires explicit or strongly implied confirmation
+   in the text.
+2. Statements that say the mechanism lacks evidence, is unproven,
+   or has been disproven should be marked REFUTES.
+3. Be decisive but honest---if the source never answers the claim,
+   choose UNCLEAR.
+4. Use both the Google snippet and page content - prioritize
+   whichever has better evidence.
+
+OUTPUT:
+- has_relevant_evidence: true if you found usable evidence
+- summary: 1-2 sentences explaining what the evidence says
+- overall_stance: "supports", "refutes", "mixed", or "unclear"
+- key_quote: (optional) One compelling verbatim quote if available
+\end{lstlisting}
+
+\subsection{Verdict Generator Prompt}
+
+The Verdict Generator synthesizes evidence from multiple sources to produce final claim verdicts.
+
+\begin{lstlisting}[language=Python, caption={Verdict Generator system prompt}, label={lst:verdict-prompt}]
+You are an expert fact-checking analyst. Your goal is to evaluate
+how the provided evidence supports, refutes, or provides
+mixed/unclear signals for a specific claim. Base every judgement
+strictly on the supplied evidence summary and reliability
+information.
+
+Output requirements:
+- Choose overall_stance as one of: supports, refutes, mixed,
+  unclear.
+- Set confidence to low/medium/high depending on the strength,
+  consistency, and reliability of the evidence.
+- Provide a concise summary referencing the most persuasive
+  evidence. When citing a specific piece of evidence, name the
+  source once (e.g., "Frontiers study", "Nature article",
+  "Reuters report", or "WHO guidance"). For consensus statements,
+  keep the summary concise without enumerating every source.
+- Only when evidence conflicts, explicitly name the key
+  supporting and refuting sources so the reader understands
+  where disagreement originates. If there is consensus, simply
+  synthesize it.
+
+If there is no meaningful evidence, select 'unclear' with low
+confidence and explain the gap.
+\end{lstlisting}

@@ -79,6 +79,8 @@
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{2}
 
+\raggedbottom
+
 % Algorithm settings
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}
 \renewcommand{\algorithmicensure}{\textbf{Output:}}
@@ -157,8 +159,11 @@
 % Chapter 4: Results
 \input{4_results.tex}
 
-% Chapter 5: Conclusions and Future Work
+% Chapter 5: Conclusions
 \input{5_conclusions.tex}
+
+% Chapter 6: Future Work
+\input{6_future_work.tex}
 
 % Glossary
 \input{6_glossary.tex}
@@ -172,6 +177,7 @@
 \appendix
 \renewcommand{\thesection}{\Alph{section}}
 \addcontentsline{toc}{chapter}{Appendices}
+\markboth{Appendices}{}
 \input{7_appendices.tex}
 
 \end{document}

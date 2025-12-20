@@ -1,38 +1,42 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% CHAPTER 5: CONCLUSIONS AND FUTURE WORK
+% CHAPTER 5: CONCLUSIONS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Conclusions and Future Work}
+\section{Conclusions}
 
-This section presents the conclusions of this thesis, evaluates the achievement of initial objectives, reflects on the methodology employed, discusses ethical and sustainability considerations, and proposes directions for future research.
+This section presents the conclusions of this thesis, evaluates the achievement of initial objectives, reflects on the methodology employed, and discusses ethical and sustainability considerations.
 
 %-------------------------------------------------------
 \subsection{Summary of Contributions}
 %-------------------------------------------------------
 
-This thesis has presented Factible, a multi-agent system for automated fact-checking of YouTube videos. The work makes several contributions to the field of automated fact-checking and demonstrates the practical viability of LLM-based verification systems.
+This thesis has presented Factible, a multi-agent system for automated fact-checking of YouTube videos. The work addresses critical gaps identified in the State of the Art---particularly the lack of end-to-end usability, dependence on structured sources, and the production readiness gap---demonstrating the practical viability of LLM-based verification systems for real-world deployment.
 
 \subsubsection{Technical Contributions}
 
 \begin{enumerate}
-    \item \textbf{End-to-End Video Fact-Checking Pipeline}: Unlike prior research that focuses on isolated components, Factible implements a complete pipeline from YouTube URL to verified claims with evidence-backed verdicts. The system handles transcript extraction, claim detection, query generation, evidence retrieval, and verdict synthesis autonomously.
+    \item \textbf{End-to-End Video Fact-Checking Pipeline}: Unlike prior research that focuses on isolated components \citep{hassan2017claimbuster, thorne2018fever}, Factible implements a complete pipeline from YouTube URL to verified claims with evidence-backed verdicts. The system handles transcript extraction, claim detection, query generation, evidence retrieval, and verdict synthesis autonomously, addressing the end-to-end usability gap identified in Section 2 \citep{lin2025factaudit}.
 
     \item \textbf{Thesis-First Claim Extraction}: A novel prompting approach that prioritizes claims based on their impact on the video's central argument, achieving 81.3\% precision and 0.870 MAP score for claim extraction.
 
-    \item \textbf{Open-Web Evidence Retrieval with Credibility Assessment}: The system retrieves evidence from the live web rather than closed knowledge bases, incorporating source credibility evaluation using Media Bias/Fact Check data and domain heuristics. This enables verification of claims about current events and specialized topics.
+    \item \textbf{Open-Web Evidence Retrieval with Credibility Assessment}: Moving beyond Wikipedia and closed knowledge bases \citep{aly2021feverous, thorne2018fever}, the system retrieves evidence from the live web using search engines, incorporating source credibility evaluation using Media Bias/Fact Check data and domain heuristics. This enables verification of claims about current events, specialized domains, and topics not well covered in encyclopedic sources.
 
-    \item \textbf{Three-Level Parallel Architecture}: An efficient execution model that parallelizes processing across claims, queries, and search results, achieving mean processing time of 129.6 seconds per video while maintaining cost under \$0.01 per video.
+    \item \textbf{Three-Level Parallel Architecture}: An efficient execution model that parallelizes processing across claims, queries, and search results, achieving mean processing time of 129.6 seconds per video while maintaining cost under \$0.01 per video. This addresses the performance and scalability limitations noted in the literature \citep{lin2025factaudit}.
 
-    \item \textbf{Production-Ready Implementation}: The complete system includes a REST API with SSE streaming, a React-based web interface, and comprehensive experimentation infrastructure, bridging the gap between research prototypes and practical tools.
+    \item \textbf{Modular Multi-Agent Architecture}: Five specialized agents with structured Pydantic schemas enable transparency, maintainability, and independent optimization. This design facilitates experimentation with different models and techniques, demonstrating the practical benefits of multi-agent approaches \citep{factagent2025, chen2024local}.
+
+    \item \textbf{Production-Ready Implementation}: A web-based interface with real-time SSE streaming makes the verification process transparent and accessible to non-expert users, bridging the gap between research prototypes and usable products \citep{lin2025factaudit}.
 \end{enumerate}
 
 \subsubsection{Research Contributions}
 
 \begin{enumerate}
-    \item \textbf{Annotated Evaluation Dataset}: A corpus of 30 YouTube videos with 503 manually annotated ground truth claims across health, climate, and political topics, providing a foundation for future research.
+    \item \textbf{Annotated Evaluation Dataset}: A corpus of 30 YouTube videos with 503 manually annotated ground truth claims across health, climate, and political topics, providing a foundation for future research on video fact-checking.
 
-    \item \textbf{Evaluation Framework}: A comprehensive methodology combining precision/recall metrics, semantic similarity matching, verdict accuracy assessment, and system efficiency measurements appropriate for LLM-based fact-checking evaluation.
+    \item \textbf{Comprehensive Evaluation Framework}: A methodology combining quantitative metrics (precision, recall, MAP), semantic similarity matching, verdict accuracy assessment, and system efficiency measurements. This multifaceted approach addresses the evaluation challenges discussed in the literature and provides a realistic assessment of system capabilities \citep{raschka2025llmeval, ruder2025llmeval}.
 
     \item \textbf{Analysis of Failure Modes}: Systematic identification of where automated fact-checking struggles, particularly with contested political claims where evidence synthesis rather than retrieval poses the challenge.
+
+    \item \textbf{Focus on Video Platform}: Unlike most fact-checking research that focuses on text-based content \citep{thorne2018fever, hassan2017claimbuster}, this work specifically addresses YouTube video verification, handling the complete video-to-verification workflow. This fills a significant gap where video platforms have been largely overlooked despite their scale and influence on information consumption.
 \end{enumerate}
 
 %-------------------------------------------------------
@@ -169,82 +173,12 @@ Several key lessons emerged from this project:
 \end{enumerate}
 
 %-------------------------------------------------------
-\subsection{Future Work}
-%-------------------------------------------------------
-
-While the current implementation demonstrates the viability of automated fact-checking for YouTube videos, several directions warrant further investigation to enhance the system's capabilities and broaden its applicability.
-
-\subsubsection{Multilingual Support}
-
-Future iterations should extend transcript extraction, claim detection, and verdict synthesis to major languages beyond English (e.g., Spanish, Portuguese, Hindi, Arabic). Misinformation is a global phenomenon, and the regions with the highest volumes of misinformation often have limited access to fact-checking resources. Key challenges include adapting prompts for different languages, identifying reliable sources in multiple languages, and evaluating source credibility across cultural contexts.
-
-\subsubsection{Large Language Model Comparison}
-
-Future studies should benchmark multiple commercial and local models (e.g., GPT-4 variants, Claude, Gemini, LLaMA, Qwen, Mistral) across pipeline components. Such comparisons would map the cost, latency, and accuracy trade-offs for mixed deployments where different models handle different components based on their strengths.
-
-\subsubsection{Enhanced Prompt Engineering}
-
-Maintaining a small prompt library with documented variants, automated prompt tuning, and curated examples per claim type would make it easier to evolve instructions without rewriting code. Techniques like constitutional AI or self-refinement could improve consistency and reduce brittleness.
-
-\subsubsection{Enhanced Source Reliability Assessment}
-
-Source reliability could be refined by incorporating:
-\begin{itemize}
-    \item Publisher-level signals (impact factors, retraction history for academic sources)
-    \item Topic-aware weighting (science journalism vs. political commentary)
-    \item Time-varying trust scores that account for source reputation changes
-    \item Lightweight cross-referencing when conflicting evidence appears
-\end{itemize}
-
-\subsubsection{Handling Contested Claims}
-
-The current system struggles with genuinely contested claims where reasonable sources disagree. Future approaches might:
-\begin{itemize}
-    \item Explicitly detect and flag claims as ``contested'' rather than attempting definitive verdicts
-    \item Implement debate-style verification using multiple LLM agents with different perspectives
-    \item Incorporate user feedback to refine handling of ambiguous cases
-    \item Develop specialized pipelines for political versus scientific claims
-\end{itemize}
-
-\subsubsection{Production Deployment}
-
-Transitioning from research prototype to production would involve:
-\begin{itemize}
-    \item Cloud deployment (e.g., AWS with auto-scaling) for handling concurrent users
-    \item User authentication and rate limiting to prevent abuse
-    \item Caching for transcripts and reliability assessments to reduce latency and costs
-    \item Monitoring and alerting infrastructure for operational health
-    \item Browser extension integration for seamless YouTube verification
-\end{itemize}
-
-\subsubsection{Extended Evaluation}
-
-The current evaluation (30 videos across three domains) should be expanded to:
-\begin{itemize}
-    \item A 100+ video corpus with broader topics and video formats
-    \item Multiple annotators to establish inter-annotator agreement baselines
-    \item A richer parameter sweep (higher claim/query limits, more search results)
-    \item User studies evaluating perceived usefulness and trust calibration
-    \item Longitudinal evaluation tracking performance as LLMs and web content evolve
-\end{itemize}
-
-\subsubsection{Multimodal Verification}
-
-The current system operates only on transcript text, ignoring visual content. Future work could incorporate:
-\begin{itemize}
-    \item Image and video frame analysis for visual claim verification
-    \item Chart and graph interpretation for data-driven claims
-    \item Speaker identification and credibility signals
-    \item Deepfake detection for authenticity verification
-\end{itemize}
-
-%-------------------------------------------------------
 \subsection{Concluding Remarks}
 %-------------------------------------------------------
 
 This thesis has demonstrated that automated fact-checking of YouTube videos is not only feasible but can achieve practically useful performance levels. Factible represents a step toward democratizing access to fact-checking capabilities, providing users with tools to critically evaluate video content that might otherwise go unexamined.
 
-The system's strengths---high precision claim extraction, robust evidence retrieval, transparent verdict presentation, and practical efficiency---make it suitable for preliminary fact-checking of YouTube content. Its limitations---particularly with contested political claims---highlight areas where human judgment remains essential and automated systems should complement rather than replace expert fact-checkers.
+The system's strengths---high precision claim extraction, robust evidence retrieval, transparent verdict presentation, and practical efficiency---make it suitable for preliminary fact-checking of YouTube content. Its limitations---particularly with contested political claims---highlight areas where human judgment remains essential and automated systems should complement rather than replace expert fact-checkers. Section~\ref{sec:future-work} outlines directions for addressing these limitations and extending the system's capabilities.
 
 As misinformation continues to evolve in volume and sophistication, automated fact-checking systems will become increasingly important. The modular, open-source nature of Factible provides a foundation for continued research and development in this critical domain. By making both the system and its evaluation transparent, this work aims to advance the broader goal of building more informed and resilient information ecosystems.
 

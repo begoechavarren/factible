@@ -12,7 +12,7 @@ This section presents the experimental evaluation of Factible across 30 YouTube 
 
 \subsubsection{Evaluation Dataset}
 
-The evaluation corpus consists of 30 YouTube videos manually annotated with ground truth claims. This sample size is comparable to evaluation scales used in end-to-end fact-checking systems; for example, ClaimBuster evaluated their system on 25 presidential debates \citep{hassan2017vldb}. Videos were selected across three thematic categories---climate, health, and political/social issues---with 10 videos per category to ensure balanced representation. Within each category, videos were equally split between factual content (5 videos) and misinformation (5 videos), allowing evaluation of the system's performance across different truth orientations. Videos range from educational science content to political commentary, representing diverse domains and claim densities. Table~\ref{tab:dataset-stats} summarizes the dataset characteristics.
+The evaluation corpus consists of 30 YouTube videos manually annotated with ground truth claims. This sample size is comparable to evaluation scales used in end-to-end fact-checking systems; for example, ClaimBuster evaluated their system on 25 presidential debates \citep{hassan2017claimbuster}. Videos were selected across three thematic categories---climate, health, and political/social issues---with 10 videos per category to ensure balanced representation. Within each category, videos were equally split between factual content (5 videos) and misinformation (5 videos), allowing evaluation of the system's performance across different truth orientations. Videos range from educational science content to political commentary, representing diverse domains and claim densities. Table~\ref{tab:dataset-stats} summarizes the dataset characteristics.
 
 \begin{table}[H]
 \centering
@@ -305,7 +305,7 @@ The mean processing time of 129.6 seconds per video enables near-interactive use
 
 \subsubsection{Cost Analysis}
 
-All experiments used GPT-4o-mini for LLM inference at current pricing (\$0.15 per million input tokens, \$0.60 per million output tokens). Across the 30-video evaluation corpus, the average cost per video was \$0.003, with individual videos ranging from \$0.0008 to \$0.0164 depending on transcript length, claim complexity, and evidence retrieval needs. The total cost for processing all 30 videos was \$0.09, demonstrating the practical affordability of the system for individual users. This cost-effectiveness contrasts with concerns about LLM deployment costs noted in prior work \citep{zhang2025factagent}, showing that fact-checking systems can achieve meaningful accuracy at minimal expense when using appropriately-sized models.
+All experiments used GPT-4o-mini for LLM inference at current pricing (\$0.15 per million input tokens, \$0.60 per million output tokens). Across the 30-video evaluation corpus, the average cost per video was \$0.003, with individual videos ranging from \$0.0008 to \$0.0164 depending on transcript length, claim complexity, and evidence retrieval needs. The total cost for processing all 30 videos was \$0.09, demonstrating the practical affordability of the system for individual users. This cost-effectiveness contrasts with concerns about LLM deployment costs noted in prior work \citep{factagent2025}, showing that fact-checking systems can achieve meaningful accuracy at minimal expense when using appropriately-sized models.
 
 %-------------------------------------------------------
 \subsection{Qualitative Analysis}
@@ -427,6 +427,91 @@ Unlike traditional classification tasks where metrics are stable given fixed tes
 \end{itemize}
 
 The strategies employed in this work to maximize reproducibility---temperature=0.0 for all LLM calls, fixed random seeds, comprehensive logging, and experiment versioning---represent current best practices for LLM evaluation but cannot eliminate all sources of variability.
+
+%-------------------------------------------------------
+\subsection{Comparison with Related Fact-Checking Systems}
+\label{subsec:comparison}
+%-------------------------------------------------------
+
+While direct performance comparison across fact-checking systems is constrained by differences in evaluation datasets, task definitions, and domain characteristics, contextualizing our results against established benchmarks and recent approaches provides valuable perspective on the system's contributions.
+
+\subsubsection{Foundational Benchmarks}
+
+The FEVER dataset \citep{thorne2018fever} established the foundational benchmark for fact verification against textual sources, comprising 185,445 claims verified against Wikipedia with sentence-level evidence annotations. Their best baseline system achieved 31.87\% accuracy when requiring correct evidence retrieval, using a pipeline of TF-IDF document retrieval, sentence selection, and decomposable attention for textual entailment. Notably, 16.82\% of FEVER claims require multi-sentence reasoning, highlighting the complexity of evidence aggregation even in controlled environments. State-of-the-art systems on the FEVER leaderboard have since achieved 70--80\% accuracy, demonstrating significant progress on this benchmark.
+
+Building on this foundation, SciFact \citep{wadden2020scifact} introduced scientific claim verification with 1,409 expert-written claims against biomedical abstracts. Their VERISCI baseline achieved 46.5\% F1 on the open retrieval task (AbstractLabel+Rationale), demonstrating that domain-specific adaptation---combining FEVER pretraining with in-domain fine-tuning---substantially improves performance over zero-shot approaches (36.4\% F1). Their error analysis identified five key reasoning challenges: scientific background knowledge, directionality, numerical reasoning, cause-and-effect relationships, and coreference resolution---challenges that parallel the difficulties our system encounters with YouTube content.
+
+\subsubsection{Post-hoc Verification and Attribution Approaches}
+
+The RARR framework \citep{gao2023rarr} introduced iterative research-and-revision for improving attribution in LLM outputs. RARR employs a two-stage pipeline: a \textit{research stage} that generates queries and retrieves evidence from web sources, and a \textit{revision stage} that uses agreement models to detect disagreements between claims and evidence before making targeted edits. On diverse QA datasets including Natural Questions, StrategyQA, and QReCC, RARR achieved F1 scores (combining attribution and preservation) ranging from 43\% to 68\%.
+
+A key insight from RARR relevant to our work is the tension between attribution improvement and content preservation. RARR found that editing to improve attribution while changing only 10--20\% of text represents a careful balance---aggressive editing sacrifices the original intent while minimal editing leaves unattributed claims intact. Our system faces an analogous trade-off: we prioritize direct verification verdicts (Supported, Refuted, Insufficient Evidence, Unverifiable) over claim revision, trading the flexibility of correction for clearer actionable outputs suited to users assessing video content truthfulness.
+
+VeriScore \citep{song2024veriscore} and FIRE \citep{xie2025fire} extended this direction by introducing confidence-based retrieval triggers that reduce computational costs without sacrificing accuracy. FIRE's iterative retrieval-and-verification approach, which triggers external retrieval only when model confidence falls below a threshold, parallels our system's confidence-based handling of borderline claims.
+
+\subsubsection{Multi-Agent Architectures}
+
+Recent work has demonstrated the effectiveness of multi-agent LLM architectures for fact verification. FactAgent \citep{factagent2025} employs a four-agent pipeline comprising Input Ingestion, Query Generation, Evidence Retrieval, and Verdict Prediction---an architecture closely resembling our own. Evaluated on HoVER, FEVEROUS, and SciFact-Open benchmarks with GPT-4o-mini, FactAgent achieved F1 scores of 0.600--0.617 on multi-hop reasoning tasks (HoVER 2--3 hop), 0.548--0.681 on FEVEROUS structured data tasks, and 0.770 on scientific claim verification (SciFact-Open), representing a 12.3\% relative improvement over baseline methods. Notably, FactAgent integrates MBFC-based source credibility filtering---a design choice we independently adopted---finding that credibility filtering significantly reduces usable links (to 9.6--15.8\% on HoVER) but improves verdict quality by excluding unreliable sources. Their ablation studies showed that generating 3--4 queries per subclaim provides optimal balance between reasoning depth and evidence precision, aligning with our own configuration choices.
+
+The MAD-Fact framework \citep{ning2025madfact} provides particularly relevant methodological insights. MAD-Fact implements a three-tier multi-agent debate system comprising: (1) a \textit{Clerk Agent} for atomic claim decomposition, (2) a \textit{Jury} of Evaluator Agents with heterogeneous role assignments (Public, Critic, News Author, Scientist, etc.) that assess factuality through structured debate, and (3) a \textit{Judge Agent} that aggregates verdicts via majority voting. On fact-checking benchmarks including FacToolQA and FELM-WK, MAD-Fact achieved F1 scores of 0.88 (Label=True) and 0.67 (Label=False), consistently outperforming single-model baselines.
+
+Three findings from MAD-Fact are particularly instructive for our work:
+\begin{itemize}
+    \item \textbf{Debate dynamics}: Multi-agent systems exhibited human-like traits during debates---agents adhered to their viewpoints, actively corrected peers' mistakes, and engaged in self-reflection. This emergent behavior contributed to superior performance over single-agent systems.
+    \item \textbf{Retrieval integration}: The ``Autonomous Retrieval and Free Debate'' rule, where agents decide based on confidence whether to invoke external retrieval, balanced knowledge utilization with computational efficiency.
+    \item \textbf{Homogeneous vs.\ heterogeneous initialization}: Interestingly, initializing all agents with the same model (GPT-4o-mini) outperformed heterogeneous initialization with multiple model families, as cross-model agents exhibited higher frequencies of misleading each other and struggled to reach consensus.
+\end{itemize}
+
+Our system adopts a comparable multi-agent pipeline---comprising claim extraction, evidence retrieval, and verdict determination---but addresses a significantly more challenging domain: unstructured YouTube content with noisy ASR transcriptions and no gold evidence. Despite this increased difficulty, our 73.3\% accuracy (versus 25\% random baseline for four-class classification) demonstrates that multi-agent approaches can generalize beyond curated datasets to real-world multimedia platforms.
+
+\subsubsection{Domain Difficulty Considerations}
+
+The primary challenge in cross-system comparison lies not in algorithmic sophistication but in domain difficulty. Most comparable systems operate on closed corpora with clean text, gold evidence, and pre-extracted claims. In contrast, our system handles:
+
+\begin{itemize}
+    \item \textbf{Noisy input}: ASR transcription errors, speaker attribution ambiguity, and variable audio quality
+    \item \textbf{Open-domain retrieval}: Web-scale evidence search without annotator-provided ground truth
+    \item \textbf{Multimodal context}: Visual information dependencies absent from text-only benchmarks
+    \item \textbf{Real-world claims}: Naturally occurring statements rather than synthetic mutations
+    \item \textbf{Temporal dynamics}: Time-sensitive claims that may have been true at recording but become outdated
+\end{itemize}
+
+Table~\ref{tab:system-comparison} summarizes key characteristics across systems. The performance gap between FEVER's baseline 31.87\% on structured Wikipedia and our 73.3\% on unstructured YouTube does not indicate superior accuracy in absolute terms, but rather reflects fundamentally different difficulty profiles and evaluation methodologies. Our system's ability to maintain reasonable accuracy while handling YouTube's compounding challenges represents meaningful progress toward bringing automated fact-checking to platforms where misinformation most commonly spreads.
+
+\begin{table}[H]
+\centering
+\caption{Comparison of fact-checking systems across key dimensions. Performance metrics are reported as originally published and are not directly comparable due to differing task definitions and evaluation protocols.}
+\label{tab:system-comparison}
+\small
+\begin{tabular}{lccccc}
+\toprule
+\textbf{System} & \textbf{Corpus Type} & \textbf{Evidence} & \textbf{Claims} & \textbf{Metric} & \textbf{Performance} \\
+\midrule
+FEVER \citep{thorne2018fever} & Wikipedia & Gold & Synthetic & Accuracy & 31.87\% \\
+SciFact \citep{wadden2020scifact} & Scientific & Gold & Natural & F1 & 46.5\% \\
+RARR \citep{gao2023rarr} & QA datasets & Retrieved & Natural & F1 & 43--68\% \\
+FactAgent \citep{factagent2025} & Wikipedia & Retrieved & Natural & F1 & 51--77\% \\
+MAD-Fact \citep{ning2025madfact} & Fact-check & Retrieved & Natural & F1 & 67--88\% \\
+\textbf{Factible (ours)} & YouTube/Web & Retrieved & Natural & Accuracy & 73.3\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Implications for System Design}
+
+The comparative analysis yields several design implications validated by our implementation:
+
+\begin{enumerate}
+    \item \textbf{Atomic decomposition is essential}: Following FactScore, SAFE, and MAD-Fact, decomposing claims into atomic, independently verifiable units enables fine-grained evaluation and targeted verdict assignment.
+
+    \item \textbf{Retrieval quality bounds verification quality}: As RARR demonstrated, even sophisticated reasoning cannot compensate for poor evidence retrieval. Our system's web search integration addresses this but introduces new challenges around source credibility assessment.
+
+    \item \textbf{Source credibility filtering is critical}: FactAgent's finding that MBFC-based credibility filtering reduces usable links to 9.6--15.8\% on complex multi-hop tasks while improving verdict quality validates our independent adoption of this approach. The trade-off between evidence quantity and quality favors aggressive filtering.
+
+    \item \textbf{Multi-agent approaches mitigate single-model bias}: Single-model verification is vulnerable to systematic errors from hallucination or knowledge gaps. Our multi-stage pipeline, like FactAgent's four-agent architecture, distributes verification responsibility across specialized agents while maintaining computational efficiency.
+
+    \item \textbf{Domain adaptation requires careful evaluation}: Performance numbers from clean-text benchmarks do not transfer to noisy multimedia domains. Future work should develop standardized benchmarks for video fact-checking that account for ASR errors, multimodal context, and real-world claim distributions.
+\end{enumerate}
 
 %-------------------------------------------------------
 \subsection{Summary of Key Findings}
