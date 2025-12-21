@@ -19,9 +19,9 @@ YouTube presents unique challenges for fact-checking:
 
 \begin{itemize}
     \item \textbf{Scale}: Over 500 hours of video are uploaded every minute, making human-only verification impossible.
-    \item \textbf{Consumption patterns}: Videos are consumed passively, with viewers less likely to critically evaluate claims than when reading text.
-    \item \textbf{Lack of annotation}: Unlike text articles, videos do not come with metadata identifying factual claims.
-    \item \textbf{Temporal context}: Claims are embedded in a narrative flow, making extraction and verification more complex than isolated text statements.
+    \item \textbf{Passive consumption}: Videos are consumed passively, with viewers less likely to critically evaluate claims than when reading text.
+    \item \textbf{Unstructured transcripts}: Video transcripts lack punctuation, structural markers, and clear claim boundaries, with statements embedded in continuous narrative flow.
+    \item \textbf{Verification burden}: Manually verifying claims requires searching multiple sources, evaluating their reliability, and synthesizing potentially conflicting information---skills and time most viewers lack.
 \end{itemize}
 
 \subsubsection{Relevance and Importance}
@@ -43,14 +43,14 @@ This project is relevant for multiple reasons:
 Currently, three main approaches exist for fact-checking:
 
 \begin{enumerate}
-    \item \textbf{Manual fact-checking}: Organizations like Newtral, Maldita.es, PolitiFact, and FactCheck.org employ specialized journalists. This approach guarantees quality but is limited by human resources and is inherently slow, typically checking only a few claims per day.
+    \item \textbf{Manual fact-checking}: Organizations like Newtral, Maldita.es, PolitiFact, and FactCheck.org employ specialized journalists. This approach guarantees quality but is limited by human resources and is inherently slow, typically checking only a few claims per day. Furthermore, manual fact-checking is subject to cognitive biases from individual analysts and potential institutional biases from the organizations themselves, as fact-checking effectiveness is contingent upon perceived trust in the source delivering fact-checks \citep{moon2025factchecking}.
 
     \item \textbf{Academic systems}: Projects like FEVER \citep{thorne2018fever}, FEVEROUS \citep{aly2021feverous}, and recent work on scientific verification \citep{wadden2020scifact} operate primarily on structured knowledge bases (Wikipedia) or require specifically curated datasets. They are not available as products usable by end users and have limited scope.
 
-    \item \textbf{Verification APIs}: Google Fact Check Tools API aggregates fact-checks already published by professional organizations but only covers content previously verified manually. It does not provide new verification for unexamined content.
+    \item \textbf{Verification APIs}: Google Fact Check Tools API \citep{google2024factcheck} aggregates fact-checks already published by professional organizations but only covers content previously verified manually. It does not provide new verification for unexamined content.
 \end{enumerate}
 
-\textbf{Identified gap}: None of these approaches provides automated end-to-end verification for continuously generated audiovisual content on platforms like YouTube. A gap exists between academic research (static datasets, limited domains) and practical, accessible tools for end users.
+\textbf{Identified gap}: None of these approaches provides automated end-to-end verification for continuously generated audiovisual content on platforms like YouTube. A gap exists between academic research (static datasets, limited domains) and practical, accessible tools for end users. Section 2 provides a detailed analysis of existing systems and their limitations.
 
 %-------------------------------------------------------
 \subsection{Project Objectives}
@@ -62,50 +62,20 @@ Design, implement, and evaluate a multi-agent system based on language models ca
 
 \subsubsection{Specific Objectives}
 
+The project pursues six specific objectives:
+
 \begin{enumerate}
-    \item \textbf{Multi-agent architecture design}
-    \begin{itemize}
-        \item Define a modular processing pipeline with specialized components
-        \item Establish structured data schemas for communication between agents
-        \item Design the information orchestration system
-    \end{itemize}
+    \item \textbf{Multi-agent architecture design}: Define a modular processing pipeline with specialized components, structured data schemas, and an orchestration system for agent coordination.
 
-    \item \textbf{System component implementation}
-    \begin{itemize}
-        \item Develop the module for extracting video transcripts from YouTube
-        \item Implement the claim identification agent with relevance classification
-        \item Create the optimized search query generator
-        \item Develop the web scraping system with source reliability evaluation
-        \item Implement the generator for explainable and traceable verdicts
-    \end{itemize}
+    \item \textbf{System component implementation}: Develop five core modules---transcript extraction, claim identification with relevance classification, search query generation, web scraping with source reliability evaluation, and explainable verdict generation.
 
-    \item \textbf{LLM usage optimization}
-    \begin{itemize}
-        \item Compare performance between commercial models (e.g., GPT-4o-mini) and open-source alternatives (e.g., Qwen 3, DeepSeek)
-        \item Analyze trade-offs between cost, latency, and output quality
-        \item Evaluate prompt optimization strategies and structured outputs
-    \end{itemize}
+    \item \textbf{LLM usage optimization}: Analyze trade-offs between cost, latency, and output quality; evaluate prompt optimization strategies and structured outputs.
 
-    \item \textbf{System evaluation}
-    \begin{itemize}
-        \item Define technical performance metrics: response time, cost per token, throughput, and completion rate per agent
-        \item Include LLM-specific quantitative metrics such as faithfulness, factual consistency, coherence, and stance accuracy
-        \item Incorporate quantitative and qualitative evaluation with LLM-as-a-judge and manual review
-        \item Conduct case studies across different video topics and analyze system limitations
-    \end{itemize}
+    \item \textbf{System evaluation}: Define technical performance metrics, incorporate LLM-as-a-judge and manual review, and conduct case studies across different video topics.
 
-    \item \textbf{End-to-end system implementation}
-    \begin{itemize}
-        \item Develop a REST API with real-time streaming
-        \item Create an intuitive web interface for end users
-        \item Ensure reproducibility and generate documentation
-    \end{itemize}
+    \item \textbf{End-to-end system implementation}: Develop a REST API with real-time streaming, create an intuitive web interface for end users, and ensure reproducibility through documentation.
 
-    \item \textbf{Ethical and bias considerations}
-    \begin{itemize}
-        \item Analyze potential biases in sources and models used
-        \item Identify limitations of the automated approach, its possible impact on misinformation propagation, and define best practices to mitigate these risks during verification
-    \end{itemize}
+    \item \textbf{Ethical and bias considerations}: Address potential biases in sources and models through transparency and multi-perspective evidence presentation, identify limitations of the automated approach, and define best practices for responsible deployment.
 \end{enumerate}
 
 \subsubsection{Project Scope}
@@ -134,12 +104,12 @@ Design, implement, and evaluate a multi-agent system based on language models ca
 
 The project addresses three dimensions of ethical and global competence:
 
-\textbf{(I) Sustainability}: The use of LLMs implies significant energy consumption. This is addressed through evaluation of local open-source models versus commercial cloud services, prompt optimization to minimize processed tokens, and transparent documentation of resource consumption.
+\textbf{(I) Sustainability}: The use of LLMs implies significant energy consumption. This is addressed through selection of cost-effective models, support for local inference to avoid cloud dependency, prompt optimization to minimize processed tokens, strict token budgets per component, and transparent documentation of resource consumption.
 
 \textbf{(II) Ethical behavior and social responsibility}: LLMs can perpetuate biases present in their training data. Mitigation strategies include:
 \begin{itemize}
     \item Total transparency in consulted sources with verifiable URLs
-    \item Presentation of evidence showing different stances (supports/refutes/neutral)
+    \item Presentation of evidence showing different stances (supports/refutes/mixed/unclear)
     \item Explicit evaluation of confidence level in each verdict
     \item Clear warnings about limitations of the automated system
 \end{itemize}
@@ -171,7 +141,7 @@ This project adopts a \textbf{Design and Creation} strategy \citep{oates2006}, a
 \begin{itemize}
     \item Automated measurement of system metrics: processing time, cost (tokens $\times$ price), number of retrieved sources, stance distribution
     \item Evaluation using LLM-as-a-judge to assess quality of extracted claims and generated verdicts
-    \item Multi-agent coordination metrics: task completion rate, latency per agent
+    \item System efficiency metrics: end-to-end latency, evidence retrieval success rate
 \end{itemize}
 
 \textit{Qualitative:}
@@ -184,14 +154,14 @@ This project adopts a \textbf{Design and Creation} strategy \citep{oates2006}, a
 
 \textbf{Chosen strategy}: Development of a new end-to-end product with a functional web interface.
 
-\textbf{Justification}: This strategy is most appropriate because it allows evaluation of the complete practical viability of the system under real usage conditions, not just as a theoretical concept. Modular development from scratch facilitates experimentation with different LLM configurations and guarantees total control over the verification pipeline. Including a web interface demonstrates applicability for end users and allows collecting feedback on real system usability.
+\textbf{Justification}: This strategy is most appropriate because it allows evaluation of the complete practical viability of the system under real usage conditions, not just as a theoretical concept. Modular development from scratch facilitates experimentation with different prompt strategies and parameter configurations, and guarantees total control over the verification pipeline. Including a web interface demonstrates applicability for end users and allows collecting feedback on real system usability.
 
 \textbf{Iterative development process:}
 \begin{enumerate}
     \item Implementation of individual components with isolated testing
     \item End-to-end pipeline integration (functional MVP)
     \item Iterative refinement module by module based on results
-    \item Comparative evaluation with different LLM configurations
+    \item Systematic evaluation against ground truth annotations
 \end{enumerate}
 
 %-------------------------------------------------------

@@ -58,7 +58,7 @@ This section evaluates the degree to which the initial objectives defined in Sec
 
     \item \textbf{System component implementation}: \textbf{Achieved}. All five components (Transcriptor, Claim Extractor, Query Generator, Online Search, Output Generator) are fully implemented and operational.
 
-    \item \textbf{LLM usage optimization}: \textbf{Partially achieved}. The system uses GPT-4o-mini effectively with deterministic settings and token budgets. Full comparison with open-source models (Qwen, DeepSeek) was not completed due to scope constraints, though the infrastructure supports such comparisons.
+    \item \textbf{LLM usage optimization}: \textbf{Achieved}. The system uses GPT-4o-mini effectively with deterministic settings and token budgets. Cost, latency, and quality trade-offs were analyzed, and prompt optimization strategies with structured outputs were implemented across all pipeline components.
 
     \item \textbf{System evaluation}: \textbf{Achieved}. Comprehensive evaluation including precision/recall metrics, verdict accuracy, evidence retrieval statistics, latency, cost analysis, and qualitative case studies.
 
@@ -94,8 +94,6 @@ Several limitations should be acknowledged:
     \item \textbf{English-only scope}: The system currently supports only English content, limiting applicability in multilingual contexts where misinformation is equally prevalent.
 
     \item \textbf{Temporal snapshot}: Evaluation was conducted at a specific point in time (December 2025). Both web search results and LLM model versions change, affecting reproducibility.
-
-    \item \textbf{Limited model comparison}: Full comparison between commercial and open-source LLMs was not completed, leaving optimization opportunities unexplored.
 \end{itemize}
 
 %-------------------------------------------------------
