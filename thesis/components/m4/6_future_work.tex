@@ -10,82 +10,46 @@ While the current implementation demonstrates the viability of automated fact-ch
 \subsection{Multilingual Support}
 %-------------------------------------------------------
 
-\textbf{Current limitation}: The system currently supports only English content, limiting applicability in multilingual contexts where misinformation is equally prevalent.
-
-\textbf{Future direction}: Future iterations should extend transcript extraction, claim detection, and verdict synthesis to major languages beyond English (e.g., Spanish, Portuguese, Hindi, Arabic). Misinformation is a global phenomenon, and the regions with the highest volumes of misinformation often have limited access to fact-checking resources. Key challenges include adapting prompts for different languages, identifying reliable sources in multiple languages, and evaluating source credibility across cultural contexts.
+The system currently supports only English content, yet misinformation is a global phenomenon. Extending to languages such as Spanish, Portuguese, Hindi, or Arabic would require adapting prompts, identifying reliable sources in each language, and evaluating source credibility across different cultural and media contexts.
 
 %-------------------------------------------------------
 \subsection{Large Language Model Comparison}
 %-------------------------------------------------------
 
-Future studies should benchmark multiple commercial and local models (e.g., GPT-4 variants, Claude, Gemini, LLaMA, Qwen, Mistral) across pipeline components. Such comparisons would map the cost, latency, and accuracy trade-offs for mixed deployments where different models handle different components based on their strengths.
+Future studies should benchmark multiple commercial and local models (GPT-4 variants, Claude, Gemini, LLaMA, Qwen, Mistral) across pipeline components. Such comparisons would map cost-quality trade-offs and assess whether mixed deployments---where different models handle different stages---improve overall performance.
 
 %-------------------------------------------------------
 \subsection{Enhanced Prompt Engineering}
 %-------------------------------------------------------
 
-Maintaining a small prompt library with documented variants, automated prompt tuning, and curated examples per claim type would make it easier to evolve instructions without rewriting code. Techniques like constitutional AI or self-refinement could improve consistency and reduce sensitivity to minor prompt changes.
+Maintaining a versioned prompt library with documented variants would make it easier to evolve instructions without rewriting code. Automated prompt tuning using evaluation feedback and domain-specific templates (scientific vs. political claims) could further improve consistency.
 
 %-------------------------------------------------------
 \subsection{Enhanced Source Reliability Assessment}
 %-------------------------------------------------------
 
-Source reliability could be refined by incorporating:
-\begin{itemize}
-    \item Publisher-level signals (impact factors, retraction history for academic sources)
-    \item Topic-aware weighting (science journalism vs. political commentary)
-    \item Time-varying trust scores that account for source reputation changes
-    \item Lightweight cross-referencing when conflicting evidence appears
-\end{itemize}
+Source reliability could be refined by incorporating publisher-level signals such as impact factors and retraction history for academic sources, topic-aware weighting that distinguishes science journalism from political commentary, and time-varying trust scores that account for reputation changes. Lightweight cross-referencing when conflicting evidence appears would further strengthen verdict quality.
 
 %-------------------------------------------------------
 \subsection{Handling Contested Claims}
 %-------------------------------------------------------
 
-The current system struggles with genuinely contested claims where reasonable sources disagree. Future approaches might:
-\begin{itemize}
-    \item Explicitly detect and flag claims as ``contested'' rather than attempting definitive verdicts
-    \item Implement debate-style verification using multiple LLM agents with different perspectives
-    \item Incorporate user feedback to refine handling of ambiguous cases
-    \item Develop specialized pipelines for political versus scientific claims
-\end{itemize}
+The current system struggles with genuinely contested claims where reasonable sources disagree. Future approaches might explicitly detect and flag such claims as ``contested'' rather than attempting definitive verdicts, implement debate-style verification using multiple LLM agents with different perspectives, or develop specialized pipelines for political versus scientific claims. Incorporating user feedback could further refine handling of ambiguous cases.
 
 %-------------------------------------------------------
 \subsection{Production Deployment}
 %-------------------------------------------------------
 
-Transitioning from research prototype to production would involve:
-\begin{itemize}
-    \item Cloud deployment (e.g., AWS with auto-scaling) for handling concurrent users
-    \item User authentication and rate limiting to prevent abuse
-    \item Caching for transcripts and reliability assessments to reduce latency and costs
-    \item Monitoring and alerting infrastructure for operational health
-    \item Browser extension integration for seamless YouTube verification
-\end{itemize}
+Transitioning from research prototype to production would involve cloud deployment with auto-scaling for handling concurrent users, user authentication and rate limiting to prevent abuse, and caching for transcripts and reliability assessments to reduce latency and costs. Monitoring infrastructure would ensure operational health, while a browser extension could enable seamless YouTube verification without leaving the platform.
 
 %-------------------------------------------------------
 \subsection{Extended Evaluation}
 %-------------------------------------------------------
 
-\textbf{Current limitations}: The evaluation has several constraints that affect the robustness of conclusions. All 503 ground truth claims were annotated by a single person (the author), introducing potential bias; inter-annotator agreement studies would strengthen the evaluation. While 30 videos with 503 claims is comparable to prior work, a larger dataset would enable more robust statistical conclusions. Additionally, evaluation was conducted at a specific point in time (December 2025), and both web search results and LLM model versions change over time, affecting reproducibility.
-
-\textbf{Future directions}: The current evaluation should be expanded to address these limitations:
-\begin{itemize}
-    \item A 100+ video corpus with broader topics and video formats
-    \item Multiple annotators to establish inter-annotator agreement baselines and reduce annotation bias
-    \item A richer parameter sweep (higher claim/query limits, more search results)
-    \item User studies evaluating perceived usefulness and trust calibration
-    \item Longitudinal evaluation tracking performance as LLMs and web content evolve, addressing temporal reproducibility concerns
-\end{itemize}
+The current evaluation has constraints (single annotator, 30-video corpus, point-in-time results) that future work should address. A larger corpus of 100+ videos with multiple annotators would establish inter-annotator agreement baselines and enable more robust statistical conclusions. User studies could evaluate perceived usefulness and trust calibration, while longitudinal evaluation would track performance as LLMs and web content evolve over time.
 
 %-------------------------------------------------------
 \subsection{Multimodal Verification}
 %-------------------------------------------------------
 
-The current system operates only on transcript text, ignoring visual content. Future work could incorporate:
-\begin{itemize}
-    \item Image and video frame analysis for visual claim verification
-    \item Chart and graph interpretation for data-driven claims
-    \item Speaker identification and credibility signals
-    \item Deepfake detection for authenticity verification
-\end{itemize}
+The current system operates only on transcript text, ignoring visual content. Future work could incorporate image and video frame analysis for visual claim verification, chart and graph interpretation for data-driven claims, speaker identification for credibility signals, and deepfake detection for authenticity verification.

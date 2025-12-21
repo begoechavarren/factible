@@ -241,6 +241,8 @@ The system employs several established prompting techniques across its component
     \item \textbf{Zero-shot prompting}: Components receive task instructions without example I/O pairs, minimizing prompt length and avoiding format bias.
 \end{itemize}
 
+The complete system prompts for each LLM agent are provided in Appendix~\ref{appendix:prompts}.
+
 \paragraph{Post-Processing: Claim Localization}
 
 After LLM extraction, each claim is located in the original transcript using fuzzy string matching. The algorithm applies a sliding window approach to find the best matching region, yielding character-level positions that enable precise timestamp mapping back to the video.
