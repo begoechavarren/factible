@@ -20,11 +20,11 @@ The five stages are:
 \begin{enumerate}
     \item \textbf{Transcriptor}: Extracts video transcripts via YouTube Transcript API, preserving timestamped segments for claim localization. The component includes automatic fallback to proxy service when rate-limited, ensuring robust transcript retrieval across different access conditions.
 
-    \item \textbf{Claim Extractor} (LLM Agent): Employs thesis-first reasoning to infer the video's central argument before extracting factual and verifiable claims. Each claim receives an importance score based on its impact on the video's thesis. Post-processing uses fuzzy string matching---a technique that finds approximate text matches using similarity scores rather than exact character sequences---to locate claims within the transcript for timestamp mapping.
+    \item \textbf{Claim Extractor} (LLM Agent): Infers the video's central argument before extracting factual and verifiable claims. Each claim receives an importance score based on its impact on the video's thesis. Post-processing locates claims within the transcript for timestamp mapping.
 
-    \item \textbf{Query Generator} (LLM Agent): Generates diverse search queries across four strategic types---direct, alternative, source-seeking, and contextual. Each query receives a priority score (1--5) based on evidence likelihood, enabling filtering of low-priority queries.
+    \item \textbf{Query Generator} (LLM Agent): Generates diverse search queries across four strategic types---direct, alternative, source, and context. Each query receives a priority score (1--5) based on evidence likelihood, enabling filtering of low-priority queries.
 
-    \item \textbf{Online Search}: Executes a four-step evidence retrieval pipeline for each query: (i) Google Search via Serper API, (ii) website reliability assessment using Media Bias/Fact Check (MBFC) data combined with domain heuristics \citep{mbfc2024methodology}, (iii) content fetching via Selenium WebDriver with JavaScript rendering support, and (iv) LLM-based evidence extraction with stance classification (supports, refutes, mixed, unclear).
+    \item \textbf{Online Search}: Executes a four-step evidence retrieval pipeline for each query: (i) Google Search via Serper API, (ii) website reliability assessment using Media Bias/Fact Check (MBFC) data combined with TLD reputation and domain age heuristics \citep{mbfc2024methodology}, (iii) content fetching via Selenium WebDriver with JavaScript rendering support, and (iv) LLM-based evidence extraction with stance classification (supports, refutes, mixed, unclear).
 
     \item \textbf{Output Generator} (LLM Agent): Synthesizes evidence into structured verdicts by building evidence bundles grouped by stance, generating natural language summaries with confidence levels, calculating algorithmic evidence quality scores, and mapping claims to video timestamps for interactive navigation.
 \end{enumerate}
@@ -61,7 +61,7 @@ Figure \ref{fig:pipeline-architecture} illustrates the complete pipeline archite
 % Stage 4
 \node[box, below=of s3] (s4) {
     \textbf{Stage 4: Online Search}\\
-    \textit{Google Search $\rightarrow$ Reliability $\rightarrow$ Fetch $\rightarrow$ Extract Evidence}
+    Google Search $\rightarrow$ Reliability $\rightarrow$ Fetch $\rightarrow$ Extract Evidence
 };
 
 % Stage 5
@@ -94,9 +94,9 @@ The system adheres to several key design principles derived from software engine
 
     \item \textbf{Progressive Enhancement}: The pipeline operates with graceful degradation (e.g., fallback to snippet if scraping fails, fallback to proxy if rate-limited) rather than failing entirely.
 
-    \item \textbf{Cost-Conscious Design}: Configurable limits (\texttt{max\_claims}, \texttt{max\_queries}, \texttt{max\_results}) prevent runaway API costs and control latency during development and production.
+    \item \textbf{Cost-Conscious Design}: Configurable limits on maximum claims, queries, and results prevent runaway API costs and control latency during development and production.
 
-    \item \textbf{Reproducibility}: Deterministic LLM outputs (\texttt{temperature=0.0}), structured YAML configurations, and comprehensive experiment tracking enable reproducible research.
+    \item \textbf{Reproducibility}: Deterministic LLM outputs using zero temperature, structured YAML configurations, and comprehensive experiment tracking enable reproducible research.
 
     \item \textbf{Separation of Concerns}: Classical algorithms handle tasks like reliability scoring, deduplication, and quality calculation, reserving LLM calls for tasks requiring reasoning and language understanding.
 \end{enumerate}
@@ -117,11 +117,11 @@ Table \ref{tab:tech-stack} presents the core technologies employed in the implem
 \toprule
 \textbf{Category} & \textbf{Technology} & \textbf{Version} & \textbf{Purpose} \\
 \midrule
-Language & Python & 3.12 & Core implementation with type hints \\
+Language & Python & 3.12 & Core implementation \\
 LLM Framework & Pydantic AI & $\geq$1.0.0 & Agent orchestration, structured outputs \\
 Data Validation & Pydantic & $\geq$2.0.0 & Schema definitions, runtime validation \\
 Web Framework & FastAPI & $\geq$0.115.0 & REST API with SSE streaming \\
-HTTP Server & Uvicorn & $\geq$0.32.0 & High-performance ASGI server \\
+HTTP Server & Uvicorn & $\geq$0.32.0 & ASGI server \\
 Async HTTP & httpx & $\geq$0.28.1 & Async HTTP client \\
 Web Scraping & Selenium & $\geq$4.15.2 & JavaScript-rendered content extraction \\
 YouTube & youtube-transcript-api & $\geq$1.2.2 & Transcript extraction \\
@@ -146,14 +146,14 @@ The system supports multiple LLM providers to enable comparison of cost-quality 
 \midrule
 OpenAI & gpt-4o-mini & 128K & \$0.15 / \$0.60 & Default \\
 OpenAI & gpt-4o & 128K & \$5.00 / \$15.00 & High-quality \\
-OpenAI & gpt-4-turbo & 128K & \$10.00 / \$30.00 & Premium \\
+OpenAI & gpt-4-turbo & 128K & \$10.00 / \$30.00 & Legacy \\
 Ollama & qwen3:8b & 40K & Free (local) & Budget/offline \\
 Ollama & qwen3:4b & 256K & Free (local) & Budget/offline \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Large language models such as GPT-4 offer multimodal capabilities and demonstrate human-level performance across diverse benchmarks \citep{openai2024gpt4}. Despite these advances, models still suffer from hallucinations and are constrained by limited context windows, underscoring the need for careful configuration and reliability safeguards \citep{openai2024gpt4}. The model management layer therefore makes it straightforward to switch providers, tune limits, and keep outputs deterministic through shared configuration.
+Large language models such as GPT-4 demonstrate strong performance across diverse reasoning benchmarks \citep{openai2024gpt4}. Despite these advances, models still suffer from hallucinations and are constrained by limited context windows, underscoring the need for careful configuration and reliability safeguards \citep{openai2024gpt4}. The model management layer makes it straightforward to switch providers, tune limits, and keep outputs deterministic through shared configuration. The architecture is extensible, allowing integration of additional LLM providers (such as Anthropic Claude, Google Gemini, or other OpenAI-compatible APIs) and local models via Ollama with minimal configuration changes.
 
 The same layer also exposes a zero-cost, offline alternative through Ollama with Qwen 3 variants (qwen3:8b, qwen3:4b). Switching between OpenAI and local providers requires only a configuration change, enabling experiments that balance latency, quality, and hardware constraints. GPT-4o-mini remains the default selection for this thesis because cloud inference provides lower latency than consumer hardware while maintaining strong reasoning quality.
 
@@ -162,6 +162,7 @@ The same layer also exposes a zero-cost, offline alternative through Ollama with
 The system integrates with external services for search and transcript extraction:
 
 \begin{itemize}
+    \item \textbf{YouTube Transcript API}: Primary transcript extraction service accessed via the youtube-transcript-api library, providing timestamped transcript segments.
     \item \textbf{Serper API}: Google Search wrapper providing organic search results with approximately 2,500 queries per month on the free tier.
     \item \textbf{YouTube oEmbed API}: Video metadata retrieval without authentication.
     \item \textbf{Webshare Proxy}: Rate limit bypass for transcript extraction with configurable proxy locations.
@@ -177,7 +178,7 @@ The Transcriptor component extracts YouTube video transcripts with precise times
 
 \paragraph{Implementation Details}
 
-The transcriptor uses the \texttt{youtube-transcript-api} library to fetch available transcripts, with preference for English. When rate-limited by YouTube, it automatically falls back to a proxy service (Webshare). Key features include:
+The transcriptor uses the youtube-transcript-api library to fetch available transcripts, with preference for English. When rate-limited by YouTube, it automatically falls back to a proxy service (Webshare). Key features include:
 
 \begin{itemize}
     \item \textbf{Timestamped Segments}: Each segment preserves \texttt{start} time and \texttt{duration} in seconds.
@@ -200,9 +201,9 @@ The Claim Extractor identifies factual, verifiable claims from video transcripts
 
 The claim extractor uses deterministic settings for reproducibility: temperature set to 0.0 to ensure consistent outputs across multiple runs, max tokens limited to 1,200 to control response length and latency, and automatic retry logic (3 attempts) to handle transient LLM failures gracefully.
 
-\paragraph{Prompt Engineering Strategy: Thesis-First Approach}
+\paragraph{Prompt Engineering Strategy}
 
-The claim extractor employs a novel \textit{thesis-first approach} with multi-step reasoning designed to prioritize claims most critical to the video's central argument:
+The claim extractor employs a novel approach with multi-step reasoning designed to prioritize claims most critical to the video's central argument:
 
 \textbf{Step 1: Thesis Inference} --- Before listing claims, the LLM infers the video's central thesis in no more than 25 words (e.g., ``Climate change alarmism is driven more by politics and media than by settled science'').
 
@@ -234,15 +235,15 @@ The system employs several established prompting techniques across its component
 \begin{itemize}
     \item \textbf{Role/system prompting}: Each component receives a focused system prompt that spells out its role, constraints, and expected outputs for consistent behavior.
     \item \textbf{Structured outputs}: Responses are constrained to typed schemas so downstream stages always receive validated fields.
-    \item \textbf{Chain-of-thought reasoning}: The thesis-first steps require the model to state the thesis and then rate claims against it, which improves prioritization.
+    \item \textbf{Chain-of-thought reasoning}: The multi-step approach requires the model to state the thesis and then rate claims against it, which improves prioritization.
     \item \textbf{Dynamic instruction injection}: Runtime parameters such as \texttt{max\_claims} are inserted directly into prompts so component behavior adapts without duplicating templates.
     \item \textbf{Deterministic generation}: Temperature stays at 0.0 across the pipeline for reproducible, debuggable outputs.
     \item \textbf{Zero-shot prompting}: Components receive task instructions without example I/O pairs, minimizing prompt length and avoiding format bias.
 \end{itemize}
 
-\paragraph{Post-Processing: Fuzzy Claim Localization}
+\paragraph{Post-Processing: Claim Localization}
 
-After LLM extraction, each claim is located in the original transcript using fuzzy string matching. The algorithm normalizes both the claim text and transcript, then applies a sliding window approach (with $\pm 2$ words tolerance around the expected claim length) to find the best matching region. Similarity is computed using Python's sequence matching algorithm, which calculates the ratio of matching characters between two strings. A minimum similarity score of 0.5 is required for a valid match. This process yields the character-level start and end positions within the transcript, along with the match confidence score, enabling precise timestamp mapping from transcript positions back to video timestamps.
+After LLM extraction, each claim is located in the original transcript using fuzzy string matching. The algorithm applies a sliding window approach to find the best matching region, yielding character-level positions that enable precise timestamp mapping back to the video.
 
 %---
 
@@ -300,25 +301,25 @@ Figure \ref{fig:online-search-pipeline} illustrates the four-step Online Search 
 % Step 1
 \node[box] (step1) {
     \textbf{Step 1: Google Search}\\
-    Serper API $\rightarrow$ GoogleSearchHits (title, URL, snippet)
+    Serper API $\rightarrow$ Search hits (title, URL, snippet)
 };
 
 % Step 2
 \node[box, below=of step1] (step2) {
     \textbf{Step 2: Reliability Assessment}\\
-    MBFC + Domain Heuristics $\rightarrow$ SiteReliability (rating, score, bias)
+    MBFC + Domain Heuristics $\rightarrow$ Site reliability (rating, score, bias)
 };
 
 % Step 3
 \node[box, below=of step2] (step3) {
     \textbf{Step 3: Content Fetching}\\
-    Selenium WebDriver $\rightarrow$ PageText (with JS rendering)
+    Selenium WebDriver $\rightarrow$ Page text (with JS rendering)
 };
 
 % Step 4
 \node[box, below=of step3] (step4) {
     \textbf{Step 4: Evidence Extraction (LLM)}\\
-    Analyze content $\rightarrow$ EvidenceSummary + Stance (supports/refutes/mixed/unclear)
+    Analyze content $\rightarrow$ Evidence summary + Stance
 };
 
 % Arrows
@@ -345,9 +346,9 @@ The Google search client wraps the Serper API for asynchronous search execution.
 The reliability checker uses a multi-factor scoring system with first-match priority, combining external datasets with algorithmic heuristics:
 
 \begin{itemize}
-    \item \textbf{Media Bias/Fact Check (MBFC) Dataset}: The system loads timestamped JSON snapshots containing nearly 10,000 news sources with credibility ratings (dataset extracted December 2025). Credibility mappings are: high $\rightarrow$ 0.85, medium $\rightarrow$ 0.60, low $\rightarrow$ 0.30, very low $\rightarrow$ 0.15.
+    \item \textbf{Media Bias/Fact Check (MBFC) Dataset}: The system loads timestamped JSON snapshots containing nearly 10,000 news sources with credibility ratings (dataset extracted December 2025). Credibility levels are mapped to numerical scores: high (0.85), medium (0.60), low (0.30), and very low (0.15).
 
-    \item \textbf{TLD Reputation}: High-trust top-level domains (\texttt{.gov}, \texttt{.edu}, \texttt{.int}) receive a base score of 0.90, reflecting their institutional authority.
+    \item \textbf{TLD Reputation}: High-trust top-level domains (.gov, .edu, .int) receive a base score of 0.90, reflecting their institutional authority.
 
     \item \textbf{Domain Age via WHOIS}: Domains $\geq$10 years old receive a +0.10 bonus (established presence), while domains $<$1 year old receive a --0.15 penalty (recent creation may indicate lower trust).
 \end{itemize}
@@ -397,37 +398,19 @@ The Output Generator employs a hybrid approach combining algorithmic evidence or
 
 \textbf{Step 2: Generate Verdict (LLM)} --- Organized evidence is formatted into a structured prompt containing stance labels, source counts, reliability ratings, and evidence summaries. The system prompt instructs the LLM to synthesize concise verdicts, naming sources explicitly only when clarifying contrasting perspectives or when evidence directly conflicts. This reduces verbosity while maintaining attribution transparency.
 
-\paragraph{Evidence Quality Score (Algorithmic)}
+\paragraph{Evidence Quality Score}
 
-The quality score is calculated algorithmically without LLM involvement for consistency and speed. The scoring formula combines three components with different weights: a base score of 0.3 for having any evidence, an actionable stance bonus of up to 0.3 (scaled by the number of supports/refutes/mixed sources, saturating at 3 sources), and a reliability bonus of up to 0.4 (scaled by the number of high/medium reliability sources, saturating at 3 sources). This design prioritizes both actionable stances and source reliability, with the maximum achievable score of 1.0 indicating high-quality, decisive evidence from multiple reliable sources.
+The quality score is calculated algorithmically for consistency and speed, combining three weighted components: a base score for having any evidence, an actionable stance bonus scaled by the number of definitive sources, and a reliability bonus based on source credibility ratings. This score is used to rank claims in the user interface, prioritizing high-confidence verdicts.
 
-Table \ref{tab:quality-score} summarizes the quality score components.
+\paragraph{Integrated Verdict Generation}
 
-\begin{table}[H]
-\centering
-\caption{Evidence quality score breakdown}
-\label{tab:quality-score}
-\begin{tabular}{lll}
-\toprule
-\textbf{Component} & \textbf{Weight} & \textbf{Criteria} \\
-\midrule
-Base & 0.3 & Having any evidence \\
-Actionable & 0.3 & Up to 3 supports/refutes/mixed sources \\
-Reliability & 0.4 & Up to 3 high/medium reliability sources \\
-\textbf{Maximum} & \textbf{1.0} & \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\paragraph{Integrated Verdict Generation (within Level 1)}
-
-Verdicts are generated immediately after each claim's evidence collection completes, within the same parallel execution context as the claim processing. This design choice eliminates the latency overhead of waiting for all claims to finish evidence collection before beginning verdict synthesis. Each claim's verdict generation executes as soon as its evidence is ready, allowing early-finishing claims to produce results while slower claims continue processing. After all parallel claim tasks complete, the reports are sorted by evidence quality score (descending) to prioritize high-confidence verdicts in the user interface.
+Verdicts are generated immediately after each claim's evidence collection completes, eliminating the latency overhead of waiting for all claims to finish. After all parallel tasks complete, reports are sorted by quality score to prioritize high-confidence verdicts in the user interface.
 
 %-------------------------------------------------------
 \subsection{Latency Optimization Strategies}
 %-------------------------------------------------------
 
-The pipeline ships with a concrete set of latency optimizations. The following subsections describe what was actually built: tuned model choices, strict token budgets, trimmed inputs, single-call components, parallel execution, real-time streaming updates, and classical fallbacks for non-reasoning tasks. Together these measures reduced mean end-to-end latency to 129.6 seconds for the evaluation set.
+The pipeline includes a set of latency optimizations following established principles for LLM application development \citep{openai2024latency}. These strategies enable scalable processing without compromising response quality.
 
 \subsubsection{Model Selection}
 
@@ -435,7 +418,7 @@ The default model (gpt-4o-mini) is selected for its balanced performance across 
 
 \subsubsection{Output Constraints}
 
-Each component has carefully tuned \texttt{max\_tokens} limits to minimize generation latency and API costs without sacrificing information quality. Claims are limited to approximately 40 words (sufficient for most factual assertions), context descriptions to 20 words (brief background), and evidence summaries to 1--2 sentences (key findings only). These constraints are enforced through explicit prompt instructions and validated against output token limits.
+Each component has carefully tuned token limits to minimize generation latency and API costs without sacrificing information quality. Claims are limited to approximately 40 words (sufficient for most factual assertions), context descriptions to 20 words (brief background), and evidence summaries to 1--2 sentences (key findings only). These constraints are enforced through explicit prompt instructions.
 
 \subsubsection{Content Trimming}
 
@@ -452,7 +435,7 @@ The system implements three levels of nested parallelization to maximize through
 \begin{itemize}
     \item \textbf{Level 1 (Claims)}: After extracting N claims from the transcript, all claims are processed in parallel. Each claim independently proceeds through query generation, evidence search, and verdict generation. Critically, each claim's verdict is generated immediately after its evidence collection completes, rather than waiting for all claims to finish---this optimization reduces perceived latency by producing results progressively.
 
-    \item \textbf{Level 2 (Queries per Claim)}: Within each claim's processing, the Query Generator produces M queries. These queries are executed in parallel, enabling simultaneous search across different query formulations (direct, alternative, source-seeking, contextual).
+    \item \textbf{Level 2 (Queries per Claim)}: Within each claim's processing, the Query Generator produces M queries. These queries are executed in parallel, enabling simultaneous search across different query formulations (direct, alternative, source, context).
 
     \item \textbf{Level 3 (Search Results per Query)}: Within each query's execution, the Online Search component retrieves K results from Google. The four-step pipeline (reliability assessment, content fetching, and evidence extraction) runs in parallel for all K results, with each result processed independently.
 \end{itemize}
@@ -465,7 +448,7 @@ Server-Sent Events (SSE) provide progressive updates as the pipeline executes, i
 
 \subsubsection{Classical Methods for Non-Reasoning Tasks}
 
-Table \ref{tab:classical-methods} shows operations handled by classical algorithms rather than LLMs.
+Not every operation requires LLM reasoning. Deterministic tasks are handled by classical algorithms, which are faster, cheaper, and more reproducible. Table \ref{tab:classical-methods} shows these operations.
 
 \begin{table}[H]
 \centering
@@ -488,39 +471,29 @@ Stance filtering & Threshold-based & Simple percentage check \\
 \subsection{Experimentation and Evaluation Framework}
 %-------------------------------------------------------
 
-Evaluating LLM-based fact-checking systems presents unique challenges: outputs are non-deterministic, external dependencies (web search) introduce variability, and traditional benchmarks risk overfitting \citep{ruder2025llmeval}. To address these challenges, a three-component experimentation framework was developed to capture complete execution traces, support batch experimentation, and compute performance metrics.
+Evaluating LLM-based fact-checking systems presents unique challenges: outputs are non-deterministic, external dependencies (web search) introduce variability, and traditional benchmarks risk overfitting \citep{ruder2025llmeval}. To address these challenges, a three-component experimentation framework was developed.
 
-\subsubsection{Framework Architecture}
+\subsubsection{Experiment Runner}
 
-The framework follows a linear data flow through three stages:
+The experiment runner executes the fact-checking pipeline on batches of videos defined in a YAML configuration file. It invokes the tracker for each run and supports parallel execution across multiple videos.
 
-\begin{enumerate}
-    \item \textbf{Experiment Runner}: Executes the fact-checking pipeline on configured videos, invoking the tracking module for each run.
-    \item \textbf{Tracking Module}: Captures all execution data---inputs, outputs, LLM calls, timing, and costs---saving structured artifacts for later analysis.
-    \item \textbf{Evaluator}: Computes performance metrics including comparisons against ground truth annotations, system efficiency measurements, and source quality assessments.
-\end{enumerate}
+\subsubsection{Run Tracker}
 
-\subsubsection{Tracking Module}
-
-The tracking module implements a singleton pattern with context manager support, enabling any pipeline component to log data without explicit parameter passing. When initialized, the tracker creates a timestamped run directory and registers itself as the global tracker. The context manager protocol ensures automatic saving on exit.
-
-Each run generates structured artifacts containing: run configuration and parameters, complete records of all LLM calls with prompts, responses, latency and cost, final extracted claims and fact-check verdicts, aggregated timing and cost metrics, and the original video transcript for reference.
-
-LLM call tracking is achieved via a decorator that instruments the Pydantic AI agent methods, automatically recording component name, model, timestamp, latency, token counts, and calculated cost for every inference call.
+The tracker captures complete execution traces for reproducibility and analysis. Each run generates structured artifacts containing: run configuration, complete records of all LLM calls (prompts, responses, latency, cost), extracted claims and verdicts, and aggregated metrics. A decorator instruments the Pydantic AI agent methods to automatically record token counts and costs for every inference call.
 
 \subsubsection{Evaluator}
 
-The evaluator computes performance metrics using modular components for each evaluation dimension:
+The evaluator computes performance metrics across multiple dimensions:
 
 \begin{itemize}
-    \item \textbf{Claim extraction metrics}: Precision@k, Recall, F1, and MAP computed using semantic similarity matching between extracted and ground truth claims.
+    \item \textbf{Claim extraction}: Precision@k, Recall, F1, and MAP using semantic similarity matching against ground truth claims.
     \item \textbf{Verdict accuracy}: Comparison of system stances against ground truth labels.
-    \item \textbf{Evidence retrieval metrics}: Success rate and source reliability distribution based on MBFC credibility ratings.
-    \item \textbf{System efficiency}: Latency and cost aggregation across all pipeline components.
-    \item \textbf{LLM-as-judge evaluation} (optional): LLM-as-judge is an evaluation paradigm where a language model assesses the quality of outputs from another model (or the same model), providing scores or judgments on dimensions difficult to capture with traditional metrics \citep{raschka2025llmeval}. In this system, LLM-as-judge can evaluate claim relevance, evidence quality, and verdict coherence.
+    \item \textbf{Evidence retrieval}: Success rate and source reliability distribution.
+    \item \textbf{System efficiency}: Latency and cost aggregation across pipeline components.
+    \item \textbf{LLM-as-judge}: A language model assesses output quality on dimensions difficult to capture with traditional metrics \citep{raschka2025llmeval}.
 \end{itemize}
 
-Evaluations execute in parallel across multiple videos for efficiency. Results include per-video reports and aggregate statistics (means, standard deviations, distributions) across all evaluated videos.
+Results include per-video reports and aggregate statistics across all evaluated videos.
 
 %-------------------------------------------------------
 \subsection{API Layer and User Interface}
@@ -528,7 +501,7 @@ Evaluations execute in parallel across multiple videos for efficiency. Results i
 
 \subsubsection{FastAPI Setup}
 
-The API uses FastAPI with CORS middleware configured for local frontend development, supporting common development server ports. API routes are organized under a versioned prefix to enable future API evolution without breaking existing clients.
+The API uses FastAPI with CORS middleware configured for local frontend development, supporting common development server ports.
 
 \subsubsection{Streaming Endpoint with SSE}
 
@@ -536,7 +509,7 @@ The streaming endpoint exposes the fact-checking run as a server-sent event stre
 
 \subsubsection{User Interface}
 
-A web-based frontend provides an accessible interface for end users to interact with the fact-checking pipeline. The interface is built with React and communicates with the backend via the streaming API endpoint. Figure~\ref{fig:ui-screenshots} presents the four main interface states.
+A web-based frontend provides an accessible interface for end users to interact with the fact-checking pipeline. The interface is built with React and communicates with the backend via the streaming API endpoint. Figures~\ref{fig:ui-screenshots-1} and~\ref{fig:ui-screenshots-2} present the four main interface states. The interface emphasizes transparency by displaying source reliability ratings, confidence levels, and direct links to evidence sources.
 
 \begin{figure}[H]
 \centering
@@ -577,10 +550,8 @@ A web-based frontend provides an accessible interface for end users to interact 
     \label{fig:ui-claim}
 \end{subfigure}
 \caption[User interface: results and claim details]{User interface: results and claim detail views. Each claim shows its verdict, confidence level, and supporting evidence with source reliability ratings.}
-\label{fig:ui-screenshots}
+\label{fig:ui-screenshots-2}
 \end{figure}
-
-The interface shows transparency by displaying source reliability ratings, confidence levels, and direct links to evidence sources. Users can click ``Jump'' buttons to navigate directly to the video timestamp where each claim was made, enabling quick verification of the original context.
 
 %-------------------------------------------------------
 \subsection{Engineering Practices}

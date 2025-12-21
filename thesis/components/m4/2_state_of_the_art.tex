@@ -3,9 +3,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{State of the Art}
 
-Automated fact-checking has evolved significantly since the mid-2010s, from rule-based systems to architectures using Large Language Models (LLMs). This evolution has been driven by advances in natural language processing, retrieval-augmented generation (RAG), and multi-agent systems that break down fact-checking into specialized, coordinated tasks.
+Automated fact-checking has evolved significantly since the mid-2010s, progressing from rule-based systems through classical machine learning classifiers and knowledge graph approaches, to neural architectures and contemporary Large Language Models (LLMs). This evolution has been driven by advances in natural language processing, retrieval-augmented generation (RAG), and multi-agent systems that break down fact-checking into specialized, coordinated tasks.
 
-This section examines automated fact-checking systems, emphasizing multi-agent architectures for video content verification. It analyzes the technological foundations of each pipeline component, from claim detection to evidence retrieval to verdict synthesis, and identifies gaps limiting practical deployment. The review covers literature from 2014 to 2025, tracing the evolution from early rule-based systems through neural approaches to modern LLM-based architectures.
+This section examines automated fact-checking systems, emphasizing multi-agent architectures for video content verification. It analyzes the technological foundations of each pipeline component, from claim detection to evidence retrieval to verdict synthesis, and identifies gaps limiting practical deployment, tracing the field's evolution from 2014 to the present.
 
 %-------------------------------------------------------
 \subsection{Historical Development of Automated Fact-Checking}
@@ -41,21 +41,17 @@ Multi-agent design for fact-checking emerged recently (2023--2025). Early resear
 \subsection{Automatic Claim Detection in Text}
 %-------------------------------------------------------
 
-Identifying which statements need fact-checking is crucial for any verification pipeline. For YouTube videos, this means scanning transcripts to flag factual claims that are verifiable and important enough to check. This task is known as claim check-worthiness detection.
+Identifying which statements warrant fact-checking---known as check-worthiness detection---is crucial for any verification pipeline. For YouTube videos, this means scanning transcripts to flag claims that are both verifiable and important.
 
 \subsubsection{Traditional Supervised Approaches}
 
-Claim detection research began in the mid-2010s, targeting political speech. \textbf{ClaimBuster} was pioneering work, the ``first-ever end-to-end fact-checking system'' \citep{hassan2017claimbuster}. It used a supervised model trained on human-labelled debate transcripts to score sentences for verifiable factual claims. Using feature engineering and early neural networks, it achieved sufficient accuracy for integration by fact-checking organizations like Duke Reporters' Lab \citep{hassan2017claimbuster}. ClaimBuster automated the initial triage step, helping journalists prioritize statements from debates or speeches.
-
-Subsequent work refined datasets and models. \textbf{ClaimRank} expanded U.S. presidential debate data and introduced context-aware modeling, using surrounding sentences to improve detection \citep{gencheva2017claimrank}. The \textbf{CLEF CheckThat!} lab (2018--2022) released annual challenges with social media posts or political statements in multiple languages, labelled for check-worthiness \citep{thorne2018fever}. These efforts established claim detection as a classification or ranking problem, with BERT and transformers becoming dominant after 2018. The key insight was that check-worthiness requires assessing both \textbf{importance} and \textbf{verifiability}. ``The sky is blue'' is factual but not check-worthy due to obviousness. ``Unemployment rose by 15\% last quarter'' is both factual and check-worthy because it's verifiable and important. Training models to capture this required carefully annotated datasets with clear guidelines.
+Claim detection research began in the mid-2010s, targeting political speech. \textbf{ClaimBuster} \citep{hassan2017claimbuster} pioneered the approach, using supervised models trained on human-labelled debate transcripts to score sentences for verifiable factual claims. Subsequent work refined datasets and models: \textbf{ClaimRank} introduced context-aware modeling using surrounding sentences \citep{gencheva2017claimrank}, while the \textbf{CLEF CheckThat!} lab (2018--present) released multilingual challenges for check-worthiness detection \citep{elsayed2019checkthat}. These efforts established claim detection as a classification problem, with BERT and transformers becoming dominant after 2018. The key insight was that check-worthiness requires assessing both \textbf{importance} and \textbf{verifiability}---a claim like ``Unemployment rose by 15\% last quarter'' is check-worthy because it is both verifiable and consequential.
 
 \subsubsection{LLM-Based Claim Detection}
 
-Recent work explores whether large language models can identify check-worthy claims without fine-tuning. \textbf{Sawinski et al. (2024)} compared fine-tuned BERT variants with GPT-3/GPT-4 in zero-shot or few-shot mode \citep{sawinski2024comparison}. Simple zero-shot LLM prompts still underperform fine-tuned models on benchmarks. LLMs often have inconsistent internal definitions of ``worthiness'' and are sensitive to prompt wording, while fine-tuned models have learned explicit criteria from labelled data.
+Recent work explores whether LLMs can identify check-worthy claims without fine-tuning. \citet{sawinski2024comparison} compared fine-tuned BERT variants with GPT-3/GPT-4 in zero-shot mode, finding that simple prompts still underperform fine-tuned models due to inconsistent internal definitions of ``worthiness'' and sensitivity to prompt wording.
 
-However, careful prompts can substantially improve LLM performance. \textbf{Li et al. (2023)} built a fully automated fact-checking prototype with an LLM-based claim detection module, using GPT-3 with verbose few-shot prompts \citep{li2023llmclaimdetection}. While quantitative metrics weren't reported, the work demonstrated that LLMs can effectively replace traditional claim detectors in automated pipelines.
-
-\textbf{Ni et al. (2024)} proposed a three-step prompting approach for consistent claim identification \citep{ni2024threestep}. The LLM analyzes text in stages: highlighting factual statements, applying check-worthiness criteria, and ranking by importance, similar to chain-of-thought reasoning. This improved consistency but focused on verifiable claim identification rather than worthiness ranking \citep{ni2024verifiable}.
+However, careful prompt design can substantially improve LLM performance. \citet{li2023llmclaimdetection} demonstrated that LLMs with verbose few-shot prompts can effectively replace traditional claim detectors in automated pipelines. \citet{ni2024threestep} proposed a three-step prompting approach where the LLM analyzes text in stages---highlighting factual statements, applying check-worthiness criteria, and ranking by importance---similar to chain-of-thought reasoning \citep{ni2024verifiable}.
 
 \subsubsection{Current Challenges}
 
@@ -67,9 +63,9 @@ Key challenges include: (1) \textbf{definition ambiguity}: what constitutes a ``
 
 A core pillar for automated fact-checking is retrieval-augmented generation (RAG), which combines text generation with external information retrieval to ensure outputs are based on verifiable sources.
 
-\subsubsection{RAG Fundamentals}
+\subsubsection{From RAG to Fact-Checking}
 
-\textbf{Lewis et al. (2020)} formalized RAG by showing that augmenting generation with external knowledge retrieval significantly improves performance on knowledge-intensive tasks \citep{lewis2020retrieval}. For fact-checking, RAG is essential: systems must fetch reliable sources that support or refute claims. The \textbf{FEVER} dataset exemplified this retrieve-then-verify pattern: given a claim, retrieve relevant documents (e.g., Wikipedia pages), then determine if they support or refute the claim \citep{thorne2018fever}. Modern systems use LLMs for both retrieval and verification, conditioning their reasoning on retrieved evidence.
+\citet{lewis2020retrieval} formalized RAG for general knowledge-intensive tasks, showing that augmenting generation with external knowledge retrieval significantly improves performance. For fact-checking, this paradigm is essential: systems must fetch reliable sources that support or refute claims. The \textbf{FEVER} dataset exemplified this retrieve-then-verify pattern: given a claim, retrieve relevant documents (e.g., Wikipedia pages), then determine if they support or refute the claim \citep{thorne2018fever}. Modern systems use LLMs for both retrieval and verification, conditioning their reasoning on retrieved evidence.
 
 RAG addresses a critical limitation of pure LLM approaches: parametric knowledge can be outdated, incomplete, or hallucinated. By retrieving external information (from document indexes, web search, or APIs), RAG systems access current information, provide source attribution, and ground reasoning in verifiable evidence. This is crucial for fact-checking, where claims often reference recent events, specific statistics, or specialized knowledge not in LLM training data.
 
@@ -89,17 +85,15 @@ Current best practices include prioritizing sources with high domain authority (
 
 \subsubsection{Query Optimization for Fact-Checking}
 
-A critical but often overlooked component of RAG systems is query formulation. The same claim can be verified or refuted depending on how search queries are constructed. Query quality significantly impacts downstream task performance \citep{ma2025guided, hassan2017claimbuster}.
+A critical but often overlooked component of RAG systems is query formulation---the same claim can be verified or refuted depending on how search queries are constructed \citep{ma2025guided}. Effective strategies include \textbf{keyword extraction} (identifying salient terms and entities), \textbf{query expansion} (generating variants to capture different phrasings, e.g., ``unemployment rate increased'' alongside ``jobless claims rose'') \citep{lewis2020retrieval}, and \textbf{temporal awareness} (incorporating time constraints for period-specific claims).
 
-Effective query optimization involves several strategies. \textbf{Keyword extraction} identifies salient terms likely to appear in relevant sources, filtering stop words and focusing on entities and key concepts. \textbf{Query expansion} generates multiple variants to capture different phrasings; for example, expanding ``unemployment rate increased'' to also search for ``jobless claims rose'' or ``labour market deterioration'' \citep{lewis2020retrieval}. \textbf{Entity recognition} identifies named entities (people, organizations, locations) that should be included in queries, as these serve as strong signals for retrieval. \textbf{Temporal awareness} incorporates time constraints when claims reference specific periods, adding the relevant year when verifying recent events.
-
-Recent multi-agent systems often dedicate a specialized agent to query generation, recognizing this step significantly impacts retrieved evidence quality \citep{factagent2025}. Poor queries may miss relevant sources or retrieve irrelevant information, degrading overall performance regardless of verification model quality. FactAgent includes explicit query formulation as one of its agent steps, using the LLM to generate search-optimized queries \citep{factagent2025}.
+Recent multi-agent systems often dedicate a specialized agent to query generation, recognizing that poor queries degrade overall performance regardless of verification model quality. FactAgent includes explicit query formulation as one of its agent steps, using the LLM to generate search-optimized queries \citep{factagent2025}.
 
 %-------------------------------------------------------
 \subsection{LLM-Based Claim Verification Methods}
 %-------------------------------------------------------
 
-Once claims are identified and evidence retrieved, systems must determine veracity, labelling claims as supported (true), refuted (false), or not enough evidence. Traditional approaches treated this as textual entailment, using neural classifiers to determine if evidence entails or contradicts claims. With LLMs, a new approach emerged: using models to perform verification through natural language reasoning.
+Once claims are identified and evidence retrieved, systems must determine veracity, labelling claims as supported, refuted, mixed, or not enough evidence. Traditional approaches treated this as textual entailment, using classifiers to determine if evidence entails or contradicts claims. With LLMs, a new approach emerged: using models to perform verification through natural language reasoning.
 
 \subsubsection{Prompting Strategies}
 
@@ -107,27 +101,17 @@ Once claims are identified and evidence retrieved, systems must determine veraci
 
 GPT-4 and similar models show surprising capability at this task, often correctly interpreting whether evidence supports statements. However, LLMs can be overly agreeable, sometimes hallucinating justifications or defaulting to ``Supported'' even when evidence is insufficient \citep{zhang2023siren}. This confirmation bias stems from models' training to be helpful and provide answers, even when saying ``I don't know'' would be more appropriate.
 
-Careful prompt engineering can help. Effective strategies include explicitly instructing the model to answer ``Not Enough Evidence'' when information is insufficient, adding system messages emphasizing accuracy over helpfulness, requesting citation of specific evidence sentences supporting its verdict, using temperature settings near zero to reduce randomness, and implementing multi-pass verification where the model first generates a verdict then critiques its own reasoning.
+Careful prompt engineering can mitigate this bias. Effective strategies include explicitly instructing the model to answer ``Not Enough Evidence'' or ``Mixed'' when appropriate, adding system messages emphasizing accuracy over helpfulness, requesting citation of specific evidence sentences, using temperature settings near zero to reduce randomness, and implementing multi-pass verification where the model critiques its own reasoning.
 
-\subsubsection{Chain-of-Thought Reasoning}
+\subsubsection{Advanced Reasoning Strategies}
 
-More advanced approaches use \textbf{chain-of-thought reasoning} or implement the LLM as an agent in a loop. The \textbf{ReAct pattern} has the LLM explicitly reason step-by-step while using tools \citep{yao2023react}. For verification, this might involve: (1) breaking the claim into parts, (2) querying a search engine for each part, (3) evaluating each piece of evidence, and (4) synthesizing a conclusion.
+More sophisticated approaches use \textbf{chain-of-thought reasoning} or implement the LLM as an agent in a loop. The \textbf{ReAct pattern} has the LLM explicitly reason step-by-step while using tools \citep{yao2023react}---for verification, this involves breaking claims into parts, querying search engines, evaluating evidence, and synthesizing conclusions. FactAgent exemplifies this approach: the LLM follows a script where each step is explicit and logged for transparency \citep{factagent2025}. Chain-of-thought provides transparency and debuggability, though multiple LLM calls can be slow and errors compound across stages.
 
-\textbf{FactAgent's} structured workflow exemplifies this: the LLM follows a script where each step (search, read results, extract evidence, cross-check, formulate verdict) is explicit and logged for transparency \citep{factagent2025}. This approach is flexible; if initial evidence is inconclusive, the agent can trigger refined searches. Also, the zero-shot operation without training, mimics human fact-checker processes \citep{factagent2025}.
-
-Chain-of-thought provides transparency (each reasoning step is explicit and inspectable), debuggability (identifying which step failed), and explainability (the reasoning trace serves as a natural language explanation). However, multiple LLM calls for each sub-step can be slow and expensive, and errors compound across stages. If claim decomposition is incorrect, subsequent reasoning will be compromised regardless of retrieval and evaluation quality.
-
-\subsubsection{Self-Consistency and Verification}
-
-\textbf{SelfCheckGPT} introduced self-consistency checking for hallucination detection by generating multiple independent answers and checking if factual claims agree across responses \citep{manakul2023selfcheckgpt}. The approach operates on the principle that hallucinated information varies across samples while grounded information remains consistent, allowing systems to identify low-confidence or potentially hallucinated components.
-
-\textbf{LLM-as-a-judge} approaches use one model to generate answers and another to verify them, catching errors before presenting results \citep{raschka2025llmeval, ruder2025llmeval}. \textbf{Cross-model checking} extends this by using different models to verify outputs; if they disagree, the system can abstain or reconsider \citep{aly2021feverous}. Many verification pipelines also use \textbf{stance detection}---the task of determining whether a piece of evidence supports, refutes, or is neutral toward a claim---to classify evidence snippets \citep{thorne2018fever}. While these verification techniques improve reliability, they add computational overhead through additional model calls and processing steps.
+Complementary techniques address reliability concerns. \textbf{SelfCheckGPT} detects hallucinations by generating multiple independent answers and checking consistency---hallucinated information varies across samples while grounded information remains stable \citep{manakul2023selfcheckgpt}. \textbf{LLM-as-a-judge} approaches use one model to generate answers and another to verify them \citep{raschka2025llmeval, ruder2025llmeval}, while \textbf{cross-model checking} uses different models that can abstain when they disagree \citep{aly2021feverous}. Many pipelines also incorporate \textbf{stance detection} to classify whether evidence supports, refutes, or is neutral toward claims \citep{thorne2018fever}. While these techniques improve reliability, they add computational overhead.
 
 \subsubsection{Current Capabilities and Limitations}
 
-Carefully prompted LLMs can achieve near state-of-the-art performance on tasks like FEVER \citep{thorne2018fever}. However, they still make mistakes, especially on ambiguous or complex claims requiring specialized knowledge or multi-step reasoning.
-
-A noted limitation is the tendency to default to ``Supported'': models sometimes erroneously agree claims are true if any related evidence is found (confirmation bias), rather than truly verifying the exact claim \citep{zhang2023siren}. Designing prompts or agent behaviors to be appropriately skeptical and output ``Not Enough Info'' when evidence is lacking remains important, requiring calibration to avoid being too trusting or too skeptical.
+Carefully prompted LLMs can achieve near state-of-the-art performance on tasks like FEVER \citep{thorne2018fever}. However, they still make mistakes, especially on ambiguous or complex claims requiring specialized knowledge or multi-step reasoning. Designing prompts or agent behaviors to be appropriately skeptical remains important, requiring calibration to avoid being too trusting or too skeptical.
 
 %-------------------------------------------------------
 \subsection{Evaluation of Fact-Checking Systems}
@@ -135,29 +119,17 @@ A noted limitation is the tendency to default to ``Supported'': models sometimes
 
 Evaluating automated fact-checking systems requires assessing accuracy, explanation quality, evidence usage, and practical usability.
 
-\subsubsection{Veracity Classification Metrics}
+\subsubsection{Accuracy and Retrieval Metrics}
 
-Standard classification metrics include accuracy, F1-score, and precision/recall. The FEVER challenge introduced the \textbf{FEVER score}, which requires both correct labels and proper evidence, penalizing systems that get labels right without grounding \citep{thorne2018fever}. For multi-class truth scales (e.g. PolitiFact's ``true'' to ``pants on fire''), accuracy within each class or Cohen's kappa can be used.
+Standard classification metrics include accuracy, F1-score, and precision/recall. The FEVER challenge introduced the \textbf{FEVER score}, which requires both correct labels and proper evidence, penalizing systems that get labels right without grounding \citep{thorne2018fever}. For evidence retrieval, key metrics include \textbf{Recall@k}, \textbf{Precision}, and \textbf{Mean Average Precision (MAP)} \citep{thorne2018fever}. End-to-end evaluations typically credit systems only when they retrieve human-identified evidence, though multiple valid sources may exist for a claim.
 
-\subsubsection{Evidence Retrieval Metrics}
+\subsubsection{Explanation Quality and Consistency}
 
-Key metrics include \textbf{Recall@k} (whether correct evidence appears in the top $k$ retrieved documents), \textbf{Precision} (proportion of relevant evidence), and \textbf{Mean Average Precision (MAP)} (accounting for both relevance and ranking order) \citep{thorne2018fever}. End-to-end evaluations typically credit systems only when they retrieve human-identified evidence, though multiple valid sources may exist for a claim.
+Explanations should be \textbf{faithful} (reflect actual reasoning) and \textbf{factually consistent} with evidence. While automatic metrics like BLEU or ROUGE exist, they don't measure factuality well \citep{raschka2025llmeval}. \textbf{LLM-as-a-judge} has become popular for scoring explanation coherence and factuality, though these judges require validation against human assessments \citep{raschka2025llmeval, ruder2025llmeval}. \textbf{Stance consistency} checks whether evidence stances align with final verdicts, while systems like LoCal evaluate logical consistency by checking if composed solutions imply claim veracity \citep{chen2024local}.
 
-\subsubsection{Explanation Faithfulness and Quality}
+\subsubsection{Human and Computational Evaluation}
 
-Explanations should be \textbf{faithful} (reflect actual reasoning) and \textbf{factually consistent} with evidence. While automatic metrics like BLEU or ROUGE exist, they don't measure factuality well \citep{raschka2025llmeval}. More sophisticated approaches include FactCC \citep{skywork2024hallucinations}, Q$^2$, and entailment checks. \textbf{LLM-as-a-judge} has become popular, using LLMs to score explanation coherence and factuality, though these judges may have biases and require validation against human assessments \citep{raschka2025llmeval, ruder2025llmeval}.
-
-\subsubsection{Logical Coherence and Consistency}
-
-\textbf{Stance consistency} checks whether evidence stances align with final verdicts: if a system claims truth but all evidence refutes it, that indicates errors. LoCal evaluates logical consistency by checking if composed solutions imply claim veracity \citep{chen2024local}. Secondary models can perform entailment checks, creating a verification layer for the system's reasoning.
-
-\subsubsection{Human Evaluation}
-
-Human judgment remains the gold standard. Researchers conduct user studies or expert assessments where fact-checking experts rate verdict correctness and reasoning soundness, while lay users evaluate whether explanations are convincing and understandable. Human evaluation also assesses readability, perceived trust, and completeness \citep{ma2025guided, wardle2017information}.
-
-\subsubsection{Computational Performance Metrics}
-
-For practical deployment, computational efficiency matters. Relevant metrics include latency, throughput, monetary cost, and resource utilization. Although rarely reported in academic papers, these metrics are critical for operational systems targeting near-real-time analysis \citep{factagent2025, tian2024webagents}.
+Human judgment remains the gold standard, with experts rating verdict correctness and lay users evaluating explanation clarity \citep{ma2025guided, wardle2017information}. For practical deployment, computational efficiency also matters: latency, throughput, and cost metrics are critical for operational systems, though rarely reported in academic papers \citep{factagent2025, tian2024webagents}.
 
 %-------------------------------------------------------
 \subsection{Current Limitations and Research Opportunities}
@@ -173,21 +145,13 @@ Most research prototypes focus on isolated components rather than seamless end-t
 
 Much research restricts evidence to structured knowledge bases, primarily Wikipedia. While this yields cleaner evaluation, it severely limits applicability \citep{aly2021feverous}. Real misinformation often requires specialized sources not available in Wikipedia, and systems benchmarked on FEVER tend to be overfitted \citep{thorne2018fever}. In practice, fact-checkers must handle the open web including news sites, scientific papers, and government databases, introducing challenges of source credibility and information quality \citep{aly2021feverous}.
 
-\subsubsection{Production Readiness Gap}
+\subsubsection{Production Readiness and Scalability}
 
-Most solutions remain research-grade implementations rather than production-ready systems. Code is typically provided as research artifacts (Jupyter notebooks, command-line scripts) without the robustness, or user interfaces needed for public deployment \citep{lin2025factaudit}. Even public tools like Google Fact Check Explorer only search existing fact-checks rather than performing new verification \citep{google2024factcheck}. Additionally, many advanced systems require computational resources not feasible without powerful hardware or costly API access, limiting their practical accessibility \citep{lin2025factaudit}.
+Most solutions remain research-grade implementations rather than production-ready systems. Code is typically provided as research artifacts without the robustness or user interfaces needed for public deployment \citep{lin2025factaudit}. Even public tools like Google Fact Check Explorer only search existing fact-checks rather than performing new verification \citep{google2024factcheck}. Scalability poses additional challenges: if verification takes minutes per claim, videos with 20 claims become impractical for interactive use. Cost is also a factor---using commercial LLMs for every step can be prohibitively expensive at scale \citep{lin2025factaudit}.
 
-\subsubsection{Performance and Scalability Limitations}
+\subsubsection{Trust, Transparency, and Model Selection}
 
-Checking long videos with many claims poses significant challenges for any system. If verification takes minutes per claim, videos with 20 claims become impractical for interactive use. Current research often doesn't address runtime performance \citep{lin2025factaudit}. Multi-agent systems can theoretically operate in parallel, but sequential dependencies limit parallelization. Cost is also a factor: using commercial LLMs like GPT-4 for every step can be prohibitively expensive at scale.
-
-\subsubsection{Trust and Transparency Issues}
-
-Users may be reluctant to trust AI verdicts without understanding their derivation, and many systems have been criticized as ``black boxes'' \citep{wardle2017information}. Multi-agent systems and chain-of-thought approaches attempt to address this via explicit reasoning traces, but face risks of hallucinated explanations or justifications. LLMs' documented tendency to confidently present false information can undermine the system's purpose in fact-checking contexts.
-
-\subsubsection{Lack of Comparative LLM Evaluation}
-
-Despite many LLM options (commercial models like GPT-4 or Claude; open-source models like LLaMA, Qwen, DeepSeek), there's limited systematic comparison of their suitability for fact-checking tasks. Research tends to use whichever model is most accessible without careful comparison of trade-offs in cost, accuracy, and latency \citep{raschka2025llmeval}.
+Users may be reluctant to trust AI verdicts without understanding their derivation, and many systems have been criticized as ``black boxes'' \citep{wardle2017information}. While multi-agent systems and chain-of-thought approaches attempt to address this via explicit reasoning traces, they face risks of hallucinated explanations. Additionally, despite many LLM options (commercial models like GPT-4 or Claude; open-source models like LLaMA, Qwen, DeepSeek), there's limited systematic comparison of their suitability for fact-checking tasks---research tends to use whichever model is most accessible without careful comparison of trade-offs \citep{raschka2025llmeval}.
 
 \subsubsection{The Video Content Gap}
 
