@@ -6,7 +6,7 @@
 This section presents the conclusions of this thesis, evaluates the achievement of initial objectives, reflects on the methodology employed, and discusses ethical and sustainability considerations.
 
 %-------------------------------------------------------
-\subsection{Summary of Contributions}
+\subsection{Contributions and Achievements}
 %-------------------------------------------------------
 
 This thesis has presented Factible, a multi-agent system for automated fact-checking of YouTube videos. The work addresses critical gaps identified in the State of the Art---particularly the lack of end-to-end usability, dependence on structured sources, and the production readiness gap---demonstrating the practical viability of LLM-based verification systems for real-world deployment.
@@ -16,7 +16,7 @@ This thesis has presented Factible, a multi-agent system for automated fact-chec
 \begin{enumerate}
     \item \textbf{End-to-End Video Fact-Checking Pipeline}: Unlike prior research that focuses on isolated components \citep{hassan2017claimbuster, thorne2018fever}, Factible implements a complete pipeline from YouTube URL to verified claims with evidence-backed verdicts. The system handles transcript extraction, claim detection, query generation, evidence retrieval, and verdict synthesis autonomously, addressing the end-to-end usability gap identified in Section 2 \citep{lin2025factaudit}.
 
-    \item \textbf{Thesis-First Claim Extraction}: A novel prompting approach that prioritizes claims based on their impact on the video's central argument, achieving 81.3\% precision and 0.870 MAP score for claim extraction.
+    \item \textbf{Novel Claim Extraction Approach}: A novel prompting approach that prioritizes claims based on their impact on the video's central argument, achieving 81.3\% precision and 0.870 MAP score for claim extraction.
 
     \item \textbf{Open-Web Evidence Retrieval with Credibility Assessment}: Moving beyond Wikipedia and closed knowledge bases \citep{aly2021feverous, thorne2018fever}, the system retrieves evidence from the live web using search engines, incorporating source credibility evaluation using Media Bias/Fact Check data and domain heuristics. This enables verification of claims about current events, specialized domains, and topics not well covered in encyclopedic sources.
 
@@ -24,7 +24,7 @@ This thesis has presented Factible, a multi-agent system for automated fact-chec
 
     \item \textbf{Modular Multi-Agent Architecture}: Five specialized agents with structured Pydantic schemas enable transparency, maintainability, and independent optimization. This design facilitates experimentation with different models and techniques, demonstrating the practical benefits of multi-agent approaches \citep{factagent2025, chen2024local}.
 
-    \item \textbf{Production-Ready Implementation}: A web-based interface with real-time SSE streaming makes the verification process transparent and accessible to non-expert users, bridging the gap between research prototypes and usable products \citep{lin2025factaudit}.
+    \item \textbf{Production-Ready Implementation}: A web-based interface with real-time SSE streaming makes the verification process transparent and accessible to non-expert users, bridging the gap between research prototypes and usable products \citep{lin2025factaudit}. The interface displays complete evidence chains including stance classifications, source reliability ratings, political bias indicators when available, evidence summaries, and confidence levels---enabling users to evaluate the system's reasoning rather than accepting verdicts blindly.
 \end{enumerate}
 
 \subsubsection{Research Contributions}
@@ -39,65 +39,21 @@ This thesis has presented Factible, a multi-agent system for automated fact-chec
     \item \textbf{Focus on Video Platform}: Unlike most fact-checking research that focuses on text-based content \citep{thorne2018fever, hassan2017claimbuster}, this work specifically addresses YouTube video verification, handling the complete video-to-verification workflow. This fills a significant gap where video platforms have been largely overlooked despite their scale and influence on information consumption.
 \end{enumerate}
 
-%-------------------------------------------------------
-\subsection{Achievement of Objectives}
-%-------------------------------------------------------
+\subsubsection{Fulfillment of Objectives}
 
-This section evaluates the degree to which the initial objectives defined in Section 1 were achieved.
+The main objective---to design, implement, and evaluate a multi-agent system capable of automatically verifying factual claims in YouTube videos---was \textbf{fully achieved}. Evaluation on 30 videos demonstrates 81.3\% claim extraction precision, 94.7\% evidence retrieval success, and 73.3\% verdict accuracy.
 
-\subsubsection{Main Objective}
-
-\textbf{Objective}: Design, implement, and evaluate a multi-agent system capable of automatically verifying factual claims in YouTube videos through retrieval and analysis of web-based evidence, generating substantiated verdicts with confidence estimates.
-
-\textbf{Achievement}: \textbf{Fully achieved}. The system processes YouTube videos end-to-end, extracting claims, retrieving evidence from multiple web sources, and generating verdicts with confidence levels. Evaluation on 30 videos demonstrates 81.3\% claim extraction precision, 94.7\% evidence retrieval success, and 73.3\% verdict accuracy.
-
-\subsubsection{Specific Objectives}
-
-\begin{enumerate}
-    \item \textbf{Multi-agent architecture design}: \textbf{Achieved}. Five specialized components with well-defined Pydantic schemas operate through a modular pipeline, enabling independent testing and optimization.
-
-    \item \textbf{System component implementation}: \textbf{Achieved}. All five components (Transcriptor, Claim Extractor, Query Generator, Online Search, Output Generator) are fully implemented and operational.
-
-    \item \textbf{LLM usage optimization}: \textbf{Achieved}. The system uses GPT-4o-mini effectively with deterministic settings and token budgets. Cost, latency, and quality trade-offs were analyzed, and prompt optimization strategies with structured outputs were implemented across all pipeline components.
-
-    \item \textbf{System evaluation}: \textbf{Achieved}. Comprehensive evaluation including precision/recall metrics, verdict accuracy, evidence retrieval statistics, latency, cost analysis, and qualitative case studies.
-
-    \item \textbf{End-to-end system implementation}: \textbf{Achieved}. REST API with SSE streaming, React web interface, and documentation are complete. Source code is publicly available.
-
-    \item \textbf{Ethical and bias considerations}: \textbf{Achieved}. The system incorporates source transparency, multi-perspective evidence presentation, and clear confidence levels. Discussion of limitations and bias mitigation strategies is included.
-\end{enumerate}
-
-%-------------------------------------------------------
-\subsection{Critical Assessment of Methodology}
-%-------------------------------------------------------
-
-\subsubsection{Strengths of the Approach}
-
-The Design and Creation methodology \citep{oates2006, hevner2004} proved appropriate for this project:
+All six specific objectives defined in Section 1.2.2 were achieved. The technical and research contributions above address objectives 1--2 (architecture and implementation), 4 (evaluation), and 5 (end-to-end system). Two additional objectives merit explicit mention:
 
 \begin{itemize}
-    \item \textbf{Iterative development} enabled rapid identification and resolution of component issues, particularly in prompt engineering and evidence extraction.
-    \item \textbf{Modular architecture} facilitated independent testing and optimization of each pipeline component.
-    \item \textbf{Practical focus} ensured the system addresses real-world requirements (latency, cost, usability) beyond academic benchmarks.
-    \item \textbf{Comprehensive evaluation} combining quantitative metrics with qualitative analysis provided meaningful insights into system behavior.
-\end{itemize}
+    \item \textbf{LLM usage optimization} (Objective 3): The system uses GPT-4o-mini with deterministic settings and token budgets. Cost, latency, and quality trade-offs were analyzed, achieving \$0.003 average cost per video with 129.6 seconds mean latency. Prompt optimization strategies with structured outputs were implemented across all pipeline components.
 
-\subsubsection{Limitations of the Approach}
-
-Several limitations should be acknowledged:
-
-\begin{itemize}
-    \item \textbf{Single annotator for ground truth}: All 503 ground truth claims were annotated by a single person (the author), introducing potential bias. Inter-annotator agreement studies would strengthen the evaluation.
-
-    \item \textbf{Dataset size}: While 30 videos with 503 claims is comparable to prior work, a larger dataset would enable more robust statistical conclusions and better representation of edge cases.
-
-    \item \textbf{English-only scope}: The system currently supports only English content, limiting applicability in multilingual contexts where misinformation is equally prevalent.
-
-    \item \textbf{Temporal snapshot}: Evaluation was conducted at a specific point in time (December 2025). Both web search results and LLM model versions change, affecting reproducibility.
+    \item \textbf{Ethical and bias considerations} (Objective 6): The system incorporates source transparency, political bias indicators, multi-perspective evidence presentation, and clear confidence levels. Section~\ref{subsec:ethics} provides detailed discussion of ethical considerations and bias mitigation strategies.
 \end{itemize}
 
 %-------------------------------------------------------
 \subsection{Reflection on Ethical and Sustainability Considerations}
+\label{subsec:ethics}
 %-------------------------------------------------------
 
 \subsubsection{Sustainability Assessment}
@@ -119,7 +75,7 @@ While LLM usage inherently involves energy consumption, the system's design choi
 The system addresses ethical concerns through several mechanisms:
 
 \begin{itemize}
-    \item \textbf{Transparency}: All evidence sources are exposed with URLs, reliability ratings, and stance classifications, enabling users to verify the system's reasoning.
+    \item \textbf{Transparency}: All evidence sources are exposed with URLs, reliability ratings, political bias indicators (when available from Media Bias/Fact Check data), and stance classifications, enabling users to verify the system's reasoning and identify potential source perspectives.
 
     \item \textbf{Multi-perspective presentation}: Evidence is organized by stance (supports, refutes, mixed, unclear), avoiding false certainty and acknowledging when claims are genuinely contested.
 
@@ -140,44 +96,18 @@ Several risks warrant ongoing attention:
     \item \textbf{Weaponization concerns}: The system could theoretically be misused to generate plausible-sounding refutations of true claims. Mitigation: Open-source release enables scrutiny, and the evidence-based approach makes manipulation detectable.
 \end{itemize}
 
-\subsubsection{Sustainable Development Goals Impact}
+\subsubsection{Sustainable Development Goals}
 
-The project contributes positively to three SDGs:
-
-\begin{itemize}
-    \item \textbf{SDG 4 (Quality Education)}: The system serves as a media literacy tool, helping users develop critical thinking skills by exposing the fact-checking process.
-
-    \item \textbf{SDG 16 (Peace, Justice and Strong Institutions)}: By providing transparent verification mechanisms, the system supports informed public discourse and combats misinformation that erodes institutional trust.
-
-    \item \textbf{SDG 10 (Reduced Inequalities)}: The open-source, low-cost design democratizes access to fact-checking capabilities previously available only to well-resourced organizations.
-\end{itemize}
-
-%-------------------------------------------------------
-\subsection{Lessons Learned}
-%-------------------------------------------------------
-
-Several key lessons emerged from this project:
-
-\begin{enumerate}
-    \item \textbf{Prompt engineering is critical but brittle}: Small changes in prompt wording can significantly affect LLM outputs. The claim prioritization approach required extensive iteration to achieve stable, high-quality claim extraction.
-
-    \item \textbf{Evidence retrieval is easier than evidence synthesis}: The system achieves 94.7\% evidence retrieval success but only 73.3\% verdict accuracy. The challenge lies in correctly interpreting and synthesizing conflicting sources, not in finding them.
-
-    \item \textbf{Contested claims remain difficult}: Political and socially contentious topics with legitimate disagreement present fundamental challenges for automated fact-checking that may require different approaches than straightforward factual verification.
-
-    \item \textbf{Practical constraints matter}: Latency, cost, and usability considerations significantly shaped design decisions. Academic metrics alone are insufficient for evaluating systems intended for real-world use.
-
-    \item \textbf{Modular design pays dividends}: The five-component architecture enabled independent development, testing, and optimization, proving essential for managing complexity.
-\end{enumerate}
+As outlined in Section 1.3.2, the project contributes to SDG 4 (Quality Education) by serving as a media literacy tool that promotes critical thinking, SDG 16 (Peace, Justice and Strong Institutions) by supporting informed public discourse through transparent verification mechanisms, and SDG 10 (Reduced Inequalities) by democratizing access to fact-checking capabilities through its open-source, low-cost design.
 
 %-------------------------------------------------------
 \subsection{Concluding Remarks}
 %-------------------------------------------------------
 
-This thesis has demonstrated that automated fact-checking of YouTube videos is not only feasible but can achieve practically useful performance levels. Factible represents a step toward democratizing access to fact-checking capabilities, providing users with tools to critically evaluate video content that might otherwise go unexamined.
+This thesis addresses a critical gap in automated fact-checking research: the lack of end-to-end verification systems for video platforms. It demonstrates that automated fact-checking of YouTube videos is not only feasible but can achieve practically useful performance levels. Factible represents a step toward democratizing access to fact-checking capabilities, providing users with tools to critically evaluate video content that might otherwise go unexamined.
 
 The system's strengths---high precision claim extraction, robust evidence retrieval, transparent verdict presentation, and practical efficiency---make it suitable for preliminary fact-checking of YouTube content. Its limitations---particularly with contested political claims---highlight areas where human judgment remains essential and automated systems should complement rather than replace expert fact-checkers. Section~\ref{sec:future-work} outlines directions for addressing these limitations and extending the system's capabilities.
 
 As misinformation continues to evolve in volume and sophistication, automated fact-checking systems will become increasingly important. The modular, open-source nature of Factible provides a foundation for continued research and development in this critical domain. By making both the system and its evaluation transparent, this work aims to advance the broader goal of building more informed and resilient information ecosystems.
 
-The complete source code, evaluation dataset, and documentation are publicly available at \url{https://github.com/begoechavarren/factible}, enabling researchers and practitioners to build upon this work.
+The complete source code, evaluation dataset, and documentation are publicly available at \url{https://github.com/begoechavarren/factible}, enabling researchers and practitioners to build upon this work toward more informed and resilient information ecosystems.

@@ -4,13 +4,15 @@
 \section{Future Work}
 \label{sec:future-work}
 
-While the current implementation demonstrates the viability of automated fact-checking for YouTube videos, several directions warrant further investigation to enhance the system's capabilities and broaden its applicability.
+While the current implementation demonstrates the viability of automated fact-checking for YouTube videos, several limitations of the current approach motivate directions for future research. This section outlines these limitations alongside the corresponding opportunities for enhancement.
 
 %-------------------------------------------------------
 \subsection{Multilingual Support}
 %-------------------------------------------------------
 
-Future iterations should extend transcript extraction, claim detection, and verdict synthesis to major languages beyond English (e.g., Spanish, Portuguese, Hindi, Arabic). Misinformation is a global phenomenon, and the regions with the highest volumes of misinformation often have limited access to fact-checking resources. Key challenges include adapting prompts for different languages, identifying reliable sources in multiple languages, and evaluating source credibility across cultural contexts.
+\textbf{Current limitation}: The system currently supports only English content, limiting applicability in multilingual contexts where misinformation is equally prevalent.
+
+\textbf{Future direction}: Future iterations should extend transcript extraction, claim detection, and verdict synthesis to major languages beyond English (e.g., Spanish, Portuguese, Hindi, Arabic). Misinformation is a global phenomenon, and the regions with the highest volumes of misinformation often have limited access to fact-checking resources. Key challenges include adapting prompts for different languages, identifying reliable sources in multiple languages, and evaluating source credibility across cultural contexts.
 
 %-------------------------------------------------------
 \subsection{Large Language Model Comparison}
@@ -22,7 +24,7 @@ Future studies should benchmark multiple commercial and local models (e.g., GPT-
 \subsection{Enhanced Prompt Engineering}
 %-------------------------------------------------------
 
-Maintaining a small prompt library with documented variants, automated prompt tuning, and curated examples per claim type would make it easier to evolve instructions without rewriting code. Techniques like constitutional AI or self-refinement could improve consistency and reduce brittleness.
+Maintaining a small prompt library with documented variants, automated prompt tuning, and curated examples per claim type would make it easier to evolve instructions without rewriting code. Techniques like constitutional AI or self-refinement could improve consistency and reduce sensitivity to minor prompt changes.
 
 %-------------------------------------------------------
 \subsection{Enhanced Source Reliability Assessment}
@@ -65,13 +67,15 @@ Transitioning from research prototype to production would involve:
 \subsection{Extended Evaluation}
 %-------------------------------------------------------
 
-The current evaluation (30 videos across three domains) should be expanded to:
+\textbf{Current limitations}: The evaluation has several constraints that affect the robustness of conclusions. All 503 ground truth claims were annotated by a single person (the author), introducing potential bias; inter-annotator agreement studies would strengthen the evaluation. While 30 videos with 503 claims is comparable to prior work, a larger dataset would enable more robust statistical conclusions. Additionally, evaluation was conducted at a specific point in time (December 2025), and both web search results and LLM model versions change over time, affecting reproducibility.
+
+\textbf{Future directions}: The current evaluation should be expanded to address these limitations:
 \begin{itemize}
     \item A 100+ video corpus with broader topics and video formats
-    \item Multiple annotators to establish inter-annotator agreement baselines
+    \item Multiple annotators to establish inter-annotator agreement baselines and reduce annotation bias
     \item A richer parameter sweep (higher claim/query limits, more search results)
     \item User studies evaluating perceived usefulness and trust calibration
-    \item Longitudinal evaluation tracking performance as LLMs and web content evolve
+    \item Longitudinal evaluation tracking performance as LLMs and web content evolve, addressing temporal reproducibility concerns
 \end{itemize}
 
 %-------------------------------------------------------
