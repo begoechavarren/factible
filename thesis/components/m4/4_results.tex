@@ -4,7 +4,7 @@
 \section{Results}
 \label{sec:results}
 
-This section presents the experimental evaluation of Factible across 30 YouTube videos spanning diverse topics including health, science, politics, and climate. The evaluation framework follows established practices from claim detection and fact-checking research \citep{hassan2015cikm, thorne2018fever}, combining ground truth comparison with LLM-as-judge quality assessments. Every run limited the pipeline to five claims per video, a setting chosen after analyzing the precision-recall tradeoff across multiple configurations while balancing cost and latency constraints.
+This section presents the experimental evaluation of Factible across 30 YouTube videos spanning diverse topics including health, science, politics, and climate. The evaluation framework follows established practices from claim detection and fact-checking research \citep{hassan2015cikm, thorne2018fever}, combining ground truth comparison with LLM-as-judge quality assessments. Every run was constrained to five claims per video, a setting chosen after analyzing the precision-recall tradeoff across multiple configurations while balancing cost and latency constraints.
 
 %-------------------------------------------------------
 \subsection{Experimental Setup}
@@ -33,7 +33,7 @@ System claims extracted per video & 5 \\
 
 \subsubsection{Ground Truth Annotation}
 
-Ground truth annotations were created following a structured protocol. For each video, all factual, verifiable claims from the transcript were manually annotated. Each claim was annotated with an importance score (0.0--1.0) reflecting its centrality to the video's main argument, and a verdict label indicating the expected verification outcome (SUPPORTS, REFUTES, MIXED, or UNCLEAR). The annotation process followed guidelines from ClaimBuster's check-worthiness criteria \citep{hassan2015cikm}, prioritizing claims that are specific, verifiable, and consequential. The complete evaluation dataset, including all 30 annotated videos with their ground truth claims, importance ratings, and expected verdicts, is provided in Appendix~\ref{appendix:ground-truth}.
+Ground truth annotations were created following a structured protocol. For each video, all factual, verifiable claims from the transcript were manually annotated. Each claim was annotated with an importance score (0.0--1.0) reflecting its centrality to the video's main argument, and a verdict label indicating the expected verification outcome (SUPPORTS, REFUTES, MIXED, or UNCLEAR). The annotation process followed guidelines from ClaimBuster's check-worthiness criteria \citep{hassan2015cikm}, prioritizing claims that are specific, verifiable, and consequential. The evaluation dataset summary, including the list of evaluated videos, annotation guidelines, and aggregate statistics, is provided in Appendix~\ref{appendix:ground-truth}. The complete claim-level annotations are available in the project repository.
 
 \subsubsection{Evaluation Metrics}
 
@@ -41,7 +41,7 @@ The evaluation employs metrics at two levels: claim extraction quality and verdi
 
 \paragraph{Claim Alignment via Semantic Similarity}
 
-System claims are matched to ground truth using sentence-transformer embeddings (all-MiniLM-L6-v2). Claims whose cosine similarity exceeds 0.7 count as matches; others become false positives or false negatives. A greedy pass ensures each ground truth claim pairs with at most one system claim. This simple semantic alignment yields the true positives needed for precision, recall, F1, and MAP calculations.
+System claims are matched to ground truth using sentence-transformer embeddings (all-MiniLM-L6-v2). Claims whose cosine similarity exceeds 0.7 count as matches; others become false positives or false negatives. A greedy pass ensures each ground truth claim pairs with at most one system claim. This semantic alignment yields the true positives needed for precision, recall, F1, and MAP calculations.
 
 \textbf{Claim Extraction Metrics:}
 \begin{itemize}
@@ -53,9 +53,8 @@ System claims are matched to ground truth using sentence-transformer embeddings 
     \item \textbf{Importance-Weighted Coverage}: Percentage of total ground truth importance mass captured by matched claims.
 \end{itemize}
 
-\textbf{Verdict Accuracy Metrics:}
 \begin{itemize}
-    \item \textbf{Stance Accuracy}: Classification accuracy for the four-class stance problem (SUPPORTS, REFUTES, MIXED, UNCLEAR), measuring the percentage of verdicts matching ground truth stance.
+    \item \textbf{Verdict Stance Accuracy}: Classification accuracy for the four-class stance problem (SUPPORTS, REFUTES, MIXED, UNCLEAR), measuring the percentage of verdicts matching ground truth stance.
 \end{itemize}
 
 \textbf{System Efficiency Metrics:}
@@ -137,15 +136,11 @@ The system achieves 81.3\% precision, meaning that approximately 4 out of 5 extr
 
 The overall recall of 26.2\% reflects the constraint of extracting only 5 claims from videos averaging 16.8 ground truth claims. However, the Recall@Important metric (39.5\%) demonstrates that the system prioritizes high-importance claims---capturing nearly 40\% of the most critical claims while only extracting approximately 30\% of the total claim set. This selective extraction behavior aligns with the design goal of importance-based ranking, where claims are prioritized by their impact on the video's central argument.
 
-The MAP score of 0.870 indicates strong ranking quality: important claims consistently appear early in the extraction order. This metric, borrowed from ClaimBuster's evaluation framework \citep{hassan2017kdd}, validates that the importance scoring mechanism effectively prioritizes claims.
+The MAP score of 0.870 indicates strong ranking quality: important claims consistently appear early in the extraction order. This metric, inspired by ClaimBuster's evaluation framework \citep{hassan2017kdd}, validates that the importance scoring mechanism effectively prioritizes claims.
 
 The importance MAE of 0.126 (on a 0--1 scale) shows that system-assigned importance scores closely approximate human judgments, with typical errors of approximately one importance tier (e.g., scoring a claim 0.7 when ground truth is 0.85).
 
-\subsubsection{Contextualizing Recall}
-
-The 26.2\% recall, while appearing low in isolation, must be interpreted in context. Given that videos contain an average of 16.8 checkable claims and the system extracts 5, a theoretical maximum recall of approximately 30\% exists under this constraint. The achieved recall of 26.2\% therefore represents strong performance relative to the configuration limit.
-
-Furthermore, the importance-weighted coverage of 29.2\% indicates that the system captures nearly one-third of the total ``importance mass'' of ground truth claims. For practical fact-checking applications where user attention is limited, presenting 5 high-quality, important claims provides more value than exhaustive but overwhelming coverage.
+The 26.2\% recall, while appearing low in isolation, must be interpreted in context. Given that videos contain an average of 16.8 checkable claims and the system extracts 5, a theoretical maximum recall of approximately 30\% exists under this constraint. The achieved recall of 26.2\% therefore represents strong performance relative to the configuration limit. Furthermore, the importance-weighted coverage of 29.2\% indicates that the system captures nearly one-third of the total ``importance mass'' of ground truth claims. For practical fact-checking applications where user attention is limited, presenting 5 high-quality, important claims provides more value than exhaustive but overwhelming coverage.
 
 %-------------------------------------------------------
 \subsection{Verdict Generation Performance}
@@ -168,7 +163,7 @@ Stance Accuracy & 0.733 & 0.334 \\
 
 \subsubsection{Accuracy Distribution Analysis}
 
-The standard deviation (0.334) in verdict accuracy warrants investigation. Analysis of per-video results reveals a distribution skewed toward high accuracy:
+The standard deviation (0.334) in verdict accuracy is notable. Analysis of per-video results reveals a distribution skewed toward high accuracy:
 
 \begin{itemize}
     \item \textbf{21 videos (70.0\%)} achieved high accuracy ($\geq$75\%)---the majority of extracted claims were correctly classified.
@@ -176,51 +171,37 @@ The standard deviation (0.334) in verdict accuracy warrants investigation. Analy
     \item \textbf{4 videos (13.3\%)} achieved low accuracy ($<$25\%)---most claims were incorrectly classified.
 \end{itemize}
 
-\paragraph{Evidence Retrieval and Verdict Quality}
+The stance accuracy of 73.3\% substantially exceeds a random baseline: for a four-class classification problem, random guessing would achieve approximately 25\% accuracy, making this a 2.93$\times$ improvement. Moreover, unlike random classification, the system provides evidence-backed explanations that enable users to evaluate the verdict's reasoning.
 
-With an evidence retrieval success rate of 94.7\%, the system consistently finds relevant sources for most claims. Table~\ref{tab:accuracy-retrieval-correlation} illustrates how verdict accuracy varies across the dataset.
+With an evidence retrieval success rate of 94.7\%, the system consistently finds relevant sources for most claims. Table~\ref{tab:accuracy-retrieval-correlation} presents representative examples illustrating how verdict accuracy varies across the dataset.
 
 \begin{table}[H]
 \centering
-\caption[Verdict accuracy distribution]{Verdict accuracy distribution with evidence retrieval rates}
+\caption[Verdict accuracy distribution]{Verdict accuracy distribution with evidence retrieval rates (representative examples)}
 \label{tab:accuracy-retrieval-correlation}
 \small
 \begin{tabular}{p{4.5cm}ccc}
 \toprule
 \textbf{Video Topic} & \textbf{Retrieval Rate} & \textbf{Verdict Acc.} & \textbf{Avg Sources} \\
 \midrule
-\multicolumn{4}{l}{\textit{High accuracy ($\geq$75\%) --- 21 videos}} \\
+\multicolumn{4}{l}{\textit{High accuracy ($\geq$75\%) --- 21 videos total, 4 examples shown}} \\
 \quad Brain Benefits of Exercise (TED) & 100\% & 100\% & 2.5 \\
 \quad Climate Change (NatGeo) & 100\% & 100\% & 2.3 \\
 \quad Fossil Fuels & 100\% & 100\% & 2.7 \\
 \quad UK Election Results & 100\% & 75\% & 2.8 \\
 \midrule
-\multicolumn{4}{l}{\textit{Medium/Low accuracy ($<$75\%) --- 9 videos}} \\
+\multicolumn{4}{l}{\textit{Medium/Low accuracy ($<$75\%) --- 9 videos total, 4 examples shown}} \\
 \quad Gender Wage Gap & 100\% & 50\% & 2.7 \\
 \quad FBI \& January 6th & 100\% & 50\% & 2.3 \\
 \quad Inflation Explainer & 60\% & 25\% & 1.8 \\
-\quad Immigration Statistics & 100\% & 0\% & 2.9 \\
+\quad A Nation of Immigrants & 100\% & 0\% & 2.9 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 Notably, successful evidence retrieval does not guarantee high verdict accuracy. Some politically contentious topics achieve 100\% retrieval but lower verdict accuracy, suggesting that the challenge lies not in finding evidence but in correctly synthesizing conflicting sources or matching the ground truth annotator's interpretation.
 
-\paragraph{Factors Affecting Verdict Accuracy}
-
-Analysis of low-accuracy videos reveals several contributing factors:
-
-\begin{itemize}
-    \item \textbf{Contested claims}: Topics with legitimate disagreement (e.g., wage gap interpretations, immigration statistics) may have evidence supporting multiple stances, making definitive verdicts challenging.
-    \item \textbf{Ground truth subjectivity}: Some claims involve nuanced interpretations where reasonable annotators might disagree on the correct stance.
-    \item \textbf{Evidence-claim mismatch}: Retrieved evidence may address related but not identical claims, leading to verdict errors.
-\end{itemize}
-
-These findings suggest that further improvements require enhanced evidence synthesis and more sophisticated handling of contested claims, rather than simply improving retrieval success.
-
-\subsubsection{Comparison to Random Baseline}
-
-The stance accuracy of 73.3\% substantially exceeds a random baseline. For a four-class classification problem (SUPPORTS, REFUTES, MIXED, UNCLEAR), random guessing would achieve approximately 25\% accuracy. The system's 73.3\% accuracy represents a 2.93$\times$ improvement over random, demonstrating meaningful verification capability. Moreover, unlike random classification, the system provides evidence-backed explanations that enable users to evaluate the verdict's reasoning.
+Analysis of low-accuracy videos reveals several contributing factors: (1) \textbf{contested claims}---topics with legitimate disagreement may have evidence supporting multiple stances, making definitive verdicts challenging; (2) \textbf{ground truth subjectivity}---some claims involve nuanced interpretations where reasonable annotators might disagree; and (3) \textbf{evidence-claim mismatch}---retrieved evidence may address related but not identical claims. These findings suggest that further improvements require enhanced evidence synthesis and more sophisticated handling of contested claims, rather than simply improving retrieval success.
 
 %-------------------------------------------------------
 \subsection{Evidence Retrieval Performance}
@@ -365,14 +346,14 @@ Only 4 videos (13.3\%) achieved less than 25\% verdict accuracy. Detailed analys
 \caption[Low-accuracy video analysis]{Low-accuracy video analysis ($<$25\% verdict accuracy)}
 \label{tab:low-accuracy-videos}
 \small
-\begin{tabular}{p{4cm}ccp{4cm}}
+\begin{tabular}{p{3.5cm}lccl}
 \toprule
-\textbf{Video Topic} & \textbf{Retrieval} & \textbf{Accuracy} & \textbf{Likely Cause} \\
+\textbf{Video Topic} & \textbf{Type} & \textbf{Retrieval} & \textbf{Accuracy} & \textbf{Likely Cause} \\
 \midrule
-Trump's National Emergency & 60\% & 0\% & Political claims with contested interpretations \\
-Immigration Statistics & 100\% & 0\% & Conflicting sources on contested statistics \\
-Juice vs. Whole Fruit & 20\% & 20\% & Limited evidence retrieval \\
-Sleep \& Teenage Brain & 100\% & 20\% & Nuanced scientific claims \\
+Trump's Historic National Emergency & Factual & 60\% & 0\% & Contested political claims \\
+A Nation of Immigrants & Misinfo & 100\% & 0\% & Conflicting sources \\
+Juice vs. Whole Fruit & Factual & 20\% & 20\% & Limited evidence retrieval \\
+Sleep \& Teenage Brain & Factual & 100\% & 20\% & Nuanced scientific claims \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -433,50 +414,49 @@ The strategies employed in this work to maximize reproducibility---temperature=0
 \label{subsec:comparison}
 %-------------------------------------------------------
 
-While direct performance comparison across fact-checking systems is constrained by differences in evaluation datasets, task definitions, and domain characteristics, contextualizing our results against established benchmarks and recent approaches provides valuable perspective on the system's contributions.
+While direct performance comparison across fact-checking systems is constrained by differences in evaluation datasets, task definitions, and domain characteristics, contextualizing these results against established benchmarks and recent approaches provides valuable perspective on the system's contributions.
 
 \subsubsection{Foundational Benchmarks}
 
 The FEVER dataset \citep{thorne2018fever} established the foundational benchmark for fact verification against textual sources, comprising 185,445 claims verified against Wikipedia with sentence-level evidence annotations. Their best baseline system achieved 31.87\% accuracy when requiring correct evidence retrieval, using a pipeline of TF-IDF document retrieval, sentence selection, and decomposable attention for textual entailment. Notably, 16.82\% of FEVER claims require multi-sentence reasoning, highlighting the complexity of evidence aggregation even in controlled environments. State-of-the-art systems on the FEVER leaderboard have since achieved 70--80\% accuracy, demonstrating significant progress on this benchmark.
 
-Building on this foundation, SciFact \citep{wadden2020scifact} introduced scientific claim verification with 1,409 expert-written claims against biomedical abstracts. Their VERISCI baseline achieved 46.5\% F1 on the open retrieval task (AbstractLabel+Rationale), demonstrating that domain-specific adaptation---combining FEVER pretraining with in-domain fine-tuning---substantially improves performance over zero-shot approaches (36.4\% F1). Their error analysis identified five key reasoning challenges: scientific background knowledge, directionality, numerical reasoning, cause-and-effect relationships, and coreference resolution---challenges that parallel the difficulties our system encounters with YouTube content.
+Building on this foundation, SciFact \citep{wadden2020scifact} introduced scientific claim verification with 1,409 expert-written claims against biomedical abstracts. Their VERISCI baseline achieved 46.5\% F1 on the open retrieval task (AbstractLabel+Rationale), demonstrating that domain-specific adaptation---combining FEVER pretraining with in-domain fine-tuning---substantially improves performance over zero-shot approaches (36.4\% F1). Their error analysis identified five key reasoning challenges: scientific background knowledge, directionality, numerical reasoning, cause-and-effect relationships, and coreference resolution---challenges that parallel the difficulties Factible encounters with YouTube content.
 
 \subsubsection{Post-hoc Verification and Attribution Approaches}
 
 The RARR framework \citep{gao2023rarr} introduced iterative research-and-revision for improving attribution in LLM outputs. RARR employs a two-stage pipeline: a \textit{research stage} that generates queries and retrieves evidence from web sources, and a \textit{revision stage} that uses agreement models to detect disagreements between claims and evidence before making targeted edits. On diverse QA datasets including Natural Questions, StrategyQA, and QReCC, RARR achieved F1 scores (combining attribution and preservation) ranging from 43\% to 68\%.
 
-A key insight from RARR relevant to our work is the tension between attribution improvement and content preservation. RARR found that editing to improve attribution while changing only 10--20\% of text represents a careful balance---aggressive editing sacrifices the original intent while minimal editing leaves unattributed claims intact. Our system faces an analogous trade-off: we prioritize direct verification verdicts (Supported, Refuted, Insufficient Evidence, Unverifiable) over claim revision, trading the flexibility of correction for clearer actionable outputs suited to users assessing video content truthfulness.
+A key insight from RARR relevant to this work is the tension between attribution improvement and content preservation. RARR found that editing to improve attribution while changing only 10--20\% of text represents a careful balance---aggressive editing sacrifices the original intent while minimal editing leaves unattributed claims intact. Factible faces an analogous trade-off: the system prioritizes direct verification verdicts (Supported, Refuted, Insufficient Evidence, Unverifiable) over claim revision, trading the flexibility of correction for clearer actionable outputs suited to users assessing video content truthfulness.
 
-VeriScore \citep{song2024veriscore} and FIRE \citep{xie2025fire} extended this direction by introducing confidence-based retrieval triggers that reduce computational costs without sacrificing accuracy. FIRE's iterative retrieval-and-verification approach, which triggers external retrieval only when model confidence falls below a threshold, parallels our system's confidence-based handling of borderline claims.
+VeriScore \citep{song2024veriscore} and FIRE \citep{xie2025fire} extended this direction by introducing confidence-based retrieval triggers that reduce computational costs without sacrificing accuracy. FIRE's iterative retrieval-and-verification approach, which triggers external retrieval only when model confidence falls below a threshold, parallels Factible's confidence-based handling of borderline claims.
 
 \subsubsection{Multi-Agent Architectures}
 
-Recent work has demonstrated the effectiveness of multi-agent LLM architectures for fact verification. FactAgent \citep{factagent2025} employs a four-agent pipeline comprising Input Ingestion, Query Generation, Evidence Retrieval, and Verdict Prediction---an architecture closely resembling our own. Evaluated on HoVER, FEVEROUS, and SciFact-Open benchmarks with GPT-4o-mini, FactAgent achieved F1 scores of 0.600--0.617 on multi-hop reasoning tasks (HoVER 2--3 hop), 0.548--0.681 on FEVEROUS structured data tasks, and 0.770 on scientific claim verification (SciFact-Open), representing a 12.3\% relative improvement over baseline methods. Notably, FactAgent integrates MBFC-based source credibility filtering---a design choice we independently adopted---finding that credibility filtering significantly reduces usable links (to 9.6--15.8\% on HoVER) but improves verdict quality by excluding unreliable sources. Their ablation studies showed that generating 3--4 queries per subclaim provides optimal balance between reasoning depth and evidence precision, aligning with our own configuration choices.
+Recent work has demonstrated the effectiveness of multi-agent LLM architectures for fact verification. FactAgent \citep{factagent2025} employs a four-agent pipeline comprising Input Ingestion, Query Generation, Evidence Retrieval, and Verdict Prediction---an architecture closely resembling Factible's. Evaluated on HoVER, FEVEROUS, and SciFact-Open benchmarks with GPT-4o-mini, FactAgent achieved F1 scores of 0.600--0.617 on multi-hop reasoning tasks (HoVER 2--3 hop), 0.548--0.681 on FEVEROUS structured data tasks, and 0.770 on scientific claim verification (SciFact-Open), representing a 12.3\% relative improvement over baseline methods. Notably, FactAgent integrates MBFC-based source credibility filtering---a design choice independently adopted in Factible---finding that credibility filtering significantly reduces usable links (to 9.6--15.8\% on HoVER) but improves verdict quality by excluding unreliable sources. Their ablation studies showed that generating 3--4 queries per subclaim provides optimal balance between reasoning depth and evidence precision, aligning with Factible's configuration choices.
 
 The MAD-Fact framework \citep{ning2025madfact} provides particularly relevant methodological insights. MAD-Fact implements a three-tier multi-agent debate system comprising: (1) a \textit{Clerk Agent} for atomic claim decomposition, (2) a \textit{Jury} of Evaluator Agents with heterogeneous role assignments (Public, Critic, News Author, Scientist, etc.) that assess factuality through structured debate, and (3) a \textit{Judge Agent} that aggregates verdicts via majority voting. On fact-checking benchmarks including FacToolQA and FELM-WK, MAD-Fact achieved F1 scores of 0.88 (Label=True) and 0.67 (Label=False), consistently outperforming single-model baselines.
 
-Three findings from MAD-Fact are particularly instructive for our work:
+Three findings from MAD-Fact are particularly instructive:
 \begin{itemize}
     \item \textbf{Debate dynamics}: Multi-agent systems exhibited human-like traits during debates---agents adhered to their viewpoints, actively corrected peers' mistakes, and engaged in self-reflection. This emergent behavior contributed to superior performance over single-agent systems.
     \item \textbf{Retrieval integration}: The ``Autonomous Retrieval and Free Debate'' rule, where agents decide based on confidence whether to invoke external retrieval, balanced knowledge utilization with computational efficiency.
     \item \textbf{Homogeneous vs.\ heterogeneous initialization}: Interestingly, initializing all agents with the same model (GPT-4o-mini) outperformed heterogeneous initialization with multiple model families, as cross-model agents exhibited higher frequencies of misleading each other and struggled to reach consensus.
 \end{itemize}
 
-Our system adopts a comparable multi-agent pipeline---comprising claim extraction, evidence retrieval, and verdict determination---but addresses a significantly more challenging domain: unstructured YouTube content with noisy ASR transcriptions and no gold evidence. Despite this increased difficulty, our 73.3\% accuracy (versus 25\% random baseline for four-class classification) demonstrates that multi-agent approaches can generalize beyond curated datasets to real-world multimedia platforms.
+Factible adopts a comparable multi-agent pipeline---comprising claim extraction, evidence retrieval, and verdict determination---but addresses a significantly more challenging domain: unstructured YouTube content with noisy automatic transcriptions and no gold evidence. Despite this increased difficulty, the 73.3\% accuracy demonstrates that multi-agent approaches can generalize beyond curated datasets to real-world multimedia platforms.
 
 \subsubsection{Domain Difficulty Considerations}
 
-The primary challenge in cross-system comparison lies not in algorithmic sophistication but in domain difficulty. Most comparable systems operate on closed corpora with clean text, gold evidence, and pre-extracted claims. In contrast, our system handles:
+The primary challenge in cross-system comparison lies not in algorithmic sophistication but in domain difficulty. Most comparable systems operate on closed corpora with clean text, gold evidence, and pre-extracted claims. In contrast, Factible handles:
 
 \begin{itemize}
-    \item \textbf{Noisy input}: ASR transcription errors, speaker attribution ambiguity, and variable audio quality
+    \item \textbf{Noisy input}: Automatic transcription errors, missing punctuation, and speaker attribution ambiguity
     \item \textbf{Open-domain retrieval}: Web-scale evidence search without annotator-provided ground truth
-    \item \textbf{Multimodal context}: Visual information dependencies absent from text-only benchmarks
     \item \textbf{Real-world claims}: Naturally occurring statements rather than synthetic mutations
     \item \textbf{Temporal dynamics}: Time-sensitive claims that may have been true at recording but become outdated
 \end{itemize}
 
-Table~\ref{tab:system-comparison} summarizes key characteristics across systems. The performance gap between FEVER's baseline 31.87\% on structured Wikipedia and our 73.3\% on unstructured YouTube does not indicate superior accuracy in absolute terms, but rather reflects fundamentally different difficulty profiles and evaluation methodologies. Our system's ability to maintain reasonable accuracy while handling YouTube's compounding challenges represents meaningful progress toward bringing automated fact-checking to platforms where misinformation most commonly spreads.
+Table~\ref{tab:system-comparison} summarizes key characteristics across systems. The performance gap between FEVER's baseline 31.87\% on structured Wikipedia and Factible's 73.3\% on unstructured YouTube does not indicate superior accuracy in absolute terms, but rather reflects fundamentally different difficulty profiles and evaluation methodologies. The system's ability to maintain reasonable accuracy while handling YouTube's compounding challenges represents meaningful progress toward bringing automated fact-checking to platforms where misinformation most commonly spreads.
 
 \begin{table}[H]
 \centering
@@ -499,18 +479,18 @@ MAD-Fact \citep{ning2025madfact} & Fact-check & Retrieved & Natural & F1 & 67--8
 
 \subsubsection{Implications for System Design}
 
-The comparative analysis yields several design implications validated by our implementation:
+The comparative analysis yields several design implications validated by this implementation:
 
 \begin{enumerate}
     \item \textbf{Atomic decomposition is essential}: Following FactScore, SAFE, and MAD-Fact, decomposing claims into atomic, independently verifiable units enables fine-grained evaluation and targeted verdict assignment.
 
-    \item \textbf{Retrieval quality bounds verification quality}: As RARR demonstrated, even sophisticated reasoning cannot compensate for poor evidence retrieval. Our system's web search integration addresses this but introduces new challenges around source credibility assessment.
+    \item \textbf{Retrieval quality bounds verification quality}: As RARR demonstrated, even sophisticated reasoning cannot compensate for poor evidence retrieval. Factible's web search integration addresses this but introduces new challenges around source credibility assessment.
 
-    \item \textbf{Source credibility filtering is critical}: FactAgent's finding that MBFC-based credibility filtering reduces usable links to 9.6--15.8\% on complex multi-hop tasks while improving verdict quality validates our independent adoption of this approach. The trade-off between evidence quantity and quality favors aggressive filtering.
+    \item \textbf{Source credibility filtering is critical}: FactAgent's finding that MBFC-based credibility filtering reduces usable links to 9.6--15.8\% on complex multi-hop tasks while improving verdict quality validates the independent adoption of this approach in Factible. The trade-off between evidence quantity and quality favors aggressive filtering.
 
-    \item \textbf{Multi-agent approaches mitigate single-model bias}: Single-model verification is vulnerable to systematic errors from hallucination or knowledge gaps. Our multi-stage pipeline, like FactAgent's four-agent architecture, distributes verification responsibility across specialized agents while maintaining computational efficiency.
+    \item \textbf{Multi-agent approaches mitigate single-model bias}: Single-model verification is vulnerable to systematic errors from hallucination or knowledge gaps. Factible's multi-stage pipeline, like FactAgent's four-agent architecture, distributes verification responsibility across specialized agents while maintaining computational efficiency.
 
-    \item \textbf{Domain adaptation requires careful evaluation}: Performance numbers from clean-text benchmarks do not transfer to noisy multimedia domains. Future work should develop standardized benchmarks for video fact-checking that account for ASR errors, multimodal context, and real-world claim distributions.
+    \item \textbf{Domain adaptation requires careful evaluation}: Performance numbers from clean-text benchmarks do not transfer to noisy multimedia domains. Future work should develop standardized benchmarks for video fact-checking that account for automatic transcription errors and real-world claim distributions.
 \end{enumerate}
 
 %-------------------------------------------------------
@@ -524,7 +504,7 @@ The experimental evaluation demonstrates that Factible achieves reliable fact-ch
 
     \item \textbf{Robust evidence retrieval:} 94.7\% success rate with 83.6\% of sources from high-reliability origins, demonstrating effective query generation and source filtering.
 
-    \item \textbf{Consistent verdict accuracy:} 73.3\% overall accuracy, with 70\% of videos (21/30) achieving $\geq$75\% accuracy. This represents a 2.93$\times$ improvement over random baselines.
+    \item \textbf{Consistent verdict accuracy:} 73.3\% overall accuracy, with 70\% of videos (21/30) achieving $\geq$75\% accuracy.
 
     \item \textbf{Identified challenges:} The 4 low-accuracy videos (13.3\%) involve politically contested claims with legitimate disagreement, where evidence synthesis rather than retrieval poses the challenge.
 
