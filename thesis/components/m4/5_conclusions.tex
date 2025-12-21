@@ -20,7 +20,7 @@ This thesis has presented Factible, a multi-agent system for automated fact-chec
 
     \item \textbf{Open-Web Evidence Retrieval with Credibility Assessment}: Moving beyond Wikipedia and closed knowledge bases \citep{aly2021feverous, thorne2018fever}, the system retrieves evidence from the live web using search engines, incorporating source credibility evaluation using Media Bias/Fact Check data and domain heuristics. This enables verification of claims about current events, specialized domains, and topics not well covered in encyclopedic sources.
 
-    \item \textbf{Three-Level Parallel Architecture}: An efficient execution model that parallelizes processing across claims, queries, and search results, achieving mean processing time of 129.6 seconds per video while maintaining cost under \$0.01 per video. This addresses the performance and scalability limitations noted in the literature \citep{lin2025factaudit}.
+    \item \textbf{Three-Level Parallel Architecture}: An efficient execution model that parallelizes processing across claims, queries, and search results, achieving mean processing time of 82.2 seconds per video while maintaining cost under \$0.01 per video. This addresses the performance and scalability limitations noted in the literature \citep{lin2025factaudit}.
 
     \item \textbf{Modular Multi-Agent Architecture}: Five specialized agents with structured Pydantic schemas enable transparency, maintainability, and independent optimization. This design facilitates experimentation with different models and techniques, demonstrating the practical benefits of multi-agent approaches \citep{factagent2025, chen2024local}.
 
@@ -46,7 +46,7 @@ The main objective---to design, implement, and evaluate a multi-agent system cap
 All six specific objectives defined in Section 1.2.2 were achieved. The technical and research contributions above address objectives 1--2 (architecture and implementation), 4 (evaluation), and 5 (end-to-end system). Two additional objectives merit explicit mention:
 
 \begin{itemize}
-    \item \textbf{LLM usage optimization} (Objective 3): The system uses GPT-4o-mini with deterministic settings and token budgets. Cost, latency, and quality trade-offs were analyzed, achieving \$0.003 average cost per video with 129.6 seconds mean latency. Prompt optimization strategies with structured outputs were implemented across all pipeline components.
+    \item \textbf{LLM usage optimization} (Objective 3): The system uses GPT-4o-mini with deterministic settings and token budgets. Cost, latency, and quality trade-offs were analyzed, achieving \$0.003 average cost per video with 82.2 seconds mean latency. Prompt optimization strategies with structured outputs were implemented across all pipeline components.
 
     \item \textbf{Ethical and bias considerations} (Objective 6): The system incorporates source transparency, political bias indicators, multi-perspective evidence presentation, and clear confidence levels. Section~\ref{subsec:ethics} provides detailed discussion of ethical considerations and bias mitigation strategies.
 \end{itemize}

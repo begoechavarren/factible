@@ -3,7 +3,7 @@
     "component": "claim_extraction",
     "model": "openai:gpt-4o-mini",
     "timestamp": "2025-12-14T02:26:10.877109",
-    "latency_seconds": 13.94,
+    "latency_seconds": 15.08,
     "input_prompt": "Extract all factual claims from this YouTube transcript:\n\nIt's my feelgood breakfast show. A feel good breakfast show. This is Espresso. Thank you so much for joining us on our live show this morning. Now before the break, I said health properties and there might be something in it for all of us when we talk about garlic. Now aside from the fact that it tastes incredible. We all know that garlic has both culinary and medical benefits. But scientists at the UC tea uh they say that they've uncovered garlic's cancer fighting properties. So in this new research UCT lecturer Dr. Katherine Kushula and her team, they've established how a compound, a compound found in crushed garlic cloves can actually kill cancer cells. And with us in studio to talk about it is Dr. Kula herself. Dr. Welcome to the show. Hi, lovely to be here. I'm excited about this because we're saying cancer killing properties from a compound that's found in crushed garlic cloves. Now, I want to get down to this. Why it needs to be crushed? Does it need to be heated? How effective is it in killing cancer? I mean what what are we talking about here? Well, the thing is I suppose because we are scientists and we're coming from the chemistry department, we actually want to understand what the compounds are that are present in garlic that are having this effect. And in actual fact, when the clove is first crushed, there's a compound allisonin which is released which is more antibacterial properties. But this compound actually changes over time when the preparation is heated as in a food preparation into this cancer fighting compound called auine. And it's got dulfide bonds in it, which means it also has this potent garlic smell. And we've actually shown that auine is able to enter into the cancer cell and it's actually able to disrupt the intracellular machinery in the cancer cell and bring about a toxic effect and kill that cancer cell. I'm gobsmacked that we're going back to natural remedies. I mean, you guys are scientists. We expect you to work with chemicals and all kinds of crazy stuff, but here we're talking about stuff that's in our kitchen cupboards. Can this property or auine like you you mentioned can it fight any type of cancer or is it only effective in some? Well, it's been shown to be cytotoxic to a range of different types of cancers. Although I think what's more relevant to the human condition because it's a dietary compound and there's a lot of epidemiological um evidence to show that actually populations of people who consume high quantities of garlic have lower incidence of gastrointestinal cancer specifically of the stomach and colon. So um I would think that you know you would probably obtain the highest concentration of this compound through a meal which has been prepared with the akawine in it. In other words, being cooked and probably exposure to um you know, oral exposure to gastrointestinal cancers would probably have a greater effect. Although we have shown in the laboratory that it is also able um to act against other cancer cell types, but I think for the human condition, it's probably more gastrointestinal tract. It's exciting because now that means we can add more garlic to our food because you're saying that we need to do it while cooking. This is also the first time that you see this because like you said, scientists wants to see how the auin or how the garlic properties actually work. What's the best way to try and consume it? I mean, take us back there. Should it always be crushed or cooked? Yes. Well, if you want to get this cancer fighting chemical, and I say it's a chemical, it's a natural compound, but it is still a chemical, and it's present in your garlic. You actually need to take your crushed clove and actually you need to take your clove, crush it, and then in order to achieve um this transformation of what's in the crushed clove into what's what's going to be present in your food preparation, you actually need to heat the preparation and you actually get a chemical transformation which takes place between a compound which is produced in the crush clove and then it gets transformed through heating into this aching compound. So um the the preparation would involve cooking of the clove which I think is actually a process which we do do when we prepare. So possibly we knew about this in some way. I don't know in some way or another doctor it's exciting stuff and it's exciting that even scientists are coming back to our kitchen to show us how to prepare things and to make things better. So thank you so much for joining us on our show today. Well there you heard it an excuse to add more garlic to that pizza. It's really good news. So make sure you try some on your next dinner date especially if you know him for the first time. Okay, but there's loads more happening on our feelood breakfast show. In fact, even though it can leave a smile the next day, we all know that garlic is so good for us. And it looks like Andrea has more details on this.",
     "input_length_chars": 5031,
     "input_tokens_estimated": 1257,
@@ -49,13 +49,13 @@
     },
     "output_length_chars": 1462,
     "output_tokens_estimated": 365,
-    "cost_usd": 0.00040755
+    "cost_usd": 0.002069915873634945
   },
   {
     "component": "query_generation",
     "model": "openai:gpt-4o-mini",
     "timestamp": "2025-12-14T02:26:23.102962",
-    "latency_seconds": 10.99,
+    "latency_seconds": 11.89,
     "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: The compound allicin is released when garlic cloves are crushed.\nContext: Discussion on garlic preparation methods.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
     "input_length_chars": 288,
     "input_tokens_estimated": 72,
@@ -77,7 +77,7 @@
     },
     "output_length_chars": 296,
     "output_tokens_estimated": 74,
-    "cost_usd": 5.52e-05,
+    "cost_usd": 0.00028035665862998155,
     "context": {
       "claim_index": 5,
       "claim_text": "The compound allicin is released when garlic cloves are crushed."
@@ -87,7 +87,7 @@
     "component": "query_generation",
     "model": "openai:gpt-4o-mini",
     "timestamp": "2025-12-14T02:26:23.226548",
-    "latency_seconds": 11.11,
+    "latency_seconds": 12.02,
     "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: A compound found in crushed garlic cloves can kill cancer cells.\nContext: Dr. Katherine Kushula discusses garlic's effects.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
     "input_length_chars": 296,
     "input_tokens_estimated": 74,
@@ -109,7 +109,7 @@
     },
     "output_length_chars": 309,
     "output_tokens_estimated": 77,
-    "cost_usd": 5.73e-05,
+    "cost_usd": 0.00029102240107786124,
     "context": {
       "claim_index": 5,
       "claim_text": "The compound allicin is released when garlic cloves are crushed.",
@@ -121,7 +121,7 @@
     "component": "query_generation",
     "model": "openai:gpt-4o-mini",
     "timestamp": "2025-12-14T02:26:23.312109",
-    "latency_seconds": 11.2,
+    "latency_seconds": 12.12,
     "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: High garlic consumption is linked to lower incidence of gastrointestinal cancers.\nContext: Epidemiological evidence on garlic and cancer.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
     "input_length_chars": 310,
     "input_tokens_estimated": 77,
@@ -143,7 +143,7 @@
     },
     "output_length_chars": 329,
     "output_tokens_estimated": 82,
-    "cost_usd": 6.075e-05,
+    "cost_usd": 0.0003085446922422351,
     "context": {
       "claim_index": 2,
       "claim_text": "A compound found in crushed garlic cloves can kill cancer cells.",
@@ -155,7 +155,7 @@
     "component": "query_generation",
     "model": "openai:gpt-4o-mini",
     "timestamp": "2025-12-14T02:26:23.570470",
-    "latency_seconds": 11.46,
+    "latency_seconds": 12.4,
     "input_prompt": "Generate effective search queries to fact-check this claim.\nClaim: Heating crushed garlic transforms allicin into the cancer-fighting compound auine.\nContext: Dr. Kushula explains the chemical transformation.\nFocus on the timeframe implied by the context, if any.\nReturn only the structured fields\u2014no explanations.",
     "input_length_chars": 314,
     "input_tokens_estimated": 78,
@@ -177,7 +177,7 @@
     },
     "output_length_chars": 354,
     "output_tokens_estimated": 88,
-    "cost_usd": 6.45e-05,
+    "cost_usd": 0.0003275906608991632,
     "context": {
       "claim_index": 4,
       "claim_text": "High garlic consumption is linked to lower incidence of gastrointestinal cancers.",
@@ -189,7 +189,7 @@
     "component": "evidence_extraction",
     "model": "openai:gpt-4o-mini",
     "timestamp": "2025-12-14T02:26:54.486117",
-    "latency_seconds": 21.74,
+    "latency_seconds": 23.52,
     "input_prompt": "Claim:\nHeating crushed garlic transforms allicin into the cancer-fighting compound auine.\n\nArticle Title:\nAllicin in Digestive System Cancer: From Biological Effects to ...\n\nGoogle Search Snippet:\nAllicin is the main active ingredient in freshly-crushed garlic and some other allium plants, and its anticancer effect on cancers of digestive system has been ...\n\nFull Page Content:\nAn official website of the United States government\nAllicin is the main active ingredient in freshly-crushed garlic and some other allium plants, and its anticancer effect on cancers of digestive system has been confirmed in many studies. The aim of this review is to summarize epidemiological studies and in vitro and in vivo investigations on the anticancer effects of allicin and its secondary metabolites, as well as their biological functions. In epidemiological studies of esophageal cancer, liver cancer, pancreatic cancer, and biliary tract cancer, the anticancer effect of garlic has been confirmed consistently. However, the results obtained from epidemiological studies in gastric cancer and colon cancer are inconsistent. In vitro studies demonstrated that allicin and its secondary metabolites play an antitumor role by inhibiting tumor cell proliferation, inducing apoptosis, controlling tumor invasion and metastasis, decreasing angiogenesis, suppressing Helicobacter pylori, enhancing the efficacy of chemotherapeutic drugs, and reducing the damage caused by chemotherapeutic drugs. In vivo studies further demonstrate that allicin and its secondary metabolites inhibit cancers of the digestive system. This review describes the mechanisms against cancers of digestive system and therapeutic potential of allicin and its secondary metabolites.\nKeywords: allicin, digestive system cancer, gastrointestinal cancer, therapy, allicin secondary metabolites\nGlobal cancer statistics in 2020 showed that digestive system cancers, such as colorectal cancer, liver cancer, gastric cancer, esophageal cancer, pancreatic cancer, and cholangiocarcinoma, usually have a high risk of morbidity and mortality, and digestive system cancer is considered the leading cause of cancer-related death in the world (Sung et al., 2021). Recent reports have shown that the incidence rate and mortality rate of digestive system cancer are still rising, and it has become a global health problem that seriously threatens human health (Smyth et al., 2017; Bray et al., 2018; Villanueva, 2019; Sung et al., 2021). At the same time, some studies have shown that digestive system cancers have some pathogenesis factors in common (Zhang et al., 2018; Wang et al., 2020). Therefore, comparing the pathogenesis of various digestive system cancers and the effect of anticancer agents on cancers of the digestive system may provide a basis for the discovery of more effective digestive system anti-tumor therapies. The current therapeutic strategies for digestive system cancer mainly include surgery, radiotherapy, chemotherapy and immunotherapy, which are often accompanied by many disadvantages, such as drug resistance, risk of recurrence, poor prognosis, and high cost (Pennathur et al., 2013; Gravitz, 2014; Razumilava and Gores, 2014; Dekker et al., 2019; Mizrahi et al., 2020; Smyth et al., 2020). As a result, new therapies are needed to better control digestive system cancer. To reduce the adverse effects of current major therapies, researchers have focused on natural products.\nAllicin (diallyl thiosulfinate) is a natural product formed chemically on crushing a garlic clove (Sarvizadeh et al., 2021). It is unstable and transforms into a variety of bioactive secondary metabolites (Sarvizadeh et al., 2021). Allicin and its secondary metabolites are organosulfur compounds (OSCs) with a variety of biological activities, including anticancer, antioxidation, and antipathogenic activities, and their effects act on cancers of digestive system have attracted extensive attention (Min and ZhuBo, 2011; El-Saber Batiha et al., 2020). Previous studies have shown that the OSCs act against digestive system cancers by suppressing proliferation, inducing apoptosis, and inhibiting invasion, metastasis, and angiogenesis of the tumor (Sarvizadeh et al., 2021). In addition, these OSCs have been found to enhance the efficacy of chemotherapeutic drugs and reduce the side effects caused by traditional therapies under certain conditions (Zhang et al., 2020). Although the research results of many studies are promising, the findings of some experiments are controversial. For example, the results of some epidemiological investigations are inconsistent in the study of allicin intervention in gastric cancer (Kim et al., 2018; Li WQ. et al., 2019). Therefore, to further explore the anticancer effect of allicin and its possible clinical application, we searched for articles on related investigations up to March 2022 in the PubMed and Web of Science databases to systematically summarize the biological functions of these compounds in vivo and in vitro and to clarify the mechanism of the anticancer effect of allicin and its secondary metabolites on cancers of the digestive system. The aim of this review is to provide a convenient reference for researchers seeking to carry out further research.\nAllicin is the primary product formed on crushing a garlic clove. It is an electrophilic thioallyl ester of allylsulfinic acid with a pungent smell reminiscent of a pizza parlour (Borlinghaus et al., 2014). Cavallito and Bailey firstly isolated and described the properties of allicin in 1944, and Stoll and Seebeck determined its structure in 1948 (Cavallito C. J. and Bailey J. H., 1944; Stoll and Seebeck, 1948). In nature allicin is produced via an enzymatic reaction after plant tissue damage (Borlinghaus et al., 2014). Alliin [(+)-S-allyl-l-cysteine sulfoxide] is the precursor of allicin and is one of the major S-alk(en)yl-l-cysteine sulfoxides identified in allium plants (Stoll and Seebeck, 1948). S-alk(en)yl-l-cysteine sulfoxides are nonvolatile sulfur storage compounds giving rise to the different odor, flavor and biological activities in allium plants (Rose et al., 2005). They biosynthesized via a series of reactions as follows: S-alk(en)ylation of the cysteine residue of glutathione, followed by transpeptidation to remove the glycyl residue, then proceeding oxidation and loss of the glutamy\n\nProvide relevant evidence.",
     "input_length_chars": 6409,
     "input_tokens_estimated": 1602,
@@ -201,13 +201,13 @@
     },
     "output_length_chars": 446,
     "output_tokens_estimated": 111,
-    "cost_usd": 0.0003069
+    "cost_usd": 0.001558722074882995
   },
   {
     "component": "evidence_extraction",
     "model": "openai:gpt-4o-mini",
     "timestamp": "2025-12-14T02:26:55.518550",
-    "latency_seconds": 14.44,
+    "latency_seconds": 15.62,
     "input_prompt": "Claim:\nThe compound allicin is released when garlic cloves are crushed.\n\nArticle Title:\nGarlic | Linus Pauling Institute | Oregon State University\n\nGoogle Search Snippet:\nGarlic cloves yield about 2.5 to 4.5 mg of allicin per gram of fresh weight when crushed. One fresh garlic clove weighs 2 to 4 g (5).\n\nFull Page Content:\nAn official website of the United States government\nAllicin is considered responsible for most of the pharmacological activity of crushed raw garlic cloves. However, when garlic supplements and garlic foods are consumed, allicin bioavailability or bioequivalence (ABB) has been unknown and in question because allicin formation from alliin and garlic alliinase usually occurs after consumption, under enzyme-inhibiting gastrointestinal conditions. The ABB from 13 garlic supplements and 9 garlic foods was determined by bioassay for 13 subjects by comparing the area under the 32-h concentration curve of breath allyl methyl sulfide (AMS), the main breath metabolite of allicin, to the area found after consuming a control (100% ABB) of known allicin content: homogenized raw garlic. For enteric tablets, ABB varied from 36\u2013104%, but it was reduced to 22\u201357% when consumed with a high-protein meal, due to slower gastric emptying. Independent of meal type, non-enteric tablets gave high ABB (80\u2013111%), while garlic powder capsules gave 26\u2013109%. Kwai garlic powder tablets, which have been used in a large number of clinical trials, gave 80% ABB, validating it as representing raw garlic in those trials. ABB did not vary with alliinase activity, indicating that only a minimum level of activity is required. Enteric tablets (high-protein meal) disintegrated slower in women than men. The ABB of supplements was compared to that predicted in vitro by the dissolution test in the United States Pharmacopeia (USP); only partial agreement was found. Cooked or acidified garlic foods, which have no alliinase activity, gave higher ABB than expected: boiled (16%), roasted (30%), pickled (19%), and acid-minced (66%). Black garlic gave 5%. The mechanism for the higher than expected ABB for alliinase-inhibited garlic was explored; the results for an alliin-free/allicin-free extract indicate a partial role for the enhanced metabolism of \u03b3-glutamyl S-allylcysteine and S-allylcysteine to AMS. In conclusion, these largely unexpected results (lower ABB for enteric tablets and higher ABB for all other products) provide guidelines for the qualities of garlic products to be used in future clinical trials and new standards for manufacturers of garlic powder supplements. They also give the consumer an awareness of how garlic foods might compare to the garlic powder supplements used to establish any allicin-related health benefit of garlic.\nKeywords: allicin bioavailability, allicin metabolism, allyl methyl sulfide, alliin, S-allylcysteine, garlic supplements, cooked garlic, pickled garlic, black garlic, aged garlic extract\nGarlic supplements, mainly dried and pulverized whole clove supplements, have been used in a large number of controlled clinical trials since the mid-1980s, focusing primarily on serum cholesterol and blood pressure [1,2,3]. The effects on blood pressure have been moderately consistent for hypertensive subjects, while the effects on serum lipids have been inconsistent, even for persons with high baseline cholesterol levels [1,2,4,5,6]. Of the 23 qualifying trials on serum cholesterol with a garlic powder product, 43% found no effect [1]. Due to the inconsistencies, the trials have been the subject of several meta-analyses (nine on serum lipids and eight on blood pressure), with the overall conclusions being conservative [7]. Authors of the meta-analyses most frequently cite the high heterogeneity among the trials (high variation in dose, variable product types, identification of active compounds, standardization concerns, and unknown bioavailability) as the reason for caution in recommending garlic products for treatment of hypercholesterolemia and hypertension [1,4,5,7,8,9,10,11]. A recent review of the mostly in vitro antimicrobial effects of allicin concluded that determination of allicin bioavailability from various products is necessary before proper clinical studies can be conducted [12]. Hence, it is clear that attention needs to be given to the bioavailability and standardization of garlic\u2019s active compounds under a variety of processing conditions, especially because of known or suspected potential issues with their formation, stability, metabolism, and detection in the body.\nThe allyl thiosulfinates, of which allicin (diallyl thiosulfinate) is the most abundant and most studied member (Figure 1), are enzymatic products of alliin, S(+)-allyl-l-cysteine sulfoxide, and alliinase. They are rapidly formed when raw garlic cloves undergo cell rupture (Figure 1) or when dried and pulverized cloves (garlic powder) become wet [13,14]. The allyl thiosulfinates have been shown to be responsible for most of the pharmacological activity of crushed raw garlic cloves. Beginning in 1944 it was shown that allicin is responsible for the antibacterial activity of garlic and that selective removal of allicin also removed all activity [15,16]. Considerable evidence suggests that the allyl thiosulfinates, or their spontaneous transformation compounds (allyl polysulfides), or their common metabolite (allyl methyl sulfide, AMS), Figure 1 and Figure 2, are responsible for most of the lipid-lowering, antioxidant, anti-atherosclerotic, and anticancer effects of whole garlic, as observed in animals and humans [13,17]. Both allicin and \u03b3-glutamyl-S-allylcysteine (GSAC), as the source of S-allylcysteine (SAC) (Figure 1), appear to be responsible for the hypotensive effects of garlic [18]. Indeed, no other compound has yet been shown to have significant activity at levels present in a normal human dose (3\u20135 g) of crushed raw garlic. The majority of the clinical trials on the possible cardiovascular effects of garlic have used supplements that are standardized on alliin or allicin potential [1,2].\nStructures of the known significant S-allyl compounds derived from garlic, including transformation reactions. The compounds above the horizontal line comprise alliin and alliin-derived dithioallyl compounds (AADD).The first set of values for t\n\nProvide relevant evidence.",
     "input_length_chars": 6353,
     "input_tokens_estimated": 1588,
@@ -219,13 +219,13 @@
     },
     "output_length_chars": 523,
     "output_tokens_estimated": 130,
-    "cost_usd": 0.0003162
+    "cost_usd": 0.0016059560771521768
   },
   {
     "component": "evidence_extraction",
     "model": "openai:gpt-4o-mini",
     "timestamp": "2025-12-14T02:27:08.946738",
-    "latency_seconds": 10.91,
+    "latency_seconds": 11.8,
     "input_prompt": "Claim:\nThe compound allicin is released when garlic cloves are crushed.\n\nArticle Title:\nHow does 'crushing' or breaking up garlic trigger the release ... - Quora\n\nGoogle Search Snippet:\nWhen garlic is crushed, the process breaks vacuoles in the cell, releasing an enzyme called alliinase which coverts that alliin to a compound ...\n\nFull Page Content:\nWhen garlic cells are crushed or cut, an enzyme is released, alliinase, this sets off the cascade of reactions below, which ultimately leading to the volatile components.\nRefrain from unknown callers asking to download apps and share OTP. Never share sensitive information like UPI credentials, ATM card details, PINs, OTP etc. Remember Silence is the key to patiently tackling the app and OTP scams. Stay vigilant, stay safe.\nBe cautious of unknown links in SMS, emails, or messaging apps. Spelling mistakes are commonly found in such sites/pages sent from unknown sources.\nContact your bank immediately and report the incident\nCrushing or chopping garlic physically ruptures its cells and brings two separated components\u2014an enzyme (alliinase) and its substrate (alliin)\u2014into contact. That contact triggers a rapid enzymatic reaction that produces allicin, the volatile compound responsible for garlic\u2019s aroma and many of its biological effects.\nStepwise mechanism\nThis is due to a phenomenon called compartmentalization.\nThe precursor of allicine, alliine, and alliinase, the enzyme that can convert alliine, are present in different compartments of the garlic cells. Crushing or cutting the membranes that separate the two, brings enzyme and substrate together, resulting in formation of the enzymatic reaction product allicine.\n\nProvide relevant evidence.",
     "input_length_chars": 1711,
     "input_tokens_estimated": 427,
@@ -237,13 +237,13 @@
     },
     "output_length_chars": 482,
     "output_tokens_estimated": 120,
-    "cost_usd": 0.00013605
+    "cost_usd": 0.0006909877428733512
   },
   {
     "component": "evidence_extraction",
     "model": "openai:gpt-4o-mini",
     "timestamp": "2025-12-14T02:27:19.668444",
-    "latency_seconds": 22.64,
+    "latency_seconds": 24.49,
     "input_prompt": "Claim:\nA compound found in crushed garlic cloves can kill cancer cells.\n\nArticle Title:\nGarlic and Cancer Prevention (Fact Sheet) - Oncology Nurse Advisor\n\nGoogle Search Snippet:\nSeveral population studies show an association between increased intake of garlic and reduced risk of certain cancers.\n\nFull Page Content:\nGarlic is a vegetable (Allium sativum) that belongs to the Allium class of bulb-shaped plants, which also includes onions, chives, leeks, and scallions. Garlic is used for flavoring in cooking and is unique because of its high sulfur content. In addition to sulfur, garlic also contains arginine, oligosaccharides, flavonoids, andselenium, all of which may be beneficial to health (1).\nThe characteristic odor and flavor of garlic comes from sulfur compounds formed from allicin, the major precursor of garlic\u2019s bioactive compounds, which are formed when garlic bulbs are chopped, crushed, or damaged (2). Bioactive compounds are defined as substances in foods or dietary supplements, other than those needed to meet basic nutritional needs, that are responsible for changes in health status.\nGarlic supplements can be classified into four groups: Garlic essential oil, garlic oil macerate, garlic powder, and garlic extract.\nSeveral population studies show an association between increased intake of garlic and reduced risk of certain cancers, including cancers of the stomach, colon, esophagus, pancreas, and breast. Population studies are multidisciplinary studies of population groups that investigate the cause, incidence, or spread of a disease or examine the effect of health-related interventions, dietary and nutritional intakes, or environmental exposures. An analysis of data from seven population studies showed that the higher the amount of raw and cooked garlic consumed, the lower the risk of stomach and colorectal cancer (5).\nThe European Prospective Investigation into Cancer and Nutrition (EPIC) is an ongoing multinational study involving men and women from 10 different countries. This study is investigating the effects of nutrition on cancer. In the study, higher intakes of onion and garlic were associated with a reduced risk of intestinal cancer (6).\nThe Iowa Women\u2019s Study is a large prospective study investigating whether diet, distribution of body fat, and other risk factors are related to cancer incidence in older women. Findings from the study showed a strong association between garlic consumption and colon cancer risk. Women who consumed the highest amounts of garlic had a 50 percent lower risk of cancer of the distal colon compared with women who had the lowest level of garlic consumption (7).\nSeveral population studies conducted in China centered on garlic consumption and cancer risk. In one study, investigators found that frequent consumption of garlic and various types of onions and chives was associated with reduced risk of esophageal and stomach cancers, with greater risk reductions seen for higher levels of consumption (8). Similarly, in another study, the consumption of allium vegetables, especially garlic and onions, was linked to a reduced risk of stomach cancer (9). In a third study, greater intake of allium vegetables (more than 10 g per day vs. less than 2.2 g per day), particularly garlic and scallions, was associated with an approximately 50 percent reduction in prostate cancer risk (10).\nEvidence also suggests that increased garlic consumption may reduce pancreatic cancer risk. A study conducted in the San Francisco Bay area found that pancreatic cancer risk was 54 percent lower in people who ate larger amounts of garlic compared with those who ate lower amounts (11).\nIn addition, a study in France found that increased garlic consumption was associated with a statistically significant reduction in breast cancer risk. After considering total calorie intake and other established risk factors, breast cancer risk was reduced in those consuming greater amounts of fiber, garlic, and onions (12).\nFew clinical trials (research studies with people) have been done to examine the potential anticancer effects of garlic.\nThree randomized clinical trials have evaluated the effect of garlic intake on gastric cancer risk. In one study, which involved over 5,000 Chinese men and women at high risk for stomach cancer, researchers compared the effects of taking a combination of 200 mg synthetic allitridum (an extract of garlic used as a medicine in China for over 3,000 years) daily and 100 micrograms selenium every other day with taking a placebo (an inactive substance or treatment that looks the same as, and is given the same way as, an active drug or treatment being tested) for 5 years. In the group that received allitridum and selenium, the risk for all tumors combined was reduced by 33 percent and the risk for stomach cancer was reduced by 52 percent in comparison with the group that received only the placebo (13).\nIn contrast, findings from another randomized trial involving individuals with precancerous stomach lesionsfound that garlic supplementation (800 mg garlic extract plus 4 mg steam-distilled garlic oil daily) did not improve the prevalence (number of existing cases) of precancerous gastric lesions or reduce the incidence (number of new cases) of gastric cancer (14).\nA third randomized study in Japan compared the effects of daily high-dose (2.4 mL) and low-dose (0.16 mL) intake of aged-garlic extract after 6 and 12 months of use on individuals with colorectal adenomas(noncancerous tumors). At the end of 12 months, 67 percent of the low-intake group developed new adenomas compared with 47 percent in the high-intake group (15).\nThe results of a small, nonrandomized study indicate that the application of garlic extracts to some skin tumors may be beneficial. In the study, which involved 21 persons with basal cell carcinoma, the application of ajoene (a sulfurous chemical found in garlic) to the skin for 1 month markedly decreased the size of 17 tumors, increased tumor size in 3 patients, and resulted in no change in 1 other patient (16). Changes in tumor size ranged from an 88 percent reduction to a 69 percent increase, with an overall median reduction of 47 percent.\nStudy limitations, including the accuracy of reporting the amounts and frequency of garlic consumed, and the inabilit\n\nProvide relevant evidence.",
     "input_length_chars": 6346,
     "input_tokens_estimated": 1586,
@@ -255,13 +255,13 @@
     },
     "output_length_chars": 566,
     "output_tokens_estimated": 141,
-    "cost_usd": 0.0003225
+    "cost_usd": 0.0016379533044958159
   },
   {
     "component": "verdict_generation",
     "model": "openai:gpt-4o-mini",
     "timestamp": "2025-12-14T02:27:27.673156",
-    "latency_seconds": 10.95,
+    "latency_seconds": 11.85,
     "input_prompt": "\nClaim: Heating crushed garlic transforms allicin into the cancer-fighting compound auine.\nCategory: scientific\nExtraction confidence: 0.90\n\nEvidence:\nREFUTES (1 sources):\n  1. Allicin in Digestive System Cancer: From Biological Effects to ... | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC9234177/\n     Summary: The article discusses allicin as the main active ingredient in garlic, noting its anticancer effects, but it does not specifically confirm that heating crushed garlic transforms allicin into auine, nor does it mention auine as a compound resulting from allicin transformation.\nUNCLEAR (4 sources):\n  1. Anticancer potential of allicin: A review - ScienceDirect.com | reliability=high (0.85)\n     URL: https://www.sciencedirect.com/science/article/abs/pii/S1043661822000639\n     Summary: The research carried out so far revealed that allicin suppresses the growth of different types of tumors. In particular, it targets many signaling pathways ...\n  2. Does Garlic Reduce Your Risk of Cancer? - Verywell Health | reliability=high (0.85)\n     URL: https://www.verywellhealth.com/garlic-reduces-your-cancer-risk-430030\n     Summary: Three of the cancer-fighting compounds in garlic are: Allicin: This plant compound is antibiotic and antifungal (inhibits the growth of fungi).\n  3. Effect of Thermal Treatment on the Antiproliferative and Antioxidant ... | reliability=medium (0.60)\n     URL: https://onlinelibrary.wiley.com/doi/full/10.1002/fsn3.70375\n     Summary: Heating of garlic homogenate (40\u00b0C\u2013100\u00b0C for 10 min) did not decrease or even increase the content of phenolics and Total Antioxidant Activity ( ...\n  4. Garlic's Immune-Boosting Role in Cancer Recovery - Massive Bio | reliability=medium (0.60)\n     URL: https://massivebio.com/garlics-immune-boosting-role-in-cancer-recovery-bio/\n     Summary: Allicin, the key active compound, is formed when raw garlic is crushed or chopped, but it is sensitive to heat and can be degraded during ...\n\nProvide the structured verdict.\n",
     "input_length_chars": 2028,
     "input_tokens_estimated": 507,
@@ -272,13 +272,13 @@
     },
     "output_length_chars": 302,
     "output_tokens_estimated": 75,
-    "cost_usd": 0.00012105
+    "cost_usd": 0.0006148038682456388
   },
   {
     "component": "verdict_generation",
     "model": "openai:gpt-4o-mini",
     "timestamp": "2025-12-14T02:27:40.271527",
-    "latency_seconds": 20.48,
+    "latency_seconds": 22.16,
     "input_prompt": "\nClaim: A compound found in crushed garlic cloves can kill cancer cells.\nCategory: scientific\nExtraction confidence: 0.90\n\nEvidence:\nUNCLEAR (5 sources):\n  1. Updates on the anticancer potential of garlic organosulfur ... - NIH | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC10067574/\n     Summary: These organosulfur compounds encourage cell death, prevent breast cancer formation, and slow the growth of cancerous cells. There are very ...\n  2. A novel therapeutic anticancer property of raw garlic extract via ... | reliability=high (0.85)\n     URL: https://www.nature.com/articles/s41420-018-0122-x\n     Summary: Prior studies suggest a possibility that the anticancer property of garlic is more effective only when exposed directly to cancer cells than ...\n  3. Allicin purified from fresh garlic cloves induces apoptosis in colon ... | reliability=high (0.85)\n     URL: https://pubmed.ncbi.nlm.nih.gov/20924970/\n     Summary: Allicin purified from fresh garlic cloves induces apoptosis in colon cancer cells via Nrf2 ... These results suggest that Nrf2 mediates the allicin-induced ...\n  4. Does Garlic Reduce Your Risk of Cancer? - Verywell Health | reliability=high (0.85)\n     URL: https://www.verywellhealth.com/garlic-reduces-your-cancer-risk-430030\n     Summary: It has been shown to have antibacterial and antioxidant properties. 1 It has also been linked to a reduced risk of developing certain cancers.\n  5. Phytochemicals of garlic: Promising candidates for cancer therapy | reliability=high (0.85)\n     URL: https://www.sciencedirect.com/science/article/pii/S0753332219353521\n     Summary: The main sulfur compound in both raw garlic and garlic powder is alliin. On average, garlic cloves contain 8 g/kg alliin. When raw garlic is chopped or crushed, ...\n\nProvide the structured verdict.\n",
     "input_length_chars": 1835,
     "input_tokens_estimated": 458,
@@ -289,13 +289,13 @@
     },
     "output_length_chars": 564,
     "output_tokens_estimated": 141,
-    "cost_usd": 0.0001533
+    "cost_usd": 0.0007785991986952205
   },
   {
     "component": "verdict_generation",
     "model": "openai:gpt-4o-mini",
     "timestamp": "2025-12-14T02:27:42.420016",
-    "latency_seconds": 19.48,
+    "latency_seconds": 21.07,
     "input_prompt": "\nClaim: High garlic consumption is linked to lower incidence of gastrointestinal cancers.\nCategory: statistical\nExtraction confidence: 0.85\n\nEvidence:\nUNCLEAR (5 sources):\n  1. Garlic and onions: Their cancer prevention properties - PMC | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC4366009/\n     Summary: Intermediate and high garlic use were associated with decreased risk of colorectal cancer with ORs of 0.88 (95% CI 0.78\u20130.98) and 0.74 (95%CI 0.63\u20138.86), ...\n  2. The association of garlic intake on total cancer incidence and mortality | reliability=high (1.00)\n     URL: https://cdas.cancer.gov/approved-projects/1677/\n     Summary: Existing epidemiologic studies have shown an association between garlic and reduced risk of cancers including stomach, colon, breast, lung, and esophagus ( ...\n  3. Updates on the anticancer potential of garlic organosulfur ... - NIH | reliability=high (1.00)\n     URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC10067574/\n     Summary: It has been demonstrated that garlic extract, its bioactive compounds, and their use in nanoformulations can prevent breast cancer in all of its stages.\n  4. Garlic consumption and cancer prevention: meta-analyses of ... | reliability=high (0.85)\n     URL: https://www.sciencedirect.com/science/article/pii/S0002916523068193\n     Summary: DISCUSSION. The published epidemiologic evidence suggests that protection against stomach and colorectal cancers is conferred by consumption of RC garlic.\n  5. Garlic consumption and colorectal cancer risk in US adults - Frontiers | reliability=high (0.85)\n     URL: https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2023.1300330/full\n     Summary: Conclusion: Moderate consumption of dietary garlic is associated with a decreased CRC risk in the US population, with variations based on CRC anatomic subsites.\n\nProvide the structured verdict.\n",
     "input_length_chars": 1907,
     "input_tokens_estimated": 476,
@@ -306,6 +306,6 @@
     },
     "output_length_chars": 286,
     "output_tokens_estimated": 71,
-    "cost_usd": 0.000114
+    "cost_usd": 0.0005789974471706141
   }
 ]

@@ -266,16 +266,16 @@ Table~\ref{tab:latency-results} presents processing time statistics.
 \toprule
 \textbf{Metric} & \textbf{Value} \\
 \midrule
-Mean latency & 129.6 seconds \\
-Standard deviation & 101.8 seconds \\
-Minimum latency & 36.5 seconds \\
-Maximum latency & 643.7 seconds \\
-Total processing time (30 videos) & 64.8 minutes \\
+Mean latency & 82.2 seconds \\
+Standard deviation & 31.8 seconds \\
+Minimum latency & 41.9 seconds \\
+Maximum latency & 178.3 seconds \\
+Total processing time (30 videos) & 41.1 minutes \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-The mean processing time of 129.6 seconds per video enables near-interactive use for individual videos. The high variance (standard deviation 101.8s) reflects multiple contributing factors:
+The mean processing time of 82.2 seconds per video enables near-interactive use for individual videos. The variance (standard deviation 31.8s) reflects multiple contributing factors:
 
 \begin{itemize}
     \item \textbf{Video length}: Longer transcripts require more LLM tokens for claim extraction, increasing inference time.
@@ -508,7 +508,7 @@ The experimental evaluation demonstrates that Factible achieves reliable fact-ch
 
     \item \textbf{Identified challenges:} The 4 low-accuracy videos (13.3\%) involve politically contested claims with legitimate disagreement, where evidence synthesis rather than retrieval poses the challenge.
 
-    \item \textbf{Practical efficiency:} 129.6 seconds mean latency at \$0.003 per video enables cost-effective, near-interactive use.
+    \item \textbf{Practical efficiency:} 82.2 seconds mean latency at \$0.003 per video enables cost-effective, near-interactive use.
 \end{enumerate}
 
 These results position Factible as a reliable tool for preliminary fact-checking of YouTube content. The system performs well on scientific, health, and clearly verifiable claims, while contested political topics with conflicting evidence sources represent the primary remaining challenge for future work.
