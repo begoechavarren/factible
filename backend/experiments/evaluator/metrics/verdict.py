@@ -11,6 +11,8 @@ from experiments.evaluator.llm_judge.explanation_quality import ExplanationQuali
 
 _logger = logging.getLogger(__name__)
 
+STANCE_LABELS = ["SUPPORTS", "REFUTES", "MIXED", "UNCLEAR"]
+
 
 class VerdictEvaluator:
     """Evaluates verdict accuracy."""
@@ -54,6 +56,10 @@ class VerdictEvaluator:
         total = 0
         verdict_errors = []
 
+        # Track predictions for confusion matrix
+        all_gt_stances = []
+        all_sys_stances = []
+
         for match in matched_claims:
             gt_text = match["gt_text"]
             sys_text = match["sys_text"]
@@ -64,6 +70,9 @@ class VerdictEvaluator:
 
                 gt_stance = gt_v.get("overall_stance", "").upper()
                 sys_stance = sys_v.get("overall_stance", "").upper()
+
+                all_gt_stances.append(gt_stance)
+                all_sys_stances.append(sys_stance)
 
                 if gt_stance == sys_stance:
                     correct_stance += 1
@@ -81,6 +90,12 @@ class VerdictEvaluator:
 
         overall_accuracy = correct / total if total > 0 else 0.0
         stance_accuracy = correct_stance / total if total > 0 else 0.0
+
+        # Build confusion matrix
+        confusion_matrix = self._build_confusion_matrix(all_gt_stances, all_sys_stances)
+
+        # Calculate per-class F1 scores
+        per_class_f1 = self._calculate_per_class_f1(all_gt_stances, all_sys_stances)
 
         # LLM-as-judge for explanation quality (optional)
         explanation_quality_avg = 0.0
@@ -108,6 +123,8 @@ class VerdictEvaluator:
             total_verdicts=total,
             verdict_errors=verdict_errors,
             explanation_quality_avg=explanation_quality_avg,
+            confusion_matrix=confusion_matrix,
+            per_class_f1=per_class_f1,
         )
 
     async def _evaluate_explanations_async(
@@ -143,3 +160,81 @@ class VerdictEvaluator:
         results = await asyncio.gather(*tasks)
         # Filter out None values (failed evaluations)
         return [score for score in results if score is not None]
+
+    def _build_confusion_matrix(
+        self, gt_stances: List[str], sys_stances: List[str]
+    ) -> List[List[int]]:
+        """
+        Build confusion matrix from ground truth and system stances.
+
+        Args:
+            gt_stances: List of ground truth stance labels
+            sys_stances: List of system-predicted stance labels
+
+        Returns:
+            Confusion matrix as list of lists [n_classes x n_classes]
+            Rows = ground truth, Columns = predicted
+        """
+        # Initialize matrix with zeros
+        n_classes = len(STANCE_LABELS)
+        matrix = [[0] * n_classes for _ in range(n_classes)]
+
+        # Create label to index mapping
+        label_to_idx = {label: idx for idx, label in enumerate(STANCE_LABELS)}
+
+        # Fill matrix
+        for gt, sys in zip(gt_stances, sys_stances):
+            gt_idx = label_to_idx.get(gt)
+            sys_idx = label_to_idx.get(sys)
+            if gt_idx is not None and sys_idx is not None:
+                matrix[gt_idx][sys_idx] += 1
+
+        return matrix
+
+    def _calculate_per_class_f1(
+        self, gt_stances: List[str], sys_stances: List[str]
+    ) -> Dict[str, float]:
+        """
+        Calculate per-class F1 scores.
+
+        Args:
+            gt_stances: List of ground truth stance labels
+            sys_stances: List of system-predicted stance labels
+
+        Returns:
+            Dictionary mapping class label to F1 score
+        """
+        per_class_f1 = {}
+
+        for label in STANCE_LABELS:
+            # True positives: both GT and system are this label
+            tp = sum(
+                1
+                for gt, sys in zip(gt_stances, sys_stances)
+                if gt == label and sys == label
+            )
+            # False positives: system predicts this label but GT is different
+            fp = sum(
+                1
+                for gt, sys in zip(gt_stances, sys_stances)
+                if gt != label and sys == label
+            )
+            # False negatives: GT is this label but system predicts different
+            fn = sum(
+                1
+                for gt, sys in zip(gt_stances, sys_stances)
+                if gt == label and sys != label
+            )
+
+            # Calculate precision, recall, F1
+            precision = tp / (tp + fp) if (tp + fp) > 0 else 0.0
+            recall = tp / (tp + fn) if (tp + fn) > 0 else 0.0
+            f1 = (
+                2 * precision * recall / (precision + recall)
+                if (precision + recall) > 0
+                else 0.0
+            )
+
+            per_class_f1[label] = f1
+
+        return per_class_f1

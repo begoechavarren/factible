@@ -5,6 +5,10 @@ from datetime import datetime
 from pathlib import Path
 from typing import List
 
+import matplotlib
+
+matplotlib.use("Agg")  # Use non-interactive backend
+import matplotlib.pyplot as plt
 import numpy as np
 
 from experiments.evaluator.ground_truth import GroundTruthManager
@@ -12,10 +16,29 @@ from experiments.evaluator.metrics.claim_extraction import ClaimExtractionEvalua
 from experiments.evaluator.metrics.end_to_end import EndToEndEvaluator
 from experiments.evaluator.metrics.evidence_search import EvidenceSearchEvaluator
 from experiments.evaluator.metrics.query_generation import QueryGenerationEvaluator
-from experiments.evaluator.metrics.verdict import VerdictEvaluator
+from experiments.evaluator.metrics.verdict import VerdictEvaluator, STANCE_LABELS
 from experiments.evaluator.models import VideoEvaluationResult
 
 _logger = logging.getLogger(__name__)
+
+plt.rcParams.update(
+    {
+        "font.family": "serif",
+        "font.serif": ["Computer Modern Roman", "Times New Roman", "DejaVu Serif"],
+        "font.size": 11,
+        "axes.labelsize": 12,
+        "axes.titlesize": 13,
+        "xtick.labelsize": 10,
+        "ytick.labelsize": 10,
+        "legend.fontsize": 10,
+        "figure.titlesize": 14,
+        "text.usetex": False,  # Set True if LaTeX is installed
+        "axes.linewidth": 0.8,
+        "grid.linewidth": 0.5,
+        "lines.linewidth": 1.5,
+        "lines.markersize": 6,
+    }
+)
 
 
 class GroundTruthEvaluator:
@@ -441,3 +464,125 @@ class GroundTruthEvaluator:
             json.dump(report_data, f, indent=2)
 
         _logger.info(f"\nAggregate report saved to: {report_path}")
+
+        # Generate confusion matrix
+        self._generate_confusion_matrix(results, report_data)
+
+    def _generate_confusion_matrix(
+        self, results: List[VideoEvaluationResult], report_data: dict
+    ) -> Path | None:
+        """
+        Generate confusion matrix visualization from evaluation results.
+
+        Args:
+            results: List of VideoEvaluationResult objects
+            report_data: The aggregate report dictionary
+
+        Returns:
+            Path to the generated PNG file
+        """
+        # Aggregate confusion matrices across all videos
+        n_classes = len(STANCE_LABELS)
+        aggregate_matrix = np.zeros((n_classes, n_classes), dtype=int)
+
+        for result in results:
+            video_matrix = result.verdict_accuracy.confusion_matrix
+            if video_matrix:
+                aggregate_matrix += np.array(video_matrix)
+
+        total = aggregate_matrix.sum()
+        if total == 0:
+            _logger.warning("No verdict data available for confusion matrix")
+            return None
+
+        # Create figure
+        fig, ax = plt.subplots(figsize=(6, 5))
+
+        # Plot heatmap (grayscale for academic style)
+        im = ax.imshow(aggregate_matrix, interpolation="nearest", cmap="Greys")
+
+        # Add colorbar
+        cbar = ax.figure.colorbar(im, ax=ax, shrink=0.8)
+        cbar.ax.set_ylabel("Count", rotation=-90, va="bottom")
+
+        # Set ticks and labels
+        ax.set_xticks(np.arange(n_classes))
+        ax.set_yticks(np.arange(n_classes))
+        ax.set_xticklabels(STANCE_LABELS, fontsize=9)
+        ax.set_yticklabels(STANCE_LABELS, fontsize=9)
+
+        # Rotate x-axis labels
+        plt.setp(ax.get_xticklabels(), rotation=45, ha="right", rotation_mode="anchor")
+
+        # Add text annotations
+        thresh = aggregate_matrix.max() / 2.0
+        for i in range(n_classes):
+            for j in range(n_classes):
+                value = aggregate_matrix[i, j]
+                color = "white" if value > thresh else "black"
+                ax.text(
+                    j,
+                    i,
+                    format(value, "d"),
+                    ha="center",
+                    va="center",
+                    color=color,
+                    fontsize=11,
+                    fontweight="bold",
+                )
+
+        # Labels and title
+        ax.set_xlabel("Predicted Stance")
+        ax.set_ylabel("True Stance")
+        ax.set_title("Verdict Classification Confusion Matrix", pad=10)
+
+        # Calculate and display accuracy
+        correct = np.trace(aggregate_matrix)
+        accuracy = correct / total if total > 0 else 0.0
+
+        # Add text box with summary statistics (bottom-right to avoid overlapping cells)
+        textstr = f"Accuracy: {accuracy:.1%}\nTotal: {total} verdicts"
+        props = dict(
+            boxstyle="round,pad=0.4",
+            facecolor="white",
+            edgecolor="#cccccc",
+            linewidth=0.5,
+        )
+        ax.text(
+            0.98,
+            0.02,
+            textstr,
+            transform=ax.transAxes,
+            fontsize=9,
+            verticalalignment="bottom",
+            horizontalalignment="right",
+            bbox=props,
+        )
+
+        # Clean up spines
+        ax.spines["top"].set_visible(False)
+        ax.spines["right"].set_visible(False)
+
+        plt.tight_layout()
+
+        # Save figure
+        output_path = self.output_dir / "confusion_matrix.png"
+        plt.savefig(output_path, dpi=300, bbox_inches="tight")
+        _logger.info(f"Confusion matrix saved to: {output_path}")
+
+        plt.close()
+
+        # Save the matrix data to the report
+        report_data["confusion_matrix"] = {
+            "labels": STANCE_LABELS,
+            "matrix": aggregate_matrix.tolist(),
+            "total_verdicts": int(total),
+            "correct_verdicts": int(correct),
+            "accuracy": float(accuracy),
+        }
+
+        report_path = self.output_dir / "aggregate_report.json"
+        with open(report_path, "w") as f:
+            json.dump(report_data, f, indent=2)
+
+        return output_path

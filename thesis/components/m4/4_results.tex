@@ -171,7 +171,7 @@ The standard deviation (0.334) in verdict accuracy is notable. Analysis of per-v
     \item \textbf{4 videos (13.3\%)} achieved low accuracy ($<$25\%)---most claims were incorrectly classified.
 \end{itemize}
 
-The stance accuracy of 73.3\% substantially exceeds a random baseline: for a four-class classification problem, random guessing would achieve approximately 25\% accuracy, making this a 2.93$\times$ improvement. Moreover, unlike random classification, the system provides evidence-backed explanations that enable users to evaluate the verdict's reasoning.
+The stance accuracy of 73.0\% substantially exceeds a random baseline: for a four-class classification problem, random guessing would achieve approximately 25\% accuracy, making this a 2.93$\times$ improvement. Moreover, unlike random classification, the system provides evidence-backed explanations that enable users to evaluate the verdict's reasoning.
 
 With an evidence retrieval success rate of 94.7\%, the system consistently finds relevant sources for most claims. Table~\ref{tab:accuracy-retrieval-correlation} presents representative examples illustrating how verdict accuracy varies across the dataset.
 
@@ -202,6 +202,33 @@ With an evidence retrieval success rate of 94.7\%, the system consistently finds
 Notably, successful evidence retrieval does not guarantee high verdict accuracy. Some politically contentious topics achieve 100\% retrieval but lower verdict accuracy, suggesting that the challenge lies not in finding evidence but in correctly synthesizing conflicting sources or matching the ground truth annotator's interpretation.
 
 Analysis of low-accuracy videos reveals several contributing factors: (1) \textbf{contested claims}---topics with legitimate disagreement may have evidence supporting multiple stances, making definitive verdicts challenging; (2) \textbf{ground truth subjectivity}---some claims involve nuanced interpretations where reasonable annotators might disagree; and (3) \textbf{evidence-claim mismatch}---retrieved evidence may address related but not identical claims. These findings suggest that further improvements require enhanced evidence synthesis and more sophisticated handling of contested claims, rather than simply improving retrieval success.
+
+\subsubsection{Confusion Matrix Analysis}
+
+Figure~\ref{fig:confusion-matrix} presents the confusion matrix for verdict classification across all 122 matched claim-verdict pairs.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.65\textwidth]{figs/confusion_matrix.png}
+\caption[Verdict classification confusion matrix]{Confusion matrix for verdict stance classification across all 122 matched claim-verdict pairs. Rows represent ground truth stances; columns represent predicted stances.}
+\label{fig:confusion-matrix}
+\end{figure}
+
+The class distribution in the evaluation dataset reflects the nature of real-world misinformation: SUPPORTS claims (69) outnumber REFUTES (12), MIXED (35), and UNCLEAR (6). This imbalance is not a flaw in the dataset but rather reflects how misinformation operates---even videos containing false claims typically include many factually accurate statements, which contributes to their persuasiveness and makes them harder to debunk. A video promoting health misinformation, for instance, may correctly cite scientific terminology or reference real institutions while drawing false conclusions. Similarly, the substantial proportion of MIXED verdicts (29\%) reflects claims where credible evidence exists on both sides; rather than forcing a binary true/false judgment, the system surfaces this ambiguity, encouraging users to examine the sources and draw their own informed conclusions.
+
+The confusion matrix reveals the following patterns:
+
+\begin{itemize}
+    \item \textbf{SUPPORTS} (75.4\% recall): Errors occur when the system assigns MIXED or UNCLEAR to claims that have clear supporting evidence.
+
+    \item \textbf{REFUTES} (83.3\% recall): The highest per-class performance demonstrates that the system reliably identifies contradicting evidence---a critical capability for fact-checking.
+
+    \item \textbf{MIXED} (74.3\% recall): This category is inherently challenging as it requires recognizing that evidence presents both supporting and refuting elements simultaneously.
+
+    \item \textbf{UNCLEAR} (16.7\% recall): The system tends toward definitive verdicts rather than acknowledging insufficient evidence. While this represents a limitation, the small sample size (n=6) limits the statistical reliability of this observation. The bias toward definitive verdicts reflects a design trade-off: users typically seek actionable conclusions rather than ``insufficient evidence'' responses.
+\end{itemize}
+
+The diagonal dominance confirms that the system performs substantially above the 25\% random baseline across all classes. The strong REFUTES performance is particularly noteworthy, as identifying false claims is the primary goal of fact-checking systems.
 
 %-------------------------------------------------------
 \subsection{Evidence Retrieval Performance}
@@ -443,7 +470,7 @@ Three findings from MAD-Fact are particularly instructive:
     \item \textbf{Homogeneous vs.\ heterogeneous initialization}: Interestingly, initializing all agents with the same model (GPT-4o-mini) outperformed heterogeneous initialization with multiple model families, as cross-model agents exhibited higher frequencies of misleading each other and struggled to reach consensus.
 \end{itemize}
 
-Factible adopts a comparable multi-agent pipeline---comprising claim extraction, evidence retrieval, and verdict determination---but addresses a significantly more challenging domain: unstructured YouTube content with noisy automatic transcriptions and no gold evidence. Despite this increased difficulty, the 73.3\% accuracy demonstrates that multi-agent approaches can generalize beyond curated datasets to real-world multimedia platforms.
+Factible adopts a comparable multi-agent pipeline---comprising claim extraction, evidence retrieval, and verdict determination---but addresses a significantly more challenging domain: unstructured YouTube content with noisy automatic transcriptions and no gold evidence. Despite this increased difficulty, the 73.0\% accuracy demonstrates that multi-agent approaches can generalize beyond curated datasets to real-world multimedia platforms.
 
 \subsubsection{Domain Difficulty Considerations}
 
@@ -456,7 +483,7 @@ The primary challenge in cross-system comparison lies not in algorithmic sophist
     \item \textbf{Temporal dynamics}: Time-sensitive claims that may have been true at recording but become outdated
 \end{itemize}
 
-Table~\ref{tab:system-comparison} summarizes key characteristics across systems. The performance gap between FEVER's baseline 31.87\% on structured Wikipedia and Factible's 73.3\% on unstructured YouTube does not indicate superior accuracy in absolute terms, but rather reflects fundamentally different difficulty profiles and evaluation methodologies. The system's ability to maintain reasonable accuracy while handling YouTube's compounding challenges represents meaningful progress toward bringing automated fact-checking to platforms where misinformation most commonly spreads.
+Table~\ref{tab:system-comparison} summarizes key characteristics across systems. The performance gap between FEVER's baseline 31.87\% on structured Wikipedia and Factible's 73.0\% on unstructured YouTube does not indicate superior accuracy in absolute terms, but rather reflects fundamentally different difficulty profiles and evaluation methodologies. The system's ability to maintain reasonable accuracy while handling YouTube's compounding challenges represents meaningful progress toward bringing automated fact-checking to platforms where misinformation most commonly spreads.
 
 \begin{table}[H]
 \centering
@@ -472,7 +499,7 @@ SciFact \citep{wadden2020scifact} & Scientific & Gold & Natural & F1 & 46.5\% \\
 RARR \citep{gao2023rarr} & QA datasets & Retrieved & Natural & F1 & 43--68\% \\
 FactAgent \citep{factagent2025} & Wikipedia & Retrieved & Natural & F1 & 51--77\% \\
 MAD-Fact \citep{ning2025madfact} & Fact-check & Retrieved & Natural & F1 & 67--88\% \\
-\textbf{Factible (ours)} & YouTube/Web & Retrieved & Natural & Accuracy & 73.3\% \\
+\textbf{Factible (ours)} & YouTube/Web & Retrieved & Natural & Accuracy & 73.0\% \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -504,7 +531,7 @@ The experimental evaluation demonstrates that Factible achieves reliable fact-ch
 
     \item \textbf{Robust evidence retrieval:} 94.7\% success rate with 83.6\% of sources from high-reliability origins, demonstrating effective query generation and source filtering.
 
-    \item \textbf{Consistent verdict accuracy:} 73.3\% overall accuracy, with 70\% of videos (21/30) achieving $\geq$75\% accuracy.
+    \item \textbf{Consistent verdict accuracy:} 73.0\% overall accuracy, with 70\% of videos (21/30) achieving $\geq$75\% accuracy.
 
     \item \textbf{Identified challenges:} The 4 low-accuracy videos (13.3\%) involve politically contested claims with legitimate disagreement, where evidence synthesis rather than retrieval poses the challenge.
 
