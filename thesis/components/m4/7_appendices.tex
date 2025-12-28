@@ -179,7 +179,7 @@ This appendix presents the system prompts used by the three main LLM agents in t
 
 The Claim Extractor uses multi-step reasoning to prioritize claims that are central to the video's argument.
 
-\begin{lstlisting}[language=Python, caption={Claim Extractor system prompt}, label={lst:claim-prompt}]
+\begin{lstlisting}[caption={Claim Extractor system prompt}, label={lst:claim-prompt}]
 You are an expert fact-checker. Your task is to extract factual
 claims from YouTube video transcripts.
 
@@ -240,7 +240,7 @@ without factual basis, rhetorical questions.
 
 The Evidence Extractor analyzes web content to determine its relevance and stance toward claims.
 
-\begin{lstlisting}[language=Python, caption={Evidence Extractor system prompt}, label={lst:evidence-prompt}]
+\begin{lstlisting}[caption={Evidence Extractor system prompt}, label={lst:evidence-prompt}]
 You assist a fact-checking analyst. You will receive:
 - The claim to fact-check
 - Article title (if available)
@@ -295,7 +295,7 @@ OUTPUT:
 
 The Verdict Generator synthesizes evidence from multiple sources to produce final claim verdicts.
 
-\begin{lstlisting}[language=Python, caption={Verdict Generator system prompt}, label={lst:verdict-prompt}]
+\begin{lstlisting}[caption={Verdict Generator system prompt}, label={lst:verdict-prompt}]
 You are an expert fact-checking analyst. Your goal is to evaluate
 how the provided evidence supports, refutes, or provides
 mixed/unclear signals for a specific claim. Base every judgement
