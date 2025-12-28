@@ -24,7 +24,7 @@ class LLMJudgeBase(Generic[T]):
         self,
         response_model: type[T],
         system_prompt: str,
-        model_choice: ModelChoice = ModelChoice.OPENAI_GPT4O_MINI,
+        model_choice: ModelChoice = ModelChoice.OLLAMA_QWEN3_0_8B,
         temperature: float = 0.0,
         max_tokens: int = 500,
     ):
@@ -34,7 +34,8 @@ class LLMJudgeBase(Generic[T]):
         Args:
             response_model: Pydantic model for structured responses
             system_prompt: System prompt defining the evaluation task
-            model_choice: Which LLM to use (default: GPT-4o-mini for cost efficiency)
+            model_choice: Which LLM to use (default: Ollama Qwen3 8B to avoid
+                circularity with the pipeline's default GPT-4o-mini)
             temperature: Sampling temperature (0.0 for deterministic)
             max_tokens: Maximum response tokens
         """

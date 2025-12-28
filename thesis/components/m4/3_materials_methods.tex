@@ -492,7 +492,7 @@ The evaluator computes performance metrics across multiple dimensions:
     \item \textbf{Verdict accuracy}: Comparison of system stances against ground truth labels.
     \item \textbf{Evidence retrieval}: Success rate and source reliability distribution.
     \item \textbf{System efficiency}: Latency and cost aggregation across pipeline components.
-    \item \textbf{LLM-as-judge}: A language model assesses output quality on dimensions difficult to capture with traditional metrics \citep{raschka2025llmeval}.
+    \item \textbf{LLM-as-judge}: A separate language model (Qwen3 8B via Ollama) assesses output quality on dimensions difficult to capture with traditional metrics \citep{raschka2025llmeval}. Using a different model than the pipeline's GPT-4o-mini avoids circularity where a model evaluates its own outputs.
 \end{itemize}
 
 Results include per-video reports and aggregate statistics across all evaluated videos.
