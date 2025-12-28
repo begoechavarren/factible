@@ -12,7 +12,7 @@ This section presents the experimental evaluation of Factible across 30 YouTube 
 
 \subsubsection{Evaluation Dataset}
 
-The evaluation corpus consists of 30 YouTube videos manually annotated with ground truth claims. This sample size is comparable to evaluation scales used in end-to-end fact-checking systems; for example, ClaimBuster evaluated their system on 25 presidential debates \citep{hassan2017claimbuster}. Videos were selected across three thematic categories---climate, health, and political/social issues---with 10 videos per category to ensure balanced representation. Within each category, videos were equally split between factual content (5 videos) and misinformation (5 videos), allowing evaluation of the system's performance across different truth orientations. Videos range from educational science content to political commentary, representing diverse domains and claim densities. Table~\ref{tab:dataset-stats} summarizes the dataset characteristics.
+The evaluation corpus consists of 30 YouTube videos manually annotated with ground truth claims. While limited in size, this dataset provides sufficient diversity for system-level evaluation, and the sample size is comparable to evaluation scales used in end-to-end fact-checking systems; for example, ClaimBuster evaluated their system on 25 presidential debates \citep{hassan2017claimbuster}. Videos were selected across three thematic categories---climate, health, and political/social issues---with 10 videos per category to ensure balanced representation. Within each category, videos were equally split between factual content (5 videos) and misinformation (5 videos), allowing evaluation of the system's performance across different truth orientations. Videos range from educational science content to political commentary, representing diverse domains and claim densities. Table~\ref{tab:dataset-stats} summarizes the dataset characteristics.
 
 \begin{table}[H]
 \centering
@@ -156,7 +156,7 @@ Table~\ref{tab:verdict-results} presents the verdict accuracy results.
 \toprule
 \textbf{Metric} & \textbf{Mean} & \textbf{Std Dev} \\
 \midrule
-Stance Accuracy & 0.733 & 0.334 \\
+Stance Accuracy & 73.0\% & 33.4\% \\
 \bottomrule
 \end{tabular}
 \end{table}
