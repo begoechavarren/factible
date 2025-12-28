@@ -127,7 +127,7 @@ Web Scraping & Selenium & $\geq$4.15.2 & JavaScript-rendered content extraction 
 YouTube & youtube-transcript-api & $\geq$1.2.2 & Transcript extraction \\
 Domain Info & python-whois & $\geq$0.8.0 & Domain age lookup \\
 CLI & Typer & $\geq$0.15.0 & Experiment runner CLI \\
-Analysis & pandas, matplotlib & - & Data analysis and visualization \\
+Analysis & pandas, matplotlib & $\geq$2.3, $\geq$3.10 & Data analysis and visualization \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -352,7 +352,7 @@ The reliability checker uses a multi-factor scoring system with first-match prio
 
     \item \textbf{TLD Reputation}: High-trust top-level domains (.gov, .edu, .int) receive a base score of 0.90, reflecting their institutional authority.
 
-    \item \textbf{Domain Age via WHOIS}: Domains $\geq$10 years old receive a +0.10 bonus (established presence), while domains $<$1 year old receive a --0.15 penalty (recent creation may indicate lower trust).
+    \item \textbf{Domain Age via WHOIS}: A supplementary signal with minor weight adjustments (+0.10 for established domains $\geq$10 years, --0.15 for domains $<$1 year). The rationale is that scam and spam sites frequently rotate through fresh domains, making very new domains a risk indicator.
 \end{itemize}
 
 The output includes a categorical rating (high, medium, low, unknown), numerical score (0.0--1.0), reasoning for the assessment, and political bias classification when available from MBFC data.
@@ -420,11 +420,11 @@ The default model (gpt-4o-mini) is selected for its balanced performance across 
 
 \subsubsection{Output Constraints}
 
-Each component has carefully tuned token limits to minimize generation latency and API costs without sacrificing information quality. Claims are limited to approximately 40 words (sufficient for most factual assertions), context descriptions to 20 words (brief background), and evidence summaries to 1--2 sentences (key findings only). These constraints are enforced through explicit prompt instructions.
+Each component has carefully tuned token limits to minimize generation latency and API costs without sacrificing information quality. Two layers of constraints are employed: prompt instructions guide the LLM toward concise responses (claims limited to approximately 40 words, context descriptions to 20 words, evidence summaries to 1--2 sentences), while API-level \texttt{max\_tokens} limits (600--1200 tokens depending on the component) serve as hard safeguards to prevent excessive generation if the model disregards prompt guidance.
 
 \subsubsection{Content Trimming}
 
-Input token counts are minimized through aggressive content trimming strategies. Web content is trimmed to 6,000--8,000 characters before being passed to the Evidence Extractor, removing excessive context while retaining the most relevant portions (typically the first several paragraphs of an article). Evidence prompts include only Google snippets and extracted page text, explicitly excluding raw HTML, JavaScript, CSS, and other non-content elements that would inflate token counts without improving extraction quality.
+Input token counts are minimized through content extraction and trimming. Web content is trimmed to 8,000 characters before being passed to the Evidence Extractor, retaining the most relevant portions (typically the first several paragraphs of an article). The Content Fetcher extracts only paragraph text, excluding raw HTML, JavaScript, CSS, and other non-content elements that would inflate token counts without improving extraction quality.
 
 \subsubsection{Combined Operations}
 
@@ -503,7 +503,7 @@ Results include per-video reports and aggregate statistics across all evaluated 
 
 \subsubsection{FastAPI Setup}
 
-The API uses FastAPI with CORS middleware configured for local frontend development, supporting common development server ports.
+The API uses FastAPI with CORS middleware to enable API requests from the frontend application.
 
 \subsubsection{Streaming Endpoint with SSE}
 
